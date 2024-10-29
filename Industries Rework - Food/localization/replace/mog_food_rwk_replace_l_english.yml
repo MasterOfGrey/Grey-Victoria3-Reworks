@@ -1,0 +1,19 @@
+﻿l_english:
+# Production method groups
+ pmg_canning:0 "Packaging"
+ pmg_distillery:0 "Fluid Products"
+ 
+# Production methods #
+# #Base
+ pm_bakery:0 "Artisanal Methods"
+ pm_sweeteners:0 "Sweeteners"
+ pm_baking_powder:0 "Baking Powder"
+ pm_automated_bakery:0 "Automated Bakery"
+# #Packaging
+ pm_cannery:0 "Metal Canning"
+ pm_vacuum_canning:1 "Vacuum Packaging"
+ pm_vacuum_canning_principle_3: "Efficient Canning Practices"
+# #Preservation
+ pm_disabled_canning:0 "No Preservatives"
+# #Fluid Products
+ pm_disabled_distillery:0 "Only Condiments"

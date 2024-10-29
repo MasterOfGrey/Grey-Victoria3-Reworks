@@ -1,0 +1,137 @@
+﻿# Updated and included from: Koa's Colonial Government
+
+military_support = {
+	groups= {
+		overlord
+	}
+	requires_approval = no
+	should_notify_third_parties = no
+
+	unlocking_technologies = {
+		nationalism
+	}
+	
+	potential = {
+		NOT = { is_country_type = decentralized }
+		scope:target_country = {
+			NOT = { is_country_type = decentralized }
+		}
+	}
+	
+	possible = {
+		country_rank >= rank_value:great_power
+		is_revolutionary = no
+		in_default = no
+		NOT = { has_war_with = scope:target_country }
+		scope:target_country.relations:root >= 20
+		scope:target_country = {
+			country_rank < rank_value:great_power
+			is_direct_subject_of = root
+			is_subject_type = subject_type_dominion
+		}
+		has_diplomatic_relevance = scope:target_country
+	}
+
+	accept_effect = {
+		scope:target_country = {
+			set_strategy = ai_strategy_territorial_expansion
+		}
+	}
+	
+	pact = {	
+		cost = 50
+		is_alliance = yes	
+		
+		manual_break_effect = {
+			scope:target_country = {
+				set_strategy = ai_strategy_subject_maintain_autonomy
+			}
+		}
+		
+		auto_break_effect = {
+			scope:target_country = {
+				set_strategy = ai_strategy_subject_maintain_autonomy
+			}
+		}
+		
+		requirement_to_maintain = {
+			trigger = {
+				in_default = no
+			}
+		}
+		
+		requirement_to_maintain = {
+			trigger = {
+				custom_tooltip = {
+					text = DIPLO_ACTION_RELATIONS_CORDIAL_OR_GREATER
+					scope:target_country.relations:root >= relations_threshold:cordial
+				}		
+			}
+			show_about_to_break_warning = {
+				scope:target_country.relations:root <= 23 # this is: cordial + 3
+				scope:target_country.relations_change_rate:root > 0
+			}
+		}
+		
+		requirement_to_maintain = {
+			trigger = {
+				scope:target_country = { liberty_desire <= 75 }
+			}
+			show_about_to_break_warning = {
+				scope:target_country = { liberty_desire >= 70 }
+			}
+		}
+		
+		requirement_to_maintain = {
+			trigger = {
+				custom_tooltip = {
+					text = DIPLOMATIC_PACT_REQUIREMENT_AT_PEACE
+					NOT = { has_war_with = scope:target_country }
+				}			
+			}
+		}
+		
+		requirement_to_maintain = {
+			trigger = {
+				custom_tooltip = {
+					text = "DIPLOMATIC_PACT_REQUIREMENT_NOT_DECENTRALIZED"
+					NOT = { is_country_type = decentralized }
+					scope:target_country = {
+						NOT = { is_country_type = decentralized }
+					}				
+				}
+			}
+		}
+	}
+	
+	ai = {
+		
+		evaluation_chance = {
+			value = 0.25
+		}
+		
+		propose_score = {
+			value = 10
+		}
+	
+		will_propose = {
+			"ai_ideological_opinion(scope:target_country)" >= 25
+			scope:target_country.relations:root >= 50
+			has_attitude = {
+				who = scope:target_country
+				attitude = protective
+			}
+		}
+		
+		will_break = { 
+			OR = {
+				"ai_ideological_opinion(scope:target_country)" <= -25
+				has_attitude = {
+					who = scope:target_country
+					attitude = domineering
+				}
+			}
+		}			
+	}
+}
+

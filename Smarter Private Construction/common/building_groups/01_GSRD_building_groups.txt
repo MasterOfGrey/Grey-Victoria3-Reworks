@@ -1,0 +1,37 @@
+﻿bg_power = {
+	category = development
+	
+	lens = infrastructure	
+	
+	always_possible = yes
+	
+	economy_of_scale = yes
+	
+	cash_reserves_max = 25000
+	
+	should_auto_expand = { 
+		default_auto_expand_rule = yes
+	}
+	
+	economy_of_scale_ai_factor = 0			# Stops the AI from deciding to overbuild a local good just because economy of scale applies
+	foreign_investment_ai_factor = 0.5
+	
+	infrastructure_usage_per_level = 2
+	
+	urbanization = 10
+}
+
+bg_private_infrastructure = {
+	parent_group = bg_infrastructure
+	
+	is_government_funded = no
+	subsidized = yes
+	
+	economy_of_scale = yes					# Allows economy of scale to apply
+	
+	cash_reserves_max = 25000
+	
+	economy_of_scale_ai_factor = 0			# Stops the AI from deciding to overbuild a local good just because economy of scale applies
+	
+	urbanization = 5
+}

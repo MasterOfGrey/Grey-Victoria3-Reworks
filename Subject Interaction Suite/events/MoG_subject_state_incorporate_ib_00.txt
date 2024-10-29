@@ -1,0 +1,63 @@
+﻿namespace = ib_events
+
+# Updated and included from: Koa's Change Subject Culture
+# Note: "is_split_state = no" was removed from trigger scope and immediate limits and effects
+ib_events.04 = {
+	type = country_event
+	hidden = yes
+	
+	# Trigger event directly on the subject country itself (not the overlord) and check if it has an overlord that is a player
+	# Only check the states for THIS country, see if any are valid targets before firing the event
+	trigger = {
+		any_overlord_or_above = { is_player = yes }
+		any_scope_state = {
+			is_incorporated = no
+			is_treaty_port = no
+		}
+	}
+	
+	# If event has been fired - find all the valid target states and incorporate them
+	immediate = {
+		every_scope_state = {
+			limit = {
+				is_incorporated = no
+				is_treaty_port = no
+			}
+			set_state_type = incorporated
+		}
+	}
+}
+
+# Original innards for reference:
+#
+#	 # No, bad, Koa wtf
+#	trigger = {
+#		is_player = yes
+#		any_country = {
+#			is_subject_of = root
+#			any_scope_state = {
+#				is_incorporated = no
+#				is_treaty_port = no
+#			}
+#		}
+#	}
+#
+#	 # Even worse, NO.
+#	immediate = {
+#		random_country = {
+#			limit = {
+#				is_subject_of = root
+#				any_scope_state = {
+#					is_incorporated = no
+#					is_treaty_port = no
+#				}
+#			}
+#			every_scope_state = {
+#				limit = {
+#					is_incorporated = no
+#					is_treaty_port = no
+#				}
+#				set_state_type = incorporated
+#			}
+#		}	
+#	}

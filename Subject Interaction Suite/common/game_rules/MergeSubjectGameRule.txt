@@ -1,0 +1,13 @@
+ai_merge_subject = {
+	default = ai_can_use
+	
+	ai_can_use = {}
+	ai_can_not_use = {}
+}
+
+merge_subject_cheat = {
+	default = balanced_merge
+	
+	balanced_merge = {}
+	cheat_merge = {}
+}

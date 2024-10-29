@@ -1,0 +1,15 @@
+﻿# Apply an immigration penalty to extractive Company Colonies like BIC & DEIC
+COUNTRIES = {
+	every_country = {
+		limit = {
+			OR = {
+				c:BIC ?= this
+				c:DEI ?= this
+				c:HBC ?= this
+			}
+		}
+		add_modifier = {
+			name = mog_company_migration_penalty
+		}
+	}
+}

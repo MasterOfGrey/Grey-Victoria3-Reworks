@@ -1,0 +1,254 @@
+﻿# Group 0
+pm_disabled_canning = {
+	texture = "gfx/interface/icons/production_method_icons/no_canning.dds"
+#	is_hidden_when_unavailable = yes
+	
+	unlocking_production_methods = {
+		pm_cloth_pkg
+		pm_paper_pkg
+	}
+}
+
+# Group 1
+# Unlocked by Sweeteners + (Default) Wax Paper 
+pm_dried_fruit = {
+	texture = "gfx/interface/icons/production_method_icons/fruit.dds"
+	is_hidden_when_unavailable = yes
+	
+	unlocking_production_methods = {
+		pm_wax_paper
+	}
+	
+	building_modifiers = {
+		workforce_scaled = {
+			# input goods
+			goods_input_grain_add = -15		# x20 =  300
+			goods_input_fruit_add = 10		# x30 =  300
+		}
+	}
+}
+
+pm_cured_meat = {
+	texture = "gfx/interface/icons/production_method_icons/meat.dds"
+	is_hidden_when_unavailable = yes
+	
+	unlocking_production_methods = {
+		pm_wax_paper
+	}
+	
+	building_modifiers = {
+		workforce_scaled = {
+			# input goods
+			goods_input_grain_add = -15		# x20 =  300
+			goods_input_meat_add = 10		# x30 =  300
+		}
+	}
+}
+
+pm_salted_fish = {
+	texture = "gfx/interface/icons/production_method_icons/fish.dds"
+	is_hidden_when_unavailable = yes
+	
+	unlocking_production_methods = {
+		pm_wax_paper
+	}
+	
+	building_modifiers = {
+		workforce_scaled = {
+			# input goods
+			goods_input_grain_add = -15		# x20 =  300
+			goods_input_fish_add = 15		# x20 =  300
+		}
+	}
+}
+
+# Group 2
+# Unlocked by Sealed Jars/Canning (requires Sweeteners)
+pm_sweet_vinegars = {
+	texture = "gfx/interface/icons/production_method_icons/vacuum_fruit.dds"
+	is_hidden_when_unavailable = yes
+	
+	unlocking_production_methods = {
+		pm_sealed_jars
+		pm_cannery
+	}
+	
+	building_modifiers = {
+		workforce_scaled = {
+			# input goods
+			goods_input_grain_add = -20		# x20 = -400
+			goods_input_meat_add = 6		# x30 =  180
+			goods_input_fruit_add = 6		# x30 =  180
+		}
+	}
+}
+
+pm_meat_broths = {
+	texture = "gfx/interface/icons/production_method_icons/vacuum_meat.dds"
+	is_hidden_when_unavailable = yes
+	
+	unlocking_production_methods = {
+		pm_sealed_jars
+		pm_cannery
+	}
+	
+	building_modifiers = {
+		workforce_scaled = {
+			# input goods
+			goods_input_grain_add = -20		# x20 = -400
+			goods_input_meat_add = 12		# x30 =  360
+		}
+	}
+}
+
+pm_brine_vinegars = {
+	texture = "gfx/interface/icons/production_method_icons/vacuum_fruit.dds"
+	is_hidden_when_unavailable = yes
+	
+	unlocking_production_methods = {
+		pm_sealed_jars
+		pm_cannery
+	}
+	
+	building_modifiers = {
+		workforce_scaled = {
+			# input goods
+			goods_input_grain_add = -20		# x20 = -400
+			goods_input_fish_add = 6		# x30 =  180
+			goods_input_fruit_add = 6		# x30 =  180
+		}
+	}
+}
+
+pm_fish_brines = {
+	texture = "gfx/interface/icons/production_method_icons/vacuum_fish.dds"
+	is_hidden_when_unavailable = yes
+	
+	unlocking_production_methods = {
+		pm_sealed_jars
+		pm_cannery
+	}
+	
+	building_modifiers = {
+		workforce_scaled = {
+			# input goods
+			goods_input_grain_add = -20		# x20 = -400
+			goods_input_fish_add = 12		# x30 =  360
+		}
+	}
+}
+
+# Group 3
+# Unlocked by Vacuum Canning or better
+pm_syrups_sauces = {
+	texture = "gfx/interface/icons/production_method_icons/vacuum_fruit.dds"
+	is_hidden_when_unavailable = yes
+	
+	unlocking_production_methods = {
+		pm_vacuum_canning
+		pm_vacuum_canning_principle_3
+	}
+	
+	building_modifiers = {
+		workforce_scaled = {
+			# input goods
+			goods_input_grain_add = -30		# x20 = 600
+			goods_input_meat_add = 8		# x30 = 240
+			goods_input_fish_add = 8		# x20 = 160
+			goods_input_fruit_add = 8		# x30 = 240
+		}
+	}
+}
+
+pm_boiling_sauces = {
+	texture = "gfx/interface/icons/production_method_icons/vacuum_meat.dds"
+	is_hidden_when_unavailable = yes
+	
+	unlocking_production_methods = {
+		pm_vacuum_canning
+		pm_vacuum_canning_principle_3
+	}
+	
+	building_modifiers = {
+		workforce_scaled = {
+			# input goods
+			goods_input_grain_add = -30		# x20 = 600
+			goods_input_meat_add = 16		# x30 = 480
+			goods_input_fruit_add = 8		# x30 = 240
+		}
+	}
+}
+
+pm_oils_sauces = {
+	texture = "gfx/interface/icons/production_method_icons/vacuum_fish.dds"
+	is_hidden_when_unavailable = yes
+	
+	unlocking_production_methods = {
+		pm_vacuum_canning
+		pm_vacuum_canning_principle_3
+	}
+	
+	building_modifiers = {
+		workforce_scaled = {
+			# input goods
+			goods_input_grain_add = -30		# x20 = 600
+			goods_input_fish_add = 20		# x20 = 400
+			goods_input_fruit_add = 8		# x30 = 240
+		}
+	}
+}
+
+pm_broths_brines = {
+	texture = "gfx/interface/icons/production_method_icons/vacuum_meat.dds"
+	is_hidden_when_unavailable = yes
+	
+	unlocking_production_methods = {
+		pm_vacuum_canning
+		pm_vacuum_canning_principle_3
+	}
+	
+	building_modifiers = {
+		workforce_scaled = {
+			# input goods
+			goods_input_grain_add = -30		# x20 = 600
+			goods_input_meat_add = 16		# x30 = 480
+			goods_input_fish_add = 8		# x20 = 160
+		}
+	}
+}
+
+pm_gravies_broths = {
+	texture = "gfx/interface/icons/production_method_icons/vacuum_meat.dds"
+	is_hidden_when_unavailable = yes
+	
+	unlocking_production_methods = {
+		pm_vacuum_canning
+		pm_vacuum_canning_principle_3
+	}
+	
+	building_modifiers = {
+		workforce_scaled = {
+			# input goods
+			goods_input_grain_add = -30		# x20 = 600
+			goods_input_meat_add = 24		# x30 = 720
+		}
+	}
+}
+
+pm_brines_oils = {
+	texture = "gfx/interface/icons/production_method_icons/vacuum_fish.dds"
+	is_hidden_when_unavailable = yes
+	
+	unlocking_production_methods = {
+		pm_vacuum_canning
+		pm_vacuum_canning_principle_3
+	}
+	
+	building_modifiers = {
+		workforce_scaled = {
+			# input goods
+			goods_input_grain_add = -30		# x20 = 600
+			goods_input_fish_add = 32		# x20 = 640
+		}
+	}
+}

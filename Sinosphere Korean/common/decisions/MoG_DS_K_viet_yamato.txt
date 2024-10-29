@@ -1,0 +1,46 @@
+﻿yamato_decision = {
+	is_shown = {
+		exists = c:DAI
+		c:DAI = THIS
+		NOT = { has_variable = vietnam_embraces }
+	}
+
+	possible = {
+		is_at_war = no
+		has_technology_researched = pan-nationalism
+		has_law = law_type:law_cultural_exclusion
+		OR = {
+			c:DAI ?= {
+				AND = {
+					owns_entire_state_region = STATE_KANTO
+					owns_entire_state_region = STATE_CHUBU
+					owns_entire_state_region = STATE_KANSAI
+				}
+			}
+			c:JAP ?= {
+				is_at_war = no
+				is_direct_subject_of = c:DAI
+			}
+			AND = {
+				any_subject_or_below = {
+					country_has_primary_culture = cu:japanese
+				}
+				c:JAP = {
+					OR = {
+						is_subject = yes
+						exists = no
+					}
+				}
+			}
+		}
+	}
+
+	when_taken = {
+		trigger_event = { id = deeper_viet.1 days = 0 popup = yes }
+	}
+
+	ai_chance = {
+		base = 100
+	}
+}
+

@@ -1,0 +1,7 @@
+ai_can_merge_subject_trigger = {
+	has_game_rule = ai_can_use
+}
+
+merge_subject_cheat_trigger = {
+	has_game_rule = cheat_merge
+}

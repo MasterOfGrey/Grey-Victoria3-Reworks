@@ -1,0 +1,34 @@
+﻿l_simp_chinese:
+ laws_synergize_bureaucracy:0 "统一官僚体制"
+ laws_synergize_bureaucracy_action_name:0 "$laws_synergize_bureaucracy$"
+ laws_synergize_bureaucracy_action_propose_name:0 "开始统一官僚体制"
+ laws_synergize_bureaucracy_action_break_name:0 "停止统一官僚体制"
+ laws_synergize_bureaucracy_pact_desc:0 "[SCOPE.GetRootScope.GetDiplomaticPact.GetFirstCountry.GetName]正在改变[SCOPE.GetRootScope.GetDiplomaticPact.GetSecondCountry.GetName]的官僚体制。 \n在总共8个阶段中目前完成了#variable [SCOPE.GetRootScope.GetDiplomaticPact.GetSecondCountry.MakeScope.Var('synergize_bureaucracy_progress').GetValue]#!个"
+ laws_synergize_bureaucracy_desc:1 "#header $laws_synergize_bureaucracy$#!\n$TOOLTIP_DELIMITER$\n让目标国施行我国的官僚体制"
+ laws_synergize_bureaucracy_action_notification_name:1 "[INITIATOR_COUNTRY.GetName]正在统一官僚体制"
+ laws_synergize_bureaucracy_action_notification_desc:1 "[INITIATOR_COUNTRY.GetName]正在改变我国的官僚体制"
+ laws_synergize_bureaucracy_action_notification_break_name:1 "[INITIATOR_COUNTRY.GetName]已停止统一官僚体制"
+ laws_synergize_bureaucracy_action_notification_break_desc:0 "[INITIATOR_COUNTRY.GetName]已停止改变我国的官僚体制"
+ 
+ laws_synergize_bureaucracy_effect_desc_global:0 "实施统一官僚体制"
+ laws_synergize_bureaucracy_effect_desc_first:0 "[COUNTRY.GetAdjectiveNoFlag]正在将自身官僚体制推行进[TARGET_COUNTRY.GetName]."
+ laws_synergize_bureaucracy_effect_desc_third:0 "[COUNTRY.GetName]正在将自身官僚体制推行进[AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)]."
+ 
+ laws_synergize_bureaucracy_trigger_desc_global:0 "正在进行官僚体制统一"
+ laws_synergize_bureaucracy_trigger_false_desc_global:0 "不再进行官僚体制统一"
+ laws_synergize_bureaucracy_trigger_desc_first:0 "[COUNTRY.GetAdjectiveNoFlag]正在将自身官僚体制推行进[TARGET_COUNTRY.GetName]."
+ laws_synergize_bureaucracy_trigger_false_desc_first:0 "[COUNTRY.GetAdjectiveNoFlag停止将自身官僚体制推行进[TARGET_COUNTRY.GetName]."
+ laws_synergize_bureaucracy_trigger_desc_third:0 "[COUNTRY.GetName]正在将自身官僚体制推行进[AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)]."
+ laws_synergize_bureaucracy_trigger_false_desc_third:0 "[COUNTRY.GetName]停止将自身官僚体制推行进[AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)]."
+ 
+ mog_syn_events.01.t: "官僚体制已统一"
+ mog_syn_events.01.d: "[ROOT.GetCountry.GetName]已成功将官僚体制推行进[SCOPE.sCountry('synergize_bureaucracy_target_country').GetName]. [SCOPE.sCountry('synergize_bureaucracy_target_country').GetName]将通过增强与母国的凝聚力而永远繁荣昌盛。"
+ mog_syn_events.01.f: "耀哉我[ROOT.GetCountry.GetName]!"
+ mog_syn_events.01.a: "干得漂亮。"
+
+ laws_synergize_bureaucracy_weekly_effect: "统一官僚体制工作需要完成八个阶段，每周有20%机会推进一个阶段。"
+ 
+ overlord_syn_cost_bureau: "统一官僚体制行动经费"
+ BUREAUCRACY_SYNERGY_COST_BUREAU: "统一官僚体制行动经费"
+ 
+ active_synergize_bureaucracy_tt: "已实施的$laws_synergize_bureaucracy$行动数量小于1"

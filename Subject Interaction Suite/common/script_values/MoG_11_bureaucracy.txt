@@ -1,0 +1,76 @@
+﻿# Values used for all bureaucracy effect calculations from agreements and law synergisation.
+	
+	# Just "bureaucracy" is the net bureaucracy value for a country - deficits are -ve value, surpluses are +ve value.
+	# Then "produced_bureaucracy" is the total amount being created by the nation.
+	# So, total bureaucracy need can be calculated as produced_bureaucracy - bureaucracy.
+	# "country_bureaucracy_add = x" used to apply an amount to a country which is done as a "country_modifier".
+
+total_bureaucracy_need = {
+	add = produced_bureaucracy
+	subtract = bureaucracy
+}
+
+# For synergising the bureaucracy system.
+overlord_synergize_cost_bureau = {
+	add = {
+		add = {
+			value = total_bureaucracy_need	# Take the total and;
+			multiply = 0.3					# get 30% of it...
+		}
+		multiply = -1						# and make it -ve because it's a *cost*.
+		desc = "BUREAUCRACY_SYNERGY_COST_BUREAU"
+	}
+}
+
+# For synergising laws other than the bureaucracy system.
+overlord_synergize_cost_standard = {
+	add = {
+		add = {
+			value = total_bureaucracy_need
+			multiply = -0.2
+		}
+	}
+}
+
+#supplement_bureaucracy_cost = {
+#	
+#	# If subject has bureaucracy deficit, also cover the deficit.
+#	add = {
+#		if = {
+#			limit = { root.second_country.bureaucracy < 0 }
+#			add = root.second_country.bureaucracy
+#			desc = "BUREAUCRACY_SUPPLEMENT_COST_DEFICIT"
+#		}
+#	}
+#	
+#	# Cost to the overlord to provide bureaucratic enhancements is static (also covers overhead costs), even if only some of it counts for liberty desire reduction.
+#	add = {
+#		if = {
+#			limit = { root.second_country.active_law:lawgroup_bureaucracy.type = root.first_country.active_law:lawgroup_bureaucracy.type }
+#			add = { root.second_country.var:total_bureaucracy_need }
+#			multiply = -0.1
+#			desc = "BUREAUCRACY_SUPPLEMENT_COST_MATCHING"
+#		}
+#		else = {
+#			add = { root.second_country.var:total_bureaucracy_need }
+#			multiply = -0.2
+#			desc = "BUREAUCRACY_SUPPLEMENT_COST_MISMATCH"
+#		}
+#	}
+#}
+#
+#supplement_bureaucracy_benefit = {
+#	add = { root.second_country.var:total_bureaucracy_need }
+#	multiply = 0.1
+#	if = {
+#		limit = { root.second_country.bureaucracy < 0 }
+#		add = { 
+#			add = root.second_country.bureaucracy
+#			multiply = -1
+#		}
+#	}
+#	desc = "BUREAUCRACY_SUPPLEMENT_BENEFIT"
+#}
+
+
+

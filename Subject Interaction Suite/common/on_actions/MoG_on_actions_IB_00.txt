@@ -1,0 +1,25 @@
+﻿# Updated and included from: Koa's Change Subject Culture
+
+# This is handled in vanilla already... and starting enactment directly to circumvent refusal chance can produce weird/unintended side effects.
+# Also doing this produces an error -> instead overwrite vanilla event with modified version (done).
+#on_impose_law = {
+#	effect = {
+#		start_enactment = scope:law.type
+#		add_enactment_modifier = {
+#			name = IB_success
+#		}
+#	}
+#}
+
+on_yearly_pulse_country = {
+	on_actions = {
+		incorporate_state_actions
+		delay = { days = { 45 330 } }
+	}
+}
+
+incorporate_state_actions = {
+	events = {
+		ib_events.04
+	}
+}

@@ -1,0 +1,171 @@
+﻿# Grey's Local Mod-Mods Defines tweaks
+
+NPops = {
+	
+##### OBSESSIONS #####
+
+	OBSESSION_DEMAND_MIN = 1.0							# The minimum relative demand of an obsession (overrides min demand in buy package goods categories)
+	OBSESSION_DEMAND_MULT = 2.0							# Demand of an obsession is multiplied by this
+	MIN_POPS_FOR_NEW_OBSESSION = 500000					# At least this many pops of a culture must live in a market to get an obsession from its goods
+	MIN_SUPPLY_LEVEL_FOR_NEW_OBSESSION = 0.3 # 0.75		# Supply needs to be at least this times the demand
+	MIN_DEMAND_VALUE_FOR_NEW_OBSESSION = 500 # 1000		# At this amount of (number of units * goods base price) needs to be demanded in a market to create a new obsession
+	MAX_NUM_OBSESSIONS = 3								# A culture can only have this number of obsessions at the same time
+	OBSESSION_SPAWN_CHANCE = 4 # 0.1					# Per year (1.0 = 1%), multiplied by goods supply and market size mult
+	OBSESSION_SPAWN_CHANCE_MAX_SUPPLY_MULT = 2.0 # 3.0	# Supply relative to demand above this isn't factored into spawn chance
+	TABOO_DEMAND_MULT = 0.5								# Demand of a taboo is multiplied by this
+	MAX_DEMAND_ADJUSTMENT_BASE_AMOUNT = 0.01			# Controls how much a pop can change demand of a substitutable goods in a single update (base)
+	MAX_DEMAND_ADJUSTMENT_SCALED_AMOUNT = 0.09			# Controls how much a pop can change demand of a substitutable goods in a single update (scaled)
+	MAX_DEMAND_ADJUSTMENT_SCALE = 1.0					# At this delta between target and current demand, apply max demand adjustment scale
+	
+	OBSESSION_POP_NEED_EXPENSE_MULT = 0.25		# Total spent on pop needs including obsessions is changed by this (scaled by number of obsessions, money is given or taken from other needs)
+	TABOO_POP_NEED_EXPENSE_MULT = -0.25			# Total spent on pop needs including taboos is changed by this (scaled by number of taboos, money is given or taken from other needs)
+	
+	
+##### ASSIMILATION/CONVERSION #####
+	
+	ASSIMILATION_RATE = 0.005 # 0.002				# Percentage of pops who will Assimilate into a different Culture each month, if eligible
+	ASSIMILATION_UNINCORPORATED_MULT = 0.1 			# ASSIMILATION_RATE is multiplied by this in unincorporated states
+	MIN_ASSIMILATION = 20 # 1						# If there is any assimilation at least this many people will assimilate
+	
+	# Smaller change since this affects every pop, not just accepted pops like assimilation.
+	CONVERSION_RATE = 0.003 # 0.002					# Percentage of pops who will Convert into a different Religion each month, if eligible
+	CONVERSION_UNINCORPORATED_MULT = 0.2 # 0.1 		# CONVERSION_RATE is multiplied by this in unincorporated states
+	MIN_CONVERSION = 20 # 1							# If there is any conversion at least this many people will convert
+	
+	
+##### JOB SATISFACTION #####
+
+	JOB_SATISFACTION_BASE = -150 # -130										# Base job satisfaction
+	JOB_SATISFACTION_FOR_NEWLY_HIRED = 1000									# Job satisfaction gained due to having been newly hired, this state lasts until the pop's next wealth calculation
+	JOB_SATISFACTION_PER_SOL_ABOVE_EXPECTED_SOL = 12 # 3					# Job satisfaction gained per level of SoL above your expected SoL
+	JOB_SATISFACTION_PER_SOL_ABOVE_STATE_STRATA_SOL = 4 # 2					# Job satisfaction gained per level of SoL above the state average for your strata
+	JOB_SATISFACTION_PER_SOL_ABOVE_COUNTRY_STRATA_SOL = 0.5 # 1				# Job satisfaction gained per level of SoL above the country average for your strata
+	JOB_SATISFACTION_PER_PERCENT_WAGE_RATE_ABOVE_NORMAL = 0.5 # 1			# Job satisfaction gained per pound of workplace wage rate (weekly wage of 10k laborers) above country normal
+	JOB_SATISFACTION_FROM_CAN_AFFORD_EXPENSES = 500 # 1000					# Job satisfaction gained from being able to afford your buy package (and taxes)
+	JOB_SATISFACTION_FROM_CANNOT_AFFORD_EXPENSES = -1000 # -100				# Job satisfaction gained from not being able to afford your buy package (and taxes)
+	JOB_SATISFACTION_PER_PERCENT_HIGHER_STRATA_QUALIFICATION = -0.8 # -1 	# Job satisfaction gained per percent of workforce qualified for a higher strata. Note that qualifications are assumed to overlap and the largest qualification is used in this calculation
+	JOB_SATISFACTION_FROM_EMPLOYMENT = 100						# Job satisfaction gained from having a job
+	JOB_SATISFACTION_DIVIDENDS_MAX_MULT = 5						# Max multiplier from the ratio between pop dividends and wages
+	JOB_SATISFACTION_DIVIDENDS_BASE = 10 # 50					# Base value to be multiplied by the ratio between dividends and wages
+	JOB_SATISFACTION_LOSSES_MIN_MULT = -10 # -5					# Min multiplier from the ratio between pop losses and wages (or if you will, max magnitude)
+	JOB_SATISFACTION_LOSSES_BASE = 50							# Base value to be multiplied by the ratio between losses and wages
+	JOB_SATISFACTION_GOVERNMENT = 100 # 50						# Government jobs need a bit more stability
+	
+	
+##### MIGRATION #####
+	
+## Cultural Communities ##
+	CULTURAL_COMMUNITY_LINGER_TIME_WEEKS = 5 # 3			# When the last pop of a given culture leaves a state, the corresponding cultural community will be removed after this long
+	CULTURAL_COMMUNITY_MAX_PER_MONTH_CHANCE = 1.0 # 0.04	# Clamps the highest possible spawn chance
+	
+## General ##
+	MIGRATION_MIN_STATE_POPS = 50000 # 20000					# A state with less population than this will not get emigration
+	MIGRATION_STATE_POPULATION_THRESHOLD = 250000 # 100000		# States with less pops than this have reduced market emigration numbers to avoid total depopulation
+	
+	MIGRATION_MAX_PER_STATE_BASE = 2000 # 500									# No more than this amount of people can move from or to a state in a single week (base)
+	MIGRATION_MAX_PER_STATE_INFRASTRUCTURE = 20	# 5								# No more than this amount of people can move from or to a state in a single week (scales with infrastructure)
+	MIGRATION_MAX_EMIGRATION_AS_POPULATION_FRACTION = 0.005						# Max emigration per week is clamped to this fraction of a state's population
+	
+	MIGRATION_MAX_PER_STATE_UNEMPLOYMENT_ORIGIN_FRACTION = 0.1 # 0.05			# The no. of unemployed workers in a state * this value is added to max emigration (after clamping from MIGRATION_MAX_EMIGRATION_AS_POPULATION_FRACTION)
+	MIGRATION_MAX_PER_STATE_UNEMPLOYMENT_TARGET_FRACTION = 0.4 # 0.05			# The amount of unemployed workers in a state * this value is removed from how many people can move to it (after clamping from MIGRATION_MAX_EMIGRATION_AS_POPULATION_FRACTION)
+	
+	# UX/UI Labeling #
+	MIGRATION_PULL_HIGH_THRESHOLD = 0.75 # 1.25									# State must have a migration pull of at least market average * this to get market immigration
+	MIGRATION_PULL_LOW_THRESHOLD = 0.75											# State must have a migration pull of less or equal than market average * this to get full amount of emigration
+
+	# Migration Desire #
+	MIGRATION_DESIRE_BASE = -50.0 # 0											# Base desire to migrate
+	MIGRATION_DESIRE_FROM_DISCRIMINATION = 150 # 100							# Being discriminated will increase desire to migrate by this much
+	MIGRATION_DESIRE_FROM_JOB_SATISFACTION_FACTOR = -2.0 # -1.0					# A pop's desire to migrate will be affected by its job satisfaction multiplied by this value.
+	
+## Migration Attraction ##
+	MIGRATION_PULL_EMPTY_STATE = 100											# If a state has no pops at all, give it a huge migration pull
+	MIGRATION_PULL_FROM_LIVING_STANDARD = 1.6 # 2								# Migration pull from each point of average living standard in target state
+	MIGRATION_PULL_FROM_AVAILABLE_EMPLOYMENT = 3.0 # 1.5						# Migration pull is increased by for each 10k available non subsistence jobs
+	MIGRATION_PULL_FROM_AVAILABLE_EMPLOYMENT_MAX = 20 # 30						# Migration pull from available non-subsistence jobs cannot exceed this
+	MIGRATION_PULL_FROM_AVAILABLE_ARABLE_LAND_MAX_EMPLOYMENT_MULTIPLIER = 0.75	# Count available arable land as though the subsistence farm has only this fraction of its max employment, so that massive states in China with mostly full subsistence farms don't get a huge migration boost
+	MIGRATION_PULL_FROM_AVAILABLE_ARABLE_LAND_EMPLOYMENT = 1.0 # 0.5			# Migration pull is increased by for each 10k available subsistence jobs
+	MIGRATION_PULL_FROM_AVAILABLE_ARABLE_LAND_EMPLOYMENT_MAX = 30				# Migration pull from available subsistence jobs cannot exceed this
+	MIGRATION_PULL_REDUCTION_FROM_UNEMPLOYMENT = 2 # 1 #(5 was too "swingy")	# Migration pull is reduced by this for each 10k unemployed pops
+		# Instead of using attraction, unemployment impact on migration is better managed by bumping up MIGRATION_MAX_PER_STATE_UNEMPLOYMENT_TARGET_FRACTION. (People hear about jobs drying up and stop coming much quicker than those who've already committed and moved to the state are likely to leave.)
+	MIGRATION_PULL_REDUCTION_FROM_UNEMPLOYMENT_MAX = 100 # 50					# Migration pull reduction from unemployment cannot exceed this
+	
+## Market Migrations ##
+	# Market Migration Processing #
+	MARKET_MIGRATION_STATE_ATTRACTION_FRACTION = 0.25 # 0.75					# States with at least this fraction of the most attractive state's migration attraction will receive migration
+	MARKET_MIGRATION_PER_WEEK_FACTOR = 2 # 5									# This number of individuals will migrate for each point of difference in migration pull
+	MARKET_MIGRATION_PER_WEEK_PER_TOTAL_POPULATION = 160000 # 100000			# Additionally, one more individual will migrate per this number of population for each point of difference in migration pull
+	MARKET_MIGRATION_MIN_DIFFERENCE_IN_MIGRATION_ATTRACTION_TO_MOVE = 3 # 5		# Pops will not migrate if their best option is to a state with a lower delta in migration pull than this number
+	MARKET_MIGRATION_MIN_POP_FRACTION_TO_MOVE = 0.00001 # 0.05					# If the people wanting to migrate constitutes less than this fraction of a pop, no new pop will be created and they won't migrate.
+	
+	MIGRATION_PULL_MULT_FROM_NO_DISCRIMINATION = 0.8 # 0.5						# Migration pull multiplier increased by this if pop is moving from discrimination to no discrimination (not applied to mass migration targets)
+	MIGRATION_PULL_MULT_FROM_HOMELANDS = 0.4 # 0.2								# Migration pull multiplier increased by this if pop is moving to cultural homelands (not applied to mass migration targets)
+	
+##### MASS MIGRATION #####
+	
+## Mass Migrations ##
+	# Mass Migration Setup #
+	MASS_MIGRATION_ORIGIN_MIN_TURMOIL = 0.20 # 0.15								# Must have at least this much turmoil in cultural homelands to create a migration target
+	MASS_MIGRATION_ORIGIN_MIN_EMIGRANTS = 150000 # 100000						# A country must have at least this many possible migrants to trigger a mass migration
+	MASS_MIGRATION_TARGET_MAX_TURMOIL = 0.30									# Must have this or less turmoil among the culture for a country to be picked as a mass migration target
+	MASS_MIGRATION_TARGET_MIN_ARABLE_LAND = 10 # 20								# A state must have at least this much arable land to be a mass migration target
+	MASS_MIGRATION_STATE_MIN_MARKET_ACCESS = 0.8 # 0.7							# A state must have at least this much market access to their market to be a mass migration target or origin state
+	MASS_MIGRATION_SPAWN_CHANCE = 3 # 2											# Per week for each potential mass migration, scales with turmoil (1 = 1%)
+	MASS_MIGRATION_SPAWN_CHANCE_STRUGGLING_FACTOR = 0.3 # 0.2					# Chance increases by this for each point of SoL below 10 for a culture in a country
+	MASS_MIGRATION_SPAWN_CHANCE_STARVING_FACTOR = 1.5 # 1						# Chance increases by this for each point of SoL below 5 for a culture in a country (added on top of struggling factor)
+	MASS_MIGRATION_TARGET_COUNTRY_RANDOM_FACTOR = 0.5							# The higher this is, the more random the selection of mass migration country targets will be
+	MASS_MIGRATION_TARGET_STATE_RANDOM_FACTOR = 0.5								# The higher this is, the more random the selection of mass migration state targets in the target country will be
+	MASS_MIGRATION_DURATION_MONTHS = 12											# How long does a mass migration last in months
+	MASS_MIGRATION_COOLDOWN_MONTHS = 60 # 48									# How many months before the same culture can mass migrate from a country again
+	MASS_MIGRATION_NUM_TARGET_STATES_FOR_NO_PENALTY = 3 # 4						# Countries with at least this number of possible target states do not receive any penalty to their mass migration target score
+	MASS_MIGRATION_FEW_TARGET_STATES_PENALTY = 0.3 # 0.2						# Mass migration target score is reduced by a fraction of itself equal to this times number of possible target states less than MASS_MIGRATION_NUM_TARGET_STATES_FOR_NO_PENALTY. Or Score = Score - Score * this * PossibleStatesDiff
+
+	# Mass Migration Processing #
+	MASS_MIGRATION_PER_WEEK_FACTOR = 8 # 10										# This number of individuals will migrate for each point of difference in migration pull
+	MASS_MIGRATION_PER_WEEK_PER_TOTAL_POPULATION = 100000						#
+	MASS_MIGRATION_MIN_DIFFERENCE_IN_MIGRATION_ATTRACTION_TO_MOVE = 6 # 10		#
+	# The below factors are applied *after* migration pull threshold checks, so they only impact how large a share of migration a state gets
+	MIGRATION_PULL_MULT_FROM_MASS_MIGRATION_TARGET = 1.8 # 1.5					# Migration pull multiplied by this from target state being a mass migration target
+	MIGRATION_PULL_MULT_FROM_MASS_MIGRATION_TARGET_ADJACENCY = 1.2 # 1.1		# Migration pull multiplied by this from target state being next to a mass migration target
+	MIGRATION_MAX_PER_STATE_MASS_EMIGRATION_MULT = 3.0							# Weekly emigration caps are multiplied by this amount by this for mass migrations (after clamping from MIGRATION_MAX_EMIGRATION_AS_POPULATION_FRACTION)
+	MIGRATION_MAX_PER_STATE_MASS_IMMIGRATION_MULT = 7.0 # 5.0					# Weekly immigration caps are multiplied by this amount by this for mass migrations (after clamping from MIGRATION_MAX_EMIGRATION_AS_POPULATION_FRACTION)
+	MASS_MIGRATION_NEIGHBORING_TARGET_STATE_LIMIT_FRACTION = 0.5				# Fraction of the limit a neighboring state gets compared to the main target state in a mass migration
+
+	
+##### POP CONSOLIDATION ##### 
+	# Pop Consolidation identifies pops so small their impact on the economy and politics is insignificant, and merges them into other pops in the same building or state.
+	# 
+	# POP_MERGE_MAX_WORKFORCE_*: determines how small the pop needs to be in terms of Workforce in order to qualify to be merged with others in their same building or the unemployment pool
+	# POP_MERGE_MIN_NUM_POPS_SAME_PROFESSION_*: employed pops will not get merged with others in their same building if there aren't at least this many pops of the same type in the building
+	# WORKFORCE_RATIO_MAX_UNEMPLOYMENT_FACTOR_*: unemployed Pops with less than POP_MERGE_MAX_WORKFORCE and a Workforce:Dependent ratio that's this much worse than the ideal will be all turned into Dependents and merged back into pops in the same state
+	# 
+	# The tail of the define name corresponds to a Pop Consolidation Game Rule with the same name. 
+	# When that Game Rule is active, the defined values for POP_MERGE_MAX_WORKFORCE and WORKFORCE_RATIO_MAX_UNEMPLOYMENT_FACTOR represent the minimum values, while the maximum are that of the level above it.
+	# POP_MERGE_START_POP and POP_MERGE_MAX_TARGET_POP determines how high to scale the values towards the level above it.
+	# For example, at Moderate Consolidation, POP_MERGE_START_POP = 50000 and POP_MERGE_MAX_TARGET_POP = 100000, and a global population of 87560 pops:
+	# POP_MERGE_MAX_WORKFORCE will effectively be 45 (75% of the way from 30 to 50) and WORKFORCE_RATIO_MAX_UNEMPLOYMENT_FACTOR will effectively be 1.6244 (75% of the way from 2 to 1.5) 
+	
+	POP_MERGE_MAX_WORKFORCE_MINOR_CONSOLIDATION = 20
+	POP_MERGE_MAX_WORKFORCE_MODERATE_CONSOLIDATION = 60						
+	POP_MERGE_MAX_WORKFORCE_AGGRESSIVE_CONSOLIDATION = 100
+	POP_MERGE_MAX_WORKFORCE_MAX_CONSOLIDATION = 200
+} 
+
+##### POP GROWTH ##### 
+
+### Pop Growth Constants
+## Base Values per month
+@min_birthrate = 0.00055			# Minimum base birthrate per month (at POP_GROWTH_STABLE_SOL)
+@max_birthrate = 0.00450			# Maximum base birthrate per month (at SOL = 0 if not modified by malnourishment)
+@min_mortality = 0.00045			# Minimum base mortality per month (at POP_GROWTH_STABLE_SOL)
+@max_mortality = 0.00600			# Maximum base mortality per month (at SOL = 0 if not modified by malnourishment)
+
+## SoL Thresholds
+@pop_growth_equilibrium_sol = 5			# Equilibrium is pops stop starving and where growth first becomes positive
+@pop_growth_transition_sol = 12 # 10	# Transition determines how long birthrate "lags" behind mortality before starting to drop. Setting to same as equilibrium leads to no "lag" (only matters for birthrate)
+@pop_growth_max_sol = 14 #20			# Growth Max is where net growth generally is at it's highest (only matters for mortality)
+@pop_growth_stable_sol = 24 #30			# Stable is where birthrate and mortality stop changing and hit their minimum values
+
+## Others
+@transition_birthrate_mult = 0.95 #1.0		# If you want the birthrate "lag" to go to a higher or lower value than max_birthrate. (you can also just change it directly below)
+@max_growth_mortality_mult = 0.40 #0.35		# What proportion of birthrate_at_growth_max mortality should be at. Higher means lower growth

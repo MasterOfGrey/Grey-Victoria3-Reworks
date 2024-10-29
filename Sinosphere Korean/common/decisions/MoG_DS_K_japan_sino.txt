@@ -1,0 +1,31 @@
+﻿sino_decision = {
+	is_shown = {
+		exists = c:JAP
+		c:JAP = THIS
+		NOT = { has_variable = japan_embraces }
+	}
+
+	possible = {
+		is_at_war = no
+		has_technology_researched = pan-nationalism
+		has_law = law_type:law_cultural_exclusion
+		c:JAP = {
+			OR = {
+				owns_entire_state_region = STATE_OUTER_MANCHURIA
+				owns_entire_state_region = STATE_SOUTHERN_MANCHURIA
+				owns_entire_state_region = STATE_NORTHERN_MANCHURIA
+				owns_entire_state_region = STATE_TONKIN
+				owns_entire_state_region = STATE_ANNAM
+				owns_entire_state_region = STATE_MEKONG
+			}
+		}
+	}
+
+	when_taken = {
+		trigger_event = { id = deeper_japan.1 days = 0 popup = yes }
+	}
+
+	ai_chance = {
+		base = 100
+	}
+}

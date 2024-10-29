@@ -1,0 +1,14 @@
+﻿l_korean:
+  
+ # Production methods 
+ pmg_base_building_automotive_industry: "자동차" #NT!
+ pmg_automotive_aeroplanes: "비행기" #NT!
+ pmg_automotive_tanks: "탱크" #NT!
+  
+ pm_automobiles: "자동차" #NT!
+ pm_no_aeroplanes: "항공기 생산 없음" #NT!
+ pm_limited_aeroplanes: "제한된 항공기 생산" #NT!
+ pm_extensive_aeroplanes: "광범위한 항공기 생산" #NT!
+ pm_no_tanks: "탱크 생산 없음" #NT!
+ pm_limited_tanks: "제한된 탱크 생산" #NT!
+ pm_extensive_tanks: "대규모 탱크 생산" #NT!

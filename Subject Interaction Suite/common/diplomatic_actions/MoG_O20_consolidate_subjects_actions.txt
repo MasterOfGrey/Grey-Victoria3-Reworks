@@ -1,0 +1,46 @@
+﻿# Adapted with permission from: CaelReader's Consolidate Subjects
+
+consolidate_subject = {
+	groups= {
+		overlord
+	}
+	
+	texture = "gfx/interface/icons/diplomatic_action_icons/consolidate_subject.dds"
+	confirmation_sound = "event:/SFX/UI/MapInteraction/SubjectInteractions/diplomatic_action_subjects_13_handle_states"
+	
+	requires_approval = no
+	should_notify_third_parties = yes
+	show_effect_in_tooltip = yes
+
+	possible = {
+		can_consolidate_subject = yes
+	}
+
+	accept_effect = {
+		scope:target_country = {
+			random_neighbouring_state = {
+				limit = {
+					owner = {
+						can_be_consolidation_recipient = yes
+					}
+				}
+				owner = {
+					annex_with_incorporation = scope:target_country
+					add_liberty_desire = -20
+					overlord = {
+						create_unidirectional_truce = { country = prev months = 12 }
+					}
+				}
+			}
+		}	
+	}
+
+	ai = {
+		evaluation_chance = {
+			value = 1		
+		}	
+		propose_score = {
+			value = 100
+		}
+	}
+}

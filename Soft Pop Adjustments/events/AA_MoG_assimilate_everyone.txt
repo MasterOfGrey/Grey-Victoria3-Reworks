@@ -1,0 +1,137 @@
+﻿# Reworked from what was originally "Assimilate Discriminated and Homeland Pops Naturally" by Caracus
+
+namespace = assimilate_everyone
+
+assimilate_everyone.1 = {
+	type = country_event
+	placement = ROOT
+	hidden = yes
+	
+	event_image = {
+		video = "gfx/event_pictures/unspecific_ruler_speaking_to_people.bk2"
+	}
+	icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+	
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/unspecific/leader_speaking_to_a_group_of_people"
+	
+	trigger = {
+		
+	}
+	
+	immediate = {
+		if = {
+			#so temporary uprising don't just consolidate immigrants
+			limit = {
+				is_secessionist = no
+			}
+			
+			ordered_primary_culture = {
+				position = 0
+				save_scope_as = primary_culture
+			}
+			
+			every_state = {
+				limit = {
+					owner = root
+				}
+				
+				this = {
+					save_scope_as = executing_state
+				}
+				
+				every_scope_pop = {
+					if = {
+						limit = {
+							OR = {
+								# DON'T use pop_is_discriminated = yes as that includes religious discrimination:
+								culture_accepted = no
+								# As we want to assimilate homeland cultures as well that are excluded from normal assimilation:
+								this.culture = {
+									has_homeland = scope:executing_state
+									NOT = {
+										is_primary_culture_of = root
+									}
+								}
+							}
+						}
+						
+						this = {
+							save_scope_as = current_pop
+						}
+						
+						change_pop_culture = { 
+							target = scope:primary_culture 
+							value = {
+								value = 0.005 # 0.002
+								
+								# 1/5 this mod's base
+								divide = 5
+								
+								# This (original version) boosts assimilation for homeland pops *if* they're accepted.
+								#	if = {
+								#		limit = {
+								#			scope:current_pop = {
+								#				pop_is_discriminated = no
+								#			}
+								#		}
+								#		multiply = 2
+								#	}
+								# The intent of this was clearly to counteract some of the penalties from cultural difference when laws have then made them accepted. However;
+								# This is quite powerful if they already share heritage/culture traits - causing Ukrainians in Russia, N.Italians in A-H, Occitans in France, or Chinese subcultures to disappear too aggressively.
+								# Instead let's just skip the mismatching non-heritage trait penalties if they're already accepted by nesting that in the check instead:
+								if = {
+									limit = {
+										scope:current_pop = {
+											culture_accepted = no
+										}
+									}
+									# Accepted pops in homelands skip this, preserving value 0.001 - allowing acceptance to "boost" some homeland results without dominating others.
+									# Only discriminated pops check against the non-heritage trait:
+									if = {
+										limit = {
+											NOT = {
+												scope:current_pop.culture = {
+													shares_non_heritage_trait_with_any_primary_culture = root
+												}
+											}
+										}
+										divide = 2
+									}
+								}
+								
+								if = {
+									limit = {
+										NOT = {
+											scope:current_pop.culture = {
+												shares_heritage_trait_with_any_primary_culture = root
+											}
+										}
+									}
+									divide = 2
+								}
+								
+								if = {
+									limit = {
+										scope:executing_state = {
+											is_incorporated = no
+										}
+									}
+									divide = 2
+								}
+								
+								multiply = {
+									value = 1
+									add = scope:executing_state.modifier:state_assimilation_mult
+								}
+								
+								min = 0
+								max = 1
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

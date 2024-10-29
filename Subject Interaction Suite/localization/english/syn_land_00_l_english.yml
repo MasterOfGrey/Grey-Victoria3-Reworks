@@ -1,0 +1,33 @@
+﻿l_english:
+ laws_synergize_land:0 "Synergize Land Reforms"
+ laws_synergize_land_action_name:0 "$laws_synergize_land$"
+ laws_synergize_land_action_propose_name:0 "Begin Synergizing Land Reforms"
+ laws_synergize_land_action_break_name:0 "Stop Synergizing Land Reforms"
+ laws_synergize_land_pact_desc:0 "[SCOPE.GetRootScope.GetDiplomaticPact.GetFirstCountry.GetName] restructures the land laws of [SCOPE.GetRootScope.GetDiplomaticPact.GetSecondCountry.GetName] to synergize with theirs.\n Currently #variable [SCOPE.GetRootScope.GetDiplomaticPact.GetSecondCountry.MakeScope.Var('synergize_land_progress').GetValue]#! progress out of 8 stages."
+ laws_synergize_land_desc:1 "#header $laws_synergize_land$#!\n$TOOLTIP_DELIMITER$\nSynergizes the land reforms of the specified country."
+ laws_synergize_land_action_notification_name:1 "[INITIATOR_COUNTRY.GetName] Synergizing Land Reforms"
+ laws_synergize_land_action_notification_desc:1 "[INITIATOR_COUNTRY.GetName] is synergizing our country’s land reforms."
+ laws_synergize_land_action_notification_break_name:1 "Cease Synergizing Land Reforms by [INITIATOR_COUNTRY.GetName]"
+ laws_synergize_land_action_notification_break_desc:0 "[INITIATOR_COUNTRY.GetName] has ceased trying to synergizing our country's land reforms."
+ 
+ laws_synergize_land_effect_desc_global:0 "Begin Synergizing Land Reforms"
+ laws_synergize_land_effect_desc_first:0 "[COUNTRY.GetAdjectiveNoFlag] initiates land reform synergisation with [TARGET_COUNTRY.GetName]."
+ laws_synergize_land_effect_desc_third:0 "[COUNTRY.GetName] initiates land reform synergisation with [AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)]."
+ 
+ laws_synergize_land_trigger_desc_global:0 "Land Reform Synergisation Ongoing"
+ laws_synergize_land_trigger_false_desc_global:0 "Not currently in the process of  synergizing land reforms."
+ laws_synergize_land_trigger_desc_first:0 "[COUNTRY.GetAdjectiveNoFlag] has synergetic land reforms with [TARGET_COUNTRY.GetName]."
+ laws_synergize_land_trigger_false_desc_first:0 "[COUNTRY.GetAdjectiveNoFlag] does not currently have synergetic land reforms with [TARGET_COUNTRY.GetName]."
+ laws_synergize_land_trigger_desc_third:0 "[COUNTRY.GetName] has synergetic land reforms with [AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)]."
+ laws_synergize_land_trigger_false_desc_third:0 "[COUNTRY.GetName] does not currently have synergetic land reforms with [AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)]."
+ 
+ mog_syn_events.03.t: "Land Reform Synergy!"
+ mog_syn_events.03.d: "The proud nation of [ROOT.GetCountry.GetName] has successfully completed the synergization of land reforms with [SCOPE.sCountry('synergize_land_target_country').GetName]. [SCOPE.sCountry('synergize_land_target_country').GetName] will thrive in eternal prosperity through increased cohesion with the homeland."
+ mog_syn_events.03.f: ""Long live [ROOT.GetCountry.GetName]!""
+ mog_syn_events.03.a: "Well done."
+
+ laws_synergize_land_weekly_effect: "Works to align their land law reforms with ours. Has a 20% chance to make progress each week, with 8 progress points required to succeed."
+ 
+ overlord_syn_cost_land: "Cost for Synergizing Land Reforms"
+ 
+ active_synergize_land_tt: "Number of other $laws_synergize_land$ actions is less than 1."

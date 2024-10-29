@@ -1,0 +1,63 @@
+﻿pm_no_radios = {
+	texture = "gfx/interface/icons/production_method_icons/no_radios.dds"
+}
+
+pm_limited_radios = {
+	texture = "gfx/interface/icons/production_method_icons/radios.dds"
+	unlocking_technologies = {
+		radio
+	}	
+	building_modifiers = {
+		workforce_scaled = {
+			goods_input_electricity_add = 30
+			goods_output_telephones_add = -10
+			goods_output_radios_add = 20
+		}
+		
+		level_scaled = {
+			building_employment_engineers_add = 200
+		}
+	}
+	
+	required_input_goods = electricity
+}
+
+pm_moderate_radios = {
+	texture = "gfx/interface/icons/production_method_icons/radios.dds"
+	unlocking_technologies = {
+		radio
+	}	
+	building_modifiers = {
+		workforce_scaled = {
+			goods_input_electricity_add = 50
+			goods_output_telephones_add = -20
+			goods_output_radios_add = 40
+		}
+		
+		level_scaled = {
+			building_employment_engineers_add = 400
+		}
+	}
+	
+	required_input_goods = electricity
+}
+
+pm_extensive_radios = {
+	texture = "gfx/interface/icons/production_method_icons/radios.dds"
+	unlocking_technologies = {
+		radio
+	}	
+	building_modifiers = {
+		workforce_scaled = {
+			goods_input_electricity_add = 70
+			goods_output_telephones_add = -30
+			goods_output_radios_add = 60
+		}
+		
+		level_scaled = {
+			building_employment_engineers_add = 600
+		}
+	}
+	
+	required_input_goods = electricity
+}

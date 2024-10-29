@@ -1,0 +1,14 @@
+﻿# Reminder to work on your laws
+
+not_enacting_laws = {
+	texture = "gfx/interface/icons/alert_icons/reform_government.dds"
+	script_context = player_country
+
+	valid = {
+		enacting_any_law = no
+	}
+
+	open_panel = politics|laws
+	type = alert
+	color = yellow
+}

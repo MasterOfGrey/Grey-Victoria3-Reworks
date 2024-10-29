@@ -1,0 +1,183 @@
+﻿# Basic
+pm_cloth_pkg = {
+	texture = "gfx/interface/icons/production_method_icons/cloth.dds"
+	
+	unlocking_production_methods = {
+		pm_bakery
+	}
+	
+	building_modifiers = {
+		workforce_scaled = {
+			# input goods
+			goods_input_fabric_add = 3		# x20 = -60
+		}
+	}
+}
+
+pm_paper_pkg = {
+	texture = "gfx/interface/icons/production_method_icons/paper.dds"
+	
+	unlocking_production_methods = {
+		pm_bakery
+	}
+	
+	building_modifiers = {
+		workforce_scaled = {
+			# input goods
+			goods_input_paper_add = 2		# x30 = -60
+		}
+	}
+}
+
+# Unlock Group 1
+pm_wax_paper = {
+	texture = "gfx/interface/icons/production_method_icons/wax_paper.dds"
+	
+	unlocking_production_methods = {
+		pm_sweeteners
+		pm_baking_powder
+		pm_automated_bakery
+	}
+	
+	building_modifiers = {
+		workforce_scaled = {
+			# input goods	- (default production for Sweeteners - profit rolled into base PM)
+			goods_input_paper_add = 5		# x30 = -150
+		}
+	}
+}
+
+# Unlock Group 2
+pm_sealed_jars = {
+	texture = "gfx/interface/icons/production_method_icons/canneries.dds"
+	
+	unlocking_technologies = {
+		canneries
+	}
+	
+	unlocking_production_methods = {
+		pm_sweeteners
+		pm_baking_powder
+		pm_automated_bakery
+	}
+	
+	building_modifiers = {
+		workforce_scaled = {
+			# input goods
+			goods_input_paper_add = 1		# x30 =  30
+			goods_input_iron_add = 1		# x40 =  40
+			goods_input_glass_add = 6		# x40 =  240
+			
+			# output goods
+			goods_output_groceries_add = 18	# (+7 inc. from base math + 10 for machinists) x30 =  540
+		}
+
+		level_scaled = {
+			# profit = 230
+			building_employment_machinists_add = 500	# x1.5 = 750 laborer wages
+		}
+	}
+}
+
+pm_cannery = {
+	texture = "gfx/interface/icons/production_method_icons/canneries.dds"
+	
+	unlocking_technologies = {
+		canneries
+	}
+	
+	unlocking_production_methods = {
+		pm_sweeteners
+		pm_baking_powder
+		pm_automated_bakery
+	}
+	
+	building_modifiers = {
+		workforce_scaled = {
+			# input goods
+			goods_input_iron_add = 7		# x40 =  280
+			goods_input_lead_add = 1		# x40 =  40
+			
+			# output goods
+			goods_output_groceries_add = 18	# (+7 inc. from base math + 10 for machinists) x30 =  540
+		}
+
+		level_scaled = {
+			# profit = 220
+			building_employment_machinists_add = 500	# x1.5 = 750 laborer wages
+		}
+	}
+}
+
+# Unlock Group 3
+pm_vacuum_canning = {
+	texture = "gfx/interface/icons/production_method_icons/vaccum_canning.dds"
+	replacement_if_valid = pm_vacuum_canning_principle_3
+	
+	unlocking_technologies = {
+		vacuum_canning
+	}
+	
+	unlocking_production_methods = {
+		pm_baking_powder
+		pm_automated_bakery
+	}
+	
+	building_modifiers = {
+		workforce_scaled = {
+			# input goods
+			goods_input_paper_add = 1		# x30 = 30
+			goods_input_glass_add = 6		# x40 = 240
+			goods_input_iron_add = 8		# x40 = 320
+			goods_input_lead_add = 1		# x40 = 40
+			goods_input_oil_add = 5 		# x40 = 200
+			
+			# output goods
+			goods_output_groceries_add = 46	# x30 = 1380
+		}
+
+		level_scaled = {
+			# profit = 600 (23.1)
+			building_employment_machinists_add = 500	# x1.5 = 750 laborer wages
+			building_employment_engineers_add = 200		# x3.0 = 600 laborer wages
+		}
+	}
+}
+
+pm_vacuum_canning_principle_3 = {
+	texture = "gfx/interface/icons/production_method_icons/vaccum_canning.dds"
+	is_hidden_when_unavailable = yes
+
+	unlocking_principles = {
+		principle_food_standardization_3
+	}
+	
+	unlocking_technologies = {
+		vacuum_canning
+	}
+	
+	unlocking_production_methods = {
+		pm_baking_powder
+		pm_automated_bakery
+	}
+	
+	building_modifiers = {
+		workforce_scaled = {
+			# input goods
+			goods_input_paper_add = 1		# x30 = 30
+			goods_input_glass_add = 6		# x40 = 240
+			goods_input_iron_add = 8		# x40 = 320
+			goods_input_lead_add = 1		# x40 = 40
+			goods_input_oil_add = 5 		# x40 = 200
+			
+			# output goods
+			goods_output_groceries_add = 56	# x30 = 1680
+		}
+
+		level_scaled = {
+			# profit = 900
+			building_employment_machinists_add = 500	# x1.5 = 750 laborer wages
+			building_employment_engineers_add = 200		# x3.0 = 600 laborer wages
+		}
+	}
+}

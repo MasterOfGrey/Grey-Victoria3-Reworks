@@ -1,0 +1,15 @@
+﻿# This is executed last among all history
+GLOBAL = {
+	
+	every_country = {
+		limit = { is_subject = yes }
+		set_variable = { name = change_state_religion_progress value = 0 }
+		set_variable = { name = change_primary_culture_progress value = 0 }
+		set_variable = { name = include_primary_culture_progress value = 0 }
+		set_variable = { name = border_opening_progress value = 0 }
+		set_variable = { name = synergize_bureaucracy_progress value = 0 }
+		set_variable = { name = synergize_economy_progress value = 0 }
+		set_variable = { name = synergize_land_progress value = 0 }
+		set_variable = { name = synergize_trade_progress value = 0 }
+	}
+}

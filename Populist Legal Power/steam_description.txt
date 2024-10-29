@@ -1,0 +1,78 @@
+[img]https://i.imgur.com/7xuCZqW.png[/img]
+Designed for Victoria 3: Version 1.7 (and onwards)
+Mod Version V1.0
+Please consider rating this if you like it! It really helps out. [img]https://i.imgur.com/tE28cZ7.gif[/img]
+
+[table]
+    [tr]
+        [td][img]https://i.imgur.com/WjDSfUn.png[/img][/td]
+        [td][img]https://i.imgur.com/6KqTKks.png[/img][/td]
+    [/tr]
+[/table]
+*Removal may cause breaking errors due to the removal of a modifier type.
+[img]https://i.imgur.com/6o9HyTD.png[/img]
+This mod makes a broad set of adjustments to many vanilla laws and institutions [i]without[/i] adding or removing any laws or otherwise making changes that would cause compatibility issues with ideologies or related fixes that still use the vanilla set of laws. This was largely created because since 1.7 I've wanted to be able to play with the [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3114281747]Law & Authority[/url] mod and also have various other fixes and changes incorporated.
+
+[img]https://i.imgur.com/Wh5EspM.png[/img]
+[h1]Features:[/h1]
+[h2]Adjusted Law Groups:[/h2]
+[list]
+[*]Bureaucracy
+[*]Children's Rights
+[*]Church and State
+[*]Citizenship
+[*]Distribution of Power
+[*]Economic System
+[*]Education System
+[*]Free Speech
+[*]Governance Principles
+[*]Internal Security
+[*]Land Reform
+[*]Migration Control
+[*]Policing
+[*]Trade Policy
+[*]Welfare
+[/list]
+
+[h2]IMPORTANT NOTES:[/h2]
+I won't go through every change but there are a few important notes:
+[list]
+[*]Economic System laws no longer have assisting game mechanics built in, they actually reflect how they work.
+[*] - So: When you switch to Laissez Faire for economic system - you [i]NEED[/i] to lower taxes if you want your economy to grow.
+[*] - And: Running high taxes on Interventionism and building most things yourself works just fine.
+[*]Collectivised Agriculture is possible [i]without[/i] Cooperative Ownership, but only if you are moving from Homesteading.
+[/list]
+
+[h2]Compatibility touch points:[/h2]
+[list]
+[*]Postal Savings tech has been touched.
+[*]Institution modified are: Welfare, Police, Home Affairs, & Workplace Safety
+[/list]
+
+[img]https://i.imgur.com/Qp8JBtZ.png[/img]
+This mod will [i]probably[/i] take precedence over other mods that touch specifically the same things it does. It should be broadly compatible with things that don't add new ideologies and should be fine with other mods that edit laws as long as they edit different laws to each other.
+
+Having said that, some specific callouts:
+[list]
+[*]Victoria Tweaks Mod - Yes; it is VTM compatible.
+[*]All AI Mods - Yes; KAI, LAI, Smarter AI, etc. are all compatible.
+[/list]
+
+[img]https://i.imgur.com/lQRf9dG.png[/img]
+[b]Why?[/b]
+[i]Different law mods are inherently incompatible, and there have been a lot of good ideas that weren't updated to some of the new AI logic changes in 1.7 so many of them don't work very well, even if they do work together. This brings many different tweaks that good people have thought of together and align the functional logic with the new vanilla systems.[/i]
+
+[img]https://i.imgur.com/UN80Om5.png[/img]
+This effectively supercedes the following mods:
+[list]
+[*]"Law & Authority [1.6]" by Taylor
+[*]"Tuned Laws" by TQ Ambo
+[*]"Better Communism" by PSVDX
+[/list]
+...and probably a few others besides.
+
+Thank you to all the listed authors for their work which inspired various details within this mod.
+
+#Government #Legitimacy
+#Law #Authority #Politics
+#Rework #Balance

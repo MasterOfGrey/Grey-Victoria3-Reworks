@@ -1,0 +1,245 @@
+﻿# Note:
+# Iron: pm_cannons pm_smoothbores
+# texture = "gfx/interface/icons/production_method_icons/pig_iron_tools.dds"
+# Steel: pm_breech_loaders pm_recoiled_barrels
+# texture = "gfx/interface/icons/production_method_icons/steel_tools.dds"
+
+pm_extensive_tools_t_i = {
+	texture = "gfx/interface/icons/production_method_icons/pig_iron_tools.dds"
+	is_hidden_when_unavailable = yes
+	
+	unlocking_technologies = {
+		steelworking
+	}
+	
+	unlocking_production_methods = {
+		pm_cannons
+		pm_smoothbores
+	}
+	
+	building_modifiers = {
+		workforce_scaled = {
+			# input goods
+			goods_input_iron_add = 3
+			goods_input_wood_add = 15
+			goods_input_hardwood_add = -8
+			
+			# output goods
+			goods_output_artillery_add = -23
+			goods_output_tools_add = 30
+		}
+	}
+}
+
+pm_moderate_tools_t_i = {
+	texture = "gfx/interface/icons/production_method_icons/pig_iron_tools.dds"
+	is_hidden_when_unavailable = yes
+	
+	unlocking_technologies = {
+		steelworking
+	}
+	
+	unlocking_production_methods = {
+		pm_cannons
+		pm_smoothbores
+	}
+	
+	building_modifiers = {
+		workforce_scaled = {
+			# input goods
+			goods_input_iron_add = 2
+			goods_input_wood_add = 10
+			goods_input_hardwood_add = -5
+			
+			# output goods
+			goods_output_artillery_add = -15
+			goods_output_tools_add = 20
+		}
+	}
+}
+
+pm_limited_tools_t_i = {
+	texture = "gfx/interface/icons/production_method_icons/pig_iron_tools.dds"
+	is_hidden_when_unavailable = yes
+	
+	unlocking_technologies = {
+		steelworking
+	}
+	
+	unlocking_production_methods = {
+		pm_cannons
+		pm_smoothbores
+	}
+	
+	building_modifiers = {
+		workforce_scaled = {
+			# input goods
+			goods_input_iron_add = 1
+			goods_input_wood_add = 5
+			goods_input_hardwood_add = -2
+			
+			# output goods
+			goods_output_artillery_add = -5
+			goods_output_tools_add = 10
+		}
+	}
+}
+
+pm_extensive_tools_t_s = {
+	texture = "gfx/interface/icons/production_method_icons/steel_tools.dds"
+	is_hidden_when_unavailable = yes
+	
+	unlocking_production_methods = {
+		pm_breech_loaders
+		pm_recoiled_barrels
+	}
+	
+	building_modifiers = {
+		workforce_scaled = {
+			# input goods
+			goods_input_steel_add = 3
+			goods_input_wood_add = 15
+			goods_input_hardwood_add = -8
+			goods_input_tools_add = -10
+			
+			# output goods
+			goods_output_artillery_add = -32
+			goods_output_tools_add = 30
+		}
+	}
+}
+
+pm_moderate_tools_t_s = {
+	texture = "gfx/interface/icons/production_method_icons/steel_tools.dds"
+	is_hidden_when_unavailable = yes
+	
+	unlocking_production_methods = {
+		pm_breech_loaders
+		pm_recoiled_barrels
+	}
+	
+	building_modifiers = {
+		workforce_scaled = {
+			# input goods
+			goods_input_steel_add = 2
+			goods_input_wood_add = 10
+			goods_input_hardwood_add = -5
+			goods_input_tools_add = -10
+			
+			# output goods
+			goods_output_artillery_add = -21
+			goods_output_tools_add = 14
+		}
+	}
+}
+
+pm_limited_tools_t_s = {
+	texture = "gfx/interface/icons/production_method_icons/steel_tools.dds"
+	is_hidden_when_unavailable = yes
+	
+	unlocking_production_methods = {
+		pm_breech_loaders
+		pm_recoiled_barrels
+	}
+	
+	building_modifiers = {
+		workforce_scaled = {
+			# input goods
+			goods_input_steel_add = 1
+			goods_input_wood_add = 5
+			goods_input_hardwood_add = -2
+			goods_input_tools_add = -8
+			
+			# output goods
+			goods_output_artillery_add = -7
+		}
+	}
+}
+
+pm_extensive_tools_t_r = {
+	texture = "gfx/interface/icons/production_method_icons/steel_tools.dds"
+	is_hidden_when_unavailable = yes
+	
+	unlocking_technologies = {
+		vulcanization
+	}
+	unlocking_production_methods = {
+		pm_recoiled_barrels
+	}
+	
+	building_modifiers = {
+		workforce_scaled = {
+			# input goods
+			goods_input_steel_add = -5
+			goods_input_oil_add = -5
+			goods_input_rubber_add = 5
+			goods_input_tools_add = -20
+			
+			# output goods
+			goods_output_artillery_add = -45
+			goods_output_tools_add = 35
+		}
+	}
+}
+
+pm_moderate_tools_t_r = {
+	texture = "gfx/interface/icons/production_method_icons/steel_tools.dds"
+	is_hidden_when_unavailable = yes
+	
+	unlocking_technologies = {
+		vulcanization
+	}
+	unlocking_production_methods = {
+		pm_recoiled_barrels
+	}
+	
+	building_modifiers = {
+		workforce_scaled = {
+			# input goods
+			goods_input_steel_add = -3
+			goods_input_oil_add = -3
+			goods_input_rubber_add = 3
+			goods_input_tools_add = -20
+			
+			# output goods
+			goods_output_artillery_add = -27
+			goods_output_tools_add = 13
+		}
+	}
+}
+
+pm_limited_tools_t_r = {
+	texture = "gfx/interface/icons/production_method_icons/steel_tools.dds"
+	is_hidden_when_unavailable = yes
+	
+	unlocking_technologies = {
+		vulcanization
+	}
+	unlocking_production_methods = {
+		pm_recoiled_barrels
+	}
+	
+	building_modifiers = {
+		workforce_scaled = {
+			# input goods
+			goods_input_steel_add = -1
+			goods_input_oil_add = -1
+			goods_input_rubber_add = 1
+			goods_input_tools_add = -11
+			
+			# output goods
+			goods_output_artillery_add = -9
+		}
+	}
+}
+
+pm_no_tools_t = {
+	texture = "gfx/interface/icons/production_method_icons/no_demobilisation.dds"
+}
+
+pm_ui_safety_b = {
+	texture = "gfx/interface/icons/production_method_icons/no_munitions_plants.dds"
+	unlocking_laws = {
+		law_chiefdom
+	}
+}

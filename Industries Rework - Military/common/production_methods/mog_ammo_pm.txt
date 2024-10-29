@@ -1,0 +1,316 @@
+﻿# Note:
+# pre-dynamite: pm_percussion_caps - pm_leblanc_process pm_ammonia-soda_process
+# texture = "gfx/interface/icons/production_method_icons/pig_iron_tools.dds"
+# post-dynamite: pm_explosive_shells - pm_vacuum_evaporation (electricity)pm_brine_electrolysis
+# texture = "gfx/interface/icons/production_method_icons/steel_tools.dds"
+
+pm_extensive_ammo_le = {
+	texture = "gfx/interface/icons/production_method_icons/leblanc_process.dds"
+	is_hidden_when_unavailable = yes
+	
+	unlocking_production_methods = {
+		pm_percussion_caps
+	}
+	
+	building_modifiers = {
+		workforce_scaled = {
+			# input goods
+			goods_input_lead_add = -10
+			goods_input_sulfur_add = 10
+			goods_input_fertilizer_add = 10
+			goods_input_explosives_add = -20
+			
+			# output goods
+			goods_output_ammunition_add = -25
+			goods_output_explosives_add = 5
+		}
+	}
+}
+
+pm_moderate_ammo_le = {
+	texture = "gfx/interface/icons/production_method_icons/leblanc_process.dds"
+	is_hidden_when_unavailable = yes
+	
+	unlocking_production_methods = {
+		pm_percussion_caps
+	}
+	
+	building_modifiers = {
+		workforce_scaled = {
+			# input goods
+			goods_input_lead_add = -6
+			goods_input_sulfur_add = 6
+			goods_input_fertilizer_add = 6
+			goods_input_explosives_add = -15
+			
+			# output goods
+			goods_output_ammunition_add = -15
+		}
+	}
+}
+
+pm_limited_ammo_le = {
+	texture = "gfx/interface/icons/production_method_icons/leblanc_process.dds"
+	is_hidden_when_unavailable = yes
+	
+	unlocking_production_methods = {
+		pm_percussion_caps
+	}
+	
+	building_modifiers = {
+		workforce_scaled = {
+			# input goods
+			goods_input_lead_add = -2
+			goods_input_sulfur_add = 2
+			goods_input_fertilizer_add = 2
+			goods_input_explosives_add = -5
+			
+			# output goods
+			goods_output_ammunition_add = -5
+		}
+	}
+}
+
+pm_extensive_ammo_ni = {
+	texture = "gfx/interface/icons/production_method_icons/ammonia_soda_process.dds"
+	is_hidden_when_unavailable = yes
+	
+	unlocking_technologies = {
+		nitroglycerin
+	}
+	
+	unlocking_production_methods = {
+		pm_percussion_caps
+	}
+	
+	building_modifiers = {
+		workforce_scaled = {
+			# input goods
+			goods_input_lead_add = -10
+			goods_input_sulfur_add = 15
+			goods_input_fertilizer_add = 15
+			goods_input_explosives_add = -20
+			
+			# output goods
+			goods_output_ammunition_add = -25
+			goods_output_explosives_add = 20
+		}
+	}
+}
+
+pm_moderate_ammo_ni = {
+	texture = "gfx/interface/icons/production_method_icons/ammonia_soda_process.dds"
+	is_hidden_when_unavailable = yes
+	
+	unlocking_technologies = {
+		nitroglycerin
+	}
+	
+	unlocking_production_methods = {
+		pm_percussion_caps
+	}
+	
+	building_modifiers = {
+		workforce_scaled = {
+			# input goods
+			goods_input_lead_add = -6
+			goods_input_sulfur_add = 9
+			goods_input_fertilizer_add = 9
+			goods_input_explosives_add = -20
+			
+			# output goods
+			goods_output_ammunition_add = -15
+			goods_output_explosives_add = 4
+		}
+	}
+}
+
+pm_limited_ammo_ni = {
+	texture = "gfx/interface/icons/production_method_icons/ammonia_soda_process.dds"
+	is_hidden_when_unavailable = yes
+	
+	unlocking_technologies = {
+		nitroglycerin
+	}
+	
+	unlocking_production_methods = {
+		pm_percussion_caps
+	}
+	
+	building_modifiers = {
+		workforce_scaled = {
+			# input goods
+			goods_input_lead_add = -2
+			goods_input_sulfur_add = 3
+			goods_input_fertilizer_add = 3
+			goods_input_explosives_add = -8
+			
+			# output goods
+			goods_output_ammunition_add = -5
+		}
+	}
+}
+
+pm_extensive_ammo_dy = {
+	texture = "gfx/interface/icons/production_method_icons/vaccum_evaporation.dds"
+	is_hidden_when_unavailable = yes
+	
+	unlocking_production_methods = {
+		pm_explosive_shells
+	}
+	
+	building_modifiers = {
+		workforce_scaled = {
+			# input goods
+			goods_input_lead_add = -15
+			goods_input_sulfur_add = 20
+			goods_input_fertilizer_add = 20
+			goods_input_paper_add = 15
+			goods_input_explosives_add = -40
+			
+			# output goods
+			goods_output_ammunition_add = -45
+			goods_output_explosives_add = 15
+		}
+	}
+}
+
+pm_moderate_ammo_dy = {
+	texture = "gfx/interface/icons/production_method_icons/vaccum_evaporation.dds"
+	is_hidden_when_unavailable = yes
+	
+	unlocking_production_methods = {
+		pm_explosive_shells
+	}
+	
+	building_modifiers = {
+		workforce_scaled = {
+			# input goods
+			goods_input_lead_add = -9
+			goods_input_sulfur_add = 12
+			goods_input_fertilizer_add = 12
+			goods_input_paper_add = 9
+			goods_input_explosives_add = -33
+			
+			# output goods
+			goods_output_ammunition_add = -27
+		}
+	}
+}
+
+pm_limited_ammo_dy = {
+	texture = "gfx/interface/icons/production_method_icons/vaccum_evaporation.dds"
+	is_hidden_when_unavailable = yes
+	
+	unlocking_production_methods = {
+		pm_explosive_shells
+	}
+	
+	building_modifiers = {
+		workforce_scaled = {
+			# input goods
+			goods_input_lead_add = -3
+			goods_input_sulfur_add = 4
+			goods_input_fertilizer_add = 4
+			goods_input_paper_add = 3
+			goods_input_explosives_add = -11
+			
+			# output goods
+			goods_output_ammunition_add = -9
+		}
+	}
+}
+
+pm_extensive_ammo_br = {
+	texture = "gfx/interface/icons/production_method_icons/vaccum_brine_electrolysis.dds"
+	is_hidden_when_unavailable = yes
+	
+	unlocking_technologies = {
+		electrical_capacitors
+	}
+	unlocking_production_methods = {
+		pm_explosive_shells
+	}
+	
+	required_input_goods = electricity
+	
+	building_modifiers = {
+		workforce_scaled = {
+			# input goods
+			goods_input_lead_add = -15
+			goods_input_sulfur_add = 20
+			goods_input_fertilizer_add = 25
+			goods_input_paper_add = 15
+			goods_input_electricity_add = 10
+			goods_input_explosives_add = -40
+			
+			# output goods
+			goods_output_ammunition_add = -45
+			goods_output_explosives_add = 35
+		}
+	}
+}
+
+pm_moderate_ammo_br = {
+	texture = "gfx/interface/icons/production_method_icons/vaccum_brine_electrolysis.dds"
+	is_hidden_when_unavailable = yes
+	
+	unlocking_technologies = {
+		electrical_capacitors
+	}
+	unlocking_production_methods = {
+		pm_explosive_shells
+	}
+	
+	required_input_goods = electricity
+	
+	building_modifiers = {
+		workforce_scaled = {
+			# input goods
+			goods_input_lead_add = -9
+			goods_input_sulfur_add = 12
+			goods_input_fertilizer_add = 15
+			goods_input_paper_add = 9
+			goods_input_electricity_add = 6
+			goods_input_explosives_add = -40
+			
+			# output goods
+			goods_output_ammunition_add = -27
+			goods_output_explosives_add = 5
+		}
+	}
+}
+
+pm_limited_ammo_br = {
+	texture = "gfx/interface/icons/production_method_icons/vaccum_brine_electrolysis.dds"
+	is_hidden_when_unavailable = yes
+	
+	unlocking_technologies = {
+		electrical_capacitors
+	}
+	unlocking_production_methods = {
+		pm_explosive_shells
+	}
+	
+	required_input_goods = electricity
+	
+	building_modifiers = {
+		workforce_scaled = {
+			# input goods
+			goods_input_lead_add = -3
+			goods_input_sulfur_add = 4
+			goods_input_fertilizer_add = 5
+			goods_input_paper_add = 3
+			goods_input_electricity_add = 2
+			goods_input_explosives_add = -15
+			
+			# output goods
+			goods_output_ammunition_add = -9
+		}
+	}
+}
+
+pm_no_self_explosives = {
+	texture = "gfx/interface/icons/production_method_icons/no_demobilisation.dds"
+}
+

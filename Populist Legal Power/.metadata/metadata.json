@@ -1,0 +1,20 @@
+{
+  "name" : "Grey's Populist Legal Power",
+  "id" : "3351014672",
+  "version" : "",
+  "supported_game_version" : "",
+  "short_description" : "",
+  "tags" : [
+        "Balance",
+        "Expansion",
+        "Fixes",
+        "Gameplay",
+        "Historical",
+        "Pops",
+        "Utilities"
+    ],
+  "relationships" : [],
+  "game_custom_data" : {
+    "multiplayer_synchronized" : true
+  }
+}

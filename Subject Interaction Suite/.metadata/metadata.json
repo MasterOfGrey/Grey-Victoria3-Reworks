@@ -1,0 +1,17 @@
+{
+  "name" : "Grey's Subject Interaction Suite",
+  "id" : "3276243851",
+  "version" : "",
+  "supported_game_version" : "",
+  "short_description" : "",
+  "tags" : [
+        "Balance",
+        "Diplomacy",
+        "Expansion",
+        "Gameplay"
+    ],
+  "relationships" : [],
+  "game_custom_data" : {
+    "multiplayer_synchronized" : true
+  }
+}

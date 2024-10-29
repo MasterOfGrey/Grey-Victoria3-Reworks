@@ -1,0 +1,15 @@
+﻿l_english:
+ consolidate_subject: "Consolidate Subject"
+ consolidate_subject_action_name: "Consolidate [concept_subject]"
+ consolidate_subject_desc: "Merge two neighboring [Concept('concept_subject', '$concept_subjects$')] into a single [concept_country]. The target subject must have low [concept_autonomy] and [concept_liberty_desire]. Both subjects must share a [Concept('concept_primary_cultures', '$concept_primary_culture$')]."
+ consolidate_subject_action_notification_name: "[INITIATOR_COUNTRY.GetName] consolidates administration"
+ consolidate_subject_action_notification_desc: "[INITIATOR_COUNTRY.GetName] has chosen to consolidate us."
+ consolidate_subject_action_notification_third_party_name: "[INITIATOR_COUNTRY.GetName] consolidates subjects"
+ consolidate_subject_action_notification_third_party_desc: "[INITIATOR_COUNTRY.GetName] has consolidated [TARGET_COUNTRY.GetName]."
+ 
+ is_not_african_subject: "This subject not one of our African colonial administrations"
+ 
+ alert_overlord_can_consolidate_subject_name: "[GetDiplomaticActionType('consolidate_subject').GetName] available for [SCOPE.GetRootScope.GetCountry.GetName]"
+ alert_overlord_can_consolidate_subject_desc: "Our [concept_subject] [SCOPE.GetRootScope.GetCountry.GetName] can be consolidated into a neighboring subject."
+ alert_overlord_can_consolidate_subject_hint: "You can use the Subjects tab in the Diplomacy Panel to perform a [GetDiplomaticActionType('consolidate_subject').GetName] [concept_diplomatic_action]."
+ alert_overlord_can_consolidate_subject_action: "Diplomacy Panel"

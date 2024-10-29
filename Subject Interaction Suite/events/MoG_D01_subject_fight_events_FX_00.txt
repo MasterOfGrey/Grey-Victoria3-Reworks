@@ -1,0 +1,721 @@
+﻿# Updated and included from: CuteRiceWalkers's Ask Your Subject To Fight
+
+namespace = FX_subject_fight
+
+FX_subject_fight.1 = {
+	type = country_event
+	placement = ROOT
+
+    title = FX_subject_fight.1.t
+    desc = FX_subject_fight.1.d
+    flavor = FX_subject_fight.1.f
+
+	event_image = {
+		video = "gfx/event_pictures/unspecific_signed_contract.bk2"
+	}
+
+	immediate = {
+		every_country = {
+			limit = {
+				has_variable = FX_potential_subject
+			}
+			if = {limit = { not = {has_global_variable = subject_initiator1}}   this = {remove_variable = FX_potential_subject save_scope_as = subject_initiator1} set_global_variable = subject_initiator1}
+			else_if = {limit = { not = {has_global_variable = subject_initiator2}}   this = {remove_variable = FX_potential_subject save_scope_as = subject_initiator2} set_global_variable = subject_initiator2}
+			else_if = {limit = { not = {has_global_variable = subject_initiator3}}   this = {remove_variable = FX_potential_subject save_scope_as = subject_initiator3} set_global_variable = subject_initiator3}
+			else_if = {limit = { not = {has_global_variable = subject_initiator4}}   this = {remove_variable = FX_potential_subject save_scope_as = subject_initiator4} set_global_variable = subject_initiator4}
+			else_if = {limit = { not = {has_global_variable = subject_initiator5}}   this = {remove_variable = FX_potential_subject save_scope_as = subject_initiator5} set_global_variable = subject_initiator5}
+			else_if = {limit = { not = {has_global_variable = subject_initiator6}}   this = {remove_variable = FX_potential_subject save_scope_as = subject_initiator6} set_global_variable = subject_initiator6}
+			else_if = {limit = { not = {has_global_variable = subject_initiator7}}   this = {remove_variable = FX_potential_subject save_scope_as = subject_initiator7} set_global_variable = subject_initiator7}
+			else_if = {limit = { not = {has_global_variable = subject_initiator8}}   this = {remove_variable = FX_potential_subject save_scope_as = subject_initiator8} set_global_variable = subject_initiator8}
+			else_if = {limit = { not = {has_global_variable = subject_initiator9}}   this = {remove_variable = FX_potential_subject save_scope_as = subject_initiator9} set_global_variable = subject_initiator9}
+			else_if = {limit = { not = {has_global_variable = subject_initiator10}}   this = {remove_variable = FX_potential_subject save_scope_as = subject_initiator10} set_global_variable = subject_initiator10}
+		}
+	}
+
+	option = {
+		name = CANCEL
+		default_option = yes
+		every_country = {
+			limit = {
+				has_variable = FX_potential_subject
+			}
+			remove_variable = FX_potential_subject
+		}
+		every_country = {
+			remove_global_variable = subject_initiator1
+			remove_global_variable = subject_initiator2
+			remove_global_variable = subject_initiator3
+			remove_global_variable = subject_initiator4
+			remove_global_variable = subject_initiator5
+			remove_global_variable = subject_initiator6
+			remove_global_variable = subject_initiator7
+			remove_global_variable = subject_initiator8
+			remove_global_variable = subject_initiator9
+			remove_global_variable = subject_initiator10
+			clear_saved_scope = subject_initiator1
+			clear_saved_scope = subject_initiator2
+			clear_saved_scope = subject_initiator3
+			clear_saved_scope = subject_initiator4
+			clear_saved_scope = subject_initiator5
+			clear_saved_scope = subject_initiator6
+			clear_saved_scope = subject_initiator7
+			clear_saved_scope = subject_initiator8
+			clear_saved_scope = subject_initiator9
+			clear_saved_scope = subject_initiator10
+		}
+	}
+	
+	# gen code in expanded form only for option 1
+	option = {
+		# name = subject_initiator1
+		name = subject_initiator1
+		trigger = {
+			exists = scope:subject_initiator1
+		}
+		scope:subject_initiator1 = {
+			save_scope_as = subject_initiator
+		}
+		trigger_event = {
+			id = FX_subject_fight.10
+			days = 0
+			popup = yes
+		}
+	}
+	option = {name = subject_initiator2 trigger = {exists = scope:subject_initiator2} scope:subject_initiator2 = {save_scope_as = subject_initiator} trigger_event = { id = FX_subject_fight.10 days = 0 popup = yes}}
+	option = {name = subject_initiator3 trigger = {exists = scope:subject_initiator3} scope:subject_initiator3 = {save_scope_as = subject_initiator} trigger_event = { id = FX_subject_fight.10 days = 0 popup = yes}}
+	option = {name = subject_initiator4 trigger = {exists = scope:subject_initiator4} scope:subject_initiator4 = {save_scope_as = subject_initiator} trigger_event = { id = FX_subject_fight.10 days = 0 popup = yes}}
+	option = {name = subject_initiator5 trigger = {exists = scope:subject_initiator5} scope:subject_initiator5 = {save_scope_as = subject_initiator} trigger_event = { id = FX_subject_fight.10 days = 0 popup = yes}}
+	option = {name = subject_initiator6 trigger = {exists = scope:subject_initiator6} scope:subject_initiator6 = {save_scope_as = subject_initiator} trigger_event = { id = FX_subject_fight.10 days = 0 popup = yes}}
+	option = {name = subject_initiator7 trigger = {exists = scope:subject_initiator7} scope:subject_initiator7 = {save_scope_as = subject_initiator} trigger_event = { id = FX_subject_fight.10 days = 0 popup = yes}}
+	option = {name = subject_initiator8 trigger = {exists = scope:subject_initiator8} scope:subject_initiator8 = {save_scope_as = subject_initiator} trigger_event = { id = FX_subject_fight.10 days = 0 popup = yes}}
+	option = {name = subject_initiator9 trigger = {exists = scope:subject_initiator9} scope:subject_initiator9 = {save_scope_as = subject_initiator} trigger_event = { id = FX_subject_fight.10 days = 0 popup = yes}}
+	option = {name = subject_initiator10 trigger = {exists = scope:subject_initiator10} scope:subject_initiator10 = {save_scope_as = subject_initiator} trigger_event = { id = FX_subject_fight.10 days = 0 popup = yes}}
+	option = {
+		name = ENCYCLOPEDIAGE_NEXT_PAGE
+		trigger = { any_country = { has_variable = FX_potential_subject }}
+		every_country = {
+			remove_global_variable = subject_initiator1
+			remove_global_variable = subject_initiator2
+			remove_global_variable = subject_initiator3
+			remove_global_variable = subject_initiator4
+			remove_global_variable = subject_initiator5
+			remove_global_variable = subject_initiator6
+			remove_global_variable = subject_initiator7
+			remove_global_variable = subject_initiator8
+			remove_global_variable = subject_initiator9
+			remove_global_variable = subject_initiator10
+			clear_saved_scope = subject_initiator1
+			clear_saved_scope = subject_initiator2
+			clear_saved_scope = subject_initiator3
+			clear_saved_scope = subject_initiator4
+			clear_saved_scope = subject_initiator5
+			clear_saved_scope = subject_initiator6
+			clear_saved_scope = subject_initiator7
+			clear_saved_scope = subject_initiator8
+			clear_saved_scope = subject_initiator9
+			clear_saved_scope = subject_initiator10
+		}
+		trigger_event = {
+			id = FX_subject_fight.1
+			days = 0
+			popup = yes
+		}
+	}
+	
+	after = {
+		# Block not used, even though it would seem sensible, because it doesn't behave cleanly for progressing the list of subjects through a dynamic number of pages.
+		# Dynamic pagination fails relying on this, so variables and scopes are cleared on Cancel, Next Page, or immediately on Choice selection event.
+	}
+}
+
+# Select diplomatic play
+FX_subject_fight.10 = {
+	type = country_event
+	placement = ROOT
+
+    title = FX_subject_fight.1.t
+    desc = FX_subject_fight.1.d
+    flavor = FX_subject_fight.1.f
+
+	event_image = {
+		video = "gfx/event_pictures/unspecific_signed_contract.bk2"
+	}
+	
+	immediate = {
+		every_country = {
+			remove_global_variable = subject_initiator1
+			remove_global_variable = subject_initiator2
+			remove_global_variable = subject_initiator3
+			remove_global_variable = subject_initiator4
+			remove_global_variable = subject_initiator5
+			remove_global_variable = subject_initiator6
+			remove_global_variable = subject_initiator7
+			remove_global_variable = subject_initiator8
+			remove_global_variable = subject_initiator9
+			remove_global_variable = subject_initiator10
+			clear_saved_scope = subject_initiator1
+			clear_saved_scope = subject_initiator2
+			clear_saved_scope = subject_initiator3
+			clear_saved_scope = subject_initiator4
+			clear_saved_scope = subject_initiator5
+			clear_saved_scope = subject_initiator6
+			clear_saved_scope = subject_initiator7
+			clear_saved_scope = subject_initiator8
+			clear_saved_scope = subject_initiator9
+			clear_saved_scope = subject_initiator10
+		}
+		every_country = {
+			limit = {
+				has_variable = FX_potential_subject
+			}
+			remove_variable = FX_potential_subject
+		}
+	}
+	
+	option = {
+		name = CANCEL
+		default_option = yes
+	}
+
+	# conquer state
+	option = {
+		name = dp_conquer_state
+		trigger = {
+			scope:subject_initiator = { is_direct_subject_of = root }
+			scope:FX_subject_fight_target_country = {
+				NOT = { is_direct_subject_of = scope:subject_initiator }
+				any_scope_state = {
+					NOR = {
+						has_claim_by = scope:subject_initiator
+						is_treaty_port = yes
+					}
+				}
+			}
+		}
+		trigger_event = {
+			id = FX_subject_fight.11
+			days = 0
+			popup = yes
+		}
+	}
+	
+	# return state
+	option = {
+		name = dp_return_state
+		trigger = {
+			scope:subject_initiator = { is_direct_subject_of = root }
+			scope:FX_subject_fight_target_country = {
+				NOT = { is_direct_subject_of = scope:subject_initiator }
+				any_scope_state = {
+					OR = {
+						has_claim_by = scope:subject_initiator
+						# is_homeland_of_country_cultures = scope:subject_initiator
+						# don't do this: the wargoal is invalid
+					}
+				}
+			}
+		}
+		trigger_event = {
+			id = FX_subject_fight.13
+			days = 0
+			popup = yes
+		}
+	}
+	
+	# take treaty port
+	option = {
+		name = dp_take_treaty_port
+		trigger = {
+			scope:subject_initiator = { is_direct_subject_of = root }
+			scope:FX_subject_fight_target_country = {
+				NOT = { is_direct_subject_of = scope:subject_initiator }
+				any_scope_state = {
+					is_treaty_port = yes
+				}
+			}
+		}
+		trigger_event = {
+			id = FX_subject_fight.12
+			days = 0
+			popup = yes
+		}
+	}
+
+	# annex country
+	option = {
+		name = dp_annex_war
+		trigger = {
+			scope:subject_initiator = { is_direct_subject_of = root }
+			scope:FX_subject_fight_target_country = {
+				OR = {
+					any_scope_state = {
+						count < 4
+					}
+					is_direct_subject_of = scope:subject_initiator
+				}
+			}
+		}
+		scope:subject_initiator = {
+			create_diplomatic_play = {
+				name = subject_fight_for_lord
+				target_country = scope:FX_subject_fight_target_country
+				type = dp_annex_war
+			}
+		}
+	}
+	
+	# debug - abort and fix
+	option = {
+		name = FX_abort
+		trigger = {
+			scope:subject_initiator = { NOT = { is_direct_subject_of = root } }
+		}
+		scope:subject_initiator = {
+			remove_variable = FX_potential_subject
+		}
+	}
+}
+
+# select state to conquer
+FX_subject_fight.11 = {
+	type = country_event
+	placement = ROOT
+
+    title = FX_subject_fight.1.t
+    desc = FX_subject_fight.1.d
+    flavor = FX_subject_fight.1.f
+
+	event_image = {
+		video = "gfx/event_pictures/unspecific_signed_contract.bk2"
+	}
+
+	immediate = {
+		scope:FX_subject_fight_target_country = {
+			every_scope_state = {
+				if = {limit = { NOR = { exists = scope:potential_target_state1 is_treaty_port = yes has_claim_by = scope:subject_initiator } } this = {save_scope_as = potential_target_state1}}
+				else_if = {limit = { NOR = {exists = scope:potential_target_state2 is_treaty_port = yes has_claim_by = scope:subject_initiator } } this = {save_scope_as = potential_target_state2}}  
+				else_if = {limit = { NOR = {exists = scope:potential_target_state3 is_treaty_port = yes has_claim_by = scope:subject_initiator } } this = {save_scope_as = potential_target_state3}}  
+				else_if = {limit = { NOR = {exists = scope:potential_target_state4 is_treaty_port = yes has_claim_by = scope:subject_initiator } } this = {save_scope_as = potential_target_state4}}  
+				else_if = {limit = { NOR = {exists = scope:potential_target_state5 is_treaty_port = yes has_claim_by = scope:subject_initiator } } this = {save_scope_as = potential_target_state5}}  
+				else_if = {limit = { NOR = {exists = scope:potential_target_state6 is_treaty_port = yes has_claim_by = scope:subject_initiator } } this = {save_scope_as = potential_target_state6}}  
+				else_if = {limit = { NOR = {exists = scope:potential_target_state7 is_treaty_port = yes has_claim_by = scope:subject_initiator } } this = {save_scope_as = potential_target_state7}}  
+				else_if = {limit = { NOR = {exists = scope:potential_target_state8 is_treaty_port = yes has_claim_by = scope:subject_initiator } } this = {save_scope_as = potential_target_state8}}  
+				else_if = {limit = { NOR = {exists = scope:potential_target_state9 is_treaty_port = yes has_claim_by = scope:subject_initiator } } this = {save_scope_as = potential_target_state9}}  
+				else_if = {limit = { NOR = {exists = scope:potential_target_state10 is_treaty_port = yes has_claim_by = scope:subject_initiator } } this = {save_scope_as = potential_target_state10}}
+				else_if = {limit = { NOR = {exists = scope:potential_target_state11 is_treaty_port = yes has_claim_by = scope:subject_initiator } } this = {save_scope_as = potential_target_state11}}
+				else_if = {limit = { NOR = {exists = scope:potential_target_state12 is_treaty_port = yes has_claim_by = scope:subject_initiator } } this = {save_scope_as = potential_target_state12}}
+				else_if = {limit = { NOR = {exists = scope:potential_target_state13 is_treaty_port = yes has_claim_by = scope:subject_initiator } } this = {save_scope_as = potential_target_state13}}
+				else_if = {limit = { NOR = {exists = scope:potential_target_state14 is_treaty_port = yes has_claim_by = scope:subject_initiator } } this = {save_scope_as = potential_target_state14}}
+				else_if = {limit = { NOR = {exists = scope:potential_target_state15 is_treaty_port = yes has_claim_by = scope:subject_initiator } } this = {save_scope_as = potential_target_state15}}
+				else_if = {limit = { NOR = {exists = scope:potential_target_state16 is_treaty_port = yes has_claim_by = scope:subject_initiator } } this = {save_scope_as = potential_target_state16}}
+				else_if = {limit = { NOR = {exists = scope:potential_target_state17 is_treaty_port = yes has_claim_by = scope:subject_initiator } } this = {save_scope_as = potential_target_state17}}
+				else_if = {limit = { NOR = {exists = scope:potential_target_state18 is_treaty_port = yes has_claim_by = scope:subject_initiator } } this = {save_scope_as = potential_target_state18}}
+				else_if = {limit = { NOR = {exists = scope:potential_target_state19 is_treaty_port = yes has_claim_by = scope:subject_initiator } } this = {save_scope_as = potential_target_state19}}
+				else_if = {limit = { NOR = {exists = scope:potential_target_state20 is_treaty_port = yes has_claim_by = scope:subject_initiator } } this = {save_scope_as = potential_target_state20}}
+				else_if = {limit = { NOR = {exists = scope:potential_target_state21 is_treaty_port = yes has_claim_by = scope:subject_initiator } } this = {save_scope_as = potential_target_state21}}
+				else_if = {limit = { NOR = {exists = scope:potential_target_state22 is_treaty_port = yes has_claim_by = scope:subject_initiator } } this = {save_scope_as = potential_target_state22}}
+				else_if = {limit = { NOR = {exists = scope:potential_target_state23 is_treaty_port = yes has_claim_by = scope:subject_initiator } } this = {save_scope_as = potential_target_state23}}
+				else_if = {limit = { NOR = {exists = scope:potential_target_state24 is_treaty_port = yes has_claim_by = scope:subject_initiator } } this = {save_scope_as = potential_target_state24}}
+				else_if = {limit = { NOR = {exists = scope:potential_target_state25 is_treaty_port = yes has_claim_by = scope:subject_initiator } } this = {save_scope_as = potential_target_state25}}
+				else_if = {limit = { NOR = {exists = scope:potential_target_state26 is_treaty_port = yes has_claim_by = scope:subject_initiator } } this = {save_scope_as = potential_target_state26}}
+				else_if = {limit = { NOR = {exists = scope:potential_target_state27 is_treaty_port = yes has_claim_by = scope:subject_initiator } } this = {save_scope_as = potential_target_state27}}
+				else_if = {limit = { NOR = {exists = scope:potential_target_state28 is_treaty_port = yes has_claim_by = scope:subject_initiator } } this = {save_scope_as = potential_target_state28}}
+				else_if = {limit = { NOR = {exists = scope:potential_target_state29 is_treaty_port = yes has_claim_by = scope:subject_initiator } } this = {save_scope_as = potential_target_state29}}
+				else_if = {limit = { NOR = {exists = scope:potential_target_state30 is_treaty_port = yes has_claim_by = scope:subject_initiator } } this = {save_scope_as = potential_target_state30}}
+				else_if = {limit = { NOR = {exists = scope:potential_target_state31 is_treaty_port = yes has_claim_by = scope:subject_initiator } } this = {save_scope_as = potential_target_state31}}
+				else_if = {limit = { NOR = {exists = scope:potential_target_state32 is_treaty_port = yes has_claim_by = scope:subject_initiator } } this = {save_scope_as = potential_target_state32}}
+				else_if = {limit = { NOR = {exists = scope:potential_target_state33 is_treaty_port = yes has_claim_by = scope:subject_initiator } } this = {save_scope_as = potential_target_state33}}
+				else_if = {limit = { NOR = {exists = scope:potential_target_state34 is_treaty_port = yes has_claim_by = scope:subject_initiator } } this = {save_scope_as = potential_target_state34}}
+				else_if = {limit = { NOR = {exists = scope:potential_target_state35 is_treaty_port = yes has_claim_by = scope:subject_initiator } } this = {save_scope_as = potential_target_state35}}
+				else_if = {limit = { NOR = {exists = scope:potential_target_state36 is_treaty_port = yes has_claim_by = scope:subject_initiator } } this = {save_scope_as = potential_target_state36}}
+				else_if = {limit = { NOR = {exists = scope:potential_target_state37 is_treaty_port = yes has_claim_by = scope:subject_initiator } } this = {save_scope_as = potential_target_state37}}
+				else_if = {limit = { NOR = {exists = scope:potential_target_state38 is_treaty_port = yes has_claim_by = scope:subject_initiator } } this = {save_scope_as = potential_target_state38}}
+				else_if = {limit = { NOR = {exists = scope:potential_target_state39 is_treaty_port = yes has_claim_by = scope:subject_initiator } } this = {save_scope_as = potential_target_state39}}
+				else_if = {limit = { NOR = {exists = scope:potential_target_state40 is_treaty_port = yes has_claim_by = scope:subject_initiator } } this = {save_scope_as = potential_target_state40}}
+				else_if = {limit = { NOR = {exists = scope:potential_target_state41 is_treaty_port = yes has_claim_by = scope:subject_initiator } } this = {save_scope_as = potential_target_state41}}
+				else_if = {limit = { NOR = {exists = scope:potential_target_state42 is_treaty_port = yes has_claim_by = scope:subject_initiator } } this = {save_scope_as = potential_target_state42}}
+				else_if = {limit = { NOR = {exists = scope:potential_target_state43 is_treaty_port = yes has_claim_by = scope:subject_initiator } } this = {save_scope_as = potential_target_state43}}
+				else_if = {limit = { NOR = {exists = scope:potential_target_state44 is_treaty_port = yes has_claim_by = scope:subject_initiator } } this = {save_scope_as = potential_target_state44}}
+				else_if = {limit = { NOR = {exists = scope:potential_target_state45 is_treaty_port = yes has_claim_by = scope:subject_initiator } } this = {save_scope_as = potential_target_state45}}
+				else_if = {limit = { NOR = {exists = scope:potential_target_state46 is_treaty_port = yes has_claim_by = scope:subject_initiator } } this = {save_scope_as = potential_target_state46}}
+				else_if = {limit = { NOR = {exists = scope:potential_target_state47 is_treaty_port = yes has_claim_by = scope:subject_initiator } } this = {save_scope_as = potential_target_state47}}
+				else_if = {limit = { NOR = {exists = scope:potential_target_state48 is_treaty_port = yes has_claim_by = scope:subject_initiator } } this = {save_scope_as = potential_target_state48}}
+				else_if = {limit = { NOR = {exists = scope:potential_target_state49 is_treaty_port = yes has_claim_by = scope:subject_initiator } } this = {save_scope_as = potential_target_state49}}
+				else_if = {limit = { NOR = {exists = scope:potential_target_state50 is_treaty_port = yes has_claim_by = scope:subject_initiator } } this = {save_scope_as = potential_target_state50}}
+				else_if = {limit = { NOR = {exists = scope:potential_target_state51 is_treaty_port = yes has_claim_by = scope:subject_initiator } } this = {save_scope_as = potential_target_state51}}
+				else_if = {limit = { NOR = {exists = scope:potential_target_state52 is_treaty_port = yes has_claim_by = scope:subject_initiator } } this = {save_scope_as = potential_target_state52}}
+				else_if = {limit = { NOR = {exists = scope:potential_target_state53 is_treaty_port = yes has_claim_by = scope:subject_initiator } } this = {save_scope_as = potential_target_state53}}
+				else_if = {limit = { NOR = {exists = scope:potential_target_state54 is_treaty_port = yes has_claim_by = scope:subject_initiator } } this = {save_scope_as = potential_target_state54}}
+			}
+		}
+	}
+
+	option = {
+		name = CANCEL
+		default_option = yes
+	}
+
+	# conquer
+	option = {
+		name = potential_target_state1
+		trigger = {
+			exists = scope:potential_target_state1
+		}
+		scope:subject_initiator = {
+			create_diplomatic_play = {
+				name = subject_fight_for_lord
+				target_state = scope:potential_target_state1
+				type = dp_conquer_state
+			}
+		}
+	}
+	option = { name = potential_target_state2 trigger = {exists = scope:potential_target_state2 } scope:subject_initiator = { create_diplomatic_play = { name = subject_fight_for_lord target_state = scope:potential_target_state2 type = dp_conquer_state}}}
+	option = { name = potential_target_state3 trigger = {exists = scope:potential_target_state3 } scope:subject_initiator = { create_diplomatic_play = { name = subject_fight_for_lord target_state = scope:potential_target_state3 type = dp_conquer_state}}}
+	option = { name = potential_target_state4 trigger = {exists = scope:potential_target_state4 } scope:subject_initiator = { create_diplomatic_play = { name = subject_fight_for_lord target_state = scope:potential_target_state4 type = dp_conquer_state}}}
+	option = { name = potential_target_state5 trigger = {exists = scope:potential_target_state5 } scope:subject_initiator = { create_diplomatic_play = { name = subject_fight_for_lord target_state = scope:potential_target_state5 type = dp_conquer_state}}}
+	option = { name = potential_target_state6 trigger = {exists = scope:potential_target_state6 } scope:subject_initiator = { create_diplomatic_play = { name = subject_fight_for_lord target_state = scope:potential_target_state6 type = dp_conquer_state}}}
+	option = { name = potential_target_state7 trigger = {exists = scope:potential_target_state7 } scope:subject_initiator = { create_diplomatic_play = { name = subject_fight_for_lord target_state = scope:potential_target_state7 type = dp_conquer_state}}}
+	option = { name = potential_target_state8 trigger = {exists = scope:potential_target_state8 } scope:subject_initiator = { create_diplomatic_play = { name = subject_fight_for_lord target_state = scope:potential_target_state8 type = dp_conquer_state}}}
+	option = { name = potential_target_state9 trigger = {exists = scope:potential_target_state9 } scope:subject_initiator = { create_diplomatic_play = { name = subject_fight_for_lord target_state = scope:potential_target_state9 type = dp_conquer_state}}}
+	option = { name = potential_target_state10 trigger = {exists = scope:potential_target_state10 } scope:subject_initiator = { create_diplomatic_play = { name = subject_fight_for_lord target_state = scope:potential_target_state10 type = dp_conquer_state}}}
+	option = { name = potential_target_state11 trigger = {exists = scope:potential_target_state11 } scope:subject_initiator = { create_diplomatic_play = { name = subject_fight_for_lord target_state = scope:potential_target_state11 type = dp_conquer_state}}}
+	option = { name = potential_target_state12 trigger = {exists = scope:potential_target_state12 } scope:subject_initiator = { create_diplomatic_play = { name = subject_fight_for_lord target_state = scope:potential_target_state12 type = dp_conquer_state}}}
+	option = { name = potential_target_state13 trigger = {exists = scope:potential_target_state13 } scope:subject_initiator = { create_diplomatic_play = { name = subject_fight_for_lord target_state = scope:potential_target_state13 type = dp_conquer_state}}}
+	option = { name = potential_target_state14 trigger = {exists = scope:potential_target_state14 } scope:subject_initiator = { create_diplomatic_play = { name = subject_fight_for_lord target_state = scope:potential_target_state14 type = dp_conquer_state}}}
+	option = { name = potential_target_state15 trigger = {exists = scope:potential_target_state15 } scope:subject_initiator = { create_diplomatic_play = { name = subject_fight_for_lord target_state = scope:potential_target_state15 type = dp_conquer_state}}}
+	option = { name = potential_target_state16 trigger = {exists = scope:potential_target_state16 } scope:subject_initiator = { create_diplomatic_play = { name = subject_fight_for_lord target_state = scope:potential_target_state16 type = dp_conquer_state}}}
+	option = { name = potential_target_state17 trigger = {exists = scope:potential_target_state17 } scope:subject_initiator = { create_diplomatic_play = { name = subject_fight_for_lord target_state = scope:potential_target_state17 type = dp_conquer_state}}}
+	option = { name = potential_target_state18 trigger = {exists = scope:potential_target_state18 } scope:subject_initiator = { create_diplomatic_play = { name = subject_fight_for_lord target_state = scope:potential_target_state18 type = dp_conquer_state}}}
+	option = { name = potential_target_state19 trigger = {exists = scope:potential_target_state19 } scope:subject_initiator = { create_diplomatic_play = { name = subject_fight_for_lord target_state = scope:potential_target_state19 type = dp_conquer_state}}}
+	option = { name = potential_target_state20 trigger = {exists = scope:potential_target_state20 } scope:subject_initiator = { create_diplomatic_play = { name = subject_fight_for_lord target_state = scope:potential_target_state20 type = dp_conquer_state}}}
+	option = { name = potential_target_state21 trigger = {exists = scope:potential_target_state21 } scope:subject_initiator = { create_diplomatic_play = { name = subject_fight_for_lord target_state = scope:potential_target_state21 type = dp_conquer_state}}}
+	option = { name = potential_target_state22 trigger = {exists = scope:potential_target_state22 } scope:subject_initiator = { create_diplomatic_play = { name = subject_fight_for_lord target_state = scope:potential_target_state22 type = dp_conquer_state}}}
+	option = { name = potential_target_state23 trigger = {exists = scope:potential_target_state23 } scope:subject_initiator = { create_diplomatic_play = { name = subject_fight_for_lord target_state = scope:potential_target_state23 type = dp_conquer_state}}}
+	option = { name = potential_target_state24 trigger = {exists = scope:potential_target_state24 } scope:subject_initiator = { create_diplomatic_play = { name = subject_fight_for_lord target_state = scope:potential_target_state24 type = dp_conquer_state}}}
+	option = { name = potential_target_state25 trigger = {exists = scope:potential_target_state25 } scope:subject_initiator = { create_diplomatic_play = { name = subject_fight_for_lord target_state = scope:potential_target_state25 type = dp_conquer_state}}}
+	option = { name = potential_target_state26 trigger = {exists = scope:potential_target_state26 } scope:subject_initiator = { create_diplomatic_play = { name = subject_fight_for_lord target_state = scope:potential_target_state26 type = dp_conquer_state}}}
+	option = { name = potential_target_state27 trigger = {exists = scope:potential_target_state27 } scope:subject_initiator = { create_diplomatic_play = { name = subject_fight_for_lord target_state = scope:potential_target_state27 type = dp_conquer_state}}}
+	option = { name = potential_target_state28 trigger = {exists = scope:potential_target_state28 } scope:subject_initiator = { create_diplomatic_play = { name = subject_fight_for_lord target_state = scope:potential_target_state28 type = dp_conquer_state}}}
+	option = { name = potential_target_state29 trigger = {exists = scope:potential_target_state29 } scope:subject_initiator = { create_diplomatic_play = { name = subject_fight_for_lord target_state = scope:potential_target_state29 type = dp_conquer_state}}}
+	option = { name = potential_target_state30 trigger = {exists = scope:potential_target_state30 } scope:subject_initiator = { create_diplomatic_play = { name = subject_fight_for_lord target_state = scope:potential_target_state30 type = dp_conquer_state}}}
+	option = { name = potential_target_state31 trigger = {exists = scope:potential_target_state31 } scope:subject_initiator = { create_diplomatic_play = { name = subject_fight_for_lord target_state = scope:potential_target_state31 type = dp_conquer_state}}}
+	option = { name = potential_target_state32 trigger = {exists = scope:potential_target_state32 } scope:subject_initiator = { create_diplomatic_play = { name = subject_fight_for_lord target_state = scope:potential_target_state32 type = dp_conquer_state}}}
+	option = { name = potential_target_state33 trigger = {exists = scope:potential_target_state33 } scope:subject_initiator = { create_diplomatic_play = { name = subject_fight_for_lord target_state = scope:potential_target_state33 type = dp_conquer_state}}}
+	option = { name = potential_target_state34 trigger = {exists = scope:potential_target_state34 } scope:subject_initiator = { create_diplomatic_play = { name = subject_fight_for_lord target_state = scope:potential_target_state34 type = dp_conquer_state}}}
+	option = { name = potential_target_state35 trigger = {exists = scope:potential_target_state35 } scope:subject_initiator = { create_diplomatic_play = { name = subject_fight_for_lord target_state = scope:potential_target_state35 type = dp_conquer_state}}}
+	option = { name = potential_target_state36 trigger = {exists = scope:potential_target_state36 } scope:subject_initiator = { create_diplomatic_play = { name = subject_fight_for_lord target_state = scope:potential_target_state36 type = dp_conquer_state}}}
+	option = { name = potential_target_state37 trigger = {exists = scope:potential_target_state37 } scope:subject_initiator = { create_diplomatic_play = { name = subject_fight_for_lord target_state = scope:potential_target_state37 type = dp_conquer_state}}}
+	option = { name = potential_target_state38 trigger = {exists = scope:potential_target_state38 } scope:subject_initiator = { create_diplomatic_play = { name = subject_fight_for_lord target_state = scope:potential_target_state38 type = dp_conquer_state}}}
+	option = { name = potential_target_state39 trigger = {exists = scope:potential_target_state39 } scope:subject_initiator = { create_diplomatic_play = { name = subject_fight_for_lord target_state = scope:potential_target_state39 type = dp_conquer_state}}}
+	option = { name = potential_target_state40 trigger = {exists = scope:potential_target_state40 } scope:subject_initiator = { create_diplomatic_play = { name = subject_fight_for_lord target_state = scope:potential_target_state40 type = dp_conquer_state}}}
+	option = { name = potential_target_state41 trigger = {exists = scope:potential_target_state41 } scope:subject_initiator = { create_diplomatic_play = { name = subject_fight_for_lord target_state = scope:potential_target_state41 type = dp_conquer_state}}}
+	option = { name = potential_target_state42 trigger = {exists = scope:potential_target_state42 } scope:subject_initiator = { create_diplomatic_play = { name = subject_fight_for_lord target_state = scope:potential_target_state42 type = dp_conquer_state}}}
+	option = { name = potential_target_state43 trigger = {exists = scope:potential_target_state43 } scope:subject_initiator = { create_diplomatic_play = { name = subject_fight_for_lord target_state = scope:potential_target_state43 type = dp_conquer_state}}}
+	option = { name = potential_target_state44 trigger = {exists = scope:potential_target_state44 } scope:subject_initiator = { create_diplomatic_play = { name = subject_fight_for_lord target_state = scope:potential_target_state44 type = dp_conquer_state}}}
+	option = { name = potential_target_state45 trigger = {exists = scope:potential_target_state45 } scope:subject_initiator = { create_diplomatic_play = { name = subject_fight_for_lord target_state = scope:potential_target_state45 type = dp_conquer_state}}}
+	option = { name = potential_target_state46 trigger = {exists = scope:potential_target_state46 } scope:subject_initiator = { create_diplomatic_play = { name = subject_fight_for_lord target_state = scope:potential_target_state46 type = dp_conquer_state}}}
+	option = { name = potential_target_state47 trigger = {exists = scope:potential_target_state47 } scope:subject_initiator = { create_diplomatic_play = { name = subject_fight_for_lord target_state = scope:potential_target_state47 type = dp_conquer_state}}}
+	option = { name = potential_target_state48 trigger = {exists = scope:potential_target_state48 } scope:subject_initiator = { create_diplomatic_play = { name = subject_fight_for_lord target_state = scope:potential_target_state48 type = dp_conquer_state}}}
+	option = { name = potential_target_state49 trigger = {exists = scope:potential_target_state49 } scope:subject_initiator = { create_diplomatic_play = { name = subject_fight_for_lord target_state = scope:potential_target_state49 type = dp_conquer_state}}}
+	option = { name = potential_target_state50 trigger = {exists = scope:potential_target_state50 } scope:subject_initiator = { create_diplomatic_play = { name = subject_fight_for_lord target_state = scope:potential_target_state50 type = dp_conquer_state}}}
+	option = { name = potential_target_state51 trigger = {exists = scope:potential_target_state51 } scope:subject_initiator = { create_diplomatic_play = { name = subject_fight_for_lord target_state = scope:potential_target_state51 type = dp_conquer_state}}}
+	option = { name = potential_target_state52 trigger = {exists = scope:potential_target_state52 } scope:subject_initiator = { create_diplomatic_play = { name = subject_fight_for_lord target_state = scope:potential_target_state52 type = dp_conquer_state}}}
+	option = { name = potential_target_state53 trigger = {exists = scope:potential_target_state53 } scope:subject_initiator = { create_diplomatic_play = { name = subject_fight_for_lord target_state = scope:potential_target_state53 type = dp_conquer_state}}}
+	option = { name = potential_target_state54 trigger = {exists = scope:potential_target_state54 } scope:subject_initiator = { create_diplomatic_play = { name = subject_fight_for_lord target_state = scope:potential_target_state54 type = dp_conquer_state}}}
+}
+
+# select treaty port to conquer
+FX_subject_fight.12 = {
+	type = country_event
+	placement = ROOT
+
+    title = FX_subject_fight.1.t
+    desc = FX_subject_fight.1.d
+    flavor = FX_subject_fight.1.f
+
+	event_image = {
+		video = "gfx/event_pictures/unspecific_signed_contract.bk2"
+	}
+
+	immediate = {
+		scope:FX_subject_fight_target_country = {
+			every_scope_state = {
+				if = {limit = { NOT = { exists = scope:potential_target_state1 } is_treaty_port = yes } this = {save_scope_as = potential_target_state1}}
+				else_if = {limit = { NOT = {exists = scope:potential_target_state2 } is_treaty_port = yes } this = {save_scope_as = potential_target_state2}}  
+				else_if = {limit = { NOT = {exists = scope:potential_target_state3 } is_treaty_port = yes } this = {save_scope_as = potential_target_state3}}  
+				else_if = {limit = { NOT = {exists = scope:potential_target_state4 } is_treaty_port = yes } this = {save_scope_as = potential_target_state4}}  
+				else_if = {limit = { NOT = {exists = scope:potential_target_state5 } is_treaty_port = yes } this = {save_scope_as = potential_target_state5}}  
+				else_if = {limit = { NOT = {exists = scope:potential_target_state6 } is_treaty_port = yes } this = {save_scope_as = potential_target_state6}}  
+				else_if = {limit = { NOT = {exists = scope:potential_target_state7 } is_treaty_port = yes } this = {save_scope_as = potential_target_state7}}  
+				else_if = {limit = { NOT = {exists = scope:potential_target_state8 } is_treaty_port = yes } this = {save_scope_as = potential_target_state8}}  
+				else_if = {limit = { NOT = {exists = scope:potential_target_state9 } is_treaty_port = yes } this = {save_scope_as = potential_target_state9}}  
+				else_if = {limit = { NOT = {exists = scope:potential_target_state10 } is_treaty_port = yes } this = {save_scope_as = potential_target_state10}}
+				else_if = {limit = { NOT = {exists = scope:potential_target_state11 } is_treaty_port = yes } this = {save_scope_as = potential_target_state11}}
+				else_if = {limit = { NOT = {exists = scope:potential_target_state12 } is_treaty_port = yes } this = {save_scope_as = potential_target_state12}}
+				else_if = {limit = { NOT = {exists = scope:potential_target_state13 } is_treaty_port = yes } this = {save_scope_as = potential_target_state13}}
+				else_if = {limit = { NOT = {exists = scope:potential_target_state14 } is_treaty_port = yes } this = {save_scope_as = potential_target_state14}}
+				else_if = {limit = { NOT = {exists = scope:potential_target_state15 } is_treaty_port = yes } this = {save_scope_as = potential_target_state15}}
+				else_if = {limit = { NOT = {exists = scope:potential_target_state16 } is_treaty_port = yes } this = {save_scope_as = potential_target_state16}}
+				else_if = {limit = { NOT = {exists = scope:potential_target_state17 } is_treaty_port = yes } this = {save_scope_as = potential_target_state17}}
+				else_if = {limit = { NOT = {exists = scope:potential_target_state18 } is_treaty_port = yes } this = {save_scope_as = potential_target_state18}}
+				else_if = {limit = { NOT = {exists = scope:potential_target_state19 } is_treaty_port = yes } this = {save_scope_as = potential_target_state19}}
+				else_if = {limit = { NOT = {exists = scope:potential_target_state20 } is_treaty_port = yes } this = {save_scope_as = potential_target_state20}}
+				else_if = {limit = { NOT = {exists = scope:potential_target_state21 } is_treaty_port = yes } this = {save_scope_as = potential_target_state21}}
+				else_if = {limit = { NOT = {exists = scope:potential_target_state22 } is_treaty_port = yes } this = {save_scope_as = potential_target_state22}}
+				else_if = {limit = { NOT = {exists = scope:potential_target_state23 } is_treaty_port = yes } this = {save_scope_as = potential_target_state23}}
+				else_if = {limit = { NOT = {exists = scope:potential_target_state24 } is_treaty_port = yes } this = {save_scope_as = potential_target_state24}}
+				else_if = {limit = { NOT = {exists = scope:potential_target_state25 } is_treaty_port = yes } this = {save_scope_as = potential_target_state25}}
+				else_if = {limit = { NOT = {exists = scope:potential_target_state26 } is_treaty_port = yes } this = {save_scope_as = potential_target_state26}}
+				else_if = {limit = { NOT = {exists = scope:potential_target_state27 } is_treaty_port = yes } this = {save_scope_as = potential_target_state27}}
+				else_if = {limit = { NOT = {exists = scope:potential_target_state28 } is_treaty_port = yes } this = {save_scope_as = potential_target_state28}}
+				else_if = {limit = { NOT = {exists = scope:potential_target_state29 } is_treaty_port = yes } this = {save_scope_as = potential_target_state29}}
+				else_if = {limit = { NOT = {exists = scope:potential_target_state30 } is_treaty_port = yes } this = {save_scope_as = potential_target_state30}}
+				else_if = {limit = { NOT = {exists = scope:potential_target_state31 } is_treaty_port = yes } this = {save_scope_as = potential_target_state31}}
+				else_if = {limit = { NOT = {exists = scope:potential_target_state32 } is_treaty_port = yes } this = {save_scope_as = potential_target_state32}}
+				else_if = {limit = { NOT = {exists = scope:potential_target_state33 } is_treaty_port = yes } this = {save_scope_as = potential_target_state33}}
+				else_if = {limit = { NOT = {exists = scope:potential_target_state34 } is_treaty_port = yes } this = {save_scope_as = potential_target_state34}}
+				else_if = {limit = { NOT = {exists = scope:potential_target_state35 } is_treaty_port = yes } this = {save_scope_as = potential_target_state35}}
+				else_if = {limit = { NOT = {exists = scope:potential_target_state36 } is_treaty_port = yes } this = {save_scope_as = potential_target_state36}}
+				else_if = {limit = { NOT = {exists = scope:potential_target_state37 } is_treaty_port = yes } this = {save_scope_as = potential_target_state37}}
+				else_if = {limit = { NOT = {exists = scope:potential_target_state38 } is_treaty_port = yes } this = {save_scope_as = potential_target_state38}}
+				else_if = {limit = { NOT = {exists = scope:potential_target_state39 } is_treaty_port = yes } this = {save_scope_as = potential_target_state39}}
+				else_if = {limit = { NOT = {exists = scope:potential_target_state40 } is_treaty_port = yes } this = {save_scope_as = potential_target_state40}}
+				else_if = {limit = { NOT = {exists = scope:potential_target_state41 } is_treaty_port = yes } this = {save_scope_as = potential_target_state41}}
+				else_if = {limit = { NOT = {exists = scope:potential_target_state42 } is_treaty_port = yes } this = {save_scope_as = potential_target_state42}}
+				else_if = {limit = { NOT = {exists = scope:potential_target_state43 } is_treaty_port = yes } this = {save_scope_as = potential_target_state43}}
+				else_if = {limit = { NOT = {exists = scope:potential_target_state44 } is_treaty_port = yes } this = {save_scope_as = potential_target_state44}}
+				else_if = {limit = { NOT = {exists = scope:potential_target_state45 } is_treaty_port = yes } this = {save_scope_as = potential_target_state45}}
+				else_if = {limit = { NOT = {exists = scope:potential_target_state46 } is_treaty_port = yes } this = {save_scope_as = potential_target_state46}}
+				else_if = {limit = { NOT = {exists = scope:potential_target_state47 } is_treaty_port = yes } this = {save_scope_as = potential_target_state47}}
+				else_if = {limit = { NOT = {exists = scope:potential_target_state48 } is_treaty_port = yes } this = {save_scope_as = potential_target_state48}}
+				else_if = {limit = { NOT = {exists = scope:potential_target_state49 } is_treaty_port = yes } this = {save_scope_as = potential_target_state49}}
+				else_if = {limit = { NOT = {exists = scope:potential_target_state50 } is_treaty_port = yes } this = {save_scope_as = potential_target_state50}}
+				else_if = {limit = { NOT = {exists = scope:potential_target_state51 } is_treaty_port = yes } this = {save_scope_as = potential_target_state51}}
+				else_if = {limit = { NOT = {exists = scope:potential_target_state52 } is_treaty_port = yes } this = {save_scope_as = potential_target_state52}}
+				else_if = {limit = { NOT = {exists = scope:potential_target_state53 } is_treaty_port = yes } this = {save_scope_as = potential_target_state53}}
+				else_if = {limit = { NOT = {exists = scope:potential_target_state54 } is_treaty_port = yes } this = {save_scope_as = potential_target_state54}}
+			}
+		}
+	}
+
+	option = {
+		name = CANCEL
+		default_option = yes
+	}
+
+	# conquer treaty port
+	option = {
+		name = potential_target_state1
+		trigger = {
+			exists = scope:potential_target_state1
+		}
+		scope:subject_initiator = {
+			create_diplomatic_play = {
+				name = subject_fight_for_lord
+				target_state = scope:potential_target_state1
+				type = dp_take_treaty_port
+			}
+		}
+	}
+	option = { name = potential_target_state2 trigger = {exists = scope:potential_target_state2 } scope:subject_initiator = { create_diplomatic_play = { name = subject_fight_for_lord target_state = scope:potential_target_state2 type = dp_take_treaty_port}}}
+	option = { name = potential_target_state3 trigger = {exists = scope:potential_target_state3 } scope:subject_initiator = { create_diplomatic_play = { name = subject_fight_for_lord target_state = scope:potential_target_state3 type = dp_take_treaty_port}}}
+	option = { name = potential_target_state4 trigger = {exists = scope:potential_target_state4 } scope:subject_initiator = { create_diplomatic_play = { name = subject_fight_for_lord target_state = scope:potential_target_state4 type = dp_take_treaty_port}}}
+	option = { name = potential_target_state5 trigger = {exists = scope:potential_target_state5 } scope:subject_initiator = { create_diplomatic_play = { name = subject_fight_for_lord target_state = scope:potential_target_state5 type = dp_take_treaty_port}}}
+	option = { name = potential_target_state6 trigger = {exists = scope:potential_target_state6 } scope:subject_initiator = { create_diplomatic_play = { name = subject_fight_for_lord target_state = scope:potential_target_state6 type = dp_take_treaty_port}}}
+	option = { name = potential_target_state7 trigger = {exists = scope:potential_target_state7 } scope:subject_initiator = { create_diplomatic_play = { name = subject_fight_for_lord target_state = scope:potential_target_state7 type = dp_take_treaty_port}}}
+	option = { name = potential_target_state8 trigger = {exists = scope:potential_target_state8 } scope:subject_initiator = { create_diplomatic_play = { name = subject_fight_for_lord target_state = scope:potential_target_state8 type = dp_take_treaty_port}}}
+	option = { name = potential_target_state9 trigger = {exists = scope:potential_target_state9 } scope:subject_initiator = { create_diplomatic_play = { name = subject_fight_for_lord target_state = scope:potential_target_state9 type = dp_take_treaty_port}}}
+	option = { name = potential_target_state10 trigger = {exists = scope:potential_target_state10 } scope:subject_initiator = { create_diplomatic_play = { name = subject_fight_for_lord target_state = scope:potential_target_state10 type = dp_take_treaty_port}}}
+	option = { name = potential_target_state11 trigger = {exists = scope:potential_target_state11 } scope:subject_initiator = { create_diplomatic_play = { name = subject_fight_for_lord target_state = scope:potential_target_state11 type = dp_take_treaty_port}}}
+	option = { name = potential_target_state12 trigger = {exists = scope:potential_target_state12 } scope:subject_initiator = { create_diplomatic_play = { name = subject_fight_for_lord target_state = scope:potential_target_state12 type = dp_take_treaty_port}}}
+	option = { name = potential_target_state13 trigger = {exists = scope:potential_target_state13 } scope:subject_initiator = { create_diplomatic_play = { name = subject_fight_for_lord target_state = scope:potential_target_state13 type = dp_take_treaty_port}}}
+	option = { name = potential_target_state14 trigger = {exists = scope:potential_target_state14 } scope:subject_initiator = { create_diplomatic_play = { name = subject_fight_for_lord target_state = scope:potential_target_state14 type = dp_take_treaty_port}}}
+	option = { name = potential_target_state15 trigger = {exists = scope:potential_target_state15 } scope:subject_initiator = { create_diplomatic_play = { name = subject_fight_for_lord target_state = scope:potential_target_state15 type = dp_take_treaty_port}}}
+	option = { name = potential_target_state16 trigger = {exists = scope:potential_target_state16 } scope:subject_initiator = { create_diplomatic_play = { name = subject_fight_for_lord target_state = scope:potential_target_state16 type = dp_take_treaty_port}}}
+	option = { name = potential_target_state17 trigger = {exists = scope:potential_target_state17 } scope:subject_initiator = { create_diplomatic_play = { name = subject_fight_for_lord target_state = scope:potential_target_state17 type = dp_take_treaty_port}}}
+	option = { name = potential_target_state18 trigger = {exists = scope:potential_target_state18 } scope:subject_initiator = { create_diplomatic_play = { name = subject_fight_for_lord target_state = scope:potential_target_state18 type = dp_take_treaty_port}}}
+	option = { name = potential_target_state19 trigger = {exists = scope:potential_target_state19 } scope:subject_initiator = { create_diplomatic_play = { name = subject_fight_for_lord target_state = scope:potential_target_state19 type = dp_take_treaty_port}}}
+	option = { name = potential_target_state20 trigger = {exists = scope:potential_target_state20 } scope:subject_initiator = { create_diplomatic_play = { name = subject_fight_for_lord target_state = scope:potential_target_state20 type = dp_take_treaty_port}}}
+	option = { name = potential_target_state21 trigger = {exists = scope:potential_target_state21 } scope:subject_initiator = { create_diplomatic_play = { name = subject_fight_for_lord target_state = scope:potential_target_state21 type = dp_take_treaty_port}}}
+	option = { name = potential_target_state22 trigger = {exists = scope:potential_target_state22 } scope:subject_initiator = { create_diplomatic_play = { name = subject_fight_for_lord target_state = scope:potential_target_state22 type = dp_take_treaty_port}}}
+	option = { name = potential_target_state23 trigger = {exists = scope:potential_target_state23 } scope:subject_initiator = { create_diplomatic_play = { name = subject_fight_for_lord target_state = scope:potential_target_state23 type = dp_take_treaty_port}}}
+	option = { name = potential_target_state24 trigger = {exists = scope:potential_target_state24 } scope:subject_initiator = { create_diplomatic_play = { name = subject_fight_for_lord target_state = scope:potential_target_state24 type = dp_take_treaty_port}}}
+	option = { name = potential_target_state25 trigger = {exists = scope:potential_target_state25 } scope:subject_initiator = { create_diplomatic_play = { name = subject_fight_for_lord target_state = scope:potential_target_state25 type = dp_take_treaty_port}}}
+	option = { name = potential_target_state26 trigger = {exists = scope:potential_target_state26 } scope:subject_initiator = { create_diplomatic_play = { name = subject_fight_for_lord target_state = scope:potential_target_state26 type = dp_take_treaty_port}}}
+	option = { name = potential_target_state27 trigger = {exists = scope:potential_target_state27 } scope:subject_initiator = { create_diplomatic_play = { name = subject_fight_for_lord target_state = scope:potential_target_state27 type = dp_take_treaty_port}}}
+	option = { name = potential_target_state28 trigger = {exists = scope:potential_target_state28 } scope:subject_initiator = { create_diplomatic_play = { name = subject_fight_for_lord target_state = scope:potential_target_state28 type = dp_take_treaty_port}}}
+	option = { name = potential_target_state29 trigger = {exists = scope:potential_target_state29 } scope:subject_initiator = { create_diplomatic_play = { name = subject_fight_for_lord target_state = scope:potential_target_state29 type = dp_take_treaty_port}}}
+	option = { name = potential_target_state30 trigger = {exists = scope:potential_target_state30 } scope:subject_initiator = { create_diplomatic_play = { name = subject_fight_for_lord target_state = scope:potential_target_state30 type = dp_take_treaty_port}}}
+	option = { name = potential_target_state31 trigger = {exists = scope:potential_target_state31 } scope:subject_initiator = { create_diplomatic_play = { name = subject_fight_for_lord target_state = scope:potential_target_state31 type = dp_take_treaty_port}}}
+	option = { name = potential_target_state32 trigger = {exists = scope:potential_target_state32 } scope:subject_initiator = { create_diplomatic_play = { name = subject_fight_for_lord target_state = scope:potential_target_state32 type = dp_take_treaty_port}}}
+	option = { name = potential_target_state33 trigger = {exists = scope:potential_target_state33 } scope:subject_initiator = { create_diplomatic_play = { name = subject_fight_for_lord target_state = scope:potential_target_state33 type = dp_take_treaty_port}}}
+	option = { name = potential_target_state34 trigger = {exists = scope:potential_target_state34 } scope:subject_initiator = { create_diplomatic_play = { name = subject_fight_for_lord target_state = scope:potential_target_state34 type = dp_take_treaty_port}}}
+	option = { name = potential_target_state35 trigger = {exists = scope:potential_target_state35 } scope:subject_initiator = { create_diplomatic_play = { name = subject_fight_for_lord target_state = scope:potential_target_state35 type = dp_take_treaty_port}}}
+	option = { name = potential_target_state36 trigger = {exists = scope:potential_target_state36 } scope:subject_initiator = { create_diplomatic_play = { name = subject_fight_for_lord target_state = scope:potential_target_state36 type = dp_take_treaty_port}}}
+	option = { name = potential_target_state37 trigger = {exists = scope:potential_target_state37 } scope:subject_initiator = { create_diplomatic_play = { name = subject_fight_for_lord target_state = scope:potential_target_state37 type = dp_take_treaty_port}}}
+	option = { name = potential_target_state38 trigger = {exists = scope:potential_target_state38 } scope:subject_initiator = { create_diplomatic_play = { name = subject_fight_for_lord target_state = scope:potential_target_state38 type = dp_take_treaty_port}}}
+	option = { name = potential_target_state39 trigger = {exists = scope:potential_target_state39 } scope:subject_initiator = { create_diplomatic_play = { name = subject_fight_for_lord target_state = scope:potential_target_state39 type = dp_take_treaty_port}}}
+	option = { name = potential_target_state40 trigger = {exists = scope:potential_target_state40 } scope:subject_initiator = { create_diplomatic_play = { name = subject_fight_for_lord target_state = scope:potential_target_state40 type = dp_take_treaty_port}}}
+	option = { name = potential_target_state41 trigger = {exists = scope:potential_target_state41 } scope:subject_initiator = { create_diplomatic_play = { name = subject_fight_for_lord target_state = scope:potential_target_state41 type = dp_take_treaty_port}}}
+	option = { name = potential_target_state42 trigger = {exists = scope:potential_target_state42 } scope:subject_initiator = { create_diplomatic_play = { name = subject_fight_for_lord target_state = scope:potential_target_state42 type = dp_take_treaty_port}}}
+	option = { name = potential_target_state43 trigger = {exists = scope:potential_target_state43 } scope:subject_initiator = { create_diplomatic_play = { name = subject_fight_for_lord target_state = scope:potential_target_state43 type = dp_take_treaty_port}}}
+	option = { name = potential_target_state44 trigger = {exists = scope:potential_target_state44 } scope:subject_initiator = { create_diplomatic_play = { name = subject_fight_for_lord target_state = scope:potential_target_state44 type = dp_take_treaty_port}}}
+	option = { name = potential_target_state45 trigger = {exists = scope:potential_target_state45 } scope:subject_initiator = { create_diplomatic_play = { name = subject_fight_for_lord target_state = scope:potential_target_state45 type = dp_take_treaty_port}}}
+	option = { name = potential_target_state46 trigger = {exists = scope:potential_target_state46 } scope:subject_initiator = { create_diplomatic_play = { name = subject_fight_for_lord target_state = scope:potential_target_state46 type = dp_take_treaty_port}}}
+	option = { name = potential_target_state47 trigger = {exists = scope:potential_target_state47 } scope:subject_initiator = { create_diplomatic_play = { name = subject_fight_for_lord target_state = scope:potential_target_state47 type = dp_take_treaty_port}}}
+	option = { name = potential_target_state48 trigger = {exists = scope:potential_target_state48 } scope:subject_initiator = { create_diplomatic_play = { name = subject_fight_for_lord target_state = scope:potential_target_state48 type = dp_take_treaty_port}}}
+	option = { name = potential_target_state49 trigger = {exists = scope:potential_target_state49 } scope:subject_initiator = { create_diplomatic_play = { name = subject_fight_for_lord target_state = scope:potential_target_state49 type = dp_take_treaty_port}}}
+	option = { name = potential_target_state50 trigger = {exists = scope:potential_target_state50 } scope:subject_initiator = { create_diplomatic_play = { name = subject_fight_for_lord target_state = scope:potential_target_state50 type = dp_take_treaty_port}}}
+	option = { name = potential_target_state51 trigger = {exists = scope:potential_target_state51 } scope:subject_initiator = { create_diplomatic_play = { name = subject_fight_for_lord target_state = scope:potential_target_state51 type = dp_take_treaty_port}}}
+	option = { name = potential_target_state52 trigger = {exists = scope:potential_target_state52 } scope:subject_initiator = { create_diplomatic_play = { name = subject_fight_for_lord target_state = scope:potential_target_state52 type = dp_take_treaty_port}}}
+	option = { name = potential_target_state53 trigger = {exists = scope:potential_target_state53 } scope:subject_initiator = { create_diplomatic_play = { name = subject_fight_for_lord target_state = scope:potential_target_state53 type = dp_take_treaty_port}}}
+	option = { name = potential_target_state54 trigger = {exists = scope:potential_target_state54 } scope:subject_initiator = { create_diplomatic_play = { name = subject_fight_for_lord target_state = scope:potential_target_state54 type = dp_take_treaty_port}}}
+}
+
+# select claimed or homeland state to return
+FX_subject_fight.13 = {
+	type = country_event
+	placement = ROOT
+
+    title = FX_subject_fight.1.t
+    desc = FX_subject_fight.1.d
+    flavor = FX_subject_fight.1.f
+
+	event_image = {
+		video = "gfx/event_pictures/unspecific_signed_contract.bk2"
+	}
+
+	immediate = {
+		scope:FX_subject_fight_target_country = {
+			every_scope_state = {
+				if = {limit = { NOT = { exists = scope:potential_target_state1 } has_claim_by = scope:subject_initiator } this = {save_scope_as = potential_target_state1}}
+				else_if = {limit = { NOT = {exists = scope:potential_target_state2 } has_claim_by = scope:subject_initiator } this = {save_scope_as = potential_target_state2}}  
+				else_if = {limit = { NOT = {exists = scope:potential_target_state3 } has_claim_by = scope:subject_initiator } this = {save_scope_as = potential_target_state3}}  
+				else_if = {limit = { NOT = {exists = scope:potential_target_state4 } has_claim_by = scope:subject_initiator } this = {save_scope_as = potential_target_state4}}  
+				else_if = {limit = { NOT = {exists = scope:potential_target_state5 } has_claim_by = scope:subject_initiator } this = {save_scope_as = potential_target_state5}}  
+				else_if = {limit = { NOT = {exists = scope:potential_target_state6 } has_claim_by = scope:subject_initiator } this = {save_scope_as = potential_target_state6}}  
+				else_if = {limit = { NOT = {exists = scope:potential_target_state7 } has_claim_by = scope:subject_initiator } this = {save_scope_as = potential_target_state7}}  
+				else_if = {limit = { NOT = {exists = scope:potential_target_state8 } has_claim_by = scope:subject_initiator } this = {save_scope_as = potential_target_state8}}  
+				else_if = {limit = { NOT = {exists = scope:potential_target_state9 } has_claim_by = scope:subject_initiator } this = {save_scope_as = potential_target_state9}}  
+				else_if = {limit = { NOT = {exists = scope:potential_target_state10 } has_claim_by = scope:subject_initiator } this = {save_scope_as = potential_target_state10}}
+				else_if = {limit = { NOT = {exists = scope:potential_target_state11 } has_claim_by = scope:subject_initiator } this = {save_scope_as = potential_target_state11}}
+				else_if = {limit = { NOT = {exists = scope:potential_target_state12 } has_claim_by = scope:subject_initiator } this = {save_scope_as = potential_target_state12}}
+				else_if = {limit = { NOT = {exists = scope:potential_target_state13 } has_claim_by = scope:subject_initiator } this = {save_scope_as = potential_target_state13}}
+				else_if = {limit = { NOT = {exists = scope:potential_target_state14 } has_claim_by = scope:subject_initiator } this = {save_scope_as = potential_target_state14}}
+				else_if = {limit = { NOT = {exists = scope:potential_target_state15 } has_claim_by = scope:subject_initiator } this = {save_scope_as = potential_target_state15}}
+				else_if = {limit = { NOT = {exists = scope:potential_target_state16 } has_claim_by = scope:subject_initiator } this = {save_scope_as = potential_target_state16}}
+				else_if = {limit = { NOT = {exists = scope:potential_target_state17 } has_claim_by = scope:subject_initiator } this = {save_scope_as = potential_target_state17}}
+				else_if = {limit = { NOT = {exists = scope:potential_target_state18 } has_claim_by = scope:subject_initiator } this = {save_scope_as = potential_target_state18}}
+				else_if = {limit = { NOT = {exists = scope:potential_target_state19 } has_claim_by = scope:subject_initiator } this = {save_scope_as = potential_target_state19}}
+				else_if = {limit = { NOT = {exists = scope:potential_target_state20 } has_claim_by = scope:subject_initiator } this = {save_scope_as = potential_target_state20}}
+				else_if = {limit = { NOT = {exists = scope:potential_target_state21 } has_claim_by = scope:subject_initiator } this = {save_scope_as = potential_target_state21}}
+				else_if = {limit = { NOT = {exists = scope:potential_target_state22 } has_claim_by = scope:subject_initiator } this = {save_scope_as = potential_target_state22}}
+				else_if = {limit = { NOT = {exists = scope:potential_target_state23 } has_claim_by = scope:subject_initiator } this = {save_scope_as = potential_target_state23}}
+				else_if = {limit = { NOT = {exists = scope:potential_target_state24 } has_claim_by = scope:subject_initiator } this = {save_scope_as = potential_target_state24}}
+				else_if = {limit = { NOT = {exists = scope:potential_target_state25 } has_claim_by = scope:subject_initiator } this = {save_scope_as = potential_target_state25}}
+				else_if = {limit = { NOT = {exists = scope:potential_target_state26 } has_claim_by = scope:subject_initiator } this = {save_scope_as = potential_target_state26}}
+				else_if = {limit = { NOT = {exists = scope:potential_target_state27 } has_claim_by = scope:subject_initiator } this = {save_scope_as = potential_target_state27}}
+				else_if = {limit = { NOT = {exists = scope:potential_target_state28 } has_claim_by = scope:subject_initiator } this = {save_scope_as = potential_target_state28}}
+				else_if = {limit = { NOT = {exists = scope:potential_target_state29 } has_claim_by = scope:subject_initiator } this = {save_scope_as = potential_target_state29}}
+				else_if = {limit = { NOT = {exists = scope:potential_target_state30 } has_claim_by = scope:subject_initiator } this = {save_scope_as = potential_target_state30}}
+				else_if = {limit = { NOT = {exists = scope:potential_target_state31 } has_claim_by = scope:subject_initiator } this = {save_scope_as = potential_target_state31}}
+				else_if = {limit = { NOT = {exists = scope:potential_target_state32 } has_claim_by = scope:subject_initiator } this = {save_scope_as = potential_target_state32}}
+				else_if = {limit = { NOT = {exists = scope:potential_target_state33 } has_claim_by = scope:subject_initiator } this = {save_scope_as = potential_target_state33}}
+				else_if = {limit = { NOT = {exists = scope:potential_target_state34 } has_claim_by = scope:subject_initiator } this = {save_scope_as = potential_target_state34}}
+				else_if = {limit = { NOT = {exists = scope:potential_target_state35 } has_claim_by = scope:subject_initiator } this = {save_scope_as = potential_target_state35}}
+				else_if = {limit = { NOT = {exists = scope:potential_target_state36 } has_claim_by = scope:subject_initiator } this = {save_scope_as = potential_target_state36}}
+				else_if = {limit = { NOT = {exists = scope:potential_target_state37 } has_claim_by = scope:subject_initiator } this = {save_scope_as = potential_target_state37}}
+				else_if = {limit = { NOT = {exists = scope:potential_target_state38 } has_claim_by = scope:subject_initiator } this = {save_scope_as = potential_target_state38}}
+				else_if = {limit = { NOT = {exists = scope:potential_target_state39 } has_claim_by = scope:subject_initiator } this = {save_scope_as = potential_target_state39}}
+				else_if = {limit = { NOT = {exists = scope:potential_target_state40 } has_claim_by = scope:subject_initiator } this = {save_scope_as = potential_target_state40}}
+				else_if = {limit = { NOT = {exists = scope:potential_target_state41 } has_claim_by = scope:subject_initiator } this = {save_scope_as = potential_target_state41}}
+				else_if = {limit = { NOT = {exists = scope:potential_target_state42 } has_claim_by = scope:subject_initiator } this = {save_scope_as = potential_target_state42}}
+				else_if = {limit = { NOT = {exists = scope:potential_target_state43 } has_claim_by = scope:subject_initiator } this = {save_scope_as = potential_target_state43}}
+				else_if = {limit = { NOT = {exists = scope:potential_target_state44 } has_claim_by = scope:subject_initiator } this = {save_scope_as = potential_target_state44}}
+				else_if = {limit = { NOT = {exists = scope:potential_target_state45 } has_claim_by = scope:subject_initiator } this = {save_scope_as = potential_target_state45}}
+				else_if = {limit = { NOT = {exists = scope:potential_target_state46 } has_claim_by = scope:subject_initiator } this = {save_scope_as = potential_target_state46}}
+				else_if = {limit = { NOT = {exists = scope:potential_target_state47 } has_claim_by = scope:subject_initiator } this = {save_scope_as = potential_target_state47}}
+				else_if = {limit = { NOT = {exists = scope:potential_target_state48 } has_claim_by = scope:subject_initiator } this = {save_scope_as = potential_target_state48}}
+				else_if = {limit = { NOT = {exists = scope:potential_target_state49 } has_claim_by = scope:subject_initiator } this = {save_scope_as = potential_target_state49}}
+				else_if = {limit = { NOT = {exists = scope:potential_target_state50 } has_claim_by = scope:subject_initiator } this = {save_scope_as = potential_target_state50}}
+				else_if = {limit = { NOT = {exists = scope:potential_target_state51 } has_claim_by = scope:subject_initiator } this = {save_scope_as = potential_target_state51}}
+				else_if = {limit = { NOT = {exists = scope:potential_target_state52 } has_claim_by = scope:subject_initiator } this = {save_scope_as = potential_target_state52}}
+				else_if = {limit = { NOT = {exists = scope:potential_target_state53 } has_claim_by = scope:subject_initiator } this = {save_scope_as = potential_target_state53}}
+				else_if = {limit = { NOT = {exists = scope:potential_target_state54 } has_claim_by = scope:subject_initiator } this = {save_scope_as = potential_target_state54}}
+			}
+		}
+	}
+
+	option = {
+		name = CANCEL
+		default_option = yes
+	}
+
+	# conquer claimed or homeland state
+	option = {
+		name = potential_target_state1
+		trigger = {
+			exists = scope:potential_target_state1
+		}
+		scope:subject_initiator = {
+			create_diplomatic_play = {
+				name = subject_fight_for_lord
+				target_state = scope:potential_target_state1
+				type = dp_return_state
+			}
+		}
+	}
+	option = { name = potential_target_state2 trigger = {exists = scope:potential_target_state2 } scope:subject_initiator = { create_diplomatic_play = { name = subject_fight_for_lord target_state = scope:potential_target_state2 type = dp_return_state}}}
+	option = { name = potential_target_state3 trigger = {exists = scope:potential_target_state3 } scope:subject_initiator = { create_diplomatic_play = { name = subject_fight_for_lord target_state = scope:potential_target_state3 type = dp_return_state}}}
+	option = { name = potential_target_state4 trigger = {exists = scope:potential_target_state4 } scope:subject_initiator = { create_diplomatic_play = { name = subject_fight_for_lord target_state = scope:potential_target_state4 type = dp_return_state}}}
+	option = { name = potential_target_state5 trigger = {exists = scope:potential_target_state5 } scope:subject_initiator = { create_diplomatic_play = { name = subject_fight_for_lord target_state = scope:potential_target_state5 type = dp_return_state}}}
+	option = { name = potential_target_state6 trigger = {exists = scope:potential_target_state6 } scope:subject_initiator = { create_diplomatic_play = { name = subject_fight_for_lord target_state = scope:potential_target_state6 type = dp_return_state}}}
+	option = { name = potential_target_state7 trigger = {exists = scope:potential_target_state7 } scope:subject_initiator = { create_diplomatic_play = { name = subject_fight_for_lord target_state = scope:potential_target_state7 type = dp_return_state}}}
+	option = { name = potential_target_state8 trigger = {exists = scope:potential_target_state8 } scope:subject_initiator = { create_diplomatic_play = { name = subject_fight_for_lord target_state = scope:potential_target_state8 type = dp_return_state}}}
+	option = { name = potential_target_state9 trigger = {exists = scope:potential_target_state9 } scope:subject_initiator = { create_diplomatic_play = { name = subject_fight_for_lord target_state = scope:potential_target_state9 type = dp_return_state}}}
+	option = { name = potential_target_state10 trigger = {exists = scope:potential_target_state10 } scope:subject_initiator = { create_diplomatic_play = { name = subject_fight_for_lord target_state = scope:potential_target_state10 type = dp_return_state}}}
+	option = { name = potential_target_state11 trigger = {exists = scope:potential_target_state11 } scope:subject_initiator = { create_diplomatic_play = { name = subject_fight_for_lord target_state = scope:potential_target_state11 type = dp_return_state}}}
+	option = { name = potential_target_state12 trigger = {exists = scope:potential_target_state12 } scope:subject_initiator = { create_diplomatic_play = { name = subject_fight_for_lord target_state = scope:potential_target_state12 type = dp_return_state}}}
+	option = { name = potential_target_state13 trigger = {exists = scope:potential_target_state13 } scope:subject_initiator = { create_diplomatic_play = { name = subject_fight_for_lord target_state = scope:potential_target_state13 type = dp_return_state}}}
+	option = { name = potential_target_state14 trigger = {exists = scope:potential_target_state14 } scope:subject_initiator = { create_diplomatic_play = { name = subject_fight_for_lord target_state = scope:potential_target_state14 type = dp_return_state}}}
+	option = { name = potential_target_state15 trigger = {exists = scope:potential_target_state15 } scope:subject_initiator = { create_diplomatic_play = { name = subject_fight_for_lord target_state = scope:potential_target_state15 type = dp_return_state}}}
+	option = { name = potential_target_state16 trigger = {exists = scope:potential_target_state16 } scope:subject_initiator = { create_diplomatic_play = { name = subject_fight_for_lord target_state = scope:potential_target_state16 type = dp_return_state}}}
+	option = { name = potential_target_state17 trigger = {exists = scope:potential_target_state17 } scope:subject_initiator = { create_diplomatic_play = { name = subject_fight_for_lord target_state = scope:potential_target_state17 type = dp_return_state}}}
+	option = { name = potential_target_state18 trigger = {exists = scope:potential_target_state18 } scope:subject_initiator = { create_diplomatic_play = { name = subject_fight_for_lord target_state = scope:potential_target_state18 type = dp_return_state}}}
+	option = { name = potential_target_state19 trigger = {exists = scope:potential_target_state19 } scope:subject_initiator = { create_diplomatic_play = { name = subject_fight_for_lord target_state = scope:potential_target_state19 type = dp_return_state}}}
+	option = { name = potential_target_state20 trigger = {exists = scope:potential_target_state20 } scope:subject_initiator = { create_diplomatic_play = { name = subject_fight_for_lord target_state = scope:potential_target_state20 type = dp_return_state}}}
+	option = { name = potential_target_state21 trigger = {exists = scope:potential_target_state21 } scope:subject_initiator = { create_diplomatic_play = { name = subject_fight_for_lord target_state = scope:potential_target_state21 type = dp_return_state}}}
+	option = { name = potential_target_state22 trigger = {exists = scope:potential_target_state22 } scope:subject_initiator = { create_diplomatic_play = { name = subject_fight_for_lord target_state = scope:potential_target_state22 type = dp_return_state}}}
+	option = { name = potential_target_state23 trigger = {exists = scope:potential_target_state23 } scope:subject_initiator = { create_diplomatic_play = { name = subject_fight_for_lord target_state = scope:potential_target_state23 type = dp_return_state}}}
+	option = { name = potential_target_state24 trigger = {exists = scope:potential_target_state24 } scope:subject_initiator = { create_diplomatic_play = { name = subject_fight_for_lord target_state = scope:potential_target_state24 type = dp_return_state}}}
+	option = { name = potential_target_state25 trigger = {exists = scope:potential_target_state25 } scope:subject_initiator = { create_diplomatic_play = { name = subject_fight_for_lord target_state = scope:potential_target_state25 type = dp_return_state}}}
+	option = { name = potential_target_state26 trigger = {exists = scope:potential_target_state26 } scope:subject_initiator = { create_diplomatic_play = { name = subject_fight_for_lord target_state = scope:potential_target_state26 type = dp_return_state}}}
+	option = { name = potential_target_state27 trigger = {exists = scope:potential_target_state27 } scope:subject_initiator = { create_diplomatic_play = { name = subject_fight_for_lord target_state = scope:potential_target_state27 type = dp_return_state}}}
+	option = { name = potential_target_state28 trigger = {exists = scope:potential_target_state28 } scope:subject_initiator = { create_diplomatic_play = { name = subject_fight_for_lord target_state = scope:potential_target_state28 type = dp_return_state}}}
+	option = { name = potential_target_state29 trigger = {exists = scope:potential_target_state29 } scope:subject_initiator = { create_diplomatic_play = { name = subject_fight_for_lord target_state = scope:potential_target_state29 type = dp_return_state}}}
+	option = { name = potential_target_state30 trigger = {exists = scope:potential_target_state30 } scope:subject_initiator = { create_diplomatic_play = { name = subject_fight_for_lord target_state = scope:potential_target_state30 type = dp_return_state}}}
+	option = { name = potential_target_state31 trigger = {exists = scope:potential_target_state31 } scope:subject_initiator = { create_diplomatic_play = { name = subject_fight_for_lord target_state = scope:potential_target_state31 type = dp_return_state}}}
+	option = { name = potential_target_state32 trigger = {exists = scope:potential_target_state32 } scope:subject_initiator = { create_diplomatic_play = { name = subject_fight_for_lord target_state = scope:potential_target_state32 type = dp_return_state}}}
+	option = { name = potential_target_state33 trigger = {exists = scope:potential_target_state33 } scope:subject_initiator = { create_diplomatic_play = { name = subject_fight_for_lord target_state = scope:potential_target_state33 type = dp_return_state}}}
+	option = { name = potential_target_state34 trigger = {exists = scope:potential_target_state34 } scope:subject_initiator = { create_diplomatic_play = { name = subject_fight_for_lord target_state = scope:potential_target_state34 type = dp_return_state}}}
+	option = { name = potential_target_state35 trigger = {exists = scope:potential_target_state35 } scope:subject_initiator = { create_diplomatic_play = { name = subject_fight_for_lord target_state = scope:potential_target_state35 type = dp_return_state}}}
+	option = { name = potential_target_state36 trigger = {exists = scope:potential_target_state36 } scope:subject_initiator = { create_diplomatic_play = { name = subject_fight_for_lord target_state = scope:potential_target_state36 type = dp_return_state}}}
+	option = { name = potential_target_state37 trigger = {exists = scope:potential_target_state37 } scope:subject_initiator = { create_diplomatic_play = { name = subject_fight_for_lord target_state = scope:potential_target_state37 type = dp_return_state}}}
+	option = { name = potential_target_state38 trigger = {exists = scope:potential_target_state38 } scope:subject_initiator = { create_diplomatic_play = { name = subject_fight_for_lord target_state = scope:potential_target_state38 type = dp_return_state}}}
+	option = { name = potential_target_state39 trigger = {exists = scope:potential_target_state39 } scope:subject_initiator = { create_diplomatic_play = { name = subject_fight_for_lord target_state = scope:potential_target_state39 type = dp_return_state}}}
+	option = { name = potential_target_state40 trigger = {exists = scope:potential_target_state40 } scope:subject_initiator = { create_diplomatic_play = { name = subject_fight_for_lord target_state = scope:potential_target_state40 type = dp_return_state}}}
+	option = { name = potential_target_state41 trigger = {exists = scope:potential_target_state41 } scope:subject_initiator = { create_diplomatic_play = { name = subject_fight_for_lord target_state = scope:potential_target_state41 type = dp_return_state}}}
+	option = { name = potential_target_state42 trigger = {exists = scope:potential_target_state42 } scope:subject_initiator = { create_diplomatic_play = { name = subject_fight_for_lord target_state = scope:potential_target_state42 type = dp_return_state}}}
+	option = { name = potential_target_state43 trigger = {exists = scope:potential_target_state43 } scope:subject_initiator = { create_diplomatic_play = { name = subject_fight_for_lord target_state = scope:potential_target_state43 type = dp_return_state}}}
+	option = { name = potential_target_state44 trigger = {exists = scope:potential_target_state44 } scope:subject_initiator = { create_diplomatic_play = { name = subject_fight_for_lord target_state = scope:potential_target_state44 type = dp_return_state}}}
+	option = { name = potential_target_state45 trigger = {exists = scope:potential_target_state45 } scope:subject_initiator = { create_diplomatic_play = { name = subject_fight_for_lord target_state = scope:potential_target_state45 type = dp_return_state}}}
+	option = { name = potential_target_state46 trigger = {exists = scope:potential_target_state46 } scope:subject_initiator = { create_diplomatic_play = { name = subject_fight_for_lord target_state = scope:potential_target_state46 type = dp_return_state}}}
+	option = { name = potential_target_state47 trigger = {exists = scope:potential_target_state47 } scope:subject_initiator = { create_diplomatic_play = { name = subject_fight_for_lord target_state = scope:potential_target_state47 type = dp_return_state}}}
+	option = { name = potential_target_state48 trigger = {exists = scope:potential_target_state48 } scope:subject_initiator = { create_diplomatic_play = { name = subject_fight_for_lord target_state = scope:potential_target_state48 type = dp_return_state}}}
+	option = { name = potential_target_state49 trigger = {exists = scope:potential_target_state49 } scope:subject_initiator = { create_diplomatic_play = { name = subject_fight_for_lord target_state = scope:potential_target_state49 type = dp_return_state}}}
+	option = { name = potential_target_state50 trigger = {exists = scope:potential_target_state50 } scope:subject_initiator = { create_diplomatic_play = { name = subject_fight_for_lord target_state = scope:potential_target_state50 type = dp_return_state}}}
+	option = { name = potential_target_state51 trigger = {exists = scope:potential_target_state51 } scope:subject_initiator = { create_diplomatic_play = { name = subject_fight_for_lord target_state = scope:potential_target_state51 type = dp_return_state}}}
+	option = { name = potential_target_state52 trigger = {exists = scope:potential_target_state52 } scope:subject_initiator = { create_diplomatic_play = { name = subject_fight_for_lord target_state = scope:potential_target_state52 type = dp_return_state}}}
+	option = { name = potential_target_state53 trigger = {exists = scope:potential_target_state53 } scope:subject_initiator = { create_diplomatic_play = { name = subject_fight_for_lord target_state = scope:potential_target_state53 type = dp_return_state}}}
+	option = { name = potential_target_state54 trigger = {exists = scope:potential_target_state54 } scope:subject_initiator = { create_diplomatic_play = { name = subject_fight_for_lord target_state = scope:potential_target_state54 type = dp_return_state}}}
+}

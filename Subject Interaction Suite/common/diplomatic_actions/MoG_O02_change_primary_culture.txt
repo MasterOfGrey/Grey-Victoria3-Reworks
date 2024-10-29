@@ -1,0 +1,185 @@
+﻿# Brought up to date and included from: Koa's Change Subject Culture
+
+change_primary_culture = {
+	groups= {
+		overlord
+	}
+	
+	requires_approval = no
+	should_notify_third_parties = no
+	
+	unlocking_technologies = {
+		nationalism
+	}
+	
+	potential = {
+		NOT = { is_country_type = decentralized }
+		scope:target_country = {
+			NOT = { is_country_type = decentralized }
+			is_direct_subject_of = root
+		}
+		any_primary_culture = {
+			NOT = { is_primary_culture_of = scope:target_country }
+		}
+		is_player = yes
+	}
+	
+	possible = {
+		is_revolutionary = no
+		in_default = no
+		NOT = { has_war_with = scope:target_country }
+		scope:target_country.relations:root > relations_threshold:cordial
+		has_diplomatic_relevance = scope:target_country
+		NOT = { has_diplomatic_pact = { who = scope:target_country type = include_primary_culture } } # mutually exclusive
+	}
+	
+	accept_effect = {
+		scope:target_country = {
+			set_variable = {
+				name = change_primary_culture_progress
+				value = 0
+			}
+		}
+	}
+	
+	pact = {
+		cost = 300
+		
+		is_two_sided_pact = no
+		show_in_outliner = yes
+		
+		income_transfer = 0.10
+		second_country_gets_income_transfer = yes
+		income_transfer_based_on_second_country = yes
+		
+		weekly_effect = {
+			custom_tooltip = {
+				text = change_primary_culture_weekly_effect
+				random_list = { 
+					4 = {}
+					1 = {
+						scope:target_country = {
+								change_variable = { name = change_primary_culture_progress add = 1 }
+							}
+						if = {
+							limit = {
+								scope:target_country.var:change_primary_culture_progress > 7.5 # Just in case of rounding edge-cases.
+							}
+							root = {
+								trigger_event = {
+								   id = ib_events.01
+								   popup = yes
+								}
+							}
+							if = {
+								limit = {
+									scope:target_country = {
+										has_diplomatic_pact = {
+											who = root
+											type = change_primary_culture
+										}									
+									}			
+								}
+								scope:target_country = {
+									remove_diplomatic_pact = {
+										country = root
+										type = change_primary_culture
+									}			
+								}
+							}	
+							else_if = {
+								limit = {
+									has_diplomatic_pact = {
+										who = scope:target_country
+										type = change_primary_culture
+									}		
+								}
+								remove_diplomatic_pact = {
+									country = scope:target_country
+									type = change_primary_culture
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		
+		requirement_to_maintain = {
+			trigger = {
+				has_diplomatic_relevance = scope:target_country
+			}
+		}
+		
+		requirement_to_maintain = {
+			trigger = {
+				custom_tooltip = {
+					text = DIPLO_ACTION_RELATIONS_CORDIAL_OR_GREATER
+					scope:target_country.relations:root >= relations_threshold:cordial
+				}		
+			}
+			show_about_to_break_warning = {
+				scope:target_country.relations:root <= 23 # this is: cordial + 3
+				scope:target_country.relations_change_rate:root > 0
+			}
+		}
+		
+		requirement_to_maintain = {
+			trigger = {
+				scope:target_country = { liberty_desire <= 80 }
+			}
+			show_about_to_break_warning = {
+				scope:target_country = { liberty_desire >= 75 }
+			}
+		}
+		
+		requirement_to_maintain = {
+			trigger = {
+				custom_tooltip = {
+					text = DIPLOMATIC_PACT_REQUIREMENT_AT_PEACE
+					NOT = { has_war_with = scope:target_country }
+				}			
+			}
+		}
+		
+		requirement_to_maintain = {
+			trigger = {
+#				any_primary_culture = { 
+#					NOT = {
+#						is_primary_culture_of = scope:target_country
+#					}
+#				}
+				scope:target_country = { 
+					NOT = {
+						any_primary_culture = { is_primary_culture_of = root }
+					}
+				} 
+			}
+		}
+		
+		requirement_to_maintain = {
+			trigger = {
+				scope:target_country = { is_direct_subject_of = root }
+			}
+		}
+		
+		requirement_to_maintain = {
+			trigger = {
+				NOT = { in_default = yes }
+			}
+		}
+		
+		requirement_to_maintain = {
+			trigger = {
+				custom_tooltip = {
+					text = "DIPLOMATIC_PACT_REQUIREMENT_NOT_DECENTRALIZED"
+					NOT = { is_country_type = decentralized }
+					scope:target_country = {
+						NOT = { is_country_type = decentralized }
+					}				
+				}
+			}
+		}
+	}
+}
+

@@ -1,0 +1,97 @@
+﻿# Grey's Smarter Autonomous Investment Defines
+
+NAI = {
+	# Below data is used to calculate how much weight the AI places on a production building
+	
+	
+	# BASIC BUILDING WEIGHTS
+	
+	PRODUCTION_BUILDING_NO_AVAILABLE_WORKFORCE_FACTOR = 0.05 # Vanilla = 0.25 - Total weight is multiplied by this if the state lacks enough workforce to staff the building
+	
+	#	Autonomous "Stop building shit in inefficient places with high MAPI" factor:
+	PRODUCTION_BUILDING_INPUT_NO_LOCAL_PRODUCTION_FACTOR = -0.8 # Vanilla = -0.5 - Add this value to a building for each unit of money worth of goods consumed that are not produced in the state but *are* produced by buildings in the market
+	#	Autonomous "Build shit in places where MAPI won't assault your profits as hard" factor (this is less important because profit weighting should play a larger impact here):
+	PRODUCTION_BUILDING_OUTPUT_NO_LOCAL_CONSUMPTION_FACTOR = -0.2 # Vanilla = -0.5 - Add this value to a building for each unit of money worth of goods produced that are not consumed in the state but *are* consumed by buildings in the market
+	
+	PRODUCTION_BUILDING_FREE_INFRASTRUCTURE_TARGET_WHEN_LACKING_WORKFORCE = 20 # Vanilla = 5 - When lacking workforce, the AI will stop building in the state once available infrastructure is this or less
+	PRODUCTION_BUILDING_REDUCE_SHORTAGE_MULT = 3 # Vanilla = 5 - Multiply score by this if we're reducing the state region's shortages
+	
+	# For Reference:
+	# PRODUCTION_BUILDING_RANDOM_FACTOR = 10.0 # The higher this is, the more random AI construction will be
+	# PRODUCTION_BUILDING_STATE_RANDOM_FACTOR = 1.0 # The higher this is, the more random AI state selection for building types will be
+	# PRODUCTION_BUILDING_GOODS_PROFIT_FACTOR = 5000 # Per pound of predicted building profit (divided by employee count per level)
+	# PRODUCTION_BUILDING_PRODUCED_VALUE_FACTOR = 0.25 # Per pound of produced goods in base value
+	# PRODUCTION_BUILDING_OUTPUT_WANTED_INDUSTRIAL_GOODS_FACTOR = 0.25 # Add this value to a building for each unit of money worth of industrial goods that aren't overproduced in the country and are used by buildings
+	# PRODUCTION_BUILDING_OUTPUT_WANTED_MILITARY_GOODS_FACTOR = 0.25 # Add this value to a building for each unit of money worth of military goods that aren't overproduced in the country and are used by buildings
+	# PRODUCTION_BUILDING_OUTPUT_NEEDED_INDUSTRIAL_GOODS_FACTOR = 0.5 # Add this value to a building for each unit of money worth of industrial goods that are underproduced in the country and are used by buildings
+	# PRODUCTION_BUILDING_OUTPUT_NEEDED_MILITARY_GOODS_FACTOR = 0.5 # Add this value to a building for each unit of money worth of military goods that are underproduced in the country and are used by buildings
+	
+	# No touch unnecessary thresholds.
+	# PRODUCTION_BUILDING_AUTONOMOUS_INVESTMENT_WANTED_COST_COVERAGE = 1 # If investment pool has less money than this in it, don't do any autonomous construction
+	# PRODUCTION_BUILDING_AUTONOMOUS_INVESTMENT_CONSTRUCTION_COST_DIVISOR_SCALING = 0.001 # Value for autonomous investment pool constructions is divided by ( 1 + construction point cost * this )
+	
+	
+	# Government construction applies this multiplier to domestic states when determining where to construct
+	# GOVERNMENT_CONSTRUCTION_DOMESTIC_INVESTMENT_BIAS = 2.0
+	# GOVERNMENT_CONSTRUCTION_SUBJECT_INVESTMENT_BIAS = 1.5
+	# Untouched for now.
+	
+	
+	# AUTONOMOUS BUILDING WEIGHTS
+	
+	PRODUCTION_BUILDING_AUTONOMOUS_INVESTMENT_CONSTRUCTION_COST_DIVISOR_SCALING = 0 # Vanilla = 0.001 - Value for autonomous investment pool constructions is divided by ( 1 + construction point cost * this )# Key lines:
+	PRODUCTION_BUILDING_AUTONOMOUS_INVESTMENT_RANDOM_FACTOR_MULT = 1.0 # Vanilla = 2.0 - Multiplies PRODUCTION_BUILDING_RANDOM_FACTOR for autonomous investment pool constructions
+	PRODUCTION_BUILDING_AUTONOMOUS_INVESTMENT_STATE_RANDOM_FACTOR_MULT = 2.5 # Vanilla = 1.5 - Multiplies PRODUCTION_BUILDING_STATE_RANDOM_FACTOR for autonomous investment pool constructions
+	
+	PRODUCTION_BUILDING_AUTONOMOUS_INVESTMENT_PROFIT_FACTOR_MULT = 2.5 # Vanilla = 1.5 - Multiplies PRODUCTION_BUILDING_GOODS_PROFIT_FACTOR for autonomous investment pool constructions
+	PRODUCTION_BUILDING_AUTONOMOUS_INVESTMENT_PROFIT_PRIVATIZE_FACTOR_MULT = 5.0 # Vanilla = 3.0 - Multiplies PRODUCTION_BUILDING_GOODS_PROFIT_FACTOR for autonomous investment pool constructions, gives higher weight to buildings that have levels to privatize
+	
+	PRODUCTION_BUILDING_AUTONOMOUS_INVESTMENT_PRODUCED_VALUE_FACTOR_MULT = 0.5 # Vanilla = 1.25 - Multiplies PRODUCTION_BUILDING_PRODUCED_VALUE_FACTOR for autonomous investment pool constructions
+	PRODUCTION_BUILDING_AUTONOMOUS_INVESTMENT_PRODUCED_VALUE_PRIVATIZE_FACTOR_MULT = 0.8 # Vanilla = 2.0 - Multiplies PRODUCTION_BUILDING_PRODUCED_VALUE_FACTOR for autonomous investment pool constructions, gives higher weight to buildings that have levels to privatize
+	
+	# Increase general desire to privatize
+	PRODUCTION_BUILDING_AUTONOMOUS_INVESTMENT_PROFIT_PRIVATIZE_SELF_OWNED_BUILDING_MULT = 1.2 # Vanilla = 0.75 - Multiply the total score for privatizing self-owned building levels by this
+	
+	AUTONOMOUS_INVESTMENT_DOMESTIC_INVESTMENT_BIAS = 3.0 # Vanilla = 2.0
+	AUTONOMOUS_INVESTMENT_DOMESTIC_INVESTMENT_BIAS_MAX = 10.0 # Vanilla = 10.0
+	
+	# The AI for autonomous investment weights alters the weights for buildings based on how much of the investment pool originates from a certain ownership type building
+	# For example, if a high proportion of investment pool income is from Manor Houses, the building groups that manor houses have high investment weights for are weighted up
+	# Here we clamp the bounds for this effect, ie how low/high is the weight allowed to get
+	AUTONOMOUS_INVESTMENT_MIN_PROPORTIONAL_INVESTMENT_WEIGHT = 0.25 # Vanilla = 0.25
+	AUTONOMOUS_INVESTMENT_MAX_PROPORTIONAL_INVESTMENT_WEIGHT = 0.75 # Vanilla = 1.0
+	
+	# When scoring an ownership building for a new investment, always consider them to be contributing a minimum of this amount of the investment pool
+	# This is to ensure that financial centers can appear in countries that lack them, etc
+	# AUTONOMOUS_INVESTMENT_MIN_OWNERSHIP_BUILDING_INVESTMENT_SHARE = 0.25
+	
+	# Chance for ai to do privatization instead of building a new building level when evaluating an existing building
+	BUILDING_PRIVATIZATION_CHANCE = 80.0  # Vanilla = 50.0
+	
+	# Investment AI owner building location selection weights and multipliers - some kept the same, re-specified for behavioural consistency.
+	OWNER_BUILDING_LOCATION_BASE_SCORE = 1							# Base score for selecting state as owner building location
+	OWNER_BUILDING_LOCATION_POPULATION_SCORE = 0.5 # 1				# For each 10000 population, increase score for selecting state as owner building location by this
+	OWNER_BUILDING_LOCATION_GDP_SCORE = 1							# For each INVESTMENT_LOCATION_GDP_DIVISOR yearly state gdp, increase score for selecting state as owner building location by this
+	OWNER_BUILDING_LOCATION_GDP_DIVISOR = 100000	
+	OWNER_BUILDING_LOCATION_HAS_OWNER_BUILDING_MULT = 1.2 # 2.0		# Multiply owner building location score by this for any state which already has the requisite owner building type
+	OWNER_BUILDING_LOCATION_CAPITAL_MULT = 1.5 # 2.0				# Multiply owner building location score by this for our capital
+	OWNER_BUILDING_LOCATION_SAME_STATE_MULT = 4.0					# Multiply owner building location score by this for the same state we're building/privatizing in
+	OWNER_BUILDING_LOCATION_NOT_HOMELANDS_MULT = 0.9 # 0.5			# Multiply owner building location score by this if the state isn't a homeland of the country's primary cultures
+	OWNER_BUILDING_LOCATION_LOWER_GDP_MULT = 0.25					# Multiply owner building location score by this for any state that has lower GDP than the state we're building/privatizing in
+	OWNER_BUILDING_LOCATION_NO_AVAILABLE_WORKFORCE_MULT = 0.1		# Multiply owner building location score by this if the state lacks workers
+	OWNER_BUILDING_LOCATION_NO_AVAILABLE_INFRASTRUCTURE_MULT = 0.1	# Multiply owner building location score by this if the state lacks infrastructure
+	OWNER_BUILDING_LOCATION_UNINCORPORATED_MULT = 0.01				# Multiply owner building location score by this if the state is unincorporated
+	
+	# Temp untouched
+	# PRODUCTION_BUILDING_AUTONOMOUS_INVESTMENT_MILITARY_GOODS_FACTOR_MULT = 0.8 # Vanilla = 1.5 - Multiplies PRODUCTION_BUILDING_OUTPUT_NEEDED_MILITARY_GOODS_FACTOR & PRODUCTION_BUILDING_OUTPUT_WANTED_MILITARY_GOODS_FACTOR for autonomous investment pool constructions
+	# PRODUCTION_BUILDING_AUTONOMOUS_INVESTMENT_INDUSTRIAL_GOODS_FACTOR_MULT = 4.0 # Vanilla = 4.0 - Multiplies PRODUCTION_BUILDING_OUTPUT_NEEDED_INDUSTRIAL_GOODS_FACTOR & PRODUCTION_BUILDING_OUTPUT_WANTED_INDUSTRIAL_GOODS_FACTOR for autonomous investment pool constructions
+	
+	# Untouched autonomous lines:
+	# PRODUCTION_BUILDING_AUTONOMOUS_INVESTMENT_PRODUCED_MODIFIER_FACTOR_MULT = 0.75 # Vanilla = 0.75 - Multiplies value from produced modifiers for autonomous investment pool constructions
+	# PRODUCTION_BUILDING_AUTONOMOUS_INVESTMENT_PRICE_COMPENSATION_FACTOR_MULT = 1.0 # Vanilla = 1.0 - Multiplies high/low price compensation factors for autonomous investment pool constructions
+	# PRODUCTION_BUILDING_AUTONOMOUS_INVESTMENT_BELOW_DESIRED_INFRASTRUCTURE_FACTOR_MULT = 0.25 # Vanilla = 0.25 - Multiplies PRODUCTION_BUILDING_BELOW_DESIRED_INFRASTRUCTURE_FACTOR for autonomous investment pool constructions
+	# PRODUCTION_BUILDING_AUTONOMOUS_INVESTMENT_LOW_INVESTMENT_FACTOR = 10 	# Vanilla = 10 - If investment proportion of the investing pop type is low (see below), multiply building value by this
+	# PRODUCTION_BUILDING_AUTONOMOUS_INVESTMENT_LOW_INVESTMENT_PROPORTION = 0.66  # Vanilla = 0.66 - If the proportion of expected to previous investments by a pop type is lower or equal to this, apply the above factor
+	# PRODUCTION_BUILDING_AUTONOMOUS_INVESTMENT_LOW_INVESTMENT_RESET_TIME = 12  # Vanilla = 12 - Every this number of months, reset the historical construction values for each pop type to ensure system can handle significant economic changes over time
+	
+}

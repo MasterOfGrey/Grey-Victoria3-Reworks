@@ -1,0 +1,14 @@
+﻿# Reminder to expand your area of influence
+
+unused_interests_alert = {
+	texture = "gfx/interface/icons/alert_icons/has_decreasing_interests.dds"
+	script_context = player_country
+
+	valid = {
+		num_declared_interests < max_num_declared_interests
+	}
+
+	open_panel = diplomatic_overview
+	type = alert
+	color = green
+}

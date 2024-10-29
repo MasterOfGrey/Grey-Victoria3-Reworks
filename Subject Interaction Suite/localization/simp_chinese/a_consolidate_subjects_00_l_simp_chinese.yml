@@ -1,0 +1,15 @@
+﻿l_simp_chinese:
+ consolidate_subject: "合并附属国"
+ consolidate_subject_action_name: "合并[concept_subject]"
+ consolidate_subject_desc: "将相邻的两个[Concept('concept_subject', '$concept_subjects$')]合并为一个[concept_country]， 附属国必须处于低[concept_autonomy]和[concept_liberty_desire]。 两个附属国必须有一个相同的[Concept('concept_primary_cultures', '$concept_primary_culture$')]"
+ consolidate_subject_action_notification_name: "[INITIATOR_COUNTRY.GetName]合并了政府"
+ consolidate_subject_action_notification_desc: "[INITIATOR_COUNTRY.GetName]决定合并我们"
+ consolidate_subject_action_notification_third_party_name: "[INITIATOR_COUNTRY.GetName]合并了附庸"
+ consolidate_subject_action_notification_third_party_desc: "[INITIATOR_COUNTRY.GetName]合并了[TARGET_COUNTRY.GetName]"
+
+ is_not_african_subject: "目标附庸不是非洲殖民政府"
+
+ alert_overlord_can_consolidate_subject_name: "[GetDiplomaticActionType('consolidate_subject').GetName]已可用于[SCOPE.GetRootScope.GetCountry.GetName]"
+ alert_overlord_can_consolidate_subject_desc: "我们的[concept_subject] [SCOPE.GetRootScope.GetCountry.GetName]以可被合并进相邻的附属国"
+ alert_overlord_can_consolidate_subject_hint: "您可以使用外交行动中的“宗主国行动”一栏执行[GetDiplomaticActionType('consolidate_subject').GetName] [concept_diplomatic_action]."
+ alert_overlord_can_consolidate_subject_action: "外交行动"

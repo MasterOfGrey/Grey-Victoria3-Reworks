@@ -1,0 +1,16 @@
+{
+  "name" : "Grey's Soft Pop Adjustments",
+  "id" : "3336914177",
+  "version" : "",
+  "supported_game_version" : "",
+  "short_description" : "",
+  "tags" : [
+        "Balance",
+        "Pops",
+        "Gameplay"
+    ],
+  "relationships" : [],
+  "game_custom_data" : {
+    "multiplayer_synchronized" : true
+  }
+}

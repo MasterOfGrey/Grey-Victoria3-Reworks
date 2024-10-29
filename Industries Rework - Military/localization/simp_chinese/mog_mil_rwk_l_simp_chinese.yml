@@ -1,0 +1,78 @@
+﻿l_simp_chinese:
+  
+ # Production method groups 
+ pmg_arms_tools_demob: "退役工具生产" #NT!
+ pmg_arti_tools_demob: "退役工具生产" #NT!
+ pmg_munitions_explosives_demob: "退役炸药生产" #NT!
+  
+ # Production methods 
+ pm_extensive_tools_a_i: "广泛的" #NT!
+ pm_moderate_tools_a_i: "缓和" #NT!
+ pm_limited_tools_a_i: "有限的" #NT!
+ pm_extensive_tools_a_s: "广泛的" #NT!
+ pm_moderate_tools_a_s: "缓和" #NT!
+ pm_limited_tools_a_s: "有限的" #NT!
+ pm_extensive_tools_a_r: "外部橡胶" #NT!
+ pm_moderate_tools_a_r: "改性橡胶" #NT!
+ pm_limited_tools_a_r: "有限公司橡胶" #NT!
+ pm_no_tools_a: "禁止使用民用工具" #NT!
+  
+ pm_extensive_tools_t_i: "广泛的" #NT!
+ pm_moderate_tools_t_i: "缓和" #NT!
+ pm_limited_tools_t_i: "有限的" #NT!
+ pm_extensive_tools_t_s: "广泛的" #NT!
+ pm_moderate_tools_t_s: "缓和" #NT!
+ pm_limited_tools_t_s: "有限的" #NT!
+ pm_extensive_tools_t_r: "外部橡胶" #NT!
+ pm_moderate_tools_t_r: "改性橡胶" #NT!
+ pm_limited_tools_t_r: "有限公司橡胶" #NT!
+ pm_no_tools_t: "禁止使用民用工具" #NT!
+  
+ pm_extensive_ammo_le: "广泛的" #NT!
+ pm_moderate_ammo_le: "缓和" #NT!
+ pm_limited_ammo_le: "有限的" #NT!
+ pm_extensive_ammo_ni: "萃取硝酸甘油" #NT!
+ pm_moderate_ammo_ni: "改良型硝酸甘油" #NT!
+ pm_limited_ammo_ni: "有限公司硝酸甘油" #NT!
+ pm_extensive_ammo_dy: "广泛的" #NT!
+ pm_moderate_ammo_dy: "缓和" #NT!
+ pm_limited_ammo_dy: "有限的" #NT!
+ pm_extensive_ammo_br: "外部电解" #NT!
+ pm_moderate_ammo_br: "电解模式" #NT!
+ pm_limited_ammo_br: "有限公司电解" #NT!
+ pm_no_self_explosives: "禁止自产爆炸物" #NT!
+  
+ pm_limited_radios: "一些收音机" #NT!
+ pm_moderate_radios: "大量广播" #NT!
+ pm_extensive_radios: "许多收音机" #NT!
+  
+ pm_ui_safety_a: "（忽略此内容）" #NT!
+ pm_ui_safety_b: "（忽略此内容）" #NT!
+  
+ # Alerts 
+ alert_MIR_war_demob_arms_name: "与退役军工企业的战争" #NT!
+ alert_MIR_war_demob_arms_hint: "您正在处于战争之中，而您的军火工业正在生产大量的工具而不是小型武器。" #NT!
+ alert_MIR_war_demob_arms_action: "城市建筑面板" #NT!
+ MIR_war_demob_arms_setting_name: "复员军火工业警告 - 战争" #NT!
+ alert_MIR_peace_mob_arms_name: "与动员军工企业共度和平" #NT!
+ alert_MIR_peace_mob_arms_hint: "你们处于和平状态并且你们的军火工业正在生产大量小型武器。" #NT!
+ alert_MIR_peace_mob_arms_action: "城市建筑面板" #NT!
+ MIR_peace_mob_arms_setting_name: "动员军火工业警告 - 和平" #NT!
+  
+ alert_MIR_war_demob_arty_name: "与退役炮兵铸造厂的战争" #NT!
+ alert_MIR_war_demob_arty_hint: "您正处于战争之中，而您的火炮铸造厂正在生产大量的工具而不是火炮。" #NT!
+ alert_MIR_war_demob_arty_action: "城市建筑面板" #NT!
+ MIR_war_demob_arty_setting_name: "复员炮兵警告 - 战争" #NT!
+ alert_MIR_peace_mob_arty_name: "与动员起来的火炮铸造厂和平相处" #NT!
+ alert_MIR_peace_mob_arty_hint: "您处于和平状态并且您的火炮铸造厂正在生产大量火炮。" #NT!
+ alert_MIR_peace_mob_arty_action: "城市建筑面板" #NT!
+ MIR_peace_mob_arty_setting_name: "动员炮兵警告-和平" #NT!
+  
+ alert_MIR_war_demob_ammo_name: "与退役军火工厂的战争" #NT!
+ alert_MIR_war_demob_ammo_hint: "您正处于战争之中，您的弹药工厂正在生产大量民用爆炸物而不是军用弹药。" #NT!
+ alert_MIR_war_demob_ammo_action: "城市建筑面板" #NT!
+ MIR_war_demob_ammo_setting_name: "复员弹药警告 - 战争" #NT!
+ alert_MIR_peace_mob_ammo_name: "与动员弹药工厂和平相处" #NT!
+ alert_MIR_peace_mob_ammo_hint: "您处于和平状态并且您的弹药工厂正在生产大量军用弹药。" #NT!
+ alert_MIR_peace_mob_ammo_action: "城市建筑面板" #NT!
+ MIR_peace_mob_ammo_setting_name: "动员弹药警告 - 和平" #NT!

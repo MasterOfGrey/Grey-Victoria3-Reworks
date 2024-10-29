@@ -1,0 +1,6 @@
+﻿on_monthly_pulse_country = {
+	events = {
+		assimilate_everyone.1
+		assimilate_everyone.2
+	}
+}

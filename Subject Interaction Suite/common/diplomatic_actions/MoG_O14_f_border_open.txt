@@ -1,0 +1,72 @@
+﻿# Brought up to date and included from: uridogoraeda's Forced change in subject country law
+
+forced_border_opening = {
+	groups= {
+		overlord
+	}
+	
+    requires_approval = no
+	show_confirmation_box = yes
+	show_effect_in_tooltip = yes
+	
+	potential = {
+		NOT = { is_country_type = decentralized }
+		scope:target_country = {
+			NOT = { 
+				is_country_type = decentralized
+				is_diplomatic_play_enemy_of = root
+				has_law = law_type:law_no_migration_controls 
+			}
+			is_subject_of = root
+		}
+	}
+
+	possible = {
+		is_player = yes
+	}
+
+	accept_effect = {
+		scope:target_country = { 
+			activate_law = law_type:law_no_migration_controls
+			add_radicals = { value = medium_radicals }
+		}
+		
+		if = {
+			limit = { 
+				scope:target_country = {
+					OR = {
+						is_subject_type = subject_type_tributary
+						is_subject_type = subject_type_protectorate
+					}
+				}
+			}
+			scope:target_country = { add_liberty_desire = 50 }
+			change_relations = {
+				country = scope:target_country
+				value = -50
+			}
+		}
+		else_if = {
+			limit = { 
+				scope:target_country = {
+					OR = {
+						is_subject_type = subject_type_vassal
+						is_subject_type = subject_type_dominion
+					}
+				}
+			}
+			scope:target_country = { add_liberty_desire = 40 }
+			change_relations = {
+				country = scope:target_country
+				value = -40
+			}
+		}
+		else = {
+			scope:target_country = { add_liberty_desire = 30 }
+			change_relations = {
+				country = scope:target_country
+				value = -30
+			}
+		}
+	}
+}

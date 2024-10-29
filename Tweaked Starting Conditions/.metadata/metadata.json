@@ -1,0 +1,17 @@
+{
+  "name" : "Grey's Tweaked Starting Conditions",
+  "id" : "3306851845",
+  "version" : "",
+  "supported_game_version" : "",
+  "short_description" : "",
+  "tags" : [
+        "Balance",
+        "Fixes",
+        "Gameplay",
+        "Historical"
+    ],
+  "relationships" : [],
+  "game_custom_data" : {
+    "multiplayer_synchronized" : true
+  }
+}

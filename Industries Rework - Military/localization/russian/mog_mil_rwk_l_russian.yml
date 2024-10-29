@@ -1,0 +1,78 @@
+﻿l_russian:
+  
+ # Production method groups 
+ pmg_arms_tools_demob: "Демобилизованное инструментальное производство" #NT!
+ pmg_arti_tools_demob: "Демобилизованное инструментальное производство" #NT!
+ pmg_munitions_explosives_demob: "Демобилизованное производство взрывчатых веществ" #NT!
+  
+ # Production methods 
+ pm_extensive_tools_a_i: "Обширный" #NT!
+ pm_moderate_tools_a_i: "Умеренный" #NT!
+ pm_limited_tools_a_i: "Ограниченный" #NT!
+ pm_extensive_tools_a_s: "Обширный" #NT!
+ pm_moderate_tools_a_s: "Умеренный" #NT!
+ pm_limited_tools_a_s: "Ограниченный" #NT!
+ pm_extensive_tools_a_r: "Внешн. резина" #NT!
+ pm_moderate_tools_a_r: "Мод. Резина" #NT!
+ pm_limited_tools_a_r: "Огр. Резина" #NT!
+ pm_no_tools_a: "Нет гражданского инструмента" #NT!
+  
+ pm_extensive_tools_t_i: "Обширный" #NT!
+ pm_moderate_tools_t_i: "Умеренный" #NT!
+ pm_limited_tools_t_i: "Ограниченный" #NT!
+ pm_extensive_tools_t_s: "Обширный" #NT!
+ pm_moderate_tools_t_s: "Умеренный" #NT!
+ pm_limited_tools_t_s: "Ограниченный" #NT!
+ pm_extensive_tools_t_r: "Внешн. резина" #NT!
+ pm_moderate_tools_t_r: "Мод. Резина" #NT!
+ pm_limited_tools_t_r: "Огр. Резина" #NT!
+ pm_no_tools_t: "Нет гражданского инструмента" #NT!
+  
+ pm_extensive_ammo_le: "Обширный" #NT!
+ pm_moderate_ammo_le: "Умеренный" #NT!
+ pm_limited_ammo_le: "Ограниченный" #NT!
+ pm_extensive_ammo_ni: "Экст. Нитроглицерин" #NT!
+ pm_moderate_ammo_ni: "Мод. Нитроглицерин" #NT!
+ pm_limited_ammo_ni: "Огр. Нитроглицерин" #NT!
+ pm_extensive_ammo_dy: "Обширный" #NT!
+ pm_moderate_ammo_dy: "Умеренный" #NT!
+ pm_limited_ammo_dy: "Ограниченный" #NT!
+ pm_extensive_ammo_br: "Внешн. электролиз" #NT!
+ pm_moderate_ammo_br: "Мод. Электролиз" #NT!
+ pm_limited_ammo_br: "Огр. Электролиз" #NT!
+ pm_no_self_explosives: "Никаких взрывчатых веществ собственного производства" #NT!
+  
+ pm_limited_radios: "Некоторые радиоприемники" #NT!
+ pm_moderate_radios: "Множество радиостанций" #NT!
+ pm_extensive_radios: "Много радио" #NT!
+  
+ pm_ui_safety_a: "(Игнорировать это)" #NT!
+ pm_ui_safety_b: "(Игнорировать это)" #NT!
+  
+ # Alerts 
+ alert_MIR_war_demob_arms_name: "Война с демобилизованными военными предприятиями" #NT!
+ alert_MIR_war_demob_arms_hint: "Вы находитесь в состоянии войны, и ваши оружейные предприятия производят большое количество инструментов вместо стрелкового оружия." #NT!
+ alert_MIR_war_demob_arms_action: "Панель городского строительства" #NT!
+ MIR_war_demob_arms_setting_name: "Предупреждение о демобилизованной оружейной промышленности - война" #NT!
+ alert_MIR_peace_mob_arms_name: "В мире с мобилизованными военными предприятиями" #NT!
+ alert_MIR_peace_mob_arms_hint: "Вы живете в мире, и ваши оружейные предприятия производят большое количество стрелкового оружия." #NT!
+ alert_MIR_peace_mob_arms_action: "Панель городского строительства" #NT!
+ MIR_peace_mob_arms_setting_name: "Предупреждение о мобилизованной оружейной промышленности - Мир" #NT!
+  
+ alert_MIR_war_demob_arty_name: "Война с демобилизованными артиллерийскими литейными заводами" #NT!
+ alert_MIR_war_demob_arty_hint: "Вы находитесь в состоянии войны, и ваши артиллерийские заводы производят большое количество инструментов вместо артиллерии." #NT!
+ alert_MIR_war_demob_arty_action: "Панель городского строительства" #NT!
+ MIR_war_demob_arty_setting_name: "Предупреждение о демобилизованной артиллерии - война" #NT!
+ alert_MIR_peace_mob_arty_name: "В мире с мобилизованными артиллерийскими литейными заводами" #NT!
+ alert_MIR_peace_mob_arty_hint: "Вы живете в мире, и ваши артиллерийские заводы производят большое количество артиллерийских орудий." #NT!
+ alert_MIR_peace_mob_arty_action: "Панель городского строительства" #NT!
+ MIR_peace_mob_arty_setting_name: "Предупреждение о мобилизованной артиллерии - Мир" #NT!
+  
+ alert_MIR_war_demob_ammo_name: "Война с демобилизованными военными заводами" #NT!
+ alert_MIR_war_demob_ammo_hint: "Вы находитесь в состоянии войны, и ваши военные заводы производят большое количество гражданской взрывчатки вместо военных боеприпасов." #NT!
+ alert_MIR_war_demob_ammo_action: "Панель городского строительства" #NT!
+ MIR_war_demob_ammo_setting_name: "Предупреждение о демобилизованных боеприпасах - война" #NT!
+ alert_MIR_peace_mob_ammo_name: "В мире с мобилизованными заводами по производству боеприпасов" #NT!
+ alert_MIR_peace_mob_ammo_hint: "Вы живете в мире, и ваши военные заводы производят большое количество боеприпасов." #NT!
+ alert_MIR_peace_mob_ammo_action: "Панель городского строительства" #NT!
+ MIR_peace_mob_ammo_setting_name: "Предупреждение о мобилизованных боеприпасах - Мир" #NT!

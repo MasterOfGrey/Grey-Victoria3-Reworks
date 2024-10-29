@@ -1,0 +1,5 @@
+﻿l_english:
+ law_imposition_events.4.t: "Legislation Imposed on [SCOPE.sC('country_imposed_upon').GetName] Failure"
+ law_imposition_events.4.d: "[SCOPE.sC('country_imposed_upon').GetName] has failed to enact [SCOPE.sLaw('foreign_imposition_law').GetName] due to internal forces."
+ law_imposition_events.4.f: "The ambassador returns, bearing the news of failure. "Despite our support they could not get it done," he reports.\n\nThe silence that follows lies heavy in the council chamber."
+ law_imposition_events.4.a: "Maybe we should try something else next time?"

@@ -1,0 +1,27 @@
+active_synergize_bureaucracy = {
+	custom_tooltip = {
+		text = active_synergize_bureaucracy_tt
+		has_variable = synergize_bureaucracy_active
+	}
+}
+
+active_synergize_economy = {
+	custom_tooltip = {
+		text = active_synergize_economy_tt
+		has_variable = synergize_economy_active
+	}
+}
+
+active_synergize_land = {
+	custom_tooltip = {
+		text = active_synergize_land_tt
+		has_variable = synergize_land_active
+	}
+}
+
+active_synergize_trade = {
+	custom_tooltip = {
+		text = active_synergize_trade_tt
+		has_variable = synergize_trade_active
+	}
+}

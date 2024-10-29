@@ -1,0 +1,39 @@
+﻿# If you have a mod with additional liberty desire effects that you want to be compatible with this mod, simply:
+# Choose one of the values below, put it in your own file with a file name that begins later than M alphabetically.
+# Put everything you want inside this mod value in your file, and use the description localization to label it whatever you want.
+# Any other sub-points, breakdowns, and the details of these localizations all live entirely in your mod.
+# As long as you use the value name (compatible_mod_value_x) and the associated description names at the top level, you will be able to make it compatible with this.
+
+
+compatible_mod_value_1 = {
+	value = 0
+}
+# desc = "COMPATIBLE_MOD_WEEKLY_CHANGE_DESC_1"
+
+
+
+compatible_mod_value_2 = {
+	value = 0
+}
+# desc = "COMPATIBLE_MOD_WEEKLY_CHANGE_DESC_2"
+
+
+
+compatible_mod_value_3 = {
+	value = 0
+}
+# desc = "COMPATIBLE_MOD_WEEKLY_CHANGE_DESC_3"
+
+
+
+compatible_mod_value_4 = {
+	value = 0
+}
+# desc = "COMPATIBLE_MOD_WEEKLY_CHANGE_DESC_4"
+
+
+
+compatible_mod_value_5 = {
+	value = 0
+}
+# desc = "COMPATIBLE_MOD_WEEKLY_CHANGE_DESC_5"

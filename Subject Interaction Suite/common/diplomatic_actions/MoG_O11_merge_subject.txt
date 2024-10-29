@@ -1,0 +1,484 @@
+﻿# Brought up to date and included from: Infinite's Merge Subject
+
+merge_subject = {
+	groups= {
+		general
+	}
+	
+	requires_approval = yes
+	should_notify_third_parties = yes
+	show_effect_in_tooltip = yes
+	
+	potential = {
+		NOT = { is_country_type = decentralized }
+		scope:target_country = {
+			NOT = { 
+				is_country_type = decentralized
+				is_diplomatic_play_enemy_of = root
+			}
+			is_direct_subject_of = root
+		}
+	}
+	
+	possible = {
+		is_at_war = no
+		trigger_if = {
+			limit = {
+				merge_subject_cheat_trigger = yes
+			}
+			scope:target_country.relations:root > relations_threshold:cordial
+			scope:target_country = {
+				liberty_desire < 40
+				NOT = {
+					has_diplomatic_pact = { who = root type = tributary }
+					has_diplomatic_pact = { who = root type = protectorate }
+				}
+			}
+			NAND = {
+				has_journal_entry = je_peru_bolivia
+				scope:target_country = {
+					OR = {
+						country_has_primary_culture = cu:quechua
+						country_has_primary_culture = cu:south_andean
+					}
+				}
+			}
+		}
+		trigger_if = {
+			limit = {
+				merge_subject_cheat_trigger = no
+			}
+			scope:target_country.relations:root >= 60
+			scope:target_country = {
+				liberty_desire < 25
+				OR = {
+					has_diplomatic_pact = { who = root type = puppet }
+					has_diplomatic_pact = { who = root type = vassal }
+					has_diplomatic_pact = { who = root type = personal_union }
+				}
+			}
+			NAND = {
+				has_journal_entry = je_peru_bolivia
+				scope:target_country = {
+					OR = {
+						country_has_primary_culture = cu:quechua
+						country_has_primary_culture = cu:south_andean
+					}
+				}
+			}
+		}
+	}
+	
+	accept_effect = {
+		annex = scope:target_country
+		if = {
+			limit = {
+				merge_subject_cheat_trigger = no
+			}
+			custom_tooltip = {
+				text = "ADD_LIBERTY_DESIRE_TO_ALL_SUBJECTS"
+				every_subject_or_below = {
+					limit = {
+						is_direct_subject_of = root
+						NOT = { this = scope:target_country }
+					}
+					add_liberty_desire = 10 #If you change this value, also update the loc string ADD_LIBERTY_DESIRE_TO_ALL_SUBJECTS accordingly
+				}
+			}
+		}
+	}
+	
+	ai = {
+		check_acceptance_for_will_propose = yes
+		
+		propose_score = {
+			if = {
+				limit = {
+					ai_can_merge_subject_trigger = yes
+				}
+				if = {
+					limit = {
+						merge_subject_cheat_trigger = yes
+					}
+					value = 1000
+					if = {
+						limit = { 
+							scope:target_country = {
+								is_ai = no
+								# Target country is player
+							}
+						}
+						multiply = 0
+					}
+				}
+				else_if = {
+					limit = {
+						OR = {
+							has_attitude = {
+								who = scope:target_country
+								attitude = domineering
+							}
+							AND = {
+								has_attitude = {
+									who = scope:target_country
+									attitude = belligerent
+								}
+								has_strategy = ai_strategy_economic_imperialism
+							}
+							OR = {
+								has_strategy = ai_strategy_territorial_expansion
+								has_strategy = ai_strategy_colonial_expansion
+								has_strategy = ai_strategy_unify_germany
+								has_strategy = ai_strategy_unify_italy
+								has_strategy = ai_strategy_unify_ethiopia
+								has_strategy = ai_strategy_unify_china
+							}
+						}
+						scope:target_country = { liberty_desire < 20 }
+					}
+					value = 100
+					if = {
+						limit = { 
+							scope:target_country = {
+								is_ai = no
+								# Target country is player
+							}
+						}
+						multiply = 0
+					}
+				}
+			}
+			else = {
+				value = 0
+				multiply = 0
+			}
+		}
+		
+		accept_score = {
+			value = 0
+			
+			add = {
+				desc = "DIPLOMATIC_ACCEPTANCE_BASE"
+				value = -100
+			}
+			
+			if = {
+				limit = {
+					has_strategic_adjacency = scope:actor
+				}
+				add = {
+					desc = "DIPLOMATIC_ACCEPTANCE_NEIGHBORS"
+					value = 10
+				}
+			}
+			
+			if = {
+				limit = {
+					"scope:actor.ai_ideological_opinion(root)" > 0
+				}
+				add = {
+					desc = "DIPLOMATIC_ACCEPTANCE_IDEOLOGICAL_OPINION"
+					value = "scope:actor.ai_ideological_opinion(root)"
+					multiply = 0.25
+					max = 20
+				}
+			}
+			else_if = {
+				limit = {
+					"scope:actor.ai_ideological_opinion(root)" < 0
+				}
+				add = {
+					desc = "DIPLOMATIC_ACCEPTANCE_IDEOLOGICAL_OPINION_NEGATIVE"
+					value = "scope:actor.ai_ideological_opinion(root)"
+					multiply = 0.25
+					min = -20
+				}
+			}
+			
+			if = {
+				limit = { 
+					has_strategy = ai_strategy_subject_break_free
+				}
+				add = {
+					desc = "DIPLOMATIC_ACCEPTANCE_BREAK_FREE"
+					add = -1000
+				}
+			}
+			else_if = {
+				limit = { 
+					has_strategy = ai_strategy_subject_strengthen_self
+				}
+				add = {
+					desc = "DIPLOMATIC_ACCEPTANCE_STRENGTHEN_SELF"
+					add = -100
+				}                           
+			}
+			else_if = {
+				limit = { 
+					has_strategy = ai_strategy_subject_maintain_autonomy
+				}
+				add = {
+					desc = "DIPLOMATIC_ACCEPTANCE_MAINTAIN_AUTONOMY"
+					add = -50
+				}                           
+			}
+			else_if = {
+				limit = { 
+					has_strategy = ai_strategy_subject_overlord_compliance
+				}
+				add = {
+					desc = "DIPLOMATIC_ACCEPTANCE_OVERLORD_COMPLIANCE"
+					add = 50
+				}                           
+			}
+			
+			add = {
+				desc = "DIPLOMATIC_ACCEPTANCE_ATTITUDE"
+				if = {
+					limit = {
+						has_attitude = {
+								who = scope:actor
+								attitude = loyal
+							}                           
+						}
+					value = 50
+				}
+				else_if = {
+					limit = {
+						has_attitude = {
+								who = scope:actor
+								attitude = defiant
+							}                           
+						}
+					value = -100
+				}
+				else_if = {
+					limit = {
+						has_attitude = {
+								who = scope:actor
+								attitude = rebellious
+							}                           
+						}
+					value = -1000
+				}
+			}
+			
+			
+			if = {
+				limit = {
+					"economic_dependence(scope:actor)" > 1
+				}
+				add = {
+					desc = "DIPLOMATIC_ACCEPTANCE_HIGH_ECONOMIC_DEPENDENCE"
+					value = "economic_dependence(scope:actor)"
+					multiply = 10
+					max = 50
+				}
+			}
+			else_if = {
+				limit = {
+					"economic_dependence(scope:actor)" < 1
+				}
+				add = {
+					desc = "DIPLOMATIC_ACCEPTANCE_LOW_ECONOMIC_DEPENDENCE"
+					value = "economic_dependence(scope:actor)"
+					subtract = 1
+					multiply = 50
+					min = -50
+				}
+			}                   
+			
+			add = {
+				desc = "DIPLOMATIC_ACCEPTANCE_ARMY_STRENGTH"
+				value = "scope:actor.ai_army_comparison(root)"
+				min = -50
+				max = 25
+			}
+			
+			
+			add = {
+				desc = "DIPLOMATIC_ACCEPTANCE_RELATIONS"
+				if = {
+					limit = {
+						"relations(scope:actor)" >= relations_threshold:amicable
+						"relations(scope:actor)" < relations_threshold:friendly
+					}
+					value = 15
+				}
+				if = {
+					limit = {
+						"relations(scope:actor)" >= relations_threshold:friendly
+					}
+					value = 30
+				}
+				if = {
+					limit = {
+						"relations(scope:actor)" < relations_threshold:poor
+					}
+					value = -100
+				}
+			}
+			
+			add = {
+				desc = "DIPLOMATIC_ACCEPTANCE_INFAMY"
+				if = {
+					limit = {
+						"scope:actor.infamy" >= infamy_threshold:infamous
+						"scope:actor.infamy" < infamy_threshold:notorious
+					}
+					value = -20
+				}
+				else_if = {
+					limit = {
+						"scope:actor.infamy" >= infamy_threshold:notorious
+						"scope:actor.infamy" < infamy_threshold:pariah
+					}
+					value = -50
+				}
+				else_if = {
+					limit = {
+						"scope:actor.infamy" >= infamy_threshold:pariah
+					}
+					value = -100
+				}
+			}
+			
+			add = {
+				desc = "DIPLOMATIC_ACCEPTANCE_PRINCIPLE_SACRED_CIVICS"
+				
+				if = {
+					limit = {
+						AND = {
+							scope:actor.power_bloc ?= {
+								OR = {
+									has_principle = principle:principle_sacred_civics_1
+									has_principle = principle:principle_sacred_civics_2
+									has_principle = principle:principle_sacred_civics_3
+								}
+							}
+							scope:actor.religion = root.religion
+						}
+					}
+					add = 20
+				}
+			}
+			
+			if = {
+				limit = {
+					religion = scope:actor.religion
+				}
+				add = {
+					desc = "DIPLOMATIC_ACCEPTANCE_SAME_RELIGION"
+					value = 30
+				}
+			}
+			else = {
+				### If you share a religious discrimination trait
+				if = {
+					limit = {
+						religion = {
+							shares_heritage_trait_with_state_religion = scope:actor
+						}
+					}
+					add = {
+						desc = "DIPLOMATIC_ACCEPTANCE_DIFFERENT_RELIGION_BUT_SAME_TRAIT"
+						value = 15
+					}
+				}
+				### Different religion
+				else = {
+					add = {
+						desc = "DIPLOMATIC_ACCEPTANCE_DIFFERENT_RELIGION"
+						value = -30
+					}
+				}
+			}
+			
+			add = {
+				value = 0
+				if = {
+					limit = {
+						scope:target_country = {
+							any_primary_culture = {
+								is_primary_culture_of = scope:actor
+							}
+						}
+					}
+					add = 30
+				}
+				else_if = {
+					limit = {
+						scope:target_country = {
+							NOT = {
+								any_primary_culture = {
+									shares_non_heritage_trait_with_any_primary_culture = scope:actor
+								}
+							}
+						}
+					}
+					add = -30
+				}
+				
+				if = {
+					limit = {
+						scope:target_country = {
+							any_primary_culture = {
+								culture_is_discriminated_in = scope:actor
+							}
+						}
+					}
+					add = -50
+				}
+				
+				desc = "primary_culture_similarity"
+			}
+			
+			add = {
+				desc = "DIPLOMATIC_ACCEPTANCE_TARGET_LIBERTY_DESIRE"
+				value = 20
+				subtract = liberty_desire
+				multiply = 2.5
+				min = -50
+			}
+			
+			
+			add = {
+				desc = "DIPLOMATIC_ACCEPTANCE_ACTOR_PRO_LOBBY_CLOUT"                    
+				value = "scope:actor.lobby_foreign_pro_clout(scope:target_country)"
+				multiply = 50
+				max = 50
+			}
+			
+			add = {
+				desc = "DIPLOMATIC_ACCEPTANCE_ACTOR_ANTI_LOBBY_CLOUT"                   
+				value = "scope:actor.lobby_foreign_anti_clout(scope:target_country)"
+				multiply = -50
+				min = -50
+			}
+			
+			add = {
+				desc = "DIPLOMATIC_ACCEPTANCE_TARGET_PRO_LOBBY_CLOUT"                   
+				value = "scope:target_country.lobby_foreign_pro_clout(scope:actor)"
+				multiply = 100
+				max = 25
+			}
+			
+			add = {
+				desc = "DIPLOMATIC_ACCEPTANCE_TARGET_ANTI_LOBBY_CLOUT"                  
+				value = "scope:target_country.lobby_foreign_anti_clout(scope:actor)"
+				multiply = -100
+				min = -25
+			}
+		}
+		
+		use_obligation_chance = {
+			value = 30
+			if = {
+				limit = {
+					ai_can_merge_subject_trigger = no
+				}
+				multiply = 0
+			}
+		}
+	}
+}

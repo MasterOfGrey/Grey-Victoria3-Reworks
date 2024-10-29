@@ -1,0 +1,17 @@
+{
+  "name" : "Grey's Military Industries Rework",
+  "id" : "3324254588",
+  "version" : "",
+  "supported_game_version" : "",
+  "short_description" : "",
+  "tags" : [
+        "Balance",
+        "Economy And Buildings",
+        "Gameplay",
+        "Warfare"
+    ],
+  "relationships" : [],
+  "game_custom_data" : {
+    "multiplayer_synchronized" : true
+  }
+}

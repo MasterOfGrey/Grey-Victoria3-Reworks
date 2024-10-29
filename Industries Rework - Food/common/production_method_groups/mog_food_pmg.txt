@@ -1,0 +1,56 @@
+﻿pmg_base_building_food_industry = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	production_methods = {
+		pm_bakery
+		pm_sweeteners
+		pm_baking_powder
+		pm_automated_bakery
+	}
+}
+
+pmg_canning = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	production_methods = {
+		pm_cloth_pkg
+		pm_paper_pkg
+		pm_wax_paper
+		pm_sealed_jars
+		pm_cannery
+		pm_vacuum_canning
+		pm_vacuum_canning_principle_3
+	}
+}
+
+pmg_preservation = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	production_methods = {
+		pm_disabled_canning
+		pm_dried_fruit
+		pm_cured_meat
+		pm_salted_fish
+		pm_sweet_vinegars
+		pm_meat_broths
+		pm_brine_vinegars
+		pm_fish_brines
+		pm_syrups_sauces
+		pm_boiling_sauces
+		pm_oils_sauces
+		pm_broths_brines
+		pm_gravies_broths
+		pm_brines_oils
+	}
+}
+
+pmg_distillery = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_refining.dds"
+	production_methods = {
+		pm_disabled_distillery
+		pm_simmer_pots
+		pm_pot_stills_grain
+		pm_pot_stills_fruit
+		pm_pot_stills_sugar
+		pm_patent_stills_grain
+		pm_patent_stills_fruit
+		pm_patent_stills_sugar
+	}
+}

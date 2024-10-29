@@ -1,0 +1,24 @@
+﻿pmg_base_building_automotive_industry = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	production_methods = {
+		pm_automobiles
+	}
+}
+
+pmg_automotive_aeroplanes = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_refining.dds"
+	production_methods = {
+		pm_no_aeroplanes
+		pm_limited_aeroplanes
+		pm_extensive_aeroplanes
+	}
+}
+
+pmg_automotive_tanks = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_refining.dds"
+	production_methods = {
+		pm_no_tanks
+		pm_limited_tanks
+		pm_extensive_tanks
+	}
+}

@@ -1,0 +1,23 @@
+﻿# Root = Country
+on_country_formed = {
+	on_actions = { clear_colonial_company_migration_penalty_on_actions }
+}
+
+# This separate on_action avoids overwriting the vanilla effect and prevents it throwing errors.
+clear_colonial_company_migration_penalty_on_actions = {
+	effect = {
+		if = {
+			limit = {
+				OR = {
+					c:CAN ?= this
+					c:JAV ?= this
+					OR = {
+						c:BHT ?= this
+						country_has_primary_culture = cu:bengali
+					}
+				}
+			}
+			remove_modifier = mog_company_migration_penalty
+		}
+	}
+}

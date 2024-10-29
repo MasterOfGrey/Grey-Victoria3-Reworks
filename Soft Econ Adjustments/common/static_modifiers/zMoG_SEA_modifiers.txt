@@ -1,0 +1,4 @@
+﻿government_owned_debt = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_coins_negative.dds
+	country_government_dividends_waste_add = -1
+}

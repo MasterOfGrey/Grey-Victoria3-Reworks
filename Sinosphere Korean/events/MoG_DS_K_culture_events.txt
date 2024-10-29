@@ -1,0 +1,185 @@
+﻿namespace = deepersinosphere
+
+namespace = deeper_japan
+
+# Japan embraces Sinosphere
+deeper_japan.1 = {
+	type = country_event
+	placement = ROOT
+
+	title = deeper_japan.1.t
+	desc = deeper_japan.1.d
+	flavor = deeper_japan.1.f
+
+	duration = 3
+
+	event_image = {
+		video = "unspecific_world_fair"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_scales.dds"
+
+	minor_left_icon = c:JAP
+
+	trigger = {
+		# triggered by decision
+	}
+
+	immediate = {
+		set_variable = {
+			name = japan_embraces
+		}
+		ROOT = {
+			if = {
+				limit = {
+					OR = {
+						owns_entire_state_region = STATE_OUTER_MANCHURIA
+						owns_entire_state_region = STATE_SOUTHERN_MANCHURIA
+						owns_entire_state_region = STATE_NORTHERN_MANCHURIA
+					}
+				}
+				set_variable = manchu_liberated
+			}
+			if = {
+				limit = {
+					OR = {
+						owns_entire_state_region = STATE_TONKIN
+						owns_entire_state_region = STATE_ANNAM
+						owns_entire_state_region = STATE_MEKONG
+					}
+				}
+				set_variable = viet_liberated
+			}
+		}
+	}
+
+	option = {
+		name = deeper_japan.1.a
+		default_option = yes
+		custom_tooltip = deepersinosphere_japan
+		if = {
+			limit = {
+				NOT = {
+					country_has_primary_culture = cu:sino
+				}
+			}
+			add_primary_culture = cu:sino
+		}
+		if = {
+			limit = {
+				has_variable = manchu_liberated
+			}
+			every_state = {
+				limit = {
+					NOR = {
+						owner = ROOT
+						owner = {
+							is_country_type = decentralized
+						}
+					}
+					state_region = {
+						is_homeland = cu:manchu
+					}
+				}
+				state_region = {
+					add_claim = ROOT
+				}
+			}
+		}
+		if = {
+			limit = {
+				has_variable = viet_liberated
+			}
+			every_state = {
+				limit = {
+					NOR = {
+						owner = ROOT
+						owner = {
+							is_country_type = decentralized
+						}
+					}
+					state_region = {
+						is_homeland = cu:vietnamese
+					}
+				}
+				state_region = {
+					add_claim = ROOT
+				}
+			}
+		}
+	}
+}
+
+namespace = deeper_viet
+
+# Dai Viet embraces Japan
+deeper_viet.1 = {
+	type = country_event
+	placement = ROOT
+
+	title = deeper_viet.1.t
+	desc = deeper_viet.1.d
+	flavor = deeper_viet.1.f
+
+	duration = 3
+
+	event_image = {
+		video = "unspecific_world_fair"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_scales.dds"
+
+	minor_left_icon = c:DAI
+
+	trigger = {
+		# triggered by decision
+	}
+
+	immediate = {
+		set_variable = {
+			name = vietnam_embraces
+		}
+		ROOT = {
+			if = {
+				limit = {
+					NOT = {
+						c:JAP ?= {
+							is_direct_subject_of = ROOT
+						}
+					}
+				}
+				every_state = {
+					limit = {
+						NOT = {
+							owner = ROOT
+						}
+						state_region = {
+							is_homeland = cu:japanese
+						}
+					}
+					state_region = {
+						add_claim = ROOT
+					}
+				}
+			}
+		}
+	}
+
+	option = {
+		name = deeper_viet.1.a
+		default_option = yes
+		custom_tooltip = deepersinosphere_viet
+		if = {
+			limit = {
+				NOT = {
+					country_has_primary_culture = cu:yamatos
+				}
+			}
+			add_primary_culture = cu:yamatos
+		}
+	}
+}

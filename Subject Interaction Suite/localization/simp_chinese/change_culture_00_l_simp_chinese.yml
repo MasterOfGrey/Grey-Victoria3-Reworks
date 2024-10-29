@@ -1,0 +1,29 @@
+﻿l_simp_chinese:
+ change_primary_culture:0 "改变主流文化"
+ change_primary_culture_action_name:0 "$change_primary_culture$"
+ change_primary_culture_action_propose_name:0 "发起文化一致运动"
+ change_primary_culture_action_break_name:0 "停止文化一致运动"
+ change_primary_culture_pact_desc:0 "[SCOPE.GetRootScope.GetDiplomaticPact.GetFirstCountry.GetName]正在让本国文化取代[SCOPE.GetRootScope.GetDiplomaticPact.GetSecondCountry.GetName]的主流文化。 \n在总共8个阶段中目前完成了#variable [SCOPE.GetRootScope.GetDiplomaticPact.GetSecondCountry.MakeScope.Var('change_primary_culture_progress').GetValue]#!个"
+ change_primary_culture_desc:1 "#header $change_primary_culture$#!\n$TOOLTIP_DELIMITER$ \n改变目标国家的主流文化。"
+ change_primary_culture_action_notification_name:1 "[INITIATOR_COUNTRY.GetName]正在改变附庸文化"
+ change_primary_culture_action_notification_desc:1 "[INITIATOR_COUNTRY.GetName]正在改变我国的主流文化。"
+ change_primary_culture_action_notification_break_name:1 "[INITIATOR_COUNTRY.GetName]停止改变主流文化"
+ change_primary_culture_action_notification_break_desc:0 "[INITIATOR_COUNTRY.GetName]停止了改变我国的主流文化。"
+ 
+ change_primary_culture_effect_desc_global:0 "实施文化一致"
+ change_primary_culture_effect_desc_first:0 "[COUNTRY.GetAdjectiveNoFlag]正在改变[TARGET_COUNTRY.GetName]的主流文化。"
+ change_primary_culture_effect_desc_third:0 "[COUNTRY.GetName]正在改变[AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)]的主流文化。"
+ 
+ change_primary_culture_trigger_desc_global:0 "文化一致运动进行中"
+ change_primary_culture_trigger_false_desc_global:0 "#b 不再#!进行文化一致运动。"
+ change_primary_culture_trigger_desc_first:0 "[COUNTRY.GetAdjectiveNoFlag]正在改变[TARGET_COUNTRY.GetName]的主流文化。"
+ change_primary_culture_trigger_false_desc_first:0 "[COUNTRY.GetAdjectiveNoFlag]#b 不再#!改变[TARGET_COUNTRY.GetName]的主流文化。"
+ change_primary_culture_trigger_desc_third:0 "[COUNTRY.GetName]正在改变[AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)]的主流文化。"
+ change_primary_culture_trigger_false_desc_third:0 "[COUNTRY.GetName]#b 不再#!改变[AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)]的主流文化。"
+ 
+ ib_events.01.t: "主流文化已取代"
+ ib_events.01.d: "[ROOT.GetCountry.GetName]已成功改变了[SCOPE.sCountry('culture_target_country').GetName]的主流文化，[SCOPE.sCountry('culture_target_country').GetName]将沐浴在母国的文化中永远繁荣。"
+ ib_events.01.f: "伟哉我[ROOT.GetCountry.GetName]！"
+ ib_events.01.a: "干得漂亮。"
+ 
+ change_primary_culture_weekly_effect: "改变主流文化需要完成八个阶段，每周有20%机会推进一个阶段。"

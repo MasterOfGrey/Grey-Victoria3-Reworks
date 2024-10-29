@@ -1,0 +1,131 @@
+﻿# Brought up to date and included from: uridogoraeda's Forced change in subject country law
+
+forced_industry_ban = {
+	groups= {
+		overlord
+	}
+	
+    requires_approval = no
+	show_confirmation_box = yes
+	
+	potential = {
+		NOT = { is_country_type = decentralized }
+		scope:target_country = {
+			NOT = { 
+				is_country_type = decentralized
+				is_diplomatic_play_enemy_of = root
+				has_law = law_type:law_industry_banned
+			}
+			is_subject_of = root
+		}
+	}
+
+	possible = {
+		has_technology_researched = romanticism
+		scope:target_country = {
+			liberty_desire < 50
+			NOT = {
+				is_subject_type = subject_type_tributary
+			}
+		}
+		is_player = yes
+	}
+
+	accept_effect = {
+		scope:target_country = { 
+			activate_law = law_type:law_industry_banned
+			add_radicals = { value = large_radicals }
+			add_liberty_desire = 10
+		}
+		
+		if = {
+			limit = { 
+				scope:target_country = {
+					is_subject_type = subject_type_protectorate
+				}
+			}
+			scope:target_country = { add_liberty_desire = 50 }
+			change_relations = {
+				country = scope:target_country
+				value = -50
+			}
+		}
+		else_if = {
+			limit = { 
+				scope:target_country = {
+					is_subject_type = subject_type_dominion
+				}
+			}
+			scope:target_country = { add_liberty_desire = 40 }
+			change_relations = {
+				country = scope:target_country
+				value = -40
+			}
+		}
+		else = {
+			scope:target_country = { add_liberty_desire = 30 }
+			change_relations = {
+				country = scope:target_country
+				value = -30
+			}
+		}
+		
+		scope:target_country = {
+			custom_tooltip = {
+				text = "forced_industry_ban_liberty_desire_custom_tooltip"
+				
+				if = {
+					limit = {
+						OR = {
+							has_law = law_type:law_laissez_faire
+							has_law = law_type:law_cooperative_ownership
+							has_law = law_type:law_command_economy
+						}
+					}
+					add_liberty_desire = 10
+				}
+				
+				if = {
+					limit = {
+						OR = {
+							ig:ig_industrialists = {
+								is_in_government = yes
+							}
+							any_interest_group = {
+								is_in_government = yes
+								leader = {
+									OR = {
+										has_ideology = ideology:ideology_protectionist
+										has_ideology = ideology:ideology_market_liberal
+									}			
+								}
+							}
+						}
+					}
+					change_relations = {
+						country = scope:target_country
+						value = -50
+					}
+				}
+				
+				if = {
+					limit = {
+						OR = {
+							any_interest_group = {
+								is_in_government = yes
+								leader = {
+									has_ideology = ideology:ideology_luddite
+								}
+							}
+						}
+					}
+					add_liberty_desire = -10
+					change_relations = {
+						country = scope:target_country
+						value = 60
+					}
+				}
+			}
+		}
+	}
+}

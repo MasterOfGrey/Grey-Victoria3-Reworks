@@ -1,0 +1,125 @@
+﻿# Alternative trigger needed to ensure subjects don't get stuck on an imposed law forever, since no longer using the old IB on_impose_law
+on_law_enactment_fail = {
+	on_actions = { impose_je_reset_on_actions }
+}
+
+# This separate on_action avoids overwriting the vanilla effect and prevents it throwing errors.
+impose_je_reset_on_actions = {
+	effect = {
+		if = {
+			limit = { 
+				has_modifier = IB_success
+				# has_journal_entry = je_law_imposition
+				# scope:journal_entry = {
+				#	currently_enacting_law = scope:foreign_imposition_law
+				# }
+			}
+			set_variable = { name = imposed_law_failed }
+		}
+	}
+}
+
+# To stop the subject actions from filling the error log with junk for no reason.
+
+# Root = Country
+# scope:target = Uprising country
+on_revolution_start = { on_actions = { law_progress_check_presets_target_on_action } }
+on_secession_start = { on_actions = { law_progress_check_presets_target_on_action } }
+
+# Root = Releasing Country
+# scope:target = Released Country
+on_country_released_as_own_subject = { on_actions = { law_progress_check_presets_target_on_action } }
+on_country_released_as_overlord_subject = { on_actions = { law_progress_check_presets_target_on_action } }
+on_country_released_as_independent = { on_actions = { law_progress_check_presets_target_on_action } }
+
+# Root = Country
+on_peace_agreement_signed_war_participant = { on_actions = { law_progress_check_presets_country_on_action } }
+on_peace_agreement_signed_war_leader = { on_actions = { law_progress_check_presets_country_on_action } }
+on_capitulation = { on_actions = { law_progress_check_presets_country_on_action } }
+
+law_progress_check_presets_country_on_action = {
+	effect = {
+		if = {
+			limit = { 
+				OR = {
+					is_subject = yes
+					AND = {
+						is_in_power_bloc = yes
+						is_power_bloc_leader = no
+					}
+				}
+			}
+			if = {
+				limit = { not = { has_variable = change_state_religion_progress } }
+				set_variable = { name = change_state_religion_progress value = 0 }
+			}
+			if = {
+				limit = { not = { has_variable = change_primary_culture_progress } }
+				set_variable = { name = change_primary_culture_progress value = 0 }
+			}
+			if = {
+				limit = { not = { has_variable = include_primary_culture_progress } }
+				set_variable = { name = include_primary_culture_progress value = 0 }
+			}
+			if = {
+				limit = { not = { has_variable = border_opening_progress } }
+				set_variable = { name = border_opening_progress value = 0 }
+			}
+			if = {
+				limit = { not = { has_variable = synergize_bureaucracy_progress } }
+				set_variable = { name = synergize_bureaucracy_progress value = 0 }
+			}
+			if = {
+				limit = { not = { has_variable = synergize_economy_progress } }
+				set_variable = { name = synergize_economy_progress value = 0 }
+			}
+			if = {
+				limit = { not = { has_variable = synergize_land_progress } }
+				set_variable = { name = synergize_land_progress value = 0 }
+			}
+			if = {
+				limit = { not = { has_variable = synergize_trade_progress } }
+				set_variable = { name = synergize_trade_progress value = 0 }
+			}
+		}
+	}
+}
+
+law_progress_check_presets_target_on_action = {
+	effect = {
+		scope:target = { 
+			if = {
+				limit = { not = { has_variable = change_state_religion_progress } }
+				set_variable = { name = change_state_religion_progress value = 0 }
+			}
+			if = {
+				limit = { not = { has_variable = change_primary_culture_progress } }
+				set_variable = { name = change_primary_culture_progress value = 0 }
+			}
+			if = {
+				limit = { not = { has_variable = include_primary_culture_progress } }
+				set_variable = { name = include_primary_culture_progress value = 0 }
+			}
+			if = {
+				limit = { not = { has_variable = border_opening_progress } }
+				set_variable = { name = border_opening_progress value = 0 }
+			}
+			if = {
+				limit = { not = { has_variable = synergize_bureaucracy_progress } }
+				set_variable = { name = synergize_bureaucracy_progress value = 0 }
+			}
+			if = {
+				limit = { not = { has_variable = synergize_economy_progress } }
+				set_variable = { name = synergize_economy_progress value = 0 }
+			}
+			if = {
+				limit = { not = { has_variable = synergize_land_progress } }
+				set_variable = { name = synergize_land_progress value = 0 }
+			}
+			if = {
+				limit = { not = { has_variable = synergize_trade_progress } }
+				set_variable = { name = synergize_trade_progress value = 0 }
+			}
+		}
+	}
+}

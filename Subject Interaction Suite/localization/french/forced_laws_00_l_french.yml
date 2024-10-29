@@ -1,0 +1,20 @@
+﻿l_french:
+ forced_border_opening: "Ouverture forcée des frontières"
+ forced_border_opening_desc: "Une [concept_instant_diplomatic_action] qui force un changement dans la [GetLawGroup('lawgroup_migration').GetName] [concept_law] du [concept_subject] cible vers [GetLawType('law_no_migration_controls').GetName]. En retour, cela endommage les [concept_relations] avec le [concept_subject] cible et une partie des [concept_pop] du [concept_subject] devient [concept_radical]."
+ forced_border_opening_action_name: "Ouverture forcée des frontières"
+ forced_border_opening_action_notification_name: "[INITIATOR_COUNTRY.GetName] a forcé l'ouverture de nos frontières"
+ forced_border_opening_action_notification_desc: "Notre [concept_overlord] [INITIATOR_COUNTRY.GetName] a forcé notre [GetLawGroup('lawgroup_migration').GetName] [concept_law] vers [GetLawType('law_no_migration_controls').GetName]. Leur [concept_attitude] envers nous est #tooltippable #tooltip:[INITIATOR_COUNTRY.GetTooltipTag],COUNTRY_ATTITUDE_TOOLTIP [INITIATOR_COUNTRY.GetAttitudeTowards(GetPlayer).GetName]#!#!."
+
+ forced_border_closing: "Fermeture forcée des frontières"
+ forced_border_closing_desc: "Une [concept_instant_diplomatic_action] qui force un changement dans la [GetLawGroup('lawgroup_migration').GetName] [concept_law] du [concept_subject] cible vers [GetLawType('law_closed_borders').GetName]. En retour, cela endommage les [concept_relations] avec le [concept_subject] cible et une partie des [concept_pop] du [concept_subject] devient [concept_radical]."
+ forced_border_closing_action_name: "Fermeture forcée des frontières"
+ forced_border_closing_action_notification_name: "[INITIATOR_COUNTRY.GetName] a forcé la fermeture de nos frontières"
+ forced_border_closing_action_notification_desc: "Notre [concept_overlord] [INITIATOR_COUNTRY.GetName] a forcé notre [GetLawGroup('lawgroup_migration').GetName] [concept_law] vers [GetLawType('law_closed_borders').GetName]. Leur [concept_attitude] envers nous est #tooltippable #tooltip:[INITIATOR_COUNTRY.GetTooltipTag],COUNTRY_ATTITUDE_TOOLTIP [INITIATOR_COUNTRY.GetAttitudeTowards(GetPlayer).GetName]#!#!."
+
+ forced_industry_ban: "Interdiction forcée de l'industrie"
+ forced_industry_ban_desc: "Une [concept_instant_diplomatic_action] qui force un changement dans la [GetLawGroup('lawgroup_economic_system').GetName] [concept_law] du [concept_subject] cible vers [GetLawType('law_industry_banned').GetName]. En retour, cela endommage les [concept_relations] avec le [concept_subject] cible et une partie des [concept_pop] du [concept_subject] devient [concept_radical]."
+ forced_industry_ban_action_name: "Interdiction forcée de l'industrie"
+ forced_industry_ban_action_notification_name: "[INITIATOR_COUNTRY.GetName] a forcé l'interdiction de notre industrie"
+ forced_industry_ban_action_notification_desc: "Notre [concept_overlord] [INITIATOR_COUNTRY.GetName] a forcé notre [GetLawGroup('lawgroup_economic_system').GetName] [concept_law] vers [GetLawType('law_industry_banned').GetName]. Leur [concept_attitude] envers nous est #tooltippable #tooltip:[INITIATOR_COUNTRY.GetTooltipTag],COUNTRY_ATTITUDE_TOOLTIP [INITIATOR_COUNTRY.GetAttitudeTowards(GetPlayer).GetName]#!#!."
+
+ forced_industry_ban_liberty_desire_custom_tooltip: "Les responsables [SCOPE.sCountry('target_country').GetAdjectiveNoFormatting] répondront à [SCOPE.GetRootScope.GetCountry.GetName] par une interdiction de l'industrie dans [SCOPE.sCountry('target_country').GetName]. Le [concept_liberty_desire] et [concept_attitude] de ce [concept_subject] changeront."

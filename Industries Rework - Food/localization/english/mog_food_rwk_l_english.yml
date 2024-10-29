@@ -1,0 +1,45 @@
+﻿l_english:
+
+# Production method groups
+# pmg_canning:0 "Packaging" # -> see replace file
+ pmg_preservation:0 "Preservation Style"
+# pmg_distillery:0 "Fluid Products" # -> see replace file
+ 
+# Production methods #
+# #Base
+# pm_bakery:0 "Artisanal Methods" # -> see replace file
+# pm_sweeteners:0 "Sweeteners" # -> see replace file
+# pm_baking_powder:0 "Baking Powder" # -> see replace file
+# pm_automated_bakery:0 "Automated Bakery" # -> see replace file
+# #Packaging
+ pm_cloth_pkg:0 "Cloth Wrapping"
+ pm_paper_pkg:0 "Paper Wrapping"
+ pm_wax_paper:0 "Wax Paper"
+ pm_sealed_jars:0 "Sealed Jars"
+# pm_cannery:0 "Metal Canning" # -> see replace file
+# pm_vacuum_canning:1 "Vacuum Packaging" # -> see replace file
+# pm_vacuum_canning_principle_3: "Efficient Canning Practices" # -> see replace file
+# #Preservation
+# pm_disabled_canning:0 "No Preservatives" # -> see replace file
+ pm_dried_fruit:0 "Fruit Drying"
+ pm_cured_meat:0 "Meat Curing"
+ pm_salted_fish:0 "Fish Salting"
+ pm_sweet_vinegars:0 "Sweet Vinegars"
+ pm_meat_broths:0 "Meat Broths"
+ pm_brine_vinegars:0 "Brine Vinegars"
+ pm_fish_brines:0 "Fish Brines"
+ pm_syrups_sauces:0 "Syrups & Sauces"
+ pm_boiling_sauces:0 "Boiling & Sauces"
+ pm_oils_sauces:0 "Oils & Sauces"
+ pm_broths_brines:0 "Broths & Brines"
+ pm_gravies_broths:0 "Gravies & Broths"
+ pm_brines_oils:0 "Brines & Oils"
+# #Fluid Products
+# pm_disabled_distillery:0 "Only Condiments" # -> see replace file
+ pm_simmer_pots:0 "Simmering Pots"
+ pm_pot_stills_grain:0 "Pot Stills (Grain Alcohol)"
+ pm_pot_stills_fruit:0 "Pot Stills (Fruit Liquors)"
+ pm_pot_stills_sugar:0 "Pot Stills (Sugar Spirits)"
+ pm_patent_stills_grain:0 "Patent Stills (Grain Alcohol)"
+ pm_patent_stills_fruit:0 "Patent Stills (Fruit Liquors)"
+ pm_patent_stills_sugar:0 "Patent Stills (Sugar Spirits)"

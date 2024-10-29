@@ -1,0 +1,14 @@
+﻿l_turkish:
+  
+ # Production methods 
+ pmg_base_building_automotive_industry: "Automobiles"
+ pmg_automotive_aeroplanes: "Aeroplanes"
+ pmg_automotive_tanks: "Tanks"
+  
+ pm_automobiles: "Automobiles"
+ pm_no_aeroplanes: "No Aeroplane Production"
+ pm_limited_aeroplanes: "Limited Aeroplane Production"
+ pm_extensive_aeroplanes: "Extensive Aeroplane Production"
+ pm_no_tanks: "No Tank Production"
+ pm_limited_tanks: "Limited Tank Production"
+ pm_extensive_tanks: "Extensive Tank Production"

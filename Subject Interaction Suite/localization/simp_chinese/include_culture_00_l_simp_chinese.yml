@@ -1,0 +1,29 @@
+﻿l_simp_chinese:
+ include_primary_culture:0 "植入主流文化"
+ include_primary_culture_action_name:0 "$include_primary_culture$"
+ include_primary_culture_action_propose_name:0 "发起文化植入运动"
+ include_primary_culture_action_break_name:0 "停止文化植入运动"
+ include_primary_culture_pact_desc:0 "[SCOPE.GetRootScope.GetDiplomaticPact.GetFirstCountry.GetName]正在将本国文化植入[SCOPE.GetRootScope.GetDiplomaticPact.GetSecondCountry.GetName]成为其主流文化之一。 \n在总共8个阶段中目前完成了#variable [SCOPE.GetRootScope.GetDiplomaticPact.GetSecondCountry.MakeScope.Var('include_primary_culture_progress').GetValue]#!个 "
+ include_primary_culture_desc:1 "#header $include_primary_culture$#! \n $TOOLTIP_DELIMITER$ \n让目标国家容纳我国的主流文化"
+ include_primary_culture_action_notification_name:1 "[INITIATOR_COUNTRY.GetName]正在进行文化植入"
+ include_primary_culture_action_notification_desc:1 "[INITIATOR_COUNTRY.GetName]正在让我国容纳他们的主流文化"
+ include_primary_culture_action_notification_break_name:1 "[INITIATOR_COUNTRY.GetName]停止了文化植入"
+ include_primary_culture_action_notification_break_desc:0 "[INITIATOR_COUNTRY.GetName]已停止将主流文化植入我国"
+ 
+ include_primary_culture_effect_desc_global:0 "实施文化植入"
+ include_primary_culture_effect_desc_first:0 "[COUNTRY.GetAdjectiveNoFlag]正在将主流文化植入[TARGET_COUNTRY.GetName]。"
+ include_primary_culture_effect_desc_third:0 "[COUNTRY.GetName]正在将主流文化植入[AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)]。"
+ 
+ include_primary_culture_trigger_desc_global:0 "正进行文化植入"
+ include_primary_culture_trigger_false_desc_global:0 "#b 不再#!进行文化植入运动。"
+ include_primary_culture_trigger_desc_first:0 "[COUNTRY.GetAdjectiveNoFlag]正在将主流文化植入[TARGET_COUNTRY.GetName]。"
+ include_primary_culture_trigger_false_desc_first:0 "[COUNTRY.GetAdjectiveNoFlag]不再将主流文化植入[TARGET_COUNTRY.GetName] #b anymore#!"
+ include_primary_culture_trigger_desc_third:0 "[COUNTRY.GetName]正在将主流文化植入[AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)]。"
+ include_primary_culture_trigger_false_desc_third:0 "[COUNTRY.GetName]不再将主流文化植入[AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)] #b anymore#!"
+ 
+ ib_events.05.t: "主流文化已植入"
+ ib_events.05.d: "[ROOT.GetCountry.GetName]已成功将主流文化植入[SCOPE.sCountry('culture_include_country').GetName]，[SCOPE.sCountry('culture_include_country').GetName]将在母国文化的熏陶下永远繁荣。"
+ ib_events.05.f: "壮哉我[ROOT.GetCountry.GetName]!"
+ ib_events.05.a: "干得漂亮。"
+
+ include_primary_culture_weekly_effect: "植入主流文化需要完成八个阶段，每周有20%机会推进一个阶段。" 

@@ -1,0 +1,58 @@
+﻿# Brought up to date and included from: FX_ask_subject_to_fight
+
+ask_subject_to_fight = {
+	groups= {
+		general
+	}
+	
+	requires_approval = no
+	should_notify_third_parties = no
+	show_effect_in_tooltip = yes
+	
+	potential = {
+		is_player = yes
+		scope:target_country = {
+			NOT = { is_country_type = decentralized }
+			NOT = { is_direct_subject_of = root }
+		}
+	}
+	
+	possible = {
+		NOT = { has_war_with = scope:target_country }
+		NOT = { has_truce_with = scope:target_country }
+		has_diplomatic_relevance = scope:target_country
+	}
+	
+	accept_effect = {
+		scope:target_country = {
+			save_scope_as = FX_subject_fight_target_country
+		}
+		
+		# Safety clean-up
+		every_country = {
+			limit = {
+				has_variable = FX_potential_subject
+			}
+			remove_variable = FX_potential_subject
+		}
+		
+		every_subject_or_below = {
+			if = {
+				limit = {
+					is_direct_subject_of = root
+					NOT = {
+						has_truce_with = scope:FX_subject_fight_target_country
+						has_variable = FX_potential_subject
+					}
+				}
+				set_variable = FX_potential_subject
+			}
+		}
+
+		trigger_event = {
+			id = FX_subject_fight.1
+			days = 0
+			popup = yes
+		}
+	}
+}

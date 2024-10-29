@@ -1,0 +1,965 @@
+﻿liberty_desire_weekly_change_legal_friction = {
+	# LEGAL FRICTION
+	add = {
+		# Free Speech - Legal friction between 
+		if = {
+			# Light friction
+			limit = {
+				OR = {
+					AND = {
+						root.first_country = {
+							OR = {
+								has_law = law_type:law_monarchy
+								has_law = law_type:law_theocracy
+								has_law = law_type:law_presidential_republic
+							}
+						}
+						root.second_country = {
+							OR = {
+								has_law = law_type:law_monarchy
+								has_law = law_type:law_theocracy
+								has_law = law_type:law_presidential_republic
+							}
+						}
+						root.first_country = {
+							active_law:lawgroup_governance_principles = {
+								save_temporary_scope_as = first_law
+							}
+						}
+						root.second_country = {
+							NOT = {
+								active_law:lawgroup_governance_principles.type = scope:first_law.type
+							}
+						}
+					}
+					AND = {
+						root.first_country = {
+							OR = {
+								has_law = law_type:law_presidential_republic
+								has_law = law_type:law_parliamentary_republic
+							}
+						}
+						root.second_country = {
+							OR = {
+								has_law = law_type:law_presidential_republic
+								has_law = law_type:law_parliamentary_republic
+							}
+						}
+						root.first_country = {
+							active_law:lawgroup_governance_principles = {
+								save_temporary_scope_as = first_law
+							}
+						}
+						root.second_country = {
+							NOT = {
+								active_law:lawgroup_governance_principles.type = scope:first_law.type
+							}
+						}
+					}
+					AND = {
+						root.first_country = {
+							OR = {
+								has_law = law_type:law_parliamentary_republic
+								has_law = law_type:law_council_republic
+							}
+						}
+						root.second_country = {
+							OR = {
+								has_law = law_type:law_parliamentary_republic
+								has_law = law_type:law_council_republic
+							}
+						}
+						root.first_country = {
+							active_law:lawgroup_governance_principles = {
+								save_temporary_scope_as = first_law
+							}
+						}
+						root.second_country = {
+							NOT = {
+								active_law:lawgroup_governance_principles.type = scope:first_law.type
+							}
+						}
+					}
+				}
+			}
+			add = {
+				value = 0.01
+			}	
+		}
+		else_if = {
+			# Moderate friction
+			limit = {
+				OR = {
+					AND = {
+						root.first_country = {
+							has_law = law_type:law_parliamentary_republic
+						}
+						root.second_country = {
+							OR = {
+								has_law = law_type:law_monarchy
+								has_law = law_type:law_theocracy
+							}
+						}
+					}
+					AND = {
+						root.first_country = {
+							OR = {
+								has_law = law_type:law_monarchy
+								has_law = law_type:law_theocracy
+							}
+						}
+						root.second_country = {
+							has_law = law_type:law_parliamentary_republic
+						}
+					}
+				}
+			}
+			add = {
+				value = 0.02
+			}	
+		}
+		else_if = {
+			# Heavy friction
+			limit = {
+				OR = {
+					AND = {
+						root.first_country = {
+							has_law = law_type:law_council_republic
+						}
+						root.second_country = {
+							OR = {
+								has_law = law_type:law_monarchy
+								has_law = law_type:law_theocracy
+								has_law = law_type:law_presidential_republic
+							}
+						}
+					}
+					AND = {
+						root.first_country = {
+							OR = {
+								has_law = law_type:law_monarchy
+								has_law = law_type:law_theocracy
+								has_law = law_type:law_presidential_republic
+							}
+						}
+						root.second_country = {
+							has_law = law_type:law_council_republic
+						}
+					}
+				}
+			}
+			add = {
+				value = 0.04
+			}	
+		}
+		desc = "LIBERTY_DESIRE_LEGAL_FRICTION_GOVERNANCE"
+		format = LIBERTY_DESIRE_LEGAL_FRICTION_VALUE_FORMAT
+	}
+	
+	add = {
+		# Church and State - Legal friction between 
+		if = {
+			# Light friction
+			limit = {
+				root.first_country = {
+					OR = {
+						has_law = law_type:law_state_religion
+						has_law = law_type:law_freedom_of_conscience
+					}
+				}
+				root.second_country = {
+					OR = {
+						has_law = law_type:law_state_religion
+						has_law = law_type:law_freedom_of_conscience
+					}
+				}
+				root.first_country = {
+					active_law:lawgroup_church_and_state = {
+						save_temporary_scope_as = first_law
+					}
+				}
+				root.second_country = {
+					NOT = {
+						active_law:lawgroup_church_and_state.type = scope:first_law.type
+					}
+				}
+			}
+			add = {
+				value = 0.01
+			}	
+		}
+		else_if = {
+			# Moderately Large friction with State Atheism
+			limit = {
+				OR = {
+					AND = {
+						root.first_country = {
+							has_law = law_type:law_state_atheism
+						}
+						root.second_country = {
+							OR = {
+								has_law = law_type:law_state_religion
+								has_law = law_type:law_freedom_of_conscience
+							}
+						}
+					}
+					AND = {
+						root.first_country = {
+							OR = {
+								has_law = law_type:law_state_religion
+								has_law = law_type:law_freedom_of_conscience
+							}
+						}
+						root.second_country = {
+							has_law = law_type:law_state_atheism
+						}
+					}
+				}
+			}
+			add = {
+				value = 0.03
+			}	
+		}
+		desc = "LIBERTY_DESIRE_LEGAL_FRICTION_CHURCH"
+		format = LIBERTY_DESIRE_LEGAL_FRICTION_VALUE_FORMAT
+	}
+	
+	add = {
+		# Bureaucracy - Legal friction between 
+		if = {
+			# Light friction
+			limit = {
+				root.first_country = {
+					OR = {
+						has_law = law_type:law_hereditary_bureaucrats
+						has_law = law_type:law_appointed_bureaucrats
+						has_law = law_type:law_elected_bureaucrats
+					}
+				}
+				root.second_country = {
+					OR = {
+						has_law = law_type:law_hereditary_bureaucrats
+						has_law = law_type:law_appointed_bureaucrats
+						has_law = law_type:law_elected_bureaucrats
+					}
+				}
+				root.first_country = {
+					active_law:lawgroup_bureaucracy = {
+						save_temporary_scope_as = first_law
+					}
+				}
+				root.second_country = {
+					NOT = {
+						active_law:lawgroup_bureaucracy.type = scope:first_law.type
+					}
+				}
+			}
+			add = {
+				value = 0.01
+			}	
+		}
+		desc = "LIBERTY_DESIRE_LEGAL_FRICTION_BUREAUCRACY"
+		format = LIBERTY_DESIRE_LEGAL_FRICTION_VALUE_FORMAT
+	}
+	
+	add = {
+		# Economic System - Legal friction between 
+		if = {
+			# Light friction
+			limit = {
+				OR = {
+					AND = {
+						# Regressive laws for light friction
+						root.first_country = {
+							OR = {
+								has_law = law_type:law_traditionalism
+								has_law = law_type:law_agrarianism
+								has_law = law_type:law_industry_banned
+							}
+						}
+						root.second_country = {
+							OR = {
+								has_law = law_type:law_traditionalism
+								has_law = law_type:law_agrarianism
+								has_law = law_type:law_industry_banned
+							}
+						}
+						root.first_country = {
+							active_law:lawgroup_economic_system = {
+								save_temporary_scope_as = first_law
+							}
+						}
+						root.second_country = {
+							NOT = {
+								active_law:lawgroup_economic_system.type = scope:first_law.type
+							}
+						}
+					}
+					AND = {
+						# Capitalist laws light friction
+						root.first_country = {
+							OR = {
+								has_law = law_type:law_interventionism
+								has_law = law_type:law_laissez_faire
+							}
+						}
+						root.second_country = {
+							OR = {
+								has_law = law_type:law_interventionism
+								has_law = law_type:law_laissez_faire
+							}
+						}
+						root.first_country = {
+							active_law:lawgroup_economic_system = {
+								save_temporary_scope_as = first_law
+							}
+						}
+						root.second_country = {
+							NOT = {
+								active_law:lawgroup_economic_system.type = scope:first_law.type
+							}
+						}
+					}
+					AND = {
+						# Government laws light friction
+						root.first_country = {
+							OR = {
+								has_law = law_type:law_interventionism
+								has_law = law_type:law_command_economy
+							}
+						}
+						root.second_country = {
+							OR = {
+								has_law = law_type:law_interventionism
+								has_law = law_type:law_command_economy
+							}
+						}
+						root.first_country = {
+							active_law:lawgroup_economic_system = {
+								save_temporary_scope_as = first_law
+							}
+						}
+						root.second_country = {
+							NOT = {
+								active_law:lawgroup_economic_system.type = scope:first_law.type
+							}
+						}
+					}
+					AND = {
+						# Collectivist laws light friction
+						root.first_country = {
+							OR = {
+								has_law = law_type:law_cooperative_ownership
+								has_law = law_type:law_command_economy
+							}
+						}
+						root.second_country = {
+							OR = {
+								has_law = law_type:law_cooperative_ownership
+								has_law = law_type:law_command_economy
+							}
+						}
+						root.first_country = {
+							active_law:lawgroup_economic_system = {
+								save_temporary_scope_as = first_law
+							}
+						}
+						root.second_country = {
+							NOT = {
+								active_law:lawgroup_economic_system.type = scope:first_law.type
+							}
+						}
+					}
+				}
+			}
+			add = {
+				value = 0.02
+			}	
+		}
+		else_if = {
+			# Heavy friction
+			limit = {
+				OR = {
+					AND = {
+						# Regressive laws first for major friction
+						root.first_country = {
+							OR = {
+								has_law = law_type:law_traditionalism
+								has_law = law_type:law_agrarianism
+								has_law = law_type:law_industry_banned
+							}
+						}
+						root.second_country = {
+							OR = {
+								has_law = law_type:law_interventionism
+								has_law = law_type:law_laissez_faire
+								has_law = law_type:law_cooperative_ownership
+								has_law = law_type:law_command_economy
+							}
+						}
+					}
+					AND = {
+						# Regressive laws last for major friction
+						root.first_country = {
+							OR = {
+								has_law = law_type:law_interventionism
+								has_law = law_type:law_laissez_faire
+								has_law = law_type:law_cooperative_ownership
+								has_law = law_type:law_command_economy
+							}
+						}
+						root.second_country = {
+							OR = {
+								has_law = law_type:law_traditionalism
+								has_law = law_type:law_agrarianism
+								has_law = law_type:law_industry_banned
+							}
+						}
+					}
+					AND = {
+						# L-F law first for major friction
+						root.first_country = {
+							OR = {
+								has_law = law_type:law_laissez_faire
+							}
+						}
+						root.second_country = {
+							OR = {
+								has_law = law_type:law_cooperative_ownership
+								has_law = law_type:law_command_economy
+							}
+						}
+					}
+					AND = {
+						# L-F law last for major friction
+						root.first_country = {
+							OR = {
+								has_law = law_type:law_cooperative_ownership
+								has_law = law_type:law_command_economy
+							}
+						}
+						root.second_country = {
+							OR = {
+								has_law = law_type:law_laissez_faire
+							}
+						}
+					}
+				}
+			}
+			add = {
+				value = 0.04
+			}	
+		}
+		desc = "LIBERTY_DESIRE_LEGAL_FRICTION_ECONOMY"
+		format = LIBERTY_DESIRE_LEGAL_FRICTION_VALUE_FORMAT
+	}
+	
+	add = {
+		# Land Reform - Legal friction between 
+		if = {
+			# Light friction
+			limit = {
+				root.first_country = {
+					OR = {
+						has_law = law_type:law_tenant_farmers
+						has_law = law_type:law_commercialized_agriculture
+						has_law = law_type:law_homesteading
+						has_law = law_type:law_collectivized_agriculture
+					}
+				}
+				root.second_country = {
+					OR = {
+						has_law = law_type:law_tenant_farmers
+						has_law = law_type:law_commercialized_agriculture
+						has_law = law_type:law_homesteading
+						has_law = law_type:law_collectivized_agriculture
+					}
+				}
+				root.first_country = {
+					active_law:lawgroup_land_reform = {
+						save_temporary_scope_as = first_law
+					}
+				}
+				root.second_country = {
+					NOT = {
+						active_law:lawgroup_land_reform.type = scope:first_law.type
+					}
+				}
+			}
+			add = {
+				value = 0.01
+			}	
+		}
+		else_if = {
+			# Moderate friction with Serfdom
+			limit = {
+				OR = {
+					AND = {
+						root.first_country = {
+							has_law = law_type:law_serfdom
+						}
+						root.second_country = {
+							OR = {
+								has_law = law_type:law_tenant_farmers
+								has_law = law_type:law_commercialized_agriculture
+								has_law = law_type:law_homesteading
+							}
+						}
+					}
+					AND = {
+						root.first_country = {
+							OR = {
+								has_law = law_type:law_tenant_farmers
+								has_law = law_type:law_commercialized_agriculture
+								has_law = law_type:law_homesteading
+							}
+						}
+						root.second_country = {
+							has_law = law_type:law_serfdom
+						}
+					}
+				}
+			}
+			add = {
+				value = 0.02
+			}	
+		}
+		else_if = {
+			# Heavy friction with Serfdom
+			limit = {
+				root.first_country = {
+					OR = {
+						has_law = law_type:law_commercialized_agriculture
+						has_law = law_type:law_serfdom
+					}
+				}
+				root.second_country = {
+					OR = {
+						has_law = law_type:law_commercialized_agriculture
+						has_law = law_type:law_serfdom
+					}
+				}
+				root.first_country = {
+					active_law:lawgroup_land_reform = {
+						save_temporary_scope_as = first_law
+					}
+				}
+				root.second_country = {
+					NOT = {
+						active_law:lawgroup_land_reform.type = scope:first_law.type
+					}
+				}
+			}
+			add = {
+				value = 0.04
+			}	
+		}
+		desc = "LIBERTY_DESIRE_LEGAL_FRICTION_LAND"
+		format = LIBERTY_DESIRE_LEGAL_FRICTION_VALUE_FORMAT
+	}
+	
+	add = {
+		# Trade Policy - Legal friction between 
+		if = {
+			# Light friction
+			limit = {
+				root.first_country = {
+					OR = {
+						has_law = law_type:law_mercantilism
+						has_law = law_type:law_protectionism
+						has_law = law_type:law_free_trade
+					}
+				}
+				root.second_country = {
+					OR = {
+						has_law = law_type:law_mercantilism
+						has_law = law_type:law_protectionism
+						has_law = law_type:law_free_trade
+					}
+				}
+				root.first_country = {
+					active_law:lawgroup_trade_policy = {
+						save_temporary_scope_as = first_law
+					}
+				}
+				root.second_country = {
+					NOT = {
+						active_law:lawgroup_trade_policy.type = scope:first_law.type
+					}
+				}
+			}
+			add = {
+				value = 0.01
+			}	
+		}
+		else_if = {
+			# Moderate friction with Isolationism
+			limit = {
+				OR = {
+					AND = {
+						root.first_country = {
+							has_law = law_type:law_isolationism
+						}
+						root.second_country = {
+							OR = {
+								has_law = law_type:law_mercantilism
+								has_law = law_type:law_protectionism
+								has_law = law_type:law_free_trade
+							}
+						}
+					}
+					AND = {
+						root.first_country = {
+							OR = {
+								has_law = law_type:law_mercantilism
+								has_law = law_type:law_protectionism
+								has_law = law_type:law_free_trade
+							}
+						}
+						root.second_country = {
+							has_law = law_type:law_isolationism
+						}
+					}
+				}
+			}
+			add = {
+				value = 0.02
+			}	
+		}
+		desc = "LIBERTY_DESIRE_LEGAL_FRICTION_TRADE"
+		format = LIBERTY_DESIRE_LEGAL_FRICTION_VALUE_FORMAT
+	}
+	
+	add = {
+		# Slavery - Legal friction between 
+		if = {
+			# Light friction
+			limit = {
+				root.first_country = {
+					OR = {
+						has_law = law_type:law_debt_slavery
+						has_law = law_type:law_slave_trade
+						has_law = law_type:law_legacy_slavery
+					}
+				}
+				root.second_country = {
+					OR = {
+						has_law = law_type:law_debt_slavery
+						has_law = law_type:law_slave_trade
+						has_law = law_type:law_legacy_slavery
+					}
+				}
+				root.first_country = {
+					active_law:lawgroup_slavery = {
+						save_temporary_scope_as = first_law
+					}
+				}
+				root.second_country = {
+					NOT = {
+						active_law:lawgroup_slavery.type = scope:first_law.type
+					}
+				}
+			}
+			add = {
+				value = 0.01
+			}	
+		}
+		else_if = {
+			# Moderate friction
+			limit = {
+				OR = {
+					AND = {
+						root.first_country = {
+							has_law = law_type:law_slavery_banned
+						}
+						root.second_country = {
+							OR = {
+								has_law = law_type:law_debt_slavery
+								has_law = law_type:law_slave_trade
+								has_law = law_type:law_legacy_slavery
+							}
+						}
+					}
+					AND = {
+						root.first_country = {
+							OR = {
+								has_law = law_type:law_debt_slavery
+								has_law = law_type:law_slave_trade
+								has_law = law_type:law_legacy_slavery
+							}
+						}
+						root.second_country = {
+							has_law = law_type:law_slavery_banned
+						}
+					}
+				}
+			}
+			add = {
+				value = 0.02
+			}	
+		}
+		desc = "LIBERTY_DESIRE_LEGAL_FRICTION_SLAVERY"
+		format = LIBERTY_DESIRE_LEGAL_FRICTION_VALUE_FORMAT
+	}
+	
+	add = {
+		# Rights of Women - Legal friction between 
+		if = {
+			# Light friction
+			limit = {
+				root.first_country = {
+					OR = {
+						has_law = law_type:law_women_own_property
+						has_law = law_type:law_women_in_the_workplace
+						has_law = law_type:law_womens_suffrage
+					}
+				}
+				root.second_country = {
+					OR = {
+						has_law = law_type:law_women_own_property
+						has_law = law_type:law_women_in_the_workplace
+						has_law = law_type:law_womens_suffrage
+					}
+				}
+				root.first_country = {
+					active_law:lawgroup_rights_of_women = {
+						save_temporary_scope_as = first_law
+					}
+				}
+				root.second_country = {
+					NOT = {
+						active_law:lawgroup_rights_of_women.type = scope:first_law.type
+					}
+				}
+			}
+			add = {
+				value = 0.01
+			}	
+		}
+		else_if = {
+			# Moderate friction with No Rights
+			limit = {
+				OR = {
+					AND = {
+						root.first_country = {
+							has_law = law_type:law_no_womens_rights
+						}
+						root.second_country = {
+							OR = {
+								has_law = law_type:law_women_own_property
+								has_law = law_type:law_women_in_the_workplace
+								has_law = law_type:law_womens_suffrage
+							}
+						}
+					}
+					AND = {
+						root.first_country = {
+							OR = {
+								has_law = law_type:law_women_own_property
+								has_law = law_type:law_women_in_the_workplace
+								has_law = law_type:law_womens_suffrage
+							}
+						}
+						root.second_country = {
+							has_law = law_type:law_no_womens_rights
+						}
+					}
+				}
+			}
+			add = {
+				value = 0.02
+			}	
+		}
+		desc = "LIBERTY_DESIRE_LEGAL_FRICTION_FEMINISM"
+		format = LIBERTY_DESIRE_LEGAL_FRICTION_VALUE_FORMAT
+	}
+	
+	add = {
+		# Free Speech - Legal friction between 
+		if = {
+			# Light friction
+			limit = {
+				OR = {
+					AND = {
+						# Regressive laws for light friction
+						root.first_country = {
+							OR = {
+								has_law = law_type:law_outlawed_dissent
+								has_law = law_type:law_censorship
+							}
+						}
+						root.second_country = {
+							OR = {
+								has_law = law_type:law_outlawed_dissent
+								has_law = law_type:law_censorship
+							}
+						}
+						root.first_country = {
+							active_law:lawgroup_free_speech = {
+								save_temporary_scope_as = first_law
+							}
+						}
+						root.second_country = {
+							NOT = {
+								active_law:lawgroup_free_speech.type = scope:first_law.type
+							}
+						}
+					}
+					AND = {
+						# Progressive laws light friction
+						root.first_country = {
+							OR = {
+								has_law = law_type:law_right_of_assembly
+								has_law = law_type:law_protected_speech
+							}
+						}
+						root.second_country = {
+							OR = {
+								has_law = law_type:law_right_of_assembly
+								has_law = law_type:law_protected_speech
+							}
+						}
+						root.first_country = {
+							active_law:lawgroup_free_speech = {
+								save_temporary_scope_as = first_law
+							}
+						}
+						root.second_country = {
+							NOT = {
+								active_law:lawgroup_free_speech.type = scope:first_law.type
+							}
+						}
+					}
+					AND = {
+						# Moderate laws light friction
+						root.first_country = {
+							OR = {
+								has_law = law_type:law_right_of_assembly
+								has_law = law_type:law_censorship
+							}
+						}
+						root.second_country = {
+							OR = {
+								has_law = law_type:law_right_of_assembly
+								has_law = law_type:law_censorship
+							}
+						}
+						root.first_country = {
+							active_law:lawgroup_free_speech = {
+								save_temporary_scope_as = first_law
+							}
+						}
+						root.second_country = {
+							NOT = {
+								active_law:lawgroup_free_speech.type = scope:first_law.type
+							}
+						}
+					}
+				}
+			}
+			add = {
+				value = 0.01
+			}	
+		}
+		else_if = {
+			# Moderate friction
+			limit = {
+				root.first_country = {
+					OR = {
+						has_law = law_type:law_protected_speech
+						has_law = law_type:law_outlawed_dissent
+					}
+				}
+				root.second_country = {
+					OR = {
+						has_law = law_type:law_protected_speech
+						has_law = law_type:law_outlawed_dissent
+					}
+				}
+				root.first_country = {
+					active_law:lawgroup_free_speech = {
+						save_temporary_scope_as = first_law
+					}
+				}
+				root.second_country = {
+					NOT = {
+						active_law:lawgroup_free_speech.type = scope:first_law.type
+					}
+				}
+			}
+			add = {
+				value = 0.02
+			}	
+		}
+		desc = "LIBERTY_DESIRE_LEGAL_FRICTION_SPEECH"
+		format = LIBERTY_DESIRE_LEGAL_FRICTION_VALUE_FORMAT
+	}
+	
+	add = {
+		# Labor Rights - Legal friction between 
+		if = {
+			# Light friction
+			limit = {
+				OR = {
+					AND = {
+						root.first_country = {
+							has_law = law_type:law_regulatory_bodies
+						}
+						root.second_country = {
+							OR = {
+								has_law = law_type:law_no_workers_rights
+								has_law = law_type:law_worker_protections
+							}
+						}
+					}
+					AND = {
+						root.first_country = {
+							OR = {
+								has_law = law_type:law_no_workers_rights
+								has_law = law_type:law_worker_protections
+							}
+						}
+						root.second_country = {
+							has_law = law_type:law_regulatory_bodies
+						}
+					}
+				}
+			}
+			add = {
+				value = 0.01
+			}	
+		}
+		else_if = {
+			# Moderate friction with No Rights
+			limit = {
+				root.first_country = {
+					OR = {
+						has_law = law_type:law_no_workers_rights
+						has_law = law_type:law_worker_protections
+					}
+				}
+				root.second_country = {
+					OR = {
+						has_law = law_type:law_no_workers_rights
+						has_law = law_type:law_worker_protections
+					}
+				}
+				root.first_country = {
+					active_law:lawgroup_labor_rights = {
+						save_temporary_scope_as = first_law
+					}
+				}
+				root.second_country = {
+					NOT = {
+						active_law:lawgroup_labor_rights.type = scope:first_law.type
+					}
+				}
+			}
+			add = {
+				value = 0.02
+			}	
+		}
+		desc = "LIBERTY_DESIRE_LEGAL_FRICTION_LABOR"
+		format = LIBERTY_DESIRE_LEGAL_FRICTION_VALUE_FORMAT
+	}
+}

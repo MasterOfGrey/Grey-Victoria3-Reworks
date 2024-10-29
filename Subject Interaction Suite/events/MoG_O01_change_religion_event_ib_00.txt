@@ -1,0 +1,107 @@
+﻿# Updated and included from: Koa's Change Subject Culture
+
+namespace = ib_events
+
+# 02 in the original mod was autonomy but this is not needed so replaced with religion separately
+ib_events.02 = {
+	type = country_event
+	title = ib_events.02.t
+	desc = ib_events.02.d
+	flavor = ib_events.02.f
+
+	event_image = {
+		video = "gfx/event_pictures/southamerica_aristocrats.bk2"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/southamerica/aristocrats"
+
+	icon = "gfx/interface/icons/event_icons/event_protest.dds"
+
+	duration = 3
+
+	trigger = {
+		# triggered by change_state_religion (diplomatic action)
+	}
+
+	immediate = {
+		random_country = {
+			limit = {
+				root = {
+					has_diplomatic_pact = {
+						who = prev
+						type = change_state_religion
+					}
+				}
+				# Produces a "used but never set" error that can be ignored.
+				var:change_state_religion_progress > 7.5
+			}
+			save_scope_as = religion_target_country
+			set_variable = { name = change_state_religion_progress value = 0 }
+		}	
+	}
+
+	option = {
+		name = ib_events.02.a
+		if = {
+			limit = {
+				has_law = law_type:law_state_atheism
+			}
+			scope:religion_target_country = {
+				activate_law = law_type:law_state_atheism
+				capital = {
+					convert_population = {
+						target = rel:atheist
+						value = 0.05
+					}
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				NOT = {has_law = law_type:law_state_atheism }
+				country_has_state_religion = rel:atheist
+			}
+			scope:religion_target_country = {
+				activate_law = law_type:law_total_separation
+				set_state_religion = rel:atheist
+				capital = {
+					convert_population = {
+						target = rel:atheist
+						value = 0.05
+					}
+				}
+			}
+		}
+		else = {
+			scope:religion_target_country = {
+				set_state_religion = root.religion
+				capital = {
+					convert_population = {
+						target = root.religion
+						value = 0.05
+					}
+				}
+			}
+		}
+		
+		hidden_effect = {
+			scope:religion_target_country = {
+				every_scope_state = {
+					limit = { is_capital = no }
+					convert_population = { 
+#						limit = {
+#							is_pop_type = aristocrats
+#							pop_has_primary_culture = yes
+#						}
+						target = root.religion
+						value = 0.01 
+					}
+				}
+				every_scope_character = {
+					kill_character = yes
+				}
+			}
+		}
+	}
+}

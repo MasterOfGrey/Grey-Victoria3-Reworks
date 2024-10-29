@@ -1,0 +1,125 @@
+﻿# Note:
+# pre-dynamite: pm_percussion_caps - pm_leblanc_process pm_ammonia-soda_process
+# texture = "gfx/interface/icons/production_method_icons/pig_iron_tools.dds"
+# post-dynamite: pm_explosive_shells - pm_vacuum_evaporation (electricity)pm_brine_electrolysis
+# texture = "gfx/interface/icons/production_method_icons/steel_tools.dds"
+
+pm_bakery = {
+	texture = "gfx/interface/icons/production_method_icons/bakeries.dds"
+	
+	building_modifiers = {
+		workforce_scaled = {
+			# input goods
+			goods_input_grain_add = 40		# x20 =  720
+
+			# output goods
+			goods_output_groceries_add = 48	# x30 = 1440
+		}
+
+		level_scaled = {
+			# profit = 720 (high apparent profit encourages industry seeding and covers the cost of basic packaging)
+			building_employment_shopkeepers_add = 500
+			building_employment_laborers_add = 4500
+		}
+	}
+}		
+
+pm_sweeteners = {
+	texture = "gfx/interface/icons/production_method_icons/sweeteners.dds"
+	
+	unlocking_technologies = {
+		distillation
+	}				
+	
+	building_modifiers = {
+		workforce_scaled = {
+			# input goods
+			goods_input_grain_add = 40		# x20 = 800
+			goods_input_sugar_add = 15		# x30 = 450
+ 
+			# output goods
+			goods_output_groceries_add = 72	# x30 = 1950
+		}
+
+		level_scaled = {
+			# profit = 910
+			building_employment_shopkeepers_add = 500
+			building_employment_laborers_add = 4000
+			building_employment_machinists_add = 500
+		}
+	}
+}
+
+pm_baking_powder = {
+	texture = "gfx/interface/icons/production_method_icons/baking_powder.dds"
+	
+	unlocking_technologies = {
+		baking_powder
+	}
+	
+	building_modifiers = {
+		workforce_scaled = {
+			# input goods
+			goods_input_grain_add = 80		# x20 = 1600
+			goods_input_sugar_add = 30		# x30 =  900
+			
+			# output goods
+			goods_output_groceries_add = 124	# x30 = 3720 (Slight buff as needs to be a driver to enable the better vacuum canning preservation options)
+		}
+		
+		level_scaled = {
+			# profit = 1220
+			building_employment_shopkeepers_add = 500
+			building_employment_laborers_add = 3500
+			building_employment_machinists_add = 750
+			building_employment_engineers_add = 250
+		}
+	}
+}
+
+pm_automated_bakery = {
+	texture = "gfx/interface/icons/production_method_icons/automated_bakery.dds"
+	
+	disallowing_laws = {
+		law_industry_banned
+	}
+
+	unlocking_technologies = {
+		dough_rollers			# (Baking Powder is a lvl 2 tech, Dough Rollers is a lvl 5 tech - it is assumed there's no way you'll get to Dough Rollers without having Baking Powder)
+	}
+	
+	building_modifiers = {
+		workforce_scaled = {
+			# input goods
+			goods_input_grain_add = 80		# x20 = 1600
+			goods_input_sugar_add = 30		# x30 =  900
+			goods_input_tools_add = 10		# x40 = 400
+			
+			# output goods
+			goods_output_groceries_add = 124	# x30 = 3720 (Slight buff as needs to be a driver to enable the better vacuum canning preservation options)
+		}
+		
+		level_scaled = {
+			# profit = 1220-400 (break-even when annual laborer wage > 8.32)
+			building_employment_shopkeepers_add = 500
+			building_employment_laborers_add = 1500
+			building_employment_machinists_add = 750
+			building_employment_engineers_add = 250
+		}
+	}
+}
+
+# Compatibility PM's to preserve save files.
+
+pm_cannery_fish = {
+	texture = "gfx/interface/icons/production_method_icons/canneries.dds"
+}
+
+pm_pot_stills = {
+	texture = "gfx/interface/icons/production_method_icons/pot_stills.dds"
+}
+
+pm_patent_stills = {
+	texture = "gfx/interface/icons/production_method_icons/patent_stills.dds"
+}
+

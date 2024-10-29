@@ -1,0 +1,61 @@
+[img]https://i.imgur.com/7xuCZqW.png[/img]
+Designed for Victoria 3: Version 1.7 (and onwards)
+Mod Version V1.0
+Please consider rating this if you like it! It really helps out. [img]https://i.imgur.com/tE28cZ7.gif[/img]
+
+[table]
+    [tr]
+        [td][img]https://i.imgur.com/WjDSfUn.png[/img][/td]
+        [td][img]https://i.imgur.com/Be8E2qJ.png[/img][/td]
+    [/tr]
+[/table]
+*Some weirdness may occur on removal.
+[img]https://i.imgur.com/6o9HyTD.png[/img]
+A companion to my [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3336914177]Soft Pop Adjustments[/url] mod, this one is a little more lightweight.
+This here is a collection of minor economic tweaks designed with the intent of providing a richer and more responsive economic simulation.
+
+[img]https://i.imgur.com/Wh5EspM.png[/img]
+[h1]Features:[/h1]
+[h2]Government Dividends:[/h2]
+Government dividends efficiency no longer gets worse when you're in debt - this is because that's not how government dividends work. When the government is in debt the pops own that debt, and when the government owns profitable assets in the economy while in debt then pop are [i]more[/i] equipped to use that service in ways which directly offset government outlays and improve the serviceability of that debt.
+Which is to say, being in debt now [i]improves[/i] government dividends efficiency.
+
+[h2]Goods and Trade:[/h2]
+For the sake of completeness, this effectively a tiny update to Henrax Le Chamalax's "Better trade routes".
+Additionally, the min/max price of goods is now 90% from base price, instead of 75%, and limits around buy/sell and shortages have been tweaked.
+
+[h2]Miscellaneous:[/h2]
+Other minor tweaks include:
+[list]
+[*]Higher minimum construction efficiency
+[*]Faster building downsizing & adjust hiring practices
+[*]Peasants demand more from the market
+[/list]
+
+[img]https://i.imgur.com/Qp8JBtZ.png[/img]
+This mod has been set up to overwrite any conflicts so that things stay in balance with each other.
+It touches very little, really, and should be compatible with basically anything.
+
+Having said that, some specific callouts:
+[list]
+[*]Victoria Tweaks Mod - These changes are similar to VTM where applicable, so it works with VTM by design.
+[*]All AI Mods - KAI, LAI, Smarter AI, etc. are all compatible, don't worry.
+[/list]
+
+[img]https://i.imgur.com/lQRf9dG.png[/img]
+[b]Why?[/b]
+[i]This improves the underlying economic simulation for the AI and other functions that usually happen below the players awareness. This helps to clean up edge case issues with vanilla and extra content from mods.[/i]
+
+[img]https://i.imgur.com/UN80Om5.png[/img]
+This effectively supercedes the following mods:
+[list]
+[*]"Better trade routes" by Henrax Le Chamalax
+[*]"Trade Rework" by TheGamingNot
+[*]"Minor Economy Modifications" by Alderon Tyran
+[/list]
+It also serves as a less sever alternative to "Vince's Downsize Buildings".
+
+Thank you to all the listed authors for their work which provided insights into creating this whole-of-system rework.
+
+#Economics #Rework
+#Trade #Credit #Tax

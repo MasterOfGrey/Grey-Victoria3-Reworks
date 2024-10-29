@@ -1,0 +1,5 @@
+﻿l_simp_chinese:
+ law_imposition_events.4.t: "在[SCOPE.sC('country_imposed_upon').GetName]的立法失败"
+ law_imposition_events.4.d: "[SCOPE.sC('country_imposed_upon').GetName]因其内部阻力没能制定[SCOPE.sLaw('foreign_imposition_law').GetName]。"
+ law_imposition_events.4.f: "大使回来了，带来了失败的消息。 \n“尽管我们给予了支持，但他们还是没能完成任务。”，他报告说。 \n会议室里一片沉寂。"
+ law_imposition_events.4.a: "下次试试别的？" 

@@ -1,0 +1,31 @@
+﻿# Updated to new pm's:
+
+has_distillery = {
+	any_scope_building = {
+		OR = {
+			# Vanilla
+			# has_active_production_method = pm_pot_stills
+			# has_active_production_method = pm_patent_stills
+			has_active_production_method = pm_pot_stills_grain
+			has_active_production_method = pm_pot_stills_fruit
+			has_active_production_method = pm_pot_stills_sugar
+			has_active_production_method = pm_patent_stills_grain
+			has_active_production_method = pm_patent_stills_fruit
+			has_active_production_method = pm_patent_stills_sugar
+		}
+	}
+}
+
+is_distillery = {
+	OR = {
+			# Vanilla
+			# has_active_production_method = pm_pot_stills
+			# has_active_production_method = pm_patent_stills
+			has_active_production_method = pm_pot_stills_grain
+			has_active_production_method = pm_pot_stills_fruit
+			has_active_production_method = pm_pot_stills_sugar
+			has_active_production_method = pm_patent_stills_grain
+			has_active_production_method = pm_patent_stills_fruit
+			has_active_production_method = pm_patent_stills_sugar
+	}
+}

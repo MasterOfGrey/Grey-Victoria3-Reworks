@@ -1,0 +1,18 @@
+{
+  "name" : "Grey's Soft Econ Adjustments",
+  "id" : "3345217364",
+  "version" : "",
+  "supported_game_version" : "",
+  "short_description" : "",
+  "tags" : [
+        "Balance",
+        "Economy And Buildings",
+        "Fixes",
+        "Gameplay",
+        "Trade"
+    ],
+  "relationships" : [],
+  "game_custom_data" : {
+    "multiplayer_synchronized" : true
+  }
+}

@@ -1,0 +1,33 @@
+﻿l_simp_chinese:
+ laws_synergize_economy:0 "统一经济体制"
+ laws_synergize_economy_action_name:0 "$laws_synergize_economy$"
+ laws_synergize_economy_action_propose_name:0 "开始统一经济体制"
+ laws_synergize_economy_action_break_name:0 "停止统一经济体制"
+ laws_synergize_economy_pact_desc:0 "[SCOPE.GetRootScope.GetDiplomaticPact.GetFirstCountry.GetName]正在改变[SCOPE.GetRootScope.GetDiplomaticPact.GetSecondCountry.GetName]的经济体制。 \n在总共8个阶段中目前完成了#variable [SCOPE.GetRootScope.GetDiplomaticPact.GetSecondCountry.MakeScope.Var('synergize_economy_progress').GetValue]#!个"
+ laws_synergize_economy_desc:1 "#header $laws_synergize_economy$#!\n$TOOLTIP_DELIMITER$\n让目标国施行我国的经济体制"
+ laws_synergize_economy_action_notification_name:1 "[INITIATOR_COUNTRY.GetName]正在统一经济体制"
+ laws_synergize_economy_action_notification_desc:1 "[INITIATOR_COUNTRY.GetName]正在改变我国的经济体制"
+ laws_synergize_economy_action_notification_break_name:1 "[INITIATOR_COUNTRY.GetName]已停止统一经济体制"
+ laws_synergize_economy_action_notification_break_desc:0 "[INITIATOR_COUNTRY.GetName]已停止改变我国的经济体制"
+ 
+ laws_synergize_economy_effect_desc_global:0 "实施统一经济体制"
+ laws_synergize_economy_effect_desc_first:0 "[COUNTRY.GetAdjectiveNoFlag]正在将自身经济体制推行进[TARGET_COUNTRY.GetName]."
+ laws_synergize_economy_effect_desc_third:0 "[COUNTRY.GetName]正在将自身经济体制推行进[AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)]."
+ 
+ laws_synergize_economy_trigger_desc_global:0 "正在进行经济体制统一"
+ laws_synergize_economy_trigger_false_desc_global:0 "不再进行经济体制统一"
+ laws_synergize_economy_trigger_desc_first:0 "[COUNTRY.GetAdjectiveNoFlag]正在将自身经济体制推行进[TARGET_COUNTRY.GetName]."
+ laws_synergize_economy_trigger_false_desc_first:0 "[COUNTRY.GetAdjectiveNoFlag]停止将自身经济体制推行进[TARGET_COUNTRY.GetName]."
+ laws_synergize_economy_trigger_desc_third:0 "[COUNTRY.GetName]正在将自身经济体制推行进[AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)]."
+ laws_synergize_economy_trigger_false_desc_third:0 "[COUNTRY.GetName]停止将自身经济体制推行进[AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)]."
+ 
+ mog_syn_events.02.t: "经济体制已统一"
+ mog_syn_events.02.d: "[ROOT.GetCountry.GetName]已成功将经济体制推行进[SCOPE.sCountry('synergize_economy_target_country').GetName]. [SCOPE.sCountry('synergize_economy_target_country').GetName]将通过增强与母国的凝聚力而永远繁荣昌盛。"
+ mog_syn_events.02.f: "昊哉我[ROOT.GetCountry.GetName]!"
+ mog_syn_events.02.a: "干得漂亮。"
+
+ laws_synergize_economy_weekly_effect: "统一经济体制工作需要完成八个阶段，每周有20%机会推进一个阶段。"
+ 
+ overlord_syn_cost_economy: "统一经济体制行动经费"
+ 
+ active_synergize_economy_tt: "已实施的$laws_synergize_economy$行动数量小于1"

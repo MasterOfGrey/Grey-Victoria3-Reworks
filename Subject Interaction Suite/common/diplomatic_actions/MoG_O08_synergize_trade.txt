@@ -1,0 +1,209 @@
+﻿laws_synergize_trade = {
+	groups= {
+		overlord
+	}
+	
+	requires_approval = no
+	should_notify_third_parties = no
+	
+	potential = {
+		scope:target_country = {
+			NOT = { is_country_type = decentralized }
+			is_direct_subject_of = root
+			NOT = { scope:target_country.active_law:lawgroup_trade_policy.type = root.active_law:lawgroup_trade_policy.type }
+		}
+		is_player = yes
+	}
+	
+	possible = {
+		is_revolutionary = no
+		in_default = no
+		NOT = { has_war_with = scope:target_country }
+		NOT = {
+			any_country = { has_diplomatic_pact = { who = root type = laws_synergize_trade  } } # Only 1 at a time.
+		}
+		has_diplomatic_relevance = scope:target_country
+		active_synergize_trade = no
+#		bureaucracy > 0
+	}
+	
+	accept_effect = {
+		scope:target_country = {
+			set_variable = {
+				name = synergize_trade_progress
+				value = 0
+			}
+		}
+		add_modifier = {
+			name = overlord_syn_cost_trade
+			multiplier = {
+				add = 1
+				scope:target_country = { multiply = overlord_synergize_cost_standard }
+				if = {
+					limit = { NOT = { scope:target_country.active_law:lawgroup_bureaucracy.type = root.active_law:lawgroup_bureaucracy.type } }
+					multiply = 2
+				}
+			}
+		}
+		set_variable = { #used to count the number of agreements
+			name = synergize_trade_active
+		}
+	}
+	
+	pact = {
+		cost = 100
+	
+		is_two_sided_pact = no
+		show_in_outliner = yes
+		
+		actor_can_break = {
+			always = yes
+		}
+		
+		weekly_effect = {
+			custom_tooltip = {
+				text = laws_synergize_trade_weekly_effect
+				random_list = { 
+					4 = {}
+					1 = {
+						# Updates the modifier cost.
+						remove_modifier = overlord_syn_cost_trade
+						add_modifier = {
+							name = overlord_syn_cost_trade
+							multiplier = {
+								add = 1
+								scope:target_country = { add = overlord_synergize_cost_standard }
+								if = {
+									limit = { NOT = { scope:target_country.active_law:lawgroup_bureaucracy.type = root.active_law:lawgroup_bureaucracy.type } }
+									multiply = 2
+								}
+							}
+						}
+						scope:target_country = {
+							change_variable = { name = synergize_trade_progress add = 1 }
+						}
+						if = {
+							limit = {
+								scope:target_country.var:synergize_trade_progress > 7.5 # Just in case of rounding edge-cases.
+							}
+							root = {
+								# Successful completion effect.
+								remove_modifier = overlord_syn_cost_trade
+								remove_variable = synergize_trade_active
+								trigger_event = {
+								   id = mog_syn_events.04
+								   popup = yes
+								}
+							}
+							if = {
+								limit = {
+									scope:target_country = {
+										has_diplomatic_pact = {
+											who = root
+											type = laws_synergize_trade
+										}									
+									}			
+								}
+								scope:target_country = {
+									remove_diplomatic_pact = {
+										country = root
+										type = laws_synergize_trade
+									}			
+								}
+							}	
+							else_if = {
+								limit = {
+									has_diplomatic_pact = {
+										who = scope:target_country
+										type = laws_synergize_trade
+									}		
+								}
+								remove_diplomatic_pact = {
+									country = scope:target_country
+									type = laws_synergize_trade
+								}
+							}
+							
+						}
+					}
+				}
+			}
+		}
+		
+		manual_break_effect = {
+			root = { 
+				remove_modifier = overlord_syn_cost_trade
+				remove_variable = synergize_trade_active
+			}
+		}
+		
+		auto_break_effect = {
+			root = { 
+				remove_modifier = overlord_syn_cost_trade
+				remove_variable = synergize_trade_active
+			}
+		}
+		
+		requirement_to_maintain = {
+			trigger = {
+				has_diplomatic_relevance = scope:target_country
+			}
+		}
+		
+		requirement_to_maintain = {
+			trigger = {
+				NOT = { scope:target_country.active_law:lawgroup_trade_policy.type = root.active_law:lawgroup_trade_policy.type }
+			}
+		}
+		
+		requirement_to_maintain = {
+			trigger = {
+				in_default = no
+			}
+		}
+		
+		requirement_to_maintain = {
+			trigger = {
+				custom_tooltip = {
+					text = DIPLO_ACTION_RELATIONS_CORDIAL_OR_GREATER
+					scope:target_country.relations:root >= relations_threshold:cordial
+				}		
+			}
+			show_about_to_break_warning = {
+				scope:target_country.relations:root <= 23 # this is: cordial + 3
+				scope:target_country.relations_change_rate:root > 0
+			}
+		}
+		
+		requirement_to_maintain = {
+			trigger = {
+				scope:target_country = { liberty_desire <= 80 }
+			}
+			show_about_to_break_warning = {
+				scope:target_country = { liberty_desire >= 75 }
+			}
+		}
+		
+		requirement_to_maintain = {
+			trigger = {
+				custom_tooltip = {
+					text = DIPLOMATIC_PACT_REQUIREMENT_AT_PEACE
+					NOT = { has_war_with = scope:target_country }
+				}			
+			}
+		}
+		
+		requirement_to_maintain = {
+			trigger = {
+				custom_tooltip = {
+					text = "DIPLOMATIC_PACT_REQUIREMENT_NOT_DECENTRALIZED"
+					NOT = { is_country_type = decentralized }
+					scope:target_country = {
+						NOT = { is_country_type = decentralized }
+					}				
+				}
+			}
+		}
+	}
+}
+

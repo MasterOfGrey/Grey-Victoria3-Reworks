@@ -1,0 +1,213 @@
+﻿namespace = assimilate_everyone
+
+assimilate_everyone.2 = {
+	type = country_event
+	placement = ROOT
+	hidden = yes
+	
+	event_image = {
+		video = "gfx/event_pictures/unspecific_ruler_speaking_to_people.bk2"
+	}
+	icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+	
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/unspecific/leader_speaking_to_a_group_of_people"
+	
+	trigger = {
+		
+	}
+	
+	immediate = {
+		if = {
+			limit = {
+				# so temporary uprising don't just consolidate immigrants
+				is_secessionist = no
+			}
+			# For when non-state religions are accepted:
+			if = {
+				limit = {
+					# don't do conversion if conversion should already be happening
+					OR = {
+						has_law = law_type:law_freedom_of_conscience
+						has_law = law_type:law_total_separation
+					}
+				}
+				
+				root.religion = { save_scope_as = institutional_religion }
+				
+				every_state = {
+					limit = {
+						owner = root
+					}
+					
+					this = {
+						save_scope_as = executing_state
+					}
+					
+					every_scope_pop = {
+						if = {
+							limit = {
+								has_state_religion = no
+								pop_is_discriminated = no
+								# as we want to convert accepted pops with religions that are normally excluded (represents institutional inertia)
+							}
+							
+							this = {
+								save_scope_as = current_pop
+							}
+							
+							change_pop_religion = { 
+								target = scope:institutional_religion
+								value = {
+									value = 0.003 # 0.002
+									
+									# 1/3 this mod's base
+									divide = 3
+									
+									if = {
+										limit = {
+											NOT = {
+												scope:current_pop.culture = {
+													shares_heritage_trait_with_any_primary_culture = root
+												}
+											}
+										}
+										divide = 2
+									}
+									
+									if = {
+										limit = {
+											NOT = {
+												scope:current_pop.culture = {
+													shares_non_heritage_trait_with_any_primary_culture = root
+												}
+											}
+										}
+										divide = 2
+									}
+									
+									if = {
+										limit = {
+											scope:current_pop.religion = {
+												shares_trait_with_state_religion = root
+											}
+										}
+										multiply = 3
+									}
+									
+									if = {
+										limit = {
+											scope:executing_state = {
+												is_incorporated = no
+											}
+										}
+										multiply = 0.2
+									}
+									
+									multiply = {
+										value = 1
+										add = scope:executing_state.modifier:state_conversion_mult
+									}
+									
+									min = 0
+									max = 1
+								}
+							}
+						}
+					}
+				}
+			}
+			# For state atheism and it's lack of seeding:
+			if = {
+				limit = {
+					has_law = law_type:law_state_atheism
+				}
+				
+				root.religion = { save_scope_as = institutional_religion }
+				root.country_definition.religion = { save_scope_as = legacy_religion }
+				
+				every_state = {
+					limit = {
+						owner = root
+					}
+					
+					this = {
+						save_scope_as = executing_state
+					}
+					
+					every_scope_pop = {
+						if = {
+							limit = {
+								pop_is_discriminated = yes
+								religion = scope:legacy_religion
+								# as we want to be able to spawn and progress state atheism in at least institutionally integrated pops even if there's no seed pop to convert from
+							}
+							
+							this = {
+								save_scope_as = current_pop
+							}
+							
+							change_pop_religion = { 
+								target = scope:institutional_religion
+								value = {
+									value = 0.003 # 0.002
+									
+									# 1/3 this mod's base
+									divide = 3
+									
+									if = {
+										limit = {
+											NOT = {
+												scope:current_pop.culture = {
+													shares_heritage_trait_with_any_primary_culture = root
+												}
+											}
+										}
+										divide = 2
+									}
+									
+									if = {
+										limit = {
+											NOT = {
+												scope:current_pop.culture = {
+													shares_non_heritage_trait_with_any_primary_culture = root
+												}
+											}
+										}
+										divide = 2
+									}
+									
+									if = {
+										limit = {
+											scope:current_pop.religion = {
+												shares_trait_with_state_religion = root
+											}
+										}
+										multiply = 3
+									}
+									
+									if = {
+										limit = {
+											scope:executing_state = {
+												is_incorporated = no
+											}
+										}
+										multiply = 0.2
+									}
+									
+									multiply = {
+										value = 1
+										add = scope:executing_state.modifier:state_conversion_mult
+									}
+									
+									min = 0
+									max = 1
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

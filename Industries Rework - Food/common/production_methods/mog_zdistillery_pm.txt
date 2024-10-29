@@ -1,0 +1,231 @@
+﻿# Base PM
+# Base fruit consumption for fluid line represents juices, chutneys, etc.
+pm_disabled_distillery = {
+	texture = "gfx/interface/icons/production_method_icons/no_distillery.dds"
+	
+	building_modifiers = {
+		workforce_scaled = {
+			# input goods
+			goods_input_fruit_add = 10		# x30 =  300
+			
+			# output goods
+			goods_output_groceries_add = 10	# x30 =  480
+		}
+	}
+}
+
+# Default Upgrade
+# Unlocked by Sweeteners
+pm_simmer_pots = {
+	texture = "gfx/interface/icons/production_method_icons/simmer_pots.dds"
+	
+	unlocking_production_methods = {
+		pm_sweeteners
+		pm_baking_powder
+		pm_automated_bakery
+	}
+	
+	building_modifiers = {
+		workforce_scaled = {
+			# input goods
+			goods_input_glass_add = 1		# x40 =  40
+			goods_input_coal_add = 1		# x30 =  30
+			goods_input_fruit_add = 10		# x30 =  300
+			
+			# output goods
+			goods_output_groceries_add = 18	# x30 =  480
+		}
+		
+		level_scaled = {
+			# profit = 110
+			building_employment_shopkeepers_add = 100	# x2.0 = 100 laborer wages
+		}
+	}
+}
+
+# Pot Stills
+pm_pot_stills_grain = {
+	texture = "gfx/interface/icons/production_method_icons/pot_stills.dds"
+
+	unlocking_technologies = {
+		distillation				
+	}
+	
+	unlocking_production_methods = {
+		pm_sweeteners
+		pm_baking_powder
+		pm_automated_bakery
+	}
+	
+	building_modifiers = {
+		workforce_scaled = {
+			# input goods
+			goods_input_glass_add = 2		# x40 =  80
+			goods_input_coal_add = 2		# x30 =  60
+			goods_input_fruit_add = 6		# x30 =  180
+			goods_input_grain_add = 14		# x20 =  280
+			goods_input_sugar_add = 20		# x30 =  600
+			
+			# output goods
+			goods_output_liquor_add = 60		# x30 = 1800
+		}
+
+		level_scaled = {
+			# profit = 730
+			building_employment_shopkeepers_add = 100	# x2.0 = 200 laborer wages
+			building_employment_machinists_add = 250	# x1.5 = 375 laborer wages
+		}
+	}
+}
+
+pm_pot_stills_fruit = {
+	texture = "gfx/interface/icons/production_method_icons/pot_stills.dds"
+
+	unlocking_technologies = {
+		distillation				
+	}
+	
+	unlocking_production_methods = {
+		pm_sweeteners
+		pm_baking_powder
+		pm_automated_bakery
+	}
+	
+	building_modifiers = {
+		workforce_scaled = {
+			# input goods
+			goods_input_glass_add = 2		# x40 =  80
+			goods_input_coal_add = 2		# x30 =  60
+			goods_input_fruit_add = 16		# x30 =  600
+			goods_input_sugar_add = 20		# x30 =  600
+			
+			# output goods
+			goods_output_liquor_add = 60		# x30 = 1800
+		}
+
+		level_scaled = {
+			# profit = 580
+			building_employment_shopkeepers_add = 100	# x2.0 = 200 laborer wages
+			building_employment_machinists_add = 250	# x1.5 = 375 laborer wages
+		}
+	}
+}
+
+pm_pot_stills_sugar = {
+	texture = "gfx/interface/icons/production_method_icons/pot_stills.dds"
+
+	unlocking_technologies = {
+		distillation				
+	}
+	
+	unlocking_production_methods = {
+		pm_sweeteners
+		pm_baking_powder
+		pm_automated_bakery
+	}
+	
+	building_modifiers = {
+		workforce_scaled = {
+			# input goods
+			goods_input_glass_add = 2		# x40 =  80
+			goods_input_coal_add = 2		# x30 =  60
+			goods_input_fruit_add = 6		# x30 =  360
+			goods_input_sugar_add = 30		# x30 =  1020
+			
+			# output goods
+			goods_output_liquor_add = 60		# x30 = 1800
+		}
+
+		level_scaled = {
+			# profit = 580
+			building_employment_shopkeepers_add = 100	# x2.0 = 200 laborer wages
+			building_employment_machinists_add = 250	# x1.5 = 375 laborer wages
+		}
+	}
+}
+
+# Patent Stills
+pm_patent_stills_grain = {
+	texture = "gfx/interface/icons/production_method_icons/patent_stills.dds"
+
+	unlocking_technologies = {
+		fractional_distillation
+	}
+	
+	building_modifiers = {
+		workforce_scaled = {
+			# input goods
+			goods_input_glass_add = 12		# x40 =  480
+			goods_input_coal_add = 2		# x30 =  60
+			goods_input_fruit_add = 6		# x30 =  180
+			goods_input_grain_add = 14		# x20 =  280
+			goods_input_sugar_add = 20		# x30 =  600
+			
+			# output goods
+			goods_output_liquor_add = 100			# x30 = 3000
+		}
+
+		level_scaled = {
+			# profit = 1380
+			building_employment_shopkeepers_add = 200	# x2.0 = 400 laborer wages
+			building_employment_machinists_add = 500	# x1.5 = 750 laborer wages
+			building_employment_engineers_add = 200		# x3.0 = 600 laborer wages
+		}
+	}
+}
+
+pm_patent_stills_fruit = {
+	texture = "gfx/interface/icons/production_method_icons/patent_stills.dds"
+
+	unlocking_technologies = {
+		fractional_distillation
+	}
+	
+	building_modifiers = {
+		workforce_scaled = {
+			# input goods
+			goods_input_glass_add = 12		# x40 =  480
+			goods_input_coal_add = 2		# x30 =  60
+			goods_input_fruit_add = 16		# x30 =  600
+			goods_input_sugar_add = 20		# x30 =  600
+			
+			# output goods
+			goods_output_liquor_add = 100			# x30 = 3000
+		}
+
+		level_scaled = {
+			# profit = 1380
+			building_employment_shopkeepers_add = 200	# x2.0 = 400 laborer wages
+			building_employment_machinists_add = 500	# x1.5 = 750 laborer wages
+			building_employment_engineers_add = 200		# x3.0 = 600 laborer wages
+		}
+	}
+}
+
+pm_patent_stills_sugar = {
+	texture = "gfx/interface/icons/production_method_icons/patent_stills.dds"
+
+	unlocking_technologies = {
+		fractional_distillation
+	}
+	
+	building_modifiers = {
+		workforce_scaled = {
+			# input goods
+			goods_input_glass_add = 12		# x40 =  480
+			goods_input_coal_add = 2		# x30 =  60
+			goods_input_fruit_add = 6		# x30 =  360
+			goods_input_sugar_add = 30		# x30 =  1020
+			
+			# output goods
+			goods_output_liquor_add = 100			# x30 = 3000
+		}
+
+		level_scaled = {
+			# profit = 1380
+			building_employment_shopkeepers_add = 200	# x2.0 = 400 laborer wages
+			building_employment_machinists_add = 500	# x1.5 = 750 laborer wages
+			building_employment_engineers_add = 200		# x3.0 = 600 laborer wages
+		}
+	}
+}

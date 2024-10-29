@@ -1,0 +1,78 @@
+﻿l_spanish:
+  
+ # Production method groups 
+ pmg_arms_tools_demob: "Producción de herramientas desmovilizada" #NT!
+ pmg_arti_tools_demob: "Producción de herramientas desmovilizada" #NT!
+ pmg_munitions_explosives_demob: "Producción de explosivos desmovilizados" #NT!
+  
+ # Production methods 
+ pm_extensive_tools_a_i: "Extenso" #NT!
+ pm_moderate_tools_a_i: "Moderado" #NT!
+ pm_limited_tools_a_i: "Limitado" #NT!
+ pm_extensive_tools_a_s: "Extenso" #NT!
+ pm_moderate_tools_a_s: "Moderado" #NT!
+ pm_limited_tools_a_s: "Limitado" #NT!
+ pm_extensive_tools_a_r: "Ext. Caucho" #NT!
+ pm_moderate_tools_a_r: "Mod. Caucho" #NT!
+ pm_limited_tools_a_r: "Ltda. Caucho" #NT!
+ pm_no_tools_a: "Sin herramientas civiles" #NT!
+  
+ pm_extensive_tools_t_i: "Extenso" #NT!
+ pm_moderate_tools_t_i: "Moderado" #NT!
+ pm_limited_tools_t_i: "Limitado" #NT!
+ pm_extensive_tools_t_s: "Extenso" #NT!
+ pm_moderate_tools_t_s: "Moderado" #NT!
+ pm_limited_tools_t_s: "Limitado" #NT!
+ pm_extensive_tools_t_r: "Ext. Caucho" #NT!
+ pm_moderate_tools_t_r: "Mod. Caucho" #NT!
+ pm_limited_tools_t_r: "Ltda. Caucho" #NT!
+ pm_no_tools_t: "Sin herramientas civiles" #NT!
+  
+ pm_extensive_ammo_le: "Extenso" #NT!
+ pm_moderate_ammo_le: "Moderado" #NT!
+ pm_limited_ammo_le: "Limitado" #NT!
+ pm_extensive_ammo_ni: "Ext. Nitroglicerina" #NT!
+ pm_moderate_ammo_ni: "Mod. Nitroglicerina" #NT!
+ pm_limited_ammo_ni: "Ltd. Nitroglicerina" #NT!
+ pm_extensive_ammo_dy: "Extenso" #NT!
+ pm_moderate_ammo_dy: "Moderado" #NT!
+ pm_limited_ammo_dy: "Limitado" #NT!
+ pm_extensive_ammo_br: "Electrólisis externa" #NT!
+ pm_moderate_ammo_br: "Mod. Electrólisis" #NT!
+ pm_limited_ammo_br: "Ltd. Electrólisis" #NT!
+ pm_no_self_explosives: "No se permiten explosivos de producción propia" #NT!
+  
+ pm_limited_radios: "Algunas radios" #NT!
+ pm_moderate_radios: "Muchas radios" #NT!
+ pm_extensive_radios: "Muchas radios" #NT!
+  
+ pm_ui_safety_a: "(Ignorar esto)" #NT!
+ pm_ui_safety_b: "(Ignorar esto)" #NT!
+  
+ # Alerts 
+ alert_MIR_war_demob_arms_name: "En guerra con las industrias de armamentos desmovilizadas" #NT!
+ alert_MIR_war_demob_arms_hint: "Estás en guerra y tus industrias armamentísticas están produciendo una gran cantidad de herramientas en lugar de armas pequeñas." #NT!
+ alert_MIR_war_demob_arms_action: "Panel de construcción urbana" #NT!
+ MIR_war_demob_arms_setting_name: "Advertencia de la industria armamentística desmovilizada: la guerra" #NT!
+ alert_MIR_peace_mob_arms_name: "En paz con las industrias armamentísticas movilizadas" #NT!
+ alert_MIR_peace_mob_arms_hint: "Estáis en paz y vuestras industrias armamentísticas están produciendo grandes cantidades de armas pequeñas." #NT!
+ alert_MIR_peace_mob_arms_action: "Panel de construcción urbana" #NT!
+ MIR_peace_mob_arms_setting_name: "Advertencia de la industria armamentística movilizada - Paz" #NT!
+  
+ alert_MIR_war_demob_arty_name: "En guerra con fundiciones de artillería desmovilizadas" #NT!
+ alert_MIR_war_demob_arty_hint: "Estás en guerra y tus fundiciones de artillería están produciendo una gran cantidad de herramientas en lugar de artillería." #NT!
+ alert_MIR_war_demob_arty_action: "Panel de construcción urbana" #NT!
+ MIR_war_demob_arty_setting_name: "Advertencia de artillería desmovilizada - Guerra" #NT!
+ alert_MIR_peace_mob_arty_name: "En paz con las fundiciones de artillería movilizadas" #NT!
+ alert_MIR_peace_mob_arty_hint: "Estás en paz y tus fundiciones de artillería están produciendo grandes cantidades de artillería." #NT!
+ alert_MIR_peace_mob_arty_action: "Panel de construcción urbana" #NT!
+ MIR_peace_mob_arty_setting_name: "Advertencia de artillería movilizada - Paz" #NT!
+  
+ alert_MIR_war_demob_ammo_name: "En guerra con las fábricas de municiones desmovilizadas" #NT!
+ alert_MIR_war_demob_ammo_hint: "Estás en guerra y tus plantas de municiones están produciendo una gran cantidad de explosivos civiles en lugar de munición militar." #NT!
+ alert_MIR_war_demob_ammo_action: "Panel de construcción urbana" #NT!
+ MIR_war_demob_ammo_setting_name: "Advertencia sobre municiones desmovilizadas - Guerra" #NT!
+ alert_MIR_peace_mob_ammo_name: "En paz con las fábricas de municiones movilizadas" #NT!
+ alert_MIR_peace_mob_ammo_hint: "Estás en paz y tus plantas de municiones están produciendo grandes cantidades de munición militar." #NT!
+ alert_MIR_peace_mob_ammo_action: "Panel de construcción urbana" #NT!
+ MIR_peace_mob_ammo_setting_name: "Alerta de municiones movilizadas - Paz" #NT!

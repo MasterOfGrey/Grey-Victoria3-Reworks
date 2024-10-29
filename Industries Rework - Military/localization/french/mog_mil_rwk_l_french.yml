@@ -1,0 +1,78 @@
+﻿l_french:
+  
+ # Production method groups 
+ pmg_arms_tools_demob: "Production d'outils démobilisés" #NT!
+ pmg_arti_tools_demob: "Production d'outils démobilisés" #NT!
+ pmg_munitions_explosives_demob: "Production d'explosifs démobilisés" #NT!
+  
+ # Production methods 
+ pm_extensive_tools_a_i: "Extensif" #NT!
+ pm_moderate_tools_a_i: "Modéré" #NT!
+ pm_limited_tools_a_i: "Limité" #NT!
+ pm_extensive_tools_a_s: "Extensif" #NT!
+ pm_moderate_tools_a_s: "Modéré" #NT!
+ pm_limited_tools_a_s: "Limité" #NT!
+ pm_extensive_tools_a_r: "Caoutchouc Ext." #NT!
+ pm_moderate_tools_a_r: "Caoutchouc Mod." #NT!
+ pm_limited_tools_a_r: "Caoutchouc Ltd." #NT!
+ pm_no_tools_a: "Pas d'outillage civil" #NT!
+  
+ pm_extensive_tools_t_i: "Extensif" #NT!
+ pm_moderate_tools_t_i: "Modéré" #NT!
+ pm_limited_tools_t_i: "Limité" #NT!
+ pm_extensive_tools_t_s: "Extensif" #NT!
+ pm_moderate_tools_t_s: "Modéré" #NT!
+ pm_limited_tools_t_s: "Limité" #NT!
+ pm_extensive_tools_t_r: "Caoutchouc Ext." #NT!
+ pm_moderate_tools_t_r: "Caoutchouc Mod." #NT!
+ pm_limited_tools_t_r: "Caoutchouc Ltd." #NT!
+ pm_no_tools_t: "Pas d'outillage civil" #NT!
+  
+ pm_extensive_ammo_le: "Extensif" #NT!
+ pm_moderate_ammo_le: "Modéré" #NT!
+ pm_limited_ammo_le: "Limité" #NT!
+ pm_extensive_ammo_ni: "Nitroglycérine Ext." #NT!
+ pm_moderate_ammo_ni: "Nitroglycérine Mod." #NT!
+ pm_limited_ammo_ni: "Nitroglycérine Ltd." #NT!
+ pm_extensive_ammo_dy: "Extensif" #NT!
+ pm_moderate_ammo_dy: "Modéré" #NT!
+ pm_limited_ammo_dy: "Limité" #NT!
+ pm_extensive_ammo_br: "Électrolyse Ext." #NT!
+ pm_moderate_ammo_br: "Électrolyse Mod." #NT!
+ pm_limited_ammo_br: "Électrolyse Ltd." #NT!
+ pm_no_self_explosives: "Pas d'explosifs autoproduits" #NT!
+  
+ pm_limited_radios: "Quelques radios" #NT!
+ pm_moderate_radios: "Beaucoup de radios" #NT!
+ pm_extensive_radios: "De nombreuses radios" #NT!
+  
+ pm_ui_safety_a: "(Ignorer ceci)" #NT!
+ pm_ui_safety_b: "(Ignorer ceci)" #NT!
+  
+ # Alerts 
+ alert_MIR_war_demob_arms_name: "En guerre contre les industries d'armement démobilisées" #NT!
+ alert_MIR_war_demob_arms_hint: "Vous êtes en guerre et vos industries d’armement produisent une grande quantité d’outils au lieu d’armes légères." #NT!
+ alert_MIR_war_demob_arms_action: "Panneau de construction urbaine" #NT!
+ MIR_war_demob_arms_setting_name: "Avertissement de l'industrie d'armement démobilisée - Guerre" #NT!
+ alert_MIR_peace_mob_arms_name: "En paix avec les industries d'armement mobilisées" #NT!
+ alert_MIR_peace_mob_arms_hint: "Vous êtes en paix et vos industries d’armement produisent de grandes quantités d’armes légères." #NT!
+ alert_MIR_peace_mob_arms_action: "Panneau de construction urbaine" #NT!
+ MIR_peace_mob_arms_setting_name: "Avertissement de l'industrie d'armement mobilisée - Paix" #NT!
+  
+ alert_MIR_war_demob_arty_name: "En guerre contre les fonderies d'artillerie démobilisées" #NT!
+ alert_MIR_war_demob_arty_hint: "Vous êtes en guerre et vos fonderies d'artillerie produisent une grande quantité d'outils au lieu d'artillerie." #NT!
+ alert_MIR_war_demob_arty_action: "Panneau de construction urbaine" #NT!
+ MIR_war_demob_arty_setting_name: "Avertissement d'artillerie démobilisée - Guerre" #NT!
+ alert_MIR_peace_mob_arty_name: "En paix avec les fonderies d'artillerie mobilisées" #NT!
+ alert_MIR_peace_mob_arty_hint: "Vous êtes en paix et vos fonderies d’artillerie produisent de grandes quantités d’artillerie." #NT!
+ alert_MIR_peace_mob_arty_action: "Panneau de construction urbaine" #NT!
+ MIR_peace_mob_arty_setting_name: "Avertissement d'artillerie mobilisée - Paix" #NT!
+  
+ alert_MIR_war_demob_ammo_name: "En guerre contre les usines de munitions démobilisées" #NT!
+ alert_MIR_war_demob_ammo_hint: "Vous êtes en guerre et vos usines de munitions produisent une grande quantité d'explosifs civils au lieu de munitions militaires." #NT!
+ alert_MIR_war_demob_ammo_action: "Panneau de construction urbaine" #NT!
+ MIR_war_demob_ammo_setting_name: "Avertissement sur les munitions démobilisées – Guerre" #NT!
+ alert_MIR_peace_mob_ammo_name: "En paix avec les usines de munitions mobilisées" #NT!
+ alert_MIR_peace_mob_ammo_hint: "Vous êtes en paix et vos usines de munitions produisent de grandes quantités de munitions militaires." #NT!
+ alert_MIR_peace_mob_ammo_action: "Panneau de construction urbaine" #NT!
+ MIR_peace_mob_ammo_setting_name: "Avertissement sur les munitions mobilisées – Paix" #NT!

@@ -1,0 +1,31 @@
+[img]https://i.imgur.com/7xuCZqW.png[/img]
+Designed for Victoria 3: Version 1.7 (and onwards)
+Mod Version V1.0
+Please consider rating this if you like it! It really helps out. [img]https://i.imgur.com/tE28cZ7.gif[/img]
+
+[table]
+    [tr]
+        [td][img]https://i.imgur.com/kbYsPSO.png[/img][/td]
+        [td][img]https://i.imgur.com/Be8E2qJ.png[/img][/td]
+    [/tr]
+[/table]
+*EXISTING SAVES: LET THIS RUN FOR A WEEK BEFORE LOOKING AT YOUR BUILDINGS.
+[img]https://i.imgur.com/6o9HyTD.png[/img]
+This mod is a complete overhaul of the Food Industries building, with the goals of having sensible and dynamic production options that are profitable, while also being maximally compatible with other mods.
+
+Among other things, the distillery options are actually profitable most of the time - but you can benefit from alternative production methods in their place.
+
+[img]https://i.imgur.com/Qp8JBtZ.png[/img]
+This should be compatible with almost anything other than major alternative food reworks. It is dynamic enough to work with alternative pop needs mods.
+It is compatible with VTM etc.
+
+[img]https://i.imgur.com/lQRf9dG.png[/img]
+[b]Can you add <insert language> localisation?[/b]
+[i]If you send it to me I will add it.[/i]
+
+[img]https://i.imgur.com/UN80Om5.png[/img]
+[h2]Language Support:[/h2]
+[b]Localizations are welcome from anyone.[/b]
+
+#Production Methods #Rework
+#Food #Liquor #Groceries

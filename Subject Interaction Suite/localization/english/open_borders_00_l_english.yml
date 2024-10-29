@@ -1,0 +1,29 @@
+﻿l_english:
+ open_border:0 "Open Borders"
+ open_border_action_name:0 "$open_border$"
+ open_border_action_propose_name:0 "Initiate Open Borders"
+ open_border_action_break_name:0 "Stop Open Borders"
+ open_border_pact_desc:0 "[SCOPE.GetRootScope.GetDiplomaticPact.GetFirstCountry.GetName] opens the borders of [SCOPE.GetRootScope.GetDiplomaticPact.GetSecondCountry.GetName].\n Currently #variable [SCOPE.GetRootScope.GetDiplomaticPact.GetSecondCountry.MakeScope.Var('border_opening_progress').GetValue]#! progress out of 8 stages."
+ open_border_desc:1 "#header $open_border$#!\n$TOOLTIP_DELIMITER$\nOpens the borders of the specified country."
+ open_border_action_notification_name:1 "[INITIATOR_COUNTRY.GetName] Opening Borders"
+ open_border_action_notification_desc:1 "[INITIATOR_COUNTRY.GetName] is opening our country’s borders."
+ open_border_action_notification_break_name:1 "Cease Opening Borders by [INITIATOR_COUNTRY.GetName]"
+ open_border_action_notification_break_desc:0 "[INITIATOR_COUNTRY.GetName] has ceased trying to open our country's borders."
+ 
+ open_border_effect_desc_global:0 "Initiate Open Borders"
+ open_border_effect_desc_first:0 "[COUNTRY.GetAdjectiveNoFlag] initiates open borders with [TARGET_COUNTRY.GetName]."
+ open_border_effect_desc_third:0 "[COUNTRY.GetName] initiates open borders with [AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)]."
+ 
+ open_border_trigger_desc_global:0 "Open Borders Ongoing"
+ open_border_trigger_false_desc_global:0 "Not currently in the process of opening borders."
+ open_border_trigger_desc_first:0 "[COUNTRY.GetAdjectiveNoFlag] has open borders with [TARGET_COUNTRY.GetName]."
+ open_border_trigger_false_desc_first:0 "[COUNTRY.GetAdjectiveNoFlag] does not currently have open borders with [TARGET_COUNTRY.GetName]."
+ open_border_trigger_desc_third:0 "[COUNTRY.GetName] has open borders with [AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)]."
+ open_border_trigger_false_desc_third:0 "[COUNTRY.GetName] does not currently have open borders with [AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)]."
+ 
+ ib_events.03.t: "Open Borders"
+ ib_events.03.d: "The proud nation of [ROOT.GetCountry.GetName] has successfully completed the opening of borders with [SCOPE.sCountry('openborders_target_country').GetName]. [SCOPE.sCountry('openborders_target_country').GetName] will thrive in eternal prosperity through increased exchanges with the homeland."
+ ib_events.03.f: ""Long live [ROOT.GetCountry.GetName]!""
+ ib_events.03.a: "Well done."
+
+ open_border_weekly_effect: "Works to open their borders with a 20% chance to make progress each week, with 8 progress points required to succeed."
