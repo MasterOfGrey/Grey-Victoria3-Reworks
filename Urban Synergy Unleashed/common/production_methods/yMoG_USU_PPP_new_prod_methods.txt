@@ -1,0 +1,416 @@
+﻿#### POWER PLANTS ####
+## Generation machinery
+PPP_pm_hydro_mechanical = {
+	texture = "gfx/interface/icons/production_method_icons/PPP_hydro_mechanical.dds"
+	
+	unlocking_production_methods = {
+		pm_hydroelectric_plant
+	}
+	
+	building_modifiers = {
+		workforce_scaled = {
+			goods_input_engines_add = 10
+			goods_output_electricity_add = 50
+		}
+		
+		level_scaled = {
+			building_employment_laborers_add   = 1500 # T:3000, V:2500
+			# building_employment_machinists_add = 0000 # T:1500, V:1800
+			# building_employment_engineers_add  = 0000 # T:1000, V:1200
+		}
+	}
+}
+
+PPP_pm_steam_engine = {
+	texture = "gfx/interface/icons/production_method_icons/PPP_steam_engines.dds"
+	
+	unlocking_production_methods = {
+		pm_coal-fired_plant
+		pm_oil-fired_plant
+	}
+	
+	building_modifiers = {
+		workforce_scaled = {
+			goods_input_engines_add = 10
+			goods_output_electricity_add = 75
+		}
+		
+		level_scaled = {
+			building_employment_laborers_add   = 1000 # T:2500, V:2000
+			building_employment_machinists_add = 300 # T:1300, V:1500
+			building_employment_engineers_add  = 200 # T:1200, V:1400
+		}
+	}
+}
+
+PPP_pm_steam_turbine = {
+	texture = "gfx/interface/icons/production_method_icons/PPP_steam_turbine.dds"
+	
+	unlocking_technologies = {
+		steam_turbine
+	}
+	
+	unlocking_production_methods = {
+		pm_coal-fired_plant
+		pm_oil-fired_plant
+	}
+	
+	building_modifiers = {
+		workforce_scaled = {
+			goods_input_engines_add = 12
+			goods_output_electricity_add = 100
+		}
+		
+		level_scaled = {
+			building_employment_laborers_add   = 500 # T:2000, V:2000
+			building_employment_machinists_add = 500 # T:1500, V:1500
+			building_employment_engineers_add  = 300 # T:1300, V:1400
+		}
+	}
+}
+
+PPP_pm_gas_turbine = {
+	texture = "gfx/interface/icons/production_method_icons/PPP_gas_turbine.dds"
+	
+	unlocking_technologies = {
+		oil_turbine
+	}
+	
+	unlocking_production_methods = {
+		pm_oil-fired_plant
+	}
+	
+	building_modifiers = {
+		workforce_scaled = {
+			goods_input_engines_add = 15
+			goods_output_electricity_add = 150
+		}
+		
+		level_scaled = {
+			building_employment_laborers_add   = 200 # T:1200, V:2000
+			building_employment_machinists_add = 800 # T:1800, V:1500
+			building_employment_engineers_add  = 500 # T:1500, V:1400
+		}
+	}
+}
+
+## HV generation
+# Hydro-based
+PPP_pm_hy_local_power = {
+	texture = "gfx/interface/icons/production_method_icons/PPP_local_power.dds"
+	is_hidden_when_unavailable = yes
+	replacement_if_valid = PPP_pm_hy_hybrid_power
+	
+	unlocking_production_methods = {
+		PPP_pm_hydro_mechanical			# Base 50 electricity
+	}
+}
+
+PPP_pm_hy_hybrid_power = {
+	texture = "gfx/interface/icons/production_method_icons/PPP_hybrid_power.dds"
+	is_hidden_when_unavailable = yes
+	
+	unlocking_production_methods = {
+		PPP_pm_hydro_mechanical
+	}
+	
+	unlocking_technologies = {
+		PPP_tech_hv_power
+	}
+	
+	building_modifiers = {
+		workforce_scaled = {
+			goods_output_electricity_add = -20
+			goods_output_ppp_hv_power_add = 8
+		}
+	}
+}
+
+PPP_pm_hy_grid_power = {
+	texture = "gfx/interface/icons/production_method_icons/PPP_grid_power.dds"
+	is_hidden_when_unavailable = yes
+	
+	unlocking_production_methods = {
+		PPP_pm_hydro_mechanical
+	}
+	
+	unlocking_technologies = {
+		PPP_tech_hv_power
+	}
+	
+	building_modifiers = {
+		workforce_scaled = {
+			goods_output_electricity_add = -50
+			goods_output_ppp_hv_power_add = 20
+		}
+	}
+}
+
+# Steam Engine-based
+PPP_pm_se_local_power = {
+	texture = "gfx/interface/icons/production_method_icons/PPP_local_power.dds"
+	is_hidden_when_unavailable = yes
+	replacement_if_valid = PPP_pm_se_hybrid_power
+	
+	unlocking_production_methods = {
+		PPP_pm_steam_engine				# Base 75 electricity
+	}
+}
+
+PPP_pm_se_hybrid_power = {
+	texture = "gfx/interface/icons/production_method_icons/PPP_hybrid_power.dds"
+	is_hidden_when_unavailable = yes
+	
+	unlocking_production_methods = {
+		PPP_pm_steam_engine
+	}
+	
+	unlocking_technologies = {
+		PPP_tech_hv_power
+	}
+	
+	building_modifiers = {
+		workforce_scaled = {
+			goods_output_electricity_add = -30
+			goods_output_ppp_hv_power_add = 12
+		}
+	}
+}
+
+PPP_pm_se_grid_power = {
+	texture = "gfx/interface/icons/production_method_icons/PPP_grid_power.dds"
+	is_hidden_when_unavailable = yes
+	
+	unlocking_production_methods = {
+		PPP_pm_steam_engine
+	}
+	
+	unlocking_technologies = {
+		PPP_tech_hv_power
+	}
+	
+	building_modifiers = {
+		workforce_scaled = {
+			goods_output_electricity_add = -75
+			goods_output_ppp_hv_power_add = 30
+		}
+	}
+}
+
+# Steam Turbine-based
+PPP_pm_st_local_power = {
+	texture = "gfx/interface/icons/production_method_icons/PPP_local_power.dds"
+	is_hidden_when_unavailable = yes
+	replacement_if_valid = PPP_pm_se_hybrid_power
+	
+	unlocking_production_methods = {
+		PPP_pm_steam_turbine			# Base 100 electricity
+	}
+}
+
+PPP_pm_st_hybrid_power = {
+	texture = "gfx/interface/icons/production_method_icons/PPP_hybrid_power.dds"
+	is_hidden_when_unavailable = yes
+	
+	unlocking_production_methods = {
+		PPP_pm_steam_turbine
+	}
+	
+	unlocking_technologies = {
+		PPP_tech_hv_power
+	}
+	
+	building_modifiers = {
+		workforce_scaled = {
+			goods_output_electricity_add = -40
+			goods_output_ppp_hv_power_add = 16
+		}
+	}
+}
+
+PPP_pm_st_grid_power = {
+	texture = "gfx/interface/icons/production_method_icons/PPP_grid_power.dds"
+	is_hidden_when_unavailable = yes
+	
+	unlocking_production_methods = {
+		PPP_pm_steam_turbine
+	}
+	
+	unlocking_technologies = {
+		PPP_tech_hv_power
+	}
+	
+	building_modifiers = {
+		workforce_scaled = {
+			goods_output_electricity_add = -100
+			goods_output_ppp_hv_power_add = 40
+		}
+	}
+}
+
+# Gas Turbine-based
+PPP_pm_gt_local_power = {
+	texture = "gfx/interface/icons/production_method_icons/PPP_local_power.dds"
+	is_hidden_when_unavailable = yes
+	replacement_if_valid = PPP_pm_se_hybrid_power
+	
+	unlocking_production_methods = {
+		PPP_pm_gas_turbine				# Base 150 electricity
+	}
+}
+
+PPP_pm_gt_hybrid_power = {
+	texture = "gfx/interface/icons/production_method_icons/PPP_hybrid_power.dds"
+	is_hidden_when_unavailable = yes
+	
+	unlocking_production_methods = {
+		PPP_pm_gas_turbine
+	}
+	
+	unlocking_technologies = {
+		PPP_tech_hv_power
+	}
+	
+	building_modifiers = {
+		workforce_scaled = {
+			goods_output_electricity_add = -50
+			goods_output_ppp_hv_power_add = 20
+		}
+	}
+}
+
+PPP_pm_gt_grid_power = {
+	texture = "gfx/interface/icons/production_method_icons/PPP_grid_power.dds"
+	is_hidden_when_unavailable = yes
+	
+	unlocking_production_methods = {
+		PPP_pm_gas_turbine
+	}
+	
+	unlocking_technologies = {
+		PPP_tech_hv_power
+	}
+	
+	building_modifiers = {
+		workforce_scaled = {
+			goods_output_electricity_add = -150
+			goods_output_ppp_hv_power_add = 60
+		}
+	}
+}
+
+# Backup option (also prevents UI issues)
+PPP_pm_emergency_local_power = {
+	texture = "gfx/interface/icons/production_method_icons/PPP_hybrid_power.dds"
+	
+	unlocking_technologies = {
+		PPP_tech_hv_power
+	}
+	
+	building_modifiers = {
+		workforce_scaled = {
+			goods_output_electricity_add = -10
+			goods_output_ppp_hv_power_add = 2
+		}
+	}
+}
+
+
+#### DISTRIBUTION GRID ####
+## Grid Base PM
+PPP_pm_grid_base = {
+	texture = "gfx/interface/icons/production_method_icons/PPP_grid_base.dds"
+	
+	building_modifiers = {
+		workforce_scaled = {
+			goods_input_steel_add = 5
+			goods_input_tools_add = 5
+		}
+		
+		level_scaled = {
+			building_employment_laborers_add   = 250
+			building_employment_machinists_add = 500
+			building_employment_engineers_add  = 250
+		}
+	}
+}
+
+## Grid Upgrades
+PPP_pm_grid_water = {
+	texture = "gfx/interface/icons/production_method_icons/PPP_grid_capacity_1.dds"
+	building_modifiers = {
+		workforce_scaled = {
+			goods_input_ppp_hv_power_add = 20
+			goods_output_electricity_add = 100
+		}
+	}
+}
+
+PPP_pm_grid_engine = {
+	texture = "gfx/interface/icons/production_method_icons/PPP_grid_capacity_2.dds"
+	
+	unlocking_technologies = {
+		steam_turbine
+	}
+	
+	building_modifiers = {
+		workforce_scaled = {
+			goods_input_steel_add = 1
+			goods_input_tools_add = 1
+			goods_input_ppp_hv_power_add = 30
+			goods_output_electricity_add = 150
+		}
+		
+		level_scaled = {
+			building_employment_laborers_add   = 50
+			building_employment_machinists_add = 100
+			building_employment_engineers_add  = 50
+		}
+	}
+}
+
+PPP_pm_grid_turbine = {
+	texture = "gfx/interface/icons/production_method_icons/PPP_grid_capacity_3.dds"
+	
+	unlocking_technologies = {
+		electric_railway
+	}
+	
+	building_modifiers = {
+		workforce_scaled = {
+			goods_input_steel_add = 2
+			goods_input_tools_add = 2
+			goods_input_ppp_hv_power_add = 40
+			goods_output_electricity_add = 200
+		}
+		
+		level_scaled = {
+			building_employment_laborers_add   = 100
+			building_employment_machinists_add = 200
+			building_employment_engineers_add  = 100
+		}
+	}
+}
+
+PPP_pm_grid_gas_turbine = {
+	texture = "gfx/interface/icons/production_method_icons/PPP_grid_capacity_4.dds"
+	
+	unlocking_technologies = {
+		USU_tech_hv_railways
+	}
+	
+	building_modifiers = {
+		workforce_scaled = {
+			goods_input_steel_add = 3
+			goods_input_tools_add = 3
+			goods_input_ppp_hv_power_add = 60
+			goods_output_electricity_add = 300
+		}
+		
+		level_scaled = {
+			building_employment_laborers_add   = 150
+			building_employment_machinists_add = 300
+			building_employment_engineers_add  = 150
+		}
+	}
+}

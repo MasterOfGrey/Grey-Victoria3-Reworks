@@ -1,0 +1,129 @@
+﻿BUILDINGS={
+	s:STATE_LOWER_EGYPT={
+		region_state:EGY={
+			create_building={
+				building="building_river_port"
+				level=1
+				activate_production_methods={ "pm_rp_small_port" }
+			}		
+		}
+	}
+	s:STATE_UPPER_EGYPT={
+		region_state:EGY={
+			create_building={
+				building="building_river_port"
+				level=1
+				activate_production_methods={ "pm_rp_small_port" }
+			}		
+		}
+	}
+	s:STATE_MIDDLE_EGYPT={
+		region_state:EGY={
+			create_building={
+				building="building_river_port"
+				level=1
+				activate_production_methods={ "pm_rp_small_port" }
+			}		
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

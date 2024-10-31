@@ -1,0 +1,146 @@
+﻿### New group because lower foreign_investment_ai_factor
+## Public Greens
+USU_bg_public_greens = {
+	parent_group = bg_ranching
+	
+	default_building = USU_building_public_green
+	
+	always_possible = yes
+	cash_reserves_max = 25000
+	
+	foreign_investment_ai_factor = 0.25
+}
+
+#### Overwrite/replacement groups with new urbanization values and autoexpand rules (if applicable):
+## Private Infrastructure - i.e. Railways (and related modded buildings)
+bg_private_infrastructure = {
+	parent_group = bg_infrastructure
+	
+	is_government_funded = no
+	subsidized = no
+	
+	economy_of_scale = yes					# Allows economy of scale to apply
+	
+	cash_reserves_max = 25000
+	
+	economy_of_scale_ai_factor = 0			# Stops the AI from deciding to overbuild a local good just because economy of scale applies
+	
+	should_auto_expand = { 
+		default_auto_expand_rule = yes		# This is new vs Vanilla - redefined in: common\scripted_triggers\MoG_USU_autoexpand_triggers.txt
+	}
+	
+	urbanization = 10 # 5
+}
+
+### New group for port urbanization and for ports not to be default subsidized
+## Ports & River Ports
+USU_bg_port_infrastructure = {
+	parent_group = bg_private_infrastructure
+	
+	subsidized = no
+	
+	urbanization = 50 # 5
+}
+
+## Canals													# Change these over to private infrastructure of some sort!!!
+bg_canals = {
+	parent_group = bg_private_infrastructure
+	lens = special
+	inheritable_construction = yes
+	
+	urbanization = 200 # 100
+}
+
+## Power Plants AND Power Grids
+bg_power = {
+	category = development
+	
+	lens = infrastructure	
+	
+	always_possible = yes
+	
+	economy_of_scale = yes
+	
+	cash_reserves_max = 25000
+	
+	should_auto_expand = { 
+		default_auto_expand_rule = yes		# This is in Vanilla - ensuring it's not overwritten by someone else.
+	}
+	
+	economy_of_scale_ai_factor = 0			# Stops the AI from deciding to overbuild a local good just because economy of scale applies
+	foreign_investment_ai_factor = 0.5
+	
+	infrastructure_usage_per_level = 2
+	
+	urbanization = 20 # 10
+}
+
+## Government Admins & Universities
+bg_government = {
+	category = development
+
+	always_possible = yes
+	
+	is_government_funded = yes
+	
+	economy_of_scale = yes
+	
+	lens = government
+	
+	urbanization = 30 # 20
+	infrastructure_usage_per_level = 1
+	
+	economy_of_scale_ai_factor = 2.0
+}
+
+## Financial Districts
+# Enabling some urbanization lets them contribute to generating the services they then consume.
+bg_financial_districts = {
+	parent_group = bg_owner_buildings
+	
+	urbanization = 1 # 0
+}
+
+## Trade Centers
+# Thanks to logistics services they have a reduced contribution to urbanization now use a teeny tiny bit more infrastructure.
+# This is not critical so if some other mod overwrites it, meh.
+bg_trade = {
+	parent_group = bg_urban_facilities
+	
+	category = urban
+	
+	lens = trade
+	
+	always_possible = yes	
+	
+	# subsidized = yes
+	
+	always_self_owning = yes
+	
+	created_by_trade_routes = yes
+	
+	auto_place_buildings = yes
+	
+	min_hiring_rate = 1.0
+	max_hiring_rate = 1.0
+	
+	ignores_productivity_when_hiring = yes
+	
+	proportionality_limit = 1.0
+	
+	economy_of_scale = no
+	
+	default_building = building_trade_center
+	
+	cash_reserves_max = 5000	
+	
+	urbanization = 2 # 5
+	
+	infrastructure_usage_per_level = 0.15 # 0.1
+	
+	fired_pops_become_radical = no
+	
+	should_auto_expand = {
+		always = no
+	}
+}

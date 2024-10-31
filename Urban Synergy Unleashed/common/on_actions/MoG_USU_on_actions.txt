@@ -1,0 +1,56 @@
+﻿# Root = Country
+on_yearly_pulse_country = {
+	on_actions = {
+		mog_urban_on_action
+		delay = { days = { 15 350 } }
+	}
+}
+# scope:target = Uprising country
+on_revolution_start = { on_actions = { mog_urban_on_action } }
+on_secession_start = { on_actions = { mog_urban_on_action } }
+
+# Root = Releasing Country
+# scope:target = Released Country
+on_country_released_as_own_subject = { on_actions = { mog_urban_on_action } }
+on_country_released_as_overlord_subject = { on_actions = { mog_urban_on_action } }
+on_country_released_as_independent = { on_actions = { mog_urban_on_action } }
+
+mog_urban_on_action = {
+	effect = {
+		if = {
+			limit = {
+				NOT = { has_modifier = mog_urbanization }
+			}
+			add_modifier = {
+				name = mog_urbanization
+			}
+		}
+	}
+}
+
+on_monthly_pulse_country = {
+	on_actions = {
+		mog_logistics_land_trade_on_action
+		delay = { days = { 5 27 } }
+	}
+}
+
+mog_logistics_land_trade_on_action = {
+	effect = {
+		remove_modifier = mog_logistics_land_trade
+		add_modifier = {
+			name = mog_logistics_land_trade
+			multiplier = {
+				add = 1
+				multiply = mog_land_trade_from_logistics
+			}
+		}
+	}
+}
+
+on_yearly_pulse_country = {
+	random_events = {
+		9 = 0
+		1 = canal_dividends.1
+	}
+}

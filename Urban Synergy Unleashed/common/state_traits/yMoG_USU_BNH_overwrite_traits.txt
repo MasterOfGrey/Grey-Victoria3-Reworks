@@ -1,0 +1,229 @@
+﻿state_trait_natural_harbors = {
+	icon = "gfx/interface/icons/state_trait_icons/natural_harbors.dds"
+	modifier = {
+		building_shipyards_throughput_add = 0.1
+		building_military_shipyards_throughput_add = 0.1
+		state_building_port_max_level_add = 2
+		state_building_naval_base_max_level_add = 10
+	}
+}
+state_trait_odensefjorden = {
+	icon = "gfx/interface/icons/state_trait_icons/fjords.dds"
+	modifier = {
+		building_shipyards_throughput_add = 0.20
+		building_military_shipyards_throughput_add = 0.20
+		state_building_port_max_level_add = 2
+		state_building_naval_base_max_level_add = 10		
+	}
+}
+state_trait_oresund = {
+    icon = "gfx/interface/icons/state_trait_icons/river.dds"
+	modifier = {
+		state_building_port_max_level_add = 2
+		state_building_naval_base_max_level_add = 20
+	}
+}
+state_trait_trondhjemsfjorden = {
+	icon = "gfx/interface/icons/state_trait_icons/fjords.dds"
+	modifier = {
+		building_shipyards_throughput_add = 0.20
+		building_military_shipyards_throughput_add = 0.20
+		state_building_port_max_level_add = 2
+		state_building_naval_base_max_level_add = 10
+	}
+}
+state_trait_hardangerfjorden = {
+	icon = "gfx/interface/icons/state_trait_icons/fjords.dds"
+	modifier = {
+		building_shipyards_throughput_add = 0.20
+		building_military_shipyards_throughput_add = 0.20
+		state_building_port_max_level_add = 2
+		state_building_naval_base_max_level_add = 10		
+	}
+}
+state_trait_christianiafjorden = {
+	icon = "gfx/interface/icons/state_trait_icons/fjords.dds"
+	modifier = {
+		building_shipyards_throughput_add = 0.20
+		building_military_shipyards_throughput_add = 0.20
+		state_building_port_max_level_add = 2
+		state_building_naval_base_max_level_add = 10	
+	}
+}
+state_trait_london_docklands = {
+	icon = "gfx/interface/icons/state_trait_icons/natural_harbors.dds"
+	modifier = {
+		building_shipyards_throughput_add = 0.20
+		building_military_shipyards_throughput_add = 0.20
+		state_building_port_max_level_add = 4
+		state_building_naval_base_max_level_add = 20	
+	}
+}
+state_trait_halifax_harbor = {
+	icon = "gfx/interface/icons/state_trait_icons/natural_harbors.dds"
+	modifier = {
+		building_shipyards_throughput_add = 0.1
+		building_military_shipyards_throughput_add = 0.1
+		state_building_port_max_level_add = 2
+		state_building_naval_base_max_level_add = 10
+	}
+}
+state_trait_new_york_harbor = {
+	icon = "gfx/interface/icons/state_trait_icons/natural_harbors.dds"
+	modifier = {
+		building_shipyards_throughput_add = 0.1
+		building_military_shipyards_throughput_add = 0.1
+		state_building_port_max_level_add = 4
+		state_building_naval_base_max_level_add = 10
+	}
+}
+state_trait_newark_harbor = {
+	icon = "gfx/interface/icons/state_trait_icons/natural_harbors.dds"
+	modifier = {
+		building_shipyards_throughput_add = 0.1
+		building_military_shipyards_throughput_add = 0.1
+		state_building_port_max_level_add = 4
+		state_building_naval_base_max_level_add = 10
+	}
+}
+state_trait_canales_patagonicos = { # araucania
+	icon = "gfx/interface/icons/state_trait_icons/fjords.dds"
+	modifier = {
+		goods_output_hardwood_mult = 0.15
+		state_building_port_max_level_add = 1
+		state_building_naval_base_max_level_add = 10
+	}
+}
+state_trait_bremerhaven = {
+	icon = "gfx/interface/icons/state_trait_icons/natural_harbors.dds"
+	modifier = {
+		building_shipyards_throughput_add = 0.1
+		building_military_shipyards_throughput_add = 0.1
+		state_building_port_max_level_add = 4
+		state_building_naval_base_max_level_add = 10
+	}
+}
+state_trait_rotterdam  = { #would need to add to holland
+	icon = "gfx/interface/icons/state_trait_icons/natural_harbors.dds"
+	modifier = {
+		building_shipyards_throughput_add = 0.1
+		building_military_shipyards_throughput_add = 0.1
+		state_building_port_max_level_add = 4
+		state_building_naval_base_max_level_add = 10
+	}
+}
+state_trait_sevastopol_bay = {
+	icon = "gfx/interface/icons/state_trait_icons/natural_harbors.dds"
+	modifier= {
+		building_shipyards_throughput_add = 0.1
+		building_military_shipyards_throughput_add = 0.1
+        state_building_naval_base_max_level_add = 10
+        state_building_port_max_level_add = 2
+	}
+}
+state_trait_hermoupolis = {
+	icon = "gfx/interface/icons/state_trait_icons/natural_harbors.dds"
+	modifier = {
+		building_shipyards_throughput_add = 0.2
+        state_building_naval_base_max_level_add = 10
+        state_building_port_max_level_add = 2
+	}
+}
+state_trait_saronic_gulf = {
+	icon = "gfx/interface/icons/state_trait_icons/natural_harbors.dds"
+	modifier = {
+		building_shipyards_throughput_add = 0.1
+		building_military_shipyards_throughput_add = 0.1
+		state_building_naval_base_max_level_add = 10
+		state_building_port_max_level_add = 2
+	}
+}
+state_trait_cap_vert = {
+	icon = "gfx/interface/icons/state_trait_icons/natural_harbors.dds"
+	modifier = {
+		state_building_port_max_level_add = 2
+		state_building_naval_base_max_level_add = 15
+	}
+}
+state_trait_tihamah = {
+	icon = "gfx/interface/icons/state_trait_icons/poor_soils.dds"
+	modifier = {
+		building_group_bg_agriculture_throughput_add = -0.1
+		building_group_bg_plantations_throughput_add = -0.1
+		state_building_port_max_level_add = -2
+		state_building_naval_base_max_level_add = -20
+    }
+}
+state_trait_galle_harbor = {
+	icon = "gfx/interface/icons/state_trait_icons/natural_harbors.dds"
+	modifier= {
+		building_shipyards_throughput_add = 0.1
+		building_military_shipyards_throughput_add = 0.1
+        state_building_naval_base_max_level_add = 10
+        state_building_port_max_level_add = 2
+	}
+}
+state_trait_manila_bay = {
+	icon = "gfx/interface/icons/state_trait_icons/natural_harbors.dds"
+	modifier = {
+		building_shipyards_throughput_add = 0.1
+		building_military_shipyards_throughput_add = 0.1
+		state_building_port_max_level_add = 2
+		state_building_naval_base_max_level_add = 10
+	}
+}
+state_trait_seto_inland_sea = {
+	icon = "gfx/interface/icons/state_trait_icons/natural_harbors.dds"
+	modifier = {
+		building_shipyards_throughput_add = 0.2
+		building_military_shipyards_throughput_add = 0.2
+		state_building_port_max_level_add = 4
+		state_building_naval_base_max_level_add = 10
+	}
+}
+state_trait_edo_bay = {
+	icon = "gfx/interface/icons/state_trait_icons/natural_harbors.dds"
+	modifier = {
+		building_shipyards_throughput_add = 0.1
+		building_military_shipyards_throughput_add = 0.1
+		state_building_port_max_level_add = 2
+		state_building_naval_base_max_level_add = 10
+	}
+}
+state_trait_golden_horn_bay = {
+	icon = "gfx/interface/icons/state_trait_icons/natural_harbors.dds"
+	modifier = {
+		building_shipyards_throughput_add = 0.1
+		building_military_shipyards_throughput_add = 0.1
+		state_building_port_max_level_add = 2
+		state_building_naval_base_max_level_add = 10
+	}
+}
+state_trait_dalian_bay = {
+	icon = "gfx/interface/icons/state_trait_icons/natural_harbors.dds"
+	modifier = {
+		building_shipyards_throughput_add = 0.1
+		building_military_shipyards_throughput_add = 0.1
+		state_building_port_max_level_add = 2
+		state_building_naval_base_max_level_add = 10
+	}
+}
+
+state_trait_nagasaki_bay = {
+	icon = "gfx/interface/icons/state_trait_icons/natural_harbors.dds"
+	modifier = {
+		building_shipyards_throughput_add = 0.1
+		building_military_shipyards_throughput_add = 0.1
+		state_building_port_max_level_add = 2
+		state_building_naval_base_max_level_add = 10
+	}
+}
+state_trait_galle_harbor = {
+	icon = "gfx/interface/icons/state_trait_icons/natural_harbors.dds"
+	modifier= {
+		building_shipyards_throughput_add = 0.1
+		building_military_shipyards_throughput_add = 0.1
+        state_building_naval_base_max_level_add = 10
+        state_building_port_max_level_add = 2
+	}
+}

@@ -1,0 +1,181 @@
+﻿## Base PM
+
+pm_canal = {
+	texture = "gfx/interface/icons/production_method_icons/canals_coal.dds"
+	
+	country_modifiers = {
+		workforce_scaled = {
+			country_prestige_add = 200
+		}
+		unscaled = {
+			country_max_companies_add = 1
+		}
+	}
+	
+	state_modifiers = {
+		level_scaled = {
+			state_infrastructure_add = 50
+			state_migration_pull_mult = 0.2
+		}
+	}
+	
+	building_modifiers = {
+		workforce_scaled = {
+			# input goods
+			goods_input_tools_add = 50
+			goods_input_engines_add = 20
+			goods_input_coal_add = 100
+			goods_output_services_add = 300
+			goods_output_transportation_add = 300
+		}
+		
+		level_scaled = {
+			building_employment_laborers_add = 2000
+			building_employment_clerks_add = 1000
+			building_employment_machinists_add = 1500
+			building_employment_engineers_add = 250
+			building_employment_bureaucrats_add = 250
+		}
+	}
+}
+
+pm_canals_electric = {
+	texture = "gfx/interface/icons/production_method_icons/canals_electric.dds"
+	
+	country_modifiers = {
+		workforce_scaled = {
+			country_prestige_add = 200
+		}
+		unscaled = {
+			country_max_companies_add = 1
+		}
+	}
+	
+	state_modifiers = {
+		level_scaled = {
+			state_infrastructure_add = 50
+			state_migration_pull_mult = 0.2
+		}
+	}
+	
+	building_modifiers = {
+		workforce_scaled = {
+			# input goods
+			goods_input_tools_add = 50
+			goods_input_engines_add = 20
+			goods_input_electricity_add = 100
+			goods_output_services_add = 300
+			goods_output_transportation_add = 300
+		}
+		
+		level_scaled = {
+			building_employment_laborers_add = 2000
+			building_employment_clerks_add = 1000
+			building_employment_machinists_add = 1500
+			building_employment_engineers_add = 250
+			building_employment_bureaucrats_add = 250
+		}
+	}
+}
+pm_canals_oil = {
+	texture = "gfx/interface/icons/production_method_icons/canals_oil.dds"
+	
+	country_modifiers = {
+		workforce_scaled = {
+			country_prestige_add = 200
+		}
+		unscaled = {
+			country_max_companies_add = 1
+		}
+	}
+	
+	state_modifiers = {
+		level_scaled = {
+			state_infrastructure_add = 50
+			state_migration_pull_mult = 0.2
+		}
+	}
+	
+	building_modifiers = {
+		workforce_scaled = {
+			# input goods
+			goods_input_tools_add = 50
+			goods_input_engines_add = 20
+			goods_input_oil_add = 100
+			goods_output_services_add = 300
+			goods_output_transportation_add = 300
+		}
+		
+		level_scaled = {
+			building_employment_laborers_add = 2000
+			building_employment_clerks_add = 1000
+			building_employment_machinists_add = 1500
+			building_employment_engineers_add = 250
+			building_employment_bureaucrats_add = 250
+		}
+	}
+}
+
+## Canal Tugboats
+
+pm_no_tugs_building_canals = {
+	texture = "gfx/interface/icons/production_method_icons/canals.dds"
+}
+
+pm_tugging_building_canals = {
+	texture = "gfx/interface/icons/production_method_icons/reinforced_steam_ships.dds"
+	
+	unlocking_technologies = {
+		gantry_cranes
+	}
+	
+	building_modifiers = {
+		workforce_scaled = {
+			# input goods
+			goods_input_steamers_add = 5
+			goods_input_coal_add = 5
+			## Added
+			goods_output_transportation_add = 50
+		}
+		
+		level_scaled = {
+			building_employment_machinists_add = 500
+		}
+	}
+}
+
+## Canal Logistics
+
+pm_no_canal_logistics = {
+	texture = "gfx/interface/icons/production_method_icons/log_0.dds"
+}
+
+pm_minor_canal_logistics = {
+	texture = "gfx/interface/icons/production_method_icons/canals_sail.dds"
+	
+	unlocking_technologies = {
+		logistics
+	}
+	
+	building_modifiers = {
+		workforce_scaled = {
+			goods_output_transportation_add = -100
+			goods_output_usu_logistics_add = 300
+		}
+	}
+}
+
+pm_major_canal_logistics = {
+	texture = "gfx/interface/icons/production_method_icons/canals_steam.dds"
+	
+	unlocking_technologies = {
+		electric_telegraph
+	}
+	
+	building_modifiers = {
+		workforce_scaled = {
+			goods_output_transportation_add = -200
+			goods_output_usu_logistics_add = 600
+		}
+	}
+}

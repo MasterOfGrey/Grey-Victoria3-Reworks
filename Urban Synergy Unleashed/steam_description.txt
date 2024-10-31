@@ -1,0 +1,92 @@
+[img]https://i.imgur.com/7xuCZqW.png[/img]
+Designed for Victoria 3: Version 1.7 (and onwards)
+Mod Version V1.0
+Please consider rating this if you like it! It really helps out. [img]https://i.imgur.com/tE28cZ7.gif[/img]
+
+[table]
+    [tr]
+        [td][img]https://i.imgur.com/XLUGyo4.png[/img][/td]
+        [td][img]https://i.imgur.com/6KqTKks.png[/img][/td]
+    [/tr]
+[/table]
+*MUST have a new game - your save will explode if you either add or remove this mid-game.
+[img]https://i.imgur.com/6o9HyTD.png[/img]
+This mod reworks the whole urban buildings environment, and a few related touch points, to create a system with in-built synergies. Urbanization gradually increases the total construction capacity (without necessarily costing the government), railways are profitable throughout the game and have additional options, ports can now be privately owned and contribute to the transport economy, rivers can now have portage, power plants have more diversity and can be extended to powering a distribution grid (this adapts content from "Power Plants+").
+
+All in all, it is a system that has been designed to round off some of the sharp edge-case corners in the economy, and to ensure that the AI can naturally benefit from the same things the player can.
+
+[img]https://i.imgur.com/Wh5EspM.png[/img]
+[h1]Features:[/h1]
+[h2]Logistics Services[/h2]
+Ports and railways now produce a new good called "Logistics Services". Rather than transport, which is of course the capacity to move goods locally, it represents the ability to organise goods to be transported - which can be done locally [i]or[/i] coordinated from afar. Which also means that this is a tradeable good! Countries can import logistics services to increase their land trade capacity - effectively "buying" access to their neighbour's ports.
+
+[h2]Urban Center & Electricity Rework[/h2]
+Urban Centers require twice as much urbanization per level now, and the primary PM has been rebalanced and now produces a small amount of construction. Streetlighting has been expanded to also infer general urban electricity supply and these PM's are designed to interact with the Power Plant rework to ensure that the AI can transition to a distribution grid for electricity successfully. The Power Plants are effectively the ones from "Power Plants+", but the structure of the PM's has been reworked to ensure the AI can understand them.
+
+[h2]Transportation Rework[/h2]
+Railways, Ports, & River Ports are all profitable providers of transport throughout the game. Additionally, the transport economy no longer starts from 0. Subsistence farms provide transport, and basic road cart pm's consume it, so right from the start there is [i]some[/i] transport floating around the local market. This *greatly* smooths out the initial industrialisation via rail. Pops also cannot switch en masse to automobiles in the late game, as the amount of their transport need that can be met by automobiles has been limited to a mere 12.5%.
+
+[h2]Services Rework[/h2]
+In addition to the rebalance of Urban Centers - Government Admins now produce a small amount of services and have been rebalanced with reduced workforce needs and extra PM's, and a new Public Green building is available to provide services. This building uses arable land, so it is naturally limited and competes with agriculture for land which can be cultivated.
+As part of this, Manor Houses now directly reduce state tax capacity as they use their position to try and evade taxation, and financial districts contribute to urbanization which helps to produce the services their pops consume.
+
+[h2]Construction Rework:[/h2]
+PM's for construction sectors have been scaled 40%/60%/80%/100% of their original sizes. This means that in the early game it's much easier for small AI nations to maintain at least 1 wooden construction sector - which is critical to enabling the autonomous investment queue.
+
+[h2]Extra Consumption:[/h2]
+Some buildings now consume additional goods. In particular, naval buildings consume additional supplies to represent the specific goods in excess of pop consumption that the government would fund to support the crews while they maintain a fleet at sea. Ports also consume groceries as supplies proportional to the modernness.
+
+[img]https://i.imgur.com/Qp8JBtZ.png[/img]
+This obviously touches a wide range of urban buildings, but it's quite self-contained otherwise.
+
+[b]This is [u]Compatible with VTM[/u].
+Also natively compatible with Pop Demand Tweak(PDT), Timber to Steel(TTS), and any AI mods (like KAI, etc.)[/b]
+Somehow compatible with Industry Realism??? - for now at least
+
+Use these compatches for:
+[list]
+[*]Morgenrote: "USU & Morgenrote"
+[*]Locomotion Land, Water, & Air (LLWA): "USU & LLWA" (coming)
+[/list]
+
+This effectively supercedes (and should not be used with) the following mods:
+[list]
+[*]"Nahan's River Transportation", "Port Rework", and "Transportation Overhaul" by nahantelhe
+[*]"Urban Center Electricity Generation" by Ferrous
+[*]"Urban Centers Create Construction" by ovnxize
+[*]"Make My Railway Profitable Again!" and "We Need More Transportation!" by Starry Inori
+[*]"Power Plants+" by 1230james
+[*]"scale_down_construct" by Zeta-0
+[*]"Canals Add Company Capacity" by Morglom
+[*]"Better Canals" by SkyRipper
+[*]"Canal Dividend Income" by Araxiel
+[/list]
+...and probably a few others besides.
+
+Further it is incompatible with:
+[list]
+[*]Urban Center mods: "Construction Rework", "Expanded Urban Centers", "Improve Urban Center" etc.
+[*]Infrastructure mods: "Port MAPI", "Port Buffing Mod", "Railway Connection", "Upgraded Railways", "Realistic Power Plants" etc.
+[*]Big Tent Reworks: "Industry Expanded", "More Technological/Construction Variety" etc.
+[/list]
+..and anything else that explicitly reworks Railways, Power Plants, Ports, or Urban Centers.
+
+This has it's own auto-expand rules rework that will probably overwrite any other auto-expand rework or be incompatible.
+
+[img]https://i.imgur.com/lQRf9dG.png[/img]
+[b]Can you change <insert language> localisation?[/b]
+[i]If you send it to me I will add it.[/i]
+
+[img]https://i.imgur.com/UN80Om5.png[/img]
+Many thanks to nahantelhe, Ferrous, ovnxize, Starry Inori, and 1230james for their works which inspired this.
+
+[h2]Language Support:[/h2]
+[b]Most Localizations are done by Machine Translation! - Replacements are welcome from anyone[/b]
+Credit will be given to to providers of localisation content:
+[list]
+[*]TBD
+[/list]
+
+#Rework #Services #MAPI
+#Trade #Urbanization
+#Electricity #Economy

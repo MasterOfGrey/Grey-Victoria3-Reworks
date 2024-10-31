@@ -1,0 +1,51 @@
+﻿# Railway Overwrites
+
+pmg_base_building_railway = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	ai_selection = most_productive
+
+	production_methods = {
+		pm_early_trains
+		pm_steam_trains
+		pm_steam_trains_principle_transport_3
+		pm_electric_trains
+		pm_electric_trains_principle_transport_3
+		pm_diesel_trains
+		pm_diesel_trains_principle_transport_3
+		pm_ac_electric_trains
+		pm_ac_electric_trains_principle_transport_3
+	}
+}
+
+pmg_passenger_trains = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_refining.dds"
+	ai_selection = most_productive
+
+	production_methods = {
+		pm_no_passenger_trains
+		pm_wooden_passenger_carriages
+		pm_steel_passenger_carriages
+		pm_electric_passenger_carriages
+	}
+}
+
+pmg_logistics_services_railway = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_refining.dds"
+	production_methods = {
+		USU_pm_rail_logistics_0
+		USU_pm_rail_logistics_1
+		USU_pm_rail_logistics_2
+		USU_pm_rail_logistics_3
+	}
+}
+
+pmg_automation_building_railway = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_automation.dds"
+	production_methods = {
+		pm_auto_disabled_building_railway
+		pm_steam_crane_building_railway
+		pm_watertube_boiler_building_railway
+		pm_rotary_valve_engine_building_railway
+		pm_steam_donkey_building_railway
+	}
+}

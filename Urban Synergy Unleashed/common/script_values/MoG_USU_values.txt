@@ -1,0 +1,39 @@
+﻿# Called from country scope.
+mog_land_trade_from_logistics = {
+	value = 1
+	if = {
+		limit = {
+			root = {
+				any_trade_route = {
+					importer.owner = root
+					goods = g:usu_logistics
+				}
+			}
+		}
+		market = {
+			mg:usu_logistics = {
+				multiply = market_goods_imports
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			root.market = {
+				mg:usu_logistics = {
+					market_goods_imports > 0.1
+				}
+			}
+		}
+		market = {
+			mg:usu_logistics = {
+				multiply = {
+					add = market_goods_imports
+					divide = 2
+				}
+			}
+		}
+	}
+	else = {
+		multiply = 0
+	}
+}

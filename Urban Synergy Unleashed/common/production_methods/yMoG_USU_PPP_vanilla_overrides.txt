@@ -1,0 +1,78 @@
+﻿pm_hydroelectric_plant = {
+	texture = "gfx/interface/icons/production_method_icons/hydroelectric_plant.dds"
+	
+	state_modifiers = {
+		workforce_scaled = {
+			state_pollution_generation_add = 10
+		}
+	}
+	
+	building_modifiers = {
+		workforce_scaled = {
+			goods_input_hardwood_add = 30
+			# goods_input_engines_add = 10
+			# goods_output_electricity_add = 50
+		}
+		
+		level_scaled = {
+			building_employment_laborers_add   = 1500 # This incremental scaling on the base PM helps encourage the AI in a helpful direction.
+			building_employment_machinists_add = 1500
+			building_employment_engineers_add  = 1000
+		}
+	}
+}
+
+pm_coal-fired_plant = {
+	texture = "gfx/interface/icons/production_method_icons/coal_fired_plant.dds"
+	
+	unlocking_technologies = {
+		# Not steam_turbine as that's the upgraded PM from the basic steam engine
+	}
+	
+	state_modifiers = {
+		workforce_scaled = {
+			state_pollution_generation_add = 50
+		}
+	}
+	
+	building_modifiers = {
+		workforce_scaled = {
+			goods_input_coal_add = 30
+			# goods_input_engines_add = 15
+			# goods_output_electricity_add = 100
+		}
+		
+		level_scaled = {
+			building_employment_laborers_add   = 1500 # This incremental scaling on the base PM helps encourage the AI in a helpful direction.
+			building_employment_machinists_add = 1000
+			building_employment_engineers_add  = 1000
+		}
+	}
+}
+
+pm_oil-fired_plant = {
+	texture = "gfx/interface/icons/production_method_icons/oil_fired_plant.dds"
+	
+	unlocking_technologies = {
+		steam_turbine # Not oil_turbine - as that's for the upgraded PM's
+	}
+	
+	state_modifiers = {
+		workforce_scaled = {
+			state_pollution_generation_add = 40
+		}
+	}
+	
+	building_modifiers = {
+		workforce_scaled = {
+			goods_input_oil_add = 20
+			# goods_input_engines_add = 20
+			# goods_output_electricity_add = 150
+		}
+		level_scaled = {
+			building_employment_laborers_add   = 1000 # This incremental scaling on the base PM helps encourage the AI in a helpful direction.
+			building_employment_machinists_add = 1000
+			building_employment_engineers_add  = 1000
+		}
+	}
+}

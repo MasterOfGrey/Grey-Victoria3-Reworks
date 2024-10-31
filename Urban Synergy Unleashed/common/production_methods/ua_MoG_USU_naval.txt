@@ -1,0 +1,123 @@
+﻿# Just naval PM's
+
+pm_no_naval_theory = {
+	texture = "gfx/interface/icons/production_method_icons/no_naval_theory.dds"
+	ai_value = 0
+	building_modifiers = {
+		workforce_scaled = {	
+			goods_input_usu_logistics_add = 2
+			goods_input_grain_add = 2
+			goods_input_clothes_add = 9
+			goods_input_luxury_clothes_add = 1
+		}
+		level_scaled = {
+			building_employment_soldiers_add = 900
+			building_employment_officers_add = 100
+			building_training_rate_add = 4
+		}
+	}
+}
+
+pm_power_of_the_purse = {
+	texture = "gfx/interface/icons/production_method_icons/power_of_the_purse.dds"
+	unlocking_technologies = {
+		power_of_the_purse
+	}
+	ai_value = 200000
+	building_modifiers = {
+		workforce_scaled = {	
+			goods_input_usu_logistics_add = 4
+			goods_input_groceries_add = 2
+			goods_input_clothes_add = 8.5
+			goods_input_luxury_clothes_add = 1.5
+		}
+		level_scaled = {
+			building_employment_soldiers_add = 875
+			building_employment_officers_add = 125
+			building_training_rate_add = 5.5
+		}
+		
+		unscaled = {
+			unit_morale_loss_mult = -0.1
+			unit_morale_damage_mult = 0.1
+		}
+	}
+}
+
+pm_jeune_ecole = {
+	texture = "gfx/interface/icons/production_method_icons/jeune_ecole.dds"
+	unlocking_technologies = {
+		jeune_ecole
+	}
+	ai_value = 300000
+	building_modifiers = {
+		workforce_scaled = {	
+			goods_input_usu_logistics_add = 6
+			goods_input_groceries_add = 3
+			goods_input_clothes_add = 8
+			goods_input_luxury_clothes_add = 2
+		}
+		level_scaled = {
+			building_employment_soldiers_add = 850
+			building_employment_officers_add = 150
+			building_training_rate_add = 6
+		}
+		
+		unscaled = {
+			unit_morale_loss_mult = -0.2
+			unit_morale_damage_mult = 0.2
+		}
+	}
+}
+
+pm_sea_lane_strategies = {
+	texture = "gfx/interface/icons/production_method_icons/mahanian_thought.dds"
+	unlocking_technologies = {
+		sea_lane_strategies
+	}
+	ai_value = 400000
+	building_modifiers = {
+		workforce_scaled = {	
+			goods_input_usu_logistics_add = 8
+			goods_input_groceries_add = 4
+			goods_input_clothes_add = 7.5
+			goods_input_luxury_clothes_add = 2.5
+		}
+		level_scaled = {
+			building_employment_soldiers_add = 825
+			building_employment_officers_add = 175
+			building_training_rate_add = 6.5
+		}
+		
+		unscaled = {
+			unit_morale_loss_mult = -0.3
+			unit_morale_damage_mult = 0.3
+		}
+	}
+}
+
+pm_battlefleet_tactics = {
+	texture = "gfx/interface/icons/production_method_icons/battlefleet_tactics.dds"
+	unlocking_technologies = {
+		battlefleet_tactics
+	}
+	ai_value = 500000
+	building_modifiers = {
+		workforce_scaled = {	
+			goods_input_usu_logistics_add = 10
+			goods_input_groceries_add = 5
+			goods_input_clothes_add = 7
+			goods_input_luxury_clothes_add = 3
+		}
+		level_scaled = {
+			building_employment_soldiers_add = 800
+			building_employment_officers_add = 200
+			building_training_rate_add = 7
+		}
+		
+		unscaled = {
+			unit_morale_loss_mult = -0.4
+			unit_morale_damage_mult = 0.4
+		}
+	}
+}

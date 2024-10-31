@@ -1,0 +1,24 @@
+﻿USU_building_public_green = {
+	building_group = USU_bg_public_greens
+	texture = "gfx/interface/icons/building_icons/USU_public_green.dds"
+	
+	ownership_type = self
+	
+	city_type = farm
+	levels_per_mesh = 5
+	
+	unlocking_technologies = {
+		enclosure
+	}
+	
+	production_method_groups = {
+		USU_pmg_public_space_management
+	}
+	
+	required_construction = construction_cost_low
+	
+	ownership_type = self
+	
+	# generates_residences = yes
+	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_monuments.dds"
+}

@@ -1,0 +1,57 @@
+﻿l_english:
+ # Railways
+ pm_ac_electric_trains: "AC Electric Trains"
+ pm_ac_electric_trains_principle_transport_3: "Joint AC Electric Trains"
+ 
+ pm_electric_passenger_carriages: "Electric Passenger Carriages"
+ 
+ pmg_automation_building_railway: "Facility Automation"
+ pm_auto_disabled_building_railway: "Hand Cranked Crane"
+ pm_steam_crane_building_railway: "Curved Jib Steam Crane"
+ pm_watertube_boiler_building_railway: "Fire-tube Boiler"
+ pm_rotary_valve_engine_building_railway: "Uniflow Rotary Valvegear"
+ pm_steam_donkey_building_railway: "Geared Steam Drivetrain"
+ 
+ # Logistics
+ pmg_logistics_services_railway: "Railway Logistics"
+ pmg_logistics_services_port_coastal: "Shipping Logistics"
+ pmg_logistics_services_port_river: "Fluvial Logistics"
+ 
+ USU_pm_rail_logistics_0: "No Logistical Coordination"
+ USU_pm_rail_logistics_1: "Quota Allowance Planning"
+ USU_pm_rail_logistics_2: "Remote Access Bidding"
+ USU_pm_rail_logistics_3: "Supply Chain Management"
+
+ USU_pm_port_c_logistics_0: "No Logistical Coordination"
+ USU_pm_port_c_logistics_1: "Quota Allowance Planning"
+ USU_pm_port_c_logistics_2: "Remote Access Bidding"
+ USU_pm_port_c_logistics_3: "Supply Chain Management"
+ 
+ USU_pm_port_r_logistics_0: "No Logistical Coordination"
+ USU_pm_port_r_logistics_1: "Quota Allowance Planning"
+ USU_pm_port_r_logistics_2: "Remote Access Bidding"
+ USU_pm_port_r_logistics_3: "Supply Chain Management"
+ 
+ # Canals
+ pm_canal: "Steam Powered Locks"
+ pm_canals_eletric: "Electric Canal Locks"
+ pm_canals_oil: "Oil Pump Locks"
+
+ pmg_canal_boats: "Canal Management"
+ pm_no_tugs_building_canals: "No Tugs"
+ pm_tugging_building_canals: "Tugboat Fleet"
+ 
+ pmg_canal_logistics: "Canal Logistics"
+ pm_no_canal_logistics: "No Logistics"
+ pm_minor_canal_logistics: "Minor Logistics"
+ pm_major_canal_logistics: "Major Logistics"
+ 
+ canal_dividends.1.t: "Canal Accident"
+ canal_dividends.1.d: "A merchant vessel didn't pay attention and accidentally ran aground in the canal, blocking the way and making the passage more dangerous until completely cleared."
+ canal_dividends.1.f: "The large trading ship lies half tilted in the canal, on its side a gashing wound from the impact with the wall, its goods spilled across the passage, finery and exotic wares bobbing in the water, the expensive merchandise of a foreign land soaked and ruined.\n\nOn the shore stands the captain, his face in his hands and his hat floating in the canal. Next to him the company's insurance representative holding a water damaged ship manifest trying to make sense of it all, while a canal agent tries to explain that the clearing might take months."
+ canal_dividends.1.1: "$expedition_events.542.a$"
+ modifier_building_canal_accident: "Canal Accident"
+
+
+
+

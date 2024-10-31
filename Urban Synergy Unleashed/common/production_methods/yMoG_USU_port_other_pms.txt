@@ -1,0 +1,85 @@
+﻿### Sea Ports
+
+USU_pm_port_c_logistics_0 = {
+	texture = "gfx/interface/icons/production_method_icons/log_0.dds"
+}
+
+USU_pm_port_c_logistics_1 = {
+	texture = "gfx/interface/icons/production_method_icons/log_1.dds"
+	unlocking_technologies = {
+		logistics
+	}
+	building_modifiers = {
+		workforce_scaled = {	
+			goods_output_usu_logistics_add = 30
+		}
+	}
+}
+
+USU_pm_port_c_logistics_2 = {
+	texture = "gfx/interface/icons/production_method_icons/log_2.dds"
+	unlocking_technologies = {
+		electric_telegraph
+	}
+	building_modifiers = {
+		workforce_scaled = {	
+			goods_output_usu_logistics_add = 70
+		}
+	}
+}
+
+USU_pm_port_c_logistics_3 = {
+	texture = "gfx/interface/icons/production_method_icons/log_3.dds"
+	unlocking_technologies = {
+		electric_telegraph
+		corporate_management
+	}
+	building_modifiers = {
+		workforce_scaled = {	
+			goods_output_usu_logistics_add = 120
+		}
+	}
+}
+
+### River Ports
+
+USU_pm_port_r_logistics_0 = {
+	texture = "gfx/interface/icons/production_method_icons/log_0.dds"
+}
+
+USU_pm_port_r_logistics_1 = {
+	texture = "gfx/interface/icons/production_method_icons/log_1.dds"
+	unlocking_technologies = {
+		logistics
+	}
+	building_modifiers = {
+		workforce_scaled = {	
+			goods_output_usu_logistics_add = 40
+		}
+	}
+}
+
+USU_pm_port_r_logistics_2 = {
+	texture = "gfx/interface/icons/production_method_icons/log_2.dds"
+	unlocking_technologies = {
+		electric_telegraph
+	}
+	building_modifiers = {
+		workforce_scaled = {	
+			goods_output_usu_logistics_add = 80
+		}
+	}
+}
+
+USU_pm_port_r_logistics_3 = {
+	texture = "gfx/interface/icons/production_method_icons/log_3.dds"
+	unlocking_technologies = {
+		electric_telegraph
+		corporate_management
+	}
+	building_modifiers = {
+		workforce_scaled = {	
+			goods_output_usu_logistics_add = 140
+		}
+	}
+}

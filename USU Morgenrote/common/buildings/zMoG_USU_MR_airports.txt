@@ -1,0 +1,21 @@
+﻿# Respecified purely so that the auto-expand rules are properly managed.
+
+building_airport = {
+	building_group = bg_private_infrastructure	
+	texture = "gfx/interface/icons/building_icons/airport.dds"
+	
+	unlocking_technologies = {
+		curtiss_modern_aviation_tech
+	}
+	
+	production_method_groups = {
+		pmg_base_building_airport
+		pmg_cargo_airport
+	}
+	
+	required_construction = construction_cost_high
+	
+	ai_value = 1000 # Airports are less important than railroads
+	
+	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_railways.dds"
+}

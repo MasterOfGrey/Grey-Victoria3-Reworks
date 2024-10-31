@@ -1,0 +1,31 @@
+﻿## PRIVATIZED PORTS (replace regular ports)
+building_port = {
+	building_group = USU_bg_port_infrastructure
+	city_type = port
+	texture = "gfx/interface/icons/building_icons/building_port.dds"
+	
+	ai_nationalization_desire = 0.5 	# Copied from railways - AI is reluctant to privatize vital infrastructure
+	ai_value = 3000 					# Just get it done, eh
+	
+	has_max_level = yes
+	ignore_stateregion_max_level = yes
+	port = yes
+	
+	unlocking_technologies = { navigation }
+	
+	production_method_groups = {
+		pmg_base_building_port
+		pmg_logistics_services_port_coastal
+	}
+	
+	required_construction = construction_cost_medium
+	ownership_type = self
+	
+	terrain_manipulator = urban_port
+	
+	possible = {
+		is_coastal = yes
+	}
+	
+	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_monuments.dds"
+}

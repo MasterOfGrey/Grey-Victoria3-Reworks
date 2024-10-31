@@ -1,0 +1,170 @@
+﻿### Defaults - Just rebalanced for urban construction.
+
+pm_market_stalls = {
+	texture = "gfx/interface/icons/production_method_icons/market_stalls.dds"
+	
+	country_modifiers = {
+		workforce_scaled = {
+			country_construction_add = 0.1
+		}
+	}
+	
+	building_modifiers = {
+		workforce_scaled = {
+			goods_input_fabric_add = 1
+			goods_input_wood_add = 2
+			goods_output_services_add = 18
+		}
+		
+		level_scaled = {
+			building_employment_laborers_add = 3500
+			building_employment_clerks_add = 1000
+			building_employment_shopkeepers_add = 500
+		}
+		
+		unscaled = {
+			building_shopkeepers_shares_add = 10
+		}
+	}
+	
+	state_modifiers = {
+		workforce_scaled = {
+			state_construction_mult = 0.0005
+			building_food_industry_throughput_add = 0.01
+			building_textile_mills_throughput_add = 0.01
+			building_furniture_manufacturies_throughput_add = 0.01
+		}	
+	}
+}
+
+pm_market_squares = {
+	texture = "gfx/interface/icons/production_method_icons/market_squares.dds"
+	
+	unlocking_technologies = { urban_planning }
+	
+	country_modifiers = {
+		workforce_scaled = {
+			country_construction_add = 0.5
+		}
+	}
+	
+	building_modifiers = {
+		workforce_scaled = {
+			goods_input_hardwood_add = 1
+			goods_input_fabric_add = 1
+			goods_input_iron_add = 1
+			goods_input_glass_add = 1
+			goods_input_tools_add = 0.5
+			goods_output_services_add = 29
+		}
+		
+		level_scaled = {
+			building_employment_laborers_add = 3000
+			building_employment_clerks_add = 1400
+			building_employment_shopkeepers_add = 500
+			building_employment_machinists_add = 100
+		}
+		
+		unscaled = {
+			building_shopkeepers_shares_add = 10
+		}
+	}
+	
+	state_modifiers = {
+		workforce_scaled = {
+			state_construction_mult = 0.001
+			building_food_industry_throughput_add = 0.01
+			building_textile_mills_throughput_add = 0.01
+			building_furniture_manufacturies_throughput_add = 0.01
+		}	
+	}
+}
+
+pm_covered_markets = {
+	texture = "gfx/interface/icons/production_method_icons/covered_markets.dds"
+	
+	unlocking_technologies = { steel_frame_buildings }
+	
+	country_modifiers = {
+		workforce_scaled = {
+			country_construction_add = 1
+		}
+	}
+	
+	building_modifiers = {
+		workforce_scaled = {
+			goods_input_glass_add = 2
+			goods_input_steel_add = 1
+			goods_input_hardwood_add = 2
+			goods_input_tools_add = 1
+			goods_input_fabric_add = 1
+			goods_output_services_add = 42
+		}
+		
+		level_scaled = {
+			building_employment_laborers_add = 2500
+			building_employment_clerks_add = 1750
+			building_employment_shopkeepers_add = 500
+			building_employment_machinists_add = 250
+		}
+		
+		unscaled = {
+			building_shopkeepers_shares_add = 10
+		}
+	}
+	
+	state_modifiers = {
+		workforce_scaled = {
+			state_construction_mult = 0.0015
+			building_food_industry_throughput_add = 0.01
+			building_textile_mills_throughput_add = 0.01
+			building_furniture_manufacturies_throughput_add = 0.01
+		}	
+	}
+}
+
+pm_arcades = {
+	texture = "gfx/interface/icons/production_method_icons/arcades.dds"
+	
+	unlocking_technologies = { elevator }
+	
+	country_modifiers = {
+		workforce_scaled = {
+			country_construction_add = 2
+		}
+	}
+	
+	building_modifiers = {
+		workforce_scaled = {
+			goods_input_glass_add = 2
+			goods_input_steel_add = 2
+			goods_input_fabric_add = 1
+			goods_input_tools_add = 2
+			goods_input_hardwood_add = 2
+			goods_input_electricity_add = 1
+			goods_output_services_add = 55
+		}
+		
+		level_scaled = {
+			building_employment_laborers_add = 1000
+			building_employment_clerks_add = 2000
+			building_employment_shopkeepers_add = 1000
+			building_employment_machinists_add = 500
+		}
+		
+		unscaled = {
+			building_shopkeepers_shares_add = 10
+		}
+	}
+	
+	state_modifiers = {
+		workforce_scaled = {
+			state_construction_mult = 0.002
+			building_food_industry_throughput_add = 0.01
+			building_textile_mills_throughput_add = 0.01
+			building_furniture_manufacturies_throughput_add = 0.01
+		}	
+	}
+	
+	required_input_goods = electricity
+}

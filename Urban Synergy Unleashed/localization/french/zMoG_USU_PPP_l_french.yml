@@ -1,0 +1,49 @@
+﻿l_french:
+    # Building
+    PPP_building_power_grid: "Réseau électrique"
+
+    # Technologies
+    PPP_tech_hv_power: "Transmission électrique à haute tension"
+    PPP_tech_hv_power_desc: "En manipulant l'électricité pour alterner entre différentes directions, des tensions élevées permettant une transmission d'énergie rentable sur de longues distances peuvent être atteintes."
+
+    # Goods
+    ppp_hv_power: "Énergie électrique à haute tension"
+
+    # Modifier types
+    goods_input_ppp_hv_power_add: "Entrée de @ppp_hv_power![Nbsp]$ppp_hv_power$"
+    goods_output_ppp_hv_power_add: "Sortie de @ppp_hv_power![Nbsp]$ppp_hv_power$"
+    goods_input_ppp_hv_power_mult: "Construction d'@ppp_hv_power![Nbsp]$ppp_hv_power$, entrée"
+    goods_output_ppp_hv_power_mult: "Construction d'@ppp_hv_power![Nbsp]$ppp_hv_power$, sortie"
+    
+    goods_input_ppp_hv_power_add_desc: "Quantité d'@ppp_hv_power![Nbsp]$ppp_hv_power$ consommée par les bâtiments"
+    goods_output_ppp_hv_power_add_desc: "Quantité d'@ppp_hv_power![Nbsp]$ppp_hv_power$ produite par les bâtiments"
+    goods_input_ppp_hv_power_mult_desc: "Bonus ou malus à la quantité d'@ppp_hv_power![Nbsp]$ppp_hv_power$ consommée par les bâtiments"
+    goods_output_ppp_hv_power_mult_desc: "Bonus ou malus à la quantité d'@ppp_hv_power![Nbsp]$ppp_hv_power$ produite par les bâtiments"
+
+    goods_input_steel_mult: "Construction de $goods_input_steel_add$"
+    goods_input_tools_mult: "Construction de $goods_input_tools_add$"
+
+    goods_input_steel_mult_desc: "$goods_input_steel_add_desc$"
+    goods_input_tools_mult_desc: "$goods_input_tools_add_desc$"
+    
+    # PMGs
+    PPP_pmg_generation_machinery: "Machines de génération"
+    PPP_pmg_HV_generation: "Distribution d'énergie"
+    PPP_pmg_power_grid: "$pm_base$"
+    PPP_pmg_power_grid_scaler: "Capacité de distribution"
+
+    # PMs
+    PPP_pm_hydro_mechanical: "Turbines hydrauliques"
+    PPP_pm_steam_engine: "Moteurs à vapeur"
+    PPP_pm_steam_turbine: "Turbines à vapeur"
+    PPP_pm_gas_turbine: "Turbines à gaz"
+
+    PPP_pm_local_power: "Électricité locale"
+    PPP_pm_grid_power: "Réseau électrique"
+
+    PPP_pm_grid_base: "Distribution régionale"
+
+    PPP_pm_grid_water: "Capacité normale"
+    PPP_pm_grid_engine: "Capacité augmentée"
+    PPP_pm_grid_turbine: "Capacité doublée"
+    PPP_pm_grid_gas_turbine: "Capacité triplée"

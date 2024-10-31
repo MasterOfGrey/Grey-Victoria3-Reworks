@@ -1,0 +1,86 @@
+﻿namespace = canal_dividends
+
+canal_dividends.1 = {
+	type = country_event # can be country_event, character_event, or state_event
+	placement = scope:canal_accident_state
+
+	title = canal_dividends.1.t
+	desc = canal_dividends.1.d
+	flavor = canal_dividends.1.f
+
+	event_image = {
+		video = "gfx/event_pictures/africa_construction_colony.bk2"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/asia/factory_accident"
+
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+
+	duration = 3
+
+	trigger = {
+		any_scope_state = {
+			OR = {
+				has_building = building_suez_canal
+				has_building = building_panama_canal
+			}
+		}
+		NOT = {
+			has_variable = canal_accident
+		}
+	}
+	immediate = {
+		random_scope_state = {
+			limit = {
+				OR = {
+					has_building = building_suez_canal
+					has_building = building_panama_canal
+				}
+			}
+			save_scope_as = canal_accident_state
+		}
+		set_variable = {
+			name = canal_accident
+			value = yes
+		}
+	}
+
+	option = {
+		name = canal_dividends.1.1
+		default_option=yes
+
+		scope:canal_accident_state = {
+			if = {
+				limit = {
+					has_building = building_suez_canal
+				}
+				b:building_suez_canal = {
+					add_modifier = {
+						name = mog_building_canal_accident
+						months = short_modifier_time
+					}
+					save_scope_as = canal_accident_suez
+				}
+			}
+			if = {
+				limit = {
+					has_building = building_panama_canal
+				}
+				b:building_panama_canal = {
+					add_modifier = {
+						name = mog_building_canal_accident
+						months = short_modifier_time
+					}
+					save_scope_as = canal_accident_panama
+				}
+			}
+
+			#add_modifier = {
+			#	name = modifier_state_canal_accident
+			#	months = normal_modifier_time
+			#}
+		}
+	}
+
+}

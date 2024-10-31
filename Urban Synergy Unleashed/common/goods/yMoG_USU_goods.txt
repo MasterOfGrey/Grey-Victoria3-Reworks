@@ -1,0 +1,57 @@
+﻿# goods types, organized by category
+
+# prestige_factor	-	Base prestige for occupying the rank MIN_PRESTIGE_AWARD spot on the goods production leaderboard. x2 awarded for every rank above the minimum.
+
+####################
+# Original: STAPLE #
+
+fabric = {
+	texture = "gfx/interface/icons/goods_icons/fabric.dds"
+	cost = 20
+	category = industrial
+	
+	prestige_factor = 3
+	
+	traded_quantity = 10
+	convoy_cost_multiplier = 0.25
+	
+	consumption_tax_cost = 300
+}
+
+wood = {
+	texture = "gfx/interface/icons/goods_icons/wood.dds"
+	cost = 20
+	category = industrial
+	
+	prestige_factor = 3
+	
+	traded_quantity = 10
+	convoy_cost_multiplier = 0.25
+	
+	consumption_tax_cost = 300
+}
+
+transportation = {
+	texture = "gfx/interface/icons/goods_icons/transportation.dds"
+	cost = 30
+	category = industrial
+	local = yes
+
+	prestige_factor = 4
+	
+	consumption_tax_cost = 200
+}
+
+###################
+#    LOGISTICS    #
+
+usu_logistics = {
+	texture = "gfx/interface/icons/goods_icons/logistics_services.dds"
+	cost = 10
+	category = industrial
+	
+	prestige_factor = 1
+	
+	traded_quantity = 30
+	convoy_cost_multiplier = 0
+}

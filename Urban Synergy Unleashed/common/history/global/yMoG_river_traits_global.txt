@@ -1,0 +1,129 @@
+﻿# This is executed last among all history
+GLOBAL = {
+		
+	## North America
+		# New
+		s:STATE_NEW_YORK = { add_state_trait = state_trait_hudson_river }
+		
+		# Extended
+		s:STATE_ILLINOIS = { add_state_trait = state_trait_great_lakes }
+		s:STATE_INDIANA = { add_state_trait = state_trait_great_lakes }
+		s:STATE_NEW_YORK = { add_state_trait = state_trait_great_lakes }
+		s:STATE_OHIO = { add_state_trait = state_trait_great_lakes }
+		s:STATE_PENNSYLVANIA = { add_state_trait = state_trait_great_lakes }
+		
+		# Would-be Overwrites on "touched" states (recorded here for reference, not used because present by default when not redefining the whole damn state)
+		# s:STATE_ILLINOIS = { add_state_trait = state_trait_mississippi_river }
+		# s:STATE_INDIANA = { add_state_trait = state_trait_ohio_river }
+		# s:STATE_OHIO = { add_state_trait = state_trait_ohio_river }
+		# s:STATE_PENNSYLVANIA = { add_state_trait = state_trait_ohio_river }
+		
+		# Traits not in any touched states:
+		# state_trait_columbia_river
+		
+	## South America
+		# New
+		
+		# Extended
+		s:STATE_BOLIVAR = { add_state_trait = state_trait_orinoco_river }
+		s:STATE_MIRANDA = { add_state_trait = state_trait_orinoco_river }
+		s:STATE_AMAZONAS = { add_state_trait = state_trait_amazon_river }
+		s:STATE_PARA = { add_state_trait = state_trait_amazon_river }
+		
+		# Would-be Overwrites on "touched" states (recorded here for reference, not used because present by default when not redefining the whole damn state)
+		
+		# Traits not in any touched states:
+		# state_trait_uruguay_river
+		# state_trait_paraguay_river
+		# state_trait_parana_river
+		# state_trait_lake_maracaibo
+		
+	## Europe
+		# New
+		
+		# Extended
+		s:STATE_EMILIA = { add_state_trait = state_trait_po_river }
+		s:STATE_ROMAGNA = { add_state_trait = state_trait_po_river }
+		
+		# Would-be Overwrites on "touched" states (recorded here for reference, not used because present by default when not redefining the whole damn state)
+		
+		# Traits not in any touched states:
+		# state_trait_rhine_river
+		# state_trait_elbe_river
+		# state_trait_oder_river
+		# state_trait_rhone_river
+		# state_trait_loire_river
+		# state_trait_seine_river
+		# state_trait_drava_river
+		# state_trait_danube_river
+		
+	## Russia / Central Asia
+		# New
+		
+		# Extended
+		
+		# Would-be Overwrites on "touched" states (recorded here for reference, not used because present by default when not redefining the whole damn state)
+		
+		# Traits not in any touched states:
+		# state_trait_dnieper_river
+		# state_trait_ob_river
+		# state_trait_volga_river
+		
+	## Africa
+		# New
+		
+		# Extended
+		
+		# Would-be Overwrites on "touched" states (recorded here for reference, not used because present by default when not redefining the whole damn state)
+		
+		# Traits not in any touched states:
+		# state_trait_nile_river
+		# state_trait_congo_river
+		# state_trait_niger_river
+		# state_trait_lake_victoria
+		# state_trait_zambezi_river
+
+	## Middle East / India
+		# New
+		
+		# Extended
+		s:STATE_NORTH_BENGAL = { add_state_trait = state_trait_brahmaputra_river }
+		s:STATE_SOUTH_BENGAL = { add_state_trait = state_trait_brahmaputra_river }
+		
+		# Would-be Overwrites on "touched" states (recorded here for reference, not used because present by default when not redefining the whole damn state)
+		
+		# Traits not in any touched states:
+		# state_trait_tigris_river
+		# state_trait_euphrates_river
+		# state_trait_indus_river
+		# state_trait_ganges_river
+		# state_trait_bengal_delta
+		# state_trait_cauvery_delta
+		
+	## SE Asia / Oceania
+		# New
+		
+		# Extended
+		
+		# Would-be Overwrites on "touched" states (recorded here for reference, not used because present by default when not redefining the whole damn state)
+		
+		# Traits not in any touched states:
+		# state_trait_mekong_river
+		# state_trait_kapuas_river
+		# state_trait_sarawak_river
+		# state_trait_mekong_delta
+		
+	## China / East Asia
+		# New
+		
+		# Extended
+		
+		# Would-be Overwrites on "touched" states (recorded here for reference, not used because present by default when not redefining the whole damn state)
+		
+		# Traits not in any touched states:
+		# state_trait_pearl_river
+		# state_trait_yangtze_river
+		# state_trait_yellow_river
+		# state_trait_irrwaddy_delta
+		# state_trait_chao_phraya_delta
+}

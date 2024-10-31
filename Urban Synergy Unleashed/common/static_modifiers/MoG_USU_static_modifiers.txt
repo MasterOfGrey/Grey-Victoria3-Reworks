@@ -1,0 +1,18 @@
+﻿# Add an additional 100 urbanization required per level
+mog_urbanization = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_positive.dds
+	state_urbanization_per_level_add = 100		# Balance point for new Urban Centre design	
+	state_market_access_price_impact = -0.1		# 100% MAPI should actually be incredibly hard to achieve, we don't even get it everywhere IRL now - allows room for Ports and Railroads to add MAPI without reaching 100%
+}
+
+mog_logistics_land_trade = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_coins_positive.dds
+	market_land_trade_capacity_add = 1
+}
+
+mog_building_canal_accident = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_gear_negative.dds
+	goods_output_transportation_mult = -0.5
+    goods_output_usu_logistics_mult = -0.5
+    goods_input_tools_mult = 2
+}

@@ -1,0 +1,377 @@
+﻿state_trait_st_lawrence_river = {
+	icon = "gfx/interface/icons/state_trait_icons/river.dds"
+	modifier = {
+		state_building_river_port_max_level_add = 2
+		state_infrastructure_add = 20
+		state_market_access_price_impact = 0.05
+	}
+}
+state_trait_mississippi_river = {
+	icon = "gfx/interface/icons/state_trait_icons/river.dds"
+	modifier = {
+		state_building_river_port_max_level_add = 2
+		state_infrastructure_add = 20
+		state_market_access_price_impact = 0.05
+	}
+}
+
+state_trait_ohio_river = {
+	icon = "gfx/interface/icons/state_trait_icons/river.dds"
+	modifier = {
+		state_infrastructure_add = 10
+		state_building_river_port_max_level_add = 1
+	}
+}
+
+state_trait_columbia_river = {
+	icon = "gfx/interface/icons/state_trait_icons/river.dds"
+		modifier = {
+		state_infrastructure_add = 10
+		state_building_river_port_max_level_add = 1
+	}
+}
+
+state_trait_great_lakes = {
+	icon = "gfx/interface/icons/state_trait_icons/river.dds"
+	modifier = {
+		state_infrastructure_add = 20
+		state_building_river_port_max_level_add = 2
+		state_market_access_price_impact = 0.05
+	}
+}
+
+state_trait_orinoco_river = {
+	icon = "gfx/interface/icons/state_trait_icons/river.dds"
+	modifier = {
+		state_building_river_port_max_level_add = 1
+		state_infrastructure_add = 10
+	}
+}
+
+state_trait_uruguay_river = {
+	icon = "gfx/interface/icons/state_trait_icons/river.dds"
+	modifier = {
+		state_building_river_port_max_level_add = 1
+		state_infrastructure_add = 10
+	}
+}
+
+state_trait_parana_river = {
+	icon = "gfx/interface/icons/state_trait_icons/river.dds"
+	modifier = {
+		state_building_river_port_max_level_add = 1
+		state_infrastructure_add = 10
+	}
+}
+
+state_trait_paraguay_river = {
+	icon = "gfx/interface/icons/state_trait_icons/river.dds"
+	modifier = {
+		state_building_river_port_max_level_add = 1
+		state_infrastructure_add = 10
+	}
+}
+
+state_trait_amazon_river = {
+	icon = "gfx/interface/icons/state_trait_icons/river.dds"
+	modifier = {
+		state_building_river_port_max_level_add = 1
+		state_infrastructure_add = 10
+	}
+}
+
+state_trait_lake_maracaibo = {
+    icon = "gfx/interface/icons/state_trait_icons/resources_fish.dds"
+	modifier = {
+		building_group_bg_oil_extraction_throughput_add = 0.2
+		building_group_bg_fishing_throughput_add = 0.2
+		state_building_river_port_max_level_add = 1
+		state_infrastructure_add = 10
+	}
+}
+
+state_trait_rhine_river = {
+	icon = "gfx/interface/icons/state_trait_icons/river.dds"
+	modifier = {
+		state_building_river_port_max_level_add = 2
+		state_infrastructure_add = 20
+		state_market_access_price_impact = 0.05
+	}
+}
+
+state_trait_elbe_river = {
+	icon = "gfx/interface/icons/state_trait_icons/river.dds"
+	modifier = {
+		state_building_river_port_max_level_add = 1
+		state_infrastructure_add = 10
+	}
+}
+
+state_trait_oder_river = {
+	icon = "gfx/interface/icons/state_trait_icons/river.dds"
+	modifier = {
+		state_building_river_port_max_level_add = 1
+		state_infrastructure_add = 10
+	}
+}
+
+state_trait_rhone_river = {
+	icon = "gfx/interface/icons/state_trait_icons/river.dds"
+	modifier = {
+		state_building_river_port_max_level_add = 1
+		state_infrastructure_add = 10
+	}
+}
+
+state_trait_loire_river = {
+	icon = "gfx/interface/icons/state_trait_icons/river.dds"
+	modifier = {
+		state_building_river_port_max_level_add = 1
+		state_infrastructure_add = 10
+	}
+}
+
+state_trait_seine_river = {
+	icon = "gfx/interface/icons/state_trait_icons/river.dds"
+	modifier = {
+		state_building_river_port_max_level_add = 1
+		state_infrastructure_add = 10
+	}
+}
+
+state_trait_po_river = {
+	icon = "gfx/interface/icons/state_trait_icons/river.dds"
+	modifier = {
+		state_building_river_port_max_level_add = 1
+		state_infrastructure_add = 10
+	}
+}
+
+state_trait_drava_river = {
+	icon = "gfx/interface/icons/state_trait_icons/river.dds"
+	modifier = {
+		state_building_river_port_max_level_add = 1
+		state_infrastructure_add = 10
+	}
+}
+
+state_trait_danube_river = {
+	icon = "gfx/interface/icons/state_trait_icons/river.dds"
+	modifier = {
+		state_building_river_port_max_level_add = 2
+		state_infrastructure_add = 20
+		state_market_access_price_impact = 0.05
+	}
+}
+
+state_trait_volga_river = {
+	icon = "gfx/interface/icons/state_trait_icons/river.dds"
+	modifier = {
+		state_building_river_port_max_level_add = 2
+		state_infrastructure_add = 20
+		state_market_access_price_impact = 0.05
+	}
+}
+
+state_trait_dnieper_river = {
+	icon = "gfx/interface/icons/state_trait_icons/river.dds"
+	modifier = {
+		state_building_river_port_max_level_add = 2
+		state_infrastructure_add = 20
+		state_market_access_price_impact = 0.05
+	}
+}
+
+state_trait_nile_river = {
+	icon = "gfx/interface/icons/state_trait_icons/river.dds"
+	modifier = {
+		building_group_bg_agriculture_throughput_add = 0.2
+		building_group_bg_plantations_throughput_add = 0.2
+		state_infrastructure_add = 20
+		state_building_river_port_max_level_add = 2
+		state_market_access_price_impact = 0.05
+	}
+}
+
+state_trait_congo_river = {
+	icon = "gfx/interface/icons/state_trait_icons/river.dds"
+	modifier = {
+		state_building_river_port_max_level_add = 1
+		state_infrastructure_add = 10	}
+}
+
+state_trait_niger_river = {
+	icon = "gfx/interface/icons/state_trait_icons/river.dds"
+	modifier = {
+		state_building_river_port_max_level_add = 1
+		state_infrastructure_add = 10
+	}
+}
+
+state_trait_lake_victoria = {
+	icon = "gfx/interface/icons/state_trait_icons/river.dds"
+	modifier = {
+		state_building_river_port_max_level_add = 1
+		state_infrastructure_add = 10
+	}
+}
+
+state_trait_zambezi_river = {
+	icon = "gfx/interface/icons/state_trait_icons/river.dds"
+	modifier = {
+		state_building_river_port_max_level_add = 1
+		state_infrastructure_add = 10
+	}
+}
+
+state_trait_tigris_river = {
+	icon = "gfx/interface/icons/state_trait_icons/river.dds"
+	modifier = {
+		state_building_river_port_max_level_add = 1
+		state_infrastructure_add = 10
+	}
+}
+
+state_trait_euphrates_river = {
+	icon = "gfx/interface/icons/state_trait_icons/river.dds"
+	modifier = {
+		state_building_river_port_max_level_add = 1
+		state_infrastructure_add = 10
+	}
+}
+
+state_trait_ob_river = {
+	icon = "gfx/interface/icons/state_trait_icons/river.dds"
+	modifier = {
+		state_building_river_port_max_level_add = 1
+		state_infrastructure_add = 10
+	}
+}
+
+state_trait_indus_river = {
+	icon = "gfx/interface/icons/state_trait_icons/river.dds"
+	modifier = {
+		state_building_river_port_max_level_add = 2
+		state_infrastructure_add = 20
+		state_market_access_price_impact = 0.05
+	}
+}
+
+state_trait_ganges_river = {
+	icon = "gfx/interface/icons/state_trait_icons/river.dds"
+	modifier = {
+		building_group_bg_agriculture_throughput_add = 0.15
+		building_group_bg_plantations_throughput_add = 0.15
+		state_building_river_port_max_level_add = 2
+		state_infrastructure_add = 20
+		state_market_access_price_impact = 0.05
+	}
+}
+
+state_trait_brahmaputra_river = {
+	icon = "gfx/interface/icons/state_trait_icons/river.dds"
+	modifier = {
+		state_building_river_port_max_level_add = 1
+		state_infrastructure_add = 10
+	}
+}
+
+state_trait_mekong_river = {
+	icon = "gfx/interface/icons/state_trait_icons/river.dds"
+	modifier = {
+		state_building_river_port_max_level_add = 1
+		state_infrastructure_add = 10
+	}
+}
+
+state_trait_kapuas_river = {
+	icon = "gfx/interface/icons/state_trait_icons/river.dds"
+	modifier = {
+		state_building_river_port_max_level_add = 1
+		state_infrastructure_add = 10
+	}
+}
+
+state_trait_sarawak_river = {
+	icon = "gfx/interface/icons/state_trait_icons/river.dds"
+	modifier = {
+		state_building_river_port_max_level_add = 1
+		state_infrastructure_add = 10
+	}
+}
+
+state_trait_pearl_river = {
+	icon = "gfx/interface/icons/state_trait_icons/river.dds"
+	modifier = {
+		state_building_river_port_max_level_add = 2
+		state_infrastructure_add = 20
+		state_market_access_price_impact = 0.05
+	}
+}
+
+state_trait_yangtze_river = {
+	icon = "gfx/interface/icons/state_trait_icons/river.dds"
+	modifier = {
+		state_building_river_port_max_level_add = 4
+		state_infrastructure_add = 40
+		state_market_access_price_impact = 0.05
+	}
+}
+
+state_trait_yellow_river = {
+	icon = "gfx/interface/icons/state_trait_icons/river.dds"
+	modifier = {
+		state_building_river_port_max_level_add = 4
+		state_infrastructure_add = 40
+		state_market_access_price_impact = 0.05
+	}
+}
+
+state_trait_bengal_delta = {
+	icon = "gfx/interface/icons/state_trait_icons/river.dds"
+	modifier = {
+		building_group_bg_agriculture_throughput_add = 0.25
+		building_group_bg_plantations_throughput_add = 0.25
+		state_building_river_port_max_level_add = 2
+		state_infrastructure_add = 20
+	}
+}
+
+state_trait_cauvery_delta = {
+	icon = "gfx/interface/icons/state_trait_icons/river.dds"
+	modifier = {
+		building_group_bg_agriculture_throughput_add = 0.2
+		building_group_bg_plantations_throughput_add = 0.2
+		state_building_river_port_max_level_add = 1
+		state_infrastructure_add = 10
+	}
+}
+state_trait_irrwaddy_delta = {
+	icon = "gfx/interface/icons/state_trait_icons/river.dds"
+	modifier = {
+		building_group_bg_agriculture_throughput_add = 0.15
+		building_group_bg_plantations_throughput_add = 0.15
+		state_building_river_port_max_level_add = 1
+		state_infrastructure_add = 10
+	}
+}
+
+state_trait_mekong_delta = {
+	icon = "gfx/interface/icons/state_trait_icons/river.dds"
+	modifier = {
+		building_group_bg_agriculture_throughput_add = 0.15
+		building_group_bg_plantations_throughput_add = 0.15
+		state_building_river_port_max_level_add = 1
+		state_infrastructure_add = 10
+	}
+}
+
+state_trait_chao_phraya_delta = {
+	icon = "gfx/interface/icons/state_trait_icons/river.dds"
+	modifier = {
+		building_group_bg_agriculture_throughput_add = 0.15
+		building_group_bg_plantations_throughput_add = 0.15
+		state_building_river_port_max_level_add = 1
+		state_infrastructure_add = 10
+	}
+}

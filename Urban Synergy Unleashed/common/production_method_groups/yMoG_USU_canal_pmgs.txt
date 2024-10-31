@@ -1,0 +1,30 @@
+﻿pmg_canal = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	ai_selection = most_productive
+	
+	production_methods = {
+		pm_canal
+		pm_canals_electric
+		pm_canals_oil
+	}
+}
+
+pmg_canal_boats = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	ai_selection = most_productive
+	
+	production_methods = {
+		pm_no_tugs_building_canals
+		pm_tugging_building_canals
+	}
+}
+
+pmg_canal_logistics = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	
+	production_methods = {
+		pm_no_canal_logistics
+		pm_minor_canal_logistics
+		pm_major_canal_logistics
+	}
+}

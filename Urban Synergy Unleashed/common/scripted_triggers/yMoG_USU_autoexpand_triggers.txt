@@ -1,0 +1,142 @@
+﻿# Vanilla overwrite:
+default_auto_expand_rule = { 
+	OR = {
+		mog_base_auto_expand_rule = yes
+		mog_construct_special_building_allow = yes
+	}
+}
+
+# Collection logic:
+mog_base_auto_expand_rule = {
+	AND = {
+		mog_b_basics_ok = yes
+		mog_normal_building_confirm = yes
+	}
+}
+
+mog_construct_special_building_allow = {
+	OR = {
+		AND = {
+			OR = {
+				is_building_type = building_railway
+				is_building_type = building_port
+				is_building_type = building_river_port
+			}
+			mog_b_infrastructure_ok = yes 		# Excludes default check for sufficient infrastructure.
+			OR = {
+				mog_infrastructure_low = yes
+				state = {
+					sg:transportation = {
+						state_goods_pricier > 0.10
+					}
+				}
+			}
+		}
+		AND = {
+			is_building_type = building_power_plant
+			mog_b_basics_ok = yes
+			state = {
+				sg:ppp_hv_power = { 
+					state_goods_pricier >= 0.10
+				}
+			}
+		}
+		AND = {
+			is_building_type = PPP_building_power_grid
+			mog_b_basics_ok = yes
+			state = {
+				sg:electricity = {
+					state_goods_pricier >= 0.10
+				}
+				sg:ppp_hv_power = { 
+					state_goods_pricier <= 0.30
+				}
+			}
+		}
+	}
+}
+
+### Building Status Basics:
+mog_b_basics_ok = {
+	AND = {
+		mog_profit_ok = yes
+		mog_market_access_ok = yes
+		mog_shortages_ok = yes
+		mog_employment_ok = yes
+		mog_construction_ok = yes
+	}
+}
+
+### Building Status Specials:
+mog_b_infrastructure_ok = {
+	AND = {
+		mog_profit_ok = yes
+		mog_shortages_ok = yes
+		mog_employment_ok = yes
+		mog_construction_ok = yes
+	}
+}
+
+mog_normal_building_confirm = {
+	nor = {
+		is_building_type = building_subsistence_farms
+		is_building_type = building_subsistence_orchards
+		is_building_type = building_subsistence_pastures
+		is_building_type = building_subsistence_fishing_villages
+		is_building_type = building_subsistence_rice_paddies
+		is_building_type = building_urban_center
+		is_building_type = building_trade_center
+		is_building_type = building_manor_house
+		is_building_type = building_financial_district
+		is_building_type = building_gold_fields
+		
+		is_building_type = building_government_administration
+		is_building_type = building_university
+		is_building_type = building_skyscraper
+		is_building_type = building_construction_sector
+		
+		is_building_type = building_railway
+		is_building_type = building_port
+		is_building_type = building_river_port
+		is_building_type = building_power_plant
+		is_building_type = PPP_building_power_grid
+	}
+}
+
+
+# Building Status Basic Parts:
+mog_profit_ok = {
+	OR = {
+		is_subsidized = yes
+		earnings > 3
+	}
+}
+mog_market_access_ok = {
+	OR = {
+		state.market_access >= 0.98
+		state = {
+			relative_infrastructure > 1
+		}
+	}
+}
+mog_shortages_ok = {
+	building_has_goods_shortage = no
+}
+mog_employment_ok = {
+	occupancy >= 0.98
+}
+mog_construction_ok = {
+	NOT = {
+		is_under_construction = yes 
+	}
+	can_queue_building_levels = 1
+}
+
+# Building Status Special Parts:
+mog_infrastructure_low = {
+	state = {
+		relative_infrastructure <= 1
+	}
+}
+
+

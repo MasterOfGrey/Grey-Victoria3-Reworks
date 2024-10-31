@@ -1,0 +1,425 @@
+﻿BUILDINGS={
+	s:STATE_ZEALAND={
+		region_state:DEN={
+			create_building={
+				building="building_river_port"
+				level=1
+				activate_production_methods={ "pm_rp_small_port" }
+			}		
+		}
+	}
+	s:STATE_HOLLAND={
+		region_state:NET={
+			create_building={
+				building="building_river_port"
+				level=1
+				activate_production_methods={ "pm_rp_small_port" }
+			}		
+		}
+	}
+	s:STATE_GELRE={
+		region_state:NET={
+			create_building={
+				building="building_river_port"
+				level=1
+				activate_production_methods={ "pm_rp_small_port" }
+			}		
+		}
+	}
+	s:STATE_NORTH_RHINE={
+		region_state:PRU={
+			create_building={
+				building="building_river_port"
+				level=1
+				activate_production_methods={ "pm_rp_small_port" }
+			}		
+		}
+	}
+	s:STATE_RHINELAND={
+		region_state:PRU={
+			create_building={
+				building="building_river_port"
+				level=1
+				activate_production_methods={ "pm_rp_small_port" }
+			}		
+		}
+	}
+	s:STATE_RUHR={
+		region_state:PRU={
+			create_building={
+				building="building_river_port"
+				level=1
+				activate_production_methods={ "pm_rp_small_port" }
+			}		
+		}
+	}
+	s:STATE_BADEN={
+		region_state:BAD={
+			create_building={
+				building="building_river_port"
+				level=1
+				activate_production_methods={ "pm_rp_small_port" }
+			}		
+		}
+	}
+	s:STATE_EAST_SWITZERLAND={
+		region_state:SWI={
+			create_building={
+				building="building_river_port"
+				level=1
+				activate_production_methods={ "pm_rp_small_port" }
+			}		
+		}
+	}
+	s:STATE_WEST_SWITZERLAND={
+		region_state:SWI={
+			create_building={
+				building="building_river_port"
+				level=1
+				activate_production_methods={ "pm_rp_small_port" }
+			}		
+		}
+	}
+	s:STATE_ELBE={
+		region_state:HAM={
+			create_building={
+				building="building_river_port"
+				level=1
+				activate_production_methods={ "pm_rp_small_port" }
+			}		
+		}
+	}
+	s:STATE_ELBE={
+		region_state:HAN={
+			create_building={
+				building="building_river_port"
+				level=1
+				activate_production_methods={ "pm_rp_small_port" }
+			}		
+		}
+	}
+	s:STATE_ANHALT={
+		region_state:PRU={
+			create_building={
+				building="building_river_port"
+				level=1
+				activate_production_methods={ "pm_rp_small_port" }
+			}		
+		}
+	}
+	s:STATE_ANHALT={
+		region_state:ANH={
+			create_building={
+				building="building_river_port"
+				level=1
+				activate_production_methods={ "pm_rp_small_port" }
+			}		
+		}
+	}
+	s:STATE_SAXONY={
+		region_state:SAX={
+			create_building={
+				building="building_river_port"
+				level=1
+				activate_production_methods={ "pm_rp_small_port" }
+			}		
+		}
+	}
+	s:STATE_BOHEMIA={
+		region_state:AUS={
+			create_building={
+				building="building_river_port"
+				level=1
+				activate_production_methods={ "pm_rp_small_port" }
+			}		
+		}
+	}
+	s:STATE_BAVARIA={
+		region_state:BAV={
+			create_building={
+				building="building_river_port"
+				level=1
+				activate_production_methods={ "pm_rp_small_port" }
+			}		
+		}
+	}
+	s:STATE_AUSTRIA={
+		region_state:AUS={
+			create_building={
+				building="building_river_port"
+				level=1
+				activate_production_methods={ "pm_rp_small_port" }
+			}		
+		}
+	}
+	s:STATE_WEST_SLOVAKIA={
+		region_state:AUS={
+			create_building={
+				building="building_river_port"
+				level=1
+				activate_production_methods={ "pm_rp_small_port" }
+			}		
+		}
+	}
+	s:STATE_TRANSDANUBIA={
+		region_state:AUS={
+			create_building={
+				building="building_river_port"
+				level=1
+				activate_production_methods={ "pm_rp_small_port" }
+			}		
+		}
+	}
+	s:STATE_CENTRAL_HUNGARY={
+		region_state:AUS={
+			create_building={
+				building="building_river_port"
+				level=1
+				activate_production_methods={ "pm_rp_small_port" }
+			}		
+		}
+	}
+	s:STATE_SLAVONIA={
+		region_state:AUS={
+			create_building={
+				building="building_river_port"
+				level=1
+				activate_production_methods={ "pm_rp_small_port" }
+			}		
+		}
+	}
+	s:STATE_DELVIDEK={
+		region_state:AUS={
+			create_building={
+				building="building_river_port"
+				level=1
+				activate_production_methods={ "pm_rp_small_port" }
+			}		
+		}
+	}
+	s:STATE_NORTHERN_SERBIA={
+		region_state:SER={
+			create_building={
+				building="building_river_port"
+				level=1
+				activate_production_methods={ "pm_rp_small_port" }
+			}		
+		}
+	}
+	s:STATE_WALLACHIA={
+		region_state:WAL={
+			create_building={
+				building="building_river_port"
+				level=1
+				activate_production_methods={ "pm_rp_small_port" }
+			}		
+		}
+	}
+	s:STATE_CROATIA={
+		region_state:AUS={
+			create_building={
+				building="building_river_port"
+				level=1
+				activate_production_methods={ "pm_rp_small_port" }
+			}		
+		}
+	}
+	s:STATE_MOSCOW={
+		region_state:RUS={
+			create_building={
+				building="building_river_port"
+				level=1
+				activate_production_methods={ "pm_rp_small_port" }
+			}		
+		}
+	}
+	s:STATE_TVER={
+		region_state:RUS={
+			create_building={
+				building="building_river_port"
+				level=1
+				activate_production_methods={ "pm_rp_small_port" }
+			}		
+		}
+	}
+	s:STATE_KAZAN={
+		region_state:RUS={
+			create_building={
+				building="building_river_port"
+				level=1
+				activate_production_methods={ "pm_rp_small_port" }
+			}		
+		}
+	}
+	s:STATE_TARTARIA={
+		region_state:RUS={
+			create_building={
+				building="building_river_port"
+				level=1
+				activate_production_methods={ "pm_rp_small_port" }
+			}		
+		}
+	}
+	s:STATE_CHERSON={
+		region_state:RUS={
+			create_building={
+				building="building_river_port"
+				level=1
+				activate_production_methods={ "pm_rp_small_port" }
+			}		
+		}
+	}
+	s:STATE_LUHANSK={
+		region_state:RUS={
+			create_building={
+				building="building_river_port"
+				level=1
+				activate_production_methods={ "pm_rp_small_port" }
+			}		
+		}
+	}
+	s:STATE_KIEV={
+		region_state:RUS={
+			create_building={
+				building="building_river_port"
+				level=1
+				activate_production_methods={ "pm_rp_small_port" }
+			}		
+		}
+	}
+	s:STATE_PIEDMONT={
+		region_state:SAR={
+			create_building={
+				building="building_river_port"
+				level=1
+				activate_production_methods={ "pm_rp_small_port" }
+			}		
+		}
+	}
+	s:STATE_LOMBARDY={
+		region_state:AUS={
+			create_building={
+				building="building_river_port"
+				level=1
+				activate_production_methods={ "pm_rp_small_port" }
+			}		
+		}
+	}
+	s:STATE_VENETIA={
+		region_state:AUS={
+			create_building={
+				building="building_river_port"
+				level=1
+				activate_production_methods={ "pm_rp_small_port" }
+			}		
+		}
+	}
+	s:STATE_ALSACE_LORRAINE={
+		region_state:FRA={
+			create_building={
+				building="building_river_port"
+				level=1
+				activate_production_methods={ "pm_rp_small_port" }
+			}		
+		}
+	}
+	s:STATE_NORMANDY={
+		region_state:FRA={
+			create_building={
+				building="building_river_port"
+				level=1
+				activate_production_methods={ "pm_rp_small_port" }
+			}		
+		}
+	}
+	s:STATE_ILE_DE_FRANCE={
+		region_state:FRA={
+			create_building={
+				building="building_river_port"
+				level=1
+				activate_production_methods={ "pm_rp_small_port" }
+			}		
+		}
+	}
+	s:STATE_BURGUNDY={
+		region_state:FRA={
+			create_building={
+				building="building_river_port"
+				level=1
+				activate_production_methods={ "pm_rp_small_port" }
+			}		
+		}
+	}
+	s:STATE_RHONE={
+		region_state:FRA={
+			create_building={
+				building="building_river_port"
+				level=1
+				activate_production_methods={ "pm_rp_small_port" }
+			}		
+		}
+	}
+	s:STATE_ORLEANS={
+		region_state:FRA={
+			create_building={
+				building="building_river_port"
+				level=1
+				activate_production_methods={ "pm_rp_small_port" }
+			}		
+		}
+	}
+	s:STATE_BRITTANY={
+		region_state:FRA={
+			create_building={
+				building="building_river_port"
+				level=1
+				activate_production_methods={ "pm_rp_small_port" }
+			}		
+		}
+	}
+	s:STATE_MAINE_ANJOU={
+		region_state:FRA={
+			create_building={
+				building="building_river_port"
+				level=1
+				activate_production_methods={ "pm_rp_small_port" }
+			}		
+		}
+	}
+	s:STATE_PROVENCE={
+		region_state:FRA={
+			create_building={
+				building="building_river_port"
+				level=1
+				activate_production_methods={ "pm_rp_small_port" }
+			}		
+		}
+	}
+	s:STATE_POMERANIA={
+		region_state:PRU={
+			create_building={
+				building="building_river_port"
+				level=1
+				activate_production_methods={ "pm_rp_small_port" }
+			}		
+		}
+	}
+	s:STATE_BRANDENBURG={
+		region_state:PRU={
+			create_building={
+				building="building_river_port"
+				level=1
+				activate_production_methods={ "pm_rp_small_port" }
+			}		
+		}
+	}
+	s:STATE_SILESIA={
+		region_state:PRU={
+			create_building={
+				building="building_river_port"
+				level=1
+				activate_production_methods={ "pm_rp_small_port" }
+			}		
+		}
+	}
+}

@@ -1,0 +1,16 @@
+﻿USU_pmg_public_space_management = {
+    texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+    
+    production_methods = {
+        USU_pm_community_orgs
+        USU_pm_private_firms
+    }
+}
+
+USU_pmg_public_parklands = {
+    texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+    
+    production_methods = {
+        USU_pm_contained_wilderness
+    }
+}

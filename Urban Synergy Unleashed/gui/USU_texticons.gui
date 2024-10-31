@@ -1,0 +1,19 @@
+texticon = {
+	icon = ppp_hv_power
+	iconsize = {
+		texture = "gfx/interface/icons/goods_icons/electricity_old.dds"
+		size = { 25 25 }
+		offset = { 0 7 }
+		fontsize = 18
+	}
+}
+
+texticon = {
+	icon = usu_logistics
+	iconsize = {
+		texture = "gfx/interface/icons/goods_icons/logistics_services.dds"
+		size = { 25 25 }
+		offset = { 0 7 }
+		fontsize = 18
+	}
+}

@@ -1,0 +1,69 @@
+﻿####
+#just the modified ones
+#########
+
+pm_domestic_routes = {
+	texture = "gfx/interface/icons/production_method_icons/air_travel_3.dds"
+	
+	unlocking_technologies = {
+		radio
+	}
+
+	building_modifiers = {
+		workforce_scaled = {
+			goods_input_radios_add = 5
+			goods_input_telephones_add = 5
+			goods_input_electricity_add = 5
+			goods_input_tools_add = 5
+			goods_input_aeroplanes_add = 10
+			goods_input_oil_add = 10
+			goods_output_air_travel_add = 25
+		}
+		level_scaled = {
+			building_employment_laborers_add = 1500
+			building_employment_machinists_add = 2500
+			building_employment_clerks_add = 1500
+		}
+	}
+
+	state_modifiers = {
+		workforce_scaled = {
+		    state_migration_pull_add = 0.2
+			state_infrastructure_add = -4
+			state_pollution_generation_add = 25
+		}
+	}
+}
+
+pm_international_routes = {
+	texture = "gfx/interface/icons/production_method_icons/air_travel_4.dds"
+	
+	unlocking_technologies = {
+		elgar_mass_culture_tech
+	}
+
+	building_modifiers = {
+		workforce_scaled = {
+			goods_input_radios_add = 10
+			goods_input_telephones_add = 10
+			goods_input_electricity_add = 10
+			goods_input_tools_add = 10
+			goods_input_aeroplanes_add = 20
+			goods_input_oil_add = 25
+			goods_output_air_travel_add = 50
+		}
+		level_scaled = {
+			building_employment_laborers_add = 1500
+			building_employment_machinists_add = 3500
+			building_employment_clerks_add = 3000
+		}
+	}
+
+	state_modifiers = {
+		workforce_scaled = {
+		    state_migration_pull_add = 0.5
+			state_infrastructure_add = -8
+			state_pollution_generation_add = 25
+		}
+	}
+}

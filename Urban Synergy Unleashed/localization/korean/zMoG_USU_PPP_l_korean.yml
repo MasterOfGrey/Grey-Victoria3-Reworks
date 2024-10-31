@@ -1,0 +1,50 @@
+﻿l_korean:
+    # Building
+    PPP_building_power_grid: "Electrical Grid"
+    
+    # Technologies
+    PPP_tech_hv_power:      "Power Transmission"
+    PPP_tech_hv_power_desc: "By manipulating electricity into alternating between different directions, high voltages that make long-distance power transmission economical can be achieved."
+    
+    # Goods
+    ppp_hv_power: "High-Voltage Power"
+    
+    # Modifier types
+    goods_input_ppp_hv_power_add:   "@ppp_hv_power![Nbsp]$ppp_hv_power$ input"
+    goods_output_ppp_hv_power_add:  "@ppp_hv_power![Nbsp]$ppp_hv_power$ output"
+    goods_input_ppp_hv_power_mult:  "Building @ppp_hv_power![Nbsp]$ppp_hv_power$ input"
+    goods_output_ppp_hv_power_mult: "Building @ppp_hv_power![Nbsp]$ppp_hv_power$ output"
+    
+    goods_input_ppp_hv_power_add_desc:   "The amount of @ppp_hv_power![Nbsp]$ppp_hv_power$ consumed by buildings"
+    goods_output_ppp_hv_power_add_desc:  "The amount of @ppp_hv_power![Nbsp]$ppp_hv_power$ produced by buildings"
+    goods_input_ppp_hv_power_mult_desc:  "A bonus or penalty to the amount of @ppp_hv_power![Nbsp]$ppp_hv_power$ consumed by buildings"
+    goods_output_ppp_hv_power_mult_desc: "A bonus or penalty to the amount of @ppp_hv_power![Nbsp]$ppp_hv_power$ produced by buildings"
+    
+    goods_input_steel_mult: "Building $goods_input_steel_add$"
+    goods_input_tools_mult: "Building $goods_input_tools_add$"
+    
+    goods_input_steel_mult_desc: "$goods_input_steel_add_desc$" # I'm lazy + they just do this for
+    goods_input_tools_mult_desc: "$goods_input_tools_add_desc$" # mobilization options anyways
+    
+    # PMGs
+    PPP_pmg_generation_machinery: "Generation Machinery"
+    PPP_pmg_HV_generation:        "Power Distribution"
+    PPP_pmg_power_grid:           "$pm_base$"
+    PPP_pmg_power_grid_scaler:    "Distribution Capacity"
+    
+    # PMs
+    PPP_pm_hydro_mechanical: "Water Turbines"
+    PPP_pm_steam_engine:     "Steam Engines"
+    PPP_pm_steam_turbine:    "Steam Turbines"
+    PPP_pm_gas_turbine:      "Gas Turbines"
+    
+    PPP_pm_local_power: "Local Electricity"
+    PPP_pm_grid_power:  "Electrical Grid"
+    
+    PPP_pm_grid_base: "Regional Distribution"
+    
+    PPP_pm_grid_water:       "Normal Capacity"
+    PPP_pm_grid_engine:      "Increased Capacity"
+    PPP_pm_grid_turbine:     "Doubled Capacity"
+    PPP_pm_grid_gas_turbine: "Tripled Capacity"
+    

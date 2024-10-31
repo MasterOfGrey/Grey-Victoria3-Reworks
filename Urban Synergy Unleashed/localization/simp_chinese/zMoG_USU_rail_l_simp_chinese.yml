@@ -1,0 +1,8 @@
+﻿l_simp_chinese:
+ pm_electric_passenger_carriages:0 "电气乘客车厢"
+ 
+ pmg_automation_building_railway:0 "设施自动化"
+ pm_auto_disabled_building_railway:0 "手动曲柄起重机"
+ pm_watertube_boiler_building_railway:0 "水管锅炉"
+ pm_rotary_valve_engine_building_railway:0 "旋转阀发动机"
+ pm_steam_donkey_building_railway:0 "辅助蒸汽机"

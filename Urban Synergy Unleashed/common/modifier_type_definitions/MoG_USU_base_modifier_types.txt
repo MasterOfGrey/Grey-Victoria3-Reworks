@@ -1,0 +1,40 @@
+﻿# New Goods
+goods_input_usu_logistics_add = {
+	color = bad
+	percent = no
+}
+
+goods_output_usu_logistics_add = {
+	color = good
+	percent = no
+}
+
+goods_input_usu_logistics_mult = {
+	color = bad
+	percent = yes
+    decimals = 1
+}
+
+goods_output_usu_logistics_mult = {
+	color = good
+	percent = yes
+    decimals = 1
+}
+
+# Missing Vanilla Goods
+goods_input_luxury_clothes_add = {
+	color = bad
+	percent = no
+}
+
+goods_input_transportation_mult = {
+	color = bad
+	percent = yes
+    decimals = 1
+}
+
+goods_output_transportation_mult = {
+	color = good
+	percent = yes
+    decimals = 1
+}

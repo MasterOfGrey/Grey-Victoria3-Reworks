@@ -1,0 +1,30 @@
+﻿## RIVER PORTS
+building_river_port = {
+	building_group = USU_bg_port_infrastructure
+	texture = "gfx/interface/icons/building_icons/building_port.dds"
+	
+	ai_nationalization_desire = 0.5 	# Copied from railways - AI is reluctant to privatize vital infrastructure
+	ai_value = 50000 # Just get it done, eh
+	
+	has_max_level = yes
+	port = yes
+	
+	unlocking_technologies = { navigation }
+	
+	production_method_groups = {
+		pmg_base_building_river_port
+		pmg_logistics_services_port_river
+	}
+	
+	required_construction = construction_cost_low
+	ownership_type = self
+	
+	terrain_manipulator = urban_port
+	
+	possible = {
+		rt_on_river = yes
+	}
+	
+	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_monuments.dds"
+}
+

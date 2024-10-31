@@ -1,0 +1,14 @@
+﻿# Reminder to use all of your construction
+
+wasted_construction = {
+	script_context = player_country
+	texture = "gfx/interface/icons/alert_icons/wasted_construction.dds"
+
+	valid = {
+		has_wasted_construction = yes
+	}
+
+	open_panel = construction|default
+	type = alert
+	color = red
+}

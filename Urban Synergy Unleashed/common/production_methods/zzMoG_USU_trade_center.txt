@@ -1,0 +1,49 @@
+﻿pm_trade_center = {
+	texture = "gfx/interface/icons/production_method_icons/trade_center.dds"
+	replacement_if_valid = pm_trade_center_principle_external_trade_2
+	is_hidden_when_unavailable = yes	
+	
+	building_modifiers = {
+		workforce_scaled = {
+			goods_input_usu_logistics_add = 1
+		}
+		level_scaled = {
+			building_employment_laborers_add = 100
+			building_employment_clerks_add = 25
+		}
+	}
+	
+	state_modifiers = {
+		unscaled = {
+			state_migration_pull_mult = 0.10
+		}
+	}
+}
+
+pm_trade_center_principle_external_trade_2 = {
+	texture = "gfx/interface/icons/production_method_icons/trade_center.dds"
+	is_hidden_when_unavailable = yes
+	
+	unlocking_principles = {
+		principle_external_trade_2
+		principle_external_trade_3
+	}
+	
+	building_modifiers = {
+		workforce_scaled = {
+			goods_input_usu_logistics_add = 1
+		}
+	}
+	
+	state_modifiers = {
+		unscaled = {
+			state_migration_pull_mult = 0.25
+		}
+	}
+	
+	country_modifiers = {
+		workforce_scaled = {
+			country_influence_add = 2
+		}
+	}	
+}

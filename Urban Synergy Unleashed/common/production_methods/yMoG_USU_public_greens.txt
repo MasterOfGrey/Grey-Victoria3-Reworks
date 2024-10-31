@@ -1,0 +1,60 @@
+﻿# Public Space Management
+USU_pm_community_orgs = {
+    texture = "gfx/interface/icons/production_method_icons/subsistence_farming.dds"
+    
+    building_modifiers = {
+        workforce_scaled = {
+            goods_output_services_add = 16
+        }
+	
+        level_scaled = {
+            building_employment_laborers_add   = 5000
+		}
+	}
+	state_modifiers = {	
+		unscaled = {
+			state_migration_pull_add = 1
+		}
+	}
+}
+
+USU_pm_private_firms = {
+    texture = "gfx/interface/icons/production_method_icons/privately_owned.dds"
+    
+    unlocking_technologies = {
+        corporatism
+    }
+    
+    building_modifiers = {
+        workforce_scaled = {
+            goods_input_fertilizer_add = 4
+			goods_output_services_add = 30
+        }
+	
+        level_scaled = {
+            building_employment_laborers_add   = 4000
+			building_employment_clerks_add   = 1000
+        }
+    }
+	state_modifiers = {	
+		unscaled = {
+			state_migration_pull_add = 3
+		}
+	}
+}
+
+# Land Usage
+USU_pm_contained_wilderness = {
+    texture = "gfx/interface/icons/production_method_icons/public_parks.dds"
+    
+    building_modifiers = {
+        workforce_scaled = {
+            goods_output_services_add = 4
+        }
+	}
+	state_modifiers = {	
+		unscaled = {
+			state_migration_pull_add = 1
+		}
+	}
+}

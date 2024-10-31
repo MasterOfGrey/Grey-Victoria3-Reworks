@@ -1,0 +1,353 @@
+﻿BUILDINGS={
+	s:STATE_PUNJAB={
+		region_state:PAN={
+			create_building={
+				building="building_river_port"
+				level=1
+				activate_production_methods={ "pm_rp_small_port" }
+			}		
+		}
+	}
+	s:STATE_SINDH={
+		region_state:SIN={
+			create_building={
+				building="building_river_port"
+				level=1
+				activate_production_methods={ "pm_rp_small_port" }
+			}		
+		}
+	}
+	s:STATE_DELHI={
+		region_state:BIC={
+			create_building={
+				building="building_river_port"
+				level=2
+				activate_production_methods={ "pm_rp_small_port" }
+			}		
+		}
+	}
+	s:STATE_AWADH={
+		region_state:BIC={
+			create_building={
+				building="building_river_port"
+				level=2
+				activate_production_methods={ "pm_rp_small_port" }
+			}		
+		}
+	}
+	s:STATE_NORTH_BENGAL={
+		region_state:BIC={
+			create_building={
+				building="building_river_port"
+				level=2
+				activate_production_methods={ "pm_rp_small_port" }
+			}		
+		}
+	}
+	s:STATE_SOUTH_BENGAL={
+		region_state:BIC={
+			create_building={
+				building="building_river_port"
+				level=2
+				activate_production_methods={ "pm_rp_small_port" }
+			}		
+		}
+	}
+	
+	s:STATE_BIHAR={
+		region_state:BIC={
+			create_building={
+				building="building_river_port"
+				level=2
+				activate_production_methods={ "pm_rp_small_port" }
+			}		
+		}
+	}
+	
+	s:STATE_SOUTH_BENGAL={
+		region_state:BIC={
+			create_building={
+				building="building_river_port"
+				level=2
+				activate_production_methods={ "pm_rp_small_port" }
+			}		
+		}
+	}
+	s:STATE_MEKONG={
+		region_state:DAI={
+			create_building={
+				building="building_river_port"
+				level=1
+				activate_production_methods={ "pm_rp_small_port" }
+			}		
+		}
+	}
+	s:STATE_CAMBODIA={
+		region_state:CAM={
+			create_building={
+				building="building_river_port"
+				level=1
+				activate_production_methods={ "pm_rp_small_port" }
+			}		
+		}
+	}
+	s:STATE_GUANGDONG={
+		region_state:CHI={
+			create_building={
+				building="building_river_port"
+				level=1
+				activate_production_methods={ "pm_rp_small_port" }
+			}		
+		}
+	}
+	s:STATE_GUANGXI={
+		region_state:CHI={
+			create_building={
+				building="building_river_port"
+				level=1
+				activate_production_methods={ "pm_rp_small_port" }
+			}		
+		}
+	}
+	s:STATE_SICHUAN={
+		region_state:CHI={
+			create_building={
+				building="building_river_port"
+				level=1
+				activate_production_methods={ "pm_rp_small_port" }
+			}		
+		}
+	}
+	s:STATE_GUIZHOU={
+		region_state:CHI={
+			create_building={
+				building="building_river_port"
+				level=1
+				activate_production_methods={ "pm_rp_small_port" }
+			}		
+		}
+	}
+	s:STATE_HUNAN={
+		region_state:CHI={
+			create_building={
+				building="building_river_port"
+				level=1
+				activate_production_methods={ "pm_rp_small_port" }
+			}		
+		}
+	}
+	s:STATE_CHONGQING={
+		region_state:CHI={
+			create_building={
+				building="building_river_port"
+				level=1
+				activate_production_methods={ "pm_rp_small_port" }
+			}		
+		}
+	}
+	s:STATE_WESTERN_HUBEI={
+		region_state:CHI={
+			create_building={
+				building="building_river_port"
+				level=1
+				activate_production_methods={ "pm_rp_small_port" }
+			}		
+		}
+	}
+	s:STATE_EASTERN_HUBEI={
+		region_state:CHI={
+			create_building={
+				building="building_river_port"
+				level=1
+				activate_production_methods={ "pm_rp_small_port" }
+			}		
+		}
+	}
+	s:STATE_JIANGXI={
+		region_state:CHI={
+			create_building={
+				building="building_river_port"
+				level=1
+				activate_production_methods={ "pm_rp_small_port" }
+			}		
+		}
+	}
+	s:STATE_SOUTHERN_ANHUI={
+		region_state:CHI={
+			create_building={
+				building="building_river_port"
+				level=1
+				activate_production_methods={ "pm_rp_small_port" }
+			}		
+		}
+	}
+	s:STATE_NANJING={
+		region_state:CHI={
+			create_building={
+				building="building_river_port"
+				level=1
+				activate_production_methods={ "pm_rp_small_port" }
+			}		
+		}
+	}
+	s:STATE_HENAN={
+		region_state:CHI={
+			create_building={
+				building="building_river_port"
+				level=1
+				activate_production_methods={ "pm_rp_small_port" }
+			}		
+		}
+	}
+	s:STATE_SHANDONG={
+		region_state:CHI={
+			create_building={
+				building="building_river_port"
+				level=1
+				activate_production_methods={ "pm_rp_small_port" }
+			}		
+		}
+	}
+	s:STATE_NINGXIA={
+		region_state:CHI={
+			create_building={
+				building="building_river_port"
+				level=1
+				activate_production_methods={ "pm_rp_small_port" }
+			}		
+		}
+	}
+	s:STATE_SUZHOU={
+		region_state:CHI={
+			create_building={
+				building="building_river_port"
+				level=1
+				activate_production_methods={ "pm_rp_small_port" }
+			}
+			create_building={
+				building="building_shipyards"
+				level=4
+				reserves=1
+				activate_production_methods={ "pm_basic_shipbuilding" "pm_merchant_guilds_building_shipyards" "pm_no_military_shipbuilding" }
+			}	
+		}
+	}
+	s:STATE_SHANDONG={
+		region_state:CHI={
+			create_building={
+				building="building_river_port"
+				level=1
+				activate_production_methods={ "pm_rp_small_port" }
+			}		
+		}
+	}
+	s:STATE_XIAN={
+		region_state:CHI={
+			create_building={
+				building="building_river_port"
+				level=1
+				activate_production_methods={ "pm_rp_small_port" }
+			}		
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

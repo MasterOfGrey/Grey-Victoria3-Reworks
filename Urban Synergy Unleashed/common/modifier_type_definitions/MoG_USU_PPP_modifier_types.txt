@@ -1,0 +1,33 @@
+﻿goods_input_ppp_hv_power_add = {
+	color = bad
+	percent = no
+}
+
+goods_output_ppp_hv_power_add = {
+	color = good
+	percent = no
+}
+
+goods_input_ppp_hv_power_mult = {
+	color = bad
+	percent = yes
+    decimals = 1
+}
+
+goods_output_ppp_hv_power_mult = {
+	color = good
+	percent = yes
+    decimals = 1
+}
+
+goods_input_steel_mult = {
+	color = bad
+	percent = yes
+    decimals = 1
+}
+
+goods_input_tools_mult = {
+	color = bad
+	percent = yes
+    decimals = 1
+}

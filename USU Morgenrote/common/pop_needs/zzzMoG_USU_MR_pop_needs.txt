@@ -1,0 +1,39 @@
+﻿######################
+#   USU(+PDT) + MR   #
+######################
+
+popneed_free_movement = {
+	default = transportation
+	
+	entry = {
+		goods = transportation
+		
+		weight = 1.0				# No need for this to be reduced weighting.
+		max_supply_share = 0.75		# Keeping - this creates the gap that makes air travel and automobiles acquire initial demand.
+		min_supply_share = 0.075
+	}
+	
+	entry = {
+		goods = services
+		
+		weight = 0.125
+		max_supply_share = 0.125
+		min_supply_share = 0.0125
+	}
+	
+	entry = {
+		goods = automobiles
+		
+		weight = 1.0
+		max_supply_share = 0.125	# Infrastructure from automobiles is busted, and it eats away at transportation badly.
+		min_supply_share = 0.0
+	}
+	
+	entry = {
+		goods = air_travel
+		
+		weight = 0.25
+		max_supply_share = 0.125
+		min_supply_share = 0.0
+	}
+}

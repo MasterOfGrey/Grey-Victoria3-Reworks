@@ -1,0 +1,43 @@
+﻿### Sea Ports - Overwrites & New
+
+pmg_base_building_port = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	ai_selection = most_productive
+
+	production_methods = {
+		pm_anchorage
+		pm_basic_port
+		pm_industrial_port
+		pm_modern_port
+	}
+}
+
+pmg_logistics_services_port_coastal = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_refining.dds"
+	production_methods = {
+		USU_pm_port_c_logistics_0
+		USU_pm_port_c_logistics_1
+		USU_pm_port_c_logistics_2
+		USU_pm_port_c_logistics_3
+	}
+}
+
+### River Ports - All New (naturally)
+
+pmg_base_building_river_port = {
+	production_methods = {
+		pm_rp_small_port
+		pm_rp_industrial_port
+		pm_rp_modern_port
+	}
+}
+
+pmg_logistics_services_port_river = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_refining.dds"
+	production_methods = {
+		USU_pm_port_r_logistics_0
+		USU_pm_port_r_logistics_1
+		USU_pm_port_r_logistics_2
+		USU_pm_port_r_logistics_3
+	}
+}

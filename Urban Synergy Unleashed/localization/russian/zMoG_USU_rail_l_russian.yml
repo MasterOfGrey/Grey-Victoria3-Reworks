@@ -1,0 +1,9 @@
+﻿l_russian:
+ 
+ pm_electric_passenger_carriages:0 "Пассажирские вагоны с электроприводом"
+ 
+ pmg_automation_building_railway:0 "Автоматизация предприятия"
+ pm_auto_disabled_building_railway:0 "Кран с ручным приводом"
+ pm_watertube_boiler_building_railway:0 "Водотрубный котел"
+ pm_rotary_valve_engine_building_railway:0 "Роторно-клапанный двигатель"
+ pm_steam_donkey_building_railway:0 "Паровой осел"

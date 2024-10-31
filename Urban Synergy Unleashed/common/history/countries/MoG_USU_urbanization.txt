@@ -1,0 +1,7 @@
+﻿COUNTRIES = {
+	every_country = {
+		add_modifier = {
+			name = mog_urbanization
+		}
+	}
+}

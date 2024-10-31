@@ -1,0 +1,9 @@
+﻿l_polish:
+ 
+ pm_electric_passenger_carriages:0 "Electric Passenger Carriages"
+ 
+ pmg_automation_building_railway:0 "Facility Automation"
+ pm_auto_disabled_building_railway:0 "Hand Cranked Crane"
+ pm_watertube_boiler_building_railway:0 "Water-tube Boiler"
+ pm_rotary_valve_engine_building_railway:0 "Rotary Valve Engine"
+ pm_steam_donkey_building_railway:0 "Steam Donkey"

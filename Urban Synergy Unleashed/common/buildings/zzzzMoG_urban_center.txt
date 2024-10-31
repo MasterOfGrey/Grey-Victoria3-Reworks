@@ -1,0 +1,31 @@
+﻿# URBANIZATION
+
+building_urban_center = {
+	building_group = bg_service
+	texture = "gfx/interface/icons/building_icons/urban_center.dds"
+	city_type = city
+	residence_points_per_level = 0
+	
+	unlocking_technologies = { 
+		urbanization
+	}
+	
+	production_method_groups = {
+		pmg_amenities
+		pmg_street_lighting
+		pmg_local_transport
+		pmg_public_transit
+		pmg_urban_clergy
+	}
+	
+	buildable = no
+	expandable = no
+	downsizeable = no	
+	cannot_switch_owner = yes
+	
+	terrain_manipulator = urban_city
+	
+	ownership_type = self
+	
+	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_monuments.dds"
+}

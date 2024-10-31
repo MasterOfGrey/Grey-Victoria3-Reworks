@@ -1,0 +1,70 @@
+﻿# Government Admin Overwrites
+
+
+pmg_base_building_government_administration = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	ai_selection = most_productive
+
+	production_methods = {
+		pm_simple_organization
+		pm_horizontal_drawer_cabinets
+		pm_vertical_filing_cabinets
+		pm_switch_boards
+	}
+}
+
+USU_pmg_government_administration_emergency_services = {
+	texture = "gfx/interface/icons/production_method_icons/mixed_icon_ownership.dds"
+	ai_selection = most_productive
+
+	production_methods = {
+		USU_pm_no_emergency_services
+		USU_pm_basic_fire_brigade
+		USU_pm_response_planning
+		USU_pm_modern_emergency_services
+	}
+}
+
+USU_pmg_government_administration_law_enforcement = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_ownership.dds"
+	ai_selection = most_productive
+
+	production_methods = {
+		USU_pm_no_police
+		USU_pm_local_police
+		USU_pm_dedicated_police
+		USU_pm_militarized_police
+	}
+}
+
+pmg_government_administration_bureaucrat_professionalism = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_ownership.dds"
+	ai_selection = most_productive
+
+	production_methods = {
+		pm_hereditary_bureaucrats
+		pm_professional_bureaucrats
+	}
+}
+
+pmg_government_administration_religious_administration = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_ownership.dds"
+	ai_selection = most_productive
+
+	production_methods = {
+		pm_religious_bureaucrats
+		pm_secular_bureaucrats
+	}
+}
+
+
+#MORGENRÖTE
+#pmg_sports_facilities = {
+#	texture = "gfx/interface/icons/production_method_icons/vikelas_sports_facilities.dds"
+#	ai_selection = most_productive
+#
+#	production_methods = {
+#		pm_vikelas_no_sports_facilities
+#		pm_vikelas_sports_facilities
+#	}
+#}
