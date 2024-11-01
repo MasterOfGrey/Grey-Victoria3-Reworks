@@ -11,6 +11,8 @@ USU_pmg_public_parklands = {
     texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
     
     production_methods = {
-        USU_pm_contained_wilderness
+        USU_pm_village_stables
+		USU_pm_contained_wilderness
+		USU_pm_seasonal_fairgrounds
     }
 }

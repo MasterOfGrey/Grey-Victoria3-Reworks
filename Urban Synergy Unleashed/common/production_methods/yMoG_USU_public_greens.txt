@@ -44,12 +44,48 @@ USU_pm_private_firms = {
 }
 
 # Land Usage
+USU_pm_village_stables = {
+    texture = "gfx/interface/icons/production_method_icons/public_parks.dds"
+    
+    building_modifiers = {
+        workforce_scaled = {
+            goods_output_transportation_add = 5
+        }
+	}
+	state_modifiers = {	
+		unscaled = {
+			state_migration_pull_add = 1
+		}
+	}
+}
+
 USU_pm_contained_wilderness = {
     texture = "gfx/interface/icons/production_method_icons/public_parks.dds"
     
     building_modifiers = {
         workforce_scaled = {
             goods_output_services_add = 4
+        }
+	}
+	state_modifiers = {	
+		unscaled = {
+			state_migration_pull_add = 1
+		}
+	}
+}
+
+USU_pm_seasonal_fairgrounds = {
+    texture = "gfx/interface/icons/production_method_icons/public_parks.dds"
+    
+	unlocking_technologies = {
+		improved_fertilizer
+	}
+	
+    building_modifiers = {
+        workforce_scaled = {
+            goods_input_groceries_add = 2
+			goods_input_fertilizer_add = 1
+			goods_output_services_add = 11
         }
 	}
 	state_modifiers = {	

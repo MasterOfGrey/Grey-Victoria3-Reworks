@@ -4,10 +4,8 @@
 	is_hidden_when_unavailable = yes	
 	
 	building_modifiers = {
-		workforce_scaled = {
-			goods_input_usu_logistics_add = 1
-		}
 		level_scaled = {
+			goods_input_usu_logistics_add = 1
 			building_employment_laborers_add = 100
 			building_employment_clerks_add = 25
 		}
@@ -30,7 +28,7 @@ pm_trade_center_principle_external_trade_2 = {
 	}
 	
 	building_modifiers = {
-		workforce_scaled = {
+		level_scaled = {
 			goods_input_usu_logistics_add = 1
 		}
 	}

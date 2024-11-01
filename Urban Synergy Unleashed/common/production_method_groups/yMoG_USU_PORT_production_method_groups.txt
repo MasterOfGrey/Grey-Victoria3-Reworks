@@ -26,6 +26,7 @@ pmg_logistics_services_port_coastal = {
 
 pmg_base_building_river_port = {
 	production_methods = {
+		pm_rp_anchorage
 		pm_rp_small_port
 		pm_rp_industrial_port
 		pm_rp_modern_port

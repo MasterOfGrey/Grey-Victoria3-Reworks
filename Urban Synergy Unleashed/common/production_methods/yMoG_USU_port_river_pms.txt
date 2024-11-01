@@ -1,5 +1,35 @@
 ﻿### Defaults - Slightly cheaper than seaports, don't provide MAPI but provide more infrastructure.
 
+pm_rp_anchorage = {
+	texture = "gfx/interface/icons/production_method_icons/anchorage.dds"
+	
+	# low_pop_method = yes # AI will activate this method for states with low population
+	# Unnecessary since it's not a gov building anymore.
+	
+	building_modifiers = {
+		workforce_scaled = {	
+			goods_output_usu_logistics_add = 10
+		}
+		level_scaled = {
+			building_employment_laborers_add = 200
+			building_employment_clerks_add = 150
+			building_employment_bureaucrats_add = 50
+		}
+	}
+	
+	country_modifiers = {
+		workforce_scaled = {
+			country_convoys_capacity_add = 25 # Uses ~10 logistics
+		}
+	}
+	
+	state_modifiers = {
+		level_scaled = {
+			state_infrastructure_add = 5
+		}
+	}
+}
+
 pm_rp_small_port = {
 	texture = "gfx/interface/icons/production_method_icons/basic_port.dds"
 	
@@ -8,6 +38,7 @@ pm_rp_small_port = {
 			goods_input_clippers_add = 2
 			goods_input_meat_add = 1
 			goods_output_transportation_add = 20
+			goods_output_usu_logistics_add = 60
 		}
 		level_scaled = {
 			building_employment_laborers_add = 2000
@@ -45,6 +76,7 @@ pm_rp_industrial_port = {
 			goods_input_coal_add = 4
 			goods_input_groceries_add = 2
 			goods_output_transportation_add = 50
+			goods_output_usu_logistics_add = 150
 		}
 		level_scaled = {
 			building_employment_laborers_add = 1500
@@ -82,6 +114,7 @@ pm_rp_modern_port = {
 			goods_input_oil_add = 6
 			goods_input_groceries_add = 4
 			goods_output_transportation_add = 90
+			goods_output_usu_logistics_add = 270
 		}
 		level_scaled = {
 			building_employment_laborers_add = 1000

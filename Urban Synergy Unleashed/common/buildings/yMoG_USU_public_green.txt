@@ -13,6 +13,7 @@
 	
 	production_method_groups = {
 		USU_pmg_public_space_management
+		USU_pmg_public_parklands
 	}
 	
 	required_construction = construction_cost_low
