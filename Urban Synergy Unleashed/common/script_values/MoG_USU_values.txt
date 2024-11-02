@@ -37,3 +37,49 @@ mog_land_trade_from_logistics = {
 		multiply = 0
 	}
 }
+
+construction_cost_consec = 10	# Shrunk construction cost for construction sectors since they are smaller, and the AI is more likely to build/demolish them frequently as a result.
+
+mog_construction_max_level_adjustment_calc = {		# Adding 150% of base to compensate for sector shrinkage to 2/5 of original size.
+	value = 0
+	if = {
+		limit = {
+			root = {
+				has_technology_researched = urbanization			# 10
+			}
+		}
+		add = 15
+	}
+	if = {
+		limit = {
+			root = {
+				has_technology_researched = urban_planning			# 5
+			}
+		}
+		add = 7
+	}
+	if = {
+		limit = {
+			root = {
+				has_technology_researched = modern_sewerage			# 5
+			}
+		}
+		add = 8
+	}
+	if = {
+		limit = {
+			root = {
+				has_technology_researched = steel_frame_buildings	# 5
+			}
+		}
+		add = 7
+	}
+	if = {
+		limit = {
+			root = {
+				has_technology_researched = elevator				# 5
+			}
+		}
+		add = 8
+	}
+}

@@ -10,6 +10,11 @@ mog_logistics_land_trade = {
 	market_land_trade_capacity_add = 1
 }
 
+mog_construction_max_level_adjustment = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_gear_positive.dds
+	state_building_construction_sector_max_level_add = 1
+}
+
 mog_building_canal_accident = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_gear_negative.dds
 	goods_output_transportation_mult = -0.5

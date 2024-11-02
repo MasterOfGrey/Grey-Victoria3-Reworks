@@ -101,6 +101,23 @@ bg_financial_districts = {
 	urbanization = 1 # 0
 }
 
+## Construction
+bg_construction = {
+	parent_group = bg_public_infrastructure
+	
+	infrastructure_usage_per_level = 0.8
+	
+	lens = government
+	
+	is_government_funded = yes
+	
+	can_use_slaves = yes
+	
+	urbanization = 2
+	
+	economy_of_scale_ai_factor = 5.0
+}
+
 ## Trade Centers
 # Thanks to logistics services they have a reduced contribution to urbanization now use a teeny tiny bit more infrastructure.
 # This is not critical so if some other mod overwrites it, meh.
