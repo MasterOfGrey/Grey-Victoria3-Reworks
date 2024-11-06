@@ -33,7 +33,12 @@ change_state_religion = {
 			country_has_state_religion = rel:atheist
 		}
 		scope:target_country = {
-			NOT = { has_law = law_type:law_state_atheism }
+			NOT = { 
+				AND = {
+					has_law = law_type:law_state_atheism
+					country_has_state_religion = rel:atheist	# This extra check is because mods can mess things up, and it stops a messed up situation getting locked in.
+				}
+			}
 		}
 		scope:target_country.relations:root > relations_threshold:cordial
 		has_diplomatic_relevance = scope:target_country
@@ -159,7 +164,12 @@ change_state_religion = {
 		requirement_to_maintain = {
 			trigger = {
 				scope:target_country = {
-					NOT = { has_law = law_type:law_state_atheism }
+					NOT = { 
+						AND = {
+							has_law = law_type:law_state_atheism
+							country_has_state_religion = rel:atheist	# This extra check is because mods can mess things up, and it stops a messed up situation getting locked in.
+						}
+					}
 				}
 			}
 		}

@@ -1,13 +1,13 @@
 ﻿l_english:
- change_state_religion:0 "State [INITIATOR_COUNTRY.GetCustom('change_religion_dynamic_name')]"
+ change_state_religion:0 "Religious Institution Takeover"
  change_state_religion_action_name:0 "$change_state_religion$"
  change_state_religion_action_propose_name:0 "Initiate [INITIATOR_COUNTRY.GetCustom('change_religion_dynamic_name')]"
  change_state_religion_action_break_name:0 "Stop [INITIATOR_COUNTRY.GetCustom('change_religion_dynamic_name')]"
  change_state_religion_pact_desc:0 "[SCOPE.GetRootScope.GetDiplomaticPact.GetFirstCountry.GetName] is changing the state religion of [SCOPE.GetRootScope.GetDiplomaticPact.GetSecondCountry.GetName].\n Currently #variable [SCOPE.GetRootScope.GetDiplomaticPact.GetSecondCountry.MakeScope.Var('change_state_religion_progress').GetValue]#! progress out of 8 stages."
- change_state_religion_desc:1 "#header $change_state_religion$#!\n$TOOLTIP_DELIMITER$\nChange the state religion of the target country."
- change_state_religion_action_notification_name:1 "[INITIATOR_COUNTRY.GetName] is changing our country's state religion."
- change_state_religion_action_notification_desc:1 "[INITIATOR_COUNTRY.GetName] is changing the state religion in our country."
- change_state_religion_action_notification_break_name:1 "State [INITIATOR_COUNTRY.GetCustom('change_religion_dynamic_name')] Stopped by [INITIATOR_COUNTRY.GetName]"
+ change_state_religion_desc:0 "#header $change_state_religion$#!\n$TOOLTIP_DELIMITER$\nChange the state religion of the target country."
+ change_state_religion_action_notification_name:0 "[INITIATOR_COUNTRY.GetName] is changing our country's state religion."
+ change_state_religion_action_notification_desc:0 "[INITIATOR_COUNTRY.GetName] is changing the state religion in our country."
+ change_state_religion_action_notification_break_name:0 "State [INITIATOR_COUNTRY.GetCustom('change_religion_dynamic_name')] Stopped by [INITIATOR_COUNTRY.GetName]"
  change_state_religion_action_notification_break_desc:0 "[INITIATOR_COUNTRY.GetName] has terminated the state religion change for our nation."
  
  change_state_religion_effect_desc_global:0 "Initiate State [INITIATOR_COUNTRY.GetCustom('change_religion_dynamic_name')]"

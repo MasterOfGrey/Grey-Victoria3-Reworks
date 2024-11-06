@@ -49,6 +49,7 @@ ib_events.02 = {
 			}
 			scope:religion_target_country = {
 				activate_law = law_type:law_state_atheism
+				set_state_religion = rel:atheist
 				capital = {
 					convert_population = {
 						target = rel:atheist
