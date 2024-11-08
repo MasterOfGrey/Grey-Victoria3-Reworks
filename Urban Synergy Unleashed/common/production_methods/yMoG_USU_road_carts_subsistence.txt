@@ -123,7 +123,7 @@ pm_serfdom_no = {
 
 	state_modifiers = {
 		workforce_scaled = {
-			state_tax_capacity_add = 1
+			state_tax_capacity_add = 0.4
 		}		
 	}
 }
@@ -145,7 +145,7 @@ pm_serfdom = {
 
 	state_modifiers = {
 		workforce_scaled = {
-			state_tax_capacity_add = 1
+			state_tax_capacity_add = 0.8
 		}		
 	}
 }		
@@ -167,7 +167,7 @@ pm_serfdom_building_subsistence_orchards = {
 
 	state_modifiers = {
 		workforce_scaled = {
-			state_tax_capacity_add = 1
+			state_tax_capacity_add = 0.8
 		}		
 	}
 }	
@@ -189,7 +189,7 @@ pm_serfdom_building_subsistence_pastures = {
 
 	state_modifiers = {
 		workforce_scaled = {
-			state_tax_capacity_add = 1
+			state_tax_capacity_add = 0.8
 		}		
 	}
 }
@@ -211,7 +211,7 @@ pm_serfdom_building_subsistence_fishing_villages = {
 
 	state_modifiers = {
 		workforce_scaled = {
-			state_tax_capacity_add = 1
+			state_tax_capacity_add = 0.8
 		}		
 	}
 }		
@@ -233,7 +233,7 @@ pm_serfdom_building_subsistence_rice_paddies = {
 
 	state_modifiers = {
 		workforce_scaled = {
-			state_tax_capacity_add = 1
+			state_tax_capacity_add = 0.8
 		}		
 	}
 }
