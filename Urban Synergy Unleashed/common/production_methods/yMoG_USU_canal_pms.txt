@@ -15,7 +15,7 @@ pm_canal = {
 	state_modifiers = {
 		level_scaled = {
 			state_infrastructure_add = 50
-			state_migration_pull_mult = 0.2
+			state_migration_pull_mult = 0.05
 		}
 	}
 	
@@ -54,7 +54,7 @@ pm_canals_electric = {
 	state_modifiers = {
 		level_scaled = {
 			state_infrastructure_add = 50
-			state_migration_pull_mult = 0.2
+			state_migration_pull_mult = 0.05
 		}
 	}
 	
@@ -92,7 +92,7 @@ pm_canals_oil = {
 	state_modifiers = {
 		level_scaled = {
 			state_infrastructure_add = 50
-			state_migration_pull_mult = 0.2
+			state_migration_pull_mult = 0.05
 		}
 	}
 	

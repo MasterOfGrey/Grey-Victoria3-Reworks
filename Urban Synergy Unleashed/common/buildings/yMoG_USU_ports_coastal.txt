@@ -5,7 +5,6 @@ building_port = {
 	texture = "gfx/interface/icons/building_icons/building_port.dds"
 	
 	ai_nationalization_desire = 0.5 	# Copied from railways - AI is reluctant to privatize vital infrastructure
-	ai_value = 3000 					# Just get it done, eh
 	
 	has_max_level = yes
 	ignore_stateregion_max_level = yes
@@ -25,6 +24,21 @@ building_port = {
 	
 	possible = {
 		is_coastal = yes
+	}
+	
+	ai_value = {		# scope is state the building is located in
+		value = 3000	# Ports are important - Just get it done, eh
+		
+		if = { # Make colonies happen
+			limit = {
+				# is_isolated_from_market = yes
+				is_under_colonization = yes
+				NOT = {
+					has_building = building_port
+				}
+			}
+			add = 100000	# Yes 100k priority for isolated colonies so the AI doesn't get stuck being dumb
+		}
 	}
 	
 	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_monuments.dds"

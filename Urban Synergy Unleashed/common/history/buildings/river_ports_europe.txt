@@ -269,7 +269,7 @@
 			}		
 		}
 	}
-	s:STATE_LUHANSK={
+	s:STATE_TAURIDA={
 		region_state:RUS={
 			create_building={
 				building="building_river_port"

@@ -11,7 +11,7 @@ USU_pm_rail_logistics_1 = {
 	}
 	building_modifiers = {
 		workforce_scaled = {	
-			goods_output_usu_logistics_add = 20
+			goods_output_usu_logistics_add = 8
 		}
 	}
 }
@@ -23,20 +23,23 @@ USU_pm_rail_logistics_2 = {
 	}
 	building_modifiers = {
 		workforce_scaled = {	
-			goods_output_usu_logistics_add = 50
+			goods_output_usu_logistics_add = 20
 		}
 	}
 }
 
 USU_pm_rail_logistics_3 = {
 	texture = "gfx/interface/icons/production_method_icons/log_3.dds"
+	unlocking_production_methods = {
+		USU_pm_rail_logistics_2
+		USU_pm_rail_logistics_3
+	}
 	unlocking_technologies = {
-		electric_telegraph
 		corporate_management
 	}
 	building_modifiers = {
 		workforce_scaled = {	
-			goods_output_usu_logistics_add = 90
+			goods_output_usu_logistics_add = 30
 		}
 	}
 }
@@ -199,7 +202,7 @@ pm_steam_donkey_building_railway = {
 	texture = "gfx/interface/icons/production_method_icons/steam_donkey.dds"
 	
 	unlocking_technologies = {
-		steam_donkey
+		combustion_engine		# Steam Donkey is the wrong tech line, and this is more technically similar in terms of the engineering required. Original MMRPA steam donkey requirement was inappropriate.
 	}
 	
 	disallowing_laws = {

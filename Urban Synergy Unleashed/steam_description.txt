@@ -31,7 +31,7 @@ In addition to the rebalance of Urban Centers - Government Admins now produce a 
 As part of this, Manor Houses now directly reduce state tax capacity as they use their position to try and evade taxation, and financial districts contribute to urbanization which helps to produce the services their pops consume.
 
 [h2]Construction Rework:[/h2]
-PM's for construction sectors have been scaled 40%/60%/80%/100% of their original sizes. This means that in the early game it's much easier for small AI nations to maintain at least 1 wooden construction sector - which is critical to enabling the autonomous investment queue.
+PM's for construction sectors have been scaled down to 40% of their original sizes. This means that in the early game it's much easier for small AI nations to maintain at least 1 wooden construction sector - which is critical to enabling the autonomous investment queue. A dynamic country modifier increases the maximum number of construction sectors to compensate so that total capacity is unchanged and no compatibility issues are introduced with technologies.
 
 [h2]Extra Consumption:[/h2]
 Some buildings now consume additional goods. In particular, naval buildings consume additional supplies to represent the specific goods in excess of pop consumption that the government would fund to support the crews while they maintain a fleet at sea. Ports also consume groceries as supplies proportional to the modernness.
@@ -40,6 +40,7 @@ Some buildings now consume additional goods. In particular, naval buildings cons
 This obviously touches a wide range of urban buildings, but it's quite self-contained otherwise.
 
 [b]This is [u]Compatible with VTM[/u].
+Includes compatibility with [u]Laws +[/u] for subsistence farm PM's.
 Also natively compatible with Pop Demand Tweak(PDT), Timber to Steel(TTS), and any AI mods (like KAI, etc.)[/b]
 Somehow compatible with Industry Realism??? - for now at least
 

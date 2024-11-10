@@ -201,7 +201,7 @@ PPP_pm_se_grid_power = {
 PPP_pm_st_local_power = {
 	texture = "gfx/interface/icons/production_method_icons/PPP_local_power.dds"
 	is_hidden_when_unavailable = yes
-	replacement_if_valid = PPP_pm_se_hybrid_power
+	replacement_if_valid = PPP_pm_st_hybrid_power
 	
 	unlocking_production_methods = {
 		PPP_pm_steam_turbine			# Base 100 electricity
@@ -252,7 +252,7 @@ PPP_pm_st_grid_power = {
 PPP_pm_gt_local_power = {
 	texture = "gfx/interface/icons/production_method_icons/PPP_local_power.dds"
 	is_hidden_when_unavailable = yes
-	replacement_if_valid = PPP_pm_se_hybrid_power
+	replacement_if_valid = PPP_pm_gt_hybrid_power
 	
 	unlocking_production_methods = {
 		PPP_pm_gas_turbine				# Base 150 electricity

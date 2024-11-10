@@ -2,7 +2,7 @@
     # Modifiers
     mog_urbanization: "Urban Synergy Unleashed"
     mog_logistics_land_trade: "Land Trade Capacity from Imported Logistics Services"
-	mog_construction_max_level_adjustment: "Urban Synergy Unleashed"
+    mog_construction_max_level_adjustment: "Urban Synergy Unleashed"
     
     # Building
     building_river_port:0 "River Docks"
@@ -26,7 +26,7 @@
     goods_output_usu_logistics_add_desc:  "The amount of @usu_logistics![Nbsp]$usu_logistics$ produced by buildings"
     goods_input_usu_logistics_mult_desc:  "A bonus or penalty to the amount of @usu_logistics![Nbsp]$usu_logistics$ consumed by buildings"
     goods_output_usu_logistics_mult_desc: "A bonus or penalty to the amount of @usu_logistics![Nbsp]$usu_logistics$ produced by buildings"
-	  
+    
     modifier_goods_input_tools_mult: "@tools![Nbsp]Tools input"
     modifier_goods_input_tools_mult_desc: "The amount of @tools![Nbsp]Tools consumed by buildings"
     
@@ -51,6 +51,10 @@
     USU_pm_militarized_police: "Martial Law Enforcement"
     USU_pm_community_orgs: "Community Orgs"
     USU_pm_private_firms: "Private Orgs"
+    USU_pm_pub_priv_partners: "Public-Private Partnerships"
+    USU_pm_village_stables: "Community Stables"
+    USU_pm_contained_wilderness: "Protected Wilderness"
+    USU_pm_seasonal_fairgrounds: "Seasonal Fairgrounds"
     
     # State Traits
     state_trait_rotterdam:0 "Rotterdam Harbor"

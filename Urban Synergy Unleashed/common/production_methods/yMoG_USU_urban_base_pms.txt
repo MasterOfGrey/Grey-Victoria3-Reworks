@@ -13,6 +13,7 @@ pm_market_stalls = {
 		workforce_scaled = {
 			goods_input_fabric_add = 1
 			goods_input_wood_add = 2
+			goods_input_usu_logistics_add = 1
 			goods_output_services_add = 18
 		}
 		
@@ -55,6 +56,7 @@ pm_market_squares = {
 			goods_input_iron_add = 1
 			goods_input_glass_add = 1
 			goods_input_tools_add = 0.5
+			goods_input_usu_logistics_add = 2
 			goods_output_services_add = 29
 		}
 		
@@ -98,6 +100,7 @@ pm_covered_markets = {
 			goods_input_hardwood_add = 2
 			goods_input_tools_add = 1
 			goods_input_fabric_add = 1
+			goods_input_usu_logistics_add = 3
 			goods_output_services_add = 42
 		}
 		
@@ -142,6 +145,7 @@ pm_arcades = {
 			goods_input_tools_add = 2
 			goods_input_hardwood_add = 2
 			goods_input_electricity_add = 1
+			goods_input_usu_logistics_add = 4
 			goods_output_services_add = 55
 		}
 		

@@ -8,3 +8,5 @@
  pm_electric_trains:0 "DC Electric Trains"
  pm_electric_trains_principle_transport_3:0 "Joint DC Electric Trains"
  pm_electric_streetlights:0 "Moonlight Towers"
+
+ pm_canal: "Steam Powered Locks"

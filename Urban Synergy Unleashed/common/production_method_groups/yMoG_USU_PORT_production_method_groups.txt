@@ -25,6 +25,7 @@ pmg_logistics_services_port_coastal = {
 ### River Ports - All New (naturally)
 
 pmg_base_building_river_port = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
 	production_methods = {
 		pm_rp_anchorage
 		pm_rp_small_port

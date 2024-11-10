@@ -1,15 +1,15 @@
-﻿# Mines & Plantations both use this.
+﻿### Mines & Plantations both use this.
 pm_road_carts = {
 	texture = "gfx/interface/icons/production_method_icons/no_rail_transport.dds"
 	building_modifiers = {
 		workforce_scaled = {
-			# input goods					
+			# input goods
 			goods_input_transportation_add = 1
 		}
 	}
 }
 
-# Subsistence
+### Subsistence Production
 default_building_subsistence_farms = {
 	texture = "gfx/interface/icons/production_method_icons/subsistence_farming.dds"
 	
@@ -108,6 +108,31 @@ default_building_subsistence_rice_paddies = {
 	}
 }
 
+### Subsistence LAND REFORM
+
+pm_homesteading_building_subsistence = {	# Included fix from UHM
+	texture = "gfx/interface/icons/production_method_icons/homesteading.dds"
+	unlocking_laws = {
+		law_homesteading
+		law_collectivized_agriculture
+	}
+	
+	building_modifiers = {
+		workforce_scaled = {
+			goods_output_grain_add = 0.25
+		}
+		
+		unscaled = {
+			building_subsistence_output_add = 4
+		}
+		
+		level_scaled = {
+			building_employment_peasants_add = -100
+			building_employment_farmers_add = 100
+		}
+	}
+}
+
 pm_serfdom_no = {
 	texture = "gfx/interface/icons/production_method_icons/no_serfdom.dds"
 	unlocking_laws = {
@@ -115,16 +140,16 @@ pm_serfdom_no = {
 		law_commercialized_agriculture
 	}
 	
-	building_modifiers = {					
+	building_modifiers = {
 		unscaled = {
 			building_subsistence_output_add = 4
 		}
 	}
-
+	
 	state_modifiers = {
 		workforce_scaled = {
 			state_tax_capacity_add = 0.4
-		}		
+		}
 	}
 }
 
@@ -137,18 +162,18 @@ pm_serfdom = {
 		workforce_scaled = {
 			goods_output_grain_add = 0.5 # 10
 		}
-
+		
 		unscaled = {
 			building_subsistence_output_add = 3
-		}		
+		}
 	}
-
+	
 	state_modifiers = {
 		workforce_scaled = {
 			state_tax_capacity_add = 0.8
-		}		
+		}
 	}
-}		
+}
 
 pm_serfdom_building_subsistence_orchards = {
 	texture = "gfx/interface/icons/production_method_icons/serfdom.dds"
@@ -159,18 +184,18 @@ pm_serfdom_building_subsistence_orchards = {
 		workforce_scaled = {
 			goods_output_fruit_add = 0.33 # 10
 		}
-
+		
 		unscaled = {
 			building_subsistence_output_add = 3
-		}			
+		}
 	}
-
+	
 	state_modifiers = {
 		workforce_scaled = {
 			state_tax_capacity_add = 0.8
-		}		
+		}
 	}
-}	
+}
 
 pm_serfdom_building_subsistence_pastures = {
 	texture = "gfx/interface/icons/production_method_icons/serfdom.dds"
@@ -181,16 +206,16 @@ pm_serfdom_building_subsistence_pastures = {
 		workforce_scaled = {
 			goods_output_meat_add = 0.33 # 10
 		}
-
+		
 		unscaled = {
 			building_subsistence_output_add = 3
-		}			
+		}
 	}
-
+	
 	state_modifiers = {
 		workforce_scaled = {
 			state_tax_capacity_add = 0.8
-		}		
+		}
 	}
 }
 
@@ -203,18 +228,18 @@ pm_serfdom_building_subsistence_fishing_villages = {
 		workforce_scaled = {
 			goods_output_fish_add = 0.5 # 10
 		}
-
+		
 		unscaled = {
 			building_subsistence_output_add = 3
-		}			
+		}
 	}
-
+	
 	state_modifiers = {
 		workforce_scaled = {
 			state_tax_capacity_add = 0.8
-		}		
+		}
 	}
-}		
+}
 
 pm_serfdom_building_subsistence_rice_paddies = {
 	texture = "gfx/interface/icons/production_method_icons/serfdom.dds"
@@ -225,15 +250,126 @@ pm_serfdom_building_subsistence_rice_paddies = {
 		workforce_scaled = {
 			goods_output_grain_add = 1 # 20
 		}
-
+		
 		unscaled = {
 			building_subsistence_output_add = 3
-		}			
+		}
 	}
-
+	
 	state_modifiers = {
 		workforce_scaled = {
 			state_tax_capacity_add = 0.8
-		}		
+		}
+	}
+}
+
+### Subsistence LAWS + Compatibility
+pm_slavery = {
+	texture = "gfx/interface/icons/production_method_icons/unused/slavery.dds"
+	unlocking_laws = {
+		law_forced_labour
+	}
+	building_modifiers = {
+		workforce_scaled = {
+			goods_output_grain_add = 0.5 # 10
+		}
+		
+		unscaled = {
+			building_subsistence_output_add = 3
+		}
+	}
+	
+	state_modifiers = {
+		workforce_scaled = {
+			state_tax_capacity_add = 0.8
+		}
+	}
+}
+
+pm_slavery_building_subsistence_orchards = {
+	texture = "gfx/interface/icons/production_method_icons/unused/slavery.dds"
+	unlocking_laws = {
+		law_forced_labour
+	}
+	building_modifiers = {
+		workforce_scaled = {
+			goods_output_fruit_add = 0.33 # 10
+		}
+		
+		unscaled = {
+			building_subsistence_output_add = 3
+		}
+	}
+	
+	state_modifiers = {
+		workforce_scaled = {
+			state_tax_capacity_add = 0.8
+		}
+	}
+}
+
+pm_slavery_building_subsistence_pastures = {
+	texture = "gfx/interface/icons/production_method_icons/unused/slavery.dds"
+	unlocking_laws = {
+		law_forced_labour
+	}
+	building_modifiers = {
+		workforce_scaled = {
+			goods_output_meat_add = 0.33 # 10
+		}
+		
+		unscaled = {
+			building_subsistence_output_add = 3
+		}
+	}
+	
+	state_modifiers = {
+		workforce_scaled = {
+			state_tax_capacity_add = 0.8
+		}
+	}
+}
+
+pm_slavery_building_subsistence_fishing_villages = {
+	texture = "gfx/interface/icons/production_method_icons/unused/slavery.dds"
+	unlocking_laws = {
+		law_forced_labour
+	}		
+	building_modifiers = {
+		workforce_scaled = {
+			goods_output_fish_add = 0.5 # 10
+		}
+		
+		unscaled = {
+			building_subsistence_output_add = 3
+		}
+	}
+	
+	state_modifiers = {
+		workforce_scaled = {
+			state_tax_capacity_add = 0.8
+		}
+	}
+}
+
+pm_slavery_building_subsistence_rice_paddies = {
+	texture = "gfx/interface/icons/production_method_icons/unused/slavery.dds"
+	unlocking_laws = {
+		law_forced_labour
+	}	
+	building_modifiers = {
+		workforce_scaled = {
+			goods_output_grain_add = 1 # 20
+		}
+		
+		unscaled = {
+			building_subsistence_output_add = 3
+		}
+	}
+	
+	state_modifiers = {
+		workforce_scaled = {
+			state_tax_capacity_add = 0.8
+		}
 	}
 }

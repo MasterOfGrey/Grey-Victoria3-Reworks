@@ -33,8 +33,8 @@
  USU_pm_port_r_logistics_3: "Supply Chain Management"
  
  # Canals
- pm_canal: "Steam Powered Locks"
- pm_canals_eletric: "Electric Canal Locks"
+ # pm_canal: "Steam Powered Locks"
+ pm_canals_electric: "Electric Canal Locks"
  pm_canals_oil: "Oil Pump Locks"
 
  pmg_canal_boats: "Canal Management"

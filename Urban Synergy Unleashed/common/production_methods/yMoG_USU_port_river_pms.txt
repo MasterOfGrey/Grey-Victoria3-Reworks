@@ -3,12 +3,13 @@
 pm_rp_anchorage = {
 	texture = "gfx/interface/icons/production_method_icons/anchorage.dds"
 	
-	# low_pop_method = yes # AI will activate this method for states with low population
-	# Unnecessary since it's not a gov building anymore.
+	low_pop_method = yes # AI will activate this method for states with low population
+	# Not strictly necessary since it's not a gov building anymore but it kinda helps nations in a power bloc that are losing pops to migration to not get stuck in a hole.
 	
 	building_modifiers = {
 		workforce_scaled = {	
 			goods_output_usu_logistics_add = 10
+			goods_output_transportation_add = 2
 		}
 		level_scaled = {
 			building_employment_laborers_add = 200
@@ -38,7 +39,7 @@ pm_rp_small_port = {
 			goods_input_clippers_add = 2
 			goods_input_meat_add = 1
 			goods_output_transportation_add = 20
-			goods_output_usu_logistics_add = 60
+			goods_output_usu_logistics_add = 30
 		}
 		level_scaled = {
 			building_employment_laborers_add = 2000
@@ -76,7 +77,7 @@ pm_rp_industrial_port = {
 			goods_input_coal_add = 4
 			goods_input_groceries_add = 2
 			goods_output_transportation_add = 50
-			goods_output_usu_logistics_add = 150
+			goods_output_usu_logistics_add = 80
 		}
 		level_scaled = {
 			building_employment_laborers_add = 1500
@@ -114,7 +115,7 @@ pm_rp_modern_port = {
 			goods_input_oil_add = 6
 			goods_input_groceries_add = 4
 			goods_output_transportation_add = 90
-			goods_output_usu_logistics_add = 270
+			goods_output_usu_logistics_add = 170
 		}
 		level_scaled = {
 			building_employment_laborers_add = 1000

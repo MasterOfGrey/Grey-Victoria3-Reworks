@@ -2,8 +2,6 @@
 	building_group = USU_bg_public_greens
 	texture = "gfx/interface/icons/building_icons/USU_public_green.dds"
 	
-	ownership_type = self
-	
 	city_type = farm
 	levels_per_mesh = 5
 	
