@@ -1,0 +1,6 @@
+﻿l_english:
+ # NEL
+ alert_not_enacting_laws_name: "Is #bold not #!enacting a law"
+ alert_not_enacting_laws_hint: "Is #bold not #!enacting a law"
+ alert_not_enacting_laws_action: "Politics Panel"
+ not_enacting_laws_setting_name: "Not Enacting a Law"

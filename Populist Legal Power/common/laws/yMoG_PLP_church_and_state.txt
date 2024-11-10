@@ -38,7 +38,7 @@ law_state_religion = {
 	possible_political_movements = {
 		law_freedom_of_conscience
 	}
-
+	
 	can_impose = {
 		OR = {
 			AND = {
@@ -51,7 +51,7 @@ law_state_religion = {
 			can_impose_law_default = yes
 		}
 	}
-
+	
 	pop_support = {
 		value = 0
 		# Clergy like theocracy
@@ -61,8 +61,8 @@ law_state_religion = {
 				limit = {
 					is_pop_type = clergymen
 				}
+				value = 0.25
 			}
-			value = 0.25
 		}
 	}
 	
@@ -72,7 +72,7 @@ law_state_religion = {
 			has_ideology = ideology:ideology_theocrat
 		}
 	}
-
+	
 	ai_enact_weight_modifier = { #Petitions
 		value = 0
 		
@@ -89,10 +89,10 @@ law_state_religion = {
 			limit = {
 				has_law = law_type:law_state_religion
 				power_bloc ?= { has_identity = identity:identity_religious }
-				religion = scope:target_country.religion			
+				religion = scope:target_country.religion
 			}
 			
-			add = base_impose_law_weight	
+			add = base_impose_law_weight
 			
 			# Very important for religious blocs
 			if = {

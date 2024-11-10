@@ -4,8 +4,3 @@
  
  POL_STR_FROM_LITERACY:0 "From [concept_literacy]: #variable $VAL|+=D$#!\n$TAB$Literacy #tooltippable #tooltip:[POP.GetTooltipTag],LITERACY_TOOLTIP #v $LITERACY|0$#!#!#!: #bold $VALPERPOP|+=$#! per Politically Active Pop"
  POL_STR_FROM_LITERACY_AVERAGE:0 "From [concept_literacy]: #variable $VAL|+=K$#!\n$TAB$Average Literacy #variable $LITERACY|1$#!: #bold $VALPERPOP|+=2$#! per Politically Active Pop"
- 
- alert_not_enacting_laws_name: "Is #bold not #!enacting a law"
- alert_not_enacting_laws_hint: "Is #bold not #!enacting a law"
- alert_not_enacting_laws_action: "Politics Panel"
- not_enacting_laws_setting_name: "Not Enacting a Law"

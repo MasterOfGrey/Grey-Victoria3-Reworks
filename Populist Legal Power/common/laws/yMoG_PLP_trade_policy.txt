@@ -23,7 +23,7 @@ law_mercantilism = {
 	tariff_modifier_no_priority = {
 		tariff_import_add = 0.15
 		tariff_export_add = 0.05
-	}	
+	}
 	
 	tariff_modifier_export_priority = {
 		tariff_import_add = 0.45
@@ -32,24 +32,24 @@ law_mercantilism = {
 	tariff_modifier_import_priority = {
 		tariff_export_add = 0.15
 	}
-
+	
 	possible_political_movements = {
 		law_protectionism
 		law_free_trade
-	}	
+	}
 	
 	pop_support = {
 		value = 0
 	}
-
+	
 	# Don't change back to mercantilism once we have protectionism or free trade
 	ai_will_do = {
 		NOR = {
 			has_law = law_type:law_protectionism
 			has_law = law_type:law_free_trade
-		}	
+		}
 	}
-
+	
 	ai_enact_weight_modifier = { #Petitions
 		value = 0
 		
@@ -59,12 +59,12 @@ law_mercantilism = {
 		}
 		
 		if = {
-			limit = { 
+			limit = {
 				has_journal_entry = je_meiji_diplomacy
 				has_law = law_type:law_isolationism
 			}
 			add = 1000
-		}		
+		}
 	}
 }
 
@@ -82,6 +82,7 @@ law_protectionism = {
 		country_trade_route_competitiveness_mult = -0.25
 		country_trade_route_quantity_mult = -0.25
 		country_trade_route_cost_mult = 0.25
+		country_leverage_resistance_mult = 0.25
 	}
 	
 	unlocking_technologies = {
@@ -91,7 +92,7 @@ law_protectionism = {
 	tariff_modifier_no_priority = {
 		tariff_export_add = 0.10
 		tariff_import_add = 0.10
-	}	
+	}
 	
 	tariff_modifier_export_priority = {
 		tariff_import_add = 0.20
@@ -99,20 +100,16 @@ law_protectionism = {
 	
 	tariff_modifier_import_priority = {
 		tariff_export_add = 0.40
-	}	
-	
-	modifier = {
-		country_leverage_resistance_mult = 0.25
 	}
-
+	
 	possible_political_movements = {
 		law_free_trade
-	}	
-
+	}
+	
 	pop_support = {
 		value = 0
 	}
-
+	
 	ai_enact_weight_modifier = { #Petitions
 		value = 0
 		
@@ -127,7 +124,7 @@ law_protectionism = {
 				has_law = law_type:law_isolationism
 			}
 			add = 1000
-		}				
+		}
 	}
 }
 
@@ -140,7 +137,7 @@ law_free_trade = {
 	
 	disallowing_laws = {
 		law_command_economy
-	}	
+	}
 	
 	modifier = {
 		country_trade_route_competitiveness_mult = 0.5
@@ -166,12 +163,12 @@ law_free_trade = {
 	
 	possible_political_movements = {
 		law_protectionism
-	}	
-
+	}
+	
 	pop_support = {
 		value = 0
 	}
-
+	
 	ai_enact_weight_modifier = { #Petitions
 		value = 0
 		
@@ -186,7 +183,7 @@ law_free_trade = {
 				has_law = law_type:law_isolationism
 			}
 			add = 1000
-		}		
+		}
 	}
 }
 
@@ -223,7 +220,7 @@ law_isolationism = {
 	possible_political_movements = {
 		law_protectionism
 		law_free_trade
-	}	
+	}
 	
 	pop_support = {
 		value = 0
@@ -240,7 +237,7 @@ law_isolationism = {
 			}
 		}
 	}
-
+	
 	ai_enact_weight_modifier = { #Petitions
 		value = 0
 		
