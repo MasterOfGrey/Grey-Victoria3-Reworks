@@ -1,5 +1,4 @@
-﻿# This is executed last among all history
-GLOBAL = {
+﻿BUILDINGS = {
 	if = { # Add top-up consecs to iron-potential states to make up for blanket downsize of consec sizes.
 		limit = { Grey_USU_is_active = yes }
 		every_state = {
