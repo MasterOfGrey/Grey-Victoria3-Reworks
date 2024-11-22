@@ -63,7 +63,7 @@ NPops = {
 	MIGRATION_STATE_POPULATION_THRESHOLD = 250000 # 100000		# States with less pops than this have reduced market emigration numbers to avoid total depopulation
 	
 	MIGRATION_MAX_PER_STATE_BASE = 2000 # 500									# No more than this amount of people can move from or to a state in a single week (base)
-	MIGRATION_MAX_PER_STATE_INFRASTRUCTURE = 20	# 5								# No more than this amount of people can move from or to a state in a single week (scales with infrastructure)
+	MIGRATION_MAX_PER_STATE_INFRASTRUCTURE = 10	# 5								# No more than this amount of people can move from or to a state in a single week (scales with infrastructure)
 	MIGRATION_MAX_EMIGRATION_AS_POPULATION_FRACTION = 0.005						# Max emigration per week is clamped to this fraction of a state's population
 	
 	MIGRATION_MAX_PER_STATE_UNEMPLOYMENT_ORIGIN_FRACTION = 0.1 # 0.05			# The no. of unemployed workers in a state * this value is added to max emigration (after clamping from MIGRATION_MAX_EMIGRATION_AS_POPULATION_FRACTION)
@@ -74,9 +74,14 @@ NPops = {
 	MIGRATION_PULL_LOW_THRESHOLD = 0.75											# State must have a migration pull of less or equal than market average * this to get full amount of emigration
 
 	# Migration Desire #
-	MIGRATION_DESIRE_BASE = -50.0 # 0											# Base desire to migrate
-	MIGRATION_DESIRE_FROM_DISCRIMINATION = 150 # 100							# Being discriminated will increase desire to migrate by this much
+	# MIGRATION_DESIRE_BASE = -50.0 # 0								#(Moved to acceptance status)			# Base desire to migrate
+	# MIGRATION_DESIRE_FROM_DISCRIMINATION = 150 # 100				#(Moved to acceptance status)			# Being discriminated will increase desire to migrate by this much
 	MIGRATION_DESIRE_FROM_JOB_SATISFACTION_FACTOR = -2.0 # -1.0					# A pop's desire to migrate will be affected by its job satisfaction multiplied by this value.
+	
+	# Acceptance #
+	MIN_ACCEPTANCE_VALUE = 0													# It is both the minimum acceptance value a pop can have as well as the explicit threshold scripted for the first acceptance status [any signed 32 bit value]
+	MAX_ACCEPTANCE_VALUE = 100													# It is both the maximum acceptance value a pop can have as well as the (implied) upper bound of the last acceptance status [> MIN_ACCEPTANCE_VALUE]
+	ACCEPTANCE_FROM_HOMELAND_COMMUNITY = 15 # 10								# The amount of acceptance a pop gets from living in their homeland, applied statically on their Cultural Community
 	
 ## Migration Attraction ##
 	MIGRATION_PULL_EMPTY_STATE = 100											# If a state has no pops at all, give it a huge migration pull
@@ -164,7 +169,7 @@ NPops = {
 @pop_growth_equilibrium_sol = 5			# Equilibrium is pops stop starving and where growth first becomes positive
 @pop_growth_transition_sol = 12 # 10	# Transition determines how long birthrate "lags" behind mortality before starting to drop. Setting to same as equilibrium leads to no "lag" (only matters for birthrate)
 @pop_growth_max_sol = 14 #20			# Growth Max is where net growth generally is at it's highest (only matters for mortality)
-@pop_growth_stable_sol = 24 #30			# Stable is where birthrate and mortality stop changing and hit their minimum values
+@pop_growth_stable_sol = 28 #30			# Stable is where birthrate and mortality stop changing and hit their minimum values
 
 ## Others
 @transition_birthrate_mult = 0.95 #1.0		# If you want the birthrate "lag" to go to a higher or lower value than max_birthrate. (you can also just change it directly below)

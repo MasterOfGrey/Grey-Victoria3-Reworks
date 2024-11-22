@@ -48,7 +48,8 @@ assimilate_everyone.2 = {
 						if = {
 							limit = {
 								has_state_religion = no
-								pop_is_discriminated = no
+								# pop_is_discriminated = no		# Not used anymore
+								pop_acceptance >= acceptance_status_2
 								# as we want to convert accepted pops with religions that are normally excluded (represents institutional inertia)
 							}
 							
