@@ -1,0 +1,108 @@
+﻿# This is executed last among all history
+# Doing this to avoid editing map_data or history files as much as possible as they need to be overridden in full
+# Avoids a lot of headaches when updating after each patch
+# If you are already editing the map you can remove this and just do all your changes in the respective files if you so desire
+GLOBAL = {
+	# State traits
+	every_state = { # We have to do this because "has_state_trait" only works on state scopes, not state regions.
+		if = {
+			limit = {
+				state_region = s:STATE_KHUZESTAN
+			}
+			state_region = { remove_state_trait = state_trait_zagros_mountains }
+		}
+		if = {
+			limit = {
+				state_region = s:STATE_EQUATORIA # South Sudan
+			}
+			state_region = { add_state_trait = state_trait_nile_river }
+		}
+		if = { # to stop MAPI stacking
+			limit = {
+				state_region = s:STATE_DIYARBAKIR
+			}
+			state_region = { remove_state_trait = state_trait_tigris_river }
+		}
+		if = {
+			limit = {
+				OR = {
+					state_region = s:STATE_BAGHDAD
+					state_region = s:STATE_BASRA
+				}
+			}
+			state_region = { remove_state_trait = state_trait_euphrates_river }
+		}
+		if = {
+			limit = {
+				state_region = s:STATE_CORRIENTES
+			}
+			state_region = { remove_state_trait = state_trait_paraguay_river }
+		}
+		if = {
+			limit = {
+				OR = {
+					state_region = s:STATE_DAGESTAN
+				}
+			}
+			state_region = { add_state_trait = state_trait_caucasus_mountains }
+		}
+		if = {
+			limit = {
+				OR = {
+					state_region = s:STATE_AZERBAIJAN
+				}
+			}
+			state_region = { remove_state_trait = state_trait_caucasus_mountains }
+		}
+		## Put these last
+		if = {
+			limit = {
+				is_cold_water_port = yes
+				NOT = { has_state_trait = state_trait_cold_water_port }
+			}
+			state_region = { add_state_trait = state_trait_cold_water_port }
+		}
+		if = {
+			limit = {
+				is_difficult_terrain = yes
+				NOT = { has_state_trait = state_trait_difficult_terrain }
+			}
+			state_region = { add_state_trait = state_trait_difficult_terrain }
+		}
+		if = {
+			limit = {
+				is_very_difficult_terrain = yes
+				NOT = { has_state_trait = state_trait_very_difficult_terrain }
+			}
+			state_region = { add_state_trait = state_trait_very_difficult_terrain }
+		}
+	}
+	
+	# Homelands
+	s:STATE_TRANSDANUBIA = {
+		remove_homeland = cu:south_german
+	}
+	
+	# States
+	s:STATE_KENYA = {
+		set_owner_of_provinces = {
+			country = c:OMA
+			provinces = { xA02190 x5C1ADA x6B52F1 }
+		}
+	}
+	
+	# Interest Groups
+	every_country = {
+		limit = {
+			OR = {
+				has_law = law_type:law_presidential_republic
+				has_law = law_type:law_parliamentary_republic
+				has_law = law_type:law_council_republic
+			}
+		}
+		ig:ig_landowners ?= {
+			remove_ideology = ideology_paternalistic
+			add_ideology = ideology_republican_paternalistic
+		}
+	}
+}

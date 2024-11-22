@@ -1,0 +1,31 @@
+﻿state_trait_cold_water_port = {
+	icon = "gfx/interface/icons/state_trait_icons/cold_water_port.dds"
+	
+	modifier = {
+		building_shipyards_throughput_add = -0.1
+		building_military_shipyards_throughput_add = -0.1
+		building_port_throughput_add = -0.4
+		state_building_port_max_level_add = -2
+		state_building_naval_base_max_level_add = -10
+	}
+}
+
+state_trait_difficult_terrain = {
+	icon = "gfx/interface/icons/state_trait_icons/difficult_terrain.dds"
+
+	disabling_technologies = { "nitroglycerin" }
+
+	modifier = {
+		state_construction_mult = -0.1
+	}
+}
+
+state_trait_very_difficult_terrain = {
+	icon = "gfx/interface/icons/state_trait_icons/very_difficult_terrain.dds"
+
+	disabling_technologies = { "dynamite" }
+
+	modifier = {
+		state_construction_mult = -0.2
+	}
+}

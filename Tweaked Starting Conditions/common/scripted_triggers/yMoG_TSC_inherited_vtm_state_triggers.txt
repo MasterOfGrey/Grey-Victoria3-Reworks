@@ -1,0 +1,70 @@
+﻿is_cold_water_port = {
+	OR = {
+		# RUS
+		state_region = s:STATE_EAST_KARELIA
+		state_region = s:STATE_ARKHANGELSK
+		#state_region = s:STATE_INGRIA
+		state_region = s:STATE_ROSTOV
+		state_region = s:STATE_OKHOTSK
+		state_region = s:STATE_KAMCHATKA
+		state_region = s:STATE_CHUKOTKA
+		# FIN
+		#state_region = s:STATE_WEST_KARELIA
+		state_region = s:STATE_OSTROBOTHNIA
+		state_region = s:STATE_UUSIMAA
+		state_region = s:STATE_OULU
+		# SWE
+		state_region = s:STATE_NORRLAND
+		# NA
+		state_region = s:STATE_QUEBEC
+		state_region = s:STATE_NEWFOUNDLAND
+	}
+}
+
+is_difficult_terrain = {
+	OR = {
+		# Europe
+		has_state_trait = state_trait_scottish_highlands
+		# Middle East
+		has_state_trait = state_trait_zagros_mountains
+		has_state_trait = state_trait_alborz_mountains
+		# SEA
+		has_state_trait = state_trait_burmese_teak
+		has_state_trait = state_trait_indochinese_forest
+		has_state_trait = state_trait_borneo_rainforest
+		# Oceania
+		has_state_trait = state_trait_great_dividing_range
+		# America
+		has_state_trait = state_trait_cascades
+		has_state_trait = state_trait_sierra_madre_occidental
+		has_state_trait = state_trait_sierra_madre_oriental
+		has_state_trait = state_trait_central_american_cordilleras
+		has_state_trait = state_trait_andes
+	}
+}
+
+is_very_difficult_terrain = {
+	OR = {
+		# Europe
+		has_state_trait = state_trait_alps_mountains
+		has_state_trait = state_trait_caucasus_mountains
+		# Middle East
+		has_state_trait = state_trait_arabian_desert
+		has_state_trait = state_trait_siberian_terrain
+		# Asia
+		has_state_trait = state_trait_taklamakan_desert
+		has_state_trait = state_trait_himalayas_mountains
+		has_state_trait = state_trait_gobi_desert
+		# Oceania
+		has_state_trait = state_trait_australian_desert
+		# Africa
+		has_state_trait = state_trait_sahara_desert
+		has_state_trait = state_trait_congo_forest
+		has_state_trait = state_trait_atlas_mountains
+		# America
+		#has_state_trait = state_trait_amazon_rainforest
+		has_state_trait = state_trait_floridian_wetlands
+		has_state_trait = state_trait_rocky_mountains
+		has_state_trait = state_trait_northern_canadian_terrain
+	}
+}
