@@ -1,0 +1,16 @@
+﻿LA_Home_Affairs = {
+	icon = gfx/interface/icons/topbar/authority_icon.dds
+	country_authority_add = 30
+}
+LA_Law_Enforcement = {
+	icon = gfx/interface/icons/topbar/authority_icon.dds
+	country_authority_add = 30
+}
+LA_Workplace_Safety = {
+	icon = gfx/interface/icons/topbar/authority_icon.dds
+	country_authority_add = 20
+}
+LA_Social_Security = {
+	icon = gfx/interface/icons/topbar/authority_icon.dds
+	country_authority_add = 10
+}

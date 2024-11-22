@@ -41,6 +41,9 @@
 		}
 		if = {
 			limit = {
+				NOT = {
+					c:BIC ?= this
+				}
 				any_interest_group = {
 					has_ideology = ideology:ideology_constitutionalist
 				}
@@ -51,24 +54,6 @@
 				}
 				remove_ideology = ideology_constitutionalist
 				add_ideology = ideology_republican
-			}
-		}
-	}
-	
-	possible_political_movements = {
-		law_council_republic
-		law_monarchy
-	}
-
-	pop_support = {
-		value = 0
-		add = {
-			desc = "POP_MIDDLE_STRATA"
-			if = {
-				limit = { 
-					strata = middle
-				}
-				value = 0.05
 			}
 		}
 	}
@@ -104,13 +89,13 @@
 				power_bloc ?= { has_identity = identity:identity_ideological_union }
 				scope:target_country = { # Is their law different enough from what we want to impose?
 					NOT = { has_law = law_type:law_parliamentary_republic }
-				}				
+				}
 			}
 			
 			add = base_impose_law_weight
 			if = {
 				limit = { 
-					scope:target_country = { has_law = law_type:law_council_republic } 
+					scope:target_country = { has_law = law_type:council_republic } 
 					NOT = { has_strategy = ai_strategy_egalitarian_agenda }
 				}
 				multiply = 5
@@ -119,5 +104,19 @@
 				multiply = 0.5 # AI is less likely to mess with governance principles unless dealing with council republics
 			}
 		}
-	}	
+		
+		if = {
+			limit = {
+				scope:target_country = {
+					c:BIC ?= this
+					OR = {
+						has_journal_entry = je_british_dictate_plantations
+						has_journal_entry = je_british_dictate_military
+						has_journal_entry = je_british_dictate_universities
+					}
+				}
+			}
+			multiply = 0
+		}
+	}
 }

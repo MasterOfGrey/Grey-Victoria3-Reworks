@@ -1,37 +1,7 @@
-﻿
-institution_social_security = {
-	icon = "gfx/interface/icons/institution_icons/social_security.dds"
-	background_texture = "gfx/interface/illustrations/institutions/social_security.dds"
-	modifier = {
-		state_welfare_payments_add = 0.2
-		country_authority_add = 10
-	}
-}
-
-institution_workplace_safety = {
-	icon = "gfx/interface/icons/institution_icons/workplace_safety.dds"
-	background_texture = "gfx/interface/illustrations/institutions/workplace_safety.dds"
-	modifier = {
-		building_working_conditions_mult = -0.2
-		country_authority_add = 20
-	}
-}
-
-institution_police = {
+﻿institution_police = {
 	icon = "gfx/interface/icons/institution_icons/police.dds"
     background_texture = "gfx/interface/illustrations/institutions/police.dds"
 	modifier = {
 		state_turmoil_effects_mult = -0.15
-		country_authority_add = 30
-	}
-}
-
-institution_home_affairs = {
-	icon = "gfx/interface/icons/institution_icons/home_affairs.dds"
-	background_texture = "gfx/interface/illustrations/institutions/home_affairs.dds"
-	modifier = {
-		country_revolution_progress_mult = -0.1
-		country_secession_progress_mult = -0.1
-		country_authority_add = 30
 	}
 }

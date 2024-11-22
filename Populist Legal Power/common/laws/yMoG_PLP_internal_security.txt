@@ -21,18 +21,6 @@ law_guaranteed_liberties = {
 		state_loyalists_from_sol_change_mult = 0.05
 	}
 	
-	possible_political_movements = {
-		law_secret_police
-	}
-	
-	pop_support = {
-		value = 0
-		add = {
-			desc = "ALL_POPS"
-			value = 0.01
-		}
-	}
-	
 	ai_enact_weight_modifier = { #Petitions
 		value = 0
 		

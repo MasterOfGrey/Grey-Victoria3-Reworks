@@ -1,0 +1,47 @@
+namespace = LA_event
+
+# Distributing authority to existing institutions
+LA_event.1 = {
+	type = country_event
+	hidden = yes
+
+	trigger = {
+		# by global
+	}
+
+	immediate = {
+		if = {
+			limit = {
+				exists = institution:institution_home_affairs
+			}
+			institution:institution_home_affairs = {
+				add_modifier = {
+					name = LA_Home_Affairs
+					multiplier = investment
+				}
+			}
+		}
+		if = {
+			limit = {
+				exists = institution:institution_police
+			}
+			institution:institution_police = {
+				add_modifier = {
+					name = LA_Law_Enforcement
+					multiplier = investment
+				}
+			}
+		}
+		if = {
+			limit = {
+				exists = institution:institution_workplace_safety
+			}
+			institution:institution_workplace_safety = {
+				add_modifier = {
+					name = LA_Workplace_Safety
+					multiplier = investment
+				}
+			}
+		}
+	}
+}

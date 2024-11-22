@@ -1,0 +1,6 @@
+﻿GLOBAL = {
+	#institutions dont exist during global execution, so need to apply existing authority via hidden event
+	every_country = {
+		trigger_event = LA_event.1 #may need to add 1 day delay, apparently could cause ctd
+	}
+}

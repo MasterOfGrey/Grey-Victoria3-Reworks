@@ -10,12 +10,6 @@ law_commercialized_agriculture = {
 		law_traditionalism
 	}
 	
-	possible_political_movements = {
-		law_homesteading
-		law_collectivized_agriculture
-		law_homesteading
-	}
-	
 	unlocking_technologies = {
 		mutual_funds
 	}
@@ -64,60 +58,16 @@ law_commercialized_agriculture = {
 		}
 	}
 	
-	pop_support = {
-		value = 0
-		
-		add = {
-			desc = "POP_CAPITALISTS"			
-			if = {
-				limit = {
-					is_pop_type = capitalists
-				}
-				value = 0.1
-			}
-		}
-		
-		# Literate pops support getting out of Serfdom once you have Empiricism
-		add = {
-			desc = "empiricism"
-			
-			if = {
-				limit = { 
-					owner = { 
-						has_technology_researched = empiricism 
-						has_law = law_type:law_serfdom
-					}				
-					
-					# Peasants & Farmers want Homesteading instead of Commercialized Agriculture
-					NOR = { 
-						is_pop_type = farmers
-						is_pop_type = peasants
-					} 
-				}
-				add = {
-					value = literacy_rate			
-					if = {
-						limit = { is_pop_type = aristocrats }
-						divide = 5
-					}	
-					else = {
-						divide = 2
-					}
-				}
-			}
-		}		
-	}
-	
 	ai_enact_weight_modifier = { #Petitions
 		value = 0
-
+		
 		if = {
 			limit = { ai_has_enact_weight_modifier_journal_entries = yes }
 			add = 750
 		}
 		
 		if = {
-			limit = { 
+			limit = {
 				has_journal_entry = je_meiji_main
 				has_law = law_type:law_serfdom
 			}
@@ -131,11 +81,17 @@ law_commercialized_agriculture = {
 				NOT = { has_strategy = ai_strategy_reactionary_agenda }
 				OR = {
 					NOT = { has_strategy = ai_strategy_conservative_agenda }
-					any_political_movement = { desired_law = law_type:law_collectivized_agriculture }				
+					any_political_movement = {
+						law_stance = {
+							law = law_type:law_collectivized_agriculture
+							value > neutral
+						}
+						political_movement_support >= 0.10
+					}
 				}
 			}
 			add = 1000
-		}		
+		}
 	}
 }
 
@@ -146,16 +102,11 @@ law_homesteading = {
 	
 	progressiveness = 25
 	
-	possible_political_movements = {
-		law_tenant_farmers
-		law_collectivized_agriculture
-		law_commercialized_agriculture
-	}
-	
 	modifier = {
 		country_farmers_pol_str_mult = 0.25
 		building_group_bg_agriculture_allowed_collectivization_add = 0.5
 		building_group_bg_ranching_allowed_collectivization_add = 0.5
+		building_group_bg_plantations_allowed_collectivization_add = 0.2
 	}
 	
 	on_enact = {
@@ -205,42 +156,6 @@ law_homesteading = {
 		# }
 	}
 	
-	pop_support = {
-		value = 0
-
-		add = {
-			desc = "POP_FARMERS"			
-			if = {
-				limit = {
-					is_pop_type = farmers
-				}
-				value = 0.50
-			}
-		}
-		
-		# Literate pops support getting out of Serfdom once you have Empiricism
-		add = {
-			desc = "empiricism"
-			
-			if = {
-				limit = { 
-					owner = { 
-						has_technology_researched = empiricism 
-						has_law = law_type:law_serfdom
-					}				
-					OR = { 
-						is_pop_type = farmers
-						is_pop_type = peasants 
-					} 
-				}
-				add = {
-					value = literacy_rate
-					divide = 2
-				}
-			}
-		}		
-	}
-	
 	ai_enact_weight_modifier = { #Petitions
 		value = 0
 		
@@ -256,11 +171,17 @@ law_homesteading = {
 				NOT = { has_strategy = ai_strategy_reactionary_agenda }
 				OR = {
 					NOT = { has_strategy = ai_strategy_conservative_agenda }
-					any_political_movement = { desired_law = law_type:law_homesteading }				
+					any_political_movement = {
+						law_stance = {
+							law = law_type:law_homesteading
+							value > neutral
+						}
+						political_movement_support >= 0.10
+					}
 				}
 			}
 			add = 1000
-		}		
+		}
 	}
 }
 
@@ -312,12 +233,6 @@ law_collectivized_agriculture = {
 #		law_cooperative_ownership
 #	}
 	
-	possible_political_movements = {
-		law_tenant_farmers
-		law_homesteading
-		law_commercialized_agriculture
-	}
-	
 	on_activate = {
 		add_modifier = {
 			name = land_redistribution_modifier
@@ -329,25 +244,6 @@ law_collectivized_agriculture = {
 	
 	unlocking_technologies = { socialism }
 	
-	pop_support = {
-		value = 0
-		
-		add = {
-			desc = "POP_PEASANTS"		
-			if = {
-				limit = { 
-					is_pop_type = peasants
-					owner = { 
-						has_law = law_type:law_serfdom
-					}
-				}
-				add = {
-					value = literacy_rate
-				}
-			}			
-		}
-	}
-	
 	ai_enact_weight_modifier = { #Petitions
 		value = 0
 		
@@ -357,7 +253,7 @@ law_collectivized_agriculture = {
 		}
 		
 		if = {
-			limit = { 
+			limit = {
 				has_law = law_type:law_council_republic
 			}
 			add = 250

@@ -1,0 +1,150 @@
+﻿# Root = Institution
+on_investment_increased = {
+	on_actions = {
+		LA_on_investment_change
+	}
+}
+on_investment_decreased = {
+	on_actions = {
+		LA_on_investment_change
+	}
+}
+
+LA_on_investment_change = {
+	effect = {
+		if = {
+			limit = {
+				THIS = owner.institution:institution_home_affairs
+			}
+			owner = {
+				institution:institution_home_affairs = {
+					remove_modifier = LA_Home_Affairs
+					add_modifier = {
+						name = LA_Home_Affairs
+						multiplier = investment
+					}
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				THIS = owner.institution:institution_police
+			}
+			owner = {
+				institution:institution_police = {
+					remove_modifier = LA_Law_Enforcement
+					add_modifier = {
+						name = LA_Law_Enforcement
+						multiplier = investment
+					}
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				THIS = owner.institution:institution_workplace_safety
+			}
+			owner = {
+				institution:institution_workplace_safety = {
+					remove_modifier = LA_Workplace_Safety
+					add_modifier = {
+						name = LA_Workplace_Safety
+						multiplier = investment
+					}
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				THIS = owner.institution:institution_social_security
+			}
+			owner = {
+				institution:institution_workplace_safety = {
+					remove_modifier = LA_Social_Security
+					add_modifier = {
+						name = LA_Social_Security
+						multiplier = investment
+					}
+				}
+			}
+		}
+	}
+}
+#######################################################################
+#for activating institution modifiers on countries not existing on start
+
+# Root = Releasing Country
+# scope:target = Released Country
+on_country_released_as_independent = {
+	on_actions = {
+		LA_on_country_released
+	}
+}
+on_country_released_as_own_subject = {
+	on_actions = {
+		LA_on_country_released
+	}
+}
+LA_on_country_released = {
+	effect = {
+		if = {
+			limit = {
+				scope:target = {
+					exists = institution:institution_home_affairs
+				}
+			}
+			scope:target = {
+				institution:institution_home_affairs = {
+					add_modifier = {
+						name = LA_Home_Affairs
+						multiplier = investment
+					}
+				}
+			}
+		}
+		if = {
+			limit = {
+				scope:target = {
+					exists = institution:institution_police
+				}
+			}
+			scope:target = {
+				institution:institution_police = {
+					add_modifier = {
+						name = LA_Law_Enforcement
+						multiplier = investment
+					}
+				}
+			}
+		}
+		if = {
+			limit = {
+				scope:target = {
+					exists = institution:institution_workplace_safety
+				}
+			}
+			scope:target = {
+				institution:institution_workplace_safety = {
+					add_modifier = {
+						name = LA_Workplace_Safety
+						multiplier = investment
+					}
+				}
+			}
+		}
+		if = {
+			limit = {
+				THIS = owner.institution:institution_social_security
+			}
+			owner = {
+				institution:institution_workplace_safety = {
+					remove_modifier = LA_Social_Security
+					add_modifier = {
+						name = LA_Social_Security
+						multiplier = investment
+					}
+				}
+			}
+		}
+	}
+}
