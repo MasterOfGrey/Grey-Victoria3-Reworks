@@ -1,0 +1,9 @@
+law_forced_labour = {
+	can_enact = {
+		0 = 1
+	}
+	
+	is_visible = {
+		0 = 1
+	}
+}
