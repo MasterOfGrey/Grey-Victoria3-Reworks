@@ -2,6 +2,9 @@
 	every_country = {
 		add_modifier = {
 			name = mog_urbanization
+			multiplier = {
+				add = 100	# Ensures that at game start the urbanization amount is ballpark ok - fine tuned by event later.
+			}
 		}
 	}
 }

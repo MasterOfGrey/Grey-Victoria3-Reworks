@@ -1,0 +1,70 @@
+﻿namespace = USU_secret_ev
+
+USU_secret_ev.1 = {
+	type = country_event
+	hidden = yes
+	
+	immediate = {
+		if = { # Clear modifiers (we'll put them back dw)
+			limit = {
+				has_modifier = mog_urbanization
+			}
+			remove_modifier = mog_urbanization
+		}
+		if = {
+			limit = {
+				has_modifier = mog_urbanization_mult
+			}
+			remove_modifier = mog_urbanization_mult
+		}
+		
+		if = { # Create variables for adjusted modifier values if not set already
+			limit = {
+				NOT = {
+					has_variable = USU_urban_adjustment_mult
+				}
+			}
+			set_variable = {
+				name  = USU_urban_adjustment_mult
+				value = 0
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					has_variable = USU_urban_adjustment
+				}
+			}
+			set_variable = {
+				name  = USU_urban_adjustment
+				value = 0
+			}
+		}
+		
+		# Negate multipliers cause they're gross and make balancing hard.
+		set_variable = {
+			name  = USU_urban_adjustment_mult
+			value = {
+				add = mog_usu_urbanization_target_mult
+				subtract = modifier:state_urbanization_per_level_mult
+			}
+		}
+		add_modifier = {
+			name = mog_urbanization_mult
+			multiplier = var:USU_urban_adjustment_mult
+		}
+		
+		# Calculate adjustment for urbanization and apply it.
+		set_variable = {
+			name  = USU_urban_adjustment
+			value = {
+				add = mog_usu_urbanization_target_calc
+				subtract = modifier:state_urbanization_per_level_add
+			}
+		}
+		add_modifier = {
+			name = mog_urbanization
+			multiplier = var:USU_urban_adjustment
+		}
+	}
+}

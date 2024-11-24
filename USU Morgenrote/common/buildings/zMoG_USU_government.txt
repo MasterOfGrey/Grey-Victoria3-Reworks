@@ -27,7 +27,7 @@
 		pmg_sports_facilities #MORGENRÖTE
 	}
 
-	texture = "gfx/interface/icons/building_icons/building_government_administration.dds"
+	icon = "gfx/interface/icons/building_icons/building_government_administration.dds"
 
 	required_construction = construction_cost_medium
 

@@ -1,7 +1,7 @@
 ﻿## RIVER PORTS
 building_river_port = {
 	building_group = USU_bg_port_infrastructure
-	texture = "gfx/interface/icons/building_icons/building_port.dds"
+	icon = "gfx/interface/icons/building_icons/building_port.dds"
 	
 	ai_nationalization_desire = 0.5 	# Copied from railways - AI is reluctant to privatize vital infrastructure
 	ai_value = 50000 # Just get it done, eh
@@ -21,7 +21,7 @@ building_river_port = {
 	
 	terrain_manipulator = urban_port
 	
-	possible = {
+	potential = {
 		rt_on_river = yes
 	}
 	

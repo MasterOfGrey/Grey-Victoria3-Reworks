@@ -1,8 +1,13 @@
-﻿# Add an additional 100 urbanization required per level
+﻿## DYNAMIC MODIFIERS
+# Add an additional 100 urbanization required per level
 mog_urbanization = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_positive.dds
-	state_urbanization_per_level_add = 100		# Balance point for new Urban Centre design	
-	state_market_access_price_impact = -0.1		# 100% MAPI should actually be incredibly hard to achieve, we don't even get it everywhere IRL now - allows room for Ports and Railroads to add MAPI without reaching 100%
+	state_urbanization_per_level_add = 1		# Balance point is 200 for new Urban Centre design - modifier applied with a multiplier to achieve this.
+}
+
+mog_urbanization_mult = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_positive.dds
+	state_urbanization_per_level_mult = 1		# Target for this is to always make the net effect = 0 to get rid of the vanilla modifiers.
 }
 
 mog_logistics_land_trade = {
@@ -13,6 +18,12 @@ mog_logistics_land_trade = {
 mog_construction_max_level_adjustment = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_gear_positive.dds
 	state_building_construction_sector_max_level_add = 1
+}
+
+## STATIC MODIFIERS
+mog_mapi = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_documents_positive.dds
+	state_market_access_price_impact = -0.1		# 100% MAPI should actually be incredibly hard to achieve, we don't even get it everywhere IRL now - allows room for Ports and Railroads to add MAPI without reaching 100%
 }
 
 mog_building_canal_accident = {

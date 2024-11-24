@@ -82,7 +82,8 @@ This has it's own auto-expand rules rework that will probably overwrite any othe
 Many thanks to nahantelhe, Ferrous, ovnxize, Starry Inori, and 1230james for their works which inspired this.
 
 [h2]Language Support:[/h2]
-[b]Most Localizations are done by Machine Translation! - Replacements are welcome from anyone[/b]
+[b]Most Localizations are done by Machine Translation!
+ -> Replacements are welcome from anyone![/b]
 Credit will be given to to providers of localisation content:
 [list]
 [*]TBD
