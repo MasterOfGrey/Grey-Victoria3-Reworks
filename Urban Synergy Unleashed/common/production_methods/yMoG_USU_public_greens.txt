@@ -8,7 +8,8 @@ USU_pm_community_orgs = {
 		}
 	
 		level_scaled = {
-			building_employment_laborers_add   = 5000
+			building_employment_laborers_add   = 4850
+			building_employment_clerks_add   = 150
 		}
 	}
 	state_modifiers = {	
