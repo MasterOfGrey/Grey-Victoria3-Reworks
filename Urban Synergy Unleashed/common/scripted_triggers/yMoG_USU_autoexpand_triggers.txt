@@ -109,6 +109,7 @@ mog_profit_ok = {
 	OR = {
 		is_subsidized = yes
 		earnings > 3
+		weekly_profit > 0
 	}
 }
 mog_market_access_ok = {
