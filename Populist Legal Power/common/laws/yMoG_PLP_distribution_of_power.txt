@@ -404,15 +404,6 @@ law_landed_voting = {
 		state_radicals_from_political_movements_mult = 0.1
 	}
 	
-	possible_political_movements = {
-		law_oligarchy
-		law_autocracy 
-		law_wealth_voting
-		law_census_voting
-		law_technocracy
-		law_single_party_state
-	}
-	
 	can_impose = {
 		country_has_voting_franchise = yes # modification of the standard trigger, only countries with a voting franchise can impose democracy on others
 		OR = {
@@ -697,16 +688,9 @@ law_universal_suffrage = {
 		law_command_economy
 	}
 	
-	possible_political_movements = {
-		law_census_voting
-		law_wealth_voting
-		law_anarchy
-		law_single_party_state
-	}
-	
 	on_activate = {
 		scripted_effect_parties_emergence = yes
-		clear_legal_single_party = yes
+		# clear_legal_single_party = yes # needed?
 	}
 	
 	modifier = {

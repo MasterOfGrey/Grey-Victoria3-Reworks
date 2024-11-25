@@ -17,8 +17,9 @@ law_guaranteed_liberties = {
 	
 	institution = institution_home_affairs
 	institution_modifier = {
-		state_radicals_from_sol_change_mult = -0.05
-		state_loyalists_from_sol_change_mult = 0.05
+		# state_radicals_from_sol_change_mult = -0.05
+		# state_loyalists_from_sol_change_mult = 0.05
+		state_radicals_and_loyalists_from_sol_change_mult = 0.05
 	}
 	
 	ai_enact_weight_modifier = { #Petitions
