@@ -1,0 +1,64 @@
+﻿l_simp_chinese:
+     # Modifiers 
+ mog_urbanization: "城市协同城市化" #NT!
+ mog_urbanization_mult: "城市协同城市化" #NT!
+ mog_construction_max_level_adjustment: "城市协同建设" #NT!
+ mog_logistics_land_trade: "进口物流服务的陆路贸易能力" #NT!
+ mog_mapi: "城市协同 MAPI" #NT!
+  
+     # Building 
+ building_river_port: "河码头" #NT!
+ USU_building_public_green: "公共绿地" #NT!
+  
+     # Technologies 
+  
+     # Goods 
+ usu_logistics: "物流服务" #NT!
+  
+     # Modifier types 
+ state_building_river_port_max_level_add: "河港最高等级" #NT!
+ state_building_river_port_max_level_add_desc: "对河港建筑最高等级的奖励或惩罚。" #NT!
+  
+ goods_input_usu_logistics_add: "@usu_logistics！[Nbsp]$usu_logistics$ 输入" #NT!
+ goods_output_usu_logistics_add: "@usu_logistics![Nbsp]$usu_logistics$ 输出" #NT!
+ goods_input_usu_logisticsr_mult: "正在构建@usu_logistics！[Nbsp]$usu_logistics$ 输入" #NT!
+ goods_output_usu_logistics_mult: "构建@usu_logistics！[Nbsp]$usu_logistics$输出" #NT!
+  
+ goods_input_usu_logistics_add_desc: "建筑物消耗的@usu_logistics![Nbsp]$usu_logistics$ 的数量" #NT!
+ goods_output_usu_logistics_add_desc: "建筑物产生的@usu_logistics![Nbsp]$usu_logistics$ 的数量" #NT!
+ goods_input_usu_logistics_mult_desc: "对建筑物消耗的@usu_logistics![Nbsp]$usu_logistics$ 数量的奖励或惩罚" #NT!
+ goods_output_usu_logistics_mult_desc: "对建筑物生产的@usu_logistics![Nbsp]$usu_logistics$ 数量的奖励或惩罚" #NT!
+  
+ modifier_goods_input_tools_mult: "@tools![Nbsp]工具输入" #NT!
+ modifier_goods_input_tools_mult_desc: "建筑物消耗的@tools![Nbsp]工具数量" #NT!
+  
+     # PMGs 
+ pmg_base_building_river_port: "码头" #NT!
+ USU_pmg_government_administration_emergency_services: "紧急服务" #NT!
+ USU_pmg_government_administration_law_enforcement: "执法" #NT!
+ USU_pmg_public_space_management: "公共空间管理" #NT!
+ USU_pmg_public_parklands: "公园使用情况" #NT!
+  
+     # PMs 
+ pm_rp_small_port: "河滨码头" #NT!
+ pm_rp_industrial_port: "工业港口" #NT!
+ pm_rp_modern_port: "现代港口" #NT!
+ USU_pm_grid_streetlights: "白炽路灯" #NT!
+ USU_pm_no_emergency_services: "无紧急服务" #NT!
+ USU_pm_basic_fire_brigade: "基础消防队" #NT!
+ USU_pm_response_planning: "灾难响应规划" #NT!
+ USU_pm_modern_emergency_services: "现代紧急服务" #NT!
+ USU_pm_no_police: "社区行动小组" #NT!
+ USU_pm_local_police: "地方警察部队" #NT!
+ USU_pm_dedicated_police: "专职警察部队" #NT!
+ USU_pm_militarized_police: "戒严执法" #NT!
+ USU_pm_community_orgs: "社区组织" #NT!
+ USU_pm_private_firms: "私人组织" #NT!
+ USU_pm_pub_priv_partners: "公私合作伙伴关系" #NT!
+ USU_pm_village_stables: "社区马厩" #NT!
+ USU_pm_contained_wilderness: "受保护的荒野" #NT!
+ USU_pm_seasonal_fairgrounds: "季节性展览会" #NT!
+  
+     # State Traits 
+ state_trait_rotterdam: "鹿特丹港" #NT!
+ state_trait_hudson_river: "哈德逊河" #NT!

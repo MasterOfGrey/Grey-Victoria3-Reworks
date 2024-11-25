@@ -1,0 +1,57 @@
+﻿l_simp_chinese:
+  # Railways 
+ pm_ac_electric_trains: "交流电动火车" #NT!
+ pm_ac_electric_trains_principle_transport_3: "联合交流电动火车" #NT!
+  
+ pm_electric_passenger_carriages: "电动客车" #NT!
+  
+ pmg_automation_building_railway: "设施自动化" #NT!
+ pm_auto_disabled_building_railway: "手摇起重机" #NT!
+ pm_steam_crane_building_railway: "曲臂蒸汽起重机" #NT!
+ pm_watertube_boiler_building_railway: "火管锅炉" #NT!
+ pm_rotary_valve_engine_building_railway: "单流旋转阀装置" #NT!
+ pm_steam_donkey_building_railway: "齿轮蒸汽传动系统" #NT!
+  
+  # Logistics 
+ pmg_logistics_services_railway: "铁路物流" #NT!
+ pmg_logistics_services_port_coastal: "航运物流" #NT!
+ pmg_logistics_services_port_river: "河流物流" #NT!
+  
+ USU_pm_rail_logistics_0: "缺乏后勤协调" #NT!
+ USU_pm_rail_logistics_1: "配额规划" #NT!
+ USU_pm_rail_logistics_2: "远程访问竞标" #NT!
+ USU_pm_rail_logistics_3: "供应链管理" #NT!
+  
+ USU_pm_port_c_logistics_0: "缺乏后勤协调" #NT!
+ USU_pm_port_c_logistics_1: "配额规划" #NT!
+ USU_pm_port_c_logistics_2: "远程访问竞标" #NT!
+ USU_pm_port_c_logistics_3: "供应链管理" #NT!
+  
+ USU_pm_port_r_logistics_0: "缺乏后勤协调" #NT!
+ USU_pm_port_r_logistics_1: "配额规划" #NT!
+ USU_pm_port_r_logistics_2: "远程访问竞标" #NT!
+ USU_pm_port_r_logistics_3: "供应链管理" #NT!
+  
+  # Canals 
+ # pm_canal: "蒸汽动力锁" #NT!
+ pm_canals_electric: "电动运河锁" #NT!
+ pm_canals_oil: "油泵锁" #NT!
+  
+ pmg_canal_boats: "运河管理" #NT!
+ pm_no_tugs_building_canals: "无拖船" #NT!
+ pm_tugging_building_canals: "拖船船队" #NT!
+  
+ pmg_canal_logistics: "运河物流" #NT!
+ pm_no_canal_logistics: "无物流" #NT!
+ pm_minor_canal_logistics: "小型物流" #NT!
+ pm_major_canal_logistics: "主要物流" #NT!
+  
+ canal_dividends.1.t: "运河事故" #NT!
+ canal_dividends.1.d: "一艘商船没有注意，意外在运河中搁浅，阻塞了通道，使通行变得更加危险，直到完全疏通。" #NT!
+ canal_dividends.1.f: "这艘大型商船半倾倒在运河中，船身因与墙壁相撞而留下一道裂痕，货物散落在通道上，华而不实的服饰和异国商品在水中漂浮，昂贵的外国商品被浸湿毁坏。\n\n船长站在岸边，双手捂脸，帽子漂浮在运河中。在他旁边，公司的保险代表拿着一份被水损坏的船舶清单，试图弄清楚这一切，而运河代理人则试图解释说清理工作可能需要几个月的时间。" #NT!
+ canal_dividends.1.1: "$expedition_events.542.a$" #NT!
+ modifier_building_canal_accident: "运河事故" #NT!
+  
+  
+  
+  

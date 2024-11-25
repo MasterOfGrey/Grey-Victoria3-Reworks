@@ -1,0 +1,12 @@
+﻿l_korean:
+  # WCA 
+ alert_wasted_construction_name: "사용하지 않은 [concept_construction]" #NT!
+ alert_wasted_construction_hint: "사용하지 않은 [concept_construction]" #NT!
+ alert_wasted_construction_action: "건설 패널" #NT!
+ wasted_construction_setting_name: "사용하지 않는 건설" #NT!
+  
+ pm_electric_trains: "DC 전기 기차" #NT!
+ pm_electric_trains_principle_transport_3: "조인트 DC 전기 열차" #NT!
+ pm_electric_streetlights: "문라이트 타워" #NT!
+  
+ pm_canal: "증기 동력 잠금 장치" #NT!

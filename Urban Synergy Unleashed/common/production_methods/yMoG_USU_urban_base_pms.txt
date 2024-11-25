@@ -2,7 +2,7 @@
 
 pm_market_stalls = {
 	texture = "gfx/interface/icons/production_method_icons/market_stalls.dds"
-	
+	ai_value = 500
 	country_modifiers = {
 		workforce_scaled = {
 			country_construction_add = 0.1
@@ -40,7 +40,7 @@ pm_market_stalls = {
 
 pm_market_squares = {
 	texture = "gfx/interface/icons/production_method_icons/market_squares.dds"
-	
+	ai_value = 1000
 	unlocking_technologies = { urban_planning }
 	
 	country_modifiers = {
@@ -84,7 +84,7 @@ pm_market_squares = {
 
 pm_covered_markets = {
 	texture = "gfx/interface/icons/production_method_icons/covered_markets.dds"
-	
+	ai_value = 1500
 	unlocking_technologies = { steel_frame_buildings }
 	
 	country_modifiers = {
@@ -128,7 +128,7 @@ pm_covered_markets = {
 
 pm_arcades = {
 	texture = "gfx/interface/icons/production_method_icons/arcades.dds"
-	
+	ai_value = 2000
 	unlocking_technologies = { elevator }
 	
 	country_modifiers = {

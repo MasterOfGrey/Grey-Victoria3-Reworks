@@ -1,4 +1,4 @@
-law_forced_labour = {
+﻿law_forced_labour = {
 	can_enact = {
 		0 = 1
 	}

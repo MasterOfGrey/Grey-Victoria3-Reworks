@@ -87,8 +87,9 @@ GLOBAL = {
 		# New
 		
 		# Extended
-		s:STATE_NORTH_BENGAL = { add_state_trait = state_trait_brahmaputra_river }
-		s:STATE_SOUTH_BENGAL = { add_state_trait = state_trait_brahmaputra_river }
+		s:STATE_WEST_BENGAL = { add_state_trait = state_trait_ganges_river }
+		s:STATE_EAST_BENGAL = { add_state_trait = state_trait_ganges_river }
+		s:STATE_EAST_BENGAL = { add_state_trait = state_trait_brahmaputra_river }
 		
 		# Would-be Overwrites on "touched" states (recorded here for reference, not used because present by default when not redefining the whole damn state)
 		

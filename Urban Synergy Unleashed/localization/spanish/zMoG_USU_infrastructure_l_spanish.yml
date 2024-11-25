@@ -1,0 +1,57 @@
+﻿l_spanish:
+  # Railways 
+ pm_ac_electric_trains: "Trenes eléctricos de CA" #NT!
+ pm_ac_electric_trains_principle_transport_3: "Trenes eléctricos de CA conjuntos" #NT!
+  
+ pm_electric_passenger_carriages: "Vagones de pasajeros eléctricos" #NT!
+  
+ pmg_automation_building_railway: "Automatización de instalaciones" #NT!
+ pm_auto_disabled_building_railway: "Grúa con manivela" #NT!
+ pm_steam_crane_building_railway: "Grúa de vapor con pluma curva" #NT!
+ pm_watertube_boiler_building_railway: "Caldera pirotubular" #NT!
+ pm_rotary_valve_engine_building_railway: "Válvula rotativa Uniflow" #NT!
+ pm_steam_donkey_building_railway: "Transmisión a vapor con engranajes" #NT!
+  
+  # Logistics 
+ pmg_logistics_services_railway: "Logística ferroviaria" #NT!
+ pmg_logistics_services_port_coastal: "Logística de envío" #NT!
+ pmg_logistics_services_port_river: "Logística fluvial" #NT!
+  
+ USU_pm_rail_logistics_0: "Sin coordinación logística" #NT!
+ USU_pm_rail_logistics_1: "Planificación de la asignación de cuotas" #NT!
+ USU_pm_rail_logistics_2: "Licitación con acceso remoto" #NT!
+ USU_pm_rail_logistics_3: "Gestión de la cadena de suministro" #NT!
+  
+ USU_pm_port_c_logistics_0: "Sin coordinación logística" #NT!
+ USU_pm_port_c_logistics_1: "Planificación de la asignación de cuotas" #NT!
+ USU_pm_port_c_logistics_2: "Licitación con acceso remoto" #NT!
+ USU_pm_port_c_logistics_3: "Gestión de la cadena de suministro" #NT!
+  
+ USU_pm_port_r_logistics_0: "Sin coordinación logística" #NT!
+ USU_pm_port_r_logistics_1: "Planificación de la asignación de cuotas" #NT!
+ USU_pm_port_r_logistics_2: "Licitación con acceso remoto" #NT!
+ USU_pm_port_r_logistics_3: "Gestión de la cadena de suministro" #NT!
+  
+  # Canals 
+ # pm_canal: "Cerraduras accionadas por vapor" #NT!
+ pm_canals_electric: "Esclusas eléctricas para canales" #NT!
+ pm_canals_oil: "Bloqueos de la bomba de aceite" #NT!
+  
+ pmg_canal_boats: "Gestión del canal" #NT!
+ pm_no_tugs_building_canals: "Sin tirones" #NT!
+ pm_tugging_building_canals: "Flota de remolcadores" #NT!
+  
+ pmg_canal_logistics: "Logística del Canal" #NT!
+ pm_no_canal_logistics: "Sin logística" #NT!
+ pm_minor_canal_logistics: "Logística menor" #NT!
+ pm_major_canal_logistics: "Logística mayor" #NT!
+  
+ canal_dividends.1.t: "Accidente en el canal" #NT!
+ canal_dividends.1.d: "Un barco mercante no prestó atención y encalló accidentalmente en el canal, bloqueando el paso y haciendo más peligroso el paso hasta que estuvo completamente despejado." #NT!
+ canal_dividends.1.f: "El gran barco mercante yace medio inclinado en el canal, de costado, con una herida profunda por el impacto contra el muro, sus mercancías esparcidas por el canal, lujosas y exóticas mercancías flotando en el agua, las caras mercancías de una tierra extranjera empapadas y arruinadas.\n\nEn la orilla se encuentra el capitán, con la cara entre las manos y el sombrero flotando en el canal. Junto a él, el representante de seguros de la compañía sostiene un manifiesto de daños causados ​​por el agua en el barco, tratando de darle sentido a todo, mientras un agente del canal intenta explicarle que la limpieza podría llevar meses." #NT!
+ canal_dividends.1.1: "$expedition_events.542.a$" #NT!
+ modifier_building_canal_accident: "Accidente en el canal" #NT!
+  
+  
+  
+  

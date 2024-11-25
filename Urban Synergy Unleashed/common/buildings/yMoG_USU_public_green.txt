@@ -16,6 +16,7 @@
 	
 	required_construction = construction_cost_low
 	
+	terrain_manipulator = pasture
 	ownership_type = self
 	
 	# generates_residences = yes

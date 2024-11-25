@@ -1,0 +1,57 @@
+﻿l_turkish:
+  # Railways 
+ pm_ac_electric_trains: "AC Elektrikli Trenler" #NT!
+ pm_ac_electric_trains_principle_transport_3: "Ortak AC Elektrikli Trenler" #NT!
+  
+ pm_electric_passenger_carriages: "Elektrikli Yolcu Arabaları" #NT!
+  
+ pmg_automation_building_railway: "Tesis Otomasyonu" #NT!
+ pm_auto_disabled_building_railway: "El Kranklı Vinç" #NT!
+ pm_steam_crane_building_railway: "Kavisli Jib Buharlı Vinç" #NT!
+ pm_watertube_boiler_building_railway: "Ateş Borulu Kazan" #NT!
+ pm_rotary_valve_engine_building_railway: "Uniflow Döner Vana Dişlisi" #NT!
+ pm_steam_donkey_building_railway: "Dişli Buhar Aktarma Organları" #NT!
+  
+  # Logistics 
+ pmg_logistics_services_railway: "Demiryolu Lojistiği" #NT!
+ pmg_logistics_services_port_coastal: "Nakliye Lojistiği" #NT!
+ pmg_logistics_services_port_river: "Nehir Lojistiği" #NT!
+  
+ USU_pm_rail_logistics_0: "Lojistik Koordinasyon Yok" #NT!
+ USU_pm_rail_logistics_1: "Kota Tahsisatı Planlaması" #NT!
+ USU_pm_rail_logistics_2: "Uzaktan Erişim Teklifi" #NT!
+ USU_pm_rail_logistics_3: "Tedarik zinciri yönetimi" #NT!
+  
+ USU_pm_port_c_logistics_0: "Lojistik Koordinasyon Yok" #NT!
+ USU_pm_port_c_logistics_1: "Kota Tahsisatı Planlaması" #NT!
+ USU_pm_port_c_logistics_2: "Uzaktan Erişim Teklifi" #NT!
+ USU_pm_port_c_logistics_3: "Tedarik zinciri yönetimi" #NT!
+  
+ USU_pm_port_r_logistics_0: "Lojistik Koordinasyon Yok" #NT!
+ USU_pm_port_r_logistics_1: "Kota Tahsisatı Planlaması" #NT!
+ USU_pm_port_r_logistics_2: "Uzaktan Erişim Teklifi" #NT!
+ USU_pm_port_r_logistics_3: "Tedarik zinciri yönetimi" #NT!
+  
+  # Canals 
+ # pm_canal: "Buharla Çalışan Kilitler" #NT!
+ pm_canals_electric: "Elektrikli Kanal Kilitleri" #NT!
+ pm_canals_oil: "Yağ Pompası Kilitleri" #NT!
+  
+ pmg_canal_boats: "Kanal Yönetimi" #NT!
+ pm_no_tugs_building_canals: "Hiçbir Çekme Yok" #NT!
+ pm_tugging_building_canals: "Römorkör Filosu" #NT!
+  
+ pmg_canal_logistics: "Kanal Lojistiği" #NT!
+ pm_no_canal_logistics: "Lojistik yok" #NT!
+ pm_minor_canal_logistics: "Küçük Lojistik" #NT!
+ pm_major_canal_logistics: "Büyük Lojistik" #NT!
+  
+ canal_dividends.1.t: "Kanal Kazası" #NT!
+ canal_dividends.1.d: "Dikkat etmeyen bir ticaret gemisi kazara kanalda karaya oturdu, yol tamamen açılana kadar geçiş daha da tehlikeli hale geldi." #NT!
+ canal_dividends.1.f: "Büyük ticaret gemisi kanalda yarı yatık bir şekilde yatıyor, yan tarafında duvara çarpması sonucu oluşan derin bir yara var, malları geçide saçılmış, süs eşyaları ve egzotik mallar suda sallanıyor, yabancı bir ülkenin pahalı malları ıslanmış ve mahvolmuş.\n\nKıyıda kaptan duruyor, yüzü ellerinin arasında ve şapkası kanalda yüzüyor. Yanında şirketin sigorta temsilcisi, her şeyi anlamaya çalışarak elinde su hasarlı bir gemi beyannamesi tutuyor, bir kanal acentesi ise temizlemenin aylar sürebileceğini açıklamaya çalışıyor." #NT!
+ canal_dividends.1.1: "$expedition_events.542.a$" #NT!
+ modifier_building_canal_accident: "Kanal Kazası" #NT!
+  
+  
+  
+  

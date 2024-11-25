@@ -27,6 +27,11 @@ goods_input_luxury_clothes_add = {
 	percent = no
 }
 
+goods_input_services_add = {
+	color = bad
+	percent = no
+}
+
 goods_input_transportation_mult = {
 	color = bad
 	percent = yes

@@ -1,0 +1,64 @@
+﻿l_braz_por:
+     # Modifiers 
+ mog_urbanization: "Sinergia Urbana Urbanismo" #NT!
+ mog_urbanization_mult: "Sinergia Urbana Urbanismo" #NT!
+ mog_construction_max_level_adjustment: "Construção Sinergia Urbana" #NT!
+ mog_logistics_land_trade: "Capacidade de Comércio Terrestre a Partir de Serviços Logísticos Importados" #NT!
+ mog_mapi: "Sinergia Urbana MAPI" #NT!
+  
+     # Building 
+ building_river_port: "Docas fluviais" #NT!
+ USU_building_public_green: "Verde Público" #NT!
+  
+     # Technologies 
+  
+     # Goods 
+ usu_logistics: "Serviços de Logística" #NT!
+  
+     # Modifier types 
+ state_building_river_port_max_level_add: "Nível máximo do porto fluvial" #NT!
+ state_building_river_port_max_level_add_desc: "Um bônus ou penalidade ao nível máximo dos edifícios do Porto Fluvial." #NT!
+  
+ goods_input_usu_logistics_add: "@usu_logistics![Nbsp]$usu_logistics$ entrada" #NT!
+ goods_output_usu_logistics_add: "@usu_logistics![Nbsp]$usu_logistics$ saída" #NT!
+ goods_input_usu_logisticsr_mult: "Construindo @usu_logistics![Nbsp]$usu_logistics$ entrada" #NT!
+ goods_output_usu_logistics_mult: "Construindo @usu_logistics![Nbsp]$usu_logistics$ saída" #NT!
+  
+ goods_input_usu_logistics_add_desc: "A quantidade de @usu_logistics![Nbsp]$usu_logistics$ consumida pelos edifícios" #NT!
+ goods_output_usu_logistics_add_desc: "A quantidade de @usu_logistics![Nbsp]$usu_logistics$ produzida pelos edifícios" #NT!
+ goods_input_usu_logistics_mult_desc: "Um bônus ou penalidade na quantidade de @usu_logistics![Nbsp]$usu_logistics$ consumido pelos edifícios" #NT!
+ goods_output_usu_logistics_mult_desc: "Um bônus ou penalidade na quantidade de @usu_logistics![Nbsp]$usu_logistics$ produzido por edifícios" #NT!
+  
+ modifier_goods_input_tools_mult: "@tools![Nbsp]Entrada de ferramentas" #NT!
+ modifier_goods_input_tools_mult_desc: "A quantidade de @tools![Nbsp]Ferramentas consumidas por edifícios" #NT!
+  
+     # PMGs 
+ pmg_base_building_river_port: "Docas" #NT!
+ USU_pmg_government_administration_emergency_services: "Serviços de emergência" #NT!
+ USU_pmg_government_administration_law_enforcement: "Aplicação da lei" #NT!
+ USU_pmg_public_space_management: "Gestão do Espaço Público" #NT!
+ USU_pmg_public_parklands: "Uso de parques" #NT!
+  
+     # PMs 
+ pm_rp_small_port: "Cais Riverside" #NT!
+ pm_rp_industrial_port: "Portos Industriais" #NT!
+ pm_rp_modern_port: "Portos Modernos" #NT!
+ USU_pm_grid_streetlights: "Luzes de rua incandescentes" #NT!
+ USU_pm_no_emergency_services: "Nenhum serviço de emergência" #NT!
+ USU_pm_basic_fire_brigade: "Corpos de Bombeiros Básicos" #NT!
+ USU_pm_response_planning: "Planejamento de resposta a desastres" #NT!
+ USU_pm_modern_emergency_services: "Serviços de emergência modernos" #NT!
+ USU_pm_no_police: "Grupos de Ação Comunitária" #NT!
+ USU_pm_local_police: "Força Policial Local" #NT!
+ USU_pm_dedicated_police: "Força Policial Dedicada" #NT!
+ USU_pm_militarized_police: "Aplicação da Lei Marcial" #NT!
+ USU_pm_community_orgs: "Organizações comunitárias" #NT!
+ USU_pm_private_firms: "Organizações Privadas" #NT!
+ USU_pm_pub_priv_partners: "Parcerias Público-Privadas" #NT!
+ USU_pm_village_stables: "Estábulos comunitários" #NT!
+ USU_pm_contained_wilderness: "Área selvagem protegida" #NT!
+ USU_pm_seasonal_fairgrounds: "Parque de Exposições Sazonais" #NT!
+  
+     # State Traits 
+ state_trait_rotterdam: "Porto de Roterdão" #NT!
+ state_trait_hudson_river: "Rio Hudson" #NT!

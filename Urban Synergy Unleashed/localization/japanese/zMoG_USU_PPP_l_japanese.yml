@@ -1,50 +1,63 @@
 ﻿l_japanese:
-    # Building
-    PPP_building_power_grid: "Electrical Grid"
-    
-    # Technologies
-    PPP_tech_hv_power:      "Power Transmission"
-    PPP_tech_hv_power_desc: "By manipulating electricity into alternating between different directions, high voltages that make long-distance power transmission economical can be achieved."
-    
-    # Goods
-    ppp_hv_power: "High-Voltage Power"
-    
-    # Modifier types
-    goods_input_ppp_hv_power_add:   "@ppp_hv_power![Nbsp]$ppp_hv_power$ input"
-    goods_output_ppp_hv_power_add:  "@ppp_hv_power![Nbsp]$ppp_hv_power$ output"
-    goods_input_ppp_hv_power_mult:  "Building @ppp_hv_power![Nbsp]$ppp_hv_power$ input"
-    goods_output_ppp_hv_power_mult: "Building @ppp_hv_power![Nbsp]$ppp_hv_power$ output"
-    
-    goods_input_ppp_hv_power_add_desc:   "The amount of @ppp_hv_power![Nbsp]$ppp_hv_power$ consumed by buildings"
-    goods_output_ppp_hv_power_add_desc:  "The amount of @ppp_hv_power![Nbsp]$ppp_hv_power$ produced by buildings"
-    goods_input_ppp_hv_power_mult_desc:  "A bonus or penalty to the amount of @ppp_hv_power![Nbsp]$ppp_hv_power$ consumed by buildings"
-    goods_output_ppp_hv_power_mult_desc: "A bonus or penalty to the amount of @ppp_hv_power![Nbsp]$ppp_hv_power$ produced by buildings"
-    
-    goods_input_steel_mult: "Building $goods_input_steel_add$"
-    goods_input_tools_mult: "Building $goods_input_tools_add$"
-    
-    goods_input_steel_mult_desc: "$goods_input_steel_add_desc$" # I'm lazy + they just do this for
-    goods_input_tools_mult_desc: "$goods_input_tools_add_desc$" # mobilization options anyways
-    
-    # PMGs
-    PPP_pmg_generation_machinery: "Generation Machinery"
-    PPP_pmg_HV_generation:        "Power Distribution"
-    PPP_pmg_power_grid:           "$pm_base$"
-    PPP_pmg_power_grid_scaler:    "Distribution Capacity"
-    
-    # PMs
-    PPP_pm_hydro_mechanical: "Water Turbines"
-    PPP_pm_steam_engine:     "Steam Engines"
-    PPP_pm_steam_turbine:    "Steam Turbines"
-    PPP_pm_gas_turbine:      "Gas Turbines"
-    
-    PPP_pm_local_power: "Local Electricity"
-    PPP_pm_grid_power:  "Electrical Grid"
-    
-    PPP_pm_grid_base: "Regional Distribution"
-    
-    PPP_pm_grid_water:       "Normal Capacity"
-    PPP_pm_grid_engine:      "Increased Capacity"
-    PPP_pm_grid_turbine:     "Doubled Capacity"
-    PPP_pm_grid_gas_turbine: "Tripled Capacity"
-    
+     # Building 
+ PPP_building_power_grid: "電力網" #NT!
+  
+     # Technologies 
+ PPP_tech_hv_power: "動力伝達" #NT!
+ PPP_tech_hv_power_desc: "コンバータとレギュレータを利用することで、高電圧の長距離電力伝送を、さまざまなニーズを持つ複数の目的地で利用できるようになりました。" #NT!
+ USU_tech_hv_railways: "産業用変圧器" #NT!
+ USU_tech_hv_railways_desc: "スケーラブルな変圧器を利用することで、交流電流の利点を最大限に活用し、長距離にわたって一貫して高電圧を供給し、電力伝送を経済的に行うことができます。" #NT!
+  
+     # Goods 
+ ppp_hv_power: "高電圧電源" #NT!
+  
+     # Modifier types - As of USU: None of the multipliers are used anymore. 
+ goods_input_ppp_hv_power_add: "@ppp_hv_power![Nbsp]$ppp_hv_power$ 入力" #NT!
+ goods_output_ppp_hv_power_add: "@ppp_hv_power![Nbsp]$ppp_hv_power$ 出力" #NT!
+ goods_input_ppp_hv_power_mult: "@ppp_hv_power を構築中![Nbsp]$ppp_hv_power$ 入力" #NT!
+ goods_output_ppp_hv_power_mult: "@ppp_hv_power を構築中![Nbsp]$ppp_hv_power$ 出力" #NT!
+  
+ goods_input_ppp_hv_power_add_desc: "建物で消費される @ppp_hv_power![Nbsp]$ppp_hv_power$ の量" #NT!
+ goods_output_ppp_hv_power_add_desc: "建物によって生成される @ppp_hv_power![Nbsp]$ppp_hv_power$ の量" #NT!
+ goods_input_ppp_hv_power_mult_desc: "建物によって消費される @ppp_hv_power![Nbsp]$ppp_hv_power$ の量に対するボーナスまたはペナルティ" #NT!
+ goods_output_ppp_hv_power_mult_desc: "建物によって生成される @ppp_hv_power![Nbsp]$ppp_hv_power$ の量に対するボーナスまたはペナルティ" #NT!
+  
+ goods_input_steel_mult: "建物$goods_input_steel_add$" #NT!
+ goods_input_tools_mult: "建物$goods_input_tools_add$" #NT!
+  
+ goods_input_steel_mult_desc: "$goods_input_steel_add_desc$" #NT!
+ goods_input_tools_mult_desc: "$goods_input_tools_add_desc$" #NT!
+  
+     # PMGs 
+ PPP_pmg_generation_machinery: "発電機械" #NT!
+ PPP_pmg_HV_generation: "電力分配" #NT!
+ PPP_pmg_power_grid: "$pm_base$" #NT!
+ PPP_pmg_power_grid_scaler: "流通能力" #NT!
+  
+     # PMs 
+ PPP_pm_hydro_mechanical: "水力タービン" #NT!
+ PPP_pm_steam_engine: "蒸気機関" #NT!
+ PPP_pm_steam_turbine: "蒸気タービン" #NT!
+ PPP_pm_gas_turbine: "ガスタービン" #NT!
+  
+ PPP_pm_hy_local_power: "地域電力" #NT!
+ PPP_pm_hy_hybrid_power: "混合グリッド供給" #NT!
+ PPP_pm_hy_grid_power: "電力網" #NT!
+ PPP_pm_se_local_power: "地域電力" #NT!
+ PPP_pm_se_hybrid_power: "混合グリッド供給" #NT!
+ PPP_pm_se_grid_power: "電力網" #NT!
+ PPP_pm_st_local_power: "地域電力" #NT!
+ PPP_pm_st_hybrid_power: "混合グリッド供給" #NT!
+ PPP_pm_st_grid_power: "電力網" #NT!
+ PPP_pm_gt_local_power: "地域電力" #NT!
+ PPP_pm_gt_hybrid_power: "混合グリッド供給" #NT!
+ PPP_pm_gt_grid_power: "電力網" #NT!
+ PPP_pm_emergency_local_power: "緊急現地供給" #NT!
+  
+ PPP_pm_grid_base: "地域別分布" #NT!
+  
+ PPP_pm_grid_water: "通常容量" #NT!
+ PPP_pm_grid_engine: "容量の増加" #NT!
+ PPP_pm_grid_turbine: "容量倍増" #NT!
+ PPP_pm_grid_gas_turbine: "容量3倍" #NT!
+  

@@ -1,0 +1,12 @@
+﻿l_turkish:
+  # WCA 
+ alert_wasted_construction_name: "Kullanılmamış [concept_construction]" #NT!
+ alert_wasted_construction_hint: "Kullanılmamış [concept_construction]" #NT!
+ alert_wasted_construction_action: "İnşaat Paneli" #NT!
+ wasted_construction_setting_name: "Kullanılmayan İnşaat" #NT!
+  
+ pm_electric_trains: "DC Elektrikli Trenler" #NT!
+ pm_electric_trains_principle_transport_3: "Ortak DC Elektrik Trenleri" #NT!
+ pm_electric_streetlights: "Ay Işığı Kuleleri" #NT!
+  
+ pm_canal: "Buharla Çalışan Kilitler" #NT!

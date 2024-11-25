@@ -1,0 +1,12 @@
+﻿l_spanish:
+  # WCA 
+ alert_wasted_construction_name: "Tiene [concept_construction] sin usar" #NT!
+ alert_wasted_construction_hint: "Tiene [concept_construction] sin usar" #NT!
+ alert_wasted_construction_action: "Panel de construcción" #NT!
+ wasted_construction_setting_name: "Construcción sin uso" #NT!
+  
+ pm_electric_trains: "Trenes eléctricos de corriente continua" #NT!
+ pm_electric_trains_principle_transport_3: "Trenes eléctricos de corriente continua conjuntos" #NT!
+ pm_electric_streetlights: "Torres de luz de luna" #NT!
+  
+ pm_canal: "Cerraduras accionadas por vapor" #NT!

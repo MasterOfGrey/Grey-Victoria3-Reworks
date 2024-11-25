@@ -2,7 +2,7 @@
 
 pm_anchorage = {
 	texture = "gfx/interface/icons/production_method_icons/anchorage.dds"
-	
+	ai_value = 2000
 	low_pop_method = yes # AI will activate this method for states with low population
 	# Not strictly necessary since it's not a gov building anymore but it kinda helps nations in a power bloc that are losing pops to migration to not get stuck in a hole.
 	
@@ -36,7 +36,7 @@ pm_anchorage = {
 
 pm_basic_port = {
 	texture = "gfx/interface/icons/production_method_icons/basic_port.dds"
-	
+	ai_value = 2000
 	building_modifiers = {
 		workforce_scaled = {	
 			goods_input_clippers_add = 2
@@ -72,7 +72,7 @@ pm_basic_port = {
 
 pm_industrial_port = {
 	texture = "gfx/interface/icons/production_method_icons/industrial_port.dds"
-	
+	ai_value = 4000
 	unlocking_technologies = {
 		gantry_cranes
 	}
@@ -114,6 +114,7 @@ pm_industrial_port = {
 
 pm_modern_port = {
 	texture = "gfx/interface/icons/production_method_icons/modern_port.dds"
+	ai_value = 5000
 	unlocking_technologies = {
 		concrete_dockyards
 	}

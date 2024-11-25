@@ -1,0 +1,13 @@
+﻿l_russian:
+ pmg_public_transit: "Общественный транспорт" #NT!
+ pm_no_public_transport: "Общественный транспорт не ходит." #NT!
+ pm_public_omnibus: "Конные омнибусы" #NT!
+ pm_public_trams: "Конки" #NT!
+ pm_public_steam_metro: "Метро на паровой тяге" #NT!
+ pm_public_electric_metro: "Электротранспорт Метро" #NT!
+ pm_public_motor_carriages: "Городские Автобусы" #NT!
+  
+ pmg_local_transport: "Местный транспорт" #NT!
+ pm_horses: "Лошади и телеги" #NT!
+ pm_stagecoaches_and_wagons: "Конные повозки" #NT!
+ pm_motor_vehicles: "Автомобили и грузовики" #NT!

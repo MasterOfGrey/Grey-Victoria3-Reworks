@@ -1,0 +1,13 @@
+﻿l_japanese:
+ pmg_public_transit: "公共交通機関" #NT!
+ pm_no_public_transport: "公共交通機関なし" #NT!
+ pm_public_omnibus: "馬車" #NT!
+ pm_public_trams: "馬車" #NT!
+ pm_public_steam_metro: "蒸気機関車" #NT!
+ pm_public_electric_metro: "電気で動く地下鉄" #NT!
+ pm_public_motor_carriages: "市バス" #NT!
+  
+ pmg_local_transport: "現地交通" #NT!
+ pm_horses: "馬と荷車" #NT!
+ pm_stagecoaches_and_wagons: "馬車" #NT!
+ pm_motor_vehicles: "自動車とトラック" #NT!

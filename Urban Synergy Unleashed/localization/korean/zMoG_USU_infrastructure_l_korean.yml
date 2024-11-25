@@ -1,0 +1,57 @@
+﻿l_korean:
+  # Railways 
+ pm_ac_electric_trains: "AC 전기 기차" #NT!
+ pm_ac_electric_trains_principle_transport_3: "조인트 AC 전기 열차" #NT!
+  
+ pm_electric_passenger_carriages: "전기 여객 마차" #NT!
+  
+ pmg_automation_building_railway: "시설 자동화" #NT!
+ pm_auto_disabled_building_railway: "핸드 크랭크 크레인" #NT!
+ pm_steam_crane_building_railway: "커브드 지브 스팀 크레인" #NT!
+ pm_watertube_boiler_building_railway: "화관 보일러" #NT!
+ pm_rotary_valve_engine_building_railway: "유니플로우 로터리 밸브기어" #NT!
+ pm_steam_donkey_building_railway: "기어드 스팀 드라이브트레인" #NT!
+  
+  # Logistics 
+ pmg_logistics_services_railway: "철도 물류" #NT!
+ pmg_logistics_services_port_coastal: "배송 물류" #NT!
+ pmg_logistics_services_port_river: "유체물류" #NT!
+  
+ USU_pm_rail_logistics_0: "물류 조정 없음" #NT!
+ USU_pm_rail_logistics_1: "할당량 허용 계획" #NT!
+ USU_pm_rail_logistics_2: "원격 액세스 입찰" #NT!
+ USU_pm_rail_logistics_3: "공급망 관리" #NT!
+  
+ USU_pm_port_c_logistics_0: "물류 조정 없음" #NT!
+ USU_pm_port_c_logistics_1: "할당량 허용 계획" #NT!
+ USU_pm_port_c_logistics_2: "원격 액세스 입찰" #NT!
+ USU_pm_port_c_logistics_3: "공급망 관리" #NT!
+  
+ USU_pm_port_r_logistics_0: "물류 조정 없음" #NT!
+ USU_pm_port_r_logistics_1: "할당량 허용 계획" #NT!
+ USU_pm_port_r_logistics_2: "원격 액세스 입찰" #NT!
+ USU_pm_port_r_logistics_3: "공급망 관리" #NT!
+  
+  # Canals 
+ # pm_canal: "증기 동력 잠금 장치" #NT!
+ pm_canals_electric: "전기 운하 잠금 장치" #NT!
+ pm_canals_oil: "오일 펌프 잠금 장치" #NT!
+  
+ pmg_canal_boats: "운하 관리" #NT!
+ pm_no_tugs_building_canals: "잡아당기기 없음" #NT!
+ pm_tugging_building_canals: "예인선 함대" #NT!
+  
+ pmg_canal_logistics: "운하 물류" #NT!
+ pm_no_canal_logistics: "물류 없음" #NT!
+ pm_minor_canal_logistics: "소규모 물류" #NT!
+ pm_major_canal_logistics: "주요물류" #NT!
+  
+ canal_dividends.1.t: "운하 사고" #NT!
+ canal_dividends.1.d: "상선 한 척이 주의를 기울이지 않아 우연히 운하에 좌초되어 길을 막았고, 완전히 운하가 뚫릴 때까지 통행이 더욱 위험해졌습니다." #NT!
+ canal_dividends.1.f: "큰 무역선이 운하에 반쯤 기울어져 있고, 벽에 부딪혀서 옆으로 찢어진 상처가 있고, 상품이 통로를 가로질러 쏟아지고, 화려한 장신구와 이국적인 상품이 물 위에 떠다니고, 외국의 값비싼 상품이 물에 젖고 망가졌습니다.\n\n해안가에는 선장이 서 있고, 얼굴을 손에 움켜쥐고 모자를 운하에 떠 있습니다. 그 옆에는 회사의 보험 담당자가 물에 젖은 선박 명세서를 들고 모든 것을 이해하려고 애쓰고 있고, 운하 관리인은 청소에 몇 달이 걸릴 수도 있다고 설명하려고 합니다." #NT!
+ canal_dividends.1.1: "$expedition_events.542.a$" #NT!
+ modifier_building_canal_accident: "운하 사고" #NT!
+  
+  
+  
+  

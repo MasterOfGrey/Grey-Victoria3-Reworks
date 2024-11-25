@@ -1,5 +1,5 @@
 [img]https://i.imgur.com/7xuCZqW.png[/img]
-Designed for Victoria 3: Version 1.7 (and onwards)
+Designed for Victoria 3: Version 1.8 (and onwards)
 Mod Version V1.0
 Please consider rating this if you like it! It really helps out. [img]https://i.imgur.com/tE28cZ7.gif[/img]
 
@@ -11,9 +11,10 @@ Please consider rating this if you like it! It really helps out. [img]https://i.
 [/table]
 *MUST have a new game - your save will explode if you either add or remove this mid-game.
 [img]https://i.imgur.com/6o9HyTD.png[/img]
-This mod reworks the whole urban buildings environment, and a few related touch points, to create a system with in-built synergies. Urbanization gradually increases the total construction capacity (without necessarily costing the government), railways are profitable throughout the game and have additional options, ports can now be privately owned and contribute to the transport economy, rivers can now have portage, power plants have more diversity and can be extended to powering a distribution grid (this adapts content from "Power Plants+").
+This mod began life as a compatibility patch designed to make 11 different mods work together. At a certain point it became obvious that it should just be its own thing.
+So, this reworks the whole urban buildings environment, and a few related touch points, to create a system with in-built synergies. Urbanization gradually increases the total construction capacity (without necessarily costing the government), railways are profitable throughout the game and have additional options, ports can now be privately owned and contribute to the transport economy, rivers can now have portage, power plants have more diversity and can be extended to powering a distribution grid (this adapts content from "Power Plants+").
 
-All in all, it is a system that has been designed to round off some of the sharp edge-case corners in the economy, and to ensure that the AI can naturally benefit from the same things the player can.
+All in all, it is a system that has been designed to round off some of the sharp edge-case corners in the urban economy, and to ensure that the AI can naturally benefit from the same things the player can.
 
 [img]https://i.imgur.com/Wh5EspM.png[/img]
 [h1]Features:[/h1]
@@ -24,7 +25,7 @@ Ports and railways now produce a new good called "Logistics Services". Rather th
 Urban Centers require twice as much urbanization per level now, and the primary PM has been rebalanced and now produces a small amount of construction. Streetlighting has been expanded to also infer general urban electricity supply and these PM's are designed to interact with the Power Plant rework to ensure that the AI can transition to a distribution grid for electricity successfully. The Power Plants are effectively the ones from "Power Plants+", but the structure of the PM's has been reworked to ensure the AI can understand them.
 
 [h2]Transportation Rework[/h2]
-Railways, Ports, & River Ports are all profitable providers of transport throughout the game. Additionally, the transport economy no longer starts from 0. Subsistence farms provide transport, and basic road cart pm's consume it, so right from the start there is [i]some[/i] transport floating around the local market. This *greatly* smooths out the initial industrialisation via rail. Pops also cannot switch en masse to automobiles in the late game, as the amount of their transport need that can be met by automobiles has been limited to a mere 12.5%.
+Railways, Ports, & River Ports are all profitable providers of transport throughout the game, and both contribute to MAPI. Additionally, the transport economy no longer starts from 0. Subsistence farms provide transport, and basic road cart pm's consume it, so right from the start there is [i]some[/i] transport floating around the local market. This [i]greatly[/i] smooths out the initial industrialisation via rail. Pops also cannot switch en masse to automobiles in the late game, as the amount of their transport need that can be met by automobiles has been limited to a mere 12.5%.
 
 [h2]Services Rework[/h2]
 In addition to the rebalance of Urban Centers - Government Admins now produce a small amount of services and have been rebalanced with reduced workforce needs and extra PM's, and a new Public Green building is available to provide services. This building uses arable land, so it is naturally limited and competes with agriculture for land which can be cultivated.

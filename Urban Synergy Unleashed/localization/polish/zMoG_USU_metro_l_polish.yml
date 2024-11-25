@@ -1,0 +1,13 @@
+﻿l_polish:
+ pmg_public_transit: "Transport publiczny" #NT!
+ pm_no_public_transport: "Brak transportu publicznego" #NT!
+ pm_public_omnibus: "Omnibusy konne" #NT!
+ pm_public_trams: "Tramwaje konne" #NT!
+ pm_public_steam_metro: "Metro napędzane parą" #NT!
+ pm_public_electric_metro: "Metro napędzane elektrycznie" #NT!
+ pm_public_motor_carriages: "Autobusy miejskie" #NT!
+  
+ pmg_local_transport: "Transport lokalny" #NT!
+ pm_horses: "Konie i wozy" #NT!
+ pm_stagecoaches_and_wagons: "Pojazdy konne" #NT!
+ pm_motor_vehicles: "Samochody i ciężarówki" #NT!

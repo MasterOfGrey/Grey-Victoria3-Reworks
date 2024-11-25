@@ -1,0 +1,12 @@
+﻿l_polish:
+  # WCA 
+ alert_wasted_construction_name: "Ma nieużywane [concept_construction]" #NT!
+ alert_wasted_construction_hint: "Ma nieużywane [concept_construction]" #NT!
+ alert_wasted_construction_action: "Panel konstrukcyjny" #NT!
+ wasted_construction_setting_name: "Nieużywana konstrukcja" #NT!
+  
+ pm_electric_trains: "Pociągi elektryczne DC" #NT!
+ pm_electric_trains_principle_transport_3: "Wspólne pociągi elektryczne DC" #NT!
+ pm_electric_streetlights: "Wieże Księżycowego Światła" #NT!
+  
+ pm_canal: "Zamki napędzane parą" #NT!

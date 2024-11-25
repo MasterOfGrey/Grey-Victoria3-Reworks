@@ -1,0 +1,12 @@
+﻿l_french:
+  # WCA 
+ alert_wasted_construction_name: "A inutilisé [concept_construction]" #NT!
+ alert_wasted_construction_hint: "A inutilisé [concept_construction]" #NT!
+ alert_wasted_construction_action: "Panneau de construction" #NT!
+ wasted_construction_setting_name: "Construction inutilisée" #NT!
+  
+ pm_electric_trains: "Trains électriques à courant continu" #NT!
+ pm_electric_trains_principle_transport_3: "Trains électriques à courant continu communs" #NT!
+ pm_electric_streetlights: "Tours au clair de lune" #NT!
+  
+ pm_canal: "Serrures à vapeur" #NT!

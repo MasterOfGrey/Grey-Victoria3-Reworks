@@ -1,0 +1,57 @@
+﻿l_german:
+  # Railways 
+ pm_ac_electric_trains: "Wechselstrom-Elektrozüge" #NT!
+ pm_ac_electric_trains_principle_transport_3: "Gemeinsame Wechselstrom-Elektrozüge" #NT!
+  
+ pm_electric_passenger_carriages: "Elektrische Personenwagen" #NT!
+  
+ pmg_automation_building_railway: "Gebäudeautomation" #NT!
+ pm_auto_disabled_building_railway: "Handkurbelkran" #NT!
+ pm_steam_crane_building_railway: "Dampfkran mit gebogenem Ausleger" #NT!
+ pm_watertube_boiler_building_railway: "Rauchrohrkessel" #NT!
+ pm_rotary_valve_engine_building_railway: "Uniflow-Drehschieberventile" #NT!
+ pm_steam_donkey_building_railway: "Getriebedampf-Antriebsstrang" #NT!
+  
+  # Logistics 
+ pmg_logistics_services_railway: "Bahnlogistik" #NT!
+ pmg_logistics_services_port_coastal: "Versandlogistik" #NT!
+ pmg_logistics_services_port_river: "Fluviale Logistik" #NT!
+  
+ USU_pm_rail_logistics_0: "Keine logistische Koordination" #NT!
+ USU_pm_rail_logistics_1: "Kontingentplanung" #NT!
+ USU_pm_rail_logistics_2: "Gebote für Fernzugriff" #NT!
+ USU_pm_rail_logistics_3: "Lieferkettenmanagement" #NT!
+  
+ USU_pm_port_c_logistics_0: "Keine logistische Koordination" #NT!
+ USU_pm_port_c_logistics_1: "Kontingentplanung" #NT!
+ USU_pm_port_c_logistics_2: "Gebote für Fernzugriff" #NT!
+ USU_pm_port_c_logistics_3: "Lieferkettenmanagement" #NT!
+  
+ USU_pm_port_r_logistics_0: "Keine logistische Koordination" #NT!
+ USU_pm_port_r_logistics_1: "Kontingentplanung" #NT!
+ USU_pm_port_r_logistics_2: "Gebote für Fernzugriff" #NT!
+ USU_pm_port_r_logistics_3: "Lieferkettenmanagement" #NT!
+  
+  # Canals 
+ # pm_canal: "Dampfbetriebene Schlösser" #NT!
+ pm_canals_electric: "Elektrische Kanalschleusen" #NT!
+ pm_canals_oil: "Ölpumpenschlösser" #NT!
+  
+ pmg_canal_boats: "Kanalmanagement" #NT!
+ pm_no_tugs_building_canals: "Keine Schlepper" #NT!
+ pm_tugging_building_canals: "Schlepperflotte" #NT!
+  
+ pmg_canal_logistics: "Kanallogistik" #NT!
+ pm_no_canal_logistics: "Keine Logistik" #NT!
+ pm_minor_canal_logistics: "Kleinere Logistik" #NT!
+ pm_major_canal_logistics: "Große Logistik" #NT!
+  
+ canal_dividends.1.t: "Kanalunglück" #NT!
+ canal_dividends.1.d: "Ein Handelsschiff hatte nicht aufgepasst und lief versehentlich im Kanal auf Grund. Dadurch wurde der Weg blockiert und die Durchfahrt gefährlicher, bis sie wieder vollständig freigegeben war." #NT!
+ canal_dividends.1.f: "Das große Handelsschiff liegt halb gekippt im Kanal, auf der Seite eine klaffende Wunde vom Aufprall gegen die Wand, seine Waren sind über die Durchfahrt verstreut, Schmuck und exotische Waren treiben im Wasser, die teuren Waren eines fremden Landes sind durchnässt und ruiniert.\n\nAm Ufer steht der Kapitän, sein Gesicht in den Händen und sein Hut schwimmt im Kanal. Neben ihm hält der Versicherungsvertreter der Gesellschaft eine Liste der durch Wasser beschädigten Schiffe in der Hand und versucht, einen Sinn in all dem zu finden, während ein Kanalagent versucht zu erklären, dass die Räumung Monate dauern könnte." #NT!
+ canal_dividends.1.1: "$expedition_events.542.a$" #NT!
+ modifier_building_canal_accident: "Kanalunglück" #NT!
+  
+  
+  
+  

@@ -181,7 +181,7 @@ pm_no_street_lighting = {
 
 pm_gas_streetlights = {
 	texture = "gfx/interface/icons/production_method_icons/gas_streetlights.dds"
-	
+	ai_value = 1000
 	city_lights_color_index = 1	# Needs to match city_graphics_data.settings color array
 	
 	unlocking_technologies = {
@@ -209,7 +209,7 @@ pm_gas_streetlights = {
 
 pm_electric_streetlights = {
 	texture = "gfx/interface/icons/production_method_icons/moonlight_towers.dds"
-	
+	ai_value = 2000
 	city_lights_color_index = 2	# Needs to match city_graphics_data.settings color array
 	
 	unlocking_technologies = {
@@ -233,7 +233,7 @@ pm_electric_streetlights = {
 
 USU_pm_grid_streetlights = {
 	texture = "gfx/interface/icons/production_method_icons/electric_streetlights.dds"
-	
+	ai_value = 3000
 	city_lights_color_index = 2	# Needs to match city_graphics_data.settings color array
 	
 	unlocking_technologies = {

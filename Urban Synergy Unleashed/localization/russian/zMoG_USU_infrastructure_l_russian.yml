@@ -1,0 +1,57 @@
+﻿l_russian:
+  # Railways 
+ pm_ac_electric_trains: "Электропоезда переменного тока" #NT!
+ pm_ac_electric_trains_principle_transport_3: "Совместные электропоезда переменного тока" #NT!
+  
+ pm_electric_passenger_carriages: "Электрические пассажирские вагоны" #NT!
+  
+ pmg_automation_building_railway: "Автоматизация объектов" #NT!
+ pm_auto_disabled_building_railway: "Ручной кран" #NT!
+ pm_steam_crane_building_railway: "Паровой кран с изогнутой стрелой" #NT!
+ pm_watertube_boiler_building_railway: "Котел с жаротрубным котлом" #NT!
+ pm_rotary_valve_engine_building_railway: "Однопоточный поворотный клапанный механизм" #NT!
+ pm_steam_donkey_building_railway: "Редукторная паровая трансмиссия" #NT!
+  
+  # Logistics 
+ pmg_logistics_services_railway: "Железнодорожная логистика" #NT!
+ pmg_logistics_services_port_coastal: "Логистика грузоперевозок" #NT!
+ pmg_logistics_services_port_river: "Речная логистика" #NT!
+  
+ USU_pm_rail_logistics_0: "Отсутствие логистической координации" #NT!
+ USU_pm_rail_logistics_1: "Планирование квот" #NT!
+ USU_pm_rail_logistics_2: "Удаленный доступ к торгам" #NT!
+ USU_pm_rail_logistics_3: "Управление цепочками поставок" #NT!
+  
+ USU_pm_port_c_logistics_0: "Отсутствие логистической координации" #NT!
+ USU_pm_port_c_logistics_1: "Планирование квот" #NT!
+ USU_pm_port_c_logistics_2: "Удаленный доступ к торгам" #NT!
+ USU_pm_port_c_logistics_3: "Управление цепочками поставок" #NT!
+  
+ USU_pm_port_r_logistics_0: "Отсутствие логистической координации" #NT!
+ USU_pm_port_r_logistics_1: "Планирование квот" #NT!
+ USU_pm_port_r_logistics_2: "Удаленный доступ к торгам" #NT!
+ USU_pm_port_r_logistics_3: "Управление цепочками поставок" #NT!
+  
+  # Canals 
+ # pm_canal: "Паровые замки" #NT!
+ pm_canals_electric: "Электрические шлюзы для каналов" #NT!
+ pm_canals_oil: "Замки масляного насоса" #NT!
+  
+ pmg_canal_boats: "Управление каналом" #NT!
+ pm_no_tugs_building_canals: "Никаких буксиров" #NT!
+ pm_tugging_building_canals: "Буксирный флот" #NT!
+  
+ pmg_canal_logistics: "Логистика канала" #NT!
+ pm_no_canal_logistics: "Никакой логистики" #NT!
+ pm_minor_canal_logistics: "Незначительная логистика" #NT!
+ pm_major_canal_logistics: "Основная логистика" #NT!
+  
+ canal_dividends.1.t: "Авария на канале" #NT!
+ canal_dividends.1.d: "Торговое судно не обратило внимания и случайно село на мель в канале, заблокировав путь и сделав проход более опасным до тех пор, пока он не был полностью расчищен." #NT!
+ canal_dividends.1.f: "Большой торговый корабль лежит полунакренившись в канале, на боку зияющая рана от удара о стену, его товары разбросаны по проходу, наряды и экзотические товары качаются в воде, дорогие товары чужой страны промокли и испортились.\n\nНа берегу стоит капитан, закрыв лицо руками, а его шляпа плавает в канале. Рядом с ним страховой представитель компании держит в руках манифест поврежденного водой судна и пытается во всем этом разобраться, в то время как агент канала пытается объяснить, что очистка может занять месяцы." #NT!
+ canal_dividends.1.1: "$expedition_events.542.a$" #NT!
+ modifier_building_canal_accident: "Авария на канале" #NT!
+  
+  
+  
+  

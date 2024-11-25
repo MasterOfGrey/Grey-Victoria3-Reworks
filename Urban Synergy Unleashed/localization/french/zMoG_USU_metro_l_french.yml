@@ -1,0 +1,13 @@
+﻿l_french:
+ pmg_public_transit: "Transports en commun" #NT!
+ pm_no_public_transport: "Pas de transport en commun" #NT!
+ pm_public_omnibus: "Omnibus tirés par des chevaux" #NT!
+ pm_public_trams: "Tramways tirés par des chevaux" #NT!
+ pm_public_steam_metro: "Métro à vapeur" #NT!
+ pm_public_electric_metro: "Métro à propulsion électrique" #NT!
+ pm_public_motor_carriages: "Les bus urbains" #NT!
+  
+ pmg_local_transport: "Transports locaux" #NT!
+ pm_horses: "Chevaux et charrettes" #NT!
+ pm_stagecoaches_and_wagons: "Véhicules tirés par des chevaux" #NT!
+ pm_motor_vehicles: "Automobiles et camions" #NT!
