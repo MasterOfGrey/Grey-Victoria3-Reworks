@@ -11,12 +11,10 @@ decree_promote_national_values = {
 	unlocking_technologies = {
 		centralization
 	}
-	valid = {
-	}
 	modifier = {
 		state_assimilation_mult = 1
 		state_conversion_mult = 1
-		state_loyalists_from_sol_change_mult = 0.15
+		state_radicals_and_loyalists_from_sol_change_mult = 0.15
 	}
 	cost = 100
 	

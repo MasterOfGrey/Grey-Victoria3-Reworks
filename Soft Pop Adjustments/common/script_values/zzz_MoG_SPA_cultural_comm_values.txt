@@ -144,9 +144,10 @@ cultural_community_creation_weight = {
 		
 		if = {
 			limit = {
-				scope:culture = {
-					culture_is_discriminated_in = root.owner
-				}
+				#scope:culture = {
+				#	culture_is_discriminated_in = root.owner
+				#}
+				cultural_acceptance_base = { target = scope:culture value <= acceptance_status_2 }
 			}
 			multiply = 0.3
 			if = {

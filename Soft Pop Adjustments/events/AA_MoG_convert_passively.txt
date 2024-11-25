@@ -48,6 +48,7 @@ assimilate_everyone.2 = {
 						if = {
 							limit = {
 								has_state_religion = no
+								has_ongoing_conversion = no
 								# pop_is_discriminated = no		# Not used anymore
 								pop_acceptance >= acceptance_status_2
 								# as we want to convert accepted pops with religions that are normally excluded (represents institutional inertia)
@@ -139,7 +140,8 @@ assimilate_everyone.2 = {
 					every_scope_pop = {
 						if = {
 							limit = {
-								pop_is_discriminated = yes
+								has_state_religion = no
+								# pop_is_discriminated = no		# Not used anymore
 								religion = scope:legacy_religion
 								# as we want to be able to spawn and progress state atheism in at least institutionally integrated pops even if there's no seed pop to convert from
 							}

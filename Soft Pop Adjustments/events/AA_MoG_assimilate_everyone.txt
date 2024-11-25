@@ -47,6 +47,7 @@ assimilate_everyone.1 = {
 								# DON'T use pop_is_discriminated = yes as that includes religious discrimination:
 								# culture_accepted = no		# Not used anymore
 								pop_acceptance < acceptance_status_2
+								has_ongoing_assimilation = no
 								# As we want to assimilate homeland cultures as well that are excluded from normal assimilation:
 								this.culture = {
 									has_homeland = scope:executing_state
