@@ -1,78 +1,96 @@
 ﻿l_polish:
   
  # Production method groups 
- pmg_arms_tools_demob: "Produkcja narzędzi zdemobilizowanych" #NT!
- pmg_arti_tools_demob: "Produkcja narzędzi zdemobilizowanych" #NT!
- pmg_munitions_explosives_demob: "Produkcja zdemobilizowanych materiałów wybuchowych" #NT!
+ pmg_arms_tools_demob: "Produkcja narzędzi zdemobilizowanych"
+ pmg_arti_tools_demob: "Produkcja narzędzi zdemobilizowanych"
+ pmg_munitions_explosives_demob: "Produkcja zdemobilizowanych materiałów wybuchowych"
   
  # Production methods 
- pm_extensive_tools_a_i: "Rozległy" #NT!
- pm_moderate_tools_a_i: "Umiarkowany" #NT!
- pm_limited_tools_a_i: "Ograniczony" #NT!
- pm_extensive_tools_a_s: "Rozległy" #NT!
- pm_moderate_tools_a_s: "Umiarkowany" #NT!
- pm_limited_tools_a_s: "Ograniczony" #NT!
- pm_extensive_tools_a_r: "Guma ekst." #NT!
- pm_moderate_tools_a_r: "Mod. Guma" #NT!
- pm_limited_tools_a_r: "Sp. z o.o. Guma" #NT!
- pm_no_tools_a: "Brak narzędzi cywilnych" #NT!
+ pm_extensive_tools_a_i: "Rozległy"
+ pm_moderate_tools_a_i: "Umiarkowany"
+ pm_limited_tools_a_i: "Ograniczony"
+ pm_extensive_tools_a_s: "Rozległy"
+ pm_moderate_tools_a_s: "Umiarkowany"
+ pm_limited_tools_a_s: "Ograniczony"
+ pm_extensive_tools_a_r: "Guma ekst."
+ pm_moderate_tools_a_r: "Mod. Guma"
+ pm_limited_tools_a_r: "Sp. z o.o. Guma"
+ pm_no_tools_a: "Brak narzędzi cywilnych"
   
- pm_extensive_tools_t_i: "Rozległy" #NT!
- pm_moderate_tools_t_i: "Umiarkowany" #NT!
- pm_limited_tools_t_i: "Ograniczony" #NT!
- pm_extensive_tools_t_s: "Rozległy" #NT!
- pm_moderate_tools_t_s: "Umiarkowany" #NT!
- pm_limited_tools_t_s: "Ograniczony" #NT!
- pm_extensive_tools_t_r: "Guma ekst." #NT!
- pm_moderate_tools_t_r: "Mod. Guma" #NT!
- pm_limited_tools_t_r: "Sp. z o.o. Guma" #NT!
- pm_no_tools_t: "Brak narzędzi cywilnych" #NT!
+ pm_extensive_tools_t_i: "Rozległy"
+ pm_moderate_tools_t_i: "Umiarkowany"
+ pm_limited_tools_t_i: "Ograniczony"
+ pm_extensive_tools_t_s: "Rozległy"
+ pm_moderate_tools_t_s: "Umiarkowany"
+ pm_limited_tools_t_s: "Ograniczony"
+ pm_extensive_tools_t_r: "Guma ekst."
+ pm_moderate_tools_t_r: "Mod. Guma"
+ pm_limited_tools_t_r: "Sp. z o.o. Guma"
+ pm_no_tools_t: "Brak narzędzi cywilnych"
   
- pm_extensive_ammo_le: "Rozległy" #NT!
- pm_moderate_ammo_le: "Umiarkowany" #NT!
- pm_limited_ammo_le: "Ograniczony" #NT!
- pm_extensive_ammo_ni: "Zewnętrzna nitrogliceryna" #NT!
- pm_moderate_ammo_ni: "Mod. Nitrogliceryna" #NT!
- pm_limited_ammo_ni: "Sp. z o.o. Nitrogliceryna" #NT!
- pm_extensive_ammo_dy: "Rozległy" #NT!
- pm_moderate_ammo_dy: "Umiarkowany" #NT!
- pm_limited_ammo_dy: "Ograniczony" #NT!
- pm_extensive_ammo_br: "Zewnętrzna elektroliza" #NT!
- pm_moderate_ammo_br: "Mod. Elektroliza" #NT!
- pm_limited_ammo_br: "Sp. z o.o. Elektroliza" #NT!
- pm_no_self_explosives: "Brak materiałów wybuchowych własnej produkcji" #NT!
+ pm_extensive_ammo_le: "Rozległy"
+ pm_moderate_ammo_le: "Umiarkowany"
+ pm_limited_ammo_le: "Ograniczony"
+ pm_extensive_ammo_ni: "Zewnętrzna nitrogliceryna"
+ pm_moderate_ammo_ni: "Mod. Nitrogliceryna"
+ pm_limited_ammo_ni: "Sp. z o.o. Nitrogliceryna"
+ pm_extensive_ammo_dy: "Rozległy"
+ pm_moderate_ammo_dy: "Umiarkowany"
+ pm_limited_ammo_dy: "Ograniczony"
+ pm_extensive_ammo_br: "Zewnętrzna elektroliza"
+ pm_moderate_ammo_br: "Mod. Elektroliza"
+ pm_limited_ammo_br: "Sp. z o.o. Elektroliza"
+ pm_no_self_explosives: "Brak materiałów wybuchowych własnej produkcji"
   
- pm_limited_radios: "Niektóre radia" #NT!
- pm_moderate_radios: "Mnóstwo radia" #NT!
- pm_extensive_radios: "Wiele Radiów" #NT!
+ pm_limited_radios: "Niektóre radia"
+ pm_moderate_radios: "Mnóstwo radia"
+ pm_extensive_radios: "Wiele Radiów"
   
- pm_ui_safety_a: "(Zignoruj ​​to)" #NT!
- pm_ui_safety_b: "(Zignoruj ​​to)" #NT!
+ pm_ui_safety_a: "(Zignoruj ​​to)"
+ pm_ui_safety_b: "(Zignoruj ​​to)"
   
  # Alerts 
- alert_MIR_war_demob_arms_name: "W stanie wojny z zdemobilizowanymi przemysłami zbrojeniowymi" #NT!
- alert_MIR_war_demob_arms_hint: "Jesteś w stanie wojny i twój przemysł zbrojeniowy produkuje duże ilości narzędzi zamiast broni ręcznej." #NT!
- alert_MIR_war_demob_arms_action: "Panel budynku miejskiego" #NT!
- MIR_war_demob_arms_setting_name: "Ostrzeżenie dla zdemobilizowanego przemysłu zbrojeniowego - Wojna" #NT!
- alert_MIR_peace_mob_arms_name: "W pokoju z zmobilizowanymi przemysłami zbrojeniowymi" #NT!
- alert_MIR_peace_mob_arms_hint: "Jesteście w pokoju, a wasz przemysł zbrojeniowy produkuje duże ilości broni ręcznej." #NT!
- alert_MIR_peace_mob_arms_action: "Panel budynku miejskiego" #NT!
- MIR_peace_mob_arms_setting_name: "Ostrzeżenie dotyczące zmobilizowanego przemysłu zbrojeniowego - Pokój" #NT!
+ alert_MIR_war_demob_arms_name: "W stanie wojny z zdemobilizowanymi przemysłami zbrojeniowymi"
+ alert_MIR_war_demob_arms_hint: "Jesteś w stanie wojny i twój przemysł zbrojeniowy produkuje duże ilości narzędzi zamiast broni ręcznej."
+ alert_MIR_war_demob_arms_action: "Panel budynku miejskiego"
+ MIR_war_demob_arms_setting_name: "Ostrzeżenie dla zdemobilizowanego przemysłu zbrojeniowego - Wojna"
+ alert_MIR_peace_mob_arms_name: "W pokoju z zmobilizowanymi przemysłami zbrojeniowymi"
+ alert_MIR_peace_mob_arms_hint: "Jesteście w pokoju, a wasz przemysł zbrojeniowy produkuje duże ilości broni ręcznej."
+ alert_MIR_peace_mob_arms_action: "Panel budynku miejskiego"
+ MIR_peace_mob_arms_setting_name: "Ostrzeżenie dotyczące zmobilizowanego przemysłu zbrojeniowego - Pokój"
   
- alert_MIR_war_demob_arty_name: "W stanie wojny z demobilizowanymi odlewniami artyleryjskimi" #NT!
- alert_MIR_war_demob_arty_hint: "Jesteś w stanie wojny i twoje odlewnie artyleryjskie produkują dużą ilość narzędzi zamiast artylerii." #NT!
- alert_MIR_war_demob_arty_action: "Panel budynku miejskiego" #NT!
- MIR_war_demob_arty_setting_name: "Ostrzeżenie przed zdemobilizowaną artylerią - wojna" #NT!
- alert_MIR_peace_mob_arty_name: "W pokoju z zmobilizowanymi odlewniami artyleryjskimi" #NT!
- alert_MIR_peace_mob_arty_hint: "Jesteś w pokoju, a twoje odlewnie artyleryjskie produkują duże ilości artylerii." #NT!
- alert_MIR_peace_mob_arty_action: "Panel budynku miejskiego" #NT!
- MIR_peace_mob_arty_setting_name: "Ostrzeżenie przed zmobilizowaną artylerią - Pokój" #NT!
+ alert_MIR_war_demob_arty_name: "W stanie wojny z demobilizowanymi odlewniami artyleryjskimi"
+ alert_MIR_war_demob_arty_hint: "Jesteś w stanie wojny i twoje odlewnie artyleryjskie produkują dużą ilość narzędzi zamiast artylerii."
+ alert_MIR_war_demob_arty_action: "Panel budynku miejskiego"
+ MIR_war_demob_arty_setting_name: "Ostrzeżenie przed zdemobilizowaną artylerią - wojna"
+ alert_MIR_peace_mob_arty_name: "W pokoju z zmobilizowanymi odlewniami artyleryjskimi"
+ alert_MIR_peace_mob_arty_hint: "Jesteś w pokoju, a twoje odlewnie artyleryjskie produkują duże ilości artylerii."
+ alert_MIR_peace_mob_arty_action: "Panel budynku miejskiego"
+ MIR_peace_mob_arty_setting_name: "Ostrzeżenie przed zmobilizowaną artylerią - Pokój"
   
- alert_MIR_war_demob_ammo_name: "Wojna z zdemobilizowanymi zakładami amunicji" #NT!
- alert_MIR_war_demob_ammo_hint: "Jesteś w stanie wojny i Twoje Zakłady Amunicyjne produkują duże ilości cywilnych materiałów wybuchowych zamiast amunicji wojskowej." #NT!
- alert_MIR_war_demob_ammo_action: "Panel budynku miejskiego" #NT!
- MIR_war_demob_ammo_setting_name: "Ostrzeżenie o zdemobilizowanej amunicji - Wojna" #NT!
- alert_MIR_peace_mob_ammo_name: "W pokoju z mobilnymi zakładami amunicji" #NT!
- alert_MIR_peace_mob_ammo_hint: "Jesteście w pokoju, a wasze Zakłady Amunicyjne produkują duże ilości amunicji wojskowej." #NT!
- alert_MIR_peace_mob_ammo_action: "Panel budynku miejskiego" #NT!
- MIR_peace_mob_ammo_setting_name: "Ostrzeżenie o zmobilizowanej amunicji - Pokój" #NT!
+ alert_MIR_war_demob_ammo_name: "Wojna z zdemobilizowanymi zakładami amunicji"
+ alert_MIR_war_demob_ammo_hint: "Jesteś w stanie wojny i Twoje Zakłady Amunicyjne produkują duże ilości cywilnych materiałów wybuchowych zamiast amunicji wojskowej."
+ alert_MIR_war_demob_ammo_action: "Panel budynku miejskiego"
+ MIR_war_demob_ammo_setting_name: "Ostrzeżenie o zdemobilizowanej amunicji - Wojna"
+ alert_MIR_peace_mob_ammo_name: "W pokoju z mobilnymi zakładami amunicji"
+ alert_MIR_peace_mob_ammo_hint: "Jesteście w pokoju, a wasze Zakłady Amunicyjne produkują duże ilości amunicji wojskowej."
+ alert_MIR_peace_mob_ammo_action: "Panel budynku miejskiego"
+ MIR_peace_mob_ammo_setting_name: "Ostrzeżenie o zmobilizowanej amunicji - Pokój"
+  
+ alert_MIR_war_demob_planes_name: "W stanie wojny z ograniczoną produkcją samolotów" #NT!
+ alert_MIR_war_demob_planes_hint: "Jesteś w stanie wojny, a twój przemysł samochodowy nie produkuje wielu samolotów." #NT!
+ alert_MIR_war_demob_planes_action: "Panel budynku miejskiego" #NT!
+ MIR_war_demob_planes_setting_name: "Ostrzeżenie o zdemobilizowanym samolocie - wojna" #NT!
+ alert_MIR_peace_mob_planes_name: "W pokoju z rozległą produkcją samolotów" #NT!
+ alert_MIR_peace_mob_planes_hint: "Jesteście spokojni, a wasz przemysł samochodowy produkuje wiele samolotów." #NT!
+ alert_MIR_peace_mob_planes_action: "Panel budynku miejskiego" #NT!
+ MIR_peace_mob_planes_setting_name: "Ostrzeżenie o zmobilizowanym samolocie - Pokój" #NT!
+  
+ alert_MIR_war_demob_tanks_name: "Wojna z ograniczoną produkcją czołgów" #NT!
+ alert_MIR_war_demob_tanks_hint: "Trwa wojna, a wasz przemysł samochodowy nie produkuje wielu czołgów." #NT!
+ alert_MIR_war_demob_tanks_action: "Panel budynku miejskiego" #NT!
+ MIR_war_demob_tanks_setting_name: "Ostrzeżenie o zdemobilizowanych czołgach - Wojna" #NT!
+ alert_MIR_peace_mob_tanks_name: "W pokoju z rozległą produkcją zbiorników" #NT!
+ alert_MIR_peace_mob_tanks_hint: "Jesteście spokojni, a wasz przemysł samochodowy produkuje wiele czołgów." #NT!
+ alert_MIR_peace_mob_tanks_action: "Panel budynku miejskiego" #NT!
+ MIR_peace_mob_tanks_setting_name: "Ostrzeżenie o zmobilizowanych czołgach - Pokój" #NT!

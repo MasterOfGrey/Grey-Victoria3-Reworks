@@ -76,3 +76,21 @@
  alert_MIR_peace_mob_ammo_hint: "You are at peace and your Munitions Plants are producing large amounts of military Ammunition."
  alert_MIR_peace_mob_ammo_action: "Urban Building Panel"
  MIR_peace_mob_ammo_setting_name: "Mobilised Munitions Warning - Peace"
+  
+ alert_MIR_war_demob_planes_name: "Em guerra com a produção limitada de aviões" #NT!
+ alert_MIR_war_demob_planes_hint: "Vocês estão em guerra e suas indústrias automobilísticas não estão produzindo muitos aviões." #NT!
+ alert_MIR_war_demob_planes_action: "Painel de Construção Urbana" #NT!
+ MIR_war_demob_planes_setting_name: "Aviso de Avião Desmobilizado - Guerra" #NT!
+ alert_MIR_peace_mob_planes_name: "Em paz com a produção extensiva de aviões" #NT!
+ alert_MIR_peace_mob_planes_hint: "Você está em paz e suas indústrias automobilísticas estão produzindo muitos aviões." #NT!
+ alert_MIR_peace_mob_planes_action: "Painel de Construção Urbana" #NT!
+ MIR_peace_mob_planes_setting_name: "Alerta de Avião Mobilizado - Paz" #NT!
+  
+ alert_MIR_war_demob_tanks_name: "Em guerra com a produção limitada de tanques" #NT!
+ alert_MIR_war_demob_tanks_hint: "Vocês estão em guerra e suas indústrias automobilísticas não estão produzindo muitos tanques." #NT!
+ alert_MIR_war_demob_tanks_action: "Painel de Construção Urbana" #NT!
+ MIR_war_demob_tanks_setting_name: "Aviso de tanques desmobilizados - Guerra" #NT!
+ alert_MIR_peace_mob_tanks_name: "Em paz com a produção extensiva de tanques" #NT!
+ alert_MIR_peace_mob_tanks_hint: "Você está em paz e suas indústrias automobilísticas estão produzindo muitos tanques." #NT!
+ alert_MIR_peace_mob_tanks_action: "Painel de Construção Urbana" #NT!
+ MIR_peace_mob_tanks_setting_name: "Aviso de tanques mobilizados - Paz" #NT!

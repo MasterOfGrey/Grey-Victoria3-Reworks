@@ -1,6 +1,6 @@
 ﻿building_motor_industry = {
 	building_group = bg_heavy_industry
-	texture = "gfx/interface/icons/building_icons/motor_industry.dds"
+	icon = "gfx/interface/icons/building_icons/motor_industry.dds"
 	city_type = city
 	levels_per_mesh = 5
 	
@@ -26,7 +26,7 @@
 
 building_war_machine_industry = {
 	building_group = bg_heavy_industry
-	texture = "gfx/interface/icons/building_icons/automotive_industry.dds"
+	icon = "gfx/interface/icons/building_icons/automotive_industry.dds"
 	city_type = city
 	levels_per_mesh = 5
 	

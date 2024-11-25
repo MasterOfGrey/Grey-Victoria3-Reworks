@@ -76,3 +76,21 @@
  alert_MIR_peace_mob_ammo_hint: "あなたは平和で、軍需工場では大量の軍用弾薬を生産しています。"
  alert_MIR_peace_mob_ammo_action: "都市建築パネル"
  MIR_peace_mob_ammo_setting_name: "動員兵器警告 - 平和"
+  
+ alert_MIR_war_demob_planes_name: "航空機生産の制限との戦い" #NT!
+ alert_MIR_war_demob_planes_hint: "あなた方は戦争中であり、自動車産業は多くの航空機を生産していません。" #NT!
+ alert_MIR_war_demob_planes_action: "都市建築パネル" #NT!
+ MIR_war_demob_planes_setting_name: "復員機警報 - 戦争" #NT!
+ alert_MIR_peace_mob_planes_name: "航空機の大量生産に平和を" #NT!
+ alert_MIR_peace_mob_planes_hint: "あなた方は平和であり、自動車産業は多くの航空機を生産しています。" #NT!
+ alert_MIR_peace_mob_planes_action: "都市建築パネル" #NT!
+ MIR_peace_mob_planes_setting_name: "移動式飛行機警報 - 平和" #NT!
+  
+ alert_MIR_war_demob_tanks_name: "戦車生産が制限される中での戦争" #NT!
+ alert_MIR_war_demob_tanks_hint: "あなた方は戦争中であり、自動車産業は戦車をあまり生産していません。" #NT!
+ alert_MIR_war_demob_tanks_action: "都市建築パネル" #NT!
+ MIR_war_demob_tanks_setting_name: "動員解除された戦車の警告 - 戦争" #NT!
+ alert_MIR_peace_mob_tanks_name: "大規模な戦車生産で平和を実現" #NT!
+ alert_MIR_peace_mob_tanks_hint: "あなたは平和で、自動車産業は多くの戦車を生産しています。" #NT!
+ alert_MIR_peace_mob_tanks_action: "都市建築パネル" #NT!
+ MIR_peace_mob_tanks_setting_name: "動員された戦車の警告 - 平和" #NT!

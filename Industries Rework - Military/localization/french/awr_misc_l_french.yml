@@ -1,10 +1,10 @@
 ﻿l_french:
-
-# Production methods
+  
+ # Production methods 
  pmg_base_building_automotive_industry: "Automobiles"
  pmg_automotive_aeroplanes: "Avions"
  pmg_automotive_tanks: "Chars"
-
+  
  pm_automobiles: "Automobiles"
  pm_no_aeroplanes: "Pas de production d'avions"
  pm_limited_aeroplanes: "Production d'avions limitée"

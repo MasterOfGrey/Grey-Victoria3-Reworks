@@ -1,78 +1,96 @@
 ﻿l_german:
   
  # Production method groups 
- pmg_arms_tools_demob: "Demobilisierte Werkzeugproduktion" #NT!
- pmg_arti_tools_demob: "Demobilisierte Werkzeugproduktion" #NT!
- pmg_munitions_explosives_demob: "Produktion demobilisierter Sprengstoffe" #NT!
+ pmg_arms_tools_demob: "Demobilisierte Werkzeugproduktion"
+ pmg_arti_tools_demob: "Demobilisierte Werkzeugproduktion"
+ pmg_munitions_explosives_demob: "Produktion demobilisierter Sprengstoffe"
   
  # Production methods 
- pm_extensive_tools_a_i: "Umfangreich" #NT!
- pm_moderate_tools_a_i: "Mäßig" #NT!
- pm_limited_tools_a_i: "Beschränkt" #NT!
- pm_extensive_tools_a_s: "Umfangreich" #NT!
- pm_moderate_tools_a_s: "Mäßig" #NT!
- pm_limited_tools_a_s: "Beschränkt" #NT!
- pm_extensive_tools_a_r: "Außengummi" #NT!
- pm_moderate_tools_a_r: "Mod. Gummi" #NT!
- pm_limited_tools_a_r: "GmbH Gummi" #NT!
- pm_no_tools_a: "Keine zivilen Werkzeuge" #NT!
+ pm_extensive_tools_a_i: "Umfangreich"
+ pm_moderate_tools_a_i: "Mäßig"
+ pm_limited_tools_a_i: "Beschränkt"
+ pm_extensive_tools_a_s: "Umfangreich"
+ pm_moderate_tools_a_s: "Mäßig"
+ pm_limited_tools_a_s: "Beschränkt"
+ pm_extensive_tools_a_r: "Außengummi"
+ pm_moderate_tools_a_r: "Mod. Gummi"
+ pm_limited_tools_a_r: "GmbH Gummi"
+ pm_no_tools_a: "Keine zivilen Werkzeuge"
   
- pm_extensive_tools_t_i: "Umfangreich" #NT!
- pm_moderate_tools_t_i: "Mäßig" #NT!
- pm_limited_tools_t_i: "Beschränkt" #NT!
- pm_extensive_tools_t_s: "Umfangreich" #NT!
- pm_moderate_tools_t_s: "Mäßig" #NT!
- pm_limited_tools_t_s: "Beschränkt" #NT!
- pm_extensive_tools_t_r: "Außengummi" #NT!
- pm_moderate_tools_t_r: "Mod. Gummi" #NT!
- pm_limited_tools_t_r: "GmbH Gummi" #NT!
- pm_no_tools_t: "Keine zivilen Werkzeuge" #NT!
+ pm_extensive_tools_t_i: "Umfangreich"
+ pm_moderate_tools_t_i: "Mäßig"
+ pm_limited_tools_t_i: "Beschränkt"
+ pm_extensive_tools_t_s: "Umfangreich"
+ pm_moderate_tools_t_s: "Mäßig"
+ pm_limited_tools_t_s: "Beschränkt"
+ pm_extensive_tools_t_r: "Außengummi"
+ pm_moderate_tools_t_r: "Mod. Gummi"
+ pm_limited_tools_t_r: "GmbH Gummi"
+ pm_no_tools_t: "Keine zivilen Werkzeuge"
   
- pm_extensive_ammo_le: "Umfangreich" #NT!
- pm_moderate_ammo_le: "Mäßig" #NT!
- pm_limited_ammo_le: "Beschränkt" #NT!
- pm_extensive_ammo_ni: "Ext. Nitroglycerin" #NT!
- pm_moderate_ammo_ni: "Mod. Nitroglycerin" #NT!
- pm_limited_ammo_ni: "Ltd. Nitroglycerin" #NT!
- pm_extensive_ammo_dy: "Umfangreich" #NT!
- pm_moderate_ammo_dy: "Mäßig" #NT!
- pm_limited_ammo_dy: "Beschränkt" #NT!
- pm_extensive_ammo_br: "Ext. Elektrolyse" #NT!
- pm_moderate_ammo_br: "Mod. Elektrolyse" #NT!
- pm_limited_ammo_br: "GmbH Elektrolyse" #NT!
- pm_no_self_explosives: "Keine Sprengstoffe aus eigener Produktion" #NT!
+ pm_extensive_ammo_le: "Umfangreich"
+ pm_moderate_ammo_le: "Mäßig"
+ pm_limited_ammo_le: "Beschränkt"
+ pm_extensive_ammo_ni: "Ext. Nitroglycerin"
+ pm_moderate_ammo_ni: "Mod. Nitroglycerin"
+ pm_limited_ammo_ni: "Ltd. Nitroglycerin"
+ pm_extensive_ammo_dy: "Umfangreich"
+ pm_moderate_ammo_dy: "Mäßig"
+ pm_limited_ammo_dy: "Beschränkt"
+ pm_extensive_ammo_br: "Ext. Elektrolyse"
+ pm_moderate_ammo_br: "Mod. Elektrolyse"
+ pm_limited_ammo_br: "GmbH Elektrolyse"
+ pm_no_self_explosives: "Keine Sprengstoffe aus eigener Produktion"
   
- pm_limited_radios: "Einige Radios" #NT!
- pm_moderate_radios: "Viele Radios" #NT!
- pm_extensive_radios: "Viele Radios" #NT!
+ pm_limited_radios: "Einige Radios"
+ pm_moderate_radios: "Viele Radios"
+ pm_extensive_radios: "Viele Radios"
   
- pm_ui_safety_a: "(Ignorieren Sie dies)" #NT!
- pm_ui_safety_b: "(Ignorieren Sie dies)" #NT!
+ pm_ui_safety_a: "(Ignorieren Sie dies)"
+ pm_ui_safety_b: "(Ignorieren Sie dies)"
   
  # Alerts 
- alert_MIR_war_demob_arms_name: "Im Krieg mit demobilisierten Waffenindustrien" #NT!
- alert_MIR_war_demob_arms_hint: "Sie befinden sich im Krieg und Ihre Rüstungsindustrie produziert in großem Umfang Werkzeuge statt Kleinwaffen." #NT!
- alert_MIR_war_demob_arms_action: "Städtebau-Panel" #NT!
- MIR_war_demob_arms_setting_name: "Warnung vor demobilisierter Waffenindustrie - Krieg" #NT!
- alert_MIR_peace_mob_arms_name: "Im Frieden mit der mobilisierten Rüstungsindustrie" #NT!
- alert_MIR_peace_mob_arms_hint: "Es herrscht Frieden und Ihre Rüstungsindustrie produziert große Mengen Kleinwaffen." #NT!
- alert_MIR_peace_mob_arms_action: "Städtebau-Panel" #NT!
- MIR_peace_mob_arms_setting_name: "Warnung der mobilisierten Rüstungsindustrie - Frieden" #NT!
+ alert_MIR_war_demob_arms_name: "Im Krieg mit demobilisierten Waffenindustrien"
+ alert_MIR_war_demob_arms_hint: "Sie befinden sich im Krieg und Ihre Rüstungsindustrie produziert in großem Umfang Werkzeuge statt Kleinwaffen."
+ alert_MIR_war_demob_arms_action: "Städtebau-Panel"
+ MIR_war_demob_arms_setting_name: "Warnung vor demobilisierter Waffenindustrie - Krieg"
+ alert_MIR_peace_mob_arms_name: "Im Frieden mit der mobilisierten Rüstungsindustrie"
+ alert_MIR_peace_mob_arms_hint: "Es herrscht Frieden und Ihre Rüstungsindustrie produziert große Mengen Kleinwaffen."
+ alert_MIR_peace_mob_arms_action: "Städtebau-Panel"
+ MIR_peace_mob_arms_setting_name: "Warnung der mobilisierten Rüstungsindustrie - Frieden"
   
- alert_MIR_war_demob_arty_name: "Im Krieg mit demobilisierten Artilleriegießereien" #NT!
- alert_MIR_war_demob_arty_hint: "Sie befinden sich im Krieg und Ihre Artilleriegießereien produzieren große Mengen an Werkzeugen statt Artillerie." #NT!
- alert_MIR_war_demob_arty_action: "Städtebau-Panel" #NT!
- MIR_war_demob_arty_setting_name: "Warnung vor demobilisierter Artillerie - Krieg" #NT!
- alert_MIR_peace_mob_arty_name: "Im Frieden mit mobilisierten Artilleriegießereien" #NT!
- alert_MIR_peace_mob_arty_hint: "Sie verfügen über Frieden und Ihre Artilleriegießereien produzieren große Mengen an Artillerie." #NT!
- alert_MIR_peace_mob_arty_action: "Städtebau-Panel" #NT!
- MIR_peace_mob_arty_setting_name: "Warnung vor mobilisierter Artillerie - Frieden" #NT!
+ alert_MIR_war_demob_arty_name: "Im Krieg mit demobilisierten Artilleriegießereien"
+ alert_MIR_war_demob_arty_hint: "Sie befinden sich im Krieg und Ihre Artilleriegießereien produzieren große Mengen an Werkzeugen statt Artillerie."
+ alert_MIR_war_demob_arty_action: "Städtebau-Panel"
+ MIR_war_demob_arty_setting_name: "Warnung vor demobilisierter Artillerie - Krieg"
+ alert_MIR_peace_mob_arty_name: "Im Frieden mit mobilisierten Artilleriegießereien"
+ alert_MIR_peace_mob_arty_hint: "Sie verfügen über Frieden und Ihre Artilleriegießereien produzieren große Mengen an Artillerie."
+ alert_MIR_peace_mob_arty_action: "Städtebau-Panel"
+ MIR_peace_mob_arty_setting_name: "Warnung vor mobilisierter Artillerie - Frieden"
   
- alert_MIR_war_demob_ammo_name: "Im Krieg mit demobilisierten Munitionsfabriken" #NT!
- alert_MIR_war_demob_ammo_hint: "Sie befinden sich im Krieg und Ihre Munitionsfabriken produzieren große Mengen ziviler Sprengstoffe anstelle von militärischer Munition." #NT!
- alert_MIR_war_demob_ammo_action: "Städtebau-Panel" #NT!
- MIR_war_demob_ammo_setting_name: "Warnung vor demobilisierter Munition - Krieg" #NT!
- alert_MIR_peace_mob_ammo_name: "Im Frieden mit mobilisierten Munitionsfabriken" #NT!
- alert_MIR_peace_mob_ammo_hint: "Es herrscht Frieden und Ihre Munitionsfabriken produzieren große Mengen militärischer Munition." #NT!
- alert_MIR_peace_mob_ammo_action: "Städtebau-Panel" #NT!
- MIR_peace_mob_ammo_setting_name: "Warnung vor mobilisierter Munition - Frieden" #NT!
+ alert_MIR_war_demob_ammo_name: "Im Krieg mit demobilisierten Munitionsfabriken"
+ alert_MIR_war_demob_ammo_hint: "Sie befinden sich im Krieg und Ihre Munitionsfabriken produzieren große Mengen ziviler Sprengstoffe anstelle von militärischer Munition."
+ alert_MIR_war_demob_ammo_action: "Städtebau-Panel"
+ MIR_war_demob_ammo_setting_name: "Warnung vor demobilisierter Munition - Krieg"
+ alert_MIR_peace_mob_ammo_name: "Im Frieden mit mobilisierten Munitionsfabriken"
+ alert_MIR_peace_mob_ammo_hint: "Es herrscht Frieden und Ihre Munitionsfabriken produzieren große Mengen militärischer Munition."
+ alert_MIR_peace_mob_ammo_action: "Städtebau-Panel"
+ MIR_peace_mob_ammo_setting_name: "Warnung vor mobilisierter Munition - Frieden"
+  
+ alert_MIR_war_demob_planes_name: "Im Krieg mit der eingeschränkten Flugzeugproduktion" #NT!
+ alert_MIR_war_demob_planes_hint: "Sie befinden sich im Krieg und Ihre Automobilindustrie produziert nicht viele Flugzeuge." #NT!
+ alert_MIR_war_demob_planes_action: "Städtebau-Panel" #NT!
+ MIR_war_demob_planes_setting_name: "Warnung vor demobilisierten Flugzeugen - Krieg" #NT!
+ alert_MIR_peace_mob_planes_name: "Im Reinen mit der umfangreichen Flugzeugproduktion" #NT!
+ alert_MIR_peace_mob_planes_hint: "Es herrscht Frieden und Ihre Automobilindustrie produziert viele Flugzeuge." #NT!
+ alert_MIR_peace_mob_planes_action: "Städtebau-Panel" #NT!
+ MIR_peace_mob_planes_setting_name: "Mobilisierte Flugzeugwarnung - Frieden" #NT!
+  
+ alert_MIR_war_demob_tanks_name: "Im Krieg mit begrenzter Panzerproduktion" #NT!
+ alert_MIR_war_demob_tanks_hint: "Sie befinden sich im Krieg und Ihre Automobilindustrie produziert nicht viele Panzer." #NT!
+ alert_MIR_war_demob_tanks_action: "Städtebau-Panel" #NT!
+ MIR_war_demob_tanks_setting_name: "Warnung vor demobilisierten Panzern - Krieg" #NT!
+ alert_MIR_peace_mob_tanks_name: "Im Frieden mit der umfangreichen Panzerproduktion" #NT!
+ alert_MIR_peace_mob_tanks_hint: "Sie haben Frieden und Ihre Automobilindustrie produziert viele Panzer." #NT!
+ alert_MIR_peace_mob_tanks_action: "Städtebau-Panel" #NT!
+ MIR_peace_mob_tanks_setting_name: "Warnung vor mobilisierten Panzern - Frieden" #NT!

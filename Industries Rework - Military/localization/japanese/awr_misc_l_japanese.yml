@@ -1,14 +1,14 @@
 ﻿l_japanese:
   
  # Production methods 
- pmg_base_building_automotive_industry: "自動車" #NT!
- pmg_automotive_aeroplanes: "飛行機" #NT!
- pmg_automotive_tanks: "戦車" #NT!
+ pmg_base_building_automotive_industry: "自動車"
+ pmg_automotive_aeroplanes: "飛行機"
+ pmg_automotive_tanks: "戦車"
   
- pm_automobiles: "自動車" #NT!
- pm_no_aeroplanes: "航空機生産なし" #NT!
- pm_limited_aeroplanes: "限定的な航空機生産" #NT!
- pm_extensive_aeroplanes: "大規模な航空機生産" #NT!
- pm_no_tanks: "戦車生産なし" #NT!
- pm_limited_tanks: "限定生産戦車" #NT!
- pm_extensive_tanks: "大規模なタンク生産" #NT!
+ pm_automobiles: "自動車"
+ pm_no_aeroplanes: "航空機生産なし"
+ pm_limited_aeroplanes: "限定的な航空機生産"
+ pm_extensive_aeroplanes: "大規模な航空機生産"
+ pm_no_tanks: "戦車生産なし"
+ pm_limited_tanks: "限定生産戦車"
+ pm_extensive_tanks: "大規模なタンク生産"

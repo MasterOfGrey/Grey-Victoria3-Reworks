@@ -1,78 +1,96 @@
 ﻿l_turkish:
   
  # Production method groups 
- pmg_arms_tools_demob: "Demobilize Alet Üretimi" #NT!
- pmg_arti_tools_demob: "Demobilize Alet Üretimi" #NT!
- pmg_munitions_explosives_demob: "Demobilize Patlayıcı Üretimi" #NT!
+ pmg_arms_tools_demob: "Demobilize Alet Üretimi"
+ pmg_arti_tools_demob: "Demobilize Alet Üretimi"
+ pmg_munitions_explosives_demob: "Demobilize Patlayıcı Üretimi"
   
  # Production methods 
- pm_extensive_tools_a_i: "Yaygın" #NT!
- pm_moderate_tools_a_i: "Ilıman" #NT!
- pm_limited_tools_a_i: "Sınırlı" #NT!
- pm_extensive_tools_a_s: "Yaygın" #NT!
- pm_moderate_tools_a_s: "Ilıman" #NT!
- pm_limited_tools_a_s: "Sınırlı" #NT!
- pm_extensive_tools_a_r: "Uzatma. Kauçuk" #NT!
- pm_moderate_tools_a_r: "Mod. Kauçuk" #NT!
- pm_limited_tools_a_r: "Ltd. Kauçuk" #NT!
- pm_no_tools_a: "Sivil Araçlar Yok" #NT!
+ pm_extensive_tools_a_i: "Yaygın"
+ pm_moderate_tools_a_i: "Ilıman"
+ pm_limited_tools_a_i: "Sınırlı"
+ pm_extensive_tools_a_s: "Yaygın"
+ pm_moderate_tools_a_s: "Ilıman"
+ pm_limited_tools_a_s: "Sınırlı"
+ pm_extensive_tools_a_r: "Uzatma. Kauçuk"
+ pm_moderate_tools_a_r: "Mod. Kauçuk"
+ pm_limited_tools_a_r: "Ltd. Kauçuk"
+ pm_no_tools_a: "Sivil Araçlar Yok"
   
- pm_extensive_tools_t_i: "Yaygın" #NT!
- pm_moderate_tools_t_i: "Ilıman" #NT!
- pm_limited_tools_t_i: "Sınırlı" #NT!
- pm_extensive_tools_t_s: "Yaygın" #NT!
- pm_moderate_tools_t_s: "Ilıman" #NT!
- pm_limited_tools_t_s: "Sınırlı" #NT!
- pm_extensive_tools_t_r: "Uzatma. Kauçuk" #NT!
- pm_moderate_tools_t_r: "Mod. Kauçuk" #NT!
- pm_limited_tools_t_r: "Ltd. Kauçuk" #NT!
- pm_no_tools_t: "Sivil Araçlar Yok" #NT!
+ pm_extensive_tools_t_i: "Yaygın"
+ pm_moderate_tools_t_i: "Ilıman"
+ pm_limited_tools_t_i: "Sınırlı"
+ pm_extensive_tools_t_s: "Yaygın"
+ pm_moderate_tools_t_s: "Ilıman"
+ pm_limited_tools_t_s: "Sınırlı"
+ pm_extensive_tools_t_r: "Uzatma. Kauçuk"
+ pm_moderate_tools_t_r: "Mod. Kauçuk"
+ pm_limited_tools_t_r: "Ltd. Kauçuk"
+ pm_no_tools_t: "Sivil Araçlar Yok"
   
- pm_extensive_ammo_le: "Yaygın" #NT!
- pm_moderate_ammo_le: "Ilıman" #NT!
- pm_limited_ammo_le: "Sınırlı" #NT!
- pm_extensive_ammo_ni: "Ekst. Nitrogliserin" #NT!
- pm_moderate_ammo_ni: "Mod. Nitrogliserin" #NT!
- pm_limited_ammo_ni: "Ltd. Nitrogliserin" #NT!
- pm_extensive_ammo_dy: "Yaygın" #NT!
- pm_moderate_ammo_dy: "Ilıman" #NT!
- pm_limited_ammo_dy: "Sınırlı" #NT!
- pm_extensive_ammo_br: "Ekst. Elektroliz" #NT!
- pm_moderate_ammo_br: "Mod. Elektroliz" #NT!
- pm_limited_ammo_br: "Ltd. Elektroliz" #NT!
- pm_no_self_explosives: "Kendi Ürettiğiniz Patlayıcılar Yok" #NT!
+ pm_extensive_ammo_le: "Yaygın"
+ pm_moderate_ammo_le: "Ilıman"
+ pm_limited_ammo_le: "Sınırlı"
+ pm_extensive_ammo_ni: "Ekst. Nitrogliserin"
+ pm_moderate_ammo_ni: "Mod. Nitrogliserin"
+ pm_limited_ammo_ni: "Ltd. Nitrogliserin"
+ pm_extensive_ammo_dy: "Yaygın"
+ pm_moderate_ammo_dy: "Ilıman"
+ pm_limited_ammo_dy: "Sınırlı"
+ pm_extensive_ammo_br: "Ekst. Elektroliz"
+ pm_moderate_ammo_br: "Mod. Elektroliz"
+ pm_limited_ammo_br: "Ltd. Elektroliz"
+ pm_no_self_explosives: "Kendi Ürettiğiniz Patlayıcılar Yok"
   
- pm_limited_radios: "Bazı Radyolar" #NT!
- pm_moderate_radios: "Bol Radyo" #NT!
- pm_extensive_radios: "Birçok Radyo" #NT!
+ pm_limited_radios: "Bazı Radyolar"
+ pm_moderate_radios: "Bol Radyo"
+ pm_extensive_radios: "Birçok Radyo"
   
- pm_ui_safety_a: "(Bunu görmezden gelin)" #NT!
- pm_ui_safety_b: "(Bunu görmezden gelin)" #NT!
+ pm_ui_safety_a: "(Bunu görmezden gelin)"
+ pm_ui_safety_b: "(Bunu görmezden gelin)"
   
  # Alerts 
- alert_MIR_war_demob_arms_name: "Terhis Edilen Silah Endüstrileriyle Savaşta" #NT!
- alert_MIR_war_demob_arms_hint: "Savaştasınız ve Silah Sanayiniz Hafif Silahlar yerine büyük miktarda Alet üretiyor." #NT!
- alert_MIR_war_demob_arms_action: "Kentsel Yapı Paneli" #NT!
- MIR_war_demob_arms_setting_name: "Terhis Edilen Silah Endüstrisi Uyarısı - Savaş" #NT!
- alert_MIR_peace_mob_arms_name: "Mobilize Silah Endüstrileriyle Barış İçinde" #NT!
- alert_MIR_peace_mob_arms_hint: "Siz huzur içindesiniz ve Silah Sanayiniz büyük miktarda Hafif Silah üretiyor." #NT!
- alert_MIR_peace_mob_arms_action: "Kentsel Yapı Paneli" #NT!
- MIR_peace_mob_arms_setting_name: "Mobilize Silah Endüstrisi Uyarısı - Barış" #NT!
+ alert_MIR_war_demob_arms_name: "Terhis Edilen Silah Endüstrileriyle Savaşta"
+ alert_MIR_war_demob_arms_hint: "Savaştasınız ve Silah Sanayiniz Hafif Silahlar yerine büyük miktarda Alet üretiyor."
+ alert_MIR_war_demob_arms_action: "Kentsel Yapı Paneli"
+ MIR_war_demob_arms_setting_name: "Terhis Edilen Silah Endüstrisi Uyarısı - Savaş"
+ alert_MIR_peace_mob_arms_name: "Mobilize Silah Endüstrileriyle Barış İçinde"
+ alert_MIR_peace_mob_arms_hint: "Siz huzur içindesiniz ve Silah Sanayiniz büyük miktarda Hafif Silah üretiyor."
+ alert_MIR_peace_mob_arms_action: "Kentsel Yapı Paneli"
+ MIR_peace_mob_arms_setting_name: "Mobilize Silah Endüstrisi Uyarısı - Barış"
   
- alert_MIR_war_demob_arty_name: "Terhis Edilen Topçu Dökümhaneleriyle Savaşta" #NT!
- alert_MIR_war_demob_arty_hint: "Savaştasınız ve Topçu Dökümhaneleriniz Topçu yerine büyük miktarda Alet üretiyor." #NT!
- alert_MIR_war_demob_arty_action: "Kentsel Yapı Paneli" #NT!
- MIR_war_demob_arty_setting_name: "Terhis Edilen Topçu Uyarısı - Savaş" #NT!
- alert_MIR_peace_mob_arty_name: "Mobilize Topçu Dökümhaneleriyle Barış İçindeyiz" #NT!
- alert_MIR_peace_mob_arty_hint: "Huzur içindesiniz ve Topçu Dökümhaneleriniz büyük miktarda Topçu üretiyor." #NT!
- alert_MIR_peace_mob_arty_action: "Kentsel Yapı Paneli" #NT!
- MIR_peace_mob_arty_setting_name: "Seferber Edilen Topçu Uyarısı - Barış" #NT!
+ alert_MIR_war_demob_arty_name: "Terhis Edilen Topçu Dökümhaneleriyle Savaşta"
+ alert_MIR_war_demob_arty_hint: "Savaştasınız ve Topçu Dökümhaneleriniz Topçu yerine büyük miktarda Alet üretiyor."
+ alert_MIR_war_demob_arty_action: "Kentsel Yapı Paneli"
+ MIR_war_demob_arty_setting_name: "Terhis Edilen Topçu Uyarısı - Savaş"
+ alert_MIR_peace_mob_arty_name: "Mobilize Topçu Dökümhaneleriyle Barış İçindeyiz"
+ alert_MIR_peace_mob_arty_hint: "Huzur içindesiniz ve Topçu Dökümhaneleriniz büyük miktarda Topçu üretiyor."
+ alert_MIR_peace_mob_arty_action: "Kentsel Yapı Paneli"
+ MIR_peace_mob_arty_setting_name: "Seferber Edilen Topçu Uyarısı - Barış"
   
- alert_MIR_war_demob_ammo_name: "Terhis Edilen Mühimmat Fabrikalarıyla Savaşta" #NT!
- alert_MIR_war_demob_ammo_hint: "Savaştasınız ve Mühimmat Fabrikalarınız askeri Mühimmat yerine büyük miktarda sivil patlayıcı üretiyor." #NT!
- alert_MIR_war_demob_ammo_action: "Kentsel Yapı Paneli" #NT!
- MIR_war_demob_ammo_setting_name: "Terhis Edilen Mühimmat Uyarısı - Savaş" #NT!
- alert_MIR_peace_mob_ammo_name: "Mobilize Mühimmat Tesisleriyle Barış İçindeyiz" #NT!
- alert_MIR_peace_mob_ammo_hint: "Huzur içindesiniz ve Mühimmat Fabrikalarınız büyük miktarda askeri Mühimmat üretiyor." #NT!
- alert_MIR_peace_mob_ammo_action: "Kentsel Yapı Paneli" #NT!
- MIR_peace_mob_ammo_setting_name: "Mobilize Mühimmat Uyarısı - Barış" #NT!
+ alert_MIR_war_demob_ammo_name: "Terhis Edilen Mühimmat Fabrikalarıyla Savaşta"
+ alert_MIR_war_demob_ammo_hint: "Savaştasınız ve Mühimmat Fabrikalarınız askeri Mühimmat yerine büyük miktarda sivil patlayıcı üretiyor."
+ alert_MIR_war_demob_ammo_action: "Kentsel Yapı Paneli"
+ MIR_war_demob_ammo_setting_name: "Terhis Edilen Mühimmat Uyarısı - Savaş"
+ alert_MIR_peace_mob_ammo_name: "Mobilize Mühimmat Tesisleriyle Barış İçindeyiz"
+ alert_MIR_peace_mob_ammo_hint: "Huzur içindesiniz ve Mühimmat Fabrikalarınız büyük miktarda askeri Mühimmat üretiyor."
+ alert_MIR_peace_mob_ammo_action: "Kentsel Yapı Paneli"
+ MIR_peace_mob_ammo_setting_name: "Mobilize Mühimmat Uyarısı - Barış"
+  
+ alert_MIR_war_demob_planes_name: "Sınırlı Uçak Üretimiyle Savaşta" #NT!
+ alert_MIR_war_demob_planes_hint: "Savaştasınız ve Otomotiv Endüstriniz pek fazla uçak üretmiyor." #NT!
+ alert_MIR_war_demob_planes_action: "Kentsel Yapı Paneli" #NT!
+ MIR_war_demob_planes_setting_name: "Terhis Edilen Uçak Uyarısı - Savaş" #NT!
+ alert_MIR_peace_mob_planes_name: "Kapsamlı Uçak Üretimiyle Barışık" #NT!
+ alert_MIR_peace_mob_planes_hint: "Siz huzur içindesiniz ve Otomotiv Sanayiniz çok sayıda uçak üretiyor." #NT!
+ alert_MIR_peace_mob_planes_action: "Kentsel Yapı Paneli" #NT!
+ MIR_peace_mob_planes_setting_name: "Mobilize Uçak Uyarısı - Barış" #NT!
+  
+ alert_MIR_war_demob_tanks_name: "Sınırlı Tank Üretimiyle Savaşta" #NT!
+ alert_MIR_war_demob_tanks_hint: "Savaştasınız ve Otomobil Endüstriniz pek fazla tank üretmiyor." #NT!
+ alert_MIR_war_demob_tanks_action: "Kentsel Yapı Paneli" #NT!
+ MIR_war_demob_tanks_setting_name: "Terhis Edilen Tanklar Uyarısı - Savaş" #NT!
+ alert_MIR_peace_mob_tanks_name: "Kapsamlı Tank Üretimiyle Barışık" #NT!
+ alert_MIR_peace_mob_tanks_hint: "Siz rahatsınız ve Otomotiv Sanayiniz çok sayıda tank üretiyor." #NT!
+ alert_MIR_peace_mob_tanks_action: "Kentsel Yapı Paneli" #NT!
+ MIR_peace_mob_tanks_setting_name: "Mobilize Tanklar Uyarısı - Barış" #NT!

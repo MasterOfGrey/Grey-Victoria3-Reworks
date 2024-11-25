@@ -1,14 +1,14 @@
 ﻿l_polish:
   
  # Production methods 
- pmg_base_building_automotive_industry: "Samochody" #NT!
- pmg_automotive_aeroplanes: "Samoloty" #NT!
- pmg_automotive_tanks: "Czołgi" #NT!
+ pmg_base_building_automotive_industry: "Samochody"
+ pmg_automotive_aeroplanes: "Samoloty"
+ pmg_automotive_tanks: "Czołgi"
   
- pm_automobiles: "Samochody" #NT!
- pm_no_aeroplanes: "Brak produkcji samolotów" #NT!
- pm_limited_aeroplanes: "Ograniczona produkcja samolotów" #NT!
- pm_extensive_aeroplanes: "Szeroka produkcja samolotów" #NT!
- pm_no_tanks: "Brak produkcji czołgów" #NT!
- pm_limited_tanks: "Ograniczona produkcja czołgów" #NT!
- pm_extensive_tanks: "Szeroka produkcja zbiorników" #NT!
+ pm_automobiles: "Samochody"
+ pm_no_aeroplanes: "Brak produkcji samolotów"
+ pm_limited_aeroplanes: "Ograniczona produkcja samolotów"
+ pm_extensive_aeroplanes: "Szeroka produkcja samolotów"
+ pm_no_tanks: "Brak produkcji czołgów"
+ pm_limited_tanks: "Ograniczona produkcja czołgów"
+ pm_extensive_tanks: "Szeroka produkcja zbiorników"

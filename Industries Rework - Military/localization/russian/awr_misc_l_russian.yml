@@ -1,14 +1,14 @@
 ﻿l_russian:
   
  # Production methods 
- pmg_base_building_automotive_industry: "Автомобили" #NT!
- pmg_automotive_aeroplanes: "Самолеты" #NT!
- pmg_automotive_tanks: "Танки" #NT!
+ pmg_base_building_automotive_industry: "Автомобили"
+ pmg_automotive_aeroplanes: "Самолеты"
+ pmg_automotive_tanks: "Танки"
   
- pm_automobiles: "Автомобили" #NT!
- pm_no_aeroplanes: "Производство самолетов не ведется" #NT!
- pm_limited_aeroplanes: "Ограниченное производство самолетов" #NT!
- pm_extensive_aeroplanes: "Масштабное производство самолетов" #NT!
- pm_no_tanks: "Производство танков не ведется" #NT!
- pm_limited_tanks: "Ограниченное производство танков" #NT!
- pm_extensive_tanks: "Масштабное производство танков" #NT!
+ pm_automobiles: "Автомобили"
+ pm_no_aeroplanes: "Производство самолетов не ведется"
+ pm_limited_aeroplanes: "Ограниченное производство самолетов"
+ pm_extensive_aeroplanes: "Масштабное производство самолетов"
+ pm_no_tanks: "Производство танков не ведется"
+ pm_limited_tanks: "Ограниченное производство танков"
+ pm_extensive_tanks: "Масштабное производство танков"

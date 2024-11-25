@@ -1,14 +1,14 @@
 ﻿l_simp_chinese:
   
  # Production methods 
- pmg_base_building_automotive_industry: "汽车" #NT!
- pmg_automotive_aeroplanes: "飞机" #NT!
- pmg_automotive_tanks: "坦克" #NT!
+ pmg_base_building_automotive_industry: "汽车"
+ pmg_automotive_aeroplanes: "飞机"
+ pmg_automotive_tanks: "坦克"
   
- pm_automobiles: "汽车" #NT!
- pm_no_aeroplanes: "没有飞机生产" #NT!
- pm_limited_aeroplanes: "限量飞机生产" #NT!
- pm_extensive_aeroplanes: "大规模飞机生产" #NT!
- pm_no_tanks: "没有坦克生产" #NT!
- pm_limited_tanks: "有限的坦克生产" #NT!
- pm_extensive_tanks: "大规模坦克生产" #NT!
+ pm_automobiles: "汽车"
+ pm_no_aeroplanes: "没有飞机生产"
+ pm_limited_aeroplanes: "限量飞机生产"
+ pm_extensive_aeroplanes: "大规模飞机生产"
+ pm_no_tanks: "没有坦克生产"
+ pm_limited_tanks: "有限的坦克生产"
+ pm_extensive_tanks: "大规模坦克生产"

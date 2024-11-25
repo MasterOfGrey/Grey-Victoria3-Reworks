@@ -1,78 +1,96 @@
 ﻿l_korean:
   
  # Production method groups 
- pmg_arms_tools_demob: "동원 해제된 도구 생산" #NT!
- pmg_arti_tools_demob: "동원 해제된 도구 생산" #NT!
- pmg_munitions_explosives_demob: "동원 해제된 폭발물 생산" #NT!
+ pmg_arms_tools_demob: "동원 해제된 도구 생산"
+ pmg_arti_tools_demob: "동원 해제된 도구 생산"
+ pmg_munitions_explosives_demob: "동원 해제된 폭발물 생산"
   
  # Production methods 
- pm_extensive_tools_a_i: "광범위한" #NT!
- pm_moderate_tools_a_i: "보통의" #NT!
- pm_limited_tools_a_i: "제한된" #NT!
- pm_extensive_tools_a_s: "광범위한" #NT!
- pm_moderate_tools_a_s: "보통의" #NT!
- pm_limited_tools_a_s: "제한된" #NT!
- pm_extensive_tools_a_r: "외부 고무" #NT!
- pm_moderate_tools_a_r: "모드 고무" #NT!
- pm_limited_tools_a_r: "유한회사 고무" #NT!
- pm_no_tools_a: "민간 도구 없음" #NT!
+ pm_extensive_tools_a_i: "광범위한"
+ pm_moderate_tools_a_i: "보통의"
+ pm_limited_tools_a_i: "제한된"
+ pm_extensive_tools_a_s: "광범위한"
+ pm_moderate_tools_a_s: "보통의"
+ pm_limited_tools_a_s: "제한된"
+ pm_extensive_tools_a_r: "외부 고무"
+ pm_moderate_tools_a_r: "모드 고무"
+ pm_limited_tools_a_r: "유한회사 고무"
+ pm_no_tools_a: "민간 도구 없음"
   
- pm_extensive_tools_t_i: "광범위한" #NT!
- pm_moderate_tools_t_i: "보통의" #NT!
- pm_limited_tools_t_i: "제한된" #NT!
- pm_extensive_tools_t_s: "광범위한" #NT!
- pm_moderate_tools_t_s: "보통의" #NT!
- pm_limited_tools_t_s: "제한된" #NT!
- pm_extensive_tools_t_r: "외부 고무" #NT!
- pm_moderate_tools_t_r: "모드 고무" #NT!
- pm_limited_tools_t_r: "유한회사 고무" #NT!
- pm_no_tools_t: "민간 도구 없음" #NT!
+ pm_extensive_tools_t_i: "광범위한"
+ pm_moderate_tools_t_i: "보통의"
+ pm_limited_tools_t_i: "제한된"
+ pm_extensive_tools_t_s: "광범위한"
+ pm_moderate_tools_t_s: "보통의"
+ pm_limited_tools_t_s: "제한된"
+ pm_extensive_tools_t_r: "외부 고무"
+ pm_moderate_tools_t_r: "모드 고무"
+ pm_limited_tools_t_r: "유한회사 고무"
+ pm_no_tools_t: "민간 도구 없음"
   
- pm_extensive_ammo_le: "광범위한" #NT!
- pm_moderate_ammo_le: "보통의" #NT!
- pm_limited_ammo_le: "제한된" #NT!
- pm_extensive_ammo_ni: "추가 니트로글리세린" #NT!
- pm_moderate_ammo_ni: "모드 니트로글리세린" #NT!
- pm_limited_ammo_ni: "유한회사 니트로글리세린" #NT!
- pm_extensive_ammo_dy: "광범위한" #NT!
- pm_moderate_ammo_dy: "보통의" #NT!
- pm_limited_ammo_dy: "제한된" #NT!
- pm_extensive_ammo_br: "외부 전기 분해" #NT!
- pm_moderate_ammo_br: "모드 전기 분해" #NT!
- pm_limited_ammo_br: "유한회사 전기분해" #NT!
- pm_no_self_explosives: "자체 생산 폭발물 없음" #NT!
+ pm_extensive_ammo_le: "광범위한"
+ pm_moderate_ammo_le: "보통의"
+ pm_limited_ammo_le: "제한된"
+ pm_extensive_ammo_ni: "추가 니트로글리세린"
+ pm_moderate_ammo_ni: "모드 니트로글리세린"
+ pm_limited_ammo_ni: "유한회사 니트로글리세린"
+ pm_extensive_ammo_dy: "광범위한"
+ pm_moderate_ammo_dy: "보통의"
+ pm_limited_ammo_dy: "제한된"
+ pm_extensive_ammo_br: "외부 전기 분해"
+ pm_moderate_ammo_br: "모드 전기 분해"
+ pm_limited_ammo_br: "유한회사 전기분해"
+ pm_no_self_explosives: "자체 생산 폭발물 없음"
   
- pm_limited_radios: "일부 라디오" #NT!
- pm_moderate_radios: "라디오가 많다" #NT!
- pm_extensive_radios: "많은 라디오" #NT!
+ pm_limited_radios: "일부 라디오"
+ pm_moderate_radios: "라디오가 많다"
+ pm_extensive_radios: "많은 라디오"
   
- pm_ui_safety_a: "(이것은 무시하세요)" #NT!
- pm_ui_safety_b: "(이것은 무시하세요)" #NT!
+ pm_ui_safety_a: "(이것은 무시하세요)"
+ pm_ui_safety_b: "(이것은 무시하세요)"
   
  # Alerts 
- alert_MIR_war_demob_arms_name: "동원 해제된 군수 산업과의 전쟁" #NT!
- alert_MIR_war_demob_arms_hint: "당신은 전쟁 중이며, 군수 산업은 소총 무기 대신 많은 양의 도구를 생산하고 있습니다." #NT!
- alert_MIR_war_demob_arms_action: "도시 건물 패널" #NT!
- MIR_war_demob_arms_setting_name: "동원 해제된 무기 산업 경고 - 전쟁" #NT!
- alert_MIR_peace_mob_arms_name: "동원된 무기 산업과 평화롭게 지내다" #NT!
- alert_MIR_peace_mob_arms_hint: "당신들은 평화를 누리고 있으며, 군수 산업은 대량의 소총을 생산하고 있습니다." #NT!
- alert_MIR_peace_mob_arms_action: "도시 건물 패널" #NT!
- MIR_peace_mob_arms_setting_name: "동원된 무기 산업 경고 - 평화" #NT!
+ alert_MIR_war_demob_arms_name: "동원 해제된 군수 산업과의 전쟁"
+ alert_MIR_war_demob_arms_hint: "당신은 전쟁 중이며, 군수 산업은 소총 무기 대신 많은 양의 도구를 생산하고 있습니다."
+ alert_MIR_war_demob_arms_action: "도시 건물 패널"
+ MIR_war_demob_arms_setting_name: "동원 해제된 무기 산업 경고 - 전쟁"
+ alert_MIR_peace_mob_arms_name: "동원된 무기 산업과 평화롭게 지내다"
+ alert_MIR_peace_mob_arms_hint: "당신들은 평화를 누리고 있으며, 군수 산업은 대량의 소총을 생산하고 있습니다."
+ alert_MIR_peace_mob_arms_action: "도시 건물 패널"
+ MIR_peace_mob_arms_setting_name: "동원된 무기 산업 경고 - 평화"
   
- alert_MIR_war_demob_arty_name: "동원 해제된 포병 주조소와의 전쟁" #NT!
- alert_MIR_war_demob_arty_hint: "당신은 전쟁 중이며, 당신의 포병 주조소는 포병 대신 많은 양의 도구를 생산하고 있습니다." #NT!
- alert_MIR_war_demob_arty_action: "도시 건물 패널" #NT!
- MIR_war_demob_arty_setting_name: "동원 해제된 포병 경고 - 전쟁" #NT!
- alert_MIR_peace_mob_arty_name: "동원된 포병 주조소와 평화롭게 지내다" #NT!
- alert_MIR_peace_mob_arty_hint: "당신은 평화로우며, 당신의 포병 주조소는 대량의 포병을 생산하고 있습니다." #NT!
- alert_MIR_peace_mob_arty_action: "도시 건물 패널" #NT!
- MIR_peace_mob_arty_setting_name: "동원포병 경고 - 평화" #NT!
+ alert_MIR_war_demob_arty_name: "동원 해제된 포병 주조소와의 전쟁"
+ alert_MIR_war_demob_arty_hint: "당신은 전쟁 중이며, 당신의 포병 주조소는 포병 대신 많은 양의 도구를 생산하고 있습니다."
+ alert_MIR_war_demob_arty_action: "도시 건물 패널"
+ MIR_war_demob_arty_setting_name: "동원 해제된 포병 경고 - 전쟁"
+ alert_MIR_peace_mob_arty_name: "동원된 포병 주조소와 평화롭게 지내다"
+ alert_MIR_peace_mob_arty_hint: "당신은 평화로우며, 당신의 포병 주조소는 대량의 포병을 생산하고 있습니다."
+ alert_MIR_peace_mob_arty_action: "도시 건물 패널"
+ MIR_peace_mob_arty_setting_name: "동원포병 경고 - 평화"
   
- alert_MIR_war_demob_ammo_name: "동원 해제된 군수 공장과의 전쟁" #NT!
- alert_MIR_war_demob_ammo_hint: "여러분은 전쟁 중이며, 군수 공장에서는 군용 탄약 대신 민간용 폭발물을 대량으로 생산하고 있습니다." #NT!
- alert_MIR_war_demob_ammo_action: "도시 건물 패널" #NT!
- MIR_war_demob_ammo_setting_name: "동원 해제된 무기 경고 - 전쟁" #NT!
- alert_MIR_peace_mob_ammo_name: "동원된 무기 공장과 평화롭게 지내다" #NT!
- alert_MIR_peace_mob_ammo_hint: "당신은 평화로우며 군수 공장에서는 대량의 군수 탄약을 생산하고 있습니다." #NT!
- alert_MIR_peace_mob_ammo_action: "도시 건물 패널" #NT!
- MIR_peace_mob_ammo_setting_name: "동원된 무기 경고 - 평화" #NT!
+ alert_MIR_war_demob_ammo_name: "동원 해제된 군수 공장과의 전쟁"
+ alert_MIR_war_demob_ammo_hint: "여러분은 전쟁 중이며, 군수 공장에서는 군용 탄약 대신 민간용 폭발물을 대량으로 생산하고 있습니다."
+ alert_MIR_war_demob_ammo_action: "도시 건물 패널"
+ MIR_war_demob_ammo_setting_name: "동원 해제된 무기 경고 - 전쟁"
+ alert_MIR_peace_mob_ammo_name: "동원된 무기 공장과 평화롭게 지내다"
+ alert_MIR_peace_mob_ammo_hint: "당신은 평화로우며 군수 공장에서는 대량의 군수 탄약을 생산하고 있습니다."
+ alert_MIR_peace_mob_ammo_action: "도시 건물 패널"
+ MIR_peace_mob_ammo_setting_name: "동원된 무기 경고 - 평화"
+  
+ alert_MIR_war_demob_planes_name: "제한된 항공기 생산으로 전쟁 중" #NT!
+ alert_MIR_war_demob_planes_hint: "당신은 전쟁 중이고 자동차 산업은 많은 비행기를 생산하지 못하고 있습니다." #NT!
+ alert_MIR_war_demob_planes_action: "도시 건물 패널" #NT!
+ MIR_war_demob_planes_setting_name: "동원 해제된 항공기 경고 - 전쟁" #NT!
+ alert_MIR_peace_mob_planes_name: "광범위한 항공기 생산으로 평화롭게 지내다" #NT!
+ alert_MIR_peace_mob_planes_hint: "당신은 평화로우며, 당신의 자동차 산업은 많은 비행기를 생산하고 있습니다." #NT!
+ alert_MIR_peace_mob_planes_action: "도시 건물 패널" #NT!
+ MIR_peace_mob_planes_setting_name: "동원 항공기 경고 - 평화" #NT!
+  
+ alert_MIR_war_demob_tanks_name: "제한된 탱크 생산으로 전쟁 중" #NT!
+ alert_MIR_war_demob_tanks_hint: "당신은 전쟁 중이고 자동차 산업은 많은 탱크를 생산하지 못하고 있습니다." #NT!
+ alert_MIR_war_demob_tanks_action: "도시 건물 패널" #NT!
+ MIR_war_demob_tanks_setting_name: "동원 해제된 탱크 경고 - 전쟁" #NT!
+ alert_MIR_peace_mob_tanks_name: "대규모 탱크 생산으로 평화롭게 지내다" #NT!
+ alert_MIR_peace_mob_tanks_hint: "당신은 평화로우며, 당신의 자동차 산업은 많은 탱크를 생산하고 있습니다." #NT!
+ alert_MIR_peace_mob_tanks_action: "도시 건물 패널" #NT!
+ MIR_peace_mob_tanks_setting_name: "동원된 탱크 경고 - 평화" #NT!
