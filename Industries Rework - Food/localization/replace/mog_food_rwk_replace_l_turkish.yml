@@ -1,0 +1,19 @@
+﻿l_turkish:
+ # Production method groups 
+ pmg_canning: "Ambalajlama" #NT!
+ pmg_distillery: "Sıvı Ürünler" #NT!
+  
+ # Production methods # 
+ # #Base 
+ pm_bakery: "El Sanatları Yöntemleri" #NT!
+ pm_sweeteners: "Tatlandırıcılar"
+ pm_baking_powder: "Kabartma Tozu"
+ pm_automated_bakery: "Otomatik Fırın"
+ # #Packaging 
+ pm_cannery: "Metal Konserveleme" #NT!
+ pm_vacuum_canning: "Vakumlu Paketleme"
+ pm_vacuum_canning_principle_3: "Verimli Konserve Uygulamaları"
+ # #Preservation 
+ pm_disabled_canning: "Koruyucu madde içermez" #NT!
+ # #Fluid Products 
+ pm_disabled_distillery: "Sadece Baharatlar" #NT!

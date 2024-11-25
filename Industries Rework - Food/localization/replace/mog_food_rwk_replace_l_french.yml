@@ -1,0 +1,19 @@
+﻿l_french:
+ # Production method groups 
+ pmg_canning: "Conditionnement" #NT!
+ pmg_distillery: "Produits fluides" #NT!
+  
+ # Production methods # 
+ # #Base 
+ pm_bakery: "Méthodes artisanales" #NT!
+ pm_sweeteners: "Édulcorants"
+ pm_baking_powder: "Levure chimique"
+ pm_automated_bakery: "Boulangerie automatisée"
+ # #Packaging 
+ pm_cannery: "Mise en conserve de métal" #NT!
+ pm_vacuum_canning: "Emballage sous vide"
+ pm_vacuum_canning_principle_3: "Pratiques de mise en conserve efficaces"
+ # #Preservation 
+ pm_disabled_canning: "Sans conservateurs" #NT!
+ # #Fluid Products 
+ pm_disabled_distillery: "Condiments uniquement" #NT!

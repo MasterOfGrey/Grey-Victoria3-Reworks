@@ -1,0 +1,45 @@
+﻿l_polish:
+  
+ # Production method groups 
+ # pmg_canning: "Opakowanie" #NT!
+ pmg_preservation: "Styl konserwacji" #NT!
+ # pmg_distillery: "Produkty płynne" #NT!
+  
+ # Production methods # 
+ # #Base 
+ # pm_bakery: "Metody rzemieślnicze" #NT!
+ # pm_sweeteners: "Słodziki" #NT!
+ # pm_baking_powder: "Proszek do pieczenia" #NT!
+ # pm_automated_bakery: "Automatyczna piekarnia" #NT!
+ # #Packaging 
+ pm_cloth_pkg: "Owijanie tkaniną" #NT!
+ pm_paper_pkg: "Opakowanie papierowe" #NT!
+ pm_wax_paper: "Papier woskowy" #NT!
+ pm_sealed_jars: "Słoiki zamknięte" #NT!
+ # pm_cannery: "Konserwowanie w metalach" #NT!
+ # pm_vacuum_canning: "Pakowanie próżniowe" #NT!
+ # pm_vacuum_canning_principle_3: "Efektywne praktyki konserwowania" #NT!
+ # #Preservation 
+ # pm_disabled_canning: "Bez konserwantów" #NT!
+ pm_dried_fruit: "Suszenie owoców" #NT!
+ pm_cured_meat: "Peklowanie mięsa" #NT!
+ pm_salted_fish: "Solenie ryb" #NT!
+ pm_sweet_vinegars: "Słodkie octy" #NT!
+ pm_meat_broths: "Buliony mięsne" #NT!
+ pm_brine_vinegars: "Ocet solankowy" #NT!
+ pm_fish_brines: "Solanki rybne" #NT!
+ pm_syrups_sauces: "Syropy i sosy" #NT!
+ pm_boiling_sauces: "Gotowanie i sosy" #NT!
+ pm_oils_sauces: "Oleje i sosy" #NT!
+ pm_broths_brines: "Buliony i solanki" #NT!
+ pm_gravies_broths: "Sosy i buliony" #NT!
+ pm_brines_oils: "Solanki i oleje" #NT!
+ # #Fluid Products 
+ # pm_disabled_distillery: "Tylko przyprawy" #NT!
+ pm_simmer_pots: "Garnki do gotowania" #NT!
+ pm_pot_stills_grain: "Pot Stills (alkohol zbożowy)" #NT!
+ pm_pot_stills_fruit: "Alembiki (likiery owocowe)" #NT!
+ pm_pot_stills_sugar: "Pot Stills (alkohole cukrowe)" #NT!
+ pm_patent_stills_grain: "Patent Stills (alkohol zbożowy)" #NT!
+ pm_patent_stills_fruit: "Patent Stills (Likiery owocowe)" #NT!
+ pm_patent_stills_sugar: "Patent Stills (napoje spirytusowe)" #NT!

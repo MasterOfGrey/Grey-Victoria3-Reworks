@@ -1,0 +1,45 @@
+﻿l_russian:
+  
+ # Production method groups 
+ # pmg_canning: "Упаковка" #NT!
+ pmg_preservation: "Стиль сохранения" #NT!
+ # pmg_distillery: "Жидкие продукты" #NT!
+  
+ # Production methods # 
+ # #Base 
+ # pm_bakery: "Кустарные методы" #NT!
+ # pm_sweeteners: "Подсластители" #NT!
+ # pm_baking_powder: "Порошок для выпечки" #NT!
+ # pm_automated_bakery: "Автоматизированная пекарня" #NT!
+ # #Packaging 
+ pm_cloth_pkg: "Упаковка ткани" #NT!
+ pm_paper_pkg: "Бумажная упаковка" #NT!
+ pm_wax_paper: "Вощеная бумага" #NT!
+ pm_sealed_jars: "Запечатанные банки" #NT!
+ # pm_cannery: "Металлическая консервация" #NT!
+ # pm_vacuum_canning: "Вакуумная упаковка" #NT!
+ # pm_vacuum_canning_principle_3: "Эффективные методы консервирования" #NT!
+ # #Preservation 
+ # pm_disabled_canning: "Без консервантов" #NT!
+ pm_dried_fruit: "Сушка фруктов" #NT!
+ pm_cured_meat: "Консервирование мяса" #NT!
+ pm_salted_fish: "Засолка рыбы" #NT!
+ pm_sweet_vinegars: "Сладкие уксусы" #NT!
+ pm_meat_broths: "Мясные бульоны" #NT!
+ pm_brine_vinegars: "Рассолы уксусы" #NT!
+ pm_fish_brines: "Рыбные рассолы" #NT!
+ pm_syrups_sauces: "Сиропы и соусы" #NT!
+ pm_boiling_sauces: "Варка и соусы" #NT!
+ pm_oils_sauces: "Масла и соусы" #NT!
+ pm_broths_brines: "Бульоны и рассолы" #NT!
+ pm_gravies_broths: "Подливки и бульоны" #NT!
+ pm_brines_oils: "Рассолы и масла" #NT!
+ # #Fluid Products 
+ # pm_disabled_distillery: "Только приправы" #NT!
+ pm_simmer_pots: "Кастрюли для кипячения" #NT!
+ pm_pot_stills_grain: "Перегонные кубы (зерновой спирт)" #NT!
+ pm_pot_stills_fruit: "Перегонные кубы (фруктовые ликеры)" #NT!
+ pm_pot_stills_sugar: "Перегонные кубы (сахарные спирты)" #NT!
+ pm_patent_stills_grain: "Патентованные перегонные кубы (зерновой спирт)" #NT!
+ pm_patent_stills_fruit: "Патентованные перегонные кубы (фруктовые ликеры)" #NT!
+ pm_patent_stills_sugar: "Патентованные перегонные кубы (сахарные спирты)" #NT!

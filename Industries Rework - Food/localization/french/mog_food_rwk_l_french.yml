@@ -1,0 +1,45 @@
+﻿l_french:
+  
+ # Production method groups 
+ # pmg_canning: "Conditionnement" #NT!
+ pmg_preservation: "Style de conservation" #NT!
+ # pmg_distillery: "Produits fluides" #NT!
+  
+ # Production methods # 
+ # #Base 
+ # pm_bakery: "Méthodes artisanales" #NT!
+ # pm_sweeteners: "Édulcorants" #NT!
+ # pm_baking_powder: "Levure chimique" #NT!
+ # pm_automated_bakery: "Boulangerie automatisée" #NT!
+ # #Packaging 
+ pm_cloth_pkg: "Emballage en tissu" #NT!
+ pm_paper_pkg: "Emballage en papier" #NT!
+ pm_wax_paper: "Papier ciré" #NT!
+ pm_sealed_jars: "Bocaux scellés" #NT!
+ # pm_cannery: "Mise en conserve de métal" #NT!
+ # pm_vacuum_canning: "Emballage sous vide" #NT!
+ # pm_vacuum_canning_principle_3: "Pratiques de mise en conserve efficaces" #NT!
+ # #Preservation 
+ # pm_disabled_canning: "Sans conservateurs" #NT!
+ pm_dried_fruit: "Séchage des fruits" #NT!
+ pm_cured_meat: "Salaison de la viande" #NT!
+ pm_salted_fish: "Salaison du poisson" #NT!
+ pm_sweet_vinegars: "Vinaigres doux" #NT!
+ pm_meat_broths: "Bouillons de viande" #NT!
+ pm_brine_vinegars: "Vinaigres de saumure" #NT!
+ pm_fish_brines: "Saumures de poisson" #NT!
+ pm_syrups_sauces: "Sirops et sauces" #NT!
+ pm_boiling_sauces: "Ébullition et sauces" #NT!
+ pm_oils_sauces: "Huiles et sauces" #NT!
+ pm_broths_brines: "Bouillons et saumures" #NT!
+ pm_gravies_broths: "Sauces et bouillons" #NT!
+ pm_brines_oils: "Saumures et huiles" #NT!
+ # #Fluid Products 
+ # pm_disabled_distillery: "Condiments uniquement" #NT!
+ pm_simmer_pots: "Marmites à mijoter" #NT!
+ pm_pot_stills_grain: "Alambics à pot (alcool de grain)" #NT!
+ pm_pot_stills_fruit: "Alambics à pot (liqueurs de fruits)" #NT!
+ pm_pot_stills_sugar: "Alambics à pot (alcools sucrés)" #NT!
+ pm_patent_stills_grain: "Alambics brevetés (alcool de grain)" #NT!
+ pm_patent_stills_fruit: "Alambics brevetés (liqueurs de fruits)" #NT!
+ pm_patent_stills_sugar: "Alambics brevetés (alcools sucrés)" #NT!

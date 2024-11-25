@@ -1,0 +1,19 @@
+﻿l_korean:
+ # Production method groups 
+ pmg_canning: "포장" #NT!
+ pmg_distillery: "유체 제품" #NT!
+  
+ # Production methods # 
+ # #Base 
+ pm_bakery: "수공예 방법" #NT!
+ pm_sweeteners: "감미료"
+ pm_baking_powder: "베이킹파우더"
+ pm_automated_bakery: "자동화 제과점"
+ # #Packaging 
+ pm_cannery: "금속 통조림" #NT!
+ pm_vacuum_canning: "진공 포장"
+ pm_vacuum_canning_principle_3: "효율적인 통조림 공정"
+ # #Preservation 
+ pm_disabled_canning: "방부제 없음" #NT!
+ # #Fluid Products 
+ pm_disabled_distillery: "조미료만" #NT!

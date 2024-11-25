@@ -1,0 +1,45 @@
+﻿l_german:
+  
+ # Production method groups 
+ # pmg_canning: "Verpackung" #NT!
+ pmg_preservation: "Erhaltungsstil" #NT!
+ # pmg_distillery: "Fluidprodukte" #NT!
+  
+ # Production methods # 
+ # #Base 
+ # pm_bakery: "Handwerkliche Methoden" #NT!
+ # pm_sweeteners: "Süßstoffe" #NT!
+ # pm_baking_powder: "Backpulver" #NT!
+ # pm_automated_bakery: "Automatisierte Bäckerei" #NT!
+ # #Packaging 
+ pm_cloth_pkg: "Stoffverpackung" #NT!
+ pm_paper_pkg: "Papierverpackung" #NT!
+ pm_wax_paper: "Wachspapier" #NT!
+ pm_sealed_jars: "Versiegelte Gläser" #NT!
+ # pm_cannery: "Metallkonserven" #NT!
+ # pm_vacuum_canning: "Vakuumverpackung" #NT!
+ # pm_vacuum_canning_principle_3: "Effiziente Konservierungspraktiken" #NT!
+ # #Preservation 
+ # pm_disabled_canning: "Keine Konservierungsstoffe" #NT!
+ pm_dried_fruit: "Obsttrocknung" #NT!
+ pm_cured_meat: "Fleischpökeln" #NT!
+ pm_salted_fish: "Fisch salzen" #NT!
+ pm_sweet_vinegars: "Süße Essige" #NT!
+ pm_meat_broths: "Fleischbrühen" #NT!
+ pm_brine_vinegars: "Salzessige" #NT!
+ pm_fish_brines: "Fischpökellaken" #NT!
+ pm_syrups_sauces: "Sirupe & Saucen" #NT!
+ pm_boiling_sauces: "Kochen & Soßen" #NT!
+ pm_oils_sauces: "Öle & Saucen" #NT!
+ pm_broths_brines: "Brühen & Pökellaken" #NT!
+ pm_gravies_broths: "Soßen & Brühen" #NT!
+ pm_brines_oils: "Salzlaken und Öle" #NT!
+ # #Fluid Products 
+ # pm_disabled_distillery: "Nur Gewürze" #NT!
+ pm_simmer_pots: "Simmertöpfe" #NT!
+ pm_pot_stills_grain: "Pot Stills (Getreidealkohol)" #NT!
+ pm_pot_stills_fruit: "Pot Stills (Obstliköre)" #NT!
+ pm_pot_stills_sugar: "Pot Stills (Zuckerspirituosen)" #NT!
+ pm_patent_stills_grain: "Patent Stills (Getreidealkohol)" #NT!
+ pm_patent_stills_fruit: "Patent Stills (Obstliköre)" #NT!
+ pm_patent_stills_sugar: "Patent Stills (Zuckerspirituosen)" #NT!

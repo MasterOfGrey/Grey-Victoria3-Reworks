@@ -1,0 +1,19 @@
+﻿l_german:
+ # Production method groups 
+ pmg_canning: "Verpackung" #NT!
+ pmg_distillery: "Fluidprodukte" #NT!
+  
+ # Production methods # 
+ # #Base 
+ pm_bakery: "Handwerkliche Methoden" #NT!
+ pm_sweeteners: "Süßungsmittel"
+ pm_baking_powder: "Backpulver"
+ pm_automated_bakery: "Brotfabriken"
+ # #Packaging 
+ pm_cannery: "Metallkonserven" #NT!
+ pm_vacuum_canning: "Vakuumierung"
+ pm_vacuum_canning_principle_3: "Effiziente Eindosung"
+ # #Preservation 
+ pm_disabled_canning: "Keine Konservierungsstoffe" #NT!
+ # #Fluid Products 
+ pm_disabled_distillery: "Nur Gewürze" #NT!

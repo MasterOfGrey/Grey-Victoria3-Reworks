@@ -1,0 +1,19 @@
+﻿l_braz_por:
+ # Production method groups 
+ pmg_canning: "Embalagem" #NT!
+ pmg_distillery: "Produtos Fluidos" #NT!
+  
+ # Production methods # 
+ # #Base 
+ pm_bakery: "Métodos Artesanais" #NT!
+ pm_sweeteners: "Adoçantes"
+ pm_baking_powder: "Fermento em Pó"
+ pm_automated_bakery: "Confeitaria Automatizada"
+ # #Packaging 
+ pm_cannery: "Conservas de metal" #NT!
+ pm_vacuum_canning: "Embalagem a Vácuo"
+ pm_vacuum_canning_principle_3: "Práticas de Enlatamento Eficientes"
+ # #Preservation 
+ pm_disabled_canning: "Sem conservantes" #NT!
+ # #Fluid Products 
+ pm_disabled_distillery: "Apenas condimentos" #NT!

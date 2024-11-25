@@ -1,0 +1,45 @@
+﻿l_simp_chinese:
+  
+ # Production method groups 
+ # pmg_canning: "包装" #NT!
+ pmg_preservation: "保存风格" #NT!
+ # pmg_distillery: "流体产品" #NT!
+  
+ # Production methods # 
+ # #Base 
+ # pm_bakery: "手工方法" #NT!
+ # pm_sweeteners: "甜味剂" #NT!
+ # pm_baking_powder: "发酵粉" #NT!
+ # pm_automated_bakery: "自动化面包房" #NT!
+ # #Packaging 
+ pm_cloth_pkg: "布包裹" #NT!
+ pm_paper_pkg: "纸包装" #NT!
+ pm_wax_paper: "蜡纸" #NT!
+ pm_sealed_jars: "密封罐" #NT!
+ # pm_cannery: "金属罐" #NT!
+ # pm_vacuum_canning: "真空包装" #NT!
+ # pm_vacuum_canning_principle_3: "高效的罐装实践" #NT!
+ # #Preservation 
+ # pm_disabled_canning: "不含防腐剂" #NT!
+ pm_dried_fruit: "水果干燥" #NT!
+ pm_cured_meat: "肉类腌制" #NT!
+ pm_salted_fish: "鱼腌制" #NT!
+ pm_sweet_vinegars: "甜醋" #NT!
+ pm_meat_broths: "肉汤" #NT!
+ pm_brine_vinegars: "盐水醋" #NT!
+ pm_fish_brines: "鱼卤水" #NT!
+ pm_syrups_sauces: "糖浆和酱汁" #NT!
+ pm_boiling_sauces: "煮食和酱汁" #NT!
+ pm_oils_sauces: "油和酱料" #NT!
+ pm_broths_brines: "肉汤和卤水" #NT!
+ pm_gravies_broths: "肉汁和肉汤" #NT!
+ pm_brines_oils: "盐水和油" #NT!
+ # #Fluid Products 
+ # pm_disabled_distillery: "仅限调味品" #NT!
+ pm_simmer_pots: "炖锅" #NT!
+ pm_pot_stills_grain: "壶式蒸馏器（谷物酒精）" #NT!
+ pm_pot_stills_fruit: "壶式蒸馏器（果酒）" #NT!
+ pm_pot_stills_sugar: "壶式蒸馏器（糖酒）" #NT!
+ pm_patent_stills_grain: "专利蒸馏器（谷物酒精）" #NT!
+ pm_patent_stills_fruit: "专利蒸馏器（果酒）" #NT!
+ pm_patent_stills_sugar: "专利蒸馏器（糖酒）" #NT!

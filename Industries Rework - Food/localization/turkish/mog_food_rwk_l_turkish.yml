@@ -1,0 +1,45 @@
+﻿l_turkish:
+  
+ # Production method groups 
+ # pmg_canning: "Ambalajlama" #NT!
+ pmg_preservation: "Koruma Tarzı" #NT!
+ # pmg_distillery: "Sıvı Ürünler" #NT!
+  
+ # Production methods # 
+ # #Base 
+ # pm_bakery: "El Sanatları Yöntemleri" #NT!
+ # pm_sweeteners: "Tatlandırıcılar" #NT!
+ # pm_baking_powder: "Kabartma tozu" #NT!
+ # pm_automated_bakery: "Otomatik Fırın" #NT!
+ # #Packaging 
+ pm_cloth_pkg: "Kumaş Sarma" #NT!
+ pm_paper_pkg: "Kağıt Sarma" #NT!
+ pm_wax_paper: "Mumlu kağıt" #NT!
+ pm_sealed_jars: "Mühürlü Kavanozlar" #NT!
+ # pm_cannery: "Metal Konserveleme" #NT!
+ # pm_vacuum_canning: "Vakumlu Paketleme" #NT!
+ # pm_vacuum_canning_principle_3: "Verimli Konserveleme Uygulamaları" #NT!
+ # #Preservation 
+ # pm_disabled_canning: "Koruyucu madde içermez" #NT!
+ pm_dried_fruit: "Meyve Kurutma" #NT!
+ pm_cured_meat: "Et Kürleme" #NT!
+ pm_salted_fish: "Balık Tuzlama" #NT!
+ pm_sweet_vinegars: "Tatlı Sirkeler" #NT!
+ pm_meat_broths: "Et Suyu" #NT!
+ pm_brine_vinegars: "Tuzlu su sirkeleri" #NT!
+ pm_fish_brines: "Balık Tuzlamaları" #NT!
+ pm_syrups_sauces: "Şuruplar ve Soslar" #NT!
+ pm_boiling_sauces: "Haşlama ve Soslar" #NT!
+ pm_oils_sauces: "Yağlar ve Soslar" #NT!
+ pm_broths_brines: "Et suyu ve tuzlu sular" #NT!
+ pm_gravies_broths: "Soslar ve Et Suları" #NT!
+ pm_brines_oils: "Tuzlu sular ve yağlar" #NT!
+ # #Fluid Products 
+ # pm_disabled_distillery: "Sadece Baharatlar" #NT!
+ pm_simmer_pots: "Kaynatma Tencereleri" #NT!
+ pm_pot_stills_grain: "Pot Still'ler (Tahıl Alkolü)" #NT!
+ pm_pot_stills_fruit: "Pot Still'ler (Meyve Likörleri)" #NT!
+ pm_pot_stills_sugar: "Pot Stills (Şekerli İçecekler)" #NT!
+ pm_patent_stills_grain: "Patent Damıtma Cihazları (Tahıl Alkolü)" #NT!
+ pm_patent_stills_fruit: "Patent Damıtma Cihazları (Meyve Likörleri)" #NT!
+ pm_patent_stills_sugar: "Patent Stills (Şekerli İçecekler)" #NT!

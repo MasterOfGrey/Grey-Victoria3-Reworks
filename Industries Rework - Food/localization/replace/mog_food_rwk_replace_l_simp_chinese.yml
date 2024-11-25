@@ -1,0 +1,19 @@
+﻿l_simp_chinese:
+ # Production method groups 
+ pmg_canning: "包装" #NT!
+ pmg_distillery: "流体产品" #NT!
+  
+ # Production methods # 
+ # #Base 
+ pm_bakery: "手工方法" #NT!
+ pm_sweeteners: "甜味剂"
+ pm_baking_powder: "发酵粉"
+ pm_automated_bakery: "自动化面包房"
+ # #Packaging 
+ pm_cannery: "金属罐" #NT!
+ pm_vacuum_canning: "真空包装"
+ pm_vacuum_canning_principle_3: "高效罐头生产"
+ # #Preservation 
+ pm_disabled_canning: "不含防腐剂" #NT!
+ # #Fluid Products 
+ pm_disabled_distillery: "仅限调味品" #NT!

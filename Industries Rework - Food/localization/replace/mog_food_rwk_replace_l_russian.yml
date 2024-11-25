@@ -1,0 +1,19 @@
+﻿l_russian:
+ # Production method groups 
+ pmg_canning: "Упаковка" #NT!
+ pmg_distillery: "Жидкие продукты" #NT!
+  
+ # Production methods # 
+ # #Base 
+ pm_bakery: "Кустарные методы" #NT!
+ pm_sweeteners: "Кондитерские"
+ pm_baking_powder: "Пекарный порошок"
+ pm_automated_bakery: "Автоматические пекарни"
+ # #Packaging 
+ pm_cannery: "Металлическая консервация" #NT!
+ pm_vacuum_canning: "Вакуумная упаковка"
+ pm_vacuum_canning_principle_3: "Эффективные методы консервирования"
+ # #Preservation 
+ pm_disabled_canning: "Без консервантов" #NT!
+ # #Fluid Products 
+ pm_disabled_distillery: "Только приправы" #NT!

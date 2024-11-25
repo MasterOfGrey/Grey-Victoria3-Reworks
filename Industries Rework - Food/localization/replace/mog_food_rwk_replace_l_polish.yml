@@ -1,0 +1,19 @@
+﻿l_polish:
+ # Production method groups 
+ pmg_canning: "Opakowanie" #NT!
+ pmg_distillery: "Produkty płynne" #NT!
+  
+ # Production methods # 
+ # #Base 
+ pm_bakery: "Metody rzemieślnicze" #NT!
+ pm_sweeteners: "Słodziki"
+ pm_baking_powder: "Proszek do pieczenia"
+ pm_automated_bakery: "Piekarnia zautomatyzowana"
+ # #Packaging 
+ pm_cannery: "Konserwowanie w metalach" #NT!
+ pm_vacuum_canning: "Pakowanie próżniowe"
+ pm_vacuum_canning_principle_3: "Wydajne metody puszkowania"
+ # #Preservation 
+ pm_disabled_canning: "Bez konserwantów" #NT!
+ # #Fluid Products 
+ pm_disabled_distillery: "Tylko przyprawy" #NT!

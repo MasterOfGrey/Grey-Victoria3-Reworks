@@ -1,0 +1,45 @@
+﻿l_korean:
+  
+ # Production method groups 
+ # pmg_canning: "포장" #NT!
+ pmg_preservation: "보존 스타일" #NT!
+ # pmg_distillery: "유체 제품" #NT!
+  
+ # Production methods # 
+ # #Base 
+ # pm_bakery: "수공예 방법" #NT!
+ # pm_sweeteners: "감미료" #NT!
+ # pm_baking_powder: "베이킹파우더" #NT!
+ # pm_automated_bakery: "자동 베이커리" #NT!
+ # #Packaging 
+ pm_cloth_pkg: "천 포장" #NT!
+ pm_paper_pkg: "종이 포장" #NT!
+ pm_wax_paper: "왁스 종이" #NT!
+ pm_sealed_jars: "밀봉된 항아리" #NT!
+ # pm_cannery: "금속 통조림" #NT!
+ # pm_vacuum_canning: "진공 포장" #NT!
+ # pm_vacuum_canning_principle_3: "효율적인 통조림 관행" #NT!
+ # #Preservation 
+ # pm_disabled_canning: "방부제 없음" #NT!
+ pm_dried_fruit: "과일 건조" #NT!
+ pm_cured_meat: "고기 염지" #NT!
+ pm_salted_fish: "생선 소금 절이기" #NT!
+ pm_sweet_vinegars: "달콤한 식초" #NT!
+ pm_meat_broths: "고기 국물" #NT!
+ pm_brine_vinegars: "소금물 식초" #NT!
+ pm_fish_brines: "생선 소금물" #NT!
+ pm_syrups_sauces: "시럽 및 소스" #NT!
+ pm_boiling_sauces: "끓이기 & 소스" #NT!
+ pm_oils_sauces: "오일 & 소스" #NT!
+ pm_broths_brines: "국물과 소금물" #NT!
+ pm_gravies_broths: "그레이비 & 국물" #NT!
+ pm_brines_oils: "소금물과 오일" #NT!
+ # #Fluid Products 
+ # pm_disabled_distillery: "조미료만" #NT!
+ pm_simmer_pots: "끓는 냄비" #NT!
+ pm_pot_stills_grain: "포트 스틸(알코올)" #NT!
+ pm_pot_stills_fruit: "포트 스틸(과일주)" #NT!
+ pm_pot_stills_sugar: "포트 스틸(설탕 증류주)" #NT!
+ pm_patent_stills_grain: "특허 스틸(알코올)" #NT!
+ pm_patent_stills_fruit: "특허 증류기(과일주)" #NT!
+ pm_patent_stills_sugar: "특허 스틸(슈가 스피릿)" #NT!

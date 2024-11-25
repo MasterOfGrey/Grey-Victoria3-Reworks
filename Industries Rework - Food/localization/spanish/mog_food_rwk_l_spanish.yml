@@ -1,0 +1,45 @@
+﻿l_spanish:
+  
+ # Production method groups 
+ # pmg_canning: "Embalaje" #NT!
+ pmg_preservation: "Estilo de conservación" #NT!
+ # pmg_distillery: "Productos fluidos" #NT!
+  
+ # Production methods # 
+ # #Base 
+ # pm_bakery: "Métodos artesanales" #NT!
+ # pm_sweeteners: "Edulcorantes" #NT!
+ # pm_baking_powder: "Levadura en polvo" #NT!
+ # pm_automated_bakery: "Panadería automatizada" #NT!
+ # #Packaging 
+ pm_cloth_pkg: "Envoltura de tela" #NT!
+ pm_paper_pkg: "Envoltura de papel" #NT!
+ pm_wax_paper: "Papel encerado" #NT!
+ pm_sealed_jars: "Frascos sellados" #NT!
+ # pm_cannery: "Enlatado de metal" #NT!
+ # pm_vacuum_canning: "Envasado al vacío" #NT!
+ # pm_vacuum_canning_principle_3: "Prácticas de enlatado eficientes" #NT!
+ # #Preservation 
+ # pm_disabled_canning: "Sin conservantes" #NT!
+ pm_dried_fruit: "Secado de frutas" #NT!
+ pm_cured_meat: "Curación de carne" #NT!
+ pm_salted_fish: "Salazón de pescado" #NT!
+ pm_sweet_vinegars: "Vinagres dulces" #NT!
+ pm_meat_broths: "Caldos de carne" #NT!
+ pm_brine_vinegars: "Vinagres de salmuera" #NT!
+ pm_fish_brines: "Salmueras de pescado" #NT!
+ pm_syrups_sauces: "Jarabes y salsas" #NT!
+ pm_boiling_sauces: "Hervidos y salsas" #NT!
+ pm_oils_sauces: "Aceites y salsas" #NT!
+ pm_broths_brines: "Caldos y salmueras" #NT!
+ pm_gravies_broths: "Salsas y caldos" #NT!
+ pm_brines_oils: "Salmueras y aceites" #NT!
+ # #Fluid Products 
+ # pm_disabled_distillery: "Solo condimentos" #NT!
+ pm_simmer_pots: "Ollas a fuego lento" #NT!
+ pm_pot_stills_grain: "Alambiques (alcohol de grano)" #NT!
+ pm_pot_stills_fruit: "Alambiques (licores de frutas)" #NT!
+ pm_pot_stills_sugar: "Alambiques (alambiques de azúcar)" #NT!
+ pm_patent_stills_grain: "Alambiques patentados (alcohol de grano)" #NT!
+ pm_patent_stills_fruit: "Alambiques de patente (licores de frutas)" #NT!
+ pm_patent_stills_sugar: "Alambiques patentados (licores azucarados)" #NT!

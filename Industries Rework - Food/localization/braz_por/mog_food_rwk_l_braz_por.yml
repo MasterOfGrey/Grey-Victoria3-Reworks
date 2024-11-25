@@ -1,0 +1,45 @@
+﻿l_braz_por:
+  
+ # Production method groups 
+ # pmg_canning: "Embalagem" #NT!
+ pmg_preservation: "Estilo de preservação" #NT!
+ # pmg_distillery: "Produtos Fluidos" #NT!
+  
+ # Production methods # 
+ # #Base 
+ # pm_bakery: "Métodos Artesanais" #NT!
+ # pm_sweeteners: "Adoçantes" #NT!
+ # pm_baking_powder: "Fermento em pó" #NT!
+ # pm_automated_bakery: "Padaria Automatizada" #NT!
+ # #Packaging 
+ pm_cloth_pkg: "Envolvimento em tecido" #NT!
+ pm_paper_pkg: "Embalagem de papel" #NT!
+ pm_wax_paper: "Papel de cera" #NT!
+ pm_sealed_jars: "Potes selados" #NT!
+ # pm_cannery: "Conservas de metal" #NT!
+ # pm_vacuum_canning: "Embalagem a vácuo" #NT!
+ # pm_vacuum_canning_principle_3: "Práticas de enlatamento eficientes" #NT!
+ # #Preservation 
+ # pm_disabled_canning: "Sem conservantes" #NT!
+ pm_dried_fruit: "Secagem de frutas" #NT!
+ pm_cured_meat: "Cura de carne" #NT!
+ pm_salted_fish: "Salga de Peixe" #NT!
+ pm_sweet_vinegars: "Vinagres doces" #NT!
+ pm_meat_broths: "Caldos de Carne" #NT!
+ pm_brine_vinegars: "Vinagres de salmoura" #NT!
+ pm_fish_brines: "Salmoura de peixe" #NT!
+ pm_syrups_sauces: "Xaropes e molhos" #NT!
+ pm_boiling_sauces: "Fervura e Molhos" #NT!
+ pm_oils_sauces: "Óleos e Molhos" #NT!
+ pm_broths_brines: "Caldos e Salmouras" #NT!
+ pm_gravies_broths: "Molhos e caldos" #NT!
+ pm_brines_oils: "Salmouras e Óleos" #NT!
+ # #Fluid Products 
+ # pm_disabled_distillery: "Apenas condimentos" #NT!
+ pm_simmer_pots: "Panelas fervendo" #NT!
+ pm_pot_stills_grain: "Alambiques de Alambique (Álcool de Cereais)" #NT!
+ pm_pot_stills_fruit: "Alambiques de Potes (licores de frutas)" #NT!
+ pm_pot_stills_sugar: "Alambiques de Pot (destilados de açúcar)" #NT!
+ pm_patent_stills_grain: "Alambiques Patenteados (Álcool de Cereais)" #NT!
+ pm_patent_stills_fruit: "Patent Stills (licores de frutas)" #NT!
+ pm_patent_stills_sugar: "Patent Stills (destilados de açúcar)" #NT!

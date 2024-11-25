@@ -1,0 +1,19 @@
+﻿l_spanish:
+ # Production method groups 
+ pmg_canning: "Embalaje" #NT!
+ pmg_distillery: "Productos fluidos" #NT!
+  
+ # Production methods # 
+ # #Base 
+ pm_bakery: "Métodos artesanales" #NT!
+ pm_sweeteners: "Edulcorantes"
+ pm_baking_powder: "Levadura en polvo"
+ pm_automated_bakery: "Pastelería automatizada"
+ # #Packaging 
+ pm_cannery: "Enlatado de metal" #NT!
+ pm_vacuum_canning: "Envasado al vacío"
+ pm_vacuum_canning_principle_3: "Técnicas de enlatado eficientes"
+ # #Preservation 
+ pm_disabled_canning: "Sin conservantes" #NT!
+ # #Fluid Products 
+ pm_disabled_distillery: "Solo condimentos" #NT!
