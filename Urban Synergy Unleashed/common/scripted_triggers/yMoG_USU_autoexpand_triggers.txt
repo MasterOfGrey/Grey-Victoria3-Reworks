@@ -108,8 +108,11 @@ mog_normal_building_confirm = {
 mog_profit_ok = {
 	OR = {
 		is_subsidized = yes
-		earnings > 3
-		weekly_profit > 0
+		AND = {
+			earnings > 4.5
+			weekly_profit > 0
+			cash_reserves_ratio > 0.05
+		}
 	}
 }
 mog_market_access_ok = {
