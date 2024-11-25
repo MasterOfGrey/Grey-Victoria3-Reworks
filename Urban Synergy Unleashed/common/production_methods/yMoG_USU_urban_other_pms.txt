@@ -132,13 +132,14 @@ pm_horses = {
 }
 
 pm_stagecoaches_and_wagons = {
-	texture = "gfx/interface/icons/production_method_icons/log_carts.dds"
+	texture = "gfx/interface/icons/production_method_icons/horse_vehicles.dds"
 	
 	building_modifiers = {
 		workforce_scaled = { #makes 30 at base prices
 			goods_input_grain_add = 4
 			goods_input_wood_add = 2
-			goods_output_transportation_add = 5
+			goods_input_services_add = 2
+			goods_output_transportation_add = 9
 		}
 	}
 	state_modifiers = {
@@ -150,7 +151,7 @@ pm_stagecoaches_and_wagons = {
 }
 
 pm_motor_vehicles = {
-	texture = "gfx/interface/icons/production_method_icons/tractors.dds"
+	texture = "gfx/interface/icons/production_method_icons/motor_vehicles.dds"
 	
 	unlocking_technologies = {
 		combustion_engine
@@ -160,7 +161,8 @@ pm_motor_vehicles = {
 		workforce_scaled = { #makes 40 at base prices
 			goods_input_automobiles_add = 1
 			goods_input_oil_add = 1
-			goods_output_transportation_add = 6
+			goods_input_services_add = 4
+			goods_output_transportation_add = 14
 		}
 	}
 	state_modifiers = {
