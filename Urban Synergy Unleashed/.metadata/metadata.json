@@ -1,13 +1,16 @@
 {
   "name" : "Grey's Urban Synergy Unleashed",
-  "id" : "",
+  "id" : "3371689443",
   "version" : "",
   "supported_game_version" : "",
   "short_description" : "",
   "tags" : [
         "Balance",
         "Economy And Buildings",
-        "Gameplay"
+        "Expansion",
+        "Fixes",
+        "Gameplay",
+        "Trade"
     ],
   "relationships" : [],
   "game_custom_data" : {

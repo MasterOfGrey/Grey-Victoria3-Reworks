@@ -10,3 +10,7 @@
  pm_electric_streetlights:0 "Moonlight Towers"
 
  pm_canal: "Steam Powered Locks"
+
+ pm_no_public_transport:0 "No Public Transportation"
+ pm_public_trams:0 "Horse-drawn Trams"
+ pm_public_motor_carriages:0 "City Busses"

@@ -21,7 +21,7 @@ building_urban_center = {
 	buildable = no
 	expandable = no
 	downsizeable = no	
-	cannot_switch_owner = yes
+	can_switch_owner = no
 	
 	terrain_manipulator = urban_city
 	

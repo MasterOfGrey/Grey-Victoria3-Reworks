@@ -1,11 +1,11 @@
 ﻿l_english:
  pmg_public_transit:0 "Public Transportation"
- pm_no_public_transport:0 "No Public Transportation"
+# pm_no_public_transport:0 "No Public Transportation"
  pm_public_omnibus:0 "Horse-drawn Omnibuses"
- pm_public_trams:0 "Horse-drawn Trams"
+# pm_public_trams:0 "Horse-drawn Trams"
  pm_public_steam_metro:0 "Steam-powered Metro"
  pm_public_electric_metro:0 "Electric-powered Metro"
- pm_public_motor_carriages:0 "City Buses"
+# pm_public_motor_carriages:0 "City Buses"
  
  pmg_local_transport:0 "Local Transportation"
  pm_horses:0 "Horses and Carts"
