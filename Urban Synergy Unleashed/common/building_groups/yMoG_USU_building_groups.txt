@@ -93,11 +93,17 @@ bg_government = {
 	economy_of_scale_ai_factor = 2.0
 }
 
-## Financial Districts
+## Financial Districts & Company Headquarters
 # Enabling some urbanization lets them contribute to generating the services they then consume.
 bg_financial_districts = {
 	parent_group = bg_owner_buildings
 	
+	urbanization = 1 # 0
+}
+
+bg_company_headquarter = {
+	parent_group = bg_owner_buildings
+
 	urbanization = 1 # 0
 }
 
