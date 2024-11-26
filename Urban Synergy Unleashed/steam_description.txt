@@ -62,6 +62,7 @@ This effectively supercedes (and should not be used with) the following mods:
 [*]"Canals Add Company Capacity" by Morglom
 [*]"Better Canals" by SkyRipper
 [*]"Canal Dividend Income" by Araxiel
+[*]"Government Administration Auto Expand" by Z先森
 [/list]
 ...and probably a few others besides.
 
