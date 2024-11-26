@@ -24,6 +24,7 @@
 		USU_pmg_government_administration_law_enforcement
 		pmg_government_administration_bureaucrat_professionalism
 		pmg_government_administration_religious_administration
+		pmg_panum_hospital #MORGENRÖTE
 		pmg_sports_facilities #MORGENRÖTE
 	}
 
