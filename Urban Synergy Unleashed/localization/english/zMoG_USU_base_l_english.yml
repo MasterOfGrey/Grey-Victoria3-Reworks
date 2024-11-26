@@ -62,3 +62,8 @@
     # State Traits
     state_trait_rotterdam:0 "Rotterdam Harbor"
     state_trait_hudson_river:0 "Hudson River"
+
+    # Autoexpand tooltip
+    is_industrial_building:0 "Is $concept_building_industry$"
+    is_private_infrastructure:0 "Is $bg_private_infrastructure$"
+    
