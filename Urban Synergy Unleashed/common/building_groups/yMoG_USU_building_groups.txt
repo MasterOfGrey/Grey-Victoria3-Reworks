@@ -23,7 +23,7 @@ bg_private_infrastructure = {
 	
 	cash_reserves_max = 25000
 	
-	economy_of_scale_ai_factor = 0			# Stops the AI from deciding to overbuild a local good just because economy of scale applies
+	economy_of_scale_ai_factor = 0.5			# Stops the AI from deciding to overbuild a local good just because economy of scale applies
 	
 	should_auto_expand = { 
 		default_auto_expand_rule = yes		# This is new vs Vanilla - redefined in: common\scripted_triggers\MoG_USU_autoexpand_triggers.txt
@@ -67,7 +67,7 @@ bg_power = {
 		default_auto_expand_rule = yes		# This is in Vanilla - ensuring it's not overwritten by someone else.
 	}
 	
-	economy_of_scale_ai_factor = 0			# Stops the AI from deciding to overbuild a local good just because economy of scale applies
+	economy_of_scale_ai_factor = 0.5			# Stops the AI from deciding to overbuild a local good just because economy of scale applies
 	foreign_investment_ai_factor = 0.5
 	
 	infrastructure_usage_per_level = 2

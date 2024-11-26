@@ -32,12 +32,16 @@ building_port = {
 		if = { # Make colonies happen
 			limit = {
 				# is_isolated_from_market = yes
-				is_under_colonization = yes
-				NOT = {
+				# is_under_colonization = yes		# Honestly, the AI should be encouraged to have at least 1 port in every valid state anyway.
+				NOR = {
 					has_building = building_port
+					any_scope_building = {
+						is_building_type = building_port
+						is_under_construction = yes
+					}
 				}
 			}
-			add = 100000	# Yes 100k priority for isolated colonies so the AI doesn't get stuck being dumb
+			add = 500000	# Yes 100k priority for isolated colonies so the AI doesn't get stuck being dumb
 		}
 	}
 	
