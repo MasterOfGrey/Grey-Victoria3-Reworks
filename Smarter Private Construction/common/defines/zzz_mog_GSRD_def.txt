@@ -14,7 +14,8 @@ NAI = {
 	PRODUCTION_BUILDING_OUTPUT_NO_LOCAL_CONSUMPTION_FACTOR = -0.2 # Vanilla = -0.5 - Add this value to a building for each unit of money worth of goods produced that are not consumed in the state but *are* consumed by buildings in the market
 	
 	PRODUCTION_BUILDING_FREE_INFRASTRUCTURE_TARGET_WHEN_LACKING_WORKFORCE = 20 # Vanilla = 5 - When lacking workforce, the AI will stop building in the state once available infrastructure is this or less
-	PRODUCTION_BUILDING_REDUCE_SHORTAGE_MULT = 3 # Vanilla = 5 - Multiply score by this if we're reducing the state region's shortages
+	PRODUCTION_BUILDING_EXCESSIVE_INFRASTRUCTURE_SURPLUS = 40 # Vanilla = 10 -  # If infra 'surplus' in state is at least this, AI doesn't want to improve it
+	PRODUCTION_BUILDING_REDUCE_SHORTAGE_MULT = 4 # Vanilla = 5 - Multiply score by this if we're reducing the state region's shortages
 	
 	# For Reference:
 	# PRODUCTION_BUILDING_RANDOM_FACTOR = 10.0 # The higher this is, the more random AI construction will be
@@ -44,10 +45,10 @@ NAI = {
 	PRODUCTION_BUILDING_AUTONOMOUS_INVESTMENT_STATE_RANDOM_FACTOR_MULT = 2.5 # Vanilla = 1.5 - Multiplies PRODUCTION_BUILDING_STATE_RANDOM_FACTOR for autonomous investment pool constructions
 	
 	PRODUCTION_BUILDING_AUTONOMOUS_INVESTMENT_PROFIT_FACTOR_MULT = 2.5 # Vanilla = 1.5 - Multiplies PRODUCTION_BUILDING_GOODS_PROFIT_FACTOR for autonomous investment pool constructions
-	PRODUCTION_BUILDING_AUTONOMOUS_INVESTMENT_PROFIT_PRIVATIZE_FACTOR_MULT = 5.0 # Vanilla = 3.0 - Multiplies PRODUCTION_BUILDING_GOODS_PROFIT_FACTOR for autonomous investment pool constructions, gives higher weight to buildings that have levels to privatize
+	PRODUCTION_BUILDING_AUTONOMOUS_INVESTMENT_PROFIT_PRIVATIZE_FACTOR_MULT = 5.0 # Vanilla = 3.0 (vanilla has since caught up to 5, but leaving this in) - Multiplies PRODUCTION_BUILDING_GOODS_PROFIT_FACTOR for autonomous investment pool constructions, gives higher weight to buildings that have levels to privatize
 	
 	PRODUCTION_BUILDING_AUTONOMOUS_INVESTMENT_PRODUCED_VALUE_FACTOR_MULT = 0.5 # Vanilla = 1.25 - Multiplies PRODUCTION_BUILDING_PRODUCED_VALUE_FACTOR for autonomous investment pool constructions
-	PRODUCTION_BUILDING_AUTONOMOUS_INVESTMENT_PRODUCED_VALUE_PRIVATIZE_FACTOR_MULT = 0.8 # Vanilla = 2.0 - Multiplies PRODUCTION_BUILDING_PRODUCED_VALUE_FACTOR for autonomous investment pool constructions, gives higher weight to buildings that have levels to privatize
+	PRODUCTION_BUILDING_AUTONOMOUS_INVESTMENT_PRODUCED_VALUE_PRIVATIZE_FACTOR_MULT = 0.8 # Vanilla = 2.0 (vanilla has since moved to 0.5, but leaving this in) - Multiplies PRODUCTION_BUILDING_PRODUCED_VALUE_FACTOR for autonomous investment pool constructions, gives higher weight to buildings that have levels to privatize
 	
 	# Increase general desire to privatize
 	PRODUCTION_BUILDING_AUTONOMOUS_INVESTMENT_PROFIT_PRIVATIZE_SELF_OWNED_BUILDING_MULT = 1.2 # Vanilla = 0.75 - Multiply the total score for privatizing self-owned building levels by this
