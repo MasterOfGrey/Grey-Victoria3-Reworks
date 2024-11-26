@@ -7,10 +7,10 @@ NPops = {
 	OBSESSION_DEMAND_MIN = 1.0							# The minimum relative demand of an obsession (overrides min demand in buy package goods categories)
 	OBSESSION_DEMAND_MULT = 2.0							# Demand of an obsession is multiplied by this
 	MIN_POPS_FOR_NEW_OBSESSION = 500000					# At least this many pops of a culture must live in a market to get an obsession from its goods
-	MIN_SUPPLY_LEVEL_FOR_NEW_OBSESSION = 0.3 # 0.75		# Supply needs to be at least this times the demand
-	MIN_DEMAND_VALUE_FOR_NEW_OBSESSION = 500 # 1000		# At this amount of (number of units * goods base price) needs to be demanded in a market to create a new obsession
+	MIN_SUPPLY_LEVEL_FOR_NEW_OBSESSION = 0.3 # 0.75	(vanilla since moved to 0.5)		# Supply needs to be at least this times the demand
+	MIN_DEMAND_VALUE_FOR_NEW_OBSESSION = 500 # 1000	(vanilla since caught up to 500)	# At this amount of (number of units * goods base price) needs to be demanded in a market to create a new obsession
 	MAX_NUM_OBSESSIONS = 3								# A culture can only have this number of obsessions at the same time
-	OBSESSION_SPAWN_CHANCE = 4 # 0.1					# Per year (1.0 = 1%), multiplied by goods supply and market size mult
+	OBSESSION_SPAWN_CHANCE = 4 # 0.1 (vanilla since moved to 0.5 - still bad)			# Per year (1.0 = 1%), multiplied by goods supply and market size mult
 	OBSESSION_SPAWN_CHANCE_MAX_SUPPLY_MULT = 2.0 # 3.0	# Supply relative to demand above this isn't factored into spawn chance
 	TABOO_DEMAND_MULT = 0.5								# Demand of a taboo is multiplied by this
 	MAX_DEMAND_ADJUSTMENT_BASE_AMOUNT = 0.01			# Controls how much a pop can change demand of a substitutable goods in a single update (base)
@@ -24,7 +24,7 @@ NPops = {
 ##### ASSIMILATION/CONVERSION #####
 	
 	ASSIMILATION_RATE = 0.005 # 0.002				# Percentage of pops who will Assimilate into a different Culture each month, if eligible
-	ASSIMILATION_UNINCORPORATED_MULT = 0.1 			# ASSIMILATION_RATE is multiplied by this in unincorporated states
+	# ASSIMILATION_UNINCORPORATED_MULT = 0.1 	# Vanilla dropped this. (why??)		# ASSIMILATION_RATE is multiplied by this in unincorporated states
 	MIN_ASSIMILATION = 20 # 1						# If there is any assimilation at least this many people will assimilate
 	
 	# Smaller change since this affects every pop, not just accepted pops like assimilation.
@@ -161,9 +161,9 @@ NPops = {
 ### Pop Growth Constants
 ## Base Values per month
 @min_birthrate = 0.00055			# Minimum base birthrate per month (at POP_GROWTH_STABLE_SOL)
-@max_birthrate = 0.00450			# Maximum base birthrate per month (at SOL = 0 if not modified by malnourishment)
+@max_birthrate = 0.00450			# Maximum base birthrate per month (at SOL = 0) (old malnourishment modifier comment no longer applicable)
 @min_mortality = 0.00045			# Minimum base mortality per month (at POP_GROWTH_STABLE_SOL)
-@max_mortality = 0.00600			# Maximum base mortality per month (at SOL = 0 if not modified by malnourishment)
+@max_mortality = 0.00600			# Maximum base mortality per month (at SOL = 0)
 
 ## SoL Thresholds
 @pop_growth_equilibrium_sol = 5			# Equilibrium is pops stop starving and where growth first becomes positive
