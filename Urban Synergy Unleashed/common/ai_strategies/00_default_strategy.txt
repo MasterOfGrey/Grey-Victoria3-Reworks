@@ -3311,7 +3311,7 @@ ai_strategy_default = {
 		}		
 
 		min = 10
-		max = 1000
+		max = 10000
 	}
 	
 	# How many levels of barracks should the AI have
