@@ -33,10 +33,20 @@ cultural_community_creation_weight = {
 	
 		# Conditions that add
 		if = {
+			# Base amount for having a port
 			limit = {
 				has_port = yes
 			}
 			add = 0.002
+
+			# Additional amount per level
+			random_scope_building = {
+				limit = { is_building_type = building_port }
+				add = {
+					add = 0.002
+					multiply = level
+				}
+			}
 		}
 		
 		if = {
@@ -77,26 +87,10 @@ cultural_community_creation_weight = {
 		if = {
 			limit = {
 				root = {
-					has_building = building_port
-				}
-			}
-			every_scope_building = {
-				limit = { is_building_type = building_port }
-				add = {
-					add = 0.002
-					multiply = level
-				}
-			}
-			#Result: add = 0.002 per building
-		}
-
-		if = {
-			limit = {
-				root = {
 					has_building = building_trade_center
 				}
 			}
-			every_scope_building = {
+			random_scope_building = {
 				limit = { is_building_type = building_trade_center }
 				add = {
 					add = 0.001
