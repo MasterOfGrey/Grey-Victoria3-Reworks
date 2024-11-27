@@ -62,8 +62,10 @@
     # State Traits
     state_trait_rotterdam:0 "Rotterdam Harbor"
     state_trait_hudson_river:0 "Hudson River"
-
-    # Autoexpand tooltip
-    is_industrial_building:0 "Is $concept_building_industry$"
-    is_private_infrastructure:0 "Is $bg_private_infrastructure$"
     
+    # Autoexpand tooltip(s)
+    is_industrial_building:0 "Is a natural $concept_building_industry$ for tradeable [Concept('concept_good', '$concept_goods$')]"
+    is_private_infrastructure:0 "Is Transport $bg_infrastructure$ that can be [Concept('concept_privatize', '$concept_privatized$')]"
+    pos_rel_infrastructure:0 "State has available [concept_infrastructure]"
+    neg_rel_infrastructure:0 "State has [concept_infrastructure] deficit"
+    bureaucracy_percent: "National Bureaucracy Level is less than #v 90%#!"

@@ -1,4 +1,4 @@
-﻿# Vanilla overwrite:
+﻿### Vanilla OVERWRITE: ###
 default_auto_expand_rule = { 
 	mog_b_basics_ok = yes
 	OR = {
@@ -10,7 +10,41 @@ default_auto_expand_rule = {
 	}
 }
 
-# Collection logic:
+### Building Status BASICS:
+mog_b_basics_ok = {
+	AND = {
+		mog_construction_ok = yes
+		mog_shortages_ok = yes
+		mog_employment_ok = yes
+		mog_profit_ok = yes
+	}
+}
+
+## Building Status Basic PARTS:
+mog_construction_ok = {
+	NOT = {
+		is_under_construction = yes 
+	}
+	can_queue_building_levels = 1
+}
+mog_shortages_ok = {
+	building_has_goods_shortage = no
+}
+mog_employment_ok = {
+	occupancy >= 0.98
+}
+mog_profit_ok = {
+	OR = {
+		is_subsidized = yes
+		AND = {
+			earnings > 4.5
+			weekly_profit > 0
+			cash_reserves_ratio > 0.05
+		}
+	}
+}
+
+### CONDITIONAL Collection logic:
 mog_base_auto_expand_rule = {
 	OR = {
 		mog_normal_building_confirm = yes
@@ -18,6 +52,28 @@ mog_base_auto_expand_rule = {
 	}
 }
 
+## Building Status SPECIAL PARTS:
+mog_infrastructure_low = {
+	custom_tooltip = {
+		text = neg_rel_infrastructure
+		state = {
+			relative_infrastructure <= 1
+		}
+	}
+}
+mog_market_access_ok = {
+	OR = {
+		state.market_access > 0.98
+		custom_tooltip = {
+			text = pos_rel_infrastructure
+			state = {
+				relative_infrastructure > 1
+			}
+		}
+	}
+}
+
+## TRANSPORT INFRASTRUCTURE Buildings
 mog_construct_private_infrastructure_allow = {
 	AND = {
 		custom_tooltip = {
@@ -39,41 +95,7 @@ mog_construct_private_infrastructure_allow = {
 	}
 }
 
-mog_construct_special_building_allow = {
-	OR = {
-		AND = {
-			is_building_type = building_power_plant
-			
-			state = {
-				sg:ppp_hv_power = { 
-					state_goods_pricier >= 0.10
-				}
-			}
-		}
-		AND = {
-			is_building_type = PPP_building_power_grid
-			state = {
-				sg:electricity = {
-					state_goods_pricier >= 0.10
-				}
-				sg:ppp_hv_power = { 
-					state_goods_pricier <= 0.30
-				}
-			}
-		}
-	}
-}
-
-### Building Status Basics:
-mog_b_basics_ok = {
-	AND = {
-		mog_profit_ok = yes
-		mog_shortages_ok = yes
-		mog_employment_ok = yes
-		mog_construction_ok = yes
-	}
-}
-
+## NORMAL Buildings
 mog_normal_building_confirm = {
 	custom_tooltip = {
 		text = is_industrial_building
@@ -103,44 +125,28 @@ mog_normal_building_confirm = {
 	}
 }
 
-
-# Building Status Basic Parts:
-mog_profit_ok = {
+## POWER Buildings
+mog_construct_special_building_allow = {
 	OR = {
-		is_subsidized = yes
 		AND = {
-			earnings > 4.5
-			weekly_profit > 0
-			cash_reserves_ratio > 0.05
+			is_building_type = building_power_plant
+			
+			state = {
+				sg:ppp_hv_power = { 
+					state_goods_pricier >= 0.10
+				}
+			}
+		}
+		AND = {
+			is_building_type = PPP_building_power_grid
+			state = {
+				sg:electricity = {
+					state_goods_pricier >= 0.10
+				}
+				sg:ppp_hv_power = { 
+					state_goods_pricier <= 0.30
+				}
+			}
 		}
 	}
 }
-mog_market_access_ok = {
-	OR = {
-		state.market_access >= 0.98
-		state = {
-			relative_infrastructure > 1
-		}
-	}
-}
-mog_shortages_ok = {
-	building_has_goods_shortage = no
-}
-mog_employment_ok = {
-	occupancy >= 0.98
-}
-mog_construction_ok = {
-	NOT = {
-		is_under_construction = yes 
-	}
-	can_queue_building_levels = 1
-}
-
-# Building Status Special Parts:
-mog_infrastructure_low = {
-	state = {
-		relative_infrastructure <= 1
-	}
-}
-
-

@@ -1,6 +1,6 @@
 building_key = {
-	building_group = bg_key								# reference to building group, building groups define some common properties of similar buildings
-	texture = "path/to/texture"							# building icon
+	building_group = bg_key								# *reference to building group, building groups define some common properties of similar buildings*
+	icon = "path/to/texture"							# building icon
 
 	buildable = yes/no									# can this building be built? ( can otherwise be created via history or script or autoplace ), default yes
 	expandable = yes/no									# can this building be expanded? default yes
@@ -10,9 +10,20 @@ building_key = {
 	ignore_stateregion_max_level = yes                  # if the building's building group has stateregion_max_level = yes, override it for this building type
 	enable_air_connection = yes/no						# if yes the region with that building built is considered for air travel, default no
 	port = yes/no 										# if yes the building can connect different market areas, default no
+	company_headquarter = yes/no                        # whether if the building is a company headquarter, default no
 
 	unlocking_technologies = {							# optional list of required technologies to be able to build this building
 		# list of technology keys
+	}
+
+	# optional custom trigger (state scope) if the state is potential for this building type, i.e. can ever be built there, default yes
+	potential = {
+		# trigger definition
+	}
+
+	# optional custom trigger (state scope) if it's possible to build the building in the state now, default yes
+	possible = {
+		# trigger definition
 	}
 
 	can_build = {										# optional custom trigger (state scope) for building requirements
@@ -40,14 +51,16 @@ building_key = {
 	# scope is country the building is located in
 	ai_privatization_deisre = script value				
 
-    slaves_role = pop_type_key                          # defines which pop type should slaves work as. Defaults to DEFAULT_POP_TYPE.
+	slaves_role = pop_type_key                          # defines which pop type should slaves work as. Defaults to DEFAULT_POP_TYPE.
 
 	production_methods = {								# a building's behavior can be modified by its production methods
-	    # list of Production Method Groups
+		# list of Production Method Groups
 	}
 	
-    should_auto_expand = trigger						# under which conditions we should auto-expand if auto-expand is toggled on (overrides building group if present)
+	should_auto_expand = trigger						# under which conditions we should auto-expand if auto-expand is toggled on (overrides building group if present)
 														# if this trigger has any contents at all, the game will think the building is potentially auto-expandable, so do not write triggers that can never evaluate to true here
+
+	category_building_type = other_building_key         # which category should this building be counted as: in average earnings/productivity, in the building registry, etc. Defaults to itself
 
 	city_type = none/city/farm/mine/port/wood			# which type of hub this building will be spawned into, default none
 	generates_residences = yes/no						# if the building adds extra residencies to the city, default yes

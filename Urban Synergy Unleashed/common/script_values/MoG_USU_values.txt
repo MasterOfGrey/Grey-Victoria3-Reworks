@@ -119,3 +119,14 @@ mog_construction_max_level_adjustment_calc = {		# Adding 150% of base to compens
 		add = 8
 	}
 }
+
+### BUREAUCRACY CHECK
+total_bureaucracy_need = {
+	add = produced_bureaucracy
+	subtract = bureaucracy
+}
+
+bureaucracy_percent = {
+	add = produced_bureaucracy
+	divide = total_bureaucracy_need
+}

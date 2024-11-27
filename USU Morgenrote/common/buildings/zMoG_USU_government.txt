@@ -9,11 +9,13 @@
 	}
 
 	should_auto_expand = {
-		occupancy >= 0.8
+		occupancy >= 0.98
+		building_has_goods_shortage = no
+		state.market_access > 0.8
 		OR = {
 			state.tax_capacity < state.tax_capacity_usage
 			owner = {
-				bureaucracy < -10
+				bureaucracy_percent < 0.9
 			}
 		}
 	}

@@ -11,9 +11,14 @@
 	
 	should_auto_expand = {
 		occupancy >= 0.98
-		state.tax_capacity < state.tax_capacity_usage
 		building_has_goods_shortage = no
 		state.market_access > 0.8
+		OR = {
+			state.tax_capacity < state.tax_capacity_usage
+			owner = {
+				bureaucracy_percent < 0.9
+			}
+		}
 	}
 	
 	production_method_groups = {
@@ -22,6 +27,7 @@
 		USU_pmg_government_administration_law_enforcement
 		pmg_government_administration_bureaucrat_professionalism
 		pmg_government_administration_religious_administration
+		# pmg_panum_hospital #MORGENRÖTE
 		# pmg_sports_facilities #MORGENRÖTE
 	}
 	
