@@ -65,21 +65,22 @@
 	# Overlapping range ensures temporarily inflated wages can come down before financial stress sets in.
 	BUILDING_PROFIT_TARGET_TO_RAISE_WAGES = 0.3						# Required profit margin to consider raising wages for SoL or employment reasons, with BUILDING_WEEKS_BETWEEN_PAY_CHANGES weeks cooldown
 	BUILDING_PROFIT_TARGET_TO_LOWER_WAGES = 0.5 # 0.15				# If profit margin is this or below, buildings should lower their wages, with BUILDING_WEEKS_BETWEEN_PAY_CHANGES weeks cooldown
-	
-	# Unchanged, included to ensure no other mods create destructive conflicts with the changes above.
+																										# (previously: consider lowering wages for SoL or employment reasons)
 	BUILDING_RAISE_WAGES_MIN_RELEVANT_POP_SIZE = 50					# Pops with less workforce than this are ignored when checking whether a profitable building should raise wages because of radicalizing workers
 	BUILDING_RAISE_WAGES_DISCRIMINATION_FACTOR = 0.66				# Profitable buildings only care to raise wages for discriminated pops if their wealth to expected SoL ratio is less than this
 	BUILDING_LOWER_WAGES_TARGET_WEALTH_MULT = 1.33					# Buildings will consider lowering wages if all significant pops working in them have this * the target wealth to expected SoL ratio
 	BUILDING_PROFIT_TARGET_TO_WITHDRAW_CASH = 0.2					# If profit margin is this or below, buildings should withdraw money from the cash reserves to make up the difference
+		# Previously: BUILDING_CASH_RESERVES_WITHDRAW_PROFIT_TARGET before directional revamp in 1.8
 	OWNERSHIP_BUILDING_PROFIT_TARGET_TO_RAISE_WAGES = 0.5			# Overrides BUILDING_PROFIT_TARGET_TO_RAISE_WAGES for buildings that own other buildings
 	OWNERSHIP_BUILDING_PROFIT_TARGET_TO_LOWER_WAGES = 0.3			# Overrides BUILDING_PROFIT_TARGET_TO_LOWER_WAGES for buildings that own other buildings
-	OWNERSHIP_BUILDING_PROFIT_TARGET_TO_WITHDRAW_CASH = 0.4			# Overrides BUILDING_PROFIT_TARGET_TO_WITHDRAW_CASH for buildings that own other buildings
+	OWNERSHIP_BUILDING_PROFIT_TARGET_TO_WITHDRAW_CASH = 0.2 # 0.4	# Overrides BUILDING_PROFIT_TARGET_TO_WITHDRAW_CASH for buildings that own other buildings
+		# Previously: OWNERSHIP_BUILDING_CASH_RESERVES_WITHDRAW_PROFIT_TARGET before directional revamp in 1.8
 	SUBSISTENCE_BUILDING_PROFIT_TARGET_TO_RAISE_WAGES = 5.0			# Overrides BUILDING_PROFIT_TARGET_TO_RAISE_WAGES for subsistence buildings
 	SUBSISTENCE_BUILDING_PROFIT_TARGET_TO_LOWER_WAGES = 3.0			# Overrides BUILDING_PROFIT_TARGET_TO_LOWER_WAGES for subsistence buildings
-	SUBSISTENCE_BUILDING_PROFIT_TARGET_TO_WITHDRAW_CASH = 4.0		# Overrides BUILDING_PROFIT_TARGET_TO_WITHDRAW_CASH for subsistence buildings
-	BUILDING_WEEKS_BETWEEN_PAY_CHANGES = 0							# Cooldown between changes in pay, so buildings don't overcompensate for a temporary change in circumstances. If the building is unprofitable it uses BUILDING_WEEKS_BETWEEN_PAY_CHANGES_WHEN_UNPROFITABLE instead.
-	BUILDING_WEEKS_BETWEEN_PAY_CHANGES_WHEN_UNPROFITABLE = 0 		# Cooldown between changes in pay, so buildings don't overcompensate for a temporary change in circumstances. Only used when unprofitable.
-	BUILDING_DEFAULT_MIN_EARNINGS_TO_HIRE_EMPLOYEES = 3  			# Non-subsidized buildings will not hire if it would result in their annual earnings/employee falling below this threshold (default value, can be overridden for building group)
+	SUBSISTENCE_BUILDING_PROFIT_TARGET_TO_WITHDRAW_CASH = 2.0 # 4.0	# Overrides BUILDING_PROFIT_TARGET_TO_WITHDRAW_CASH for subsistence buildings
+	BUILDING_WEEKS_BETWEEN_PAY_CHANGES = 12 # 0 (v1.8)				# Cooldown between changes in pay, so buildings don't overcompensate for a temporary change in circumstances. If the building is unprofitable it uses BUILDING_WEEKS_BETWEEN_PAY_CHANGES_WHEN_UNPROFITABLE instead.
+	BUILDING_WEEKS_BETWEEN_PAY_CHANGES_WHEN_UNPROFITABLE = 4 # 0 (v1.8) 	# Cooldown between changes in pay, so buildings don't overcompensate for a temporary change in circumstances. Only used when unprofitable.
+	BUILDING_DEFAULT_MIN_EARNINGS_TO_HIRE_EMPLOYEES = 3  					# Non-subsidized buildings will not hire if it would result in their annual earnings/employee falling below this threshold (default value, can be overridden for building group)
 	
 	# MEM values to test?
 	# SUBSISTENCE_OUTPUT_AVERAGE_WAGE_RATE_FACTOR = 50 # 150		# Each 1.0 of subsistence output counts as this much wage rate when setting normal wages 
