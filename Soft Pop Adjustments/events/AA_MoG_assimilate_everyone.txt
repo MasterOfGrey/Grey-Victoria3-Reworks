@@ -31,10 +31,7 @@ assimilate_everyone.1 = {
 				save_scope_as = primary_culture
 			}
 			
-			every_state = {
-				limit = {
-					owner = root
-				}
+			every_scope_state = {
 				
 				this = {
 					save_scope_as = executing_state
