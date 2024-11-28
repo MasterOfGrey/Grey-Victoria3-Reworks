@@ -14,7 +14,7 @@ USU_pm_rail_logistics_1 = {
 			goods_output_usu_logistics_add = 8
 		}
 	}
-	ai_weight = 1000
+	ai_value = 1000
 }
 
 USU_pm_rail_logistics_2 = {
@@ -27,7 +27,7 @@ USU_pm_rail_logistics_2 = {
 			goods_output_usu_logistics_add = 20
 		}
 	}
-	ai_weight = 2000
+	ai_value = 2000
 }
 
 USU_pm_rail_logistics_3 = {
@@ -44,7 +44,7 @@ USU_pm_rail_logistics_3 = {
 			goods_output_usu_logistics_add = 30
 		}
 	}
-	ai_weight = 3000
+	ai_value = 3000
 }
 
 ### Passenger Carriages

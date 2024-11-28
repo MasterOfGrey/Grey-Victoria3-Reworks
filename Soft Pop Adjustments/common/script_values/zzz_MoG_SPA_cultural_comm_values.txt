@@ -40,7 +40,7 @@ cultural_community_creation_weight = {
 			add = 0.002
 
 			# Additional amount per level
-			random_scope_building = {
+			every_scope_building = {
 				limit = { is_building_type = building_port }
 				add = {
 					add = 0.002
@@ -90,7 +90,7 @@ cultural_community_creation_weight = {
 					has_building = building_trade_center
 				}
 			}
-			random_scope_building = {
+			every_scope_building = {
 				limit = { is_building_type = building_trade_center }
 				add = {
 					add = 0.001
