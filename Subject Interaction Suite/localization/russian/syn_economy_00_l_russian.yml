@@ -1,0 +1,33 @@
+﻿l_russian:
+ laws_synergize_economy: "Синергия экономик" #NT!
+ laws_synergize_economy_action_name: "$laws_synergize_economy$" #NT!
+ laws_synergize_economy_action_propose_name: "Начните синергию экономик" #NT!
+ laws_synergize_economy_action_break_name: "Остановите синергию экономик" #NT!
+ laws_synergize_economy_pact_desc: "[SCOPE.GetRootScope.GetDiplomaticPact.GetFirstCountry.GetName] реструктурирует экономику [SCOPE.GetRootScope.GetDiplomaticPact.GetSecondCountry.GetName] для синергии с их экономикой.\n В настоящее время #variable [SCOPE.GetRootScope.GetDiplomaticPact.GetSecondCountry.MakeScope.Var('synergize_economy_progress').GetValue]#! проходят 8 этапов." #NT!
+ laws_synergize_economy_desc: "#header $laws_synergize_economy$#!\n$TOOLTIP_DELIMITER$\nSynergizes экономические системы указанной страны." #NT!
+ laws_synergize_economy_action_notification_name: "[INITIATOR_COUNTRY.GetName] Синергия экономик" #NT!
+ laws_synergize_economy_action_notification_desc: "[INITIATOR_COUNTRY.GetName] усиливает синергию экономических систем нашей страны." #NT!
+ laws_synergize_economy_action_notification_break_name: "Прекратить синергию экономик [INITIATOR_COUNTRY.GetName]" #NT!
+ laws_synergize_economy_action_notification_break_desc: "[INITIATOR_COUNTRY.GetName] прекратил попытки объединить экономические системы нашей страны." #NT!
+  
+ laws_synergize_economy_effect_desc_global: "Начните синергию экономик" #NT!
+ laws_synergize_economy_effect_desc_first: "[COUNTRY.GetAdjectiveNoFlag] инициирует экономическую синергию с [TARGET_COUNTRY.GetName]." #NT!
+ laws_synergize_economy_effect_desc_third: "[COUNTRY.GetName] инициирует экономическую синергию с [AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)]." #NT!
+  
+ laws_synergize_economy_trigger_desc_global: "Экономическая синергия продолжается" #NT!
+ laws_synergize_economy_trigger_false_desc_global: "В настоящее время процесс синергии экономических систем не осуществляется." #NT!
+ laws_synergize_economy_trigger_desc_first: "[COUNTRY.GetAdjectiveNoFlag] имеет синергетические экономические системы с [TARGET_COUNTRY.GetName]." #NT!
+ laws_synergize_economy_trigger_false_desc_first: "[COUNTRY.GetAdjectiveNoFlag] в настоящее время не имеет синергетических экономических систем с [TARGET_COUNTRY.GetName]." #NT!
+ laws_synergize_economy_trigger_desc_third: "[COUNTRY.GetName] имеет синергетические экономические системы с [AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)]." #NT!
+ laws_synergize_economy_trigger_false_desc_third: "[COUNTRY.GetName] в настоящее время не имеет синергетических экономических систем с [AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)]." #NT!
+  
+ mog_syn_events.02.t: "Экономическая синергия!" #NT!
+ mog_syn_events.02.d: "Гордая нация [ROOT.GetCountry.GetName] успешно завершила синергию экономических систем с [SCOPE.sCountry('synergize_economy_target_country').GetName]. [SCOPE.sCountry('synergize_economy_target_country').GetName] будет процветать в вечном процветании за счет усиления сплоченности с родиной." #NT!
+ mog_syn_events.02.f: "«Да здравствует [ROOT.GetCountry.GetName]!»" #NT!
+ mog_syn_events.02.a: "Отличная работа." #NT!
+  
+ laws_synergize_economy_weekly_effect: "Работает над согласованием своей экономической системы с нашей. Имеет 20% шанс добиться прогресса каждую неделю, для успеха требуется 8 очков прогресса." #NT!
+  
+ overlord_syn_cost_economy: "Стоимость синергетической экономики" #NT!
+  
+ active_synergize_economy_tt: "Количество других действий $laws_synergize_economy$ меньше 1." #NT!

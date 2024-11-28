@@ -2,30 +2,32 @@
  ld_level_low: "Faible"
  ld_level_moderate: "Modéré"
  ld_level_high: "Élevé"
-
+  
  LIBERTY_DESIRE_LEVEL_BOUNDS_DESC: "S'applique entre [LibertyDesireLevel.GetLowerBound|v0] et [LibertyDesireLevel.GetUpperBound|v0] [concept_liberty_desire]"
  LIBERTY_DESIRE_LEVEL_NO_EFFECT: "#italic Aucun effet#!"
-
+  
  LIBERTY_DESIRE_LEVEL_ACTIVE: "#i #b (Actuellement actif)#!#!"
  LIBERTY_DESIRE_LEVEL_TOOLTIP: "[SelectLocalization(LibertyDesireLevel.IsActive(Country.GetLibertyDesireRaw), 'LIBERTY_DESIRE_LEVEL_ACTIVE_TOOLTIP', 'LIBERTY_DESIRE_LEVEL_INACTIVE_TOOLTIP')]"
  LIBERTY_DESIRE_LEVEL_INACTIVE_TOOLTIP: "#header [LibertyDesireLevel.GetNameNoFormatting]#!\n$LIBERTY_DESIRE_LEVEL_BOUNDS_DESC$\n$TOOLTIP_DELIMITER$\n#title Effets sur [Country.GetName]:#!#indent_newline:2 \n[LibertyDesireLevel.GetEffects]#!"
-
+  
+  
  LIBERTY_DESIRE_LEVEL_ACTIVE_TOOLTIP: "#header [LibertyDesireLevel.GetNameNoFormatting]#! $LIBERTY_DESIRE_LEVEL_ACTIVE$\n$LIBERTY_DESIRE_LEVEL_BOUNDS_DESC$\n$LIBERTY_DESIRE_LEVEL_CURRENT_LIBERTY_DESIRE_DESC$\n$TOOLTIP_DELIMITER$\n[Country.GetWeeklyLibertyDesireChangeDesc]\n$TOOLTIP_DELIMITER$\nEffets sur [Country.GetName]:#indent_newline:2 \n[LibertyDesireLevel.GetEffects]#!"
-
+  
+  
  LIBERTY_DESIRE_LEVEL_CURRENT_LIBERTY_DESIRE_DESC: "Valeur actuelle de [concept_liberty_desire] : [Country.GetLibertyDesireRaw|v0]"
-
+  
  COUNTRY_LIBERTY_DESIRE_ACTIVE_LEVEL_BOUNDS_DESC: "S'applique entre [Country.CalcLibertyDesireLevel.GetLowerBound|v0] et [Country.CalcLibertyDesireLevel.GetUpperBound|v0] [concept_liberty_desire]"
  COUNTRY_LIBERTY_DESIRE_ACTIVE_LEVEL_TOOLTIP: "#header [Country.GetName] est [Country.CalcLibertyDesireLevel.GetNameNoFormatting]#!\n$COUNTRY_LIBERTY_DESIRE_ACTIVE_LEVEL_BOUNDS_DESC$\n$LIBERTY_DESIRE_LEVEL_CURRENT_LIBERTY_DESIRE_DESC$\n$TOOLTIP_DELIMITER$\n[Country.GetWeeklyLibertyDesireChangeDesc]\n\n#title Effets sur [Country.GetName]:#!#indent_newline:2 \n[Country.CalcLibertyDesireLevel.GetEffects]#!"
-
+  
  TOOLTIP_TYPE_LIBERTY_DESIRE_LEVEL: "Niveau de désir de liberté"
-
+  
  LIBERTY_DESIRE_WEEKLY_CHANGE_BASE: "Base"
  LIBERTY_DESIRE_WEEKLY_CHANGE_VALUE_FORMAT: "[SelectLocalization(GreaterThan_CFixedPoint('(CFixedPoint)$VALUE$','(CFixedPoint)0'),'$VALUE|bo=2$','$VALUE|bu=2$')] de $KEY$"
  LIBERTY_DESIRE_WEEKLY_CHANGE_DESC: "[concept_liberty_desire] est prévu changer de [SelectLocalization(GreaterThan_CFixedPoint('(CFixedPoint)$VALUE$','(CFixedPoint)0'),'$VALUE|bo=2$','$VALUE|bu=2$')] sur une base hebdomadaire en raison de :\n$BREAKDOWN$"
  LIBERTY_DESIRE_WEEKLY_CHANGE_DESC_ADDITIONAL_ADDS: "#indent_newline:3 accords supplémentaires :\n[SCOPE.GetRootScope.GetDiplomaticPact.GetSecondCountry.GetModifier.GetDescFor('country_liberty_desire_add')]#!"
  LIBERTY_SUBJECT_DESIRE_WEEKLY_CHANGE_DESC_ADDITIONAL_ADDS: "#indent_newline:3 accords supplémentaires :\n[SCOPE.GetRootScope.GetDiplomaticPact.GetFirstCountry.GetModifier.GetDescFor('country_liberty_desire_of_subjects_add')]#!"
  LIBERTY_DESIRE_WEEKLY_CHANGE_DESC_ADDITIONAL_MULTS: "#indent_newline:3 accords supplémentaires :\n[SCOPE.GetRootScope.GetDiplomaticPact.GetSecondCountry.GetModifier.GetDescFor('country_liberty_desire_add')][SCOPE.GetRootScope.GetDiplomaticPact.GetSecondCountry.GetModifier.GetDescFor('country_liberty_desire_increase_mult')][SCOPE.GetRootScope.GetDiplomaticPact.GetSecondCountry.GetModifier.GetDescFor('country_liberty_desire_decrease_mult')]#!"
-
+  
  LIBERTY_DESIRE_WEEKLY_CHANGE_RELATIONS_HOSTILE: "#r Hostile #![concept_relations]"
  LIBERTY_DESIRE_WEEKLY_CHANGE_RELATIONS_COLD: "#r Froid #![concept_relations]"
  LIBERTY_DESIRE_WEEKLY_CHANGE_RELATIONS_POOR: "#r Médiocre #![concept_relations]"
@@ -33,9 +35,9 @@
  LIBERTY_DESIRE_WEEKLY_CHANGE_RELATIONS_CORDIAL: "#green Cordial #![concept_relations]"
  LIBERTY_DESIRE_WEEKLY_CHANGE_RELATIONS_AMICABLE: "#green Amical #![concept_relations]"
  LIBERTY_DESIRE_WEEKLY_CHANGE_RELATIONS_FRIENDLY: "#green Amical #![concept_relations]"
-
+  
  LIBERTY_DESIRE_WEEKLY_CHANGE_INFAMY: "[concept_infamy] de [concept_overlord]"
-
+  
  LIBERTY_DESIRE_WEEKLY_CHANGE_BANKROLL: "[GetDiplomaticActionType('bankroll').GetName]"
  LIBERTY_DESIRE_WEEKLY_CHANGE_SUPPORT_REGIME: "[GetDiplomaticActionType('da_support_regime').GetName]"
  LIBERTY_DESIRE_WEEKLY_CHANGE_KNOWLEDGE_SHARING: "[GetDiplomaticActionType('da_knowledge_sharing').GetName]"
@@ -43,10 +45,10 @@
  LIBERTY_DESIRE_WEEKLY_CHANGE_RAISE_PAYMENTS: "[GetDiplomaticActionType('raise_payments').GetName]"
  LIBERTY_DESIRE_WEEKLY_CHANGE_DECREASE_PAYMENTS: "[GetDiplomaticActionType('decrease_payments').GetName]"
  LIBERTY_DESIRE_WEEKLY_CHANGE_CULTURE_CONVERT: "[GetDiplomaticActionType('change_primary_culture').GetName]"
-
+  
  LIBERTY_DESIRE_RELATIVE_PRESTIGE_VALUE_FORMAT: "$TAB$[SelectLocalization(GreaterThan_CFixedPoint('(CFixedPoint)$VALUE$','(CFixedPoint)0'),'$VALUE|bo=2$','$VALUE|bu=2$')] pour $KEY$"
  LIBERTY_DESIRE_WEEKLY_CHANGE_RELATIVE_PRESTIGE: "[concept_overlord] [concept_prestige] par rapport à [SCOPE.GetRootScope.GetDiplomaticPact.GetSecondCountry.GetName] (Actuellement #v [SCOPE.GetRootScope.GetDiplomaticPact.GetFirstCountry.GetRelativePrestige(SCOPE.GetRootScope.GetDiplomaticPact.GetSecondCountry)|v1]x#!)\n$TAB$Satisfaction du [SCOPE.GetRootScope.GetDiplomaticPact.GetSecondCountry.GetSubjectType.GetName] affectée par :\n[SCOPE.GetScriptValueDesc('liberty_desire_weekly_change_relative_prestige')]"
-
+  
  LIBERTY_DESIRE_WEEKLY_CHANGE_NO_PRESTIGE_NEGATIVE: "[SCOPE.GetRootScope.GetDiplomaticPact.GetSecondCountry.GetAdjective] [concept_prestige] est à #v 0#!"
  LIBERTY_DESIRE_WEEKLY_CHANGE_NO_PRESTIGE_POSITIVE: "[SCOPE.GetRootScope.GetDiplomaticPact.GetFirstCountry.GetAdjective] [concept_prestige] est à #v 0#!"
  LIBERTY_DESIRE_WEEKLY_CHANGE_PRESTIGE_DIFFERENCE_1_5_POSITIVE: "ayant moins de #v 1.5x#! leur prestige"
@@ -64,17 +66,18 @@
  LIBERTY_DESIRE_WEEKLY_CHANGE_PRESTIGE_DIFFERENCE_24_0_NEGATIVE: "ayant plus de #v 24.0x#! leur prestige"
  LIBERTY_DESIRE_WEEKLY_CHANGE_PRESTIGE_DIFFERENCE_32_0_NEGATIVE: "ayant plus de #v 32.0x#! leur prestige"
  LIBERTY_DESIRE_WEEKLY_CHANGE_PRESTIGE_DIFFERENCE_48_0_NEGATIVE: "ayant plus de #v 48.0x#! leur prestige"
-
+  
  LIBERTY_DESIRE_WEEKLY_CHANGE_RELIGION: "Tentative de changer la religion de [SCOPE.GetRootScope.GetDiplomaticPact.GetSecondCountry.GetSubjectType.GetName]"
  LIBERTY_DESIRE_WEEKLY_CHANGE_DEVOUT_RESISTANCE: "Résistance fervente à [GetDiplomaticActionType('change_state_religion').GetName]"
  LIBERTY_DESIRE_WEEKLY_CHANGE_CULTURE: "Tentative de supplanter la culture principale de [SCOPE.GetRootScope.GetDiplomaticPact.GetSecondCountry.GetSubjectType.GetName]"
  LIBERTY_DESIRE_WEEKLY_CHANGE_NATIONALIST_RESISTANCE: "Résistance nationaliste à [GetDiplomaticActionType('change_primary_culture').GetName]"
-
+ LIBERTY_DESIRE_WEEKLY_CHANGE_INCLUDE_CULTURE: "Tentative d'inclusion de [SCOPE.GetRootScope.GetDiplomaticPact.GetSecondCountry.GetSubjectType.GetName] dans [Concept('concept_primary_cultures','$concept_primary_culture$')]" #NT!
+  
  legal_systems: "Systèmes juridiques"
  LIBERTY_DESIRE_LEGAL_FRICTION: "Friction"
  LIBERTY_DESIRE_LEGAL_FRICTION_VALUE_FORMAT: "$TAB$[SelectLocalization(Supérieur à CFixedPoint('(CFixedPoint)$VALUE$','(CFixedPoint)0'),'$VALUE|bo=2$','$VALUE|bu=2$')] pour $KEY$"
  LIBERTY_DESIRE_WEEKLY_CHANGE_LEGAL_FRICTION: "$LIBERTY_DESIRE_LEGAL_FRICTION$ entre [Concept('concept_law', '$legal_systems$')]:\n[SCOPE.GetScriptValueDesc('liberty_desire_weekly_change_legal_friction')]"
-
+  
  LIBERTY_DESIRE_LEGAL_FRICTION_GOVERNANCE: "[GetLawGroup('lawgroup_governance_principles').GetName]"
  LIBERTY_DESIRE_LEGAL_FRICTION_CHURCH: "[GetLawGroup('lawgroup_church_and_state').GetName]"
  LIBERTY_DESIRE_LEGAL_FRICTION_BUREAUCRACY: "[GetLawGroup('lawgroup_bureaucracy').GetName]"
@@ -85,14 +88,17 @@
  LIBERTY_DESIRE_LEGAL_FRICTION_FEMINISM: "[GetLawGroup('lawgroup_rights_of_women').GetName]"
  LIBERTY_DESIRE_LEGAL_FRICTION_SPEECH: "[GetLawGroup('lawgroup_free_speech').GetName]"
  LIBERTY_DESIRE_LEGAL_FRICTION_LABOR: "[GetLawGroup('lawgroup_labor_rights').GetName]"
-
+  
  LIBERTY_DESIRE_WEEKLY_CHANGE_REL_MILITARY_WEAK: "[SCOPE.GetRootScope.GetDiplomaticPact.GetSecondCountry.GetName] n'a pas d'[concept_army] !"
  LIBERTY_DESIRE_WEEKLY_CHANGE_REL_MILITARY_SCALING: "Projection de puissance relative de l'[concept_army] de [concept_overlord] (effet maximal à 10x)"
  LIBERTY_DESIRE_WEEKLY_CHANGE_REL_MILITARY_APPROACH: "Puissance militaire relative >80% de l'Overlord"
  LIBERTY_DESIRE_WEEKLY_CHANGE_REL_MILITARY_EXCCEED: "Puissance militaire relative >100% de l'Overlord"
  LIBERTY_DESIRE_WEEKLY_CHANGE_REL_NAVY_SCALING: "Marine relative de [SCOPE.GetRootScope.GetDiplomaticPact.GetSecondCountry.GetName] [concept_power_projection]"
  LIBERTY_DESIRE_WEEKLY_CHANGE_REL_MILITARY_SCALING_REDUCTION: "Marine de [concept_subject] réduisant l'importance de l'[concept_army] outre-mer de l'[concept_overlord]"
-
+ LIBERTY_DESIRE_WEEKLY_CHANGE_COMBINED_SUBJECTS: "Tous les [Concept('concept_subject', '$concept_subjects$')] [concept_power_projection] comparés à [SCOPE.GetRootScope.GetDiplomaticPact.GetFirstCountry.GetName]\n[SCOPE.GetScriptValueDesc('liberty_desire_weekly_change_combined_subjects')]" #NT!
+ LIBERTY_DESIRE_WEEKLY_CHANGE_OWN_COMBINED_SUBJECTS: "menace de [SCOPE.GetRootScope.GetDiplomaticPact.GetSecondCountry.GetName] lui-même [Concept('concept_subject', '$concept_subjects$')])" #NT!
+ LIBERTY_DESIRE_CHANGE_OWN_COMBINED_SUBJECTS_VALUE_FORMAT: "$TAB$ (Comprend [SelectLocalization(GreaterThan_CFixedPoint('(CFixedPoint)$VALUE$','(CFixedPoint)0'),'$VALUE|bo=2$','$VALUE|bu=2$')] de $KEY$" #NT!
+  
  LIBERTY_DESIRE_WEEKLY_CHANGE_LOW_SUPPLY_NETWORK_STRENGTH: "Faible résistance [concept_supply_network] [SCOPE.GetRootScope.GetDiplomaticPact.GetFirstCountry.GetAdjective] ([SCOPE.GetRootScope.GetDiplomaticPact.GetFirstCountry.GetSupplyNetworkStrength|v0%])"
  LIBERTY_DESIRE_WEEKLY_CHANGE_SACRED_CIVICS: "Même [concept_religion] sous #v $principle_group_sacred_civics$#!"
  LIBERTY_DESIRE_WEEKLY_CHANGE_ISOLATED_FROM_MARKET: "[SCOPE.GetRootScope.GetDiplomaticPact.GetCapital.GetName] est isolé du [SCOPE.GetRootScope.GetDiplomaticPact.GetFirstCountry.GetMarket.GetName]"
@@ -104,3 +110,5 @@
  LIBERTY_DESIRE_WEEKLY_CHANGE_ANTI_LOBBY_INTEREST_GROUP_IN_OPPOSITION: "[concept_clout] du [concept_political_lobby] [Concept('concept_interest_group','$concept_interest_groups$')] [concept_in_opposition]"
  LIBERTY_DESIRE_WEEKLY_CHANGE_SCALING_LOW: "Résistance au changement du statu quo bas [concept_liberty_desire]"
  LIBERTY_DESIRE_WEEKLY_CHANGE_SCALING_HIGH: "Résistance au changement du statu quo élevé [concept_liberty_desire]"
+  
+  

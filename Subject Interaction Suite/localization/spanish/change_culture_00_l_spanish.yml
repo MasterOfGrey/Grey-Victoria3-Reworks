@@ -1,0 +1,29 @@
+﻿l_spanish:
+ change_primary_culture: "Alineación cultural" #NT!
+ change_primary_culture_action_name: "$change_primary_culture$" #NT!
+ change_primary_culture_action_propose_name: "Iniciar la alineación cultural" #NT!
+ change_primary_culture_action_break_name: "Detener la alineación cultural" #NT!
+ change_primary_culture_pact_desc: "[SCOPE.GetRootScope.GetDiplomaticPact.GetFirstCountry.GetName] está cambiando la cultura principal de [SCOPE.GetRootScope.GetDiplomaticPact.GetSecondCountry.GetName].\n Actualmente #variable [SCOPE.GetRootScope.GetDiplomaticPact.GetSecondCountry.MakeScope.Var('change_primary_culture_progress').GetValue]#! progresan de 8 etapas." #NT!
+ change_primary_culture_desc: "#header $change_primary_culture$#!\n$TOOLTIP_DELIMITER$\nChange la cultura primaria del país de destino." #NT!
+ change_primary_culture_action_notification_name: "[INITIATOR_COUNTRY.GetName] está cambiando la cultura primaria de nuestro país." #NT!
+ change_primary_culture_action_notification_desc: "[INITIATOR_COUNTRY.GetName] está cambiando la cultura primaria en nuestro país." #NT!
+ change_primary_culture_action_notification_break_name: "El cambio de cultura primaria se detuvo en [INITIATOR_COUNTRY.GetName]" #NT!
+ change_primary_culture_action_notification_break_desc: "[INITIATOR_COUNTRY.GetName] ha terminado el cambio cultural primario para nuestra nación." #NT!
+  
+ change_primary_culture_effect_desc_global: "Iniciar un cambio cultural primario" #NT!
+ change_primary_culture_effect_desc_first: "[COUNTRY.GetAdjectiveNoFlag] está iniciando un cambio cultural primario en [TARGET_COUNTRY.GetName]." #NT!
+ change_primary_culture_effect_desc_third: "[COUNTRY.GetName] está iniciando la alineación cultural en [AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)]." #NT!
+  
+ change_primary_culture_trigger_desc_global: "Alineamiento cultural en progreso" #NT!
+ change_primary_culture_trigger_false_desc_global: "Ya no estoy en proceso de alineación cultural #b#!" #NT!
+ change_primary_culture_trigger_desc_first: "[COUNTRY.GetAdjectiveNoFlag] está cambiando la cultura principal en [TARGET_COUNTRY.GetName]." #NT!
+ change_primary_culture_trigger_false_desc_first: "[COUNTRY.GetAdjectiveNoFlag] ya no cambia la cultura principal en [TARGET_COUNTRY.GetName] #b#!" #NT!
+ change_primary_culture_trigger_desc_third: "[COUNTRY.GetName] está cambiando la cultura principal en [AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)]." #NT!
+ change_primary_culture_trigger_false_desc_third: "[COUNTRY.GetName] ya no cambia la cultura principal en [AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)] #b#!" #NT!
+  
+ ib_events.01.t: "Cambio de cultura primaria" #NT!
+ ib_events.01.d: "El orgulloso [ROOT.GetCountry.GetName] ha completado con éxito la alineación cultural de [SCOPE.sCountry('culture_target_country').GetName]. [SCOPE.sCountry('culture_target_country').GetName] ahora prosperará para siempre, abrazando la cultura de su patria." #NT!
+ ib_events.01.f: ""¡Salve [ROOT.GetCountry.GetName]!"" #NT!
+ ib_events.01.a: "Bien hecho." #NT!
+  
+ change_primary_culture_weekly_effect: "Trabaja para lograr la alineación completa de la cultura primaria con un 20% de posibilidades de progresar cada semana, con 8 puntos de progreso necesarios para tener éxito." #NT!

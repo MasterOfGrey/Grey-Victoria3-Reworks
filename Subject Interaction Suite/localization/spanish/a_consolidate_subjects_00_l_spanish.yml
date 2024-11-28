@@ -1,0 +1,15 @@
+﻿l_spanish:
+ consolidate_subject: "Consolidar tema" #NT!
+ consolidate_subject_action_name: "Consolidar [concept_subject]" #NT!
+ consolidate_subject_desc: "Fusiona dos [Concept('concept_subject', '$concept_subjects$')] vecinos en un solo [concept_country]. El sujeto objetivo debe tener [concept_autonomy] y [concept_liberty_desire] bajos. Ambos sujetos deben compartir un [Concept('concept_primary_cultures', '$concept_primary_culture$')]." #NT!
+ consolidate_subject_action_notification_name: "[INITIATOR_COUNTRY.GetName] consolida la administración" #NT!
+ consolidate_subject_action_notification_desc: "[INITIATOR_COUNTRY.GetName] ha optado por consolidarnos." #NT!
+ consolidate_subject_action_notification_third_party_name: "[INITIATOR_COUNTRY.GetName] consolida asignaturas" #NT!
+ consolidate_subject_action_notification_third_party_desc: "[INITIATOR_COUNTRY.GetName] ha consolidado [TARGET_COUNTRY.GetName]." #NT!
+  
+ is_not_african_subject: "Este tema no es de ninguna de nuestras administraciones coloniales africanas." #NT!
+  
+ alert_overlord_can_consolidate_subject_name: "[GetDiplomaticActionType('consolidate_subject').GetName] disponibles para [SCOPE.GetRootScope.GetCountry.GetName]" #NT!
+ alert_overlord_can_consolidate_subject_desc: "Nuestro [concept_subject] [SCOPE.GetRootScope.GetCountry.GetName] puede consolidarse en un sujeto vecino." #NT!
+ alert_overlord_can_consolidate_subject_hint: "Puedes utilizar la pestaña Temas en el Panel de Diplomacia para realizar una [GetDiplomaticActionType('consolidate_subject').GetName] [concept_diplomatic_action]." #NT!
+ alert_overlord_can_consolidate_subject_action: "Panel de diplomacia" #NT!

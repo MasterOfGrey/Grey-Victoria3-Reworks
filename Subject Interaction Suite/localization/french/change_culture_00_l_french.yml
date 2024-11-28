@@ -1,29 +1,29 @@
 ﻿l_french:
- change_primary_culture:0 "Alignement culturel"
- change_primary_culture_action_name:0 "$change_primary_culture$"
- change_primary_culture_action_propose_name:0 "Initier l'alignement culturel"
- change_primary_culture_action_break_name:0 "Arrêter l'alignement culturel"
- change_primary_culture_pact_desc:0 "[SCOPE.GetRootScope.GetDiplomaticPact.GetFirstCountry.GetName] est en train de changer la culture principale de [SCOPE.GetRootScope.GetDiplomaticPact.GetSecondCountry.GetName]."
- change_primary_culture_desc:1 "#header $change_primary_culture$#!\n$TOOLTIP_DELIMITER$\nChanger la culture principale du pays cible."
- change_primary_culture_action_notification_name:1 "[INITIATOR_COUNTRY.GetName] change la culture principale de notre pays."
- change_primary_culture_action_notification_desc:1 "[INITIATOR_COUNTRY.GetName] modifie la culture principale dans notre pays."
- change_primary_culture_action_notification_break_name:1 "Arrêt de l'alignement culturel par [INITIATOR_COUNTRY.GetName]"
- change_primary_culture_action_notification_break_desc:0 "[INITIATOR_COUNTRY.GetName] a mis fin au changement de culture principale pour notre nation."
-
- change_primary_culture_effect_desc_global:0 "Initier le changement de culture principale"
- change_primary_culture_effect_desc_first:0 "[COUNTRY.GetAdjectiveNoFlag] initie le changement de culture principale dans [TARGET_COUNTRY.GetName]."
- change_primary_culture_effect_desc_third:0 "[COUNTRY.GetName] initie l'alignement culturel dans [AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)]."
-
- change_primary_culture_trigger_desc_global:0 "Alignement culturel en cours"
- change_primary_culture_trigger_false_desc_global:0 "Plus d'alignement culturel en cours #b !#"
- change_primary_culture_trigger_desc_first:0 "[COUNTRY.GetAdjectiveNoFlag] change la culture principale dans [TARGET_COUNTRY.GetName]."
- change_primary_culture_trigger_false_desc_first:0 "[COUNTRY.GetAdjectiveNoFlag] ne change plus la culture principale dans [TARGET_COUNTRY.GetName] #b !#"
- change_primary_culture_trigger_desc_third:0 "[COUNTRY.GetName] change la culture principale dans [AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)]."
- change_primary_culture_trigger_false_desc_third:0 "[COUNTRY.GetName] ne change plus la culture principale dans [AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)] #b !#"
-
+ change_primary_culture: "Alignement culturel"
+ change_primary_culture_action_name: "$change_primary_culture$"
+ change_primary_culture_action_propose_name: "Initier l'alignement culturel"
+ change_primary_culture_action_break_name: "Arrêter l'alignement culturel"
+ change_primary_culture_pact_desc: "[SCOPE.GetRootScope.GetDiplomaticPact.GetFirstCountry.GetName] est en train de changer la culture principale de [SCOPE.GetRootScope.GetDiplomaticPact.GetSecondCountry.GetName]."
+ change_primary_culture_desc: "#header $change_primary_culture$#!\n$TOOLTIP_DELIMITER$\nChanger la culture principale du pays cible."
+ change_primary_culture_action_notification_name: "[INITIATOR_COUNTRY.GetName] change la culture principale de notre pays."
+ change_primary_culture_action_notification_desc: "[INITIATOR_COUNTRY.GetName] modifie la culture principale dans notre pays."
+ change_primary_culture_action_notification_break_name: "Arrêt de l'alignement culturel par [INITIATOR_COUNTRY.GetName]"
+ change_primary_culture_action_notification_break_desc: "[INITIATOR_COUNTRY.GetName] a mis fin au changement de culture principale pour notre nation."
+  
+ change_primary_culture_effect_desc_global: "Initier le changement de culture principale"
+ change_primary_culture_effect_desc_first: "[COUNTRY.GetAdjectiveNoFlag] initie le changement de culture principale dans [TARGET_COUNTRY.GetName]."
+ change_primary_culture_effect_desc_third: "[COUNTRY.GetName] initie l'alignement culturel dans [AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)]."
+  
+ change_primary_culture_trigger_desc_global: "Alignement culturel en cours"
+ change_primary_culture_trigger_false_desc_global: "Plus d'alignement culturel en cours #b !#"
+ change_primary_culture_trigger_desc_first: "[COUNTRY.GetAdjectiveNoFlag] change la culture principale dans [TARGET_COUNTRY.GetName]."
+ change_primary_culture_trigger_false_desc_first: "[COUNTRY.GetAdjectiveNoFlag] ne change plus la culture principale dans [TARGET_COUNTRY.GetName] #b !#"
+ change_primary_culture_trigger_desc_third: "[COUNTRY.GetName] change la culture principale dans [AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)]."
+ change_primary_culture_trigger_false_desc_third: "[COUNTRY.GetName] ne change plus la culture principale dans [AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)] #b !#"
+  
  ib_events.01.t: "Changement de culture principale"
  ib_events.01.d: "Le fier [ROOT.GetCountry.GetName] a réussi à achever l'alignement culturel pour [SCOPE.sCountry('culture_target_country').GetName]. [SCOPE.sCountry('culture_target_country').GetName] prospérera désormais pour toujours, embrassant la culture du pays d'origine."
  ib_events.01.f: ""Vive [ROOT.GetCountry.GetName] !""
  ib_events.01.a: "Bien joué."
-
- change_primary_culture_monthly_effect: "Achever l'alignement de la culture principale avec une chance de 5% chaque mois."
+  
+ change_primary_culture_weekly_effect: "Travaille pour atteindre un alignement complet de la culture primaire avec 20 % de chances de progresser chaque semaine, avec 8 points de progression nécessaires pour réussir." #NT!

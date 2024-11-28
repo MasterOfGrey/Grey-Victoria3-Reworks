@@ -95,6 +95,9 @@
  LIBERTY_DESIRE_WEEKLY_CHANGE_REL_MILITARY_EXCCEED: "Relative Army Power >100% of Overlord"
  LIBERTY_DESIRE_WEEKLY_CHANGE_REL_NAVY_SCALING: "[SCOPE.GetRootScope.GetDiplomaticPact.GetSecondCountry.GetName]'s relative Navy [concept_power_projection]"
  LIBERTY_DESIRE_WEEKLY_CHANGE_REL_MILITARY_SCALING_REDUCTION: "[concept_subject] Navy reducing significance of overseas [concept_overlord] [concept_army]"
+ LIBERTY_DESIRE_WEEKLY_CHANGE_COMBINED_SUBJECTS: "All [Concept('concept_subject', '$concept_subjects$')] [concept_power_projection] compared to [SCOPE.GetRootScope.GetDiplomaticPact.GetFirstCountry.GetName]\n[SCOPE.GetScriptValueDesc('liberty_desire_weekly_change_combined_subjects')]"
+ LIBERTY_DESIRE_WEEKLY_CHANGE_OWN_COMBINED_SUBJECTS: "threat of [SCOPE.GetRootScope.GetDiplomaticPact.GetSecondCountry.GetName]'s own [Concept('concept_subject', '$concept_subjects$')])"
+ LIBERTY_DESIRE_CHANGE_OWN_COMBINED_SUBJECTS_VALUE_FORMAT: "$TAB$(Includes [SelectLocalization(GreaterThan_CFixedPoint('(CFixedPoint)$VALUE$','(CFixedPoint)0'),'$VALUE|bo=2$','$VALUE|bu=2$')] from $KEY$"
  
  LIBERTY_DESIRE_WEEKLY_CHANGE_LOW_SUPPLY_NETWORK_STRENGTH: "Low [SCOPE.GetRootScope.GetDiplomaticPact.GetFirstCountry.GetAdjective] [concept_supply_network] strength ([SCOPE.GetRootScope.GetDiplomaticPact.GetFirstCountry.GetSupplyNetworkStrength|v0%])"
  LIBERTY_DESIRE_WEEKLY_CHANGE_SACRED_CIVICS: "Same state [concept_religion] under #v $principle_group_sacred_civics$#!"

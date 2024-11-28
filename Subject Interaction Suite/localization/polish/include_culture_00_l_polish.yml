@@ -1,0 +1,29 @@
+﻿l_polish:
+ include_primary_culture: "Włączenie kulturowe" #NT!
+ include_primary_culture_action_name: "$include_primary_culture$" #NT!
+ include_primary_culture_action_propose_name: "Zainicjuj integrację kulturową" #NT!
+ include_primary_culture_action_break_name: "Zatrzymajmy inkluzję kulturową" #NT!
+ include_primary_culture_pact_desc: "[SCOPE.GetRootScope.GetDiplomaticPact.GetFirstCountry.GetName] włącza swoją główną kulturę do [SCOPE.GetRootScope.GetDiplomaticPact.GetSecondCountry.GetName].\n Obecnie #variable [SCOPE.GetRootScope.GetDiplomaticPact.GetSecondCountry.MakeScope.Var('include_primary_culture_progress').GetValue]#! postęp z 8 etapów." #NT!
+ include_primary_culture_desc: "#header $include_primary_culture$#!\n$TOOLTIP_DELIMITER$\nAdd swojej głównej kultury z główną kulturą kraju docelowego." #NT!
+ include_primary_culture_action_notification_name: "[INITIATOR_COUNTRY.GetName] włącza swoją podstawową kulturę do podstawowej kultury naszego kraju." #NT!
+ include_primary_culture_action_notification_desc: "[INITIATOR_COUNTRY.GetName] włącza swoją podstawową kulturę do naszego kraju." #NT!
+ include_primary_culture_action_notification_break_name: "Włączenie kultury pierwotnej zatrzymane przez [INITIATOR_COUNTRY.GetName]" #NT!
+ include_primary_culture_action_notification_break_desc: "[INITIATOR_COUNTRY.GetName] zakończył podstawową integrację kulturową dla naszego narodu." #NT!
+  
+ include_primary_culture_effect_desc_global: "Zainicjuj integrację kulturową" #NT!
+ include_primary_culture_effect_desc_first: "[COUNTRY.GetAdjectiveNoFlag] inicjuje włączenie kultury pierwotnej w [TARGET_COUNTRY.GetName]." #NT!
+ include_primary_culture_effect_desc_third: "[COUNTRY.GetName] inicjuje integrację kulturową w [AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)]." #NT!
+  
+ include_primary_culture_trigger_desc_global: "Włączanie kulturowe w toku" #NT!
+ include_primary_culture_trigger_false_desc_global: "Nie w trakcie procesu włączania kulturowego #b już#!" #NT!
+ include_primary_culture_trigger_desc_first: "[COUNTRY.GetAdjectiveNoFlag] włącza swoją podstawową kulturę do [TARGET_COUNTRY.GetName]." #NT!
+ include_primary_culture_trigger_false_desc_first: "[COUNTRY.GetAdjectiveNoFlag] nie uwzględnia już swojej głównej kultury w [TARGET_COUNTRY.GetName] #b#!" #NT!
+ include_primary_culture_trigger_desc_third: "[COUNTRY.GetName] włącza swoją kulturę główną do [AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)]." #NT!
+ include_primary_culture_trigger_false_desc_third: "[COUNTRY.GetName] nie uwzględnia już swojej głównej kultury w [AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)] #b#!" #NT!
+  
+ ib_events.05.t: "Włączenie kultury pierwotnej" #NT!
+ ib_events.05.d: "Dumny [ROOT.GetCountry.GetName] pomyślnie ukończył integrację kulturową [SCOPE.sCountry('culture_include_country').GetName]. [SCOPE.sCountry('culture_target_country').GetName] będzie teraz prosperować wiecznie, obejmując kulturę ojczyzny." #NT!
+ ib_events.05.f: "„Witaj [ROOT.GetCountry.GetName]!”" #NT!
+ ib_events.05.a: "Dobrze zrobiony." #NT!
+  
+ include_primary_culture_weekly_effect: "Pracuje nad włączeniem głównych kultur Władcy do jego Podmiotu, dając 20% szans na postęp co tydzień, a do osiągnięcia sukcesu wymagane jest 8 punktów postępu." #NT!

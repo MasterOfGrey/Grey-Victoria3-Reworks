@@ -1,0 +1,33 @@
+﻿l_japanese:
+ change_state_religion: "宗教機関の乗っ取り" #NT!
+ change_state_religion_action_name: "$change_state_religion$" #NT!
+ change_state_religion_action_propose_name: "開始[INITIATOR_COUNTRY.GetCustom('change_religion_dynamic_name')]" #NT!
+ change_state_religion_action_break_name: "停止[INITIATOR_COUNTRY.GetCustom('change_religion_dynamic_name')]" #NT!
+ change_state_religion_pact_desc: "[SCOPE.GetRootScope.GetDiplomaticPact.GetFirstCountry.GetName] は [SCOPE.GetRootScope.GetDiplomaticPact.GetSecondCountry.GetName] の国教を変更しています。\n 現在、8 段階中 #variable [SCOPE.GetRootScope.GetDiplomaticPact.GetSecondCountry.MakeScope.Var('change_state_religion_progress').GetValue]#! が進行中です。" #NT!
+ change_state_religion_desc: "#header $change_state_religion$#!\n$TOOLTIP_DELIMITER$\nChange 対象国の国教。" #NT!
+ change_state_religion_action_notification_name: "[INITIATOR_COUNTRY.GetName]は我が国の国教を変えています。" #NT!
+ change_state_religion_action_notification_desc: "[INITIATOR_COUNTRY.GetName]は我が国の国教を変えています。" #NT!
+ change_state_religion_action_notification_break_name: "状態 [INITIATOR_COUNTRY.GetCustom('change_religion_dynamic_name')] [INITIATOR_COUNTRY.GetName] によって停止" #NT!
+ change_state_religion_action_notification_break_desc: "[INITIATOR_COUNTRY.GetName] は我が国の国教変更を中止しました。" #NT!
+  
+ change_state_religion_effect_desc_global: "開始状態 [INITIATOR_COUNTRY.GetCustom('change_religion_dynamic_name')]" #NT!
+ change_state_religion_effect_desc_first: "[COUNTRY.GetAdjectiveNoFlag] は [TARGET_COUNTRY.GetName] で国教の変更を開始しています。" #NT!
+ change_state_religion_effect_desc_third: "[COUNTRY.GetName] は [AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)] で [INITIATOR_COUNTRY.GetCustom('change_religion_dynamic_name')] を開始します。" #NT!
+  
+ change_state_religion_trigger_desc_global: "[INITIATOR_COUNTRY.GetCustom('change_religion_dynamic_name')] 進行中" #NT!
+ change_state_religion_trigger_false_desc_global: "もう[INITIATOR_COUNTRY.GetCustom('change_religion_dynamic_name')] #b の過程ではありません#!" #NT!
+ change_state_religion_trigger_desc_first: "[COUNTRY.GetAdjectiveNoFlag]は[TARGET_COUNTRY.GetName]の国教を変えています。" #NT!
+ change_state_religion_trigger_false_desc_first: "[COUNTRY.GetAdjectiveNoFlag] は[TARGET_COUNTRY.GetName] #b の国教をもう変えません#!" #NT!
+ change_state_religion_trigger_desc_third: "[COUNTRY.GetName]は[AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)]の国教を変更します。" #NT!
+ change_state_religion_trigger_false_desc_third: "[COUNTRY.GetName] は[AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)] #b の国教をもう変えません#!" #NT!
+  
+ ib_events.02.t: "国教の変更" #NT!
+ ib_events.02.d: "誇り高き[ROOT.GetCountry.GetName]は[SCOPE.sCountry('religion_target_country').GetName]の[INITIATOR_COUNTRY.GetCustom('change_religion_dynamic_name')]を無事に完了しました。[SCOPE.sCountry('religion_target_country').GetName]は祖国の宗教制度を受け入れ、永遠に繁栄するでしょう。" #NT!
+ ib_events.02.f: "「万歳[ROOT.GetCountry.GetName]！」" #NT!
+ ib_events.02.a: "よくやった。" #NT!
+  
+ change_state_religion_weekly_effect: "国教の完全な整合を達成するために取り組みます。毎週 20% の確率で進捗し、成功するには 8 つの進捗ポイントが必要です。" #NT!
+  
+ cr_irreligious_conversion: "非宗教的乗っ取り" #NT!
+ cr_institutionalise_secularism: "世俗主義の規制" #NT!
+ cr_religious_conversion: "宗教的改宗" #NT!

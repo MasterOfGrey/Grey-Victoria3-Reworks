@@ -1,0 +1,5 @@
+﻿l_spanish:
+ law_imposition_events.4.t: "Legislación impuesta a [SCOPE.sC('country_imposed_upon').GetName] Fracaso" #NT!
+ law_imposition_events.4.d: "[SCOPE.sC('country_imposed_upon').GetName] no ha podido ejecutar [SCOPE.sLaw('foreign_imposition_law').GetName] debido a fuerzas internas." #NT!
+ law_imposition_events.4.f: "El embajador regresa con la noticia del fracaso. "A pesar de nuestro apoyo no pudieron hacerlo", informa. El silencio que sigue pesa en la sala del consejo." #NT!
+ law_imposition_events.4.a: "¿Tal vez deberíamos probar algo diferente la próxima vez?" #NT!

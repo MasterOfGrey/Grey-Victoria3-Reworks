@@ -1,25 +1,35 @@
 ﻿l_korean:
- military_support:0 "영토 확장 지원"
- military_support_action_name:0 "$military_support$"
- military_support_action_propose_name:0 "영토 확장 지원 시작"
- military_support_action_break_name:0 "영토 확장 지원 중지"
- military_support_pact_desc:0 "[SCOPE.GetRootScope.GetDiplomaticPact.GetFirstCountry.GetName](이)가 [SCOPE.GetRootScope.GetDiplomaticPact.GetSecondCountry.GetName]의 군사를 통제합니다."
- military_support_desc:1 "#header $military_support$#!\n$TOOLTIP_DELIMITER$\n자치령에게 군사적 동맹을 제안해 영토 확장을 지원합니다."
- military_support_action_notification_name:1 "[INITIATOR_COUNTRY.GetName](이)가 우리나라에 영토 확장 지원 중"
- military_support_action_notification_desc:1 "[INITIATOR_COUNTRY.GetName](이)가 우리나라의 영토 확장을 지원하기 위해 군사적 동맹을 맺었습니다."
- military_support_action_notification_break_name:1 "[INITIATOR_COUNTRY.GetName]의 영토 확장 지원 중단"
- military_support_action_notification_break_desc:0 "[INITIATOR_COUNTRY.GetName](이)가 우리 국가에 대한 영토 확장 지원를 종료했습니다."
- 
- military_support_effect_desc_global:0 "영토 확장 지원 시작"
- military_support_effect_desc_first:0 "[COUNTRY.GetAdjectiveNoFlag](이)가 [TARGET_COUNTRY.GetName]에 영토 확장 지원을 시작함"
- military_support_effect_desc_third:0 "[COUNTRY.GetName](이)가 [AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)]에 영토 확장 지원를 시작함"
- 
- military_support_trigger_desc_global:0 "영토 확장 지원 중"
- military_support_trigger_false_desc_global:0 "영토 확장 지원 중이지 #b 않음#!"
- military_support_trigger_desc_first:0 "[COUNTRY.GetAdjectiveNoFlag](이)가 [TARGET_COUNTRY.GetName]에 영토 확장 지원 중"
- military_support_trigger_false_desc_first:0 "[COUNTRY.GetAdjectiveNoFlag](이)가 [TARGET_COUNTRY.GetName]에 영토 확장 지원 중이지 #b 않음#!"
- military_support_trigger_desc_third:0 "[COUNTRY.GetName](이)가 [AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)]에 영토 확장 지원 중"
- military_support_trigger_false_desc_third:0 "[COUNTRY.GetName](이)가 [AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)]에 영토 확장 지원 중이지 #b 않음#!"
- 
- military_support_monthly_effect: "매달 1/36 확률로 자치권 부여를 완료합니다"
- military_support_monthly_effect: "매달 1/36 확률로 자치권 회수를 완료합니다"
+ military_support: "영토 확장 지원"
+ military_support_action_name: "$military_support$"
+ military_support_action_propose_name: "영토 확장 지원 시작"
+ military_support_action_break_name: "영토 확장 지원 중지"
+ military_support_action_notification_name: "[INITIATOR_COUNTRY.GetName](이)가 우리나라에 영토 확장 지원 중"
+ military_support_action_notification_desc: "[INITIATOR_COUNTRY.GetName](이)가 우리나라의 영토 확장을 지원하기 위해 군사적 동맹을 맺었습니다."
+ military_support_desc: "#header $military_support$#!\n$TOOLTIP_DELIMITER$\n자치령에게 군사적 동맹을 제안해 영토 확장을 지원합니다."
+ military_support_pact_desc: "[SCOPE.GetRootScope.GetDiplomaticPact.GetFirstCountry.GetName](이)가 [SCOPE.GetRootScope.GetDiplomaticPact.GetSecondCountry.GetName]의 군사를 통제합니다."
+ military_support_proposal_notification_name: "영토 확장 지원 제안" #NT!
+ military_support_proposal_notification_desc: "[INITIATOR_COUNTRY.GetName] 소원 우리와 함께 영토 확장을 지원해 주세요." #NT!
+ military_support_proposal_notification_effects_desc: "$military_support_desc$" #NT!
+ military_support_proposal_accepted_name: "영토 확장 지원 수락" #NT!
+ military_support_proposal_accepted_desc: "[TARGET_COUNTRY.GetName]은 영토 확장 지원에 대한 우리의 제안을 수락했습니다." #NT!
+ military_support_proposal_declined_name: "영토 확장 지원 거부" #NT!
+ military_support_proposal_declined_desc: "[TARGET_COUNTRY.GetName]은 영토 확장을 지원하겠다는 우리의 제안을 거부했습니다." #NT!
+ military_support_action_notification_break_name: "[INITIATOR_COUNTRY.GetName]의 영토 확장 지원 중단"
+ military_support_action_notification_break_desc: "[INITIATOR_COUNTRY.GetName](이)가 우리 국가에 대한 영토 확장 지원를 종료했습니다."
+ military_support_proposal_third_party_accepted_name: "영토 확장 지원 서명" #NT!
+ military_support_proposal_third_party_accepted_desc: "[INITIATOR_COUNTRY.GetName]과 [TARGET_COUNTRY.GetName]은 영토 확장 지원 계약을 체결했습니다." #NT!
+ military_support_proposal_third_party_declined_name: "영토 확장 지원 거부" #NT!
+ military_support_proposal_third_party_declined_desc: "[TARGET_COUNTRY.GetName]은(는) [INITIATOR_COUNTRY.GetName]와의 영토 확장 지원을 거부했습니다." #NT!
+ military_support_action_notification_third_party_break_name: "영토 확장 지원 중단" #NT!
+ military_support_action_notification_third_party_break_desc: "[INITIATOR_COUNTRY.GetName]은 [TARGET_COUNTRY.GetName]과의 영토 확장 지원을 중단했습니다." #NT!
+  
+ military_support_effect_desc_global: "영토 확장 지원 시작"
+ military_support_effect_desc_first: "[COUNTRY.GetAdjectiveNoFlag](이)가 [TARGET_COUNTRY.GetName]에 영토 확장 지원을 시작함"
+ military_support_effect_desc_third: "[COUNTRY.GetName](이)가 [AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)]에 영토 확장 지원를 시작함"
+  
+ military_support_trigger_desc_global: "영토 확장 지원 중"
+ military_support_trigger_false_desc_global: "영토 확장 지원 중이지 #b 않음#!"
+ military_support_trigger_desc_first: "[COUNTRY.GetAdjectiveNoFlag](이)가 [TARGET_COUNTRY.GetName]에 영토 확장 지원 중"
+ military_support_trigger_false_desc_first: "[COUNTRY.GetAdjectiveNoFlag](이)가 [TARGET_COUNTRY.GetName]에 영토 확장 지원 중이지 #b 않음#!"
+ military_support_trigger_desc_third: "[COUNTRY.GetName](이)가 [AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)]에 영토 확장 지원 중"
+ military_support_trigger_false_desc_third: "[COUNTRY.GetName](이)가 [AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)]에 영토 확장 지원 중이지 #b 않음#!"

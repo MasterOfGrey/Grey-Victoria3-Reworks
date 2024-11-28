@@ -1,21 +1,31 @@
 ﻿l_french:
- DIPLO_ACTION_MERGE_SUBJECT:0 "$DIPLO_ACTION_RELATIONS$ n'est pas inférieur à $relations_amicable$"
- merge_subject:0 "Fusionner le Sujet"
- merge_subject_action_name:0 "Territoires Fusionnés"
- merge_subject_desc:0 "#header $merge_subject$#!\n$TOOLTIP_DELIMITER$\nUn type de [concept_instant_diplomatic_action] qui permet de fusionner immédiatement et inconditionnellement avec ses propres sujets."
- merge_subject_proposal_notification_name:0 "Proposer $merge_subject_action_name$"
- merge_subject_proposal_notification_desc:0 "[INITIATOR_COUNTRY.GetName] propose d'unifier notre territoire national"
- merge_subject_proposal_notification_effects_desc:0 "$merge_subject_action_name$"
- merge_subject_proposal_accepted_name:0 "Accepter $merge_subject_action_name$"
- merge_subject_proposal_accepted_desc:0 "[TARGET_COUNTRY.GetName] a accepté notre proposition de fusionner leurs territoires nationaux."
- merge_subject_proposal_declined_name:0 "Rejeter $merge_subject_action_name$"
- merge_subject_proposal_declined_desc:0 "[TARGET_COUNTRY.GetName] a rejeté notre proposition de fusionner leur territoire national."
- merge_subject_proposal_third_party_accepted_name:0 "Accepter $merge_subject_action_name$"
- merge_subject_proposal_third_party_accepted_desc:0 "[INITIATOR_COUNTRY.GetName] a fusionné tous les territoires du pays de [TARGET_COUNTRY.GetName]."
- merge_subject_proposal_third_party_declined_name:0 "Rejeter $merge_subject_action_name$"
- merge_subject_proposal_third_party_declined_desc:0 "[TARGET_COUNTRY.GetName] a refusé de fusionner avec [INITIATOR_COUNTRY.GetName]."
- rule_ai_merge_subject:0 "$merge_subject$"
- setting_ai_can_not_use:0 "Interdire l'IA de Fusionner le Sujet"
- setting_ai_can_not_use_desc:0 "Interdire à l'IA d'utiliser l'action diplomatique : Fusionner [concept_subject] [Concept('concept_country', '$concept_countries$')]"
- setting_ai_can_use:0 "Autoriser l'IA à Fusionner le Sujet"
- setting_ai_can_use_desc:0 "Autoriser l'IA à utiliser l'action diplomatique : Fusionner [concept_subject] [Concept('concept_country', '$concept_countries$')]。\nNote : L'IA n'enverra pas cette action diplomatique au joueur。"
+ DIPLO_ACTION_MERGE_SUBJECT: "$DIPLO_ACTION_RELATIONS$ n'est pas inférieur à $relations_amicable$"
+ merge_subject: "Fusionner le Sujet"
+ merge_subject_action_name: "Territoires Fusionnés"
+ merge_subject_desc: "#header $merge_subject$#!\n$TOOLTIP_DELIMITER$\nUn type de [concept_instant_diplomatic_action] qui permet de fusionner immédiatement et inconditionnellement avec ses propres sujets."
+ merge_subject_proposal_notification_name: "Proposer $merge_subject_action_name$"
+ merge_subject_proposal_notification_desc: "[INITIATOR_COUNTRY.GetName] propose d'unifier notre territoire national"
+ merge_subject_proposal_notification_effects_desc: "$merge_subject_action_name$"
+ merge_subject_proposal_accepted_name: "Accepter $merge_subject_action_name$"
+ merge_subject_proposal_accepted_desc: "[TARGET_COUNTRY.GetName] a accepté notre proposition de fusionner leurs territoires nationaux."
+ merge_subject_proposal_declined_name: "Rejeter $merge_subject_action_name$"
+ merge_subject_proposal_declined_desc: "[TARGET_COUNTRY.GetName] a rejeté notre proposition de fusionner leur territoire national."
+ merge_subject_proposal_third_party_accepted_name: "Accepter $merge_subject_action_name$"
+ merge_subject_proposal_third_party_accepted_desc: "[INITIATOR_COUNTRY.GetName] a fusionné tous les territoires du pays de [TARGET_COUNTRY.GetName]."
+ merge_subject_proposal_third_party_declined_name: "Rejeter $merge_subject_action_name$"
+ merge_subject_proposal_third_party_declined_desc: "[TARGET_COUNTRY.GetName] a refusé de fusionner avec [INITIATOR_COUNTRY.GetName]."
+ rule_ai_merge_subject: "$merge_subject$"
+ setting_ai_can_not_use: "Interdire l'IA de Fusionner le Sujet"
+ setting_ai_can_not_use_desc: "Interdire à l'IA d'utiliser l'action diplomatique : Fusionner [concept_subject] [Concept('concept_country', '$concept_countries$')]"
+ setting_ai_can_use: "Autoriser l'IA à Fusionner le Sujet"
+ setting_ai_can_use_desc: "Autoriser l'IA à utiliser l'action diplomatique : Fusionner [concept_subject] [Concept('concept_country', '$concept_countries$')]。\nNote : L'IA n'enverra pas cette action diplomatique au joueur。"
+ merge_subject_cheat: "Triche sur la fusion des sujets" #NT!
+ rule_merge_subject_cheat: "$merge_subject$" #NT!
+ setting_balanced_merge: "Le sujet de fusion est équilibré" #NT!
+ setting_balanced_merge_desc: "L'action diplomatique : Fusionner [concept_subject] [Concept('concept_country', '$concept_countries$')] est équilibrée pour le jeu normal." #NT!
+ setting_cheat_merge: "Merge Subject est une triche" #NT!
+ setting_cheat_merge_desc: "L'action diplomatique : Fusionner [concept_subject] [Concept('concept_country', '$concept_countries$')] est une triche puissante." #NT!
+ DIPLOMATIC_ACCEPTANCE_BREAK_FREE: "Ils poursuivent un [concept_ai_strategy] de #v $ai_strategy_subject_break_free$#!" #NT!
+ DIPLOMATIC_ACCEPTANCE_STRENGTHEN_SELF: "Ils poursuivent un [concept_ai_strategy] de #v $ai_strategy_subject_strengthen_self$#!" #NT!
+ DIPLOMATIC_ACCEPTANCE_MAINTAIN_AUTONOMY: "Ils poursuivent un [concept_ai_strategy] de #v $ai_strategy_subject_maintain_autonomy$#!" #NT!
+ DIPLOMATIC_ACCEPTANCE_OVERLORD_COMPLIANCE: "Ils poursuivent un [concept_ai_strategy] de #v $ai_strategy_subject_overlord_compliance$#!" #NT!

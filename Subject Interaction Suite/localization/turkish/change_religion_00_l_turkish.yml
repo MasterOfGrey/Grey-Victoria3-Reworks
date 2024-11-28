@@ -1,0 +1,33 @@
+﻿l_turkish:
+ change_state_religion: "Dini Kurum Devralma" #NT!
+ change_state_religion_action_name: "$change_state_religion$" #NT!
+ change_state_religion_action_propose_name: "Başlat [INITIATOR_COUNTRY.GetCustom('change_religion_dynamic_name')]" #NT!
+ change_state_religion_action_break_name: "Dur [INITIATOR_COUNTRY.GetCustom('change_religion_dynamic_name')]" #NT!
+ change_state_religion_pact_desc: "[SCOPE.GetRootScope.GetDiplomaticPact.GetFirstCountry.GetName], [SCOPE.GetRootScope.GetDiplomaticPact.GetSecondCountry.GetName]'in resmi dinini değiştiriyor.\n Şu anda 8 aşamadan #variable [SCOPE.GetRootScope.GetDiplomaticPact.GetSecondCountry.MakeScope.Var('change_state_religion_progress').GetValue]#!'ü ilerledi." #NT!
+ change_state_religion_desc: "#header $change_state_religion$#!\n$TOOLTIP_DELIMITER$\nChange hedef ülkenin resmi dini." #NT!
+ change_state_religion_action_notification_name: "[INITIATOR_COUNTRY.GetName] ülkemizin resmi dinini değiştiriyor." #NT!
+ change_state_religion_action_notification_desc: "[INITIATOR_COUNTRY.GetName] ülkemizde resmi dini değiştiriyor." #NT!
+ change_state_religion_action_notification_break_name: "Durum [INITIATOR_COUNTRY.GetCustom('change_religion_dynamic_name')] [INITIATOR_COUNTRY.GetName] tarafından durduruldu" #NT!
+ change_state_religion_action_notification_break_desc: "[INITIATOR_COUNTRY.GetName] Ülkemiz için resmi din değişikliğini sonlandırdı." #NT!
+  
+ change_state_religion_effect_desc_global: "Durumu Başlat [INITIATOR_COUNTRY.GetCustom('change_religion_dynamic_name')]" #NT!
+ change_state_religion_effect_desc_first: "[COUNTRY.GetAdjectiveNoFlag], [TARGET_COUNTRY.GetName]'de devlet dini değişikliğini başlatıyor." #NT!
+ change_state_religion_effect_desc_third: "[COUNTRY.GetName], [AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)]'te [INITIATOR_COUNTRY.GetCustom('change_religion_dynamic_name')]'i başlatıyor." #NT!
+  
+ change_state_religion_trigger_desc_global: "[INITIATOR_COUNTRY.GetCustom('change_religion_dynamic_name')] Devam Ediyor" #NT!
+ change_state_religion_trigger_false_desc_global: "[INITIATOR_COUNTRY.GetCustom('change_religion_dynamic_name')] #b artık devam etmiyor#!" #NT!
+ change_state_religion_trigger_desc_first: "[COUNTRY.GetAdjectiveNoFlag], [TARGET_COUNTRY.GetName]'deki resmi dini değiştiriyor." #NT!
+ change_state_religion_trigger_false_desc_first: "[COUNTRY.GetAdjectiveNoFlag] artık [TARGET_COUNTRY.GetName] #b'deki devlet dinini değiştirmiyor#!" #NT!
+ change_state_religion_trigger_desc_third: "[COUNTRY.GetName], [AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)]'deki resmi dini değiştiriyor." #NT!
+ change_state_religion_trigger_false_desc_third: "[COUNTRY.GetName] artık [AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)] #b'teki devlet dinini değiştirmiyor#!" #NT!
+  
+ ib_events.02.t: "Devlet Din Değişikliği" #NT!
+ ib_events.02.d: "Gururlu [ROOT.GetCountry.GetName], [SCOPE.sCountry('religion_target_country').GetName] için [INITIATOR_COUNTRY.GetCustom('change_religion_dynamic_name')]'i başarıyla tamamladı. [SCOPE.sCountry('religion_target_country').GetName] artık vatanın dini kurumlarını kucaklayarak sonsuza dek refah içinde yaşayacak." #NT!
+ ib_events.02.f: ""Selam [ROOT.GetCountry.GetName]!"" #NT!
+ ib_events.02.a: "Tebrikler." #NT!
+  
+ change_state_religion_weekly_effect: "Her hafta %20 ilerleme şansı ile devlet dininin tam olarak uyumlu hale getirilmesi için çalışmalar yapılır ve başarılı olmak için 8 ilerleme puanı gerekir." #NT!
+  
+ cr_irreligious_conversion: "Dinsiz Devralma" #NT!
+ cr_institutionalise_secularism: "Laik Düzenleme" #NT!
+ cr_religious_conversion: "Dini dönüşüm" #NT!

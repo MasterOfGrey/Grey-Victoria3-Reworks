@@ -1,0 +1,33 @@
+﻿l_spanish:
+ change_state_religion: "Toma de posesión de una institución religiosa" #NT!
+ change_state_religion_action_name: "$change_state_religion$" #NT!
+ change_state_religion_action_propose_name: "Iniciar [INITIATOR_COUNTRY.GetCustom('change_religion_dynamic_name')]" #NT!
+ change_state_religion_action_break_name: "Detener [INITIATOR_COUNTRY.GetCustom('change_religion_dynamic_name')]" #NT!
+ change_state_religion_pact_desc: "[SCOPE.GetRootScope.GetDiplomaticPact.GetFirstCountry.GetName] está cambiando la religión estatal de [SCOPE.GetRootScope.GetDiplomaticPact.GetSecondCountry.GetName].\n Actualmente #variable [SCOPE.GetRootScope.GetDiplomaticPact.GetSecondCountry.MakeScope.Var('change_state_religion_progress').GetValue]#! progresan de 8 etapas." #NT!
+ change_state_religion_desc: "#header $change_state_religion$#!\n$TOOLTIP_DELIMITER$\nChange la religión estatal del país de destino." #NT!
+ change_state_religion_action_notification_name: "[INITIATOR_COUNTRY.GetName] está cambiando la religión estatal de nuestro país." #NT!
+ change_state_religion_action_notification_desc: "[INITIATOR_COUNTRY.GetName] está cambiando la religión estatal en nuestro país." #NT!
+ change_state_religion_action_notification_break_name: "Estado [INITIATOR_COUNTRY.GetCustom('change_religion_dynamic_name')] Detenido por [INITIATOR_COUNTRY.GetName]" #NT!
+ change_state_religion_action_notification_break_desc: "[INITIATOR_COUNTRY.GetName] ha terminado el cambio de religión estatal para nuestra nación." #NT!
+  
+ change_state_religion_effect_desc_global: "Estado Iniciado [INITIATOR_COUNTRY.GetCustom('change_religion_dynamic_name')]" #NT!
+ change_state_religion_effect_desc_first: "[COUNTRY.GetAdjectiveNoFlag] está iniciando el cambio de religión estatal en [TARGET_COUNTRY.GetName]." #NT!
+ change_state_religion_effect_desc_third: "[COUNTRY.GetName] está iniciando [INITIATOR_COUNTRY.GetCustom('change_religion_dynamic_name')] en [AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)]." #NT!
+  
+ change_state_religion_trigger_desc_global: "[INITIATOR_COUNTRY.GetCustom('change_religion_dynamic_name')] en progreso" #NT!
+ change_state_religion_trigger_false_desc_global: "Ya no estoy en proceso de [INITIATOR_COUNTRY.GetCustom('change_religion_dynamic_name')] #b#!" #NT!
+ change_state_religion_trigger_desc_first: "[COUNTRY.GetAdjectiveNoFlag] está cambiando la religión estatal en [TARGET_COUNTRY.GetName]." #NT!
+ change_state_religion_trigger_false_desc_first: "[COUNTRY.GetAdjectiveNoFlag] ya no cambiará la religión estatal en [TARGET_COUNTRY.GetName] #b#!" #NT!
+ change_state_religion_trigger_desc_third: "[COUNTRY.GetName] está cambiando la religión estatal en [AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)]." #NT!
+ change_state_religion_trigger_false_desc_third: "[COUNTRY.GetName] ya no cambia la religión estatal en [AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)] #b#!" #NT!
+  
+ ib_events.02.t: "Cambio de religión estatal" #NT!
+ ib_events.02.d: "El orgulloso [ROOT.GetCountry.GetName] ha completado con éxito el [INITIATOR_COUNTRY.GetCustom('change_religion_dynamic_name')] para [SCOPE.sCountry('religion_target_country').GetName]. [SCOPE.sCountry('religion_target_country').GetName] ahora prosperará para siempre, abrazando las instituciones religiosas de la patria." #NT!
+ ib_events.02.f: ""¡Salve [ROOT.GetCountry.GetName]!"" #NT!
+ ib_events.02.a: "Bien hecho." #NT!
+  
+ change_state_religion_weekly_effect: "Trabaja para lograr la alineación completa de la religión estatal con un 20% de posibilidades de progresar cada semana, con 8 puntos de progreso necesarios para tener éxito." #NT!
+  
+ cr_irreligious_conversion: "Toma de poder irreligiosa" #NT!
+ cr_institutionalise_secularism: "Regulación secularista" #NT!
+ cr_religious_conversion: "Conversión religiosa" #NT!

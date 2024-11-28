@@ -13,8 +13,8 @@
 
 on_yearly_pulse_country = {
 	on_actions = {
-		incorporate_state_actions
 		delay = { days = { 45 330 } }
+		incorporate_state_actions
 	}
 }
 

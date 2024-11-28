@@ -1,0 +1,33 @@
+﻿l_russian:
+ laws_synergize_land: "Синергия земельных реформ" #NT!
+ laws_synergize_land_action_name: "$laws_synergize_land$" #NT!
+ laws_synergize_land_action_propose_name: "Начать синергию земельных реформ" #NT!
+ laws_synergize_land_action_break_name: "Остановите синергию земельных реформ" #NT!
+ laws_synergize_land_pact_desc: "[SCOPE.GetRootScope.GetDiplomaticPact.GetFirstCountry.GetName] реструктурирует земельные законы [SCOPE.GetRootScope.GetDiplomaticPact.GetSecondCountry.GetName] для синергии с их законами.\n В настоящее время #variable [SCOPE.GetRootScope.GetDiplomaticPact.GetSecondCountry.MakeScope.Var('synergize_land_progress').GetValue]#! проходят 8 этапов." #NT!
+ laws_synergize_land_desc: "#header $laws_synergize_land$#!\n$TOOLTIP_DELIMITER$\nSynergizes земельные реформы указанной страны." #NT!
+ laws_synergize_land_action_notification_name: "[INITIATOR_COUNTRY.GetName] Синергия земельных реформ" #NT!
+ laws_synergize_land_action_notification_desc: "[INITIATOR_COUNTRY.GetName] усиливает земельные реформы в нашей стране." #NT!
+ laws_synergize_land_action_notification_break_name: "Прекратить синергию земельных реформ [INITIATOR_COUNTRY.GetName]" #NT!
+ laws_synergize_land_action_notification_break_desc: "[INITIATOR_COUNTRY.GetName] прекратил попытки объединить земельные реформы в нашей стране." #NT!
+  
+ laws_synergize_land_effect_desc_global: "Начать синергию земельных реформ" #NT!
+ laws_synergize_land_effect_desc_first: "[COUNTRY.GetAdjectiveNoFlag] инициирует синергию земельной реформы с [TARGET_COUNTRY.GetName]." #NT!
+ laws_synergize_land_effect_desc_third: "[COUNTRY.GetName] инициирует синергию земельной реформы с [AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)]." #NT!
+  
+ laws_synergize_land_trigger_desc_global: "Продолжается синергия земельной реформы" #NT!
+ laws_synergize_land_trigger_false_desc_global: "В настоящее время процесс синергии земельных реформ не ведется." #NT!
+ laws_synergize_land_trigger_desc_first: "[COUNTRY.GetAdjectiveNoFlag] проводит синергетическую земельную реформу с [TARGET_COUNTRY.GetName]." #NT!
+ laws_synergize_land_trigger_false_desc_first: "[COUNTRY.GetAdjectiveNoFlag] в настоящее время не имеет синергетических земельных реформ с [TARGET_COUNTRY.GetName]." #NT!
+ laws_synergize_land_trigger_desc_third: "[COUNTRY.GetName] проводит синергетическую земельную реформу с [AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)]." #NT!
+ laws_synergize_land_trigger_false_desc_third: "[COUNTRY.GetName] в настоящее время не имеет синергетических земельных реформ с [AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)]." #NT!
+  
+ mog_syn_events.03.t: "Синергия земельной реформы!" #NT!
+ mog_syn_events.03.d: "Гордая нация [ROOT.GetCountry.GetName] успешно завершила синергию земельных реформ с [SCOPE.sCountry('synergize_land_target_country').GetName]. [SCOPE.sCountry('synergize_land_target_country').GetName] будет процветать в вечном процветании благодаря усилению сплоченности с родиной." #NT!
+ mog_syn_events.03.f: "«Да здравствует [ROOT.GetCountry.GetName]!»" #NT!
+ mog_syn_events.03.a: "Отличная работа." #NT!
+  
+ laws_synergize_land_weekly_effect: "Работает над согласованием своих реформ земельного права с нашими. Имеет 20% шанс добиться прогресса каждую неделю, для успеха требуется 8 очков прогресса." #NT!
+  
+ overlord_syn_cost_land: "Стоимость синергетических земельных реформ" #NT!
+  
+ active_synergize_land_tt: "Количество других действий $laws_synergize_land$ меньше 1." #NT!

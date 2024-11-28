@@ -12,6 +12,7 @@
 								has_law = law_type:law_monarchy
 								has_law = law_type:law_theocracy
 								has_law = law_type:law_presidential_republic
+								has_law = law_type:law_corporate_state
 							}
 						}
 						root.second_country = {
@@ -19,6 +20,7 @@
 								has_law = law_type:law_monarchy
 								has_law = law_type:law_theocracy
 								has_law = law_type:law_presidential_republic
+								has_law = law_type:law_corporate_state
 							}
 						}
 						root.first_country = {
@@ -144,6 +146,28 @@
 						}
 						root.second_country = {
 							has_law = law_type:law_council_republic
+						}
+					}
+					AND = {
+						root.first_country = {
+							has_law = law_type:law_corporate_state
+						}
+						root.second_country = {
+							OR = {
+								has_law = law_type:law_parliamentary_republic
+								has_law = law_type:law_council_republic
+							}
+						}
+					}
+					AND = {
+						root.first_country = {
+							OR = {
+								has_law = law_type:law_parliamentary_republic
+								has_law = law_type:law_council_republic
+							}
+						}
+						root.second_country = {
+							has_law = law_type:law_corporate_state
 						}
 					}
 				}

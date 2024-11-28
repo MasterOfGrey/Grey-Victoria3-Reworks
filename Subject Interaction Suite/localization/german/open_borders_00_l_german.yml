@@ -1,0 +1,29 @@
+﻿l_german:
+ open_border: "Offene Grenzen" #NT!
+ open_border_action_name: "$open_border$" #NT!
+ open_border_action_propose_name: "Offene Grenzen initiieren" #NT!
+ open_border_action_break_name: "Stoppt offene Grenzen" #NT!
+ open_border_pact_desc: "[SCOPE.GetRootScope.GetDiplomaticPact.GetFirstCountry.GetName] öffnet die Grenzen von [SCOPE.GetRootScope.GetDiplomaticPact.GetSecondCountry.GetName].\n Derzeit durchlaufen #variable [SCOPE.GetRootScope.GetDiplomaticPact.GetSecondCountry.MakeScope.Var('border_opening_progress').GetValue]#! 8 Stufen." #NT!
+ open_border_desc: "#header $open_border$#!\n$TOOLTIP_DELIMITER$\nOpens die Grenzen des angegebenen Landes." #NT!
+ open_border_action_notification_name: "[INITIATOR_COUNTRY.GetName] Grenzen öffnen" #NT!
+ open_border_action_notification_desc: "[INITIATOR_COUNTRY.GetName] öffnet die Grenzen unseres Landes." #NT!
+ open_border_action_notification_break_name: "Stoppt die Grenzöffnung von [INITIATOR_COUNTRY.GetName]" #NT!
+ open_border_action_notification_break_desc: "[INITIATOR_COUNTRY.GetName] hat seine Versuche eingestellt, die Grenzen unseres Landes zu öffnen." #NT!
+  
+ open_border_effect_desc_global: "Offene Grenzen initiieren" #NT!
+ open_border_effect_desc_first: "[COUNTRY.GetAdjectiveNoFlag] initiiert offene Grenzen mit [TARGET_COUNTRY.GetName]." #NT!
+ open_border_effect_desc_third: "[COUNTRY.GetName] initiiert offene Grenzen mit [AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)]." #NT!
+  
+ open_border_trigger_desc_global: "Offene Grenzen – weiterhin" #NT!
+ open_border_trigger_false_desc_global: "Derzeit nicht im Prozess der Grenzöffnung." #NT!
+ open_border_trigger_desc_first: "[COUNTRY.GetAdjectiveNoFlag] hat offene Grenzen mit [TARGET_COUNTRY.GetName]." #NT!
+ open_border_trigger_false_desc_first: "[COUNTRY.GetAdjectiveNoFlag] hat derzeit keine offenen Grenzen mit [TARGET_COUNTRY.GetName]." #NT!
+ open_border_trigger_desc_third: "[COUNTRY.GetName] hat offene Grenzen mit [AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)]." #NT!
+ open_border_trigger_false_desc_third: "[COUNTRY.GetName] hat derzeit keine offenen Grenzen mit [AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)]." #NT!
+  
+ ib_events.03.t: "Offene Grenzen" #NT!
+ ib_events.03.d: "Die stolze Nation [ROOT.GetCountry.GetName] hat die Grenzöffnung zu [SCOPE.sCountry('openborders_target_country').GetName] erfolgreich abgeschlossen. [SCOPE.sCountry('openborders_target_country').GetName] wird durch verstärkten Austausch mit dem Heimatland in ewigem Wohlstand gedeihen." #NT!
+ ib_events.03.f: "„Lang lebe [ROOT.GetCountry.GetName]!“" #NT!
+ ib_events.03.a: "Gut gemacht." #NT!
+  
+ open_border_weekly_effect: "Arbeitet an der Öffnung der Grenzen mit einer 20 %igen Chance auf wöchentliche Fortschritte. Für den Erfolg sind 8 Fortschrittspunkte erforderlich." #NT!

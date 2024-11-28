@@ -1,0 +1,65 @@
+﻿# From Defines (not used but notable for reference):
+# PRESTIGE_FROM_SUBJECT_ARMY_POWER_PROJECTION = 0.0005 # Per point of power projection from army combat power in subjects
+# PRESTIGE_FROM_SUBJECT_NAVY_POWER_PROJECTION = 0.01 # Per point of power projection from navy combat power in subjects
+
+liberty_desire_weekly_change_combined_subjects = {
+	
+	# COMBINED ARMY STRENGTH
+	# Uses: army_power_projection
+	add = {
+		root.first_country = {
+			every_direct_subject = {
+				add = army_power_projection
+			}
+		}
+		divide = {
+			add = root.first_country.army_power_projection
+			min = 0.001
+		} 
+		# division gives you the % of all subject armies combined relative to the overlord's army.
+	}
+	
+	# COMBINED NAVY STRENGTH
+	# Uses: naval_power_projection
+	if = {
+		# Subject navies are collectively < Overlord navy = reduce the effect
+		limit = {
+			root.first_country.naval_power_projection > {
+				add = {
+					root.first_country = {
+						every_direct_subject = {
+							add = naval_power_projection
+						}
+					}
+				}
+			}
+		}
+		multiply = 0.5
+	}
+	
+	# OWN COMBINED SUBJECT POWER
+	add = {
+		value = liberty_desire_weekly_change_own_combined_subjects
+		desc = "LIBERTY_DESIRE_WEEKLY_CHANGE_OWN_COMBINED_SUBJECTS"
+		format = LIBERTY_DESIRE_CHANGE_OWN_COMBINED_SUBJECTS_VALUE_FORMAT
+	}
+}
+
+liberty_desire_weekly_change_own_combined_subjects = {
+	
+	# COMBINED ARMY STRENGTH
+	# Uses: army_power_projection
+	add = {
+		root.second_country = {
+			every_direct_subject = {
+				add = army_power_projection
+			}
+		}
+		divide = {
+			add = root.second_country.army_power_projection
+			min = 0.001
+		}
+		# division gives you the % of all subject armies combined relative to the overlord's army.
+		multiply = -0.5
+	}
+}

@@ -1,0 +1,35 @@
+﻿l_turkish:
+ military_support: "Bölgesel Genişlemeyi Destekleyin" #NT!
+ military_support_action_name: "Bölgesel Genişlemeyi Destekleyin" #NT!
+ military_support_action_propose_name: "Bölgesel Genişlemeyi Destekleyin" #NT!
+ military_support_action_break_name: "Bölgesel Genişlemeyi Desteklemeyi Sonlandır" #NT!
+ military_support_action_notification_name: "Desteklenen Bölgesel Genişleme" #NT!
+ military_support_action_notification_desc: "[INITIATOR_COUNTRY.GetName] ile Bölgesel Genişlemeyi Destekleme anlaşması yaptık." #NT!
+ military_support_desc: "#header $military_support$#!\n$TOOLTIP_DELIMITER$\nA [concept_diplomatic_pact] İki [Concept('concept_country', '$concept_countries$')] devleti arasında Destek Bölgesel Genişleme anlaşması kuran." #NT!
+ military_support_pact_desc: "[SCOPE.GetRootScope.GetDiplomaticPact.GetFirstCountry.GetName] [SCOPE.GetRootScope.GetDiplomaticPact.GetSecondCountry.GetName]'in Bölgesel Genişlemesini Destekler." #NT!
+ military_support_proposal_notification_name: "Bölgesel Genişlemeyi Destekleme Teklifi" #NT!
+ military_support_proposal_notification_desc: "[INITIATOR_COUNTRY.GetName] dilek Bölgesel Genişlemeyi bizimle destekleyin." #NT!
+ military_support_proposal_notification_effects_desc: "$military_support_desc$" #NT!
+ military_support_proposal_accepted_name: "Bölgesel Genişlemeyi Destekleme Kabul Edildi" #NT!
+ military_support_proposal_accepted_desc: "[TARGET_COUNTRY.GetName] Bölgesel Genişlemeyi Destekleme önerimizi kabul etti." #NT!
+ military_support_proposal_declined_name: "Bölgesel Genişleme Desteği Reddedildi" #NT!
+ military_support_proposal_declined_desc: "[TARGET_COUNTRY.GetName] Bölgesel Genişlemeyi Destekleme teklifimizi reddetti." #NT!
+ military_support_action_notification_break_name: "Bölgesel Genişlemeyi Destekle Kırık" #NT!
+ military_support_action_notification_break_desc: "[INITIATOR_COUNTRY.GetName] bizimle olan Destek Bölgesel Genişleme anlaşmasını kesti." #NT!
+ military_support_proposal_third_party_accepted_name: "Bölgesel Genişlemeyi Destekleme İmzalandı" #NT!
+ military_support_proposal_third_party_accepted_desc: "[INITIATOR_COUNTRY.GetName] ve [TARGET_COUNTRY.GetName] Bölgesel Genişlemeyi Destekleme anlaşması imzaladılar." #NT!
+ military_support_proposal_third_party_declined_name: "Bölgesel Genişlemeyi Destekleme Reddedildi" #NT!
+ military_support_proposal_third_party_declined_desc: "[TARGET_COUNTRY.GetName], [INITIATOR_COUNTRY.GetName] ile Bölgesel Genişlemeyi Destekleme teklifini reddetti." #NT!
+ military_support_action_notification_third_party_break_name: "Bölgesel Genişlemeyi Destekle Kırık" #NT!
+ military_support_action_notification_third_party_break_desc: "[INITIATOR_COUNTRY.GetName], [TARGET_COUNTRY.GetName] ile olan Destek Bölgesel Genişleme anlaşmasını bozdu." #NT!
+  
+ military_support_effect_desc_global: "Bölgesel Genişlemeye Destek Sağlar" #NT!
+ military_support_effect_desc_first: "[COUNTRY.GetAdjectiveNoFlag], [TARGET_COUNTRY.GetName] ile Bölgesel Genişlemeye Destek Sağlar" #NT!
+ military_support_effect_desc_third: "[COUNTRY.GetName], [AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)] ile Bölgesel Genişleme Desteğini kurar" #NT!
+  
+ military_support_trigger_desc_global: "Bölgesel Genişlemeyi Destekliyor" #NT!
+ military_support_trigger_false_desc_global: "#b not#!'in Bölgesel Genişleme Desteği var mı?" #NT!
+ military_support_trigger_desc_first: "[COUNTRY.GetAdjectiveNoFlag], [TARGET_COUNTRY.GetName] ile Bölgesel Genişleme Desteğine sahiptir" #NT!
+ military_support_trigger_false_desc_first: "[COUNTRY.GetAdjectiveNoFlag] #b #! [TARGET_COUNTRY.GetName] ile Bölgesel Genişleme Desteğine sahip değil mi?" #NT!
+ military_support_trigger_desc_third: "[COUNTRY.GetName], [AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)] ile Bölgesel Genişleme Desteğine sahiptir" #NT!
+ military_support_trigger_false_desc_third: "[COUNTRY.GetName] #b #! [AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)] ile Bölgesel Genişleme Desteğine sahip değil" #NT!

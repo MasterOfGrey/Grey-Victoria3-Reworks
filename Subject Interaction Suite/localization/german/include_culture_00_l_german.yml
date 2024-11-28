@@ -1,0 +1,29 @@
+﻿l_german:
+ include_primary_culture: "Kulturelle Inklusion" #NT!
+ include_primary_culture_action_name: "$include_primary_culture$" #NT!
+ include_primary_culture_action_propose_name: "Kulturelle Inklusion initiieren" #NT!
+ include_primary_culture_action_break_name: "Stoppt kulturelle Inklusion" #NT!
+ include_primary_culture_pact_desc: "[SCOPE.GetRootScope.GetDiplomaticPact.GetFirstCountry.GetName] nimmt ihre primäre Kultur in [SCOPE.GetRootScope.GetDiplomaticPact.GetSecondCountry.GetName] auf.\n Derzeit durchlaufen #variable [SCOPE.GetRootScope.GetDiplomaticPact.GetSecondCountry.MakeScope.Var('include_primary_culture_progress').GetValue]#! 8 Stufen." #NT!
+ include_primary_culture_desc: "#header $include_primary_culture$#!\n$TOOLTIP_DELIMITER$\nAdd ihre primäre Kultur an die primäre Kultur des Ziellandes an." #NT!
+ include_primary_culture_action_notification_name: "[INITIATOR_COUNTRY.GetName] integriert ihre Primärkultur in die Primärkultur unseres Landes." #NT!
+ include_primary_culture_action_notification_desc: "[INITIATOR_COUNTRY.GetName] integriert ihre primäre Kultur in unser Land." #NT!
+ include_primary_culture_action_notification_break_name: "Primäre Kultureingliederung Gestoppt von [INITIATOR_COUNTRY.GetName]" #NT!
+ include_primary_culture_action_notification_break_desc: "[INITIATOR_COUNTRY.GetName] hat die grundlegende kulturelle Inklusion unseres Landes beendet." #NT!
+  
+ include_primary_culture_effect_desc_global: "Kulturelle Inklusion initiieren" #NT!
+ include_primary_culture_effect_desc_first: "[COUNTRY.GetAdjectiveNoFlag] leitet die Einbeziehung der Primärkultur in [TARGET_COUNTRY.GetName] ein." #NT!
+ include_primary_culture_effect_desc_third: "[COUNTRY.GetName] initiiert kulturelle Inklusion in [AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)]." #NT!
+  
+ include_primary_culture_trigger_desc_global: "Kulturelle Inklusion im Gange" #NT!
+ include_primary_culture_trigger_false_desc_global: "Nicht mehr im Prozess der kulturellen Inklusion #b #!" #NT!
+ include_primary_culture_trigger_desc_first: "[COUNTRY.GetAdjectiveNoFlag] schließt seine primäre Kultur in [TARGET_COUNTRY.GetName] ein." #NT!
+ include_primary_culture_trigger_false_desc_first: "[COUNTRY.GetAdjectiveNoFlag] schließt seine primäre Kultur nicht mehr in [TARGET_COUNTRY.GetName] #b ein#!" #NT!
+ include_primary_culture_trigger_desc_third: "[COUNTRY.GetName] schließt seine primäre Kultur in [AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)] ein." #NT!
+ include_primary_culture_trigger_false_desc_third: "[COUNTRY.GetName] schließt seine primäre Kultur nicht mehr in [AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)] #b ein#!" #NT!
+  
+ ib_events.05.t: "Primäre Kultureinbeziehung" #NT!
+ ib_events.05.d: "Der stolze [ROOT.GetCountry.GetName] hat die kulturelle Integration für [SCOPE.sCountry('culture_include_country').GetName] erfolgreich abgeschlossen. [SCOPE.sCountry('culture_target_country').GetName] wird nun für immer gedeihen und die Kultur des Heimatlandes annehmen." #NT!
+ ib_events.05.f: "„Heil [ROOT.GetCountry.GetName]!“" #NT!
+ ib_events.05.a: "Gut gemacht." #NT!
+  
+ include_primary_culture_weekly_effect: "Arbeitet daran, die primären Kulturen von Overlord in ihr Thema aufzunehmen, mit einer 20 %igen Chance, jede Woche Fortschritte zu machen, wobei 8 Fortschrittspunkte für den Erfolg erforderlich sind." #NT!

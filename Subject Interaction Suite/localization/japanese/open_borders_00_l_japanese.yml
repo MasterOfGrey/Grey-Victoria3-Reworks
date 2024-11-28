@@ -1,0 +1,29 @@
+﻿l_japanese:
+ open_border: "国境開放" #NT!
+ open_border_action_name: "$open_border$" #NT!
+ open_border_action_propose_name: "国境開放を開始する" #NT!
+ open_border_action_break_name: "国境開放を止めろ" #NT!
+ open_border_pact_desc: "[SCOPE.GetRootScope.GetDiplomaticPact.GetFirstCountry.GetName] は [SCOPE.GetRootScope.GetDiplomaticPact.GetSecondCountry.GetName] の境界を開きます。\n 現在、8 つのステージのうち #variable [SCOPE.GetRootScope.GetDiplomaticPact.GetSecondCountry.MakeScope.Var('border_opening_progress').GetValue]#! が進行中です。" #NT!
+ open_border_desc: "#header $open_border$#!\n$TOOLTIP_DELIMITER$\nOpens 指定された国の国境。" #NT!
+ open_border_action_notification_name: "[INITIATOR_COUNTRY.GetName] 国境を開く" #NT!
+ open_border_action_notification_desc: "[INITIATOR_COUNTRY.GetName]は私たちの国の国境を開設しています。" #NT!
+ open_border_action_notification_break_name: "国境開放をやめる [INITIATOR_COUNTRY.GetName]" #NT!
+ open_border_action_notification_break_desc: "[INITIATOR_COUNTRY.GetName]は我が国の国境を開こうとする試みをやめました。" #NT!
+  
+ open_border_effect_desc_global: "国境開放を開始する" #NT!
+ open_border_effect_desc_first: "[COUNTRY.GetAdjectiveNoFlag] は [TARGET_COUNTRY.GetName] との国境開放を開始します。" #NT!
+ open_border_effect_desc_third: "[COUNTRY.GetName] は [AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)] とのオープンボーダーを開始します。" #NT!
+  
+ open_border_trigger_desc_global: "国境開放は継続中" #NT!
+ open_border_trigger_false_desc_global: "現在、国境開放の過程には入っていません。" #NT!
+ open_border_trigger_desc_first: "[COUNTRY.GetAdjectiveNoFlag] は [TARGET_COUNTRY.GetName] と国境が開いています。" #NT!
+ open_border_trigger_false_desc_first: "[COUNTRY.GetAdjectiveNoFlag] は現在、[TARGET_COUNTRY.GetName] と国境が開かれていません。" #NT!
+ open_border_trigger_desc_third: "[COUNTRY.GetName] は [AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)] と境界が開いています。" #NT!
+ open_border_trigger_false_desc_third: "[COUNTRY.GetName] は現在、[AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)] と国境が開いていません。" #NT!
+  
+ ib_events.03.t: "国境開放" #NT!
+ ib_events.03.d: "誇り高き[ROOT.GetCountry.GetName] 国は[SCOPE.sCountry('openborders_target_country').GetName] 国との国境開放に成功しました。[SCOPE.sCountry('openborders_target_country').GetName] 国は祖国との交流を深めることで永遠に繁栄するでしょう。" #NT!
+ ib_events.03.f: "「[ROOT.GetCountry.GetName]万歳！」" #NT!
+ ib_events.03.a: "よくやった。" #NT!
+  
+ open_border_weekly_effect: "毎週 20% の確率で国境を開くよう努め、成功するには 8 つの進捗ポイントが必要です。" #NT!

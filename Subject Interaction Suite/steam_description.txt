@@ -1,0 +1,114 @@
+[img]https://i.imgur.com/7xuCZqW.png[/img]
+Designed for Victoria 3: Version 1.7 (and onwards)
+Mod Version V1.10
+Please consider rating this if you like it! It really helps out. [img]https://i.imgur.com/tE28cZ7.gif[/img]
+
+[table]
+    [tr]
+        [td][img]https://i.imgur.com/WjDSfUn.png[/img][/td]
+        [td][img]https://i.imgur.com/Be8E2qJ.png[/img][/td]
+    [/tr]
+[/table]
+*Cancel any ongoing actions before attempting to remove.
+[img]https://i.imgur.com/6o9HyTD.png[/img]
+This mod is a large overhaul for interacting with your subjects.
+It contains a [i]complete overhaul[/i] of Liberty Desire, and a range of additional subject interactions either created by myself, sourced from abandoned mods and updated, or included with permission.
+
+[img]https://i.imgur.com/Wh5EspM.png[/img]
+[h1]Features:[/h1]
+[h2]Liberty Desire Overhaul:[/h2]
+[list]
+[*]BASE Liberty Desire has been totally removed and replaced with [b]Legal Friction[/b].
+[*]Legal Friction applies liberty desire to subjects based on differences between their laws and yours that relate to; how governments interact with each other, and wealth-owner groups investment options and returns.
+[*]The impact of Overlord Prestige on reducing liberty desire now scales through 5 tiers. 
+[*]The power of the overlord's army (up to a max of 10x) reduces subject liberty desire... and the inverse is true also...
+[*][b]Overseas[/b] subjects will now receive less liberty desire reduction from the overlord's army, if they have a powerful fleet to stop you from landing.
+[*]...and having a powerful fleet will add liberty desire all of its own...
+[/list]
+
+[b]Read the detailed explanation here: [url=https://steamcommunity.com/workshop/filedetails/discussion/3276243851/4757577465145140872]Liberty Desire Overhaul[/url][/b]
+
+[h2]Additional Subject Interactions:[/h2]
+[list]
+[*]Ask Your Subject to Fight - updated and expanded, triggers your subject to declare to conquer a state of your choosing. (Can also Return State with claims, take existing Treaty Ports, or Annex a nation if it's your subject's direct subject, or has at most 3 states.)
+[*]Initiate Open Borders - gradually encourages them to change law to Open Borders.
+[*]Merge Subject - allows for diplomatic integration of sufficiently friendly and low-liberty desire subjects.
+[*]Initiate Cultural Alignment - updated and refined localisation, diplomatic agreement to eventually align their primary culture with yours.
+[*]Initiate Religious Conversion - separate diplomatic agreement to eventually align their state religion with yours.
+[*]Initiate Cultural Inclusion - works to eventually your primary culture to their country in addition to their own.
+[*]Synergize Bureaucracy - gradually (and forcibly) align a subject's bureaucracy laws to match yours.
+[*]Synergize Economic Systems - gradually (and forcibly) align a subject's economic laws to match yours.
+[*]Synergize Land Reforms - gradually (and forcibly) align a subject's land reform laws to match yours.
+[*]Synergize Trade Policies - gradually (and forcibly) align a subject's trade policy laws to match yours.
+[*]Forced Industry Ban - forcibly change a subject's law to Industry Banned, at substantial diplomatic cost...
+[*]Forced Border Closing - force a subject to close its borders, requires close association, not a huge matter.
+[*]Forced Border Opening - force a subject to open it's borders... a more freely usable but much less popular decision.
+[*]Consolidate Subjects - Merge subjects of similar cultures together (does not count cultures added by you). [i]Many thanks to CaelReader; check out their other [url=https://steamcommunity.com/id/CaelReader/myworkshopfiles/?appid=529340]workshop mods here[/url]![/i]
+[*] Support Subject Expansion - causes subjects to adopt an aggressive strategy towards regional neighbours.
+[/list]
+
+NOTE: These appear contextually - they won't show for a particular subject if they're not potentially valid.
+
+[h2]Game Rules:[/h2]
+- Set whether the AI can use the Merge Subject action. (Default = yes)
+--> Note: This DOES NOT affect Consolidate Subject
+- Choose whether the Merge Subject action is balanced or a cheat! (Default = balanced)
+
+[h2]Bonus features:[/h2]
+- When you request a subject change their domestic laws, they get a buff to enactment success because you asked it of them.
+- On yearly pulse your subjects will core any states they have fully owned and aren't coring.
+
+I expect to add more things to this over time.
+
+[img]https://i.imgur.com/Qp8JBtZ.png[/img]
+This should never conflict with anything unless that thing also changes Liberty Desire.
+IF YOU WANT TO MAKE OTHER LIBERTY DESIRE CHANGES COMPATIBLE WITH THIS:
+Refer to the instructions in MoG_10_mod_compatibility.txt in \common\script_values
+
+This mod's version of Consolidate Subjects is slightly different to Cael's original mod - [i]if you have both loaded the other will take priority.[/i]
+
+If you find it doesn't behave as advertised; LOAD THIS LAST and try again before reporting issues.
+
+Apparently this works really well with:
+[list][*]Cold War Era
+[/list]
+
+[img]https://i.imgur.com/lQRf9dG.png[/img]
+[b]Can you add <insert language> localisation?[/b]
+[i]If you send it to me I will add it.[/i]
+
+[b]Otherwise - [url=https://steamcommunity.com/workshop/filedetails/discussion/3276243851/4757577465145124708]Read the FAQ[/url][/b]
+
+[img]https://i.imgur.com/UN80Om5.png[/img]
+Credit to creators of the original mods: 
+[list][*]Koa - "Change Subject Culture"
+[*]无言Infinite - "Merge Subject"
+[*]CuteRiceWalker - "Ask Your Subject to Fight"
+[*]uridogoraeda - "Forced change in subject country law"
+[*]CaelReader - "Consolidate Subjects"
+[/list]
+
+Credit to Henrax le Chamalax for doing some real AI acceptance logic for Merge Subject.
+
+[h2]Language Support:[/h2]
+[b]Localizations are either; submitted by community members, collected from defunct sources, or done by Machine Translation.
+ -> Replacements are welcome from anyone![/b]
+Credit to human providers of localisation content:
+[list][*]English: MrBlazzar™
+[*]Chinese: CuteRiceWalker, 无言Infinite, GHYNG, 无铭
+[*]Korean: Koa, uridogoraeda
+[*]Brazilian: Íkaros
+[*]Polish: WarpWhistle79
+[*]Russian: Nihillman
+[*]Japanese: Cosmox
+[*]French: BobbyBob
+[/list]
+You can submit additional localizations to the pinned Discussions thread.
+
+Supported Languages:
+English, B.Portuguese(Português), Simp. Chinese(中文), French(Français), German(Deutsch), Japanese(日本語), Korean(한국어), Polish(Polski), Russian(русский язык), Spanish(Español), Turkish(Türkçe)
+
+#Diplomacy #Subject
+#Management #Interactions
+#Change Primary Culture
+#Command Subjects #SIS

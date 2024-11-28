@@ -1,4 +1,11 @@
-﻿liberty_desire_weekly_change_relative_prestige = {
+﻿# Note list of 1.8 subject types:
+# subject_type_protectorate	-> subject_type_puppet
+# subject_type_tributary	-> subject_type_vassal
+# subject_type_personal_union		-> ||, ||
+# subject_type_dominion		-> subject_type_colony
+# subject_type_chartered_company	-> ||
+
+liberty_desire_weekly_change_relative_prestige = {
 	# PRESTIGE Dependent Effects
 	if = {
 		limit = { root.first_country.prestige < 1 }
@@ -15,254 +22,17 @@
 			desc = "LIBERTY_DESIRE_WEEKLY_CHANGE_NO_PRESTIGE_NEGATIVE"
 			format = LIBERTY_DESIRE_RELATIVE_PRESTIGE_VALUE_FORMAT
 		}
-	}	
-	else_if = {
-		limit = {
-			OR = {
-				is_diplomatic_action_type = protectorate
-				is_diplomatic_action_type = tributary
-			}
-		}				
-		if = {
-			# 1st Increment (Tributary/Protectorate) (negative if below)
-			limit = { 	
-				root.first_country.prestige > {
-					add = root.second_country.prestige
-					# determines the multiple of prestige the overlord must have achieved in order for prestige advantage to have a negative impact on Liberty Desire rather than positive
-					multiply = 1.5
-				}
-			}
-			add = {
-				add = root.first_country.prestige
-				divide = root.second_country.prestige
-				divide = 60
-				min = 0.01
-				max = 0.05
-				multiply = -1
-				desc = "LIBERTY_DESIRE_WEEKLY_CHANGE_PRESTIGE_DIFFERENCE_1_5_NEGATIVE"
-				format = LIBERTY_DESIRE_RELATIVE_PRESTIGE_VALUE_FORMAT
-			}
-			if = {
-				# 2nd Increment (Tributary/Protectorate)
-				limit = { 	
-					root.first_country.prestige > {
-						add = root.second_country.prestige
-						# determines the multiple of prestige the overlord must have achieved in order for prestige advantage to have a negative impact on Liberty Desire rather than positive
-						multiply = 3.0
-					}
-				}
-				add = {
-					add = root.first_country.prestige
-					divide = root.second_country.prestige
-					divide = 120
-					min = 0.01
-					max = 0.05
-					multiply = -1
-					desc = "LIBERTY_DESIRE_WEEKLY_CHANGE_PRESTIGE_DIFFERENCE_3_0_NEGATIVE"
-					format = LIBERTY_DESIRE_RELATIVE_PRESTIGE_VALUE_FORMAT
-				}
-				if = {
-					# 3rd Increment (Tributary/Protectorate)
-					limit = { 	
-						root.first_country.prestige > {
-							add = root.second_country.prestige
-							# determines the multiple of prestige the overlord must have achieved in order for prestige advantage to have a negative impact on Liberty Desire rather than positive
-							multiply = 6.0
-						}
-					}
-					add = {
-						add = root.first_country.prestige
-						divide = root.second_country.prestige
-						divide = 240
-						min = 0.01
-						max = 0.05
-						multiply = -1
-						desc = "LIBERTY_DESIRE_WEEKLY_CHANGE_PRESTIGE_DIFFERENCE_6_0_NEGATIVE"
-						format = LIBERTY_DESIRE_RELATIVE_PRESTIGE_VALUE_FORMAT
-					}
-					if = {
-						# 4th Increment (Tributary/Protectorate)
-						limit = { 	
-							root.first_country.prestige > {
-								add = root.second_country.prestige
-								# determines the multiple of prestige the overlord must have achieved in order for prestige advantage to have a negative impact on Liberty Desire rather than positive
-								multiply = 12.0
-							}
-						}
-						add = {
-							add = root.first_country.prestige
-							divide = root.second_country.prestige
-							divide = 480
-							min = 0.01
-							max = 0.05
-							multiply = -1
-							desc = "LIBERTY_DESIRE_WEEKLY_CHANGE_PRESTIGE_DIFFERENCE_12_0_NEGATIVE"
-							format = LIBERTY_DESIRE_RELATIVE_PRESTIGE_VALUE_FORMAT
-						}
-						if = {
-							# 5th Increment (Tributary/Protectorate)
-							limit = { 	
-								root.first_country.prestige > {
-									add = root.second_country.prestige
-									# determines the multiple of prestige the overlord must have achieved in order for prestige advantage to have a negative impact on Liberty Desire rather than positive
-									multiply = 24.0
-								}
-							}
-							add = {
-								add = root.first_country.prestige
-								divide = root.second_country.prestige
-								divide = 960
-								min = 0.01
-								max = 0.05
-								multiply = -1
-								desc = "LIBERTY_DESIRE_WEEKLY_CHANGE_PRESTIGE_DIFFERENCE_24_0_NEGATIVE"
-								format = LIBERTY_DESIRE_RELATIVE_PRESTIGE_VALUE_FORMAT
-							}
-						}
-					}
-				}
-			}
-		}
-		else_if = {
-			add = {
-				add = root.second_country.prestige
-				multiply = 1.5
-				divide = root.first_country.prestige
-				divide = 3
-				max = 2.5
-				desc = "LIBERTY_DESIRE_WEEKLY_CHANGE_PRESTIGE_DIFFERENCE_1_5_POSITIVE"
-				format = LIBERTY_DESIRE_RELATIVE_PRESTIGE_VALUE_FORMAT
-			}
-		}	
 	}
-	else_if = {
-		limit = {
-			OR = {
-				is_diplomatic_action_type = personal_union
-				is_diplomatic_action_type = dominion
-			}
-		}				
-		if = {
-			# 1st Increment (PUnion/Dominion) (negative if below)
-			limit = { 	
-				root.first_country.prestige > {
-					add = root.second_country.prestige
-					# determines the multiple of prestige the overlord must have achieved in order for prestige advantage to have a negative impact on Liberty Desire rather than positive
-					multiply = 2.0
-				}
-			}
-			add = {
-				add = root.first_country.prestige
-				divide = root.second_country.prestige
-				divide = 80
-				min = 0.01
-				max = 0.05
-				multiply = -1
-				desc = "LIBERTY_DESIRE_WEEKLY_CHANGE_PRESTIGE_DIFFERENCE_2_0_NEGATIVE"
-				format = LIBERTY_DESIRE_RELATIVE_PRESTIGE_VALUE_FORMAT
-			}
-			if = {
-				# 2nd Increment (PUnion/Dominion)
-				limit = { 	
-					root.first_country.prestige > {
-						add = root.second_country.prestige
-						# determines the multiple of prestige the overlord must have achieved in order for prestige advantage to have a negative impact on Liberty Desire rather than positive
-						multiply = 4.0
-					}
-				}
-				add = {
-					add = root.first_country.prestige
-					divide = root.second_country.prestige
-					divide = 160
-					min = 0.01
-					max = 0.05
-					multiply = -1
-					desc = "LIBERTY_DESIRE_WEEKLY_CHANGE_PRESTIGE_DIFFERENCE_4_0_NEGATIVE"
-					format = LIBERTY_DESIRE_RELATIVE_PRESTIGE_VALUE_FORMAT
-				}
-				if = {
-					# 3rd Increment (PUnion/Dominion)
-					limit = { 	
-						root.first_country.prestige > {
-							add = root.second_country.prestige
-							# determines the multiple of prestige the overlord must have achieved in order for prestige advantage to have a negative impact on Liberty Desire rather than positive
-							multiply = 8.0
-						}
-					}
-					add = {
-						add = root.first_country.prestige
-						divide = root.second_country.prestige
-						divide = 320
-						min = 0.01
-						max = 0.05
-						multiply = -1
-						desc = "LIBERTY_DESIRE_WEEKLY_CHANGE_PRESTIGE_DIFFERENCE_8_0_NEGATIVE"
-						format = LIBERTY_DESIRE_RELATIVE_PRESTIGE_VALUE_FORMAT
-					}
-					if = {
-						# 4th Increment (PUnion/Dominion)
-						limit = { 	
-							root.first_country.prestige > {
-								add = root.second_country.prestige
-								# determines the multiple of prestige the overlord must have achieved in order for prestige advantage to have a negative impact on Liberty Desire rather than positive
-								multiply = 16.0
-							}
-						}
-						add = {
-							add = root.first_country.prestige
-							divide = root.second_country.prestige
-							divide = 640
-							min = 0.01
-							max = 0.05
-							multiply = -1
-							desc = "LIBERTY_DESIRE_WEEKLY_CHANGE_PRESTIGE_DIFFERENCE_16_0_NEGATIVE"
-							format = LIBERTY_DESIRE_RELATIVE_PRESTIGE_VALUE_FORMAT
-						}
-						if = {
-							# 5th Increment (PUnion/Dominion)
-							limit = { 	
-								root.first_country.prestige > {
-									add = root.second_country.prestige
-									# determines the multiple of prestige the overlord must have achieved in order for prestige advantage to have a negative impact on Liberty Desire rather than positive
-									multiply = 32.0
-								}
-							}
-							add = {
-								add = root.first_country.prestige
-								divide = root.second_country.prestige
-								divide = 1280
-								min = 0.01
-								max = 0.05
-								multiply = -1
-								desc = "LIBERTY_DESIRE_WEEKLY_CHANGE_PRESTIGE_DIFFERENCE_32_0_NEGATIVE"
-								format = LIBERTY_DESIRE_RELATIVE_PRESTIGE_VALUE_FORMAT
-							}
-						}
-					}
-				}
-			}
-		}
-		else_if = {
-			add = {
-				add = root.second_country.prestige
-				multiply = 2.0
-				divide = root.first_country.prestige
-				divide = 3
-				max = 2.5
-				desc = "LIBERTY_DESIRE_WEEKLY_CHANGE_PRESTIGE_DIFFERENCE_2_0_POSITIVE"
-				format = LIBERTY_DESIRE_RELATIVE_PRESTIGE_VALUE_FORMAT
-			}
-		}	
-	}	
-	else_if = {
+	else_if = {		# Normal Subjects withOUT autonomy
 		limit = {
 			OR = {
 				is_diplomatic_action_type = puppet
 				is_diplomatic_action_type = vassal
+				is_diplomatic_action_type = colony
 			}
 		}				
 		if = {
-			# 1st Increment (Puppet/Vassal) (negative if below)
+			# 1st Increment (Puppet/Vassal/Colony) (negative if below)
 			limit = { 	
 				root.first_country.prestige > {
 					add = root.second_country.prestige
@@ -373,4 +143,243 @@
 			}
 		}	
 	}
+	else_if = {		# Normal Subjects WITH autonomy
+		limit = {
+			OR = {
+				is_diplomatic_action_type = protectorate
+				is_diplomatic_action_type = tributary
+				is_diplomatic_action_type = dominion
+			}
+		}				
+		if = {
+			# 1st Increment (Tributary/Protectorate/Dominion) (negative if below)
+			limit = { 	
+				root.first_country.prestige > {
+					add = root.second_country.prestige
+					# determines the multiple of prestige the overlord must have achieved in order for prestige advantage to have a negative impact on Liberty Desire rather than positive
+					multiply = 1.5
+				}
+			}
+			add = {
+				add = root.first_country.prestige
+				divide = root.second_country.prestige
+				divide = 60
+				min = 0.01
+				max = 0.05
+				multiply = -1
+				desc = "LIBERTY_DESIRE_WEEKLY_CHANGE_PRESTIGE_DIFFERENCE_1_5_NEGATIVE"
+				format = LIBERTY_DESIRE_RELATIVE_PRESTIGE_VALUE_FORMAT
+			}
+			if = {
+				# 2nd Increment (Tributary/Protectorate)
+				limit = { 	
+					root.first_country.prestige > {
+						add = root.second_country.prestige
+						# determines the multiple of prestige the overlord must have achieved in order for prestige advantage to have a negative impact on Liberty Desire rather than positive
+						multiply = 3.0
+					}
+				}
+				add = {
+					add = root.first_country.prestige
+					divide = root.second_country.prestige
+					divide = 120
+					min = 0.01
+					max = 0.05
+					multiply = -1
+					desc = "LIBERTY_DESIRE_WEEKLY_CHANGE_PRESTIGE_DIFFERENCE_3_0_NEGATIVE"
+					format = LIBERTY_DESIRE_RELATIVE_PRESTIGE_VALUE_FORMAT
+				}
+				if = {
+					# 3rd Increment (Tributary/Protectorate)
+					limit = { 	
+						root.first_country.prestige > {
+							add = root.second_country.prestige
+							# determines the multiple of prestige the overlord must have achieved in order for prestige advantage to have a negative impact on Liberty Desire rather than positive
+							multiply = 6.0
+						}
+					}
+					add = {
+						add = root.first_country.prestige
+						divide = root.second_country.prestige
+						divide = 240
+						min = 0.01
+						max = 0.05
+						multiply = -1
+						desc = "LIBERTY_DESIRE_WEEKLY_CHANGE_PRESTIGE_DIFFERENCE_6_0_NEGATIVE"
+						format = LIBERTY_DESIRE_RELATIVE_PRESTIGE_VALUE_FORMAT
+					}
+					if = {
+						# 4th Increment (Tributary/Protectorate)
+						limit = { 	
+							root.first_country.prestige > {
+								add = root.second_country.prestige
+								# determines the multiple of prestige the overlord must have achieved in order for prestige advantage to have a negative impact on Liberty Desire rather than positive
+								multiply = 12.0
+							}
+						}
+						add = {
+							add = root.first_country.prestige
+							divide = root.second_country.prestige
+							divide = 480
+							min = 0.01
+							max = 0.05
+							multiply = -1
+							desc = "LIBERTY_DESIRE_WEEKLY_CHANGE_PRESTIGE_DIFFERENCE_12_0_NEGATIVE"
+							format = LIBERTY_DESIRE_RELATIVE_PRESTIGE_VALUE_FORMAT
+						}
+						if = {
+							# 5th Increment (Tributary/Protectorate)
+							limit = { 	
+								root.first_country.prestige > {
+									add = root.second_country.prestige
+									# determines the multiple of prestige the overlord must have achieved in order for prestige advantage to have a negative impact on Liberty Desire rather than positive
+									multiply = 24.0
+								}
+							}
+							add = {
+								add = root.first_country.prestige
+								divide = root.second_country.prestige
+								divide = 960
+								min = 0.01
+								max = 0.05
+								multiply = -1
+								desc = "LIBERTY_DESIRE_WEEKLY_CHANGE_PRESTIGE_DIFFERENCE_24_0_NEGATIVE"
+								format = LIBERTY_DESIRE_RELATIVE_PRESTIGE_VALUE_FORMAT
+							}
+						}
+					}
+				}
+			}
+		}
+		else_if = {
+			add = {
+				add = root.second_country.prestige
+				multiply = 1.5
+				divide = root.first_country.prestige
+				divide = 3
+				max = 2.5
+				desc = "LIBERTY_DESIRE_WEEKLY_CHANGE_PRESTIGE_DIFFERENCE_1_5_POSITIVE"
+				format = LIBERTY_DESIRE_RELATIVE_PRESTIGE_VALUE_FORMAT
+			}
+		}	
+	}
+	else = {		# else_if	# OTHER Subjects generally
+		#limit = {
+		#	OR = {
+		#		is_diplomatic_action_type = personal_union
+		#		is_diplomatic_action_type = dominion
+		#	}
+		#}				
+		if = {
+			# 1st Increment (PUnion/Chartered Company/Etc.) (negative if below)
+			limit = { 	
+				root.first_country.prestige > {
+					add = root.second_country.prestige
+					# determines the multiple of prestige the overlord must have achieved in order for prestige advantage to have a negative impact on Liberty Desire rather than positive
+					multiply = 2.0
+				}
+			}
+			add = {
+				add = root.first_country.prestige
+				divide = root.second_country.prestige
+				divide = 80
+				min = 0.01
+				max = 0.05
+				multiply = -1
+				desc = "LIBERTY_DESIRE_WEEKLY_CHANGE_PRESTIGE_DIFFERENCE_2_0_NEGATIVE"
+				format = LIBERTY_DESIRE_RELATIVE_PRESTIGE_VALUE_FORMAT
+			}
+			if = {
+				# 2nd Increment (PUnion/Chartered Company/Etc.)
+				limit = { 	
+					root.first_country.prestige > {
+						add = root.second_country.prestige
+						# determines the multiple of prestige the overlord must have achieved in order for prestige advantage to have a negative impact on Liberty Desire rather than positive
+						multiply = 4.0
+					}
+				}
+				add = {
+					add = root.first_country.prestige
+					divide = root.second_country.prestige
+					divide = 160
+					min = 0.01
+					max = 0.05
+					multiply = -1
+					desc = "LIBERTY_DESIRE_WEEKLY_CHANGE_PRESTIGE_DIFFERENCE_4_0_NEGATIVE"
+					format = LIBERTY_DESIRE_RELATIVE_PRESTIGE_VALUE_FORMAT
+				}
+				if = {
+					# 3rd Increment (PUnion/Chartered Company/Etc.)
+					limit = { 	
+						root.first_country.prestige > {
+							add = root.second_country.prestige
+							# determines the multiple of prestige the overlord must have achieved in order for prestige advantage to have a negative impact on Liberty Desire rather than positive
+							multiply = 8.0
+						}
+					}
+					add = {
+						add = root.first_country.prestige
+						divide = root.second_country.prestige
+						divide = 320
+						min = 0.01
+						max = 0.05
+						multiply = -1
+						desc = "LIBERTY_DESIRE_WEEKLY_CHANGE_PRESTIGE_DIFFERENCE_8_0_NEGATIVE"
+						format = LIBERTY_DESIRE_RELATIVE_PRESTIGE_VALUE_FORMAT
+					}
+					if = {
+						# 4th Increment (PUnion/Chartered Company/Etc.)
+						limit = { 	
+							root.first_country.prestige > {
+								add = root.second_country.prestige
+								# determines the multiple of prestige the overlord must have achieved in order for prestige advantage to have a negative impact on Liberty Desire rather than positive
+								multiply = 16.0
+							}
+						}
+						add = {
+							add = root.first_country.prestige
+							divide = root.second_country.prestige
+							divide = 640
+							min = 0.01
+							max = 0.05
+							multiply = -1
+							desc = "LIBERTY_DESIRE_WEEKLY_CHANGE_PRESTIGE_DIFFERENCE_16_0_NEGATIVE"
+							format = LIBERTY_DESIRE_RELATIVE_PRESTIGE_VALUE_FORMAT
+						}
+						if = {
+							# 5th Increment (PUnion/Chartered Company/Etc.)
+							limit = { 	
+								root.first_country.prestige > {
+									add = root.second_country.prestige
+									# determines the multiple of prestige the overlord must have achieved in order for prestige advantage to have a negative impact on Liberty Desire rather than positive
+									multiply = 32.0
+								}
+							}
+							add = {
+								add = root.first_country.prestige
+								divide = root.second_country.prestige
+								divide = 1280
+								min = 0.01
+								max = 0.05
+								multiply = -1
+								desc = "LIBERTY_DESIRE_WEEKLY_CHANGE_PRESTIGE_DIFFERENCE_32_0_NEGATIVE"
+								format = LIBERTY_DESIRE_RELATIVE_PRESTIGE_VALUE_FORMAT
+							}
+						}
+					}
+				}
+			}
+		}
+		else_if = {
+			add = {
+				add = root.second_country.prestige
+				multiply = 2.0
+				divide = root.first_country.prestige
+				divide = 3
+				max = 2.5
+				desc = "LIBERTY_DESIRE_WEEKLY_CHANGE_PRESTIGE_DIFFERENCE_2_0_POSITIVE"
+				format = LIBERTY_DESIRE_RELATIVE_PRESTIGE_VALUE_FORMAT
+			}
+		}	
+	}	
 }

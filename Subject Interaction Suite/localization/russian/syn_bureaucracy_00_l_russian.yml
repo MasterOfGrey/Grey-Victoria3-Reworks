@@ -1,0 +1,34 @@
+﻿l_russian:
+ laws_synergize_bureaucracy: "Синергия бюрократии" #NT!
+ laws_synergize_bureaucracy_action_name: "$laws_synergize_bureaucracy$" #NT!
+ laws_synergize_bureaucracy_action_propose_name: "Начните синергию бюрократии" #NT!
+ laws_synergize_bureaucracy_action_break_name: "Прекратите синергетическу бюрократию" #NT!
+ laws_synergize_bureaucracy_pact_desc: "[SCOPE.GetRootScope.GetDiplomaticPact.GetFirstCountry.GetName] реструктурирует бюрократию [SCOPE.GetRootScope.GetDiplomaticPact.GetSecondCountry.GetName], чтобы объединиться с их.\n В настоящее время #variable [SCOPE.GetRootScope.GetDiplomaticPact.GetSecondCountry.MakeScope.Var('synergize_bureaucracy_progress').GetValue]#! проходят 8 этапов." #NT!
+ laws_synergize_bureaucracy_desc: "#header $laws_synergize_bureaucracy$#!\n$TOOLTIP_DELIMITER$\nSynergizes бюрократические законы указанной страны." #NT!
+ laws_synergize_bureaucracy_action_notification_name: "[INITIATOR_COUNTRY.GetName] Синергия бюрократии" #NT!
+ laws_synergize_bureaucracy_action_notification_desc: "[INITIATOR_COUNTRY.GetName] объединяет бюрократические законы нашей страны." #NT!
+ laws_synergize_bureaucracy_action_notification_break_name: "Прекратите синергетические бюрократии [INITIATOR_COUNTRY.GetName]" #NT!
+ laws_synergize_bureaucracy_action_notification_break_desc: "[INITIATOR_COUNTRY.GetName] прекратил попытки синергизировать бюрократические законы нашей страны." #NT!
+  
+ laws_synergize_bureaucracy_effect_desc_global: "Начните синергию бюрократии" #NT!
+ laws_synergize_bureaucracy_effect_desc_first: "[COUNTRY.GetAdjectiveNoFlag] инициирует бюрократическую синергию с [TARGET_COUNTRY.GetName]." #NT!
+ laws_synergize_bureaucracy_effect_desc_third: "[COUNTRY.GetName] инициирует бюрократическую синергию с [AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)]." #NT!
+  
+ laws_synergize_bureaucracy_trigger_desc_global: "Бюрократическая синергия продолжается" #NT!
+ laws_synergize_bureaucracy_trigger_false_desc_global: "В настоящее время процесс синергии законов о бюрократии не ведется." #NT!
+ laws_synergize_bureaucracy_trigger_desc_first: "[COUNTRY.GetAdjectiveNoFlag] имеет синергетические бюрократические системы с [TARGET_COUNTRY.GetName]." #NT!
+ laws_synergize_bureaucracy_trigger_false_desc_first: "[COUNTRY.GetAdjectiveNoFlag] в настоящее время не имеет синергетических бюрократических систем с [TARGET_COUNTRY.GetName]." #NT!
+ laws_synergize_bureaucracy_trigger_desc_third: "[COUNTRY.GetName] имеет синергетические бюрократические системы с [AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)]." #NT!
+ laws_synergize_bureaucracy_trigger_false_desc_third: "[COUNTRY.GetName] в настоящее время не имеет синергетических бюрократических систем с [AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)]." #NT!
+  
+ mog_syn_events.01.t: "Бюрократическая синергия!" #NT!
+ mog_syn_events.01.d: "Гордая нация [ROOT.GetCountry.GetName] успешно завершила синергию бюрократических законов с [SCOPE.sCountry('synergize_bureaucracy_target_country').GetName]. [SCOPE.sCountry('synergize_bureaucracy_target_country').GetName] будет процветать в вечном процветании благодаря усилению сплоченности с родиной." #NT!
+ mog_syn_events.01.f: "«Да здравствует [ROOT.GetCountry.GetName]!»" #NT!
+ mog_syn_events.01.a: "Отличная работа." #NT!
+  
+ laws_synergize_bureaucracy_weekly_effect: "Работает над согласованием своей системы бюрократии с нашей. Имеет 20% шанс добиться прогресса каждую неделю, для успеха требуется 8 очков прогресса." #NT!
+  
+ overlord_syn_cost_bureau: "Стоимость синергетической бюрократии" #NT!
+ BUREAUCRACY_SYNERGY_COST_BUREAU: "Стоимость синергетической бюрократии" #NT!
+  
+ active_synergize_bureaucracy_tt: "Количество других действий $laws_synergize_bureaucracy$ меньше 1." #NT!

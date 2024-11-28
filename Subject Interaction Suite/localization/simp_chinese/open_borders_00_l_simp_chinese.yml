@@ -1,29 +1,29 @@
 ﻿l_simp_chinese:
- open_border:0 "打通边境"
- open_border_action_name:0 "$open_border$"
- open_border_action_propose_name:0 "发起$open_border$运动"
- open_border_action_break_name:0 "停止$open_border$运动"
- open_border_pact_desc:0 "[SCOPE.GetRootScope.GetDiplomaticPact.GetFirstCountry.GetName]在推动[SCOPE.GetRootScope.GetDiplomaticPact.GetSecondCountry.GetName]开放边境。 \n在总共8个阶段中目前完成了#variable [SCOPE.GetRootScope.GetDiplomaticPact.GetSecondCountry.MakeScope.Var('border_opening_progress').GetValue]#!个 "
- open_border_desc:1 "#header $open_border$#!\n$TOOLTIP_DELIMITER$ \n让目标国家允许移民。"
- open_border_action_notification_name:1 "[INITIATOR_COUNTRY.GetName]正在打通边境"
- open_border_action_notification_desc:1 "[INITIATOR_COUNTRY.GetName]正在让我国开放边境。"
- open_border_action_notification_break_name:1 "[INITIATOR_COUNTRY.GetName]停止打通边境"
- open_border_action_notification_break_desc:0 "[INITIATOR_COUNTRY.GetName]已停止打通国家边境。"
- 
- open_border_effect_desc_global:0 "实施开放移民"
- open_border_effect_desc_first:0 "[COUNTRY.GetAdjectiveNoFlag]正在打通[TARGET_COUNTRY.GetName]的边境。"
- open_border_effect_desc_third:0 "[COUNTRY.GetName]正在打通[AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)]的边境。"
- 
- open_border_trigger_desc_global:0 "正在打通边境"
- open_border_trigger_false_desc_global:0 "#b 不再#!进行开放移民运动"
- open_border_trigger_desc_first:0 "[COUNTRY.GetAdjectiveNoFlag]正在打通[TARGET_COUNTRY.GetName]的边境。"
- open_border_trigger_false_desc_first:0 "[COUNTRY.GetAdjectiveNoFlag]已停止打通[TARGET_COUNTRY.GetName]的边境。"
- open_border_trigger_desc_third:0 "[COUNTRY.GetName]正在努力让[AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)]开放边境。"
- open_border_trigger_false_desc_third:0 "[COUNTRY.GetName]已停止尝试让[AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)]开放边境。"
- 
+ open_border: "打通边境"
+ open_border_action_name: "$open_border$"
+ open_border_action_propose_name: "发起$open_border$运动"
+ open_border_action_break_name: "停止$open_border$运动"
+ open_border_pact_desc: "[SCOPE.GetRootScope.GetDiplomaticPact.GetFirstCountry.GetName]在推动[SCOPE.GetRootScope.GetDiplomaticPact.GetSecondCountry.GetName]开放边境。 \n在总共8个阶段中目前完成了#variable [SCOPE.GetRootScope.GetDiplomaticPact.GetSecondCountry.MakeScope.Var('border_opening_progress').GetValue]#!个 "
+ open_border_desc: "#header $open_border$#!\n$TOOLTIP_DELIMITER$ \n让目标国家允许移民。"
+ open_border_action_notification_name: "[INITIATOR_COUNTRY.GetName]正在打通边境"
+ open_border_action_notification_desc: "[INITIATOR_COUNTRY.GetName]正在让我国开放边境。"
+ open_border_action_notification_break_name: "[INITIATOR_COUNTRY.GetName]停止打通边境"
+ open_border_action_notification_break_desc: "[INITIATOR_COUNTRY.GetName]已停止打通国家边境。"
+  
+ open_border_effect_desc_global: "实施开放移民"
+ open_border_effect_desc_first: "[COUNTRY.GetAdjectiveNoFlag]正在打通[TARGET_COUNTRY.GetName]的边境。"
+ open_border_effect_desc_third: "[COUNTRY.GetName]正在打通[AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)]的边境。"
+  
+ open_border_trigger_desc_global: "正在打通边境"
+ open_border_trigger_false_desc_global: "#b 不再#!进行开放移民运动"
+ open_border_trigger_desc_first: "[COUNTRY.GetAdjectiveNoFlag]正在打通[TARGET_COUNTRY.GetName]的边境。"
+ open_border_trigger_false_desc_first: "[COUNTRY.GetAdjectiveNoFlag]已停止打通[TARGET_COUNTRY.GetName]的边境。"
+ open_border_trigger_desc_third: "[COUNTRY.GetName]正在努力让[AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)]开放边境。"
+ open_border_trigger_false_desc_third: "[COUNTRY.GetName]已停止尝试让[AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)]开放边境。"
+  
  ib_events.03.t: "边境已开放"
  ib_events.03.d: "[ROOT.GetCountry.GetName]已成功完成了和[SCOPE.sCountry('openborders_target_country').GetName]的移民互通。通过加强与母国的交流，[SCOPE.sCountry('openborders_target_country').GetName]将永恒繁荣。"
  ib_events.03.f: "豪哉我[ROOT.GetCountry.GetName]！"
  ib_events.03.a: "干得漂亮。"
- 
- open_border_weekly_effect: "边境互通行动需要完成八个阶段，每周有20%机会推进一个阶段。" 
+  
+ open_border_weekly_effect: "边境互通行动需要完成八个阶段，每周有20%机会推进一个阶段。"

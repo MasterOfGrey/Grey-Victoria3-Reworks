@@ -1,21 +1,31 @@
 ﻿l_russian:
- DIPLO_ACTION_MERGE_SUBJECT:0 "$дипломатическая_аннексия$ не меньше чем $лояльный$"
- merge_subject:0 "Аннексированные территории"
- merge_subject_action_name:0 "Аннексирование субъекта"
- merge_subject_desc:0 "#header $аннексия_субъекта$#!\n$TOOLTIP_DELIMITER$\nA [concept_instant_diplomatic_action] позволяет аннексировать субъект немедленно и безоговорочно."
- merge_subject_proposal_notification_name:0 "Предложение $аннексирования_субъекта$"
- merge_subject_proposal_notification_desc:0 "[INITIATOR_COUNTRY.GetName] предлагает объеденить нашу национальную территорию"
- merge_subject_proposal_notification_effects_desc:0 "$аннексия_субъекта$"
- merge_subject_proposal_accepted_name:0 "Принятие $аннексии_субъекта$"
- merge_subject_proposal_accepted_desc:0 "[TARGET_COUNTRY.GetName] приняла наше предложение присоединить их территории."
- merge_subject_proposal_declined_name:0 "Отказ $аннексии_субъекта$"
- merge_subject_proposal_declined_desc:0 "[TARGET_COUNTRY.GetName] отвергла наше предложение присоединить их территории."
- merge_subject_proposal_third_party_accepted_name:0 "Принятие $аннексии_субъекта$"
- merge_subject_proposal_third_party_accepted_desc:0 "[INITIATOR_COUNTRY.GetName] аннексировала [TARGET_COUNTRY.GetName]."
- merge_subject_proposal_third_party_declined_name:0 "Отказ $аннексии_субъекта$"
- merge_subject_proposal_third_party_declined_desc:0 "[TARGET_COUNTRY.GetName] отказала в аннексии [INITIATOR_COUNTRY.GetName]."
- rule_ai_merge_subject:0 "$Аннексия_субъекта$"
- setting_ai_can_not_use:0 "Запретить ИИ дипломатически аннексировать субъекты"
- setting_ai_can_not_use_desc:0 "Запретить ИИ использовать дипломатическое действие :Аннексия [concept_subject] [Concept('concept_country', '$concept_countries$')]"
- setting_ai_can_use:0 "Разрешить ИИ дипломатически аннексировать субъекты"
- setting_ai_can_use_desc:0 "Разрешить ИИ использовать дипломатическое действие :Аннексия [concept_subject] [Concept('concept_country', '$concept_countries$')]"
+ DIPLO_ACTION_MERGE_SUBJECT: "$дипломатическая_аннексия$ не меньше чем $лояльный$"
+ merge_subject: "Аннексированные территории"
+ merge_subject_action_name: "Аннексирование субъекта"
+ merge_subject_desc: "#header $аннексия_субъекта$#!\n$TOOLTIP_DELIMITER$\nA [concept_instant_diplomatic_action] позволяет аннексировать субъект немедленно и безоговорочно."
+ merge_subject_proposal_notification_name: "Предложение $аннексирования_субъекта$"
+ merge_subject_proposal_notification_desc: "[INITIATOR_COUNTRY.GetName] предлагает объеденить нашу национальную территорию"
+ merge_subject_proposal_notification_effects_desc: "$аннексия_субъекта$"
+ merge_subject_proposal_accepted_name: "Принятие $аннексии_субъекта$"
+ merge_subject_proposal_accepted_desc: "[TARGET_COUNTRY.GetName] приняла наше предложение присоединить их территории."
+ merge_subject_proposal_declined_name: "Отказ $аннексии_субъекта$"
+ merge_subject_proposal_declined_desc: "[TARGET_COUNTRY.GetName] отвергла наше предложение присоединить их территории."
+ merge_subject_proposal_third_party_accepted_name: "Принятие $аннексии_субъекта$"
+ merge_subject_proposal_third_party_accepted_desc: "[INITIATOR_COUNTRY.GetName] аннексировала [TARGET_COUNTRY.GetName]."
+ merge_subject_proposal_third_party_declined_name: "Отказ $аннексии_субъекта$"
+ merge_subject_proposal_third_party_declined_desc: "[TARGET_COUNTRY.GetName] отказала в аннексии [INITIATOR_COUNTRY.GetName]."
+ rule_ai_merge_subject: "$Аннексия_субъекта$"
+ setting_ai_can_not_use: "Запретить ИИ дипломатически аннексировать субъекты"
+ setting_ai_can_not_use_desc: "Запретить ИИ использовать дипломатическое действие :Аннексия [concept_subject] [Concept('concept_country', '$concept_countries$')]"
+ setting_ai_can_use: "Разрешить ИИ дипломатически аннексировать субъекты"
+ setting_ai_can_use_desc: "Разрешить ИИ использовать дипломатическое действие :Аннексия [concept_subject] [Concept('concept_country', '$concept_countries$')]"
+ merge_subject_cheat: "Обман слияния предметов" #NT!
+ rule_merge_subject_cheat: "$merge_subject$" #NT!
+ setting_balanced_merge: "Сбалансированный предмет слияния" #NT!
+ setting_balanced_merge_desc: "Дипломатическое действие: Слияние [concept_subject] [Concept('concept_country', '$concept_countries$')] сбалансировано для обычной игры." #NT!
+ setting_cheat_merge: "Merge Subject — это мошенничество" #NT!
+ setting_cheat_merge_desc: "Дипломатическое действие: Merge [concept_subject] [Concept('concept_country', '$concept_countries$')] — мощный чит." #NT!
+ DIPLOMATIC_ACCEPTANCE_BREAK_FREE: "Они преследуют [concept_ai_strategy] из #v $ai_strategy_subject_break_free$#!" #NT!
+ DIPLOMATIC_ACCEPTANCE_STRENGTHEN_SELF: "Они преследуют [concept_ai_strategy] из #v $ai_strategy_subject_strengthen_self$#!" #NT!
+ DIPLOMATIC_ACCEPTANCE_MAINTAIN_AUTONOMY: "Они преследуют [concept_ai_strategy] из #v $ai_strategy_subject_maintain_autonomy$#!" #NT!
+ DIPLOMATIC_ACCEPTANCE_OVERLORD_COMPLIANCE: "Они преследуют [concept_ai_strategy] из #v $ai_strategy_subject_overlord_compliance$#!" #NT!

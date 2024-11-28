@@ -1,0 +1,33 @@
+﻿l_spanish:
+ laws_synergize_land: "Sinergizar las reformas agrarias" #NT!
+ laws_synergize_land_action_name: "$laws_synergize_land$" #NT!
+ laws_synergize_land_action_propose_name: "Comenzar a sinergizar las reformas agrarias" #NT!
+ laws_synergize_land_action_break_name: "Basta de sinergizar las reformas agrarias" #NT!
+ laws_synergize_land_pact_desc: "[SCOPE.GetRootScope.GetDiplomaticPact.GetFirstCountry.GetName] reestructura las leyes territoriales de [SCOPE.GetRootScope.GetDiplomaticPact.GetSecondCountry.GetName] para sinergizarlas con las de ellos.\n Actualmente #variable [SCOPE.GetRootScope.GetDiplomaticPact.GetSecondCountry.MakeScope.Var('synergize_land_progress').GetValue]#! progresan de 8 etapas." #NT!
+ laws_synergize_land_desc: "#header $laws_synergize_land$#!\n$TOOLTIP_DELIMITER$\nSynergizes las reformas agrarias del país especificado." #NT!
+ laws_synergize_land_action_notification_name: "[INITIATOR_COUNTRY.GetName] Sinergización de las reformas agrarias" #NT!
+ laws_synergize_land_action_notification_desc: "[INITIATOR_COUNTRY.GetName] está sinergizando las reformas agrarias de nuestro país." #NT!
+ laws_synergize_land_action_notification_break_name: "Dejemos de sinergizar las reformas agrarias por [INITIATOR_COUNTRY.GetName]" #NT!
+ laws_synergize_land_action_notification_break_desc: "[INITIATOR_COUNTRY.GetName] ha dejado de intentar sinergizar las reformas agrarias de nuestro país." #NT!
+  
+ laws_synergize_land_effect_desc_global: "Comenzar a sinergizar las reformas agrarias" #NT!
+ laws_synergize_land_effect_desc_first: "[COUNTRY.GetAdjectiveNoFlag] inicia una sinergia de reforma agraria con [TARGET_COUNTRY.GetName]." #NT!
+ laws_synergize_land_effect_desc_third: "[COUNTRY.GetName] inicia una sinergia de reforma agraria con [AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)]." #NT!
+  
+ laws_synergize_land_trigger_desc_global: "Sinergia de la reforma agraria en curso" #NT!
+ laws_synergize_land_trigger_false_desc_global: "Actualmente no estamos en el proceso de sinergizar las reformas agrarias." #NT!
+ laws_synergize_land_trigger_desc_first: "[COUNTRY.GetAdjectiveNoFlag] tiene reformas territoriales sinérgicas con [TARGET_COUNTRY.GetName]." #NT!
+ laws_synergize_land_trigger_false_desc_first: "[COUNTRY.GetAdjectiveNoFlag] actualmente no tiene reformas agrarias sinérgicas con [TARGET_COUNTRY.GetName]." #NT!
+ laws_synergize_land_trigger_desc_third: "[COUNTRY.GetName] tiene reformas territoriales sinérgicas con [AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)]." #NT!
+ laws_synergize_land_trigger_false_desc_third: "[COUNTRY.GetName] actualmente no tiene reformas agrarias sinérgicas con [AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)]." #NT!
+  
+ mog_syn_events.03.t: "¡Sinergia de reforma agraria!" #NT!
+ mog_syn_events.03.d: "La orgullosa nación de [ROOT.GetCountry.GetName] ha completado con éxito la sinergización de las reformas agrarias con [SCOPE.sCountry('synergize_land_target_country').GetName]. [SCOPE.sCountry('synergize_land_target_country').GetName] prosperará en eterna prosperidad a través de una mayor cohesión con la patria." #NT!
+ mog_syn_events.03.f: ""¡Viva [ROOT.GetCountry.GetName]!"" #NT!
+ mog_syn_events.03.a: "Bien hecho." #NT!
+  
+ laws_synergize_land_weekly_effect: "Trabaja para alinear sus reformas de la ley de tierras con las nuestras. Tiene un 20 % de posibilidades de avanzar cada semana, y se requieren 8 puntos de progreso para lograrlo." #NT!
+  
+ overlord_syn_cost_land: "Costo de sinergizar las reformas agrarias" #NT!
+  
+ active_synergize_land_tt: "El número de otras acciones $laws_synergize_land$ es menor que 1." #NT!

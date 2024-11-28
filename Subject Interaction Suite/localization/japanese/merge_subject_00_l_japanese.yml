@@ -1,16 +1,31 @@
 ﻿l_japanese:
- DIPLO_ACTION_MERGE_SUBJECT:0 "$DIPLO_ACTION_RELATIONS$は$relations_amicable$と同等かそれ以上です"
- merge_subject:0 "臣下の併合"
- merge_subject_action_name:0 "全領土の併合"
- merge_subject_desc:0 "#header $merge_subject$#!\n$TOOLTIP_DELIMITER$\n[concept_relations]が$relations_amicable$以上の[concept_subject]を併合する[concept_instant_diplomatic_action]です。"
- merge_subject_proposal_notification_name:0 "$merge_subject_action_name$を提案"
- merge_subject_proposal_notification_desc:0 "[INITIATOR_COUNTRY.GetName]は我が国を吸収する形での統合を提案している。"
- merge_subject_proposal_notification_effects_desc:0 "$merge_subject_action_name$"
- merge_subject_proposal_accepted_name:0 "$merge_subject_action_name$を受領"
- merge_subject_proposal_accepted_desc:0 "[TARGET_COUNTRY.GetName]の全領土を併合を提案し、受領されました。"
- merge_subject_proposal_declined_name:0 "$merge_subject_action_name$を拒否"
- merge_subject_proposal_declined_desc:0 "[TARGET_COUNTRY.GetName]の全領土を併合を提案し、拒否されました。"
- merge_subject_proposal_third_party_accepted_name:0 "$merge_subject_action_name$を受領"
- merge_subject_proposal_third_party_accepted_desc:0 "[INITIATOR_COUNTRY.GetName]が[TARGET_COUNTRY.GetName]の全領土を併合しました"
- merge_subject_proposal_third_party_declined_name:0 "$merge_subject_action_name$を拒否"
- merge_subject_proposal_third_party_declined_desc:0 "[TARGET_COUNTRY.GetName]が[INITIATOR_COUNTRY.GetName]への全領土の併合を拒否しました。"
+ DIPLO_ACTION_MERGE_SUBJECT: "$DIPLO_ACTION_RELATIONS$は$relations_amicable$と同等かそれ以上です"
+ merge_subject: "臣下の併合"
+ merge_subject_action_name: "全領土の併合"
+ merge_subject_desc: "#header $merge_subject$#!\n$TOOLTIP_DELIMITER$\n[concept_relations]が$relations_amicable$以上の[concept_subject]を併合する[concept_instant_diplomatic_action]です。"
+ merge_subject_proposal_notification_name: "$merge_subject_action_name$を提案"
+ merge_subject_proposal_notification_desc: "[INITIATOR_COUNTRY.GetName]は我が国を吸収する形での統合を提案している。"
+ merge_subject_proposal_notification_effects_desc: "$merge_subject_action_name$"
+ merge_subject_proposal_accepted_name: "$merge_subject_action_name$を受領"
+ merge_subject_proposal_accepted_desc: "[TARGET_COUNTRY.GetName]の全領土を併合を提案し、受領されました。"
+ merge_subject_proposal_declined_name: "$merge_subject_action_name$を拒否"
+ merge_subject_proposal_declined_desc: "[TARGET_COUNTRY.GetName]の全領土を併合を提案し、拒否されました。"
+ merge_subject_proposal_third_party_accepted_name: "$merge_subject_action_name$を受領"
+ merge_subject_proposal_third_party_accepted_desc: "[INITIATOR_COUNTRY.GetName]が[TARGET_COUNTRY.GetName]の全領土を併合しました"
+ merge_subject_proposal_third_party_declined_name: "$merge_subject_action_name$を拒否"
+ merge_subject_proposal_third_party_declined_desc: "[TARGET_COUNTRY.GetName]が[INITIATOR_COUNTRY.GetName]への全領土の併合を拒否しました。"
+ rule_ai_merge_subject: "$merge_subject$" #NT!
+ setting_ai_can_not_use: "AIによる主題の統合を禁止する" #NT!
+ setting_ai_can_not_use_desc: "AIによる外交行動を禁止する: マージ [concept_subject] [Concept('concept_country', '$concept_countries$')]" #NT!
+ setting_ai_can_use: "AIによる主題の統合を許可する" #NT!
+ setting_ai_can_use_desc: "AI が外交アクションを使用するのを許可します: 合併 [concept_subject] [Concept('concept_country', '$concept_countries$')]。\n注: AI はこの外交アクションをプレイヤーに送信しません。" #NT!
+ merge_subject_cheat: "件名をマージするチート" #NT!
+ rule_merge_subject_cheat: "$merge_subject$" #NT!
+ setting_balanced_merge: "マージ件名のバランスが取れている" #NT!
+ setting_balanced_merge_desc: "外交アクション: マージ [concept_subject] [Concept('concept_country', '$concept_countries$')] は通常のプレイではバランスが取れています。" #NT!
+ setting_cheat_merge: "件名のマージはチートです" #NT!
+ setting_cheat_merge_desc: "外交アクション：マージ[concept_subject] [Concept('concept_country', '$concept_countries$')] は強力なチートです。" #NT!
+ DIPLOMATIC_ACCEPTANCE_BREAK_FREE: "彼らは#v $ai_strategy_subject_break_free$#!の[concept_ai_strategy]を追求しています" #NT!
+ DIPLOMATIC_ACCEPTANCE_STRENGTHEN_SELF: "彼らは#v $ai_strategy_subject_strengthen_self$#!の[concept_ai_strategy]を追求しています" #NT!
+ DIPLOMATIC_ACCEPTANCE_MAINTAIN_AUTONOMY: "彼らは#v $ai_strategy_subject_maintain_autonomy$#!の[concept_ai_strategy]を追求しています" #NT!
+ DIPLOMATIC_ACCEPTANCE_OVERLORD_COMPLIANCE: "彼らは#v $ai_strategy_subject_overlord_compliance$#!の[concept_ai_strategy]を追求しています" #NT!

@@ -1,0 +1,29 @@
+﻿l_korean:
+ include_primary_culture: "문화적 포용" #NT!
+ include_primary_culture_action_name: "$include_primary_culture$" #NT!
+ include_primary_culture_action_propose_name: "문화적 포용을 시작하다" #NT!
+ include_primary_culture_action_break_name: "문화적 포용을 중단하다" #NT!
+ include_primary_culture_pact_desc: "[SCOPE.GetRootScope.GetDiplomaticPact.GetFirstCountry.GetName]은(는) 주요 문화를 [SCOPE.GetRootScope.GetDiplomaticPact.GetSecondCountry.GetName]에 포함시킵니다.\n 현재 8단계 중 #variable [SCOPE.GetRootScope.GetDiplomaticPact.GetSecondCountry.MakeScope.Var('include_primary_culture_progress').GetValue]#!가 진행 중입니다." #NT!
+ include_primary_culture_desc: "#header $include_primary_culture$#!\n$TOOLTIP_DELIMITER$\nAdd 주요 문화를 대상 국가의 주요 문화로 변환합니다." #NT!
+ include_primary_culture_action_notification_name: "[INITIATOR_COUNTRY.GetName]는 자기 나라의 주요 문화에 자기 나라의 주요 문화를 포함시키는 것입니다." #NT!
+ include_primary_culture_action_notification_desc: "[INITIATOR_COUNTRY.GetName]는 그들의 주요 문화를 우리나라에 포함시키고 있습니다." #NT!
+ include_primary_culture_action_notification_break_name: "Primary Culture Inclusion이 [INITIATOR_COUNTRY.GetName]에 의해 중단되었습니다." #NT!
+ include_primary_culture_action_notification_break_desc: "[INITIATOR_COUNTRY.GetName]은 우리 국가의 주요 문화 포함을 종료했습니다." #NT!
+  
+ include_primary_culture_effect_desc_global: "문화적 포용을 시작하다" #NT!
+ include_primary_culture_effect_desc_first: "[COUNTRY.GetAdjectiveNoFlag]이 [TARGET_COUNTRY.GetName]에 일차문화 포함을 시작합니다." #NT!
+ include_primary_culture_effect_desc_third: "[COUNTRY.GetName]이 [AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)]에서 문화적 포용을 시작하고 있습니다." #NT!
+  
+ include_primary_culture_trigger_desc_global: "진행 중인 문화적 포용" #NT!
+ include_primary_culture_trigger_false_desc_global: "더 이상 문화적 포용을 진행 중이 아닙니다 #b#!" #NT!
+ include_primary_culture_trigger_desc_first: "[COUNTRY.GetAdjectiveNoFlag]은(는) 주요 문화를 [TARGET_COUNTRY.GetName]에 포함시킵니다." #NT!
+ include_primary_culture_trigger_false_desc_first: "[COUNTRY.GetAdjectiveNoFlag]은 더 이상 [TARGET_COUNTRY.GetName] #b에 주요 문화를 포함하지 않습니다#!" #NT!
+ include_primary_culture_trigger_desc_third: "[COUNTRY.GetName]은 주요 문화를 [AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)]에 포함시킵니다." #NT!
+ include_primary_culture_trigger_false_desc_third: "[COUNTRY.GetName]은 더 이상 [AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)] #b에 주요 문화를 포함하지 않습니다#!" #NT!
+  
+ ib_events.05.t: "1차 문화 포함" #NT!
+ ib_events.05.d: "자랑스러운 [ROOT.GetCountry.GetName]은 [SCOPE.sCountry('culture_include_country').GetName]의 문화적 포용을 성공적으로 완료했습니다. [SCOPE.sCountry('culture_target_country').GetName]은 이제 고국의 문화를 수용하여 영원히 번영할 것입니다." #NT!
+ ib_events.05.f: ""[ROOT.GetCountry.GetName] 만세!"" #NT!
+ ib_events.05.a: "잘하셨어요." #NT!
+  
+ include_primary_culture_weekly_effect: "오버로드의 주요 문화를 주제에 포함시키는 작업으로, 매주 20%의 확률로 진행이 가능하며, 성공하려면 8개의 진행 포인트가 필요합니다." #NT!

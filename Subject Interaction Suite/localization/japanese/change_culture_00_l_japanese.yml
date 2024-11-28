@@ -1,0 +1,29 @@
+﻿l_japanese:
+ change_primary_culture: "文化的な整合性" #NT!
+ change_primary_culture_action_name: "$change_primary_culture$" #NT!
+ change_primary_culture_action_propose_name: "文化的な整合を開始する" #NT!
+ change_primary_culture_action_break_name: "文化的な整合をやめる" #NT!
+ change_primary_culture_pact_desc: "[SCOPE.GetRootScope.GetDiplomaticPact.GetFirstCountry.GetName] は [SCOPE.GetRootScope.GetDiplomaticPact.GetSecondCountry.GetName] の主な文化を変更しています。\n 現在、8 段階中 #variable [SCOPE.GetRootScope.GetDiplomaticPact.GetSecondCountry.MakeScope.Var('change_primary_culture_progress').GetValue]#! が進行中です。" #NT!
+ change_primary_culture_desc: "#header $change_primary_culture$#!\n$TOOLTIP_DELIMITER$\nChange 対象国の主な文化。" #NT!
+ change_primary_culture_action_notification_name: "[INITIATOR_COUNTRY.GetName]は私たちの国の主要な文化を変えています。" #NT!
+ change_primary_culture_action_notification_desc: "[INITIATOR_COUNTRY.GetName]は私たちの国の主要な文化を変えています。" #NT!
+ change_primary_culture_action_notification_break_name: "一次文化の変化は[INITIATOR_COUNTRY.GetName]によって停止されました" #NT!
+ change_primary_culture_action_notification_break_desc: "[INITIATOR_COUNTRY.GetName] は我が国の主要な文化変革を終了させました。" #NT!
+  
+ change_primary_culture_effect_desc_global: "基本的な文化の変化を起こす" #NT!
+ change_primary_culture_effect_desc_first: "[COUNTRY.GetAdjectiveNoFlag] は [TARGET_COUNTRY.GetName] で主要な文化の変化を開始しています。" #NT!
+ change_primary_culture_effect_desc_third: "[COUNTRY.GetName] は [AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)] で文化的整合を開始しています。" #NT!
+  
+ change_primary_culture_trigger_desc_global: "文化の整合が進行中" #NT!
+ change_primary_culture_trigger_false_desc_global: "文化的整合の過程にはもうありません#b#!" #NT!
+ change_primary_culture_trigger_desc_first: "[COUNTRY.GetAdjectiveNoFlag] は [TARGET_COUNTRY.GetName] の主要な文化を変えています。" #NT!
+ change_primary_culture_trigger_false_desc_first: "[COUNTRY.GetAdjectiveNoFlag] は [TARGET_COUNTRY.GetName] #b の主要な文化をもう変えません#!" #NT!
+ change_primary_culture_trigger_desc_third: "[COUNTRY.GetName] は [AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)] の主要な文化を変えています。" #NT!
+ change_primary_culture_trigger_false_desc_third: "[COUNTRY.GetName] は [AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)] #b の主要な文化をもう変更していません#!" #NT!
+  
+ ib_events.01.t: "主要な文化の変化" #NT!
+ ib_events.01.d: "誇り高き[ROOT.GetCountry.GetName]は[SCOPE.sCountry('culture_target_country').GetName]の文化的調和を無事に完了しました。[SCOPE.sCountry('culture_target_country').GetName]はこれから、祖国の文化を受け入れながら永遠に繁栄するでしょう。" #NT!
+ ib_events.01.f: "「万歳[ROOT.GetCountry.GetName]！」" #NT!
+ ib_events.01.a: "よくやった。" #NT!
+  
+ change_primary_culture_weekly_effect: "プライマリー カルチャーの完全な整合を達成するために取り組みます。毎週 20% の確率で進捗し、成功するには 8 つの進捗ポイントが必要です。" #NT!

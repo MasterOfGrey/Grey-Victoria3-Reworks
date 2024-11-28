@@ -14,3 +14,5 @@
  forced_industry_ban_action_name: "강제 공업 금지"
  forced_industry_ban_action_notification_name: "[INITIATOR_COUNTRY.GetName](이)가 우리의 공업을 강제로 금지함"
  forced_industry_ban_action_notification_desc: "우리의 [concept_overlord]인 [INITIATOR_COUNTRY.GetName](이)가 우리의 [GetLawGroup('lawgroup_economic_system').GetName] [concept_law]을 강제로 [GetLawType('law_industry_banned').GetName]로 변경했습니다. 우리를 향한 상대의 [concept_attitude]는 #tooltippable #tooltip:[INITIATOR_COUNTRY.GetTooltipTag],COUNTRY_ATTITUDE_TOOLTIP [INITIATOR_COUNTRY.GetAttitudeTowards(GetPlayer).GetName]#!#!입니다."
+  
+ forced_industry_ban_liberty_desire_custom_tooltip: "[SCOPE.sCountry('target_country').GetAdjectiveNoFormatting] 공무원이 [SCOPE.GetRootScope.GetCountry.GetName] 산업 금지에 대응할 것입니다. [SCOPE.sCountry('target_country').GetName]. 이 [concept_subject]의 [concept_liberty_desire]와 [concept_attitude]가 변경될 것입니다." #NT!

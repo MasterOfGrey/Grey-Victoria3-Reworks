@@ -1,0 +1,114 @@
+﻿l_russian:
+ ld_level_low: "Низкое"
+ ld_level_moderate: "Умеренное"
+ ld_level_high: "Высокое"
+  
+ LIBERTY_DESIRE_LEVEL_BOUNDS_DESC: "При [Concept('concept_liberty_desire', 'желании свободы')] от [LibertyDesireLevel.GetLowerBound|v0] до [LibertyDesireLevel.GetUpperBound|v0]"
+ LIBERTY_DESIRE_LEVEL_NO_EFFECT: "#italic Нет эффекта#!"
+  
+ LIBERTY_DESIRE_LEVEL_ACTIVE: "#i #b (Текущий уровень)#!#!"
+ LIBERTY_DESIRE_LEVEL_TOOLTIP: "[SelectLocalization( LibertyDesireLevel.IsActive( Country.GetLibertyDesireRaw ), 'LIBERTY_DESIRE_LEVEL_ACTIVE_TOOLTIP', 'LIBERTY_DESIRE_LEVEL_INACTIVE_TOOLTIP' )]"
+ LIBERTY_DESIRE_LEVEL_INACTIVE_TOOLTIP: "#header [LibertyDesireLevel.GetNameNoFormatting]#!\n$LIBERTY_DESIRE_LEVEL_BOUNDS_DESC$\n$TOOLTIP_DELIMITER$\n#title Эффекты для [Country.GetAltName('RU_CL_RP')]:#!#indent_newline:2 \n[LibertyDesireLevel.GetEffects]#!"
+  
+  
+ LIBERTY_DESIRE_LEVEL_ACTIVE_TOOLTIP: "#header [LibertyDesireLevel.GetNameNoFormatting]#! $LIBERTY_DESIRE_LEVEL_ACTIVE$\n$LIBERTY_DESIRE_LEVEL_BOUNDS_DESC$\n$LIBERTY_DESIRE_LEVEL_CURRENT_LIBERTY_DESIRE_DESC$\n$TOOLTIP_DELIMITER$\n[Country.GetWeeklyLibertyDesireChangeDesc]\n$TOOLTIP_DELIMITER$\nЭффекты на [Country.GetName]:[LibertyDesireLevel.GetNameNoFormatting]0 \n[LibertyDesireLevel.GetNameNoFormatting]1#!" #NT!
+  
+  
+ LIBERTY_DESIRE_LEVEL_CURRENT_LIBERTY_DESIRE_DESC: "Текущее значение [Concept('concept_liberty_desire', 'желания свободы')]: [Country.GetLibertyDesireRaw|v0]"
+  
+ COUNTRY_LIBERTY_DESIRE_ACTIVE_LEVEL_BOUNDS_DESC: "При [Concept('concept_liberty_desire', 'желании свободы')] от [Country.CalcLibertyDesireLevel.GetLowerBound|v0] до [Country.CalcLibertyDesireLevel.GetUpperBound|v0]"
+ COUNTRY_LIBERTY_DESIRE_ACTIVE_LEVEL_TOOLTIP: "#header [Country.GetName]: [Country.CalcLibertyDesireLevel.GetNameNoFormatting]#!\n$COUNTRY_LIBERTY_DESIRE_ACTIVE_LEVEL_BOUNDS_DESC$\n$LIBERTY_DESIRE_LEVEL_CURRENT_LIBERTY_DESIRE_DESC$\n$TOOLTIP_DELIMITER$\n[Country.GetWeeklyLibertyDesireChangeDesc]\n\n#title Эффекты для [Country.GetAltName('RU_CL_RP')]:#!#indent_newline:2 \n[Country.CalcLibertyDesireLevel.GetEffects]#!"
+  
+ TOOLTIP_TYPE_LIBERTY_DESIRE_LEVEL: "Уровень желания свободы"
+  
+ LIBERTY_DESIRE_WEEKLY_CHANGE_BASE: "Основа"
+ LIBERTY_DESIRE_WEEKLY_CHANGE_VALUE_FORMAT: "[SelectLocalization(GreaterThan_CFixedPoint('(CFixedPoint)$VALUE$','(CFixedPoint)0'),'$VALUE|bo=2$','$VALUE|bu=2$')] ед. от: $KEY$"
+ LIBERTY_DESIRE_WEEKLY_CHANGE_DESC: "Ожидается, что [Concept('concept_liberty_desire','желание свободы' )] будет меняться на [SelectLocalization(GreaterThan_CFixedPoint('(CFixedPoint)$VALUE$','(CFixedPoint)0'),'$VALUE|bo=2$','$VALUE|bu=2$')] ед. в неделю. Причины:\n$BREAKDOWN$"
+ LIBERTY_DESIRE_WEEKLY_CHANGE_DESC_ADDITIONAL_ADDS: "#indent_newline:3 дополнительные соглашения:\n[SCOPE.GetRootScope.GetDiplomaticPact.GetSecondCountry.GetModifier.GetDescFor('country_liberty_desire_add')]#!"
+ LIBERTY_SUBJECT_DESIRE_WEEKLY_CHANGE_DESC_ADDITIONAL_ADDS: "#indent_newline:3 дополнительные соглашения:\n[SCOPE.GetRootScope.GetDiplomaticPact.GetFirstCountry.GetModifier.GetDescFor('country_liberty_desire_of_subjects_add')]#!"
+ LIBERTY_DESIRE_WEEKLY_CHANGE_DESC_ADDITIONAL_MULTS: "#indent_newline:3 дополнительные соглашения:\n[SCOPE.GetRootScope.GetDiplomaticPact.GetSecondCountry.GetModifier.GetDescFor('country_liberty_desire_add')][SCOPE.GetRootScope.GetDiplomaticPact.GetSecondCountry.GetModifier.GetDescFor('country_liberty_desire_increase_mult')][SCOPE.GetRootScope.GetDiplomaticPact.GetSecondCountry.GetModifier.GetDescFor('country_liberty_desire_decrease_mult')]#!"
+  
+ LIBERTY_DESIRE_WEEKLY_CHANGE_RELATIONS_HOSTILE: "#r Враждебный #![concept_relations]" #NT!
+ LIBERTY_DESIRE_WEEKLY_CHANGE_RELATIONS_COLD: "#r Холодно #![concept_relations]" #NT!
+ LIBERTY_DESIRE_WEEKLY_CHANGE_RELATIONS_POOR: "#r Плохо #![concept_relations]" #NT!
+ LIBERTY_DESIRE_WEEKLY_CHANGE_RELATIONS_NEUTRAL: "#b Нейтральный #![concept_relations]" #NT!
+ LIBERTY_DESIRE_WEEKLY_CHANGE_RELATIONS_CORDIAL: "#green Сердечный #![concept_relations]" #NT!
+ LIBERTY_DESIRE_WEEKLY_CHANGE_RELATIONS_AMICABLE: "#green Дружелюбный #![concept_relations]" #NT!
+ LIBERTY_DESIRE_WEEKLY_CHANGE_RELATIONS_FRIENDLY: "#greenFriendly #![concept_relations]" #NT!
+  
+ LIBERTY_DESIRE_WEEKLY_CHANGE_INFAMY: "[concept_infamy] из [concept_overlord]" #NT!
+  
+ LIBERTY_DESIRE_WEEKLY_CHANGE_BANKROLL: "[GetDiplomaticActionType('bankroll').GetName]" #NT!
+ LIBERTY_DESIRE_WEEKLY_CHANGE_SUPPORT_REGIME: "[GetDiplomaticActionType('da_support_regime').GetName]"
+ LIBERTY_DESIRE_WEEKLY_CHANGE_KNOWLEDGE_SHARING: "[GetDiplomaticActionType('da_knowledge_sharing').GetName]"
+ LIBERTY_DESIRE_WEEKLY_CHANGE_EXEMPT_FROM_SERVICE: "[GetDiplomaticActionType('exempt_from_service').GetName]"
+ LIBERTY_DESIRE_WEEKLY_CHANGE_RAISE_PAYMENTS: "[GetDiplomaticActionType('raise_payments').GetName]"
+ LIBERTY_DESIRE_WEEKLY_CHANGE_DECREASE_PAYMENTS: "[GetDiplomaticActionType('decrease_payments').GetName]"
+ LIBERTY_DESIRE_WEEKLY_CHANGE_CULTURE_CONVERT: "[GetDiplomaticActionType('change_primary_culture').GetName]" #NT!
+  
+ LIBERTY_DESIRE_RELATIVE_PRESTIGE_VALUE_FORMAT: "$TAB$[SelectLocalization(GreaterThan_CFixedPoint('(CFixedPoint)$VALUE$','(CFixedPoint)0'),'$VALUE|bo=2$','$VALUE|bu=2$')] за $KEY$" #NT!
+ LIBERTY_DESIRE_WEEKLY_CHANGE_RELATIVE_PRESTIGE: "[concept_overlord] [concept_prestige] относительно [SCOPE.GetRootScope.GetDiplomaticPact.GetSecondCountry.GetName] (В настоящее время #v [SCOPE.GetRootScope.GetDiplomaticPact.GetFirstCountry.GetRelativePrestige( SCOPE.GetRootScope.GetDiplomaticPact.GetSecondCountry )|v1]x#!)\n$TAB$[SCOPE.GetRootScope.GetDiplomaticPact.GetSecondCountry.GetSubjectType.GetName] удовлетворенность зависит от:\n[SCOPE.GetScriptValueDesc('liberty_desire_weekly_change_relative_prestige')]" #NT!
+  
+ LIBERTY_DESIRE_WEEKLY_CHANGE_NO_PRESTIGE_NEGATIVE: "#tooltippable_name [SCOPE.GetRootScope.GetDiplomaticPact.GetSecondCountry.GetAdjective]ий#! [Concept('concept_prestige', 'престиж')] равен #v 0#!"
+ LIBERTY_DESIRE_WEEKLY_CHANGE_NO_PRESTIGE_POSITIVE: "#tooltippable_name [SCOPE.GetRootScope.GetDiplomaticPact.GetFirstCountry.GetAdjective]ий#! [Concept('concept_prestige', 'престиж')] равен #v 0#!"
+ LIBERTY_DESIRE_WEEKLY_CHANGE_PRESTIGE_DIFFERENCE_1_5_POSITIVE: "имеющие ниже #v 1.5x#! их престиж" #NT!
+ LIBERTY_DESIRE_WEEKLY_CHANGE_PRESTIGE_DIFFERENCE_2_0_POSITIVE: "имеющие ниже #v 2.0x#! их престиж" #NT!
+ LIBERTY_DESIRE_WEEKLY_CHANGE_PRESTIGE_DIFFERENCE_3_0_POSITIVE: "имеющие ниже #v 3.0x#! их престиж" #NT!
+  
+ LIBERTY_DESIRE_WEEKLY_CHANGE_PRESTIGE_DIFFERENCE_1_5_NEGATIVE: "имея более #v 1.5x#! их престиж" #NT!
+ LIBERTY_DESIRE_WEEKLY_CHANGE_PRESTIGE_DIFFERENCE_2_0_NEGATIVE: "имея более #v 2.0x#! их престиж" #NT!
+ LIBERTY_DESIRE_WEEKLY_CHANGE_PRESTIGE_DIFFERENCE_3_0_NEGATIVE: "имея более #v 3.0x#! их престиж" #NT!
+ LIBERTY_DESIRE_WEEKLY_CHANGE_PRESTIGE_DIFFERENCE_4_0_NEGATIVE: "имея более #v 4.0x#! их престиж" #NT!
+ LIBERTY_DESIRE_WEEKLY_CHANGE_PRESTIGE_DIFFERENCE_6_0_NEGATIVE: "имея более #v 6.0x#! их престиж" #NT!
+ LIBERTY_DESIRE_WEEKLY_CHANGE_PRESTIGE_DIFFERENCE_8_0_NEGATIVE: "имея более #v 8.0x#! их престиж" #NT!
+ LIBERTY_DESIRE_WEEKLY_CHANGE_PRESTIGE_DIFFERENCE_12_0_NEGATIVE: "имея более #v 12.0x#! их престиж" #NT!
+ LIBERTY_DESIRE_WEEKLY_CHANGE_PRESTIGE_DIFFERENCE_16_0_NEGATIVE: "имея более #v 16.0x#! их престиж" #NT!
+ LIBERTY_DESIRE_WEEKLY_CHANGE_PRESTIGE_DIFFERENCE_24_0_NEGATIVE: "имея более #v 24.0x#! их престиж" #NT!
+ LIBERTY_DESIRE_WEEKLY_CHANGE_PRESTIGE_DIFFERENCE_32_0_NEGATIVE: "имея более #v 32.0x#! их престиж" #NT!
+ LIBERTY_DESIRE_WEEKLY_CHANGE_PRESTIGE_DIFFERENCE_48_0_NEGATIVE: "имея более #v 48.0x#! их престиж" #NT!
+  
+ LIBERTY_DESIRE_WEEKLY_CHANGE_RELIGION: "Попытка изменить [SCOPE.GetRootScope.GetDiplomaticPact.GetSecondCountry.GetSubjectType.GetName] [concept_state_religion]" #NT!
+ LIBERTY_DESIRE_WEEKLY_CHANGE_DEVOUT_RESISTANCE: "Преданное сопротивление [GetDiplomaticActionType('change_state_religion').GetName]" #NT!
+ LIBERTY_DESIRE_WEEKLY_CHANGE_CULTURE: "Попытка вытеснить [SCOPE.GetRootScope.GetDiplomaticPact.GetSecondCountry.GetSubjectType.GetName] [Concept('concept_primary_cultures','$concept_primary_culture$')]" #NT!
+ LIBERTY_DESIRE_WEEKLY_CHANGE_NATIONALIST_RESISTANCE: "Националистическое сопротивление "[GetDiplomaticActionType('change_primary_culture').GetName]"" #NT!
+ LIBERTY_DESIRE_WEEKLY_CHANGE_INCLUDE_CULTURE: "Попытка включить [SCOPE.GetRootScope.GetDiplomaticPact.GetSecondCountry.GetSubjectType.GetName] [Concept('concept_primary_cultures','$concept_primary_culture$')]" #NT!
+  
+ legal_systems: "Правовые системы" #NT!
+ LIBERTY_DESIRE_LEGAL_FRICTION: "Трение" #NT!
+ LIBERTY_DESIRE_LEGAL_FRICTION_VALUE_FORMAT: "$TAB$[SelectLocalization(GreaterThan_CFixedPoint('(CFixedPoint)$VALUE$','(CFixedPoint)0'),'$VALUE|bo=2$','$VALUE|bu=2$')] за $KEY$" #NT!
+ LIBERTY_DESIRE_WEEKLY_CHANGE_LEGAL_FRICTION: "$LIBERTY_DESIRE_LEGAL_FRICTION$ между [Concept('concept_law', '$legal_systems$')]:\n[SCOPE.GetScriptValueDesc('liberty_desire_weekly_change_legal_friction')]" #NT!
+  
+ LIBERTY_DESIRE_LEGAL_FRICTION_GOVERNANCE: "[GetLawGroup('lawgroup_governance_principles').GetName]" #NT!
+ LIBERTY_DESIRE_LEGAL_FRICTION_CHURCH: "[GetLawGroup('lawgroup_church_and_state').GetName]" #NT!
+ LIBERTY_DESIRE_LEGAL_FRICTION_BUREAUCRACY: "[GetLawGroup('lawgroup_bureaucracy').GetName]" #NT!
+ LIBERTY_DESIRE_LEGAL_FRICTION_ECONOMY: "[GetLawGroup('lawgroup_economic_system').GetName]" #NT!
+ LIBERTY_DESIRE_LEGAL_FRICTION_LAND: "[GetLawGroup('lawgroup_land_reform').GetName]" #NT!
+ LIBERTY_DESIRE_LEGAL_FRICTION_TRADE: "[GetLawGroup('lawgroup_trade_policy').GetName]" #NT!
+ LIBERTY_DESIRE_LEGAL_FRICTION_SLAVERY: "[GetLawGroup('lawgroup_slavery').GetName]" #NT!
+ LIBERTY_DESIRE_LEGAL_FRICTION_FEMINISM: "[GetLawGroup('lawgroup_rights_of_women').GetName]" #NT!
+ LIBERTY_DESIRE_LEGAL_FRICTION_SPEECH: "[GetLawGroup('lawgroup_free_speech').GetName]" #NT!
+ LIBERTY_DESIRE_LEGAL_FRICTION_LABOR: "[GetLawGroup('lawgroup_labor_rights').GetName]" #NT!
+  
+ LIBERTY_DESIRE_WEEKLY_CHANGE_REL_MILITARY_WEAK: "[SCOPE.GetRootScope.GetDiplomaticPact.GetSecondCountry.GetName] не имеет [concept_army]!" #NT!
+ LIBERTY_DESIRE_WEEKLY_CHANGE_REL_MILITARY_SCALING: "Относительно [concept_army] [concept_power_projection] из [concept_overlord] (Максимальный эффект при 10x)" #NT!
+ LIBERTY_DESIRE_WEEKLY_CHANGE_REL_MILITARY_APPROACH: "Относительная мощь армии >80% от Overlord" #NT!
+ LIBERTY_DESIRE_WEEKLY_CHANGE_REL_MILITARY_EXCCEED: "Относительная сила армии >100% от Overlord" #NT!
+ LIBERTY_DESIRE_WEEKLY_CHANGE_REL_NAVY_SCALING: "[SCOPE.GetRootScope.GetDiplomaticPact.GetSecondCountry.GetName]'s относительно ВМС [concept_power_projection]" #NT!
+ LIBERTY_DESIRE_WEEKLY_CHANGE_REL_MILITARY_SCALING_REDUCTION: "[concept_subject] ВМС снижают значение за рубежом [concept_overlord] [concept_army]" #NT!
+ LIBERTY_DESIRE_WEEKLY_CHANGE_COMBINED_SUBJECTS: "Все [Concept('concept_subject', '$concept_subjects$')] [concept_power_projection] по сравнению с [SCOPE.GetRootScope.GetDiplomaticPact.GetFirstCountry.GetName]\n[SCOPE.GetScriptValueDesc('liberty_desire_weekly_change_combined_subjects')]" #NT!
+ LIBERTY_DESIRE_WEEKLY_CHANGE_OWN_COMBINED_SUBJECTS: "угроза [SCOPE.GetRootScope.GetDiplomaticPact.GetSecondCountry.GetName] собственной [Concept('concept_subject', '$concept_subjects$')])" #NT!
+ LIBERTY_DESIRE_CHANGE_OWN_COMBINED_SUBJECTS_VALUE_FORMAT: "$TAB$(Включает [SelectLocalization(GreaterThan_CFixedPoint('(CFixedPoint)$VALUE$','(CFixedPoint)0'),'$VALUE|bo=2$','$VALUE|bu=2$')] из $KEY$" #NT!
+  
+ LIBERTY_DESIRE_WEEKLY_CHANGE_LOW_SUPPLY_NETWORK_STRENGTH: "Низкая сила #tooltippable_name [SCOPE.GetRootScope.GetDiplomaticPact.GetFirstCountry.GetAdjective|l]ой#! [Concept('concept_supply_network', 'сети снабжения')] ([SCOPE.GetRootScope.GetDiplomaticPact.GetFirstCountry.GetSupplyNetworkStrength|v0%])"
+ LIBERTY_DESIRE_WEEKLY_CHANGE_SACRED_CIVICS: "Общая государственная [Concept('concept_religion', 'религия')] и #v $principle_group_sacred_civics$#!"
+ LIBERTY_DESIRE_WEEKLY_CHANGE_ISOLATED_FROM_MARKET: "[SCOPE.GetRootScope.GetDiplomaticPact.GetSecondCountry.GetCapital.GetName] в изоляции от #tooltippable_name #tooltip:[SCOPE.GetRootScope.GetDiplomaticPact.GetFirstCountry.GetMarket.GetTooltipTag],DATA_MARKET_NAME_TOOLTIP,MarketTooltip [SCOPE.GetRootScope.GetDiplomaticPact.GetFirstCountry.GetMarket.GetCustom('RU_ML_ADJ')|l]ого#!#! рынка"
+ LIBERTY_DESIRE_WEEKLY_CHANGE_ECONOMIC_DEPENDENCE: "[Concept('concept_economic_dependence','Экономическая зависимость')] от [Concept('concept_overlord','сюзерена')] ([SCOPE.GetRootScope.GetDiplomaticPact.GetSecondCountry.GetEconomicDependenceOn(SCOPE.GetRootScope.GetDiplomaticPact.GetFirstCountry)])"
+ LIBERTY_DESIRE_WEEKLY_CHANGE_TRUCE: "[Concept('concept_truce','Перемирие')] с [SCOPE.GetRootScope.GetDiplomaticPact.GetFirstCountry.GetAltName('RU_CL_TP')] до [SCOPE.GetRootScope.GetDiplomaticPact.GetSecondCountry.GetTruceDate(SCOPE.GetRootScope.GetDiplomaticPact.GetFirstCountry)]"
+ LIBERTY_DESIRE_WEEKLY_CHANGE_PRO_LOBBY_INTEREST_GROUP_IN_GOVERNMENT: "[Concept('concept_clout', 'Уровень влияния')] [Concept('concept_in_government', 'правительственных')] [Concept('concept_interest_group','заинтересованных групп')] в [Concept('concept_political_lobby', 'лобби')] (#v x2#!)"
+ LIBERTY_DESIRE_WEEKLY_CHANGE_ANTI_LOBBY_INTEREST_GROUP_IN_GOVERNMENT: "[Concept('concept_clout', 'Уровень влияния')] [Concept('concept_in_government', 'правительственных')] [Concept('concept_interest_group','заинтересованных групп')] в [Concept('concept_political_lobby', 'лобби')] (#v x2#!)"
+ LIBERTY_DESIRE_WEEKLY_CHANGE_PRO_LOBBY_INTEREST_GROUP_IN_OPPOSITION: "[Concept('concept_clout', 'Уровень влияния')] [Concept('concept_in_opposition', 'оппозиционных')] [Concept('concept_interest_group','заинтересованных групп')] в [Concept('concept_political_lobby', 'лобби')]"
+ LIBERTY_DESIRE_WEEKLY_CHANGE_ANTI_LOBBY_INTEREST_GROUP_IN_OPPOSITION: "[Concept('concept_clout', 'Уровень влияния')] [Concept('concept_in_opposition', 'оппозиционных')] [Concept('concept_interest_group','заинтересованных групп')] в [Concept('concept_political_lobby', 'лобби')]"
+ LIBERTY_DESIRE_WEEKLY_CHANGE_SCALING_LOW: "Сопротивление изменениям в статус-кво от низкого [concept_liberty_desire]" #NT!
+ LIBERTY_DESIRE_WEEKLY_CHANGE_SCALING_HIGH: "Сопротивление изменениям в статус-кво от высокого [concept_liberty_desire]" #NT!
+  
+  

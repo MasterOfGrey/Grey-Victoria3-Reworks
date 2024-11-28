@@ -1,0 +1,29 @@
+﻿l_german:
+ change_primary_culture: "Kulturelle Ausrichtung" #NT!
+ change_primary_culture_action_name: "$change_primary_culture$" #NT!
+ change_primary_culture_action_propose_name: "Kulturelle Ausrichtung einleiten" #NT!
+ change_primary_culture_action_break_name: "Schluss mit der kulturellen Ausrichtung" #NT!
+ change_primary_culture_pact_desc: "[SCOPE.GetRootScope.GetDiplomaticPact.GetFirstCountry.GetName] ändert die primäre Kultur von [SCOPE.GetRootScope.GetDiplomaticPact.GetSecondCountry.GetName].\n Derzeit durchlaufen #variable [SCOPE.GetRootScope.GetDiplomaticPact.GetSecondCountry.MakeScope.Var('change_primary_culture_progress').GetValue]#! 8 Stufen." #NT!
+ change_primary_culture_desc: "#header $change_primary_culture$#!\n$TOOLTIP_DELIMITER$\nChange die primäre Kultur des Ziellandes." #NT!
+ change_primary_culture_action_notification_name: "[INITIATOR_COUNTRY.GetName] verändert die Grundkultur unseres Landes." #NT!
+ change_primary_culture_action_notification_desc: "[INITIATOR_COUNTRY.GetName] verändert die Grundkultur unseres Landes." #NT!
+ change_primary_culture_action_notification_break_name: "Primärer Kulturwandel gestoppt durch [INITIATOR_COUNTRY.GetName]" #NT!
+ change_primary_culture_action_notification_break_desc: "[INITIATOR_COUNTRY.GetName] hat den grundlegenden Kulturwandel in unserer Nation eingeleitet." #NT!
+  
+ change_primary_culture_effect_desc_global: "Primären Kulturwandel einleiten" #NT!
+ change_primary_culture_effect_desc_first: "[COUNTRY.GetAdjectiveNoFlag] leitet den primären Kulturwandel in [TARGET_COUNTRY.GetName] ein." #NT!
+ change_primary_culture_effect_desc_third: "[COUNTRY.GetName] initiiert die kulturelle Angleichung in [AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)]." #NT!
+  
+ change_primary_culture_trigger_desc_global: "Kulturelle Anpassung im Gange" #NT!
+ change_primary_culture_trigger_false_desc_global: "Nicht mehr im Prozess der kulturellen Anpassung #b #!" #NT!
+ change_primary_culture_trigger_desc_first: "[COUNTRY.GetAdjectiveNoFlag] ändert die primäre Kultur in [TARGET_COUNTRY.GetName]." #NT!
+ change_primary_culture_trigger_false_desc_first: "[COUNTRY.GetAdjectiveNoFlag] ändert die primäre Kultur in [TARGET_COUNTRY.GetName] #b nicht mehr #!" #NT!
+ change_primary_culture_trigger_desc_third: "[COUNTRY.GetName] ändert die primäre Kultur in [AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)]." #NT!
+ change_primary_culture_trigger_false_desc_third: "[COUNTRY.GetName] ändert die primäre Kultur in [AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)] #b nicht mehr #!" #NT!
+  
+ ib_events.01.t: "Primärer Kulturwandel" #NT!
+ ib_events.01.d: "Der stolze [ROOT.GetCountry.GetName] hat die kulturelle Anpassung für [SCOPE.sCountry('culture_target_country').GetName] erfolgreich abgeschlossen. [SCOPE.sCountry('culture_target_country').GetName] wird nun für immer gedeihen und die Kultur des Heimatlandes annehmen." #NT!
+ ib_events.01.f: "„Heil [ROOT.GetCountry.GetName]!“" #NT!
+ ib_events.01.a: "Gut gemacht." #NT!
+  
+ change_primary_culture_weekly_effect: "Arbeitet an einer vollständigen Anpassung der Primärkultur mit einer 20 %igen Chance, jede Woche Fortschritte zu machen. Für den Erfolg sind 8 Fortschrittspunkte erforderlich." #NT!

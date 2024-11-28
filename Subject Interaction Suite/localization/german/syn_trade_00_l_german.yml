@@ -1,0 +1,33 @@
+﻿l_german:
+ laws_synergize_trade: "Synergien in der Handelspolitik" #NT!
+ laws_synergize_trade_action_name: "$laws_synergize_trade$" #NT!
+ laws_synergize_trade_action_propose_name: "Beginnen Sie mit der Synergiebildung in Handelspolitiken" #NT!
+ laws_synergize_trade_action_break_name: "Schluss mit der Synergiebildung in der Handelspolitik" #NT!
+ laws_synergize_trade_pact_desc: "[SCOPE.GetRootScope.GetDiplomaticPact.GetFirstCountry.GetName] strukturiert die Handelspolitik von [SCOPE.GetRootScope.GetDiplomaticPact.GetSecondCountry.GetName] um, um Synergien mit ihrer zu erzielen.\n Derzeit durchlaufen #variable [SCOPE.GetRootScope.GetDiplomaticPact.GetSecondCountry.MakeScope.Var('synergize_trade_progress').GetValue]#! 8 Stufen." #NT!
+ laws_synergize_trade_desc: "#header $laws_synergize_trade$#!\n$TOOLTIP_DELIMITER$\nSynergizes die Handelspolitik des angegebenen Landes." #NT!
+ laws_synergize_trade_action_notification_name: "[INITIATOR_COUNTRY.GetName] Synergistische Handelspolitik" #NT!
+ laws_synergize_trade_action_notification_desc: "[INITIATOR_COUNTRY.GetName] sorgt für Synergien in der Handelspolitik unseres Landes." #NT!
+ laws_synergize_trade_action_notification_break_name: "Beenden Sie die Synergisierung der Handelspolitik durch [INITIATOR_COUNTRY.GetName]" #NT!
+ laws_synergize_trade_action_notification_break_desc: "[INITIATOR_COUNTRY.GetName] hat aufgehört, zu versuchen, die Handelspolitik unseres Landes zu synergetisch zu gestalten." #NT!
+  
+ laws_synergize_trade_effect_desc_global: "Beginnen Sie mit der Synergiebildung in Handelspolitiken" #NT!
+ laws_synergize_trade_effect_desc_first: "[COUNTRY.GetAdjectiveNoFlag] initiiert handelspolitische Synergien mit [TARGET_COUNTRY.GetName]." #NT!
+ laws_synergize_trade_effect_desc_third: "[COUNTRY.GetName] initiiert handelspolitische Synergien mit [AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)]." #NT!
+  
+ laws_synergize_trade_trigger_desc_global: "Synergien in der Handelspolitik laufen" #NT!
+ laws_synergize_trade_trigger_false_desc_global: "Derzeit nicht im Prozess der Synergiebildung in der Handelspolitik." #NT!
+ laws_synergize_trade_trigger_desc_first: "[COUNTRY.GetAdjectiveNoFlag] verfügt über synergetische Handelspolitiksysteme mit [TARGET_COUNTRY.GetName]." #NT!
+ laws_synergize_trade_trigger_false_desc_first: "[COUNTRY.GetAdjectiveNoFlag] verfügt derzeit nicht über synergetische Handelspolitiksysteme mit [TARGET_COUNTRY.GetName]." #NT!
+ laws_synergize_trade_trigger_desc_third: "[COUNTRY.GetName] verfügt über synergetische Handelspolitiksysteme mit [AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)]." #NT!
+ laws_synergize_trade_trigger_false_desc_third: "[COUNTRY.GetName] verfügt derzeit nicht über synergetische Handelspolitiksysteme mit [AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)]." #NT!
+  
+ mog_syn_events.04.t: "Kommerzielle Handelssynergie!" #NT!
+ mog_syn_events.04.d: "Die stolze Nation [ROOT.GetCountry.GetName] hat die Synergie der Handelspolitik mit [SCOPE.sCountry('synergize_trade_target_country').GetName] erfolgreich abgeschlossen. [SCOPE.sCountry('synergize_trade_target_country').GetName] wird durch verstärkten Zusammenhalt mit dem Heimatland in ewigem Wohlstand gedeihen." #NT!
+ mog_syn_events.04.f: "„Lang lebe [ROOT.GetCountry.GetName]!“" #NT!
+ mog_syn_events.04.a: "Gut gemacht." #NT!
+  
+ laws_synergize_trade_weekly_effect: "Arbeitet daran, ihre Handelspolitik mit unserer in Einklang zu bringen. Hat jede Woche eine Chance von 20 %, Fortschritte zu machen, wobei für den Erfolg 8 Fortschrittspunkte erforderlich sind." #NT!
+  
+ overlord_syn_cost_trade: "Kosten für die Synergiebildung in der Handelspolitik" #NT!
+  
+ active_synergize_trade_tt: "Die Anzahl anderer $laws_synergize_trade$-Aktionen ist kleiner als 1." #NT!

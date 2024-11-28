@@ -1,21 +1,31 @@
 ﻿l_braz_por:
- DIPLO_ACTION_MERGE_SUBJECT:0 "$DIPLO_ACTION_RELATIONS$ não é menor que $relations_amicable$"
- merge_subject:0 "Fundir Súdito"
- merge_subject_action_name:0 "Territórios Fundidos"
- merge_subject_desc:0 "#header $merge_subject$#!\n$TOOLTIP_DELIMITER$\nUma espécie de [concept_instant_diplomatic_action] que pode se fundir com seus próprios assuntos imediatamente e incondicionalmente."
- merge_subject_proposal_notification_name:0 "Propor $merge_subject_action_name$"
- merge_subject_proposal_notification_desc:0 "[INITIATOR_COUNTRY.GetName] propõe unificar nosso território nacional"
- merge_subject_proposal_notification_effects_desc:0 "$merge_subject_action_name$"
- merge_subject_proposal_accepted_name:0 "Aceitar $merge_subject_action_name$"
- merge_subject_proposal_accepted_desc:0 "[TARGET_COUNTRY.GetName] aceitou nossa proposta de fundir os territórios de seu país."
- merge_subject_proposal_declined_name:0 "Rejeitar $merge_subject_action_name$"
- merge_subject_proposal_declined_desc:0 "[TARGET_COUNTRY.GetName] rejeitou nossa proposta de fundir seu território nacional."
- merge_subject_proposal_third_party_accepted_name:0 "Aceitar $merge_subject_action_name$"
- merge_subject_proposal_third_party_accepted_desc:0 "[INITIATOR_COUNTRY.GetName] fundiu todos os territórios do país [TARGET_COUNTRY.GetName]."
- merge_subject_proposal_third_party_declined_name:0 "Rejeitar $merge_subject_action_name$"
- merge_subject_proposal_third_party_declined_desc:0 "[TARGET_COUNTRY.GetName] se recusou a se fundir com [INITIATOR_COUNTRY.GetName]."
- rule_ai_merge_subject:0 "$merge_subject$"
- setting_ai_can_not_use:0 "Proibir AI de Fundir Súdito"
- setting_ai_can_not_use_desc:0 "Proibir a IA de usar ação diplomática: Mesclar [concept_subject] [Concept('concept_country', '$concept_countries$')]"
- setting_ai_can_use:0 "Permitir que a IA possa Fundir Súdito"
- setting_ai_can_use_desc:0 "Permitir que a IA use ação diplomática: Mesclar [concept_subject] [Concept('concept_country', '$concept_countries$')]"
+ DIPLO_ACTION_MERGE_SUBJECT: "$DIPLO_ACTION_RELATIONS$ não é menor que $relations_amicable$"
+ merge_subject: "Fundir Súdito"
+ merge_subject_action_name: "Territórios Fundidos"
+ merge_subject_desc: "#header $merge_subject$#!\n$TOOLTIP_DELIMITER$\nUma espécie de [concept_instant_diplomatic_action] que pode se fundir com seus próprios assuntos imediatamente e incondicionalmente."
+ merge_subject_proposal_notification_name: "Propor $merge_subject_action_name$"
+ merge_subject_proposal_notification_desc: "[INITIATOR_COUNTRY.GetName] propõe unificar nosso território nacional"
+ merge_subject_proposal_notification_effects_desc: "$merge_subject_action_name$"
+ merge_subject_proposal_accepted_name: "Aceitar $merge_subject_action_name$"
+ merge_subject_proposal_accepted_desc: "[TARGET_COUNTRY.GetName] aceitou nossa proposta de fundir os territórios de seu país."
+ merge_subject_proposal_declined_name: "Rejeitar $merge_subject_action_name$"
+ merge_subject_proposal_declined_desc: "[TARGET_COUNTRY.GetName] rejeitou nossa proposta de fundir seu território nacional."
+ merge_subject_proposal_third_party_accepted_name: "Aceitar $merge_subject_action_name$"
+ merge_subject_proposal_third_party_accepted_desc: "[INITIATOR_COUNTRY.GetName] fundiu todos os territórios do país [TARGET_COUNTRY.GetName]."
+ merge_subject_proposal_third_party_declined_name: "Rejeitar $merge_subject_action_name$"
+ merge_subject_proposal_third_party_declined_desc: "[TARGET_COUNTRY.GetName] se recusou a se fundir com [INITIATOR_COUNTRY.GetName]."
+ rule_ai_merge_subject: "$merge_subject$"
+ setting_ai_can_not_use: "Proibir AI de Fundir Súdito"
+ setting_ai_can_not_use_desc: "Proibir a IA de usar ação diplomática: Mesclar [concept_subject] [Concept('concept_country', '$concept_countries$')]"
+ setting_ai_can_use: "Permitir que a IA possa Fundir Súdito"
+ setting_ai_can_use_desc: "Permitir que a IA use ação diplomática: Mesclar [concept_subject] [Concept('concept_country', '$concept_countries$')]"
+ merge_subject_cheat: "Mesclar assunto Cheat" #NT!
+ rule_merge_subject_cheat: "$merge_subject$" #NT!
+ setting_balanced_merge: "Mesclar assunto é equilibrado" #NT!
+ setting_balanced_merge_desc: "A ação diplomática: Mesclar [concept_subject] [Concept('concept_country', '$concept_countries$')] é balanceada para jogo normal." #NT!
+ setting_cheat_merge: "Mesclar assunto é uma trapaça" #NT!
+ setting_cheat_merge_desc: "A ação diplomática: Mesclar [concept_subject] [Concept('concept_country', '$concept_countries$')] é um truque poderoso." #NT!
+ DIPLOMATIC_ACCEPTANCE_BREAK_FREE: "Eles estão buscando um [concept_ai_strategy] de #v $ai_strategy_subject_break_free$#!" #NT!
+ DIPLOMATIC_ACCEPTANCE_STRENGTHEN_SELF: "Eles estão buscando um [concept_ai_strategy] de #v $ai_strategy_subject_strengthen_self$#!" #NT!
+ DIPLOMATIC_ACCEPTANCE_MAINTAIN_AUTONOMY: "Eles estão buscando um [concept_ai_strategy] de #v $ai_strategy_subject_maintain_autonomy$#!" #NT!
+ DIPLOMATIC_ACCEPTANCE_OVERLORD_COMPLIANCE: "Eles estão buscando um [concept_ai_strategy] de #v $ai_strategy_subject_overlord_compliance$#!" #NT!

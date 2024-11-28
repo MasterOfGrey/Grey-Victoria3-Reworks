@@ -1,0 +1,33 @@
+﻿l_polish:
+ laws_synergize_economy: "Synergizuj gospodarki" #NT!
+ laws_synergize_economy_action_name: "$laws_synergize_economy$" #NT!
+ laws_synergize_economy_action_propose_name: "Rozpocznij synergię gospodarek" #NT!
+ laws_synergize_economy_action_break_name: "Zatrzymajmy synergię gospodarek" #NT!
+ laws_synergize_economy_pact_desc: "[SCOPE.GetRootScope.GetDiplomaticPact.GetFirstCountry.GetName] restrukturyzuje gospodarkę [SCOPE.GetRootScope.GetDiplomaticPact.GetSecondCountry.GetName], aby współdziałać z ich gospodarką.\n Obecnie #variable [SCOPE.GetRootScope.GetDiplomaticPact.GetSecondCountry.MakeScope.Var('synergize_economy_progress').GetValue]#! postępuje z 8 etapów." #NT!
+ laws_synergize_economy_desc: "#header $laws_synergize_economy$#!\n$TOOLTIP_DELIMITER$\nSynergizes systemy gospodarcze wskazanego kraju." #NT!
+ laws_synergize_economy_action_notification_name: "[INITIATOR_COUNTRY.GetName] Synergizujące gospodarki" #NT!
+ laws_synergize_economy_action_notification_desc: "[INITIATOR_COUNTRY.GetName] synergizuje systemy gospodarcze naszego kraju." #NT!
+ laws_synergize_economy_action_notification_break_name: "Zaprzestań synergii gospodarek do [INITIATOR_COUNTRY.GetName]" #NT!
+ laws_synergize_economy_action_notification_break_desc: "[INITIATOR_COUNTRY.GetName] zaprzestał prób harmonizacji systemów gospodarczych naszego kraju." #NT!
+  
+ laws_synergize_economy_effect_desc_global: "Rozpocznij synergię gospodarek" #NT!
+ laws_synergize_economy_effect_desc_first: "[COUNTRY.GetAdjectiveNoFlag] inicjuje synergię ekonomiczną z [TARGET_COUNTRY.GetName]." #NT!
+ laws_synergize_economy_effect_desc_third: "[COUNTRY.GetName] inicjuje synergię ekonomiczną z [AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)]." #NT!
+  
+ laws_synergize_economy_trigger_desc_global: "Synergia gospodarcza w toku" #NT!
+ laws_synergize_economy_trigger_false_desc_global: "Obecnie nie jesteśmy w trakcie procesu synergii systemów gospodarczych." #NT!
+ laws_synergize_economy_trigger_desc_first: "[COUNTRY.GetAdjectiveNoFlag] ma synergistyczne systemy ekonomiczne z [TARGET_COUNTRY.GetName]." #NT!
+ laws_synergize_economy_trigger_false_desc_first: "[COUNTRY.GetAdjectiveNoFlag] nie posiada obecnie synergistycznych systemów ekonomicznych z [TARGET_COUNTRY.GetName]." #NT!
+ laws_synergize_economy_trigger_desc_third: "[COUNTRY.GetName] ma synergistyczne systemy ekonomiczne z [AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)]." #NT!
+ laws_synergize_economy_trigger_false_desc_third: "[COUNTRY.GetName] nie posiada obecnie synergistycznych systemów ekonomicznych z [AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)]." #NT!
+  
+ mog_syn_events.02.t: "Synergia gospodarcza!" #NT!
+ mog_syn_events.02.d: "Dumny naród [ROOT.GetCountry.GetName] pomyślnie zrealizował synergię systemów ekonomicznych z [SCOPE.sCountry('synergize_economy_target_country').GetName]. [SCOPE.sCountry('synergize_economy_target_country').GetName] będzie cieszył się wiecznym dobrobytem dzięki zwiększonej spójności z ojczyzną." #NT!
+ mog_syn_events.02.f: ""Niech żyje [ROOT.GetCountry.GetName]!"" #NT!
+ mog_syn_events.02.a: "Dobrze zrobiony." #NT!
+  
+ laws_synergize_economy_weekly_effect: "Pracuje nad dostosowaniem swojego systemu ekonomicznego do naszego. Ma 20% szans na postęp w każdym tygodniu, a do osiągnięcia sukcesu potrzeba 8 punktów postępu." #NT!
+  
+ overlord_syn_cost_economy: "Koszt synergii gospodarek" #NT!
+  
+ active_synergize_economy_tt: "Liczba innych akcji $laws_synergize_economy$ jest mniejsza niż 1." #NT!

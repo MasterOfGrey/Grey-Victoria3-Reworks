@@ -1,1 +1,31 @@
-﻿
+﻿l_korean:
+ DIPLO_ACTION_MERGE_SUBJECT: "$DIPLO_ACTION_RELATIONS$은 $relations_amicable$보다 작지 않습니다." #NT!
+ merge_subject: "병합 주제" #NT!
+ merge_subject_action_name: "병합된 영토" #NT!
+ merge_subject_desc: "#header $merge_subject$#!\n$TOOLTIP_DELIMITER$\nA 는 즉시 그리고 무조건적으로 자체 주체와 병합할 수 있는 [concept_instant_diplomatic_action] 종류입니다." #NT!
+ merge_subject_proposal_notification_name: "제안하기 $merge_subject_action_name$" #NT!
+ merge_subject_proposal_notification_desc: "[INITIATOR_COUNTRY.GetName]은 우리의 국토를 통일하자고 제안합니다" #NT!
+ merge_subject_proposal_notification_effects_desc: "$merge_subject_action_name$" #NT!
+ merge_subject_proposal_accepted_name: "수락 $merge_subject_action_name$" #NT!
+ merge_subject_proposal_accepted_desc: "[TARGET_COUNTRY.GetName]은(는) 그들의 국가 영토를 합병한다는 우리의 제안을 수락했습니다." #NT!
+ merge_subject_proposal_declined_name: "거부 $merge_subject_action_name$" #NT!
+ merge_subject_proposal_declined_desc: "[TARGET_COUNTRY.GetName]는 그들의 국가 영토를 합병하자는 우리의 제안을 거부했습니다." #NT!
+ merge_subject_proposal_third_party_accepted_name: "수락 $merge_subject_action_name$" #NT!
+ merge_subject_proposal_third_party_accepted_desc: "[INITIATOR_COUNTRY.GetName]은 [TARGET_COUNTRY.GetName] 국가의 모든 영토를 병합했습니다." #NT!
+ merge_subject_proposal_third_party_declined_name: "거부 $merge_subject_action_name$" #NT!
+ merge_subject_proposal_third_party_declined_desc: "[TARGET_COUNTRY.GetName]이 [INITIATOR_COUNTRY.GetName]와의 병합을 거부했습니다." #NT!
+ rule_ai_merge_subject: "$merge_subject$" #NT!
+ setting_ai_can_not_use: "AI가 주제를 병합하는 것을 금지합니다" #NT!
+ setting_ai_can_not_use_desc: "AI가 외교적 행동을 사용하는 것을 금지합니다: [concept_subject] [Concept('concept_country', '$concept_countries$')] 병합" #NT!
+ setting_ai_can_use: "AI가 주제를 병합하도록 허용" #NT!
+ setting_ai_can_use_desc: "AI가 외교적 행동을 사용하도록 허용: [concept_subject] [Concept('concept_country', '$concept_countries$')]을 병합합니다.\n참고: AI는 이 외교적 행동을 플레이어에게 보내지 않습니다." #NT!
+ merge_subject_cheat: "병합 주제 속임수" #NT!
+ rule_merge_subject_cheat: "$merge_subject$" #NT!
+ setting_balanced_merge: "병합 주제가 균형 잡혔습니다" #NT!
+ setting_balanced_merge_desc: "외교적 행동: 병합 [concept_subject] [Concept('concept_country', '$concept_countries$')]은 일반 플레이에 맞게 조정되었습니다." #NT!
+ setting_cheat_merge: "제목 병합은 속임수입니다" #NT!
+ setting_cheat_merge_desc: "외교적 행동: Merge [concept_subject] [Concept('concept_country', '$concept_countries$')]은 강력한 치트입니다." #NT!
+ DIPLOMATIC_ACCEPTANCE_BREAK_FREE: "[concept_ai_strategy] of #v $ai_strategy_subject_break_free$#!을 추구하고 있습니다" #NT!
+ DIPLOMATIC_ACCEPTANCE_STRENGTHEN_SELF: "[concept_ai_strategy] of #v $ai_strategy_subject_strengthen_self$#!을 추구하고 있습니다" #NT!
+ DIPLOMATIC_ACCEPTANCE_MAINTAIN_AUTONOMY: "[concept_ai_strategy] of #v $ai_strategy_subject_maintain_autonomy$#!을 추구하고 있습니다" #NT!
+ DIPLOMATIC_ACCEPTANCE_OVERLORD_COMPLIANCE: "[concept_ai_strategy] of #v $ai_strategy_subject_overlord_compliance$#!을 추구하고 있습니다" #NT!

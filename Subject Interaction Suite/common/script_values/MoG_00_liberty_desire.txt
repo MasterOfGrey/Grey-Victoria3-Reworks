@@ -130,15 +130,18 @@ liberty_desire_weekly_change = {
 				# determines the naval power that the subject must have to begin gaining Liberty Desire from navy strength
 				multiply = 0.6
 			}
-			root.first_country = {
-				NOT = { has_strategic_adjacency = root.second_country }
+			NOT = {
+				root.first_country = { has_strategic_land_adjacency = root.second_country }
 			}
 		}
 		add = {
 			add = root.first_country.naval_power_projection
 			subtract = root.second_country.naval_power_projection
 			# division gives you the % of overlord's army that is in excess of subject's army
-			divide = root.first_country.naval_power_projection
+			divide = {
+				add = root.first_country.naval_power_projection
+				min = 0.001
+			}
 				# result value right now is in the range 0.4-0.0 at equivalence...
 			# subtraction is related to the 0.6 multiplier for over 60% check - adjust as appropriate
 			subtract = 0.4 
@@ -147,6 +150,12 @@ liberty_desire_weekly_change = {
 				# result is now positive liberty gain from approaching equivalence in naval power
 			desc = "LIBERTY_DESIRE_WEEKLY_CHANGE_REL_NAVY_SCALING"
 		}
+	}
+	else = {
+		add = {
+			value = -0.01
+			desc = "LIBERTY_DESIRE_WEEKLY_CHANGE_REL_NAVY_SCALING"
+		}	
 	}
 	# Uses: army_power_projection
 	if = {
@@ -166,7 +175,10 @@ liberty_desire_weekly_change = {
 					add = root.first_country.army_power_projection
 					subtract = root.second_country.army_power_projection
 					# division gives you the % of overlord's army that is in excess of subject's army
-					divide = root.first_country.army_power_projection
+					divide = {
+						add = root.first_country.army_power_projection
+						min = 0.001
+					}
 						# result value right now is in the range 0.2-0.0 at equivalence...
 					# subtraction is related to the 0.8 multiplier for over 80% check - adjust as appropriate
 					subtract = 0.2 
@@ -182,7 +194,10 @@ liberty_desire_weekly_change = {
 					add = root.first_country.army_power_projection
 					subtract = root.second_country.army_power_projection
 					# division gives you the % of overlord's army that the subject's army exceeds it by (-ve value)
-					divide = root.first_country.army_power_projection
+					divide = {
+						add = root.first_country.army_power_projection
+						min = 0.001
+					}
 					multiply = -1
 						# result is now positive liberty gain from exceeding overlord in army power
 					multiply = 2
@@ -231,7 +246,10 @@ liberty_desire_weekly_change = {
 			}
 			add = {
 				add = root.first_country.army_power_projection
-				divide = root.second_country.army_power_projection
+				divide = {
+					add = root.second_country.army_power_projection
+					min = 0.001
+				}
 				divide = 50
 				min = 0.01
 				max = 0.2
@@ -241,6 +259,11 @@ liberty_desire_weekly_change = {
 		}
 	}
 	
+	# COMBINED SUBJECT POWER
+	add = {
+		value = liberty_desire_weekly_change_combined_subjects
+		desc = "LIBERTY_DESIRE_WEEKLY_CHANGE_COMBINED_SUBJECTS"
+	}
 	
 	# PACT Dependent Effects
 	# Bankroll

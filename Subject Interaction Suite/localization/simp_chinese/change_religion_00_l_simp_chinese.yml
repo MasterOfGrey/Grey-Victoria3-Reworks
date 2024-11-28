@@ -1,33 +1,33 @@
 ﻿l_simp_chinese:
- change_state_religion:0 "[INITIATOR_COUNTRY.GetCustom('change_religion_dynamic_name')]"
- change_state_religion_action_name:0 "$change_state_religion$"
- change_state_religion_action_propose_name:0 "开始[INITIATOR_COUNTRY.GetCustom('change_religion_dynamic_name')]"
- change_state_religion_action_break_name:0 "停止[INITIATOR_COUNTRY.GetCustom('change_religion_dynamic_name')]"
- change_state_religion_pact_desc:0 "[SCOPE.GetRootScope.GetDiplomaticPact.GetFirstCountry.GetName]正在重整[SCOPE.GetRootScope.GetDiplomaticPact.GetSecondCountry.GetName]的宗教事务。 \n在总共8个阶段中目前完成了#variable [SCOPE.GetRootScope.GetDiplomaticPact.GetSecondCountry.MakeScope.Var('change_state_religion_progress').GetValue]#!个 "
- change_state_religion_desc:1 "#header $change_state_religion$#!\n$TOOLTIP_DELIMITER$ \n重整目标国家的宗教事务。"
- change_state_religion_action_notification_name:1 "[INITIATOR_COUNTRY.GetName]正在插手我国的宗教事务。"
- change_state_religion_action_notification_desc:1 "[INITIATOR_COUNTRY.GetName]正在插手我国的宗教事务。"
- change_state_religion_action_notification_break_name:1 "[INITIATOR_COUNTRY.GetName]停止插手我国的宗教事务"
- change_state_religion_action_notification_break_desc:0 "[INITIATOR_COUNTRY.GetName]已停止插手我国的宗教事务。"
- 
- change_state_religion_effect_desc_global:0 "当前在[INITIATOR_COUNTRY.GetCustom('change_religion_dynamic_name')]"
- change_state_religion_effect_desc_first:0 "[COUNTRY.GetAdjectiveNoFlag]正在重整[TARGET_COUNTRY.GetName]的宗教事务。"
- change_state_religion_effect_desc_third:0 "[COUNTRY.GetName]正在重整[AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)]的宗教事务。"
- 
- change_state_religion_trigger_desc_global:0 "[INITIATOR_COUNTRY.GetCustom('change_religion_dynamic_name')]事务进行中"
- change_state_religion_trigger_false_desc_global:0 "#b 不再#![INITIATOR_COUNTRY.GetCustom('change_religion_dynamic_name')]。"
+ change_state_religion: "[INITIATOR_COUNTRY.GetCustom('change_religion_dynamic_name')]"
+ change_state_religion_action_name: "$change_state_religion$"
+ change_state_religion_action_propose_name: "开始[INITIATOR_COUNTRY.GetCustom('change_religion_dynamic_name')]"
+ change_state_religion_action_break_name: "停止[INITIATOR_COUNTRY.GetCustom('change_religion_dynamic_name')]"
+ change_state_religion_pact_desc: "[SCOPE.GetRootScope.GetDiplomaticPact.GetFirstCountry.GetName]正在重整[SCOPE.GetRootScope.GetDiplomaticPact.GetSecondCountry.GetName]的宗教事务。 \n在总共8个阶段中目前完成了#variable [SCOPE.GetRootScope.GetDiplomaticPact.GetSecondCountry.MakeScope.Var('change_state_religion_progress').GetValue]#!个 "
+ change_state_religion_desc: "#header $change_state_religion$#!\n$TOOLTIP_DELIMITER$ \n重整目标国家的宗教事务。"
+ change_state_religion_action_notification_name: "[INITIATOR_COUNTRY.GetName]正在插手我国的宗教事务。"
+ change_state_religion_action_notification_desc: "[INITIATOR_COUNTRY.GetName]正在插手我国的宗教事务。"
+ change_state_religion_action_notification_break_name: "[INITIATOR_COUNTRY.GetName]停止插手我国的宗教事务"
+ change_state_religion_action_notification_break_desc: "[INITIATOR_COUNTRY.GetName]已停止插手我国的宗教事务。"
+  
+ change_state_religion_effect_desc_global: "当前在[INITIATOR_COUNTRY.GetCustom('change_religion_dynamic_name')]"
+ change_state_religion_effect_desc_first: "[COUNTRY.GetAdjectiveNoFlag]正在重整[TARGET_COUNTRY.GetName]的宗教事务。"
+ change_state_religion_effect_desc_third: "[COUNTRY.GetName]正在重整[AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)]的宗教事务。"
+  
+ change_state_religion_trigger_desc_global: "[INITIATOR_COUNTRY.GetCustom('change_religion_dynamic_name')]事务进行中"
+ change_state_religion_trigger_false_desc_global: "#b 不再#![INITIATOR_COUNTRY.GetCustom('change_religion_dynamic_name')]。"
  change_state_religion_trigger_desc_first: "[COUNTRY.GetAdjectiveNoFlag]正在插手[TARGET_COUNTRY.GetName]的宗教事务。"
  change_state_religion_trigger_false_desc_first: "[COUNTRY.GetAdjectiveNoFlag]#b 不再#!插手[TARGET_COUNTRY.GetName]的宗教事务。"
  change_state_religion_trigger_desc_third: "[COUNTRY.GetName]正在插手[AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)]的宗教事务。"
  change_state_religion_trigger_false_desc_third: "[COUNTRY.GetName]#b 不再#!插手[AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)]的宗教事务。"
- 
+  
  ib_events.02.t: "教权已清晰"
  ib_events.02.d: "[ROOT.GetCountry.GetName]已成功理顺了[SCOPE.sCountry('religion_target_country').GetName]的宗教事务，[SCOPE.sCountry('religion_target_country').GetName]将沐浴在母国的信仰中永远繁荣。"
  ib_events.02.f: "雄哉我[ROOT.GetCountry.GetName]！"
  ib_events.02.a: "干得漂亮。"
- 
- change_state_religion_weekly_effect: "重整宗教行动需要完成八个阶段，每周有20%机会推进一个阶段。" 
- 
+  
+ change_state_religion_weekly_effect: "重整宗教行动需要完成八个阶段，每周有20%机会推进一个阶段。"
+  
  cr_irreligious_conversion: "取缔神灵崇拜"
  cr_institutionalise_secularism: "实行政教分离"
  cr_religious_conversion: "传播正统信仰"

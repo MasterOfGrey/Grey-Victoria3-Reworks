@@ -2,27 +2,32 @@
  ld_level_low: "低"
  ld_level_moderate: "中"
  ld_level_high: "高"
+  
  LIBERTY_DESIRE_LEVEL_BOUNDS_DESC: "适用于[LibertyDesireLevel.GetLowerBound|v0]到[LibertyDesireLevel.GetUpperBound|v0]之间的[concept_liberty_desire]"
  LIBERTY_DESIRE_LEVEL_NO_EFFECT: "#italic 无效果#!"
+  
  LIBERTY_DESIRE_LEVEL_ACTIVE: "#i #b （当前生效）#!#!"
  LIBERTY_DESIRE_LEVEL_TOOLTIP: "[SelectLocalization( LibertyDesireLevel.IsActive( Country.GetLibertyDesireRaw ), 'LIBERTY_DESIRE_LEVEL_ACTIVE_TOOLTIP', 'LIBERTY_DESIRE_LEVEL_INACTIVE_TOOLTIP' )]"
  LIBERTY_DESIRE_LEVEL_INACTIVE_TOOLTIP: "#header [LibertyDesireLevel.GetNameNoFormatting]#!\n$LIBERTY_DESIRE_LEVEL_BOUNDS_DESC$\n$TOOLTIP_DELIMITER$\n#title 对[Country.GetName]的影响：#!#indent_newline:2 \n[LibertyDesireLevel.GetEffects]#!"
+  
+  
  LIBERTY_DESIRE_LEVEL_ACTIVE_TOOLTIP: "#header [LibertyDesireLevel.GetNameNoFormatting]#!$LIBERTY_DESIRE_LEVEL_ACTIVE$\n$LIBERTY_DESIRE_LEVEL_BOUNDS_DESC$\n$LIBERTY_DESIRE_LEVEL_CURRENT_LIBERTY_DESIRE_DESC$\n$TOOLTIP_DELIMITER$\n[Country.GetWeeklyLibertyDesireChangeDesc]\n\n对[Country.GetName]的影响：#indent_newline:2 \n[LibertyDesireLevel.GetEffects]#!"
+  
+  
  LIBERTY_DESIRE_LEVEL_CURRENT_LIBERTY_DESIRE_DESC: "当前[concept_liberty_desire]：[Country.GetLibertyDesireRaw|v0]"
-
+  
  COUNTRY_LIBERTY_DESIRE_ACTIVE_LEVEL_BOUNDS_DESC: "适用于[Country.CalcLibertyDesireLevel.GetLowerBound|v0]到[Country.CalcLibertyDesireLevel.GetUpperBound|v0]之间的[concept_liberty_desire]"
  COUNTRY_LIBERTY_DESIRE_ACTIVE_LEVEL_TOOLTIP: "#header [Country.GetName]为[Country.CalcLibertyDesireLevel.GetNameNoFormatting]#!\n$COUNTRY_LIBERTY_DESIRE_ACTIVE_LEVEL_BOUNDS_DESC$\n$LIBERTY_DESIRE_LEVEL_CURRENT_LIBERTY_DESIRE_DESC$\n$TOOLTIP_DELIMITER$\n[Country.GetWeeklyLibertyDesireChangeDesc]\n\n#title 对[Country.GetName]的影响：#!#indent_newline:2 \n[Country.CalcLibertyDesireLevel.GetEffects]#!"
- LIBERTY_DESIRE_LEVEL_SWAY_WAR_GOAL_DESC: "允许要求#b $WAR_GOAL$#!作为[concept_war_goal]"
-
+  
  TOOLTIP_TYPE_LIBERTY_DESIRE_LEVEL: "独立倾向等级"
-
+  
  LIBERTY_DESIRE_WEEKLY_CHANGE_BASE: "基础"
  LIBERTY_DESIRE_WEEKLY_CHANGE_VALUE_FORMAT: "[SelectLocalization(GreaterThan_CFixedPoint('(CFixedPoint)$VALUE$','(CFixedPoint)0'),'$VALUE|bo=2$','$VALUE|bu=2$')] 由于 $KEY$"
  LIBERTY_DESIRE_WEEKLY_CHANGE_DESC: "[concept_liberty_desire]预计每周改变[SelectLocalization(GreaterThan_CFixedPoint('(CFixedPoint)$VALUE$','(CFixedPoint)0'),'$VALUE|bo=2$','$VALUE|bu=2$')]，原因是：\n$BREAKDOWN$"
  LIBERTY_DESIRE_WEEKLY_CHANGE_DESC_ADDITIONAL_ADDS: "#indent_newline:3 附加协议：\n[SCOPE.GetRootScope.GetDiplomaticPact.GetSecondCountry.GetModifier.GetDescFor('country_liberty_desire_add')]#!"
  LIBERTY_SUBJECT_DESIRE_WEEKLY_CHANGE_DESC_ADDITIONAL_ADDS: "#indent_newline:3 附加协议：\n[SCOPE.GetRootScope.GetDiplomaticPact.GetFirstCountry.GetModifier.GetDescFor('country_liberty_desire_of_subjects_add')]#!"
  LIBERTY_DESIRE_WEEKLY_CHANGE_DESC_ADDITIONAL_MULTS: "#indent_newline:3 附加协议：\n[SCOPE.GetRootScope.GetDiplomaticPact.GetSecondCountry.GetModifier.GetDescFor('country_liberty_desire_add')][SCOPE.GetRootScope.GetDiplomaticPact.GetSecondCountry.GetModifier.GetDescFor('country_liberty_desire_increase_mult')][SCOPE.GetRootScope.GetDiplomaticPact.GetSecondCountry.GetModifier.GetDescFor('country_liberty_desire_decrease_mult')]#!"
-
+  
  LIBERTY_DESIRE_WEEKLY_CHANGE_RELATIONS_HOSTILE: "#r 敌意#![concept_relations]"
  LIBERTY_DESIRE_WEEKLY_CHANGE_RELATIONS_COLD: "#r 冷淡#![concept_relations]"
  LIBERTY_DESIRE_WEEKLY_CHANGE_RELATIONS_POOR: "#r 较差#![concept_relations]"
@@ -30,9 +35,9 @@
  LIBERTY_DESIRE_WEEKLY_CHANGE_RELATIONS_CORDIAL: "#green 善意#![concept_relations]"
  LIBERTY_DESIRE_WEEKLY_CHANGE_RELATIONS_AMICABLE: "#green 友善#![concept_relations]"
  LIBERTY_DESIRE_WEEKLY_CHANGE_RELATIONS_FRIENDLY: "#green 亲密#![concept_relations]"
- 
+  
  LIBERTY_DESIRE_WEEKLY_CHANGE_INFAMY: " [concept_overlord]的[concept_infamy]"
- 
+  
  LIBERTY_DESIRE_WEEKLY_CHANGE_BANKROLL: "[GetDiplomaticActionType('bankroll').GetName]"
  LIBERTY_DESIRE_WEEKLY_CHANGE_SUPPORT_REGIME: "[GetDiplomaticActionType('da_support_regime').GetName]"
  LIBERTY_DESIRE_WEEKLY_CHANGE_KNOWLEDGE_SHARING: "[GetDiplomaticActionType('da_knowledge_sharing').GetName]"
@@ -40,18 +45,19 @@
  LIBERTY_DESIRE_WEEKLY_CHANGE_RAISE_PAYMENTS: "[GetDiplomaticActionType('raise_payments').GetName]"
  LIBERTY_DESIRE_WEEKLY_CHANGE_DECREASE_PAYMENTS: "[GetDiplomaticActionType('decrease_payments').GetName]"
  LIBERTY_DESIRE_WEEKLY_CHANGE_CULTURE_CONVERT: "[GetDiplomaticActionType('change_primary_culture').GetName]"
- 
+  
  LIBERTY_DESIRE_RELATIVE_PRESTIGE_VALUE_FORMAT: "$TAB$[SelectLocalization(GreaterThan_CFixedPoint('(CFixedPoint)$VALUE$','(CFixedPoint)0'),'$VALUE|bo=2$','$VALUE|bu=2$')]由于$KEY$"
  LIBERTY_DESIRE_WEEKLY_CHANGE_RELATIVE_PRESTIGE: "[concept_overlord]相对于 [SCOPE.GetRootScope.GetDiplomaticPact.GetSecondCountry.GetName]的[concept_prestige] (当前 #v [SCOPE.GetRootScope.GetDiplomaticPact.GetFirstCountry.GetRelativePrestige( SCOPE.GetRootScope.GetDiplomaticPact.GetSecondCountry )|v1]x#!倍)\n$TAB$[SCOPE.GetRootScope.GetDiplomaticPact.GetSecondCountry.GetSubjectType.GetName] 顺从度受影响于 :\n[SCOPE.GetScriptValueDesc('liberty_desire_weekly_change_relative_prestige')]"
- 
+  
  LIBERTY_DESIRE_WEEKLY_CHANGE_NO_PRESTIGE_NEGATIVE: "[SCOPE.GetRootScope.GetDiplomaticPact.GetSecondCountry.GetAdjective]的[concept_prestige]为#v 0#!"
  LIBERTY_DESIRE_WEEKLY_CHANGE_NO_PRESTIGE_POSITIVE: "[SCOPE.GetRootScope.GetDiplomaticPact.GetFirstCountry.GetAdjective]的[concept_prestige]为#v 0#!"
- LIBERTY_DESIRE_WEEKLY_CHANGE_PRESTIGE_DIFFERENCE_1_5_NEGATIVE: "相对[concept_prestige]高于[SCOPE.GetRootScope.GetDiplomaticPact.GetSecondCountry.GetSubjectType.GetName]期望的#v 1.5×#!倍（当前#v [SCOPE.GetRootScope.GetDiplomaticPact.GetFirstCountry.GetRelativePrestige( SCOPE.GetRootScope.GetDiplomaticPact.GetSecondCountry )|v1]×#!）"
  LIBERTY_DESIRE_WEEKLY_CHANGE_PRESTIGE_DIFFERENCE_1_5_POSITIVE: "相对[concept_prestige]低于[SCOPE.GetRootScope.GetDiplomaticPact.GetSecondCountry.GetSubjectType.GetName]期望的#v 1.5×#!倍（当前#v [SCOPE.GetRootScope.GetDiplomaticPact.GetFirstCountry.GetRelativePrestige( SCOPE.GetRootScope.GetDiplomaticPact.GetSecondCountry )|v1]×#!）"
- LIBERTY_DESIRE_WEEKLY_CHANGE_PRESTIGE_DIFFERENCE_2_0_NEGATIVE: "相对[concept_prestige]高于[SCOPE.GetRootScope.GetDiplomaticPact.GetSecondCountry.GetSubjectType.GetName]期望的#v 2.0×#!倍（当前#v [SCOPE.GetRootScope.GetDiplomaticPact.GetFirstCountry.GetRelativePrestige( SCOPE.GetRootScope.GetDiplomaticPact.GetSecondCountry )|v1]×#!）"
  LIBERTY_DESIRE_WEEKLY_CHANGE_PRESTIGE_DIFFERENCE_2_0_POSITIVE: "相对[concept_prestige]低于[SCOPE.GetRootScope.GetDiplomaticPact.GetSecondCountry.GetSubjectType.GetName]期望的#v 2.0×#!倍（当前#v [SCOPE.GetRootScope.GetDiplomaticPact.GetFirstCountry.GetRelativePrestige( SCOPE.GetRootScope.GetDiplomaticPact.GetSecondCountry )|v1]×#!）"
- LIBERTY_DESIRE_WEEKLY_CHANGE_PRESTIGE_DIFFERENCE_3_0_NEGATIVE: "相对[concept_prestige]高于[SCOPE.GetRootScope.GetDiplomaticPact.GetSecondCountry.GetSubjectType.GetName]期望的#v 3.0×#!倍（当前#v [SCOPE.GetRootScope.GetDiplomaticPact.GetFirstCountry.GetRelativePrestige( SCOPE.GetRootScope.GetDiplomaticPact.GetSecondCountry )|v1]×#!）"
  LIBERTY_DESIRE_WEEKLY_CHANGE_PRESTIGE_DIFFERENCE_3_0_POSITIVE: "相对[concept_prestige]低于[SCOPE.GetRootScope.GetDiplomaticPact.GetSecondCountry.GetSubjectType.GetName]期望的#v 3.0×#!倍（当前#v [SCOPE.GetRootScope.GetDiplomaticPact.GetFirstCountry.GetRelativePrestige( SCOPE.GetRootScope.GetDiplomaticPact.GetSecondCountry )|v1]×#!）"
+  
+ LIBERTY_DESIRE_WEEKLY_CHANGE_PRESTIGE_DIFFERENCE_1_5_NEGATIVE: "相对[concept_prestige]高于[SCOPE.GetRootScope.GetDiplomaticPact.GetSecondCountry.GetSubjectType.GetName]期望的#v 1.5×#!倍（当前#v [SCOPE.GetRootScope.GetDiplomaticPact.GetFirstCountry.GetRelativePrestige( SCOPE.GetRootScope.GetDiplomaticPact.GetSecondCountry )|v1]×#!）"
+ LIBERTY_DESIRE_WEEKLY_CHANGE_PRESTIGE_DIFFERENCE_2_0_NEGATIVE: "相对[concept_prestige]高于[SCOPE.GetRootScope.GetDiplomaticPact.GetSecondCountry.GetSubjectType.GetName]期望的#v 2.0×#!倍（当前#v [SCOPE.GetRootScope.GetDiplomaticPact.GetFirstCountry.GetRelativePrestige( SCOPE.GetRootScope.GetDiplomaticPact.GetSecondCountry )|v1]×#!）"
+ LIBERTY_DESIRE_WEEKLY_CHANGE_PRESTIGE_DIFFERENCE_3_0_NEGATIVE: "相对[concept_prestige]高于[SCOPE.GetRootScope.GetDiplomaticPact.GetSecondCountry.GetSubjectType.GetName]期望的#v 3.0×#!倍（当前#v [SCOPE.GetRootScope.GetDiplomaticPact.GetFirstCountry.GetRelativePrestige( SCOPE.GetRootScope.GetDiplomaticPact.GetSecondCountry )|v1]×#!）"
  LIBERTY_DESIRE_WEEKLY_CHANGE_PRESTIGE_DIFFERENCE_4_0_NEGATIVE: "相对[concept_prestige]高于[SCOPE.GetRootScope.GetDiplomaticPact.GetSecondCountry.GetSubjectType.GetName]期望的#v 4.0x#!倍（当前#v [SCOPE.GetRootScope.GetDiplomaticPact.GetFirstCountry.GetRelativePrestige( SCOPE.GetRootScope.GetDiplomaticPact.GetSecondCountry )|v1]×#!"
  LIBERTY_DESIRE_WEEKLY_CHANGE_PRESTIGE_DIFFERENCE_6_0_NEGATIVE: "相对[concept_prestige]高于[SCOPE.GetRootScope.GetDiplomaticPact.GetSecondCountry.GetSubjectType.GetName]期望的#v 6.0x#!倍（当前#v [SCOPE.GetRootScope.GetDiplomaticPact.GetFirstCountry.GetRelativePrestige( SCOPE.GetRootScope.GetDiplomaticPact.GetSecondCountry )|v1]×#!"
  LIBERTY_DESIRE_WEEKLY_CHANGE_PRESTIGE_DIFFERENCE_8_0_NEGATIVE: "相对[concept_prestige]高于[SCOPE.GetRootScope.GetDiplomaticPact.GetSecondCountry.GetSubjectType.GetName]期望的#v 8.0x#!倍（当前#v [SCOPE.GetRootScope.GetDiplomaticPact.GetFirstCountry.GetRelativePrestige( SCOPE.GetRootScope.GetDiplomaticPact.GetSecondCountry )|v1]×#!"
@@ -60,18 +66,18 @@
  LIBERTY_DESIRE_WEEKLY_CHANGE_PRESTIGE_DIFFERENCE_24_0_NEGATIVE: "相对[concept_prestige]高于[SCOPE.GetRootScope.GetDiplomaticPact.GetSecondCountry.GetSubjectType.GetName]期望的#v 24.0x#!倍（当前#v [SCOPE.GetRootScope.GetDiplomaticPact.GetFirstCountry.GetRelativePrestige( SCOPE.GetRootScope.GetDiplomaticPact.GetSecondCountry )|v1]×#!"
  LIBERTY_DESIRE_WEEKLY_CHANGE_PRESTIGE_DIFFERENCE_32_0_NEGATIVE: "相对[concept_prestige]高于[SCOPE.GetRootScope.GetDiplomaticPact.GetSecondCountry.GetSubjectType.GetName]期望的#v 32.0x#!倍（当前#v [SCOPE.GetRootScope.GetDiplomaticPact.GetFirstCountry.GetRelativePrestige( SCOPE.GetRootScope.GetDiplomaticPact.GetSecondCountry )|v1]×#!"
  LIBERTY_DESIRE_WEEKLY_CHANGE_PRESTIGE_DIFFERENCE_48_0_NEGATIVE: "相对[concept_prestige]高于[SCOPE.GetRootScope.GetDiplomaticPact.GetSecondCountry.GetSubjectType.GetName]期望的#v 48.0x#!倍（当前#v [SCOPE.GetRootScope.GetDiplomaticPact.GetFirstCountry.GetRelativePrestige( SCOPE.GetRootScope.GetDiplomaticPact.GetSecondCountry )|v1]×#!"
- 
+  
  LIBERTY_DESIRE_WEEKLY_CHANGE_RELIGION: "尝试改变[SCOPE.GetRootScope.GetDiplomaticPact.GetSecondCountry.GetSubjectType.GetName]的[concept_state_religion]"
  LIBERTY_DESIRE_WEEKLY_CHANGE_DEVOUT_RESISTANCE: "[GetDiplomaticActionType('change_state_religion').GetName]的信仰虔诚度阻力"
  LIBERTY_DESIRE_WEEKLY_CHANGE_CULTURE: "试图取代[SCOPE.GetRootScope.GetDiplomaticPact.GetSecondCountry.GetSubjectType.GetName]的[Concept('concept_primary_cultures','$concept_primary_culture$')]"
  LIBERTY_DESIRE_WEEKLY_CHANGE_NATIONALIST_RESISTANCE: "[GetDiplomaticActionType('change_primary_culture').GetName]的文化排外度阻力"
  LIBERTY_DESIRE_WEEKLY_CHANGE_INCLUDE_CULTURE: "尝试让[SCOPE.GetRootScope.GetDiplomaticPact.GetSecondCountry.GetSubjectType.GetName]容纳[Concept('concept_primary_cultures','$concept_primary_culture$')]"
- 
+  
  legal_systems: "法律"
  LIBERTY_DESIRE_LEGAL_FRICTION: "差异"
  LIBERTY_DESIRE_LEGAL_FRICTION_VALUE_FORMAT: "$TAB$[SelectLocalization(GreaterThan_CFixedPoint('(CFixedPoint)$VALUE$','(CFixedPoint)0'),'$VALUE|bo=2$','$VALUE|bu=2$')]来自$KEY$"
  LIBERTY_DESIRE_WEEKLY_CHANGE_LEGAL_FRICTION: "[Concept('concept_law', '$legal_systems$')]$LIBERTY_DESIRE_LEGAL_FRICTION$:\n[SCOPE.GetScriptValueDesc('liberty_desire_weekly_change_legal_friction')]"
- 
+  
  LIBERTY_DESIRE_LEGAL_FRICTION_GOVERNANCE: "[GetLawGroup('lawgroup_governance_principles').GetName]"
  LIBERTY_DESIRE_LEGAL_FRICTION_CHURCH: "[GetLawGroup('lawgroup_church_and_state').GetName]"
  LIBERTY_DESIRE_LEGAL_FRICTION_BUREAUCRACY: "[GetLawGroup('lawgroup_bureaucracy').GetName]"
@@ -82,14 +88,17 @@
  LIBERTY_DESIRE_LEGAL_FRICTION_FEMINISM: "[GetLawGroup('lawgroup_rights_of_women').GetName]"
  LIBERTY_DESIRE_LEGAL_FRICTION_SPEECH: "[GetLawGroup('lawgroup_free_speech').GetName]"
  LIBERTY_DESIRE_LEGAL_FRICTION_LABOR: "[GetLawGroup('lawgroup_labor_rights').GetName]"
- 
+  
  LIBERTY_DESIRE_WEEKLY_CHANGE_REL_MILITARY_WEAK: "[SCOPE.GetRootScope.GetDiplomaticPact.GetSecondCountry.GetName]没有[concept_army]!"
  LIBERTY_DESIRE_WEEKLY_CHANGE_REL_MILITARY_SCALING: "相对[concept_army][concept_power_projection]占[concept_overlord]的比重（十倍时达到上限）"
  LIBERTY_DESIRE_WEEKLY_CHANGE_REL_MILITARY_APPROACH: "陆军力量投射>宗主的80% "
  LIBERTY_DESIRE_WEEKLY_CHANGE_REL_MILITARY_EXCCEED: "陆军力量投射>宗主的100%"
  LIBERTY_DESIRE_WEEKLY_CHANGE_REL_NAVY_SCALING: "[SCOPE.GetRootScope.GetDiplomaticPact.GetSecondCountry.GetName]的相对海军[concept_power_projection]"
  LIBERTY_DESIRE_WEEKLY_CHANGE_REL_MILITARY_SCALING_REDUCTION: "[concept_subject]缺少相对于 [concept_overlord] [concept_army]的海军力量存在"
- 
+ LIBERTY_DESIRE_WEEKLY_CHANGE_COMBINED_SUBJECTS: "所有 [Concept('concept_subject', '$concept_subjects$')] [concept_power_projection] 与 [SCOPE.GetRootScope.GetDiplomaticPact.GetFirstCountry.GetName]\n[SCOPE.GetScriptValueDesc('liberty_desire_weekly_change_combined_subjects')] 相比" #NT!
+ LIBERTY_DESIRE_WEEKLY_CHANGE_OWN_COMBINED_SUBJECTS: "[SCOPE.GetRootScope.GetDiplomaticPact.GetSecondCountry.GetName] 自身[Concept('concept_subject', '$concept_subjects$')] 的威胁）" #NT!
+ LIBERTY_DESIRE_CHANGE_OWN_COMBINED_SUBJECTS_VALUE_FORMAT: "$TAB$（包括$KEY$ 中的[SelectLocalization(GreaterThan_CFixedPoint('(CFixedPoint)$VALUE$','(CFixedPoint)0'),'$VALUE|bo=2$','$VALUE|bu=2$')]" #NT!
+  
  LIBERTY_DESIRE_WEEKLY_CHANGE_LOW_SUPPLY_NETWORK_STRENGTH: "[SCOPE.GetRootScope.GetDiplomaticPact.GetFirstCountry.GetAdjective]的[concept_supply_network]强度较低（[SCOPE.GetRootScope.GetDiplomaticPact.GetFirstCountry.GetSupplyNetworkStrength|v0%]）"
  LIBERTY_DESIRE_WEEKLY_CHANGE_SACRED_CIVICS: "#v $principle_group_sacred_civics$#!下的相同国家[concept_religion]"
  LIBERTY_DESIRE_WEEKLY_CHANGE_ISOLATED_FROM_MARKET: "[SCOPE.GetRootScope.GetDiplomaticPact.GetSecondCountry.GetCapital.GetName]孤立于[SCOPE.GetRootScope.GetDiplomaticPact.GetFirstCountry.GetMarket.GetName]"
@@ -100,4 +109,6 @@
  LIBERTY_DESIRE_WEEKLY_CHANGE_PRO_LOBBY_INTEREST_GROUP_IN_OPPOSITION: "[concept_political_lobby][concept_in_opposition][Concept('concept_interest_group','$concept_interest_groups$')]的[concept_clout]"
  LIBERTY_DESIRE_WEEKLY_CHANGE_ANTI_LOBBY_INTEREST_GROUP_IN_OPPOSITION: "[concept_political_lobby][concept_in_opposition][Concept('concept_interest_group','$concept_interest_groups$')]的[concept_clout]"
  LIBERTY_DESIRE_WEEKLY_CHANGE_SCALING_LOW: "变化速度因低[concept_liberty_desire]调整"
- LIBERTY_DESIRE_WEEKLY_CHANGE_SCALING_HIGH: "变化速度因高[concept_liberty_desire]调整" 
+ LIBERTY_DESIRE_WEEKLY_CHANGE_SCALING_HIGH: "变化速度因高[concept_liberty_desire]调整"
+  
+  

@@ -1,0 +1,15 @@
+﻿l_japanese:
+ consolidate_subject: "件名を統合する" #NT!
+ consolidate_subject_action_name: "統合[concept_subject]" #NT!
+ consolidate_subject_desc: "隣接する 2 つの [Concept('concept_subject', '$concept_subjects$')] を 1 つの [concept_country] にマージします。ターゲットの被験者は [concept_autonomy] と [concept_liberty_desire] が低い必要があります。両方の被験者は [Concept('concept_primary_cultures', '$concept_primary_culture$')] を共有する必要があります。" #NT!
+ consolidate_subject_action_notification_name: "[INITIATOR_COUNTRY.GetName] 管理を統合" #NT!
+ consolidate_subject_action_notification_desc: "[INITIATOR_COUNTRY.GetName] は私たちを統合することを選択しました。" #NT!
+ consolidate_subject_action_notification_third_party_name: "[INITIATOR_COUNTRY.GetName]は主題を統合する" #NT!
+ consolidate_subject_action_notification_third_party_desc: "[INITIATOR_COUNTRY.GetName] は [TARGET_COUNTRY.GetName] を統合しました。" #NT!
+  
+ is_not_african_subject: "この主題は、アフリカの植民地政権の1つではない" #NT!
+  
+ alert_overlord_can_consolidate_subject_name: "[GetDiplomaticActionType('consolidate_subject').GetName] は [SCOPE.GetRootScope.GetCountry.GetName] でご利用いただけます" #NT!
+ alert_overlord_can_consolidate_subject_desc: "[concept_subject] [SCOPE.GetRootScope.GetCountry.GetName] は隣接する主題に統合できます。" #NT!
+ alert_overlord_can_consolidate_subject_hint: "外交パネルの [主題] タブを使用して、[GetDiplomaticActionType('consolidate_subject').GetName] [concept_diplomatic_action] を実行できます。" #NT!
+ alert_overlord_can_consolidate_subject_action: "外交パネル" #NT!

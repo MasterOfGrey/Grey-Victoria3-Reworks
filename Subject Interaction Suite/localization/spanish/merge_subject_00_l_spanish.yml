@@ -1,0 +1,31 @@
+﻿l_spanish:
+ DIPLO_ACTION_MERGE_SUBJECT: "$DIPLO_ACTION_RELATIONS$ no es menor que $relations_amicable$" #NT!
+ merge_subject: "Fusionar asunto" #NT!
+ merge_subject_action_name: "Territorios fusionados" #NT!
+ merge_subject_desc: "#header $merge_subject$#!\n$TOOLTIP_DELIMITER$\nA tipo de [concept_instant_diplomatic_action] que puede fusionarse con sus propios sujetos de forma inmediata e incondicional." #NT!
+ merge_subject_proposal_notification_name: "Proponer $merge_subject_action_name$" #NT!
+ merge_subject_proposal_notification_desc: "[INITIATOR_COUNTRY.GetName] propone unificar nuestro territorio nacional" #NT!
+ merge_subject_proposal_notification_effects_desc: "$merge_subject_action_name$" #NT!
+ merge_subject_proposal_accepted_name: "Aceptar $merge_subject_action_name$" #NT!
+ merge_subject_proposal_accepted_desc: "[TARGET_COUNTRY.GetName] aceptó nuestra propuesta de fusionar los territorios de su país." #NT!
+ merge_subject_proposal_declined_name: "Rechazo $merge_subject_action_name$" #NT!
+ merge_subject_proposal_declined_desc: "[TARGET_COUNTRY.GetName] rechazó nuestra propuesta de fusionar su territorio nacional." #NT!
+ merge_subject_proposal_third_party_accepted_name: "Aceptar $merge_subject_action_name$" #NT!
+ merge_subject_proposal_third_party_accepted_desc: "[INITIATOR_COUNTRY.GetName] fusionó todos los territorios del país de [TARGET_COUNTRY.GetName]." #NT!
+ merge_subject_proposal_third_party_declined_name: "Rechazo $merge_subject_action_name$" #NT!
+ merge_subject_proposal_third_party_declined_desc: "[TARGET_COUNTRY.GetName] se negó a fusionarse con [INITIATOR_COUNTRY.GetName]." #NT!
+ rule_ai_merge_subject: "$merge_subject$" #NT!
+ setting_ai_can_not_use: "Prohibir a la IA fusionar sujetos" #NT!
+ setting_ai_can_not_use_desc: "Prohibir a la IA utilizar acciones diplomáticas: Fusionar [concept_subject] [Concept('concept_country', '$concept_countries$')]" #NT!
+ setting_ai_can_use: "Permitir que la IA fusione sujetos" #NT!
+ setting_ai_can_use_desc: "Permitir que la IA utilice acciones diplomáticas: Fusionar [concept_subject] [Concept('concept_country', '$concept_countries$')]。\nNota: La IA no enviará esta acción diplomática al jugador。" #NT!
+ merge_subject_cheat: "Truco para fusionar sujetos" #NT!
+ rule_merge_subject_cheat: "$merge_subject$" #NT!
+ setting_balanced_merge: "El tema de fusión está equilibrado" #NT!
+ setting_balanced_merge_desc: "La acción diplomática: Fusionar [concept_subject] [Concept('concept_country', '$concept_countries$')] está equilibrada para el juego normal." #NT!
+ setting_cheat_merge: "Fusionar tema es una trampa" #NT!
+ setting_cheat_merge_desc: "La acción diplomática: Fusionar [concept_subject] [Concept('concept_country', '$concept_countries$')] es un truco poderoso." #NT!
+ DIPLOMATIC_ACCEPTANCE_BREAK_FREE: "Están persiguiendo un [concept_ai_strategy] de #v $ai_strategy_subject_break_free$#!" #NT!
+ DIPLOMATIC_ACCEPTANCE_STRENGTHEN_SELF: "Están persiguiendo un [concept_ai_strategy] de #v $ai_strategy_subject_strengthen_self$#!" #NT!
+ DIPLOMATIC_ACCEPTANCE_MAINTAIN_AUTONOMY: "Están persiguiendo un [concept_ai_strategy] de #v $ai_strategy_subject_maintain_autonomy$#!" #NT!
+ DIPLOMATIC_ACCEPTANCE_OVERLORD_COMPLIANCE: "Están persiguiendo un [concept_ai_strategy] de #v $ai_strategy_subject_overlord_compliance$#!" #NT!

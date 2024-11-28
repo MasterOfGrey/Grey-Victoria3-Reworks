@@ -1,0 +1,15 @@
+﻿l_russian:
+ consolidate_subject: "Объединить тему" #NT!
+ consolidate_subject_action_name: "Объединить [concept_subject]" #NT!
+ consolidate_subject_desc: "Объединить два соседних [Concept('concept_subject', '$concept_subjects$')] в один [concept_country]. Целевой субъект должен иметь низкие [concept_autonomy] и [concept_liberty_desire]. Оба субъекта должны иметь общий [Concept('concept_primary_cultures', '$concept_primary_culture$')]." #NT!
+ consolidate_subject_action_notification_name: "[INITIATOR_COUNTRY.GetName] объединяет администрацию" #NT!
+ consolidate_subject_action_notification_desc: "[INITIATOR_COUNTRY.GetName] решил нас объединить." #NT!
+ consolidate_subject_action_notification_third_party_name: "[INITIATOR_COUNTRY.GetName] объединяет предметы" #NT!
+ consolidate_subject_action_notification_third_party_desc: "[INITIATOR_COUNTRY.GetName] объединил [TARGET_COUNTRY.GetName]." #NT!
+  
+ is_not_african_subject: "Этот предмет не относится ни к одной из наших африканских колониальных администраций." #NT!
+  
+ alert_overlord_can_consolidate_subject_name: "[GetDiplomaticActionType('consolidate_subject').GetName] доступно для [SCOPE.GetRootScope.GetCountry.GetName]" #NT!
+ alert_overlord_can_consolidate_subject_desc: "Наш [concept_subject] [SCOPE.GetRootScope.GetCountry.GetName] можно объединить в соседнюю тему." #NT!
+ alert_overlord_can_consolidate_subject_hint: "Вы можете использовать вкладку «Субъекты» на панели «Дипломатия» для выполнения [GetDiplomaticActionType('consolidate_subject').GetName] [concept_diplomatic_action]." #NT!
+ alert_overlord_can_consolidate_subject_action: "Дипломатическая панель" #NT!

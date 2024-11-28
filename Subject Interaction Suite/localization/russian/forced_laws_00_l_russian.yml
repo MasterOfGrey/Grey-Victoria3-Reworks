@@ -1,0 +1,18 @@
+﻿l_russian:
+ forced_border_opening: "Принудительное открытие границы" #NT!
+ forced_border_opening_desc: "[concept_instant_diplomatic_action], который заставляет изменить [GetLawGroup('lawgroup_migration').GetName] [concept_law] цели [concept_subject] на [GetLawType('law_no_migration_controls').GetName]. Вместо этого наносит урон [concept_relations] с целью [concept_subject] и часть [concept_subject] [concept_pop] становится [concept_radical]." #NT!
+ forced_border_opening_action_name: "Принудительное открытие границы" #NT!
+ forced_border_opening_action_notification_name: "[INITIATOR_COUNTRY.GetName] заставили открыть наши границы" #NT!
+ forced_border_opening_action_notification_desc: "Наш [concept_overlord] [INITIATOR_COUNTRY.GetName] заставил нашего [GetLawGroup('lawgroup_migration').GetName] [concept_law] стать [GetLawType('law_no_migration_controls').GetName]. Их [concept_attitude] по отношению к нам #tooltippable #tooltip:[INITIATOR_COUNTRY.GetTooltipTag],COUNTRY_ATTITUDE_TOOLTIP [INITIATOR_COUNTRY.GetAttitudeTowards(GetPlayer).GetName]#!#!." #NT!
+ forced_border_closing: "Принудительное закрытие границы" #NT!
+ forced_border_closing_desc: "[concept_instant_diplomatic_action], который заставляет изменить [GetLawGroup('lawgroup_migration').GetName] [concept_law] цели [concept_subject] на [GetLawType('law_closed_borders').GetName]. Вместо этого наносит урон [concept_relations] с целью [concept_subject] и часть [concept_subject] [concept_pop] становится [concept_radical]." #NT!
+ forced_border_closing_action_name: "Принудительное закрытие границы" #NT!
+ forced_border_closing_action_notification_name: "[INITIATOR_COUNTRY.GetName] вынуждены закрыть наши границы" #NT!
+ forced_border_closing_action_notification_desc: "Наш [concept_overlord] [INITIATOR_COUNTRY.GetName] заставил нашего [GetLawGroup('lawgroup_migration').GetName] [concept_law] сделать [GetLawType('law_closed_borders').GetName].GetName]. Их [concept_attitude] по отношению к нам #tooltippable #tooltip:[INITIATOR_COUNTRY.GetTooltipTag],COUNTRY_ATTITUDE_TOOLTIP [INITIATOR_COUNTRY.GetAttitudeTowards(GetPlayer).GetName]#!#!." #NT!
+ forced_industry_ban: "Принудительный запрет на деятельность отрасли" #NT!
+ forced_industry_ban_desc: "[concept_instant_diplomatic_action], который заставляет изменить [GetLawGroup('lawgroup_economic_system').GetName] [concept_law] цели [concept_subject] на [GetLawType('law_industry_banned').GetName]. Вместо этого наносит урон [concept_relations] с целью [concept_subject] и часть [concept_subject] [concept_pop] становится [concept_radical]." #NT!
+ forced_industry_ban_action_name: "Принудительный запрет на деятельность отрасли" #NT!
+ forced_industry_ban_action_notification_name: "[INITIATOR_COUNTRY.GetName] заставили запретить нашу отрасль" #NT!
+ forced_industry_ban_action_notification_desc: "Наш [concept_overlord] [INITIATOR_COUNTRY.GetName] заставил нашего [GetLawGroup('lawgroup_economic_system').GetName] [concept_law] стать [GetLawType('law_industry_banned').GetName]. Их [concept_attitude] по отношению к нам #tooltippable #tooltip:[INITIATOR_COUNTRY.GetTooltipTag],COUNTRY_ATTITUDE_TOOLTIP [INITIATOR_COUNTRY.GetAttitudeTowards(GetPlayer).GetName]#!#!." #NT!
+  
+ forced_industry_ban_liberty_desire_custom_tooltip: "[SCOPE.sCountry('target_country').GetAdjectiveNoFormatting] чиновники отреагируют на [SCOPE.GetRootScope.GetCountry.GetName] запрет на промышленность в [SCOPE.sCountry('target_country').GetName]. Это [concept_subject] [concept_liberty_desire] и [concept_attitude] изменятся." #NT!

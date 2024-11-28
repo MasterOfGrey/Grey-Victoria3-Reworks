@@ -79,8 +79,11 @@
 			scope:journal_entry = {
 				has_variable = has_been_abandoned
 			}
-			root = {
-				has_variable = imposed_law_failed
+			# root = {
+			has_variable = imposed_law_failed
+			AND = {
+				scope:journal_entry = { has_variable = notification_sent_var }
+				enacting_any_law = no
 			}
 			scope:foreign_imposition_country ?= {
 				NOT = {

@@ -1,0 +1,33 @@
+﻿l_german:
+ laws_synergize_land: "Synergien zwischen Landreformen" #NT!
+ laws_synergize_land_action_name: "$laws_synergize_land$" #NT!
+ laws_synergize_land_action_propose_name: "Beginnen Sie mit der Synergiebildung bei den Landreformen" #NT!
+ laws_synergize_land_action_break_name: "Schluss mit der Synergie der Landreformen" #NT!
+ laws_synergize_land_pact_desc: "[SCOPE.GetRootScope.GetDiplomaticPact.GetFirstCountry.GetName] strukturiert die Landgesetze von [SCOPE.GetRootScope.GetDiplomaticPact.GetSecondCountry.GetName] neu, damit sie mit ihren synergetisch harmonieren.\n Derzeit durchlaufen #variable [SCOPE.GetRootScope.GetDiplomaticPact.GetSecondCountry.MakeScope.Var('synergize_land_progress').GetValue]#! 8 Stufen." #NT!
+ laws_synergize_land_desc: "#header $laws_synergize_land$#!\n$TOOLTIP_DELIMITER$\nSynergizes die Landreformen des angegebenen Landes." #NT!
+ laws_synergize_land_action_notification_name: "[INITIATOR_COUNTRY.GetName] Synergien zwischen Landreformen" #NT!
+ laws_synergize_land_action_notification_desc: "[INITIATOR_COUNTRY.GetName] sorgt für Synergien bei den Landreformen unseres Landes." #NT!
+ laws_synergize_land_action_notification_break_name: "Beenden Sie die Synergisierung der Landreformen durch [INITIATOR_COUNTRY.GetName]" #NT!
+ laws_synergize_land_action_notification_break_desc: "[INITIATOR_COUNTRY.GetName] hat aufgehört, zu versuchen, die Landreformen unseres Landes zu synergetisch zu gestalten." #NT!
+  
+ laws_synergize_land_effect_desc_global: "Beginnen Sie mit der Synergiebildung bei den Landreformen" #NT!
+ laws_synergize_land_effect_desc_first: "[COUNTRY.GetAdjectiveNoFlag] leitet mit [TARGET_COUNTRY.GetName] eine Synergie zur Landreform ein." #NT!
+ laws_synergize_land_effect_desc_third: "[COUNTRY.GetName] leitet eine Synergie der Landreform mit [AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)] ein." #NT!
+  
+ laws_synergize_land_trigger_desc_global: "Synergien bei der Landreform laufen" #NT!
+ laws_synergize_land_trigger_false_desc_global: "Derzeit nicht im Prozess der Synergiebildung bei Landreformen." #NT!
+ laws_synergize_land_trigger_desc_first: "[COUNTRY.GetAdjectiveNoFlag] hat synergetische Landreformen mit [TARGET_COUNTRY.GetName]." #NT!
+ laws_synergize_land_trigger_false_desc_first: "[COUNTRY.GetAdjectiveNoFlag] hat derzeit keine synergetischen Landreformen mit [TARGET_COUNTRY.GetName]." #NT!
+ laws_synergize_land_trigger_desc_third: "[COUNTRY.GetName] hat synergetische Landreformen mit [AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)]." #NT!
+ laws_synergize_land_trigger_false_desc_third: "[COUNTRY.GetName] hat derzeit keine synergetischen Landreformen mit [AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)]." #NT!
+  
+ mog_syn_events.03.t: "Synergie der Landreform!" #NT!
+ mog_syn_events.03.d: "Die stolze Nation [ROOT.GetCountry.GetName] hat die Synergie der Landreformen mit [SCOPE.sCountry('synergize_land_target_country').GetName] erfolgreich abgeschlossen. [SCOPE.sCountry('synergize_land_target_country').GetName] wird durch verstärkten Zusammenhalt mit dem Heimatland in ewigem Wohlstand gedeihen." #NT!
+ mog_syn_events.03.f: "„Lang lebe [ROOT.GetCountry.GetName]!“" #NT!
+ mog_syn_events.03.a: "Gut gemacht." #NT!
+  
+ laws_synergize_land_weekly_effect: "Arbeitet daran, ihre Landrechtsreformen mit unseren in Einklang zu bringen. Hat jede Woche eine Chance von 20 %, Fortschritte zu machen, wobei 8 Fortschrittspunkte für den Erfolg erforderlich sind." #NT!
+  
+ overlord_syn_cost_land: "Kosten für die Synergie von Landreformen" #NT!
+  
+ active_synergize_land_tt: "Die Anzahl anderer $laws_synergize_land$-Aktionen ist kleiner als 1." #NT!

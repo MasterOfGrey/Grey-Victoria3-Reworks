@@ -1,0 +1,31 @@
+﻿l_turkish:
+ DIPLO_ACTION_MERGE_SUBJECT: "$DIPLO_ACTION_RELATIONS$, $relations_amicable$'den küçük değildir" #NT!
+ merge_subject: "Konuyu Birleştir" #NT!
+ merge_subject_action_name: "Birleştirilmiş Topraklar" #NT!
+ merge_subject_desc: "#header $merge_subject$#!\n$TOOLTIP_DELIMITER$\nA kendi özneleriyle anında ve koşulsuz olarak birleşebilen [concept_instant_diplomatic_action] türü." #NT!
+ merge_subject_proposal_notification_name: "Öner $merge_subject_action_name$" #NT!
+ merge_subject_proposal_notification_desc: "[INITIATOR_COUNTRY.GetName] ulusal topraklarımızı birleştirmeyi öneriyor" #NT!
+ merge_subject_proposal_notification_effects_desc: "$merge_subject_action_name$" #NT!
+ merge_subject_proposal_accepted_name: "Kabul et $merge_subject_action_name$" #NT!
+ merge_subject_proposal_accepted_desc: "[TARGET_COUNTRY.GetName] ülkelerinin topraklarını birleştirme önerimizi kabul etti." #NT!
+ merge_subject_proposal_declined_name: "Reddet $merge_subject_action_name$" #NT!
+ merge_subject_proposal_declined_desc: "[TARGET_COUNTRY.GetName] ulusal topraklarını birleştirme önerimizi reddetti." #NT!
+ merge_subject_proposal_third_party_accepted_name: "Kabul et $merge_subject_action_name$" #NT!
+ merge_subject_proposal_third_party_accepted_desc: "[INITIATOR_COUNTRY.GetName], [TARGET_COUNTRY.GetName] ülkesinin tüm topraklarını birleştirdi." #NT!
+ merge_subject_proposal_third_party_declined_name: "Reddet $merge_subject_action_name$" #NT!
+ merge_subject_proposal_third_party_declined_desc: "[TARGET_COUNTRY.GetName], [INITIATOR_COUNTRY.GetName] ile birleşmeyi reddetti." #NT!
+ rule_ai_merge_subject: "$merge_subject$" #NT!
+ setting_ai_can_not_use: "Yapay Zeka'nın Konuyu Birleştirmesini Yasakla" #NT!
+ setting_ai_can_not_use_desc: "Yapay zekanın diplomatik eylem kullanmasını yasakla: Birleştir [concept_subject] [Concept('concept_country', '$concept_countries$')]" #NT!
+ setting_ai_can_use: "AI'nın Konuyu Birleştirmesine İzin Ver" #NT!
+ setting_ai_can_use_desc: "Yapay zekanın diplomatik eylem kullanmasına izin ver: Birleştir [concept_subject] [Concept('concept_country', '$concept_countries$')]。\nNot: Yapay zeka bu diplomatik eylemi oyuncuya göndermeyecektir。" #NT!
+ merge_subject_cheat: "Konu Birleştirme Hilesi" #NT!
+ rule_merge_subject_cheat: "$merge_subject$" #NT!
+ setting_balanced_merge: "Birleştirme Konusu Dengeli" #NT!
+ setting_balanced_merge_desc: "Diplomatik eylem: Birleştir [concept_subject] [Concept('concept_country', '$concept_countries$')] normal oyun için dengelidir." #NT!
+ setting_cheat_merge: "Konu Birleştirme bir Hiledir" #NT!
+ setting_cheat_merge_desc: "Diplomatik eylem: Birleştir [concept_subject] [Concept('concept_country', '$concept_countries$')] güçlü bir hiledir." #NT!
+ DIPLOMATIC_ACCEPTANCE_BREAK_FREE: "#v $ai_strategy_subject_break_free$#!'ün [concept_ai_strategy]'ını takip ediyorlar" #NT!
+ DIPLOMATIC_ACCEPTANCE_STRENGTHEN_SELF: "#v $ai_strategy_subject_strengthen_self$#!'ün [concept_ai_strategy]'ını takip ediyorlar" #NT!
+ DIPLOMATIC_ACCEPTANCE_MAINTAIN_AUTONOMY: "#v $ai_strategy_subject_maintain_autonomy$#!'ün [concept_ai_strategy]'ını takip ediyorlar" #NT!
+ DIPLOMATIC_ACCEPTANCE_OVERLORD_COMPLIANCE: "#v $ai_strategy_subject_overlord_compliance$#!'ün [concept_ai_strategy]'ını takip ediyorlar" #NT!

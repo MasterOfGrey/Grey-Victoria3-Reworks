@@ -32,6 +32,8 @@ merge_subject = {
 				NOT = {
 					has_diplomatic_pact = { who = root type = tributary }
 					has_diplomatic_pact = { who = root type = protectorate }
+					has_diplomatic_pact = { who = root type = dominion }
+					has_diplomatic_pact = { who = root type = chartered_company }
 				}
 			}
 			NAND = {
@@ -54,6 +56,7 @@ merge_subject = {
 				OR = {
 					has_diplomatic_pact = { who = root type = puppet }
 					has_diplomatic_pact = { who = root type = vassal }
+					has_diplomatic_pact = { who = root type = colony }
 					has_diplomatic_pact = { who = root type = personal_union }
 				}
 			}
@@ -104,8 +107,8 @@ merge_subject = {
 					if = {
 						limit = { 
 							scope:target_country = {
-								is_ai = no
-								# Target country is player
+								is_ai = no												# Target country is player
+								has_diplomatic_pact = { who = root type = colony }		# AI will not eat its own Colonies but the player can
 							}
 						}
 						multiply = 0
@@ -140,8 +143,8 @@ merge_subject = {
 					if = {
 						limit = { 
 							scope:target_country = {
-								is_ai = no
-								# Target country is player
+								is_ai = no												# Target country is player
+								has_diplomatic_pact = { who = root type = colony }		# AI will not eat its own Colonies but the player can
 							}
 						}
 						multiply = 0
@@ -423,7 +426,8 @@ merge_subject = {
 					limit = {
 						scope:target_country = {
 							any_primary_culture = {
-								culture_is_discriminated_in = scope:actor
+								# culture_is_discriminated_in = scope:actor
+								scope:actor = { cultural_acceptance_base = { target = prev value < acceptance_status_4 } }
 							}
 						}
 					}
