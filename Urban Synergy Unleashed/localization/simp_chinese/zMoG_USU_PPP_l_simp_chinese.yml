@@ -1,63 +1,63 @@
 ﻿l_simp_chinese:
      # Building 
- PPP_building_power_grid: "电网" #NT!
+ PPP_building_power_grid: "电网"
   
      # Technologies 
- PPP_tech_hv_power: "动力传输" #NT!
- PPP_tech_hv_power_desc: "通过利用转换器和调节器，长距离高压电力传输现在可供具有不同需求的多个目的地使用。" #NT!
- USU_tech_hv_railways: "工业变压器" #NT!
- USU_tech_hv_railways_desc: "通过利用可扩展的变压器，我们可以充分利用交流电的优势，实现长距离输送持续的高电压，并使电力传输更加经济。" #NT!
+ PPP_tech_hv_power: "动力传输"
+ PPP_tech_hv_power_desc: "通过利用转换器和调节器，长距离高压电力传输现在可供具有不同需求的多个目的地使用。"
+ USU_tech_hv_railways: "工业变压器"
+ USU_tech_hv_railways_desc: "通过利用可扩展的变压器，我们可以充分利用交流电的优势，实现长距离输送持续的高电压，并使电力传输更加经济。"
   
      # Goods 
- ppp_hv_power: "高压电源" #NT!
+ ppp_hv_power: "高压电源"
   
      # Modifier types - As of USU: None of the multipliers are used anymore. 
- goods_input_ppp_hv_power_add: "@ppp_hv_power![Nbsp]$ppp_hv_power$ 输入" #NT!
- goods_output_ppp_hv_power_add: "@ppp_hv_power![Nbsp]$ppp_hv_power$ 输出" #NT!
- goods_input_ppp_hv_power_mult: "构建@ppp_hv_power！[Nbsp]$ppp_hv_power$ 输入" #NT!
- goods_output_ppp_hv_power_mult: "构建@ppp_hv_power![Nbsp]$ppp_hv_power$ 输出" #NT!
+ goods_input_ppp_hv_power_add: "@ppp_hv_power![Nbsp]$ppp_hv_power$ 输入"
+ goods_output_ppp_hv_power_add: "@ppp_hv_power![Nbsp]$ppp_hv_power$ 输出"
+ goods_input_ppp_hv_power_mult: "构建@ppp_hv_power！[Nbsp]$ppp_hv_power$ 输入"
+ goods_output_ppp_hv_power_mult: "构建@ppp_hv_power![Nbsp]$ppp_hv_power$ 输出"
   
- goods_input_ppp_hv_power_add_desc: "建筑物消耗的@ppp_hv_power![Nbsp]$ppp_hv_power$ 的数量" #NT!
- goods_output_ppp_hv_power_add_desc: "建筑物产生的@ppp_hv_power![Nbsp]$ppp_hv_power$ 的数量" #NT!
- goods_input_ppp_hv_power_mult_desc: "对建筑物消耗的 @ppp_hv_power![Nbsp]$ppp_hv_power$ 数量的奖励或惩罚" #NT!
- goods_output_ppp_hv_power_mult_desc: "对建筑物产生的@ppp_hv_power![Nbsp]$ppp_hv_power$ 数量的奖励或惩罚" #NT!
+ goods_input_ppp_hv_power_add_desc: "建筑物消耗的@ppp_hv_power![Nbsp]$ppp_hv_power$ 的数量"
+ goods_output_ppp_hv_power_add_desc: "建筑物产生的@ppp_hv_power![Nbsp]$ppp_hv_power$ 的数量"
+ goods_input_ppp_hv_power_mult_desc: "对建筑物消耗的 @ppp_hv_power![Nbsp]$ppp_hv_power$ 数量的奖励或惩罚"
+ goods_output_ppp_hv_power_mult_desc: "对建筑物产生的@ppp_hv_power![Nbsp]$ppp_hv_power$ 数量的奖励或惩罚"
   
- goods_input_steel_mult: "建筑$goods_input_steel_add$" #NT!
- goods_input_tools_mult: "建筑$goods_input_tools_add$" #NT!
+ goods_input_steel_mult: "建筑$goods_input_steel_add$"
+ goods_input_tools_mult: "建筑$goods_input_tools_add$"
   
- goods_input_steel_mult_desc: "$goods_input_steel_add_desc$" #NT!
- goods_input_tools_mult_desc: "$goods_input_tools_add_desc$" #NT!
+ goods_input_steel_mult_desc: "$goods_input_steel_add_desc$"
+ goods_input_tools_mult_desc: "$goods_input_tools_add_desc$"
   
      # PMGs 
- PPP_pmg_generation_machinery: "发电机械" #NT!
- PPP_pmg_HV_generation: "配电" #NT!
- PPP_pmg_power_grid: "$pm_base$" #NT!
- PPP_pmg_power_grid_scaler: "配送能力" #NT!
+ PPP_pmg_generation_machinery: "发电机械"
+ PPP_pmg_HV_generation: "配电"
+ PPP_pmg_power_grid: "$pm_base$"
+ PPP_pmg_power_grid_scaler: "配送能力"
   
      # PMs 
- PPP_pm_hydro_mechanical: "水轮机" #NT!
- PPP_pm_steam_engine: "蒸汽机" #NT!
- PPP_pm_steam_turbine: "蒸汽轮机" #NT!
- PPP_pm_gas_turbine: "燃气轮机" #NT!
+ PPP_pm_hydro_mechanical: "水轮机"
+ PPP_pm_steam_engine: "蒸汽机"
+ PPP_pm_steam_turbine: "蒸汽轮机"
+ PPP_pm_gas_turbine: "燃气轮机"
   
- PPP_pm_hy_local_power: "当地电力" #NT!
- PPP_pm_hy_hybrid_power: "混合电网供应" #NT!
- PPP_pm_hy_grid_power: "电网" #NT!
- PPP_pm_se_local_power: "当地电力" #NT!
- PPP_pm_se_hybrid_power: "混合电网供应" #NT!
- PPP_pm_se_grid_power: "电网" #NT!
- PPP_pm_st_local_power: "当地电力" #NT!
- PPP_pm_st_hybrid_power: "混合电网供应" #NT!
- PPP_pm_st_grid_power: "电网" #NT!
- PPP_pm_gt_local_power: "当地电力" #NT!
- PPP_pm_gt_hybrid_power: "混合电网供应" #NT!
- PPP_pm_gt_grid_power: "电网" #NT!
- PPP_pm_emergency_local_power: "当地紧急供应" #NT!
+ PPP_pm_hy_local_power: "当地电力"
+ PPP_pm_hy_hybrid_power: "混合电网供应"
+ PPP_pm_hy_grid_power: "电网"
+ PPP_pm_se_local_power: "当地电力"
+ PPP_pm_se_hybrid_power: "混合电网供应"
+ PPP_pm_se_grid_power: "电网"
+ PPP_pm_st_local_power: "当地电力"
+ PPP_pm_st_hybrid_power: "混合电网供应"
+ PPP_pm_st_grid_power: "电网"
+ PPP_pm_gt_local_power: "当地电力"
+ PPP_pm_gt_hybrid_power: "混合电网供应"
+ PPP_pm_gt_grid_power: "电网"
+ PPP_pm_emergency_local_power: "当地紧急供应"
   
- PPP_pm_grid_base: "区域分布" #NT!
+ PPP_pm_grid_base: "区域分布"
   
- PPP_pm_grid_water: "正常容量" #NT!
- PPP_pm_grid_engine: "提高产能" #NT!
- PPP_pm_grid_turbine: "容量翻倍" #NT!
- PPP_pm_grid_gas_turbine: "容量增加三倍" #NT!
+ PPP_pm_grid_water: "正常容量"
+ PPP_pm_grid_engine: "提高产能"
+ PPP_pm_grid_turbine: "容量翻倍"
+ PPP_pm_grid_gas_turbine: "容量增加三倍"
   

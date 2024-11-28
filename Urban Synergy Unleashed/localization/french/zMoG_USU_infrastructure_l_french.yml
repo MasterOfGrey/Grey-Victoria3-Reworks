@@ -1,56 +1,56 @@
 ﻿l_french:
   # Railways 
- pm_ac_electric_trains: "Trains électriques à courant alternatif" #NT!
- pm_ac_electric_trains_principle_transport_3: "Trains électriques à courant alternatif communs" #NT!
+ pm_ac_electric_trains: "Trains électriques à courant alternatif"
+ pm_ac_electric_trains_principle_transport_3: "Trains électriques à courant alternatif communs"
   
- pm_electric_passenger_carriages: "Voitures électriques pour passagers" #NT!
+ pm_electric_passenger_carriages: "Voitures électriques pour passagers"
   
- pmg_automation_building_railway: "Automatisation des installations" #NT!
- pm_auto_disabled_building_railway: "Grue à manivelle" #NT!
- pm_steam_crane_building_railway: "Grue à vapeur à flèche courbée" #NT!
- pm_watertube_boiler_building_railway: "Chaudière à tubes de fumée" #NT!
- pm_rotary_valve_engine_building_railway: "Vanne rotative Uniflow" #NT!
- pm_steam_donkey_building_railway: "Transmission à vapeur à engrenages" #NT!
+ pmg_automation_building_railway: "Automatisation des installations"
+ pm_auto_disabled_building_railway: "Grue à manivelle"
+ pm_steam_crane_building_railway: "Grue à vapeur à flèche courbée"
+ pm_watertube_boiler_building_railway: "Chaudière à tubes de fumée"
+ pm_rotary_valve_engine_building_railway: "Vanne rotative Uniflow"
+ pm_steam_donkey_building_railway: "Transmission à vapeur à engrenages"
   
   # Logistics 
- pmg_logistics_services_railway: "Logistique ferroviaire" #NT!
- pmg_logistics_services_port_coastal: "Logistique d'expédition" #NT!
- pmg_logistics_services_port_river: "Logistique fluviale" #NT!
+ pmg_logistics_services_railway: "Logistique ferroviaire"
+ pmg_logistics_services_port_coastal: "Logistique d'expédition"
+ pmg_logistics_services_port_river: "Logistique fluviale"
   
- USU_pm_rail_logistics_0: "Aucune coordination logistique" #NT!
- USU_pm_rail_logistics_1: "Planification des quotas" #NT!
- USU_pm_rail_logistics_2: "Enchères d'accès à distance" #NT!
- USU_pm_rail_logistics_3: "Gestion de la chaîne d'approvisionnement" #NT!
+ USU_pm_rail_logistics_0: "Aucune coordination logistique"
+ USU_pm_rail_logistics_1: "Planification des quotas"
+ USU_pm_rail_logistics_2: "Enchères d'accès à distance"
+ USU_pm_rail_logistics_3: "Gestion de la chaîne d'approvisionnement"
   
- USU_pm_port_c_logistics_0: "Aucune coordination logistique" #NT!
- USU_pm_port_c_logistics_1: "Planification des quotas" #NT!
- USU_pm_port_c_logistics_2: "Enchères d'accès à distance" #NT!
- USU_pm_port_c_logistics_3: "Gestion de la chaîne d'approvisionnement" #NT!
+ USU_pm_port_c_logistics_0: "Aucune coordination logistique"
+ USU_pm_port_c_logistics_1: "Planification des quotas"
+ USU_pm_port_c_logistics_2: "Enchères d'accès à distance"
+ USU_pm_port_c_logistics_3: "Gestion de la chaîne d'approvisionnement"
   
- USU_pm_port_r_logistics_0: "Aucune coordination logistique" #NT!
- USU_pm_port_r_logistics_1: "Planification des quotas" #NT!
- USU_pm_port_r_logistics_2: "Enchères d'accès à distance" #NT!
- USU_pm_port_r_logistics_3: "Gestion de la chaîne d'approvisionnement" #NT!
+ USU_pm_port_r_logistics_0: "Aucune coordination logistique"
+ USU_pm_port_r_logistics_1: "Planification des quotas"
+ USU_pm_port_r_logistics_2: "Enchères d'accès à distance"
+ USU_pm_port_r_logistics_3: "Gestion de la chaîne d'approvisionnement"
   
   # Canals 
- # pm_canal: "Serrures à vapeur" #NT!
- pm_canals_electric: "Écluses électriques" #NT!
- pm_canals_oil: "Verrouillage de la pompe à huile" #NT!
+ # pm_canal: "Serrures à vapeur"
+ pm_canals_electric: "Écluses électriques"
+ pm_canals_oil: "Verrouillage de la pompe à huile"
   
- pmg_canal_boats: "Gestion des canaux" #NT!
- pm_no_tugs_building_canals: "Pas de remorqueurs" #NT!
- pm_tugging_building_canals: "Flotte de remorqueurs" #NT!
+ pmg_canal_boats: "Gestion des canaux"
+ pm_no_tugs_building_canals: "Pas de remorqueurs"
+ pm_tugging_building_canals: "Flotte de remorqueurs"
   
- pmg_canal_logistics: "Logistique des canaux" #NT!
- pm_no_canal_logistics: "Pas de logistique" #NT!
- pm_minor_canal_logistics: "Logistique mineure" #NT!
- pm_major_canal_logistics: "Logistique majeure" #NT!
+ pmg_canal_logistics: "Logistique des canaux"
+ pm_no_canal_logistics: "Pas de logistique"
+ pm_minor_canal_logistics: "Logistique mineure"
+ pm_major_canal_logistics: "Logistique majeure"
   
- canal_dividends.1.t: "Accident de canal" #NT!
- canal_dividends.1.d: "Un navire marchand n'a pas fait attention et s'est échoué accidentellement dans le canal, bloquant la voie et rendant le passage plus dangereux jusqu'à ce qu'il soit complètement dégagé." #NT!
- canal_dividends.1.f: "Le grand navire marchand gît à moitié penché dans le canal, sur le flanc blessé par l'impact avec le mur, ses marchandises répandues dans le passage, ses parures et ses articles exotiques flottant dans l'eau, les marchandises coûteuses d'un pays étranger trempées et ruinées.\n\nSur le rivage se tient le capitaine, le visage dans les mains et son chapeau flottant dans le canal. À côté de lui, le représentant de l'assurance de la compagnie tenant un manifeste du navire endommagé par l'eau tente de donner un sens à tout cela, tandis qu'un agent du canal essaie d'expliquer que le déblaiement pourrait prendre des mois." #NT!
- canal_dividends.1.1: "$expedition_events.542.a$" #NT!
- modifier_building_canal_accident: "Accident de canal" #NT!
+ canal_dividends.1.t: "Accident de canal"
+ canal_dividends.1.d: "Un navire marchand n'a pas fait attention et s'est échoué accidentellement dans le canal, bloquant la voie et rendant le passage plus dangereux jusqu'à ce qu'il soit complètement dégagé."
+ canal_dividends.1.f: "Le grand navire marchand gît à moitié penché dans le canal, sur le flanc blessé par l'impact avec le mur, ses marchandises répandues dans le passage, ses parures et ses articles exotiques flottant dans l'eau, les marchandises coûteuses d'un pays étranger trempées et ruinées.\n\nSur le rivage se tient le capitaine, le visage dans les mains et son chapeau flottant dans le canal. À côté de lui, le représentant de l'assurance de la compagnie tenant un manifeste du navire endommagé par l'eau tente de donner un sens à tout cela, tandis qu'un agent du canal essaie d'expliquer que le déblaiement pourrait prendre des mois."
+ canal_dividends.1.1: "$expedition_events.542.a$"
+ modifier_building_canal_accident: "Accident de canal"
   
   
   

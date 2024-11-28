@@ -1,12 +1,16 @@
 ﻿l_simp_chinese:
   # WCA 
- alert_wasted_construction_name: "有未使用的 [concept_construction]" #NT!
- alert_wasted_construction_hint: "有未使用的 [concept_construction]" #NT!
- alert_wasted_construction_action: "建筑面板" #NT!
- wasted_construction_setting_name: "未使用的建筑" #NT!
+ alert_wasted_construction_name: "有未使用的[concept_construction]"
+ alert_wasted_construction_hint: "有未使用的[concept_construction]"
+ alert_wasted_construction_action: "建造面板"
+ wasted_construction_setting_name: "未使用的建造力"
   
  pm_electric_trains: "直流电动火车" #NT!
- pm_electric_trains_principle_transport_3: "联合直流电力列车" #NT!
+ pm_electric_trains_principle_transport_3: "连接DC电动火车" #NT!
  pm_electric_streetlights: "月光塔" #NT!
   
  pm_canal: "蒸汽动力锁" #NT!
+  
+ pm_no_public_transport: "没有公共交通"
+ pm_public_trams: "马拉电车"
+ pm_public_motor_carriages: "城市公交车"

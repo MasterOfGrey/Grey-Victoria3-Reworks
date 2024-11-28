@@ -1,64 +1,71 @@
 ﻿l_french:
      # Modifiers 
- mog_urbanization: "Synergie urbaine Urbanisme" #NT!
- mog_urbanization_mult: "Synergie urbaine Urbanisme" #NT!
- mog_construction_max_level_adjustment: "Synergie urbaine Construction" #NT!
- mog_logistics_land_trade: "Capacité commerciale terrestre grâce aux services logistiques importés" #NT!
- mog_mapi: "Synergie urbaine MAPI" #NT!
+ mog_urbanization: "Synergie urbaine Urbanisme"
+ mog_urbanization_mult: "Synergie urbaine Urbanisme"
+ mog_construction_max_level_adjustment: "Synergie urbaine Construction"
+ mog_logistics_land_trade: "Capacité commerciale terrestre grâce aux services logistiques importés"
+ mog_mapi: "Synergie urbaine MAPI"
   
      # Building 
- building_river_port: "Quais fluviaux" #NT!
- USU_building_public_green: "Espace vert public" #NT!
+ building_river_port: "Quais fluviaux"
+ USU_building_public_green: "Espace vert public"
   
      # Technologies 
   
      # Goods 
- usu_logistics: "Services logistiques" #NT!
+ usu_logistics: "Services logistiques"
   
      # Modifier types 
- state_building_river_port_max_level_add: "Niveau maximum du port fluvial" #NT!
- state_building_river_port_max_level_add_desc: "Un bonus ou une pénalité au niveau maximum des bâtiments du port fluvial." #NT!
+ state_building_river_port_max_level_add: "Niveau maximum du port fluvial"
+ state_building_river_port_max_level_add_desc: "Un bonus ou une pénalité au niveau maximum des bâtiments du port fluvial."
   
- goods_input_usu_logistics_add: "@usu_logistics![Nbsp]$usu_logistics$ contribution" #NT!
- goods_output_usu_logistics_add: "@usu_logistics![Nbsp]$usu_logistics$ résultat" #NT!
- goods_input_usu_logisticsr_mult: "Bâtiment @usu_logistics![Nbsp]$usu_logistics$ contribution" #NT!
- goods_output_usu_logistics_mult: "Bâtiment @usu_logistics![Nbsp]$usu_logistics$ résultat" #NT!
+ goods_input_usu_logistics_add: "@usu_logistics![Nbsp]$usu_logistics$ contribution"
+ goods_output_usu_logistics_add: "@usu_logistics![Nbsp]$usu_logistics$ résultat"
+ goods_input_usu_logisticsr_mult: "Bâtiment @usu_logistics![Nbsp]$usu_logistics$ contribution"
+ goods_output_usu_logistics_mult: "Bâtiment @usu_logistics![Nbsp]$usu_logistics$ résultat"
   
- goods_input_usu_logistics_add_desc: "La quantité de @usu_logistics![Nbsp]$usu_logistics$ consommée par les bâtiments" #NT!
- goods_output_usu_logistics_add_desc: "La quantité de @usu_logistics![Nbsp]$usu_logistics$ produite par les bâtiments" #NT!
- goods_input_usu_logistics_mult_desc: "Un bonus ou une pénalité sur la quantité de @usu_logistics![Nbsp]$usu_logistics$ consommée par les bâtiments" #NT!
- goods_output_usu_logistics_mult_desc: "Un bonus ou une pénalité au montant de @usu_logistics![Nbsp]$usu_logistics$ produit par les bâtiments" #NT!
+ goods_input_usu_logistics_add_desc: "La quantité de @usu_logistics![Nbsp]$usu_logistics$ consommée par les bâtiments"
+ goods_output_usu_logistics_add_desc: "La quantité de @usu_logistics![Nbsp]$usu_logistics$ produite par les bâtiments"
+ goods_input_usu_logistics_mult_desc: "Un bonus ou une pénalité sur la quantité de @usu_logistics![Nbsp]$usu_logistics$ consommée par les bâtiments"
+ goods_output_usu_logistics_mult_desc: "Un bonus ou une pénalité au montant de @usu_logistics![Nbsp]$usu_logistics$ produit par les bâtiments"
   
- modifier_goods_input_tools_mult: "@tools![Nbsp]Saisie d'outils" #NT!
- modifier_goods_input_tools_mult_desc: "La quantité d'@tools![Nbsp]Outils consommés par les bâtiments" #NT!
+ modifier_goods_input_tools_mult: "@tools![Nbsp]Saisie d'outils"
+ modifier_goods_input_tools_mult_desc: "La quantité d'@tools![Nbsp]Outils consommés par les bâtiments"
   
      # PMGs 
- pmg_base_building_river_port: "Quais" #NT!
- USU_pmg_government_administration_emergency_services: "Services d'urgence" #NT!
- USU_pmg_government_administration_law_enforcement: "Application de la loi" #NT!
- USU_pmg_public_space_management: "Gestion de l'espace public" #NT!
- USU_pmg_public_parklands: "Utilisation des espaces verts" #NT!
+ pmg_base_building_river_port: "Quais"
+ USU_pmg_government_administration_emergency_services: "Services d'urgence"
+ USU_pmg_government_administration_law_enforcement: "Application de la loi"
+ USU_pmg_public_space_management: "Gestion de l'espace public"
+ USU_pmg_public_parklands: "Utilisation des espaces verts"
   
      # PMs 
- pm_rp_small_port: "Quais au bord de la rivière" #NT!
- pm_rp_industrial_port: "Ports industriels" #NT!
- pm_rp_modern_port: "Ports modernes" #NT!
- USU_pm_grid_streetlights: "Lampadaires à incandescence" #NT!
- USU_pm_no_emergency_services: "Pas de services d'urgence" #NT!
- USU_pm_basic_fire_brigade: "Brigades de pompiers de base" #NT!
- USU_pm_response_planning: "Planification des interventions en cas de catastrophe" #NT!
- USU_pm_modern_emergency_services: "Services d'urgence modernes" #NT!
- USU_pm_no_police: "Groupes d'action communautaire" #NT!
- USU_pm_local_police: "Police locale" #NT!
- USU_pm_dedicated_police: "Force de police dédiée" #NT!
- USU_pm_militarized_police: "Application de la loi martiale" #NT!
- USU_pm_community_orgs: "Organisations communautaires" #NT!
- USU_pm_private_firms: "Organisations privées" #NT!
- USU_pm_pub_priv_partners: "Partenariats Public-Privé" #NT!
- USU_pm_village_stables: "Écuries communautaires" #NT!
- USU_pm_contained_wilderness: "Zone sauvage protégée" #NT!
- USU_pm_seasonal_fairgrounds: "Foires saisonnières" #NT!
+ pm_rp_small_port: "Quais au bord de la rivière"
+ pm_rp_industrial_port: "Ports industriels"
+ pm_rp_modern_port: "Ports modernes"
+ USU_pm_grid_streetlights: "Lampadaires à incandescence"
+ USU_pm_no_emergency_services: "Pas de services d'urgence"
+ USU_pm_basic_fire_brigade: "Brigades de pompiers de base"
+ USU_pm_response_planning: "Planification des interventions en cas de catastrophe"
+ USU_pm_modern_emergency_services: "Services d'urgence modernes"
+ USU_pm_no_police: "Groupes d'action communautaire"
+ USU_pm_local_police: "Police locale"
+ USU_pm_dedicated_police: "Force de police dédiée"
+ USU_pm_militarized_police: "Application de la loi martiale"
+ USU_pm_community_orgs: "Organisations communautaires"
+ USU_pm_private_firms: "Organisations privées"
+ USU_pm_pub_priv_partners: "Partenariats Public-Privé"
+ USU_pm_village_stables: "Écuries communautaires"
+ USU_pm_contained_wilderness: "Zone sauvage protégée"
+ USU_pm_seasonal_fairgrounds: "Foires saisonnières"
   
      # State Traits 
- state_trait_rotterdam: "Port de Rotterdam" #NT!
- state_trait_hudson_river: "Rivière Hudson" #NT!
+ state_trait_rotterdam: "Port de Rotterdam"
+ state_trait_hudson_river: "Rivière Hudson"
+  
+     # Autoexpand tooltip(s) 
+ is_industrial_building: "Est un $concept_building_industry$ naturel pour un [Concept('concept_good', '$concept_goods$')] échangeable" #NT!
+ is_private_infrastructure: "Le transport est-il $bg_infrastructure$ qui peut être [Concept('concept_privatize', '$concept_privatized$')]" #NT!
+ pos_rel_infrastructure: "L'État a disponible [concept_infrastructure]" #NT!
+ neg_rel_infrastructure: "L'État a un déficit de [concept_infrastructure]" #NT!
+ bureaucracy_percent: "Le niveau de bureaucratie nationale est inférieur à #v 90%#!" #NT!

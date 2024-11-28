@@ -1,13 +1,13 @@
 ﻿l_german:
- pmg_public_transit: "Öffentliche Verkehrsmittel" #NT!
- pm_no_public_transport: "Kein öffentlicher Nahverkehr" #NT!
- pm_public_omnibus: "Pferdeomnibusse" #NT!
- pm_public_trams: "Pferdestraßenbahnen" #NT!
- pm_public_steam_metro: "Dampfbetriebene Metro" #NT!
- pm_public_electric_metro: "Elektrisch betriebene Metro" #NT!
- pm_public_motor_carriages: "Stadtbusse" #NT!
+ pmg_public_transit: "Öffentliche Verkehrsmittel"
+ # pm_no_public_transport: "Kein öffentlicher Nahverkehr" #NT!
+ pm_public_omnibus: "Pferdeomnibusse"
+ # pm_public_trams: "Pferdestraßenbahnen" #NT!
+ pm_public_steam_metro: "Dampfbetriebene Metro"
+ pm_public_electric_metro: "Elektrisch betriebene Metro"
+ # pm_public_motor_carriages: "Stadtbusse" #NT!
   
- pmg_local_transport: "Öffentliche Verkehrsmittel" #NT!
- pm_horses: "Pferde und Wagen" #NT!
- pm_stagecoaches_and_wagons: "Pferdefuhrwerke" #NT!
- pm_motor_vehicles: "Autos und Lastwagen" #NT!
+ pmg_local_transport: "Öffentliche Verkehrsmittel"
+ pm_horses: "Pferde und Wagen"
+ pm_stagecoaches_and_wagons: "Pferdefuhrwerke"
+ pm_motor_vehicles: "Autos und Lastwagen"

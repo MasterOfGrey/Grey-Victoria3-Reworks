@@ -1,12 +1,16 @@
 ﻿l_japanese:
   # WCA 
- alert_wasted_construction_name: "未使用の[concept_construction]あり" #NT!
- alert_wasted_construction_hint: "未使用の[concept_construction]あり" #NT!
- alert_wasted_construction_action: "建設パネル" #NT!
- wasted_construction_setting_name: "未使用の建造物" #NT!
+ alert_wasted_construction_name: "[concept_construction]が未使用である"
+ alert_wasted_construction_hint: "[concept_construction]が未使用である"
+ alert_wasted_construction_action: "建設パネル"
+ wasted_construction_setting_name: "未使用の資材"
   
  pm_electric_trains: "直流電気機関車" #NT!
  pm_electric_trains_principle_transport_3: "ジョイントDC電車" #NT!
  pm_electric_streetlights: "ムーンライトタワー" #NT!
   
  pm_canal: "蒸気動力ロック" #NT!
+  
+ pm_no_public_transport: "公共交通機関なし"
+ pm_public_trams: "馬車"
+ pm_public_motor_carriages: "市バス"

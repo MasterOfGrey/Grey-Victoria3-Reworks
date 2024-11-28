@@ -1,56 +1,56 @@
 ﻿l_japanese:
   # Railways 
- pm_ac_electric_trains: "交流電気機関車" #NT!
- pm_ac_electric_trains_principle_transport_3: "ジョイントAC電気列車" #NT!
+ pm_ac_electric_trains: "交流電気機関車"
+ pm_ac_electric_trains_principle_transport_3: "ジョイントAC電気列車"
   
- pm_electric_passenger_carriages: "電気旅客車両" #NT!
+ pm_electric_passenger_carriages: "電気旅客車両"
   
- pmg_automation_building_railway: "施設自動化" #NT!
- pm_auto_disabled_building_railway: "手回しクレーン" #NT!
- pm_steam_crane_building_railway: "曲線ジブ蒸気クレーン" #NT!
- pm_watertube_boiler_building_railway: "火管ボイラー" #NT!
- pm_rotary_valve_engine_building_railway: "ユニフローロータリーバルブギア" #NT!
- pm_steam_donkey_building_railway: "ギア付き蒸気駆動装置" #NT!
+ pmg_automation_building_railway: "施設自動化"
+ pm_auto_disabled_building_railway: "手回しクレーン"
+ pm_steam_crane_building_railway: "曲線ジブ蒸気クレーン"
+ pm_watertube_boiler_building_railway: "火管ボイラー"
+ pm_rotary_valve_engine_building_railway: "ユニフローロータリーバルブギア"
+ pm_steam_donkey_building_railway: "ギア付き蒸気駆動装置"
   
   # Logistics 
- pmg_logistics_services_railway: "鉄道物流" #NT!
- pmg_logistics_services_port_coastal: "配送物流" #NT!
- pmg_logistics_services_port_river: "フリュービアル・ロジスティクス" #NT!
+ pmg_logistics_services_railway: "鉄道物流"
+ pmg_logistics_services_port_coastal: "配送物流"
+ pmg_logistics_services_port_river: "フリュービアル・ロジスティクス"
   
- USU_pm_rail_logistics_0: "物流調整なし" #NT!
- USU_pm_rail_logistics_1: "割当量計画" #NT!
- USU_pm_rail_logistics_2: "リモートアクセス入札" #NT!
- USU_pm_rail_logistics_3: "サプライチェーンマネジメント" #NT!
+ USU_pm_rail_logistics_0: "物流調整なし"
+ USU_pm_rail_logistics_1: "割当量計画"
+ USU_pm_rail_logistics_2: "リモートアクセス入札"
+ USU_pm_rail_logistics_3: "サプライチェーンマネジメント"
   
- USU_pm_port_c_logistics_0: "物流調整なし" #NT!
- USU_pm_port_c_logistics_1: "割当量計画" #NT!
- USU_pm_port_c_logistics_2: "リモートアクセス入札" #NT!
- USU_pm_port_c_logistics_3: "サプライチェーンマネジメント" #NT!
+ USU_pm_port_c_logistics_0: "物流調整なし"
+ USU_pm_port_c_logistics_1: "割当量計画"
+ USU_pm_port_c_logistics_2: "リモートアクセス入札"
+ USU_pm_port_c_logistics_3: "サプライチェーンマネジメント"
   
- USU_pm_port_r_logistics_0: "物流調整なし" #NT!
- USU_pm_port_r_logistics_1: "割当量計画" #NT!
- USU_pm_port_r_logistics_2: "リモートアクセス入札" #NT!
- USU_pm_port_r_logistics_3: "サプライチェーンマネジメント" #NT!
+ USU_pm_port_r_logistics_0: "物流調整なし"
+ USU_pm_port_r_logistics_1: "割当量計画"
+ USU_pm_port_r_logistics_2: "リモートアクセス入札"
+ USU_pm_port_r_logistics_3: "サプライチェーンマネジメント"
   
   # Canals 
- # pm_canal: "蒸気動力ロック" #NT!
- pm_canals_electric: "電気運河水門" #NT!
- pm_canals_oil: "オイルポンプロック" #NT!
+ # pm_canal: "蒸気動力ロック"
+ pm_canals_electric: "電気運河水門"
+ pm_canals_oil: "オイルポンプロック"
   
- pmg_canal_boats: "運河管理" #NT!
- pm_no_tugs_building_canals: "タグなし" #NT!
- pm_tugging_building_canals: "タグボート艦隊" #NT!
+ pmg_canal_boats: "運河管理"
+ pm_no_tugs_building_canals: "タグなし"
+ pm_tugging_building_canals: "タグボート艦隊"
   
- pmg_canal_logistics: "運河物流" #NT!
- pm_no_canal_logistics: "物流なし" #NT!
- pm_minor_canal_logistics: "マイナーロジスティクス" #NT!
- pm_major_canal_logistics: "主要物流" #NT!
+ pmg_canal_logistics: "運河物流"
+ pm_no_canal_logistics: "物流なし"
+ pm_minor_canal_logistics: "マイナーロジスティクス"
+ pm_major_canal_logistics: "主要物流"
   
- canal_dividends.1.t: "運河事故" #NT!
- canal_dividends.1.d: "商船が注意を払わず、誤って運河で座礁し、道をふさいでしまい、完全に復旧するまで航行がさらに危険な状態になりました。" #NT!
- canal_dividends.1.f: "大型貿易船は運河に半分傾いて横たわっており、壁に衝突したために深い傷を負い、積荷は通路に散らばり、高級品や珍しい品々は水に浮かび、外国の高価な商品は水に濡れて台無しになっている。\n\n岸には船長が立っているが、顔は両手で覆い、帽子は運河に浮かんでいる。船長の隣では、保険会社の担当者が水害を受けた船の積荷目録を持って、この状況を理解しようとしている。一方、運河の代理人は、復旧には何ヶ月もかかるかもしれないと説明しようとしている。" #NT!
- canal_dividends.1.1: "$expedition_events.542.a$" #NT!
- modifier_building_canal_accident: "運河事故" #NT!
+ canal_dividends.1.t: "運河事故"
+ canal_dividends.1.d: "商船が注意を払わず、誤って運河で座礁し、道をふさいでしまい、完全に復旧するまで航行がさらに危険な状態になりました。"
+ canal_dividends.1.f: "大型貿易船は運河に半分傾いて横たわっており、壁に衝突したために深い傷を負い、積荷は通路に散らばり、高級品や珍しい品々は水に浮かび、外国の高価な商品は水に濡れて台無しになっている。\n\n岸には船長が立っているが、顔は両手で覆い、帽子は運河に浮かんでいる。船長の隣では、保険会社の担当者が水害を受けた船の積荷目録を持って、この状況を理解しようとしている。一方、運河の代理人は、復旧には何ヶ月もかかるかもしれないと説明しようとしている。"
+ canal_dividends.1.1: "$expedition_events.542.a$"
+ modifier_building_canal_accident: "運河事故"
   
   
   

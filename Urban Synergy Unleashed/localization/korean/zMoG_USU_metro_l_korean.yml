@@ -1,13 +1,13 @@
 ﻿l_korean:
- pmg_public_transit: "대중 교통" #NT!
- pm_no_public_transport: "대중 교통 없음" #NT!
- pm_public_omnibus: "말이 끄는 옴니버스" #NT!
- pm_public_trams: "말이 끄는 전차" #NT!
- pm_public_steam_metro: "증기 기관차 지하철" #NT!
- pm_public_electric_metro: "전기로 구동되는 지하철" #NT!
- pm_public_motor_carriages: "시내버스" #NT!
+ pmg_public_transit: "대중 교통"
+ # pm_no_public_transport: "대중 교통 없음" #NT!
+ pm_public_omnibus: "말이 끄는 옴니버스"
+ # pm_public_trams: "말이 끄는 전차" #NT!
+ pm_public_steam_metro: "증기 기관차 지하철"
+ pm_public_electric_metro: "전기로 구동되는 지하철"
+ # pm_public_motor_carriages: "시내버스" #NT!
   
- pmg_local_transport: "지역 교통" #NT!
- pm_horses: "말과 수레" #NT!
- pm_stagecoaches_and_wagons: "말이 끄는 차량" #NT!
- pm_motor_vehicles: "자동차 및 트럭" #NT!
+ pmg_local_transport: "지역 교통"
+ pm_horses: "말과 수레"
+ pm_stagecoaches_and_wagons: "말이 끄는 차량"
+ pm_motor_vehicles: "자동차 및 트럭"

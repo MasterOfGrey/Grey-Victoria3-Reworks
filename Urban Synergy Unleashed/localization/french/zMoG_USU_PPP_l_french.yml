@@ -1,63 +1,63 @@
 ﻿l_french:
      # Building 
- PPP_building_power_grid: "Réseau électrique" #NT!
+ PPP_building_power_grid: "Réseau électrique"
   
      # Technologies 
- PPP_tech_hv_power: "Transmission de puissance" #NT!
- PPP_tech_hv_power_desc: "En utilisant des convertisseurs et des régulateurs, la transmission d’énergie longue distance à haute tension est désormais utilisable par plusieurs destinations ayant des besoins différents." #NT!
- USU_tech_hv_railways: "Transformateurs industriels" #NT!
- USU_tech_hv_railways_desc: "En utilisant des transformateurs évolutifs, nous pouvons bénéficier pleinement du courant électrique alternatif, ce qui permet de fournir des tensions constamment élevées sur de longues distances et de rendre la transmission d'énergie économique." #NT!
+ PPP_tech_hv_power: "Transmission de puissance"
+ PPP_tech_hv_power_desc: "En utilisant des convertisseurs et des régulateurs, la transmission d’énergie longue distance à haute tension est désormais utilisable par plusieurs destinations ayant des besoins différents."
+ USU_tech_hv_railways: "Transformateurs industriels"
+ USU_tech_hv_railways_desc: "En utilisant des transformateurs évolutifs, nous pouvons bénéficier pleinement du courant électrique alternatif, ce qui permet de fournir des tensions constamment élevées sur de longues distances et de rendre la transmission d'énergie économique."
   
      # Goods 
- ppp_hv_power: "Alimentation à haute tension" #NT!
+ ppp_hv_power: "Alimentation à haute tension"
   
      # Modifier types - As of USU: None of the multipliers are used anymore. 
- goods_input_ppp_hv_power_add: "@ppp_hv_power![Nbsp]$ppp_hv_power$ entrée" #NT!
- goods_output_ppp_hv_power_add: "@ppp_hv_power![Nbsp]$ppp_hv_power$ sortie" #NT!
- goods_input_ppp_hv_power_mult: "Bâtiment @ppp_hv_power![Nbsp]$ppp_hv_power$ entrée" #NT!
- goods_output_ppp_hv_power_mult: "Bâtiment @ppp_hv_power![Nbsp]$ppp_hv_power$ sortie" #NT!
+ goods_input_ppp_hv_power_add: "@ppp_hv_power![Nbsp]$ppp_hv_power$ entrée"
+ goods_output_ppp_hv_power_add: "@ppp_hv_power![Nbsp]$ppp_hv_power$ sortie"
+ goods_input_ppp_hv_power_mult: "Bâtiment @ppp_hv_power![Nbsp]$ppp_hv_power$ entrée"
+ goods_output_ppp_hv_power_mult: "Bâtiment @ppp_hv_power![Nbsp]$ppp_hv_power$ sortie"
   
- goods_input_ppp_hv_power_add_desc: "La quantité de @ppp_hv_power![Nbsp]$ppp_hv_power$ consommée par les bâtiments" #NT!
- goods_output_ppp_hv_power_add_desc: "La quantité de @ppp_hv_power![Nbsp]$ppp_hv_power$ produite par les bâtiments" #NT!
- goods_input_ppp_hv_power_mult_desc: "Un bonus ou une pénalité sur la quantité de @ppp_hv_power![Nbsp]$ppp_hv_power$ consommée par les bâtiments" #NT!
- goods_output_ppp_hv_power_mult_desc: "Un bonus ou une pénalité à la quantité de @ppp_hv_power![Nbsp]$ppp_hv_power$ produite par les bâtiments" #NT!
+ goods_input_ppp_hv_power_add_desc: "La quantité de @ppp_hv_power![Nbsp]$ppp_hv_power$ consommée par les bâtiments"
+ goods_output_ppp_hv_power_add_desc: "La quantité de @ppp_hv_power![Nbsp]$ppp_hv_power$ produite par les bâtiments"
+ goods_input_ppp_hv_power_mult_desc: "Un bonus ou une pénalité sur la quantité de @ppp_hv_power![Nbsp]$ppp_hv_power$ consommée par les bâtiments"
+ goods_output_ppp_hv_power_mult_desc: "Un bonus ou une pénalité à la quantité de @ppp_hv_power![Nbsp]$ppp_hv_power$ produite par les bâtiments"
   
- goods_input_steel_mult: "Bâtiment $goods_input_steel_add$" #NT!
- goods_input_tools_mult: "Bâtiment $goods_input_tools_add$" #NT!
+ goods_input_steel_mult: "Bâtiment $goods_input_steel_add$"
+ goods_input_tools_mult: "Bâtiment $goods_input_tools_add$"
   
- goods_input_steel_mult_desc: "$goods_input_steel_add_desc$" #NT!
- goods_input_tools_mult_desc: "$goods_input_tools_add_desc$" #NT!
+ goods_input_steel_mult_desc: "$goods_input_steel_add_desc$"
+ goods_input_tools_mult_desc: "$goods_input_tools_add_desc$"
   
      # PMGs 
- PPP_pmg_generation_machinery: "Machines de production" #NT!
- PPP_pmg_HV_generation: "Distribution d'énergie" #NT!
- PPP_pmg_power_grid: "$pm_base$" #NT!
- PPP_pmg_power_grid_scaler: "Capacité de distribution" #NT!
+ PPP_pmg_generation_machinery: "Machines de production"
+ PPP_pmg_HV_generation: "Distribution d'énergie"
+ PPP_pmg_power_grid: "$pm_base$"
+ PPP_pmg_power_grid_scaler: "Capacité de distribution"
   
      # PMs 
- PPP_pm_hydro_mechanical: "Turbines hydrauliques" #NT!
- PPP_pm_steam_engine: "Machines à vapeur" #NT!
- PPP_pm_steam_turbine: "Turbines à vapeur" #NT!
- PPP_pm_gas_turbine: "Turbines à gaz" #NT!
+ PPP_pm_hydro_mechanical: "Turbines hydrauliques"
+ PPP_pm_steam_engine: "Machines à vapeur"
+ PPP_pm_steam_turbine: "Turbines à vapeur"
+ PPP_pm_gas_turbine: "Turbines à gaz"
   
- PPP_pm_hy_local_power: "Electricité locale" #NT!
- PPP_pm_hy_hybrid_power: "Alimentation mixte sur réseau" #NT!
- PPP_pm_hy_grid_power: "Réseau électrique" #NT!
- PPP_pm_se_local_power: "Electricité locale" #NT!
- PPP_pm_se_hybrid_power: "Alimentation mixte sur réseau" #NT!
- PPP_pm_se_grid_power: "Réseau électrique" #NT!
- PPP_pm_st_local_power: "Electricité locale" #NT!
- PPP_pm_st_hybrid_power: "Alimentation mixte sur réseau" #NT!
- PPP_pm_st_grid_power: "Réseau électrique" #NT!
- PPP_pm_gt_local_power: "Electricité locale" #NT!
- PPP_pm_gt_hybrid_power: "Alimentation mixte sur réseau" #NT!
- PPP_pm_gt_grid_power: "Réseau électrique" #NT!
- PPP_pm_emergency_local_power: "Approvisionnement local d'urgence" #NT!
+ PPP_pm_hy_local_power: "Electricité locale"
+ PPP_pm_hy_hybrid_power: "Alimentation mixte sur réseau"
+ PPP_pm_hy_grid_power: "Réseau électrique"
+ PPP_pm_se_local_power: "Electricité locale"
+ PPP_pm_se_hybrid_power: "Alimentation mixte sur réseau"
+ PPP_pm_se_grid_power: "Réseau électrique"
+ PPP_pm_st_local_power: "Electricité locale"
+ PPP_pm_st_hybrid_power: "Alimentation mixte sur réseau"
+ PPP_pm_st_grid_power: "Réseau électrique"
+ PPP_pm_gt_local_power: "Electricité locale"
+ PPP_pm_gt_hybrid_power: "Alimentation mixte sur réseau"
+ PPP_pm_gt_grid_power: "Réseau électrique"
+ PPP_pm_emergency_local_power: "Approvisionnement local d'urgence"
   
- PPP_pm_grid_base: "Répartition régionale" #NT!
+ PPP_pm_grid_base: "Répartition régionale"
   
- PPP_pm_grid_water: "Capacité normale" #NT!
- PPP_pm_grid_engine: "Capacité accrue" #NT!
- PPP_pm_grid_turbine: "Capacité doublée" #NT!
- PPP_pm_grid_gas_turbine: "Capacité triplée" #NT!
+ PPP_pm_grid_water: "Capacité normale"
+ PPP_pm_grid_engine: "Capacité accrue"
+ PPP_pm_grid_turbine: "Capacité doublée"
+ PPP_pm_grid_gas_turbine: "Capacité triplée"
   

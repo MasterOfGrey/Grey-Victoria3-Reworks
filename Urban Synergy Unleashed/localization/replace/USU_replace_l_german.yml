@@ -1,12 +1,16 @@
 ﻿l_german:
   # WCA 
- alert_wasted_construction_name: "Hat unbenutzt [concept_construction]" #NT!
- alert_wasted_construction_hint: "Hat unbenutzt [concept_construction]" #NT!
- alert_wasted_construction_action: "Konstruktionspanel" #NT!
- wasted_construction_setting_name: "Unbenutzte Konstruktion" #NT!
+ alert_wasted_construction_name: "Hat ungenutzten [concept_construction]"
+ alert_wasted_construction_hint: "Hat ungenutzten [concept_construction]"
+ alert_wasted_construction_action: "Bau-Tafel"
+ wasted_construction_setting_name: "Ungenutzten Bau"
   
  pm_electric_trains: "Gleichstrom-Elektrozüge" #NT!
  pm_electric_trains_principle_transport_3: "Gemeinsame Gleichstrom-Elektrozüge" #NT!
  pm_electric_streetlights: "Mondscheintürme" #NT!
   
  pm_canal: "Dampfbetriebene Schlösser" #NT!
+  
+ pm_no_public_transport: "Kein öffentlicher Nahverkehr"
+ pm_public_trams: "Pferdestraßenbahnen"
+ pm_public_motor_carriages: "Stadtbusse"

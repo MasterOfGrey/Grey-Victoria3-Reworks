@@ -1,63 +1,63 @@
 ﻿l_german:
      # Building 
- PPP_building_power_grid: "Stromnetz" #NT!
+ PPP_building_power_grid: "Stromnetz"
   
      # Technologies 
- PPP_tech_hv_power: "Kraftübertragung" #NT!
- PPP_tech_hv_power_desc: "Durch den Einsatz von Konvertern und Reglern ist die Fernübertragung von Hochspannung nun für mehrere Ziele mit unterschiedlichen Anforderungen nutzbar." #NT!
- USU_tech_hv_railways: "Industrielle Transformatoren" #NT!
- USU_tech_hv_railways_desc: "Durch die Verwendung skalierbarer Transformatoren können wir den vollen Nutzen aus Wechselstrom ziehen. So können wir konstant hohe Spannungen über weite Entfernungen liefern und die Stromübertragung wirtschaftlich gestalten." #NT!
+ PPP_tech_hv_power: "Kraftübertragung"
+ PPP_tech_hv_power_desc: "Durch den Einsatz von Konvertern und Reglern ist die Fernübertragung von Hochspannung nun für mehrere Ziele mit unterschiedlichen Anforderungen nutzbar."
+ USU_tech_hv_railways: "Industrielle Transformatoren"
+ USU_tech_hv_railways_desc: "Durch die Verwendung skalierbarer Transformatoren können wir den vollen Nutzen aus Wechselstrom ziehen. So können wir konstant hohe Spannungen über weite Entfernungen liefern und die Stromübertragung wirtschaftlich gestalten."
   
      # Goods 
- ppp_hv_power: "Hochspannungsleistung" #NT!
+ ppp_hv_power: "Hochspannungsleistung"
   
      # Modifier types - As of USU: None of the multipliers are used anymore. 
- goods_input_ppp_hv_power_add: "@ppp_hv_power![Nbsp]$ppp_hv_power$ Eingabe" #NT!
- goods_output_ppp_hv_power_add: "@ppp_hv_power![Nbsp]$ppp_hv_power$ Ausgabe" #NT!
- goods_input_ppp_hv_power_mult: "Gebäude @ppp_hv_power![Nbsp]$ppp_hv_power$ Eingabe" #NT!
- goods_output_ppp_hv_power_mult: "Erstellen der Ausgabe von @ppp_hv_power![Nbsp]$ppp_hv_power$" #NT!
+ goods_input_ppp_hv_power_add: "@ppp_hv_power![Nbsp]$ppp_hv_power$ Eingabe"
+ goods_output_ppp_hv_power_add: "@ppp_hv_power![Nbsp]$ppp_hv_power$ Ausgabe"
+ goods_input_ppp_hv_power_mult: "Gebäude @ppp_hv_power![Nbsp]$ppp_hv_power$ Eingabe"
+ goods_output_ppp_hv_power_mult: "Erstellen der Ausgabe von @ppp_hv_power![Nbsp]$ppp_hv_power$"
   
- goods_input_ppp_hv_power_add_desc: "Die Menge an @ppp_hv_power![Nbsp]$ppp_hv_power$, die von Gebäuden verbraucht wird" #NT!
- goods_output_ppp_hv_power_add_desc: "Die Menge an @ppp_hv_power![Nbsp]$ppp_hv_power$, die von Gebäuden erzeugt wird" #NT!
- goods_input_ppp_hv_power_mult_desc: "Ein Bonus oder eine Strafe für die Menge an @ppp_hv_power![Nbsp]$ppp_hv_power$, die von Gebäuden verbraucht wird" #NT!
- goods_output_ppp_hv_power_mult_desc: "Ein Bonus oder eine Strafe in Höhe der von Gebäuden erzeugten @ppp_hv_power![Nbsp]$ppp_hv_power$" #NT!
+ goods_input_ppp_hv_power_add_desc: "Die Menge an @ppp_hv_power![Nbsp]$ppp_hv_power$, die von Gebäuden verbraucht wird"
+ goods_output_ppp_hv_power_add_desc: "Die Menge an @ppp_hv_power![Nbsp]$ppp_hv_power$, die von Gebäuden erzeugt wird"
+ goods_input_ppp_hv_power_mult_desc: "Ein Bonus oder eine Strafe für die Menge an @ppp_hv_power![Nbsp]$ppp_hv_power$, die von Gebäuden verbraucht wird"
+ goods_output_ppp_hv_power_mult_desc: "Ein Bonus oder eine Strafe in Höhe der von Gebäuden erzeugten @ppp_hv_power![Nbsp]$ppp_hv_power$"
   
- goods_input_steel_mult: "Gebäude $goods_input_steel_add$" #NT!
- goods_input_tools_mult: "Gebäude $goods_input_tools_add$" #NT!
+ goods_input_steel_mult: "Gebäude $goods_input_steel_add$"
+ goods_input_tools_mult: "Gebäude $goods_input_tools_add$"
   
- goods_input_steel_mult_desc: "$goods_input_steel_add_desc$" #NT!
- goods_input_tools_mult_desc: "$goods_input_tools_add_desc$" #NT!
+ goods_input_steel_mult_desc: "$goods_input_steel_add_desc$"
+ goods_input_tools_mult_desc: "$goods_input_tools_add_desc$"
   
      # PMGs 
- PPP_pmg_generation_machinery: "Erzeugungsmaschinen" #NT!
- PPP_pmg_HV_generation: "Stromverteilung" #NT!
- PPP_pmg_power_grid: "$pm_base$" #NT!
- PPP_pmg_power_grid_scaler: "Verteilungskapazität" #NT!
+ PPP_pmg_generation_machinery: "Erzeugungsmaschinen"
+ PPP_pmg_HV_generation: "Stromverteilung"
+ PPP_pmg_power_grid: "$pm_base$"
+ PPP_pmg_power_grid_scaler: "Verteilungskapazität"
   
      # PMs 
- PPP_pm_hydro_mechanical: "Wasserturbinen" #NT!
- PPP_pm_steam_engine: "Dampfmaschinen" #NT!
- PPP_pm_steam_turbine: "Dampfturbinen" #NT!
- PPP_pm_gas_turbine: "Gasturbinen" #NT!
+ PPP_pm_hydro_mechanical: "Wasserturbinen"
+ PPP_pm_steam_engine: "Dampfmaschinen"
+ PPP_pm_steam_turbine: "Dampfturbinen"
+ PPP_pm_gas_turbine: "Gasturbinen"
   
- PPP_pm_hy_local_power: "Lokale Elektrizität" #NT!
- PPP_pm_hy_hybrid_power: "Gemischte Netzversorgung" #NT!
- PPP_pm_hy_grid_power: "Stromnetz" #NT!
- PPP_pm_se_local_power: "Lokale Elektrizität" #NT!
- PPP_pm_se_hybrid_power: "Gemischte Netzversorgung" #NT!
- PPP_pm_se_grid_power: "Stromnetz" #NT!
- PPP_pm_st_local_power: "Lokale Elektrizität" #NT!
- PPP_pm_st_hybrid_power: "Gemischte Netzversorgung" #NT!
- PPP_pm_st_grid_power: "Stromnetz" #NT!
- PPP_pm_gt_local_power: "Lokale Elektrizität" #NT!
- PPP_pm_gt_hybrid_power: "Gemischte Netzversorgung" #NT!
- PPP_pm_gt_grid_power: "Stromnetz" #NT!
- PPP_pm_emergency_local_power: "Lokale Notversorgung" #NT!
+ PPP_pm_hy_local_power: "Lokale Elektrizität"
+ PPP_pm_hy_hybrid_power: "Gemischte Netzversorgung"
+ PPP_pm_hy_grid_power: "Stromnetz"
+ PPP_pm_se_local_power: "Lokale Elektrizität"
+ PPP_pm_se_hybrid_power: "Gemischte Netzversorgung"
+ PPP_pm_se_grid_power: "Stromnetz"
+ PPP_pm_st_local_power: "Lokale Elektrizität"
+ PPP_pm_st_hybrid_power: "Gemischte Netzversorgung"
+ PPP_pm_st_grid_power: "Stromnetz"
+ PPP_pm_gt_local_power: "Lokale Elektrizität"
+ PPP_pm_gt_hybrid_power: "Gemischte Netzversorgung"
+ PPP_pm_gt_grid_power: "Stromnetz"
+ PPP_pm_emergency_local_power: "Lokale Notversorgung"
   
- PPP_pm_grid_base: "Regionale Verteilung" #NT!
+ PPP_pm_grid_base: "Regionale Verteilung"
   
- PPP_pm_grid_water: "Normale Kapazität" #NT!
- PPP_pm_grid_engine: "Erhöhte Kapazität" #NT!
- PPP_pm_grid_turbine: "Doppelte Kapazität" #NT!
- PPP_pm_grid_gas_turbine: "Verdreifachte Kapazität" #NT!
+ PPP_pm_grid_water: "Normale Kapazität"
+ PPP_pm_grid_engine: "Erhöhte Kapazität"
+ PPP_pm_grid_turbine: "Doppelte Kapazität"
+ PPP_pm_grid_gas_turbine: "Verdreifachte Kapazität"
   

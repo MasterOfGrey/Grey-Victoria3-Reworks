@@ -1,13 +1,13 @@
 ﻿l_simp_chinese:
- pmg_public_transit: "公共交通" #NT!
- pm_no_public_transport: "没有公共交通" #NT!
- pm_public_omnibus: "公共马车" #NT!
- pm_public_trams: "马拉电车" #NT!
- pm_public_steam_metro: "蒸汽动力地铁" #NT!
- pm_public_electric_metro: "电动地铁" #NT!
- pm_public_motor_carriages: "城市公交车" #NT!
+ pmg_public_transit: "公共交通"
+ # pm_no_public_transport: "没有公共交通" #NT!
+ pm_public_omnibus: "公共马车"
+ # pm_public_trams: "马拉电车" #NT!
+ pm_public_steam_metro: "蒸汽动力地铁"
+ pm_public_electric_metro: "电动地铁"
+ # pm_public_motor_carriages: "城市公交车" #NT!
   
- pmg_local_transport: "当地交通" #NT!
- pm_horses: "马和马车" #NT!
- pm_stagecoaches_and_wagons: "马车" #NT!
- pm_motor_vehicles: "汽车和卡车" #NT!
+ pmg_local_transport: "当地交通"
+ pm_horses: "马和马车"
+ pm_stagecoaches_and_wagons: "马车"
+ pm_motor_vehicles: "汽车和卡车"

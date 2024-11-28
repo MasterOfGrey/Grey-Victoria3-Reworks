@@ -1,64 +1,71 @@
 ﻿l_german:
      # Modifiers 
- mog_urbanization: "Urbane Synergie Urbanismus" #NT!
- mog_urbanization_mult: "Urbane Synergie Urbanismus" #NT!
- mog_construction_max_level_adjustment: "Urban Synergy Bau" #NT!
- mog_logistics_land_trade: "Landhandelskapazität aus importierten Logistikdienstleistungen" #NT!
- mog_mapi: "Urban Synergy MAPI" #NT!
+ mog_urbanization: "Urbane Synergie Urbanismus"
+ mog_urbanization_mult: "Urbane Synergie Urbanismus"
+ mog_construction_max_level_adjustment: "Urban Synergy Bau"
+ mog_logistics_land_trade: "Landhandelskapazität aus importierten Logistikdienstleistungen"
+ mog_mapi: "Urban Synergy MAPI"
   
      # Building 
- building_river_port: "Flussdocks" #NT!
- USU_building_public_green: "Öffentliches Grün" #NT!
+ building_river_port: "Flussdocks"
+ USU_building_public_green: "Öffentliches Grün"
   
      # Technologies 
   
      # Goods 
- usu_logistics: "Logistikdienstleistungen" #NT!
+ usu_logistics: "Logistikdienstleistungen"
   
      # Modifier types 
- state_building_river_port_max_level_add: "Flusshafen, Höchstlevel" #NT!
- state_building_river_port_max_level_add_desc: "Ein Bonus oder eine Strafe für das Höchstlevel von Flusshafengebäuden." #NT!
+ state_building_river_port_max_level_add: "Flusshafen, Höchstlevel"
+ state_building_river_port_max_level_add_desc: "Ein Bonus oder eine Strafe für das Höchstlevel von Flusshafengebäuden."
   
- goods_input_usu_logistics_add: "@usu_logistics![Nbsp]$usu_logistics$ Eingabe" #NT!
- goods_output_usu_logistics_add: "@usu_logistics![Nbsp]$usu_logistics$ Ausgabe" #NT!
- goods_input_usu_logisticsr_mult: "Gebäude @usu_logistics![Nbsp]$usu_logistics$ Eingabe" #NT!
- goods_output_usu_logistics_mult: "Erstellen der Ausgabe von @usu_logistics![Nbsp]$usu_logistics$" #NT!
+ goods_input_usu_logistics_add: "@usu_logistics![Nbsp]$usu_logistics$ Eingabe"
+ goods_output_usu_logistics_add: "@usu_logistics![Nbsp]$usu_logistics$ Ausgabe"
+ goods_input_usu_logisticsr_mult: "Gebäude @usu_logistics![Nbsp]$usu_logistics$ Eingabe"
+ goods_output_usu_logistics_mult: "Erstellen der Ausgabe von @usu_logistics![Nbsp]$usu_logistics$"
   
- goods_input_usu_logistics_add_desc: "Die Menge an @usu_logistics![Nbsp]$usu_logistics$, die von Gebäuden verbraucht wird" #NT!
- goods_output_usu_logistics_add_desc: "Die Menge an @usu_logistics![Nbsp]$usu_logistics$, die von Gebäuden erzeugt wird" #NT!
- goods_input_usu_logistics_mult_desc: "Ein Bonus oder eine Strafe in Höhe von @usu_logistics![Nbsp]$usu_logistics$, die von Gebäuden verbraucht werden" #NT!
- goods_output_usu_logistics_mult_desc: "Ein Bonus oder eine Strafe in Höhe von @usu_logistics![Nbsp]$usu_logistics$, die von Gebäuden erzeugt werden" #NT!
+ goods_input_usu_logistics_add_desc: "Die Menge an @usu_logistics![Nbsp]$usu_logistics$, die von Gebäuden verbraucht wird"
+ goods_output_usu_logistics_add_desc: "Die Menge an @usu_logistics![Nbsp]$usu_logistics$, die von Gebäuden erzeugt wird"
+ goods_input_usu_logistics_mult_desc: "Ein Bonus oder eine Strafe in Höhe von @usu_logistics![Nbsp]$usu_logistics$, die von Gebäuden verbraucht werden"
+ goods_output_usu_logistics_mult_desc: "Ein Bonus oder eine Strafe in Höhe von @usu_logistics![Nbsp]$usu_logistics$, die von Gebäuden erzeugt werden"
   
- modifier_goods_input_tools_mult: "@tools![Nbsp]Tools-Eingabe" #NT!
- modifier_goods_input_tools_mult_desc: "Die Menge an @tools![Nbsp]Tools, die von Gebäuden verbraucht werden" #NT!
+ modifier_goods_input_tools_mult: "@tools![Nbsp]Tools-Eingabe"
+ modifier_goods_input_tools_mult_desc: "Die Menge an @tools![Nbsp]Tools, die von Gebäuden verbraucht werden"
   
      # PMGs 
- pmg_base_building_river_port: "Anlegestellen" #NT!
- USU_pmg_government_administration_emergency_services: "Notdienste" #NT!
- USU_pmg_government_administration_law_enforcement: "Strafverfolgung" #NT!
- USU_pmg_public_space_management: "Verwaltung öffentlicher Räume" #NT!
- USU_pmg_public_parklands: "Parklandschaftsnutzung" #NT!
+ pmg_base_building_river_port: "Anlegestellen"
+ USU_pmg_government_administration_emergency_services: "Notdienste"
+ USU_pmg_government_administration_law_enforcement: "Strafverfolgung"
+ USU_pmg_public_space_management: "Verwaltung öffentlicher Räume"
+ USU_pmg_public_parklands: "Parklandschaftsnutzung"
   
      # PMs 
- pm_rp_small_port: "Piers am Flussufer" #NT!
- pm_rp_industrial_port: "Industriehäfen" #NT!
- pm_rp_modern_port: "Moderne Häfen" #NT!
- USU_pm_grid_streetlights: "Glühlampen für Straßenlaternen" #NT!
- USU_pm_no_emergency_services: "Keine Notdienste" #NT!
- USU_pm_basic_fire_brigade: "Basisfeuerwehren" #NT!
- USU_pm_response_planning: "Katastrophenschutzplanung" #NT!
- USU_pm_modern_emergency_services: "Moderne Notfalldienste" #NT!
- USU_pm_no_police: "Gemeinschaftsaktionsgruppen" #NT!
- USU_pm_local_police: "Örtliche Polizei" #NT!
- USU_pm_dedicated_police: "Engagierte Polizei" #NT!
- USU_pm_militarized_police: "Durchsetzung des Kriegsrechts" #NT!
- USU_pm_community_orgs: "Gemeinschaftsorganisationen" #NT!
- USU_pm_private_firms: "Private Organisationen" #NT!
- USU_pm_pub_priv_partners: "Öffentlich-private Partnerschaften" #NT!
- USU_pm_village_stables: "Gemeinschaftsställe" #NT!
- USU_pm_contained_wilderness: "Geschützte Wildnis" #NT!
- USU_pm_seasonal_fairgrounds: "Saisonale Jahrmärkte" #NT!
+ pm_rp_small_port: "Piers am Flussufer"
+ pm_rp_industrial_port: "Industriehäfen"
+ pm_rp_modern_port: "Moderne Häfen"
+ USU_pm_grid_streetlights: "Glühlampen für Straßenlaternen"
+ USU_pm_no_emergency_services: "Keine Notdienste"
+ USU_pm_basic_fire_brigade: "Basisfeuerwehren"
+ USU_pm_response_planning: "Katastrophenschutzplanung"
+ USU_pm_modern_emergency_services: "Moderne Notfalldienste"
+ USU_pm_no_police: "Gemeinschaftsaktionsgruppen"
+ USU_pm_local_police: "Örtliche Polizei"
+ USU_pm_dedicated_police: "Engagierte Polizei"
+ USU_pm_militarized_police: "Durchsetzung des Kriegsrechts"
+ USU_pm_community_orgs: "Gemeinschaftsorganisationen"
+ USU_pm_private_firms: "Private Organisationen"
+ USU_pm_pub_priv_partners: "Öffentlich-private Partnerschaften"
+ USU_pm_village_stables: "Gemeinschaftsställe"
+ USU_pm_contained_wilderness: "Geschützte Wildnis"
+ USU_pm_seasonal_fairgrounds: "Saisonale Jahrmärkte"
   
      # State Traits 
- state_trait_rotterdam: "Rotterdamer Hafen" #NT!
- state_trait_hudson_river: "Der Hudson Fluss" #NT!
+ state_trait_rotterdam: "Rotterdamer Hafen"
+ state_trait_hudson_river: "Der Hudson Fluss"
+  
+     # Autoexpand tooltip(s) 
+ is_industrial_building: "Ist ein natürlicher $concept_building_industry$ für handelbaren [Concept('concept_good', '$concept_goods$')]" #NT!
+ is_private_infrastructure: "Ist Transport $bg_infrastructure$, das kann [Concept('concept_privatize', '$concept_privatized$')] sein" #NT!
+ pos_rel_infrastructure: "Staat hat verfügbar [concept_infrastructure]" #NT!
+ neg_rel_infrastructure: "Staat hat [concept_infrastructure] Defizit" #NT!
+ bureaucracy_percent: "Der nationale Bürokratiegrad liegt unter #v 90%#!" #NT!
