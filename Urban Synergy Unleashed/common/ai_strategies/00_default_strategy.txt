@@ -1070,7 +1070,10 @@ ai_strategy_default = {
 							scope:target_state = { 
 								is_split_state = yes 
 								state_region = { 
-									any_scope_state = { owner = ROOT }
+									any_scope_state = { 
+										owner = ROOT 
+										is_treaty_port = no
+									}
 								}
 							}
 							scope:target_state = { has_claim_by = root } 
@@ -2574,7 +2577,6 @@ ai_strategy_default = {
 							region = sr:region_south_china
 							region = sr:region_manchuria
 						}
-						is_treaty_port = yes
 					}					
 				}
 			}
@@ -2833,7 +2835,7 @@ ai_strategy_default = {
 					capital.region = sr:region_southern_africa
 				}
 			}
-			add = 5
+			add = 25
 		}
 
 		if = { # Dutch East Indies
@@ -2844,13 +2846,13 @@ ai_strategy_default = {
 					is_country_type = unrecognized
 				}
 			}
-			add = 10
+			add = 25
 		}
 		
 		if = { # Portugal wishes to eat Gaza
 			limit = {
 				country_has_primary_culture = cu:portuguese
-				has_technology_researched = malaria_prevention
+				has_technology_researched = civilizing_mission
 				OR = {
 					any_scope_state = {
 						OR = {
@@ -2878,7 +2880,7 @@ ai_strategy_default = {
 					}
 				}
 			}
-			add = 10
+			add = 25
 		}
 
 		# Aggression against radical leftists
@@ -5264,6 +5266,14 @@ ai_strategy_default = {
 				limit = {
 					NOT = { is_country_type = unrecognized }
 					scope:target_country = { is_country_type = unrecognized }
+					scope:target_country = {
+						OR = {
+							is_subject = no
+							top_overlord ?= {
+								is_country_type = unrecognized
+							}
+						}
+					}					
 					has_technology_researched = colonization
 					institution_investment_level = {
 						institution = institution_colonial_affairs
@@ -5273,22 +5283,13 @@ ai_strategy_default = {
 				add = 50
 
 				if = {
-					limit = { has_technology_researched = civilizing_mission }
-					add = 100
+					limit = { has_technology_researched = quinine }
+					add = 50
+				}
 
-					if = {
-						limit = {
-							scope:target_country = {
-								OR = {
-									is_subject = no
-									top_overlord ?= {
-										is_country_type = unrecognized
-									}
-								}
-							}
-						}
-						add = 250
-					}					
+				if = {
+					limit = { has_technology_researched = civilizing_mission }
+					add = 200		
 					
 					if = {
 						limit = {
@@ -5304,8 +5305,96 @@ ai_strategy_default = {
 						power_bloc ?= { has_principle_group = principle_group:principle_group_colonial_offices }
 					}
 					add = 50
-				}						
-			}		
+				}
+
+				if = {
+					limit = {
+						has_journal_entry = je_scramble_for_africa
+						scope:target_country = {
+							country_is_in_africa = yes
+						}
+					}
+					add = 500
+				}
+
+				if = { # Portugal wishes to eat Gaza
+					limit = {
+						country_has_primary_culture = cu:portuguese
+						has_technology_researched = civilizing_mission
+						OR = {
+							any_scope_state = {
+								OR = {
+									state_region = s:STATE_MOCAMBIQUE
+									state_region = s:STATE_ZAMBEZIA
+									state_region = s:STATE_LOURENCO_MARQUES
+								}
+							}
+							any_subject_or_below = {
+								capital = {
+									OR = {
+										state_region = s:STATE_MOCAMBIQUE
+										state_region = s:STATE_ZAMBEZIA
+										state_region = s:STATE_LOURENCO_MARQUES
+									}
+								}
+							}
+						}
+						scope:target_country = {
+							is_country_type = unrecognized
+							any_scope_state = {
+								state_region = s:STATE_MOCAMBIQUE
+								state_region = s:STATE_ZAMBEZIA
+								state_region = s:STATE_LOURENCO_MARQUES
+							}
+						}
+					}
+					add = 250
+
+					if = {
+						limit = {
+							has_technology_researched = malaria_prevention
+						}
+						add = 500
+					}
+				}				
+
+				if = {
+					limit = {
+						c:DEI ?= this 
+						scope:target_country = {
+							capital.region = sr:region_indonesia
+							is_country_type = unrecognized
+						}						
+					}
+					add = 1000
+				}
+
+				if = {
+					limit = {
+						scope:target_country = {
+							is_subject = yes
+							is_country_type = unrecognized
+							top_overlord ?= {
+								NOT = { is_country_type = unrecognized }
+							}
+						}
+					}
+					multiply = 0.1
+				}									
+			}
+			if = { # Britain consolidating South Africa
+				limit = {
+					country_has_primary_culture = cu:british
+					has_technology_researched = malaria_prevention
+					any_subject_or_below = {
+						capital.region = sr:region_southern_africa
+					}
+					scope:target_country = {
+						capital.region = sr:region_southern_africa
+					}
+				}
+				add = 500
+			}
 
 			if = {
 				limit = {
@@ -5514,6 +5603,14 @@ ai_strategy_default = {
 					NOT = { is_country_type = unrecognized }
 					scope:target_country = { is_country_type = unrecognized }
 					scope:target_country = { NOT = { is_subject_of = root }	}
+					scope:target_country = {
+						OR = {
+							is_subject = no
+							top_overlord ?= {
+								is_country_type = unrecognized
+							}
+						}
+					}	
 					has_technology_researched = colonization
 					institution_investment_level = {
 						institution = institution_colonial_affairs
@@ -5521,6 +5618,11 @@ ai_strategy_default = {
 					}					
 				}
 				add = 25
+
+				if = {
+					limit = { has_technology_researched = quinine }
+					add = 25
+				}				
 				
 				if = {
 					limit = { has_technology_researched = civilizing_mission }
@@ -5540,8 +5642,55 @@ ai_strategy_default = {
 						power_bloc ?= { has_principle_group = principle_group:principle_group_colonial_offices }
 					}
 					add = 50
+				}
+
+				if = {
+					limit = {
+						has_journal_entry = je_scramble_for_africa
+						scope:target_country = {
+							country_is_in_africa = yes
+						}
+					}
+					add = 250
 				}				
-			}			
+
+				if = {
+					limit = {
+						c:DEI ?= this 
+						scope:target_country = {
+							capital.region = sr:region_indonesia
+							is_country_type = unrecognized
+						}						
+					}
+					add = 500
+				}				
+
+				if = {
+					limit = {
+						scope:target_country = {
+							is_subject = yes
+							is_country_type = unrecognized
+							top_overlord ?= {
+								NOT = { is_country_type = unrecognized }
+							}
+						}
+					}
+					multiply = 0.1
+				}								
+			}
+			if = { # Britain consolidating South Africa
+				limit = {
+					country_has_primary_culture = cu:british
+					has_technology_researched = malaria_prevention
+					any_subject_or_below = {
+						capital.region = sr:region_southern_africa
+					}
+					scope:target_country = {
+						capital.region = sr:region_southern_africa
+					}
+				}
+				add = 250
+			}		
 			
 			if = {
 				limit = {
@@ -5553,7 +5702,6 @@ ai_strategy_default = {
 				add = 25
 			}
 			
-
 			multiply = {
 				value = "ai_ideological_opinion(scope:target_country)"
 				multiply = -0.05
