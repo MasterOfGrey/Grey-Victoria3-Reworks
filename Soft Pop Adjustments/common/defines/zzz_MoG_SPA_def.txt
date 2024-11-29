@@ -135,7 +135,11 @@ NPops = {
 	MIGRATION_MAX_PER_STATE_MASS_EMIGRATION_MULT = 3.0							# Weekly emigration caps are multiplied by this amount by this for mass migrations (after clamping from MIGRATION_MAX_EMIGRATION_AS_POPULATION_FRACTION)
 	MIGRATION_MAX_PER_STATE_MASS_IMMIGRATION_MULT = 7.0 # 5.0					# Weekly immigration caps are multiplied by this amount by this for mass migrations (after clamping from MIGRATION_MAX_EMIGRATION_AS_POPULATION_FRACTION)
 	MASS_MIGRATION_NEIGHBORING_TARGET_STATE_LIMIT_FRACTION = 0.5				# Fraction of the limit a neighboring state gets compared to the main target state in a mass migration
-
+	
+	# Mass Migration Acceptance #
+	MIN_REQUIRED_ACCEPTANCE_FOR_MIGRATION = 30   # If a pop would have less than this much acceptance in a target state, they won't mass migrate there
+	EXPECTED_ACCEPTANCE_INCREASE_TO_MIGRATE = 10 # A pop will look to increase their acceptance by this much when mass migrating, but might accept less if mass migration attraction difference is high enough
+	MAX_ACCEPTANCE_RATIO_MULT_MIGRATION = 5      # A difference in acceptance between source and target in mass migrations will result in at most this much increased migration
 	
 ##### POP CONSOLIDATION ##### 
 	# Pop Consolidation identifies pops so small their impact on the economy and politics is insignificant, and merges them into other pops in the same building or state.

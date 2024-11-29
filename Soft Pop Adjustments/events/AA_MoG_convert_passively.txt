@@ -26,11 +26,13 @@ assimilate_everyone.2 = {
 			# For when non-state religions are accepted:
 			if = {
 				limit = {
-					# don't do conversion if conversion should already be happening
-					OR = {
-						has_law = law_type:law_freedom_of_conscience
-						has_law = law_type:law_total_separation
-					}
+					# Don't care which laws anymore, everything handled by "has_ongoing_conversion = no"
+					# Only need to handle State Atheism Separately
+					NOT = { has_law = law_type:law_state_atheism }
+					# OR = {
+					#	has_law = law_type:law_freedom_of_conscience
+					#	has_law = law_type:law_total_separation
+					# }
 				}
 				
 				root.religion = { save_scope_as = institutional_religion }
@@ -49,8 +51,8 @@ assimilate_everyone.2 = {
 							limit = {
 								has_state_religion = no
 								has_ongoing_conversion = no
-								# pop_is_discriminated = no		# Not used anymore
-								pop_acceptance >= acceptance_status_2
+								# pop_is_discriminated = no					# Not used anymore
+								# pop_acceptance >= acceptance_status_2		# Literally irrelevant, using discrimination makes no sense anymore
 								# as we want to convert accepted pops with religions that are normally excluded (represents institutional inertia)
 							}
 							
@@ -140,10 +142,19 @@ assimilate_everyone.2 = {
 					every_scope_pop = {
 						if = {
 							limit = {
-								has_state_religion = no
-								# pop_is_discriminated = no		# Not used anymore
-								religion = scope:legacy_religion
-								# as we want to be able to spawn and progress state atheism in at least institutionally integrated pops even if there's no seed pop to convert from
+								OR = {
+									AND = {
+										has_state_religion = no					# Pop is not Atheist
+										has_ongoing_conversion = no				# Pop is blocked from converting otherwise (this should be because of discrimination)
+										pop_acceptance <= acceptance_status_3	# Some portion of discriminated pops won't be attached to their religion and will see abandoning it as a safe way out.
+									}
+									AND = {
+										has_state_religion = no				# Pop is not Atheist
+										# has_ongoing_conversion = no		# Don't care, happy for this to boost conversion in states where it's already happening anyway.
+										religion = scope:legacy_religion
+										# as we want to be able to spawn and progress state atheism in at least institutionally integrated pops even if there's no seed pop to convert from.
+									}
+								}
 							}
 							
 							this = {
