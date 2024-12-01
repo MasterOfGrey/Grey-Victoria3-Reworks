@@ -1,0 +1,815 @@
+﻿movement_anti_slavery = {
+	category = movement_category_ideological
+
+	ideology = ideology_anti_slavery	
+	character_ideologies = {
+		ideology_abolitionist
+		ideology_humanitarian
+	}
+	
+	disband_trigger = {
+		has_law = law_type:law_slavery_banned
+	}
+	on_disbanded = {}
+	
+	creation_trigger = {
+		NOT = { has_law = law_type:law_slavery_banned }
+		has_technology_researched = empiricism
+	}
+	creation_weight = {
+		value = 100
+	}	
+	on_created = {
+		add_movement_enthusiasm_modifier = yes
+	}
+	
+	character_support_trigger = {
+		OR = {
+			has_ideology = ideology:ideology_abolitionist
+			has_ideology = ideology:ideology_humanitarian
+			OR = {
+				is_interest_group_type = ig_intelligentsia
+				is_interest_group_type = ig_trade_unions
+			}
+		}
+	}
+	character_support_weight = {
+		value = 200
+		if = {
+			limit = {
+				OR = {
+					has_ideology = ideology:ideology_abolitionist
+					has_ideology = ideology:ideology_humanitarian
+				}
+			}
+			multiply = {
+				value = 5
+			}
+		}
+	}
+	
+	pop_support_factors = {
+		movement_support_high_urbanization
+		movement_support_high_literacy	
+		movement_support_capitalists
+		movement_support_academics
+		movement_support_clergymen
+		movement_support_bureaucrats
+		movement_support_clerks
+		movement_support_slaves
+		movement_support_je_acw_countdown
+	}	
+
+	pop_support_weight = {
+		add = {
+			desc = "URBAN_STATE"
+			value = 3
+			multiply = state.state_urbanization_rate
+		}
+
+		if = {
+			limit = {
+				strata = upper
+			}
+			if = {
+				limit = {
+					is_pop_type = capitalists
+				}
+				add = {
+					value = 12
+					desc = "POP_CAPITALISTS"
+				}
+			}
+			else = {
+				add = {
+					value = 3
+					desc = "UPPER_NO_ICON"
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				strata = middle
+			}
+			if = {
+				limit = {
+					is_pop_type = academics
+				}
+				add = {
+					value = 25
+					desc = "POP_ACADEMICS"
+				}
+			}
+			else_if = {
+				limit = {
+					is_pop_type = clergymen
+				}
+				add = {
+					value = 25
+					desc = "POP_CLERGYMEN"
+				}
+			}
+			else_if = {
+				limit = {
+					is_pop_type = bureaucrats
+				}
+				add = {
+					value = 15
+					desc = "POP_BUREAUCRATS"
+				}
+			}
+			else = {
+				add = {
+					value = 10
+					desc = "MIDDLE_NO_ICON"
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				strata = lower
+			}
+			if = {
+				limit = {
+					is_pop_type = clerks
+				}
+				add = {
+					value = 10
+					desc = "POP_CLERKS"
+				}
+			}
+			else_if = {
+				limit = {
+					is_pop_type = slaves
+				}
+				add = {
+					value = 30
+					desc = "POP_SLAVES"
+				}
+			}
+			else = {
+				add = {
+					value = 3
+					desc = "LOWER_NO_ICON"
+				}
+			}
+		}
+
+		if = {
+			limit = {
+                this.culture = {
+                    any_scope_pop = {
+                        owner = root.owner
+                        is_pop_type = slaves
+                    }
+                }
+			}
+			multiply = {
+				desc = "CULTURE_ENSLAVED_PERCENT" # TODO: "x percent of this culture is enslaved"
+				value = 1
+
+				add = {
+					value = {
+						value = 0
+						this.culture = {
+							every_scope_pop = {
+								limit = {
+									owner = root.owner
+									is_pop_type = slaves
+								}
+								add = total_size
+							}
+						}
+					}
+					divide = {
+						value = 0
+						this.culture = {
+							every_scope_pop = {
+								limit = {
+									owner = root.owner
+								}
+								add = total_size
+							}
+						}
+					}
+				}
+			}
+		}
+		
+		multiply = {
+			desc = "SLAVE_STATE"
+			value = 1.0
+			
+			if = {
+				limit = {
+					state = { is_slave_state = yes }
+				}
+				
+				if = {
+					limit = {
+						OR = {
+							is_pop_type = aristocrats
+							is_pop_type = clergymen
+							is_pop_type = officers
+							is_pop_type = farmers
+						}				
+					}
+					
+					subtract = 0.95
+				}
+				else = {
+					subtract = 0.75
+				}
+			}			
+		}
+		
+		if = {
+			limit = { 
+				owner ?= { has_journal_entry = je_acw_countdown }
+			}
+			
+			multiply = {
+				value = 3.0
+				desc = "je_acw_countdown"
+			}
+		}
+
+		multiply = { # Illiterate pops participate at 1/10 the rate of fully literate pops
+			desc = "POP_LITERACY"
+			value = literacy_rate
+			add = 0.10
+		}
+	}
+
+	revolution = {
+		possible = {
+			political_movement_support >= 0.05
+		}
+		
+		weight = {
+			value = 100
+		}
+	
+		state_weight = {
+			value = 1
+			if = {
+			   limit = { 
+					is_slave_state = yes
+					NOT = { has_variable = former_free_state }
+			   }	
+			   if = {
+					limit = { 
+						owner ?= {	
+							OR = {
+								has_journal_entry = je_acw_countdown
+								has_law = law_type:law_legacy_slavery
+								has_variable = slavery_recently_enacted
+							}
+							any_scope_state = {
+								OR = {
+								   is_slave_state = no
+								   has_variable = former_free_state	
+								}				
+							}					
+						} 
+					}	  
+					multiply = 0.0
+				}
+				else = {
+					multiply = 0.25
+				}
+			}
+			
+			if = {
+				limit = { is_capital = yes }
+				if = {
+					limit = { owner ?= { has_law = law_type:law_slavery_banned } }
+					multiply = 10.0
+				}
+				else = {
+					multiply = 0.1
+				}
+			}
+		}
+	}
+
+	secession = {
+		possible = {
+			political_movement_support >= 0.05
+			OR = {
+				scope:clout <= 0
+				owner = {
+					OR = {
+						has_journal_entry = je_acw_countdown
+						has_law = law_type:law_legacy_slavery
+						has_variable = slavery_recently_enacted
+					}
+				}
+			}
+		}	
+	
+		weight = {
+			value = 50
+
+			if = {
+				limit = {
+					owner ?= { has_journal_entry = je_acw_countdown }
+				}
+				add = 50
+			}
+		}	
+		
+		forced_tags = {
+			FSA = {
+				trigger = {
+					owner ?= { has_journal_entry = je_acw_countdown }
+				}
+				weight = 1000
+			}
+			BHT = {
+				trigger = {
+					owner ?= { c:BIC ?= this }
+				}
+				weight = 1000
+			}
+		}
+
+		state_weight = {
+			value = 1
+			if = {
+			   limit = { 
+					is_slave_state = yes
+					NOT = { has_variable = former_free_state }
+			   }	
+			   if = {
+					limit = { 
+						owner ?= {	
+							OR = {
+								has_journal_entry = je_acw_countdown
+								has_law = law_type:law_legacy_slavery
+								has_variable = slavery_recently_enacted
+							}
+							any_scope_state = {
+								OR = {
+								   is_slave_state = no
+								   has_variable = former_free_state	
+								}				
+							}					
+						} 
+					}	  
+					multiply = 0.0
+				}
+				else = {
+					multiply = 0.25
+				}
+			}
+			
+			# New York should be FSA capital
+			if = {
+				limit = { 
+					owner ?= { has_journal_entry = je_acw_countdown }
+					state_region = s:STATE_NEW_YORK
+				}
+				
+				multiply = 10.0
+			}			
+		}		
+	}	
+	
+	additional_radicalism_factors = {
+		if = {
+			limit = {
+				owner.ruler ?= {
+					OR = {
+						has_ideology = ideology:ideology_jacksonian_democrat
+						has_ideology = ideology:ideology_slaver
+					}
+				}
+			}
+			
+			add = {
+				value = 0.1
+				desc = "RULER_IS_PRO_SLAVERY"
+			}
+		}	
+	
+		add = {
+			value = 10
+			subtract = "owner.average_sol_for_slaves"
+			multiply = 0.05
+			max = 0.5
+			min = -0.25
+			desc = "STANDARD_OF_LIVING_FOR_SLAVES"
+		}
+		
+		if = {
+			limit = { 
+				owner ?= { has_journal_entry = je_acw_countdown }
+			}
+			
+			add = {
+				value = 0.2
+				desc = "je_acw_countdown"
+			}
+		}		
+	}
+}
+
+movement_pro_slavery = {
+	category = movement_category_ideological
+
+	ideology = ideology_pro_slavery
+	character_ideologies = {
+		ideology_slaver
+		ideology_jacksonian_democrat
+	}
+	
+	creation_trigger = {
+		NOT = { has_law = law_type:law_slavery_banned }
+	}	
+	creation_weight = {
+		value = 100
+	}	
+	on_created = {
+		add_movement_enthusiasm_modifier = yes
+	}
+	
+	character_support_trigger = {
+		trigger_if = {
+			limit = {
+				is_in_exile_pool = yes
+			}
+			has_ideology = ideology:ideology_slaver
+			has_ideology = ideology:ideology_jacksonian_democrat
+		}
+		trigger_else = {
+			OR = {
+				has_ideology = ideology:ideology_slaver
+				has_ideology = ideology:ideology_jacksonian_democrat
+			}
+			interest_group ?= {
+				has_ideology = ideology:ideology_pro_slavery
+			}
+		}
+	}
+	character_support_weight = {
+		value = 200
+		if = {
+			limit = {
+				OR = {
+					has_ideology = ideology:ideology_slaver
+				}
+			}
+			multiply = {
+				value = 5
+			}
+		}
+	}
+	
+	pop_support_trigger = {
+		state = { is_slave_state = yes }				
+	}
+
+	pop_support_factors = {
+		movement_support_slave_state
+		movement_support_high_literacy
+		movement_support_aristocrats
+		movement_support_farmers
+		movement_support_clergymen
+		movement_support_officers
+		movement_support_clergymen
+		movement_support_je_acw_countdown
+	}
+
+	pop_support_weight = {	
+		add = {
+			value = 9
+			desc = "SLAVE_STATE"
+		}	
+	
+		if = {
+			limit = {
+				is_pop_type = aristocrats
+			}
+			add = {
+				value = 45
+				desc = "POP_ARISTOCRATS"
+			}
+		}	
+		else_if = {
+			limit = {
+				is_pop_type = farmers
+			}
+			add = {
+				value = 15
+				desc = "POP_FARMERS"
+			}
+		}		
+		else_if = {
+			limit = {
+				is_pop_type = clergymen
+			}
+			add = {
+				value = 15
+				desc = "POP_CLERGYMEN"
+			}
+		}
+		else_if = {
+			limit = {
+				is_pop_type = officers
+			}
+			add = {
+				value = 15
+				desc = "POP_OFFICERS"
+			}
+		}
+
+		if = {
+			limit = {
+                this.culture = {
+                    any_scope_pop = {
+                        owner = root.owner
+                        is_pop_type = slaves
+                    }
+                }
+			}
+			multiply = {
+				desc = "CULTURE_ENSLAVED_PERCENT" # TODO: "x percent of this culture is enslaved"
+				value = 1
+
+				subtract = {
+					value = {
+						value = 0
+						this.culture = {
+							every_scope_pop = {
+								limit = {
+									owner = root.owner
+									is_pop_type = slaves
+								}
+								add = total_size
+							}
+						}
+					}
+					divide = {
+						value = 0
+						this.culture = {
+							every_scope_pop = {
+								limit = {
+									owner = root.owner
+								}
+								add = total_size
+							}
+						}
+					}
+				}
+			}
+		}
+		
+		if = {
+			limit = { 
+				owner ?= { has_journal_entry = je_acw_countdown }
+			}
+			
+			multiply = {
+				value = 3.0
+				desc = "je_acw_countdown"
+			}		
+		}
+
+		multiply = { # Illiterate pops participate at 1/10 the rate of fully literate pops
+			desc = "POP_LITERACY"
+			value = literacy_rate
+			add = 0.10
+		}
+	}
+	
+	revolution = {
+		possible = {
+			political_movement_support >= 0.05
+		}
+			
+		weight = {
+			value = 100
+		}
+
+		state_weight = {
+			value = 1
+			if = {
+			   limit = { 
+					is_slave_state = no 
+					NOT = { has_variable = former_slave_state }
+			   }	
+			   if = {
+					limit = { 
+						owner ?= {											
+							OR = {
+								has_journal_entry = je_acw_countdown
+								has_law = law_type:law_legacy_slavery
+								has_variable = slavery_recently_abolished
+							}
+							any_scope_state = {
+								OR = {
+								   is_slave_state = yes 
+								   has_variable = former_slave_state			
+								}				
+							}					
+						} 
+					}	  
+					multiply = 0.0
+				}
+				else = {
+					multiply = 0.25
+				}
+			}
+			
+			if = {
+				limit = { is_capital = yes }
+				if = {
+					limit = { owner ?= { NOT = { has_law = law_type:law_slavery_banned } } }
+					multiply = 10.0
+				}
+				else = {
+					multiply = 0.1
+				}
+			}		
+		}
+	}
+	
+	secession = {
+		possible = {
+			political_movement_support >= 0.05
+			OR = {
+				scope:clout <= 0
+				owner = {
+					OR = {
+						has_journal_entry = je_acw_countdown
+						has_law = law_type:law_legacy_slavery
+						has_variable = slavery_recently_abolished
+					}
+				}
+			}
+		}	
+	
+		weight = {
+			value = 10
+
+			if = {
+				limit = {
+					OR = {
+						owner ?= {
+							OR = {
+								has_journal_entry = je_acw_countdown 
+								has_variable = slavery_recently_abolished
+							}						
+						}
+						scope:clout <= 0
+					}
+				}
+				add = 1000
+			}
+		}
+		
+		forced_tags = {
+			CSA = {
+				trigger = {
+					owner ?= { has_journal_entry = je_acw_countdown }
+				}
+				weight = 1000
+			}
+		}
+		
+		state_weight = {
+			value = 1
+			if = {
+			   limit = { 
+					is_slave_state = no 
+					NOT = { has_variable = former_slave_state }
+			   }	
+			   if = {
+					limit = { 
+						owner ?= {											
+							OR = {
+								has_journal_entry = je_acw_countdown
+								has_law = law_type:law_legacy_slavery
+								has_variable = slavery_recently_abolished
+							}
+							any_scope_state = {
+								OR = {
+								   is_slave_state = yes 
+								   has_variable = former_slave_state			
+								}				
+							}					
+						} 
+					}	  
+					multiply = 0.0
+				}
+				else = {
+					multiply = 0.25
+				}
+			}
+			
+			if = {
+				limit = { 
+					owner ?= { has_journal_entry = je_acw_countdown }
+				}
+				
+				if = { # Ensure the union retains Washington DC/Maryland/Delaware in case of southern secession
+					limit = {
+						OR = {
+							state_region = s:STATE_MARYLAND
+							state_region = s:STATE_DELAWARE
+							state_region = s:STATE_DISTRICT_OF_COLUMBIA
+						}					
+					}
+					
+					multiply = 0.0
+				}			
+				else_if = { # Virginia should be CSA capital
+					limit = { 
+						state_region = s:STATE_VIRGINIA
+					}
+					
+					multiply = 10.0
+				}	
+			}	
+		}	
+	}
+	
+	additional_radicalism_factors = {
+		if = {
+			limit = {
+				owner.ruler ?= { has_ideology = ideology:ideology_abolitionist }
+			}
+			
+			add = {
+				value = 0.1
+				desc = "RULER_IS_ANTI_SLAVERY"
+			}
+		}
+	
+		if = {
+			limit = { owner.army_size > 0 }
+			
+			add = {
+				owner = {
+					every_scope_building = {
+						limit = { 
+							is_building_type = building_barracks
+							state = { is_slave_state = yes }
+						}
+						add = this.level
+					}
+				}
+				
+				divide = {
+					value = owner.army_size
+					min = 1
+				}			
+				
+				subtract = 0.5
+				multiply = -1
+				min = 0
+				max = 0.5			
+				desc = "ARMY_FRACTION_IN_SLAVE_STATES"			
+			}			
+		}
+		
+		if = {
+			limit = { owner.navy_size > 0 }		
+
+			add = {
+				owner = {
+					every_scope_building = {
+						limit = { 
+							is_building_type = building_naval_base
+							state = { is_slave_state = yes }
+						}
+						add = this.level
+					}
+				}
+				
+				divide = {
+					value = owner.navy_size
+					min = 1
+				}			
+				
+				subtract = 0.5
+				multiply = -0.5
+				min = 0
+				max = 0.25			
+				desc = "NAVY_FRACTION_IN_SLAVE_STATES"			
+			}	
+		}
+		
+		if = {
+			limit = { 
+				owner ?= { has_journal_entry = je_acw_countdown }
+			}
+			
+			add = {
+				value = 0.2
+				desc = "je_acw_countdown"
+			}
+		}		
+	}
+}
