@@ -2,9 +2,6 @@
 	building_group = USU_bg_public_greens
 	icon = "gfx/interface/icons/building_icons/USU_public_green.dds"
 	
-	city_type = farm
-	levels_per_mesh = 5
-	
 	unlocking_technologies = {
 		enclosure
 	}
@@ -16,7 +13,6 @@
 	
 	required_construction = construction_cost_low
 	
-	terrain_manipulator = pasture
 	ownership_type = self
 	
 	# generates_residences = yes
