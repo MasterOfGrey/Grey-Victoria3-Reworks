@@ -1,6 +1,6 @@
 ﻿violent_hostility = {
 	threshold = 0
-	base_migration_desire = 100
+	base_migration_desire = 100 # 100 # Not a binary system so keeping this at 100 now
 	war_exhaustion_impact_own_side = 0
 	war_exhaustion_impact_other_side = 0
 	color = { 180 75 80 }
@@ -11,7 +11,7 @@
 
 cultural_erasure = {
 	threshold = 20
-	base_migration_desire = 100
+	base_migration_desire = 40 # 100
 	war_exhaustion_impact_own_side = 0
 	war_exhaustion_impact_other_side = 0
 	color = { 175 100 75 }
@@ -22,7 +22,7 @@ cultural_erasure = {
 
 open_prejudice = {
 	threshold = 40
-	base_migration_desire = 50
+	base_migration_desire = 10 # 50
 	war_exhaustion_impact_own_side = 0.5
 	war_exhaustion_impact_other_side = 0
 	color = { 155 130 100 }
@@ -33,7 +33,7 @@ open_prejudice = {
 
 second_rate_citizen = {
 	threshold = 60
-	base_migration_desire = 20
+	base_migration_desire = -20.0 # 20
 	war_exhaustion_impact_own_side = 1.5
 	war_exhaustion_impact_other_side = 0.5
 	color = { 130 155 90 }
@@ -44,7 +44,7 @@ second_rate_citizen = {
 
 full_acceptance = {
 	threshold = 80
-	base_migration_desire = 0
+	base_migration_desire = -50.0 # 0
 	war_exhaustion_impact_own_side = 3
 	war_exhaustion_impact_other_side = 3
 	color = { 90 150 150 }
