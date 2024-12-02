@@ -46,6 +46,12 @@ assimilate_everyone.1 = {
 								}
 							}
 							has_ongoing_assimilation = no
+							NOT = {
+								root = {
+									has_law = law_type:law_slave_trade
+								}
+								is_pop_type = slaves
+							}
 							# Everything else is literally irrelevant, "has_ongoing_assimilation = no" + not primary culture covers everything
 						}
 						
