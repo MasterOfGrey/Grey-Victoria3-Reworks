@@ -5,9 +5,16 @@
 		pasteurization
 	}
 	
+	state_modifiers = {
+		workforce_scaled = {
+			building_food_industry_throughput_add = 0.01
+		}
+	}
+	
 	building_modifiers = {
 		workforce_scaled = {
 			goods_input_electricity_add = 3
+			goods_input_transportation_add = 1
 		}
 		level_scaled = {
 			building_employment_laborers_add = -800
@@ -26,7 +33,7 @@ pm_refrigerated_rail_cars_building_livestock_ranch = {
 	
 	state_modifiers = {
 		workforce_scaled = {
-			building_food_industry_throughput_add = 0.01
+			building_food_industry_throughput_add = 0.02
 		}
 	}
 	

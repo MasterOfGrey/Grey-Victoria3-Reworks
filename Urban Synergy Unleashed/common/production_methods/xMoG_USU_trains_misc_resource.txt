@@ -34,6 +34,26 @@ pm_log_carts = {
 # Rubber Plantations
 # n/a
 
+# Everyone
+pm_unrefrigerated = {
+	texture = "gfx/interface/icons/production_method_icons/no_refrigeration.dds"
+	
+	state_modifiers = {
+		workforce_scaled = {
+			building_food_industry_throughput_add = 0.005
+		}
+	}
+	
+	building_modifiers = {
+		workforce_scaled = {
+			# input
+			goods_input_transportation_add = 1
+		}
+	}
+	
+	required_input_goods = electricity
+}
+
 # Fishing Wharfs
 pm_refrigerated_storage_building_fishing_wharf = {
 	texture = "gfx/interface/icons/production_method_icons/refrigerated_storage.dds"
@@ -42,10 +62,17 @@ pm_refrigerated_storage_building_fishing_wharf = {
 		pasteurization
 	}
 	
+	state_modifiers = {
+		workforce_scaled = {
+			building_food_industry_throughput_add = 0.01
+		}
+	}
+	
 	building_modifiers = {
 		workforce_scaled = {
 			# input
 			goods_input_electricity_add = 5
+			goods_input_transportation_add = 5
 		}
 		level_scaled = {
 			# employment
@@ -65,7 +92,7 @@ pm_refrigerated_rail_cars_building_fishing_wharf = {
 	
 	state_modifiers = {
 		workforce_scaled = {
-			building_food_industry_throughput_add = 0.01
+			building_food_industry_throughput_add = 0.02
 		}
 	}
 	
@@ -93,7 +120,7 @@ pm_flash_freezing_building_fishing_wharf = {
 	
 	state_modifiers = {
 		workforce_scaled = {
-			building_food_industry_throughput_add = 0.02
+			building_food_industry_throughput_add = 0.03
 		}
 	}
 	
@@ -120,6 +147,12 @@ pm_refrigerated_storage_building_whaling_station = {
 		pasteurization
 	}
 	
+	state_modifiers = {
+		workforce_scaled = {
+			building_food_industry_throughput_add = 0.01
+		}
+	}
+	
 	building_modifiers = {
 		workforce_scaled = {
 			# input
@@ -143,7 +176,7 @@ pm_refrigerated_rail_cars_building_whaling_station = {
 	
 	state_modifiers = {
 		workforce_scaled = {
-			building_food_industry_throughput_add = 0.01
+			building_food_industry_throughput_add = 0.02
 		}
 	}
 	
@@ -171,7 +204,7 @@ pm_flash_freezing_building_whaling_station = {
 	
 	state_modifiers = {
 		workforce_scaled = {
-			building_food_industry_throughput_add = 0.02
+			building_food_industry_throughput_add = 0.03
 		}
 	}
 	

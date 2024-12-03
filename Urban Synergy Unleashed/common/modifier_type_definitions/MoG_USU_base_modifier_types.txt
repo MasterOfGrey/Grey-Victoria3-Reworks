@@ -61,3 +61,20 @@ state_migration_pull_add={
 		ai_value=500	# 0
 	}
 }
+
+country_weekly_innovation_max_add={
+	decimals=1
+	color=good
+	game_data={
+		ai_value=1000	# 0 - Included to maximise compatibility with any university reworks.
+	}
+}
+
+# Show better information (vanilla overwrites):
+state_infrastructure_from_population_add={
+	decimals=1
+	color=good
+	game_data={
+		ai_value=0
+	}
+}
