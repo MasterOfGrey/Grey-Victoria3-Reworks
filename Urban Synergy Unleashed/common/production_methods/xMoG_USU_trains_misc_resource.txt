@@ -50,8 +50,6 @@ pm_unrefrigerated = {
 			goods_input_transportation_add = 1
 		}
 	}
-	
-	required_input_goods = electricity
 }
 
 # Fishing Wharfs
