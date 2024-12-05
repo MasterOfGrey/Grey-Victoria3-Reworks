@@ -240,12 +240,6 @@ law_industry_banned = {
 				}
 				if = {
 					limit = {
-						has_building = building_power_plant
-					}
-					remove_building = building_power_plant
-				}
-				if = {
-					limit = {
 						has_building = building_motor_industry
 					}
 					remove_building = building_motor_industry
@@ -278,6 +272,12 @@ law_industry_banned = {
 		state_expected_sol_mult = -0.1
 		interest_group_ig_rural_folk_pol_str_mult = 0.5
 		state_aristocrats_investment_pool_contribution_add = 0.25
+		## 1.8.4
+		#state_shopkeepers_investment_pool_efficiency_mult = -0.5
+		#state_capitalists_investment_pool_efficiency_mult = -0.25
+		#state_farmers_investment_pool_efficiency_mult = -0.75	
+		#state_clergymen_investment_pool_efficiency_mult = -0.75	
+		#state_aristocrats_investment_pool_efficiency_mult = -0.75
 		country_private_construction_allocation_mult = 0.5
 		country_production_tech_research_speed_mult = -0.25
 		country_production_tech_spread_mult = -0.25
@@ -535,7 +535,7 @@ law_cooperative_ownership = {
 		
 		state_market_access_price_impact = -0.05
 		
-		country_allow_national_collectivization_bool = yes
+		#country_allow_national_collectivization_bool = yes # modifier type definition removed in 1.8.4
 		country_foreign_collectivization_bool = yes
 		country_disable_privatization_bool = yes
 		country_company_pay_to_establish_bool = yes
