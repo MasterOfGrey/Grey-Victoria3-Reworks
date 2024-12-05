@@ -59,27 +59,33 @@
 	MAX_WAGE_STEP_CHANGE = 0.5 # 0.1			   					# Wage rates can change at most this much each week
 	DEFAULT_MIN_HIRING_RATE = 0.01 									# Default weekly min hiring limit applied in a building per profession as a ratio of full employment
 	DEFAULT_MAX_HIRING_RATE = 0.2 # 0.1 							# Default weekly max hiring limit applied in a building per profession as a ratio of full employment
-	BUILDING_PAUSE_HIRES_CASH_RESERVES_THRESHOLD = 0.25 # 0.75 		# If cash reserves are less than this, buildings should consider pausing new hires to wait for cash reserves
+	BUILDING_PAUSE_HIRES_CASH_RESERVES_THRESHOLD = 0.25 # 0.75 		# If cash reserves are higher than this, and employment fraction is below BUILDING_MAX_EMPLOYMENT_FRACTION_TO_CONSIDER_CASH_RESERVES, then allow hiring even if profits are low
+																			# (previously: less than this, buildings should consider pausing new hires to wait for cash reserves)
+	BUILDING_MAX_EMPLOYMENT_FRACTION_TO_CONSIDER_CASH_RESERVES = 0.5 	# If a building has at least this employment fraction, then ignore the cash reserves override for hiring
 	# Pairs with AUTO_DOWNSIZE_BUILDING_MIN_EMPTY_FRACTION in behavior, above (1-THAT)= will raise wages before downsizing from lack of staff:
 	BUILDING_MAX_EMPLOYMENT_FRACTION_TO_RAISE_WAGES = 0.85 # 0.5	# If the employment fraction of a building is above this, don't raise wages just to try and snipe employees from other buildings
 	# Overlapping range ensures temporarily inflated wages can come down before financial stress sets in.
-	BUILDING_PROFIT_TARGET_TO_RAISE_WAGES = 0.3						# Required profit margin to consider raising wages for SoL or employment reasons, with BUILDING_WEEKS_BETWEEN_PAY_CHANGES weeks cooldown
+	BUILDING_PROFIT_TARGET_TO_RAISE_WAGES = 0.25					# Required profit margin to consider raising wages for SoL or employment reasons, with BUILDING_WEEKS_BETWEEN_PAY_CHANGES weeks cooldown
 	BUILDING_PROFIT_TARGET_TO_LOWER_WAGES = 0.5 # 0.15				# If profit margin is this or below, buildings should lower their wages, with BUILDING_WEEKS_BETWEEN_PAY_CHANGES weeks cooldown
 																										# (previously: consider lowering wages for SoL or employment reasons)
+	BUILDING_PROFIT_TARGET_TO_HIRE_EMPLOYEES = 0.25					# If profit margin is this or above, buildings should try to hire new workers
 	BUILDING_RAISE_WAGES_MIN_RELEVANT_POP_SIZE = 50					# Pops with less workforce than this are ignored when checking whether a profitable building should raise wages because of radicalizing workers
 	BUILDING_RAISE_WAGES_DISCRIMINATION_FACTOR = 0.66				# Profitable buildings only care to raise wages for discriminated pops if their wealth to expected SoL ratio is less than this
-	BUILDING_LOWER_WAGES_TARGET_WEALTH_MULT = 1.33					# Buildings will consider lowering wages if all significant pops working in them have this * the target wealth to expected SoL ratio
-	BUILDING_PROFIT_TARGET_TO_WITHDRAW_CASH = 0.2					# If profit margin is this or below, buildings should withdraw money from the cash reserves to make up the difference
+	BUILDING_LOWER_WAGES_TARGET_WEALTH_MULT = 1.2					# Buildings will consider lowering wages if all significant pops working in them have this * the target wealth to expected SoL ratio
+	BUILDING_PREFER_LAYOFFS_TARGET_WEALTH_MULT = 0.5 				# Buildings will prefer laying off pops if any significant pops working in them have this * the target wealth to expected SoL ratio or below
+	BUILDING_PROFIT_TARGET_TO_WITHDRAW_CASH = 0.15					# If profit margin is this or below, buildings should withdraw money from the cash reserves to make up the difference
 		# Previously: BUILDING_CASH_RESERVES_WITHDRAW_PROFIT_TARGET before directional revamp in 1.8
-	OWNERSHIP_BUILDING_PROFIT_TARGET_TO_RAISE_WAGES = 0.5			# Overrides BUILDING_PROFIT_TARGET_TO_RAISE_WAGES for buildings that own other buildings
+	OWNERSHIP_BUILDING_PROFIT_TARGET_TO_RAISE_WAGES = 0.5 			# Overrides BUILDING_PROFIT_TARGET_TO_RAISE_WAGES for buildings that own other buildings
 	OWNERSHIP_BUILDING_PROFIT_TARGET_TO_LOWER_WAGES = 0.3			# Overrides BUILDING_PROFIT_TARGET_TO_LOWER_WAGES for buildings that own other buildings
-	OWNERSHIP_BUILDING_PROFIT_TARGET_TO_WITHDRAW_CASH = 0.2 # 0.4	# Overrides BUILDING_PROFIT_TARGET_TO_WITHDRAW_CASH for buildings that own other buildings
+	OWNERSHIP_BUILDING_PROFIT_TARGET_TO_WITHDRAW_CASH = 0.2 # 0.3	# Overrides BUILDING_PROFIT_TARGET_TO_WITHDRAW_CASH for buildings that own other buildings
 		# Previously: OWNERSHIP_BUILDING_CASH_RESERVES_WITHDRAW_PROFIT_TARGET before directional revamp in 1.8
-	SUBSISTENCE_BUILDING_PROFIT_TARGET_TO_RAISE_WAGES = 5.0			# Overrides BUILDING_PROFIT_TARGET_TO_RAISE_WAGES for subsistence buildings
-	SUBSISTENCE_BUILDING_PROFIT_TARGET_TO_LOWER_WAGES = 3.0			# Overrides BUILDING_PROFIT_TARGET_TO_LOWER_WAGES for subsistence buildings
-	SUBSISTENCE_BUILDING_PROFIT_TARGET_TO_WITHDRAW_CASH = 2.0 # 4.0	# Overrides BUILDING_PROFIT_TARGET_TO_WITHDRAW_CASH for subsistence buildings
+	OWNERSHIP_BUILDING_PROFIT_TARGET_TO_HIRE_EMPLOYEES = 0.5 		# Overrides BUILDING_PROFIT_TARGET_TO_HIRE_EMPLOYEES for buildings that own other buildings
+	SUBSISTENCE_BUILDING_PROFIT_TARGET_TO_RAISE_WAGES = 0.7			# Overrides BUILDING_PROFIT_TARGET_TO_RAISE_WAGES for subsistence buildings
+	SUBSISTENCE_BUILDING_PROFIT_TARGET_TO_LOWER_WAGES = 0.5			# Overrides BUILDING_PROFIT_TARGET_TO_LOWER_WAGES for subsistence buildings
+	SUBSISTENCE_BUILDING_PROFIT_TARGET_TO_WITHDRAW_CASH = 0.5		# Overrides BUILDING_PROFIT_TARGET_TO_WITHDRAW_CASH for subsistence buildings
 	BUILDING_WEEKS_BETWEEN_PAY_CHANGES = 12 # 0 (v1.8)				# Cooldown between changes in pay, so buildings don't overcompensate for a temporary change in circumstances. If the building is unprofitable it uses BUILDING_WEEKS_BETWEEN_PAY_CHANGES_WHEN_UNPROFITABLE instead.
 	BUILDING_WEEKS_BETWEEN_PAY_CHANGES_WHEN_UNPROFITABLE = 4 # 0 (v1.8) 	# Cooldown between changes in pay, so buildings don't overcompensate for a temporary change in circumstances. Only used when unprofitable.
+	BUILDING_LAYOFF_HIRING_COOLDOWN_WEEKS = 4						# If a building does layoffs, don't hire anymore workers for at least this amount of weeks 
 	BUILDING_DEFAULT_MIN_EARNINGS_TO_HIRE_EMPLOYEES = 3  					# Non-subsidized buildings will not hire if it would result in their annual earnings/employee falling below this threshold (default value, can be overridden for building group)
 	
 	# MEM values to test?
@@ -145,7 +151,8 @@ NAI = {
 	# UNUSED_CAPPED_RESOURCE_RATIO_TO_STOP_DISCOURAGING_EXPORT = 1.0	# If the untapped potential production of a resource-capped good in the country is at least market buy orders * this, stop applying punitive export tariffs
 	
 	# COMPANY Owner Building Investment Logics
-	OWNER_COMPANY_SCORE_MULT = 30 # 3.0								# Multiply owner company score by this, the higher this is, the more likely a company building is chosen instead of other owning building types
+	OWNER_COMPANY_SCORE_MULT = 30 # 3.0								# Multiply owner company score by this in case of new construction, the higher this is, the more likely a company building is chosen instead of other owning building types
+	OWNER_COMPANY_PRIVATIZATION_SCORE_MULT = 30 # 7.0				# Multiply owner company score by this in case of privatization, the higher this is, the more likely a company building is chosen instead of other owning building types
 	OWNER_COMPANY_MIN_LEVELS_IN_OWN_STATE = 10						# How many levels should the company building invest in buildings in its own state
 	OWNER_COMPANY_MIN_LEVELS_IN_OWN_STATE_PENALTY_MULT = 0.5 # 0.05	# Multiply owner company score by this if the number of levels in its own state is below minimum
 	OWNER_COMPANY_MIN_LEVELS_IN_OWN_COUNTRY = 100					# How many levels should the company building invest in buildings in its own country
