@@ -48,7 +48,10 @@ assimilate_everyone.1 = {
 							has_ongoing_assimilation = no
 							NOT = {
 								root = {
-									has_law = law_type:law_slave_trade
+									or = {
+										has_law = law_type:law_slave_trade
+										has_law = law_type:law_legacy_slavery
+									}
 								}
 								is_pop_type = slaves
 							}
