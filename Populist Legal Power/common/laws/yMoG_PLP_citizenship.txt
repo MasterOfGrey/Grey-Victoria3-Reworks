@@ -32,12 +32,18 @@ law_ethnostate = {
 		# Previous modifiers now done by acceptance level:
 		# state_radicals_from_sol_change_accepted_culture_mult = -0.2 # gone with 1.8
 		# state_loyalists_from_sol_change_accepted_culture_mult = 0.2 # gone with 1.8
-		country_radicalism_increases_violent_hostility_mult = 0.33
-		country_radicalism_increases_cultural_erasure_mult = 0.2
-		country_radicalism_increases_second_rate_citizen_mult = -0.1
-		country_radicalism_increases_full_acceptance_mult = -0.2
-		country_loyalism_increases_second_rate_citizen_mult = 0.2
-		country_loyalism_increases_full_acceptance_mult = 0.33
+		
+		country_radicalism_increases_violent_hostility_mult   =  0.8
+		country_radicalism_increases_cultural_erasure_mult    =  0.6
+		country_radicalism_increases_open_prejudice_mult      =  0.4
+		country_radicalism_increases_second_rate_citizen_mult =  0.2
+		country_radicalism_increases_full_acceptance_mult     = -0.2
+		
+		country_loyalism_increases_violent_hostility_mult   = -0.4
+		country_loyalism_increases_cultural_erasure_mult    = -0.3
+		country_loyalism_increases_open_prejudice_mult      = -0.2
+		country_loyalism_increases_second_rate_citizen_mult = -0.1
+		country_loyalism_increases_full_acceptance_mult     =  0.1
 		
 		country_allow_voting_violent_hostility_bool = no
 		country_allow_voting_cultural_erasure_bool = no
@@ -46,6 +52,7 @@ law_ethnostate = {
 		country_voting_power_second_rate_citizen_mult = -0.5
 		country_allow_voting_full_acceptance_bool = yes
 		
+		# country_allow_assimilation_violent_hostility_bool = no	# Included for clarity.
 		country_allow_assimilation_cultural_erasure_bool = yes
 		country_allow_assimilation_open_prejudice_bool = yes
 		country_allow_assimilation_second_rate_citizen_bool = yes
@@ -63,26 +70,28 @@ law_ethnostate = {
 		country_political_strength_second_rate_citizen_mult = -0.15
 		country_political_strength_full_acceptance_mult = 0.25
 		
-		country_wage_violent_hostility_mult = -0.5
-		country_wage_cultural_erasure_mult = -0.4
-		country_wage_open_prejudice_mult = -0.25
+		country_wage_violent_hostility_mult   = -0.8
+		country_wage_cultural_erasure_mult    = -0.6
+		country_wage_open_prejudice_mult      = -0.4
 		country_wage_second_rate_citizen_mult = -0.15
-		country_wage_full_acceptance_mult = 0.25
+		country_wage_full_acceptance_mult     =  0
 		
-		country_qualification_growth_violent_hostility_mult = -0.5
-		country_qualification_growth_cultural_erasure_mult = -0.3
-		country_qualification_growth_open_prejudice_mult = -0.1
+		country_qualification_growth_violent_hostility_mult   = -0.8
+		country_qualification_growth_cultural_erasure_mult    = -0.6
+		country_qualification_growth_open_prejudice_mult      = -0.4
+		country_qualification_growth_second_rate_citizen_mult = -0.15
+		country_qualification_growth_full_acceptance_mult     =  0
 		
 		country_disallow_military_work_violent_hostility_bool = yes
 		country_disallow_military_work_cultural_erasure_bool = no
- 		country_disallow_military_work_open_prejudice_bool = no
+		country_disallow_military_work_open_prejudice_bool = no
 		country_disallow_military_work_second_rate_citizen_bool = no
 		country_disallow_military_work_full_acceptance_bool = no
 		
 		country_disallow_government_work_violent_hostility_bool = yes
 		country_disallow_government_work_cultural_erasure_bool = yes
-		country_disallow_government_work_open_prejudice_bool = no
-		country_disallow_government_work_second_rate_citizen_bool = no
+		country_disallow_government_work_open_prejudice_bool = yes
+		country_disallow_government_work_second_rate_citizen_bool = no	# This is the shared heritage + culture trait + suitable religion group 
 		country_disallow_government_work_full_acceptance_bool = no
 	}
 	
@@ -122,12 +131,18 @@ law_national_supremacy = {
 		# Previous modifiers now done by acceptance level:
 		# state_radicals_from_sol_change_accepted_culture_mult = -0.15 # gone with 1.8
 		# state_loyalists_from_sol_change_accepted_culture_mult = 0.15 # gone with 1.8
-		country_radicalism_increases_violent_hostility_mult = 0.25 # 0.2
-		country_radicalism_increases_cultural_erasure_mult = 0.15 # 0.1
-		country_radicalism_increases_second_rate_citizen_mult = -0.075 # -0.1
-		country_radicalism_increases_full_acceptance_mult = -0.15 # -0.1
-		country_loyalism_increases_second_rate_citizen_mult = 0.15 # 0.1
-		country_loyalism_increases_full_acceptance_mult = 0.25 # 0.2
+		
+		country_radicalism_increases_violent_hostility_mult   =  0.6
+		country_radicalism_increases_cultural_erasure_mult    =  0.45
+		country_radicalism_increases_open_prejudice_mult      =  0.3
+		country_radicalism_increases_second_rate_citizen_mult =  0.15
+		country_radicalism_increases_full_acceptance_mult     = -0.15
+		
+		country_loyalism_increases_violent_hostility_mult   = -0.3
+		country_loyalism_increases_cultural_erasure_mult    = -0.225
+		country_loyalism_increases_open_prejudice_mult      = -0.15
+		country_loyalism_increases_second_rate_citizen_mult = -0.075
+		country_loyalism_increases_full_acceptance_mult     =  0.075
 		
 		country_allow_voting_violent_hostility_bool = no
 		country_allow_voting_cultural_erasure_bool = no
@@ -137,6 +152,7 @@ law_national_supremacy = {
 		country_voting_power_second_rate_citizen_mult = -0.25
 		country_allow_voting_full_acceptance_bool = yes
 		
+		# country_allow_assimilation_violent_hostility_bool = no	# Included for clarity.
 		country_allow_assimilation_cultural_erasure_bool = yes
 		country_allow_assimilation_open_prejudice_bool = yes
 		country_allow_assimilation_second_rate_citizen_bool = yes
@@ -154,19 +170,21 @@ law_national_supremacy = {
 		country_political_strength_second_rate_citizen_mult = -0.1
 		country_political_strength_full_acceptance_mult = 0.20
 		
-		country_wage_violent_hostility_mult = -0.4
-		country_wage_cultural_erasure_mult = -0.3
-		country_wage_open_prejudice_mult = -0.2
+		country_wage_violent_hostility_mult   = -0.6
+		country_wage_cultural_erasure_mult    = -0.45
+		country_wage_open_prejudice_mult      = -0.3
 		country_wage_second_rate_citizen_mult = -0.1
-		country_wage_full_acceptance_mult = 0.20
+		country_wage_full_acceptance_mult     =  0
 		
-		country_qualification_growth_violent_hostility_mult = -0.5
-		country_qualification_growth_cultural_erasure_mult = -0.3
-		country_qualification_growth_open_prejudice_mult = -0.1
+		country_qualification_growth_violent_hostility_mult   = -0.6
+		country_qualification_growth_cultural_erasure_mult    = -0.45
+		country_qualification_growth_open_prejudice_mult      = -0.3
+		country_qualification_growth_second_rate_citizen_mult = -0.1
+		country_qualification_growth_full_acceptance_mult     =  0
 		
 		country_disallow_military_work_violent_hostility_bool = yes
 		country_disallow_military_work_cultural_erasure_bool = no
- 		country_disallow_military_work_open_prejudice_bool = no
+		country_disallow_military_work_open_prejudice_bool = no
 		country_disallow_military_work_second_rate_citizen_bool = no
 		country_disallow_military_work_full_acceptance_bool = no
 		
@@ -214,12 +232,17 @@ law_racial_segregation = {
 		# state_radicals_from_sol_change_accepted_culture_mult = -0.1 # gone with 1.8
 		# state_loyalists_from_sol_change_accepted_culture_mult = 0.1 # gone with 1.8
 		# ALL NEW FROM PLP MOD:
-		country_radicalism_increases_violent_hostility_mult = 0.15
-		country_radicalism_increases_cultural_erasure_mult = 0.1
-		country_radicalism_increases_second_rate_citizen_mult = -0.05
-		country_radicalism_increases_full_acceptance_mult = -0.1
-		country_loyalism_increases_second_rate_citizen_mult = 0.1
-		country_loyalism_increases_full_acceptance_mult = 0.15
+		country_radicalism_increases_violent_hostility_mult   =  0.4
+		country_radicalism_increases_cultural_erasure_mult    =  0.3
+		country_radicalism_increases_open_prejudice_mult      =  0.2
+		country_radicalism_increases_second_rate_citizen_mult =  0.1
+		country_radicalism_increases_full_acceptance_mult     = -0.1
+		
+		country_loyalism_increases_violent_hostility_mult   = -0.2
+		country_loyalism_increases_cultural_erasure_mult    = -0.15
+		country_loyalism_increases_open_prejudice_mult      = -0.1
+		country_loyalism_increases_second_rate_citizen_mult = -0.05
+		country_loyalism_increases_full_acceptance_mult     =  0.05
 		
 		country_allow_voting_violent_hostility_bool = no
 		country_allow_voting_cultural_erasure_bool = no
@@ -228,6 +251,7 @@ law_racial_segregation = {
 		country_allow_voting_second_rate_citizen_bool = yes
 		country_allow_voting_full_acceptance_bool = yes
 		
+		# country_allow_assimilation_violent_hostility_bool = no	# Included for clarity.
 		country_allow_assimilation_cultural_erasure_bool = yes
 		country_allow_assimilation_open_prejudice_bool = yes
 		country_allow_assimilation_second_rate_citizen_bool = yes
@@ -245,19 +269,21 @@ law_racial_segregation = {
 		country_political_strength_second_rate_citizen_mult = 0.1
 		country_political_strength_full_acceptance_mult = 0.1
 		
-		country_wage_violent_hostility_mult = -0.3
-		country_wage_cultural_erasure_mult = -0.2
-		country_wage_open_prejudice_mult = -0.1
-		country_wage_second_rate_citizen_mult = 0.05
-		country_wage_full_acceptance_mult = 0.15
+		country_wage_violent_hostility_mult   = -0.4
+		country_wage_cultural_erasure_mult    = -0.3
+		country_wage_open_prejudice_mult      = -0.2
+		country_wage_second_rate_citizen_mult = -0.05
+		country_wage_full_acceptance_mult     =  0
 		
-		country_qualification_growth_violent_hostility_mult = -0.5
-		country_qualification_growth_cultural_erasure_mult = -0.3
-		country_qualification_growth_open_prejudice_mult = -0.1
+		country_qualification_growth_violent_hostility_mult   = -0.4
+		country_qualification_growth_cultural_erasure_mult    = -0.3
+		country_qualification_growth_open_prejudice_mult      = -0.2
+		country_qualification_growth_second_rate_citizen_mult = -0.05
+		country_qualification_growth_full_acceptance_mult     =  0
 		
 		country_disallow_military_work_violent_hostility_bool = yes
 		country_disallow_military_work_cultural_erasure_bool = no
- 		country_disallow_military_work_open_prejudice_bool = no
+		country_disallow_military_work_open_prejudice_bool = no
 		country_disallow_military_work_second_rate_citizen_bool = no
 		country_disallow_military_work_full_acceptance_bool = no
 		
@@ -293,7 +319,7 @@ law_cultural_exclusion = {
 	on_enact = {
 		recalculate_pop_ig_support = yes
 	}
-
+	
 	cultural_acceptance_rule = {
 		shares_trait_with_any_primary_culture = scope:country
 	}
@@ -314,13 +340,19 @@ law_cultural_exclusion = {
 		# state_radicals_from_sol_change_accepted_culture_mult = -0.05 # gone with 1.8
 		# state_loyalists_from_sol_change_accepted_culture_mult = 0.05 # gone with 1.8
 		# ALL NEW FROM PLP MOD:
-		country_radicalism_increases_violent_hostility_mult = 0.075
-		country_radicalism_increases_cultural_erasure_mult = 0.05
-		country_radicalism_increases_second_rate_citizen_mult = -0.025
-		country_radicalism_increases_full_acceptance_mult = -0.05
-		country_loyalism_increases_second_rate_citizen_mult = 0.05
-		country_loyalism_increases_full_acceptance_mult = 0.075
+		country_radicalism_increases_violent_hostility_mult   =  0.2
+		country_radicalism_increases_cultural_erasure_mult    =  0.15
+		country_radicalism_increases_open_prejudice_mult      =  0.1
+		country_radicalism_increases_second_rate_citizen_mult =  0.05
+		country_radicalism_increases_full_acceptance_mult     = -0.05
 		
+		country_loyalism_increases_violent_hostility_mult   = -0.1
+		country_loyalism_increases_cultural_erasure_mult    = -0.075
+		country_loyalism_increases_open_prejudice_mult      = -0.05
+		country_loyalism_increases_second_rate_citizen_mult = -0.025
+		country_loyalism_increases_full_acceptance_mult     =  0.025
+		
+		# country_allow_assimilation_violent_hostility_bool = no	# Included for clarity.
 		country_allow_assimilation_cultural_erasure_bool = yes
 		country_allow_assimilation_open_prejudice_bool = yes
 		country_allow_assimilation_second_rate_citizen_bool = yes
@@ -345,18 +377,21 @@ law_cultural_exclusion = {
 		country_political_strength_second_rate_citizen_mult = 0.1
 		country_political_strength_full_acceptance_mult = 0.1
 		
-		country_wage_violent_hostility_mult = -0.3
-		country_wage_cultural_erasure_mult = -0.2
-		country_wage_open_prejudice_mult = -0.1
-		country_wage_full_acceptance_mult = 0.05
+		country_wage_violent_hostility_mult   = -0.4
+		country_wage_cultural_erasure_mult    = -0.3
+		country_wage_open_prejudice_mult      = -0.2
+		country_wage_second_rate_citizen_mult = -0.05
+		country_wage_full_acceptance_mult     =  0
 		
-		country_qualification_growth_violent_hostility_mult = -0.5
-		country_qualification_growth_cultural_erasure_mult = -0.3
-		country_qualification_growth_open_prejudice_mult = -0.1
+		country_qualification_growth_violent_hostility_mult   = -0.4
+		country_qualification_growth_cultural_erasure_mult    = -0.3
+		country_qualification_growth_open_prejudice_mult      = -0.2
+		country_qualification_growth_second_rate_citizen_mult = -0.05
+		country_qualification_growth_full_acceptance_mult     =  0
 		
 		country_disallow_military_work_violent_hostility_bool = no
 		country_disallow_military_work_cultural_erasure_bool = no
- 		country_disallow_military_work_open_prejudice_bool = no
+		country_disallow_military_work_open_prejudice_bool = no
 		country_disallow_military_work_second_rate_citizen_bool = no
 		country_disallow_military_work_full_acceptance_bool = no
 		
@@ -408,12 +443,29 @@ law_multicultural = {
 	}
 	
 	acceptance_modifier = {
+		# Previous modifiers now done by acceptance level:
+		# state_radicals_from_sol_change_accepted_culture_mult = 0 # gone with 1.8
+		# state_loyalists_from_sol_change_accepted_culture_mult = 0 # gone with 1.8
+		# ALL NEW FROM PLP MOD:
+		country_radicalism_increases_violent_hostility_mult   =  0.2
+		country_radicalism_increases_cultural_erasure_mult    =  0.15
+		country_radicalism_increases_open_prejudice_mult      =  0.1
+		country_radicalism_increases_second_rate_citizen_mult =  0.05
+		country_radicalism_increases_full_acceptance_mult     =  0
+		
+		country_loyalism_increases_violent_hostility_mult   = -0.1
+		country_loyalism_increases_cultural_erasure_mult    = -0.075
+		country_loyalism_increases_open_prejudice_mult      = -0.05
+		country_loyalism_increases_second_rate_citizen_mult = -0.025
+		country_loyalism_increases_full_acceptance_mult     =  0
+		
 		country_allow_voting_violent_hostility_bool = yes
 		country_allow_voting_cultural_erasure_bool = yes
 		country_allow_voting_open_prejudice_bool = yes
 		country_allow_voting_second_rate_citizen_bool = yes
 		country_allow_voting_full_acceptance_bool = yes
 		
+		# country_allow_assimilation_violent_hostility_bool = no	# Included for clarity.
 		country_allow_assimilation_cultural_erasure_bool = yes
 		country_allow_assimilation_open_prejudice_bool = yes
 		country_allow_assimilation_second_rate_citizen_bool = yes
@@ -425,19 +477,27 @@ law_multicultural = {
 		country_assimilation_second_rate_citizen_mult = -0.05
 		country_assimilation_full_acceptance_mult = -0.15
 		
-		country_wage_violent_hostility_mult = -0.2
-		country_wage_cultural_erasure_mult = -0.1
-		country_wage_open_prejudice_mult = -0.05
+		country_wage_violent_hostility_mult   = -0.2
+		country_wage_cultural_erasure_mult    = -0.15
+		country_wage_open_prejudice_mult      = -0.1
+		country_wage_second_rate_citizen_mult = -0.05
+		country_wage_full_acceptance_mult     =  0
+		
+		country_qualification_growth_violent_hostility_mult   = -0.2
+		country_qualification_growth_cultural_erasure_mult    = -0.15
+		country_qualification_growth_open_prejudice_mult      = -0.1
+		country_qualification_growth_second_rate_citizen_mult = -0.05
+		country_qualification_growth_full_acceptance_mult     =  0
 		
 		country_disallow_military_work_violent_hostility_bool = no
- 		country_disallow_military_work_cultural_erasure_bool = no
- 		country_disallow_military_work_open_prejudice_bool = no
+		country_disallow_military_work_cultural_erasure_bool = no
+		country_disallow_military_work_open_prejudice_bool = no
 		country_disallow_military_work_second_rate_citizen_bool = no
 		country_disallow_military_work_full_acceptance_bool = no
 		
 		country_disallow_government_work_violent_hostility_bool = no
- 		country_disallow_government_work_cultural_erasure_bool = no
- 		country_disallow_government_work_open_prejudice_bool = no
+		country_disallow_government_work_cultural_erasure_bool = no
+		country_disallow_government_work_open_prejudice_bool = no
 		country_disallow_government_work_second_rate_citizen_bool = no
 		country_disallow_government_work_full_acceptance_bool = no
 	}
