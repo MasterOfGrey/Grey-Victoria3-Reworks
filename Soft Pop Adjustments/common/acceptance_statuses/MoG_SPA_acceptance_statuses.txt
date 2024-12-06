@@ -21,7 +21,7 @@ cultural_erasure = {
 }
 
 open_prejudice = {
-	threshold = 40
+	threshold = 45 # 40
 	base_migration_desire = 10 # 50
 	war_exhaustion_impact_own_side = 0.5
 	war_exhaustion_impact_other_side = 0
@@ -32,7 +32,7 @@ open_prejudice = {
 }
 
 second_rate_citizen = {
-	threshold = 60
+	threshold = 70 # 60
 	base_migration_desire = -20.0 # 20
 	war_exhaustion_impact_own_side = 1.5
 	war_exhaustion_impact_other_side = 0.5
@@ -43,7 +43,7 @@ second_rate_citizen = {
 }
 
 full_acceptance = {
-	threshold = 80
+	threshold = 95 # 80
 	base_migration_desire = -50.0 # 0
 	war_exhaustion_impact_own_side = 3
 	war_exhaustion_impact_other_side = 3

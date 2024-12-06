@@ -3,7 +3,7 @@
 NPops = {
 	
 ##### OBSESSIONS #####
-
+	
 	OBSESSION_DEMAND_MIN = 1.0							# The minimum relative demand of an obsession (overrides min demand in buy package goods categories)
 	OBSESSION_DEMAND_MULT = 2.0							# Demand of an obsession is multiplied by this
 	MIN_POPS_FOR_NEW_OBSESSION = 500000					# At least this many pops of a culture must live in a market to get an obsession from its goods
@@ -33,8 +33,28 @@ NPops = {
 	MIN_CONVERSION = 20 # 1							# If there is any conversion at least this many people will convert
 	
 	
+##### RADICALISM #####
+	
+	RADICALS_MAX_FROM_LOW_SOL = 0.25 # 0.15				# If pop is already this % radical, don't add more radicals from low SOL (Scales by delta between SoL and expected min SoL)
+	RADICALS_MAX_FROM_DISCRIMINATION = 0.7 # 0.5		# If pop is already this % radical, don't add more radicals from discrimination (Scales by literacy)
+	RADICALS_MONTHLY_FROM_LOW_SOL = 0.004 # 0.002		# Scales by delta between SoL and expected min SoL
+	RADICALS_MONTHLY_FROM_DISCRIMINATION = 0.005 		# Scales by literacy
+	
+	# Radicals Monthly indicates what fraction of the pop turns radical every month while starving
+	# Radicals max indicates at what max fraction of radicals we stop adding new ones due to starvation
+	# Radical growth/max increases between these values as Food Security decreases
+	RADICALS_MONTHLY_FROM_STARVATION_BASE = 0.006 # 0.002 	# Food Security = Mild Threshold
+	RADICALS_MONTHLY_FROM_STARVATION_MILD = 0.012 # 0.008	# Food Security = Severe Threshold
+	RADICALS_MONTHLY_FROM_STARVATION_SEVERE = 0.02			# Food Security = 0
+	RADICALS_MAX_FROM_STARVATION_BASE = 0.15		# Food Security = Mild Threshold
+	RADICALS_MAX_FROM_STARVATION_MILD = 0.5			# Food Security = Severe Threshold
+	RADICALS_MAX_FROM_STARVATION_SEVERE = 0.75		# Food Security = 0
+	
+	EXPECTED_SOL_FROM_LITERACY_SUBSISTENCE_MULT = 0.5 # 0.25	# Expected SoL from literacy is multiplied by this for Pops working in subsistence buildings
+	
+	
 ##### JOB SATISFACTION #####
-
+	
 	JOB_SATISFACTION_BASE = -150 # -130										# Base job satisfaction
 	JOB_SATISFACTION_FOR_NEWLY_HIRED = 1000									# Job satisfaction gained due to having been newly hired, this state lasts until the pop's next wealth calculation
 	JOB_SATISFACTION_PER_SOL_ABOVE_EXPECTED_SOL = 12 # 3					# Job satisfaction gained per level of SoL above your expected SoL
@@ -60,7 +80,7 @@ NPops = {
 	
 ## General ##
 	MIGRATION_MIN_STATE_POPS = 50000 # 20000					# A state with less population than this will not get emigration
-	MIGRATION_STATE_POPULATION_THRESHOLD = 250000 # 100000		# States with less pops than this have reduced market emigration numbers to avoid total depopulation
+	MIGRATION_STATE_POPULATION_THRESHOLD = 200000 # 100000		# States with less pops than this have reduced market emigration numbers to avoid total depopulation
 	
 	MIGRATION_MAX_PER_STATE_BASE = 2000 # 500									# No more than this amount of people can move from or to a state in a single week (base)
 	MIGRATION_MAX_PER_STATE_INFRASTRUCTURE = 10	# 5								# No more than this amount of people can move from or to a state in a single week (scales with infrastructure)
@@ -72,7 +92,7 @@ NPops = {
 	# UX/UI Labeling #
 	MIGRATION_PULL_HIGH_THRESHOLD = 0.75 # 1.25									# State must have a migration pull of at least market average * this to get market immigration
 	MIGRATION_PULL_LOW_THRESHOLD = 0.75											# State must have a migration pull of less or equal than market average * this to get full amount of emigration
-
+	
 	# Migration Desire #
 	# MIGRATION_DESIRE_BASE = -50.0 # 0								#(Moved to acceptance status)			# Base desire to migrate
 	# MIGRATION_DESIRE_FROM_DISCRIMINATION = 150 # 100				#(Moved to acceptance status)			# Being discriminated will increase desire to migrate by this much
@@ -124,7 +144,7 @@ NPops = {
 	MASS_MIGRATION_COOLDOWN_MONTHS = 60 # 48									# How many months before the same culture can mass migrate from a country again
 	MASS_MIGRATION_NUM_TARGET_STATES_FOR_NO_PENALTY = 3 # 4						# Countries with at least this number of possible target states do not receive any penalty to their mass migration target score
 	MASS_MIGRATION_FEW_TARGET_STATES_PENALTY = 0.3 # 0.2						# Mass migration target score is reduced by a fraction of itself equal to this times number of possible target states less than MASS_MIGRATION_NUM_TARGET_STATES_FOR_NO_PENALTY. Or Score = Score - Score * this * PossibleStatesDiff
-
+	
 	# Mass Migration Processing #
 	MASS_MIGRATION_PER_WEEK_FACTOR = 8 # 10										# This number of individuals will migrate for each point of difference in migration pull
 	MASS_MIGRATION_PER_WEEK_PER_TOTAL_POPULATION = 100000						#
