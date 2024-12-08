@@ -1,8 +1,8 @@
 [img]https://i.imgur.com/7xuCZqW.png[/img]
-Designed for Victoria 3: Version 1.7 (and onwards)
-Mod Version V1.0
+Supports Victoria 3: V1.8.4  (and onwards)
+Mod Version: V1.4
 Please consider rating this if you like it! It really helps out. [img]https://i.imgur.com/tE28cZ7.gif[/img]
-
+[spoiler]Originally made for: Version 1.7.6[/spoiler]
 [table]
     [tr]
         [td][img]https://i.imgur.com/WjDSfUn.png[/img][/td]
@@ -12,6 +12,8 @@ Please consider rating this if you like it! It really helps out. [img]https://i.
 *Removal may cause breaking errors due to the removal of a modifier type.
 [img]https://i.imgur.com/6o9HyTD.png[/img]
 This mod makes a broad set of adjustments to many vanilla laws and institutions [i]without[/i] adding or removing any laws or otherwise making changes that would cause compatibility issues with ideologies or related fixes that still use the vanilla set of laws. This was largely created because since 1.7 I've wanted to be able to play with the [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3114281747]Law & Authority[/url] mod and also have various other fixes and changes incorporated.
+
+[h3]Consider using [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2895956555]Better Decrees[/url] to utilise your newly realised authority[/h3]
 
 [img]https://i.imgur.com/Wh5EspM.png[/img]
 [h1]Features:[/h1]
@@ -41,12 +43,13 @@ I won't go through every change but there are a few important notes:
 [*] - So: When you switch to Laissez Faire for economic system - you [i]NEED[/i] to lower taxes if you want your economy to grow.
 [*] - And: Running high taxes on Interventionism and building most things yourself works just fine.
 [*]Collectivised Agriculture is possible [i]without[/i] Cooperative Ownership, but only if you are moving from Homesteading.
+[*]Changing to Total Separation [i]from[/i] State Atheism no longer removes Atheism as the institutional religion, but re-implementing FoC or SR will restore original national religion still.
 [/list]
 
 [h2]Compatibility touch points:[/h2]
 [list]
 [*]Postal Savings tech has been touched.
-[*]Institution modified are: Welfare, Police, Home Affairs, & Workplace Safety
+[*]Institutions modified are: Welfare, Police, Home Affairs, & Workplace Safety
 [/list]
 
 [img]https://i.imgur.com/Qp8JBtZ.png[/img]
@@ -55,8 +58,11 @@ This mod will [i]probably[/i] take precedence over other mods that touch specifi
 Having said that, some specific callouts:
 [list]
 [*]Victoria Tweaks Mod - Yes; it is VTM compatible.
+[*]Works with BPM [b]Lite[/b]
 [*]All AI Mods - Yes; KAI, LAI, Smarter AI, etc. are all compatible.
 [/list]
+[h3]Warning:[/h3]
+NOT BPM Compatible
 
 [img]https://i.imgur.com/lQRf9dG.png[/img]
 [b]Why?[/b]

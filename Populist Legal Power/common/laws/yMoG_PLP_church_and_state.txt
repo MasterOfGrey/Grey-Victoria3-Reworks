@@ -25,7 +25,12 @@ law_state_religion = {
 	}
 	
 	on_activate = {
-		set_state_religion = root.country_definition.religion
+		if = {
+			limit = {
+				country_has_state_religion = rel:atheist
+			}
+			set_state_religion = root.country_definition.religion
+		}
 	}
 	
 	modifier = {
@@ -148,7 +153,12 @@ law_freedom_of_conscience = {
 	}
 	
 	on_activate = {
-		set_state_religion = root.country_definition.religion
+		if = {
+			limit = {
+				country_has_state_religion = rel:atheist
+			}
+			set_state_religion = root.country_definition.religion
+		}
 	}
 	
 	modifier = {
