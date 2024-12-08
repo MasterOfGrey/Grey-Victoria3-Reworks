@@ -154,47 +154,6 @@
 				}
 			}
 		}
-
-		if = {
-			limit = {
-                this.culture = {
-                    any_scope_pop = {
-                        owner = root.owner
-                        is_pop_type = slaves
-                    }
-                }
-			}
-			multiply = {
-				desc = "CULTURE_ENSLAVED_PERCENT" # TODO: "x percent of this culture is enslaved"
-				value = 1
-
-				add = {
-					value = {
-						value = 0
-						this.culture = {
-							every_scope_pop = {
-								limit = {
-									owner = root.owner
-									is_pop_type = slaves
-								}
-								add = total_size
-							}
-						}
-					}
-					divide = {
-						value = 0
-						this.culture = {
-							every_scope_pop = {
-								limit = {
-									owner = root.owner
-								}
-								add = total_size
-							}
-						}
-					}
-				}
-			}
-		}
 		
 		multiply = {
 			desc = "SLAVE_STATE"
@@ -231,6 +190,69 @@
 			multiply = {
 				value = 3.0
 				desc = "je_acw_countdown"
+			}
+		}
+
+		if = {
+			limit = {
+				owner = {
+					or = {
+						has_law = law_type:law_slave_trade
+						has_law = law_type:law_legacy_slavery
+					}
+				}
+                this.culture = {
+                    any_scope_pop = {
+                        owner = root.owner
+                        is_pop_type = slaves
+                    }
+                }
+			}
+			add = {
+				desc = "CULTURE_ENSLAVED_PERCENT" # TODO: "x percent of this culture is enslaved"
+				value = 100
+
+				multiply = {
+					value = {
+						value = 0
+						this.culture = {
+							every_scope_pop = {
+								limit = {
+									owner = root.owner
+									is_pop_type = slaves
+								}
+								add = total_size
+							}
+						}
+					}
+					divide = {
+						value = 0
+						this.culture = {
+							every_scope_pop = {
+								limit = {
+									owner = root.owner
+								}
+								add = total_size
+							}
+						}
+					}
+				}
+			}
+		}
+
+		if = {
+			limit = {
+				standard_of_living < 15
+				owner = {
+					has_law = law_type:law_debt_slavery
+				}
+			}
+			
+			add = {
+				value =	standard_of_living
+				subtract = 15
+				multiply = -5
+				desc = "POP_POVERTY"
 			}
 		}
 
