@@ -13,7 +13,69 @@ consolidate_subject = {
 	show_effect_in_tooltip = yes
 
 	possible = {
-		can_consolidate_subject = yes
+		NOT = { THIS = c:BIC }
+		is_subject = no
+		is_revolutionary = no
+		is_diplomatic_play_committed_participant = no
+		has_technology_researched = nationalism												# disable for testing
+		
+		# Don't use this trigger in here - it works in the effects, but it doesn't resolve correctly as a trigger.
+		can_consolidate_subject = yes		# Consequently, full scope of the trigger is duplicated here.
+		
+		any_country = {
+			is_adjacent_to_country = scope:target_country
+			is_subject_of = root
+			is_diplomatic_play_committed_participant = no 
+			liberty_desire < 50																# disable for testing
+			hidden_trigger = {
+				NOT = { this = scope:target_country }
+				is_revolutionary = no
+			}
+			OR = {
+				is_subject_type = subject_type_puppet
+				is_subject_type = subject_type_vassal
+				is_subject_type = subject_type_dominion
+				is_subject_type = subject_type_colony
+			#	is_subject_type = subject_type_protectorate # temporary testing
+				AND = {
+					is_subject_type = subject_type_personal_union
+					overlord = {
+						has_technology_researched = philosophical_pragmatism
+						has_technology_researched = pan-nationalism
+					}
+				}
+				AND = {
+					has_government_type = gov_chartered_company
+					overlord = {
+						has_technology_researched = corporatism
+						has_technology_researched = civilizing_mission
+					}
+				}
+			}
+			OR = {
+				# Only primary cultures match:
+				any_primary_culture = {				# Confirmed working without the custom tooltip.
+					custom_tooltip = {
+						text = consolidate_subject_primary_culture_tt
+						is_primary_culture_of = scope:target_country
+					}
+				}
+				# *Any* primary culture traits overlap
+				custom_tooltip = {					# Confirmed working without the custom tooltip.
+					text = consolidate_subject_acceptance_tt
+					AND = {
+						any_primary_culture = {
+							shares_trait_with_any_primary_culture = scope:target_country
+						}
+						has_law = law_type:law_multicultural
+						overlord = {
+							has_technology_researched = pan-nationalism
+							has_technology_researched = civilizing_mission
+						}
+					}
+				}
+			}
+		}
 	}
 
 	accept_effect = {

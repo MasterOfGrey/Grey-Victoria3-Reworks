@@ -3,12 +3,28 @@
 unused_interests_alert = {
 	texture = "gfx/interface/icons/alert_icons/has_decreasing_interests.dds"
 	script_context = player_country
-
+	
 	valid = {
 		num_declared_interests < max_num_declared_interests
 	}
-
+	
 	open_panel = diplomatic_overview
 	type = alert
+	color = green
+}
+
+overlord_can_consolidate_subject = {
+	texture = "gfx/interface/icons/diplomatic_action_icons/consolidate_subject.dds"
+	script_context = player_country
+	
+	valid = {
+		any_subject_or_below = {
+			is_direct_subject_of = root
+			can_consolidate_subject = yes
+		}
+	}
+	
+	open_panel = diplomatic_overview|subjects
+	type = important_action
 	color = green
 }

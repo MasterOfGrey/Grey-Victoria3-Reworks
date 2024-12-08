@@ -37,6 +37,12 @@ liberty_desire_weekly_change_combined_subjects = {
 		multiply = 0.5
 	}
 	
+	# HALVED EFFECT FOR CORPORATE CHARTERS
+	if = {
+		limit = { root.second_country = { has_government_type = gov_chartered_company } }
+		multiply = 0.5
+	}	
+	
 	# OWN COMBINED SUBJECT POWER
 	add = {
 		value = liberty_desire_weekly_change_own_combined_subjects

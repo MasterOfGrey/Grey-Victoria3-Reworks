@@ -27,7 +27,12 @@ military_support = {
 		scope:target_country = {
 			country_rank < rank_value:great_power
 			is_direct_subject_of = root
-			is_subject_type = subject_type_dominion
+			OR = {
+				is_subject_type = subject_type_protectorate
+				is_subject_type = subject_type_dominion
+				is_subject_type = subject_type_chartered_company
+				is_subject_type = subject_type_tributary
+			}
 		}
 		has_diplomatic_relevance = scope:target_country
 	}

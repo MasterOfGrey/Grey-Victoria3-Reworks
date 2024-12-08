@@ -7,7 +7,17 @@
  consolidate_subject_action_notification_third_party_name: "[INITIATOR_COUNTRY.GetName] consolidates subjects"
  consolidate_subject_action_notification_third_party_desc: "[INITIATOR_COUNTRY.GetName] has consolidated [TARGET_COUNTRY.GetName]."
  
- is_not_african_subject: "This subject not one of our African colonial administrations"
+ is_not_african_subject: "This subject not an African colonial administration"
+ consolidate_subject_country_tier_tt: "[concept_country_tier] of [SCOPE.sCountry('target_country').GetName] is below $country_tier_kingdom$"
+ consolidate_subject_country_tier_kingdom_tt: "[concept_country_tier] of [SCOPE.sCountry('target_country').GetName] is $country_tier_kingdom$ and:"
+ consolidate_subject_country_tier_kingdom_overlord_research_tt: "[SCOPE.GetRootScope.GetCountry.GetName] has researched one of: [GetTechnology('pan-nationalism').GetName], [GetTechnology('civilizing_mission').GetName], or [GetTechnology('corporatism').GetName]"
+ consolidate_subject_either_tt: "Either:"
+ consolidate_subject_vassal_type_tt: "$TAB$[SCOPE.sCountry('target_country').GetName] is a [GetSubjectType('subject_type_vassal').GetName] or [GetSubjectType('subject_type_puppet').GetName]"
+ consolidate_subject_dominion_type_tt: "[SCOPE.sCountry('target_country').GetName] is a [GetSubjectType('subject_type_dominion').GetName] and one of:"
+ consolidate_subject_dominion_type_laws_tt: "[GetLawType('law_parliamentary_republic').GetName], [GetLawType('law_presidential_republic').GetName], or [GetLawType('law_council_republic').GetName]"
+ consolidate_subject_union_type_tt: "[SCOPE.sCountry('target_country').GetName] is a [GetSubjectType('subject_type_personal_union').GetName] and:"
+ consolidate_subject_primary_culture_tt: "Are one of the Target Subject's [concept_primary_cultures]: [SCOPE.sCountry('target_country').GetPrimaryCulturesDesc]"
+ consolidate_subject_acceptance_tt: "The [concept_overlord] has researched Pan-nationalism and Civilizing Mission, the Target Subject's [concept_primary_cultures] have at least some overlap, and the Receiving Subject has [GetLawType('law_multicultural').GetName]"
  
  alert_overlord_can_consolidate_subject_name: "[GetDiplomaticActionType('consolidate_subject').GetName] available for [SCOPE.GetRootScope.GetCountry.GetName]"
  alert_overlord_can_consolidate_subject_desc: "Our [concept_subject] [SCOPE.GetRootScope.GetCountry.GetName] can be consolidated into a neighboring subject."

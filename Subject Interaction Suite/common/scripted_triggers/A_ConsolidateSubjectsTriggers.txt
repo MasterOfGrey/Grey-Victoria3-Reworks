@@ -1,89 +1,115 @@
 ﻿# Adapted with permission from: CaelReader's Consolidate Subjects
 
 can_consolidate_subject = {
-	has_technology_researched = nationalism
-	is_subject = no
-	is_diplomatic_play_committed_participant = no
-	is_revolutionary = no
 	scope:target_country = {
+		is_diplomatic_play_committed_participant = no 
+		liberty_desire < 25															# disable for testing
 		subject_can_be_consolidation_target = yes
+	}
+	hidden_trigger = {
+		any_country = {
+			can_be_consolidation_recipient = yes
+		}
 	}
 }
 
 subject_can_be_consolidation_target = {
-	is_ai = yes
+	hidden_trigger = {
+		is_ai = yes
+		is_revolutionary = no
+	}
 	OR = {
-		NOR = {
-			country_tier = kingdom
-			country_tier = empire
-			country_tier = hegemony
+		custom_tooltip = {
+			text = consolidate_subject_country_tier_tt
+			OR = {
+				country_tier = city_state
+				country_tier = principality
+				country_tier = grand_principality
+			}
 		}
 		AND = {
-			country_tier = kingdom
-			is_country_type = unrecognized
-		}
-		AND = {
-			country_tier = kingdom
-			overlord = {
-				OR = {
-					has_technology_researched = pan-nationalism
-					has_technology_researched = civilizing_mission
-					has_technology_researched = corporatism
+			custom_tooltip = {
+				text = consolidate_subject_country_tier_kingdom_tt
+				country_tier = kingdom
+			}
+			OR = {
+				is_country_type = unrecognized
+				custom_tooltip = {
+					text = consolidate_subject_country_tier_kingdom_overlord_research_tt
+					overlord = {
+						OR = {
+							has_technology_researched = pan-nationalism
+							has_technology_researched = civilizing_mission
+							has_technology_researched = corporatism
+						}
+					}
 				}
 			}
 		}
 	}
-	NOR = {
-		country_has_primary_culture = cu:australian
-		country_has_primary_culture = cu:anglo_canadian
-		country_has_primary_culture = cu:franco_canadian
-	}
 	custom_tooltip = {
-		text = is_not_african_subject
-		is_african_subject = no
-	}
-	NOR = {
-		c:BIC ?= this
-		c:DEI ?= this
+		text = consolidate_subject_either_tt
 	}
 	OR = {
-		is_subject_type = subject_type_puppet
-		is_subject_type = subject_type_vassal
-		AND = {
-			is_subject_type = subject_type_dominion
+		custom_tooltip = {
+			text = consolidate_subject_vassal_type_tt
 			OR = {
-				has_law = law_type:law_parliamentary_republic
-				has_law = law_type:law_council_republic
-				has_law = law_type:law_presidential_republic
+				is_subject_type = subject_type_vassal
+				is_subject_type = subject_type_puppet
+				is_subject_type = subject_type_protectorate # temporary
 			}
 		}
 		AND = {
-			is_subject_type = subject_type_personal_union
+			custom_tooltip = {
+				text = consolidate_subject_dominion_type_tt
+				is_subject_type = subject_type_dominion
+			}
+			custom_tooltip = {
+				text = consolidate_subject_dominion_type_laws_tt
+				OR = {
+					has_law = law_type:law_parliamentary_republic
+					has_law = law_type:law_presidential_republic
+					has_law = law_type:law_council_republic
+				}
+			}
+		}
+		AND = {
+			custom_tooltip = {
+				text = consolidate_subject_union_type_tt
+				is_subject_type = subject_type_personal_union
+			}
 			overlord = {
 				has_technology_researched = philosophical_pragmatism
 				has_technology_researched = pan-nationalism
 			}
 		}
 	}
-	is_diplomatic_play_committed_participant = no 
-	is_revolutionary = no
-	liberty_desire < 25
-	any_neighbouring_state = {
-		owner = {
-			can_be_consolidation_recipient = yes
-		}
+	custom_tooltip = {
+		text = is_not_african_subject
+		is_african_subject = no
+	}
+	NOT = {
+		country_has_primary_culture = cu:australian
+		country_has_primary_culture = cu:anglo_canadian
+		country_has_primary_culture = cu:franco_canadian
 	}
 }
 
 can_be_consolidation_recipient = {
-	NOT = {
-		this = scope:target_country
+	hidden_trigger = {
+		NOT = { this = scope:target_country }
+		is_adjacent_to_country = scope:target_country
+		is_subject_of = root
+		is_diplomatic_play_committed_participant = no 
+		liberty_desire < 50																# disable for testing
+		is_revolutionary = no
 	}
-	is_subject_of = root
 	OR = {
 		is_subject_type = subject_type_puppet
 		is_subject_type = subject_type_vassal
 		is_subject_type = subject_type_dominion
+		is_subject_type = subject_type_colony
+	#	is_subject_type = subject_type_protectorate # temporary testing
 		AND = {
 			is_subject_type = subject_type_personal_union
 			overlord = {
@@ -99,38 +125,25 @@ can_be_consolidation_recipient = {
 			}
 		}
 	}
-	is_diplomatic_play_committed_participant = no 
-	is_revolutionary = no
-	liberty_desire < 50
 	OR = {
-		any_primary_culture = {
-			is_primary_culture_of = scope:target_country
+		# Only primary cultures match:
+		any_primary_culture = {				# Confirmed working without the custom tooltip.
+			custom_tooltip = {
+				text = consolidate_subject_primary_culture_tt
+				is_primary_culture_of = scope:target_country
+			}
 		}
-		AND = {
-			overlord = {
-				OR = {
+		# *Any* primary culture traits overlap
+		custom_tooltip = {					# Confirmed working without the custom tooltip.
+			text = consolidate_subject_acceptance_tt
+			AND = {
+				any_primary_culture = {
+					shares_trait_with_any_primary_culture = scope:target_country
+				}
+				has_law = law_type:law_multicultural
+				overlord = {
 					has_technology_researched = pan-nationalism
 					has_technology_researched = civilizing_mission
-				}
-			}
-			any_primary_culture = {
-				count = all
-				shares_heritage_trait_with_any_primary_culture = scope:target_country
-				NOT = {
-					culture_is_discriminated_in = scope:target_country
-				}
-			}
-		}
-		AND = {
-			overlord = {
-				has_technology_researched = pan-nationalism
-				has_technology_researched = civilizing_mission
-			}
-			any_primary_culture = {
-				count = all
-				shares_trait_with_any_primary_culture = scope:target_country
-				NOT = {
-					culture_is_discriminated_in = scope:target_country
 				}
 			}
 		}

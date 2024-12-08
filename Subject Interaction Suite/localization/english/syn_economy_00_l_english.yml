@@ -25,7 +25,7 @@
  mog_syn_events.02.d: "The proud nation of [ROOT.GetCountry.GetName] has successfully completed the synergization of economic systems with [SCOPE.sCountry('synergize_economy_target_country').GetName]. [SCOPE.sCountry('synergize_economy_target_country').GetName] will thrive in eternal prosperity through increased cohesion with the homeland."
  mog_syn_events.02.f: ""Long live [ROOT.GetCountry.GetName]!""
  mog_syn_events.02.a: "Well done."
-
+ 
  laws_synergize_economy_weekly_effect: "Works to align their economic system with ours. Has a 20% chance to make progress each week, with 8 progress points required to succeed."
  
  overlord_syn_cost_economy: "Cost for Synergizing Economies"
