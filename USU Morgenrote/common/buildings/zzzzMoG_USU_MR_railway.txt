@@ -135,6 +135,19 @@
 			}
 			add = 10000
 		}
+		
+		if = { # Get them started at least...
+			limit = {
+				NOR = {
+					has_building = building_railway
+					any_scope_building = {
+						is_building_type = building_railway
+						is_under_construction = yes
+					}
+				}
+			}
+			add = 5000
+		}
 	}
 	
 	ownership_type = self
