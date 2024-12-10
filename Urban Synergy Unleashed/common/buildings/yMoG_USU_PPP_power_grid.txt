@@ -31,4 +31,19 @@
 			}
 		}
 	}
+	
+	ai_value = {		# scope is state the building is located in
+		if = { # Get the grid started
+			limit = {
+				NOR = {
+					has_building = PPP_building_power_grid
+					any_scope_building = {
+						is_building_type = PPP_building_power_grid
+						is_under_construction = yes
+					}
+				}
+			}
+			add = 8000	# A firm encouragement
+		}
+	}
 }

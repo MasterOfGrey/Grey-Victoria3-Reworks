@@ -104,7 +104,7 @@ bg_financial_districts = {
 bg_company_headquarter = {
 	parent_group = bg_owner_buildings
 
-	urbanization = 1 # 0
+	urbanization = 5 # 0	# These have a *much* bigger impact on service consumption
 }
 
 ## Construction

@@ -43,6 +43,7 @@
  pm_rp_small_port: "리버사이드 피어스"
  pm_rp_industrial_port: "산업 항구"
  pm_rp_modern_port: "현대 항구"
+ USU_pm_hv_arcades: "대형 상가"
  USU_pm_grid_streetlights: "백열등 가로등"
  USU_pm_no_emergency_services: "응급 서비스 없음"
  USU_pm_basic_fire_brigade: "기본 소방대"

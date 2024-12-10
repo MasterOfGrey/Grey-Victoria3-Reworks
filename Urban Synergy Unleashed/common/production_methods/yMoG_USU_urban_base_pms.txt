@@ -29,8 +29,12 @@ pm_market_stalls = {
 	}
 	
 	state_modifiers = {
+		level_scaled = {
+			state_construction_mult = 0.0005					# The existence of the urban infrastructure (empty roads, refurbishable buildings, etc.) makes construction a breeze.
+		}
+		
 		workforce_scaled = {
-			state_construction_mult = 0.0005
+			state_construction_mult = -0.0005					# The more people are utilising the urban spaces though, the more this benefit is negated by all the people and businesses in the way.
 			building_food_industry_throughput_add = 0.01
 			building_textile_mills_throughput_add = 0.01
 			building_furniture_manufacturies_throughput_add = 0.01
@@ -73,8 +77,12 @@ pm_market_squares = {
 	}
 	
 	state_modifiers = {
-		workforce_scaled = {
+		level_scaled = {
 			state_construction_mult = 0.001
+		}
+		
+		workforce_scaled = {
+			state_construction_mult = -0.001
 			building_food_industry_throughput_add = 0.01
 			building_textile_mills_throughput_add = 0.01
 			building_furniture_manufacturies_throughput_add = 0.01
@@ -117,8 +125,12 @@ pm_covered_markets = {
 	}
 	
 	state_modifiers = {
-		workforce_scaled = {
+		level_scaled = {
 			state_construction_mult = 0.0015
+		}
+		
+		workforce_scaled = {
+			state_construction_mult = -0.0015
 			building_food_industry_throughput_add = 0.01
 			building_textile_mills_throughput_add = 0.01
 			building_furniture_manufacturies_throughput_add = 0.01
@@ -128,6 +140,7 @@ pm_covered_markets = {
 
 pm_arcades = {
 	texture = "gfx/interface/icons/production_method_icons/arcades.dds"
+	replacement_if_valid = USU_pm_hv_arcades
 	ai_value = 2000
 	unlocking_technologies = { elevator }
 	
@@ -162,8 +175,70 @@ pm_arcades = {
 	}
 	
 	state_modifiers = {
-		workforce_scaled = {
+		level_scaled = {
 			state_construction_mult = 0.002
+		}
+		
+		workforce_scaled = {
+			state_construction_mult = -0.002
+			building_food_industry_throughput_add = 0.01
+			building_textile_mills_throughput_add = 0.01
+			building_furniture_manufacturies_throughput_add = 0.01
+		}	
+	}
+	
+	required_input_goods = electricity
+}
+
+USU_pm_hv_arcades = {
+	texture = "gfx/interface/icons/production_method_icons/arcades.dds"
+	is_hidden_when_unavailable = yes
+	ai_value = 50000
+	
+	unlocking_production_methods = { 		# de facto counts as needing PPP_tech_hv_power tech unlock
+		USU_pm_grid_streetlights
+	}
+	unlocking_technologies = {				# means that high voltage arcades auto-replaces regular arcades when they exist as an option	
+		elevator
+	}
+	
+	country_modifiers = {
+		workforce_scaled = {
+			country_construction_add = 2
+		}
+	}
+	
+	building_modifiers = {
+		workforce_scaled = {
+			goods_input_glass_add = 2
+			goods_input_steel_add = 2
+			goods_input_fabric_add = 1
+			goods_input_tools_add = 2
+			goods_input_hardwood_add = 2
+			goods_input_ppp_hv_power_add = 0.3
+			goods_input_usu_logistics_add = 4
+			goods_output_services_add = 55
+		}
+		
+		level_scaled = {
+			building_employment_laborers_add = 600
+			building_employment_clerks_add = 2000
+			building_employment_shopkeepers_add = 1000
+			building_employment_machinists_add = 400
+		}
+		
+		unscaled = {
+			building_shopkeepers_shares_add = 10
+		}
+	}
+	
+	state_modifiers = {
+		level_scaled = {
+			state_construction_mult = 0.002
+		}
+		
+		workforce_scaled = {
+			state_construction_mult = -0.002
 			building_food_industry_throughput_add = 0.01
 			building_textile_mills_throughput_add = 0.01
 			building_furniture_manufacturies_throughput_add = 0.01

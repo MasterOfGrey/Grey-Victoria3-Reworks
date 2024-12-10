@@ -43,6 +43,7 @@
     pm_rp_small_port:0 "Riverside Piers"
     pm_rp_industrial_port:0 "Industrial Ports"
     pm_rp_modern_port:0 "Modern Ports"
+    USU_pm_hv_arcades: "Arcades"
     USU_pm_grid_streetlights: "Incandescent Steetlights"
     USU_pm_no_emergency_services: "No Emergency Services"
     USU_pm_basic_fire_brigade: "Basic Fire Brigades"

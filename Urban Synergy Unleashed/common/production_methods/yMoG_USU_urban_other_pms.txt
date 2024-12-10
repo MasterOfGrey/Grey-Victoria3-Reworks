@@ -117,6 +117,7 @@ pm_public_motor_carriages = {
 
 pm_horses = {
 	texture = "gfx/interface/icons/production_method_icons/no_automation.dds"
+	ai_value = 10000
 	
 	building_modifiers = {
 		workforce_scaled = { #neutral at base prices
@@ -133,6 +134,7 @@ pm_horses = {
 
 pm_stagecoaches_and_wagons = {
 	texture = "gfx/interface/icons/production_method_icons/horse_vehicles.dds"
+	ai_value = 30000
 	
 	building_modifiers = {
 		workforce_scaled = { #makes 30 at base prices
@@ -152,6 +154,7 @@ pm_stagecoaches_and_wagons = {
 
 pm_motor_vehicles = {
 	texture = "gfx/interface/icons/production_method_icons/motor_vehicles.dds"
+	ai_value = 50000
 	
 	unlocking_technologies = {
 		combustion_engine
@@ -181,7 +184,7 @@ pm_no_street_lighting = {
 
 pm_gas_streetlights = {
 	texture = "gfx/interface/icons/production_method_icons/gas_streetlights.dds"
-	ai_value = 1000
+	ai_value = 10000
 	city_lights_color_index = 1	# Needs to match city_graphics_data.settings color array
 	
 	unlocking_technologies = {
@@ -209,7 +212,7 @@ pm_gas_streetlights = {
 
 pm_electric_streetlights = {
 	texture = "gfx/interface/icons/production_method_icons/moonlight_towers.dds"
-	ai_value = 2000
+	ai_value = 30000
 	city_lights_color_index = 2	# Needs to match city_graphics_data.settings color array
 	
 	unlocking_technologies = {
@@ -233,7 +236,7 @@ pm_electric_streetlights = {
 
 USU_pm_grid_streetlights = {
 	texture = "gfx/interface/icons/production_method_icons/electric_streetlights.dds"
-	ai_value = 3000
+	ai_value = 50000
 	city_lights_color_index = 2	# Needs to match city_graphics_data.settings color array
 	
 	unlocking_technologies = {

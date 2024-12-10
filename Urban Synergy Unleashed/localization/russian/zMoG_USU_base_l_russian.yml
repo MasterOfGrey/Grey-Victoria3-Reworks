@@ -43,6 +43,7 @@
  pm_rp_small_port: "Риверсайд Пирс"
  pm_rp_industrial_port: "Промышленные порты"
  pm_rp_modern_port: "Современные порты"
+ USU_pm_hv_arcades: "Пассажи"
  USU_pm_grid_streetlights: "Лампы накаливания"
  USU_pm_no_emergency_services: "Нет экстренных служб"
  USU_pm_basic_fire_brigade: "Базовые пожарные бригады"
