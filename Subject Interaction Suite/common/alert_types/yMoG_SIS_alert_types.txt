@@ -15,12 +15,175 @@ unused_interests_alert = {
 
 overlord_can_consolidate_subject = {
 	texture = "gfx/interface/icons/diplomatic_action_icons/consolidate_subject.dds"
-	script_context = player_country
+	script_context = player_subject
 	
 	valid = {
-		any_subject_or_below = {
-			is_direct_subject_of = root
-			can_consolidate_subject = yes
+	# Check Overlord
+		overlord = {
+			has_technology_researched = nationalism
+			is_subject = no
+			is_diplomatic_play_committed_participant = no
+			is_revolutionary = no
+			NOT = { c:BIC ?= this }
+			save_temporary_scope_as = player_overlord
+		}
+	# Check subject_can_be_consolidation_target = yes
+		is_ai = yes
+		is_revolutionary = no
+		is_diplomatic_play_committed_participant = no 
+		liberty_desire < 25	
+		OR = {
+			custom_tooltip = {
+				text = consolidate_subject_country_tier_tt
+				OR = {
+					country_tier = city_state
+					country_tier = principality
+					country_tier = grand_principality
+				}
+			}
+			AND = {
+				custom_tooltip = {
+					text = consolidate_subject_country_tier_kingdom_tt
+					country_tier = kingdom
+				}
+				OR = {
+					is_country_type = unrecognized
+					custom_tooltip = {
+						text = consolidate_subject_country_tier_kingdom_overlord_research_tt
+						overlord = {
+							OR = {
+								has_technology_researched = pan-nationalism
+								has_technology_researched = civilizing_mission
+								has_technology_researched = corporatism
+							}
+						}
+					}
+				}
+			}
+		}
+		custom_tooltip = {
+			text = consolidate_subject_either_tt
+		}
+		OR = {
+			custom_tooltip = {
+				text = consolidate_subject_vassal_type_tt
+				OR = {
+					is_subject_type = subject_type_vassal
+					is_subject_type = subject_type_puppet
+					is_subject_type = subject_type_protectorate # temporary
+				}
+			}
+			AND = {
+				custom_tooltip = {
+					text = consolidate_subject_dominion_type_tt
+					is_subject_type = subject_type_dominion
+				}
+				custom_tooltip = {
+					text = consolidate_subject_dominion_type_laws_tt
+					OR = {
+						has_law = law_type:law_parliamentary_republic
+						has_law = law_type:law_presidential_republic
+						has_law = law_type:law_council_republic
+					}
+				}
+			}
+			AND = {
+				custom_tooltip = {
+					text = consolidate_subject_union_type_tt
+					is_subject_type = subject_type_personal_union
+				}
+				overlord = {
+					has_technology_researched = philosophical_pragmatism
+					has_technology_researched = pan-nationalism
+				}
+			}
+		}
+		custom_tooltip = {
+			text = is_not_african_subject
+			is_african_subject = no
+		}
+		NOT = {
+			country_has_primary_culture = cu:australian
+			country_has_primary_culture = cu:anglo_canadian
+			country_has_primary_culture = cu:franco_canadian
+		}
+		save_temporary_scope_as = consolidation_subject
+	# Check exists can_be_consolidation_recipient = yes
+		any_country = {
+			save_temporary_scope_as = recipient_subject
+			hidden_trigger = {
+				is_adjacent_to_country = scope:consolidation_subject
+				is_direct_subject_of = scope:player_overlord
+				is_diplomatic_play_committed_participant = no 
+				liberty_desire < 50																# disable for testing
+				NOT = { this = scope:consolidation_subject }
+				is_revolutionary = no
+			}
+			OR = {
+				is_subject_type = subject_type_puppet
+				is_subject_type = subject_type_vassal
+				is_subject_type = subject_type_dominion
+				is_subject_type = subject_type_colony
+			#	is_subject_type = subject_type_protectorate # temporary testing
+				AND = {
+					is_subject_type = subject_type_personal_union
+					overlord = {
+						has_technology_researched = philosophical_pragmatism
+						has_technology_researched = pan-nationalism
+					}
+				}
+				AND = {
+					has_government_type = gov_chartered_company
+					overlord = {
+						has_technology_researched = corporatism
+						has_technology_researched = civilizing_mission
+					}
+				}
+			}
+			OR = {
+				# Only primary cultures match:
+				any_primary_culture = {				# Confirmed working without the custom tooltip.
+					custom_tooltip = {
+						text = consolidate_subject_primary_culture_tt
+						is_primary_culture_of = scope:consolidation_subject
+					}
+				}
+				# New madness from Cael:
+				custom_tooltip = {
+					text = consolidate_subject_acceptance_tt
+					AND = {
+						overlord = {
+							has_technology_researched = pan-nationalism
+							has_technology_researched = civilizing_mission
+						}
+						scope:consolidation_subject = {
+							any_primary_culture = {
+								count = all
+								shares_trait_with_any_primary_culture = scope:recipient_subject
+								scope:recipient_subject = {
+									cultural_acceptance_base = { target = PREV value >= acceptance_status_4 }
+								}
+							}
+						}
+					}
+				}
+				# *Any* primary culture traits overlap
+				custom_tooltip = {					# Confirmed working without the custom tooltip.
+					text = consolidate_subject_multicultural_tt
+					AND = {
+						any_primary_culture = {
+							shares_trait_with_any_primary_culture = scope:consolidation_subject
+						}
+						has_law = law_type:law_multicultural
+						has_technology_researched = corporatism
+						has_technology_researched = human_rights
+						overlord = {
+							has_technology_researched = pan-nationalism
+							has_technology_researched = civilizing_mission
+						}
+					}
+				}
+			}
 		}
 	}
 	
