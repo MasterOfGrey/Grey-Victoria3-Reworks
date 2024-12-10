@@ -1,8 +1,8 @@
 [img]https://i.imgur.com/7xuCZqW.png[/img]
-Designed for Victoria 3: Version 1.7 (and onwards)
-Mod Version V1.10
+Supports Victoria 3: V1.8.3  (and onwards)
+Mod Version: V1.10
 Please consider rating this if you like it! It really helps out. [img]https://i.imgur.com/tE28cZ7.gif[/img]
-
+[spoiler]Originally made for: Version 1.7[/spoiler]
 [table]
     [tr]
         [td][img]https://i.imgur.com/WjDSfUn.png[/img][/td]

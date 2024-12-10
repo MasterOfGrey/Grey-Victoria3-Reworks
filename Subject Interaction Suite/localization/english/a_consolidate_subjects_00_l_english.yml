@@ -1,7 +1,7 @@
 ﻿l_english:
  consolidate_subject: "Consolidate Subject"
  consolidate_subject_action_name: "Consolidate [concept_subject]"
- consolidate_subject_desc: "Merge two neighboring [Concept('concept_subject', '$concept_subjects$')] into a single [concept_country]. The target subject must have low [concept_autonomy] and [concept_liberty_desire]. Both subjects must share a [Concept('concept_primary_cultures', '$concept_primary_culture$')]."
+ consolidate_subject_desc: "Consolidate a [concept_subject], causing it to be annexed by a neighboring [concept_subject]. Both subjects must have fairly low [concept_autonomy] and [concept_liberty_desire], and share [concept_primary_cultures] or cultural traits."
  consolidate_subject_action_notification_name: "[INITIATOR_COUNTRY.GetName] consolidates administration"
  consolidate_subject_action_notification_desc: "[INITIATOR_COUNTRY.GetName] has chosen to consolidate us."
  consolidate_subject_action_notification_third_party_name: "[INITIATOR_COUNTRY.GetName] consolidates subjects"
@@ -17,9 +17,14 @@
  consolidate_subject_dominion_type_laws_tt: "[GetLawType('law_parliamentary_republic').GetName], [GetLawType('law_presidential_republic').GetName], or [GetLawType('law_council_republic').GetName]"
  consolidate_subject_union_type_tt: "[SCOPE.sCountry('target_country').GetName] is a [GetSubjectType('subject_type_personal_union').GetName] and:"
  consolidate_subject_primary_culture_tt: "Are one of the Target Subject's [concept_primary_cultures]: [SCOPE.sCountry('target_country').GetPrimaryCulturesDesc]"
- consolidate_subject_acceptance_tt: "The [concept_overlord] has researched Pan-nationalism and Civilizing Mission, the Target Subject's [concept_primary_cultures] have at least some overlap, and the Receiving Subject has [GetLawType('law_multicultural').GetName]"
+ consolidate_subject_acceptance_tt: "The [concept_overlord] has researched Pan-nationalism and Civilizing Mission, and all of the Consolidated Subject's [concept_primary_cultures] must share a trait and have at least @acceptance_status_4! $second_rate_citizen$ [concept_acceptance_status]"
+ consolidate_subject_multicultural_tt: "The [concept_overlord] has researched Pan-nationalism and Civilizing Mission, the Target Subject's [concept_primary_cultures] have at least some overlap, and the Receiving Subject has researched Human Rights and Corporatism, and has [GetLawType('law_multicultural').GetName]"
  
  alert_overlord_can_consolidate_subject_name: "[GetDiplomaticActionType('consolidate_subject').GetName] available for [SCOPE.GetRootScope.GetCountry.GetName]"
  alert_overlord_can_consolidate_subject_desc: "Our [concept_subject] [SCOPE.GetRootScope.GetCountry.GetName] can be consolidated into a neighboring subject."
  alert_overlord_can_consolidate_subject_hint: "You can use the Subjects tab in the Diplomacy Panel to perform a [GetDiplomaticActionType('consolidate_subject').GetName] [concept_diplomatic_action]."
  alert_overlord_can_consolidate_subject_action: "Diplomacy Panel"
+ 
+ ag_can_consolidate_subject_name: "Can [GetDiplomaticActionType('consolidate_subject').GetName]"
+ ag_can_consolidate_subject_desc: "There are [concept_subject] [Concept('concept_country', '$concept_countries$')] which are eligible for the [GetDiplomaticActionType('consolidate_subject').GetName] action"
+ ag_can_consolidate_subject_tooltip: "#header $ag_can_consolidate_subject_name$#!\n$TOOLTIP_DELIMITER$\n$ag_can_consolidate_subject_desc$\n\n$ALERT_GROUP_TOOLTIP_FOOTER$"

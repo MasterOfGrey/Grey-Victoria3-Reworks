@@ -96,6 +96,7 @@ subject_can_be_consolidation_target = {
 }
 
 can_be_consolidation_recipient = {
+	save_temporary_scope_as = recipient_subject
 	hidden_trigger = {
 		NOT = { this = scope:target_country }
 		is_adjacent_to_country = scope:target_country
@@ -133,14 +134,35 @@ can_be_consolidation_recipient = {
 				is_primary_culture_of = scope:target_country
 			}
 		}
+		# New madness from Cael:
+		custom_tooltip = {
+			text = consolidate_subject_acceptance_tt
+			AND = {
+				overlord = {
+					has_technology_researched = pan-nationalism
+					has_technology_researched = civilizing_mission
+				}
+				scope:target_country = {
+					any_primary_culture = {
+						count = all
+						shares_trait_with_any_primary_culture = scope:recipient_subject
+						scope:recipient_subject = {
+							cultural_acceptance_base = { target = PREV value >= acceptance_status_4 }
+						}
+					}
+				}
+			}
+		}
 		# *Any* primary culture traits overlap
 		custom_tooltip = {					# Confirmed working without the custom tooltip.
-			text = consolidate_subject_acceptance_tt
+			text = consolidate_subject_multicultural_tt
 			AND = {
 				any_primary_culture = {
 					shares_trait_with_any_primary_culture = scope:target_country
 				}
 				has_law = law_type:law_multicultural
+				has_technology_researched = corporatism
+				has_technology_researched = human_rights
 				overlord = {
 					has_technology_researched = pan-nationalism
 					has_technology_researched = civilizing_mission

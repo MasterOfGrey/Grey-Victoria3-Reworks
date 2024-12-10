@@ -27,4 +27,5 @@ overlord_can_consolidate_subject = {
 	open_panel = diplomatic_overview|subjects
 	type = important_action
 	color = green
+	alert_group = can_consolidate_subject
 }
