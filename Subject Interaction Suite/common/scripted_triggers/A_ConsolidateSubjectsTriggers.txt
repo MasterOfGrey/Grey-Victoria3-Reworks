@@ -1,21 +1,22 @@
 ﻿# Adapted with permission from: CaelReader's Consolidate Subjects
 
 can_consolidate_subject = {
+	NOT = { THIS = c:BIC }
+	is_subject = no
+	is_revolutionary = no
+	is_diplomatic_play_committed_participant = no
+	has_technology_researched = nationalism											# disable for testing
 	scope:target_country = {
 		is_diplomatic_play_committed_participant = no 
 		liberty_desire < 25															# disable for testing
 		subject_can_be_consolidation_target = yes
-	}
-	hidden_trigger = {
-		any_country = {
-			can_be_consolidation_recipient = yes
-		}
 	}
 }
 
 subject_can_be_consolidation_target = {
 	hidden_trigger = {
 		is_ai = yes
+		is_direct_subject_of = root
 		is_revolutionary = no
 	}
 	OR = {
@@ -93,16 +94,21 @@ subject_can_be_consolidation_target = {
 		country_has_primary_culture = cu:anglo_canadian
 		country_has_primary_culture = cu:franco_canadian
 	}
+	hidden_trigger = {
+		any_country = {
+			can_be_consolidation_recipient = yes
+		}
+	}
 }
 
 can_be_consolidation_recipient = {
 	save_temporary_scope_as = recipient_subject
 	hidden_trigger = {
-		NOT = { this = scope:target_country }
 		is_adjacent_to_country = scope:target_country
-		is_subject_of = root
+		is_direct_subject_of = root
 		is_diplomatic_play_committed_participant = no 
 		liberty_desire < 50																# disable for testing
+		NOT = { this = scope:target_country }
 		is_revolutionary = no
 	}
 	OR = {
