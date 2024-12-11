@@ -1290,6 +1290,7 @@ ai_strategy_default = {
 							state_region = s:STATE_JETISY
 							state_region = s:STATE_TOMSK
 							state_region = s:STATE_KIRGHIZIA
+							state_region = s:STATE_AMUR
 						}
 					}
 				}
@@ -2527,7 +2528,7 @@ ai_strategy_default = {
 				}
 			}
 			add = 100
-		}		
+		}
 		
 		# Opium wars aggressor should be very, very aggressive against target if they're banning opium
 		if = {
@@ -2750,6 +2751,7 @@ ai_strategy_default = {
 							state_region = s:STATE_JETISY
 							state_region = s:STATE_TOMSK
 							state_region = s:STATE_KIRGHIZIA
+							state_region = s:STATE_AMUR
 						}
 					}
 				}
