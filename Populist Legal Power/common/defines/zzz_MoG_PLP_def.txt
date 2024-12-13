@@ -4,6 +4,57 @@
 }
 
 NPolitics = {
+	# Since these got deleted:
+	# REVOLUTION_SUPPORT_STATE_MULTIPLIER = 0.01		# A revolution will have the backing of ( support * this fraction of states )
+	# REVOLUTION_MAX_STATE_FRACTION = 0.90			# A revolution cannot be supported by more than this fraction of the states in the country
+	
+	## Revolutions ##
+	CIVIL_WAR_COOLDOWN_MONTHS = 2 # 6									# After a civil war concludes, it takes this long before another one can start
+	# Basics:
+	CIVIL_WAR_MAX_PROGRESS_AT_CHECKPOINT = 0.25			# A civil war can advance at most this amount per checkpoint, regardless of radicalism
+	MIN_RADICALISM_FOR_CIVIL_WAR_PROGRESSION = 0.75		# A political movement must have this much radicalism for a civil war to start organizing
+	MIN_RADICALISM_FOR_CIVIL_WAR_START = 1.0			# Allow a civil war to start at this amount of radicalism or more
+	CIVIL_WAR_PROGRESS_DECAY = 0.1						# The progress of civil wars with insufficient support decays at this rate
+	CIVIL_WAR_PROGRESS_RADICALISM_WEIGHT = 0.2  		# civil wars gain progress based on the movement's radicalism, multiplied by this weight (may be affected by modifiers)
+	CIVIL_WAR_CHECKPOINT_INTERVAL_BASE_WEEKS = 8		# civil war progress will be updated every this many weeks (may be affected by modifiers)
+	CIVIL_WAR_CHECKPOINT_INTERVAL_MAXIMUM_WEEKS = 52	# This serves as a limit, to protect modifiers from reducing the progress speed to zero
+	CIVIL_WAR_LOSER_IG_AND_MOVEMENT_DEBUFF_YEARS = 10	# Debuff duration in years for IG that looses in a revolution
+	
+	# The values below are used to calculate the target number of states that rise up when a civil war without an explicit target_fraction_of_states begins
+	# This is just a target value - the end result may end up different based on state weights defined in the civil war scripting
+	CIVIL_WAR_UPRISING_STATES_DEFAULT_CLOUT_FACTOR = 1.0 				# Fraction of total states in country, multiplied by revolutionary IG clout 
+	CIVIL_WAR_UPRISING_STATES_DEFAULT_POPULAR_SUPPORT_FACTOR = 0.5		# Fraction of total states in country, multiplied by movement popular support
+	CIVIL_WAR_UPRISING_STATES_DEFAULT_MILITARY_SUPPORT_FACTOR = 0.25	# Fraction of total states in country, multiplied by movement military support
+	CIVIL_WAR_UPRISING_STATES_DEFAULT_WEALTH_SUPPORT_FACTOR = 0.25		# Fraction of total states in country, multiplied by movement wealth support
+	CIVIL_WAR_UPRISING_STATES_DEFAULT_MIN_FRACTION = 0.05 # 0.10		# Min fraction of total states in country that will try to rise up
+	CIVIL_WAR_UPRISING_STATES_DEFAULT_MAX_FRACTION = 0.90 # 0.75		# Max fraction of total states in country that will try to rise up
+	CIVIL_WAR_POTENTIAL_UPRISING_STATE_MIN_MULTIPLIER = 0.01  			# The weight for an uprising state cannot be reduced below this by local clout/identity share of population
+	
+	CIVIL_WAR_UPRISING_STATE_RANDOM_FACTOR = 0.1 # 0.5					# The higher this is, the more random uprising state selection will be
+	CIVIL_WAR_UPRISING_STATE_CONNECTIONS_FACTOR = 1.0 					# The score of an uprising state is multiplied by ( 1 + this number * the number of other uprising states it connects to )
+	CIVIL_WAR_UPRISING_STATE_NON_CONNECTED_SECESSION_FACTOR = 0.01 		# The score of an uprising state is multiplied by this for seceding states that are not connected to any other rebel states in the same area
+	CIVIL_WAR_UPRISING_ISOLATED_STATE_FACTOR = 100.0 					# The score of an uprising state is multiplied by this if it's isolated from the most loyalist state by uprising states 
+	CIVIL_WAR_NON_CONTIGUOUS_UPRISING_STATE_FACTOR = 0.7 # 0.25			# The score of an uprising state is multiplied by this if it would end up cutting off a number of loyalist states greater than the remaining number of states that should rebel 
+	CIVIL_WAR_UPRISING_ARMY_TARGET_DELTA_FACTOR = 3.0 # 10.0		# How heavily are states weighted towards or against rising up based on how their defection will affect the ideal number of army units that should be rebelling
+	CIVIL_WAR_UPRISING_NAVY_TARGET_DELTA_FACTOR = 2.0 # 5.0			# How heavily are states weighted towards or against rising up based on how their defection will affect the ideal number of navy units that should be rebelling
+	
+	# Overseas areas of the country that are considered colonial will either be fully loyal or fully rebellious, as determined by the logic below
+	CIVIL_WAR_UPRISING_STATES_OVERSEAS_HIGH_UNINCORPORATED_FRACTION = 0.5	# At this % of unincorporated states or above in non capital area, it will be considered 'colonial' even if it has a close sea adjacency to capital
+	CIVIL_WAR_COLONIAL_UPRISING_MIN_CHANCE = 0.25							# If the chance for a colonial area to rebel is below this, it will always stay loyal
+	CIVIL_WAR_COLONIAL_UPRISING_CHANCE_WEALTH_SUPPORT_FACTOR = 4.0 # 2.0	# Chance for each colonial area to rebel, multiplied by insurrectionary movement wealth support
+	CIVIL_WAR_COLONIAL_UPRISING_CHANCE_CLOUT_FACTOR = 1.0					# Chance for each colonial area to rebel, multiplied by insurrectionary IG clout in the area
+	
+	CIVIL_WAR_UPRISING_STATE_EXCESSIVE_ARMY_FRACTION = 0.5					# If a state contains at least this much of the area's army
+	CIVIL_WAR_UPRISING_ARMY_FRACTION_MILITARY_SUPPORT_FACTOR = 1.0 # 0.75	# Target fraction of the army that should rebel, multiplied by insurrectionary movement military support
+	CIVIL_WAR_UPRISING_ARMY_FRACTION_CLOUT_FACTOR = 1.0 # 0.25				# Target fraction of the army that should rebel, multiplied by insurrectionary IG clout in the area
+	CIVIL_WAR_UPRISING_NAVY_FRACTION_MILITARY_SUPPORT_FACTOR = 0.5 # 0.75	# Target fraction of the navy that should rebel, multiplied by insurrectionary movement military support
+	CIVIL_WAR_UPRISING_NAVY_FRACTION_CLOUT_FACTOR = 0.25					# Target fraction of the navy that should rebel, multiplied by insurrectionary IG clout in the area
+	
+	CIVIL_WAR_CONSCRIPTION_RATE_POPULAR_SUPPORT_MULTIPLIER = 0.6 # 0.25		# At 100% popular support, insurrectionary states gain this multiplier of civil_war_conscription modifier
+	CIVIL_WAR_CONSCRIPTION_RATE_CLOUT_MULTIPLIER = 0.1 # 0.05				# At 100% clout from supporting IGs, insurrectionary states gain this multiplier of civil_war_conscription modifier
+	CIVIL_WAR_CONSCRIPTION_RATE_MAX_MULTIPLIER = 0.7 # 0.1 # Screw History, the player can manipulate things to survive much worse than historical. The immortal Tsar is not toppled by 10% conscription.	# Total multiplier of civil_war_conscription modifier cannot exceed this number (this is intentionally much lower than the possible maximum scaling above, as movements very rarely have >10-20% popular support)
+	
+	## Movements ##
 	#MOVEMENT_WEEKLY_RADICALISM_CHANGE = 0.01			# How much does a movement's radicalism change towards its calculated target each week
 	MOVEMENT_MONTHLY_RADICALS_THRESHOLD = 0.25 # 0.5	# At this level of radicalism, movement supporters start being radicalized each month at an amount scaled by the radicalism value
 	#MOVEMENT_MONTHLY_RADICALS_SCALING_MIN = 0.005		# The minimum % of supporters radicalized each month when above the radicalization threshold

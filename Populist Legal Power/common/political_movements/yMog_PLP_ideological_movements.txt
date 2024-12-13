@@ -265,7 +265,7 @@
 
 	revolution = {
 		possible = {
-			political_movement_support >= 0.05
+			political_movement_support >= 0.1 # 0.05
 		}
 		
 		weight = {
@@ -317,7 +317,7 @@
 
 	secession = {
 		possible = {
-			political_movement_support >= 0.05
+			political_movement_support >= 0.1 # 0.05
 			OR = {
 				scope:clout <= 0
 				owner = {
@@ -607,7 +607,7 @@ movement_pro_slavery = {
 	
 	revolution = {
 		possible = {
-			political_movement_support >= 0.05
+			political_movement_support >= 0.1 # 0.05
 		}
 			
 		weight = {
@@ -659,7 +659,7 @@ movement_pro_slavery = {
 	
 	secession = {
 		possible = {
-			political_movement_support >= 0.05
+			political_movement_support >= 0.1 # 0.05
 			OR = {
 				scope:clout <= 0
 				owner = {

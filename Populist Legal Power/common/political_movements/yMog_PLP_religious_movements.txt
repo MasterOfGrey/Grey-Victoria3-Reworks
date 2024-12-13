@@ -302,7 +302,7 @@
 				any_scope_state = {
 					religion_percent_state = {
 						target = scope:political_movement.religion
-						value >= 0.10
+						value >= 0.100.15 # 0.10
 					}
 				}
 			}
@@ -351,7 +351,7 @@
 					limit = {
 						religion_percent_state = {
 							target = scope:political_movement.religion
-							value >= 0.1
+							value >= 0.15 # 0.1
 						}
 					}
 					add = 10
@@ -363,8 +363,8 @@
 			value = political_movement_identity_support
 			add = scope:clout
 			multiply = 3
-			min = 0.15
-			max = 0.75
+			min = 0.05 # 0.15
+			max = 0.90 # 0.75
 		}		
 	}
 	
