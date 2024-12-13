@@ -209,7 +209,7 @@
                 }
 			}
 			add = {
-				desc = "CULTURE_ENSLAVED_PERCENT" # TODO: "x percent of this culture is enslaved"
+				desc = "CULTURE_ENSLAVED_PERCENT"
 				value = 100
 
 				multiply = {
