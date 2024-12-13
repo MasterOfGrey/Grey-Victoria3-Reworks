@@ -11,9 +11,12 @@ building_airport = {
 	production_method_groups = {
 		pmg_base_building_airport
 		pmg_cargo_airport
+		pmg_tourism_airport
 	}
 	
 	required_construction = construction_cost_high
+	
+	ownership_type = self
 	
 	ai_value = 1000 # Airports are less important than railroads
 	
