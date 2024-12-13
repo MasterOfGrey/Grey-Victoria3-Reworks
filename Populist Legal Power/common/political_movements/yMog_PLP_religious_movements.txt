@@ -302,7 +302,7 @@
 				any_scope_state = {
 					religion_percent_state = {
 						target = scope:political_movement.religion
-						value >= 0.100.15 # 0.10
+						value >= 0.15 # 0.10
 					}
 				}
 			}
