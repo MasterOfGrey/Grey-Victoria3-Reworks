@@ -201,40 +201,24 @@
 						has_law = law_type:law_legacy_slavery
 					}
 				}
-                this.culture = {
-                    any_scope_pop = {
-                        owner = root.owner
-                        is_pop_type = slaves
-                    }
-                }
 			}
 			add = {
 				desc = "CULTURE_ENSLAVED_PERCENT"
 				value = 100
 
-				multiply = {
-					value = {
-						value = 0
-						this.culture = {
-							every_scope_pop = {
-								limit = {
-									owner = root.owner
-									is_pop_type = slaves
-								}
-								add = total_size
+				this.culture = {
+					every_in_list = {
+						variable = culture_enslaved_percent_cache
+						limit = {
+							dict_key_for_kvp = {
+								lookup_key = root.owner.var:dict_id
 							}
 						}
-					}
-					divide = {
-						value = 0
-						this.culture = {
-							every_scope_pop = {
-								limit = {
-									owner = root.owner
-								}
-								add = total_size
-							}
+						save_temporary_scope_value_as = {
+							name = kvp
+							value = this
 						}
+						multiply = kvp_to_value
 					}
 				}
 			}
@@ -547,41 +531,23 @@ movement_pro_slavery = {
 		}
 
 		if = {
-			limit = {
-                this.culture = {
-                    any_scope_pop = {
-                        owner = root.owner
-                        is_pop_type = slaves
-                    }
-                }
-			}
 			multiply = {
-				desc = "CULTURE_ENSLAVED_PERCENT" # TODO: "x percent of this culture is enslaved"
+				desc = "CULTURE_ENSLAVED_PERCENT"
 				value = 1
 
-				subtract = {
-					value = {
-						value = 0
-						this.culture = {
-							every_scope_pop = {
-								limit = {
-									owner = root.owner
-									is_pop_type = slaves
-								}
-								add = total_size
+				this.culture = {
+					every_in_list = {
+						variable = culture_enslaved_percent_cache
+						limit = {
+							dict_key_for_kvp = {
+								lookup_key = root.owner.var:dict_id
 							}
 						}
-					}
-					divide = {
-						value = 0
-						this.culture = {
-							every_scope_pop = {
-								limit = {
-									owner = root.owner
-								}
-								add = total_size
-							}
+						save_temporary_scope_value_as = {
+							name = kvp
+							value = this
 						}
+						subtract = kvp_to_value
 					}
 				}
 			}
