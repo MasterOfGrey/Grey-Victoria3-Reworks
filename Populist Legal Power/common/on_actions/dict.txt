@@ -1,0 +1,37 @@
+on_country_formed = {
+    on_actions = {
+        set_dict_id_effect
+    }
+}
+
+on_country_released_as_independent = {
+    on_actions = {
+        set_dict_id_target_effect
+    }
+}
+
+on_country_released_as_own_subject = {
+    on_actions = {
+        set_dict_id_target_effect
+    }
+}
+
+on_secession_start = {
+    on_actions = {
+        set_dict_id_target_effect
+    }
+}
+
+set_dict_id_effect = {
+    effect = {
+        set_dict_id
+    }
+}
+
+set_dict_id_target_effect = {
+    effect = {
+        scope:target = {
+            set_dict_id
+        }
+    }
+}
