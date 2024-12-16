@@ -1,4 +1,4 @@
-## Key value pairs
+﻿## Key value pairs
 # Numbers are stored as 64 bit unsigned fixed point integers with 5 decimal places
 # Sign  - 1 bit
 # Key   - 11 bits (max 2047, enough for each defined country in the game to exist and spawn two dynamic tags)
