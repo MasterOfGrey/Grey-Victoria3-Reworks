@@ -13,7 +13,7 @@ building_military_shipyards = {
 	}
 	
 	production_method_groups = {
-		pmg_tts_naval_yards
+		pmg_military_base
 		pmg_mil_shipyards_shiftwork
 	}
 	

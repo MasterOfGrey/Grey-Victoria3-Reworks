@@ -17,7 +17,8 @@ pm_military_shipbuilding_ironclad = {
 			goods_input_iron_add = 30
 			
 			# output goods
-			goods_output_ironclads_add = 50
+			goods_output_ironclads_add = 35
+			goods_output_manowars_add = 25
 		}
 		
 		level_scaled = {
@@ -25,6 +26,7 @@ pm_military_shipbuilding_ironclad = {
 			building_employment_laborers_add = 2000
 			building_employment_machinists_add = 1500
 			building_employment_engineers_add = 1000
+			building_employment_shopkeepers_add = 500
 		}
 	}
 }
@@ -53,6 +55,7 @@ pm_military_shipbuilding_steel = {
 			building_employment_laborers_add = 2000
 			building_employment_machinists_add = 1500
 			building_employment_engineers_add = 1000
+			building_employment_shopkeepers_add = 500
 		}
 	}
 }
@@ -73,7 +76,7 @@ pm_military_shipbuilding_turbine = {
 			goods_input_electricity_add = 10
 			
 			# output goods
-			goods_output_ironclads_add = 30
+			goods_output_ironclads_add = 35
 			goods_output_tts_capital_ships_add = 25
 		}
 		
@@ -82,6 +85,7 @@ pm_military_shipbuilding_turbine = {
 			building_employment_laborers_add = 1000
 			building_employment_machinists_add = 2000
 			building_employment_engineers_add = 1500
+			building_employment_shopkeepers_add = 500
 		}
 	}
 }
@@ -102,7 +106,7 @@ pm_military_shipbuilding_arc_welding = {
 			goods_input_electricity_add = 20
 			
 			# output goods
-			goods_output_ironclads_add = 25
+			goods_output_ironclads_add = 30
 			goods_output_tts_capital_ships_add = 40
 		}
 		
@@ -111,6 +115,7 @@ pm_military_shipbuilding_arc_welding = {
 			building_employment_laborers_add = 1000
 			building_employment_machinists_add = 2000
 			building_employment_engineers_add = 1500
+			building_employment_shopkeepers_add = 500
 		}
 	}
 }

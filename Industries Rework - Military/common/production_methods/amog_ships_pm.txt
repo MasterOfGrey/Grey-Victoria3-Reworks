@@ -61,6 +61,7 @@ pm_military_shipbuilding_steam_2 = {
 pm_mil_shipyards_double_shifts = {
 	texture = "gfx/interface/icons/production_method_icons/shift_2.dds"
 	replacement_if_valid = pm_mil_shipyards_double_shifts_arc_weld
+	replacement_if_valid = pm_mil_shipyards_double_shifts_tts
 	
 	unlocking_technologies = {
 		shift_work
