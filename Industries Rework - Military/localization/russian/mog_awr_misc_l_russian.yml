@@ -1,0 +1,30 @@
+﻿l_russian:
+ # Production methods 
+ pmg_base_building_automotive_industry: "Автомобили"
+ pmg_automotive_shiftwork: "Сменная работа" #NT!
+ pmg_automotive_aeroplanes: "Самолеты"
+ pmg_automotive_tanks: "Танки"
+  
+ pm_gear_transmissions: "Ранние трансмиссии" #NT!
+ pm_automobiles: "Автомобили"
+ pm_pneumatic_tyres: "Пневматические шины" #NT!
+  
+ pm_single_shift_days: "Отдельные смены" #NT!
+ pm_automotive_double_shifts: "Двойные смены" #NT!
+ pm_automotive_double_shifts_pneumatic: "Двойные смены" #NT!
+ pm_automotive_triple_shifts: "Тройные смены" #NT!
+ pm_automotive_triple_shifts_pneumatic: "Тройные смены" #NT!
+  
+ pm_no_aeroplanes: "Производство самолетов не ведется"
+ pm_limited_aeroplanes: "Ограниченное производство самолетов"
+ pm_extensive_aeroplanes: "Масштабное производство самолетов"
+ pm_overtime_aeroplanes: "Сверхурочное производство самолетов" #NT!
+  
+ pm_no_tanks: "Производство танков не ведется"
+ pm_limited_tanks: "Ограниченное производство танков"
+ pm_extensive_tanks: "Масштабное производство танков"
+ pm_overtime_tanks: "Сверхурочное производство самолетов" #NT!
+  
+ # Technology 
+ pneumatic_tyres: "Пневматические шины" #NT!
+ pneumatic_tyres_desc: "Применение вулканизированной резины в сочетании с двигателем внутреннего сгорания может стать революционным." #NT!

@@ -5,7 +5,10 @@
  pmg_arti_tools_demob: "Producción de herramientas desmovilizada"
  pmg_munitions_explosives_demob: "Producción de explosivos desmovilizados"
   
- # Production methods 
+ pmg_automation_building_explosives_factory: "Automatización" #NT!
+ pmg_mil_shipyards_shiftwork: "Trabajo por turnos" #NT!
+  
+  # Production methods 
  pm_extensive_tools_a_i: "Extenso"
  pm_moderate_tools_a_i: "Moderado"
  pm_limited_tools_a_i: "Limitado"
@@ -49,6 +52,26 @@
  pm_ui_safety_a: "(Ignorar esto)"
  pm_ui_safety_b: "(Ignorar esto)"
   
+ pm_rotary_valve_engine_building_arti_foundry: "Motor de válvulas rotativas" #NT!
+ pm_assembly_lines_building_arti_foundry: "Líneas de montaje" #NT!
+  
+ pm_mechanical_mixers_building_explosives_factory: "Mezcladoras mecánicas" #NT!
+ pm_rotary_valve_engine_building_explosives_factory: "Motor de válvulas rotativas" #NT!
+ pm_assembly_lines_building_explosives_factory: "Líneas de montaje" #NT!
+ pm_full_process_automation_building_explosives_factory: "Embalaje automatizado" #NT!
+  
+ pm_mil_shipyards_double_shifts: "Turnos dobles" #NT!
+ pm_mil_shipyards_double_shifts_arc_weld: "Turnos dobles" #NT!
+ pm_mil_shipyards_triple_shifts: "Turnos triples" #NT!
+ pm_mil_shipyards_triple_shifts_arc_weld: "Turnos triples" #NT!
+ pm_mil_shipyards_double_shifts_tts: "Turnos dobles" #NT!
+ pm_mil_shipyards_double_shifts_tts_steel: "Turnos dobles" #NT!
+ pm_mil_shipyards_double_shifts_tts_turbine: "Turnos dobles" #NT!
+ pm_mil_shipyards_double_shifts_tts_arc_welding: "Turnos dobles" #NT!
+ pm_mil_shipyards_triple_shifts_tts: "Turnos triples" #NT!
+ pm_mil_shipyards_triple_shifts_tts_turbine: "Turnos triples" #NT!
+ pm_mil_shipyards_triple_shifts_tts_arc_welding: "Turnos triples" #NT!
+  
  # Alerts 
  alert_MIR_war_demob_arms_name: "En guerra con las industrias de armamentos desmovilizadas"
  alert_MIR_war_demob_arms_hint: "Estás en guerra y tus industrias armamentísticas están produciendo una gran cantidad de herramientas en lugar de armas pequeñas."
@@ -77,20 +100,20 @@
  alert_MIR_peace_mob_ammo_action: "Panel de construcción urbana"
  MIR_peace_mob_ammo_setting_name: "Alerta de municiones movilizadas - Paz"
   
- alert_MIR_war_demob_planes_name: "En guerra con la producción limitada de aviones" #NT!
- alert_MIR_war_demob_planes_hint: "Estáis en guerra y vuestras industrias automovilísticas no producen muchos aviones." #NT!
- alert_MIR_war_demob_planes_action: "Panel de construcción urbana" #NT!
- MIR_war_demob_planes_setting_name: "Aviso de desmovilización de aviones - Guerra" #NT!
- alert_MIR_peace_mob_planes_name: "En paz con la producción extensiva de aviones" #NT!
- alert_MIR_peace_mob_planes_hint: "Estáis en paz y vuestras industrias automovilísticas están produciendo muchos aviones." #NT!
- alert_MIR_peace_mob_planes_action: "Panel de construcción urbana" #NT!
- MIR_peace_mob_planes_setting_name: "Aviones movilizados alertan - Paz" #NT!
+ alert_MIR_war_demob_planes_name: "En guerra con la producción limitada de aviones"
+ alert_MIR_war_demob_planes_hint: "Estáis en guerra y vuestras industrias automovilísticas no producen muchos aviones."
+ alert_MIR_war_demob_planes_action: "Panel de construcción urbana"
+ MIR_war_demob_planes_setting_name: "Aviso de desmovilización de aviones - Guerra"
+ alert_MIR_peace_mob_planes_name: "En paz con la producción extensiva de aviones"
+ alert_MIR_peace_mob_planes_hint: "Estáis en paz y vuestras industrias automovilísticas están produciendo muchos aviones."
+ alert_MIR_peace_mob_planes_action: "Panel de construcción urbana"
+ MIR_peace_mob_planes_setting_name: "Aviones movilizados alertan - Paz"
   
- alert_MIR_war_demob_tanks_name: "En guerra con una producción limitada de tanques" #NT!
- alert_MIR_war_demob_tanks_hint: "Estás en guerra y tus industrias automovilísticas no producen muchos tanques." #NT!
- alert_MIR_war_demob_tanks_action: "Panel de construcción urbana" #NT!
- MIR_war_demob_tanks_setting_name: "Tanques desmovilizados: advertencia de guerra" #NT!
- alert_MIR_peace_mob_tanks_name: "En paz con la producción extensiva de tanques" #NT!
- alert_MIR_peace_mob_tanks_hint: "Estáis en paz y vuestras industrias automovilísticas están produciendo muchos tanques." #NT!
- alert_MIR_peace_mob_tanks_action: "Panel de construcción urbana" #NT!
- MIR_peace_mob_tanks_setting_name: "Tanques movilizados: alerta de paz" #NT!
+ alert_MIR_war_demob_tanks_name: "En guerra con una producción limitada de tanques"
+ alert_MIR_war_demob_tanks_hint: "Estás en guerra y tus industrias automovilísticas no producen muchos tanques."
+ alert_MIR_war_demob_tanks_action: "Panel de construcción urbana"
+ MIR_war_demob_tanks_setting_name: "Tanques desmovilizados: advertencia de guerra"
+ alert_MIR_peace_mob_tanks_name: "En paz con la producción extensiva de tanques"
+ alert_MIR_peace_mob_tanks_hint: "Estáis en paz y vuestras industrias automovilísticas están produciendo muchos tanques."
+ alert_MIR_peace_mob_tanks_action: "Panel de construcción urbana"
+ MIR_peace_mob_tanks_setting_name: "Tanques movilizados: alerta de paz"

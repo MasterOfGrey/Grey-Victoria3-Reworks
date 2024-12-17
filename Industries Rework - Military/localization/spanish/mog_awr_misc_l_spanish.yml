@@ -1,0 +1,30 @@
+﻿l_spanish:
+ # Production methods 
+ pmg_base_building_automotive_industry: "Automóviles"
+ pmg_automotive_shiftwork: "Trabajo por turnos" #NT!
+ pmg_automotive_aeroplanes: "Aviones"
+ pmg_automotive_tanks: "Tanques"
+  
+ pm_gear_transmissions: "Transmisiones de engranajes tempranas" #NT!
+ pm_automobiles: "Automóviles"
+ pm_pneumatic_tyres: "Neumáticos" #NT!
+  
+ pm_single_shift_days: "Turnos individuales" #NT!
+ pm_automotive_double_shifts: "Turnos dobles" #NT!
+ pm_automotive_double_shifts_pneumatic: "Turnos dobles" #NT!
+ pm_automotive_triple_shifts: "Turnos triples" #NT!
+ pm_automotive_triple_shifts_pneumatic: "Turnos triples" #NT!
+  
+ pm_no_aeroplanes: "Sin producción de aviones"
+ pm_limited_aeroplanes: "Producción Limitada de Aviones"
+ pm_extensive_aeroplanes: "Producción Extensiva de Aviones"
+ pm_overtime_aeroplanes: "Producción de aviones en horas extras" #NT!
+  
+ pm_no_tanks: "Sin producción de tanques"
+ pm_limited_tanks: "Producción limitada de tanques"
+ pm_extensive_tanks: "Producción Extensiva de tanques"
+ pm_overtime_tanks: "Producción de aviones en horas extras" #NT!
+  
+ # Technology 
+ pneumatic_tyres: "Neumáticos" #NT!
+ pneumatic_tyres_desc: "Las aplicaciones del caucho vulcanizado en combinación con el motor de combustión tienen el potencial de ser revolucionarias." #NT!

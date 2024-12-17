@@ -5,7 +5,10 @@
  pmg_arti_tools_demob: "Production d'outils démobilisés"
  pmg_munitions_explosives_demob: "Production d'explosifs démobilisés"
   
- # Production methods 
+ pmg_automation_building_explosives_factory: "Automation" #NT!
+ pmg_mil_shipyards_shiftwork: "Travail posté" #NT!
+  
+  # Production methods 
  pm_extensive_tools_a_i: "Extensif"
  pm_moderate_tools_a_i: "Modéré"
  pm_limited_tools_a_i: "Limité"
@@ -49,6 +52,26 @@
  pm_ui_safety_a: "(Ignorer ceci)"
  pm_ui_safety_b: "(Ignorer ceci)"
   
+ pm_rotary_valve_engine_building_arti_foundry: "Moteur à soupape rotative" #NT!
+ pm_assembly_lines_building_arti_foundry: "Lignes d'assemblage" #NT!
+  
+ pm_mechanical_mixers_building_explosives_factory: "Mélangeurs mécaniques" #NT!
+ pm_rotary_valve_engine_building_explosives_factory: "Moteur à soupape rotative" #NT!
+ pm_assembly_lines_building_explosives_factory: "Lignes d'assemblage" #NT!
+ pm_full_process_automation_building_explosives_factory: "Emballage automatisé" #NT!
+  
+ pm_mil_shipyards_double_shifts: "Doubles quarts de travail" #NT!
+ pm_mil_shipyards_double_shifts_arc_weld: "Doubles quarts de travail" #NT!
+ pm_mil_shipyards_triple_shifts: "Triples quarts de travail" #NT!
+ pm_mil_shipyards_triple_shifts_arc_weld: "Triples quarts de travail" #NT!
+ pm_mil_shipyards_double_shifts_tts: "Doubles quarts de travail" #NT!
+ pm_mil_shipyards_double_shifts_tts_steel: "Doubles quarts de travail" #NT!
+ pm_mil_shipyards_double_shifts_tts_turbine: "Doubles quarts de travail" #NT!
+ pm_mil_shipyards_double_shifts_tts_arc_welding: "Doubles quarts de travail" #NT!
+ pm_mil_shipyards_triple_shifts_tts: "Triples quarts de travail" #NT!
+ pm_mil_shipyards_triple_shifts_tts_turbine: "Triples quarts de travail" #NT!
+ pm_mil_shipyards_triple_shifts_tts_arc_welding: "Triples quarts de travail" #NT!
+  
  # Alerts 
  alert_MIR_war_demob_arms_name: "En guerre contre les industries d'armement démobilisées"
  alert_MIR_war_demob_arms_hint: "Vous êtes en guerre et vos industries d’armement produisent une grande quantité d’outils au lieu d’armes légères."
@@ -77,20 +100,20 @@
  alert_MIR_peace_mob_ammo_action: "Panneau de construction urbaine"
  MIR_peace_mob_ammo_setting_name: "Avertissement sur les munitions mobilisées – Paix"
   
- alert_MIR_war_demob_planes_name: "En guerre contre la production limitée d'avions" #NT!
- alert_MIR_war_demob_planes_hint: "Vous êtes en guerre et vos industries automobiles ne produisent pas beaucoup d’avions." #NT!
- alert_MIR_war_demob_planes_action: "Panneau de construction urbaine" #NT!
- MIR_war_demob_planes_setting_name: "Avertissement concernant les avions démobilisés - Guerre" #NT!
- alert_MIR_peace_mob_planes_name: "En paix avec la production massive d'avions" #NT!
- alert_MIR_peace_mob_planes_hint: "Vous êtes en paix et vos industries automobiles produisent de nombreux avions." #NT!
- alert_MIR_peace_mob_planes_action: "Panneau de construction urbaine" #NT!
- MIR_peace_mob_planes_setting_name: "Avertissement d'avion mobilisé - Paix" #NT!
+ alert_MIR_war_demob_planes_name: "En guerre contre la production limitée d'avions"
+ alert_MIR_war_demob_planes_hint: "Vous êtes en guerre et vos industries automobiles ne produisent pas beaucoup d’avions."
+ alert_MIR_war_demob_planes_action: "Panneau de construction urbaine"
+ MIR_war_demob_planes_setting_name: "Avertissement concernant les avions démobilisés - Guerre"
+ alert_MIR_peace_mob_planes_name: "En paix avec la production massive d'avions"
+ alert_MIR_peace_mob_planes_hint: "Vous êtes en paix et vos industries automobiles produisent de nombreux avions."
+ alert_MIR_peace_mob_planes_action: "Panneau de construction urbaine"
+ MIR_peace_mob_planes_setting_name: "Avertissement d'avion mobilisé - Paix"
   
- alert_MIR_war_demob_tanks_name: "En guerre contre une production limitée de chars" #NT!
- alert_MIR_war_demob_tanks_hint: "Vous êtes en guerre et vos industries automobiles ne produisent pas beaucoup de chars." #NT!
- alert_MIR_war_demob_tanks_action: "Panneau de construction urbaine" #NT!
- MIR_war_demob_tanks_setting_name: "Avertissement sur les chars démobilisés – Guerre" #NT!
- alert_MIR_peace_mob_tanks_name: "En paix avec la production massive de chars" #NT!
- alert_MIR_peace_mob_tanks_hint: "Vous êtes en paix et vos industries automobiles produisent de nombreux chars." #NT!
- alert_MIR_peace_mob_tanks_action: "Panneau de construction urbaine" #NT!
- MIR_peace_mob_tanks_setting_name: "Avertissement de chars mobilisés - Paix" #NT!
+ alert_MIR_war_demob_tanks_name: "En guerre contre une production limitée de chars"
+ alert_MIR_war_demob_tanks_hint: "Vous êtes en guerre et vos industries automobiles ne produisent pas beaucoup de chars."
+ alert_MIR_war_demob_tanks_action: "Panneau de construction urbaine"
+ MIR_war_demob_tanks_setting_name: "Avertissement sur les chars démobilisés – Guerre"
+ alert_MIR_peace_mob_tanks_name: "En paix avec la production massive de chars"
+ alert_MIR_peace_mob_tanks_hint: "Vous êtes en paix et vos industries automobiles produisent de nombreux chars."
+ alert_MIR_peace_mob_tanks_action: "Panneau de construction urbaine"
+ MIR_peace_mob_tanks_setting_name: "Avertissement de chars mobilisés - Paix"

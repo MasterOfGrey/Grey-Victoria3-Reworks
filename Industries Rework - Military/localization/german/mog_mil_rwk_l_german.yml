@@ -5,7 +5,10 @@
  pmg_arti_tools_demob: "Demobilisierte Werkzeugproduktion"
  pmg_munitions_explosives_demob: "Produktion demobilisierter Sprengstoffe"
   
- # Production methods 
+ pmg_automation_building_explosives_factory: "Automatisierung" #NT!
+ pmg_mil_shipyards_shiftwork: "Schichtarbeit" #NT!
+  
+  # Production methods 
  pm_extensive_tools_a_i: "Umfangreich"
  pm_moderate_tools_a_i: "Mäßig"
  pm_limited_tools_a_i: "Beschränkt"
@@ -49,6 +52,26 @@
  pm_ui_safety_a: "(Ignorieren Sie dies)"
  pm_ui_safety_b: "(Ignorieren Sie dies)"
   
+ pm_rotary_valve_engine_building_arti_foundry: "Drehschiebermotor" #NT!
+ pm_assembly_lines_building_arti_foundry: "Fließbänder" #NT!
+  
+ pm_mechanical_mixers_building_explosives_factory: "Mechanische Mischer" #NT!
+ pm_rotary_valve_engine_building_explosives_factory: "Drehschiebermotor" #NT!
+ pm_assembly_lines_building_explosives_factory: "Fließbänder" #NT!
+ pm_full_process_automation_building_explosives_factory: "Automatisiertes Verpacken" #NT!
+  
+ pm_mil_shipyards_double_shifts: "Doppelschichten" #NT!
+ pm_mil_shipyards_double_shifts_arc_weld: "Doppelschichten" #NT!
+ pm_mil_shipyards_triple_shifts: "Dreifache Schichten" #NT!
+ pm_mil_shipyards_triple_shifts_arc_weld: "Dreifache Schichten" #NT!
+ pm_mil_shipyards_double_shifts_tts: "Doppelschichten" #NT!
+ pm_mil_shipyards_double_shifts_tts_steel: "Doppelschichten" #NT!
+ pm_mil_shipyards_double_shifts_tts_turbine: "Doppelschichten" #NT!
+ pm_mil_shipyards_double_shifts_tts_arc_welding: "Doppelschichten" #NT!
+ pm_mil_shipyards_triple_shifts_tts: "Dreifache Schichten" #NT!
+ pm_mil_shipyards_triple_shifts_tts_turbine: "Dreifache Schichten" #NT!
+ pm_mil_shipyards_triple_shifts_tts_arc_welding: "Dreifache Schichten" #NT!
+  
  # Alerts 
  alert_MIR_war_demob_arms_name: "Im Krieg mit demobilisierten Waffenindustrien"
  alert_MIR_war_demob_arms_hint: "Sie befinden sich im Krieg und Ihre Rüstungsindustrie produziert in großem Umfang Werkzeuge statt Kleinwaffen."
@@ -77,20 +100,20 @@
  alert_MIR_peace_mob_ammo_action: "Städtebau-Panel"
  MIR_peace_mob_ammo_setting_name: "Warnung vor mobilisierter Munition - Frieden"
   
- alert_MIR_war_demob_planes_name: "Im Krieg mit der eingeschränkten Flugzeugproduktion" #NT!
- alert_MIR_war_demob_planes_hint: "Sie befinden sich im Krieg und Ihre Automobilindustrie produziert nicht viele Flugzeuge." #NT!
- alert_MIR_war_demob_planes_action: "Städtebau-Panel" #NT!
- MIR_war_demob_planes_setting_name: "Warnung vor demobilisierten Flugzeugen - Krieg" #NT!
- alert_MIR_peace_mob_planes_name: "Im Reinen mit der umfangreichen Flugzeugproduktion" #NT!
- alert_MIR_peace_mob_planes_hint: "Es herrscht Frieden und Ihre Automobilindustrie produziert viele Flugzeuge." #NT!
- alert_MIR_peace_mob_planes_action: "Städtebau-Panel" #NT!
- MIR_peace_mob_planes_setting_name: "Mobilisierte Flugzeugwarnung - Frieden" #NT!
+ alert_MIR_war_demob_planes_name: "Im Krieg mit der eingeschränkten Flugzeugproduktion"
+ alert_MIR_war_demob_planes_hint: "Sie befinden sich im Krieg und Ihre Automobilindustrie produziert nicht viele Flugzeuge."
+ alert_MIR_war_demob_planes_action: "Städtebau-Panel"
+ MIR_war_demob_planes_setting_name: "Warnung vor demobilisierten Flugzeugen - Krieg"
+ alert_MIR_peace_mob_planes_name: "Im Reinen mit der umfangreichen Flugzeugproduktion"
+ alert_MIR_peace_mob_planes_hint: "Es herrscht Frieden und Ihre Automobilindustrie produziert viele Flugzeuge."
+ alert_MIR_peace_mob_planes_action: "Städtebau-Panel"
+ MIR_peace_mob_planes_setting_name: "Mobilisierte Flugzeugwarnung - Frieden"
   
- alert_MIR_war_demob_tanks_name: "Im Krieg mit begrenzter Panzerproduktion" #NT!
- alert_MIR_war_demob_tanks_hint: "Sie befinden sich im Krieg und Ihre Automobilindustrie produziert nicht viele Panzer." #NT!
- alert_MIR_war_demob_tanks_action: "Städtebau-Panel" #NT!
- MIR_war_demob_tanks_setting_name: "Warnung vor demobilisierten Panzern - Krieg" #NT!
- alert_MIR_peace_mob_tanks_name: "Im Frieden mit der umfangreichen Panzerproduktion" #NT!
- alert_MIR_peace_mob_tanks_hint: "Sie haben Frieden und Ihre Automobilindustrie produziert viele Panzer." #NT!
- alert_MIR_peace_mob_tanks_action: "Städtebau-Panel" #NT!
- MIR_peace_mob_tanks_setting_name: "Warnung vor mobilisierten Panzern - Frieden" #NT!
+ alert_MIR_war_demob_tanks_name: "Im Krieg mit begrenzter Panzerproduktion"
+ alert_MIR_war_demob_tanks_hint: "Sie befinden sich im Krieg und Ihre Automobilindustrie produziert nicht viele Panzer."
+ alert_MIR_war_demob_tanks_action: "Städtebau-Panel"
+ MIR_war_demob_tanks_setting_name: "Warnung vor demobilisierten Panzern - Krieg"
+ alert_MIR_peace_mob_tanks_name: "Im Frieden mit der umfangreichen Panzerproduktion"
+ alert_MIR_peace_mob_tanks_hint: "Sie haben Frieden und Ihre Automobilindustrie produziert viele Panzer."
+ alert_MIR_peace_mob_tanks_action: "Städtebau-Panel"
+ MIR_peace_mob_tanks_setting_name: "Warnung vor mobilisierten Panzern - Frieden"

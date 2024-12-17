@@ -1,0 +1,122 @@
+﻿## Vanilla PM's
+
+pm_tractors = {
+	texture = "gfx/interface/icons/production_method_icons/tractors.dds"
+	
+	state_modifiers = {
+		workforce_scaled = {
+			state_pollution_generation_add = 15
+		}
+	}
+	
+	unlocking_technologies = {
+		mechanized_farming
+	}
+	building_modifiers = {
+		workforce_scaled = {
+			# input goods
+			goods_input_coal_add = 2 
+			goods_input_automobiles_add = 0.5
+		}
+		
+		level_scaled = {
+			building_employment_laborers_add = -2000
+		}
+	}
+}
+
+pm_compression_ignition_tractors = {
+	texture = "gfx/interface/icons/production_method_icons/compression_ignition_tractors.dds"
+	
+	state_modifiers = {
+		workforce_scaled = {
+			state_pollution_generation_add = 20
+		}
+	}
+	
+	unlocking_technologies = {
+		compression_ignition
+	}
+	building_modifiers = {
+		workforce_scaled = {
+			# input goods
+			goods_input_oil_add = 1
+			goods_input_automobiles_add = 1
+		}
+		
+		level_scaled = {
+			building_employment_laborers_add = -2500
+		}
+	}
+}
+
+pm_cropdusting = {
+	texture = "gfx/interface/icons/production_method_icons/cropdusting.dds"
+	
+	state_modifiers = {
+		workforce_scaled = {
+			state_pollution_generation_add = 20
+		}
+	}
+	
+	unlocking_technologies = {
+		military_aviation
+	}
+	
+	unlocking_production_methods = {
+		pm_chemical_fertilizer
+	}
+	
+	building_modifiers = {
+		workforce_scaled = {
+			# input goods
+			goods_input_sulfur_add = 1
+			goods_input_lead_add = 1
+			goods_input_oil_add = 2
+			goods_input_automobiles_add = 1
+			goods_input_aeroplanes_add = 1
+			# output goods
+			goods_output_grain_add = 30
+		}
+		
+		level_scaled = {
+			building_employment_laborers_add = -2500
+			building_employment_farmers_add = -1500
+		}
+	}
+}
+
+pm_cropdusting_rice = {
+	texture = "gfx/interface/icons/production_method_icons/cropdusting.dds"
+	
+	state_modifiers = {
+		workforce_scaled = {
+			state_pollution_generation_add = 20
+		}
+	}
+	
+	unlocking_technologies = {
+		military_aviation
+	}
+	
+	unlocking_production_methods = {
+		pm_chemical_fertilizer_building_rice_farm
+	}
+	
+	building_modifiers = {
+		workforce_scaled = {
+			# input goods
+			goods_input_sulfur_add = 2
+			goods_input_lead_add = 2
+			goods_input_oil_add = 6
+			goods_input_aeroplanes_add = 3
+			# output goods
+			goods_output_grain_add = 60
+		}
+		
+		level_scaled = {
+			building_employment_laborers_add = -3000
+			building_employment_farmers_add = -4000
+		}
+	}
+}

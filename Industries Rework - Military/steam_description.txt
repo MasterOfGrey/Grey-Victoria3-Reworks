@@ -1,8 +1,8 @@
 [img]https://i.imgur.com/7xuCZqW.png[/img]
-Designed for Victoria 3: Version 1.7 (and onwards)
-Mod Version V1.0
+Supports Victoria 3: V1.8.6  (and onwards)
+Mod Version: V1.4
 Please consider rating this if you like it! It really helps out. [img]https://i.imgur.com/tE28cZ7.gif[/img]
-
+[spoiler]Originally made for: Version 1.7.6[/spoiler]
 [table]
     [tr]
         [td][img]https://i.imgur.com/WjDSfUn.png[/img][/td]
@@ -11,39 +11,85 @@ Please consider rating this if you like it! It really helps out. [img]https://i.
 [/table]
 *Your economy may have a very bad day if you remove this.
 [img]https://i.imgur.com/6o9HyTD.png[/img]
-This mod attempts to improve the military industries situation by reworking or adding production methods to represent the mobilisation and demobilisation of industries during war time.
-It contains the [i]excellent[/i] [b][url=https://steamcommunity.com/sharedfiles/filedetails/?id=2990348796]Automotive Industry Rework[/url][/b] by indexo4, included with permission.
+This mod attempts to improve the military industries situation by reworking or adding production methods to represent the mobilisation and demobilisation of industries during war time, and related industrial developments.
+It contains (and builds upon) the [i]excellent[/i] [b][url=https://steamcommunity.com/sharedfiles/filedetails/?id=2990348796]Automotive Industry Rework[/url][/b] by indexo4, included with permission.
+
+It generally results in military industries being more stable in between wars - resulting in less AI money spent on subsidies, and less dramatic swings when war is declared as the industries can simply switch PM's to military goods when they're profitable during war.
+
+To maintain balance; If you don't demobilise them then the arms, artillery, and munitions industries are still [i]identical[/i] to vanilla, so you can choose whether or not you use the features or play the same way - but the AI does much better with the option to demobilise.
 
 [img]https://i.imgur.com/Wh5EspM.png[/img]
 [h1]Features:[/h1]
+The elements of this mod can be broadly grouped into 3 categories:
+[list][*]Core Changes - The mechanical reworks that are the raison d’être for this mod, the reason that it exists. (These [u][i]really[/i] help the ai![/u])
+[*]Secondary Changes - Those changes which are important, as a consequence of the core changes, to maintain balance and consistency in gameplay - not a big deal if overwritten by other mods.
+[*]Peripheral Bonuses - Minor changes that help round things out, but which are set up to be easily overwritten by other mods to prevent clashes.
+[/list]
+
+[h1]Core Changes:[/h1]
+[h2]Mobilisation/Demobilisation:[/h2]
 To better represent the ability of a country with large civilian industry to "mobilize" its factories to a wartime economy:
-[h2]Automotive Industry Rework:[/h2]
-[list]
-[*]The "Motor Industries" building from vanilla only produces engines now, and has been renamed to "Steam Engine Industries"
-[*]The "War Machine Industries" have been replaced with "Automotive Industries", which produces Automobiles and has secondary PM's for Tanks and Aeroplanes.
-[*]Besides those changes, the costs involved with making automobiles have been rebalanced, to bring them more in line with other heavy industries.
+[h3]Automotive Industry Rework:[/h3]
+[list][*]The "War Machine Industries" have been replaced with "Automotive Industries", which produces Automobiles and has secondary PM's to [u]mobilise[/u] for Tanks and Aeroplanes.
+[*]Besides those changes, the costs involved with making automobiles have been rebalanced (they require engines), to bring them more in line with other heavy industries.
 [/list]
-
-[h2]Tooling from Small Arms and Artillery:[/h2]
-[list]
-[*]New PM line allowing you to convert 50%, 30%, 10%, or 0% of your military goods production into tools. - Default is 50% tool production.
+[h3]Tooling from Small Arms and Artillery:[/h3]
+[list][*]New PM line allowing you to [u][b]de[/b]mobilise[/u] your military goods production and convert 50%, 30%, 10%, or 0% into tools. - Default is 50% tool production.
 [*]Different levels are available depending on the Base PM in use - which means there are [i]many[/i] options; as such options that you cannot use are hidden. When changing the Base PM, be aware you'll need to update the Demobilisation PM as well.
-[*]- It was more efficient to use the existing military industries and represent them as less-specialised industries capable of mobilisation, rather than put mobilisation PM's onto the tool industry which would cause dramatic swings in economy whenever the PM was changed.
 [/list]
-
-[h2]Explosives from Munitions:[/h2]
-[list]
-[*]As above: New PM line allowing you to convert 50%, 30%, 10%, or 0% of your military goods production into explosives. - Default is 50% tool production.
+[h3]Explosives from Munitions:[/h3]
+[list][*]As above: New PM line allowing you to convert 50%, 30%, 10%, or 0% of your military goods production into explosives. - Default is 50% explosives production.
 [*]Often you won't actually get explosives out of these, they'll just subsidise their consumption of explosives with some level of self-sufficiency.
 [/list]
 
-[h2]More Radio PM's:[/h2]
-Radio production now has 3 levels along a similar concept to the others.
+[h2]Shiftwork:[/h2]
+New PM line on Automotive Industries (and military shipyards) allows you to expand the throughput of a factory by running extra shifts:
+[h3]Automotive Industry:[/h3]
+[list][*]Now starts off much smaller in terms of employment - with double and triple shifts producing (almost) double and triple as much for the same building level!
+[*]It also now unlocks with Ironclads tech. While the motor industry produces [i]engines[/i] the automotive industry now broadly represents the manufacturer of variable speed gear transmissions, first used in warships, bicycles, and even some horsedrawn vehicles.
+[*]-> As a result, Automobile production now has 3 production methods. An early inefficient one which represents these applications, one for vehicles without pneumatic tyres, and then the usual one.
+[*]-> The productivity and number of extra shifts you can run is gated by both tech and base production PM.
+[*]Tanks and Planes have an Overtime production level for maximum war machine output - but this requires being on Triple Shifts.
+[/list]
+[h3]Military Shipyard:[/h3]
+[list][*]To minimise compatibility concerns, this is the same size, but still with double and triple shifts producing (almost) double and triple as much for the same building level!
+[*]This means that a single level of Military Shipyard can be *huge*. Make sure you build it somewhere with plenty of workforce!
+[*]Drawing on the above note from the automotive industry changes; producing steam warships now consumes some "automobiles" in place of a few engines.
+[*]-> This is all specially designed to be [u]compatible with Timber to Steel![/u]
+[/list]
+
+[h1]Secondary Changes:[/h1]
+[h3]Electronics Industry[/h3]
+[list][*]More Radio PM's: Radio production now has 3 levels along a similar concept to the others.
+[*]Automation PM's: This industry is a notoriously labour-intensive building with no automation whatsoever. This can be a huge problem late-game.
+[/list]
+[h3]Motor Industries:[/h3]
+[list][*]The "Motor Industries" building from vanilla only produces engines now, and has been renamed to "Steam Engine Industries".
+[*]Production methods have been buffed so that it's possible for these to stay profitable without motors always staying expensive.
+[/list]
+[h3]Explosives Factory[/h3]
+[list][*]Automation PM's: This industry had no automation whatsoever, automation was needed to balance against ammunition demobilisation PM's.
+[/list]
+
+[h1]Peripheral Bonuses:[/h1]
+[h3]Farm Automation[/h3]
+[list][*]Tractor PM's now consume automobiles instead of engines.
+[*]End-tier automation PM is now available with the highest level of fertilisers: Cropdusting uses planes and allows a significant reduction in workforce needs and a moderate output boost.
+[/list]
 
 [img]https://i.imgur.com/Qp8JBtZ.png[/img]
 This and the original Automotive Rework mod will be managed by load order - in case their content ever diverges.
 
 Otherwise this only touches motor, electrics, and military industries. It should otherwise not bother anything else.
+
+COMPATIBLE WITH VTM!
+
+Incompatible with: 
+[list]
+[*]"More Technological Variety"
+[*]"Industry Expanded"
+[*]"Industry Realism"
+[/list]
 
 [img]https://i.imgur.com/lQRf9dG.png[/img]
 [b]Can you add <insert language> localisation?[/b]
@@ -54,7 +100,8 @@ Builds on the Automotive Industry Rework by indexo4
 Content from the Automotive Industry Rework is available in English, Brazilian Portuguese, German (by CertainDeath), French (by Choupy) and Spanish (by ByKalitos ESP).
 
 [h2]Language Support:[/h2]
-[b]Localizations are welcome from anyone. - Existing localizations are not necessarily complete.[/b]
+[b]Most Localizations are done by Machine Translation!
+ -> Replacements are welcome from anyone![/b]
 Credit to providers of localisation content:
 [list]
 [*]Brazilian: indexo4
@@ -63,5 +110,6 @@ Credit to providers of localisation content:
 [/list]
 
 #Production Methods #Rework
-#Radio #Sensible Guns
-#Firearm & Munitions Economy
+#Radio #Firearm & Munitions Economy
+#Mobilize #Demobilize #Airplane
+#Sensible Guns #MIR #GMIR

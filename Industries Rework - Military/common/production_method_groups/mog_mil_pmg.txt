@@ -1,4 +1,9 @@
-﻿pmg_arms_tools_demob = {
+﻿# This file is primary military industries with demobilisation PM's
+
+# pmg_firearms_manufacturing = {														# Vanilla PMG untouched
+# Ref production_methods = { pm_muskets pm_rifles pm_repeaters pm_bolt_action_rifles }
+
+pmg_arms_tools_demob = {																# Modded PMG
 	texture = "gfx/interface/icons/generic_icons/mixed_icon_refining.dds"
 	production_methods = {
 		pm_extensive_tools_a_i
@@ -15,7 +20,10 @@
 	}
 }
 
-pmg_arti_tools_demob = {
+# pmg_foundries = {																		# Vanilla PMG untouched
+# Ref production_methods = { pm_cannons pm_smoothbores pm_breech_loaders pm_recoiled_barrels }
+
+pmg_arti_tools_demob = {																# Modded PMG
 	texture = "gfx/interface/icons/generic_icons/mixed_icon_refining.dds"
 	production_methods = {
 		pm_extensive_tools_t_i
@@ -32,7 +40,23 @@ pmg_arti_tools_demob = {
 	}
 }
 
-pmg_munitions_explosives_demob = {
+# pmg_automation_building_arms_industry = {												# Vanilla PMG modded - shared with artillery foundry
+pmg_automation_building_arms_industry = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_automation.dds"
+	production_methods = {
+		pm_automation_disabled
+		pm_rotary_valve_engine_building_arms_industry
+		pm_rotary_valve_engine_building_arti_foundry
+		pm_assembly_lines_building_arms_industry
+		pm_assembly_lines_building_arti_foundry
+	}
+}
+# Ref production_methods = { pm_automation_disabled pm_rotary_valve_engine_building_arms_industry pm_assembly_lines_building_arms_industry }
+
+# pmg_base_building_munition_plants = {													# Vanilla PMG untouched
+# Ref production_methods = { pm_percussion_caps pm_explosive_shells }
+
+pmg_munitions_explosives_demob = {														# Modded PMG
 	texture = "gfx/interface/icons/generic_icons/mixed_icon_refining.dds"
 	production_methods = {
 		pm_extensive_ammo_le
@@ -55,12 +79,5 @@ pmg_munitions_explosives_demob = {
 	}
 }
 
-pmg_radios_category = {
-	texture = "gfx/interface/icons/generic_icons/mixed_icon_refining.dds"
-	production_methods = {
-		pm_no_radios
-		pm_limited_radios
-		pm_moderate_radios
-		pm_extensive_radios
-	}
-}
+# pmg_automation_building_munition_plants = {											# Vanilla PMG untouched
+# Ref production_methods = { pm_automation_disabled pm_rotary_valve_engine_building_munition_plants pm_assembly_lines_building_munition_plants }

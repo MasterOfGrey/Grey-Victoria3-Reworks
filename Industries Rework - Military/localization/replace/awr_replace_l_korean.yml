@@ -1,3 +1,11 @@
 ﻿l_korean:
  building_motor_industry: "기관차 공장" #NT!
  building_war_machine_industry: "자동차 산업" #NT!
+  
+ dough_rollers: "전체 프로세스 자동화" #NT!
+ dough_rollers_desc: "반복적인 작업을 완전 자동화하기 위해 기계를 통합함으로써 산업에서는 생산에 있어서 전례 없는 효율성, 일관성 및 규모를 달성할 수 있습니다." #NT!
+  
+ pm_single_shift_days: "단일 교대" #NT!
+  
+ pm_cropdusting: "작물 살포" #NT!
+ pm_cropdusting_rice: "작물 살포" #NT!

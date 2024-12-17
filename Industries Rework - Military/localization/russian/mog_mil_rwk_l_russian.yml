@@ -5,7 +5,10 @@
  pmg_arti_tools_demob: "Демобилизованное инструментальное производство"
  pmg_munitions_explosives_demob: "Демобилизованное производство взрывчатых веществ"
   
- # Production methods 
+ pmg_automation_building_explosives_factory: "Автоматизация" #NT!
+ pmg_mil_shipyards_shiftwork: "Сменная работа" #NT!
+  
+  # Production methods 
  pm_extensive_tools_a_i: "Обширный"
  pm_moderate_tools_a_i: "Умеренный"
  pm_limited_tools_a_i: "Ограниченный"
@@ -49,6 +52,26 @@
  pm_ui_safety_a: "(Игнорировать это)"
  pm_ui_safety_b: "(Игнорировать это)"
   
+ pm_rotary_valve_engine_building_arti_foundry: "Двигатель с роторным клапаном" #NT!
+ pm_assembly_lines_building_arti_foundry: "Линии сборки" #NT!
+  
+ pm_mechanical_mixers_building_explosives_factory: "Механические миксеры" #NT!
+ pm_rotary_valve_engine_building_explosives_factory: "Двигатель с роторным клапаном" #NT!
+ pm_assembly_lines_building_explosives_factory: "Линии сборки" #NT!
+ pm_full_process_automation_building_explosives_factory: "Автоматизированная упаковка" #NT!
+  
+ pm_mil_shipyards_double_shifts: "Двойные смены" #NT!
+ pm_mil_shipyards_double_shifts_arc_weld: "Двойные смены" #NT!
+ pm_mil_shipyards_triple_shifts: "Тройные смены" #NT!
+ pm_mil_shipyards_triple_shifts_arc_weld: "Тройные смены" #NT!
+ pm_mil_shipyards_double_shifts_tts: "Двойные смены" #NT!
+ pm_mil_shipyards_double_shifts_tts_steel: "Двойные смены" #NT!
+ pm_mil_shipyards_double_shifts_tts_turbine: "Двойные смены" #NT!
+ pm_mil_shipyards_double_shifts_tts_arc_welding: "Двойные смены" #NT!
+ pm_mil_shipyards_triple_shifts_tts: "Тройные смены" #NT!
+ pm_mil_shipyards_triple_shifts_tts_turbine: "Тройные смены" #NT!
+ pm_mil_shipyards_triple_shifts_tts_arc_welding: "Тройные смены" #NT!
+  
  # Alerts 
  alert_MIR_war_demob_arms_name: "Война с демобилизованными военными предприятиями"
  alert_MIR_war_demob_arms_hint: "Вы находитесь в состоянии войны, и ваши оружейные предприятия производят большое количество инструментов вместо стрелкового оружия."
@@ -77,20 +100,20 @@
  alert_MIR_peace_mob_ammo_action: "Панель городского строительства"
  MIR_peace_mob_ammo_setting_name: "Предупреждение о мобилизованных боеприпасах - Мир"
   
- alert_MIR_war_demob_planes_name: "Война с ограниченным производством самолетов" #NT!
- alert_MIR_war_demob_planes_hint: "Вы находитесь в состоянии войны, и ваша автомобильная промышленность не производит много самолетов." #NT!
- alert_MIR_war_demob_planes_action: "Панель городского строительства" #NT!
- MIR_war_demob_planes_setting_name: "Предупреждение о демобилизованных самолетах - война" #NT!
- alert_MIR_peace_mob_planes_name: "В мире с обширным производством самолетов" #NT!
- alert_MIR_peace_mob_planes_hint: "Вы живете в мире, и ваша автомобильная промышленность производит много самолетов." #NT!
- alert_MIR_peace_mob_planes_action: "Панель городского строительства" #NT!
- MIR_peace_mob_planes_setting_name: "Предупреждение о мобилизованных самолетах - Мир" #NT!
+ alert_MIR_war_demob_planes_name: "Война с ограниченным производством самолетов"
+ alert_MIR_war_demob_planes_hint: "Вы находитесь в состоянии войны, и ваша автомобильная промышленность не производит много самолетов."
+ alert_MIR_war_demob_planes_action: "Панель городского строительства"
+ MIR_war_demob_planes_setting_name: "Предупреждение о демобилизованных самолетах - война"
+ alert_MIR_peace_mob_planes_name: "В мире с обширным производством самолетов"
+ alert_MIR_peace_mob_planes_hint: "Вы живете в мире, и ваша автомобильная промышленность производит много самолетов."
+ alert_MIR_peace_mob_planes_action: "Панель городского строительства"
+ MIR_peace_mob_planes_setting_name: "Предупреждение о мобилизованных самолетах - Мир"
   
- alert_MIR_war_demob_tanks_name: "Война с ограниченным производством танков" #NT!
- alert_MIR_war_demob_tanks_hint: "Вы находитесь в состоянии войны, а ваша автомобильная промышленность не производит много танков." #NT!
- alert_MIR_war_demob_tanks_action: "Панель городского строительства" #NT!
- MIR_war_demob_tanks_setting_name: "Предупреждение о демобилизованных танках - Война" #NT!
- alert_MIR_peace_mob_tanks_name: "В мире с обширным производством танков" #NT!
- alert_MIR_peace_mob_tanks_hint: "Вы живете в мире, и ваша автомобильная промышленность производит много танков." #NT!
- alert_MIR_peace_mob_tanks_action: "Панель городского строительства" #NT!
- MIR_peace_mob_tanks_setting_name: "Предупреждение о мобилизованных танках - Мир" #NT!
+ alert_MIR_war_demob_tanks_name: "Война с ограниченным производством танков"
+ alert_MIR_war_demob_tanks_hint: "Вы находитесь в состоянии войны, а ваша автомобильная промышленность не производит много танков."
+ alert_MIR_war_demob_tanks_action: "Панель городского строительства"
+ MIR_war_demob_tanks_setting_name: "Предупреждение о демобилизованных танках - Война"
+ alert_MIR_peace_mob_tanks_name: "В мире с обширным производством танков"
+ alert_MIR_peace_mob_tanks_hint: "Вы живете в мире, и ваша автомобильная промышленность производит много танков."
+ alert_MIR_peace_mob_tanks_action: "Панель городского строительства"
+ MIR_peace_mob_tanks_setting_name: "Предупреждение о мобилизованных танках - Мир"

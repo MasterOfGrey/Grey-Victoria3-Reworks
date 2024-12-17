@@ -1,3 +1,11 @@
 ﻿l_spanish:
  building_motor_industry: "Fábricas de locomotoras" #NT!
  building_war_machine_industry: "Industrias automotrices" #NT!
+  
+ dough_rollers: "Automatización completa de procesos" #NT!
+ dough_rollers_desc: "Al integrar máquinas para automatizar completamente tareas repetitivas, las industrias pueden lograr una eficiencia, consistencia y escala en la producción sin precedentes." #NT!
+  
+ pm_single_shift_days: "Turnos individuales" #NT!
+  
+ pm_cropdusting: "Fumigación de cultivos" #NT!
+ pm_cropdusting_rice: "Fumigación de cultivos" #NT!

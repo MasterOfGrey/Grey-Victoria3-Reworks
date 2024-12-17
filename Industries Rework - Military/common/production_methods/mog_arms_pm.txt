@@ -4,8 +4,34 @@
 # Rifles and up are steel: pm_rifles pm_repeaters pm_bolt_action_rifles
 # texture = "gfx/interface/icons/production_method_icons/steel_tools.dds"
 
+## For long-term balancing against Tooling factories it is necessary to ensure the base PM's are very similar profitability.
+## And importantly - that Mod & Ext tooling result in a *lower* overall profitability than tooling factories at the corresponding production method.
+
+## Muskets (Iron)
+pm_muskets = {
+	texture = "gfx/interface/icons/production_method_icons/muskets.dds"
+	
+	building_modifiers = {
+		workforce_scaled = {
+			# input goods
+			goods_input_iron_add = 10
+			goods_input_hardwood_add = 10
+			
+			# output goods
+			goods_output_small_arms_add = 30				# No changes needed, this one is perfect.
+		}
+		
+		level_scaled = {
+			# employment
+			building_employment_shopkeepers_add = 500
+			building_employment_laborers_add = 4000
+			building_employment_machinists_add = 500
+		}
+	}
+}
+
 pm_extensive_tools_a_i = {
-	texture = "gfx/interface/icons/production_method_icons/pig_iron_tools.dds"
+	texture = "gfx/interface/icons/production_method_icons/pig_iron_tools_plus.dds"
 	is_hidden_when_unavailable = yes
 	
 	unlocking_technologies = {
@@ -57,7 +83,7 @@ pm_moderate_tools_a_i = {
 }
 
 pm_limited_tools_a_i = {
-	texture = "gfx/interface/icons/production_method_icons/pig_iron_tools.dds"
+	texture = "gfx/interface/icons/production_method_icons/military_priority.dds"
 	is_hidden_when_unavailable = yes
 	
 	unlocking_technologies = {
@@ -82,8 +108,65 @@ pm_limited_tools_a_i = {
 	}
 }
 
+## Rifles & Repeaters (Steel)
+pm_rifles = {
+	texture = "gfx/interface/icons/production_method_icons/rifles.dds"
+	
+	unlocking_technologies = {
+		rifling
+	}
+	
+	building_modifiers = {
+		workforce_scaled = {
+			# input goods
+			goods_input_steel_add = 8 # 10
+			goods_input_hardwood_add = 5 # 10
+			goods_input_tools_add = 5
+			
+			# output goods
+			goods_output_small_arms_add = 40 # 50	Profitability = 1600
+		}
+		
+		level_scaled = {
+			# employment
+			building_employment_shopkeepers_add = 500
+			building_employment_laborers_add = 3250
+			building_employment_machinists_add = 1000
+			building_employment_engineers_add = 250
+		}
+	}
+}
+
+pm_repeaters = {
+	texture = "gfx/interface/icons/production_method_icons/repeaters.dds"
+	
+	unlocking_technologies = {
+		repeaters
+	}
+	
+	building_modifiers = {
+		workforce_scaled = {
+			# input goods
+			goods_input_steel_add = 18 # 20
+			goods_input_hardwood_add = 8 # 10
+			goods_input_tools_add = 8 # 10
+			
+			# output goods
+			goods_output_small_arms_add = 54 # 70	Profitability = 1700 (all demob PM's match 1600 or below)
+		}
+		
+		level_scaled = {
+			# employment
+			building_employment_shopkeepers_add = 500
+			building_employment_laborers_add = 3000
+			building_employment_machinists_add = 1000
+			building_employment_engineers_add = 500
+		}
+	}
+}
+
 pm_extensive_tools_a_s = {
-	texture = "gfx/interface/icons/production_method_icons/steel_tools.dds"
+	texture = "gfx/interface/icons/production_method_icons/steel_tools_plus.dds"
 	is_hidden_when_unavailable = yes
 	
 	unlocking_production_methods = {
@@ -96,11 +179,11 @@ pm_extensive_tools_a_s = {
 		workforce_scaled = {
 			# input goods
 			goods_input_wood_add = 15
-			goods_input_hardwood_add = -5
+			goods_input_hardwood_add = -4 # -5
 			goods_input_tools_add = -5
 			
 			# output goods
-			goods_output_small_arms_add = -35
+			goods_output_small_arms_add = -27 # -35
 			goods_output_tools_add = 35
 		}
 	}
@@ -120,18 +203,18 @@ pm_moderate_tools_a_s = {
 		workforce_scaled = {
 			# input goods
 			goods_input_wood_add = 10
-			goods_input_hardwood_add = -3
+			goods_input_hardwood_add = -2.5
 			goods_input_tools_add = -5
 			
 			# output goods
-			goods_output_small_arms_add = -21
+			goods_output_small_arms_add = -16 # -21
 			goods_output_tools_add = 19
 		}
 	}
 }
 
 pm_limited_tools_a_s = {
-	texture = "gfx/interface/icons/production_method_icons/steel_tools.dds"
+	texture = "gfx/interface/icons/production_method_icons/military_priority.dds"
 	is_hidden_when_unavailable = yes
 	
 	unlocking_production_methods = {
@@ -148,14 +231,44 @@ pm_limited_tools_a_s = {
 			goods_input_tools_add = -5
 			
 			# output goods
-			goods_output_small_arms_add = -7
+			goods_output_small_arms_add = -6 # -7
 			goods_output_tools_add = 3
 		}
 	}
 }
 
+## Bolt Actions (Rubber)
+pm_bolt_action_rifles = {
+	texture = "gfx/interface/icons/production_method_icons/bolt_action_rifles.dds"
+	
+	unlocking_technologies = {
+		bolt_action_rifles
+	}
+	
+	building_modifiers = {
+		workforce_scaled = {
+			# input goods
+			goods_input_steel_add = 20
+			goods_input_hardwood_add = 10
+			goods_input_tools_add = 12
+			goods_input_oil_add = 10
+			
+			# output goods
+			goods_output_small_arms_add = 80 # 100	Profitability = 2520 (all demob PM's match 2500 or below)
+		}
+
+		level_scaled = {
+			# employment
+			building_employment_shopkeepers_add = 500
+			building_employment_laborers_add = 2500
+			building_employment_machinists_add = 1250
+			building_employment_engineers_add = 750
+		}
+	}
+}
+
 pm_extensive_tools_a_r = {
-	texture = "gfx/interface/icons/production_method_icons/steel_tools.dds"
+	texture = "gfx/interface/icons/production_method_icons/steel_tools_plus.dds"
 	is_hidden_when_unavailable = yes
 	
 	unlocking_technologies = {
@@ -171,12 +284,12 @@ pm_extensive_tools_a_r = {
 			goods_input_steel_add = 5
 			goods_input_rubber_add = 5
 			goods_input_hardwood_add = -5
-			goods_input_tools_add = -20
+			goods_input_tools_add = -12 # -20
 			goods_input_oil_add = -5
 			
 			# output goods
-			goods_output_small_arms_add = -50
-			goods_output_tools_add = 35
+			goods_output_small_arms_add = -40 # -50
+			goods_output_tools_add = 47 # 35
 		}
 	}
 }
@@ -198,18 +311,18 @@ pm_moderate_tools_a_r = {
 			goods_input_steel_add = 4
 			goods_input_rubber_add = 3
 			goods_input_hardwood_add = -3
-			goods_input_tools_add = -20
+			goods_input_tools_add = -12 # -20
 			goods_input_oil_add = -3
 			
 			# output goods
-			goods_output_small_arms_add = -30
-			goods_output_tools_add = 13
+			goods_output_small_arms_add = -24 # -30
+			goods_output_tools_add = 25 # 13
 		}
 	}
 }
 
 pm_limited_tools_a_r = {
-	texture = "gfx/interface/icons/production_method_icons/steel_tools.dds"
+	texture = "gfx/interface/icons/production_method_icons/military_priority.dds"
 	is_hidden_when_unavailable = yes
 	
 	unlocking_technologies = {
@@ -229,7 +342,7 @@ pm_limited_tools_a_r = {
 			goods_input_oil_add = -1
 			
 			# output goods
-			goods_output_small_arms_add = -10
+			goods_output_small_arms_add = -8 # -10
 		}
 	}
 }
@@ -245,3 +358,56 @@ pm_ui_safety_a = {
 	}
 }
 
+### Automation Replacements ###
+pm_rotary_valve_engine_building_arms_industry = {
+	texture = "gfx/interface/icons/production_method_icons/rotary_valve_engine.dds"
+	replacement_if_valid = pm_rotary_valve_engine_building_arti_foundry
+	
+	state_modifiers = {
+		workforce_scaled = {
+			state_pollution_generation_add = 10
+		}
+	}
+	
+	unlocking_technologies = {
+		rotary_valve_engine
+	}
+	
+	building_modifiers = {
+		workforce_scaled = {
+			goods_input_coal_add = 15
+		}
+
+		level_scaled = {
+			building_employment_laborers_add = -2000
+		}
+	}
+}
+
+pm_assembly_lines_building_arms_industry = {
+	texture = "gfx/interface/icons/production_method_icons/assembly_lines.dds"
+	replacement_if_valid = pm_assembly_lines_building_arti_foundry
+	
+	state_modifiers = {
+		workforce_scaled = {
+			state_pollution_generation_add = 10
+		}
+	}
+
+	unlocking_technologies = {
+		conveyors
+	}
+	
+	building_modifiers = {
+		workforce_scaled = {
+			goods_input_oil_add = 10
+			goods_input_electricity_add = 5
+		}
+
+		level_scaled = {
+			building_employment_laborers_add = -2500
+		}
+	}
+
+	required_input_goods = electricity
+}

@@ -5,7 +5,10 @@
  pmg_arti_tools_demob: "동원 해제된 도구 생산"
  pmg_munitions_explosives_demob: "동원 해제된 폭발물 생산"
   
- # Production methods 
+ pmg_automation_building_explosives_factory: "오토메이션" #NT!
+ pmg_mil_shipyards_shiftwork: "교대근무" #NT!
+  
+  # Production methods 
  pm_extensive_tools_a_i: "광범위한"
  pm_moderate_tools_a_i: "보통의"
  pm_limited_tools_a_i: "제한된"
@@ -49,6 +52,26 @@
  pm_ui_safety_a: "(이것은 무시하세요)"
  pm_ui_safety_b: "(이것은 무시하세요)"
   
+ pm_rotary_valve_engine_building_arti_foundry: "로터리 밸브 엔진" #NT!
+ pm_assembly_lines_building_arti_foundry: "조립 라인" #NT!
+  
+ pm_mechanical_mixers_building_explosives_factory: "기계식 믹서" #NT!
+ pm_rotary_valve_engine_building_explosives_factory: "로터리 밸브 엔진" #NT!
+ pm_assembly_lines_building_explosives_factory: "조립 라인" #NT!
+ pm_full_process_automation_building_explosives_factory: "자동 포장" #NT!
+  
+ pm_mil_shipyards_double_shifts: "더블 쉬프트" #NT!
+ pm_mil_shipyards_double_shifts_arc_weld: "더블 쉬프트" #NT!
+ pm_mil_shipyards_triple_shifts: "트리플 쉬프트" #NT!
+ pm_mil_shipyards_triple_shifts_arc_weld: "트리플 쉬프트" #NT!
+ pm_mil_shipyards_double_shifts_tts: "더블 쉬프트" #NT!
+ pm_mil_shipyards_double_shifts_tts_steel: "더블 쉬프트" #NT!
+ pm_mil_shipyards_double_shifts_tts_turbine: "더블 쉬프트" #NT!
+ pm_mil_shipyards_double_shifts_tts_arc_welding: "더블 쉬프트" #NT!
+ pm_mil_shipyards_triple_shifts_tts: "트리플 시프트" #NT!
+ pm_mil_shipyards_triple_shifts_tts_turbine: "트리플 쉬프트" #NT!
+ pm_mil_shipyards_triple_shifts_tts_arc_welding: "트리플 쉬프트" #NT!
+  
  # Alerts 
  alert_MIR_war_demob_arms_name: "동원 해제된 군수 산업과의 전쟁"
  alert_MIR_war_demob_arms_hint: "당신은 전쟁 중이며, 군수 산업은 소총 무기 대신 많은 양의 도구를 생산하고 있습니다."
@@ -77,20 +100,20 @@
  alert_MIR_peace_mob_ammo_action: "도시 건물 패널"
  MIR_peace_mob_ammo_setting_name: "동원된 무기 경고 - 평화"
   
- alert_MIR_war_demob_planes_name: "제한된 항공기 생산으로 전쟁 중" #NT!
- alert_MIR_war_demob_planes_hint: "당신은 전쟁 중이고 자동차 산업은 많은 비행기를 생산하지 못하고 있습니다." #NT!
- alert_MIR_war_demob_planes_action: "도시 건물 패널" #NT!
- MIR_war_demob_planes_setting_name: "동원 해제된 항공기 경고 - 전쟁" #NT!
- alert_MIR_peace_mob_planes_name: "광범위한 항공기 생산으로 평화롭게 지내다" #NT!
- alert_MIR_peace_mob_planes_hint: "당신은 평화로우며, 당신의 자동차 산업은 많은 비행기를 생산하고 있습니다." #NT!
- alert_MIR_peace_mob_planes_action: "도시 건물 패널" #NT!
- MIR_peace_mob_planes_setting_name: "동원 항공기 경고 - 평화" #NT!
+ alert_MIR_war_demob_planes_name: "제한된 항공기 생산으로 전쟁 중"
+ alert_MIR_war_demob_planes_hint: "당신은 전쟁 중이고 자동차 산업은 많은 비행기를 생산하지 못하고 있습니다."
+ alert_MIR_war_demob_planes_action: "도시 건물 패널"
+ MIR_war_demob_planes_setting_name: "동원 해제된 항공기 경고 - 전쟁"
+ alert_MIR_peace_mob_planes_name: "광범위한 항공기 생산으로 평화롭게 지내다"
+ alert_MIR_peace_mob_planes_hint: "당신은 평화로우며, 당신의 자동차 산업은 많은 비행기를 생산하고 있습니다."
+ alert_MIR_peace_mob_planes_action: "도시 건물 패널"
+ MIR_peace_mob_planes_setting_name: "동원 항공기 경고 - 평화"
   
- alert_MIR_war_demob_tanks_name: "제한된 탱크 생산으로 전쟁 중" #NT!
- alert_MIR_war_demob_tanks_hint: "당신은 전쟁 중이고 자동차 산업은 많은 탱크를 생산하지 못하고 있습니다." #NT!
- alert_MIR_war_demob_tanks_action: "도시 건물 패널" #NT!
- MIR_war_demob_tanks_setting_name: "동원 해제된 탱크 경고 - 전쟁" #NT!
- alert_MIR_peace_mob_tanks_name: "대규모 탱크 생산으로 평화롭게 지내다" #NT!
- alert_MIR_peace_mob_tanks_hint: "당신은 평화로우며, 당신의 자동차 산업은 많은 탱크를 생산하고 있습니다." #NT!
- alert_MIR_peace_mob_tanks_action: "도시 건물 패널" #NT!
- MIR_peace_mob_tanks_setting_name: "동원된 탱크 경고 - 평화" #NT!
+ alert_MIR_war_demob_tanks_name: "제한된 탱크 생산으로 전쟁 중"
+ alert_MIR_war_demob_tanks_hint: "당신은 전쟁 중이고 자동차 산업은 많은 탱크를 생산하지 못하고 있습니다."
+ alert_MIR_war_demob_tanks_action: "도시 건물 패널"
+ MIR_war_demob_tanks_setting_name: "동원 해제된 탱크 경고 - 전쟁"
+ alert_MIR_peace_mob_tanks_name: "대규모 탱크 생산으로 평화롭게 지내다"
+ alert_MIR_peace_mob_tanks_hint: "당신은 평화로우며, 당신의 자동차 산업은 많은 탱크를 생산하고 있습니다."
+ alert_MIR_peace_mob_tanks_action: "도시 건물 패널"
+ MIR_peace_mob_tanks_setting_name: "동원된 탱크 경고 - 평화"

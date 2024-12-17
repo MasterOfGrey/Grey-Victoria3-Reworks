@@ -4,8 +4,11 @@
  pmg_arms_tools_demob: "Demobilised Tool Production"
  pmg_arti_tools_demob: "Demobilised Tool Production"
  pmg_munitions_explosives_demob: "Demobilised Explosives Production"
-
-# Production methods
+ 
+ pmg_automation_building_explosives_factory: "Automation"
+ pmg_mil_shipyards_shiftwork: "Shift Work"
+ 
+ # Production methods
  pm_extensive_tools_a_i: "Extensive"
  pm_moderate_tools_a_i: "Moderate"
  pm_limited_tools_a_i: "Limited"
@@ -48,7 +51,27 @@
  
  pm_ui_safety_a: "(Ignore This)"
  pm_ui_safety_b: "(Ignore This)"
-
+ 
+ pm_rotary_valve_engine_building_arti_foundry: "Rotary Valve Engine"
+ pm_assembly_lines_building_arti_foundry: "Assembly Lines"
+ 
+ pm_mechanical_mixers_building_explosives_factory: "Mechanical Mixers"
+ pm_rotary_valve_engine_building_explosives_factory: "Rotary Valve Engine"
+ pm_assembly_lines_building_explosives_factory: "Assembly Lines"
+ pm_full_process_automation_building_explosives_factory: "Automated Packing"
+ 
+ pm_mil_shipyards_double_shifts: "Double Shifts"
+ pm_mil_shipyards_double_shifts_arc_weld: "Double Shifts"
+ pm_mil_shipyards_triple_shifts: "Triple Shifts"
+ pm_mil_shipyards_triple_shifts_arc_weld: "Triple Shifts"
+ pm_mil_shipyards_double_shifts_tts: "Double Shifts"
+ pm_mil_shipyards_double_shifts_tts_steel: "Double Shifts"
+ pm_mil_shipyards_double_shifts_tts_turbine: "Double Shifts"
+ pm_mil_shipyards_double_shifts_tts_arc_welding: "Double Shifts"
+ pm_mil_shipyards_triple_shifts_tts: "Triple Shifts"
+ pm_mil_shipyards_triple_shifts_tts_turbine: "Triple Shifts"
+ pm_mil_shipyards_triple_shifts_tts_arc_welding: "Triple Shifts"
+ 
 # Alerts
  alert_MIR_war_demob_arms_name: "At War with Demobilised Arms Industries"
  alert_MIR_war_demob_arms_hint: "You are at war and your Arms Industries are producing a large amount of Tools instead of Small Arms."

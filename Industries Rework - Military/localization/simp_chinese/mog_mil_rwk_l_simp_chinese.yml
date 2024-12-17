@@ -5,7 +5,10 @@
  pmg_arti_tools_demob: "退役工具生产"
  pmg_munitions_explosives_demob: "退役炸药生产"
   
- # Production methods 
+ pmg_automation_building_explosives_factory: "自动化" #NT!
+ pmg_mil_shipyards_shiftwork: "轮班工作" #NT!
+  
+  # Production methods 
  pm_extensive_tools_a_i: "广泛的"
  pm_moderate_tools_a_i: "缓和"
  pm_limited_tools_a_i: "有限的"
@@ -49,6 +52,26 @@
  pm_ui_safety_a: "（忽略此内容）"
  pm_ui_safety_b: "（忽略此内容）"
   
+ pm_rotary_valve_engine_building_arti_foundry: "旋转阀发动机" #NT!
+ pm_assembly_lines_building_arti_foundry: "装配线" #NT!
+  
+ pm_mechanical_mixers_building_explosives_factory: "机械搅拌器" #NT!
+ pm_rotary_valve_engine_building_explosives_factory: "旋转阀发动机" #NT!
+ pm_assembly_lines_building_explosives_factory: "装配线" #NT!
+ pm_full_process_automation_building_explosives_factory: "自动包装" #NT!
+  
+ pm_mil_shipyards_double_shifts: "双班制" #NT!
+ pm_mil_shipyards_double_shifts_arc_weld: "双班制" #NT!
+ pm_mil_shipyards_triple_shifts: "三班倒" #NT!
+ pm_mil_shipyards_triple_shifts_arc_weld: "三班倒" #NT!
+ pm_mil_shipyards_double_shifts_tts: "双班制" #NT!
+ pm_mil_shipyards_double_shifts_tts_steel: "双班制" #NT!
+ pm_mil_shipyards_double_shifts_tts_turbine: "双班制" #NT!
+ pm_mil_shipyards_double_shifts_tts_arc_welding: "双班制" #NT!
+ pm_mil_shipyards_triple_shifts_tts: "三班倒" #NT!
+ pm_mil_shipyards_triple_shifts_tts_turbine: "三班倒" #NT!
+ pm_mil_shipyards_triple_shifts_tts_arc_welding: "三班倒" #NT!
+  
  # Alerts 
  alert_MIR_war_demob_arms_name: "与退役军工企业的战争"
  alert_MIR_war_demob_arms_hint: "您正在处于战争之中，而您的军火工业正在生产大量的工具而不是小型武器。"
@@ -77,20 +100,20 @@
  alert_MIR_peace_mob_ammo_action: "城市建筑面板"
  MIR_peace_mob_ammo_setting_name: "动员弹药警告 - 和平"
   
- alert_MIR_war_demob_planes_name: "飞机产量有限，战争加剧" #NT!
- alert_MIR_war_demob_planes_hint: "你们正处于战争之中，而且你们的汽车工业没有生产出很多飞机。" #NT!
- alert_MIR_war_demob_planes_action: "城市建筑面板" #NT!
- MIR_war_demob_planes_setting_name: "退役飞机警告 - 战争" #NT!
- alert_MIR_peace_mob_planes_name: "安心进行大规模飞机生产" #NT!
- alert_MIR_peace_mob_planes_hint: "你们很和平，你们的汽车工业正在生产许多飞机。" #NT!
- alert_MIR_peace_mob_planes_action: "城市建筑面板" #NT!
- MIR_peace_mob_planes_setting_name: "动员飞机警报 - 和平" #NT!
+ alert_MIR_war_demob_planes_name: "飞机产量有限，战争加剧"
+ alert_MIR_war_demob_planes_hint: "你们正处于战争之中，而且你们的汽车工业没有生产出很多飞机。"
+ alert_MIR_war_demob_planes_action: "城市建筑面板"
+ MIR_war_demob_planes_setting_name: "退役飞机警告 - 战争"
+ alert_MIR_peace_mob_planes_name: "安心进行大规模飞机生产"
+ alert_MIR_peace_mob_planes_hint: "你们很和平，你们的汽车工业正在生产许多飞机。"
+ alert_MIR_peace_mob_planes_action: "城市建筑面板"
+ MIR_peace_mob_planes_setting_name: "动员飞机警报 - 和平"
   
- alert_MIR_war_demob_tanks_name: "坦克产量有限，战争中" #NT!
- alert_MIR_war_demob_tanks_hint: "你们正处于战争之中，而你们的汽车工业却没有生产出很多坦克。" #NT!
- alert_MIR_war_demob_tanks_action: "城市建筑面板" #NT!
- MIR_war_demob_tanks_setting_name: "退役坦克警告 - 战争" #NT!
- alert_MIR_peace_mob_tanks_name: "和平地大规模生产坦克" #NT!
- alert_MIR_peace_mob_tanks_hint: "您处于和平状态，并且您的汽车工业正在生产许多坦克。" #NT!
- alert_MIR_peace_mob_tanks_action: "城市建筑面板" #NT!
- MIR_peace_mob_tanks_setting_name: "动员坦克警告 - 和平" #NT!
+ alert_MIR_war_demob_tanks_name: "坦克产量有限，战争中"
+ alert_MIR_war_demob_tanks_hint: "你们正处于战争之中，而你们的汽车工业却没有生产出很多坦克。"
+ alert_MIR_war_demob_tanks_action: "城市建筑面板"
+ MIR_war_demob_tanks_setting_name: "退役坦克警告 - 战争"
+ alert_MIR_peace_mob_tanks_name: "和平地大规模生产坦克"
+ alert_MIR_peace_mob_tanks_hint: "您处于和平状态，并且您的汽车工业正在生产许多坦克。"
+ alert_MIR_peace_mob_tanks_action: "城市建筑面板"
+ MIR_peace_mob_tanks_setting_name: "动员坦克警告 - 和平"

@@ -1,0 +1,34 @@
+﻿# We use the TTS named PMG with the vanilla pms in it, so that we can overwrite the building using a vanilla PMG that has the TTS name.
+# This file's `pmg_tts_naval_yards` must be superseded by "tts_pm_groups.txt"
+
+pmg_tts_naval_yards = {
+	ai_selection = most_productive
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	production_methods = {
+		pm_military_shipbuilding_wooden
+		pm_military_shipbuilding_wooden_2
+		pm_military_shipbuilding_steam
+		pm_military_shipbuilding_steam_2
+		# pm_military_shipbuilding_wooden		# TTS versions that will replace this whole thing when TTS is loaded.
+		# pm_military_shipbuilding_wooden_2
+		# pm_military_shipbuilding_ironclad
+		# pm_military_shipbuilding_steel
+		# pm_military_shipbuilding_turbine
+		# pm_military_shipbuilding_arc_welding
+	}
+}
+
+# Shiftwork PMG - overwrites the one in "mog_sec_pmg.txt".
+pmg_mil_shipyards_shiftwork = {													# Modded PMG
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_automation.dds"
+	production_methods = {
+		pm_single_shift_days
+		pm_mil_shipyards_double_shifts_tts
+		pm_mil_shipyards_double_shifts_tts_steel
+		pm_mil_shipyards_double_shifts_tts_turbine
+		pm_mil_shipyards_double_shifts_tts_arc_welding
+		pm_mil_shipyards_triple_shifts_tts
+		pm_mil_shipyards_triple_shifts_tts_turbine
+		pm_mil_shipyards_triple_shifts_tts_arc_welding
+	}
+}

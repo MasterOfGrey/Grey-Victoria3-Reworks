@@ -1,28 +1,5 @@
-﻿building_motor_industry = {
-	building_group = bg_heavy_industry
-	icon = "gfx/interface/icons/building_icons/motor_industry.dds"
-	city_type = city
-	levels_per_mesh = 5
-	
-	unlocking_technologies = {
-		atmospheric_engine
-	}
-	
-	production_method_groups = {
-		pmg_base_building_motor_industry
-		pmg_automation_building_motor_industry
-	}
-	
-	required_construction = construction_cost_high
-	
-	possible = {
-		owner = { 
-			NOT = { has_law = law_type:law_industry_banned } 
-		}
-	}
-	ownership_type = self
-	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_heavy_industry.dds"
-}
+﻿# This file is the automotive industry with tank and plane demobilisation PM's
+# Credit to indexo4 for the initial version
 
 building_war_machine_industry = {
 	building_group = bg_heavy_industry
@@ -31,11 +8,12 @@ building_war_machine_industry = {
 	levels_per_mesh = 5
 	
 	unlocking_technologies = {
-		combustion_engine
+		ironclad_tech # combustion_engine	# Now represents the advent of early steel geared transmissions use for ships and tested for bicycles and some horse-drawn carriages etc.
 	}
 	
 	production_method_groups = {
 		pmg_base_building_automotive_industry
+		pmg_automotive_shiftwork
 		pmg_automotive_aeroplanes
 		pmg_automotive_tanks
 	}

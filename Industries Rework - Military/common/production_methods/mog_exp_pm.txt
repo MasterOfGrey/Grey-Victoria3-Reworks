@@ -1,0 +1,100 @@
+﻿pm_mechanical_mixers_building_explosives_factory = {
+	texture = "gfx/interface/icons/production_method_icons/mechanized_looms.dds"
+	
+	unlocking_technologies = {
+		nitroglycerin
+	}
+	
+	building_modifiers = {
+		workforce_scaled = {
+			goods_input_tools_add = 5
+		}
+		
+		level_scaled = {
+			building_employment_laborers_add = -1000
+		}
+	}
+}
+
+pm_rotary_valve_engine_building_explosives_factory = {
+	texture = "gfx/interface/icons/production_method_icons/rotary_valve_engine.dds"
+	
+	state_modifiers = {
+		workforce_scaled = {
+			state_pollution_generation_add = 5
+		}
+	}
+	
+	unlocking_technologies = {
+		rotary_valve_engine
+	}
+	
+	building_modifiers = {
+		workforce_scaled = {
+			goods_input_tools_add = 5
+			goods_input_coal_add = 10
+		}
+		
+		level_scaled = {
+			building_employment_laborers_add = -2000
+		}
+	}
+}
+
+pm_assembly_lines_building_explosives_factory = {
+	texture = "gfx/interface/icons/production_method_icons/assembly_lines.dds"
+	
+	state_modifiers = {
+		workforce_scaled = {
+			state_pollution_generation_add = 10
+		}
+	}
+	
+	unlocking_technologies = {
+		conveyors
+	}
+	
+	building_modifiers = {
+		workforce_scaled = {
+			goods_input_oil_add = 10
+			goods_input_electricity_add = 5
+		}
+		
+		level_scaled = {
+			building_employment_laborers_add = -2000
+			building_employment_machinists_add = -500
+		}
+	}
+	
+	required_input_goods = electricity
+}
+
+pm_full_process_automation_building_explosives_factory = {
+	texture = "gfx/interface/icons/production_method_icons/automated_bottle_blowers.dds"
+	
+	unlocking_technologies = {
+		dough_rollers
+	}
+	
+	state_modifiers = {
+		workforce_scaled = {
+			state_pollution_generation_add = 10
+		}
+	}
+	
+	building_modifiers = {
+		workforce_scaled = {
+			# input goods
+			goods_input_oil_add = 10
+			goods_input_electricity_add = 8
+		}
+		
+		level_scaled = {
+			building_employment_laborers_add = -1000
+			building_employment_machinists_add = -500
+			building_employment_engineers_add = -500
+		}
+	}
+	
+	required_input_goods = electricity
+}

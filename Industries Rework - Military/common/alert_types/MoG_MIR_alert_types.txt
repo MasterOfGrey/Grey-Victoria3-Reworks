@@ -228,7 +228,10 @@ MIR_peace_mob_planes = {
 			level > 0
 		}
 		any_scope_state = {
-			is_production_method_active = { building_type = building_war_machine_industry production_method = pm_extensive_aeroplanes }
+			OR = {
+				is_production_method_active = { building_type = building_war_machine_industry production_method = pm_extensive_aeroplanes }
+				is_production_method_active = { building_type = building_war_machine_industry production_method = pm_overtime_aeroplanes }
+			}
 		}
 	}
 	
@@ -274,7 +277,10 @@ MIR_peace_mob_tanks = {
 			level > 0
 		}
 		any_scope_state = {
-			is_production_method_active = { building_type = building_war_machine_industry production_method = pm_extensive_tanks }
+			OR = {
+				is_production_method_active = { building_type = building_war_machine_industry production_method = pm_extensive_tanks }
+				is_production_method_active = { building_type = building_war_machine_industry production_method = pm_overtime_tanks }
+			}
 		}
 	}
 	

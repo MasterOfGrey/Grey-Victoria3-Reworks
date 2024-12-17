@@ -1,0 +1,74 @@
+﻿# This file is secondary industries with related PM's for either consistency or to deal with industries touched by other balance changes
+
+## Electronics Industry:
+pmg_telephones_category = {														# Vanilla PMG re-specified
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	production_methods = {
+		pm_telephones
+	}
+}
+
+pmg_radios_category = {															# Modded PMG
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_refining.dds"
+	production_methods = {
+		pm_no_radios
+		pm_limited_radios
+		pm_moderate_radios
+		pm_extensive_radios
+	}
+}
+
+## Locomotive Factories:
+pmg_base_building_motor_industry = {											# Vanilla PMG re-specified
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	production_methods = {
+		pm_steam_engines
+		pm_electric_engines
+		pm_diesel_engines
+	}
+}
+
+pmg_automation_building_motor_industry = {										# Vanilla PMG re-specified
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_automation.dds"
+	production_methods = {
+		pm_automation_disabled
+		pm_watertube_boiler_building_motor_industry
+		pm_rotary_valve_engine_building_motor_industry
+		pm_assembly_lines_building_motor_industry
+	}
+}
+
+## Explosives Factory:
+pmg_explosives_building_chemical_plants = {										# Vanilla PMG re-specified
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	production_methods = {
+		pm_leblanc_process
+		pm_ammonia-soda_process
+		pm_vacuum_evaporation
+		pm_brine_electrolysis
+	}
+}
+
+pmg_automation_building_explosives_factory = {									# Modded PMG
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_automation.dds"
+	production_methods = {
+		pm_automation_disabled
+		pm_mechanical_mixers_building_explosives_factory
+		pm_rotary_valve_engine_building_explosives_factory
+		pm_assembly_lines_building_explosives_factory
+		pm_full_process_automation_building_explosives_factory
+	}
+}
+
+## Military Shipyards
+
+pmg_mil_shipyards_shiftwork = {													# Modded PMG
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_automation.dds"
+	production_methods = {
+		pm_single_shift_days
+		pm_mil_shipyards_double_shifts
+		pm_mil_shipyards_double_shifts_arc_weld
+		pm_mil_shipyards_triple_shifts
+		pm_mil_shipyards_triple_shifts_arc_weld
+	}
+}

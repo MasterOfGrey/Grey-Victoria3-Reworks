@@ -1,0 +1,30 @@
+﻿l_simp_chinese:
+ # Production methods 
+ pmg_base_building_automotive_industry: "汽车"
+ pmg_automotive_shiftwork: "轮班工作" #NT!
+ pmg_automotive_aeroplanes: "飞机"
+ pmg_automotive_tanks: "坦克"
+  
+ pm_gear_transmissions: "早期齿轮传动" #NT!
+ pm_automobiles: "汽车"
+ pm_pneumatic_tyres: "充气轮胎" #NT!
+  
+ pm_single_shift_days: "单班制" #NT!
+ pm_automotive_double_shifts: "双班制" #NT!
+ pm_automotive_double_shifts_pneumatic: "双班制" #NT!
+ pm_automotive_triple_shifts: "三班倒" #NT!
+ pm_automotive_triple_shifts_pneumatic: "三班倒" #NT!
+  
+ pm_no_aeroplanes: "没有飞机生产"
+ pm_limited_aeroplanes: "限量飞机生产"
+ pm_extensive_aeroplanes: "大规模飞机生产"
+ pm_overtime_aeroplanes: "加班生产飞机" #NT!
+  
+ pm_no_tanks: "没有坦克生产"
+ pm_limited_tanks: "有限的坦克生产"
+ pm_extensive_tanks: "大规模坦克生产"
+ pm_overtime_tanks: "加班生产飞机" #NT!
+  
+ # Technology 
+ pneumatic_tyres: "充气轮胎" #NT!
+ pneumatic_tyres_desc: "硫化橡胶与内燃机的结合应用具有革命性的潜力。" #NT!

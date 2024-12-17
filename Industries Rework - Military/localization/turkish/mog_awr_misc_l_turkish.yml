@@ -1,0 +1,30 @@
+﻿l_turkish:
+ # Production methods 
+ pmg_base_building_automotive_industry: "Automobiles"
+ pmg_automotive_shiftwork: "Vardiyalı Çalışma" #NT!
+ pmg_automotive_aeroplanes: "Aeroplanes"
+ pmg_automotive_tanks: "Tanks"
+  
+ pm_gear_transmissions: "Erken Vites Şanzımanları" #NT!
+ pm_automobiles: "Automobiles"
+ pm_pneumatic_tyres: "Pnömatik Lastikler" #NT!
+  
+ pm_single_shift_days: "Tek Vardiyalar" #NT!
+ pm_automotive_double_shifts: "Çift Vardiya" #NT!
+ pm_automotive_double_shifts_pneumatic: "Çift Vardiya" #NT!
+ pm_automotive_triple_shifts: "Üçlü Vardiyalar" #NT!
+ pm_automotive_triple_shifts_pneumatic: "Üçlü Vardiyalar" #NT!
+  
+ pm_no_aeroplanes: "No Aeroplane Production"
+ pm_limited_aeroplanes: "Limited Aeroplane Production"
+ pm_extensive_aeroplanes: "Extensive Aeroplane Production"
+ pm_overtime_aeroplanes: "Fazla Mesai Uçak Üretimi" #NT!
+  
+ pm_no_tanks: "No Tank Production"
+ pm_limited_tanks: "Limited Tank Production"
+ pm_extensive_tanks: "Extensive Tank Production"
+ pm_overtime_tanks: "Fazla Mesai Uçak Üretimi" #NT!
+  
+ # Technology 
+ pneumatic_tyres: "Pnömatik Lastikler" #NT!
+ pneumatic_tyres_desc: "Vulkanize kauçuğun içten yanmalı motorlarla birlikte kullanılmasının devrim niteliğinde olma potansiyeli bulunmaktadır." #NT!

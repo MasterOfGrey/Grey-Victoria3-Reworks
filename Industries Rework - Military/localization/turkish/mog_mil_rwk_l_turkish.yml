@@ -5,7 +5,10 @@
  pmg_arti_tools_demob: "Demobilize Alet Üretimi"
  pmg_munitions_explosives_demob: "Demobilize Patlayıcı Üretimi"
   
- # Production methods 
+ pmg_automation_building_explosives_factory: "Otomasyon" #NT!
+ pmg_mil_shipyards_shiftwork: "Vardiyalı Çalışma" #NT!
+  
+  # Production methods 
  pm_extensive_tools_a_i: "Yaygın"
  pm_moderate_tools_a_i: "Ilıman"
  pm_limited_tools_a_i: "Sınırlı"
@@ -49,6 +52,26 @@
  pm_ui_safety_a: "(Bunu görmezden gelin)"
  pm_ui_safety_b: "(Bunu görmezden gelin)"
   
+ pm_rotary_valve_engine_building_arti_foundry: "Döner Valf Motoru" #NT!
+ pm_assembly_lines_building_arti_foundry: "Montaj Hatları" #NT!
+  
+ pm_mechanical_mixers_building_explosives_factory: "Mekanik Karıştırıcılar" #NT!
+ pm_rotary_valve_engine_building_explosives_factory: "Döner Valf Motoru" #NT!
+ pm_assembly_lines_building_explosives_factory: "Montaj Hatları" #NT!
+ pm_full_process_automation_building_explosives_factory: "Otomatik Paketleme" #NT!
+  
+ pm_mil_shipyards_double_shifts: "Çift Vardiya" #NT!
+ pm_mil_shipyards_double_shifts_arc_weld: "Çift Vardiya" #NT!
+ pm_mil_shipyards_triple_shifts: "Üçlü Vardiyalar" #NT!
+ pm_mil_shipyards_triple_shifts_arc_weld: "Üçlü Vardiyalar" #NT!
+ pm_mil_shipyards_double_shifts_tts: "Çift Vardiya" #NT!
+ pm_mil_shipyards_double_shifts_tts_steel: "Çift Vardiya" #NT!
+ pm_mil_shipyards_double_shifts_tts_turbine: "Çift Vardiya" #NT!
+ pm_mil_shipyards_double_shifts_tts_arc_welding: "Çift Vardiya" #NT!
+ pm_mil_shipyards_triple_shifts_tts: "Üçlü Vardiyalar" #NT!
+ pm_mil_shipyards_triple_shifts_tts_turbine: "Üçlü Vardiyalar" #NT!
+ pm_mil_shipyards_triple_shifts_tts_arc_welding: "Üçlü Vardiyalar" #NT!
+  
  # Alerts 
  alert_MIR_war_demob_arms_name: "Terhis Edilen Silah Endüstrileriyle Savaşta"
  alert_MIR_war_demob_arms_hint: "Savaştasınız ve Silah Sanayiniz Hafif Silahlar yerine büyük miktarda Alet üretiyor."
@@ -77,20 +100,20 @@
  alert_MIR_peace_mob_ammo_action: "Kentsel Yapı Paneli"
  MIR_peace_mob_ammo_setting_name: "Mobilize Mühimmat Uyarısı - Barış"
   
- alert_MIR_war_demob_planes_name: "Sınırlı Uçak Üretimiyle Savaşta" #NT!
- alert_MIR_war_demob_planes_hint: "Savaştasınız ve Otomotiv Endüstriniz pek fazla uçak üretmiyor." #NT!
- alert_MIR_war_demob_planes_action: "Kentsel Yapı Paneli" #NT!
- MIR_war_demob_planes_setting_name: "Terhis Edilen Uçak Uyarısı - Savaş" #NT!
- alert_MIR_peace_mob_planes_name: "Kapsamlı Uçak Üretimiyle Barışık" #NT!
- alert_MIR_peace_mob_planes_hint: "Siz huzur içindesiniz ve Otomotiv Sanayiniz çok sayıda uçak üretiyor." #NT!
- alert_MIR_peace_mob_planes_action: "Kentsel Yapı Paneli" #NT!
- MIR_peace_mob_planes_setting_name: "Mobilize Uçak Uyarısı - Barış" #NT!
+ alert_MIR_war_demob_planes_name: "Sınırlı Uçak Üretimiyle Savaşta"
+ alert_MIR_war_demob_planes_hint: "Savaştasınız ve Otomotiv Endüstriniz pek fazla uçak üretmiyor."
+ alert_MIR_war_demob_planes_action: "Kentsel Yapı Paneli"
+ MIR_war_demob_planes_setting_name: "Terhis Edilen Uçak Uyarısı - Savaş"
+ alert_MIR_peace_mob_planes_name: "Kapsamlı Uçak Üretimiyle Barışık"
+ alert_MIR_peace_mob_planes_hint: "Siz huzur içindesiniz ve Otomotiv Sanayiniz çok sayıda uçak üretiyor."
+ alert_MIR_peace_mob_planes_action: "Kentsel Yapı Paneli"
+ MIR_peace_mob_planes_setting_name: "Mobilize Uçak Uyarısı - Barış"
   
- alert_MIR_war_demob_tanks_name: "Sınırlı Tank Üretimiyle Savaşta" #NT!
- alert_MIR_war_demob_tanks_hint: "Savaştasınız ve Otomobil Endüstriniz pek fazla tank üretmiyor." #NT!
- alert_MIR_war_demob_tanks_action: "Kentsel Yapı Paneli" #NT!
- MIR_war_demob_tanks_setting_name: "Terhis Edilen Tanklar Uyarısı - Savaş" #NT!
- alert_MIR_peace_mob_tanks_name: "Kapsamlı Tank Üretimiyle Barışık" #NT!
- alert_MIR_peace_mob_tanks_hint: "Siz rahatsınız ve Otomotiv Sanayiniz çok sayıda tank üretiyor." #NT!
- alert_MIR_peace_mob_tanks_action: "Kentsel Yapı Paneli" #NT!
- MIR_peace_mob_tanks_setting_name: "Mobilize Tanklar Uyarısı - Barış" #NT!
+ alert_MIR_war_demob_tanks_name: "Sınırlı Tank Üretimiyle Savaşta"
+ alert_MIR_war_demob_tanks_hint: "Savaştasınız ve Otomobil Endüstriniz pek fazla tank üretmiyor."
+ alert_MIR_war_demob_tanks_action: "Kentsel Yapı Paneli"
+ MIR_war_demob_tanks_setting_name: "Terhis Edilen Tanklar Uyarısı - Savaş"
+ alert_MIR_peace_mob_tanks_name: "Kapsamlı Tank Üretimiyle Barışık"
+ alert_MIR_peace_mob_tanks_hint: "Siz rahatsınız ve Otomotiv Sanayiniz çok sayıda tank üretiyor."
+ alert_MIR_peace_mob_tanks_action: "Kentsel Yapı Paneli"
+ MIR_peace_mob_tanks_setting_name: "Mobilize Tanklar Uyarısı - Barış"

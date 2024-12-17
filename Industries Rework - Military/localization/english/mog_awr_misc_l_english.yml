@@ -1,0 +1,30 @@
+﻿l_english:
+# Production methods
+ pmg_base_building_automotive_industry: "Automobiles"
+ pmg_automotive_shiftwork: "Shift Work"
+ pmg_automotive_aeroplanes: "Aeroplanes"
+ pmg_automotive_tanks: "Tanks"
+ 
+ pm_gear_transmissions: "Early Gear Transmissions"
+ pm_automobiles: "Automobiles"
+ pm_pneumatic_tyres: "Pneumatic Tyres"
+ 
+ pm_single_shift_days: "Single Shifts"
+ pm_automotive_double_shifts: "Double Shifts"
+ pm_automotive_double_shifts_pneumatic: "Double Shifts"
+ pm_automotive_triple_shifts: "Triple Shifts"
+ pm_automotive_triple_shifts_pneumatic: "Triple Shifts"
+
+ pm_no_aeroplanes: "No Aeroplane Production"
+ pm_limited_aeroplanes: "Limited Aeroplane Production"
+ pm_extensive_aeroplanes: "Extensive Aeroplane Production"
+ pm_overtime_aeroplanes: "Overtime Aeroplane Production"
+
+ pm_no_tanks: "No Tank Production"
+ pm_limited_tanks: "Limited Tank Production"
+ pm_extensive_tanks: "Extensive Tank Production"
+ pm_overtime_tanks: "Overtime Aeroplane Production"
+ 
+# Technology
+ pneumatic_tyres: "Pneumatic Tyres"
+ pneumatic_tyres_desc: "The applications for vulcanised rubber in combination with the combustion engine have the potential to be revolutionary."

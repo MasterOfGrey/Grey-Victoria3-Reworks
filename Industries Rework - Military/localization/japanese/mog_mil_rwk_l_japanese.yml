@@ -5,7 +5,10 @@
  pmg_arti_tools_demob: "解体されたツールの生産"
  pmg_munitions_explosives_demob: "解体爆薬製造"
   
- # Production methods 
+ pmg_automation_building_explosives_factory: "オートメーション" #NT!
+ pmg_mil_shipyards_shiftwork: "シフト勤務" #NT!
+  
+  # Production methods 
  pm_extensive_tools_a_i: "広範囲にわたる"
  pm_moderate_tools_a_i: "適度"
  pm_limited_tools_a_i: "限定"
@@ -49,6 +52,26 @@
  pm_ui_safety_a: "（無視してください）"
  pm_ui_safety_b: "（無視してください）"
   
+ pm_rotary_valve_engine_building_arti_foundry: "ロータリーバルブエンジン" #NT!
+ pm_assembly_lines_building_arti_foundry: "組立ライン" #NT!
+  
+ pm_mechanical_mixers_building_explosives_factory: "機械式ミキサー" #NT!
+ pm_rotary_valve_engine_building_explosives_factory: "ロータリーバルブエンジン" #NT!
+ pm_assembly_lines_building_explosives_factory: "組立ライン" #NT!
+ pm_full_process_automation_building_explosives_factory: "自動梱包" #NT!
+  
+ pm_mil_shipyards_double_shifts: "ダブルシフト" #NT!
+ pm_mil_shipyards_double_shifts_arc_weld: "ダブルシフト" #NT!
+ pm_mil_shipyards_triple_shifts: "トリプルシフト" #NT!
+ pm_mil_shipyards_triple_shifts_arc_weld: "トリプルシフト" #NT!
+ pm_mil_shipyards_double_shifts_tts: "ダブルシフト" #NT!
+ pm_mil_shipyards_double_shifts_tts_steel: "ダブルシフト" #NT!
+ pm_mil_shipyards_double_shifts_tts_turbine: "ダブルシフト" #NT!
+ pm_mil_shipyards_double_shifts_tts_arc_welding: "ダブルシフト" #NT!
+ pm_mil_shipyards_triple_shifts_tts: "トリプルシフト" #NT!
+ pm_mil_shipyards_triple_shifts_tts_turbine: "トリプルシフト" #NT!
+ pm_mil_shipyards_triple_shifts_tts_arc_welding: "トリプルシフト" #NT!
+  
  # Alerts 
  alert_MIR_war_demob_arms_name: "武装解除された軍需産業との戦争"
  alert_MIR_war_demob_arms_hint: "あなたは戦争中であり、あなたの国の軍事産業は小火器の代わりに大量の工具を生産しています。"
@@ -77,20 +100,20 @@
  alert_MIR_peace_mob_ammo_action: "都市建築パネル"
  MIR_peace_mob_ammo_setting_name: "動員兵器警告 - 平和"
   
- alert_MIR_war_demob_planes_name: "航空機生産の制限との戦い" #NT!
- alert_MIR_war_demob_planes_hint: "あなた方は戦争中であり、自動車産業は多くの航空機を生産していません。" #NT!
- alert_MIR_war_demob_planes_action: "都市建築パネル" #NT!
- MIR_war_demob_planes_setting_name: "復員機警報 - 戦争" #NT!
- alert_MIR_peace_mob_planes_name: "航空機の大量生産に平和を" #NT!
- alert_MIR_peace_mob_planes_hint: "あなた方は平和であり、自動車産業は多くの航空機を生産しています。" #NT!
- alert_MIR_peace_mob_planes_action: "都市建築パネル" #NT!
- MIR_peace_mob_planes_setting_name: "移動式飛行機警報 - 平和" #NT!
+ alert_MIR_war_demob_planes_name: "航空機生産の制限との戦い"
+ alert_MIR_war_demob_planes_hint: "あなた方は戦争中であり、自動車産業は多くの航空機を生産していません。"
+ alert_MIR_war_demob_planes_action: "都市建築パネル"
+ MIR_war_demob_planes_setting_name: "復員機警報 - 戦争"
+ alert_MIR_peace_mob_planes_name: "航空機の大量生産に平和を"
+ alert_MIR_peace_mob_planes_hint: "あなた方は平和であり、自動車産業は多くの航空機を生産しています。"
+ alert_MIR_peace_mob_planes_action: "都市建築パネル"
+ MIR_peace_mob_planes_setting_name: "移動式飛行機警報 - 平和"
   
- alert_MIR_war_demob_tanks_name: "戦車生産が制限される中での戦争" #NT!
- alert_MIR_war_demob_tanks_hint: "あなた方は戦争中であり、自動車産業は戦車をあまり生産していません。" #NT!
- alert_MIR_war_demob_tanks_action: "都市建築パネル" #NT!
- MIR_war_demob_tanks_setting_name: "動員解除された戦車の警告 - 戦争" #NT!
- alert_MIR_peace_mob_tanks_name: "大規模な戦車生産で平和を実現" #NT!
- alert_MIR_peace_mob_tanks_hint: "あなたは平和で、自動車産業は多くの戦車を生産しています。" #NT!
- alert_MIR_peace_mob_tanks_action: "都市建築パネル" #NT!
- MIR_peace_mob_tanks_setting_name: "動員された戦車の警告 - 平和" #NT!
+ alert_MIR_war_demob_tanks_name: "戦車生産が制限される中での戦争"
+ alert_MIR_war_demob_tanks_hint: "あなた方は戦争中であり、自動車産業は戦車をあまり生産していません。"
+ alert_MIR_war_demob_tanks_action: "都市建築パネル"
+ MIR_war_demob_tanks_setting_name: "動員解除された戦車の警告 - 戦争"
+ alert_MIR_peace_mob_tanks_name: "大規模な戦車生産で平和を実現"
+ alert_MIR_peace_mob_tanks_hint: "あなたは平和で、自動車産業は多くの戦車を生産しています。"
+ alert_MIR_peace_mob_tanks_action: "都市建築パネル"
+ MIR_peace_mob_tanks_setting_name: "動員された戦車の警告 - 平和"

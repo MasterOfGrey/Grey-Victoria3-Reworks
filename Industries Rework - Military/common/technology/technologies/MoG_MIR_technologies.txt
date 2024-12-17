@@ -1,0 +1,19 @@
+﻿# Overwrites for tech-based MAPI
+
+pneumatic_tyres = {
+	era = era_4
+	texture = "gfx/interface/icons/invention_icons/tech_pneumatic_tyres.dds"
+	category = production	
+	
+	modifier = {
+	}
+	
+	unlocking_technologies = {	
+		vulcanization
+		combustion_engine
+	}
+	
+	ai_weight = {
+		value = 1
+	}
+}

@@ -5,7 +5,10 @@
  pmg_arti_tools_demob: "Produkcja narzędzi zdemobilizowanych"
  pmg_munitions_explosives_demob: "Produkcja zdemobilizowanych materiałów wybuchowych"
   
- # Production methods 
+ pmg_automation_building_explosives_factory: "Automatyzacja" #NT!
+ pmg_mil_shipyards_shiftwork: "Praca zmianowa" #NT!
+  
+  # Production methods 
  pm_extensive_tools_a_i: "Rozległy"
  pm_moderate_tools_a_i: "Umiarkowany"
  pm_limited_tools_a_i: "Ograniczony"
@@ -49,6 +52,26 @@
  pm_ui_safety_a: "(Zignoruj ​​to)"
  pm_ui_safety_b: "(Zignoruj ​​to)"
   
+ pm_rotary_valve_engine_building_arti_foundry: "Silnik z zaworem obrotowym" #NT!
+ pm_assembly_lines_building_arti_foundry: "Linie montażowe" #NT!
+  
+ pm_mechanical_mixers_building_explosives_factory: "Miksery mechaniczne" #NT!
+ pm_rotary_valve_engine_building_explosives_factory: "Silnik z zaworem obrotowym" #NT!
+ pm_assembly_lines_building_explosives_factory: "Linie montażowe" #NT!
+ pm_full_process_automation_building_explosives_factory: "Pakowanie automatyczne" #NT!
+  
+ pm_mil_shipyards_double_shifts: "Podwójne zmiany" #NT!
+ pm_mil_shipyards_double_shifts_arc_weld: "Podwójne zmiany" #NT!
+ pm_mil_shipyards_triple_shifts: "Potrójne zmiany" #NT!
+ pm_mil_shipyards_triple_shifts_arc_weld: "Potrójne zmiany" #NT!
+ pm_mil_shipyards_double_shifts_tts: "Podwójne zmiany" #NT!
+ pm_mil_shipyards_double_shifts_tts_steel: "Podwójne zmiany" #NT!
+ pm_mil_shipyards_double_shifts_tts_turbine: "Podwójne zmiany" #NT!
+ pm_mil_shipyards_double_shifts_tts_arc_welding: "Podwójne zmiany" #NT!
+ pm_mil_shipyards_triple_shifts_tts: "Potrójne zmiany" #NT!
+ pm_mil_shipyards_triple_shifts_tts_turbine: "Potrójne zmiany" #NT!
+ pm_mil_shipyards_triple_shifts_tts_arc_welding: "Potrójne zmiany" #NT!
+  
  # Alerts 
  alert_MIR_war_demob_arms_name: "W stanie wojny z zdemobilizowanymi przemysłami zbrojeniowymi"
  alert_MIR_war_demob_arms_hint: "Jesteś w stanie wojny i twój przemysł zbrojeniowy produkuje duże ilości narzędzi zamiast broni ręcznej."
@@ -77,20 +100,20 @@
  alert_MIR_peace_mob_ammo_action: "Panel budynku miejskiego"
  MIR_peace_mob_ammo_setting_name: "Ostrzeżenie o zmobilizowanej amunicji - Pokój"
   
- alert_MIR_war_demob_planes_name: "W stanie wojny z ograniczoną produkcją samolotów" #NT!
- alert_MIR_war_demob_planes_hint: "Jesteś w stanie wojny, a twój przemysł samochodowy nie produkuje wielu samolotów." #NT!
- alert_MIR_war_demob_planes_action: "Panel budynku miejskiego" #NT!
- MIR_war_demob_planes_setting_name: "Ostrzeżenie o zdemobilizowanym samolocie - wojna" #NT!
- alert_MIR_peace_mob_planes_name: "W pokoju z rozległą produkcją samolotów" #NT!
- alert_MIR_peace_mob_planes_hint: "Jesteście spokojni, a wasz przemysł samochodowy produkuje wiele samolotów." #NT!
- alert_MIR_peace_mob_planes_action: "Panel budynku miejskiego" #NT!
- MIR_peace_mob_planes_setting_name: "Ostrzeżenie o zmobilizowanym samolocie - Pokój" #NT!
+ alert_MIR_war_demob_planes_name: "W stanie wojny z ograniczoną produkcją samolotów"
+ alert_MIR_war_demob_planes_hint: "Jesteś w stanie wojny, a twój przemysł samochodowy nie produkuje wielu samolotów."
+ alert_MIR_war_demob_planes_action: "Panel budynku miejskiego"
+ MIR_war_demob_planes_setting_name: "Ostrzeżenie o zdemobilizowanym samolocie - wojna"
+ alert_MIR_peace_mob_planes_name: "W pokoju z rozległą produkcją samolotów"
+ alert_MIR_peace_mob_planes_hint: "Jesteście spokojni, a wasz przemysł samochodowy produkuje wiele samolotów."
+ alert_MIR_peace_mob_planes_action: "Panel budynku miejskiego"
+ MIR_peace_mob_planes_setting_name: "Ostrzeżenie o zmobilizowanym samolocie - Pokój"
   
- alert_MIR_war_demob_tanks_name: "Wojna z ograniczoną produkcją czołgów" #NT!
- alert_MIR_war_demob_tanks_hint: "Trwa wojna, a wasz przemysł samochodowy nie produkuje wielu czołgów." #NT!
- alert_MIR_war_demob_tanks_action: "Panel budynku miejskiego" #NT!
- MIR_war_demob_tanks_setting_name: "Ostrzeżenie o zdemobilizowanych czołgach - Wojna" #NT!
- alert_MIR_peace_mob_tanks_name: "W pokoju z rozległą produkcją zbiorników" #NT!
- alert_MIR_peace_mob_tanks_hint: "Jesteście spokojni, a wasz przemysł samochodowy produkuje wiele czołgów." #NT!
- alert_MIR_peace_mob_tanks_action: "Panel budynku miejskiego" #NT!
- MIR_peace_mob_tanks_setting_name: "Ostrzeżenie o zmobilizowanych czołgach - Pokój" #NT!
+ alert_MIR_war_demob_tanks_name: "Wojna z ograniczoną produkcją czołgów"
+ alert_MIR_war_demob_tanks_hint: "Trwa wojna, a wasz przemysł samochodowy nie produkuje wielu czołgów."
+ alert_MIR_war_demob_tanks_action: "Panel budynku miejskiego"
+ MIR_war_demob_tanks_setting_name: "Ostrzeżenie o zdemobilizowanych czołgach - Wojna"
+ alert_MIR_peace_mob_tanks_name: "W pokoju z rozległą produkcją zbiorników"
+ alert_MIR_peace_mob_tanks_hint: "Jesteście spokojni, a wasz przemysł samochodowy produkuje wiele czołgów."
+ alert_MIR_peace_mob_tanks_action: "Panel budynku miejskiego"
+ MIR_peace_mob_tanks_setting_name: "Ostrzeżenie o zmobilizowanych czołgach - Pokój"

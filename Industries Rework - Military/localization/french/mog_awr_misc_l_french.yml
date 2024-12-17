@@ -1,0 +1,30 @@
+﻿l_french:
+ # Production methods 
+ pmg_base_building_automotive_industry: "Automobiles"
+ pmg_automotive_shiftwork: "Travail posté" #NT!
+ pmg_automotive_aeroplanes: "Avions"
+ pmg_automotive_tanks: "Chars"
+  
+ pm_gear_transmissions: "Transmissions à engrenages anciens" #NT!
+ pm_automobiles: "Automobiles"
+ pm_pneumatic_tyres: "Pneus pneumatiques" #NT!
+  
+ pm_single_shift_days: "Quarts de travail uniques" #NT!
+ pm_automotive_double_shifts: "Doubles quarts de travail" #NT!
+ pm_automotive_double_shifts_pneumatic: "Doubles quarts de travail" #NT!
+ pm_automotive_triple_shifts: "Triples quarts de travail" #NT!
+ pm_automotive_triple_shifts_pneumatic: "Triples quarts de travail" #NT!
+  
+ pm_no_aeroplanes: "Pas de production d'avions"
+ pm_limited_aeroplanes: "Production d'avions limitée"
+ pm_extensive_aeroplanes: "Production d'avions importante"
+ pm_overtime_aeroplanes: "Production d'avions en heures supplémentaires" #NT!
+  
+ pm_no_tanks: "Pas de production de chars"
+ pm_limited_tanks: "Production de chars limitée"
+ pm_extensive_tanks: "Production de chars importante"
+ pm_overtime_tanks: "Production d'avions en heures supplémentaires" #NT!
+  
+ # Technology 
+ pneumatic_tyres: "Pneus pneumatiques" #NT!
+ pneumatic_tyres_desc: "Les applications du caoutchouc vulcanisé en combinaison avec le moteur à combustion ont le potentiel d’être révolutionnaires." #NT!

@@ -1,0 +1,431 @@
+﻿## TTS Shipbuilding Compatibility:
+
+# Base PM's
+pm_military_shipbuilding_ironclad = {
+	texture = "gfx/interface/icons/production_method_icons/ironclad_production.dds"
+	
+	unlocking_technologies = {
+		ironclad_tech
+	}
+	
+	building_modifiers = {
+		workforce_scaled = {
+			# input goods
+			goods_input_engines_add = 6
+			goods_input_automobiles_add = 2
+			goods_input_coal_add = 10
+			goods_input_iron_add = 30
+			
+			# output goods
+			goods_output_ironclads_add = 50
+		}
+		
+		level_scaled = {
+			# employment
+			building_employment_laborers_add = 2000
+			building_employment_machinists_add = 1500
+			building_employment_engineers_add = 1000
+		}
+	}
+}
+
+pm_military_shipbuilding_steel = {
+	texture = "gfx/interface/icons/production_method_icons/steel_military_shipbuilding.dds"
+	
+	unlocking_technologies = {
+		steel_shipbuilding_tech
+	}
+	
+	building_modifiers = {
+		workforce_scaled = {
+			# input goods
+			goods_input_engines_add = 6
+			goods_input_automobiles_add = 2
+			goods_input_steel_add = 30
+			goods_input_coal_add = 15
+			
+			# output goods
+			goods_output_ironclads_add = 60
+		}
+		
+		level_scaled = {
+			# employment
+			building_employment_laborers_add = 2000
+			building_employment_machinists_add = 1500
+			building_employment_engineers_add = 1000
+		}
+	}
+}
+
+pm_military_shipbuilding_turbine = {
+	texture = "gfx/interface/icons/production_method_icons/turbine_military_shipbuilding.dds"
+	
+	unlocking_technologies = {
+		turbine_powered_ships_tech
+	}
+	
+	building_modifiers = {
+		workforce_scaled = {
+			# input goods
+			goods_input_engines_add = 9
+			goods_input_automobiles_add = 3
+			goods_input_steel_add = 40
+			goods_input_electricity_add = 10
+			
+			# output goods
+			goods_output_ironclads_add = 30
+			goods_output_tts_capital_ships_add = 25
+		}
+		
+		level_scaled = {
+			# employment
+			building_employment_laborers_add = 1000
+			building_employment_machinists_add = 2000
+			building_employment_engineers_add = 1500
+		}
+	}
+}
+
+pm_military_shipbuilding_arc_welding = {
+	texture = "gfx/interface/icons/production_method_icons/arcwelded_military_shipbuilding.dds"
+	
+	unlocking_technologies = {
+		large_scale_shipbuilding_tech
+	}
+	
+	building_modifiers = {
+		workforce_scaled = {
+			# input goods
+			goods_input_engines_add = 12
+			goods_input_automobiles_add = 4
+			goods_input_steel_add = 40
+			goods_input_electricity_add = 20
+			
+			# output goods
+			goods_output_ironclads_add = 25
+			goods_output_tts_capital_ships_add = 40
+		}
+		
+		level_scaled = {
+			# employment
+			building_employment_laborers_add = 1000
+			building_employment_machinists_add = 2000
+			building_employment_engineers_add = 1500
+		}
+	}
+}
+
+# Shift-work PM's
+pm_mil_shipyards_double_shifts_tts = {
+	texture = "gfx/interface/icons/production_method_icons/shift_2.dds"
+	replacement_if_valid = pm_mil_shipyards_double_shifts_tts_steel
+	replacement_if_valid = pm_mil_shipyards_double_shifts_tts_turbine
+	replacement_if_valid = pm_mil_shipyards_double_shifts_tts_arc_welding
+	
+	unlocking_technologies = {
+		shift_work
+	}
+	unlocking_production_methods = {
+		pm_military_shipbuilding_ironclad
+		pm_military_shipbuilding_steel
+		pm_military_shipbuilding_turbine
+		pm_military_shipbuilding_arc_welding
+	}
+	
+	building_modifiers = {
+		workforce_scaled = {
+			# input goods
+			goods_input_engines_add = 5
+			goods_input_automobiles_add = 2
+			goods_input_coal_add = 8
+			goods_input_iron_add = 24
+			
+			# output goods
+			goods_output_ironclads_add = 46
+		}
+		
+		level_scaled = {
+			# employment
+			building_employment_laborers_add = 2000
+			building_employment_machinists_add = 1500
+			building_employment_engineers_add = 600
+		}
+	}
+	
+	state_modifiers = {
+		unscaled = {
+			building_military_shipyards_throughput_add = 0.1
+		}
+		level_scaled = {
+			building_military_shipyards_throughput_add = 0.02
+		}
+	}
+}
+
+pm_mil_shipyards_double_shifts_tts_steel = {
+	texture = "gfx/interface/icons/production_method_icons/shift_2.dds"
+	replacement_if_valid = pm_mil_shipyards_double_shifts_tts_turbine
+	replacement_if_valid = pm_mil_shipyards_double_shifts_tts_arc_welding
+	is_hidden_when_unavailable = yes
+	
+	unlocking_technologies = {
+		shift_work
+	}
+	unlocking_production_methods = {
+		pm_military_shipbuilding_steel
+		pm_military_shipbuilding_turbine
+		pm_military_shipbuilding_arc_welding
+	}
+	
+	building_modifiers = {
+		workforce_scaled = {
+			# input goods
+			goods_input_engines_add = 5
+			goods_input_automobiles_add = 2
+			goods_input_steel_add = 24
+			goods_input_coal_add = 12
+			
+			# output goods
+			goods_output_ironclads_add = 56
+		}
+		
+		level_scaled = {
+			# employment
+			building_employment_laborers_add = 2000
+			building_employment_machinists_add = 1500
+			building_employment_engineers_add = 600
+		}
+	}
+	
+	state_modifiers = {
+		unscaled = {
+			building_military_shipyards_throughput_add = 0.1
+		}
+		level_scaled = {
+			building_military_shipyards_throughput_add = 0.02
+		}
+	}
+}
+
+pm_mil_shipyards_double_shifts_tts_turbine = {
+	texture = "gfx/interface/icons/production_method_icons/shift_2.dds"
+	replacement_if_valid = pm_mil_shipyards_double_shifts_tts_arc_welding
+	is_hidden_when_unavailable = yes
+	
+	unlocking_technologies = {
+		shift_work
+	}
+	unlocking_production_methods = {
+		pm_military_shipbuilding_turbine
+		pm_military_shipbuilding_arc_welding
+	}
+	
+	building_modifiers = {
+		workforce_scaled = {
+			# input goods
+			goods_input_engines_add = 7
+			goods_input_automobiles_add = 2
+			goods_input_steel_add = 32
+			goods_input_electricity_add = 8
+			
+			# output goods
+			goods_output_ironclads_add = 26
+			goods_output_tts_capital_ships_add = 22
+		}
+		
+		level_scaled = {
+			# employment
+			building_employment_laborers_add = 1000
+			building_employment_machinists_add = 2000
+			building_employment_engineers_add = 900
+		}
+	}
+	
+	state_modifiers = {
+		unscaled = {
+			building_military_shipyards_throughput_add = 0.1
+		}
+		level_scaled = {
+			building_military_shipyards_throughput_add = 0.02
+		}
+	}
+}
+
+pm_mil_shipyards_double_shifts_tts_arc_welding = {
+	texture = "gfx/interface/icons/production_method_icons/shift_2.dds"
+	is_hidden_when_unavailable = yes
+	
+	unlocking_technologies = {
+		shift_work
+	}
+	unlocking_production_methods = {
+		pm_military_shipbuilding_arc_welding
+	}
+	
+	building_modifiers = {
+		workforce_scaled = {
+			# input goods
+			goods_input_engines_add = 10
+			goods_input_automobiles_add = 3
+			goods_input_steel_add = 32
+			goods_input_electricity_add = 16
+			
+			# output goods
+			goods_output_ironclads_add = 22
+			goods_output_tts_capital_ships_add = 36
+		}
+		
+		level_scaled = {
+			# employment
+			building_employment_laborers_add = 1000
+			building_employment_machinists_add = 2000
+			building_employment_engineers_add = 900
+		}
+	}
+	
+	state_modifiers = {
+		unscaled = {
+			building_military_shipyards_throughput_add = 0.1
+		}
+		level_scaled = {
+			building_military_shipyards_throughput_add = 0.02
+		}
+	}
+}
+
+# Triples
+pm_mil_shipyards_triple_shifts_tts = {
+	texture = "gfx/interface/icons/production_method_icons/shift_3.dds"
+	replacement_if_valid = pm_mil_shipyards_triple_shifts_tts_turbine
+	replacement_if_valid = pm_mil_shipyards_triple_shifts_tts_arc_welding
+	
+	unlocking_technologies = {
+		conveyors
+	}
+	unlocking_production_methods = {
+		pm_military_shipbuilding_steel
+		pm_military_shipbuilding_turbine
+		pm_military_shipbuilding_arc_welding
+	}
+	
+	building_modifiers = {
+		workforce_scaled = {
+			# input goods
+			goods_input_engines_add = 8
+			goods_input_automobiles_add = 3
+			goods_input_steel_add = 42
+			goods_input_coal_add = 21
+			
+			# output goods
+			goods_output_ironclads_add = 108
+		}
+		
+		level_scaled = {
+			# employment
+			building_employment_laborers_add = 4000
+			building_employment_machinists_add = 3000
+			building_employment_engineers_add = 800
+		}
+	}
+	
+	state_modifiers = {
+		unscaled = {
+			building_military_shipyards_throughput_add = 0.2
+		}
+		level_scaled = {
+			building_military_shipyards_throughput_add = 0.04
+		}
+	}
+	
+	required_input_goods = electricity
+}
+
+pm_mil_shipyards_triple_shifts_tts_turbine = {
+	texture = "gfx/interface/icons/production_method_icons/shift_3.dds"
+	replacement_if_valid = pm_mil_shipyards_triple_shifts_tts_arc_welding
+	is_hidden_when_unavailable = yes
+	
+	unlocking_technologies = {
+		conveyors
+	}
+	unlocking_production_methods = {
+		pm_military_shipbuilding_turbine
+		pm_military_shipbuilding_arc_welding
+	}
+	
+	building_modifiers = {
+		workforce_scaled = {
+			# input goods
+			goods_input_engines_add = 12
+			goods_input_automobiles_add = 3
+			goods_input_steel_add = 56
+			goods_input_electricity_add = 14
+			
+			# output goods
+			goods_output_ironclads_add = 48
+			goods_output_tts_capital_ships_add = 41
+		}
+		
+		level_scaled = {
+			# employment
+			building_employment_laborers_add = 2000
+			building_employment_machinists_add = 4000
+			building_employment_engineers_add = 1200
+		}
+	}
+	
+	state_modifiers = {
+		unscaled = {
+			building_military_shipyards_throughput_add = 0.2
+		}
+		level_scaled = {
+			building_military_shipyards_throughput_add = 0.04
+		}
+	}
+	
+	required_input_goods = electricity
+}
+
+pm_mil_shipyards_triple_shifts_tts_arc_welding = {
+	texture = "gfx/interface/icons/production_method_icons/shift_3.dds"
+	is_hidden_when_unavailable = yes
+	
+	unlocking_technologies = {
+		conveyors
+	}
+	unlocking_production_methods = {
+		pm_military_shipbuilding_arc_welding
+	}
+	
+	building_modifiers = {
+		workforce_scaled = {
+			# input goods
+			goods_input_engines_add = 18
+			goods_input_automobiles_add = 5
+			goods_input_steel_add = 56
+			goods_input_electricity_add = 30
+			
+			# output goods
+			goods_output_ironclads_add = 41
+			goods_output_tts_capital_ships_add = 68
+		}
+		
+		level_scaled = {
+			# employment
+			building_employment_laborers_add = 2000
+			building_employment_machinists_add = 4000
+			building_employment_engineers_add = 1200
+		}
+	}
+	
+	state_modifiers = {
+		unscaled = {
+			building_military_shipyards_throughput_add = 0.2
+		}
+		level_scaled = {
+			building_military_shipyards_throughput_add = 0.04
+		}
+	}
+	
+	required_input_goods = electricity
+}
