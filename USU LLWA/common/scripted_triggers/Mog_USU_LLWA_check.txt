@@ -1,0 +1,7 @@
+﻿LLWA_active = {
+    OR = {
+        has_game_rule = LLWA_grs_mapi_no
+		has_game_rule = LLWA_grs_mapi_yes
+        has_game_rule = LLWA_grs_bldgs_only
+    }
+}

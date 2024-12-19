@@ -1,0 +1,32 @@
+﻿# Note for travel agencies: curtiss_tourism_tech if USU+MR is active (overwrites this)
+
+pm_luxury_requisitions = {
+	texture = "gfx/interface/icons/production_method_icons/luxury_requisitions.dds"
+	
+	building_modifiers = {
+		workforce_scaled = {
+			goods_input_usu_logistics_add = 2
+			goods_output_services_add = 10
+		}	
+	}
+}
+
+pm_travel_agencies = {
+	texture = "gfx/interface/icons/production_method_icons/travel_agencies.dds"
+	
+	unlocking_technologies = {
+		mass_propaganda
+	}
+	
+	building_modifiers = {
+		workforce_scaled = {
+			goods_input_usu_logistics_add = 12
+			goods_output_services_add = 20
+			goods_output_air_travel_add = 1
+		}
+		level_scaled = {
+			building_employment_laborers_add = -400
+			building_employment_clerks_add = 200
+		}
+	}
+}

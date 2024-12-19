@@ -1,0 +1,27 @@
+[img]https://i.imgur.com/7xuCZqW.png[/img]
+Supports Victoria 3: V1.8.6  (and onwards)
+Supports LLWA: Any Valid Version
+Mod Version: V1.0
+Please consider rating this if you like it! It really helps out. [img]https://i.imgur.com/tE28cZ7.gif[/img]
+[spoiler]Originally made for: Version 1.8.6[/spoiler]
+[table]
+    [tr]
+        [td][img]https://i.imgur.com/XLUGyo4.png[/img][/td]
+        [td][img]https://i.imgur.com/6KqTKks.png[/img][/td]
+    [/tr]
+[/table]
+*Neither LLWA nor Urban Synergy Unleashed can be removed from existing saves.
+[img]https://i.imgur.com/6o9HyTD.png[/img]
+This is a compatibility patch for Locomotion: Land, Water, & Air and Urban Synergy Unleashed.
+
+It is [i][u][b]also[/b][/u][/i] the USU + LLWA +Morgenrote compatch (requires USU + Morgenrote [i]and[/i] LLWA + Morgenrote as well).
+
+[h3]Requires the originals: [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3371689443]Urban Synergy Unleashed[/url] and [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3032533792]Locomotion: Land, Water, & Air[/url].[/h3]
+
+Load order doesn't matter.
+
+I recommend [i]not[/i] using LLWA's alternative MAPI rules with this - though it's probably fine as long as LLWA is up-to-date when you do.
+
+#USU #GUSU #LLWA #Trade
+#Morgenrote #Urbanization
+#Electricity #Economy

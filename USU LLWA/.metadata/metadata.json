@@ -1,0 +1,16 @@
+{
+  "name" : "USU + LLWA Compatch",
+  "id" : "3387021675",
+  "version" : "",
+  "supported_game_version" : "",
+  "short_description" : "",
+  "tags" : [
+        "Balance",
+        "Economy And Buildings",
+        "Gameplay"
+    ],
+  "relationships" : [],
+  "game_custom_data" : {
+    "multiplayer_synchronized" : true
+  }
+}

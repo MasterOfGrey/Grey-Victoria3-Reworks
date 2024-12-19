@@ -1,0 +1,7 @@
+﻿pm_gaudi_no_communication = {
+	texture = "gfx/interface/icons/production_method_icons/gaudi_telegraph_no_pm.dds"
+	
+	unlocking_production_methods = {
+		pm_gaudi_no_communication
+	}
+}
