@@ -1,0 +1,9 @@
+GLOBAL = {
+    set_global_variable = {
+        name = next_dict_id
+        value = 0
+    }
+    every_country = {
+        set_dict_id
+    }
+}
