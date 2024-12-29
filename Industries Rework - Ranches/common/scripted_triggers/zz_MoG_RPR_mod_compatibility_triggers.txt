@@ -1,0 +1,7 @@
+﻿##################################################
+#   GREY - MOD COMPATIBILITY SCRIPTED TRIGGERS   #
+##################################################
+
+Grey_RPR_is_active = { # Ranch Production Rework
+	always = yes
+}

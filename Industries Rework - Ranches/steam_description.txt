@@ -1,0 +1,44 @@
+[img]https://i.imgur.com/7xuCZqW.png[/img]
+Supports Victoria 3: V1.8.6  (and onwards)
+Mod Version: V1.0
+Please consider rating this if you like it! It really helps out. [img]https://i.imgur.com/tE28cZ7.gif[/img]
+[spoiler]Originally made for: Version 1.8.6[/spoiler]
+[table]
+    [tr]
+        [td][img]https://i.imgur.com/kbYsPSO.png[/img][/td]
+        [td][img]https://i.imgur.com/Be8E2qJ.png[/img][/td]
+    [/tr]
+[/table]
+*EXISTING SAVES: LET THIS RUN FOR A WEEK BEFORE LOOKING AT YOUR BUILDINGS.
+[img]https://i.imgur.com/6o9HyTD.png[/img]
+This mod is a complete overhaul of the Ranches building, with the goals of having dynamic production options that are capable of making the ranch actually viable.
+It is intentionally limited in scope to the ranch to be maximally compatible with other mods.
+
+It also has a way for ranches to produce "silk" - representing high quality textiles such as cashmere and merino wool, which are better described as luxury fabrics.
+
+Among other things, this means that some nations that were historically viable almost solely due to their animal herding skills will be able to avoid abject poverty.
+
+[img]https://i.imgur.com/Qp8JBtZ.png[/img]
+This should be compatible with almost anything other than major alternative ranch reworks.
+
+This mod does tweak pop needs a little bit, to bring in compatibility with Pop Demand Tweak while still sorting the overall balance - if you're using a mod with alternative food products, that *may* need to be patched depending on how they've done it. The building itself is dynamic enough to work with alternative pop needs mods as long as they themselves are done sensibly.
+
+It is compatible with VTM and AI mods, etc.
+
+[img]https://i.imgur.com/lQRf9dG.png[/img]
+[b]Can you add <insert language> localisation?[/b]
+[i]If you send it to me I will add it.[/i]
+
+[img]https://i.imgur.com/UN80Om5.png[/img]
+[h2]Language Support:[/h2]
+[b]Unless Credited below: Localizations are done by Machine Translation!
+ -> Replacements are welcome from anyone![/b]
+Credit will be given to to providers of localisation content:
+[list]
+[*]n/a
+[/list]
+
+#Production #Ranch #Rework
+#Products #Meat #Groceries
+#Fertilizer #Fertiliser
+#Textiles #Silken Cloth

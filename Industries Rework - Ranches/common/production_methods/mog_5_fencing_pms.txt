@@ -1,0 +1,40 @@
+﻿# Vanilla fencing PM's are trash.
+
+pm_standard_fences = {
+	texture = "gfx/interface/icons/production_method_icons/standard_fences.dds"
+}
+
+pm_barbed_wire_fences = {
+	texture = "gfx/interface/icons/production_method_icons/barbed_wire_fencing.dds"
+	unlocking_technologies = {
+		field_works	
+	}	
+	building_modifiers = {
+		workforce_scaled = {
+			goods_input_iron_add = 1		# 2
+		}
+
+		level_scaled = {
+			building_employment_laborers_add = -800
+		}
+	}
+}		
+
+pm_electric_fencing = {
+	texture = "gfx/interface/icons/production_method_icons/electric_fencing.dds"	
+	unlocking_technologies = {
+		electrical_generation	
+	}
+	building_modifiers = {
+		workforce_scaled = {
+			goods_input_iron_add = 1		# 2
+			goods_input_electricity_add = 2
+		}
+
+		level_scaled = {
+			building_employment_laborers_add = -1400
+		}
+	}
+
+	required_input_goods = electricity
+}

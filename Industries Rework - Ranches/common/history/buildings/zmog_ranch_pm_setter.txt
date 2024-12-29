@@ -1,0 +1,11 @@
+﻿BUILDINGS = {
+	if = { # Add top-up consecs to iron-potential states to make up for blanket downsize of consec sizes.
+		limit = { Grey_RPR_is_active = yes }
+		every_state = {
+			limit = {
+				can_activate_production_method = { building_type = building_livestock_ranch production_method = pm_unrefrigerated_ranch }
+			}
+			activate_production_methods={ "pm_open_air_stockyards" "pm_homemade_tools" "pm_simple_ranch" "pm_artisanal_cheese" "pm_standard_fences" "pm_unrefrigerated_ranch"  }
+		}
+	}
+}

@@ -1,0 +1,98 @@
+﻿# Group 0
+pm_no_cheese = {
+	texture = "gfx/interface/icons/production_method_icons/no_processing.dds"
+}
+
+pm_artisanal_cheese = {
+	texture = "gfx/interface/icons/production_method_icons/cheese.dds"
+	
+	building_modifiers = {
+		workforce_scaled = {
+			goods_input_fabric_add = 4
+			goods_output_meat_add = -18
+			goods_output_groceries_add = 30
+		}
+		
+		level_scaled = {
+			building_employment_laborers_add = -100
+			building_employment_machinists_add = 50
+		}
+	}
+}
+
+pm_industrial_preserves = {
+	texture = "gfx/interface/icons/production_method_icons/cheese_extra.dds"
+	
+	unlocking_technologies = {
+		canneries
+	}
+	
+	building_modifiers = {
+		workforce_scaled = {
+			goods_input_paper_add = 4
+			goods_output_meat_add = -15
+			goods_output_groceries_add = 30
+		}
+		
+		level_scaled = {
+			building_employment_laborers_add = -200
+			building_employment_machinists_add = 100
+		}
+	}
+}
+
+pm_ranch_milk_production = {
+	texture = "gfx/interface/icons/production_method_icons/dairy_milk.dds"
+	
+	unlocking_technologies = {
+		pasteurization
+	}
+	unlocking_production_methods = {
+		pm_intensive_grazing_ranch
+		pm_battery_farming
+	}
+	
+	building_modifiers = {
+		workforce_scaled = {
+			goods_input_paper_add = 8
+			goods_input_electricity_add = 4
+			goods_output_meat_add = -30
+			goods_output_groceries_add = 60
+		}
+		
+		level_scaled = {
+			building_employment_laborers_add = -300
+			building_employment_machinists_add = 150
+		}
+	}
+	
+	required_input_goods = electricity
+}
+
+
+pm_full_eggs_dairy = {
+	texture = "gfx/interface/icons/production_method_icons/chicken_coop.dds"
+	
+	unlocking_technologies = {
+		pasteurization
+	}
+	unlocking_production_methods = {
+		pm_battery_farming
+	}
+	
+	building_modifiers = {
+		workforce_scaled = {
+			goods_input_paper_add = 10
+			goods_input_electricity_add = 10
+			goods_output_meat_add = -20
+			goods_output_groceries_add = 60
+		}
+		
+		level_scaled = {
+			building_employment_laborers_add = -400
+			building_employment_machinists_add = 200
+		}
+	}
+	
+	required_input_goods = electricity
+}

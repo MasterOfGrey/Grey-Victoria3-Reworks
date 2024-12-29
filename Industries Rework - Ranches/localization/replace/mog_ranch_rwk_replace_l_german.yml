@@ -1,0 +1,48 @@
+﻿l_german:
+  # More accurate fabric terms for how the game uses them 
+ fabric: "Basistextilien" #NT!
+ silk: "Seidenstoff" #NT!
+  
+ goods_output_fabric_add: "@Stoff! Textilausgabe" #NT!
+ goods_output_fabric_add_desc: "Die Menge an @fabric!-Textilien, die von Gebäuden produziert werden" #NT!
+ goods_output_fabric_mult: "Aufbau von @fabric! Textilproduktion" #NT!
+ goods_output_fabric_mult_desc: "Ein Bonus oder eine Strafe für die Menge an @fabric! Textilien, die von Gebäuden produziert werden" #NT!
+ goods_output_silk_add: "@silk! Seidenstoff-Ausgabe" #NT!
+ goods_output_silk_add_desc: "Die Menge an @silk! Seidenstoff, die von Gebäuden produziert wird" #NT!
+ goods_output_silk_mult: "Erstellen von @silk! Silken Cloth-Ausgabe" #NT!
+ goods_output_silk_mult_desc: "Ein Bonus oder eine Strafe für die Menge an @Seide! Seidenstoff, der von Gebäuden produziert wird" #NT!
+  
+  #Ranches 
+ pmg_base_building_livestock_ranch: "$pm_base$"
+ pm_open_air_stockyards: "Freiluftschlachtungen"
+ pm_intensive_grazing_ranch: "Intensive Weidezyklen" #NT!
+ pm_battery_farming: "Massentierhaltung" #NT!
+  
+ pmg_automation_ranch: "Werkzeugbau" #NT!
+ pm_homemade_tools: "Hausgemachte Werkzeuge" #NT!
+ pm_butchering_tools: "Schlachtwerkzeuge"
+ pm_slaughterhouses: "Schlachthöfe"
+ pm_mechanized_slaughtering: "Mechanisierte Schlachthöfe"
+ pm_refrigerated_workspaces: "Gekühlte Arbeitsplätze" #NT!
+  
+ pmg_sheep_ranch: "Wollproduktion"
+ pm_simple_ranch: "Wolltierfarm" #NT!
+ pm_sheep_farms: "Verbesserte Wollgewinnung"
+ pm_intensive_diet_control: "Intensive Diätkontrolle" #NT!
+  
+ pmg_dairy_products: "Veredelte Produkte" #NT!
+ pm_no_cheese: "Keine Verfeinerung" #NT!
+ pm_artisanal_cheese: "Handwerklich hergestellter Käse" #NT!
+ pm_industrial_preserves: "Industrielle Konserven" #NT!
+ pm_ranch_milk_production: "Pasteurisierte Milch" #NT!
+ pm_full_eggs_dairy: "Volle Eier und Milchprodukte" #NT!
+  
+ pmg_fencing: "Zäune"
+ pm_standard_fences: "Standardzäune"
+ pm_barbed_wire_fences: "Stacheldrahtzäune"
+ pm_electric_fencing: "Elektrozäune"
+  
+ pmg_refrigeration_building_livestock_ranch: "Kühlung"
+ pm_unrefrigerated_ranch: "Ungekühlt" #NT!
+ pm_refrigerated_storage_building_livestock_ranch: "Kühllager"
+ pm_refrigerated_rail_cars_building_livestock_ranch: "Kühlwaggons"

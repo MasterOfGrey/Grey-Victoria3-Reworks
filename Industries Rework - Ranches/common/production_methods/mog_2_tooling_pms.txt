@@ -1,0 +1,99 @@
+﻿pm_homemade_tools = {
+	texture = "gfx/interface/icons/production_method_icons/rpr_homemade_tools.dds"						
+}
+
+pm_butchering_tools = {
+	texture = "gfx/interface/icons/production_method_icons/rpr_butchering_tools.dds"			
+	building_modifiers = {				
+		workforce_scaled = {
+			goods_input_tools_add = 2
+			goods_output_meat_add = 12
+		}
+		
+		level_scaled = {
+			building_employment_laborers_add = -400
+			building_employment_farmers_add = 200
+		}
+	}							
+}
+
+pm_slaughterhouses = {
+	texture = "gfx/interface/icons/production_method_icons/rpr_slaughterhouses.dds"	
+	
+	state_modifiers = {
+		workforce_scaled = {
+			state_pollution_generation_add = 5
+		}
+	}
+	
+	unlocking_technologies = {
+		mechanical_tools
+	}	
+	building_modifiers = {
+		workforce_scaled = {
+			goods_input_tools_add = 6
+			goods_output_meat_add = 22
+		}
+		
+		level_scaled = {
+			building_employment_laborers_add = -400
+			building_employment_machinists_add = 100
+			building_employment_farmers_add = 100
+		}
+	}
+}
+
+pm_mechanized_slaughtering = {
+	texture = "gfx/interface/icons/production_method_icons/rpr_mechanized_slaughtering.dds"	
+	
+	state_modifiers = {
+		workforce_scaled = {
+			state_pollution_generation_add = 10
+		}
+	}
+	
+	unlocking_technologies = {
+		steam_donkey
+	}
+	building_modifiers = {
+		workforce_scaled = {
+			goods_input_tools_add = 8
+			goods_input_coal_add = 4
+			goods_output_meat_add = 60
+		}
+		
+		level_scaled = {
+			building_employment_laborers_add = -600
+			building_employment_machinists_add = 200
+			building_employment_farmers_add = 100
+		}
+	}
+}
+
+pm_refrigerated_workspaces = {
+	texture = "gfx/interface/icons/production_method_icons/rpr_fridge_cow.dds"	
+	
+	state_modifiers = {
+		workforce_scaled = {
+			state_pollution_generation_add = 10
+		}
+	}
+	
+	unlocking_technologies = {
+		pasteurization
+	}
+	building_modifiers = {
+		workforce_scaled = {
+			goods_input_tools_add = 8
+			goods_input_electricity_add = 4
+			goods_output_meat_add = 70
+		}
+		
+		level_scaled = {
+			building_employment_laborers_add = -800
+			building_employment_machinists_add = 300
+			building_employment_farmers_add = 100
+		}
+	}
+	required_input_goods = electricity
+}

@@ -1,0 +1,48 @@
+﻿l_japanese:
+  # More accurate fabric terms for how the game uses them 
+ fabric: "ベーシックテキスタイル" #NT!
+ silk: "絹布" #NT!
+  
+ goods_output_fabric_add: "@fabric! テキスタイル出力" #NT!
+ goods_output_fabric_add_desc: "建物から生産される@fabric!繊維の量" #NT!
+ goods_output_fabric_mult: "@fabric の構築! 繊維出力" #NT!
+ goods_output_fabric_mult_desc: "@fabricの量にボーナスまたはペナルティ！建物によって生産された繊維" #NT!
+ goods_output_silk_add: "@silk! シルク生地出力" #NT!
+ goods_output_silk_add_desc: "建物から生産される絹織物の量" #NT!
+ goods_output_silk_mult: "@silk! の構築 絹布の生産" #NT!
+ goods_output_silk_mult_desc: "建物によって生産される@silk! 絹布の量に対するボーナスまたはペナルティ" #NT!
+  
+  #Ranches 
+ pmg_base_building_livestock_ranch: "$pm_base$"
+ pm_open_air_stockyards: "露天家畜場"
+ pm_intensive_grazing_ranch: "集中放牧サイクル" #NT!
+ pm_battery_farming: "バッテリーファーミング" #NT!
+  
+ pmg_automation_ranch: "ツーリング" #NT!
+ pm_homemade_tools: "手作りツール" #NT!
+ pm_butchering_tools: "屠畜道具"
+ pm_slaughterhouses: "屠畜場"
+ pm_mechanized_slaughtering: "機械化屠畜場"
+ pm_refrigerated_workspaces: "冷蔵ワークスペース" #NT!
+  
+ pmg_sheep_ranch: "羊毛生産"
+ pm_simple_ranch: "ウールアニマルランチ" #NT!
+ pm_sheep_farms: "羊毛の収集量の増加"
+ pm_intensive_diet_control: "徹底した食事制限" #NT!
+  
+ pmg_dairy_products: "精製製品" #NT!
+ pm_no_cheese: "精製なし" #NT!
+ pm_artisanal_cheese: "手作りチーズ" #NT!
+ pm_industrial_preserves: "産業保護区" #NT!
+ pm_ranch_milk_production: "低温殺菌牛乳" #NT!
+ pm_full_eggs_dairy: "卵と乳製品" #NT!
+  
+ pmg_fencing: "柵"
+ pm_standard_fences: "標準柵"
+ pm_barbed_wire_fences: "有刺鉄線"
+ pm_electric_fencing: "電気柵"
+  
+ pmg_refrigeration_building_livestock_ranch: "冷凍"
+ pm_unrefrigerated_ranch: "冷蔵なし" #NT!
+ pm_refrigerated_storage_building_livestock_ranch: "冷凍保管庫"
+ pm_refrigerated_rail_cars_building_livestock_ranch: "冷凍庫付き列車"

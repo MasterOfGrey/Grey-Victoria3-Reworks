@@ -1,0 +1,48 @@
+﻿l_simp_chinese:
+  # More accurate fabric terms for how the game uses them 
+ fabric: "基础纺织品" #NT!
+ silk: "丝绸布" #NT!
+  
+ goods_output_fabric_add: "@fabric！纺织品输出" #NT!
+ goods_output_fabric_add_desc: "建筑物生产的@fabric！纺织品的数量" #NT!
+ goods_output_fabric_mult: "建造@fabric！纺织品输出" #NT!
+ goods_output_fabric_mult_desc: "对@fabric! 数量的奖励或惩罚" #NT!
+ goods_output_silk_add: "@silk! 丝绸布输出" #NT!
+ goods_output_silk_add_desc: "建筑物生产的@silk！丝绸布的数量" #NT!
+ goods_output_silk_mult: "建造@silk！丝绸布输出" #NT!
+ goods_output_silk_mult_desc: "对建筑物生产的@silk! Silken Cloth 数量的奖励或惩罚" #NT!
+  
+  #Ranches 
+ pmg_base_building_livestock_ranch: "$pm_base$"
+ pm_open_air_stockyards: "露天牲畜栏"
+ pm_intensive_grazing_ranch: "密集放牧周期" #NT!
+ pm_battery_farming: "电池耕作" #NT!
+  
+ pmg_automation_ranch: "工具" #NT!
+ pm_homemade_tools: "自制工具" #NT!
+ pm_butchering_tools: "屠宰工具"
+ pm_slaughterhouses: "屠宰场"
+ pm_mechanized_slaughtering: "机械化屠宰场"
+ pm_refrigerated_workspaces: "冷藏工作区" #NT!
+  
+ pmg_sheep_ranch: "羊毛生产"
+ pm_simple_ranch: "羊毛动物牧场" #NT!
+ pm_sheep_farms: "改进羊毛采收"
+ pm_intensive_diet_control: "强化饮食控制" #NT!
+  
+ pmg_dairy_products: "精炼产品" #NT!
+ pm_no_cheese: "无改进" #NT!
+ pm_artisanal_cheese: "手工奶酪" #NT!
+ pm_industrial_preserves: "工业保护区" #NT!
+ pm_ranch_milk_production: "巴氏杀菌奶" #NT!
+ pm_full_eggs_dairy: "全蛋和奶制品" #NT!
+  
+ pmg_fencing: "围栏"
+ pm_standard_fences: "标准围栏"
+ pm_barbed_wire_fences: "有刺铁丝围栏"
+ pm_electric_fencing: "电围栏"
+  
+ pmg_refrigeration_building_livestock_ranch: "冷藏"
+ pm_unrefrigerated_ranch: "非冷藏" #NT!
+ pm_refrigerated_storage_building_livestock_ranch: "冷库"
+ pm_refrigerated_rail_cars_building_livestock_ranch: "冷藏列车"

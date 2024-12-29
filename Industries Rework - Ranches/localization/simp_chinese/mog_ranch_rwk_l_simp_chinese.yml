@@ -1,0 +1,9 @@
+﻿l_simp_chinese:
+  # Missing Modifier Types 
+ goods_output_grain_mult: "建造@grain！粮食产量" #NT!
+ goods_output_grain_mult_desc: "对@grain! 数量的奖励或惩罚建筑物生产的粮食" #NT!
+ goods_output_meat_mult: "建造@meat！肉类产量" #NT!
+ goods_output_meat_mult_desc: "对@肉的数量有奖励或惩罚！建筑物生产的肉" #NT!
+  
+  # Flavour Easter Eggs 
+ company_somali_food_chain: "卡多食物链集团" #NT!

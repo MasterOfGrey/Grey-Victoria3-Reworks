@@ -1,0 +1,72 @@
+﻿### Local Food buildings with protein outputs improve local food industry efficiencies after refrigerated transportation becomes available.
+
+# Ranches
+pm_unrefrigerated_ranch = {
+	texture = "gfx/interface/icons/production_method_icons/no_refrigeration.dds"
+	
+	state_modifiers = {
+		workforce_scaled = {
+			building_food_industry_throughput_add = 0.005
+		}
+	}
+	
+	building_modifiers = {
+		workforce_scaled = {
+			goods_input_transportation_add = 1
+		}
+	}
+}
+
+pm_refrigerated_storage_building_livestock_ranch = {
+	texture = "gfx/interface/icons/production_method_icons/meat_fridge.dds"
+	ai_value = 500
+	
+	unlocking_technologies = {
+		pasteurization
+	}
+	
+	state_modifiers = {
+		workforce_scaled = {
+			building_food_industry_throughput_add = 0.01
+		}
+	}
+	
+	building_modifiers = {
+		workforce_scaled = {
+			goods_input_electricity_add = 3
+			goods_input_transportation_add = 1
+		}
+		level_scaled = {
+			building_employment_laborers_add = -800
+		}
+	}
+	
+	required_input_goods = electricity
+}
+
+pm_refrigerated_rail_cars_building_livestock_ranch = {
+	texture = "gfx/interface/icons/production_method_icons/refrigerated_rail_cars.dds"
+	ai_value = 500
+	
+	unlocking_technologies = {
+		flash_freezing
+	}
+	
+	state_modifiers = {
+		workforce_scaled = {
+			building_food_industry_throughput_add = 0.02
+		}
+	}
+	
+	building_modifiers = {
+		workforce_scaled = {
+			goods_input_electricity_add = 2
+			goods_input_transportation_add = 2
+		}
+		level_scaled = {
+			building_employment_laborers_add = -1400
+		}
+	}
+	
+	required_input_goods = electricity
+}

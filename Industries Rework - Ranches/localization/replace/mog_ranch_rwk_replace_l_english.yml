@@ -1,0 +1,48 @@
+﻿l_english:
+ # More accurate fabric terms for how the game uses them
+ fabric: "Basic Textiles"
+ silk: "Silken Cloth"
+ 
+ goods_output_fabric_add: "@fabric! Textile output"
+ goods_output_fabric_add_desc: "The amount of @fabric! Textiles produced by buildings"
+ goods_output_fabric_mult: "Building @fabric! Textile output"
+ goods_output_fabric_mult_desc: "A bonus or penalty to the amount of @fabric! Textiles produced by buildings"
+ goods_output_silk_add: "@silk! Silken Cloth output"
+ goods_output_silk_add_desc: "The amount of @silk! Silken Cloth produced by buildings"
+ goods_output_silk_mult: "Building @silk! Silken Cloth output"
+ goods_output_silk_mult_desc: "A bonus or penalty to the amount of @silk! Silken Cloth produced by buildings"
+ 
+ #Ranches
+ pmg_base_building_livestock_ranch: "$pm_base$"
+ pm_open_air_stockyards: "Open Air Stockyards"
+ pm_intensive_grazing_ranch: "Intensive Grazing Cycles"
+ pm_battery_farming: "Battery Farming"
+ 
+ pmg_automation_ranch: "Tooling"
+ pm_homemade_tools: "Homemade Tools"
+ pm_butchering_tools: "Butchering Tools"
+ pm_slaughterhouses: "Slaughterhouses"
+ pm_mechanized_slaughtering: "Mechanized Slaughterhouses"
+ pm_refrigerated_workspaces: "Refrigerated Workspaces"
+ 
+ pmg_sheep_ranch: "Wool Production"
+ pm_simple_ranch: "Wool Animal Ranch"
+ pm_sheep_farms: "Increased Wool Gathering"
+ pm_intensive_diet_control: "Intensive Diet Control"
+ 
+ pmg_dairy_products: "Refined Products"
+ pm_no_cheese: "No Refinement"
+ pm_artisanal_cheese: "Artisanal Cheeses"
+ pm_industrial_preserves: "Industrial Preserves"
+ pm_ranch_milk_production: "Pasteurized Milk"
+ pm_full_eggs_dairy: "Full Eggs & Dairy"
+ 
+ pmg_fencing: "Fencing"
+ pm_standard_fences: "Standard Fences"
+ pm_barbed_wire_fences: "Barbed Wire Fences"
+ pm_electric_fencing: "Electric Fences"
+ 
+ pmg_refrigeration_building_livestock_ranch: "Refrigeration"
+ pm_unrefrigerated_ranch: "Unrefrigerated"
+ pm_refrigerated_storage_building_livestock_ranch: "Refrigerated Storage"
+ pm_refrigerated_rail_cars_building_livestock_ranch: "Refrigerated Rail Cars"

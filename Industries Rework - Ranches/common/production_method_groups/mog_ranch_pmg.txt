@@ -1,0 +1,57 @@
+﻿pmg_base_building_livestock_ranch = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_refining.dds"
+	production_methods = {
+		pm_open_air_stockyards
+		pm_intensive_grazing_ranch
+		pm_battery_farming
+	}
+}
+
+pmg_automation_ranch = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_refining.dds"
+	production_methods = {
+		pm_homemade_tools
+		pm_butchering_tools
+		pm_slaughterhouses
+		pm_mechanized_slaughtering
+		pm_refrigerated_workspaces
+	}
+}
+
+pmg_sheep_ranch = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	production_methods = {
+		pm_simple_ranch
+		pm_sheep_farms
+		pm_intensive_diet_control
+	}
+}
+
+pmg_dairy_products = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_refining.dds"
+	production_methods = {
+		pm_no_cheese
+		pm_artisanal_cheese
+		pm_industrial_preserves
+		pm_ranch_milk_production
+		pm_full_eggs_dairy
+	}
+}
+
+pmg_fencing = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_automation.dds"
+	production_methods = {
+		pm_standard_fences
+		pm_barbed_wire_fences
+		pm_electric_fencing
+	}
+}
+
+pmg_refrigeration_building_livestock_ranch = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_automation.dds"
+	production_methods = {
+		pm_unrefrigerated_ranch
+		pm_refrigerated_storage_building_livestock_ranch
+		pm_refrigerated_rail_cars_building_livestock_ranch
+	}
+}

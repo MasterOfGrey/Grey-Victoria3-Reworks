@@ -1,0 +1,16 @@
+{
+  "name" : "Grey's Ranch Production Rework",
+  "id" : "3394847149",
+  "version" : "",
+  "supported_game_version" : "",
+  "short_description" : "",
+  "tags" : [
+        "Balance",
+        "Economy And Buildings",
+        "Gameplay"
+    ],
+  "relationships" : [],
+  "game_custom_data" : {
+    "multiplayer_synchronized" : true
+  }
+}

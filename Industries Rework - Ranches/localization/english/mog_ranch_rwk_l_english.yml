@@ -1,0 +1,9 @@
+﻿l_english:
+ # Missing Modifier Types
+ goods_output_grain_mult: "Building @grain! Grain output"
+ goods_output_grain_mult_desc: "A bonus or penalty to the amount of @grain! Grain produced by buildings"
+ goods_output_meat_mult: "Building @meat! Meat output"
+ goods_output_meat_mult_desc: "A bonus or penalty to the amount of @meat! Meat produced by buildings"
+ 
+ # Flavour Easter Eggs
+ company_somali_food_chain: "Qardho Food Chain Syndicate"

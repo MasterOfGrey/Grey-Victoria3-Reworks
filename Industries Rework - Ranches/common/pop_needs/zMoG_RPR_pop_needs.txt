@@ -1,0 +1,108 @@
+﻿#####################
+#   PDT style RPR   #
+#####################
+
+popneed_basic_food = {
+	default = grain
+
+	entry = {
+		goods = grain
+		
+		weight = 1 # Keeping
+		max_supply_share = 1.0 # 0.9 Pointless now
+		min_supply_share = 0.1
+	}
+	
+	entry = {
+		goods = fish
+		
+		weight = 1 # Keeping
+		max_supply_share = 1.0 # 0.9 Pointless now
+		min_supply_share = 0.1
+	}
+	
+	entry = {
+		goods = groceries
+		
+		weight = 0.8 # 0.5 # 0.75
+		max_supply_share = 0.8 # 0.5 Restricting the supply share is a problem
+		min_supply_share = 0.05
+	}
+
+	entry = {
+		goods = meat
+		
+		weight = 0.8 # 0.5
+		max_supply_share = 0.8 # 0.5 Restricting the supply share is a problem
+		min_supply_share = 0.025
+	}
+	
+	entry = {
+		goods = fruit
+		
+		weight = 0.25 # 0.5
+		max_supply_share = 0.25
+		min_supply_share = 0.025
+	}
+
+	entry = {
+		goods = sugar
+		
+		weight = 0.25
+		max_supply_share = 0.25
+		min_supply_share = 0.025
+	}
+	
+	entry = {
+		goods = services
+		
+		weight = 0.125
+		max_supply_share = 0.125
+		min_supply_share = 0.0125
+	}
+}
+
+# PDT Luxury Food modified where noted:
+popneed_luxury_food = {
+	default = groceries
+	
+	entry = {
+		goods = groceries
+		
+		weight = 1.0 # 1.5
+		max_supply_share = 1.0 # Keeping
+		min_supply_share = 0.1
+	}
+	
+	entry = {
+		goods = meat
+		
+		weight = 0.8 # 0.5					# RPR
+		max_supply_share = 0.8 # 0.5 # 0.75	# RPR
+		min_supply_share = 0.1 # 0.05		# RPR
+	}
+	
+	entry = {
+		goods = fruit
+		
+		weight = 0.5
+		max_supply_share = 0.5 # 0.75
+		min_supply_share = 0.05
+	}
+	
+	entry = {
+		goods = sugar
+		
+		weight = 0.5 # Keeping
+		max_supply_share = 0.5 # Keeping
+		min_supply_share = 0.05
+	}
+
+	entry = {
+		goods = services
+		
+		weight = 0.125
+		max_supply_share = 0.125
+		min_supply_share = 0.0125
+	}
+}

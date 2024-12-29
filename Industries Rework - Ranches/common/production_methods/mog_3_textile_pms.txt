@@ -1,0 +1,60 @@
+﻿pm_simple_ranch = {
+	texture = "gfx/interface/icons/production_method_icons/leather_animals.dds"
+
+	building_modifiers = {
+		workforce_scaled = {
+			goods_output_fabric_add = 5
+		}
+	}
+}
+
+pm_sheep_farms = {
+	texture = "gfx/interface/icons/production_method_icons/large_sheep_ranch.dds"
+	
+	unlocking_technologies = {
+		intensive_agriculture
+	}	
+	
+	unlocking_production_methods = {
+		pm_intensive_grazing_ranch
+	}
+	
+	building_modifiers = {
+		workforce_scaled = {
+			goods_output_meat_add = -10
+			goods_output_fabric_add = 20
+			goods_output_fertilizer_add = 10
+		}
+	}
+}
+
+pm_intensive_diet_control = {
+	texture = "gfx/interface/icons/production_method_icons/sheep_control.dds"
+
+	unlocking_technologies = {
+		improved_fertilizer
+	}
+	
+	unlocking_production_methods = {
+		pm_intensive_grazing_ranch
+		pm_battery_farming
+	}
+	
+	state_modifiers = {
+		workforce_scaled = {
+			building_millet_farm_throughput_add = 0.02
+			goods_output_grain_mult = 0.02
+		}
+	}
+	
+	building_modifiers = {
+		workforce_scaled = {
+			goods_input_grain_add = 10
+			goods_input_fruit_add = 6
+			goods_output_meat_add = -20
+			goods_output_fabric_add = 30
+			goods_output_silk_add = 5
+			goods_output_fertilizer_add = 30
+		}
+	}
+}

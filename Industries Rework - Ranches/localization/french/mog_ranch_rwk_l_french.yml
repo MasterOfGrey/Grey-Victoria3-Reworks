@@ -1,0 +1,9 @@
+﻿l_french:
+  # Missing Modifier Types 
+ goods_output_grain_mult: "Construire @grain! Production de céréales" #NT!
+ goods_output_grain_mult_desc: "Un bonus ou une pénalité sur la quantité de @grain! Grain produit par les bâtiments" #NT!
+ goods_output_meat_mult: "Bâtiment @meat! Production de viande" #NT!
+ goods_output_meat_mult_desc: "Un bonus ou une pénalité sur la quantité de viande produite par les bâtiments" #NT!
+  
+  # Flavour Easter Eggs 
+ company_somali_food_chain: "Syndicat de la chaîne alimentaire de Qardho" #NT!

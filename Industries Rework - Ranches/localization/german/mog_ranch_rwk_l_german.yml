@@ -1,0 +1,9 @@
+﻿l_german:
+  # Missing Modifier Types 
+ goods_output_grain_mult: "@grain erstellen! Getreideausgabe" #NT!
+ goods_output_grain_mult_desc: "Ein Bonus oder eine Strafe für die Menge an @grain! Getreide, das von Gebäuden produziert wird" #NT!
+ goods_output_meat_mult: "Aufbau von @meat! Fleischproduktion" #NT!
+ goods_output_meat_mult_desc: "Ein Bonus oder eine Strafe für die Menge an @meat! Fleisch, das von Gebäuden produziert wird" #NT!
+  
+  # Flavour Easter Eggs 
+ company_somali_food_chain: "Qardho-Nahrungskettensyndikat" #NT!

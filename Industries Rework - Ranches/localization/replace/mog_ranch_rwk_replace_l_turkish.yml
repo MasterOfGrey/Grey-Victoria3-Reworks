@@ -1,0 +1,48 @@
+﻿l_turkish:
+  # More accurate fabric terms for how the game uses them 
+ fabric: "Temel Tekstiller" #NT!
+ silk: "İpek Kumaş" #NT!
+  
+ goods_output_fabric_add: "@fabric! Tekstil çıktısı" #NT!
+ goods_output_fabric_add_desc: "Binaların ürettiği @fabric! tekstillerinin miktarı" #NT!
+ goods_output_fabric_mult: "@fabric inşa ediliyor! Tekstil çıktısı" #NT!
+ goods_output_fabric_mult_desc: "@fabric miktarına bir bonus veya ceza! Binalar tarafından üretilen tekstiller" #NT!
+ goods_output_silk_add: "@silk! İpek Kumaş çıktısı" #NT!
+ goods_output_silk_add_desc: "Binaların ürettiği @silk! İpek Kumaş miktarı" #NT!
+ goods_output_silk_mult: "@silk! yapımı İpek Kumaş çıktısı" #NT!
+ goods_output_silk_mult_desc: "Binaların ürettiği @silk! İpek Kumaş miktarına bir bonus veya ceza" #NT!
+  
+  #Ranches 
+ pmg_base_building_livestock_ranch: "$pm_base$"
+ pm_open_air_stockyards: "Açık Hava Ağılları"
+ pm_intensive_grazing_ranch: "Yoğun Otlatma Döngüleri" #NT!
+ pm_battery_farming: "Pil Çiftçiliği" #NT!
+  
+ pmg_automation_ranch: "Takımlama" #NT!
+ pm_homemade_tools: "Ev yapımı aletler" #NT!
+ pm_butchering_tools: "Kasap Aletleri"
+ pm_slaughterhouses: "Kesimevleri"
+ pm_mechanized_slaughtering: "Mekanize Kesimevleri"
+ pm_refrigerated_workspaces: "Soğutmalı Çalışma Alanları" #NT!
+  
+ pmg_sheep_ranch: "Yün Üretimi"
+ pm_simple_ranch: "Yün Hayvan Çiftliği" #NT!
+ pm_sheep_farms: "Arttırılmış Yün Toplama"
+ pm_intensive_diet_control: "Yoğun Diyet Kontrolü" #NT!
+  
+ pmg_dairy_products: "Rafine Ürünler" #NT!
+ pm_no_cheese: "Hiçbir Arıtma" #NT!
+ pm_artisanal_cheese: "El yapımı peynirler" #NT!
+ pm_industrial_preserves: "Endüstriyel Korumalar" #NT!
+ pm_ranch_milk_production: "Pastörize Süt" #NT!
+ pm_full_eggs_dairy: "Tam Yumurta ve Süt Ürünleri" #NT!
+  
+ pmg_fencing: "Çit Çekme"
+ pm_standard_fences: "Standart Çitler"
+ pm_barbed_wire_fences: "Dikenli Telli Çitler"
+ pm_electric_fencing: "Elektrikli Çitler"
+  
+ pmg_refrigeration_building_livestock_ranch: "Soğutma"
+ pm_unrefrigerated_ranch: "Buzdolabında saklanmamış" #NT!
+ pm_refrigerated_storage_building_livestock_ranch: "Soğuk Hava Deposu"
+ pm_refrigerated_rail_cars_building_livestock_ranch: "Soğutmalı Vagonlar"

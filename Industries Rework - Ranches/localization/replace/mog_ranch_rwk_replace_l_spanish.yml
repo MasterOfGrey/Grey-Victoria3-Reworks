@@ -1,0 +1,48 @@
+﻿l_spanish:
+  # More accurate fabric terms for how the game uses them 
+ fabric: "Textiles básicos" #NT!
+ silk: "Tela de seda" #NT!
+  
+ goods_output_fabric_add: "@fabric! Producción textil" #NT!
+ goods_output_fabric_add_desc: "¡La cantidad de @tela! Textiles producidos por los edificios" #NT!
+ goods_output_fabric_mult: "¡Construyendo @fabric! Producción textil" #NT!
+ goods_output_fabric_mult_desc: "¡Una bonificación o penalización a la cantidad de @fabric! Textiles producidos por edificios" #NT!
+ goods_output_silk_add: "@silk! Salida de tela de seda" #NT!
+ goods_output_silk_add_desc: "La cantidad de @silk! Tela de seda producida por los edificios" #NT!
+ goods_output_silk_mult: "¡Construyendo @silk! Producción de Silken Cloth" #NT!
+ goods_output_silk_mult_desc: "¡Una bonificación o penalización a la cantidad de @silk! Tela de seda producida por los edificios" #NT!
+  
+  #Ranches 
+ pmg_base_building_livestock_ranch: "$pm_base$"
+ pm_open_air_stockyards: "Corrales al aire libre"
+ pm_intensive_grazing_ranch: "Ciclos de pastoreo intensivo" #NT!
+ pm_battery_farming: "Agricultura en batería" #NT!
+  
+ pmg_automation_ranch: "Estampación" #NT!
+ pm_homemade_tools: "Herramientas caseras" #NT!
+ pm_butchering_tools: "Útiles de carnicería"
+ pm_slaughterhouses: "Mataderos"
+ pm_mechanized_slaughtering: "Mataderos mecanizados"
+ pm_refrigerated_workspaces: "Espacios de trabajo refrigerados" #NT!
+  
+ pmg_sheep_ranch: "Producción de lana"
+ pm_simple_ranch: "Rancho de animales de lana" #NT!
+ pm_sheep_farms: "Recogida de lana incrementada"
+ pm_intensive_diet_control: "Control intensivo de la dieta" #NT!
+  
+ pmg_dairy_products: "Productos refinados" #NT!
+ pm_no_cheese: "Sin refinamiento" #NT!
+ pm_artisanal_cheese: "Quesos Artesanales" #NT!
+ pm_industrial_preserves: "Conservas industriales" #NT!
+ pm_ranch_milk_production: "Leche pasteurizada" #NT!
+ pm_full_eggs_dairy: "Huevos enteros y lácteos" #NT!
+  
+ pmg_fencing: "Cercas"
+ pm_standard_fences: "Vallas normales"
+ pm_barbed_wire_fences: "Vallas con alambre de espino"
+ pm_electric_fencing: "Vallas electrificadas"
+  
+ pmg_refrigeration_building_livestock_ranch: "Refrigeración"
+ pm_unrefrigerated_ranch: "Sin refrigerar" #NT!
+ pm_refrigerated_storage_building_livestock_ranch: "Almacenamiento frigorífico"
+ pm_refrigerated_rail_cars_building_livestock_ranch: "Vagones refrigerados"
