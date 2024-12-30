@@ -15,7 +15,7 @@
 	BUY_SELL_DIFF_AT_MAX_FACTOR = 3 # 2				# the difference between buy/consumption and sell/production at min/max pricing, e.g. if set to 4 then if buy orders are 4x sell orders price is maxed
 	
 	# Slightly less severe than VTM
-	GOODS_SHORTAGE_PENALTY_THRESHOLD = 0.4 # 0.5	# If supply / demand is lower than this, start applying output penalties, by default this should be ( 1 / BUY_SELL_DIFF_AT_MAX_FACTOR )
+	GOODS_SHORTAGE_PENALTY_THRESHOLD = 0.32 # 0.4 # 0.5	# If supply / demand is lower than this, start applying output penalties, by default this should be ( 1 / BUY_SELL_DIFF_AT_MAX_FACTOR )
 	GOODS_SHORTAGE_PENALTY_INCREASE_SPEED = 0.01  	# Goods shortage penalty increases by this fraction of the target each day
 	GOODS_SHORTAGE_PENALTY_DECREASE_SPEED = 0.01  	# Goods shortage penalty goes down by this fraction of GOODS_SHORTAGE_PENALTY_MAX each day
 	GOODS_SHORTAGE_PENALTY_MIN = 0.05				# Goods shortage penalty can't be lower than this if there is any shortage
@@ -34,10 +34,10 @@
 	# TRADE_ROUTE_USE_AVERAGE_PRE_AND_POST_TRADE_PRICES = no			# Whether trade routes should use an average of pre and post-trade prices or just market prices (0 = market prices, 1 = pre/post trade prices)
 	
 	TRADE_ROUTE_AUTO_INCREASE_EMPLOYMENT_THRESHOLD = 0.9 					# If trade route has this much of its max staffing level employed, it can automatically increase its level
-	TRADE_ROUTE_AUTO_INCREASE_ACCEPTABLE_REVENUE_DIFFERENCE = 1 # 1.1		# Multiply revenue of new trade route level by this for the purpose of considering whether it's OK to auto-increase level (means that trade routes can level up even when slightly decreasing overall revenue)
+	TRADE_ROUTE_AUTO_INCREASE_ACCEPTABLE_REVENUE_DIFFERENCE = 1.02 # 1.1	# Multiply revenue of new trade route level by this for the purpose of considering whether it's OK to auto-increase level (means that trade routes can level up even when slightly decreasing overall revenue)
 	TRADE_ROUTE_AUTO_INCREASE_VERY_LOW_PRODUCTIVITY_THRESHOLD = 5 # 3		# If trade route's productivity is below this, always automatically decrease its level (regardless of total revenue)
 	TRADE_ROUTE_AUTO_INCREASE_LOW_PRODUCTIVITY_THRESHOLD = 18 # 6			# If trade route's productivity would drop below this, don't automatically increase its level (regardless of total revenue)
-	TRADE_ROUTE_AUTO_INCREASE_HIGH_PRODUCTIVITY_THRESHOLD = 500 # 10		# If trade route's productivity is above this, it's always fine to automatically increase its level (regardless of total revenue)
+	TRADE_ROUTE_AUTO_INCREASE_HIGH_PRODUCTIVITY_THRESHOLD = 40 # 500 # 10		# If trade route's productivity is above this, it's always fine to automatically increase its level (regardless of total revenue)
 	TRADE_ROUTE_AUTO_REDUCTION_EMPLOYMENT_THRESHOLD = 0.75 					# If trade route has less than this of its max staffing level employed and could not hire anyone last week, it can automatically decrease its level
 	TRADE_ROUTE_AUTO_REDUCTION_ACCEPTABLE_REVENUE_DIFFERENCE = 1.1 # 1.15	# Multiply revenue of current trade route level by this for the purpose of considering whether we should auto-decrease level (means that trade routes won't level down just for the purpose of a small revenue increase)
 	
@@ -54,9 +54,9 @@
 	# TRADE_CENTER_EXISTING_TRADE_ROUTES_FACTOR = -1  # When deciding trade center for a trade route, multiply the number of trade routes already associated with the state by this score
 	
 	## Wage diversity
-	MINIMUM_WAGE_RATE = 1.0 # 10.0									# The wage rate can never drop below this, no matter what (weekly £ per POP_SIZE_PACKAGE employees)
+	MINIMUM_WAGE_RATE = 2.0 # 1.0 # 10.0									# The wage rate can never drop below this, no matter what (weekly £ per POP_SIZE_PACKAGE employees)
 	BUILDING_INITIAL_WAGE_WEEKS = 1 # 2			   					# A building will not adjust its wages for the first this many weeks of its existence                                                                    
-	MAX_WAGE_STEP_CHANGE = 0.5 # 0.1			   					# Wage rates can change at most this much each week
+	MAX_WAGE_STEP_CHANGE = 0.3 # 0.5 # 0.1			   					# Wage rates can change at most this much each week
 	
 	BUILDING_RAISE_WAGES_MIN_RELEVANT_POP_SIZE = 50					# Pops with less workforce than this are ignored when checking whether a profitable building should raise wages because of radicalizing workers
 	BUILDING_RAISE_WAGES_DISCRIMINATION_FACTOR = 0.66				# Profitable buildings only care to raise wages for discriminated pops if their wealth to expected SoL ratio is less than this
@@ -64,7 +64,7 @@
 	
 	# Overlapping range ensures temporarily inflated wages can come down before financial stress sets in.
 	BUILDING_PROFIT_TARGET_TO_RAISE_WAGES = 0.3	# 0.25				# Required profit margin to consider raising wages for SoL or employment reasons, with BUILDING_WEEKS_BETWEEN_PAY_CHANGES weeks cooldown
-	BUILDING_PROFIT_TARGET_TO_LOWER_WAGES = 0.5 # 0.15				# If profit margin is this or below, buildings should lower their wages, with BUILDING_WEEKS_BETWEEN_PAY_CHANGES weeks cooldown
+	BUILDING_PROFIT_TARGET_TO_LOWER_WAGES = 0.3 # 0.5 # 0.15				# If profit margin is this or below, buildings should lower their wages, with BUILDING_WEEKS_BETWEEN_PAY_CHANGES weeks cooldown
 																										# (previously: consider lowering wages for SoL or employment reasons)
 	BUILDING_PROFIT_TARGET_TO_WITHDRAW_CASH = 0.2 # 0.15			# If profit margin is this or below, buildings should withdraw money from the cash reserves to make up the difference
 		# Previously: BUILDING_CASH_RESERVES_WITHDRAW_PROFIT_TARGET before directional revamp in 1.8
@@ -75,7 +75,7 @@
 	SUBSISTENCE_BUILDING_PROFIT_TARGET_TO_RAISE_WAGES = 0.7			# Overrides BUILDING_PROFIT_TARGET_TO_RAISE_WAGES for subsistence buildings
 	SUBSISTENCE_BUILDING_PROFIT_TARGET_TO_LOWER_WAGES = 0.5			# Overrides BUILDING_PROFIT_TARGET_TO_LOWER_WAGES for subsistence buildings
 	SUBSISTENCE_BUILDING_PROFIT_TARGET_TO_WITHDRAW_CASH = 0.3 # 0.5	# (Squeeze the peasants first fool!) # Overrides BUILDING_PROFIT_TARGET_TO_WITHDRAW_CASH for subsistence buildings
-	BUILDING_WEEKS_BETWEEN_PAY_CHANGES = 12 # 0 (v1.8)				# Cooldown between changes in pay, so buildings don't overcompensate for a temporary change in circumstances. If the building is unprofitable it uses BUILDING_WEEKS_BETWEEN_PAY_CHANGES_WHEN_UNPROFITABLE instead.
+	BUILDING_WEEKS_BETWEEN_PAY_CHANGES = 6 # 12 # 0 (v1.8)				# Cooldown between changes in pay, so buildings don't overcompensate for a temporary change in circumstances. If the building is unprofitable it uses BUILDING_WEEKS_BETWEEN_PAY_CHANGES_WHEN_UNPROFITABLE instead.
 	BUILDING_WEEKS_BETWEEN_PAY_CHANGES_WHEN_UNPROFITABLE = 4 # 0 (v1.8) 	# Cooldown between changes in pay, so buildings don't overcompensate for a temporary change in circumstances. Only used when unprofitable.
 	
 	# Pairs with AUTO_DOWNSIZE_BUILDING_MIN_EMPTY_FRACTION in behavior, above (1-THAT)= will raise wages before downsizing from lack of staff:
@@ -116,11 +116,13 @@
 	# GOLD_RESERVE_MIN = 1000						# If Gold Reserves are computed to be lower than this, it's instead set to this                                                                          
 	# GOLD_RESERVE_LIMIT_FACTOR = 1.0 # 0.2			# The base factor of annual GDP that should be provided as a Gold Reserve                                                                                
 	# GOLD_RESERVE_RETURNS_FACTOR = 0.1 # 1.0		# How rapidly diminishing returns will cause gold reserves to drop off after the limit has been reached (higher value increases penalty)             
-
-
+	
+	
 	## Companies
 	COMPANY_PRODUCTIVITY_RATIO_HIGH_THRESHOLD = 1.1 # 1.25	# Companies whose productivity exceeds this factor of the global average will be considered high-productivity companies
 	COMPANY_PRODUCTIVITY_RATIO_LOW_THRESHOLD = 0.66 # 0.75	# Companies whose productivity is below this factor of the global average will be considered low-productivity companies
+	COMPANY_PRODUCTIVITY_ABSOLUTE_HIGH_THRESHOLD = 20 # 25	# Companies whose productivity exceeds this amount will ALWAYS be considered high-productivity companies
+	COMPANY_PRODUCTIVITY_ABSOLUTE_LOW_THRESHOLD = 5			# Companies whose productivity is below this amount will ALWAYS be considered low-productivity companies
 	COMPANY_PROSPERITY_WEEKLY_INCREASE = 10	# 5				# High-productivity companies have their prosperity increase by this amount per week
 	COMPANY_PROSPERITY_WEEKLY_DECREASE = 2	# 5				# Low-productivity companies have their prosperity increase by this amount per week
 	COMPANY_ON_ESTABLISH_COOLDOWN_MONTHS = 48 # 60			# Cooldown in months after establishing a company before you can disband it
