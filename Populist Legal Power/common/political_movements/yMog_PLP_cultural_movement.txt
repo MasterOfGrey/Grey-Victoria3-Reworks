@@ -510,6 +510,17 @@
 			min = 0
 			desc = "STANDARD_OF_LIVING_FOR_CULTURE"
 		}
+
+#		add = {
+#			value = "owner.average_sol_for_culture(scope:culture)"
+#			subtract = {
+#				value =
+#			}
+#			multiply = 0.05
+#			max = 0.5
+#			min = 0
+#			desc = "STANDARD_OF_LIVING_FOR_CULTURE"
+#		}
 		
 		if = {
 			limit = {
@@ -540,6 +551,24 @@
 				value = 0.1
 				desc = "DISCRIMINATION_LEVEL_open_prejudice"
 			}
-		}	
+		}
+
+#		if = {
+#			limit = {
+#				NOT = {
+#					scope:culture = {
+#						shares_trait_with_any_primary_culture = root.owner
+#					}
+#				}
+#			}
+#
+#			subtract = {
+#				desc = "INSTITUTION_FUNDING_LEVEL_colonial_affairs"
+#				value = {
+#					owner.institution:institution_colonial_affairs.investment
+#				}
+#				multiply = 0.05
+#			}
+#		}
 	}
 }
