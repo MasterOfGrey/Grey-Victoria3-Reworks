@@ -11,6 +11,7 @@ clear_colonial_company_migration_penalty_on_actions = {
 				OR = {
 					c:CAN ?= this
 					c:JAV ?= this
+					c:IDN ?= this
 					OR = {
 						c:BHT ?= this
 						country_has_primary_culture = cu:bengali
