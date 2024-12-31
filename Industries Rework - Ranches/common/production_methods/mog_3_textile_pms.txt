@@ -17,13 +17,14 @@ pm_sheep_farms = {
 	
 	unlocking_production_methods = {
 		pm_intensive_grazing_ranch
+		pm_battery_farming
 	}
 	
 	building_modifiers = {
 		workforce_scaled = {
 			goods_output_meat_add = -10
 			goods_output_fabric_add = 20
-			goods_output_fertilizer_add = 10
+			goods_output_fertilizer_add = 20
 		}
 	}
 }
@@ -37,7 +38,6 @@ pm_intensive_diet_control = {
 	
 	unlocking_production_methods = {
 		pm_intensive_grazing_ranch
-		pm_battery_farming
 	}
 	
 	state_modifiers = {

@@ -46,6 +46,11 @@ pm_battery_farming = {
 		mechanized_farming
 	}
 	
+	unlocking_production_methods = {
+		pm_simple_ranch
+		pm_sheep_farms
+	}
+	
 	state_modifiers = {
 		workforce_scaled = {
 			state_pollution_generation_add = 10
