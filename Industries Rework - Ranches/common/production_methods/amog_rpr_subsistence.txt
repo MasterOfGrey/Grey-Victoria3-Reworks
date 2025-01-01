@@ -1,0 +1,133 @@
+﻿### Subsistence Production
+default_building_subsistence_farms = {
+	texture = "gfx/interface/icons/production_method_icons/subsistence_farming.dds"
+	
+	building_modifiers = {
+		workforce_scaled = { # 40
+			goods_output_grain_add = 1.0 # 20
+			goods_output_fabric_add = 0.5 # 10
+			goods_output_wood_add = 0.5 # 10
+			goods_output_services_add = 0.1
+		}
+		
+		level_scaled = {
+			building_employment_peasants_add = 5000
+		}
+	}
+	
+	state_modifiers = {							# This is inherited from USU, and is not strictly in scope for this mod - but I've seen that it works and people should have access to this feature without USU if they want it.
+		workforce_scaled = {
+			state_birth_rate_mult = -0.0075		# For some reason this one gets modifiers but the other doesn't, and the goal is to cancel out when fully employed.
+		}
+		level_scaled = {
+			state_birth_rate_mult = 0.01
+		}
+	}
+}
+
+default_building_subsistence_orchards = {
+	texture = "gfx/interface/icons/production_method_icons/subsistence_farming.dds"
+	
+	building_modifiers = {
+		workforce_scaled = { # 40
+			goods_output_grain_add = 0.25 # 5 
+			goods_output_fruit_add = 0.5 # 15
+			goods_output_fabric_add = 0.5 # 10
+			goods_output_wood_add = 0.5 # 10
+			goods_output_services_add = 0.1
+		}
+		
+		level_scaled = {
+			building_employment_peasants_add = 5000
+		}
+	}
+	
+	state_modifiers = {
+		workforce_scaled = {
+			state_birth_rate_mult = -0.0075
+		}
+		level_scaled = {
+			state_birth_rate_mult = 0.01
+		}
+	}
+}
+
+default_building_subsistence_pastures = {
+	texture = "gfx/interface/icons/production_method_icons/subsistence_farming.dds"
+	
+	building_modifiers = {
+		workforce_scaled = { # 40
+			goods_output_grain_add = 0.25 # 5
+			goods_output_meat_add = 0.5 # 15
+			goods_output_fabric_add = 0.75 # 15
+			goods_output_wood_add = 0.25 # 5
+			goods_output_services_add = 0.1
+		}
+		
+		level_scaled = {
+			building_employment_peasants_add = 5000
+		}
+	}
+	
+	state_modifiers = {
+		workforce_scaled = {
+			state_birth_rate_mult = -0.0075
+		}
+		level_scaled = {
+			state_birth_rate_mult = 0.01
+		}
+	}
+}
+
+default_building_subsistence_fishing_villages = {
+	texture = "gfx/interface/icons/production_method_icons/subsistence_farming.dds"
+	
+	building_modifiers = {
+		workforce_scaled = { # 40
+			goods_output_grain_add = 0.5 # 10
+			goods_output_fish_add = 1.0 # 20
+			goods_output_fabric_add = 0.25 # 5
+			goods_output_wood_add = 0.25 # 5
+			goods_output_services_add = 0.1
+		}
+		
+		level_scaled = {
+			building_employment_peasants_add = 5000
+		}
+	}
+	
+	state_modifiers = {
+		workforce_scaled = {
+			state_birth_rate_mult = -0.0075
+		}
+		level_scaled = {
+			state_birth_rate_mult = 0.01
+		}
+	}
+}
+
+default_building_subsistence_rice_paddies = {
+	texture = "gfx/interface/icons/production_method_icons/subsistence_farming.dds"
+	
+	building_modifiers = {
+		workforce_scaled = { # 70
+			goods_output_grain_add = 2 # 40
+			goods_output_fabric_add = 0.75 # 15
+			goods_output_wood_add = 0.75 # 15
+			goods_output_services_add = 0.1
+		}
+		
+		level_scaled = {
+			building_employment_peasants_add = 10000
+		}
+	}
+	
+	state_modifiers = {
+		workforce_scaled = {
+			state_birth_rate_mult = -0.0075
+		}
+		level_scaled = {
+			state_birth_rate_mult = 0.01
+		}
+	}
+}

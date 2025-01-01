@@ -24,7 +24,7 @@ pm_sheep_farms = {
 		workforce_scaled = {
 			goods_output_meat_add = -10
 			goods_output_fabric_add = 20
-			goods_output_fertilizer_add = 20
+			goods_output_fertilizer_add = 10
 		}
 	}
 }
@@ -54,7 +54,7 @@ pm_intensive_diet_control = {
 			goods_output_meat_add = -20
 			goods_output_fabric_add = 30
 			goods_output_silk_add = 5
-			goods_output_fertilizer_add = 30
+			goods_output_fertilizer_add = 20
 		}
 	}
 }
