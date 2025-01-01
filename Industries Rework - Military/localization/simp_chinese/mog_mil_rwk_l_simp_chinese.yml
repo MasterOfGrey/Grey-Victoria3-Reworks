@@ -5,8 +5,9 @@
  pmg_arti_tools_demob: "退役工具生产"
  pmg_munitions_explosives_demob: "退役炸药生产"
   
- pmg_automation_building_explosives_factory: "自动化" #NT!
- pmg_mil_shipyards_shiftwork: "轮班工作" #NT!
+ pmg_automation_building_electronics: "自动化"
+ pmg_automation_building_explosives_factory: "自动化"
+ pmg_mil_shipyards_shiftwork: "轮班工作"
   
   # Production methods 
  pm_extensive_tools_a_i: "广泛的"
@@ -49,28 +50,35 @@
  pm_moderate_radios: "大量广播"
  pm_extensive_radios: "许多收音机"
   
+ pm_assembly_lines_building_electronics: "装配线"
+ pm_full_process_automation_building_electronics: "预冲压部件"
+  
  pm_ui_safety_a: "（忽略此内容）"
  pm_ui_safety_b: "（忽略此内容）"
+ pm_ui_safety_c: "（忽略此内容）"
+ pm_ui_safety_d: "（忽略此内容）"
   
- pm_rotary_valve_engine_building_arti_foundry: "旋转阀发动机" #NT!
- pm_assembly_lines_building_arti_foundry: "装配线" #NT!
+ pm_rotary_valve_engine_building_arti_foundry: "旋转阀发动机"
+ pm_assembly_lines_building_arti_foundry: "装配线"
   
- pm_mechanical_mixers_building_explosives_factory: "机械搅拌器" #NT!
- pm_rotary_valve_engine_building_explosives_factory: "旋转阀发动机" #NT!
- pm_assembly_lines_building_explosives_factory: "装配线" #NT!
- pm_full_process_automation_building_explosives_factory: "自动包装" #NT!
+ pm_mechanical_mixers_building_explosives_factory: "机械搅拌器"
+ pm_rotary_valve_engine_building_explosives_factory: "旋转阀发动机"
+ pm_assembly_lines_building_explosives_factory: "装配线"
+ pm_full_process_automation_building_explosives_factory: "自动包装"
   
- pm_mil_shipyards_double_shifts: "双班制" #NT!
- pm_mil_shipyards_double_shifts_arc_weld: "双班制" #NT!
- pm_mil_shipyards_triple_shifts: "三班倒" #NT!
- pm_mil_shipyards_triple_shifts_arc_weld: "三班倒" #NT!
- pm_mil_shipyards_double_shifts_tts: "双班制" #NT!
- pm_mil_shipyards_double_shifts_tts_steel: "双班制" #NT!
- pm_mil_shipyards_double_shifts_tts_turbine: "双班制" #NT!
- pm_mil_shipyards_double_shifts_tts_arc_welding: "双班制" #NT!
- pm_mil_shipyards_triple_shifts_tts: "三班倒" #NT!
- pm_mil_shipyards_triple_shifts_tts_turbine: "三班倒" #NT!
- pm_mil_shipyards_triple_shifts_tts_arc_welding: "三班倒" #NT!
+ pm_mil_shipyards_double_shifts_wooden: "双班制"
+ pm_mil_shipyards_double_shifts: "双班制"
+ pm_mil_shipyards_double_shifts_arc_weld: "双班制"
+ pm_mil_shipyards_triple_shifts_wooden: "三班倒"
+ pm_mil_shipyards_triple_shifts: "三班倒"
+ pm_mil_shipyards_triple_shifts_arc_weld: "三班倒"
+ pm_mil_shipyards_double_shifts_tts: "双班制"
+ pm_mil_shipyards_double_shifts_tts_steel: "双班制"
+ pm_mil_shipyards_double_shifts_tts_turbine: "双班制"
+ pm_mil_shipyards_double_shifts_tts_arc_welding: "双班制"
+ pm_mil_shipyards_triple_shifts_tts: "三班倒"
+ pm_mil_shipyards_triple_shifts_tts_turbine: "三班倒"
+ pm_mil_shipyards_triple_shifts_tts_arc_welding: "三班倒"
   
  # Alerts 
  alert_MIR_war_demob_arms_name: "与退役军工企业的战争"

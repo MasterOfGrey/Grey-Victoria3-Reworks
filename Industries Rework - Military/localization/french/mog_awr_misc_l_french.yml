@@ -1,30 +1,36 @@
 ﻿l_french:
  # Production methods 
  pmg_base_building_automotive_industry: "Automobiles"
- pmg_automotive_shiftwork: "Travail posté" #NT!
+ pmg_automotive_shiftwork: "Travail posté"
  pmg_automotive_aeroplanes: "Avions"
  pmg_automotive_tanks: "Chars"
   
- pm_gear_transmissions: "Transmissions à engrenages anciens" #NT!
+ pm_gear_transmissions: "Transmissions à engrenages anciens"
  pm_automobiles: "Automobiles"
- pm_pneumatic_tyres: "Pneus pneumatiques" #NT!
+ pm_pneumatic_tyres: "Pneus pneumatiques"
   
- pm_single_shift_days: "Quarts de travail uniques" #NT!
- pm_automotive_double_shifts: "Doubles quarts de travail" #NT!
- pm_automotive_double_shifts_pneumatic: "Doubles quarts de travail" #NT!
- pm_automotive_triple_shifts: "Triples quarts de travail" #NT!
- pm_automotive_triple_shifts_pneumatic: "Triples quarts de travail" #NT!
+ pm_single_shift_days: "Quarts de travail uniques"
+ pm_automotive_double_shifts: "Doubles quarts de travail"
+ pm_automotive_double_shifts_pneumatic: "Doubles quarts de travail"
+ pm_automotive_triple_shifts: "Triples quarts de travail"
+ pm_automotive_triple_shifts_pneumatic: "Triples quarts de travail"
   
  pm_no_aeroplanes: "Pas de production d'avions"
  pm_limited_aeroplanes: "Production d'avions limitée"
+ pm_limited_aeroplanes_double: "Production d'avions limitée" #NT!
+ pm_limited_aeroplanes_triple: "Production d'avions limitée" #NT!
  pm_extensive_aeroplanes: "Production d'avions importante"
- pm_overtime_aeroplanes: "Production d'avions en heures supplémentaires" #NT!
+ pm_extensive_aeroplanes_triple: "Production d'avions importante" #NT!
+ pm_overtime_aeroplanes: "Production d'avions en heures supplémentaires"
   
  pm_no_tanks: "Pas de production de chars"
  pm_limited_tanks: "Production de chars limitée"
+ pm_limited_tanks_double: "Production limitée de chars" #NT!
+ pm_limited_tanks_triple: "Production limitée de chars" #NT!
  pm_extensive_tanks: "Production de chars importante"
- pm_overtime_tanks: "Production d'avions en heures supplémentaires" #NT!
+ pm_extensive_tanks_triple: "Production extensive de chars" #NT!
+ pm_overtime_tanks: "Production de chars en heures supplémentaires"
   
  # Technology 
- pneumatic_tyres: "Pneus pneumatiques" #NT!
- pneumatic_tyres_desc: "Les applications du caoutchouc vulcanisé en combinaison avec le moteur à combustion ont le potentiel d’être révolutionnaires." #NT!
+ pneumatic_tyres: "Pneus pneumatiques"
+ pneumatic_tyres_desc: "Les applications du caoutchouc vulcanisé en combinaison avec le moteur à combustion ont le potentiel d’être révolutionnaires."

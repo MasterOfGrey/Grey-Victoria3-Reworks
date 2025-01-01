@@ -5,7 +5,7 @@
  dough_rollers: "Vollständige Prozessautomatisierung" #NT!
  dough_rollers_desc: "Durch die Integration von Maschinen zur vollständigen Automatisierung sich wiederholender Aufgaben können Branchen eine beispiellose Effizienz, Konsistenz und Größenordnung in der Produktion erreichen." #NT!
   
- pm_single_shift_days: "Einzelschichten" #NT!
+ pm_single_shift_days: "Einzelschichten"
   
  pm_cropdusting: "Schädlingsbekämpfung" #NT!
  pm_cropdusting_rice: "Schädlingsbekämpfung" #NT!

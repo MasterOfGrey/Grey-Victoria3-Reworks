@@ -5,8 +5,9 @@
  pmg_arti_tools_demob: "Demobilize Alet Üretimi"
  pmg_munitions_explosives_demob: "Demobilize Patlayıcı Üretimi"
   
- pmg_automation_building_explosives_factory: "Otomasyon" #NT!
- pmg_mil_shipyards_shiftwork: "Vardiyalı Çalışma" #NT!
+ pmg_automation_building_electronics: "Otomasyon" #NT!
+ pmg_automation_building_explosives_factory: "Otomasyon"
+ pmg_mil_shipyards_shiftwork: "Vardiyalı Çalışma"
   
   # Production methods 
  pm_extensive_tools_a_i: "Yaygın"
@@ -49,28 +50,35 @@
  pm_moderate_radios: "Bol Radyo"
  pm_extensive_radios: "Birçok Radyo"
   
+ pm_assembly_lines_building_electronics: "Montaj Hatları" #NT!
+ pm_full_process_automation_building_electronics: "Önceden Damgalanmış Bileşenler" #NT!
+  
  pm_ui_safety_a: "(Bunu görmezden gelin)"
  pm_ui_safety_b: "(Bunu görmezden gelin)"
+ pm_ui_safety_c: "(Bunu görmezden gelin)" #NT!
+ pm_ui_safety_d: "(Bunu görmezden gelin)" #NT!
   
- pm_rotary_valve_engine_building_arti_foundry: "Döner Valf Motoru" #NT!
- pm_assembly_lines_building_arti_foundry: "Montaj Hatları" #NT!
+ pm_rotary_valve_engine_building_arti_foundry: "Döner Valf Motoru"
+ pm_assembly_lines_building_arti_foundry: "Montaj Hatları"
   
- pm_mechanical_mixers_building_explosives_factory: "Mekanik Karıştırıcılar" #NT!
- pm_rotary_valve_engine_building_explosives_factory: "Döner Valf Motoru" #NT!
- pm_assembly_lines_building_explosives_factory: "Montaj Hatları" #NT!
- pm_full_process_automation_building_explosives_factory: "Otomatik Paketleme" #NT!
+ pm_mechanical_mixers_building_explosives_factory: "Mekanik Karıştırıcılar"
+ pm_rotary_valve_engine_building_explosives_factory: "Döner Valf Motoru"
+ pm_assembly_lines_building_explosives_factory: "Montaj Hatları"
+ pm_full_process_automation_building_explosives_factory: "Otomatik Paketleme"
   
- pm_mil_shipyards_double_shifts: "Çift Vardiya" #NT!
- pm_mil_shipyards_double_shifts_arc_weld: "Çift Vardiya" #NT!
- pm_mil_shipyards_triple_shifts: "Üçlü Vardiyalar" #NT!
- pm_mil_shipyards_triple_shifts_arc_weld: "Üçlü Vardiyalar" #NT!
- pm_mil_shipyards_double_shifts_tts: "Çift Vardiya" #NT!
- pm_mil_shipyards_double_shifts_tts_steel: "Çift Vardiya" #NT!
- pm_mil_shipyards_double_shifts_tts_turbine: "Çift Vardiya" #NT!
- pm_mil_shipyards_double_shifts_tts_arc_welding: "Çift Vardiya" #NT!
- pm_mil_shipyards_triple_shifts_tts: "Üçlü Vardiyalar" #NT!
- pm_mil_shipyards_triple_shifts_tts_turbine: "Üçlü Vardiyalar" #NT!
- pm_mil_shipyards_triple_shifts_tts_arc_welding: "Üçlü Vardiyalar" #NT!
+ pm_mil_shipyards_double_shifts_wooden: "Çift Vardiya" #NT!
+ pm_mil_shipyards_double_shifts: "Çift Vardiya"
+ pm_mil_shipyards_double_shifts_arc_weld: "Çift Vardiya"
+ pm_mil_shipyards_triple_shifts_wooden: "Üçlü Vardiyalar" #NT!
+ pm_mil_shipyards_triple_shifts: "Üçlü Vardiyalar"
+ pm_mil_shipyards_triple_shifts_arc_weld: "Üçlü Vardiyalar"
+ pm_mil_shipyards_double_shifts_tts: "Çift Vardiya"
+ pm_mil_shipyards_double_shifts_tts_steel: "Çift Vardiya"
+ pm_mil_shipyards_double_shifts_tts_turbine: "Çift Vardiya"
+ pm_mil_shipyards_double_shifts_tts_arc_welding: "Çift Vardiya"
+ pm_mil_shipyards_triple_shifts_tts: "Üçlü Vardiyalar"
+ pm_mil_shipyards_triple_shifts_tts_turbine: "Üçlü Vardiyalar"
+ pm_mil_shipyards_triple_shifts_tts_arc_welding: "Üçlü Vardiyalar"
   
  # Alerts 
  alert_MIR_war_demob_arms_name: "Terhis Edilen Silah Endüstrileriyle Savaşta"

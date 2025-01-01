@@ -5,8 +5,9 @@
  pmg_arti_tools_demob: "Production d'outils démobilisés"
  pmg_munitions_explosives_demob: "Production d'explosifs démobilisés"
   
- pmg_automation_building_explosives_factory: "Automation" #NT!
- pmg_mil_shipyards_shiftwork: "Travail posté" #NT!
+ pmg_automation_building_electronics: "Automation" #NT!
+ pmg_automation_building_explosives_factory: "Automation"
+ pmg_mil_shipyards_shiftwork: "Travail posté"
   
   # Production methods 
  pm_extensive_tools_a_i: "Extensif"
@@ -49,28 +50,35 @@
  pm_moderate_radios: "Beaucoup de radios"
  pm_extensive_radios: "De nombreuses radios"
   
+ pm_assembly_lines_building_electronics: "Lignes d'assemblage" #NT!
+ pm_full_process_automation_building_electronics: "Composants pré-estampés" #NT!
+  
  pm_ui_safety_a: "(Ignorer ceci)"
  pm_ui_safety_b: "(Ignorer ceci)"
+ pm_ui_safety_c: "(Ignorer ceci)" #NT!
+ pm_ui_safety_d: "(Ignorer ceci)" #NT!
   
- pm_rotary_valve_engine_building_arti_foundry: "Moteur à soupape rotative" #NT!
- pm_assembly_lines_building_arti_foundry: "Lignes d'assemblage" #NT!
+ pm_rotary_valve_engine_building_arti_foundry: "Moteur à soupape rotative"
+ pm_assembly_lines_building_arti_foundry: "Lignes d'assemblage"
   
- pm_mechanical_mixers_building_explosives_factory: "Mélangeurs mécaniques" #NT!
- pm_rotary_valve_engine_building_explosives_factory: "Moteur à soupape rotative" #NT!
- pm_assembly_lines_building_explosives_factory: "Lignes d'assemblage" #NT!
- pm_full_process_automation_building_explosives_factory: "Emballage automatisé" #NT!
+ pm_mechanical_mixers_building_explosives_factory: "Mélangeurs mécaniques"
+ pm_rotary_valve_engine_building_explosives_factory: "Moteur à soupape rotative"
+ pm_assembly_lines_building_explosives_factory: "Lignes d'assemblage"
+ pm_full_process_automation_building_explosives_factory: "Emballage automatisé"
   
- pm_mil_shipyards_double_shifts: "Doubles quarts de travail" #NT!
- pm_mil_shipyards_double_shifts_arc_weld: "Doubles quarts de travail" #NT!
- pm_mil_shipyards_triple_shifts: "Triples quarts de travail" #NT!
- pm_mil_shipyards_triple_shifts_arc_weld: "Triples quarts de travail" #NT!
- pm_mil_shipyards_double_shifts_tts: "Doubles quarts de travail" #NT!
- pm_mil_shipyards_double_shifts_tts_steel: "Doubles quarts de travail" #NT!
- pm_mil_shipyards_double_shifts_tts_turbine: "Doubles quarts de travail" #NT!
- pm_mil_shipyards_double_shifts_tts_arc_welding: "Doubles quarts de travail" #NT!
- pm_mil_shipyards_triple_shifts_tts: "Triples quarts de travail" #NT!
- pm_mil_shipyards_triple_shifts_tts_turbine: "Triples quarts de travail" #NT!
- pm_mil_shipyards_triple_shifts_tts_arc_welding: "Triples quarts de travail" #NT!
+ pm_mil_shipyards_double_shifts_wooden: "Doubles quarts de travail" #NT!
+ pm_mil_shipyards_double_shifts: "Doubles quarts de travail"
+ pm_mil_shipyards_double_shifts_arc_weld: "Doubles quarts de travail"
+ pm_mil_shipyards_triple_shifts_wooden: "Triples quarts de travail" #NT!
+ pm_mil_shipyards_triple_shifts: "Triples quarts de travail"
+ pm_mil_shipyards_triple_shifts_arc_weld: "Triples quarts de travail"
+ pm_mil_shipyards_double_shifts_tts: "Doubles quarts de travail"
+ pm_mil_shipyards_double_shifts_tts_steel: "Doubles quarts de travail"
+ pm_mil_shipyards_double_shifts_tts_turbine: "Doubles quarts de travail"
+ pm_mil_shipyards_double_shifts_tts_arc_welding: "Doubles quarts de travail"
+ pm_mil_shipyards_triple_shifts_tts: "Triples quarts de travail"
+ pm_mil_shipyards_triple_shifts_tts_turbine: "Triples quarts de travail"
+ pm_mil_shipyards_triple_shifts_tts_arc_welding: "Triples quarts de travail"
   
  # Alerts 
  alert_MIR_war_demob_arms_name: "En guerre contre les industries d'armement démobilisées"

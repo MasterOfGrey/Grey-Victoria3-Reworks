@@ -17,13 +17,19 @@
 
  pm_no_aeroplanes: "No Aeroplane Production"
  pm_limited_aeroplanes: "Limited Aeroplane Production"
+ pm_limited_aeroplanes_double: "Limited Aeroplane Production"
+ pm_limited_aeroplanes_triple: "Limited Aeroplane Production"
  pm_extensive_aeroplanes: "Extensive Aeroplane Production"
+ pm_extensive_aeroplanes_triple: "Extensive Aeroplane Production"
  pm_overtime_aeroplanes: "Overtime Aeroplane Production"
 
  pm_no_tanks: "No Tank Production"
  pm_limited_tanks: "Limited Tank Production"
+ pm_limited_tanks_double: "Limited Tank Production"
+ pm_limited_tanks_triple: "Limited Tank Production"
  pm_extensive_tanks: "Extensive Tank Production"
- pm_overtime_tanks: "Overtime Aeroplane Production"
+ pm_extensive_tanks_triple: "Extensive Tank Production"
+ pm_overtime_tanks: "Overtime Tank Production"
  
 # Technology
  pneumatic_tyres: "Pneumatic Tyres"

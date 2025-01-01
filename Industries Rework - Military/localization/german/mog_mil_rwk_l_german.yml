@@ -5,8 +5,9 @@
  pmg_arti_tools_demob: "Demobilisierte Werkzeugproduktion"
  pmg_munitions_explosives_demob: "Produktion demobilisierter Sprengstoffe"
   
- pmg_automation_building_explosives_factory: "Automatisierung" #NT!
- pmg_mil_shipyards_shiftwork: "Schichtarbeit" #NT!
+ pmg_automation_building_electronics: "Automatisierung" #NT!
+ pmg_automation_building_explosives_factory: "Automatisierung"
+ pmg_mil_shipyards_shiftwork: "Schichtarbeit"
   
   # Production methods 
  pm_extensive_tools_a_i: "Umfangreich"
@@ -49,28 +50,35 @@
  pm_moderate_radios: "Viele Radios"
  pm_extensive_radios: "Viele Radios"
   
+ pm_assembly_lines_building_electronics: "Fließbänder" #NT!
+ pm_full_process_automation_building_electronics: "Vorgestanzte Komponenten" #NT!
+  
  pm_ui_safety_a: "(Ignorieren Sie dies)"
  pm_ui_safety_b: "(Ignorieren Sie dies)"
+ pm_ui_safety_c: "(Ignorieren Sie dies)" #NT!
+ pm_ui_safety_d: "(Ignorieren Sie dies)" #NT!
   
- pm_rotary_valve_engine_building_arti_foundry: "Drehschiebermotor" #NT!
- pm_assembly_lines_building_arti_foundry: "Fließbänder" #NT!
+ pm_rotary_valve_engine_building_arti_foundry: "Drehschiebermotor"
+ pm_assembly_lines_building_arti_foundry: "Fließbänder"
   
- pm_mechanical_mixers_building_explosives_factory: "Mechanische Mischer" #NT!
- pm_rotary_valve_engine_building_explosives_factory: "Drehschiebermotor" #NT!
- pm_assembly_lines_building_explosives_factory: "Fließbänder" #NT!
- pm_full_process_automation_building_explosives_factory: "Automatisiertes Verpacken" #NT!
+ pm_mechanical_mixers_building_explosives_factory: "Mechanische Mischer"
+ pm_rotary_valve_engine_building_explosives_factory: "Drehschiebermotor"
+ pm_assembly_lines_building_explosives_factory: "Fließbänder"
+ pm_full_process_automation_building_explosives_factory: "Automatisiertes Verpacken"
   
- pm_mil_shipyards_double_shifts: "Doppelschichten" #NT!
- pm_mil_shipyards_double_shifts_arc_weld: "Doppelschichten" #NT!
- pm_mil_shipyards_triple_shifts: "Dreifache Schichten" #NT!
- pm_mil_shipyards_triple_shifts_arc_weld: "Dreifache Schichten" #NT!
- pm_mil_shipyards_double_shifts_tts: "Doppelschichten" #NT!
- pm_mil_shipyards_double_shifts_tts_steel: "Doppelschichten" #NT!
- pm_mil_shipyards_double_shifts_tts_turbine: "Doppelschichten" #NT!
- pm_mil_shipyards_double_shifts_tts_arc_welding: "Doppelschichten" #NT!
- pm_mil_shipyards_triple_shifts_tts: "Dreifache Schichten" #NT!
- pm_mil_shipyards_triple_shifts_tts_turbine: "Dreifache Schichten" #NT!
- pm_mil_shipyards_triple_shifts_tts_arc_welding: "Dreifache Schichten" #NT!
+ pm_mil_shipyards_double_shifts_wooden: "Doppelschichten" #NT!
+ pm_mil_shipyards_double_shifts: "Doppelschichten"
+ pm_mil_shipyards_double_shifts_arc_weld: "Doppelschichten"
+ pm_mil_shipyards_triple_shifts_wooden: "Dreifache Schichten" #NT!
+ pm_mil_shipyards_triple_shifts: "Dreifache Schichten"
+ pm_mil_shipyards_triple_shifts_arc_weld: "Dreifache Schichten"
+ pm_mil_shipyards_double_shifts_tts: "Doppelschichten"
+ pm_mil_shipyards_double_shifts_tts_steel: "Doppelschichten"
+ pm_mil_shipyards_double_shifts_tts_turbine: "Doppelschichten"
+ pm_mil_shipyards_double_shifts_tts_arc_welding: "Doppelschichten"
+ pm_mil_shipyards_triple_shifts_tts: "Dreifache Schichten"
+ pm_mil_shipyards_triple_shifts_tts_turbine: "Dreifache Schichten"
+ pm_mil_shipyards_triple_shifts_tts_arc_welding: "Dreifache Schichten"
   
  # Alerts 
  alert_MIR_war_demob_arms_name: "Im Krieg mit demobilisierten Waffenindustrien"

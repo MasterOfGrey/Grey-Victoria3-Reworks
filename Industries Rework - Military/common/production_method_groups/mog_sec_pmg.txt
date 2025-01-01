@@ -18,6 +18,15 @@ pmg_radios_category = {															# Modded PMG
 	}
 }
 
+pmg_automation_building_electronics = {									# Modded PMG
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_automation.dds"
+	production_methods = {
+		pm_automation_disabled
+		pm_assembly_lines_building_electronics
+		pm_full_process_automation_building_electronics
+	}
+}
+
 ## Locomotive Factories:
 pmg_base_building_motor_industry = {											# Vanilla PMG re-specified
 	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"

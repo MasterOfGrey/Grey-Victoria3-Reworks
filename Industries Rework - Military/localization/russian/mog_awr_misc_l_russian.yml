@@ -1,30 +1,36 @@
 ﻿l_russian:
  # Production methods 
  pmg_base_building_automotive_industry: "Автомобили"
- pmg_automotive_shiftwork: "Сменная работа" #NT!
+ pmg_automotive_shiftwork: "Сменная работа"
  pmg_automotive_aeroplanes: "Самолеты"
  pmg_automotive_tanks: "Танки"
   
- pm_gear_transmissions: "Ранние трансмиссии" #NT!
+ pm_gear_transmissions: "Ранние трансмиссии"
  pm_automobiles: "Автомобили"
- pm_pneumatic_tyres: "Пневматические шины" #NT!
+ pm_pneumatic_tyres: "Пневматические шины"
   
- pm_single_shift_days: "Отдельные смены" #NT!
- pm_automotive_double_shifts: "Двойные смены" #NT!
- pm_automotive_double_shifts_pneumatic: "Двойные смены" #NT!
- pm_automotive_triple_shifts: "Тройные смены" #NT!
- pm_automotive_triple_shifts_pneumatic: "Тройные смены" #NT!
+ pm_single_shift_days: "Отдельные смены"
+ pm_automotive_double_shifts: "Двойные смены"
+ pm_automotive_double_shifts_pneumatic: "Двойные смены"
+ pm_automotive_triple_shifts: "Тройные смены"
+ pm_automotive_triple_shifts_pneumatic: "Тройные смены"
   
  pm_no_aeroplanes: "Производство самолетов не ведется"
  pm_limited_aeroplanes: "Ограниченное производство самолетов"
+ pm_limited_aeroplanes_double: "Ограниченное производство самолетов" #NT!
+ pm_limited_aeroplanes_triple: "Ограниченное производство самолетов" #NT!
  pm_extensive_aeroplanes: "Масштабное производство самолетов"
- pm_overtime_aeroplanes: "Сверхурочное производство самолетов" #NT!
+ pm_extensive_aeroplanes_triple: "Масштабное производство самолетов" #NT!
+ pm_overtime_aeroplanes: "Сверхурочное производство самолетов"
   
  pm_no_tanks: "Производство танков не ведется"
  pm_limited_tanks: "Ограниченное производство танков"
+ pm_limited_tanks_double: "Ограниченное производство танков" #NT!
+ pm_limited_tanks_triple: "Ограниченное производство танков" #NT!
  pm_extensive_tanks: "Масштабное производство танков"
- pm_overtime_tanks: "Сверхурочное производство самолетов" #NT!
+ pm_extensive_tanks_triple: "Масштабное производство танков" #NT!
+ pm_overtime_tanks: "Сверхурочное производство танков"
   
  # Technology 
- pneumatic_tyres: "Пневматические шины" #NT!
- pneumatic_tyres_desc: "Применение вулканизированной резины в сочетании с двигателем внутреннего сгорания может стать революционным." #NT!
+ pneumatic_tyres: "Пневматические шины"
+ pneumatic_tyres_desc: "Применение вулканизированной резины в сочетании с двигателем внутреннего сгорания может стать революционным."

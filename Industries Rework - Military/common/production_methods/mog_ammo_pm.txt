@@ -175,7 +175,7 @@ pm_limited_ammo_ni = {
 			goods_input_sulfur_add = 3
 			goods_input_fertilizer_add = 3
 			goods_input_paper_add = 1 # 0
-			goods_input_explosives_add = 12 # -8
+			goods_input_explosives_add = -12 # -8
 			
 			# output goods
 			goods_output_ammunition_add = -8 # -5

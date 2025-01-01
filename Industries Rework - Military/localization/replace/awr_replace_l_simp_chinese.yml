@@ -5,7 +5,7 @@
  dough_rollers: "全流程自动化" #NT!
  dough_rollers_desc: "通过集成机器来完全自动化重复性任务，行业可以实现前所未有的生产效率、一致性和规模。" #NT!
   
- pm_single_shift_days: "单班制" #NT!
+ pm_single_shift_days: "单班制"
   
  pm_cropdusting: "农作物喷洒" #NT!
  pm_cropdusting_rice: "农作物喷洒" #NT!

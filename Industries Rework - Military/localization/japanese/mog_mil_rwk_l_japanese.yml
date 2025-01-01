@@ -5,8 +5,9 @@
  pmg_arti_tools_demob: "解体されたツールの生産"
  pmg_munitions_explosives_demob: "解体爆薬製造"
   
- pmg_automation_building_explosives_factory: "オートメーション" #NT!
- pmg_mil_shipyards_shiftwork: "シフト勤務" #NT!
+ pmg_automation_building_electronics: "オートメーション"
+ pmg_automation_building_explosives_factory: "オートメーション"
+ pmg_mil_shipyards_shiftwork: "シフト勤務"
   
   # Production methods 
  pm_extensive_tools_a_i: "広範囲にわたる"
@@ -49,28 +50,35 @@
  pm_moderate_radios: "ラジオが豊富"
  pm_extensive_radios: "多くのラジオ"
   
+ pm_assembly_lines_building_electronics: "組立ライン"
+ pm_full_process_automation_building_electronics: "事前刻印された部品"
+  
  pm_ui_safety_a: "（無視してください）"
  pm_ui_safety_b: "（無視してください）"
+ pm_ui_safety_c: "（無視してください）"
+ pm_ui_safety_d: "（無視してください）"
   
- pm_rotary_valve_engine_building_arti_foundry: "ロータリーバルブエンジン" #NT!
- pm_assembly_lines_building_arti_foundry: "組立ライン" #NT!
+ pm_rotary_valve_engine_building_arti_foundry: "ロータリーバルブエンジン"
+ pm_assembly_lines_building_arti_foundry: "組立ライン"
   
- pm_mechanical_mixers_building_explosives_factory: "機械式ミキサー" #NT!
- pm_rotary_valve_engine_building_explosives_factory: "ロータリーバルブエンジン" #NT!
- pm_assembly_lines_building_explosives_factory: "組立ライン" #NT!
- pm_full_process_automation_building_explosives_factory: "自動梱包" #NT!
+ pm_mechanical_mixers_building_explosives_factory: "機械式ミキサー"
+ pm_rotary_valve_engine_building_explosives_factory: "ロータリーバルブエンジン"
+ pm_assembly_lines_building_explosives_factory: "組立ライン"
+ pm_full_process_automation_building_explosives_factory: "自動梱包"
   
- pm_mil_shipyards_double_shifts: "ダブルシフト" #NT!
- pm_mil_shipyards_double_shifts_arc_weld: "ダブルシフト" #NT!
- pm_mil_shipyards_triple_shifts: "トリプルシフト" #NT!
- pm_mil_shipyards_triple_shifts_arc_weld: "トリプルシフト" #NT!
- pm_mil_shipyards_double_shifts_tts: "ダブルシフト" #NT!
- pm_mil_shipyards_double_shifts_tts_steel: "ダブルシフト" #NT!
- pm_mil_shipyards_double_shifts_tts_turbine: "ダブルシフト" #NT!
- pm_mil_shipyards_double_shifts_tts_arc_welding: "ダブルシフト" #NT!
- pm_mil_shipyards_triple_shifts_tts: "トリプルシフト" #NT!
- pm_mil_shipyards_triple_shifts_tts_turbine: "トリプルシフト" #NT!
- pm_mil_shipyards_triple_shifts_tts_arc_welding: "トリプルシフト" #NT!
+ pm_mil_shipyards_double_shifts_wooden: "ダブルシフト"
+ pm_mil_shipyards_double_shifts: "ダブルシフト"
+ pm_mil_shipyards_double_shifts_arc_weld: "ダブルシフト"
+ pm_mil_shipyards_triple_shifts_wooden: "トリプルシフト"
+ pm_mil_shipyards_triple_shifts: "トリプルシフト"
+ pm_mil_shipyards_triple_shifts_arc_weld: "トリプルシフト"
+ pm_mil_shipyards_double_shifts_tts: "ダブルシフト"
+ pm_mil_shipyards_double_shifts_tts_steel: "ダブルシフト"
+ pm_mil_shipyards_double_shifts_tts_turbine: "ダブルシフト"
+ pm_mil_shipyards_double_shifts_tts_arc_welding: "ダブルシフト"
+ pm_mil_shipyards_triple_shifts_tts: "トリプルシフト"
+ pm_mil_shipyards_triple_shifts_tts_turbine: "トリプルシフト"
+ pm_mil_shipyards_triple_shifts_tts_arc_welding: "トリプルシフト"
   
  # Alerts 
  alert_MIR_war_demob_arms_name: "武装解除された軍需産業との戦争"

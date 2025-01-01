@@ -1,30 +1,36 @@
 ﻿l_japanese:
  # Production methods 
  pmg_base_building_automotive_industry: "自動車"
- pmg_automotive_shiftwork: "シフト勤務" #NT!
+ pmg_automotive_shiftwork: "シフト勤務"
  pmg_automotive_aeroplanes: "飛行機"
  pmg_automotive_tanks: "戦車"
   
- pm_gear_transmissions: "初期のギアトランスミッション" #NT!
+ pm_gear_transmissions: "初期のギアトランスミッション"
  pm_automobiles: "自動車"
- pm_pneumatic_tyres: "空気入りタイヤ" #NT!
+ pm_pneumatic_tyres: "空気入りタイヤ"
   
- pm_single_shift_days: "シングルシフト" #NT!
- pm_automotive_double_shifts: "ダブルシフト" #NT!
- pm_automotive_double_shifts_pneumatic: "ダブルシフト" #NT!
- pm_automotive_triple_shifts: "トリプルシフト" #NT!
- pm_automotive_triple_shifts_pneumatic: "トリプルシフト" #NT!
+ pm_single_shift_days: "シングルシフト"
+ pm_automotive_double_shifts: "ダブルシフト"
+ pm_automotive_double_shifts_pneumatic: "ダブルシフト"
+ pm_automotive_triple_shifts: "トリプルシフト"
+ pm_automotive_triple_shifts_pneumatic: "トリプルシフト"
   
  pm_no_aeroplanes: "航空機生産なし"
  pm_limited_aeroplanes: "限定的な航空機生産"
+ pm_limited_aeroplanes_double: "限定的な航空機生産"
+ pm_limited_aeroplanes_triple: "限定的な航空機生産"
  pm_extensive_aeroplanes: "大規模な航空機生産"
- pm_overtime_aeroplanes: "航空機生産残業" #NT!
+ pm_extensive_aeroplanes_triple: "大規模な航空機生産"
+ pm_overtime_aeroplanes: "航空機生産残業"
   
  pm_no_tanks: "戦車生産なし"
  pm_limited_tanks: "限定生産戦車"
+ pm_limited_tanks_double: "限定生産戦車"
+ pm_limited_tanks_triple: "限定生産戦車"
  pm_extensive_tanks: "大規模なタンク生産"
- pm_overtime_tanks: "航空機生産残業" #NT!
+ pm_extensive_tanks_triple: "大規模なタンク生産"
+ pm_overtime_tanks: "航空機生産残業"
   
  # Technology 
- pneumatic_tyres: "空気入りタイヤ" #NT!
- pneumatic_tyres_desc: "加硫ゴムを燃焼エンジンと組み合わせた応用は、革命的なものになる可能性があります。" #NT!
+ pneumatic_tyres: "空気入りタイヤ"
+ pneumatic_tyres_desc: "加硫ゴムを燃焼エンジンと組み合わせた応用は、革命的なものになる可能性があります。"

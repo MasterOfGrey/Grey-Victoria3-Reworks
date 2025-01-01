@@ -1,6 +1,59 @@
 ﻿## Vanilla Shipbuilding PM's
 
 # Base PM's
+
+pm_military_shipbuilding_wooden = {
+	texture = "gfx/interface/icons/production_method_icons/military_shipbuilding_wooden.dds"
+	
+	building_modifiers = {
+		workforce_scaled = {
+			#input goods
+			goods_input_hardwood_add = 20
+			goods_input_fabric_add = 20
+			goods_input_iron_add = 6
+			goods_input_artillery_add = 2
+			# output goods
+			goods_output_manowars_add = 35
+		}
+		
+		level_scaled = {
+			# employment
+			building_employment_shopkeepers_add = 500
+			building_employment_laborers_add = 3500
+			building_employment_machinists_add = 750
+			building_employment_engineers_add = 250
+		}
+	}
+}
+
+pm_military_shipbuilding_wooden_2 = {
+	texture = "gfx/interface/icons/production_method_icons/military_shipbuilding_wooden_2.dds"
+	
+	unlocking_technologies = {
+		screw_frigate
+	}
+	
+	building_modifiers = {
+		workforce_scaled = {
+			#input goods
+			goods_input_hardwood_add = 30
+			goods_input_fabric_add = 10
+			goods_input_engines_add = 5
+			goods_input_iron_add = 6
+			goods_input_artillery_add = 2
+			# output goods
+			goods_output_manowars_add = 45
+		}
+		level_scaled = {
+			# employment
+			building_employment_shopkeepers_add = 500
+			building_employment_laborers_add = 3000
+			building_employment_machinists_add = 1000
+			building_employment_engineers_add = 500
+		}
+	}
+}
+
 pm_military_shipbuilding_steam = {
 	texture = "gfx/interface/icons/production_method_icons/military_shipbuilding_steam.dds"
 	
@@ -11,7 +64,8 @@ pm_military_shipbuilding_steam = {
 	building_modifiers = {
 		workforce_scaled = {
 			#input goods
-			goods_input_steel_add = 40
+			goods_input_steel_add = 32 # 40
+			goods_input_artillery_add = 5
 			goods_input_coal_add = 20
 			goods_input_engines_add = 6
 			goods_input_automobiles_add = 2
@@ -38,7 +92,8 @@ pm_military_shipbuilding_steam_2 = {
 	building_modifiers = {
 		workforce_scaled = {
 			#input
-			goods_input_steel_add = 40
+			goods_input_steel_add = 32 # 40
+			goods_input_artillery_add = 5
 			goods_input_electricity_add = 30
 			goods_input_engines_add = 12
 			goods_input_automobiles_add = 4
@@ -58,10 +113,70 @@ pm_military_shipbuilding_steam_2 = {
 }
 
 # Shift-work PM's
+pm_mil_shipyards_double_shifts_wooden = {
+	texture = "gfx/interface/icons/production_method_icons/shift_2.dds"
+	# Vanilla
+	replacement_if_valid = pm_mil_shipyards_double_shifts
+	# replacement_if_valid = pm_mil_shipyards_double_shifts_arc_weld
+	# # TTS
+	# replacement_if_valid = pm_mil_shipyards_double_shifts_tts
+	# replacement_if_valid = pm_mil_shipyards_double_shifts_tts_steel
+	# replacement_if_valid = pm_mil_shipyards_double_shifts_tts_turbine
+	# replacement_if_valid = pm_mil_shipyards_double_shifts_tts_arc_welding
+	
+	is_hidden_when_unavailable = yes
+	
+	unlocking_technologies = {
+		shift_work
+	}
+	unlocking_production_methods = {
+		# Vanilla
+		pm_military_shipbuilding_wooden_2			 # Initialises at wooden_2
+		pm_military_shipbuilding_steam
+	#	pm_military_shipbuilding_steam_2
+	#	# TTS
+	#	pm_military_shipbuilding_wooden_2
+	#	pm_military_shipbuilding_ironclad
+	#	pm_military_shipbuilding_steel
+	#	pm_military_shipbuilding_turbine
+	#	pm_military_shipbuilding_arc_welding
+	}
+	
+	building_modifiers = {
+		workforce_scaled = {
+			#input goods
+			goods_input_hardwood_add = 27
+			goods_input_fabric_add = 8
+			goods_input_engines_add = 4
+			goods_input_iron_add = 6
+			goods_input_artillery_add = 2
+			# output goods
+			goods_output_manowars_add = 42
+		}
+		level_scaled = {
+			# employment
+			building_employment_shopkeepers_add = 200
+			building_employment_laborers_add = 3000
+			building_employment_machinists_add = 1000
+			building_employment_engineers_add = 200
+		}
+	}
+	
+	state_modifiers = {
+		unscaled = {
+			building_military_shipyards_throughput_add = 0.1
+		}
+		level_scaled = {
+			building_military_shipyards_throughput_add = 0.02
+		}
+	}
+}
+
 pm_mil_shipyards_double_shifts = {
 	texture = "gfx/interface/icons/production_method_icons/shift_2.dds"
 	replacement_if_valid = pm_mil_shipyards_double_shifts_arc_weld
-	replacement_if_valid = pm_mil_shipyards_double_shifts_tts
+	is_hidden_when_unavailable = yes
+
 	
 	unlocking_technologies = {
 		shift_work
@@ -74,7 +189,8 @@ pm_mil_shipyards_double_shifts = {
 	building_modifiers = {
 		workforce_scaled = {
 			#input goods
-			goods_input_steel_add = 36
+			goods_input_steel_add = 28 # 36
+			goods_input_artillery_add = 5
 			goods_input_coal_add = 18
 			goods_input_engines_add = 5
 			goods_input_automobiles_add = 2
@@ -114,7 +230,8 @@ pm_mil_shipyards_double_shifts_arc_weld = {
 	building_modifiers = {
 		workforce_scaled = {
 			#input
-			goods_input_steel_add = 36
+			goods_input_steel_add = 28 # 36
+			goods_input_artillery_add = 5
 			goods_input_electricity_add = 28
 			goods_input_engines_add = 10
 			goods_input_automobiles_add = 3
@@ -142,9 +259,71 @@ pm_mil_shipyards_double_shifts_arc_weld = {
 	required_input_goods = electricity
 }
 
+pm_mil_shipyards_triple_shifts_wooden = { # wooden_2
+	texture = "gfx/interface/icons/production_method_icons/shift_3.dds"
+	# Vanilla
+	replacement_if_valid = pm_mil_shipyards_triple_shifts
+	# replacement_if_valid = pm_mil_shipyards_triple_shifts_arc_weld
+	# TTS
+	# replacement_if_valid = pm_mil_shipyards_triple_shifts_tts	# Default is steel
+	# replacement_if_valid = pm_mil_shipyards_triple_shifts_tts_steel
+	# replacement_if_valid = pm_mil_shipyards_triple_shifts_tts_turbine
+	# replacement_if_valid = pm_mil_shipyards_triple_shifts_tts_arc_welding
+	
+	is_hidden_when_unavailable = yes
+	
+	unlocking_technologies = {
+		conveyors
+	}
+	unlocking_production_methods = {
+		# Vanilla
+		pm_military_shipbuilding_wooden_2
+		pm_military_shipbuilding_steam
+		# pm_military_shipbuilding_steam_2
+		# TTS
+		# pm_military_shipbuilding_ironclad
+		# pm_military_shipbuilding_steel
+		# pm_military_shipbuilding_turbine
+		# pm_military_shipbuilding_arc_welding
+	}
+	
+	building_modifiers = {
+		workforce_scaled = {
+			#input goods
+			goods_input_hardwood_add = 50
+			goods_input_fabric_add = 14
+			goods_input_engines_add = 6
+			goods_input_iron_add = 10
+			goods_input_artillery_add = 4
+			goods_input_electricity_add = 2	# Gotta run the lights overnight
+			# output goods
+			goods_output_manowars_add = 80
+		}
+		level_scaled = {
+			# employment
+			building_employment_shopkeepers_add = 300
+			building_employment_laborers_add = 6000
+			building_employment_machinists_add = 2000
+			building_employment_engineers_add = 300
+		}
+	}
+	
+	state_modifiers = {
+		unscaled = {
+			building_military_shipyards_throughput_add = 0.2
+		}
+		level_scaled = {
+			building_military_shipyards_throughput_add = 0.04
+		}
+	}
+	
+	required_input_goods = electricity
+}
+
 pm_mil_shipyards_triple_shifts = {
 	texture = "gfx/interface/icons/production_method_icons/shift_3.dds"
 	replacement_if_valid = pm_mil_shipyards_triple_shifts_arc_weld
+	is_hidden_when_unavailable = yes
 	
 	unlocking_technologies = {
 		conveyors
@@ -157,7 +336,8 @@ pm_mil_shipyards_triple_shifts = {
 	building_modifiers = {
 		workforce_scaled = {
 			#input goods
-			goods_input_steel_add = 68
+			goods_input_steel_add = 52 # 68
+			goods_input_artillery_add = 10
 			goods_input_coal_add = 34
 			goods_input_engines_add = 9
 			goods_input_automobiles_add = 2
@@ -200,7 +380,8 @@ pm_mil_shipyards_triple_shifts_arc_weld = {
 	building_modifiers = {
 		workforce_scaled = {
 			#input
-			goods_input_steel_add = 68
+			goods_input_steel_add = 52 # 68
+			goods_input_artillery_add = 10
 			goods_input_electricity_add = 56
 			goods_input_engines_add = 18
 			goods_input_automobiles_add = 5

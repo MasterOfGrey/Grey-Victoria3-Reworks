@@ -5,8 +5,9 @@
  pmg_arti_tools_demob: "Демобилизованное инструментальное производство"
  pmg_munitions_explosives_demob: "Демобилизованное производство взрывчатых веществ"
   
- pmg_automation_building_explosives_factory: "Автоматизация" #NT!
- pmg_mil_shipyards_shiftwork: "Сменная работа" #NT!
+ pmg_automation_building_electronics: "Автоматизация" #NT!
+ pmg_automation_building_explosives_factory: "Автоматизация"
+ pmg_mil_shipyards_shiftwork: "Сменная работа"
   
   # Production methods 
  pm_extensive_tools_a_i: "Обширный"
@@ -49,28 +50,35 @@
  pm_moderate_radios: "Множество радиостанций"
  pm_extensive_radios: "Много радио"
   
+ pm_assembly_lines_building_electronics: "Линии сборки" #NT!
+ pm_full_process_automation_building_electronics: "Предварительно штампованные компоненты" #NT!
+  
  pm_ui_safety_a: "(Игнорировать это)"
  pm_ui_safety_b: "(Игнорировать это)"
+ pm_ui_safety_c: "(Игнорировать это)" #NT!
+ pm_ui_safety_d: "(Игнорировать это)" #NT!
   
- pm_rotary_valve_engine_building_arti_foundry: "Двигатель с роторным клапаном" #NT!
- pm_assembly_lines_building_arti_foundry: "Линии сборки" #NT!
+ pm_rotary_valve_engine_building_arti_foundry: "Двигатель с роторным клапаном"
+ pm_assembly_lines_building_arti_foundry: "Линии сборки"
   
- pm_mechanical_mixers_building_explosives_factory: "Механические миксеры" #NT!
- pm_rotary_valve_engine_building_explosives_factory: "Двигатель с роторным клапаном" #NT!
- pm_assembly_lines_building_explosives_factory: "Линии сборки" #NT!
- pm_full_process_automation_building_explosives_factory: "Автоматизированная упаковка" #NT!
+ pm_mechanical_mixers_building_explosives_factory: "Механические миксеры"
+ pm_rotary_valve_engine_building_explosives_factory: "Двигатель с роторным клапаном"
+ pm_assembly_lines_building_explosives_factory: "Линии сборки"
+ pm_full_process_automation_building_explosives_factory: "Автоматизированная упаковка"
   
- pm_mil_shipyards_double_shifts: "Двойные смены" #NT!
- pm_mil_shipyards_double_shifts_arc_weld: "Двойные смены" #NT!
- pm_mil_shipyards_triple_shifts: "Тройные смены" #NT!
- pm_mil_shipyards_triple_shifts_arc_weld: "Тройные смены" #NT!
- pm_mil_shipyards_double_shifts_tts: "Двойные смены" #NT!
- pm_mil_shipyards_double_shifts_tts_steel: "Двойные смены" #NT!
- pm_mil_shipyards_double_shifts_tts_turbine: "Двойные смены" #NT!
- pm_mil_shipyards_double_shifts_tts_arc_welding: "Двойные смены" #NT!
- pm_mil_shipyards_triple_shifts_tts: "Тройные смены" #NT!
- pm_mil_shipyards_triple_shifts_tts_turbine: "Тройные смены" #NT!
- pm_mil_shipyards_triple_shifts_tts_arc_welding: "Тройные смены" #NT!
+ pm_mil_shipyards_double_shifts_wooden: "Двойные смены" #NT!
+ pm_mil_shipyards_double_shifts: "Двойные смены"
+ pm_mil_shipyards_double_shifts_arc_weld: "Двойные смены"
+ pm_mil_shipyards_triple_shifts_wooden: "Тройные смены" #NT!
+ pm_mil_shipyards_triple_shifts: "Тройные смены"
+ pm_mil_shipyards_triple_shifts_arc_weld: "Тройные смены"
+ pm_mil_shipyards_double_shifts_tts: "Двойные смены"
+ pm_mil_shipyards_double_shifts_tts_steel: "Двойные смены"
+ pm_mil_shipyards_double_shifts_tts_turbine: "Двойные смены"
+ pm_mil_shipyards_double_shifts_tts_arc_welding: "Двойные смены"
+ pm_mil_shipyards_triple_shifts_tts: "Тройные смены"
+ pm_mil_shipyards_triple_shifts_tts_turbine: "Тройные смены"
+ pm_mil_shipyards_triple_shifts_tts_arc_welding: "Тройные смены"
   
  # Alerts 
  alert_MIR_war_demob_arms_name: "Война с демобилизованными военными предприятиями"

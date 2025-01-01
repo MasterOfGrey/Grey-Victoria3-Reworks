@@ -5,8 +5,9 @@
  pmg_arti_tools_demob: "Demobilised Tool Production"
  pmg_munitions_explosives_demob: "Demobilised Explosives Production"
   
- pmg_automation_building_explosives_factory: "Automação" #NT!
- pmg_mil_shipyards_shiftwork: "Trabalho por turnos" #NT!
+ pmg_automation_building_electronics: "Automação" #NT!
+ pmg_automation_building_explosives_factory: "Automação"
+ pmg_mil_shipyards_shiftwork: "Trabalho por turnos"
   
   # Production methods 
  pm_extensive_tools_a_i: "Extensive"
@@ -49,28 +50,35 @@
  pm_moderate_radios: "Plenty of Radios"
  pm_extensive_radios: "Many Radios"
   
+ pm_assembly_lines_building_electronics: "Linhas de montagem" #NT!
+ pm_full_process_automation_building_electronics: "Componentes pré-estampados" #NT!
+  
  pm_ui_safety_a: "(Ignore This)"
  pm_ui_safety_b: "(Ignore This)"
+ pm_ui_safety_c: "(Ignore isso)" #NT!
+ pm_ui_safety_d: "(Ignore isso)" #NT!
   
- pm_rotary_valve_engine_building_arti_foundry: "Motor de válvula rotativa" #NT!
- pm_assembly_lines_building_arti_foundry: "Linhas de montagem" #NT!
+ pm_rotary_valve_engine_building_arti_foundry: "Motor de válvula rotativa"
+ pm_assembly_lines_building_arti_foundry: "Linhas de montagem"
   
- pm_mechanical_mixers_building_explosives_factory: "Misturadores Mecânicos" #NT!
- pm_rotary_valve_engine_building_explosives_factory: "Motor de válvula rotativa" #NT!
- pm_assembly_lines_building_explosives_factory: "Linhas de montagem" #NT!
- pm_full_process_automation_building_explosives_factory: "Embalagem automatizada" #NT!
+ pm_mechanical_mixers_building_explosives_factory: "Misturadores Mecânicos"
+ pm_rotary_valve_engine_building_explosives_factory: "Motor de válvula rotativa"
+ pm_assembly_lines_building_explosives_factory: "Linhas de montagem"
+ pm_full_process_automation_building_explosives_factory: "Embalagem automatizada"
   
- pm_mil_shipyards_double_shifts: "Turnos Duplos" #NT!
- pm_mil_shipyards_double_shifts_arc_weld: "Turnos Duplos" #NT!
- pm_mil_shipyards_triple_shifts: "Turnos triplos" #NT!
- pm_mil_shipyards_triple_shifts_arc_weld: "Turnos triplos" #NT!
- pm_mil_shipyards_double_shifts_tts: "Turnos Duplos" #NT!
- pm_mil_shipyards_double_shifts_tts_steel: "Turnos Duplos" #NT!
- pm_mil_shipyards_double_shifts_tts_turbine: "Turnos Duplos" #NT!
- pm_mil_shipyards_double_shifts_tts_arc_welding: "Turnos Duplos" #NT!
- pm_mil_shipyards_triple_shifts_tts: "Turnos triplos" #NT!
- pm_mil_shipyards_triple_shifts_tts_turbine: "Turnos triplos" #NT!
- pm_mil_shipyards_triple_shifts_tts_arc_welding: "Turnos triplos" #NT!
+ pm_mil_shipyards_double_shifts_wooden: "Turnos Duplos" #NT!
+ pm_mil_shipyards_double_shifts: "Turnos Duplos"
+ pm_mil_shipyards_double_shifts_arc_weld: "Turnos Duplos"
+ pm_mil_shipyards_triple_shifts_wooden: "Turnos triplos" #NT!
+ pm_mil_shipyards_triple_shifts: "Turnos triplos"
+ pm_mil_shipyards_triple_shifts_arc_weld: "Turnos triplos"
+ pm_mil_shipyards_double_shifts_tts: "Turnos Duplos"
+ pm_mil_shipyards_double_shifts_tts_steel: "Turnos Duplos"
+ pm_mil_shipyards_double_shifts_tts_turbine: "Turnos Duplos"
+ pm_mil_shipyards_double_shifts_tts_arc_welding: "Turnos Duplos"
+ pm_mil_shipyards_triple_shifts_tts: "Turnos triplos"
+ pm_mil_shipyards_triple_shifts_tts_turbine: "Turnos triplos"
+ pm_mil_shipyards_triple_shifts_tts_arc_welding: "Turnos triplos"
   
  # Alerts 
  alert_MIR_war_demob_arms_name: "At War with Demobilised Arms Industries"

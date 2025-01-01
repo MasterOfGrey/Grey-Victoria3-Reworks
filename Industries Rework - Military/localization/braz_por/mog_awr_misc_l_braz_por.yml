@@ -1,30 +1,36 @@
 ﻿l_braz_por:
  # Production methods 
  pmg_base_building_automotive_industry: "Automóveis"
- pmg_automotive_shiftwork: "Trabalho por turnos" #NT!
+ pmg_automotive_shiftwork: "Trabalho por turnos"
  pmg_automotive_aeroplanes: "Aviões"
  pmg_automotive_tanks: "Tanques"
   
- pm_gear_transmissions: "Transmissões de engrenagem iniciais" #NT!
+ pm_gear_transmissions: "Transmissões de engrenagem iniciais"
  pm_automobiles: "Automóveis"
- pm_pneumatic_tyres: "Pneus Pneumáticos" #NT!
+ pm_pneumatic_tyres: "Pneus Pneumáticos"
   
- pm_single_shift_days: "Turnos Únicos" #NT!
- pm_automotive_double_shifts: "Turnos Duplos" #NT!
- pm_automotive_double_shifts_pneumatic: "Turnos Duplos" #NT!
- pm_automotive_triple_shifts: "Turnos triplos" #NT!
- pm_automotive_triple_shifts_pneumatic: "Turnos triplos" #NT!
+ pm_single_shift_days: "Turnos Únicos"
+ pm_automotive_double_shifts: "Turnos Duplos"
+ pm_automotive_double_shifts_pneumatic: "Turnos Duplos"
+ pm_automotive_triple_shifts: "Turnos triplos"
+ pm_automotive_triple_shifts_pneumatic: "Turnos triplos"
   
  pm_no_aeroplanes: "Sem Produção de Aviões"
  pm_limited_aeroplanes: "Produção Limitada de Aviões"
+ pm_limited_aeroplanes_double: "Produção Limitada de Aviões" #NT!
+ pm_limited_aeroplanes_triple: "Produção Limitada de Aviões" #NT!
  pm_extensive_aeroplanes: "Produção Extensiva de Aviões"
- pm_overtime_aeroplanes: "Produção de aviões em horas extras" #NT!
+ pm_extensive_aeroplanes_triple: "Produção Extensiva de Aviões" #NT!
+ pm_overtime_aeroplanes: "Produção de Aviões em horas extras"
   
  pm_no_tanks: "Sem Produção de Tanques"
  pm_limited_tanks: "Produção Limitada de Tanques"
+ pm_limited_tanks_double: "Produção Limitada de Tanques" #NT!
+ pm_limited_tanks_triple: "Produção Limitada de Tanques" #NT!
  pm_extensive_tanks: "Produção Extensiva de Tanques"
- pm_overtime_tanks: "Produção de aviões em horas extras" #NT!
+ pm_extensive_tanks_triple: "Produção Extensiva de Tanques" #NT!
+ pm_overtime_tanks: "Produção de Tanques em horas extras"
   
  # Technology 
- pneumatic_tyres: "Pneus Pneumáticos" #NT!
- pneumatic_tyres_desc: "As aplicações da borracha vulcanizada em combinação com o motor de combustão têm o potencial de ser revolucionárias." #NT!
+ pneumatic_tyres: "Pneus Pneumáticos"
+ pneumatic_tyres_desc: "As aplicações da borracha vulcanizada em combinação com o motor de combustão têm o potencial de ser revolucionárias."

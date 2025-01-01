@@ -5,8 +5,9 @@
  pmg_arti_tools_demob: "Produkcja narzędzi zdemobilizowanych"
  pmg_munitions_explosives_demob: "Produkcja zdemobilizowanych materiałów wybuchowych"
   
- pmg_automation_building_explosives_factory: "Automatyzacja" #NT!
- pmg_mil_shipyards_shiftwork: "Praca zmianowa" #NT!
+ pmg_automation_building_electronics: "Automatyzacja" #NT!
+ pmg_automation_building_explosives_factory: "Automatyzacja"
+ pmg_mil_shipyards_shiftwork: "Praca zmianowa"
   
   # Production methods 
  pm_extensive_tools_a_i: "Rozległy"
@@ -49,28 +50,35 @@
  pm_moderate_radios: "Mnóstwo radia"
  pm_extensive_radios: "Wiele Radiów"
   
+ pm_assembly_lines_building_electronics: "Linie montażowe" #NT!
+ pm_full_process_automation_building_electronics: "Komponenty wstępnie tłoczone" #NT!
+  
  pm_ui_safety_a: "(Zignoruj ​​to)"
  pm_ui_safety_b: "(Zignoruj ​​to)"
+ pm_ui_safety_c: "(Zignoruj ​​to)" #NT!
+ pm_ui_safety_d: "(Zignoruj ​​to)" #NT!
   
- pm_rotary_valve_engine_building_arti_foundry: "Silnik z zaworem obrotowym" #NT!
- pm_assembly_lines_building_arti_foundry: "Linie montażowe" #NT!
+ pm_rotary_valve_engine_building_arti_foundry: "Silnik z zaworem obrotowym"
+ pm_assembly_lines_building_arti_foundry: "Linie montażowe"
   
- pm_mechanical_mixers_building_explosives_factory: "Miksery mechaniczne" #NT!
- pm_rotary_valve_engine_building_explosives_factory: "Silnik z zaworem obrotowym" #NT!
- pm_assembly_lines_building_explosives_factory: "Linie montażowe" #NT!
- pm_full_process_automation_building_explosives_factory: "Pakowanie automatyczne" #NT!
+ pm_mechanical_mixers_building_explosives_factory: "Miksery mechaniczne"
+ pm_rotary_valve_engine_building_explosives_factory: "Silnik z zaworem obrotowym"
+ pm_assembly_lines_building_explosives_factory: "Linie montażowe"
+ pm_full_process_automation_building_explosives_factory: "Pakowanie automatyczne"
   
- pm_mil_shipyards_double_shifts: "Podwójne zmiany" #NT!
- pm_mil_shipyards_double_shifts_arc_weld: "Podwójne zmiany" #NT!
- pm_mil_shipyards_triple_shifts: "Potrójne zmiany" #NT!
- pm_mil_shipyards_triple_shifts_arc_weld: "Potrójne zmiany" #NT!
- pm_mil_shipyards_double_shifts_tts: "Podwójne zmiany" #NT!
- pm_mil_shipyards_double_shifts_tts_steel: "Podwójne zmiany" #NT!
- pm_mil_shipyards_double_shifts_tts_turbine: "Podwójne zmiany" #NT!
- pm_mil_shipyards_double_shifts_tts_arc_welding: "Podwójne zmiany" #NT!
- pm_mil_shipyards_triple_shifts_tts: "Potrójne zmiany" #NT!
- pm_mil_shipyards_triple_shifts_tts_turbine: "Potrójne zmiany" #NT!
- pm_mil_shipyards_triple_shifts_tts_arc_welding: "Potrójne zmiany" #NT!
+ pm_mil_shipyards_double_shifts_wooden: "Podwójne zmiany" #NT!
+ pm_mil_shipyards_double_shifts: "Podwójne zmiany"
+ pm_mil_shipyards_double_shifts_arc_weld: "Podwójne zmiany"
+ pm_mil_shipyards_triple_shifts_wooden: "Potrójne zmiany" #NT!
+ pm_mil_shipyards_triple_shifts: "Potrójne zmiany"
+ pm_mil_shipyards_triple_shifts_arc_weld: "Potrójne zmiany"
+ pm_mil_shipyards_double_shifts_tts: "Podwójne zmiany"
+ pm_mil_shipyards_double_shifts_tts_steel: "Podwójne zmiany"
+ pm_mil_shipyards_double_shifts_tts_turbine: "Podwójne zmiany"
+ pm_mil_shipyards_double_shifts_tts_arc_welding: "Podwójne zmiany"
+ pm_mil_shipyards_triple_shifts_tts: "Potrójne zmiany"
+ pm_mil_shipyards_triple_shifts_tts_turbine: "Potrójne zmiany"
+ pm_mil_shipyards_triple_shifts_tts_arc_welding: "Potrójne zmiany"
   
  # Alerts 
  alert_MIR_war_demob_arms_name: "W stanie wojny z zdemobilizowanymi przemysłami zbrojeniowymi"

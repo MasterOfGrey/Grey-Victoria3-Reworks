@@ -23,16 +23,19 @@ pmg_mil_shipyards_shiftwork = {													# Modded PMG
 	texture = "gfx/interface/icons/generic_icons/mixed_icon_automation.dds"
 	production_methods = {
 		pm_single_shift_days
-		pm_mil_shipyards_double_shifts				# replacement_if_valid = pm_mil_shipyards_double_shifts_tts
+		pm_mil_shipyards_double_shifts_wooden		# replacement_if_valid = branches off from here to both lists
+		pm_mil_shipyards_double_shifts				# Never valid if TTS loaded
 		pm_mil_shipyards_double_shifts_arc_weld		# Never valid if TTS loaded
-		pm_mil_shipyards_triple_shifts				# Never valid if TTS loaded
-		pm_mil_shipyards_triple_shifts_arc_weld		# Never valid if TTS loaded
 		pm_mil_shipyards_double_shifts_tts
 		pm_mil_shipyards_double_shifts_tts_steel
 		pm_mil_shipyards_double_shifts_tts_turbine
 		pm_mil_shipyards_double_shifts_tts_arc_welding
+		pm_mil_shipyards_triple_shifts_wooden		# replacement_if_valid = branches off from here to both lists
+		pm_mil_shipyards_triple_shifts				# Never valid if TTS loaded
+		pm_mil_shipyards_triple_shifts_arc_weld		# Never valid if TTS loaded
 		pm_mil_shipyards_triple_shifts_tts
 		pm_mil_shipyards_triple_shifts_tts_turbine
 		pm_mil_shipyards_triple_shifts_tts_arc_welding
+		pm_ui_safety_b
 	}
 }

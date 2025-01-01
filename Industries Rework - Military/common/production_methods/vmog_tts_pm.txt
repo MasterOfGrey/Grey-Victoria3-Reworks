@@ -14,7 +14,8 @@ pm_military_shipbuilding_ironclad = {
 			goods_input_engines_add = 6
 			goods_input_automobiles_add = 2
 			goods_input_coal_add = 10
-			goods_input_iron_add = 30
+			goods_input_iron_add = 24 # 30
+			goods_input_artillery_add = 3
 			
 			# output goods
 			goods_output_ironclads_add = 35
@@ -43,7 +44,8 @@ pm_military_shipbuilding_steel = {
 			# input goods
 			goods_input_engines_add = 6
 			goods_input_automobiles_add = 2
-			goods_input_steel_add = 30
+			goods_input_steel_add = 24 # 30
+			goods_input_artillery_add = 4
 			goods_input_coal_add = 15
 			
 			# output goods
@@ -72,7 +74,8 @@ pm_military_shipbuilding_turbine = {
 			# input goods
 			goods_input_engines_add = 9
 			goods_input_automobiles_add = 3
-			goods_input_steel_add = 40
+			goods_input_steel_add = 32 # 40
+			goods_input_artillery_add = 5
 			goods_input_electricity_add = 10
 			
 			# output goods
@@ -102,8 +105,9 @@ pm_military_shipbuilding_arc_welding = {
 			# input goods
 			goods_input_engines_add = 12
 			goods_input_automobiles_add = 4
-			goods_input_steel_add = 40
-			goods_input_electricity_add = 20
+			goods_input_steel_add = 32 # 40
+			goods_input_artillery_add = 6
+			goods_input_electricity_add = 16
 			
 			# output goods
 			goods_output_ironclads_add = 30
@@ -124,8 +128,9 @@ pm_military_shipbuilding_arc_welding = {
 pm_mil_shipyards_double_shifts_tts = {
 	texture = "gfx/interface/icons/production_method_icons/shift_2.dds"
 	replacement_if_valid = pm_mil_shipyards_double_shifts_tts_steel
-	replacement_if_valid = pm_mil_shipyards_double_shifts_tts_turbine
-	replacement_if_valid = pm_mil_shipyards_double_shifts_tts_arc_welding
+	# replacement_if_valid = pm_mil_shipyards_double_shifts_tts_turbine
+	# replacement_if_valid = pm_mil_shipyards_double_shifts_tts_arc_welding
+	is_hidden_when_unavailable = yes
 	
 	unlocking_technologies = {
 		shift_work
@@ -133,8 +138,8 @@ pm_mil_shipyards_double_shifts_tts = {
 	unlocking_production_methods = {
 		pm_military_shipbuilding_ironclad
 		pm_military_shipbuilding_steel
-		pm_military_shipbuilding_turbine
-		pm_military_shipbuilding_arc_welding
+	#	pm_military_shipbuilding_turbine
+	#	pm_military_shipbuilding_arc_welding
 	}
 	
 	building_modifiers = {
@@ -143,7 +148,8 @@ pm_mil_shipyards_double_shifts_tts = {
 			goods_input_engines_add = 5
 			goods_input_automobiles_add = 2
 			goods_input_coal_add = 8
-			goods_input_iron_add = 24
+			goods_input_iron_add = 18
+			goods_input_artillery_add = 3
 			
 			# output goods
 			goods_output_ironclads_add = 46
@@ -170,7 +176,7 @@ pm_mil_shipyards_double_shifts_tts = {
 pm_mil_shipyards_double_shifts_tts_steel = {
 	texture = "gfx/interface/icons/production_method_icons/shift_2.dds"
 	replacement_if_valid = pm_mil_shipyards_double_shifts_tts_turbine
-	replacement_if_valid = pm_mil_shipyards_double_shifts_tts_arc_welding
+	# replacement_if_valid = pm_mil_shipyards_double_shifts_tts_arc_welding
 	is_hidden_when_unavailable = yes
 	
 	unlocking_technologies = {
@@ -179,7 +185,7 @@ pm_mil_shipyards_double_shifts_tts_steel = {
 	unlocking_production_methods = {
 		pm_military_shipbuilding_steel
 		pm_military_shipbuilding_turbine
-		pm_military_shipbuilding_arc_welding
+	#	pm_military_shipbuilding_arc_welding
 	}
 	
 	building_modifiers = {
@@ -187,7 +193,8 @@ pm_mil_shipyards_double_shifts_tts_steel = {
 			# input goods
 			goods_input_engines_add = 5
 			goods_input_automobiles_add = 2
-			goods_input_steel_add = 24
+			goods_input_steel_add = 18 # 24
+			goods_input_artillery_add = 4
 			goods_input_coal_add = 12
 			
 			# output goods
@@ -230,7 +237,8 @@ pm_mil_shipyards_double_shifts_tts_turbine = {
 			# input goods
 			goods_input_engines_add = 7
 			goods_input_automobiles_add = 2
-			goods_input_steel_add = 32
+			goods_input_steel_add = 24 # 32
+			goods_input_artillery_add = 5
 			goods_input_electricity_add = 8
 			
 			# output goods
@@ -272,7 +280,8 @@ pm_mil_shipyards_double_shifts_tts_arc_welding = {
 			# input goods
 			goods_input_engines_add = 10
 			goods_input_automobiles_add = 3
-			goods_input_steel_add = 32
+			goods_input_steel_add = 24 # 32
+			goods_input_artillery_add = 6
 			goods_input_electricity_add = 16
 			
 			# output goods
@@ -302,7 +311,8 @@ pm_mil_shipyards_double_shifts_tts_arc_welding = {
 pm_mil_shipyards_triple_shifts_tts = {
 	texture = "gfx/interface/icons/production_method_icons/shift_3.dds"
 	replacement_if_valid = pm_mil_shipyards_triple_shifts_tts_turbine
-	replacement_if_valid = pm_mil_shipyards_triple_shifts_tts_arc_welding
+	# replacement_if_valid = pm_mil_shipyards_triple_shifts_tts_arc_welding
+	is_hidden_when_unavailable = yes
 	
 	unlocking_technologies = {
 		conveyors
@@ -310,7 +320,7 @@ pm_mil_shipyards_triple_shifts_tts = {
 	unlocking_production_methods = {
 		pm_military_shipbuilding_steel
 		pm_military_shipbuilding_turbine
-		pm_military_shipbuilding_arc_welding
+	#	pm_military_shipbuilding_arc_welding
 	}
 	
 	building_modifiers = {
@@ -318,7 +328,8 @@ pm_mil_shipyards_triple_shifts_tts = {
 			# input goods
 			goods_input_engines_add = 8
 			goods_input_automobiles_add = 3
-			goods_input_steel_add = 42
+			goods_input_steel_add = 30 # 42
+			goods_input_artillery_add = 8
 			goods_input_coal_add = 21
 			
 			# output goods
@@ -363,7 +374,8 @@ pm_mil_shipyards_triple_shifts_tts_turbine = {
 			# input goods
 			goods_input_engines_add = 12
 			goods_input_automobiles_add = 3
-			goods_input_steel_add = 56
+			goods_input_steel_add = 40 # 56
+			goods_input_artillery_add = 10
 			goods_input_electricity_add = 14
 			
 			# output goods
@@ -407,8 +419,9 @@ pm_mil_shipyards_triple_shifts_tts_arc_welding = {
 			# input goods
 			goods_input_engines_add = 18
 			goods_input_automobiles_add = 5
-			goods_input_steel_add = 56
-			goods_input_electricity_add = 30
+			goods_input_steel_add = 40 # 56
+			goods_input_artillery_add = 12
+			goods_input_electricity_add = 22 # 30
 			
 			# output goods
 			goods_output_ironclads_add = 41

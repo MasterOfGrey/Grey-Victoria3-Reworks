@@ -5,7 +5,7 @@
  dough_rollers: "Tam Süreç Otomasyonu" #NT!
  dough_rollers_desc: "Tekrarlayan görevleri tam otomatikleştirmek için makineleri entegre ederek, endüstriler üretimde benzeri görülmemiş verimlilik, tutarlılık ve ölçek elde edebilirler." #NT!
   
- pm_single_shift_days: "Tek Vardiyalar" #NT!
+ pm_single_shift_days: "Tek Vardiyalar"
   
  pm_cropdusting: "Ürün tozlama" #NT!
  pm_cropdusting_rice: "Ürün tozlama" #NT!

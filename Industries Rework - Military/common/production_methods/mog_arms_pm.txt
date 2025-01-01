@@ -406,6 +406,7 @@ pm_assembly_lines_building_arms_industry = {
 
 		level_scaled = {
 			building_employment_laborers_add = -2500
+			building_employment_machinists_add = -500
 		}
 	}
 

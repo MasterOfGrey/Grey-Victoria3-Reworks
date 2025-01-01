@@ -5,6 +5,7 @@
  pmg_arti_tools_demob: "Demobilised Tool Production"
  pmg_munitions_explosives_demob: "Demobilised Explosives Production"
  
+ pmg_automation_building_electronics: "Automation"
  pmg_automation_building_explosives_factory: "Automation"
  pmg_mil_shipyards_shiftwork: "Shift Work"
  
@@ -49,8 +50,13 @@
  pm_moderate_radios: "Plenty of Radios"
  pm_extensive_radios: "Many Radios"
  
+ pm_assembly_lines_building_electronics: "Assembly Lines"
+ pm_full_process_automation_building_electronics: "Pre-Stamped Components"
+ 
  pm_ui_safety_a: "(Ignore This)"
  pm_ui_safety_b: "(Ignore This)"
+ pm_ui_safety_c: "(Ignore This)"
+ pm_ui_safety_d: "(Ignore This)"
  
  pm_rotary_valve_engine_building_arti_foundry: "Rotary Valve Engine"
  pm_assembly_lines_building_arti_foundry: "Assembly Lines"
@@ -60,8 +66,10 @@
  pm_assembly_lines_building_explosives_factory: "Assembly Lines"
  pm_full_process_automation_building_explosives_factory: "Automated Packing"
  
+ pm_mil_shipyards_double_shifts_wooden: "Double Shifts"
  pm_mil_shipyards_double_shifts: "Double Shifts"
  pm_mil_shipyards_double_shifts_arc_weld: "Double Shifts"
+ pm_mil_shipyards_triple_shifts_wooden: "Triple Shifts"
  pm_mil_shipyards_triple_shifts: "Triple Shifts"
  pm_mil_shipyards_triple_shifts_arc_weld: "Triple Shifts"
  pm_mil_shipyards_double_shifts_tts: "Double Shifts"

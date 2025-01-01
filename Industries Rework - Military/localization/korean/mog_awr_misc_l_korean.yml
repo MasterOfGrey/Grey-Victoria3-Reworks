@@ -1,30 +1,36 @@
 ﻿l_korean:
  # Production methods 
  pmg_base_building_automotive_industry: "자동차"
- pmg_automotive_shiftwork: "교대근무" #NT!
+ pmg_automotive_shiftwork: "교대근무"
  pmg_automotive_aeroplanes: "비행기"
  pmg_automotive_tanks: "탱크"
   
- pm_gear_transmissions: "초기 기어 변속기" #NT!
+ pm_gear_transmissions: "초기 기어 변속기"
  pm_automobiles: "자동차"
- pm_pneumatic_tyres: "공압 타이어" #NT!
+ pm_pneumatic_tyres: "공압 타이어"
   
- pm_single_shift_days: "단일 교대" #NT!
- pm_automotive_double_shifts: "더블 쉬프트" #NT!
- pm_automotive_double_shifts_pneumatic: "더블 쉬프트" #NT!
- pm_automotive_triple_shifts: "트리플 쉬프트" #NT!
- pm_automotive_triple_shifts_pneumatic: "트리플 쉬프트" #NT!
+ pm_single_shift_days: "단일 교대"
+ pm_automotive_double_shifts: "더블 쉬프트"
+ pm_automotive_double_shifts_pneumatic: "더블 쉬프트"
+ pm_automotive_triple_shifts: "트리플 쉬프트"
+ pm_automotive_triple_shifts_pneumatic: "트리플 쉬프트"
   
  pm_no_aeroplanes: "항공기 생산 없음"
  pm_limited_aeroplanes: "제한된 항공기 생산"
+ pm_limited_aeroplanes_double: "제한된 항공기 생산"
+ pm_limited_aeroplanes_triple: "제한된 항공기 생산"
  pm_extensive_aeroplanes: "광범위한 항공기 생산"
- pm_overtime_aeroplanes: "초과 근무 항공기 생산" #NT!
+ pm_extensive_aeroplanes_triple: "광범위한 항공기 생산"
+ pm_overtime_aeroplanes: "초과 근무 항공기 생산"
   
  pm_no_tanks: "탱크 생산 없음"
  pm_limited_tanks: "제한된 탱크 생산"
+ pm_limited_tanks_double: "제한된 탱크 생산"
+ pm_limited_tanks_triple: "제한된 탱크 생산"
  pm_extensive_tanks: "대규모 탱크 생산"
- pm_overtime_tanks: "초과 근무 항공기 생산" #NT!
+ pm_extensive_tanks_triple: "대규모 탱크 생산"
+ pm_overtime_tanks: "초과 근무 항공기 생산"
   
  # Technology 
- pneumatic_tyres: "공압 타이어" #NT!
- pneumatic_tyres_desc: "가황 고무를 연소 엔진과 결합해 사용하면 혁신을 일으킬 수 있는 잠재력이 있습니다." #NT!
+ pneumatic_tyres: "공압 타이어"
+ pneumatic_tyres_desc: "가황 고무를 연소 엔진과 결합해 사용하면 혁신을 일으킬 수 있는 잠재력이 있습니다."

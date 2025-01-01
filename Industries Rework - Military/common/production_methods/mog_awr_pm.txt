@@ -204,11 +204,19 @@ pm_no_aeroplanes = {
 
 pm_limited_aeroplanes = {
 	texture = "gfx/interface/icons/production_method_icons/aeroplanes_secondary.dds"
-
+	replacement_if_valid = pm_limited_aeroplanes_double
+	is_hidden_when_unavailable = yes
+	
 	unlocking_technologies = {
 		military_aviation
 	}
-
+	
+	unlocking_production_methods = {
+		pm_single_shift_days
+		pm_automotive_double_shifts
+		pm_automotive_double_shifts_pneumatic
+	}
+	
 	building_modifiers = {
 		workforce_scaled = {
 			# Representing aluminium used in plane production
@@ -216,35 +224,47 @@ pm_limited_aeroplanes = {
 			goods_input_radios_add = 2 # Cost 80, total 160
 			goods_input_steel_add = -5 # Cost 50, total 250
 			goods_input_rubber_add = -2 # cost 40, total 80
-
+			
 			goods_output_automobiles_add = -12
 			goods_output_aeroplanes_add = 24	# 15
 		}
 	}
 }
 
-pm_extensive_aeroplanes = {
-	texture = "gfx/interface/icons/production_method_icons/aeroplanes_plus.dds"
-
+pm_limited_aeroplanes_double = {
+	texture = "gfx/interface/icons/production_method_icons/aeroplanes_secondary.dds"
+	replacement_if_valid = pm_limited_aeroplanes_triple
+	is_hidden_when_unavailable = yes
+	
 	unlocking_technologies = {
 		military_aviation
 	}
-
+	
+	unlocking_production_methods = {
+		pm_automotive_double_shifts
+		pm_automotive_double_shifts_pneumatic
+		pm_automotive_triple_shifts
+		pm_automotive_triple_shifts_pneumatic
+	}
+	
 	building_modifiers = {
 		workforce_scaled = {
-			goods_input_electricity_add = 12 # 20
-			goods_input_radios_add = 4
-			goods_input_steel_add = -10 
-			goods_input_rubber_add = -4
-
+			# Representing aluminium used in plane production
+			goods_input_electricity_add = 10
+			goods_input_radios_add = 3
+			goods_input_steel_add = -8
+			goods_input_rubber_add = -3
+			
 			goods_output_automobiles_add = -20
-			goods_output_aeroplanes_add = 38	# 25
+			goods_output_aeroplanes_add = 44
 		}
 	}
 }
 
-pm_overtime_aeroplanes = {
-	texture = "gfx/interface/icons/production_method_icons/aeroplanes_overtime.dds"
+
+pm_limited_aeroplanes_triple = {
+	texture = "gfx/interface/icons/production_method_icons/aeroplanes_secondary.dds"
+	is_hidden_when_unavailable = yes
 	
 	unlocking_technologies = {
 		military_aviation
@@ -257,14 +277,103 @@ pm_overtime_aeroplanes = {
 	
 	building_modifiers = {
 		workforce_scaled = {
-			goods_input_electricity_add = 18 # 20
-			goods_input_radios_add = 6
-			goods_input_steel_add = -15 
-			goods_input_rubber_add = -6
-
+			# Representing aluminium used in plane production
+			goods_input_electricity_add = 14
+			goods_input_radios_add = 4
+			goods_input_steel_add = -10
+			goods_input_rubber_add = -4
+			
 			goods_output_automobiles_add = -26
-			goods_output_aeroplanes_add = 48		# Diminishing returns.
+			goods_output_aeroplanes_add = 60
 		}
+	}
+}
+
+pm_extensive_aeroplanes = {
+	texture = "gfx/interface/icons/production_method_icons/aeroplanes_plus.dds"
+	replacement_if_valid = pm_extensive_aeroplanes_triple
+	is_hidden_when_unavailable = yes
+	
+	unlocking_technologies = {
+		military_aviation
+	}
+	
+	unlocking_production_methods = {
+		pm_automotive_double_shifts
+		pm_automotive_double_shifts_pneumatic
+		pm_automotive_triple_shifts
+		pm_automotive_triple_shifts_pneumatic
+	}
+	
+	building_modifiers = {
+		workforce_scaled = {
+			goods_input_electricity_add = 20
+			goods_input_radios_add = 6
+			goods_input_steel_add = -16 
+			goods_input_rubber_add = -6
+			
+			goods_output_automobiles_add = -34
+			goods_output_aeroplanes_add = 60
+		}
+	}
+}
+
+pm_extensive_aeroplanes_triple = {
+	texture = "gfx/interface/icons/production_method_icons/aeroplanes_plus.dds"
+	is_hidden_when_unavailable = yes
+	
+	unlocking_technologies = {
+		military_aviation
+	}
+	
+	unlocking_production_methods = {
+		pm_automotive_triple_shifts
+		pm_automotive_triple_shifts_pneumatic
+	}
+	
+	building_modifiers = {
+		workforce_scaled = {
+			goods_input_electricity_add = 24
+			goods_input_radios_add = 8
+			goods_input_steel_add = -20 
+			goods_input_rubber_add = -8
+			
+			goods_output_automobiles_add = -54
+			goods_output_aeroplanes_add = 92
+		}
+	}
+}
+
+pm_overtime_aeroplanes = {
+	texture = "gfx/interface/icons/production_method_icons/aeroplanes_overtime.dds"
+	is_hidden_when_unavailable = yes
+	
+	unlocking_technologies = {
+		military_aviation
+	}
+	
+	unlocking_production_methods = {
+		pm_automotive_triple_shifts
+		pm_automotive_triple_shifts_pneumatic
+	}
+	
+	building_modifiers = {
+		workforce_scaled = {
+			goods_input_electricity_add = 24
+			goods_input_radios_add = 9
+			goods_input_steel_add = -24 
+			goods_input_rubber_add = -9
+			
+			goods_output_automobiles_add = -72
+			goods_output_aeroplanes_add = 128		# Diminishing returns.
+		}
+	}
+}
+
+pm_ui_safety_c = {
+	texture = "gfx/interface/icons/production_method_icons/no_aeroplanes.dds"
+	unlocking_laws = {
+		law_chiefdom
 	}
 }
 
@@ -274,42 +383,60 @@ pm_no_tanks = {
 
 pm_limited_tanks = {
 	texture = "gfx/interface/icons/production_method_icons/tanks_secondary.dds"
-
+	replacement_if_valid = pm_limited_tanks_double
+	is_hidden_when_unavailable = yes
+	
 	unlocking_technologies = {
 		mobile_armor
 	}
-
+	
+	unlocking_production_methods = {
+		pm_single_shift_days
+		pm_automotive_double_shifts
+		pm_automotive_double_shifts_pneumatic
+	}
+	
 	building_modifiers = {
 		workforce_scaled = {
 			goods_input_steel_add = 5 # Cost 50, total 250
 			goods_input_rubber_add = -5 # Cost 40, total 200
-
+			
 			goods_output_automobiles_add = -12
 			goods_output_tanks_add = 15
 		}
 	}
 }
 
-pm_extensive_tanks = {
-	texture = "gfx/interface/icons/production_method_icons/tanks_plus.dds"
-
+pm_limited_tanks_double = {
+	texture = "gfx/interface/icons/production_method_icons/tanks_secondary.dds"
+	replacement_if_valid = pm_limited_tanks_triple
+	is_hidden_when_unavailable = yes
+	
 	unlocking_technologies = {
 		mobile_armor
 	}
-
+	
+	unlocking_production_methods = {
+		pm_automotive_double_shifts
+		pm_automotive_double_shifts_pneumatic
+		pm_automotive_triple_shifts
+		pm_automotive_triple_shifts_pneumatic
+	}
+	
 	building_modifiers = {
 		workforce_scaled = {
-			goods_input_steel_add = 10 # Cost 50, total 500
-			goods_input_rubber_add = -10 # Cost 40, total 400
-
-			goods_output_automobiles_add = -20
-			goods_output_tanks_add = 25
+			goods_input_steel_add = 8
+			goods_input_rubber_add = -8
+			
+			goods_output_automobiles_add = -19
+			goods_output_tanks_add = 24
 		}
 	}
 }
 
-pm_overtime_tanks = {
-	texture = "gfx/interface/icons/production_method_icons/tanks_plus.dds"
+pm_limited_tanks_triple = {
+	texture = "gfx/interface/icons/production_method_icons/tanks_secondary.dds"
+	is_hidden_when_unavailable = yes
 	
 	unlocking_technologies = {
 		mobile_armor
@@ -322,11 +449,93 @@ pm_overtime_tanks = {
 	
 	building_modifiers = {
 		workforce_scaled = {
-			goods_input_steel_add = 15 # Cost 50, total 500
-			goods_input_rubber_add = -15 # Cost 40, total 400
-
-			goods_output_automobiles_add = -26
-			goods_output_tanks_add = 32
+			goods_input_steel_add = 10
+			goods_input_rubber_add = -10
+			
+			goods_output_automobiles_add = -24
+			goods_output_tanks_add = 30
 		}
+	}
+}
+
+pm_extensive_tanks = {
+	texture = "gfx/interface/icons/production_method_icons/tanks_plus.dds"
+	replacement_if_valid = pm_extensive_tanks_triple
+	is_hidden_when_unavailable = yes
+	
+	unlocking_technologies = {
+		mobile_armor
+	}
+	
+	unlocking_production_methods = {
+		pm_automotive_double_shifts
+		pm_automotive_double_shifts_pneumatic
+		pm_automotive_triple_shifts
+		pm_automotive_triple_shifts_pneumatic
+	}
+	
+	building_modifiers = {
+		workforce_scaled = {
+			goods_input_steel_add = 16
+			goods_input_rubber_add = -16
+			
+			goods_output_automobiles_add = -34
+			goods_output_tanks_add = 40
+		}
+	}
+}
+
+pm_extensive_tanks_triple = {
+	texture = "gfx/interface/icons/production_method_icons/tanks_plus.dds"
+	is_hidden_when_unavailable = yes
+	
+	unlocking_technologies = {
+		mobile_armor
+	}
+	
+	unlocking_production_methods = {
+		pm_automotive_triple_shifts
+		pm_automotive_triple_shifts_pneumatic
+	}
+	
+	building_modifiers = {
+		workforce_scaled = {
+			goods_input_steel_add = 20
+			goods_input_rubber_add = -20
+			
+			goods_output_automobiles_add = -42
+			goods_output_tanks_add = 50
+		}
+	}
+}
+
+pm_overtime_tanks = {
+	texture = "gfx/interface/icons/production_method_icons/tanks_plus.dds"
+	is_hidden_when_unavailable = yes
+	
+	unlocking_technologies = {
+		mobile_armor
+	}
+	
+	unlocking_production_methods = {
+		pm_automotive_triple_shifts
+		pm_automotive_triple_shifts_pneumatic
+	}
+	
+	building_modifiers = {
+		workforce_scaled = {
+			goods_input_steel_add = 30
+			goods_input_rubber_add = -30
+			
+			goods_output_automobiles_add = -51
+			goods_output_tanks_add = 64
+		}
+	}
+}
+
+pm_ui_safety_d = {
+	texture = "gfx/interface/icons/production_method_icons/no_tanks_secondary.dds"
+	unlocking_laws = {
+		law_chiefdom
 	}
 }

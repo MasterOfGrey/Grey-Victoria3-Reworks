@@ -26,8 +26,12 @@ pmg_automotive_aeroplanes = {													# Modded PMG
 	production_methods = {
 		pm_no_aeroplanes
 		pm_limited_aeroplanes
+		pm_limited_aeroplanes_double
+		pm_limited_aeroplanes_triple
 		pm_extensive_aeroplanes
+		pm_extensive_aeroplanes_triple
 		pm_overtime_aeroplanes
+		pm_ui_safety_c
 	}
 }
 
@@ -36,7 +40,11 @@ pmg_automotive_tanks = {														# Modded PMG
 	production_methods = {
 		pm_no_tanks
 		pm_limited_tanks
+		pm_limited_tanks_double
+		pm_limited_tanks_triple
 		pm_extensive_tanks
+		pm_extensive_tanks_triple
 		pm_overtime_tanks
+		pm_ui_safety_d
 	}
 }
