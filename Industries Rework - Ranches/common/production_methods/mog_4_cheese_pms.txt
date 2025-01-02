@@ -9,8 +9,8 @@ pm_artisanal_cheese = {
 	building_modifiers = {
 		workforce_scaled = {
 			goods_input_fabric_add = 4
-			goods_output_meat_add = -18
-			goods_output_groceries_add = 30
+			goods_output_meat_add = -15
+			goods_output_groceries_add = 18
 		}
 		
 		level_scaled = {
@@ -26,12 +26,17 @@ pm_industrial_preserves = {
 	unlocking_technologies = {
 		canneries
 	}
+	unlocking_production_methods = {
+		pm_slaughterhouses
+		pm_mechanized_slaughtering
+		pm_refrigerated_workspaces
+	}
 	
 	building_modifiers = {
 		workforce_scaled = {
 			goods_input_paper_add = 4
 			goods_output_meat_add = -15
-			goods_output_groceries_add = 30
+			goods_output_groceries_add = 26
 		}
 		
 		level_scaled = {
