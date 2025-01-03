@@ -1,6 +1,6 @@
 ﻿l_japanese:
      # Building 
- PPP_building_power_grid: "電力網"
+ ppp_building_power_grid: "電力網"
   
      # Technologies 
  PPP_tech_hv_power: "動力伝達"

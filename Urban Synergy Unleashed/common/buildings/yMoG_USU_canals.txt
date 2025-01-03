@@ -6,6 +6,9 @@
 	downsizeable = no
 	unique = yes
 	required_construction = construction_cost_canal
+	
+	ownership_type = self
+	ai_nationalization_desire = 0.05 	# AI is extremely reluctant to privatize national strategic infrastructure
 
 	ai_value = 50000 # Canals are very important
 	
@@ -57,6 +60,9 @@ building_panama_canal = {
 	downsizeable = no
 	unique = yes
 	required_construction = construction_cost_canal
+	
+	ownership_type = self
+	ai_nationalization_desire = 0.05 	# AI is extremely reluctant to privatize national strategic infrastructure
 
 	ai_value = 50000 # Canals are very important
 	

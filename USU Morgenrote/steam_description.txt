@@ -1,0 +1,23 @@
+[img]https://i.imgur.com/7xuCZqW.png[/img]
+Supports Victoria 3: V1.8.4  (and onwards)
+Supports Morgenrote: 2.3.x (and onwards)
+Mod Version: V1.2
+Please consider rating this if you like it! It really helps out. [img]https://i.imgur.com/tE28cZ7.gif[/img]
+[spoiler]Originally made for: Version 1.8.2[/spoiler]
+[table]
+    [tr]
+        [td][img]https://i.imgur.com/XLUGyo4.png[/img][/td]
+        [td][img]https://i.imgur.com/6KqTKks.png[/img][/td]
+    [/tr]
+[/table]
+*Neither Morgenrote nor Urban Synergy Unleashed can be removed from existing saves.
+[img]https://i.imgur.com/6o9HyTD.png[/img]
+This is a compatibility patch for Morgenrote and Urban Synergy Unleashed
+
+[h3]Requires the originals: [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3371689443]Urban Synergy Unleashed[/url] and [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2889925770]Morgenröte - Dawn of Flavor[/url].[/h3]
+
+Load order doesn't matter.
+
+#USU #GUSU #Morgenrote
+#Trade #Urbanization
+#Electricity #Economy

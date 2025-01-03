@@ -7,8 +7,8 @@
     mog_mapi: "Urban Synergy MAPI"
     
     # Building
-    building_river_port:0 "River Docks"
-    USU_building_public_green: "Public Green"
+    building_river_port: "River Docks"
+    usu_building_public_green: "Public Green"
     
     # Technologies
     
@@ -16,8 +16,8 @@
     usu_logistics: "Logistics Services"
     
     # Modifier types
-    state_building_river_port_max_level_add:0 "River Port Max Level"
-    state_building_river_port_max_level_add_desc:0 "A bonus or penalty to the maximum level of River Port buildings."
+    state_building_river_port_max_level_add: "River Port Max Level"
+    state_building_river_port_max_level_add_desc: "A bonus or penalty to the maximum level of River Port buildings."
     
     goods_input_usu_logistics_add:   "@usu_logistics![Nbsp]$usu_logistics$ input"
     goods_output_usu_logistics_add:  "@usu_logistics![Nbsp]$usu_logistics$ output"
@@ -32,17 +32,25 @@
     modifier_goods_input_tools_mult: "@tools![Nbsp]Tools input"
     modifier_goods_input_tools_mult_desc: "The amount of @tools![Nbsp]Tools consumed by buildings"
     
+    usu_building_public_green_throughput_add: "$usu_building_public_green$ building [concept_throughput]"
+    usu_building_public_green_throughput_add_desc: "A bonus or penalty to both input and output of $usu_building_public_green$"
+    ppp_building_power_grid_throughput_add: "$ppp_building_power_grid$ building [concept_throughput]"
+    ppp_building_power_grid_throughput_add_desc: "A bonus or penalty to both input and output of $ppp_building_power_grid$"
+    building_river_port_throughput_add: "$building_river_port$ building [concept_throughput]"
+    building_river_port_throughput_add_desc: "A bonus or penalty to both input and output of $building_river_port$"
+    
     # PMGs
-    pmg_base_building_river_port:0 "Docks"
+    pmg_base_building_river_port: "Docks"
     USU_pmg_government_administration_emergency_services: "Emergency Services"
     USU_pmg_government_administration_law_enforcement: "Law Enforcement"
     USU_pmg_public_space_management: "Public Space Management"
     USU_pmg_public_parklands: "Parklands Usage"
     
     # PMs
-    pm_rp_small_port:0 "Riverside Piers"
-    pm_rp_industrial_port:0 "Industrial Ports"
-    pm_rp_modern_port:0 "Modern Ports"
+    pm_rp_anchorage: "Anchorage"
+    pm_rp_small_port: "Riverside Piers"
+    pm_rp_industrial_port: "Industrial Ports"
+    pm_rp_modern_port: "Modern Ports"
     USU_pm_hv_arcades: "Arcades"
     USU_pm_grid_streetlights: "Incandescent Steetlights"
     USU_pm_no_emergency_services: "No Emergency Services"
@@ -65,8 +73,8 @@
     state_trait_hudson_river:0 "Hudson River"
     
     # Autoexpand tooltip(s)
-    is_industrial_building:0 "Is a natural $concept_building_industry$ for tradeable [Concept('concept_good', '$concept_goods$')]"
-    is_private_infrastructure:0 "Is Transport $bg_infrastructure$ that can be [Concept('concept_privatize', '$concept_privatized$')]"
-    pos_rel_infrastructure:0 "State has available [concept_infrastructure]"
-    neg_rel_infrastructure:0 "State has [concept_infrastructure] deficit"
+    is_industrial_building: "Is a natural $concept_building_industry$ for tradeable [Concept('concept_good', '$concept_goods$')]"
+    is_private_infrastructure: "Is Transport $bg_infrastructure$ that can be [Concept('concept_privatize', '$concept_privatized$')]"
+    pos_rel_infrastructure: "State has available [concept_infrastructure]"
+    neg_rel_infrastructure: "State has [concept_infrastructure] deficit"
     bureaucracy_percent: "National Bureaucracy Level is less than #v 90%#!"

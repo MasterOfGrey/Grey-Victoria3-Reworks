@@ -1,6 +1,6 @@
 ﻿l_german:
      # Building 
- PPP_building_power_grid: "Stromnetz"
+ ppp_building_power_grid: "Stromnetz"
   
      # Technologies 
  PPP_tech_hv_power: "Kraftübertragung"

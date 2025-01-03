@@ -120,7 +120,7 @@ mog_normal_building_confirm = {
 			is_building_type = building_port
 			is_building_type = building_river_port
 			is_building_type = building_power_plant
-			is_building_type = PPP_building_power_grid
+			is_building_type = ppp_building_power_grid
 		}
 	}
 }
@@ -138,7 +138,7 @@ mog_construct_special_building_allow = {
 			}
 		}
 		AND = {
-			is_building_type = PPP_building_power_grid
+			is_building_type = ppp_building_power_grid
 			state = {
 				sg:electricity = {
 					state_goods_pricier >= 0.10

@@ -3,7 +3,7 @@
 USU_bg_public_greens = {
 	parent_group = bg_ranching
 	
-	default_building = USU_building_public_green
+	default_building = usu_building_public_green
 	
 	always_possible = yes
 	cash_reserves_max = 25000

@@ -13,7 +13,7 @@
 	
 	state_modifiers = {
 		unscaled = {
-			state_migration_pull_mult = 0.10
+			state_migration_pull_add = 2
 		}
 	}
 }
@@ -30,12 +30,14 @@ pm_trade_center_principle_external_trade_2 = {
 	building_modifiers = {
 		level_scaled = {
 			goods_input_usu_logistics_add = 1
+			building_employment_laborers_add = 100
+			building_employment_clerks_add = 25
 		}
 	}
 	
 	state_modifiers = {
 		unscaled = {
-			state_migration_pull_mult = 0.25
+			state_migration_pull_add = 3
 		}
 	}
 	

@@ -44,6 +44,34 @@ goods_output_transportation_mult = {
     decimals = 1
 }
 
+# New Building Modifiers:
+usu_building_public_green_throughput_add={
+	decimals=0
+	color=good
+	percent=yes
+	game_data={
+		ai_value=0
+	}
+}
+
+ppp_building_power_grid_throughput_add={
+	decimals=0
+	color=good
+	percent=yes
+	game_data={
+		ai_value=0
+	}
+}
+
+building_river_port_throughput_add={
+	decimals=0
+	color=good
+	percent=yes
+	game_data={
+		ai_value=0
+	}
+}
+
 # Encourage the AI please to be sensible (vanilla overwrites):
 state_market_access_price_impact={
 	decimals=1

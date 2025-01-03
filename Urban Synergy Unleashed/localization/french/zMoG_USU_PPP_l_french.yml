@@ -1,6 +1,6 @@
 ﻿l_french:
      # Building 
- PPP_building_power_grid: "Réseau électrique"
+ ppp_building_power_grid: "Réseau électrique"
   
      # Technologies 
  PPP_tech_hv_power: "Transmission de puissance"
