@@ -1,6 +1,6 @@
 ﻿l_english:
     # Building
-    PPP_building_power_grid: "Electrical Grid"
+    ppp_building_power_grid: "Electrical Grid"
     
     # Technologies
     PPP_tech_hv_power:      "Power Transmission"

@@ -1,6 +1,6 @@
 ﻿l_korean:
      # Building 
- PPP_building_power_grid: "전기 그리드"
+ ppp_building_power_grid: "전기 그리드"
   
      # Technologies 
  PPP_tech_hv_power: "동력 전달"

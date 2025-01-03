@@ -1,6 +1,6 @@
 ﻿l_russian:
      # Building 
- PPP_building_power_grid: "Электрическая сеть"
+ ppp_building_power_grid: "Электрическая сеть"
   
      # Technologies 
  PPP_tech_hv_power: "Передача мощности"

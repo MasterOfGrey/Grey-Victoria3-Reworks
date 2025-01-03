@@ -15,6 +15,7 @@ USU_pm_community_orgs = {
 	state_modifiers = {	
 		unscaled = {
 			state_migration_pull_add = 1
+			building_urban_center_throughput_add = 0.01		# Intentionally unscaled
 		}
 	}
 }
@@ -40,6 +41,7 @@ USU_pm_private_firms = {
 	state_modifiers = {	
 		unscaled = {
 			state_migration_pull_add = 2
+			building_urban_center_throughput_add = 0.01
 		}
 	}
 }
@@ -68,6 +70,7 @@ USU_pm_pub_priv_partners = {
 	state_modifiers = {	
 		unscaled = {
 			state_migration_pull_add = 3
+			building_urban_center_throughput_add = 0.01
 		}
 	}
 }
@@ -78,7 +81,7 @@ USU_pm_village_stables = {
 	
 	building_modifiers = {
 		workforce_scaled = {
-			goods_output_transportation_add = 5
+			goods_output_transportation_add = 7
 		}
 	}
 	state_modifiers = {	
@@ -93,7 +96,7 @@ USU_pm_contained_wilderness = {
 	
 	building_modifiers = {
 		workforce_scaled = {
-			goods_output_services_add = 4
+			goods_output_services_add = 6
 		}
 	}
 	state_modifiers = {	
@@ -114,7 +117,10 @@ USU_pm_seasonal_fairgrounds = {
 		workforce_scaled = {
 			goods_input_groceries_add = 2
 			goods_input_fertilizer_add = 1
-			goods_output_services_add = 11
+			goods_output_services_add = 28
+		}
+		level_scaled = {
+			building_employment_laborers_add   = -1000
 		}
 	}
 	state_modifiers = {	

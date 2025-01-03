@@ -1,6 +1,6 @@
 ﻿l_simp_chinese:
      # Building 
- PPP_building_power_grid: "电网"
+ ppp_building_power_grid: "电网"
   
      # Technologies 
  PPP_tech_hv_power: "动力传输"

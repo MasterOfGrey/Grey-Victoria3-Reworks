@@ -1,6 +1,6 @@
 ﻿l_braz_por:
      # Building 
- PPP_building_power_grid: "Rede elétrica"
+ ppp_building_power_grid: "Rede elétrica"
   
      # Technologies 
  PPP_tech_hv_power: "Transmissão de energia"

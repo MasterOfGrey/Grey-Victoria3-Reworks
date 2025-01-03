@@ -1,6 +1,6 @@
 ﻿l_polish:
      # Building 
- PPP_building_power_grid: "Sieć elektryczna"
+ ppp_building_power_grid: "Sieć elektryczna"
   
      # Technologies 
  PPP_tech_hv_power: "Przenoszenie mocy"
