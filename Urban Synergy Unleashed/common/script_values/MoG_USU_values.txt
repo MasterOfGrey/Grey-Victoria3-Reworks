@@ -130,3 +130,18 @@ bureaucracy_percent = {
 	add = produced_bureaucracy
 	divide = total_bureaucracy_need
 }
+
+### CONVOY CHECK
+convoy_ratio = {
+	if = {
+		limit = {
+			num_convoys_available = 0
+		}
+		value = -1
+	}
+	else = {
+		value = num_convoys_available
+		subtract = num_convoys_required
+		divide = num_convoys_available
+	}
+}
