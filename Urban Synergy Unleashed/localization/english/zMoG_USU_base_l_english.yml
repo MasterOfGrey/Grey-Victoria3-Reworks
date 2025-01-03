@@ -78,3 +78,5 @@
     pos_rel_infrastructure: "State has available [concept_infrastructure]"
     neg_rel_infrastructure: "State has [concept_infrastructure] deficit"
     bureaucracy_percent: "National Bureaucracy Level is less than #v 90%#!"
+    is_convoy_provider: "Is $bg_infrastructure$ that provides [concept_convoys]"
+    convoy_ratio: "Available convoys are less than #v 5%#!"
