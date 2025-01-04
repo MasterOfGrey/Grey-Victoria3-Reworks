@@ -6,6 +6,12 @@
 			goods_output_fabric_add = 5
 		}
 	}
+	state_modifiers = {
+		workforce_scaled = {
+			building_millet_farm_throughput_add = 0.005
+			goods_output_grain_mult = 0.005
+		}
+	}
 }
 
 pm_sheep_farms = {
@@ -18,6 +24,13 @@ pm_sheep_farms = {
 	unlocking_production_methods = {
 		pm_intensive_grazing_ranch
 		pm_battery_farming
+	}
+	
+	state_modifiers = {
+		workforce_scaled = {
+			building_millet_farm_throughput_add = 0.005
+			goods_output_grain_mult = 0.005
+		}
 	}
 	
 	building_modifiers = {
@@ -42,8 +55,8 @@ pm_intensive_diet_control = {
 	
 	state_modifiers = {
 		workforce_scaled = {
-			building_millet_farm_throughput_add = 0.02
-			goods_output_grain_mult = 0.02
+			building_millet_farm_throughput_add = 0.01
+			goods_output_grain_mult = 0.01
 		}
 	}
 	
