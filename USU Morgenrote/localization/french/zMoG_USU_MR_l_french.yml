@@ -1,0 +1,20 @@
+﻿l_french:
+     # PMGs 
+ pmg_tourism_airport: "Importations et tourisme" #NT!
+ pmg_mendelejew_automation_oil: "Automation" #NT!
+ pmg_mendelejew_automation_rubber: "Automation" #NT!
+  
+     # PMs 
+ pm_luxury_requisitions: "Réquisitions de luxe" #NT!
+ pm_travel_agencies: "Agences de voyages" #NT!
+  
+ pm_mendelejew_automation_disabled: "Opérations manuelles" #NT!
+ pm_pneumatic_transfer_system: "Systèmes de transfert pneumatique" #NT!
+ pm_continuous_process_systems_hydrogenation: "Hydrogénation continue" #NT!
+ pm_continuous_process_systems_polymerisation: "Polymérisation continue" #NT!
+  
+     # Modifier Types 
+ building_mendelejew_hydrogenation_plants_throughput_add: "$building_mendelejew_hydrogenation_plants$ bâtiment [concept_throughput]" #NT!
+ building_mendelejew_hydrogenation_plants_throughput_add_desc: "Un bonus ou une pénalité à l'entrée et à la sortie de $building_mendelejew_hydrogenation_plants$" #NT!
+ building_mendelejew_synthetic_rubber_factory_throughput_add: "$building_mendelejew_synthetic_rubber_factory$ bâtiment [concept_throughput]" #NT!
+ building_mendelejew_synthetic_rubber_factory_throughput_add_desc: "Un bonus ou une pénalité à l'entrée et à la sortie de $building_mendelejew_synthetic_rubber_factory$" #NT!

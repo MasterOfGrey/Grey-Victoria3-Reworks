@@ -1,0 +1,20 @@
+﻿l_russian:
+     # PMGs 
+ pmg_tourism_airport: "Импорт и туризм" #NT!
+ pmg_mendelejew_automation_oil: "Автоматизация" #NT!
+ pmg_mendelejew_automation_rubber: "Автоматизация" #NT!
+  
+     # PMs 
+ pm_luxury_requisitions: "Роскошные реквизиции" #NT!
+ pm_travel_agencies: "Туристические агентства" #NT!
+  
+ pm_mendelejew_automation_disabled: "Ручные операции" #NT!
+ pm_pneumatic_transfer_system: "Пневматические транспортные системы" #NT!
+ pm_continuous_process_systems_hydrogenation: "Непрерывная гидрогенизация" #NT!
+ pm_continuous_process_systems_polymerisation: "Непрерывная полимеризация" #NT!
+  
+     # Modifier Types 
+ building_mendelejew_hydrogenation_plants_throughput_add: "$building_mendelejew_hydrogenation_plants$ здание [concept_throughput]" #NT!
+ building_mendelejew_hydrogenation_plants_throughput_add_desc: "Бонус или штраф как к входу, так и к выходу $building_mendelejew_hydrogenation_plants$" #NT!
+ building_mendelejew_synthetic_rubber_factory_throughput_add: "$building_mendelejew_synthetic_rubber_factory$ здание [concept_throughput]" #NT!
+ building_mendelejew_synthetic_rubber_factory_throughput_add_desc: "Бонус или штраф как к входу, так и к выходу $building_mendelejew_synthetic_rubber_factory$" #NT!

@@ -1,0 +1,20 @@
+﻿l_polish:
+     # PMGs 
+ pmg_tourism_airport: "Import i turystyka" #NT!
+ pmg_mendelejew_automation_oil: "Automatyzacja" #NT!
+ pmg_mendelejew_automation_rubber: "Automatyzacja" #NT!
+  
+     # PMs 
+ pm_luxury_requisitions: "Zamówienia luksusowe" #NT!
+ pm_travel_agencies: "Biura podróży" #NT!
+  
+ pm_mendelejew_automation_disabled: "Operacje ręczne" #NT!
+ pm_pneumatic_transfer_system: "Systemy przesyłu pneumatycznego" #NT!
+ pm_continuous_process_systems_hydrogenation: "Uwodornienie ciągłe" #NT!
+ pm_continuous_process_systems_polymerisation: "Polimeryzacja ciągła" #NT!
+  
+     # Modifier Types 
+ building_mendelejew_hydrogenation_plants_throughput_add: "$building_mendelejew_hydrogenation_plants$ budynek [concept_throughput]" #NT!
+ building_mendelejew_hydrogenation_plants_throughput_add_desc: "Premia lub kara do wejścia i wyjścia wynosząca $building_mendelejew_hydrogenation_plants$" #NT!
+ building_mendelejew_synthetic_rubber_factory_throughput_add: "$building_mendelejew_synthetic_rubber_factory$ budynek [concept_throughput]" #NT!
+ building_mendelejew_synthetic_rubber_factory_throughput_add_desc: "Premia lub kara do wejścia i wyjścia wynosząca $building_mendelejew_synthetic_rubber_factory$" #NT!

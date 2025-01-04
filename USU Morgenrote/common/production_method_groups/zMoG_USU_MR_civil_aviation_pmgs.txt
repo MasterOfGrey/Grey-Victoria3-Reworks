@@ -1,6 +1,5 @@
 ﻿pmg_base_building_airport = {
 	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
-	ai_selection = most_productive
 	
 	production_methods = {
 		pm_private_charters
@@ -12,7 +11,6 @@
 
 pmg_cargo_airport = {
 	texture = "gfx/interface/icons/generic_icons/mixed_icon_refining.dds"
-	ai_selection = most_productive
 	
 	production_methods = {
 		pm_air_passenger_only

@@ -1,0 +1,20 @@
+﻿l_braz_por:
+     # PMGs 
+ pmg_tourism_airport: "Importações e Turismo" #NT!
+ pmg_mendelejew_automation_oil: "Automação" #NT!
+ pmg_mendelejew_automation_rubber: "Automação" #NT!
+  
+     # PMs 
+ pm_luxury_requisitions: "Requisições de Luxo" #NT!
+ pm_travel_agencies: "Agências de viagens" #NT!
+  
+ pm_mendelejew_automation_disabled: "Operações manuais" #NT!
+ pm_pneumatic_transfer_system: "Sistemas de transferência pneumática" #NT!
+ pm_continuous_process_systems_hydrogenation: "Hidrogenação Contínua" #NT!
+ pm_continuous_process_systems_polymerisation: "Polimerização Contínua" #NT!
+  
+     # Modifier Types 
+ building_mendelejew_hydrogenation_plants_throughput_add: "$building_mendelejew_hydrogenation_plants$ edifício [concept_throughput]" #NT!
+ building_mendelejew_hydrogenation_plants_throughput_add_desc: "Um bônus ou penalidade para entrada e saída de $building_mendelejew_hydrogenation_plants$" #NT!
+ building_mendelejew_synthetic_rubber_factory_throughput_add: "$building_mendelejew_synthetic_rubber_factory$ edifício [concept_throughput]" #NT!
+ building_mendelejew_synthetic_rubber_factory_throughput_add_desc: "Um bônus ou penalidade para entrada e saída de $building_mendelejew_synthetic_rubber_factory$" #NT!
