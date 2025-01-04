@@ -1,5 +1,6 @@
 ﻿pm_gear_transmissions = {
 	texture = "gfx/interface/icons/production_method_icons/gear_transmissions.dds"
+	ai_value = 0		# The AI should move off of this as soon as it has the opportunity to do so.
 	
 	unlocking_technologies = {
 		ironclad_tech
@@ -10,7 +11,7 @@
 			goods_input_tools_add = 5 # cost 40, total = 200
 			goods_input_steel_add = 5 # cost 50, total 250
 			
-			goods_output_automobiles_add = 16 # cost 100, total 1600
+			goods_output_automobiles_add = 12 # cost 100, total 1200
 		}
 		
 		level_scaled = {
@@ -22,6 +23,7 @@
 
 pm_automobiles = {
 	texture = "gfx/interface/icons/production_method_icons/automobiles_primary.dds"
+	ai_value = 50000
 	
 	unlocking_technologies = {
 		combustion_engine
@@ -46,6 +48,7 @@ pm_automobiles = {
 
 pm_pneumatic_tyres = {
 	texture = "gfx/interface/icons/production_method_icons/pneumatic_tyres.dds"
+	ai_value = 50000
 	
 	unlocking_technologies = {
 		pneumatic_tyres
@@ -333,7 +336,7 @@ pm_extensive_aeroplanes_triple = {
 	
 	building_modifiers = {
 		workforce_scaled = {
-			goods_input_electricity_add = 24
+			goods_input_electricity_add = 28
 			goods_input_radios_add = 8
 			goods_input_steel_add = -20 
 			goods_input_rubber_add = -8
@@ -359,7 +362,7 @@ pm_overtime_aeroplanes = {
 	
 	building_modifiers = {
 		workforce_scaled = {
-			goods_input_electricity_add = 24
+			goods_input_electricity_add = 42
 			goods_input_radios_add = 9
 			goods_input_steel_add = -24 
 			goods_input_rubber_add = -9
