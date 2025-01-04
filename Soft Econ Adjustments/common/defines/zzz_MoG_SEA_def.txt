@@ -41,17 +41,20 @@
 	TRADE_ROUTE_AUTO_REDUCTION_EMPLOYMENT_THRESHOLD = 0.75 					# If trade route has less than this of its max staffing level employed and could not hire anyone last week, it can automatically decrease its level
 	TRADE_ROUTE_AUTO_REDUCTION_ACCEPTABLE_REVENUE_DIFFERENCE = 1.1 # 1.15	# Multiply revenue of current trade route level by this for the purpose of considering whether we should auto-decrease level (means that trade routes won't level down just for the purpose of a small revenue increase)
 	
+	TRADE_CENTER_MIN_AVAILABLE_WORKFORCE = 1000 # 20000			# Don't put new trade centers in places with less available workforce than this
+		# Because trade centres often add migration attraction, in late-game you actually need them to spawn in places with low workforce or those places *stay* low workforce forever.
+	TRADE_CENTER_EXISTING_TRADE_ROUTES_FACTOR = -3 # -1			# When deciding trade center for a trade route, multiply the number of trade routes already associated with the state by this score
+		# As above, you actually need trade centres to spread out in the late game.
+	
 	# Other trade defines untouched:
 	# TRADE_CENTER_BASE_NUM_LEVELS_PER_TRADE_ROUTE = 0 # 1		# Each distinct trade route generates this number of Trade Center levels to manage it
 	# 	Tried 0 here but it causes quirky edge-cases.
 	# TRADE_CENTER_NUM_LEVELS_PER_TRADE_ROUTE_LEVEL = 1 # Each level of a trade route generates this number of Trade Center levels to manage it
-	# TRADE_CENTER_MIN_AVAILABLE_WORKFORCE = 20000 # Don't put new trade centers in places with less available workforce than this
 	# TRADE_CENTER_TRADE_ROUTE_STATE_FACTOR = 4	# When deciding trade center for a trade route, increase score by this if the state is the exit/entry port for the trade route
 	# TRADE_CENTER_TRADE_ROUTE_STATE_NEIGHBOR_FACTOR = 2	# When deciding trade center for a trade route, increase score by this if the state neighboring the exit/entry port for the trade route
 	# TRADE_CENTER_TREATY_PORT_FACTOR = 15 	# When deciding trade center for a trade route, increase score by this for treaty port in the remote market
 	# TRADE_CENTER_MARKET_CAPITAL_FACTOR = 5 	# When deciding trade center for a trade route, increase score by this for the market capital in the market
 	# TRADE_CENTER_PORT_LEVEL_FACTOR = 1 	# When deciding trade center for a trade route, multiply port level by this and add to the score
-	# TRADE_CENTER_EXISTING_TRADE_ROUTES_FACTOR = -1  # When deciding trade center for a trade route, multiply the number of trade routes already associated with the state by this score
 	
 	## Wage diversity
 	MINIMUM_WAGE_RATE = 2.0 # 1.0 # 10.0									# The wage rate can never drop below this, no matter what (weekly £ per POP_SIZE_PACKAGE employees)
@@ -101,7 +104,7 @@
 	BUILDING_PAUSE_HIRES_CASH_RESERVES_THRESHOLD = 0.25 # 0.75 				# If cash reserves are higher than this, and employment fraction is below BUILDING_MAX_EMPLOYMENT_FRACTION_TO_CONSIDER_CASH_RESERVES, then allow hiring even if profits are low															# (previously: less than this, buildings should consider pausing new hires to wait for cash reserves)
 	BUILDING_MAX_EMPLOYMENT_FRACTION_TO_CONSIDER_CASH_RESERVES = 0.8 # 0.5	# If a building has at least this employment fraction, then ignore the cash reserves override for hiring
 	
-	BUILDING_MIN_EMPLOYMENT_FRACTION_TO_PAUSE_HIRES = 0.1 			# If building has at least this employment, it's OK to pause hiring
+	BUILDING_MIN_EMPLOYMENT_FRACTION_TO_PAUSE_HIRES = 0.2 # 0.1 			# If building has at least this employment, it's OK to pause hiring
 	BUILDING_MAX_PROFIT_TO_PAUSE_HIRES = 0.2						# If building is making less than this fraction of revenue in profit, it's OK to pause hiring
 		
 		
