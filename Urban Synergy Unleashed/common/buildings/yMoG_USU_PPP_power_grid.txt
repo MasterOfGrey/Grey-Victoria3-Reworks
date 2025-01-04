@@ -14,7 +14,7 @@
 		# pmg_ownership_capital_building_power_plant
 	}
 	
-	required_construction = construction_cost_medium
+	required_construction = construction_cost_low
 	
 	possible = {
 		OR = {
@@ -43,7 +43,7 @@
 					}
 				}
 			}
-			add = 8000	# A firm encouragement
+			add = 80000	# An *extremely* firm encouragement
 		}
 	}
 }

@@ -15,6 +15,7 @@ building_port = {
 	production_method_groups = {
 		pmg_base_building_port
 		pmg_logistics_services_port_coastal
+		pmg_automation_port
 	}
 	
 	required_construction = construction_cost_medium

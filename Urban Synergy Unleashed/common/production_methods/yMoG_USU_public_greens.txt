@@ -15,7 +15,7 @@ USU_pm_community_orgs = {
 	state_modifiers = {	
 		unscaled = {
 			state_migration_pull_add = 1
-			building_urban_center_throughput_add = 0.01		# Intentionally unscaled
+			building_urban_center_throughput_add = 0.04		# Intentionally unscaled
 		}
 	}
 }
@@ -41,7 +41,7 @@ USU_pm_private_firms = {
 	state_modifiers = {	
 		unscaled = {
 			state_migration_pull_add = 2
-			building_urban_center_throughput_add = 0.01
+			building_urban_center_throughput_add = 0.07
 		}
 	}
 }
@@ -70,7 +70,7 @@ USU_pm_pub_priv_partners = {
 	state_modifiers = {	
 		unscaled = {
 			state_migration_pull_add = 3
-			building_urban_center_throughput_add = 0.01
+			building_urban_center_throughput_add = 0.1
 		}
 	}
 }

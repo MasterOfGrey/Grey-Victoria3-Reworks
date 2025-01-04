@@ -12,6 +12,13 @@
  pm_rotary_valve_engine_building_railway: "Uniflow Rotary Valvegear"
  pm_steam_donkey_building_railway: "Geared Steam Drivetrain"
  
+ # Ports
+ pmg_automation_port: "Facility Automation"
+ pm_auto_disabled_building_railway: "Manual Handling"
+ pm_steam_crane_building_port: "Curved Jib Steam Crane"
+ pm_hydraulic_lifters_building_port: "Hydraulic Lifters"
+ pm_assembly_lines_building_port: "Dockside Conveyors"
+
  # Logistics
  pmg_logistics_services_railway: "Railway Logistics"
  pmg_logistics_services_port_coastal: "Shipping Logistics"

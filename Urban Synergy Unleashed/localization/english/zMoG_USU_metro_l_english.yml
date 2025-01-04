@@ -7,7 +7,7 @@
  pm_public_electric_metro:0 "Electric-powered Metro"
 # pm_public_motor_carriages:0 "City Buses"
  
- pmg_local_transport:0 "Local Transportation"
+ pmg_local_transport:0 "Local Road Capacity"
  pm_horses:0 "Horses and Carts"
  pm_stagecoaches_and_wagons:0 "Horse-drawn Vehicles"
  pm_motor_vehicles:0 "Automobiles and Trucks"

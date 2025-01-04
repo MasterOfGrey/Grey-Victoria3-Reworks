@@ -14,6 +14,11 @@ USU_pm_port_c_logistics_1 = {
 			goods_output_usu_logistics_add = 30
 		}
 	}
+	state_modifiers = {
+		level_scaled = {
+			building_urban_center_throughput_add = 0.01
+		}
+	}
 }
 
 USU_pm_port_c_logistics_2 = {
@@ -24,6 +29,11 @@ USU_pm_port_c_logistics_2 = {
 	building_modifiers = {
 		workforce_scaled = {	
 			goods_output_usu_logistics_add = 70
+		}
+	}
+	state_modifiers = {
+		level_scaled = {
+			building_urban_center_throughput_add = 0.02
 		}
 	}
 }
@@ -40,6 +50,11 @@ USU_pm_port_c_logistics_3 = {
 	building_modifiers = {
 		workforce_scaled = {	
 			goods_output_usu_logistics_add = 105
+		}
+	}
+	state_modifiers = {
+		level_scaled = {
+			building_urban_center_throughput_add = 0.03
 		}
 	}
 }
@@ -60,6 +75,11 @@ USU_pm_port_r_logistics_1 = {
 			goods_output_usu_logistics_add = 40
 		}
 	}
+	state_modifiers = {
+		level_scaled = {
+			building_urban_center_throughput_add = 0.02
+		}
+	}
 }
 
 USU_pm_port_r_logistics_2 = {
@@ -70,6 +90,11 @@ USU_pm_port_r_logistics_2 = {
 	building_modifiers = {
 		workforce_scaled = {	
 			goods_output_usu_logistics_add = 90
+		}
+	}
+	state_modifiers = {
+		level_scaled = {
+			building_urban_center_throughput_add = 0.04
 		}
 	}
 }
@@ -88,4 +113,118 @@ USU_pm_port_r_logistics_3 = {
 			goods_output_usu_logistics_add = 140
 		}
 	}
+	state_modifiers = {
+		level_scaled = {
+			building_urban_center_throughput_add = 0.06
+		}
+	}
+}
+
+### Automation
+
+pm_auto_disabled_building_port = {
+	texture = "gfx/interface/icons/production_method_icons/no_automation.dds"
+}
+
+pm_steam_crane_building_port = {
+	texture = "gfx/interface/icons/production_method_icons/port_crane.dds"
+	
+	unlocking_technologies = {
+		atmospheric_engine
+	}
+	unlocking_production_methods = {
+		pm_basic_port
+		pm_rp_small_port
+		pm_industrial_port
+		pm_rp_industrial_port
+		pm_modern_port
+		pm_rp_modern_port
+	}
+	
+	state_modifiers = {
+		workforce_scaled = {
+			state_pollution_generation_add = 2
+		}
+	}
+	
+	building_modifiers = {
+		workforce_scaled = {
+			# input goods
+			goods_input_tools_add = 1
+			goods_input_coal_add = 1
+		}
+		level_scaled = {
+			building_employment_laborers_add = -1000
+		}
+	}
+}
+
+pm_hydraulic_lifters_building_port = {
+	texture = "gfx/interface/icons/production_method_icons/hydraulic_lifters.dds"
+	
+	unlocking_technologies = {
+		gantry_cranes
+	}
+	unlocking_production_methods = {
+		pm_industrial_port
+		pm_rp_industrial_port
+		pm_modern_port
+		pm_rp_modern_port
+	}
+	
+	state_modifiers = {
+		workforce_scaled = {
+			state_pollution_generation_add = 5
+		}
+	}
+	
+	building_modifiers = {
+		workforce_scaled = {
+			# input goods
+			goods_input_engines_add = 1
+			goods_input_oil_add = 1
+		}
+		level_scaled = {
+			building_employment_laborers_add = -1000
+			building_employment_clerks_add = -500
+		}
+	}
+}
+
+pm_assembly_lines_building_port = {
+	texture = "gfx/interface/icons/production_method_icons/assembly_lines.dds"
+	
+	unlocking_technologies = {
+		conveyors
+	}
+	unlocking_production_methods = {
+		pm_modern_port
+		pm_rp_modern_port
+	}
+	
+	disallowing_laws = {
+		law_industry_banned
+	}
+	
+	state_modifiers = {
+		workforce_scaled = {
+			state_pollution_generation_add = 10
+		}
+	}
+	
+	building_modifiers = {
+		workforce_scaled = {
+			# input goods
+			goods_input_engines_add = 1
+			goods_input_oil_add = 2
+			goods_input_electricity_add = 2
+		}
+		level_scaled = {
+			building_employment_laborers_add = -1000
+			building_employment_clerks_add = -500
+			building_employment_machinists_add = -500
+		}
+	}
+	
+	required_input_goods = electricity
 }

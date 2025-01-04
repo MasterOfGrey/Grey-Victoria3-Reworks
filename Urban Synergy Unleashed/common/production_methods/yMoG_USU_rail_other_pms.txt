@@ -14,6 +14,12 @@ USU_pm_rail_logistics_1 = {
 			goods_output_usu_logistics_add = 8
 		}
 	}
+	state_modifiers = {
+		level_scaled = {
+			building_port_throughput_add = 0.01
+			building_river_port_throughput_add = 0.02
+		}	
+	}
 	ai_value = 1000
 }
 
@@ -26,6 +32,12 @@ USU_pm_rail_logistics_2 = {
 		workforce_scaled = {	
 			goods_output_usu_logistics_add = 16
 		}
+	}
+	state_modifiers = {
+		level_scaled = {
+			building_port_throughput_add = 0.02
+			building_river_port_throughput_add = 0.04
+		}	
 	}
 	ai_value = 2000
 }
@@ -43,6 +55,12 @@ USU_pm_rail_logistics_3 = {
 		workforce_scaled = {	
 			goods_output_usu_logistics_add = 24
 		}
+	}
+	state_modifiers = {
+		level_scaled = {
+			building_port_throughput_add = 0.03
+			building_river_port_throughput_add = 0.06
+		}	
 	}
 	ai_value = 3000
 }
@@ -62,10 +80,16 @@ pm_wooden_passenger_carriages = {
 			goods_output_transportation_add = 10
 		}
 		level_scaled = {
-				building_employment_clerks_add = 250
-				building_employment_laborers_add = -1000
+			building_employment_clerks_add = 250
+			building_employment_laborers_add = -500
+			building_employment_machinists_add = -100
 		}
-	}			
+	}
+	state_modifiers = {
+		level_scaled = {
+			building_urban_center_throughput_add = 0.01
+		}
+	}
 }
 
 pm_steel_passenger_carriages = {
@@ -82,9 +106,15 @@ pm_steel_passenger_carriages = {
 		}
 		level_scaled = {
 			building_employment_clerks_add = 500
-			building_employment_laborers_add = -1000
+			building_employment_laborers_add = -500
+			building_employment_machinists_add = -300
 		}
-	}			
+	}
+	state_modifiers = {
+		level_scaled = {
+			building_urban_center_throughput_add = 0.015
+		}
+	}
 }
 
 pm_electric_passenger_carriages = {
@@ -102,9 +132,15 @@ pm_electric_passenger_carriages = {
 		}
 		level_scaled = {
 			building_employment_clerks_add = 750
-			building_employment_laborers_add = -1000
+			building_employment_laborers_add = -500
+			building_employment_machinists_add = -500
 		}
-	}			
+	}
+	state_modifiers = {
+		level_scaled = {
+			building_urban_center_throughput_add = 0.02
+		}
+	}
 }
 
 ### Automation
@@ -195,8 +231,8 @@ pm_rotary_valve_engine_building_railway = {
 			goods_input_coal_add = 3
 		}
 		level_scaled = {
-			building_employment_laborers_add = -1500
-			building_employment_machinists_add = -500
+			building_employment_laborers_add = -1000
+			building_employment_machinists_add = -1000
 		}
 	}
 }
@@ -225,8 +261,8 @@ pm_steam_donkey_building_railway = {
 			goods_input_coal_add = 4
 		}
 		level_scaled = {
-			building_employment_laborers_add = -1500
-			building_employment_machinists_add = -1000
+			building_employment_laborers_add = -1000
+			building_employment_machinists_add = -1500
 		}
 	}
 }

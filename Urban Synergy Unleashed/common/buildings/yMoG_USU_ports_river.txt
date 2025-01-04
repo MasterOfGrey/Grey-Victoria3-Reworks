@@ -3,7 +3,7 @@ building_river_port = {
 	building_group = USU_bg_port_infrastructure
 	icon = "gfx/interface/icons/building_icons/building_port.dds"
 	
-	ai_nationalization_desire = 0.5 	# Copied from railways - AI is reluctant to privatize vital infrastructure
+	ai_nationalization_desire = 0.25 # AI is only a bit reluctant to privatize River Ports as the are semi-critical infrastructure.
 	ai_value = 50000 # Just get it done, eh
 	
 	has_max_level = yes
@@ -14,6 +14,7 @@ building_river_port = {
 	production_method_groups = {
 		pmg_base_building_river_port
 		pmg_logistics_services_port_river
+		pmg_automation_port
 	}
 	
 	required_construction = construction_cost_low

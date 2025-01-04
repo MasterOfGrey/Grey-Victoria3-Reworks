@@ -43,3 +43,15 @@ pmg_logistics_services_port_river = {
 		USU_pm_port_r_logistics_3
 	}
 }
+
+### Shared - All New
+
+pmg_automation_port = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_automation.dds"
+	production_methods = {
+		pm_auto_disabled_building_railway
+		pm_steam_crane_building_port
+		pm_hydraulic_lifters_building_port
+		pm_assembly_lines_building_port
+	}
+}
