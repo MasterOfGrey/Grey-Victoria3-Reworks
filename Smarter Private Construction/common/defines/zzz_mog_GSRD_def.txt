@@ -5,8 +5,9 @@ NAI = {
 	
 	
 	# BASIC BUILDING WEIGHTS
-	
+	PRODUCTION_BUILDING_BASE_VALUE = 500 # 1000					# If no ai_value is scripted in the building
 	PRODUCTION_BUILDING_NO_AVAILABLE_WORKFORCE_FACTOR = 0.05 # Vanilla = 0.25 - Total weight is multiplied by this if the state lacks enough workforce to staff the building
+	# PRODUCTION_BUILDING_MISSING_QUALIFICATIONS_MULT = 0.50 # Multiply score by this if there's not enough qualifications to staff the building (disabled for now)
 	
 	#	Autonomous "Stop building shit in inefficient places with high MAPI" factor:
 	PRODUCTION_BUILDING_INPUT_NO_LOCAL_PRODUCTION_FACTOR = -0.8 # Vanilla = -0.5 - Add this value to a building for each unit of money worth of goods consumed that are not produced in the state but *are* produced by buildings in the market
@@ -14,8 +15,14 @@ NAI = {
 	PRODUCTION_BUILDING_OUTPUT_NO_LOCAL_CONSUMPTION_FACTOR = -0.2 # Vanilla = -0.5 - Add this value to a building for each unit of money worth of goods produced that are not consumed in the state but *are* consumed by buildings in the market
 	
 	PRODUCTION_BUILDING_FREE_INFRASTRUCTURE_TARGET_WHEN_LACKING_WORKFORCE = 20 # Vanilla = 5 - When lacking workforce, the AI will stop building in the state once available infrastructure is this or less
-	PRODUCTION_BUILDING_EXCESSIVE_INFRASTRUCTURE_SURPLUS = 40 # Vanilla = 10 -  # If infra 'surplus' in state is at least this, AI doesn't want to improve it
-	PRODUCTION_BUILDING_REDUCE_SHORTAGE_MULT = 4 # Vanilla = 5 - Multiply score by this if we're reducing the state region's shortages
+	PRODUCTION_BUILDING_EXCESSIVE_INFRASTRUCTURE_SURPLUS = 40 # Vanilla = 10 -		# If infra 'surplus' in state is at least this, AI doesn't want to improve it
+	PRODUCTION_BUILDING_REDUCE_SHORTAGE_MULT = 4 # Vanilla = 5 -					# Multiply score by this if we're reducing the state region's shortages
+	
+	PRODUCTION_BUILDING_OUTPUT_NEW_GOODS_STATE_INCORPORATED_POPULATION_THRESHOLD = 200000 # 250000		# When the AI prioritizes 'new goods' in a state rather than a market (because of local goods) it only cares about incorporated states with at least this much population
+	PRODUCTION_BUILDING_OUTPUT_NEW_GOODS_STATE_UNINCORPORATED_POPULATION_THRESHOLD = 400000 # 1000000	# When the AI prioritizes 'new goods' in a state rather than a market (because of local goods) it only cares about unincorporated states with at least this much population
+	
+	PRODUCTION_BUILDING_OTHER_BUILDING_TYPES_UNDER_CONSTRUCTION_DIV = 0.3 # 0.5		# Divide score by (1 + this * number of other building types queued in the state)
+	PRODUCTION_BUILDING_COMPANY_MULT = 3.0 # 2.0									# Multiply score by this if we have at least one established company for the building type
 	
 	# For Reference:
 	# PRODUCTION_BUILDING_RANDOM_FACTOR = 10.0 # The higher this is, the more random AI construction will be
@@ -50,6 +57,10 @@ NAI = {
 	PRODUCTION_BUILDING_AUTONOMOUS_INVESTMENT_PRODUCED_VALUE_FACTOR_MULT = 0.5 # Vanilla = 1.25 - Multiplies PRODUCTION_BUILDING_PRODUCED_VALUE_FACTOR for autonomous investment pool constructions
 	PRODUCTION_BUILDING_AUTONOMOUS_INVESTMENT_PRODUCED_VALUE_PRIVATIZE_FACTOR_MULT = 0.8 # Vanilla = 2.0 (vanilla has since moved to 0.5, but leaving this in) - Multiplies PRODUCTION_BUILDING_PRODUCED_VALUE_FACTOR for autonomous investment pool constructions, gives higher weight to buildings that have levels to privatize
 	
+	# Temp untouched
+	PRODUCTION_BUILDING_AUTONOMOUS_INVESTMENT_MILITARY_GOODS_FACTOR_MULT = 1.2 # Vanilla = 1.5 - discourage military unless profitable. 	# Multiplies PRODUCTION_BUILDING_OUTPUT_NEEDED_MILITARY_GOODS_FACTOR & PRODUCTION_BUILDING_OUTPUT_WANTED_MILITARY_GOODS_FACTOR for autonomous investment pool constructions
+	PRODUCTION_BUILDING_AUTONOMOUS_INVESTMENT_INDUSTRIAL_GOODS_FACTOR_MULT = 3.0 # Vanilla = 4.0 - unchanged								# Multiplies PRODUCTION_BUILDING_OUTPUT_NEEDED_INDUSTRIAL_GOODS_FACTOR & PRODUCTION_BUILDING_OUTPUT_WANTED_INDUSTRIAL_GOODS_FACTOR for autonomous investment pool constructions	
+	
 	# Increase general desire to privatize
 	PRODUCTION_BUILDING_AUTONOMOUS_INVESTMENT_PROFIT_PRIVATIZE_SELF_OWNED_BUILDING_MULT = 1.2 # Vanilla = 0.75 - Multiply the total score for privatizing self-owned building levels by this
 	
@@ -67,7 +78,7 @@ NAI = {
 	# AUTONOMOUS_INVESTMENT_MIN_OWNERSHIP_BUILDING_INVESTMENT_SHARE = 0.25
 	
 	# Chance for ai to do privatization instead of building a new building level when evaluating an existing building
-	BUILDING_PRIVATIZATION_CHANCE = 80.0  # Vanilla = 50.0
+	BUILDING_PRIVATIZATION_CHANCE = 95.0 # 80.0  # Vanilla = 50.0
 	
 	# Investment AI owner building location selection weights and multipliers - some kept the same, re-specified for behavioural consistency.
 	OWNER_BUILDING_LOCATION_BASE_SCORE = 1							# Base score for selecting state as owner building location
@@ -89,10 +100,7 @@ NAI = {
 	OWNER_COMPANY_MIN_LEVELS_IN_OWN_STATE_PENALTY_MULT = 0.5 # 0.05	# Multiply owner company score by this if the number of levels in its own state is below minimum
 	OWNER_COMPANY_MIN_LEVELS_IN_OWN_COUNTRY = 100					# How many levels should the company building invest in buildings in its own country
 	OWNER_COMPANY_MIN_LEVELS_IN_OWN_COUNTRY_PENALTY_MULT = 0.2 # 0.05	# Multiply owner company score by this if the number of levels in its own country is below minimum
-	
-	# Temp untouched
-	# PRODUCTION_BUILDING_AUTONOMOUS_INVESTMENT_MILITARY_GOODS_FACTOR_MULT = 0.8 # Vanilla = 1.5 - Multiplies PRODUCTION_BUILDING_OUTPUT_NEEDED_MILITARY_GOODS_FACTOR & PRODUCTION_BUILDING_OUTPUT_WANTED_MILITARY_GOODS_FACTOR for autonomous investment pool constructions
-	# PRODUCTION_BUILDING_AUTONOMOUS_INVESTMENT_INDUSTRIAL_GOODS_FACTOR_MULT = 4.0 # Vanilla = 4.0 - Multiplies PRODUCTION_BUILDING_OUTPUT_NEEDED_INDUSTRIAL_GOODS_FACTOR & PRODUCTION_BUILDING_OUTPUT_WANTED_INDUSTRIAL_GOODS_FACTOR for autonomous investment pool constructions
+
 	
 	# Untouched autonomous lines:
 	# PRODUCTION_BUILDING_AUTONOMOUS_INVESTMENT_PRODUCED_MODIFIER_FACTOR_MULT = 0.75 # Vanilla = 0.75 - Multiplies value from produced modifiers for autonomous investment pool constructions
