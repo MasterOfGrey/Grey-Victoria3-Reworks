@@ -1,0 +1,17 @@
+﻿state_food_security_add={
+	decimals=1						# 0 previously
+	color=good
+	percent=yes
+	game_data={
+		ai_value=0
+	}
+}
+
+state_working_adult_ratio_add={
+	decimals=1						# 0 previously
+	color=good
+	percent=yes
+	game_data={
+		ai_value=0
+	}
+}
