@@ -75,21 +75,42 @@ mog_market_access_ok = {
 
 ## TRANSPORT INFRASTRUCTURE Buildings
 mog_construct_private_infrastructure_allow = {
+	OR = {
+		AND = {
+			custom_tooltip = {
+				text = is_private_infrastructure
+				OR = {
+					is_building_type = building_railway
+					is_building_type = building_port
+					is_building_type = building_river_port
+				}
+			}
+			OR = {
+				mog_infrastructure_low = yes
+				state = {
+					sg:transportation = {
+						state_goods_pricier > 0.10
+					}
+				}
+			}
+		}
+		mog_construct_convoy_allow = yes
+	}
+}
+
+mog_construct_convoy_allow = {
 	AND = {
 		custom_tooltip = {
-			text = is_private_infrastructure
+			text = is_convoy_provider
 			OR = {
-				is_building_type = building_railway
 				is_building_type = building_port
 				is_building_type = building_river_port
 			}
 		}
-		OR = {
-			mog_infrastructure_low = yes
-			state = {
-				sg:transportation = {
-					state_goods_pricier > 0.10
-				}
+		custom_tooltip = {
+			text = convoy_ratio
+			owner = {
+				convoy_ratio < 0.05 # Aligns with TRADE_ROUTE_REQUIRED_CONVOY_BUFFER
 			}
 		}
 	}
