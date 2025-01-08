@@ -17,10 +17,10 @@ default_building_subsistence_farms = {
 	
 	state_modifiers = {							# This is inherited from USU, and is not strictly in scope for this mod - but I've seen that it works and people should have access to this feature without USU if they want it.
 		workforce_scaled = {
-			state_birth_rate_mult = -0.0075		# For some reason this one gets modifiers but the other doesn't, and the goal is to cancel out when fully employed.
+			state_birth_rate_mult = -0.0045		# For some reason this one gets modifiers but the other doesn't, and the goal is to cancel out when fully employed.
 		}
 		level_scaled = {
-			state_birth_rate_mult = 0.01
+			state_birth_rate_mult = -0.005
 		}
 	}
 }
@@ -44,10 +44,10 @@ default_building_subsistence_orchards = {
 	
 	state_modifiers = {
 		workforce_scaled = {
-			state_birth_rate_mult = -0.0075
+			state_birth_rate_mult = -0.0045
 		}
 		level_scaled = {
-			state_birth_rate_mult = 0.01
+			state_birth_rate_mult = -0.005
 		}
 	}
 }
@@ -71,10 +71,10 @@ default_building_subsistence_pastures = {
 	
 	state_modifiers = {
 		workforce_scaled = {
-			state_birth_rate_mult = -0.0075
+			state_birth_rate_mult = -0.0045
 		}
 		level_scaled = {
-			state_birth_rate_mult = 0.01
+			state_birth_rate_mult = -0.005
 		}
 	}
 }
@@ -98,10 +98,10 @@ default_building_subsistence_fishing_villages = {
 	
 	state_modifiers = {
 		workforce_scaled = {
-			state_birth_rate_mult = -0.0075
+			state_birth_rate_mult = -0.0045
 		}
 		level_scaled = {
-			state_birth_rate_mult = 0.01
+			state_birth_rate_mult = -0.005
 		}
 	}
 }
@@ -124,10 +124,10 @@ default_building_subsistence_rice_paddies = {
 	
 	state_modifiers = {
 		workforce_scaled = {
-			state_birth_rate_mult = -0.0075
+			state_birth_rate_mult = -0.0045
 		}
 		level_scaled = {
-			state_birth_rate_mult = 0.01
+			state_birth_rate_mult = -0.005
 		}
 	}
 }
