@@ -1,0 +1,11 @@
+on_monthly_pulse_state = {
+    on_actions = {
+        state_market_access_from_literacy_update_action
+    }
+}
+
+state_market_access_from_literacy_update_action = {
+    effect = {
+		trigger_event = mog_literacy_event.1
+	}
+}
