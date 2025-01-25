@@ -69,7 +69,7 @@
 				desc = "QUALIFICATIONS_FAVORED_TYPE"
 			}
 		}
-		if = {
+		else_if = {
 			limit = {
 				is_peasant_under_serfdom = yes
 			}

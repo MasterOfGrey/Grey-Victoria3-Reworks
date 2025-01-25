@@ -59,7 +59,7 @@
 					desc = "QUALIFICATIONS_FAVORED_TYPE"
 				}
 			}
-			if = {
+			else_if = {
 				limit = {
 					is_pop_type = aristocrats
 				}
@@ -68,6 +68,16 @@
 					desc = "QUALIFICATIONS_FAVORED_TYPE"
 				}
 			}
+			else_if = {
+				limit = {
+					is_peasant_under_serfdom = yes
+				}
+				multiply = {
+					value = 0.1
+					desc = "QUALIFICATIONS_PEASANTS_UNDER_SERFDOM"
+				}
+			}
+
 			if = {
 				limit = {
 					state = {
@@ -91,15 +101,6 @@
 				multiply = {
 					value = 0.5
 					desc = "QUALIFICATIONS_CLERGYMEN_UNDER_TOTAL_SEPARATION"
-				}
-			}
-			if = {
-				limit = {
-					is_peasant_under_serfdom = yes
-				}
-				multiply = {
-					value = 0.1
-					desc = "QUALIFICATIONS_PEASANTS_UNDER_SERFDOM"
 				}
 			}
 			if = {
