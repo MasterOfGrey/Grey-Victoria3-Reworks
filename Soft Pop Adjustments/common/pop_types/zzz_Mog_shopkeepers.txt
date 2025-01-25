@@ -39,7 +39,7 @@
 		# baseline: ( wealth - 5 ) / 2, norm 10 for Clerks with Wealth 15
 		add = {
 			value = wealth
-			subtract = 5
+			subtract = 8
 			desc = "QUALIFICATIONS_WEALTH_FACTOR"
 		}
 
