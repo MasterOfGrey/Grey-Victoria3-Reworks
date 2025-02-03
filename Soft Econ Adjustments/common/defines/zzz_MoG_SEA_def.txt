@@ -130,6 +130,7 @@
 	COMPANY_PROSPERITY_WEEKLY_DECREASE = 2	# 5				# Low-productivity companies have their prosperity increase by this amount per week
 	COMPANY_ON_ESTABLISH_COOLDOWN_MONTHS = 48 # 60			# Cooldown in months after establishing a company before you can disband it
 	COMPANY_ON_DISBAND_COOLDOWN_MONTHS = 36 # 48			# Cooldown in months after disbanding a company before you can re-establish it
+	COMPANY_INITIAL_LEVELS = 2 # 5							# How many levels of ownership in other buildings required to establish a company
 	COMPANY_MIN_LEVELS_OWNED = 2 # 5						# Min amount of ownerships that company can have, more can't be nationalized or privatized
 }
 
