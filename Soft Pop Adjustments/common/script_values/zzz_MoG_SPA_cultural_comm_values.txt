@@ -40,12 +40,9 @@ cultural_community_creation_weight = {
 			add = 0.002
 
 			# Additional amount per level
-			every_scope_building = {
-				limit = { is_building_type = building_port }
-				add = {
-					add = 0.002
-					multiply = level
-				}
+			add = {
+				add = 0.002
+				multiply = var:port_levels
 			}
 		}
 		
@@ -84,21 +81,17 @@ cultural_community_creation_weight = {
 			add = 0.001
 		}
 
-		if = {
-			limit = {
-				root = {
-					has_building = building_trade_center
+		add = {
+			add = 0.001
+			multiply = var:trade_center_levels
+			if = {
+				limit = {
+					Grey_USU_is_active = yes
 				}
+				divide = 2 # USU trade centers are about twice as large for a given trade volume
 			}
-			every_scope_building = {
-				limit = { is_building_type = building_trade_center }
-				add = {
-					add = 0.001
-					multiply = level
-				}
-			}
-			#Result: add = 0.001 per building
 		}
+		#Result: add = 0.001 per building
 
 		# Positive Conditions that Multiply
 	
@@ -234,44 +227,29 @@ cultural_community_creation_weight = {
 		}
 		else_if = {
 			limit = {
-				AND = {
-					num_cultural_communities >=5
-					num_cultural_communities <10
-				}
+				num_cultural_communities <10
 			}
 			multiply = 0.6
 		}
 		else_if = {
 			limit = {
-				AND = {
-					num_cultural_communities >=10
-					num_cultural_communities <15
-				}
+				num_cultural_communities <15
 			}
 			multiply = 0.4
 		}
 		else_if = {
 			limit = {
-				AND = {
-					num_cultural_communities >=15
-					num_cultural_communities <21
-				}
+				num_cultural_communities <21
 			}
 			multiply = 0.2
 		}
 		else_if = {
 			limit = {
-				AND = {
-					num_cultural_communities >=21
-					num_cultural_communities <24
-				}
+				num_cultural_communities <24
 			}
 			multiply = 0.1
 		}
-		else_if = {
-			limit = {
-				num_cultural_communities >=24
-			}
+		else = {
 			multiply = 0.02
 		}
 	}

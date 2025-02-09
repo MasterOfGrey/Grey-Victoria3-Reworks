@@ -1,0 +1,11 @@
+on_monthly_pulse_state = {
+    on_actions = {
+        mog_spa_building_level_cache_update_action
+    }
+}
+
+mog_spa_building_level_cache_update_action = {
+    effect = {
+        mog_spa_building_cache_update_effect = yes
+    }
+}
