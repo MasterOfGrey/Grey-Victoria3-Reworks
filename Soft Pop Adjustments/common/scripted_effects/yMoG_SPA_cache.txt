@@ -12,10 +12,6 @@ mog_spa_building_cache_update_effect = {
             OR = {
                 has_port = yes
                 has_building = building_trade_center
-                AND = {
-                    Grey_USU_is_active = yes
-                    is_building_type = building_river_port
-                }
             }
         }
         every_scope_building = {
