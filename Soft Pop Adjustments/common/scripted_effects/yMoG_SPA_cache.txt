@@ -1,0 +1,56 @@
+mog_spa_building_cache_update_effect = {
+    set_variable = {
+        name = trade_center_levels
+        value = 0
+    }
+    set_variable = {
+        name = port_levels
+        value = 0
+    }
+    if = {
+        limit = {
+            OR = {
+                has_port = yes
+                has_building = building_trade_center
+            }
+        }
+        every_scope_building = {
+            if = {
+                limit = {
+                    OR = {
+                        is_building_type = building_port
+                        AND = {
+                            Grey_USU_is_active = yes
+                            is_building_type = building_river_port
+                        }
+                    }
+                }
+                save_temporary_scope_value_as = {
+                    name = building_level
+                    value = level
+                }
+                PREV = {
+                    change_variable = {
+                        name = port_levels
+                        add = scope:building_level
+                    }
+                }
+            }
+            else_if = {
+                limit = {
+                    is_building_type = building_trade_center
+                }
+                save_temporary_scope_value_as = {
+                    name = building_level
+                    value = level
+                }
+                PREV = {
+                    change_variable = {
+                        name = trade_center_levels
+                        add = scope:building_level
+                    }
+                }
+            }
+        }
+    }
+}
