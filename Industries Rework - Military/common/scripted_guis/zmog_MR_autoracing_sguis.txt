@@ -1,0 +1,47 @@
+﻿### SPORTS BUTTONS ###
+
+#Morgenrote compatibility with MIR
+
+#MR_AUTORACING_FOUND_TEAM_BUTTON
+mr_autoracing_found_team_button = {
+	scope = country
+	is_shown = {
+		NOT = {
+			has_variable = vikelas_autoracing_team_var
+		}
+		has_variable = vikelas_automobile_club_var
+		# morgenrote_is_active = yes						# Safety check - enable if something weird gets reported
+	}
+	is_valid = {
+		custom_tooltip = {
+			text = MR_HAS_RACER_TT
+			has_variable = vikelas_racer_var
+		}
+		custom_tooltip = {
+			text = MR_HAS_ENGINEER_TT
+			gaudi_has_engineer = yes
+		}
+		custom_tooltip = {
+			text = MR_AUTORACING_FOUND_TEAM_BUTTON_TRIGGER_TT
+			any_scope_building = {
+				is_building_type = building_war_machine_industry	# building_motor_industry
+				OR = {												# has_active_production_method = pm_automobile_production
+					has_active_production_method = pm_automobiles
+					has_active_production_method = pm_pneumatic_tyres
+				}
+				level >= 2
+			}
+		}
+	}
+	effect = {
+		set_variable = vikelas_autoracing_team_var
+		trigger_event = {
+			id = vikelas.505
+		}
+	}
+	ai_is_valid = { always = yes }	# Whether this SGUI is available to the AI or not (default false)
+	ai_chance = {
+		base = 100 # The chance that the AI will activate this SGUI (script value between 1 and 100)
+	}
+	ai_frequency = 6 # Named value determining how frequently the AI will evaluate this SGUI (in months)
+}
