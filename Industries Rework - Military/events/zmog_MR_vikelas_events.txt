@@ -4,6 +4,8 @@
 
 #Morgenrote compatibility with MIR
 
+namespace = vikelas
+
 #Vikelas 505: Race Team
 vikelas.505 = {
 	dlc = dlc_morgenrote
