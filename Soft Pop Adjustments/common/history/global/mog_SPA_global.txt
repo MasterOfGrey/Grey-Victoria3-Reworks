@@ -1,0 +1,5 @@
+GLOBAL = {
+    every_state = {
+        mog_spa_building_cache_update_effect = yes
+    }
+}
