@@ -1,3 +1,4 @@
 ﻿l_english:
     # Modifiers
     mog_company_migration_penalty: "Extractive Colonial Administration"
+    mog_education_access_from_urbanization: "Education access from [concept_urbanization]"
