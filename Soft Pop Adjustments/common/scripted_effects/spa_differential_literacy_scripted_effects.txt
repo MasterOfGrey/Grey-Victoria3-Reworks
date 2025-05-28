@@ -1,0 +1,47 @@
+# Removal effects for differential literacy modifiers by law group
+
+remove_spa_diff_childrens_rights_effects = {
+    remove_modifier = spa_diff_child_labor_allowed_literacy
+    remove_modifier = spa_diff_restricted_child_labor_literacy
+    remove_modifier = spa_diff_compulsory_primary_school_literacy
+}
+
+remove_spa_diff_education_system_effects = {
+    remove_modifier = spa_diff_religious_schools_literacy
+    remove_modifier = spa_diff_private_schools_literacy
+    remove_modifier = spa_diff_public_schools_literacy
+}
+
+# Application effects for Children's Rights differential literacy modifiers
+
+apply_spa_diff_child_labor_allowed_effect = {
+    remove_spa_diff_childrens_rights_effects = yes
+    add_modifier = { name = spa_diff_child_labor_allowed_literacy }
+}
+
+apply_spa_diff_restricted_child_labor_effect = {
+    remove_spa_diff_childrens_rights_effects = yes
+    add_modifier = { name = spa_diff_restricted_child_labor_literacy }
+}
+
+apply_spa_diff_compulsory_primary_school_effect = {
+    remove_spa_diff_childrens_rights_effects = yes
+    add_modifier = { name = spa_diff_compulsory_primary_school_literacy }
+}
+
+# Application effects for Education System differential literacy modifiers
+
+apply_spa_diff_religious_schools_effect = {
+    remove_spa_diff_education_system_effects = yes
+    add_modifier = { name = spa_diff_religious_schools_literacy }
+}
+
+apply_spa_diff_private_schools_effect = {
+    remove_spa_diff_education_system_effects = yes
+    add_modifier = { name = spa_diff_private_schools_literacy }
+}
+
+apply_spa_diff_public_schools_effect = {
+    remove_spa_diff_education_system_effects = yes
+    add_modifier = { name = spa_diff_public_schools_literacy }
+}

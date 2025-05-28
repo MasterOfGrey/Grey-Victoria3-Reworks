@@ -1,0 +1,133 @@
+# on_actions to apply literacy modifiers based on enacted laws
+
+on_law_enacted = {
+    effect = {
+        trigger_switch = {
+            on_trigger = law # The law that was just enacted
+
+            # Voting Rights Laws
+            law_landed_voting = { apply_spa_landed_voting_literacy_effect = yes }
+            law_wealth_voting = { apply_spa_wealth_voting_literacy_effect = yes }
+            law_census_voting = { clear_spa_voting_literacy_effects_if_no_specific_modifier = yes } # No specific modifier from PR
+            law_universal_suffrage = { apply_spa_universal_suffrage_literacy_effect = yes }
+
+            # Economy Laws
+            law_laissez_faire = { apply_spa_laissez_faire_literacy_effect = yes }
+            law_interventionism = { apply_spa_interventionism_literacy_effect = yes }
+            law_command_economy = { apply_spa_command_economy_literacy_effect = yes }
+
+            # Education System Laws
+            law_private_schools = { apply_spa_private_schools_literacy_effect = yes }
+            law_public_schools = { apply_spa_public_schools_literacy_effect = yes }
+            law_no_schools = { apply_spa_no_schools_literacy_effect = yes }
+
+            # Freedom of Conscience Laws
+            law_state_religion = { apply_spa_state_religion_literacy_effect = yes }
+            law_freedom_of_conscience = { apply_spa_freedom_of_conscience_literacy_effect = yes }
+            law_state_atheism = { apply_spa_state_atheism_literacy_effect = yes }
+
+            # Social Security Laws
+            law_no_social_security = { apply_spa_no_social_security_literacy_effect = yes }
+            law_poor_laws = { apply_spa_poor_laws_literacy_effect = yes }
+            law_wage_subsidies = { clear_spa_social_security_literacy_effects_if_no_specific_modifier = yes } # No specific modifier from PR
+            law_old_age_pensions = { apply_spa_old_age_pensions_literacy_effect = yes }
+        }
+    }
+}
+
+on_game_start = {
+    effect = {
+        # Apply initial modifiers based on active Voting Rights laws
+        if = {
+            limit = { has_law = law_landed_voting }
+            apply_spa_landed_voting_literacy_effect = yes
+        }
+        else_if = {
+            limit = { has_law = law_wealth_voting }
+            apply_spa_wealth_voting_literacy_effect = yes
+        }
+        else_if = {
+            limit = { has_law = law_universal_suffrage }
+            apply_spa_universal_suffrage_literacy_effect = yes
+        }
+        else_if = { # Handles census_voting or any other voting law not explicitly modified
+            limit = { OR = { has_law = law_census_voting } } # Add other non-modified voting laws if any
+            clear_spa_voting_literacy_effects_if_no_specific_modifier = yes
+        }
+        else = { # Fallback if no known voting law is active (should ideally not happen for this group)
+            remove_spa_voting_literacy_effects = yes
+        }
+
+        # Apply initial modifiers based on active Economy laws
+        if = {
+            limit = { has_law = law_laissez_faire }
+            apply_spa_laissez_faire_literacy_effect = yes
+        }
+        else_if = {
+            limit = { has_law = law_interventionism }
+            apply_spa_interventionism_literacy_effect = yes
+        }
+        else_if = {
+            limit = { has_law = law_command_economy }
+            apply_spa_command_economy_literacy_effect = yes
+        }
+        else = { # Fallback for any other economy law
+            remove_spa_economy_literacy_effects = yes
+        }
+
+        # Apply initial modifiers based on active Education System laws
+        if = {
+            limit = { has_law = law_private_schools }
+            apply_spa_private_schools_literacy_effect = yes
+        }
+        else_if = {
+            limit = { has_law = law_public_schools }
+            apply_spa_public_schools_literacy_effect = yes
+        }
+        else_if = {
+            limit = { has_law = law_no_schools }
+            apply_spa_no_schools_literacy_effect = yes
+        }
+        else = { # Fallback for any other education law (e.g. religious schools if not covered)
+            remove_spa_education_literacy_effects = yes
+        }
+
+        # Apply initial modifiers based on active Freedom of Conscience laws
+        if = {
+            limit = { has_law = law_state_religion }
+            apply_spa_state_religion_literacy_effect = yes
+        }
+        else_if = {
+            limit = { has_law = law_freedom_of_conscience }
+            apply_spa_freedom_of_conscience_literacy_effect = yes
+        }
+        else_if = {
+            limit = { has_law = law_state_atheism }
+            apply_spa_state_atheism_literacy_effect = yes
+        }
+        else = { # Fallback for any other conscience law
+            remove_spa_conscience_literacy_effects = yes
+        }
+
+        # Apply initial modifiers based on active Social Security laws
+        if = {
+            limit = { has_law = law_no_social_security }
+            apply_spa_no_social_security_literacy_effect = yes
+        }
+        else_if = {
+            limit = { has_law = law_poor_laws }
+            apply_spa_poor_laws_literacy_effect = yes
+        }
+        else_if = {
+            limit = { has_law = law_old_age_pensions }
+            apply_spa_old_age_pensions_literacy_effect = yes
+        }
+        else_if = { # Handles wage_subsidies or any other social security law not explicitly modified
+            limit = { OR = { has_law = law_wage_subsidies } } # Add other non-modified social security laws if any
+            clear_spa_social_security_literacy_effects_if_no_specific_modifier = yes
+        }
+        else = { # Fallback if no known social security law is active
+            remove_spa_social_security_literacy_effects = yes
+        }
+    }
+}
