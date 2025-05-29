@@ -1,0 +1,40 @@
+namespace = mog_literacy_event
+
+# Increase education access along with urbanization
+# Both books and educattional institutions are more available in urban areas
+mog_literacy_event.2 = {
+	type = state_event
+	hidden = yes
+
+	trigger = {
+		# by global
+	}
+
+	immediate = {
+        if = {
+            limit = {
+                has_modifier = mog_education_access_from_urbanization
+            }
+            remove_modifier = mog_education_access_from_urbanization
+        }
+
+        add_modifier = {
+            name = mog_education_access_from_urbanization
+            multiplier = {
+                value = state_urbanization_rate
+                multiply = { # Limit by total urbanization
+                    value = total_urbanization
+                    divide = 2000
+                    max = 1
+                    desc = "total_urbanization"
+                }
+                if = {
+                    limit = {
+                        is_incorporated = no
+                    }
+                    multiply = 0.5
+                }
+            }
+        }
+    }
+}
