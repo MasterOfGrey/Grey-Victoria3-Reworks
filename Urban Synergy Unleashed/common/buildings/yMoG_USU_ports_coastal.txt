@@ -43,6 +43,19 @@ building_port = {
 			}
 			add = 999999	# Yes uber priority for isolated colonies so the AI doesn't get stuck being dumb
 		}
+
+		if = {
+			limit = {
+				relative_infrastructure < 1.1
+			}
+			multiply = 2
+		}
+		if = {
+			limit = {
+				relative_infrastructure < 1
+			}
+			multiply = 4
+		}
 	}
 	
 	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_monuments.dds"
