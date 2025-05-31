@@ -20,7 +20,10 @@
 					bureaucracy_percent < 0.9
 				}
 			}
-			state.tax_capacity < state.tax_capacity_usage
+			AND = {
+				state.tax_capacity < state.tax_capacity_usage
+				state.is_incorporated = yes
+			}
 		}
 	}
 	
