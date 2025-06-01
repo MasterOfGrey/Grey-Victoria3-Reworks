@@ -20,7 +20,7 @@ default_building_subsistence_farms = {
 			state_birth_rate_mult = -0.0045		# For some reason this one gets modifiers but the other doesn't, and the goal is to cancel out when fully employed.
 		}
 		level_scaled = {
-			state_birth_rate_mult = -0.005
+			state_birth_rate_mult = 0.005
 		}
 	}
 }
@@ -47,7 +47,7 @@ default_building_subsistence_orchards = {
 			state_birth_rate_mult = -0.0045
 		}
 		level_scaled = {
-			state_birth_rate_mult = -0.005
+			state_birth_rate_mult = 0.005
 		}
 	}
 }
@@ -74,7 +74,7 @@ default_building_subsistence_pastures = {
 			state_birth_rate_mult = -0.0045
 		}
 		level_scaled = {
-			state_birth_rate_mult = -0.005
+			state_birth_rate_mult = 0.005
 		}
 	}
 }
@@ -101,7 +101,7 @@ default_building_subsistence_fishing_villages = {
 			state_birth_rate_mult = -0.0045
 		}
 		level_scaled = {
-			state_birth_rate_mult = -0.005
+			state_birth_rate_mult = 0.005
 		}
 	}
 }
@@ -127,7 +127,7 @@ default_building_subsistence_rice_paddies = {
 			state_birth_rate_mult = -0.0045
 		}
 		level_scaled = {
-			state_birth_rate_mult = -0.005
+			state_birth_rate_mult = 0.005
 		}
 	}
 }
