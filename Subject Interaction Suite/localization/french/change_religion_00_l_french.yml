@@ -26,8 +26,8 @@
  ib_events.02.f: ""Vive [ROOT.GetCountry.GetName] !""
  ib_events.02.a: "Bien joué."
   
- change_state_religion_weekly_effect: "Travaille pour atteindre un alignement complet de la religion d'État avec 20 % de chances de progresser chaque semaine, avec 8 points de progression requis pour réussir." #NT!
+ change_state_religion_weekly_effect: "Travaille pour atteindre un alignement complet de la religion d'État avec 20 % de chances de progresser chaque semaine, avec 8 points de progression requis pour réussir."
   
- cr_irreligious_conversion: "Prise de contrôle irréligieuse" #NT!
- cr_institutionalise_secularism: "Régulation laïque" #NT!
- cr_religious_conversion: "Conversion religieuse" #NT!
+ cr_irreligious_conversion: "Prise de contrôle irréligieuse"
+ cr_institutionalise_secularism: "Régulation laïque"
+ cr_religious_conversion: "Conversion religieuse"

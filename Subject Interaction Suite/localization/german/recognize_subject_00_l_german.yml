@@ -1,0 +1,22 @@
+﻿l_german:
+ DIPLO_ACTION_GET_RECOGNIZED: "$DIPLO_ACTION_RELATIONS$ ist nicht weniger als $relations_cordial$" #NT!
+ get_recognized: "Bitten Sie Verbündete um die Anerkennung" #NT!
+ recognize: "Erkennen" #NT!
+ get_recognized_action_name: "Bitten Sie Verbündete um die Anerkennung" #NT!
+ recognize_action_name: "Erkennen" #NT!
+ get_recognized_desc: "#header $get_recognized$#!\n$TOOLTIP_DELIMITER$\nA Art von [concept_instant_diplomatic_action], die eine alliierte große Kraft bitten kann, uns auf der Weltbühne zu erkennen." #NT!
+ recognize_desc: "#header $recognize$#!\n$TOOLTIP_DELIMITER$\nA Art von [concept_instant_diplomatic_action], die andere Länder auf der Weltbühne erkennen kann." #NT!
+ get_recognized_proposal_notification_name: "Schlagen Sie $get_recongized_action_name$ vor" #NT!
+ get_recognized_proposal_notification_desc: "[INITIATOR_COUNTRY.GetName] fragt nach unserer offiziellen diplomatischen Anerkennung." #NT!
+ get_recognized_proposal_notification_effects_desc: "$get_recognized_action_name$" #NT!
+ recognize_proposal_notification_name: "Schlagen Sie $recognize_action_name$ vor" #NT!
+ recognize_proposal_notification_desc: "Wir gewähren [INITIATOR_COUNTRY.GetName] unsere offizielle diplomatische Anerkennung." #NT!
+ recognize_proposal_notification_effects_desc: "$recognize_action_name$" #NT!
+ get_recognized_proposal_accepted_name: "Akzeptiere $get_recognized_action_name$" #NT!
+ get_recognized_proposal_accepted_desc: "[TARGET_COUNTRY.GetName] stimmte zu, uns für die Welt anzuerkennen." #NT!
+ get_recognized_proposal_declined_name: "Ablehnen $merge_subject_action_name$" #NT!
+ get_recognized_proposal_declined_desc: "[TARGET_COUNTRY.GetName] weigerte sich, uns der Welt zu erkennen." #NT!
+ get_recognized_proposal_third_party_accepted_name: "Akzeptiere $merge_subject_action_name$" #NT!
+ get_recognized_proposal_third_party_accepted_desc: "[INITIATOR_COUNTRY.GetName] wurde auf der Weltbühne durch [TARGET_COUNTRY.GetName] anerkannt, eine neue Ära steht vor der Tür." #NT!
+ get_recognized_proposal_third_party_declined_name: "Ablehnen $merge_subject_action_name$" #NT!
+ get_recognized_proposal_third_party_declined_desc: "[TARGET_COUNTRY.GetName] weigerte sich, [INITIATOR_COUNTRY.GetName] zu erkennen. Möglicherweise müssen wir mit Waffenkraft auf der Weltbühne aufsteigen!" #NT!

@@ -1,15 +1,30 @@
 ﻿l_french:
- consolidate_subject: "Consolider le sujet" #NT!
- consolidate_subject_action_name: "Consolider [concept_subject]" #NT!
- consolidate_subject_desc: "Fusionner deux [Concept('concept_subject', '$concept_subjects$')] voisins en un seul [concept_country]. Le sujet cible doit avoir un [concept_autonomy] et un [concept_liberty_desire] faibles. Les deux sujets doivent partager un [Concept('concept_primary_cultures', '$concept_primary_culture$')]." #NT!
- consolidate_subject_action_notification_name: "[INITIATOR_COUNTRY.GetName] consolide l'administration" #NT!
- consolidate_subject_action_notification_desc: "[INITIATOR_COUNTRY.GetName] a choisi de nous consolider." #NT!
- consolidate_subject_action_notification_third_party_name: "[INITIATOR_COUNTRY.GetName] consolide les sujets" #NT!
- consolidate_subject_action_notification_third_party_desc: "[INITIATOR_COUNTRY.GetName] a consolidé [TARGET_COUNTRY.GetName]." #NT!
+ consolidate_subject: "Consolider le sujet"
+ consolidate_subject_action_name: "Consolider [concept_subject]"
+ consolidate_subject_desc: "Fusionner deux [Concept('concept_subject', '$concept_subjects$')] voisins en un seul [concept_country]. Le sujet cible doit avoir un [concept_autonomy] et un [concept_liberty_desire] faibles. Les deux sujets doivent partager un [Concept('concept_primary_cultures', '$concept_primary_culture$')]."
+ consolidate_subject_action_notification_name: "[INITIATOR_COUNTRY.GetName] consolide l'administration"
+ consolidate_subject_action_notification_desc: "[INITIATOR_COUNTRY.GetName] a choisi de nous consolider."
+ consolidate_subject_action_notification_third_party_name: "[INITIATOR_COUNTRY.GetName] consolide les sujets"
+ consolidate_subject_action_notification_third_party_desc: "[INITIATOR_COUNTRY.GetName] a consolidé [TARGET_COUNTRY.GetName]."
   
- is_not_african_subject: "Ce sujet ne fait pas partie de nos administrations coloniales africaines" #NT!
+ is_not_african_subject: "Ce sujet ne fait pas partie de nos administrations coloniales africaines"
+ consolidate_subject_country_tier_tt: "[concept_country_tier] de [SCOPE.sCountry('target_country').GetName] est ci-dessous $country_tier_kingdom$" #NT!
+ consolidate_subject_country_tier_kingdom_tt: "[concept_country_tier] de [SCOPE.sCountry('target_country').GetName] est $country_tier_kingdom$ et:" #NT!
+ consolidate_subject_country_tier_kingdom_overlord_research_tt: "[SCOPE.GetRootScope.GetCountry.GetName] a recherché l'un des: [GetTechnology('pan-nationalism').GetName], [GetTechnology('civilizing_mission').GetName], ou [GetTechnology('corporatism').GetName]" #NT!
+ consolidate_subject_either_tt: "Soit:" #NT!
+ consolidate_subject_vassal_type_tt: "$TAB$[SCOPE.sCountry('target_country').GetName] est un [GetSubjectType('subject_type_vassal').GetName] ou [GetSubjectType('subject_type_puppet').GetName]" #NT!
+ consolidate_subject_dominion_type_tt: "[SCOPE.sCountry('target_country').GetName] est un [GetSubjectType('subject_type_dominion').GetName] et un de:" #NT!
+ consolidate_subject_dominion_type_laws_tt: "[GetLawType('law_parliamentary_republic').GetName], [GetLawType('law_presidential_republic').GetName], ou [GetLawType('law_council_republic').GetName]" #NT!
+ consolidate_subject_union_type_tt: "[SCOPE.sCountry('target_country').GetName] est un [GetSubjectType('subject_type_personal_union').GetName] et:" #NT!
+ consolidate_subject_primary_culture_tt: "Sont l'un des sujets cibles [concept_primary_cultures]: [SCOPE.sCountry('target_country').GetPrimaryCulturesDesc]" #NT!
+ consolidate_subject_acceptance_tt: "Le [concept_overlord] a fait des recherches sur le pan-nationalisme et la mission de civilisation, et tous les sujets consolidés [concept_primary_cultures] doivent partager un trait et avoir au moins @ acceptation_status_4! $second_rate_citizen$ [concept_acceptance_status]" #NT!
+ consolidate_subject_multicultural_tt: "Le [concept_overlord] a fait des recherches sur le pan-nationalisme et la mission de civilisation, les ☻1 du sujet cible ont au moins un certain chevauchement, et le sujet récepteur a recherché les droits de l'homme et le corporatisme, et a [GetLawType('law_multicultural').GetName]" #NT!
   
- alert_overlord_can_consolidate_subject_name: "[GetDiplomaticActionType('consolidate_subject').GetName] disponible pour [SCOPE.GetRootScope.GetCountry.GetName]" #NT!
- alert_overlord_can_consolidate_subject_desc: "Notre [concept_subject] [SCOPE.GetRootScope.GetCountry.GetName] peut être consolidé dans un sujet voisin." #NT!
- alert_overlord_can_consolidate_subject_hint: "Vous pouvez utiliser l'onglet Sujets dans le panneau Diplomatie pour effectuer un [GetDiplomaticActionType('consolidate_subject').GetName] [concept_diplomatic_action]." #NT!
- alert_overlord_can_consolidate_subject_action: "Panel sur la diplomatie" #NT!
+ alert_overlord_can_consolidate_subject_name: "[GetDiplomaticActionType('consolidate_subject').GetName] disponible pour [SCOPE.GetRootScope.GetCountry.GetName]"
+ alert_overlord_can_consolidate_subject_desc: "Notre [concept_subject] [SCOPE.GetRootScope.GetCountry.GetName] peut être consolidé dans un sujet voisin."
+ alert_overlord_can_consolidate_subject_hint: "Vous pouvez utiliser l'onglet Sujets dans le panneau Diplomatie pour effectuer un [GetDiplomaticActionType('consolidate_subject').GetName] [concept_diplomatic_action]."
+ alert_overlord_can_consolidate_subject_action: "Panel sur la diplomatie"
+  
+ ag_can_consolidate_subject_name: "Peut [GetDiplomaticActionType('consolidate_subject').GetName]" #NT!
+ ag_can_consolidate_subject_desc: "Il y a [concept_subject] [Concept('concept_country', '$concept_countries$')] qui sont éligibles pour l'action [GetDiplomaticActionType('consolidate_subject').GetName]" #NT!
+ ag_can_consolidate_subject_tooltip: "#header $ag_can_consolidate_subject_name$#!\n$TOOLTIP_DELIMITER$\n$ag_can_consolidate_subject_desc$\n\n$ALERT_GROUP_TOOLTIP_FOOTER$" #NT!

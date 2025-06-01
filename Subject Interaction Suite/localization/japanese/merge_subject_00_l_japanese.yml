@@ -14,18 +14,18 @@
  merge_subject_proposal_third_party_accepted_desc: "[INITIATOR_COUNTRY.GetName]が[TARGET_COUNTRY.GetName]の全領土を併合しました"
  merge_subject_proposal_third_party_declined_name: "$merge_subject_action_name$を拒否"
  merge_subject_proposal_third_party_declined_desc: "[TARGET_COUNTRY.GetName]が[INITIATOR_COUNTRY.GetName]への全領土の併合を拒否しました。"
- rule_ai_merge_subject: "$merge_subject$" #NT!
- setting_ai_can_not_use: "AIによる主題の統合を禁止する" #NT!
- setting_ai_can_not_use_desc: "AIによる外交行動を禁止する: マージ [concept_subject] [Concept('concept_country', '$concept_countries$')]" #NT!
- setting_ai_can_use: "AIによる主題の統合を許可する" #NT!
- setting_ai_can_use_desc: "AI が外交アクションを使用するのを許可します: 合併 [concept_subject] [Concept('concept_country', '$concept_countries$')]。\n注: AI はこの外交アクションをプレイヤーに送信しません。" #NT!
- merge_subject_cheat: "件名をマージするチート" #NT!
- rule_merge_subject_cheat: "$merge_subject$" #NT!
- setting_balanced_merge: "マージ件名のバランスが取れている" #NT!
- setting_balanced_merge_desc: "外交アクション: マージ [concept_subject] [Concept('concept_country', '$concept_countries$')] は通常のプレイではバランスが取れています。" #NT!
- setting_cheat_merge: "件名のマージはチートです" #NT!
- setting_cheat_merge_desc: "外交アクション：マージ[concept_subject] [Concept('concept_country', '$concept_countries$')] は強力なチートです。" #NT!
- DIPLOMATIC_ACCEPTANCE_BREAK_FREE: "彼らは#v $ai_strategy_subject_break_free$#!の[concept_ai_strategy]を追求しています" #NT!
- DIPLOMATIC_ACCEPTANCE_STRENGTHEN_SELF: "彼らは#v $ai_strategy_subject_strengthen_self$#!の[concept_ai_strategy]を追求しています" #NT!
- DIPLOMATIC_ACCEPTANCE_MAINTAIN_AUTONOMY: "彼らは#v $ai_strategy_subject_maintain_autonomy$#!の[concept_ai_strategy]を追求しています" #NT!
- DIPLOMATIC_ACCEPTANCE_OVERLORD_COMPLIANCE: "彼らは#v $ai_strategy_subject_overlord_compliance$#!の[concept_ai_strategy]を追求しています" #NT!
+ rule_ai_merge_subject: "$merge_subject$"
+ setting_ai_can_not_use: "AIによる主題の統合を禁止する"
+ setting_ai_can_not_use_desc: "AIによる外交行動を禁止する: マージ [concept_subject] [Concept('concept_country', '$concept_countries$')]"
+ setting_ai_can_use: "AIによる主題の統合を許可する"
+ setting_ai_can_use_desc: "AI が外交アクションを使用するのを許可します: 合併 [concept_subject] [Concept('concept_country', '$concept_countries$')]。\n注: AI はこの外交アクションをプレイヤーに送信しません。"
+ merge_subject_cheat: "件名をマージするチート"
+ rule_merge_subject_cheat: "$merge_subject$"
+ setting_balanced_merge: "マージ件名のバランスが取れている"
+ setting_balanced_merge_desc: "外交アクション: マージ [concept_subject] [Concept('concept_country', '$concept_countries$')] は通常のプレイではバランスが取れています。"
+ setting_cheat_merge: "件名のマージはチートです"
+ setting_cheat_merge_desc: "外交アクション：マージ[concept_subject] [Concept('concept_country', '$concept_countries$')] は強力なチートです。"
+ DIPLOMATIC_ACCEPTANCE_BREAK_FREE: "彼らは#v $ai_strategy_subject_break_free$#!の[concept_ai_strategy]を追求しています"
+ DIPLOMATIC_ACCEPTANCE_STRENGTHEN_SELF: "彼らは#v $ai_strategy_subject_strengthen_self$#!の[concept_ai_strategy]を追求しています"
+ DIPLOMATIC_ACCEPTANCE_MAINTAIN_AUTONOMY: "彼らは#v $ai_strategy_subject_maintain_autonomy$#!の[concept_ai_strategy]を追求しています"
+ DIPLOMATIC_ACCEPTANCE_OVERLORD_COMPLIANCE: "彼らは#v $ai_strategy_subject_overlord_compliance$#!の[concept_ai_strategy]を追求しています"

@@ -1,33 +1,33 @@
 ﻿l_polish:
- change_state_religion: "Przejęcie instytucji religijnej" #NT!
- change_state_religion_action_name: "$change_state_religion$" #NT!
- change_state_religion_action_propose_name: "Zainicjuj [INITIATOR_COUNTRY.GetCustom('change_religion_dynamic_name')]" #NT!
- change_state_religion_action_break_name: "Zatrzymaj się [INITIATOR_COUNTRY.GetCustom('change_religion_dynamic_name')]" #NT!
- change_state_religion_pact_desc: "[SCOPE.GetRootScope.GetDiplomaticPact.GetFirstCountry.GetName] zmienia religię państwową [SCOPE.GetRootScope.GetDiplomaticPact.GetSecondCountry.GetName].\n Obecnie #variable [SCOPE.GetRootScope.GetDiplomaticPact.GetSecondCountry.MakeScope.Var('change_state_religion_progress').GetValue]#! postęp z 8 etapów." #NT!
- change_state_religion_desc: "#header $change_state_religion$#!\n$TOOLTIP_DELIMITER$\nChange religia państwowa kraju docelowego." #NT!
- change_state_religion_action_notification_name: "[INITIATOR_COUNTRY.GetName] zmienia religię państwową naszego kraju." #NT!
- change_state_religion_action_notification_desc: "[INITIATOR_COUNTRY.GetName] zmienia religię państwową w naszym kraju." #NT!
- change_state_religion_action_notification_break_name: "Stan [INITIATOR_COUNTRY.GetCustom('change_religion_dynamic_name')] Zatrzymany przez [INITIATOR_COUNTRY.GetName]" #NT!
- change_state_religion_action_notification_break_desc: "[INITIATOR_COUNTRY.GetName] zakończył zmianę religii państwowej w naszym kraju." #NT!
+ change_state_religion: "Przejęcie instytucji religijnej"
+ change_state_religion_action_name: "$change_state_religion$"
+ change_state_religion_action_propose_name: "Zainicjuj [INITIATOR_COUNTRY.GetCustom('change_religion_dynamic_name')]"
+ change_state_religion_action_break_name: "Zatrzymaj się [INITIATOR_COUNTRY.GetCustom('change_religion_dynamic_name')]"
+ change_state_religion_pact_desc: "[SCOPE.GetRootScope.GetDiplomaticPact.GetFirstCountry.GetName] zmienia religię państwową [SCOPE.GetRootScope.GetDiplomaticPact.GetSecondCountry.GetName].\n Obecnie #variable [SCOPE.GetRootScope.GetDiplomaticPact.GetSecondCountry.MakeScope.Var('change_state_religion_progress').GetValue]#! postęp z 8 etapów."
+ change_state_religion_desc: "#header $change_state_religion$#!\n$TOOLTIP_DELIMITER$\nChange religia państwowa kraju docelowego."
+ change_state_religion_action_notification_name: "[INITIATOR_COUNTRY.GetName] zmienia religię państwową naszego kraju."
+ change_state_religion_action_notification_desc: "[INITIATOR_COUNTRY.GetName] zmienia religię państwową w naszym kraju."
+ change_state_religion_action_notification_break_name: "Stan [INITIATOR_COUNTRY.GetCustom('change_religion_dynamic_name')] Zatrzymany przez [INITIATOR_COUNTRY.GetName]"
+ change_state_religion_action_notification_break_desc: "[INITIATOR_COUNTRY.GetName] zakończył zmianę religii państwowej w naszym kraju."
   
- change_state_religion_effect_desc_global: "Stan inicjacji [INITIATOR_COUNTRY.GetCustom('change_religion_dynamic_name')]" #NT!
- change_state_religion_effect_desc_first: "[COUNTRY.GetAdjectiveNoFlag] inicjuje zmianę religii państwowej w [TARGET_COUNTRY.GetName]." #NT!
- change_state_religion_effect_desc_third: "[COUNTRY.GetName] inicjuje [INITIATOR_COUNTRY.GetCustom('change_religion_dynamic_name')] w [AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)]." #NT!
+ change_state_religion_effect_desc_global: "Stan inicjacji [INITIATOR_COUNTRY.GetCustom('change_religion_dynamic_name')]"
+ change_state_religion_effect_desc_first: "[COUNTRY.GetAdjectiveNoFlag] inicjuje zmianę religii państwowej w [TARGET_COUNTRY.GetName]."
+ change_state_religion_effect_desc_third: "[COUNTRY.GetName] inicjuje [INITIATOR_COUNTRY.GetCustom('change_religion_dynamic_name')] w [AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)]."
   
- change_state_religion_trigger_desc_global: "[INITIATOR_COUNTRY.GetCustom('change_religion_dynamic_name')] w toku" #NT!
- change_state_religion_trigger_false_desc_global: "Nie w trakcie [INITIATOR_COUNTRY.GetCustom('change_religion_dynamic_name')] #b już#!" #NT!
- change_state_religion_trigger_desc_first: "[COUNTRY.GetAdjectiveNoFlag] zmienia religię państwową w [TARGET_COUNTRY.GetName]." #NT!
- change_state_religion_trigger_false_desc_first: "[COUNTRY.GetAdjectiveNoFlag] nie zmienia już religii państwowej w [TARGET_COUNTRY.GetName] #b#!" #NT!
- change_state_religion_trigger_desc_third: "[COUNTRY.GetName] zmienia religię państwową w [AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)]." #NT!
- change_state_religion_trigger_false_desc_third: "[COUNTRY.GetName] nie zmienia już religii państwowej w [AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)] #b#!" #NT!
+ change_state_religion_trigger_desc_global: "[INITIATOR_COUNTRY.GetCustom('change_religion_dynamic_name')] w toku"
+ change_state_religion_trigger_false_desc_global: "Nie w trakcie [INITIATOR_COUNTRY.GetCustom('change_religion_dynamic_name')] #b już#!"
+ change_state_religion_trigger_desc_first: "[COUNTRY.GetAdjectiveNoFlag] zmienia religię państwową w [TARGET_COUNTRY.GetName]."
+ change_state_religion_trigger_false_desc_first: "[COUNTRY.GetAdjectiveNoFlag] nie zmienia już religii państwowej w [TARGET_COUNTRY.GetName] #b#!"
+ change_state_religion_trigger_desc_third: "[COUNTRY.GetName] zmienia religię państwową w [AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)]."
+ change_state_religion_trigger_false_desc_third: "[COUNTRY.GetName] nie zmienia już religii państwowej w [AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)] #b#!"
   
- ib_events.02.t: "Zmiana religii państwowej" #NT!
- ib_events.02.d: "Dumny [ROOT.GetCountry.GetName] pomyślnie ukończył [INITIATOR_COUNTRY.GetCustom('change_religion_dynamic_name')] dla [SCOPE.sCountry('religion_target_country').GetName]. [SCOPE.sCountry('religion_target_country').GetName] będzie teraz prosperować wiecznie, obejmując instytucje religijne ojczyzny." #NT!
- ib_events.02.f: "„Witaj [ROOT.GetCountry.GetName]!”" #NT!
- ib_events.02.a: "Dobrze zrobiony." #NT!
+ ib_events.02.t: "Zmiana religii państwowej"
+ ib_events.02.d: "Dumny [ROOT.GetCountry.GetName] pomyślnie ukończył [INITIATOR_COUNTRY.GetCustom('change_religion_dynamic_name')] dla [SCOPE.sCountry('religion_target_country').GetName]. [SCOPE.sCountry('religion_target_country').GetName] będzie teraz prosperować wiecznie, obejmując instytucje religijne ojczyzny."
+ ib_events.02.f: "„Witaj [ROOT.GetCountry.GetName]!”"
+ ib_events.02.a: "Dobrze zrobiony."
   
- change_state_religion_weekly_effect: "Pracuje nad osiągnięciem całkowitego zrównania religii państwowej z 20% szansą na postęp co tydzień, przy czym do osiągnięcia sukcesu wymagane jest 8 punktów postępu." #NT!
+ change_state_religion_weekly_effect: "Pracuje nad osiągnięciem całkowitego zrównania religii państwowej z 20% szansą na postęp co tydzień, przy czym do osiągnięcia sukcesu wymagane jest 8 punktów postępu."
   
- cr_irreligious_conversion: "Przejęcie władzy przez osoby niereligijne" #NT!
- cr_institutionalise_secularism: "Regulacja świecka" #NT!
- cr_religious_conversion: "Konwersja religijna" #NT!
+ cr_irreligious_conversion: "Przejęcie władzy przez osoby niereligijne"
+ cr_institutionalise_secularism: "Regulacja świecka"
+ cr_religious_conversion: "Konwersja religijna"

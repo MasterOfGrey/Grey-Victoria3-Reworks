@@ -1,5 +1,5 @@
 ﻿l_french:
- law_imposition_events.4.t: "Législation imposée à [SCOPE.sC('country_imposed_upon').GetName] Échec" #NT!
- law_imposition_events.4.d: "[SCOPE.sC('country_imposed_upon').GetName] n’a pas réussi à mettre en œuvre [SCOPE.sLaw('foreign_imposition_law').GetName] en raison de forces internes." #NT!
- law_imposition_events.4.f: "L'ambassadeur revient, apportant la nouvelle de l'échec. « Malgré notre soutien, ils n'ont pas pu y parvenir », rapporte-t-il.\n\nLe silence qui suit pèse sur la salle du conseil." #NT!
- law_imposition_events.4.a: "Peut-être devrions-nous essayer autre chose la prochaine fois ?" #NT!
+ law_imposition_events.4.t: "Législation imposée à [SCOPE.sC('country_imposed_upon').GetName] Échec"
+ law_imposition_events.4.d: "[SCOPE.sC('country_imposed_upon').GetName] n’a pas réussi à mettre en œuvre [SCOPE.sLaw('foreign_imposition_law').GetName] en raison de forces internes."
+ law_imposition_events.4.f: "L'ambassadeur revient, apportant la nouvelle de l'échec. « Malgré notre soutien, ils n'ont pas pu y parvenir », rapporte-t-il.\n\nLe silence qui suit pèse sur la salle du conseil."
+ law_imposition_events.4.a: "Peut-être devrions-nous essayer autre chose la prochaine fois ?"

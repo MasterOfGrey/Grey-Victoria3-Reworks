@@ -1,29 +1,29 @@
 ﻿l_japanese:
- include_primary_culture: "文化的包摂" #NT!
- include_primary_culture_action_name: "$include_primary_culture$" #NT!
- include_primary_culture_action_propose_name: "文化的包摂を開始する" #NT!
- include_primary_culture_action_break_name: "文化的包摂を止めろ" #NT!
- include_primary_culture_pact_desc: "[SCOPE.GetRootScope.GetDiplomaticPact.GetFirstCountry.GetName] は、主な文化を [SCOPE.GetRootScope.GetDiplomaticPact.GetSecondCountry.GetName] に含めています。\n 現在、8 段階中 #variable [SCOPE.GetRootScope.GetDiplomaticPact.GetSecondCountry.MakeScope.Var('include_primary_culture_progress').GetValue]#! が進行中です。" #NT!
- include_primary_culture_desc: "#header $include_primary_culture$#!\n$TOOLTIP_DELIMITER$\nAdd 自国の主要文化を対象国の主要文化に置き換えます。" #NT!
- include_primary_culture_action_notification_name: "[INITIATOR_COUNTRY.GetName]は彼らの主要な文化を私たちの国の主要な文化に取り入れています。" #NT!
- include_primary_culture_action_notification_desc: "[INITIATOR_COUNTRY.GetName]は彼らの主要な文化を私たちの国に取り入れています。" #NT!
- include_primary_culture_action_notification_break_name: "プライマリカルチャーインクルージョンは[INITIATOR_COUNTRY.GetName]によって停止されました" #NT!
- include_primary_culture_action_notification_break_desc: "[INITIATOR_COUNTRY.GetName] は我が国の主要な文化の包含を終了しました。" #NT!
+ include_primary_culture: "文化的包摂"
+ include_primary_culture_action_name: "$include_primary_culture$"
+ include_primary_culture_action_propose_name: "文化的包摂を開始する"
+ include_primary_culture_action_break_name: "文化的包摂を止めろ"
+ include_primary_culture_pact_desc: "[SCOPE.GetRootScope.GetDiplomaticPact.GetFirstCountry.GetName] は、主な文化を [SCOPE.GetRootScope.GetDiplomaticPact.GetSecondCountry.GetName] に含めています。\n 現在、8 段階中 #variable [SCOPE.GetRootScope.GetDiplomaticPact.GetSecondCountry.MakeScope.Var('include_primary_culture_progress').GetValue]#! が進行中です。"
+ include_primary_culture_desc: "#header $include_primary_culture$#!\n$TOOLTIP_DELIMITER$\nAdd 自国の主要文化を対象国の主要文化に置き換えます。"
+ include_primary_culture_action_notification_name: "[INITIATOR_COUNTRY.GetName]は彼らの主要な文化を私たちの国の主要な文化に取り入れています。"
+ include_primary_culture_action_notification_desc: "[INITIATOR_COUNTRY.GetName]は彼らの主要な文化を私たちの国に取り入れています。"
+ include_primary_culture_action_notification_break_name: "プライマリカルチャーインクルージョンは[INITIATOR_COUNTRY.GetName]によって停止されました"
+ include_primary_culture_action_notification_break_desc: "[INITIATOR_COUNTRY.GetName] は我が国の主要な文化の包含を終了しました。"
   
- include_primary_culture_effect_desc_global: "文化的包摂を開始する" #NT!
- include_primary_culture_effect_desc_first: "[COUNTRY.GetAdjectiveNoFlag] は [TARGET_COUNTRY.GetName] への一次培養の組み込みを開始しています。" #NT!
- include_primary_culture_effect_desc_third: "[COUNTRY.GetName] は [AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)] で文化的包摂を開始しています。" #NT!
+ include_primary_culture_effect_desc_global: "文化的包摂を開始する"
+ include_primary_culture_effect_desc_first: "[COUNTRY.GetAdjectiveNoFlag] は [TARGET_COUNTRY.GetName] への一次培養の組み込みを開始しています。"
+ include_primary_culture_effect_desc_third: "[COUNTRY.GetName] は [AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)] で文化的包摂を開始しています。"
   
- include_primary_culture_trigger_desc_global: "文化的包摂の進展" #NT!
- include_primary_culture_trigger_false_desc_global: "文化的包摂の過程にはもういない#b#!" #NT!
- include_primary_culture_trigger_desc_first: "[COUNTRY.GetAdjectiveNoFlag] は、その主要な文化を [TARGET_COUNTRY.GetName] に含めています。" #NT!
- include_primary_culture_trigger_false_desc_first: "[COUNTRY.GetAdjectiveNoFlag] はもはや[TARGET_COUNTRY.GetName] #b に主要な文化を含めていません#!" #NT!
- include_primary_culture_trigger_desc_third: "[COUNTRY.GetName] は、主要な文化を [AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)] に含めています。" #NT!
- include_primary_culture_trigger_false_desc_third: "[COUNTRY.GetName] はもはや[AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)] #b に主要な文化を含めていません#!" #NT!
+ include_primary_culture_trigger_desc_global: "文化的包摂の進展"
+ include_primary_culture_trigger_false_desc_global: "文化的包摂の過程にはもういない#b#!"
+ include_primary_culture_trigger_desc_first: "[COUNTRY.GetAdjectiveNoFlag] は、その主要な文化を [TARGET_COUNTRY.GetName] に含めています。"
+ include_primary_culture_trigger_false_desc_first: "[COUNTRY.GetAdjectiveNoFlag] はもはや[TARGET_COUNTRY.GetName] #b に主要な文化を含めていません#!"
+ include_primary_culture_trigger_desc_third: "[COUNTRY.GetName] は、主要な文化を [AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)] に含めています。"
+ include_primary_culture_trigger_false_desc_third: "[COUNTRY.GetName] はもはや[AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)] #b に主要な文化を含めていません#!"
   
- ib_events.05.t: "プライマリーカルチャーインクルージョン" #NT!
- ib_events.05.d: "誇り高き[ROOT.GetCountry.GetName]は[SCOPE.sCountry('culture_include_country').GetName]の文化的包摂を成功裏に完了しました。[SCOPE.sCountry('culture_target_country').GetName]は祖国の文化を抱きしめながら永遠に繁栄するでしょう。" #NT!
- ib_events.05.f: "「万歳[ROOT.GetCountry.GetName]！」" #NT!
- ib_events.05.a: "よくやった。" #NT!
+ ib_events.05.t: "プライマリーカルチャーインクルージョン"
+ ib_events.05.d: "誇り高き[ROOT.GetCountry.GetName]は[SCOPE.sCountry('culture_include_country').GetName]の文化的包摂を成功裏に完了しました。[SCOPE.sCountry('culture_target_country').GetName]は祖国の文化を抱きしめながら永遠に繁栄するでしょう。"
+ ib_events.05.f: "「万歳[ROOT.GetCountry.GetName]！」"
+ ib_events.05.a: "よくやった。"
   
- include_primary_culture_weekly_effect: "オーバーロードの主要な文化をその主題に組み込む作業。毎週 20% の確率で進歩し、成功するには 8 つの進歩ポイントが必要です。" #NT!
+ include_primary_culture_weekly_effect: "オーバーロードの主要な文化をその主題に組み込む作業。毎週 20% の確率で進歩し、成功するには 8 つの進歩ポイントが必要です。"

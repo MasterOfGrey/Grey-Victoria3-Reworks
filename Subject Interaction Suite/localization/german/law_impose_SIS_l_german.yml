@@ -1,5 +1,5 @@
 ﻿l_german:
- law_imposition_events.4.t: "Gesetzliche Regelungen für [SCOPE.sC('country_imposed_upon').GetName]-Versagen" #NT!
- law_imposition_events.4.d: "[SCOPE.sC('country_imposed_upon').GetName] konnte [SCOPE.sLaw('foreign_imposition_law').GetName] aufgrund interner Kräfte nicht umsetzen." #NT!
- law_imposition_events.4.f: "Der Botschafter kehrt zurück und überbringt die Nachricht des Scheiterns. „Trotz unserer Unterstützung konnten sie es nicht schaffen“, berichtet er.\n\nDie darauf folgende Stille liegt schwer im Ratssaal." #NT!
- law_imposition_events.4.a: "Vielleicht sollten wir das nächste Mal etwas anderes ausprobieren?" #NT!
+ law_imposition_events.4.t: "Gesetzliche Regelungen für [SCOPE.sC('country_imposed_upon').GetName] - Versagen"
+ law_imposition_events.4.d: "[SCOPE.sC('country_imposed_upon').GetName] konnte [SCOPE.sLaw('foreign_imposition_law').GetName] aufgrund interner Kräfte nicht umsetzen."
+ law_imposition_events.4.f: "Der Botschafter kehrt zurück und überbringt die Nachricht des Scheiterns. „Trotz unserer Unterstützung konnten sie es nicht schaffen“, berichtet er.\n\nDie darauf folgende Stille liegt schwer im Ratssaal."
+ law_imposition_events.4.a: "Vielleicht sollten wir das nächste Mal etwas anderes ausprobieren?"

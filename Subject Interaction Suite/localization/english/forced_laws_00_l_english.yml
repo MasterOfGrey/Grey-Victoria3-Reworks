@@ -16,3 +16,14 @@
  forced_industry_ban_action_notification_desc: "Our [concept_overlord] [INITIATOR_COUNTRY.GetName] forced our [GetLawGroup('lawgroup_economic_system').GetName] [concept_law] to [GetLawType('law_industry_banned').GetName]. Their [concept_attitude] towards us is #tooltippable #tooltip:[INITIATOR_COUNTRY.GetTooltipTag],COUNTRY_ATTITUDE_TOOLTIP [INITIATOR_COUNTRY.GetAttitudeTowards(GetPlayer).GetName]#!#!."
  
  forced_industry_ban_liberty_desire_custom_tooltip: "[SCOPE.sCountry('target_country').GetAdjectiveNoFormatting] officials will respond to [SCOPE.GetRootScope.GetCountry.GetName] a ban on industry in [SCOPE.sCountry('target_country').GetName]. This [concept_subject]'s [concept_liberty_desire] and [concept_attitude] will change."
+ 
+ forced_slavery_ban: "Forced Slavery Ban"
+ forced_slavery_ban_desc: "An [concept_instant_diplomatic_action] that forces a change in the [GetLawGroup('lawgroup_slavery').GetName] [concept_law] of the target [concept_subject] to the [GetLawType('law_slavery_banned').GetName]. Damages [concept_relations] with the target [concept_subject] and some of the [concept_subject] [concept_pop] becomes [concept_radical]."
+ forced_slavery_ban_action_name: "Forced Industry Ban"
+ forced_slavery_ban_action_notification_name: "[INITIATOR_COUNTRY.GetName] forced us to ban slavery"
+ forced_slavery_ban_action_notification_desc: "Our [concept_overlord] [INITIATOR_COUNTRY.GetName] forced our [GetLawGroup('lawgroup_slavery').GetName] [concept_law] to [GetLawType('law_slavery_banned').GetName]. Their [concept_attitude] towards us is #tooltippable #tooltip:[INITIATOR_COUNTRY.GetTooltipTag],COUNTRY_ATTITUDE_TOOLTIP [INITIATOR_COUNTRY.GetAttitudeTowards(GetPlayer).GetName]#!#!."
+ forced_slave_trade: "Forced Slave Trade"
+ forced_slave_trade_desc: "An [concept_instant_diplomatic_action] that forces a change in the [GetLawGroup('lawgroup_slavery').GetName] [concept_law] of the target [concept_subject] to the [GetLawType('law_slave_trade').GetName]. Damages [concept_relations] with the target [concept_subject] and some of the [concept_subject] [concept_pop] becomes [concept_radical]."
+ forced_slave_trade_action_name: "Forced Slave Trade"
+ forced_slave_trade_action_notification_name: "[INITIATOR_COUNTRY.GetName] forced us to trade slaves"
+ forced_slave_trade_action_notification_desc: "Our [concept_overlord] [INITIATOR_COUNTRY.GetName] forced our [GetLawGroup('lawgroup_slavery').GetName] [concept_law] to [GetLawType('law_slave_trade').GetName]. Their [concept_attitude] towards us is #tooltippable #tooltip:[INITIATOR_COUNTRY.GetTooltipTag],COUNTRY_ATTITUDE_TOOLTIP [INITIATOR_COUNTRY.GetAttitudeTowards(GetPlayer).GetName]#!#!."

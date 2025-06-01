@@ -19,13 +19,13 @@
  setting_ai_can_not_use_desc: "Proibir a IA de usar ação diplomática: Mesclar [concept_subject] [Concept('concept_country', '$concept_countries$')]"
  setting_ai_can_use: "Permitir que a IA possa Fundir Súdito"
  setting_ai_can_use_desc: "Permitir que a IA use ação diplomática: Mesclar [concept_subject] [Concept('concept_country', '$concept_countries$')]"
- merge_subject_cheat: "Mesclar assunto Cheat" #NT!
- rule_merge_subject_cheat: "$merge_subject$" #NT!
- setting_balanced_merge: "Mesclar assunto é equilibrado" #NT!
- setting_balanced_merge_desc: "A ação diplomática: Mesclar [concept_subject] [Concept('concept_country', '$concept_countries$')] é balanceada para jogo normal." #NT!
- setting_cheat_merge: "Mesclar assunto é uma trapaça" #NT!
- setting_cheat_merge_desc: "A ação diplomática: Mesclar [concept_subject] [Concept('concept_country', '$concept_countries$')] é um truque poderoso." #NT!
- DIPLOMATIC_ACCEPTANCE_BREAK_FREE: "Eles estão buscando um [concept_ai_strategy] de #v $ai_strategy_subject_break_free$#!" #NT!
- DIPLOMATIC_ACCEPTANCE_STRENGTHEN_SELF: "Eles estão buscando um [concept_ai_strategy] de #v $ai_strategy_subject_strengthen_self$#!" #NT!
- DIPLOMATIC_ACCEPTANCE_MAINTAIN_AUTONOMY: "Eles estão buscando um [concept_ai_strategy] de #v $ai_strategy_subject_maintain_autonomy$#!" #NT!
- DIPLOMATIC_ACCEPTANCE_OVERLORD_COMPLIANCE: "Eles estão buscando um [concept_ai_strategy] de #v $ai_strategy_subject_overlord_compliance$#!" #NT!
+ merge_subject_cheat: "Mesclar assunto Cheat"
+ rule_merge_subject_cheat: "$merge_subject$"
+ setting_balanced_merge: "Mesclar assunto é equilibrado"
+ setting_balanced_merge_desc: "A ação diplomática: Mesclar [concept_subject] [Concept('concept_country', '$concept_countries$')] é balanceada para jogo normal."
+ setting_cheat_merge: "Mesclar assunto é uma trapaça"
+ setting_cheat_merge_desc: "A ação diplomática: Mesclar [concept_subject] [Concept('concept_country', '$concept_countries$')] é um truque poderoso."
+ DIPLOMATIC_ACCEPTANCE_BREAK_FREE: "Eles estão buscando um [concept_ai_strategy] de #v $ai_strategy_subject_break_free$#!"
+ DIPLOMATIC_ACCEPTANCE_STRENGTHEN_SELF: "Eles estão buscando um [concept_ai_strategy] de #v $ai_strategy_subject_strengthen_self$#!"
+ DIPLOMATIC_ACCEPTANCE_MAINTAIN_AUTONOMY: "Eles estão buscando um [concept_ai_strategy] de #v $ai_strategy_subject_maintain_autonomy$#!"
+ DIPLOMATIC_ACCEPTANCE_OVERLORD_COMPLIANCE: "Eles estão buscando um [concept_ai_strategy] de #v $ai_strategy_subject_overlord_compliance$#!"
