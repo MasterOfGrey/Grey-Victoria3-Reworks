@@ -1,33 +1,33 @@
 ﻿l_polish:
- laws_synergize_trade: "Polityki handlowe synergiczne" #NT!
- laws_synergize_trade_action_name: "$laws_synergize_trade$" #NT!
- laws_synergize_trade_action_propose_name: "Rozpocznij synergię polityk handlowych" #NT!
- laws_synergize_trade_action_break_name: "Zatrzymajmy synergię polityk handlowych" #NT!
- laws_synergize_trade_pact_desc: "[SCOPE.GetRootScope.GetDiplomaticPact.GetFirstCountry.GetName] restrukturyzuje politykę handlową [SCOPE.GetRootScope.GetDiplomaticPact.GetSecondCountry.GetName], aby uzyskać synergię z ich polityką.\n Obecnie #variable [SCOPE.GetRootScope.GetDiplomaticPact.GetSecondCountry.MakeScope.Var('synergize_trade_progress').GetValue]#! postęp z 8 etapów." #NT!
- laws_synergize_trade_desc: "#header $laws_synergize_trade$#!\n$TOOLTIP_DELIMITER$\nSynergizes politykę handlową wskazanego kraju." #NT!
- laws_synergize_trade_action_notification_name: "[INITIATOR_COUNTRY.GetName] Synergizująca polityka handlowa" #NT!
- laws_synergize_trade_action_notification_desc: "[INITIATOR_COUNTRY.GetName] synergizuje politykę handlową naszego kraju." #NT!
- laws_synergize_trade_action_notification_break_name: "Zaprzestań synergistycznej polityki handlowej do [INITIATOR_COUNTRY.GetName]" #NT!
- laws_synergize_trade_action_notification_break_desc: "[INITIATOR_COUNTRY.GetName] zaprzestał prób harmonizacji polityki handlowej naszego kraju." #NT!
+ laws_synergize_trade: "Polityki handlowe synergiczne"
+ laws_synergize_trade_action_name: "$laws_synergize_trade$"
+ laws_synergize_trade_action_propose_name: "Rozpocznij synergię polityk handlowych"
+ laws_synergize_trade_action_break_name: "Zatrzymajmy synergię polityk handlowych"
+ laws_synergize_trade_pact_desc: "[SCOPE.GetRootScope.GetDiplomaticPact.GetFirstCountry.GetName] restrukturyzuje politykę handlową [SCOPE.GetRootScope.GetDiplomaticPact.GetSecondCountry.GetName], aby uzyskać synergię z ich polityką.\n Obecnie #variable [SCOPE.GetRootScope.GetDiplomaticPact.GetSecondCountry.MakeScope.Var('synergize_trade_progress').GetValue]#! postęp z 8 etapów."
+ laws_synergize_trade_desc: "#header $laws_synergize_trade$#!\n$TOOLTIP_DELIMITER$\nSynergizes politykę handlową wskazanego kraju."
+ laws_synergize_trade_action_notification_name: "[INITIATOR_COUNTRY.GetName] Synergizująca polityka handlowa"
+ laws_synergize_trade_action_notification_desc: "[INITIATOR_COUNTRY.GetName] synergizuje politykę handlową naszego kraju."
+ laws_synergize_trade_action_notification_break_name: "Zaprzestań synergistycznej polityki handlowej do [INITIATOR_COUNTRY.GetName]"
+ laws_synergize_trade_action_notification_break_desc: "[INITIATOR_COUNTRY.GetName] zaprzestał prób harmonizacji polityki handlowej naszego kraju."
   
- laws_synergize_trade_effect_desc_global: "Rozpocznij synergię polityk handlowych" #NT!
- laws_synergize_trade_effect_desc_first: "[COUNTRY.GetAdjectiveNoFlag] inicjuje synergię polityki handlowej z [TARGET_COUNTRY.GetName]." #NT!
- laws_synergize_trade_effect_desc_third: "[COUNTRY.GetName] inicjuje synergię polityki handlowej z [AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)]." #NT!
+ laws_synergize_trade_effect_desc_global: "Rozpocznij synergię polityk handlowych"
+ laws_synergize_trade_effect_desc_first: "[COUNTRY.GetAdjectiveNoFlag] inicjuje synergię polityki handlowej z [TARGET_COUNTRY.GetName]."
+ laws_synergize_trade_effect_desc_third: "[COUNTRY.GetName] inicjuje synergię polityki handlowej z [AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)]."
   
- laws_synergize_trade_trigger_desc_global: "Synergia polityki handlowej w toku" #NT!
- laws_synergize_trade_trigger_false_desc_global: "Obecnie nie prowadzimy procesu synergii polityk handlowych." #NT!
- laws_synergize_trade_trigger_desc_first: "[COUNTRY.GetAdjectiveNoFlag] ma synergistyczne systemy polityki handlowej z [TARGET_COUNTRY.GetName]." #NT!
- laws_synergize_trade_trigger_false_desc_first: "[COUNTRY.GetAdjectiveNoFlag] nie posiada obecnie synergistycznych systemów polityki handlowej z [TARGET_COUNTRY.GetName]." #NT!
- laws_synergize_trade_trigger_desc_third: "[COUNTRY.GetName] ma synergistyczny system polityki handlowej z [AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)]." #NT!
- laws_synergize_trade_trigger_false_desc_third: "[COUNTRY.GetName] nie posiada obecnie synergistycznych systemów polityki handlowej z [AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)]." #NT!
+ laws_synergize_trade_trigger_desc_global: "Synergia polityki handlowej w toku"
+ laws_synergize_trade_trigger_false_desc_global: "Obecnie nie prowadzimy procesu synergii polityk handlowych."
+ laws_synergize_trade_trigger_desc_first: "[COUNTRY.GetAdjectiveNoFlag] ma synergistyczne systemy polityki handlowej z [TARGET_COUNTRY.GetName]."
+ laws_synergize_trade_trigger_false_desc_first: "[COUNTRY.GetAdjectiveNoFlag] nie posiada obecnie synergistycznych systemów polityki handlowej z [TARGET_COUNTRY.GetName]."
+ laws_synergize_trade_trigger_desc_third: "[COUNTRY.GetName] ma synergistyczny system polityki handlowej z [AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)]."
+ laws_synergize_trade_trigger_false_desc_third: "[COUNTRY.GetName] nie posiada obecnie synergistycznych systemów polityki handlowej z [AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)]."
   
- mog_syn_events.04.t: "Synergia Handlowa!" #NT!
- mog_syn_events.04.d: "Dumny naród [ROOT.GetCountry.GetName] z powodzeniem zrealizował synergię polityki handlowej z [SCOPE.sCountry('synergize_trade_target_country').GetName]. [SCOPE.sCountry('synergize_trade_target_country').GetName] będzie cieszył się wiecznym dobrobytem dzięki zwiększonej spójności z ojczyzną." #NT!
- mog_syn_events.04.f: ""Niech żyje [ROOT.GetCountry.GetName]!"" #NT!
- mog_syn_events.04.a: "Dobrze zrobiony." #NT!
+ mog_syn_events.04.t: "Synergia Handlowa!"
+ mog_syn_events.04.d: "Dumny naród [ROOT.GetCountry.GetName] z powodzeniem zrealizował synergię polityki handlowej z [SCOPE.sCountry('synergize_trade_target_country').GetName]. [SCOPE.sCountry('synergize_trade_target_country').GetName] będzie cieszył się wiecznym dobrobytem dzięki zwiększonej spójności z ojczyzną."
+ mog_syn_events.04.f: ""Niech żyje [ROOT.GetCountry.GetName]!""
+ mog_syn_events.04.a: "Dobrze zrobiony."
   
- laws_synergize_trade_weekly_effect: "Pracuje nad dostosowaniem swojej polityki handlowej do naszej. Ma 20% szans na postęp w każdym tygodniu, a do osiągnięcia sukcesu wymagane jest 8 punktów postępu." #NT!
+ laws_synergize_trade_weekly_effect: "Pracuje nad dostosowaniem swojej polityki handlowej do naszej. Ma 20% szans na postęp w każdym tygodniu, a do osiągnięcia sukcesu wymagane jest 8 punktów postępu."
   
- overlord_syn_cost_trade: "Koszty synergii polityk handlowych" #NT!
+ overlord_syn_cost_trade: "Koszty synergii polityk handlowych"
   
- active_synergize_trade_tt: "Liczba innych akcji $laws_synergize_trade$ jest mniejsza niż 1." #NT!
+ active_synergize_trade_tt: "Liczba innych akcji $laws_synergize_trade$ jest mniejsza niż 1."

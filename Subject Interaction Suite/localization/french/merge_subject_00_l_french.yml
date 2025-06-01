@@ -19,13 +19,13 @@
  setting_ai_can_not_use_desc: "Interdire à l'IA d'utiliser l'action diplomatique : Fusionner [concept_subject] [Concept('concept_country', '$concept_countries$')]"
  setting_ai_can_use: "Autoriser l'IA à Fusionner le Sujet"
  setting_ai_can_use_desc: "Autoriser l'IA à utiliser l'action diplomatique : Fusionner [concept_subject] [Concept('concept_country', '$concept_countries$')]。\nNote : L'IA n'enverra pas cette action diplomatique au joueur。"
- merge_subject_cheat: "Triche sur la fusion des sujets" #NT!
- rule_merge_subject_cheat: "$merge_subject$" #NT!
- setting_balanced_merge: "Le sujet de fusion est équilibré" #NT!
- setting_balanced_merge_desc: "L'action diplomatique : Fusionner [concept_subject] [Concept('concept_country', '$concept_countries$')] est équilibrée pour le jeu normal." #NT!
- setting_cheat_merge: "Merge Subject est une triche" #NT!
- setting_cheat_merge_desc: "L'action diplomatique : Fusionner [concept_subject] [Concept('concept_country', '$concept_countries$')] est une triche puissante." #NT!
- DIPLOMATIC_ACCEPTANCE_BREAK_FREE: "Ils poursuivent un [concept_ai_strategy] de #v $ai_strategy_subject_break_free$#!" #NT!
- DIPLOMATIC_ACCEPTANCE_STRENGTHEN_SELF: "Ils poursuivent un [concept_ai_strategy] de #v $ai_strategy_subject_strengthen_self$#!" #NT!
- DIPLOMATIC_ACCEPTANCE_MAINTAIN_AUTONOMY: "Ils poursuivent un [concept_ai_strategy] de #v $ai_strategy_subject_maintain_autonomy$#!" #NT!
- DIPLOMATIC_ACCEPTANCE_OVERLORD_COMPLIANCE: "Ils poursuivent un [concept_ai_strategy] de #v $ai_strategy_subject_overlord_compliance$#!" #NT!
+ merge_subject_cheat: "Triche sur la fusion des sujets"
+ rule_merge_subject_cheat: "$merge_subject$"
+ setting_balanced_merge: "Le sujet de fusion est équilibré"
+ setting_balanced_merge_desc: "L'action diplomatique : Fusionner [concept_subject] [Concept('concept_country', '$concept_countries$')] est équilibrée pour le jeu normal."
+ setting_cheat_merge: "Merge Subject est une triche"
+ setting_cheat_merge_desc: "L'action diplomatique : Fusionner [concept_subject] [Concept('concept_country', '$concept_countries$')] est une triche puissante."
+ DIPLOMATIC_ACCEPTANCE_BREAK_FREE: "Ils poursuivent un [concept_ai_strategy] de #v $ai_strategy_subject_break_free$#!"
+ DIPLOMATIC_ACCEPTANCE_STRENGTHEN_SELF: "Ils poursuivent un [concept_ai_strategy] de #v $ai_strategy_subject_strengthen_self$#!"
+ DIPLOMATIC_ACCEPTANCE_MAINTAIN_AUTONOMY: "Ils poursuivent un [concept_ai_strategy] de #v $ai_strategy_subject_maintain_autonomy$#!"
+ DIPLOMATIC_ACCEPTANCE_OVERLORD_COMPLIANCE: "Ils poursuivent un [concept_ai_strategy] de #v $ai_strategy_subject_overlord_compliance$#!"

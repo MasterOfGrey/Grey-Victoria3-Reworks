@@ -1,31 +1,31 @@
 ﻿l_german:
- DIPLO_ACTION_MERGE_SUBJECT: "$DIPLO_ACTION_RELATIONS$ ist nicht kleiner als $relations_amicable$" #NT!
- merge_subject: "Betreff zusammenführen" #NT!
- merge_subject_action_name: "Zusammengelegte Gebiete" #NT!
- merge_subject_desc: "#header $merge_subject$#!\n$TOOLTIP_DELIMITER$\nA Art von [concept_instant_diplomatic_action], die sofort und bedingungslos mit ihren eigenen Subjekten verschmelzen kann." #NT!
- merge_subject_proposal_notification_name: "Vorschlagen $merge_subject_action_name$" #NT!
- merge_subject_proposal_notification_desc: "[INITIATOR_COUNTRY.GetName] schlägt vor, unser Staatsgebiet zu vereinen" #NT!
- merge_subject_proposal_notification_effects_desc: "$merge_subject_action_name$" #NT!
- merge_subject_proposal_accepted_name: "Akzeptieren $merge_subject_action_name$" #NT!
- merge_subject_proposal_accepted_desc: "[TARGET_COUNTRY.GetName] hat unseren Vorschlag zur Zusammenlegung der Gebiete ihres Landes angenommen." #NT!
- merge_subject_proposal_declined_name: "Ablehnen $merge_subject_action_name$" #NT!
- merge_subject_proposal_declined_desc: "[TARGET_COUNTRY.GetName] hat unseren Vorschlag zur Zusammenlegung ihres Staatsgebiets abgelehnt." #NT!
- merge_subject_proposal_third_party_accepted_name: "Akzeptieren $merge_subject_action_name$" #NT!
- merge_subject_proposal_third_party_accepted_desc: "[INITIATOR_COUNTRY.GetName] hat alle Gebiete des Landes [TARGET_COUNTRY.GetName] zusammengelegt." #NT!
- merge_subject_proposal_third_party_declined_name: "Ablehnen $merge_subject_action_name$" #NT!
- merge_subject_proposal_third_party_declined_desc: "[TARGET_COUNTRY.GetName] hat die Fusion mit [INITIATOR_COUNTRY.GetName] abgelehnt." #NT!
- rule_ai_merge_subject: "$merge_subject$" #NT!
- setting_ai_can_not_use: "Verbieten Sie der KI, Betreff zusammenzuführen" #NT!
- setting_ai_can_not_use_desc: "Der KI diplomatische Maßnahmen verbieten: Zusammenführen [concept_subject] [Concept('concept_country', '$concept_countries$')]" #NT!
- setting_ai_can_use: "Erlauben Sie der KI, Betreff zusammenzuführen" #NT!
- setting_ai_can_use_desc: "Erlaube der KI diplomatische Aktionen: Zusammenführen [concept_subject] [Concept('concept_country', '$concept_countries$')].\nHinweis: Die KI wird diese diplomatische Aktion nicht an den Spieler senden." #NT!
- merge_subject_cheat: "Cheat zum Zusammenführen von Betreff" #NT!
- rule_merge_subject_cheat: "$merge_subject$" #NT!
- setting_balanced_merge: "Zusammenführungsthema ist ausgeglichen" #NT!
- setting_balanced_merge_desc: "Die diplomatische Aktion: Merge [concept_subject] [Concept('concept_country', '$concept_countries$')] ist für das normale Spiel ausgeglichen." #NT!
- setting_cheat_merge: "Merge Subject ist ein Cheat" #NT!
- setting_cheat_merge_desc: "Die diplomatische Aktion: Merge [concept_subject] [Concept('concept_country', '$concept_countries$')] ist ein mächtiger Cheat." #NT!
- DIPLOMATIC_ACCEPTANCE_BREAK_FREE: "Sie verfolgen ein [concept_ai_strategy] von #v $ai_strategy_subject_break_free$#!" #NT!
- DIPLOMATIC_ACCEPTANCE_STRENGTHEN_SELF: "Sie verfolgen ein [concept_ai_strategy] von #v $ai_strategy_subject_strengthen_self$#!" #NT!
- DIPLOMATIC_ACCEPTANCE_MAINTAIN_AUTONOMY: "Sie verfolgen ein [concept_ai_strategy] von #v $ai_strategy_subject_maintain_autonomy$#!" #NT!
- DIPLOMATIC_ACCEPTANCE_OVERLORD_COMPLIANCE: "Sie verfolgen ein [concept_ai_strategy] von #v $ai_strategy_subject_overlord_compliance$#!" #NT!
+ DIPLO_ACTION_MERGE_SUBJECT: "$DIPLO_ACTION_RELATIONS$ ist nicht kleiner als $relations_amicable$"
+ merge_subject: "Klientelland einverleiben"
+ merge_subject_action_name: "Staatsgebiete vereinen"
+ merge_subject_desc: "#header $merge_subject$#!\n$TOOLTIP_DELIMITER$\nEine [concept_instant_diplomatic_action], bei deren Annahme das [concept_subject] sofort und bedingungslos annektiert wird."
+ merge_subject_proposal_notification_name: "Vorschlagen $merge_subject_action_name$"
+ merge_subject_proposal_notification_desc: "[INITIATOR_COUNTRY.GetName] schlägt vor, unsere Staatsgebiete zu vereinen."
+ merge_subject_proposal_notification_effects_desc: "$merge_subject_action_name$"
+ merge_subject_proposal_accepted_name: "$merge_subject_action_name$ akzeptiert"
+ merge_subject_proposal_accepted_desc: "[TARGET_COUNTRY.GetName] hat unseren Vorschlag zur Zusammenlegung der Staatsgebiete unserer Länder angenommen."
+ merge_subject_proposal_declined_name: "$merge_subject_action_name$ abgelehnt"
+ merge_subject_proposal_declined_desc: "[TARGET_COUNTRY.GetName] hat unseren Vorschlag zur Zusammenlegung der Staatsgebiete unserer Länder abgelehnt."
+ merge_subject_proposal_third_party_accepted_name: "$merge_subject_action_name$ akzeptiert"
+ merge_subject_proposal_third_party_accepted_desc: "[INITIATOR_COUNTRY.GetName] hat alle Gebiete des Landes [TARGET_COUNTRY.GetName] einvernehmlich annektiert."
+ merge_subject_proposal_third_party_declined_name: "$merge_subject_action_name$ abgelehnt"
+ merge_subject_proposal_third_party_declined_desc: "[TARGET_COUNTRY.GetName] hat die Fusion mit [INITIATOR_COUNTRY.GetName] abgelehnt."
+ rule_ai_merge_subject: "$merge_subject$"
+ setting_ai_can_not_use: "Für die KI verboten"
+ setting_ai_can_not_use_desc: "Der KI die diplomatische Aktion verbieten, Klientelländer einvernehmlich zu annektieren."
+ setting_ai_can_use: "Für die KI erlaubt"
+ setting_ai_can_use_desc: "Der KI die diplomatische Aktion erlauben, Klientelländer einvernehmlich zu annektieren.\nHinweis: Die KI wird diese diplomatische Aktion nicht beim Spieler verwenden."
+ merge_subject_cheat: "Cheat zum Einverleiben von Klientelländer"
+ rule_merge_subject_cheat: "$merge_subject$"
+ setting_balanced_merge: "Ausgeglichen"
+ setting_balanced_merge_desc: "Die diplomatische Aktion, Klientelländer einvernehmlich einzuverleiben, ist für das normale Spiel ausgeglichen."
+ setting_cheat_merge: "Klientelländer einverleiben ist ein Cheat"
+ setting_cheat_merge_desc: "Die diplomatische Aktion, Klientelländer einvernehmlich einzuverleiben, ist ein mächtiger Cheat."
+ DIPLOMATIC_ACCEPTANCE_BREAK_FREE: "Sie verfolgen die [concept_ai_strategy] "#v $ai_strategy_subject_break_free$#!""
+ DIPLOMATIC_ACCEPTANCE_STRENGTHEN_SELF: "Sie verfolgen die [concept_ai_strategy] "#v $ai_strategy_subject_strengthen_self$#!""
+ DIPLOMATIC_ACCEPTANCE_MAINTAIN_AUTONOMY: "Sie verfolgen die [concept_ai_strategy] "#v $ai_strategy_subject_maintain_autonomy$#!""
+ DIPLOMATIC_ACCEPTANCE_OVERLORD_COMPLIANCE: "Sie verfolgen die [concept_ai_strategy] "#v $ai_strategy_subject_overlord_compliance$#!""

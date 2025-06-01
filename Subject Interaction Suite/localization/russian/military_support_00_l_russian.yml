@@ -1,35 +1,35 @@
 ﻿l_russian:
- military_support: "Поддержка территориального расширения" #NT!
- military_support_action_name: "Поддержка территориального расширения" #NT!
- military_support_action_propose_name: "Поддержка территориального расширения" #NT!
- military_support_action_break_name: "Окончание поддержки территориального расширения" #NT!
- military_support_action_notification_name: "Поддерживаемое территориальное расширение" #NT!
- military_support_action_notification_desc: "Мы заключили соглашение о поддержке территориального расширения с [INITIATOR_COUNTRY.GetName]." #NT!
- military_support_desc: "#header $military_support$#!\n$TOOLTIP_DELIMITER$\nA [concept_diplomatic_pact], который устанавливает соглашение о территориальном расширении поддержки между двумя [Concept('concept_country', '$concept_countries$')]." #NT!
- military_support_pact_desc: "[SCOPE.GetRootScope.GetDiplomaticPact.GetFirstCountry.GetName] Поддерживает территориальное расширение [SCOPE.GetRootScope.GetDiplomaticPact.GetSecondCountry.GetName]." #NT!
- military_support_proposal_notification_name: "Предложение о территориальном расширении поддержки" #NT!
- military_support_proposal_notification_desc: "[INITIATOR_COUNTRY.GetName] пожеланий Поддержите территориальное расширение вместе с нами." #NT!
- military_support_proposal_notification_effects_desc: "$military_support_desc$" #NT!
- military_support_proposal_accepted_name: "Поддержка территориального расширения принята" #NT!
- military_support_proposal_accepted_desc: "[TARGET_COUNTRY.GetName] приняли наше предложение о поддержке территориального расширения." #NT!
- military_support_proposal_declined_name: "Поддержка территориального расширения отклонена" #NT!
- military_support_proposal_declined_desc: "[TARGET_COUNTRY.GetName] отклонил наше предложение о поддержке территориального расширения." #NT!
- military_support_action_notification_break_name: "Поддержка территориального расширения сломана" #NT!
- military_support_action_notification_break_desc: "[INITIATOR_COUNTRY.GetName] прекратили территориальное расширение поддержки с нами." #NT!
- military_support_proposal_third_party_accepted_name: "Подписано соглашение о территориальном расширении" #NT!
- military_support_proposal_third_party_accepted_desc: "[INITIATOR_COUNTRY.GetName] и [TARGET_COUNTRY.GetName] заключили соглашение о территориальном расширении поддержки." #NT!
- military_support_proposal_third_party_declined_name: "Поддержка территориального расширения отклонена" #NT!
- military_support_proposal_third_party_declined_desc: "[TARGET_COUNTRY.GetName] отказался принять поддержку территориального расширения с [INITIATOR_COUNTRY.GetName]." #NT!
- military_support_action_notification_third_party_break_name: "Поддержка территориального расширения сломана" #NT!
- military_support_action_notification_third_party_break_desc: "[INITIATOR_COUNTRY.GetName] прекратили территориальное расширение поддержки с [TARGET_COUNTRY.GetName]." #NT!
+ military_support: "Поддержка территориального расширения"
+ military_support_action_name: "Поддержка территориального расширения"
+ military_support_action_propose_name: "Поддержка территориального расширения"
+ military_support_action_break_name: "Окончание поддержки территориального расширения"
+ military_support_action_notification_name: "Поддерживаемое территориальное расширение"
+ military_support_action_notification_desc: "Мы заключили соглашение о поддержке территориального расширения с [INITIATOR_COUNTRY.GetName]."
+ military_support_desc: "#header $military_support$#!\n$TOOLTIP_DELIMITER$\nA [concept_diplomatic_pact], который устанавливает соглашение о территориальном расширении поддержки между двумя [Concept('concept_country', '$concept_countries$')]."
+ military_support_pact_desc: "[SCOPE.GetRootScope.GetDiplomaticPact.GetFirstCountry.GetName] Поддерживает территориальное расширение [SCOPE.GetRootScope.GetDiplomaticPact.GetSecondCountry.GetName]."
+ military_support_proposal_notification_name: "Предложение о территориальном расширении поддержки"
+ military_support_proposal_notification_desc: "[INITIATOR_COUNTRY.GetName] пожеланий Поддержите территориальное расширение вместе с нами."
+ military_support_proposal_notification_effects_desc: "$military_support_desc$"
+ military_support_proposal_accepted_name: "Поддержка территориального расширения принята"
+ military_support_proposal_accepted_desc: "[TARGET_COUNTRY.GetName] приняли наше предложение о поддержке территориального расширения."
+ military_support_proposal_declined_name: "Поддержка территориального расширения отклонена"
+ military_support_proposal_declined_desc: "[TARGET_COUNTRY.GetName] отклонил наше предложение о поддержке территориального расширения."
+ military_support_action_notification_break_name: "Поддержка территориального расширения сломана"
+ military_support_action_notification_break_desc: "[INITIATOR_COUNTRY.GetName] прекратили территориальное расширение поддержки с нами."
+ military_support_proposal_third_party_accepted_name: "Подписано соглашение о территориальном расширении"
+ military_support_proposal_third_party_accepted_desc: "[INITIATOR_COUNTRY.GetName] и [TARGET_COUNTRY.GetName] заключили соглашение о территориальном расширении поддержки."
+ military_support_proposal_third_party_declined_name: "Поддержка территориального расширения отклонена"
+ military_support_proposal_third_party_declined_desc: "[TARGET_COUNTRY.GetName] отказался принять поддержку территориального расширения с [INITIATOR_COUNTRY.GetName]."
+ military_support_action_notification_third_party_break_name: "Поддержка территориального расширения сломана"
+ military_support_action_notification_third_party_break_desc: "[INITIATOR_COUNTRY.GetName] прекратили территориальное расширение поддержки с [TARGET_COUNTRY.GetName]."
   
- military_support_effect_desc_global: "Обеспечивает поддержку территориальной экспансии" #NT!
- military_support_effect_desc_first: "[COUNTRY.GetAdjectiveNoFlag] устанавливает поддержку территориального расширения с [TARGET_COUNTRY.GetName]" #NT!
- military_support_effect_desc_third: "[COUNTRY.GetName] устанавливает поддержку территориального расширения с [AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)]" #NT!
+ military_support_effect_desc_global: "Обеспечивает поддержку территориальной экспансии"
+ military_support_effect_desc_first: "[COUNTRY.GetAdjectiveNoFlag] устанавливает поддержку территориального расширения с [TARGET_COUNTRY.GetName]"
+ military_support_effect_desc_third: "[COUNTRY.GetName] устанавливает поддержку территориального расширения с [AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)]"
   
- military_support_trigger_desc_global: "Поддерживает территориальное расширение" #NT!
- military_support_trigger_false_desc_global: "Имеет ли #b не#! поддержку территориального расширения?" #NT!
- military_support_trigger_desc_first: "[COUNTRY.GetAdjectiveNoFlag] имеет поддержку территориального расширения с [TARGET_COUNTRY.GetName]" #NT!
- military_support_trigger_false_desc_first: "[COUNTRY.GetAdjectiveNoFlag] имеет #b не#! поддержку территориального расширения с [TARGET_COUNTRY.GetName]" #NT!
- military_support_trigger_desc_third: "[COUNTRY.GetName] имеет поддержку территориального расширения с [AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)]" #NT!
- military_support_trigger_false_desc_third: "[COUNTRY.GetName] имеет #b не#! поддержку территориального расширения с [AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)]" #NT!
+ military_support_trigger_desc_global: "Поддерживает территориальное расширение"
+ military_support_trigger_false_desc_global: "Имеет ли #b не#! поддержку территориального расширения?"
+ military_support_trigger_desc_first: "[COUNTRY.GetAdjectiveNoFlag] имеет поддержку территориального расширения с [TARGET_COUNTRY.GetName]"
+ military_support_trigger_false_desc_first: "[COUNTRY.GetAdjectiveNoFlag] имеет #b не#! поддержку территориального расширения с [TARGET_COUNTRY.GetName]"
+ military_support_trigger_desc_third: "[COUNTRY.GetName] имеет поддержку территориального расширения с [AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)]"
+ military_support_trigger_false_desc_third: "[COUNTRY.GetName] имеет #b не#! поддержку территориального расширения с [AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)]"

@@ -1,0 +1,22 @@
+﻿l_turkish:
+ DIPLO_ACTION_GET_RECOGNIZED: "$DIPLO_ACTION_RELATIONS$ $relations_cordial$'den az değil" #NT!
+ get_recognized: "Ally'den tanınmasını isteyin" #NT!
+ recognize: "Tanımak" #NT!
+ get_recognized_action_name: "Ally'den tanınmasını isteyin" #NT!
+ recognize_action_name: "Tanımak" #NT!
+ get_recognized_desc: "#header $get_recognized$#!\n$TOOLTIP_DELIMITER$\nA Müttefik bir güç isteyebilecek tür [concept_instant_diplomatic_action]." #NT!
+ recognize_desc: "#header $recognize$#!\n$TOOLTIP_DELIMITER$\nA dünya sahnesinde diğer ülkeleri tanıyabilen [concept_instant_diplomatic_action] türü." #NT!
+ get_recognized_proposal_notification_name: "$get_recongized_action_name$ öner" #NT!
+ get_recognized_proposal_notification_desc: "[INITIATOR_COUNTRY.GetName] resmi diplomatik tanınmamızı ister." #NT!
+ get_recognized_proposal_notification_effects_desc: "$get_recognized_action_name$" #NT!
+ recognize_proposal_notification_name: "$recognize_action_name$ öner" #NT!
+ recognize_proposal_notification_desc: "Resmi diplomatik tanınmamıza [INITIATOR_COUNTRY.GetName] veriyoruz." #NT!
+ recognize_proposal_notification_effects_desc: "$recognize_action_name$" #NT!
+ get_recognized_proposal_accepted_name: "$get_recognized_action_name$ kabul et" #NT!
+ get_recognized_proposal_accepted_desc: "[TARGET_COUNTRY.GetName] bizi dünyaya tanımayı kabul etti." #NT!
+ get_recognized_proposal_declined_name: "Reddet $merge_subject_action_name$" #NT!
+ get_recognized_proposal_declined_desc: "[TARGET_COUNTRY.GetName] bizi dünyaya tanımayı reddetti." #NT!
+ get_recognized_proposal_third_party_accepted_name: "$merge_subject_action_name$ kabul et" #NT!
+ get_recognized_proposal_third_party_accepted_desc: "[INITIATOR_COUNTRY.GetName] dünya sahnesinde [TARGET_COUNTRY.GetName] tarafından tanındı, yeni bir dönem üzerimizde." #NT!
+ get_recognized_proposal_third_party_declined_name: "Reddet $merge_subject_action_name$" #NT!
+ get_recognized_proposal_third_party_declined_desc: "[TARGET_COUNTRY.GetName] tanınmayı reddetti [INITIATOR_COUNTRY.GetName] Dünya sahnesinde silah zorla yükselmemiz gerekebilir!" #NT!

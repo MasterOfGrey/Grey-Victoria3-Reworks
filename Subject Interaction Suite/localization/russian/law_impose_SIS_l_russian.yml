@@ -1,5 +1,5 @@
 ﻿l_russian:
- law_imposition_events.4.t: "Законодательство, наложенное на [SCOPE.sC('country_imposed_upon').GetName] Неудача" #NT!
- law_imposition_events.4.d: "[SCOPE.sC('country_imposed_upon').GetName] не удалось ввести в действие [SCOPE.sLaw('foreign_imposition_law').GetName] из-за внутренних сил." #NT!
- law_imposition_events.4.f: "Посол возвращается с известием о провале. «Несмотря на нашу поддержку, они не смогли этого сделать», — сообщает он.\n\nПоследовавшая тишина тяготит зал совета." #NT!
- law_imposition_events.4.a: "Может быть, в следующий раз нам стоит попробовать что-то другое?" #NT!
+ law_imposition_events.4.t: "Законодательство, наложенное на [SCOPE.sC('country_imposed_upon').GetName] Неудача"
+ law_imposition_events.4.d: "[SCOPE.sC('country_imposed_upon').GetName] не удалось ввести в действие [SCOPE.sLaw('foreign_imposition_law').GetName] из-за внутренних сил."
+ law_imposition_events.4.f: "Посол возвращается с известием о провале. «Несмотря на нашу поддержку, они не смогли этого сделать», — сообщает он.\n\nПоследовавшая тишина тяготит зал совета."
+ law_imposition_events.4.a: "Может быть, в следующий раз нам стоит попробовать что-то другое?"

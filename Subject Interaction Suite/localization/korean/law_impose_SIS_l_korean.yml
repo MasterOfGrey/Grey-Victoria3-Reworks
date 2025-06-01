@@ -1,5 +1,5 @@
 ﻿l_korean:
- law_imposition_events.4.t: "[SCOPE.sC('country_imposed_upon').GetName]에 부과된 법률 실패" #NT!
- law_imposition_events.4.d: "[SCOPE.sC('country_imposed_upon').GetName]은 내부적인 문제로 인해 [SCOPE.sLaw('foreign_imposition_law').GetName]을 제정하지 못했습니다." #NT!
- law_imposition_events.4.f: "대사는 실패 소식을 전하며 돌아왔다. "우리의 지원에도 불구하고 그들은 그것을 이룰 수 없었습니다." 그는 보고한다.\n\n그 뒤를 따르는 침묵이 의회 회의실에 무겁게 깔렸다." #NT!
- law_imposition_events.4.a: "다음에는 다른 것을 시도해 보는 게 어떨까요?" #NT!
+ law_imposition_events.4.t: "[SCOPE.sC('country_imposed_upon').GetName]에 부과된 법률 실패"
+ law_imposition_events.4.d: "[SCOPE.sC('country_imposed_upon').GetName]은 내부적인 문제로 인해 [SCOPE.sLaw('foreign_imposition_law').GetName]을 제정하지 못했습니다."
+ law_imposition_events.4.f: "대사는 실패 소식을 전하며 돌아왔다. "우리의 지원에도 불구하고 그들은 그것을 이룰 수 없었습니다." 그는 보고한다.\n\n그 뒤를 따르는 침묵이 의회 회의실에 무겁게 깔렸다."
+ law_imposition_events.4.a: "다음에는 다른 것을 시도해 보는 게 어떨까요?"

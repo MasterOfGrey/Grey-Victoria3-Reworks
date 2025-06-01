@@ -1,15 +1,30 @@
 ﻿l_turkish:
- consolidate_subject: "Konuyu Birleştir" #NT!
- consolidate_subject_action_name: "Birleştir [concept_subject]" #NT!
- consolidate_subject_desc: "İki komşu [Concept('concept_subject', '$concept_subjects$')]'ı tek bir [concept_country]'e birleştirin. Hedef özne düşük [concept_autonomy] ve [concept_liberty_desire]'e sahip olmalıdır. Her iki özne de bir [Concept('concept_primary_cultures', '$concept_primary_culture$')] paylaşmalıdır." #NT!
- consolidate_subject_action_notification_name: "[INITIATOR_COUNTRY.GetName] yönetimi birleştirir" #NT!
- consolidate_subject_action_notification_desc: "[INITIATOR_COUNTRY.GetName] bizi birleştirmeyi seçti." #NT!
- consolidate_subject_action_notification_third_party_name: "[INITIATOR_COUNTRY.GetName] konuları pekiştirir" #NT!
- consolidate_subject_action_notification_third_party_desc: "[INITIATOR_COUNTRY.GetName], [TARGET_COUNTRY.GetName]'i konsolide etti." #NT!
+ consolidate_subject: "Konuyu Birleştir"
+ consolidate_subject_action_name: "Birleştir [concept_subject]"
+ consolidate_subject_desc: "İki komşu [Concept('concept_subject', '$concept_subjects$')]'ı tek bir [concept_country]'e birleştirin. Hedef özne düşük [concept_autonomy] ve [concept_liberty_desire]'e sahip olmalıdır. Her iki özne de bir [Concept('concept_primary_cultures', '$concept_primary_culture$')] paylaşmalıdır."
+ consolidate_subject_action_notification_name: "[INITIATOR_COUNTRY.GetName] yönetimi birleştirir"
+ consolidate_subject_action_notification_desc: "[INITIATOR_COUNTRY.GetName] bizi birleştirmeyi seçti."
+ consolidate_subject_action_notification_third_party_name: "[INITIATOR_COUNTRY.GetName] konuları pekiştirir"
+ consolidate_subject_action_notification_third_party_desc: "[INITIATOR_COUNTRY.GetName], [TARGET_COUNTRY.GetName]'i konsolide etti."
   
- is_not_african_subject: "Bu konu Afrika sömürge yönetimlerimizden biri değil" #NT!
+ is_not_african_subject: "Bu konu Afrika sömürge yönetimlerimizden biri değil"
+ consolidate_subject_country_tier_tt: "[concept_country_tier] of [SCOPE.sCountry('target_country').GetName] $country_tier_kingdom$'nin altında" #NT!
+ consolidate_subject_country_tier_kingdom_tt: "[concept_country_tier] [SCOPE.sCountry('target_country').GetName] $country_tier_kingdom$ ve:" #NT!
+ consolidate_subject_country_tier_kingdom_overlord_research_tt: "[SCOPE.GetRootScope.GetCountry.GetName]: [GetTechnology('pan-nationalism').GetName], [GetTechnology('civilizing_mission').GetName] veya [GetTechnology('corporatism').GetName]'ten birini araştırdı" #NT!
+ consolidate_subject_either_tt: "Herhangi biri:" #NT!
+ consolidate_subject_vassal_type_tt: "$TAB$[SCOPE.sCountry('target_country').GetName] [GetSubjectType('subject_type_vassal').GetName] veya [GetSubjectType('subject_type_puppet').GetName]'tür" #NT!
+ consolidate_subject_dominion_type_tt: "[SCOPE.sCountry('target_country').GetName] bir [GetSubjectType('subject_type_dominion').GetName] ve bir tanesidir:" #NT!
+ consolidate_subject_dominion_type_laws_tt: "[GetLawType('law_parliamentary_republic').GetName], [GetLawType('law_presidential_republic').GetName] veya [GetLawType('law_council_republic').GetName]" #NT!
+ consolidate_subject_union_type_tt: "[SCOPE.sCountry('target_country').GetName] bir [GetSubjectType('subject_type_personal_union').GetName] ve:" #NT!
+ consolidate_subject_primary_culture_tt: "Hedef konunun [concept_primary_cultures]: [SCOPE.sCountry('target_country').GetPrimaryCulturesDesc]" #NT!
+ consolidate_subject_acceptance_tt: "[concept_overlord], pan-ulusculuk ve medeniyet görevini araştırdı ve konsolide konunun tümü [concept_primary_cultures] bir özelliği paylaşmalı ve en azından @cispance_status_4! $second_rate_citizen$ [concept_acceptance_status]" #NT!
+ consolidate_subject_multicultural_tt: "[concept_overlord], pan-ulusculuk ve medeniyet misyonunu araştırdı, hedef konunun [concept_primary_cultures] en azından bir miktar örtüşmeye sahip ve alıcı konu insan haklarını ve korporatizmi araştırdı ve [GetLawType('law_multicultural').GetName]" #NT!
   
- alert_overlord_can_consolidate_subject_name: "[GetDiplomaticActionType('consolidate_subject').GetName] [SCOPE.GetRootScope.GetCountry.GetName] için kullanılabilir" #NT!
- alert_overlord_can_consolidate_subject_desc: "[concept_subject] [SCOPE.GetRootScope.GetCountry.GetName]'imiz komşu bir özneye konsolide edilebilir." #NT!
- alert_overlord_can_consolidate_subject_hint: "Diplomasi Panelindeki Konular sekmesini kullanarak [GetDiplomaticActionType('consolidate_subject').GetName] [concept_diplomatic_action] işlemini gerçekleştirebilirsiniz." #NT!
- alert_overlord_can_consolidate_subject_action: "Diplomasi Paneli" #NT!
+ alert_overlord_can_consolidate_subject_name: "[GetDiplomaticActionType('consolidate_subject').GetName] [SCOPE.GetRootScope.GetCountry.GetName] için kullanılabilir"
+ alert_overlord_can_consolidate_subject_desc: "[concept_subject] [SCOPE.GetRootScope.GetCountry.GetName]'imiz komşu bir özneye konsolide edilebilir."
+ alert_overlord_can_consolidate_subject_hint: "Diplomasi Panelindeki Konular sekmesini kullanarak [GetDiplomaticActionType('consolidate_subject').GetName] [concept_diplomatic_action] işlemini gerçekleştirebilirsiniz."
+ alert_overlord_can_consolidate_subject_action: "Diplomasi Paneli"
+  
+ ag_can_consolidate_subject_name: "Can [GetDiplomaticActionType('consolidate_subject').GetName]" #NT!
+ ag_can_consolidate_subject_desc: "[GetDiplomaticActionType('consolidate_subject').GetName] eylemi için uygun olan [concept_subject] [Concept('concept_country', '$concept_countries$')] var" #NT!
+ ag_can_consolidate_subject_tooltip: "#header $ag_can_consolidate_subject_name$#!\n$TOOLTIP_DELIMITER$\n$ag_can_consolidate_subject_desc$\n\n$ALERT_GROUP_TOOLTIP_FOOTER$" #NT!

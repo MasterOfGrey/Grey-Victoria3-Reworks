@@ -1,18 +1,29 @@
 ﻿l_polish:
- forced_border_opening: "Przymusowe otwarcie granic" #NT!
- forced_border_opening_desc: "[concept_instant_diplomatic_action] wymusza zmianę [GetLawGroup('lawgroup_migration').GetName] [concept_law] celu [concept_subject] na [GetLawType('law_no_migration_controls').GetName]. Zamiast tego zadaje obrażenia [concept_relations] celowi [concept_subject], a część [concept_subject] [concept_pop] staje się [concept_radical]." #NT!
- forced_border_opening_action_name: "Przymusowe otwarcie granic" #NT!
- forced_border_opening_action_notification_name: "[INITIATOR_COUNTRY.GetName] zmusił nas do otwarcia granic" #NT!
- forced_border_opening_action_notification_desc: "Nasze [concept_overlord] [INITIATOR_COUNTRY.GetName] zmusiło nasze [GetLawGroup('lawgroup_migration').GetName] [concept_law] do [GetLawType('law_no_migration_controls').GetName]. Ich [concept_attitude] w naszą stronę to #tooltippable #tooltip:[INITIATOR_COUNTRY.GetTooltipTag],COUNTRY_ATTITUDE_TOOLTIP [INITIATOR_COUNTRY.GetAttitudeTowards(GetPlayer).GetName]#!#!." #NT!
- forced_border_closing: "Przymusowe zamknięcie granic" #NT!
- forced_border_closing_desc: "[concept_instant_diplomatic_action] wymusza zmianę [GetLawGroup('lawgroup_migration').GetName] [concept_law] celu [concept_subject] na [GetLawType('law_closed_borders').GetName]. Zamiast tego zadaje obrażenia [concept_relations] celowi [concept_subject], a część [concept_subject] [concept_pop] staje się [concept_radical]." #NT!
- forced_border_closing_action_name: "Przymusowe zamknięcie granic" #NT!
- forced_border_closing_action_notification_name: "[INITIATOR_COUNTRY.GetName] zmuszeni zamknęliśmy nasze granice" #NT!
- forced_border_closing_action_notification_desc: "Nasze [concept_overlord] [INITIATOR_COUNTRY.GetName] zmusiło nasze [GetLawGroup('lawgroup_migration').GetName] [concept_law] do [GetLawType('law_closed_borders').GetName].GetName]. Ich [concept_attitude] w stosunku do nas to #tooltippable #tooltip:[INITIATOR_COUNTRY.GetTooltipTag],COUNTRY_ATTITUDE_TOOLTIP [INITIATOR_COUNTRY.GetAttitudeTowards(GetPlayer).GetName]#!#!." #NT!
- forced_industry_ban: "Przymusowy zakaz przemysłu" #NT!
- forced_industry_ban_desc: "[concept_instant_diplomatic_action] wymusza zmianę [GetLawGroup('lawgroup_economic_system').GetName] [concept_law] celu [concept_subject] na [GetLawType('law_industry_banned').GetName]. Zamiast tego zadaje obrażenia [concept_relations] celowi [concept_subject], a część [concept_subject] [concept_pop] staje się [concept_radical]." #NT!
- forced_industry_ban_action_name: "Przymusowy zakaz przemysłu" #NT!
- forced_industry_ban_action_notification_name: "[INITIATOR_COUNTRY.GetName] przymusowy zakaz naszego przemysłu" #NT!
- forced_industry_ban_action_notification_desc: "Nasze [concept_overlord] [INITIATOR_COUNTRY.GetName] zmusiło nasze [GetLawGroup('lawgroup_economic_system').GetName] [concept_law] do [GetLawType('law_industry_banned').GetName]. Ich [concept_attitude] w naszą stronę to #tooltippable #tooltip:[INITIATOR_COUNTRY.GetTooltipTag],COUNTRY_ATTITUDE_TOOLTIP [INITIATOR_COUNTRY.GetAttitudeTowards(GetPlayer).GetName]#!#!." #NT!
+ forced_border_opening: "Przymusowe otwarcie granic"
+ forced_border_opening_desc: "[concept_instant_diplomatic_action] wymusza zmianę [GetLawGroup('lawgroup_migration').GetName] [concept_law] celu [concept_subject] na [GetLawType('law_no_migration_controls').GetName]. Zamiast tego zadaje obrażenia [concept_relations] celowi [concept_subject], a część [concept_subject] [concept_pop] staje się [concept_radical]."
+ forced_border_opening_action_name: "Przymusowe otwarcie granic"
+ forced_border_opening_action_notification_name: "[INITIATOR_COUNTRY.GetName] zmusił nas do otwarcia granic"
+ forced_border_opening_action_notification_desc: "Nasze [concept_overlord] [INITIATOR_COUNTRY.GetName] zmusiło nasze [GetLawGroup('lawgroup_migration').GetName] [concept_law] do [GetLawType('law_no_migration_controls').GetName]. Ich [concept_attitude] w naszą stronę to #tooltippable #tooltip:[INITIATOR_COUNTRY.GetTooltipTag],COUNTRY_ATTITUDE_TOOLTIP [INITIATOR_COUNTRY.GetAttitudeTowards(GetPlayer).GetName]#!#!."
+ forced_border_closing: "Przymusowe zamknięcie granic"
+ forced_border_closing_desc: "[concept_instant_diplomatic_action] wymusza zmianę [GetLawGroup('lawgroup_migration').GetName] [concept_law] celu [concept_subject] na [GetLawType('law_closed_borders').GetName]. Zamiast tego zadaje obrażenia [concept_relations] celowi [concept_subject], a część [concept_subject] [concept_pop] staje się [concept_radical]."
+ forced_border_closing_action_name: "Przymusowe zamknięcie granic"
+ forced_border_closing_action_notification_name: "[INITIATOR_COUNTRY.GetName] zmuszeni zamknęliśmy nasze granice"
+ forced_border_closing_action_notification_desc: "Nasze [concept_overlord] [INITIATOR_COUNTRY.GetName] zmusiło nasze [GetLawGroup('lawgroup_migration').GetName] [concept_law] do [GetLawType('law_closed_borders').GetName].GetName]. Ich [concept_attitude] w stosunku do nas to #tooltippable #tooltip:[INITIATOR_COUNTRY.GetTooltipTag],COUNTRY_ATTITUDE_TOOLTIP [INITIATOR_COUNTRY.GetAttitudeTowards(GetPlayer).GetName]#!#!."
+ forced_industry_ban: "Przymusowy zakaz przemysłu"
+ forced_industry_ban_desc: "[concept_instant_diplomatic_action] wymusza zmianę [GetLawGroup('lawgroup_economic_system').GetName] [concept_law] celu [concept_subject] na [GetLawType('law_industry_banned').GetName]. Zamiast tego zadaje obrażenia [concept_relations] celowi [concept_subject], a część [concept_subject] [concept_pop] staje się [concept_radical]."
+ forced_industry_ban_action_name: "Przymusowy zakaz przemysłu"
+ forced_industry_ban_action_notification_name: "[INITIATOR_COUNTRY.GetName] przymusowy zakaz naszego przemysłu"
+ forced_industry_ban_action_notification_desc: "Nasze [concept_overlord] [INITIATOR_COUNTRY.GetName] zmusiło nasze [GetLawGroup('lawgroup_economic_system').GetName] [concept_law] do [GetLawType('law_industry_banned').GetName]. Ich [concept_attitude] w naszą stronę to #tooltippable #tooltip:[INITIATOR_COUNTRY.GetTooltipTag],COUNTRY_ATTITUDE_TOOLTIP [INITIATOR_COUNTRY.GetAttitudeTowards(GetPlayer).GetName]#!#!."
   
- forced_industry_ban_liberty_desire_custom_tooltip: "[SCOPE.sCountry('target_country').GetAdjectiveNoFormatting] urzędnicy odpowiedzą na [SCOPE.GetRootScope.GetCountry.GetName] zakaz przemysłu w [SCOPE.sCountry('target_country').GetName]. To [concept_subject] [concept_liberty_desire] i [concept_attitude] ulegnie zmianie." #NT!
+ forced_industry_ban_liberty_desire_custom_tooltip: "[SCOPE.sCountry('target_country').GetAdjectiveNoFormatting] urzędnicy odpowiedzą na [SCOPE.GetRootScope.GetCountry.GetName] zakaz przemysłu w [SCOPE.sCountry('target_country').GetName]. To [concept_subject] [concept_liberty_desire] i [concept_attitude] ulegnie zmianie."
+  
+ forced_slavery_ban: "Zakaz wymuszonego niewolnictwa" #NT!
+ forced_slavery_ban_desc: "[concept_instant_diplomatic_action], który wymusza zmianę [GetLawGroup('lawgroup_slavery').GetName] [concept_law] do celu [concept_subject] na [GetLawType('law_slavery_banned').GetName]. Uszkodzenia [concept_relations] z celem [concept_subject] i niektóre [concept_subject] [concept_pop] stają się [concept_radical]." #NT!
+ forced_slavery_ban_action_name: "Wymuszony zakaz branży" #NT!
+ forced_slavery_ban_action_notification_name: "[INITIATOR_COUNTRY.GetName] zmusił nas do zakazania niewolnictwa" #NT!
+ forced_slavery_ban_action_notification_desc: "Nasz [concept_overlord] [INITIATOR_COUNTRY.GetName] zmusił nasz [GetLawGroup('lawgroup_slavery').GetName] [concept_law] do [GetLawType('law_slavery_banned').GetName]. Ich [concept_attitude] wobec nas to #tooltippable #tooltip:[INITIATOR_COUNTRY.GetTooltipTag],COUNTRY_ATTITUDE_TOOLTIP [INITIATOR_COUNTRY.GetAttitudeTowards(GetPlayer).GetName]#!#!." #NT!
+ forced_slave_trade: "Wymuszony handel niewolnikami" #NT!
+ forced_slave_trade_desc: "[concept_instant_diplomatic_action], który wymusza zmianę [GetLawGroup('lawgroup_slavery').GetName] [concept_law] do celu [concept_subject] na [GetLawType('law_slave_trade').GetName]. Uszkodzenia [concept_relations] z celem [concept_subject] i niektóre [concept_subject] [concept_pop] stają się [concept_radical]." #NT!
+ forced_slave_trade_action_name: "Wymuszony handel niewolnikami" #NT!
+ forced_slave_trade_action_notification_name: "[INITIATOR_COUNTRY.GetName] zmusił nas do handlu niewolnikami" #NT!
+ forced_slave_trade_action_notification_desc: "Nasz [concept_overlord] [INITIATOR_COUNTRY.GetName] zmusił nasz [GetLawGroup('lawgroup_slavery').GetName] [concept_law] do [GetLawType('law_slave_trade').GetName]. Ich [concept_attitude] wobec nas to #tooltippable #tooltip:[INITIATOR_COUNTRY.GetTooltipTag],COUNTRY_ATTITUDE_TOOLTIP [INITIATOR_COUNTRY.GetAttitudeTowards(GetPlayer).GetName]#!#!." #NT!

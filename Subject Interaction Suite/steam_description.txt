@@ -1,6 +1,6 @@
 [img]https://i.imgur.com/7xuCZqW.png[/img]
 Supports Victoria 3: V1.8.3  (and onwards)
-Mod Version: V1.10
+Mod Version: V1.11
 Please consider rating this if you like it! It really helps out. [img]https://i.imgur.com/tE28cZ7.gif[/img]
 [spoiler]Originally made for: Version 1.7[/spoiler]
 [table]
@@ -111,4 +111,5 @@ English, B.Portuguese(Português), Simp. Chinese(中文), French(Français), Ger
 #Diplomacy #Subject
 #Management #Interactions
 #Change Primary Culture
-#Command Subjects #SIS
+#Command Subjects #SIS #GSIS
+You can support me on Patreon: [url=https://patreon.com/MasterOfGreyVic3?utm_medium=unknown&utm_source=join_link&utm_campaign=creatorshare_creator&utm_content=copyLink] [img]https://ufo2.site44.com/become_a_patron_button.png[/img] [/url]

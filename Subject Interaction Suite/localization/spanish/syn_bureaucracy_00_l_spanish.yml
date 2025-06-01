@@ -1,34 +1,34 @@
 ﻿l_spanish:
- laws_synergize_bureaucracy: "Sinergizar las burocracias" #NT!
- laws_synergize_bureaucracy_action_name: "$laws_synergize_bureaucracy$" #NT!
- laws_synergize_bureaucracy_action_propose_name: "Empezar a crear sinergias entre burocracias" #NT!
- laws_synergize_bureaucracy_action_break_name: "Basta de sinergizar las burocracias" #NT!
- laws_synergize_bureaucracy_pact_desc: "[SCOPE.GetRootScope.GetDiplomaticPact.GetFirstCountry.GetName] reestructura la burocracia de [SCOPE.GetRootScope.GetDiplomaticPact.GetSecondCountry.GetName] para sinergizar con la de ellos.\n Actualmente #variable [SCOPE.GetRootScope.GetDiplomaticPact.GetSecondCountry.MakeScope.Var('synergize_bureaucracy_progress').GetValue]#! progresan de 8 etapas." #NT!
- laws_synergize_bureaucracy_desc: "#header $laws_synergize_bureaucracy$#!\n$TOOLTIP_DELIMITER$\nSynergizes las leyes de burocracia del país especificado." #NT!
- laws_synergize_bureaucracy_action_notification_name: "[INITIATOR_COUNTRY.GetName] Sinergizando Burocracias" #NT!
- laws_synergize_bureaucracy_action_notification_desc: "[INITIATOR_COUNTRY.GetName] está sinergizando las leyes de burocracia de nuestro país." #NT!
- laws_synergize_bureaucracy_action_notification_break_name: "Dejemos de sinergizar las burocracias por [INITIATOR_COUNTRY.GetName]" #NT!
- laws_synergize_bureaucracy_action_notification_break_desc: "[INITIATOR_COUNTRY.GetName] ha dejado de intentar sinergizar las leyes de burocracia de nuestro país." #NT!
+ laws_synergize_bureaucracy: "Sinergizar las burocracias"
+ laws_synergize_bureaucracy_action_name: "$laws_synergize_bureaucracy$"
+ laws_synergize_bureaucracy_action_propose_name: "Empezar a crear sinergias entre burocracias"
+ laws_synergize_bureaucracy_action_break_name: "Basta de sinergizar las burocracias"
+ laws_synergize_bureaucracy_pact_desc: "[SCOPE.GetRootScope.GetDiplomaticPact.GetFirstCountry.GetName] reestructura la burocracia de [SCOPE.GetRootScope.GetDiplomaticPact.GetSecondCountry.GetName] para sinergizar con la de ellos.\n Actualmente #variable [SCOPE.GetRootScope.GetDiplomaticPact.GetSecondCountry.MakeScope.Var('synergize_bureaucracy_progress').GetValue]#! progresan de 8 etapas."
+ laws_synergize_bureaucracy_desc: "#header $laws_synergize_bureaucracy$#!\n$TOOLTIP_DELIMITER$\nSynergizes las leyes de burocracia del país especificado."
+ laws_synergize_bureaucracy_action_notification_name: "[INITIATOR_COUNTRY.GetName] Sinergizando Burocracias"
+ laws_synergize_bureaucracy_action_notification_desc: "[INITIATOR_COUNTRY.GetName] está sinergizando las leyes de burocracia de nuestro país."
+ laws_synergize_bureaucracy_action_notification_break_name: "Dejemos de sinergizar las burocracias por [INITIATOR_COUNTRY.GetName]"
+ laws_synergize_bureaucracy_action_notification_break_desc: "[INITIATOR_COUNTRY.GetName] ha dejado de intentar sinergizar las leyes de burocracia de nuestro país."
   
- laws_synergize_bureaucracy_effect_desc_global: "Empezar a crear sinergias entre burocracias" #NT!
- laws_synergize_bureaucracy_effect_desc_first: "[COUNTRY.GetAdjectiveNoFlag] inicia sinergización burocrática con [TARGET_COUNTRY.GetName]." #NT!
- laws_synergize_bureaucracy_effect_desc_third: "[COUNTRY.GetName] inicia sinergización burocrática con [AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)]." #NT!
+ laws_synergize_bureaucracy_effect_desc_global: "Empezar a crear sinergias entre burocracias"
+ laws_synergize_bureaucracy_effect_desc_first: "[COUNTRY.GetAdjectiveNoFlag] inicia sinergización burocrática con [TARGET_COUNTRY.GetName]."
+ laws_synergize_bureaucracy_effect_desc_third: "[COUNTRY.GetName] inicia sinergización burocrática con [AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)]."
   
- laws_synergize_bureaucracy_trigger_desc_global: "Sinergización burocrática en curso" #NT!
- laws_synergize_bureaucracy_trigger_false_desc_global: "Actualmente no estamos en el proceso de sinergizar las leyes de burocracia." #NT!
- laws_synergize_bureaucracy_trigger_desc_first: "[COUNTRY.GetAdjectiveNoFlag] tiene sistemas burocráticos sinérgicos con [TARGET_COUNTRY.GetName]." #NT!
- laws_synergize_bureaucracy_trigger_false_desc_first: "[COUNTRY.GetAdjectiveNoFlag] no cuenta actualmente con sistemas burocráticos sinérgicos con [TARGET_COUNTRY.GetName]." #NT!
- laws_synergize_bureaucracy_trigger_desc_third: "[COUNTRY.GetName] tiene sistemas burocráticos sinérgicos con [AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)]." #NT!
- laws_synergize_bureaucracy_trigger_false_desc_third: "[COUNTRY.GetName] actualmente no tiene sistemas burocráticos sinérgicos con [AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)]." #NT!
+ laws_synergize_bureaucracy_trigger_desc_global: "Sinergización burocrática en curso"
+ laws_synergize_bureaucracy_trigger_false_desc_global: "Actualmente no estamos en el proceso de sinergizar las leyes de burocracia."
+ laws_synergize_bureaucracy_trigger_desc_first: "[COUNTRY.GetAdjectiveNoFlag] tiene sistemas burocráticos sinérgicos con [TARGET_COUNTRY.GetName]."
+ laws_synergize_bureaucracy_trigger_false_desc_first: "[COUNTRY.GetAdjectiveNoFlag] no cuenta actualmente con sistemas burocráticos sinérgicos con [TARGET_COUNTRY.GetName]."
+ laws_synergize_bureaucracy_trigger_desc_third: "[COUNTRY.GetName] tiene sistemas burocráticos sinérgicos con [AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)]."
+ laws_synergize_bureaucracy_trigger_false_desc_third: "[COUNTRY.GetName] actualmente no tiene sistemas burocráticos sinérgicos con [AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)]."
   
- mog_syn_events.01.t: "¡Sinergia burocrática!" #NT!
- mog_syn_events.01.d: "La orgullosa nación de [ROOT.GetCountry.GetName] ha completado con éxito la sinergización de las leyes burocráticas con [SCOPE.sCountry('synergize_bureaucracy_target_country').GetName]. [SCOPE.sCountry('synergize_bureaucracy_target_country').GetName] prosperará en eterna prosperidad a través de una mayor cohesión con la patria." #NT!
- mog_syn_events.01.f: ""¡Viva [ROOT.GetCountry.GetName]!"" #NT!
- mog_syn_events.01.a: "Bien hecho." #NT!
+ mog_syn_events.01.t: "¡Sinergia burocrática!"
+ mog_syn_events.01.d: "La orgullosa nación de [ROOT.GetCountry.GetName] ha completado con éxito la sinergización de las leyes burocráticas con [SCOPE.sCountry('synergize_bureaucracy_target_country').GetName]. [SCOPE.sCountry('synergize_bureaucracy_target_country').GetName] prosperará en eterna prosperidad a través de una mayor cohesión con la patria."
+ mog_syn_events.01.f: ""¡Viva [ROOT.GetCountry.GetName]!""
+ mog_syn_events.01.a: "Bien hecho."
   
- laws_synergize_bureaucracy_weekly_effect: "Trabaja para alinear su sistema de burocracia con el nuestro. Tiene un 20 % de posibilidades de progresar cada semana y se requieren 8 puntos de progreso para lograrlo." #NT!
+ laws_synergize_bureaucracy_weekly_effect: "Trabaja para alinear su sistema de burocracia con el nuestro. Tiene un 20 % de posibilidades de progresar cada semana y se requieren 8 puntos de progreso para lograrlo."
   
- overlord_syn_cost_bureau: "Costo de sinergizar burocracias" #NT!
- BUREAUCRACY_SYNERGY_COST_BUREAU: "Costo de sinergizar burocracias" #NT!
+ overlord_syn_cost_bureau: "Costo de sinergizar burocracias"
+ BUREAUCRACY_SYNERGY_COST_BUREAU: "Costo de sinergizar burocracias"
   
- active_synergize_bureaucracy_tt: "El número de otras acciones $laws_synergize_bureaucracy$ es menor que 1." #NT!
+ active_synergize_bureaucracy_tt: "El número de otras acciones $laws_synergize_bureaucracy$ es menor que 1."

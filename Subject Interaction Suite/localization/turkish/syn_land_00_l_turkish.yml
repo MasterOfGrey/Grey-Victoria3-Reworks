@@ -1,33 +1,33 @@
 ﻿l_turkish:
- laws_synergize_land: "Toprak Reformlarını Sinerjize Edin" #NT!
- laws_synergize_land_action_name: "$laws_synergize_land$" #NT!
- laws_synergize_land_action_propose_name: "Toprak Reformlarını Sinerji Haline Getirmeye Başlayın" #NT!
- laws_synergize_land_action_break_name: "Toprak Reformlarının Sinerji Yaratmasını Durdurun" #NT!
- laws_synergize_land_pact_desc: "[SCOPE.GetRootScope.GetDiplomaticPact.GetFirstCountry.GetName], [SCOPE.GetRootScope.GetDiplomaticPact.GetSecondCountry.GetName]'in arazi yasalarını onlarınkiyle sinerji yaratacak şekilde yeniden yapılandırır.\n Şu anda 8 aşamadan #variable [SCOPE.GetRootScope.GetDiplomaticPact.GetSecondCountry.MakeScope.Var('synergize_land_progress').GetValue]#!'ü ilerleme kaydetti." #NT!
- laws_synergize_land_desc: "#header $laws_synergize_land$#!\n$TOOLTIP_DELIMITER$\nSynergizes belirtilen ülkenin toprak reformları." #NT!
- laws_synergize_land_action_notification_name: "[INITIATOR_COUNTRY.GetName] Toprak Reformlarının Sinerji Oluşturulması" #NT!
- laws_synergize_land_action_notification_desc: "[INITIATOR_COUNTRY.GetName] ülkemizin toprak reformlarına sinerji katıyor." #NT!
- laws_synergize_land_action_notification_break_name: "[INITIATOR_COUNTRY.GetName] Tarafından Toprak Reformlarının Sinerji Oluşturulmasını Durdurun" #NT!
- laws_synergize_land_action_notification_break_desc: "[INITIATOR_COUNTRY.GetName] ülkemizin toprak reformlarını sinerji haline getirmeye çalışmaktan vazgeçti." #NT!
+ laws_synergize_land: "Toprak Reformlarını Sinerjize Edin"
+ laws_synergize_land_action_name: "$laws_synergize_land$"
+ laws_synergize_land_action_propose_name: "Toprak Reformlarını Sinerji Haline Getirmeye Başlayın"
+ laws_synergize_land_action_break_name: "Toprak Reformlarının Sinerji Yaratmasını Durdurun"
+ laws_synergize_land_pact_desc: "[SCOPE.GetRootScope.GetDiplomaticPact.GetFirstCountry.GetName], [SCOPE.GetRootScope.GetDiplomaticPact.GetSecondCountry.GetName]'in arazi yasalarını onlarınkiyle sinerji yaratacak şekilde yeniden yapılandırır.\n Şu anda 8 aşamadan #variable [SCOPE.GetRootScope.GetDiplomaticPact.GetSecondCountry.MakeScope.Var('synergize_land_progress').GetValue]#!'ü ilerleme kaydetti."
+ laws_synergize_land_desc: "#header $laws_synergize_land$#!\n$TOOLTIP_DELIMITER$\nSynergizes belirtilen ülkenin toprak reformları."
+ laws_synergize_land_action_notification_name: "[INITIATOR_COUNTRY.GetName] Toprak Reformlarının Sinerji Oluşturulması"
+ laws_synergize_land_action_notification_desc: "[INITIATOR_COUNTRY.GetName] ülkemizin toprak reformlarına sinerji katıyor."
+ laws_synergize_land_action_notification_break_name: "[INITIATOR_COUNTRY.GetName] Tarafından Toprak Reformlarının Sinerji Oluşturulmasını Durdurun"
+ laws_synergize_land_action_notification_break_desc: "[INITIATOR_COUNTRY.GetName] ülkemizin toprak reformlarını sinerji haline getirmeye çalışmaktan vazgeçti."
   
- laws_synergize_land_effect_desc_global: "Toprak Reformlarını Sinerji Haline Getirmeye Başlayın" #NT!
- laws_synergize_land_effect_desc_first: "[COUNTRY.GetAdjectiveNoFlag], [TARGET_COUNTRY.GetName] ile toprak reformu sinerjisini başlatır." #NT!
- laws_synergize_land_effect_desc_third: "[COUNTRY.GetName], [AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)] ile toprak reformu sinerjisini başlatır." #NT!
+ laws_synergize_land_effect_desc_global: "Toprak Reformlarını Sinerji Haline Getirmeye Başlayın"
+ laws_synergize_land_effect_desc_first: "[COUNTRY.GetAdjectiveNoFlag], [TARGET_COUNTRY.GetName] ile toprak reformu sinerjisini başlatır."
+ laws_synergize_land_effect_desc_third: "[COUNTRY.GetName], [AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)] ile toprak reformu sinerjisini başlatır."
   
- laws_synergize_land_trigger_desc_global: "Toprak Reformu Sinerjizasyonu Devam Ediyor" #NT!
- laws_synergize_land_trigger_false_desc_global: "Şu anda toprak reformlarının sinerjisini oluşturma sürecinde değiliz." #NT!
- laws_synergize_land_trigger_desc_first: "[COUNTRY.GetAdjectiveNoFlag], [TARGET_COUNTRY.GetName] ile sinerjik toprak reformlarına sahiptir." #NT!
- laws_synergize_land_trigger_false_desc_first: "[COUNTRY.GetAdjectiveNoFlag] şu anda [TARGET_COUNTRY.GetName] ile sinerjik toprak reformlarına sahip değil." #NT!
- laws_synergize_land_trigger_desc_third: "[COUNTRY.GetName], [AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)] ile sinerjik toprak reformlarına sahiptir." #NT!
- laws_synergize_land_trigger_false_desc_third: "[COUNTRY.GetName] şu anda [AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)] ile sinerjik toprak reformlarına sahip değil." #NT!
+ laws_synergize_land_trigger_desc_global: "Toprak Reformu Sinerjizasyonu Devam Ediyor"
+ laws_synergize_land_trigger_false_desc_global: "Şu anda toprak reformlarının sinerjisini oluşturma sürecinde değiliz."
+ laws_synergize_land_trigger_desc_first: "[COUNTRY.GetAdjectiveNoFlag], [TARGET_COUNTRY.GetName] ile sinerjik toprak reformlarına sahiptir."
+ laws_synergize_land_trigger_false_desc_first: "[COUNTRY.GetAdjectiveNoFlag] şu anda [TARGET_COUNTRY.GetName] ile sinerjik toprak reformlarına sahip değil."
+ laws_synergize_land_trigger_desc_third: "[COUNTRY.GetName], [AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)] ile sinerjik toprak reformlarına sahiptir."
+ laws_synergize_land_trigger_false_desc_third: "[COUNTRY.GetName] şu anda [AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)] ile sinerjik toprak reformlarına sahip değil."
   
- mog_syn_events.03.t: "Toprak Reformu Sinerjisi!" #NT!
- mog_syn_events.03.d: "[ROOT.GetCountry.GetName]'ın gururlu milleti, [SCOPE.sCountry('synergize_land_target_country').GetName] ile toprak reformlarının sinerjisini başarıyla tamamladı. [SCOPE.sCountry('synergize_land_target_country').GetName], vatanla artan uyum sayesinde sonsuz refah içinde gelişecektir." #NT!
- mog_syn_events.03.f: ""Çok yaşa [ROOT.GetCountry.GetName]!"" #NT!
- mog_syn_events.03.a: "Tebrikler." #NT!
+ mog_syn_events.03.t: "Toprak Reformu Sinerjisi!"
+ mog_syn_events.03.d: "[ROOT.GetCountry.GetName]'ın gururlu milleti, [SCOPE.sCountry('synergize_land_target_country').GetName] ile toprak reformlarının sinerjisini başarıyla tamamladı. [SCOPE.sCountry('synergize_land_target_country').GetName], vatanla artan uyum sayesinde sonsuz refah içinde gelişecektir."
+ mog_syn_events.03.f: ""Çok yaşa [ROOT.GetCountry.GetName]!""
+ mog_syn_events.03.a: "Tebrikler."
   
- laws_synergize_land_weekly_effect: "Toprak yasası reformlarını bizimkilerle uyumlu hale getirmek için çalışır. Her hafta ilerleme kaydetme şansı %20'dir ve başarılı olmak için 8 ilerleme puanı gerekir." #NT!
+ laws_synergize_land_weekly_effect: "Toprak yasası reformlarını bizimkilerle uyumlu hale getirmek için çalışır. Her hafta ilerleme kaydetme şansı %20'dir ve başarılı olmak için 8 ilerleme puanı gerekir."
   
- overlord_syn_cost_land: "Arazi Reformlarını Sinerji Haline Getirmenin Maliyeti" #NT!
+ overlord_syn_cost_land: "Arazi Reformlarını Sinerji Haline Getirmenin Maliyeti"
   
- active_synergize_land_tt: "Diğer $laws_synergize_land$ eylemlerinin sayısı 1'den azdır." #NT!
+ active_synergize_land_tt: "Diğer $laws_synergize_land$ eylemlerinin sayısı 1'den azdır."

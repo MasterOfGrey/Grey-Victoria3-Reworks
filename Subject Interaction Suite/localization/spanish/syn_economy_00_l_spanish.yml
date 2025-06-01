@@ -1,33 +1,33 @@
 ﻿l_spanish:
- laws_synergize_economy: "Sinergizar las economías" #NT!
- laws_synergize_economy_action_name: "$laws_synergize_economy$" #NT!
- laws_synergize_economy_action_propose_name: "Empezar a sinergizar las economías" #NT!
- laws_synergize_economy_action_break_name: "Dejemos de sinergizar las economías" #NT!
- laws_synergize_economy_pact_desc: "[SCOPE.GetRootScope.GetDiplomaticPact.GetFirstCountry.GetName] reestructura la economía de [SCOPE.GetRootScope.GetDiplomaticPact.GetSecondCountry.GetName] para sinergizar con la de ellos.\n Actualmente #variable [SCOPE.GetRootScope.GetDiplomaticPact.GetSecondCountry.MakeScope.Var('synergize_economy_progress').GetValue]#! progresan de 8 etapas." #NT!
- laws_synergize_economy_desc: "#header $laws_synergize_economy$#!\n$TOOLTIP_DELIMITER$\nSynergizes los sistemas económicos del país especificado." #NT!
- laws_synergize_economy_action_notification_name: "[INITIATOR_COUNTRY.GetName] Sinergización de economías" #NT!
- laws_synergize_economy_action_notification_desc: "[INITIATOR_COUNTRY.GetName] está sinergizando los sistemas económicos de nuestro país." #NT!
- laws_synergize_economy_action_notification_break_name: "Dejemos de sinergizar las economías por [INITIATOR_COUNTRY.GetName]" #NT!
- laws_synergize_economy_action_notification_break_desc: "[INITIATOR_COUNTRY.GetName] ha dejado de intentar sinergizar los sistemas económicos de nuestro país." #NT!
+ laws_synergize_economy: "Sinergizar las economías"
+ laws_synergize_economy_action_name: "$laws_synergize_economy$"
+ laws_synergize_economy_action_propose_name: "Empezar a sinergizar las economías"
+ laws_synergize_economy_action_break_name: "Dejemos de sinergizar las economías"
+ laws_synergize_economy_pact_desc: "[SCOPE.GetRootScope.GetDiplomaticPact.GetFirstCountry.GetName] reestructura la economía de [SCOPE.GetRootScope.GetDiplomaticPact.GetSecondCountry.GetName] para sinergizar con la de ellos.\n Actualmente #variable [SCOPE.GetRootScope.GetDiplomaticPact.GetSecondCountry.MakeScope.Var('synergize_economy_progress').GetValue]#! progresan de 8 etapas."
+ laws_synergize_economy_desc: "#header $laws_synergize_economy$#!\n$TOOLTIP_DELIMITER$\nSynergizes los sistemas económicos del país especificado."
+ laws_synergize_economy_action_notification_name: "[INITIATOR_COUNTRY.GetName] Sinergización de economías"
+ laws_synergize_economy_action_notification_desc: "[INITIATOR_COUNTRY.GetName] está sinergizando los sistemas económicos de nuestro país."
+ laws_synergize_economy_action_notification_break_name: "Dejemos de sinergizar las economías por [INITIATOR_COUNTRY.GetName]"
+ laws_synergize_economy_action_notification_break_desc: "[INITIATOR_COUNTRY.GetName] ha dejado de intentar sinergizar los sistemas económicos de nuestro país."
   
- laws_synergize_economy_effect_desc_global: "Empezar a sinergizar las economías" #NT!
- laws_synergize_economy_effect_desc_first: "[COUNTRY.GetAdjectiveNoFlag] inicia sinergización económica con [TARGET_COUNTRY.GetName]." #NT!
- laws_synergize_economy_effect_desc_third: "[COUNTRY.GetName] inicia sinergización económica con [AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)]." #NT!
+ laws_synergize_economy_effect_desc_global: "Empezar a sinergizar las economías"
+ laws_synergize_economy_effect_desc_first: "[COUNTRY.GetAdjectiveNoFlag] inicia sinergización económica con [TARGET_COUNTRY.GetName]."
+ laws_synergize_economy_effect_desc_third: "[COUNTRY.GetName] inicia sinergización económica con [AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)]."
   
- laws_synergize_economy_trigger_desc_global: "Sinergización económica en curso" #NT!
- laws_synergize_economy_trigger_false_desc_global: "Actualmente no estamos en el proceso de sinergizar los sistemas económicos." #NT!
- laws_synergize_economy_trigger_desc_first: "[COUNTRY.GetAdjectiveNoFlag] tiene sistemas económicos sinérgicos con [TARGET_COUNTRY.GetName]." #NT!
- laws_synergize_economy_trigger_false_desc_first: "[COUNTRY.GetAdjectiveNoFlag] no tiene actualmente sistemas económicos sinérgicos con [TARGET_COUNTRY.GetName]." #NT!
- laws_synergize_economy_trigger_desc_third: "[COUNTRY.GetName] tiene sistemas económicos sinérgicos con [AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)]." #NT!
- laws_synergize_economy_trigger_false_desc_third: "[COUNTRY.GetName] actualmente no tiene sistemas económicos sinérgicos con [AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)]." #NT!
+ laws_synergize_economy_trigger_desc_global: "Sinergización económica en curso"
+ laws_synergize_economy_trigger_false_desc_global: "Actualmente no estamos en el proceso de sinergizar los sistemas económicos."
+ laws_synergize_economy_trigger_desc_first: "[COUNTRY.GetAdjectiveNoFlag] tiene sistemas económicos sinérgicos con [TARGET_COUNTRY.GetName]."
+ laws_synergize_economy_trigger_false_desc_first: "[COUNTRY.GetAdjectiveNoFlag] no tiene actualmente sistemas económicos sinérgicos con [TARGET_COUNTRY.GetName]."
+ laws_synergize_economy_trigger_desc_third: "[COUNTRY.GetName] tiene sistemas económicos sinérgicos con [AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)]."
+ laws_synergize_economy_trigger_false_desc_third: "[COUNTRY.GetName] actualmente no tiene sistemas económicos sinérgicos con [AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)]."
   
- mog_syn_events.02.t: "¡Sinergia económica!" #NT!
- mog_syn_events.02.d: "La orgullosa nación de [ROOT.GetCountry.GetName] ha completado con éxito la sinergización de los sistemas económicos con [SCOPE.sCountry('synergize_economy_target_country').GetName]. [SCOPE.sCountry('synergize_economy_target_country').GetName] prosperará en eterna prosperidad a través de una mayor cohesión con la patria." #NT!
- mog_syn_events.02.f: ""¡Viva [ROOT.GetCountry.GetName]!"" #NT!
- mog_syn_events.02.a: "Bien hecho." #NT!
+ mog_syn_events.02.t: "¡Sinergia económica!"
+ mog_syn_events.02.d: "La orgullosa nación de [ROOT.GetCountry.GetName] ha completado con éxito la sinergización de los sistemas económicos con [SCOPE.sCountry('synergize_economy_target_country').GetName]. [SCOPE.sCountry('synergize_economy_target_country').GetName] prosperará en eterna prosperidad a través de una mayor cohesión con la patria."
+ mog_syn_events.02.f: ""¡Viva [ROOT.GetCountry.GetName]!""
+ mog_syn_events.02.a: "Bien hecho."
   
- laws_synergize_economy_weekly_effect: "Trabaja para alinear su sistema económico con el nuestro. Tiene un 20 % de posibilidades de progresar cada semana y se requieren 8 puntos de progreso para lograrlo." #NT!
+ laws_synergize_economy_weekly_effect: "Trabaja para alinear su sistema económico con el nuestro. Tiene un 20 % de posibilidades de progresar cada semana y se requieren 8 puntos de progreso para lograrlo."
   
- overlord_syn_cost_economy: "Costo de sinergizar economías" #NT!
+ overlord_syn_cost_economy: "Costo de sinergizar economías"
   
- active_synergize_economy_tt: "El número de otras acciones $laws_synergize_economy$ es menor que 1." #NT!
+ active_synergize_economy_tt: "El número de otras acciones $laws_synergize_economy$ es menor que 1."

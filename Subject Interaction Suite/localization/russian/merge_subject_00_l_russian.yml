@@ -19,13 +19,13 @@
  setting_ai_can_not_use_desc: "Запретить ИИ использовать дипломатическое действие :Аннексия [concept_subject] [Concept('concept_country', '$concept_countries$')]"
  setting_ai_can_use: "Разрешить ИИ дипломатически аннексировать субъекты"
  setting_ai_can_use_desc: "Разрешить ИИ использовать дипломатическое действие :Аннексия [concept_subject] [Concept('concept_country', '$concept_countries$')]"
- merge_subject_cheat: "Обман слияния предметов" #NT!
- rule_merge_subject_cheat: "$merge_subject$" #NT!
- setting_balanced_merge: "Сбалансированный предмет слияния" #NT!
- setting_balanced_merge_desc: "Дипломатическое действие: Слияние [concept_subject] [Concept('concept_country', '$concept_countries$')] сбалансировано для обычной игры." #NT!
- setting_cheat_merge: "Merge Subject — это мошенничество" #NT!
- setting_cheat_merge_desc: "Дипломатическое действие: Merge [concept_subject] [Concept('concept_country', '$concept_countries$')] — мощный чит." #NT!
- DIPLOMATIC_ACCEPTANCE_BREAK_FREE: "Они преследуют [concept_ai_strategy] из #v $ai_strategy_subject_break_free$#!" #NT!
- DIPLOMATIC_ACCEPTANCE_STRENGTHEN_SELF: "Они преследуют [concept_ai_strategy] из #v $ai_strategy_subject_strengthen_self$#!" #NT!
- DIPLOMATIC_ACCEPTANCE_MAINTAIN_AUTONOMY: "Они преследуют [concept_ai_strategy] из #v $ai_strategy_subject_maintain_autonomy$#!" #NT!
- DIPLOMATIC_ACCEPTANCE_OVERLORD_COMPLIANCE: "Они преследуют [concept_ai_strategy] из #v $ai_strategy_subject_overlord_compliance$#!" #NT!
+ merge_subject_cheat: "Обман слияния предметов"
+ rule_merge_subject_cheat: "$merge_subject$"
+ setting_balanced_merge: "Сбалансированный предмет слияния"
+ setting_balanced_merge_desc: "Дипломатическое действие: Слияние [concept_subject] [Concept('concept_country', '$concept_countries$')] сбалансировано для обычной игры."
+ setting_cheat_merge: "Merge Subject — это мошенничество"
+ setting_cheat_merge_desc: "Дипломатическое действие: Merge [concept_subject] [Concept('concept_country', '$concept_countries$')] — мощный чит."
+ DIPLOMATIC_ACCEPTANCE_BREAK_FREE: "Они преследуют [concept_ai_strategy] из #v $ai_strategy_subject_break_free$#!"
+ DIPLOMATIC_ACCEPTANCE_STRENGTHEN_SELF: "Они преследуют [concept_ai_strategy] из #v $ai_strategy_subject_strengthen_self$#!"
+ DIPLOMATIC_ACCEPTANCE_MAINTAIN_AUTONOMY: "Они преследуют [concept_ai_strategy] из #v $ai_strategy_subject_maintain_autonomy$#!"
+ DIPLOMATIC_ACCEPTANCE_OVERLORD_COMPLIANCE: "Они преследуют [concept_ai_strategy] из #v $ai_strategy_subject_overlord_compliance$#!"

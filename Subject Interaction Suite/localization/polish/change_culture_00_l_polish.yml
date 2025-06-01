@@ -1,29 +1,29 @@
 ﻿l_polish:
- change_primary_culture: "Wyrównanie kulturowe" #NT!
- change_primary_culture_action_name: "$change_primary_culture$" #NT!
- change_primary_culture_action_propose_name: "Zainicjuj dopasowanie kulturowe" #NT!
- change_primary_culture_action_break_name: "Zatrzymaj kulturowe dopasowanie" #NT!
- change_primary_culture_pact_desc: "[SCOPE.GetRootScope.GetDiplomaticPact.GetFirstCountry.GetName] zmienia podstawową kulturę [SCOPE.GetRootScope.GetDiplomaticPact.GetSecondCountry.GetName].\n Obecnie #variable [SCOPE.GetRootScope.GetDiplomaticPact.GetSecondCountry.MakeScope.Var('change_primary_culture_progress').GetValue]#! postęp z 8 etapów." #NT!
- change_primary_culture_desc: "#header $change_primary_culture$#!\n$TOOLTIP_DELIMITER$\nChange podstawowa kultura kraju docelowego." #NT!
- change_primary_culture_action_notification_name: "[INITIATOR_COUNTRY.GetName] zmienia podstawową kulturę naszego kraju." #NT!
- change_primary_culture_action_notification_desc: "[INITIATOR_COUNTRY.GetName] zmienia podstawową kulturę w naszym kraju." #NT!
- change_primary_culture_action_notification_break_name: "Zmiana kultury pierwotnej zatrzymana przez [INITIATOR_COUNTRY.GetName]" #NT!
- change_primary_culture_action_notification_break_desc: "[INITIATOR_COUNTRY.GetName] zakończył podstawową zmianę kulturową dla naszego narodu." #NT!
+ change_primary_culture: "Wyrównanie kulturowe"
+ change_primary_culture_action_name: "$change_primary_culture$"
+ change_primary_culture_action_propose_name: "Zainicjuj dopasowanie kulturowe"
+ change_primary_culture_action_break_name: "Zatrzymaj kulturowe dopasowanie"
+ change_primary_culture_pact_desc: "[SCOPE.GetRootScope.GetDiplomaticPact.GetFirstCountry.GetName] zmienia podstawową kulturę [SCOPE.GetRootScope.GetDiplomaticPact.GetSecondCountry.GetName].\n Obecnie #variable [SCOPE.GetRootScope.GetDiplomaticPact.GetSecondCountry.MakeScope.Var('change_primary_culture_progress').GetValue]#! postęp z 8 etapów."
+ change_primary_culture_desc: "#header $change_primary_culture$#!\n$TOOLTIP_DELIMITER$\nChange podstawowa kultura kraju docelowego."
+ change_primary_culture_action_notification_name: "[INITIATOR_COUNTRY.GetName] zmienia podstawową kulturę naszego kraju."
+ change_primary_culture_action_notification_desc: "[INITIATOR_COUNTRY.GetName] zmienia podstawową kulturę w naszym kraju."
+ change_primary_culture_action_notification_break_name: "Zmiana kultury pierwotnej zatrzymana przez [INITIATOR_COUNTRY.GetName]"
+ change_primary_culture_action_notification_break_desc: "[INITIATOR_COUNTRY.GetName] zakończył podstawową zmianę kulturową dla naszego narodu."
   
- change_primary_culture_effect_desc_global: "Zainicjuj podstawową zmianę kultury" #NT!
- change_primary_culture_effect_desc_first: "[COUNTRY.GetAdjectiveNoFlag] inicjuje podstawową zmianę kultury w [TARGET_COUNTRY.GetName]." #NT!
- change_primary_culture_effect_desc_third: "[COUNTRY.GetName] inicjuje dostosowanie kulturowe w [AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)]." #NT!
+ change_primary_culture_effect_desc_global: "Zainicjuj podstawową zmianę kultury"
+ change_primary_culture_effect_desc_first: "[COUNTRY.GetAdjectiveNoFlag] inicjuje podstawową zmianę kultury w [TARGET_COUNTRY.GetName]."
+ change_primary_culture_effect_desc_third: "[COUNTRY.GetName] inicjuje dostosowanie kulturowe w [AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)]."
   
- change_primary_culture_trigger_desc_global: "Postępujące dostosowanie kulturowe" #NT!
- change_primary_culture_trigger_false_desc_global: "Nie jestem już w trakcie dostosowywania się kulturowego #b#!" #NT!
- change_primary_culture_trigger_desc_first: "[COUNTRY.GetAdjectiveNoFlag] zmienia kulturę podstawową w [TARGET_COUNTRY.GetName]." #NT!
- change_primary_culture_trigger_false_desc_first: "[COUNTRY.GetAdjectiveNoFlag] nie zmienia już kultury podstawowej w [TARGET_COUNTRY.GetName] #b#!" #NT!
- change_primary_culture_trigger_desc_third: "[COUNTRY.GetName] zmienia kulturę podstawową w [AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)]." #NT!
- change_primary_culture_trigger_false_desc_third: "[COUNTRY.GetName] nie zmienia już kultury podstawowej w [AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)] #b#!" #NT!
+ change_primary_culture_trigger_desc_global: "Postępujące dostosowanie kulturowe"
+ change_primary_culture_trigger_false_desc_global: "Nie jestem już w trakcie dostosowywania się kulturowego #b#!"
+ change_primary_culture_trigger_desc_first: "[COUNTRY.GetAdjectiveNoFlag] zmienia kulturę podstawową w [TARGET_COUNTRY.GetName]."
+ change_primary_culture_trigger_false_desc_first: "[COUNTRY.GetAdjectiveNoFlag] nie zmienia już kultury podstawowej w [TARGET_COUNTRY.GetName] #b#!"
+ change_primary_culture_trigger_desc_third: "[COUNTRY.GetName] zmienia kulturę podstawową w [AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)]."
+ change_primary_culture_trigger_false_desc_third: "[COUNTRY.GetName] nie zmienia już kultury podstawowej w [AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)] #b#!"
   
- ib_events.01.t: "Zmiana kultury podstawowej" #NT!
- ib_events.01.d: "Dumny [ROOT.GetCountry.GetName] pomyślnie zakończył proces kulturowego dostosowania się do [SCOPE.sCountry('culture_target_country').GetName]. [SCOPE.sCountry('culture_target_country').GetName] będzie teraz prosperował wiecznie, przyjmując kulturę ojczyzny." #NT!
- ib_events.01.f: "„Witaj [ROOT.GetCountry.GetName]!”" #NT!
- ib_events.01.a: "Dobrze zrobiony." #NT!
+ ib_events.01.t: "Zmiana kultury podstawowej"
+ ib_events.01.d: "Dumny [ROOT.GetCountry.GetName] pomyślnie zakończył proces kulturowego dostosowania się do [SCOPE.sCountry('culture_target_country').GetName]. [SCOPE.sCountry('culture_target_country').GetName] będzie teraz prosperował wiecznie, przyjmując kulturę ojczyzny."
+ ib_events.01.f: "„Witaj [ROOT.GetCountry.GetName]!”"
+ ib_events.01.a: "Dobrze zrobiony."
   
- change_primary_culture_weekly_effect: "Pracuje nad osiągnięciem całkowitego wyrównania kultury podstawowej, zapewniając 20% szans na postęp co tydzień, przy czym do osiągnięcia sukcesu wymagane jest 8 punktów postępu." #NT!
+ change_primary_culture_weekly_effect: "Pracuje nad osiągnięciem całkowitego wyrównania kultury podstawowej, zapewniając 20% szans na postęp co tydzień, przy czym do osiągnięcia sukcesu wymagane jest 8 punktów postępu."

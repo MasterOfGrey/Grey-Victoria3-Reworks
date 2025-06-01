@@ -1,33 +1,33 @@
 ﻿l_japanese:
- laws_synergize_land: "土地改革の相乗効果" #NT!
- laws_synergize_land_action_name: "$laws_synergize_land$" #NT!
- laws_synergize_land_action_propose_name: "土地改革の相乗効果を開始" #NT!
- laws_synergize_land_action_break_name: "土地改革の相乗効果を止めろ" #NT!
- laws_synergize_land_pact_desc: "[SCOPE.GetRootScope.GetDiplomaticPact.GetFirstCountry.GetName]は、[SCOPE.GetRootScope.GetDiplomaticPact.GetSecondCountry.GetName]の土地法を再構築して、現在8段階から進行中の進行状況で\ nと相乗効果を発揮します。" #NT!
- laws_synergize_land_desc: "#header $laws_synergize_land$#!\n$TOOLTIP_DELIMITER$\nSynergizes 指定された国の土地改革。" #NT!
- laws_synergize_land_action_notification_name: "[INITIATOR_COUNTRY.GetName] 土地改革の相乗効果" #NT!
- laws_synergize_land_action_notification_desc: "[INITIATOR_COUNTRY.GetName]は我が国の土地改革を相乗的に進めています。" #NT!
- laws_synergize_land_action_notification_break_name: "土地改革の相乗効果を止めよう [INITIATOR_COUNTRY.GetName]" #NT!
- laws_synergize_land_action_notification_break_desc: "[INITIATOR_COUNTRY.GetName]は我が国の土地改革の相乗効果を図る試みをやめた。" #NT!
+ laws_synergize_land: "土地改革の相乗効果"
+ laws_synergize_land_action_name: "$laws_synergize_land$"
+ laws_synergize_land_action_propose_name: "土地改革の相乗効果を開始"
+ laws_synergize_land_action_break_name: "土地改革の相乗効果を止めろ"
+ laws_synergize_land_pact_desc: "[SCOPE.GetRootScope.GetDiplomaticPact.GetFirstCountry.GetName]は、[SCOPE.GetRootScope.GetDiplomaticPact.GetSecondCountry.GetName]の土地法を再構築して、現在8段階から進行中の進行状況で\ nと相乗効果を発揮します。"
+ laws_synergize_land_desc: "#header $laws_synergize_land$#!\n$TOOLTIP_DELIMITER$\nSynergizes 指定された国の土地改革。"
+ laws_synergize_land_action_notification_name: "[INITIATOR_COUNTRY.GetName] 土地改革の相乗効果"
+ laws_synergize_land_action_notification_desc: "[INITIATOR_COUNTRY.GetName]は我が国の土地改革を相乗的に進めています。"
+ laws_synergize_land_action_notification_break_name: "土地改革の相乗効果を止めよう [INITIATOR_COUNTRY.GetName]"
+ laws_synergize_land_action_notification_break_desc: "[INITIATOR_COUNTRY.GetName]は我が国の土地改革の相乗効果を図る試みをやめた。"
   
- laws_synergize_land_effect_desc_global: "土地改革の相乗効果を開始" #NT!
- laws_synergize_land_effect_desc_first: "[COUNTRY.GetAdjectiveNoFlag] は [TARGET_COUNTRY.GetName] との土地改革の相乗効果を開始します。" #NT!
- laws_synergize_land_effect_desc_third: "[COUNTRY.GetName] は [AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)] との土地改革の相乗効果を開始します。" #NT!
+ laws_synergize_land_effect_desc_global: "土地改革の相乗効果を開始"
+ laws_synergize_land_effect_desc_first: "[COUNTRY.GetAdjectiveNoFlag] は [TARGET_COUNTRY.GetName] との土地改革の相乗効果を開始します。"
+ laws_synergize_land_effect_desc_third: "[COUNTRY.GetName] は [AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)] との土地改革の相乗効果を開始します。"
   
- laws_synergize_land_trigger_desc_global: "土地改革の相乗効果は継続中" #NT!
- laws_synergize_land_trigger_false_desc_global: "現在、土地改革の相乗効果を図る過程にはない。" #NT!
- laws_synergize_land_trigger_desc_first: "[COUNTRY.GetAdjectiveNoFlag] は [TARGET_COUNTRY.GetName] と相乗的な土地改革を行っています。" #NT!
- laws_synergize_land_trigger_false_desc_first: "[COUNTRY.GetAdjectiveNoFlag] は現在、[TARGET_COUNTRY.GetName] と相乗効果のある土地改革を行っていません。" #NT!
- laws_synergize_land_trigger_desc_third: "[COUNTRY.GetName] は [AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)] と相乗的な土地改革を行います。" #NT!
- laws_synergize_land_trigger_false_desc_third: "[COUNTRY.GetName] は現在、[AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)] と相乗効果のある土地改革を行っていません。" #NT!
+ laws_synergize_land_trigger_desc_global: "土地改革の相乗効果は継続中"
+ laws_synergize_land_trigger_false_desc_global: "現在、土地改革の相乗効果を図る過程にはない。"
+ laws_synergize_land_trigger_desc_first: "[COUNTRY.GetAdjectiveNoFlag] は [TARGET_COUNTRY.GetName] と相乗的な土地改革を行っています。"
+ laws_synergize_land_trigger_false_desc_first: "[COUNTRY.GetAdjectiveNoFlag] は現在、[TARGET_COUNTRY.GetName] と相乗効果のある土地改革を行っていません。"
+ laws_synergize_land_trigger_desc_third: "[COUNTRY.GetName] は [AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)] と相乗的な土地改革を行います。"
+ laws_synergize_land_trigger_false_desc_third: "[COUNTRY.GetName] は現在、[AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)] と相乗効果のある土地改革を行っていません。"
   
- mog_syn_events.03.t: "土地改革の相乗効果！" #NT!
- mog_syn_events.03.d: "誇り高き[ROOT.GetCountry.GetName] 国家は、[SCOPE.sCountry('synergize_land_target_country').GetName] との土地改革の相乗効果を成功裏に達成しました。[SCOPE.sCountry('synergize_land_target_country').GetName] は祖国との結束力を高めることで、永遠の繁栄を享受するでしょう。" #NT!
- mog_syn_events.03.f: "「[ROOT.GetCountry.GetName]万歳！」" #NT!
- mog_syn_events.03.a: "よくやった。" #NT!
+ mog_syn_events.03.t: "土地改革の相乗効果！"
+ mog_syn_events.03.d: "誇り高き[ROOT.GetCountry.GetName] 国家は、[SCOPE.sCountry('synergize_land_target_country').GetName] との土地改革の相乗効果を成功裏に達成しました。[SCOPE.sCountry('synergize_land_target_country').GetName] は祖国との結束力を高めることで、永遠の繁栄を享受するでしょう。"
+ mog_syn_events.03.f: "「[ROOT.GetCountry.GetName]万歳！」"
+ mog_syn_events.03.a: "よくやった。"
   
- laws_synergize_land_weekly_effect: "彼らの土地法改革を私たちのものと一致させるよう努めています。毎週 20% の確率で進歩し、成功するには 8 つの進歩ポイントが必要です。" #NT!
+ laws_synergize_land_weekly_effect: "彼らの土地法改革を私たちのものと一致させるよう努めています。毎週 20% の確率で進歩し、成功するには 8 つの進歩ポイントが必要です。"
   
- overlord_syn_cost_land: "土地改革の相乗効果にかかるコスト" #NT!
+ overlord_syn_cost_land: "土地改革の相乗効果にかかるコスト"
   
- active_synergize_land_tt: "その他の$laws_synergize_land$アクションの数は1未満です。" #NT!
+ active_synergize_land_tt: "その他の$laws_synergize_land$アクションの数は1未満です。"

@@ -26,4 +26,4 @@
  ib_events.01.f: ""Vive [ROOT.GetCountry.GetName] !""
  ib_events.01.a: "Bien joué."
   
- change_primary_culture_weekly_effect: "Travaille pour atteindre un alignement complet de la culture primaire avec 20 % de chances de progresser chaque semaine, avec 8 points de progression nécessaires pour réussir." #NT!
+ change_primary_culture_weekly_effect: "Travaille pour atteindre un alignement complet de la culture primaire avec 20 % de chances de progresser chaque semaine, avec 8 points de progression nécessaires pour réussir."
