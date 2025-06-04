@@ -70,6 +70,12 @@ NPops = {
 	JOB_SATISFACTION_LOSSES_MIN_MULT = -10 # -5					# Min multiplier from the ratio between pop losses and wages (or if you will, max magnitude)
 	JOB_SATISFACTION_LOSSES_BASE = 50							# Base value to be multiplied by the ratio between losses and wages
 	JOB_SATISFACTION_GOVERNMENT = 100 # 50						# Government jobs need a bit more stability
+
+
+##### LITERACY & QUALIFICATIONS #####
+
+	#LITERACY_DIEOFF_BIAS = 0.8 # 0.7					# Percentage of literate pops who die of old age compared to the current literacy rate, the higher this value the faster the population becomes illiterate when literacy suffers
+	QUALIFICATIONS_NUM_MONTHS_AT_START = 120 # 60				# How many months of qualifications should be seeded to pops at start of game?
 	
 	
 ##### MIGRATION #####
