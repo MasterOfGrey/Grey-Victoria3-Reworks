@@ -6,6 +6,7 @@
  FX_subject_fight.1.t: "Command Subjects To Fight"
  FX_subject_fight.1.d: "Select which subject to fight"
  FX_subject_fight.1.f: "Select the diplomatic play"
+ FX_subject_fight.LD: "$lobby_events_ig_blocked$: [concept_subject] [concept_liberty_desire] >60"
  subject_initiator1: "[SCOPE.sCountry('subject_initiator1').GetName]"
  subject_initiator2: "[SCOPE.sCountry('subject_initiator2').GetName]"
  subject_initiator3: "[SCOPE.sCountry('subject_initiator3').GetName]"
