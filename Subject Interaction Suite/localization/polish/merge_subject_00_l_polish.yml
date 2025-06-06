@@ -14,7 +14,7 @@
  merge_subject_proposal_third_party_accepted_desc: "[INITIATOR_COUNTRY.GetName] wchłania wszystkie terytoria [TARGET_COUNTRY.GetName]."
  merge_subject_proposal_third_party_declined_name: "Reject $merge_subject_action_name$"
  merge_subject_proposal_third_party_declined_desc: "[TARGET_COUNTRY.GetName] odmawia wchłonięcia przez [INITIATOR_COUNTRY.GetName]."
- rule_ai_merge_subject: "$Wchłanianie państw poddańczych$"
+ rule_ai_merge_subject: "$merge_subject$"
  setting_ai_can_not_use: "Zabroń AI na wchłonięcia państw poddańczych"
  setting_ai_can_not_use_desc: "Zabroń AI na urzycie akcji dyplomatycznej:Wchłoń [concept_subject] [Concept('concept_country', '$concept_countries$')]"
  setting_ai_can_use: "Zezwól AI na wchłonięcia państw poddańczych"

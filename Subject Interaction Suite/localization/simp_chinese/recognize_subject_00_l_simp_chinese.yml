@@ -6,7 +6,7 @@
  recognize_action_name: "认可"
  get_recognized_desc: "#header $get_recognized$#!\n$TOOLTIP_DELIMITER$\n发起[concept_instant_diplomatic_action]，要求一个结盟的列强认可我们，让我们登上世界舞台。"
  recognize_desc: "#header $recognize$#!\n$TOOLTIP_DELIMITER$\n发起[concept_instant_diplomatic_action]认可他国。"
- get_recognized_proposal_notification_name: "提议$get_recongized_action_name$"
+ get_recognized_proposal_notification_name: "提议$get_recognized_action_name$"
  get_recognized_proposal_notification_desc: "[INITIATOR_COUNTRY.GetName]要求我们官方的外交认可。"
  get_recognized_proposal_notification_effects_desc: "$get_recognized_action_name$"
  recognize_proposal_notification_name: "授予$recognize_action_name$"

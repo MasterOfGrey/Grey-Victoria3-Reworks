@@ -1,22 +1,22 @@
 ﻿l_russian:
- DIPLO_ACTION_GET_RECOGNIZED: "$DIPLO_ACTION_RELATIONS$ не меньше, чем $relations_cordial$" #NT!
- get_recognized: "Спросите союзника о признании" #NT!
- recognize: "Распознавать" #NT!
- get_recognized_action_name: "Спросите союзника о признании" #NT!
- recognize_action_name: "Распознавать" #NT!
- get_recognized_desc: "#header $get_recognized$#!\n$TOOLTIP_DELIMITER$\nA Вид [concept_instant_diplomatic_action], который может попросить союзничную великую силу, чтобы распознать нас на мировой арене." #NT!
- recognize_desc: "#header $recognize$#!\n$TOOLTIP_DELIMITER$\nA Вид [concept_instant_diplomatic_action], который может распознавать другие страны на мировой арене." #NT!
- get_recognized_proposal_notification_name: "Предложить $get_recongized_action_name$" #NT!
- get_recognized_proposal_notification_desc: "[INITIATOR_COUNTRY.GetName] просит наше официальное дипломатическое признание." #NT!
- get_recognized_proposal_notification_effects_desc: "$get_recognized_action_name$" #NT!
- recognize_proposal_notification_name: "Предложить $recognize_action_name$" #NT!
- recognize_proposal_notification_desc: "Мы предоставляем [INITIATOR_COUNTRY.GetName] наше официальное дипломатическое признание." #NT!
- recognize_proposal_notification_effects_desc: "$recognize_action_name$" #NT!
- get_recognized_proposal_accepted_name: "Принять $get_recognized_action_name$" #NT!
- get_recognized_proposal_accepted_desc: "[TARGET_COUNTRY.GetName] согласился признать нас в мире." #NT!
- get_recognized_proposal_declined_name: "Отклонить $merge_subject_action_name$" #NT!
- get_recognized_proposal_declined_desc: "[TARGET_COUNTRY.GetName] отказался узнавать нас в мире." #NT!
- get_recognized_proposal_third_party_accepted_name: "Принять $merge_subject_action_name$" #NT!
- get_recognized_proposal_third_party_accepted_desc: "[INITIATOR_COUNTRY.GetName] был признан на мировой арене [TARGET_COUNTRY.GetName], новая эра на нас." #NT!
- get_recognized_proposal_third_party_declined_name: "Отклонить $merge_subject_action_name$" #NT!
- get_recognized_proposal_third_party_declined_desc: "[TARGET_COUNTRY.GetName] отказался признать [INITIATOR_COUNTRY.GetName], возможно, нам потребуется подняться на мировой арене силой оружия!" #NT!
+ DIPLO_ACTION_GET_RECOGNIZED: "$DIPLO_ACTION_RELATIONS$ не меньше, чем $relations_cordial$"
+ get_recognized: "Спросите союзника о признании"
+ recognize: "Распознавать"
+ get_recognized_action_name: "Спросите союзника о признании"
+ recognize_action_name: "Распознавать"
+ get_recognized_desc: "#header $get_recognized$#!\n$TOOLTIP_DELIMITER$\nA Вид [concept_instant_diplomatic_action], который может попросить союзничную великую силу, чтобы распознать нас на мировой арене."
+ recognize_desc: "#header $recognize$#!\n$TOOLTIP_DELIMITER$\nA Вид [concept_instant_diplomatic_action], который может распознавать другие страны на мировой арене."
+ get_recognized_proposal_notification_name: "Предложить $get_recognized_action_name$"
+ get_recognized_proposal_notification_desc: "[INITIATOR_COUNTRY.GetName] просит наше официальное дипломатическое признание."
+ get_recognized_proposal_notification_effects_desc: "$get_recognized_action_name$"
+ recognize_proposal_notification_name: "Предложить $recognize_action_name$"
+ recognize_proposal_notification_desc: "Мы предоставляем [INITIATOR_COUNTRY.GetName] наше официальное дипломатическое признание."
+ recognize_proposal_notification_effects_desc: "$recognize_action_name$"
+ get_recognized_proposal_accepted_name: "Принять $get_recognized_action_name$"
+ get_recognized_proposal_accepted_desc: "[TARGET_COUNTRY.GetName] согласился признать нас в мире."
+ get_recognized_proposal_declined_name: "Отклонить $merge_subject_action_name$"
+ get_recognized_proposal_declined_desc: "[TARGET_COUNTRY.GetName] отказался узнавать нас в мире."
+ get_recognized_proposal_third_party_accepted_name: "Принять $merge_subject_action_name$"
+ get_recognized_proposal_third_party_accepted_desc: "[INITIATOR_COUNTRY.GetName] был признан на мировой арене [TARGET_COUNTRY.GetName], новая эра на нас."
+ get_recognized_proposal_third_party_declined_name: "Отклонить $merge_subject_action_name$"
+ get_recognized_proposal_third_party_declined_desc: "[TARGET_COUNTRY.GetName] отказался признать [INITIATOR_COUNTRY.GetName], возможно, нам потребуется подняться на мировой арене силой оружия!"

@@ -6,6 +6,10 @@
  FX_subject_fight.1.t: "Comandar os Sujeitos para Lutar"
  FX_subject_fight.1.d: "Selecione qual assunto lutar"
  FX_subject_fight.1.f: "Selecione a peça diplomática"
+ FX_subject_fight.LD.return_state: "[SCOPE.sCountry('subject_initiator').GetName] tem pelo menos 1 reivindicação em ☻1." #NT!
+ FX_subject_fight.LD.treaty_port: "[SCOPE.sCountry('FX_subject_fight_target_country').GetName] tem pelo menos 1 [concept_treaty_port]." #NT!
+ FX_subject_fight.LD.conquer_state: "[SCOPE.sCountry('FX_subject_fight_target_country').GetName] tem mais de 1 [concept_state]." #NT!
+ FX_subject_fight.LD.annex_war: "[SCOPE.sCountry('FX_subject_fight_target_country').GetName] tem 3 ou menos [Concept('concept_state','$concept_states$')]." #NT!
  subject_initiator1: "[SCOPE.sCountry('subject_initiator1').GetName]"
  subject_initiator2: "[SCOPE.sCountry('subject_initiator2').GetName]"
  subject_initiator3: "[SCOPE.sCountry('subject_initiator3').GetName]"

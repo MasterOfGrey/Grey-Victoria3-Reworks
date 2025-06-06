@@ -15,7 +15,7 @@
  change_primary_culture_effect_desc_third: "[COUNTRY.GetName] は [AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)] で文化的整合を開始しています。"
   
  change_primary_culture_trigger_desc_global: "文化の整合が進行中"
- change_primary_culture_trigger_false_desc_global: "文化的整合の過程にはもうありません#b#!"
+ change_primary_culture_trigger_false_desc_global: "文化的整合の過程にはもうありません。"
  change_primary_culture_trigger_desc_first: "[COUNTRY.GetAdjectiveNoFlag] は [TARGET_COUNTRY.GetName] の主要な文化を変えています。"
  change_primary_culture_trigger_false_desc_first: "[COUNTRY.GetAdjectiveNoFlag] は [TARGET_COUNTRY.GetName] #b の主要な文化をもう変えません#!"
  change_primary_culture_trigger_desc_third: "[COUNTRY.GetName] は [AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)] の主要な文化を変えています。"

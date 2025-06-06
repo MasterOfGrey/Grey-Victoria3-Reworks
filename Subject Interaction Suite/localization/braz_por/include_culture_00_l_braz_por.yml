@@ -15,11 +15,11 @@
  include_primary_culture_effect_desc_third: "[COUNTRY.GetName] está iniciando a inclusão cultural em [AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)]."
   
  include_primary_culture_trigger_desc_global: "Inclusão Cultural em Progresso"
- include_primary_culture_trigger_false_desc_global: "Não está mais no processo de inclusão cultural #b#!"
+ include_primary_culture_trigger_false_desc_global: "Não está mais no processo de inclusão cultural."
  include_primary_culture_trigger_desc_first: "[COUNTRY.GetAdjectiveNoFlag] está incluindo sua cultura primária em [TARGET_COUNTRY.GetName]."
- include_primary_culture_trigger_false_desc_first: "[COUNTRY.GetAdjectiveNoFlag] não está mais incluindo sua cultura primária em [TARGET_COUNTRY.GetName] #b#!"
+ include_primary_culture_trigger_false_desc_first: "[COUNTRY.GetAdjectiveNoFlag] não está mais incluindo sua cultura primária em [TARGET_COUNTRY.GetName]."
  include_primary_culture_trigger_desc_third: "[COUNTRY.GetName] está incluindo sua cultura primária em [AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)]."
- include_primary_culture_trigger_false_desc_third: "[COUNTRY.GetName] não está mais incluindo sua cultura primária em [AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)] #b#!"
+ include_primary_culture_trigger_false_desc_third: "[COUNTRY.GetName] não está mais incluindo sua cultura primária em [AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)]."
   
  ib_events.05.t: "Inclusão da cultura primária"
  ib_events.05.d: "O orgulhoso [ROOT.GetCountry.GetName] concluiu com sucesso a inclusão cultural para [SCOPE.sCountry('culture_include_country').GetName]. [SCOPE.sCountry('culture_target_country').GetName] agora prosperará para sempre, abraçando a cultura da terra natal."

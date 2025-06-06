@@ -15,11 +15,11 @@
  change_state_religion_effect_desc_third: "[COUNTRY.GetName] está iniciando [INITIATOR_COUNTRY.GetCustom('change_religion_dynamic_name')] en [AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)]."
   
  change_state_religion_trigger_desc_global: "[INITIATOR_COUNTRY.GetCustom('change_religion_dynamic_name')] en progreso"
- change_state_religion_trigger_false_desc_global: "Ya no estoy en proceso de [INITIATOR_COUNTRY.GetCustom('change_religion_dynamic_name')] #b#!"
+ change_state_religion_trigger_false_desc_global: "Ya no estoy en proceso de [INITIATOR_COUNTRY.GetCustom('change_religion_dynamic_name')]."
  change_state_religion_trigger_desc_first: "[COUNTRY.GetAdjectiveNoFlag] está cambiando la religión estatal en [TARGET_COUNTRY.GetName]."
- change_state_religion_trigger_false_desc_first: "[COUNTRY.GetAdjectiveNoFlag] ya no cambiará la religión estatal en [TARGET_COUNTRY.GetName] #b#!"
+ change_state_religion_trigger_false_desc_first: "[COUNTRY.GetAdjectiveNoFlag] ya no cambiará la religión estatal en [TARGET_COUNTRY.GetName]."
  change_state_religion_trigger_desc_third: "[COUNTRY.GetName] está cambiando la religión estatal en [AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)]."
- change_state_religion_trigger_false_desc_third: "[COUNTRY.GetName] ya no cambia la religión estatal en [AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)] #b#!"
+ change_state_religion_trigger_false_desc_third: "[COUNTRY.GetName] ya no cambia la religión estatal en [AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)]."
   
  ib_events.02.t: "Cambio de religión estatal"
  ib_events.02.d: "El orgulloso [ROOT.GetCountry.GetName] ha completado con éxito el [INITIATOR_COUNTRY.GetCustom('change_religion_dynamic_name')] para [SCOPE.sCountry('religion_target_country').GetName]. [SCOPE.sCountry('religion_target_country').GetName] ahora prosperará para siempre, abrazando las instituciones religiosas de la patria."

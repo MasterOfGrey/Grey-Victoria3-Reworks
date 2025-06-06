@@ -6,7 +6,7 @@
  recognize_action_name:0 "Recognize"
  get_recognized_desc:0 "#header $get_recognized$#!\n$TOOLTIP_DELIMITER$\nA kind of [concept_instant_diplomatic_action] that can ask an allied Great Power to recognize us on the world stage."
  recognize_desc:0 "#header $recognize$#!\n$TOOLTIP_DELIMITER$\nA kind of [concept_instant_diplomatic_action] that can recognize other countries on the world stage."
- get_recognized_proposal_notification_name:0 "Propose $get_recongized_action_name$"
+ get_recognized_proposal_notification_name:0 "Propose $get_recognized_action_name$"
  get_recognized_proposal_notification_desc:0 "[INITIATOR_COUNTRY.GetName] asks for our official diplomatic recognition."
  get_recognized_proposal_notification_effects_desc:0 "$get_recognized_action_name$"
  recognize_proposal_notification_name:0 "Propose $recognize_action_name$"

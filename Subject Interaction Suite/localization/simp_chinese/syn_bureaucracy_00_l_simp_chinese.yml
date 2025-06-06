@@ -17,7 +17,7 @@
  laws_synergize_bureaucracy_trigger_desc_global: "正在进行官僚体制统一"
  laws_synergize_bureaucracy_trigger_false_desc_global: "不再进行官僚体制统一"
  laws_synergize_bureaucracy_trigger_desc_first: "[COUNTRY.GetAdjectiveNoFlag]正在将自身官僚体制推行进[TARGET_COUNTRY.GetName]."
- laws_synergize_bureaucracy_trigger_false_desc_first: "[COUNTRY.GetAdjectiveNoFlag停止将自身官僚体制推行进[TARGET_COUNTRY.GetName]."
+ laws_synergize_bureaucracy_trigger_false_desc_first: "[COUNTRY.GetAdjectiveNoFlag]停止将自身官僚体制推行进[TARGET_COUNTRY.GetName]."
  laws_synergize_bureaucracy_trigger_desc_third: "[COUNTRY.GetName]正在将自身官僚体制推行进[AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)]."
  laws_synergize_bureaucracy_trigger_false_desc_third: "[COUNTRY.GetName]停止将自身官僚体制推行进[AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)]."
   

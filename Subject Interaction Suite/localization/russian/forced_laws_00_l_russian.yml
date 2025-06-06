@@ -17,13 +17,13 @@
   
  forced_industry_ban_liberty_desire_custom_tooltip: "[SCOPE.sCountry('target_country').GetAdjectiveNoFormatting] чиновники отреагируют на [SCOPE.GetRootScope.GetCountry.GetName] запрет на промышленность в [SCOPE.sCountry('target_country').GetName]. Это [concept_subject] [concept_liberty_desire] и [concept_attitude] изменятся."
   
- forced_slavery_ban: "Принудительный запрет рабства" #NT!
- forced_slavery_ban_desc: "A [concept_instant_diplomatic_action], который заставляет изменение в [GetLawGroup('lawgroup_slavery').GetName] [concept_law] цели [concept_subject] на [GetLawType('law_slavery_banned').GetName]. Ущерб [concept_relations] с целью [concept_subject], а некоторые из [concept_subject] [concept_pop] становится [concept_radical]." #NT!
- forced_slavery_ban_action_name: "Принудительный запрет отрасли" #NT!
- forced_slavery_ban_action_notification_name: "[INITIATOR_COUNTRY.GetName] заставил нас запретить рабство" #NT!
- forced_slavery_ban_action_notification_desc: "Наш [concept_overlord] [INITIATOR_COUNTRY.GetName] вынудил нашу [GetLawGroup('lawgroup_slavery').GetName] [concept_law] до [GetLawType('law_slavery_banned').GetName]. Их [concept_attitude] к нам - #tooltippable #tooltip:[INITIATOR_COUNTRY.GetTooltipTag],COUNTRY_ATTITUDE_TOOLTIP [INITIATOR_COUNTRY.GetAttitudeTowards(GetPlayer).GetName]#!#!." #NT!
- forced_slave_trade: "Принудительная работорговля" #NT!
- forced_slave_trade_desc: "A [concept_instant_diplomatic_action], который заставляет изменение в [GetLawGroup('lawgroup_slavery').GetName] [concept_law] цели [concept_subject] на [GetLawType('law_slave_trade').GetName]. Ущерб [concept_relations] с целью [concept_subject], а некоторые из [concept_subject] [concept_pop] становится [concept_radical]." #NT!
- forced_slave_trade_action_name: "Принудительная работорговля" #NT!
- forced_slave_trade_action_notification_name: "[INITIATOR_COUNTRY.GetName] заставил нас торговать рабами" #NT!
- forced_slave_trade_action_notification_desc: "Наш [concept_overlord] [INITIATOR_COUNTRY.GetName] вынудил нашу [GetLawGroup('lawgroup_slavery').GetName] [concept_law] до [GetLawType('law_slave_trade').GetName]. Их [concept_attitude] к нам - #tooltippable #tooltip:[INITIATOR_COUNTRY.GetTooltipTag],COUNTRY_ATTITUDE_TOOLTIP [INITIATOR_COUNTRY.GetAttitudeTowards(GetPlayer).GetName]#!#!." #NT!
+ forced_slavery_ban: "Принудительный запрет рабства"
+ forced_slavery_ban_desc: "A [concept_instant_diplomatic_action], который заставляет изменение в [GetLawGroup('lawgroup_slavery').GetName] [concept_law] цели [concept_subject] на [GetLawType('law_slavery_banned').GetName]. Ущерб [concept_relations] с целью [concept_subject], а некоторые из [concept_subject] [concept_pop] становится [concept_radical]."
+ forced_slavery_ban_action_name: "Принудительный запрет отрасли"
+ forced_slavery_ban_action_notification_name: "[INITIATOR_COUNTRY.GetName] заставил нас запретить рабство"
+ forced_slavery_ban_action_notification_desc: "Наш [concept_overlord] [INITIATOR_COUNTRY.GetName] вынудил нашу [GetLawGroup('lawgroup_slavery').GetName] [concept_law] до [GetLawType('law_slavery_banned').GetName]. Их [concept_attitude] к нам - #tooltippable #tooltip:[INITIATOR_COUNTRY.GetTooltipTag],COUNTRY_ATTITUDE_TOOLTIP [INITIATOR_COUNTRY.GetAttitudeTowards(GetPlayer).GetName]#!#!."
+ forced_slave_trade: "Принудительная работорговля"
+ forced_slave_trade_desc: "A [concept_instant_diplomatic_action], который заставляет изменение в [GetLawGroup('lawgroup_slavery').GetName] [concept_law] цели [concept_subject] на [GetLawType('law_slave_trade').GetName]. Ущерб [concept_relations] с целью [concept_subject], а некоторые из [concept_subject] [concept_pop] становится [concept_radical]."
+ forced_slave_trade_action_name: "Принудительная работорговля"
+ forced_slave_trade_action_notification_name: "[INITIATOR_COUNTRY.GetName] заставил нас торговать рабами"
+ forced_slave_trade_action_notification_desc: "Наш [concept_overlord] [INITIATOR_COUNTRY.GetName] вынудил нашу [GetLawGroup('lawgroup_slavery').GetName] [concept_law] до [GetLawType('law_slave_trade').GetName]. Их [concept_attitude] к нам - #tooltippable #tooltip:[INITIATOR_COUNTRY.GetTooltipTag],COUNTRY_ATTITUDE_TOOLTIP [INITIATOR_COUNTRY.GetAttitudeTowards(GetPlayer).GetName]#!#!."

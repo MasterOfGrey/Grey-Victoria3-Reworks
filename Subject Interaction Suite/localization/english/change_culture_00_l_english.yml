@@ -15,11 +15,11 @@
  change_primary_culture_effect_desc_third:0 "[COUNTRY.GetName] is initiating cultural alignment in [AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)]."
  
  change_primary_culture_trigger_desc_global:0 "Cultural Alignment in Progress"
- change_primary_culture_trigger_false_desc_global:0 "Not in the process of cultural alignment #b anymore#!"
+ change_primary_culture_trigger_false_desc_global:0 "Not in the process of cultural alignment #b anymore.#!"
  change_primary_culture_trigger_desc_first:0 "[COUNTRY.GetAdjectiveNoFlag] is changing the primary culture in [TARGET_COUNTRY.GetName]."
- change_primary_culture_trigger_false_desc_first:0 "[COUNTRY.GetAdjectiveNoFlag] is not changing the primary culture in [TARGET_COUNTRY.GetName] #b anymore#!"
+ change_primary_culture_trigger_false_desc_first:0 "[COUNTRY.GetAdjectiveNoFlag] is not changing the primary culture in [TARGET_COUNTRY.GetName] #b anymore.#!"
  change_primary_culture_trigger_desc_third:0 "[COUNTRY.GetName] is changing the primary culture in [AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)]."
- change_primary_culture_trigger_false_desc_third:0 "[COUNTRY.GetName] is not changing the primary culture in [AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)] #b anymore#!"
+ change_primary_culture_trigger_false_desc_third:0 "[COUNTRY.GetName] is not changing the primary culture in [AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)] #b anymore.#!"
  
  ib_events.01.t: "Primary Culture Change"
  ib_events.01.d: "The proud [ROOT.GetCountry.GetName] has successfully completed the cultural alignment for [SCOPE.sCountry('culture_target_country').GetName]. [SCOPE.sCountry('culture_target_country').GetName] will now prosper forever, embracing the culture of the homeland."

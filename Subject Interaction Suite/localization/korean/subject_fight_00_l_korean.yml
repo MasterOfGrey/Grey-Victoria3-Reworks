@@ -6,6 +6,10 @@
  FX_subject_fight.1.t: "명령 주체에게 싸움을 명령하다"
  FX_subject_fight.1.d: "어떤 주제를 싸울지 선택하세요"
  FX_subject_fight.1.f: "외교적 플레이를 선택하세요"
+ FX_subject_fight.LD.return_state: "[SCOPE.sCountry('subject_initiator').GetName]은 [SCOPE.sCountry('FX_subject_fight_target_country').GetName]에 대해 최소 1 건의 청구를합니다." #NT!
+ FX_subject_fight.LD.treaty_port: "[SCOPE.sCountry('FX_subject_fight_target_country').GetName]은 최소 1 [concept_treaty_port]입니다." #NT!
+ FX_subject_fight.LD.conquer_state: "[SCOPE.sCountry('FX_subject_fight_target_country').GetName]은 1 [concept_state] 이상입니다." #NT!
+ FX_subject_fight.LD.annex_war: "[SCOPE.sCountry('FX_subject_fight_target_country').GetName]에는 3 이하의 [Concept('concept_state','$concept_states$')]이 있습니다." #NT!
  subject_initiator1: "[SCOPE.sCountry('subject_initiator1').GetName]"
  subject_initiator2: "[SCOPE.sCountry('subject_initiator2').GetName]"
  subject_initiator3: "[SCOPE.sCountry('subject_initiator3').GetName]"
