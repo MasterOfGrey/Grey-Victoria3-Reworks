@@ -1,22 +1,22 @@
 ﻿l_polish:
- DIPLO_ACTION_GET_RECOGNIZED: "$DIPLO_ACTION_RELATIONS$ jest nie mniej niż $relations_cordial$" #NT!
- get_recognized: "Poproś Ally o uznanie" #NT!
- recognize: "Rozpoznać" #NT!
- get_recognized_action_name: "Poproś Ally o uznanie" #NT!
- recognize_action_name: "Rozpoznać" #NT!
- get_recognized_desc: "#header $get_recognized$#!\n$TOOLTIP_DELIMITER$\nA Rodzaj [concept_instant_diplomatic_action], który może poprosić o wielką moc pokrewną, aby rozpoznać nas na scenie światowej." #NT!
- recognize_desc: "#header $recognize$#!\n$TOOLTIP_DELIMITER$\nA Rodzaj [concept_instant_diplomatic_action], który może rozpoznać inne kraje na światowym etapie." #NT!
- get_recognized_proposal_notification_name: "Proponuj $get_recongized_action_name$" #NT!
- get_recognized_proposal_notification_desc: "[INITIATOR_COUNTRY.GetName] prosi o nasze oficjalne uznanie dyplomatyczne." #NT!
- get_recognized_proposal_notification_effects_desc: "$get_recognized_action_name$" #NT!
- recognize_proposal_notification_name: "Proponuj $recognize_action_name$" #NT!
- recognize_proposal_notification_desc: "Uznajemy [INITIATOR_COUNTRY.GetName] Nasze oficjalne uznanie dyplomatyczne." #NT!
- recognize_proposal_notification_effects_desc: "$recognize_action_name$" #NT!
- get_recognized_proposal_accepted_name: "Zaakceptuj $get_recognized_action_name$" #NT!
- get_recognized_proposal_accepted_desc: "[TARGET_COUNTRY.GetName] zgodził się rozpoznać nas światu." #NT!
- get_recognized_proposal_declined_name: "Odrzuć $merge_subject_action_name$" #NT!
- get_recognized_proposal_declined_desc: "[TARGET_COUNTRY.GetName] odmówił rozpoznania nas na świat." #NT!
- get_recognized_proposal_third_party_accepted_name: "Zaakceptuj $merge_subject_action_name$" #NT!
- get_recognized_proposal_third_party_accepted_desc: "[INITIATOR_COUNTRY.GetName] został rozpoznany na scenie światowej przez [TARGET_COUNTRY.GetName], nadchodzi nowa era." #NT!
- get_recognized_proposal_third_party_declined_name: "Odrzuć $merge_subject_action_name$" #NT!
- get_recognized_proposal_third_party_declined_desc: "[TARGET_COUNTRY.GetName] odmówiło rozpoznania [INITIATOR_COUNTRY.GetName] Może być konieczne powstanie na światowym scenie siłą broni!" #NT!
+ DIPLO_ACTION_GET_RECOGNIZED: "$DIPLO_ACTION_RELATIONS$ jest nie mniej niż $relations_cordial$"
+ get_recognized: "Poproś Ally o uznanie"
+ recognize: "Rozpoznać"
+ get_recognized_action_name: "Poproś Ally o uznanie"
+ recognize_action_name: "Rozpoznać"
+ get_recognized_desc: "#header $get_recognized$#!\n$TOOLTIP_DELIMITER$\nA Rodzaj [concept_instant_diplomatic_action], który może poprosić o wielką moc pokrewną, aby rozpoznać nas na scenie światowej."
+ recognize_desc: "#header $recognize$#!\n$TOOLTIP_DELIMITER$\nA Rodzaj [concept_instant_diplomatic_action], który może rozpoznać inne kraje na światowym etapie."
+ get_recognized_proposal_notification_name: "Proponuj $get_recognized_action_name$"
+ get_recognized_proposal_notification_desc: "[INITIATOR_COUNTRY.GetName] prosi o nasze oficjalne uznanie dyplomatyczne."
+ get_recognized_proposal_notification_effects_desc: "$get_recognized_action_name$"
+ recognize_proposal_notification_name: "Proponuj $recognize_action_name$"
+ recognize_proposal_notification_desc: "Uznajemy [INITIATOR_COUNTRY.GetName] Nasze oficjalne uznanie dyplomatyczne."
+ recognize_proposal_notification_effects_desc: "$recognize_action_name$"
+ get_recognized_proposal_accepted_name: "Zaakceptuj $get_recognized_action_name$"
+ get_recognized_proposal_accepted_desc: "[TARGET_COUNTRY.GetName] zgodził się rozpoznać nas światu."
+ get_recognized_proposal_declined_name: "Odrzuć $merge_subject_action_name$"
+ get_recognized_proposal_declined_desc: "[TARGET_COUNTRY.GetName] odmówił rozpoznania nas na świat."
+ get_recognized_proposal_third_party_accepted_name: "Zaakceptuj $merge_subject_action_name$"
+ get_recognized_proposal_third_party_accepted_desc: "[INITIATOR_COUNTRY.GetName] został rozpoznany na scenie światowej przez [TARGET_COUNTRY.GetName], nadchodzi nowa era."
+ get_recognized_proposal_third_party_declined_name: "Odrzuć $merge_subject_action_name$"
+ get_recognized_proposal_third_party_declined_desc: "[TARGET_COUNTRY.GetName] odmówiło rozpoznania [INITIATOR_COUNTRY.GetName] Może być konieczne powstanie na światowym scenie siłą broni!"

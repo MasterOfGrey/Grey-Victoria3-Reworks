@@ -6,6 +6,10 @@
  FX_subject_fight.1.t: "Befehlen Sie Ihren Untertanen, zu kämpfen"
  FX_subject_fight.1.d: "Wählen Sie welches [concept_subject] kämpfen soll:"
  FX_subject_fight.1.f: "Wählen Sie anschließend die Art des Diplomatiesspiels und den zu erobernden Staat aus."
+ FX_subject_fight.LD.return_state: "[SCOPE.sCountry('subject_initiator').GetName] hat mindestens 1 Anspruch auf [SCOPE.sCountry('FX_subject_fight_target_country').GetName]." #NT!
+ FX_subject_fight.LD.treaty_port: "[SCOPE.sCountry('FX_subject_fight_target_country').GetName] hat mindestens 1 [concept_treaty_port]." #NT!
+ FX_subject_fight.LD.conquer_state: "[SCOPE.sCountry('FX_subject_fight_target_country').GetName] hat mehr als 1 [concept_state]." #NT!
+ FX_subject_fight.LD.annex_war: "[SCOPE.sCountry('FX_subject_fight_target_country').GetName] hat 3 oder weniger [Concept('concept_state','$concept_states$')]." #NT!
  subject_initiator1: "[SCOPE.sCountry('subject_initiator1').GetName]"
  subject_initiator2: "[SCOPE.sCountry('subject_initiator2').GetName]"
  subject_initiator3: "[SCOPE.sCountry('subject_initiator3').GetName]"

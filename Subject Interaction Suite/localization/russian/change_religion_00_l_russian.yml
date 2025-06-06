@@ -15,11 +15,11 @@
  change_state_religion_effect_desc_third: "[COUNTRY.GetName] инициирует [INITIATOR_COUNTRY.GetCustom('change_religion_dynamic_name')] в [AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)]."
   
  change_state_religion_trigger_desc_global: "[INITIATOR_COUNTRY.GetCustom('change_religion_dynamic_name')] в процессе"
- change_state_religion_trigger_false_desc_global: "Больше не в процессе [INITIATOR_COUNTRY.GetCustom('change_religion_dynamic_name')] #b#!"
+ change_state_religion_trigger_false_desc_global: "Больше не в процессе [INITIATOR_COUNTRY.GetCustom('change_religion_dynamic_name')]."
  change_state_religion_trigger_desc_first: "[COUNTRY.GetAdjectiveNoFlag] меняет государственную религию в [TARGET_COUNTRY.GetName]."
- change_state_religion_trigger_false_desc_first: "[COUNTRY.GetAdjectiveNoFlag] больше не меняет государственную религию в [TARGET_COUNTRY.GetName] #b#!"
+ change_state_religion_trigger_false_desc_first: "[COUNTRY.GetAdjectiveNoFlag] больше не меняет государственную религию в [TARGET_COUNTRY.GetName]."
  change_state_religion_trigger_desc_third: "[COUNTRY.GetName] меняет государственную религию в [AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)]."
- change_state_religion_trigger_false_desc_third: "[COUNTRY.GetName] больше не меняет государственную религию в [AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)] #b#!"
+ change_state_religion_trigger_false_desc_third: "[COUNTRY.GetName] больше не меняет государственную религию в [AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)]."
   
  ib_events.02.t: "Изменение государственной религии"
  ib_events.02.d: "Гордый [ROOT.GetCountry.GetName] успешно завершил [INITIATOR_COUNTRY.GetCustom('change_religion_dynamic_name')] для [SCOPE.sCountry('religion_target_country').GetName]. [SCOPE.sCountry('religion_target_country').GetName] теперь будет процветать вечно, охватывая религиозные институты родины."

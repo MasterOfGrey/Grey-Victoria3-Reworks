@@ -15,11 +15,11 @@
  include_primary_culture_effect_desc_third: "[COUNTRY.GetName] инициирует культурную инклюзивность в [AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)]."
   
  include_primary_culture_trigger_desc_global: "Культурная инклюзия в процессе"
- include_primary_culture_trigger_false_desc_global: "Больше не в процессе культурной инклюзии #b#!"
+ include_primary_culture_trigger_false_desc_global: "Больше не в процессе культурной инклюзии."
  include_primary_culture_trigger_desc_first: "[COUNTRY.GetAdjectiveNoFlag] включает свою основную культуру в [TARGET_COUNTRY.GetName]."
- include_primary_culture_trigger_false_desc_first: "[COUNTRY.GetAdjectiveNoFlag] больше не включает свою основную культуру в [TARGET_COUNTRY.GetName] #b#!"
+ include_primary_culture_trigger_false_desc_first: "[COUNTRY.GetAdjectiveNoFlag] больше не включает свою основную культуру в [TARGET_COUNTRY.GetName]."
  include_primary_culture_trigger_desc_third: "[COUNTRY.GetName] включает свою основную культуру в [AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)]."
- include_primary_culture_trigger_false_desc_third: "[COUNTRY.GetName] больше не включает свою основную культуру в [AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)] #b#!"
+ include_primary_culture_trigger_false_desc_third: "[COUNTRY.GetName] больше не включает свою основную культуру в [AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)]."
   
  ib_events.05.t: "Первичная культурная инклюзия"
  ib_events.05.d: "Гордый [ROOT.GetCountry.GetName] успешно завершил культурную интеграцию для [SCOPE.sCountry('culture_include_country').GetName]. [SCOPE.sCountry('culture_target_country').GetName] теперь будет процветать вечно, принимая культуру своей родины."

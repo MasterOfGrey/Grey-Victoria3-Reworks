@@ -15,11 +15,11 @@
  include_primary_culture_effect_desc_third: "[COUNTRY.GetName] está iniciando la inclusión cultural en [AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)]."
   
  include_primary_culture_trigger_desc_global: "Inclusión cultural en progreso"
- include_primary_culture_trigger_false_desc_global: "Ya no estoy en proceso de inclusión cultural #b#!"
+ include_primary_culture_trigger_false_desc_global: "Ya no estoy en proceso de inclusión cultural."
  include_primary_culture_trigger_desc_first: "[COUNTRY.GetAdjectiveNoFlag] está incluyendo su cultura primaria en [TARGET_COUNTRY.GetName]."
- include_primary_culture_trigger_false_desc_first: "[COUNTRY.GetAdjectiveNoFlag] ya no incluye su cultura primaria en [TARGET_COUNTRY.GetName] #b#!"
+ include_primary_culture_trigger_false_desc_first: "[COUNTRY.GetAdjectiveNoFlag] ya no incluye su cultura primaria en [TARGET_COUNTRY.GetName]."
  include_primary_culture_trigger_desc_third: "[COUNTRY.GetName] está incluyendo su cultura primaria en [AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)]."
- include_primary_culture_trigger_false_desc_third: "[COUNTRY.GetName] ya no incluye su cultura primaria en [AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)] #b#!"
+ include_primary_culture_trigger_false_desc_third: "[COUNTRY.GetName] ya no incluye su cultura primaria en [AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)]."
   
  ib_events.05.t: "Inclusión cultural primaria"
  ib_events.05.d: "El orgulloso [ROOT.GetCountry.GetName] ha completado con éxito la inclusión cultural de [SCOPE.sCountry('culture_include_country').GetName]. [SCOPE.sCountry('culture_target_country').GetName] ahora prosperará para siempre, abrazando la cultura de su patria."

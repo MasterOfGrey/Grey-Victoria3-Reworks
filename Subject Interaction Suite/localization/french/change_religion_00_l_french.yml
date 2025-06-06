@@ -15,11 +15,11 @@
  change_state_religion_effect_desc_third: "[COUNTRY.GetName] initie la conversion religieuse dans [AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)]."
   
  change_state_religion_trigger_desc_global: "Conversion religieuse en cours"
- change_state_religion_trigger_false_desc_global: "Plus de conversion religieuse en cours #b !#"
+ change_state_religion_trigger_false_desc_global: "Plus de conversion religieuse en cours."
  change_state_religion_trigger_desc_first: "[COUNTRY.GetAdjectiveNoFlag] change la religion d'État dans [TARGET_COUNTRY.GetName]."
- change_state_religion_trigger_false_desc_first: "[COUNTRY.GetAdjectiveNoFlag] ne change plus la religion d'État dans [TARGET_COUNTRY.GetName] #b !#"
+ change_state_religion_trigger_false_desc_first: "[COUNTRY.GetAdjectiveNoFlag] ne change plus la religion d'État dans [TARGET_COUNTRY.GetName]."
  change_state_religion_trigger_desc_third: "[COUNTRY.GetName] change la religion d'État dans [AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)]."
- change_state_religion_trigger_false_desc_third: "[COUNTRY.GetName] ne change plus la religion d'État dans [AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)] #b !#"
+ change_state_religion_trigger_false_desc_third: "[COUNTRY.GetName] ne change plus la religion d'État dans [AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)]."
   
  ib_events.02.t: "Changement de religion d'État"
  ib_events.02.d: "Le fier [ROOT.GetCountry.GetName] a réussi à achever la conversion religieuse pour [SCOPE.sCountry('religion_target_country').GetName]. [SCOPE.sCountry('religion_target_country').GetName] prospérera désormais pour toujours, embrassant la religion du pays d'origine."

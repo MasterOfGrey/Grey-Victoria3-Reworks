@@ -4,7 +4,7 @@
  change_state_religion_action_propose_name: "[INITIATOR_COUNTRY.GetCustom('change_religion_dynamic_name')] initiieren"
  change_state_religion_action_break_name: "Stoppe [INITIATOR_COUNTRY.GetCustom('change_religion_dynamic_name')]"
  change_state_religion_pact_desc: "[SCOPE.GetRootScope.GetDiplomaticPact.GetFirstCountry.GetName] ändert die Staatsreligion von [SCOPE.GetRootScope.GetDiplomaticPact.GetSecondCountry.GetName].\nDer aktuelle Fortschritt beträgt #variable [SCOPE.GetRootScope.GetDiplomaticPact.GetSecondCountry.MakeScope.Var('change_state_religion_progress').GetValue]#! von 8 Stufen."
- change_state_religion_desc: "#header $change_state_religion$#!\n$TOOLTIP_DELIMITER$\n Ändere die Staatsreligion des Ziellandes." 
+ change_state_religion_desc: "#header $change_state_religion$#!\n$TOOLTIP_DELIMITER$\n Ändere die Staatsreligion des Ziellandes."
  change_state_religion_action_notification_name: "[INITIATOR_COUNTRY.GetName] ändert die Staatsreligion unseres Landes."
  change_state_religion_action_notification_desc: "[INITIATOR_COUNTRY.GetName] ändert die Staatsreligion in unserem Land."
  change_state_religion_action_notification_break_name: "Status [INITIATOR_COUNTRY.GetCustom('change_religion_dynamic_name')] Gestoppt von [INITIATOR_COUNTRY.GetName]"

@@ -1,4 +1,4 @@
-ai_can_merge_subject_trigger = {
+﻿ai_can_merge_subject_trigger = {
 	has_game_rule = ai_can_use
 }
 

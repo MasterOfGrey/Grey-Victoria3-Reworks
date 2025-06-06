@@ -1,4 +1,4 @@
-ai_merge_subject = {
+﻿ai_merge_subject = {
 	default = ai_can_use
 	
 	ai_can_use = {}

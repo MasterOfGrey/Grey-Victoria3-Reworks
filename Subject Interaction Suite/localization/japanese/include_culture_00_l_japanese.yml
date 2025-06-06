@@ -15,7 +15,7 @@
  include_primary_culture_effect_desc_third: "[COUNTRY.GetName] は [AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)] で文化的包摂を開始しています。"
   
  include_primary_culture_trigger_desc_global: "文化的包摂の進展"
- include_primary_culture_trigger_false_desc_global: "文化的包摂の過程にはもういない#b#!"
+ include_primary_culture_trigger_false_desc_global: "文化的包摂の過程にはもういない。"
  include_primary_culture_trigger_desc_first: "[COUNTRY.GetAdjectiveNoFlag] は、その主要な文化を [TARGET_COUNTRY.GetName] に含めています。"
  include_primary_culture_trigger_false_desc_first: "[COUNTRY.GetAdjectiveNoFlag] はもはや[TARGET_COUNTRY.GetName] #b に主要な文化を含めていません#!"
  include_primary_culture_trigger_desc_third: "[COUNTRY.GetName] は、主要な文化を [AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)] に含めています。"

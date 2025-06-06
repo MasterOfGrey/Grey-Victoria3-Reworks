@@ -28,7 +28,7 @@
  military_support_effect_desc_third: "[COUNTRY.GetName]は[AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)]との領土拡大支援を確立する"
   
  military_support_trigger_desc_global: "領土拡大を支持"
- military_support_trigger_false_desc_global: "#bは#!は領土拡大を支持しているか"
+ military_support_trigger_false_desc_global: "#b は#! は領土拡大を支持しているか"
  military_support_trigger_desc_first: "[COUNTRY.GetAdjectiveNoFlag]は[TARGET_COUNTRY.GetName]とともに領土拡大を支持している"
  military_support_trigger_false_desc_first: "[COUNTRY.GetAdjectiveNoFlag] #b は#! [TARGET_COUNTRY.GetName] による領土拡大を支持していない"
  military_support_trigger_desc_third: "[COUNTRY.GetName]は[AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)]による領土拡大を支持している"

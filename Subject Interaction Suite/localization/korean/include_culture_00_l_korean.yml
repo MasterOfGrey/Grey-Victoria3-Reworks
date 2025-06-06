@@ -15,7 +15,7 @@
  include_primary_culture_effect_desc_third: "[COUNTRY.GetName]이 [AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)]에서 문화적 포용을 시작하고 있습니다."
   
  include_primary_culture_trigger_desc_global: "진행 중인 문화적 포용"
- include_primary_culture_trigger_false_desc_global: "더 이상 문화적 포용을 진행 중이 아닙니다 #b#!"
+ include_primary_culture_trigger_false_desc_global: "더 이상 문화적 포용을 진행 중이 아닙니다."
  include_primary_culture_trigger_desc_first: "[COUNTRY.GetAdjectiveNoFlag]은(는) 주요 문화를 [TARGET_COUNTRY.GetName]에 포함시킵니다."
  include_primary_culture_trigger_false_desc_first: "[COUNTRY.GetAdjectiveNoFlag]은 더 이상 [TARGET_COUNTRY.GetName] #b에 주요 문화를 포함하지 않습니다#!"
  include_primary_culture_trigger_desc_third: "[COUNTRY.GetName]은 주요 문화를 [AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)]에 포함시킵니다."

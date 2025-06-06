@@ -131,7 +131,7 @@ liberty_desire_weekly_change_relative_prestige = {
 				}
 			}
 		}
-		else_if = {
+		else = {
 			add = {
 				add = root.second_country.prestige
 				multiply = 3
@@ -251,7 +251,7 @@ liberty_desire_weekly_change_relative_prestige = {
 				}
 			}
 		}
-		else_if = {
+		else = {
 			add = {
 				add = root.second_country.prestige
 				multiply = 1.5
@@ -370,7 +370,7 @@ liberty_desire_weekly_change_relative_prestige = {
 				}
 			}
 		}
-		else_if = {
+		else = {
 			add = {
 				add = root.second_country.prestige
 				multiply = 2.0

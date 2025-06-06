@@ -15,11 +15,11 @@
  include_primary_culture_effect_desc_third: "[COUNTRY.GetName], [AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)]'de kültürel katılımı başlatıyor."
   
  include_primary_culture_trigger_desc_global: "Kültürel Katılım İlerliyor"
- include_primary_culture_trigger_false_desc_global: "Artık kültürel katılım sürecinde değiliz #b#!"
+ include_primary_culture_trigger_false_desc_global: "Artık kültürel katılım sürecinde değiliz."
  include_primary_culture_trigger_desc_first: "[COUNTRY.GetAdjectiveNoFlag], birincil kültürlerini [TARGET_COUNTRY.GetName]'e dahil ediyor."
- include_primary_culture_trigger_false_desc_first: "[COUNTRY.GetAdjectiveNoFlag] artık birincil kültürlerini [TARGET_COUNTRY.GetName] #b'ye dahil etmiyor#!"
+ include_primary_culture_trigger_false_desc_first: "[COUNTRY.GetAdjectiveNoFlag] artık birincil kültürlerini [TARGET_COUNTRY.GetName] #b 'ye dahil etmiyor#!"
  include_primary_culture_trigger_desc_third: "[COUNTRY.GetName], birincil kültürlerini [AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)]'ye dahil ediyor."
- include_primary_culture_trigger_false_desc_third: "[COUNTRY.GetName] artık birincil kültürlerini [AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)] #b#!'e dahil etmiyor"
+ include_primary_culture_trigger_false_desc_third: "[COUNTRY.GetName] artık birincil kültürlerini [AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)] #b 'e dahil etmiyor.#!"
   
  ib_events.05.t: "Birincil Kültür Dahil Etme"
  ib_events.05.d: "Gururlu [ROOT.GetCountry.GetName], [SCOPE.sCountry('culture_include_country').GetName] için kültürel katılımı başarıyla tamamladı. [SCOPE.sCountry('culture_target_country').GetName] artık vatanın kültürünü kucaklayarak sonsuza dek refah içinde yaşayacak."

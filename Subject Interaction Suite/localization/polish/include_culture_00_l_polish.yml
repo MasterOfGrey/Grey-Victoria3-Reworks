@@ -17,9 +17,9 @@
  include_primary_culture_trigger_desc_global: "Włączanie kulturowe w toku"
  include_primary_culture_trigger_false_desc_global: "Nie w trakcie procesu włączania kulturowego #b już#!"
  include_primary_culture_trigger_desc_first: "[COUNTRY.GetAdjectiveNoFlag] włącza swoją podstawową kulturę do [TARGET_COUNTRY.GetName]."
- include_primary_culture_trigger_false_desc_first: "[COUNTRY.GetAdjectiveNoFlag] nie uwzględnia już swojej głównej kultury w [TARGET_COUNTRY.GetName] #b#!"
+ include_primary_culture_trigger_false_desc_first: "[COUNTRY.GetAdjectiveNoFlag] nie uwzględnia już swojej głównej kultury w [TARGET_COUNTRY.GetName]."
  include_primary_culture_trigger_desc_third: "[COUNTRY.GetName] włącza swoją kulturę główną do [AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)]."
- include_primary_culture_trigger_false_desc_third: "[COUNTRY.GetName] nie uwzględnia już swojej głównej kultury w [AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)] #b#!"
+ include_primary_culture_trigger_false_desc_third: "[COUNTRY.GetName] nie uwzględnia już swojej głównej kultury w [AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)]."
   
  ib_events.05.t: "Włączenie kultury pierwotnej"
  ib_events.05.d: "Dumny [ROOT.GetCountry.GetName] pomyślnie ukończył integrację kulturową [SCOPE.sCountry('culture_include_country').GetName]. [SCOPE.sCountry('culture_target_country').GetName] będzie teraz prosperować wiecznie, obejmując kulturę ojczyzny."

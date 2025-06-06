@@ -15,11 +15,11 @@
  change_primary_culture_effect_desc_third: "[COUNTRY.GetName] инициирует культурное выравнивание в [AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)]."
   
  change_primary_culture_trigger_desc_global: "Культурное согласование в процессе"
- change_primary_culture_trigger_false_desc_global: "Больше не в процессе культурного выравнивания #b#!"
+ change_primary_culture_trigger_false_desc_global: "Больше не в процессе культурного выравнивания."
  change_primary_culture_trigger_desc_first: "[COUNTRY.GetAdjectiveNoFlag] меняет основную культуру в [TARGET_COUNTRY.GetName]."
- change_primary_culture_trigger_false_desc_first: "[COUNTRY.GetAdjectiveNoFlag] больше не меняет основную культуру в [TARGET_COUNTRY.GetName] #b#!"
+ change_primary_culture_trigger_false_desc_first: "[COUNTRY.GetAdjectiveNoFlag] больше не меняет основную культуру в [TARGET_COUNTRY.GetName]."
  change_primary_culture_trigger_desc_third: "[COUNTRY.GetName] меняет основную культуру в [AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)]."
- change_primary_culture_trigger_false_desc_third: "[COUNTRY.GetName] больше не меняет основную культуру в [AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)] #b#!"
+ change_primary_culture_trigger_false_desc_third: "[COUNTRY.GetName] больше не меняет основную культуру в [AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)]."
   
  ib_events.01.t: "Первичное изменение культуры"
  ib_events.01.d: "Гордый [ROOT.GetCountry.GetName] успешно завершил культурное выравнивание для [SCOPE.sCountry('culture_target_country').GetName]. [SCOPE.sCountry('culture_target_country').GetName] теперь будет процветать вечно, принимая культуру своей родины."

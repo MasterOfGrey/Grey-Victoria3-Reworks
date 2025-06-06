@@ -1,5 +1,5 @@
 ﻿l_german:
- change_primary_culture: "Kulturelle Angleichung" 
+ change_primary_culture: "Kulturelle Angleichung"
  change_primary_culture_action_name: "$change_primary_culture$"
  change_primary_culture_action_propose_name: "Kulturelle Angleichung initiieren"
  change_primary_culture_action_break_name: "Stoppe die Kulturelle Angleichung"
@@ -7,11 +7,11 @@
  change_primary_culture_desc: "#header $change_primary_culture$#!\n$TOOLTIP_DELIMITER$\n Ändere die [Concept('concept_primary_cultures', '$concept_primary_culture$')] des Klientellandes."
  change_primary_culture_action_notification_name: "[INITIATOR_COUNTRY.GetName] verändert die [Concept('concept_primary_cultures', '$concept_primary_culture$')] unseres Landes."
  change_primary_culture_action_notification_desc: "[INITIATOR_COUNTRY.GetName] verändert die [Concept('concept_primary_cultures', '$concept_primary_culture$')] unseres Landes."
- change_primary_culture_action_notification_break_name: "Die Änderung der [Concept('concept_primary_cultures', '$concept_primary_culture$')] durch [INITIATOR_COUNTRY.GetName] wurde gestoppt" 
+ change_primary_culture_action_notification_break_name: "Die Änderung der [Concept('concept_primary_cultures', '$concept_primary_culture$')] durch [INITIATOR_COUNTRY.GetName] wurde gestoppt"
  change_primary_culture_action_notification_break_desc: "[INITIATOR_COUNTRY.GetName] hat die Änderung der [Concept('concept_primary_cultures', '$concept_primary_culture$')] für unserer Nation eingeleitet."
   
  change_primary_culture_effect_desc_global: "Änderung der [Concept('concept_primary_cultures', '$concept_primary_culture$')] starten"
- change_primary_culture_effect_desc_first: "[COUNTRY.GetAdjectiveNoFlag] startet die Änderung der [Concept('concept_primary_cultures', '$concept_primary_culture$')] in [TARGET_COUNTRY.GetName]." 
+ change_primary_culture_effect_desc_first: "[COUNTRY.GetAdjectiveNoFlag] startet die Änderung der [Concept('concept_primary_cultures', '$concept_primary_culture$')] in [TARGET_COUNTRY.GetName]."
  change_primary_culture_effect_desc_third: "[COUNTRY.GetName] initiiert die kulturelle Angleichung in [AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)]."
   
  change_primary_culture_trigger_desc_global: "Kulturelle Angleichung im Gange"

@@ -17,13 +17,13 @@
   
  forced_industry_ban_liberty_desire_custom_tooltip: "[SCOPE.sCountry('target_country').GetAdjectiveNoFormatting] funcionarios responderán a [SCOPE.GetRootScope.GetCountry.GetName] una prohibición de la industria en [SCOPE.sCountry('target_country').GetName]. Esto [concept_subject]'s [concept_liberty_desire] y [concept_attitude] cambiarán."
   
- forced_slavery_ban: "Prohibición de esclavitud forzada" #NT!
- forced_slavery_ban_desc: "Un [concept_instant_diplomatic_action] que obliga a un cambio en el [GetLawGroup('lawgroup_slavery').GetName] [concept_law] del objetivo [concept_subject] al [GetLawType('law_slavery_banned').GetName]. Daños [concept_relations] con el objetivo [concept_subject] y algunos de los [concept_subject] [concept_pop] se convierten en [concept_radical]." #NT!
- forced_slavery_ban_action_name: "Prohibición de la industria forzada" #NT!
- forced_slavery_ban_action_notification_name: "[INITIATOR_COUNTRY.GetName] nos obligó a prohibir la esclavitud" #NT!
- forced_slavery_ban_action_notification_desc: "Nuestro [concept_overlord] [INITIATOR_COUNTRY.GetName] forzó nuestro [GetLawGroup('lawgroup_slavery').GetName] [concept_law] a [GetLawType('law_slavery_banned').GetName]. Su [concept_attitude] hacia nosotros es #tooltippable #tooltip:[INITIATOR_COUNTRY.GetTooltipTag],COUNTRY_ATTITUDE_TOOLTIP [INITIATOR_COUNTRY.GetAttitudeTowards(GetPlayer).GetName]#!#!." #NT!
- forced_slave_trade: "Comercio de esclavos forzados" #NT!
- forced_slave_trade_desc: "Un [concept_instant_diplomatic_action] que obliga a un cambio en el [GetLawGroup('lawgroup_slavery').GetName] [concept_law] del objetivo [concept_subject] al [GetLawType('law_slave_trade').GetName]. Daños [concept_relations] con el objetivo [concept_subject] y algunos de los [concept_subject] [concept_pop] se convierten en [concept_radical]." #NT!
- forced_slave_trade_action_name: "Comercio de esclavos forzados" #NT!
- forced_slave_trade_action_notification_name: "[INITIATOR_COUNTRY.GetName] nos obligó a intercambiar esclavos" #NT!
- forced_slave_trade_action_notification_desc: "Nuestro [concept_overlord] [INITIATOR_COUNTRY.GetName] forzó nuestro [GetLawGroup('lawgroup_slavery').GetName] [concept_law] a [GetLawType('law_slave_trade').GetName]. Su [concept_attitude] hacia nosotros es #tooltippable #tooltip:[INITIATOR_COUNTRY.GetTooltipTag],COUNTRY_ATTITUDE_TOOLTIP [INITIATOR_COUNTRY.GetAttitudeTowards(GetPlayer).GetName]#!#!." #NT!
+ forced_slavery_ban: "Prohibición de esclavitud forzada"
+ forced_slavery_ban_desc: "Un [concept_instant_diplomatic_action] que obliga a un cambio en el [GetLawGroup('lawgroup_slavery').GetName] [concept_law] del objetivo [concept_subject] al [GetLawType('law_slavery_banned').GetName]. Daños [concept_relations] con el objetivo [concept_subject] y algunos de los [concept_subject] [concept_pop] se convierten en [concept_radical]."
+ forced_slavery_ban_action_name: "Prohibición de la industria forzada"
+ forced_slavery_ban_action_notification_name: "[INITIATOR_COUNTRY.GetName] nos obligó a prohibir la esclavitud"
+ forced_slavery_ban_action_notification_desc: "Nuestro [concept_overlord] [INITIATOR_COUNTRY.GetName] forzó nuestro [GetLawGroup('lawgroup_slavery').GetName] [concept_law] a [GetLawType('law_slavery_banned').GetName]. Su [concept_attitude] hacia nosotros es #tooltippable #tooltip:[INITIATOR_COUNTRY.GetTooltipTag],COUNTRY_ATTITUDE_TOOLTIP [INITIATOR_COUNTRY.GetAttitudeTowards(GetPlayer).GetName]#!#!."
+ forced_slave_trade: "Comercio de esclavos forzados"
+ forced_slave_trade_desc: "Un [concept_instant_diplomatic_action] que obliga a un cambio en el [GetLawGroup('lawgroup_slavery').GetName] [concept_law] del objetivo [concept_subject] al [GetLawType('law_slave_trade').GetName]. Daños [concept_relations] con el objetivo [concept_subject] y algunos de los [concept_subject] [concept_pop] se convierten en [concept_radical]."
+ forced_slave_trade_action_name: "Comercio de esclavos forzados"
+ forced_slave_trade_action_notification_name: "[INITIATOR_COUNTRY.GetName] nos obligó a intercambiar esclavos"
+ forced_slave_trade_action_notification_desc: "Nuestro [concept_overlord] [INITIATOR_COUNTRY.GetName] forzó nuestro [GetLawGroup('lawgroup_slavery').GetName] [concept_law] a [GetLawType('law_slave_trade').GetName]. Su [concept_attitude] hacia nosotros es #tooltippable #tooltip:[INITIATOR_COUNTRY.GetTooltipTag],COUNTRY_ATTITUDE_TOOLTIP [INITIATOR_COUNTRY.GetAttitudeTowards(GetPlayer).GetName]#!#!."

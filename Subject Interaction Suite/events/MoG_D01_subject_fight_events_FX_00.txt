@@ -177,47 +177,23 @@ FX_subject_fight.10 = {
 		default_option = yes
 	}
 	
-	option = {
-		name = FX_subject_fight.LD
-		trigger = {
-			scope:subject_initiator = { liberty_desire >= 60 }
-		}
-	}
-
-	# conquer state
-	option = {
-		name = dp_conquer_state
-		trigger = {
-			scope:subject_initiator = { is_direct_subject_of = root liberty_desire < 60 }
-			scope:FX_subject_fight_target_country = {
-				NOT = { is_direct_subject_of = scope:subject_initiator }
-				any_scope_state = {
-					NOR = {
-						has_claim_by = scope:subject_initiator
-						is_treaty_port = yes
-					}
-				}
-			}
-		}
-		trigger_event = {
-			id = FX_subject_fight.11
-			days = 0
-			popup = yes
-		}
-	}
-	
 	# return state
 	option = {
 		name = dp_return_state
+		highlighted_option = yes
+		show_as_unavailable = { always = yes }
 		trigger = {
 			scope:subject_initiator = { is_direct_subject_of = root liberty_desire < 80 }
-			scope:FX_subject_fight_target_country = {
-				NOT = { is_direct_subject_of = scope:subject_initiator }
-				any_scope_state = {
-					OR = {
+			custom_tooltip = {
+				text = FX_subject_fight.LD.return_state
+				scope:FX_subject_fight_target_country = {
+					NOT = { is_direct_subject_of = scope:subject_initiator }
+					any_scope_state = {
 						has_claim_by = scope:subject_initiator
-						# is_homeland_of_country_cultures = scope:subject_initiator
-						# don't do this: the wargoal is invalid
+						# OR = {
+							# is_homeland_of_country_cultures = scope:subject_initiator
+							# don't do this: the wargoal is invalid
+						# }
 					}
 				}
 			}
@@ -232,12 +208,17 @@ FX_subject_fight.10 = {
 	# take treaty port
 	option = {
 		name = dp_take_treaty_port
+		highlighted_option = yes
+		show_as_unavailable = { always = yes }
 		trigger = {
 			scope:subject_initiator = { is_direct_subject_of = root liberty_desire < 70 }
-			scope:FX_subject_fight_target_country = {
-				NOT = { is_direct_subject_of = scope:subject_initiator }
-				any_scope_state = {
-					is_treaty_port = yes
+			custom_tooltip = {
+				text = FX_subject_fight.LD.treaty_port
+				scope:FX_subject_fight_target_country = {
+					NOT = { is_direct_subject_of = scope:subject_initiator }
+					any_scope_state = {
+						is_treaty_port = yes
+					}
 				}
 			}
 		}
@@ -247,18 +228,51 @@ FX_subject_fight.10 = {
 			popup = yes
 		}
 	}
-
+	
+	# conquer state
+	option = {
+		name = dp_conquer_state
+		highlighted_option = yes
+		show_as_unavailable = { always = yes }
+		trigger = {
+			scope:subject_initiator = { is_direct_subject_of = root liberty_desire < 60 }
+			custom_tooltip = {
+				text = FX_subject_fight.LD.conquer_state
+				scope:FX_subject_fight_target_country = {
+					NOT = { is_direct_subject_of = scope:subject_initiator }
+					any_scope_state = {
+						NOR = {
+							has_claim_by = scope:subject_initiator
+							is_treaty_port = yes
+						}
+						count > 1
+					}
+				}
+			}
+		}
+		trigger_event = {
+			id = FX_subject_fight.11
+			days = 0
+			popup = yes
+		}
+	}
+	
 	# annex country
 	option = {
 		name = dp_annex_war
+		highlighted_option = yes
+		show_as_unavailable = { always = yes }
 		trigger = {
 			scope:subject_initiator = { is_direct_subject_of = root liberty_desire < 50 }
-			scope:FX_subject_fight_target_country = {
-				OR = {
-					any_scope_state = {
-						count < 4
+			custom_tooltip = {
+				text = FX_subject_fight.LD.annex_war
+				scope:FX_subject_fight_target_country = {
+					OR = {
+						any_scope_state = {
+							count < 4
+						}
+						is_direct_subject_of = scope:subject_initiator
 					}
-					is_direct_subject_of = scope:subject_initiator
 				}
 			}
 		}

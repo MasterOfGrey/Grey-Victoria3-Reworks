@@ -1,4 +1,4 @@
-# Brought up to date and included from: (originally) a.k.a DMDonahue's "Diplomatic Recognition" & (more recently) Marcus's "Request and Grant Diplomatic Recognition"
+﻿# Brought up to date and included from: (originally) a.k.a DMDonahue's "Diplomatic Recognition" & (more recently) Marcus's "Request and Grant Diplomatic Recognition"
 
 recognize = {
 	groups= {
@@ -78,9 +78,16 @@ get_recognized = {
 	}
 	possible = {
 		is_at_war = no
-		scope:target_country = {
-			is_allied = yes
+		or = {
+			and = {
+				is_in_same_power_bloc = scope:target_country
+				is_owed_obligation_by = scope:target_country
+			}
+			has_diplomatic_pact = { who = scope:target_country type = alliance }
 		}
+	#	scope:target_country = {
+	#		is_allied = yes
+	#	}
 		is_country_type = unrecognized
 		country_rank >= rank_value:unrecognized_regional_power
 		NOT = { has_war_with = scope:target_country }

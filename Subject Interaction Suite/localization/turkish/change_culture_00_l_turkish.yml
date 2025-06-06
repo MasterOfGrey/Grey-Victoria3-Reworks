@@ -15,11 +15,11 @@
  change_primary_culture_effect_desc_third: "[COUNTRY.GetName], [AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)]'de kültürel uyumu başlatıyor."
   
  change_primary_culture_trigger_desc_global: "Kültürel Uyum Devam Ediyor"
- change_primary_culture_trigger_false_desc_global: "Artık kültürel uyum sürecinde değiliz #b#!"
+ change_primary_culture_trigger_false_desc_global: "Artık kültürel uyum sürecinde değiliz."
  change_primary_culture_trigger_desc_first: "[COUNTRY.GetAdjectiveNoFlag], [TARGET_COUNTRY.GetName]'deki birincil kültürü değiştiriyor."
- change_primary_culture_trigger_false_desc_first: "[COUNTRY.GetAdjectiveNoFlag] artık [TARGET_COUNTRY.GetName] #b'deki birincil kültürü değiştirmiyor#!"
+ change_primary_culture_trigger_false_desc_first: "[COUNTRY.GetAdjectiveNoFlag] artık [TARGET_COUNTRY.GetName] #b 'deki birincil kültürü değiştirmiyor#!"
  change_primary_culture_trigger_desc_third: "[COUNTRY.GetName], [AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)]'deki birincil kültürü değiştiriyor."
- change_primary_culture_trigger_false_desc_third: "[COUNTRY.GetName] artık [AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)] #b'teki birincil kültürü değiştirmiyor#!"
+ change_primary_culture_trigger_false_desc_third: "[COUNTRY.GetName] artık [AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)] #b 'teki birincil kültürü değiştirmiyor#!"
   
  ib_events.01.t: "Birincil Kültür Değişimi"
  ib_events.01.d: "Gururlu [ROOT.GetCountry.GetName], [SCOPE.sCountry('culture_target_country').GetName] için kültürel uyumu başarıyla tamamladı. [SCOPE.sCountry('culture_target_country').GetName] artık vatanın kültürünü kucaklayarak sonsuza dek refah içinde yaşayacak."

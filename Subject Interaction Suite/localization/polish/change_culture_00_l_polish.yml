@@ -15,11 +15,11 @@
  change_primary_culture_effect_desc_third: "[COUNTRY.GetName] inicjuje dostosowanie kulturowe w [AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)]."
   
  change_primary_culture_trigger_desc_global: "Postępujące dostosowanie kulturowe"
- change_primary_culture_trigger_false_desc_global: "Nie jestem już w trakcie dostosowywania się kulturowego #b#!"
+ change_primary_culture_trigger_false_desc_global: "Nie jestem już w trakcie dostosowywania się kulturowego."
  change_primary_culture_trigger_desc_first: "[COUNTRY.GetAdjectiveNoFlag] zmienia kulturę podstawową w [TARGET_COUNTRY.GetName]."
- change_primary_culture_trigger_false_desc_first: "[COUNTRY.GetAdjectiveNoFlag] nie zmienia już kultury podstawowej w [TARGET_COUNTRY.GetName] #b#!"
+ change_primary_culture_trigger_false_desc_first: "[COUNTRY.GetAdjectiveNoFlag] nie zmienia już kultury podstawowej w [TARGET_COUNTRY.GetName]."
  change_primary_culture_trigger_desc_third: "[COUNTRY.GetName] zmienia kulturę podstawową w [AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)]."
- change_primary_culture_trigger_false_desc_third: "[COUNTRY.GetName] nie zmienia już kultury podstawowej w [AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)] #b#!"
+ change_primary_culture_trigger_false_desc_third: "[COUNTRY.GetName] nie zmienia już kultury podstawowej w [AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)]."
   
  ib_events.01.t: "Zmiana kultury podstawowej"
  ib_events.01.d: "Dumny [ROOT.GetCountry.GetName] pomyślnie zakończył proces kulturowego dostosowania się do [SCOPE.sCountry('culture_target_country').GetName]. [SCOPE.sCountry('culture_target_country').GetName] będzie teraz prosperował wiecznie, przyjmując kulturę ojczyzny."

@@ -1,22 +1,22 @@
 ﻿l_braz_por:
- DIPLO_ACTION_GET_RECOGNIZED: "$DIPLO_ACTION_RELATIONS$ não é menor que ☻1" #NT!
- get_recognized: "Peça a Ally por reconhecimento" #NT!
- recognize: "Reconhecer" #NT!
- get_recognized_action_name: "Peça a Ally por reconhecimento" #NT!
- recognize_action_name: "Reconhecer" #NT!
- get_recognized_desc: "#header $get_recognized$#!\n$TOOLTIP_DELIMITER$\nA tipo de [concept_instant_diplomatic_action] que pode pedir a um grande poder aliado para nos reconhecer no cenário mundial." #NT!
- recognize_desc: "#header $recognize$#!\n$TOOLTIP_DELIMITER$\nA tipo de [concept_instant_diplomatic_action] que pode reconhecer outros países no cenário mundial." #NT!
- get_recognized_proposal_notification_name: "Propor $get_recongized_action_name$" #NT!
- get_recognized_proposal_notification_desc: "[INITIATOR_COUNTRY.GetName] pede nosso reconhecimento diplomático oficial." #NT!
- get_recognized_proposal_notification_effects_desc: "$get_recognized_action_name$" #NT!
- recognize_proposal_notification_name: "Propor $recognize_action_name$" #NT!
- recognize_proposal_notification_desc: "Concedemos [INITIATOR_COUNTRY.GetName] nosso reconhecimento diplomático oficial." #NT!
- recognize_proposal_notification_effects_desc: "$recognize_action_name$" #NT!
- get_recognized_proposal_accepted_name: "Aceitar $get_recognized_action_name$" #NT!
- get_recognized_proposal_accepted_desc: "[TARGET_COUNTRY.GetName] concordou em nos reconhecer ao mundo." #NT!
- get_recognized_proposal_declined_name: "Rejeitar $merge_subject_action_name$" #NT!
- get_recognized_proposal_declined_desc: "[TARGET_COUNTRY.GetName] se recusou a nos reconhecer ao mundo." #NT!
- get_recognized_proposal_third_party_accepted_name: "Aceitar $merge_subject_action_name$" #NT!
- get_recognized_proposal_third_party_accepted_desc: "☻0 foi reconhecido no cenário mundial por ☻1, uma nova era está sobre nós." #NT!
- get_recognized_proposal_third_party_declined_name: "Rejeitar $merge_subject_action_name$" #NT!
- get_recognized_proposal_third_party_declined_desc: "[TARGET_COUNTRY.GetName] Recusou -se a reconhecer ☻1 de que podemos precisar nos levantar no cenário mundial pela força das armas!" #NT!
+ DIPLO_ACTION_GET_RECOGNIZED: "$DIPLO_ACTION_RELATIONS$ não é menor que ☻1"
+ get_recognized: "Peça a Ally por reconhecimento"
+ recognize: "Reconhecer"
+ get_recognized_action_name: "Peça a Ally por reconhecimento"
+ recognize_action_name: "Reconhecer"
+ get_recognized_desc: "#header $get_recognized$#!\n$TOOLTIP_DELIMITER$\nA tipo de [concept_instant_diplomatic_action] que pode pedir a um grande poder aliado para nos reconhecer no cenário mundial."
+ recognize_desc: "#header $recognize$#!\n$TOOLTIP_DELIMITER$\nA tipo de [concept_instant_diplomatic_action] que pode reconhecer outros países no cenário mundial."
+ get_recognized_proposal_notification_name: "Propor $get_recognized_action_name$"
+ get_recognized_proposal_notification_desc: "[INITIATOR_COUNTRY.GetName] pede nosso reconhecimento diplomático oficial."
+ get_recognized_proposal_notification_effects_desc: "$get_recognized_action_name$"
+ recognize_proposal_notification_name: "Propor $recognize_action_name$"
+ recognize_proposal_notification_desc: "Concedemos [INITIATOR_COUNTRY.GetName] nosso reconhecimento diplomático oficial."
+ recognize_proposal_notification_effects_desc: "$recognize_action_name$"
+ get_recognized_proposal_accepted_name: "Aceitar $get_recognized_action_name$"
+ get_recognized_proposal_accepted_desc: "[TARGET_COUNTRY.GetName] concordou em nos reconhecer ao mundo."
+ get_recognized_proposal_declined_name: "Rejeitar $merge_subject_action_name$"
+ get_recognized_proposal_declined_desc: "[TARGET_COUNTRY.GetName] se recusou a nos reconhecer ao mundo."
+ get_recognized_proposal_third_party_accepted_name: "Aceitar $merge_subject_action_name$"
+ get_recognized_proposal_third_party_accepted_desc: "☻0 foi reconhecido no cenário mundial por ☻1, uma nova era está sobre nós."
+ get_recognized_proposal_third_party_declined_name: "Rejeitar $merge_subject_action_name$"
+ get_recognized_proposal_third_party_declined_desc: "[TARGET_COUNTRY.GetName] Recusou -se a reconhecer ☻1 de que podemos precisar nos levantar no cenário mundial pela força das armas!"

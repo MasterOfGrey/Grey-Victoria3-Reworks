@@ -8,23 +8,23 @@
  consolidate_subject_action_notification_third_party_desc: "[INITIATOR_COUNTRY.GetName] は [TARGET_COUNTRY.GetName] を統合しました。"
   
  is_not_african_subject: "この主題は、アフリカの植民地政権の1つではない"
- consolidate_subject_country_tier_tt: "[SCOPE.sCountry('target_country').GetName]の[concept_country_tier]は$country_tier_kingdom$未満です" #NT!
- consolidate_subject_country_tier_kingdom_tt: "[SCOPE.sCountry('target_country').GetName]の[concept_country_tier]は$country_tier_kingdom$であり、" #NT!
- consolidate_subject_country_tier_kingdom_overlord_research_tt: "[SCOPE.GetRootScope.GetCountry.GetName]は、[GetTechnology('pan-nationalism').GetName]、[GetTechnology('civilizing_mission').GetName]、または[GetTechnology('corporatism').GetName]のいずれかを調査しました" #NT!
- consolidate_subject_either_tt: "どちらか：" #NT!
- consolidate_subject_vassal_type_tt: "$TAB$[SCOPE.sCountry('target_country').GetName]は[GetSubjectType('subject_type_vassal').GetName]または[GetSubjectType('subject_type_puppet').GetName]です" #NT!
- consolidate_subject_dominion_type_tt: "[SCOPE.sCountry('target_country').GetName]は[GetSubjectType('subject_type_dominion').GetName]であり、その1つは次のとおりです。" #NT!
- consolidate_subject_dominion_type_laws_tt: "[GetLawType('law_parliamentary_republic').GetName]、[GetLawType('law_presidential_republic').GetName]、または[GetLawType('law_council_republic').GetName]" #NT!
- consolidate_subject_union_type_tt: "[SCOPE.sCountry('target_country').GetName]は[GetSubjectType('subject_type_personal_union').GetName]であり、" #NT!
- consolidate_subject_primary_culture_tt: "ターゲット被験者の[concept_primary_cultures]：[SCOPE.sCountry('target_country').GetPrimaryCulturesDesc]の1つです" #NT!
- consolidate_subject_acceptance_tt: "[concept_overlord]は汎ナショナリズムと文明化の使命を研究しており、すべての統合された被験者の[concept_primary_cultures]は特性を共有し、少なくとも @acceptance_status_4を持っている必要があります！ $second_rate_citizen$[concept_acceptance_status]" #NT!
- consolidate_subject_multicultural_tt: "[concept_overlord]は汎ナショナリズムと文明化の使命を研究しており、ターゲットの被験者の[concept_primary_cultures]は少なくともある程度重複しており、受け取る被験者は人権とコーポラティズムを研究しており、[GetLawType('law_multicultural').GetName]を持っています" #NT!
+ consolidate_subject_country_tier_tt: "[SCOPE.sCountry('target_country').GetName]の[concept_country_tier]は$country_tier_kingdom$未満です"
+ consolidate_subject_country_tier_kingdom_tt: "[SCOPE.sCountry('target_country').GetName]の[concept_country_tier]は$country_tier_kingdom$であり、"
+ consolidate_subject_country_tier_kingdom_overlord_research_tt: "[SCOPE.GetRootScope.GetCountry.GetName]は、[GetTechnology('pan-nationalism').GetName]、[GetTechnology('civilizing_mission').GetName]、または[GetTechnology('corporatism').GetName]のいずれかを調査しました"
+ consolidate_subject_either_tt: "どちらか："
+ consolidate_subject_vassal_type_tt: "$TAB$[SCOPE.sCountry('target_country').GetName]は[GetSubjectType('subject_type_vassal').GetName]または[GetSubjectType('subject_type_puppet').GetName]です"
+ consolidate_subject_dominion_type_tt: "[SCOPE.sCountry('target_country').GetName]は[GetSubjectType('subject_type_dominion').GetName]であり、その1つは次のとおりです。"
+ consolidate_subject_dominion_type_laws_tt: "[GetLawType('law_parliamentary_republic').GetName]、[GetLawType('law_presidential_republic').GetName]、または[GetLawType('law_council_republic').GetName]"
+ consolidate_subject_union_type_tt: "[SCOPE.sCountry('target_country').GetName]は[GetSubjectType('subject_type_personal_union').GetName]であり、"
+ consolidate_subject_primary_culture_tt: "ターゲット被験者の[concept_primary_cultures]：[SCOPE.sCountry('target_country').GetPrimaryCulturesDesc]の1つです"
+ consolidate_subject_acceptance_tt: "[concept_overlord]は汎ナショナリズムと文明化の使命を研究しており、すべての統合された被験者の[concept_primary_cultures]は特性を共有し、少なくとも @acceptance_status_4! を持っている必要があります！ $second_rate_citizen$[concept_acceptance_status]"
+ consolidate_subject_multicultural_tt: "[concept_overlord]は汎ナショナリズムと文明化の使命を研究しており、ターゲットの被験者の[concept_primary_cultures]は少なくともある程度重複しており、受け取る被験者は人権とコーポラティズムを研究しており、[GetLawType('law_multicultural').GetName]を持っています"
   
  alert_overlord_can_consolidate_subject_name: "[GetDiplomaticActionType('consolidate_subject').GetName] は [SCOPE.GetRootScope.GetCountry.GetName] でご利用いただけます"
  alert_overlord_can_consolidate_subject_desc: "[concept_subject] [SCOPE.GetRootScope.GetCountry.GetName] は隣接する主題に統合できます。"
  alert_overlord_can_consolidate_subject_hint: "外交パネルの [主題] タブを使用して、[GetDiplomaticActionType('consolidate_subject').GetName] [concept_diplomatic_action] を実行できます。"
  alert_overlord_can_consolidate_subject_action: "外交パネル"
   
- ag_can_consolidate_subject_name: "CAN[GetDiplomaticActionType('consolidate_subject').GetName]" #NT!
- ag_can_consolidate_subject_desc: "[GetDiplomaticActionType('consolidate_subject').GetName]アクションの対象となる[concept_subject][Concept('concept_country', '$concept_countries$')]があります" #NT!
- ag_can_consolidate_subject_tooltip: "#header$ag_can_consolidate_subject_name$#!\n$TOOLTIP_DELIMITER$\n$ag_can_consolidate_subject_desc$\n\n$ALERT_GROUP_TOOLTIP_FOOTER$" #NT!
+ ag_can_consolidate_subject_name: "CAN [GetDiplomaticActionType('consolidate_subject').GetName]"
+ ag_can_consolidate_subject_desc: "[GetDiplomaticActionType('consolidate_subject').GetName]アクションの対象となる[concept_subject][Concept('concept_country', '$concept_countries$')]があります"
+ ag_can_consolidate_subject_tooltip: "#header$ag_can_consolidate_subject_name$#!\n$TOOLTIP_DELIMITER$\n$ag_can_consolidate_subject_desc$\n\n$ALERT_GROUP_TOOLTIP_FOOTER$"
