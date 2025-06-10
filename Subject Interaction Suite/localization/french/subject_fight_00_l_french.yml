@@ -6,10 +6,10 @@
  FX_subject_fight.1.t: "Ordonner aux Sujets de Combattre"
  FX_subject_fight.1.d: "Sélectionnez quel sujet doit combattre"
  FX_subject_fight.1.f: "Sélectionnez la manœuvre diplomatique"
- FX_subject_fight.LD.return_state: "[SCOPE.sCountry('subject_initiator').GetName] a au moins 1 affirmation sur [SCOPE.sCountry('FX_subject_fight_target_country').GetName]." #NT!
- FX_subject_fight.LD.treaty_port: "[SCOPE.sCountry('FX_subject_fight_target_country').GetName] a au moins 1 [concept_treaty_port]." #NT!
- FX_subject_fight.LD.conquer_state: "[SCOPE.sCountry('FX_subject_fight_target_country').GetName] a plus de 1 [concept_state]." #NT!
- FX_subject_fight.LD.annex_war: "[SCOPE.sCountry('FX_subject_fight_target_country').GetName] a 3 ou moins [Concept('concept_state','$concept_states$')]." #NT!
+ FX_subject_fight.LD.return_state: "[SCOPE.sCountry('subject_initiator').GetName] a au moins 1 affirmation sur [SCOPE.sCountry('FX_subject_fight_target_country').GetName]."
+ FX_subject_fight.LD.treaty_port: "[SCOPE.sCountry('FX_subject_fight_target_country').GetName] a au moins 1 [concept_treaty_port]."
+ FX_subject_fight.LD.conquer_state: "[SCOPE.sCountry('FX_subject_fight_target_country').GetName] a plus de 1 [concept_state]."
+ FX_subject_fight.LD.annex_war: "[SCOPE.sCountry('FX_subject_fight_target_country').GetName] a 3 ou moins [Concept('concept_state','$concept_states$')]."
  subject_initiator1: "[SCOPE.sCountry('subject_initiator1').GetName]"
  subject_initiator2: "[SCOPE.sCountry('subject_initiator2').GetName]"
  subject_initiator3: "[SCOPE.sCountry('subject_initiator3').GetName]"

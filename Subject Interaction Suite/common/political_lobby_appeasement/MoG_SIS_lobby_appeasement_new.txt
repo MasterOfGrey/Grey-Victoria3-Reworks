@@ -1,0 +1,13 @@
+﻿## New appeasements based on subject interactions.
+
+appeasement_support_expansion_agreement_formed = {
+	duration_to_show = { months = 60 }
+}
+
+appeasement_support_expansion_agreement_broken = {
+	duration_to_show = { months = 60 }
+}
+
+appeasement_industry_banned = {
+	duration_to_show = { months = 60 }
+}
