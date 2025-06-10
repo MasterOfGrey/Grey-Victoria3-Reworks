@@ -6,10 +6,10 @@
  FX_subject_fight.1.t: "臣民に戦いを命じる"
  FX_subject_fight.1.d: "戦う対象を選択してください"
  FX_subject_fight.1.f: "外交プレイを選択"
- FX_subject_fight.LD.return_state: "[SCOPE.sCountry('subject_initiator').GetName]には、少なくとも1つの主張があります。" #NT!
- FX_subject_fight.LD.treaty_port: "[SCOPE.sCountry('FX_subject_fight_target_country').GetName]には少なくとも1[concept_treaty_port]があります。" #NT!
- FX_subject_fight.LD.conquer_state: "[SCOPE.sCountry('FX_subject_fight_target_country').GetName]には1つ以上の[concept_state]があります。" #NT!
- FX_subject_fight.LD.annex_war: "[SCOPE.sCountry('FX_subject_fight_target_country').GetName]は3以下の[Concept('concept_state','$concept_states$')]です。" #NT!
+ FX_subject_fight.LD.return_state: "[SCOPE.sCountry('subject_initiator').GetName]には、少なくとも1つの主張があります。"
+ FX_subject_fight.LD.treaty_port: "[SCOPE.sCountry('FX_subject_fight_target_country').GetName]には少なくとも1[concept_treaty_port]があります。"
+ FX_subject_fight.LD.conquer_state: "[SCOPE.sCountry('FX_subject_fight_target_country').GetName]には1つ以上の[concept_state]があります。"
+ FX_subject_fight.LD.annex_war: "[SCOPE.sCountry('FX_subject_fight_target_country').GetName]は3以下の[Concept('concept_state','$concept_states$')]です。"
  subject_initiator1: "[SCOPE.sCountry('subject_initiator1').GetName]"
  subject_initiator2: "[SCOPE.sCountry('subject_initiator2').GetName]"
  subject_initiator3: "[SCOPE.sCountry('subject_initiator3').GetName]"

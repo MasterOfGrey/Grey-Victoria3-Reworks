@@ -6,10 +6,10 @@
  FX_subject_fight.1.t: "Komuta Konuları Savaşmaya"
  FX_subject_fight.1.d: "Hangi konuda mücadele edeceğinizi seçin"
  FX_subject_fight.1.f: "Diplomatik oyunu seçin"
- FX_subject_fight.LD.return_state: "[SCOPE.sCountry('subject_initiator').GetName] [SCOPE.sCountry('FX_subject_fight_target_country').GetName] hakkında en az 1 iddiaya sahiptir." #NT!
- FX_subject_fight.LD.treaty_port: "[SCOPE.sCountry('FX_subject_fight_target_country').GetName] en az 1 [concept_treaty_port] vardır." #NT!
- FX_subject_fight.LD.conquer_state: "[SCOPE.sCountry('FX_subject_fight_target_country').GetName] 1'den fazla [concept_state]'e sahiptir." #NT!
- FX_subject_fight.LD.annex_war: "[SCOPE.sCountry('FX_subject_fight_target_country').GetName] 3 veya daha az [Concept('concept_state','$concept_states$')] vardır." #NT!
+ FX_subject_fight.LD.return_state: "[SCOPE.sCountry('subject_initiator').GetName] [SCOPE.sCountry('FX_subject_fight_target_country').GetName] hakkında en az 1 iddiaya sahiptir."
+ FX_subject_fight.LD.treaty_port: "[SCOPE.sCountry('FX_subject_fight_target_country').GetName] en az 1 [concept_treaty_port] vardır."
+ FX_subject_fight.LD.conquer_state: "[SCOPE.sCountry('FX_subject_fight_target_country').GetName] 1'den fazla [concept_state]'e sahiptir."
+ FX_subject_fight.LD.annex_war: "[SCOPE.sCountry('FX_subject_fight_target_country').GetName] 3 veya daha az [Concept('concept_state','$concept_states$')] vardır."
  subject_initiator1: "[SCOPE.sCountry('subject_initiator1').GetName]"
  subject_initiator2: "[SCOPE.sCountry('subject_initiator2').GetName]"
  subject_initiator3: "[SCOPE.sCountry('subject_initiator3').GetName]"

@@ -1,0 +1,124 @@
+﻿# Called in scope:political_lobby where:
+# root = the interest group looking to join/leave
+# scope:country = the country the lobby belongs to
+# scope:target_country = the country the lobby is targeting (same as scope:country for domestic lobbies)
+# scope:political_lobby = the lobby
+pro_overlord_lobby_starting_appeasement = {
+	value = 0
+	
+	scope:country = {	# scope:lobby_country isn't a real scope - and was originally created *incorrectly* with save_temporary_scope_as = lobby_country in the root scope (which is interest group)
+		if = {
+			limit = { 
+				"relations(scope:target_country)" >= relations_threshold:friendly		
+			}
+			add = 4
+		}
+		else_if = {
+			limit = { 
+				"relations(scope:target_country)" >= relations_threshold:cordial			
+			}
+			add = 2
+		}
+		else_if = {
+			limit = { 
+				"relations(scope:target_country)" <= relations_threshold:hostile	
+			}
+			add = -4
+		}	
+		else_if = {
+			limit = { 
+				"relations(scope:target_country)" <= relations_threshold:poor			
+			}
+			add = -2
+		}
+
+		if = {
+			limit = { 
+				OR = {
+					is_subject_type = subject_type_colony
+					is_subject_type = subject_type_puppet
+					is_subject_type = subject_type_vassal
+				}
+			}
+			add = 2
+		}
+		else_if = {
+			limit = { 
+				OR = {
+					is_subject_type = subject_type_chartered_company
+					is_subject_type = subject_type_dominion
+					is_subject_type = subject_type_protectorate
+					is_subject_type = subject_type_tributary
+				}
+			}
+			add = -2
+		}
+		else = {
+			add = -4
+		}
+	}
+	
+	# #Wut #NO
+	# max = 5
+	# min = -5
+}
+
+anti_overlord_lobby_starting_appeasement = {
+	value = 0
+	
+	scope:country = {	# scope:lobby_country isn't a real scope - and was originally created *incorrectly* with save_temporary_scope_as = lobby_country in the root scope (which is interest group)
+		if = {
+			limit = { 
+				"relations(scope:target_country)" >= relations_threshold:friendly		
+			}
+			add = -4
+		}
+		else_if = {
+			limit = { 
+				"relations(scope:target_country)" >= relations_threshold:cordial			
+			}
+			add = -2
+		}
+		else_if = {
+			limit = { 
+				"relations(scope:target_country)" <= relations_threshold:hostile	
+			}
+			add = 4
+		}	
+		else_if = {
+			limit = { 
+				"relations(scope:target_country)" <= relations_threshold:poor			
+			}
+			add = 2
+		}
+
+		if = {
+			limit = { 
+				OR = {
+					is_subject_type = subject_type_colony
+					is_subject_type = subject_type_puppet
+					is_subject_type = subject_type_vassal
+				}
+			}
+			add = -2
+		}
+		else_if = {
+			limit = { 
+				OR = {
+					is_subject_type = subject_type_chartered_company
+					is_subject_type = subject_type_dominion
+					is_subject_type = subject_type_protectorate
+					is_subject_type = subject_type_tributary
+				}
+			}
+			add = 2
+		}
+		else = {
+			add = 4
+		}
+	}
+	
+	# #Wut #NO
+	# max = 5
+	# min = -5
+}

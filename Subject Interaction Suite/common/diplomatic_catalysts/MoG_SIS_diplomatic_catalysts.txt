@@ -1,0 +1,78 @@
+﻿# Can we use add_lobby_member = scope:interest_group in this??
+# What about:
+# create_political_lobby = {  
+#	type = lobby_pro_country  
+#	arget = <country scope>  
+#	add_interest_group = <ig scope 1>  
+#	add_interest_group = <ig scope 2>  
+#	add_interest_group = <ig scope 3>  
+#}
+
+### Vanilla Overwrites: ###
+
+catalyst_became_subject = {
+	category = cc_subject_status_change
+	
+	political_lobby_creation = {
+		lobby_pro_overlord = {
+			value = 0.65
+			
+			if = {
+				limit = { liberty_desire < 25 }
+				add = 0.25
+			}
+			else_if = {
+				limit = { liberty_desire < 50 }
+				add = 0.10
+			}		
+		}
+		lobby_anti_overlord = {
+			value = 0.65
+			
+			if = {
+				limit = { liberty_desire >= 75 }
+				add = 0.25
+			}
+			else_if = {
+				limit = { liberty_desire >= 50 }
+				add = 0.10
+			}		
+		}		
+	}	
+}
+
+### New Catalysts: ###
+
+catalyst_force_laws = {
+	category = cc_diplomatic_aggression
+	
+	political_lobby_creation = {
+		lobby_anti_overlord = {
+			value = 0.05
+			
+			if = {
+				limit = {
+					scope:target_country.country_rank > root.country_rank
+				}
+				multiply = 2
+			}	
+
+			if = {
+				limit = {
+					NOT = { has_strategic_adjacency = scope:target_country }
+				}
+				multiply = 0.5
+			}				
+		}
+	}
+	
+	effect = {
+		add_lobby_appeasement_from_diplomacy_unidirectional = { 
+			FIRST = root
+			SECOND = scope:target_country 
+			PRO_AMOUNT = -4
+			ANTI_AMOUNT = 4
+			FACTOR = appeasement_diplomatic_demand_made
+		}		
+	}	
+}
