@@ -79,3 +79,72 @@ popneed_communication = {
 		min_supply_share = 0.0
 	}
 }
+
+## Vanilla ##
+# popneed_heating = {
+#	default = wood
+#	goods = coal
+#		weight = 2
+#		max_supply_share = 0.8
+#		min_supply_share = 0.0
+#	goods = oil
+#		weight = 3
+#		max_supply_share = 1.0
+#		min_supply_share = 0.0
+#	goods = electricity
+#		weight = 3
+#		max_supply_share = 1.0
+#		min_supply_share = 0.0
+
+# USU version (PDT-friendly):
+popneed_heating = {
+	default = wood
+
+	entry = {
+		goods = wood
+		
+		weight = 0.5			# 0.75
+		max_supply_share = 0.5
+		min_supply_share = 0.05	# 0.0
+	}
+	
+	entry = {
+		goods = fabric
+		
+		weight = 0.5			# 0.25
+		max_supply_share = 0.5	# 0.25
+		min_supply_share = 0.05
+	}	
+	
+	entry = {
+		goods = coal
+		
+		weight = 1				# 2 (More efficient, but dirty)
+		max_supply_share = 0.5	# Semi-Keeping (0.8)
+		min_supply_share = 0.05	# 0.0
+	}
+	
+	entry = {
+		goods = oil
+		
+		weight = 2				# 3 (Neat to manage, but not to be overdone)
+		max_supply_share = 0.8
+		min_supply_share = 0.05	# 0.0
+	}
+	
+	entry = {
+		goods = electricity
+		
+		weight = 8				# 3 (Seriously, it's gotta be high to break into the market.)
+		max_supply_share = 1.0	# Keeping
+		min_supply_share = 0.0	# Keeping
+	}
+	
+	entry = {
+		goods = services
+		
+		weight = 0.125
+		max_supply_share = 0.125
+		min_supply_share = 0.0125
+	}
+}

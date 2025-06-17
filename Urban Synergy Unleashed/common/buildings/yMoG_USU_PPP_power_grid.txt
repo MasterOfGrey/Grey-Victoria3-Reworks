@@ -1,5 +1,5 @@
 ﻿ppp_building_power_grid = {
-	building_group = bg_power
+	building_group = usu_bg_power_grid
 	icon = "gfx/interface/icons/building_icons/PPP_power_grid.dds"
 	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_monuments.dds"
 	ownership_type = self

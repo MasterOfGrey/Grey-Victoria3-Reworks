@@ -63,6 +63,15 @@ ppp_building_power_grid_throughput_add={
 	}
 }
 
+usu_building_hydro_power_plant_throughput_add={
+	decimals=0
+	color=good
+	percent=yes
+	game_data={
+		ai_value=0
+	}
+}
+
 building_river_port_throughput_add={
 	decimals=0
 	color=good
