@@ -32,3 +32,9 @@ mog_building_canal_accident = {
     goods_output_usu_logistics_mult = -0.5
     goods_input_tools_mult = 2
 }
+
+## FLEXIBLE STATIC MODIFIERS (usable in events to alter a baseline with a multiplier of this)
+mog_usu_hp_hydro_potential_adjustment = {
+	icon = gfx/interface/icons/hp_hydro_power_1.dds
+	state_usu_building_hydro_power_plant_max_level_add = 1
+}

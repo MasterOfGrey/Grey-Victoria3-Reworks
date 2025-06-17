@@ -1,0 +1,450 @@
+﻿# "zMOG" = make sure all river traits are sequentially before all hydropower potential traits
+GLOBAL = {
+	########### SOME POTENTIAL ###########
+	
+	### WEST EUROPE ###
+	s:STATE_SVEALAND = { add_state_trait = state_trait_hydro_potential_1 }
+	s:STATE_OSTROBOTHNIA = { add_state_trait = state_trait_hydro_potential_1 }
+	s:STATE_LANCASHIRE = { add_state_trait = state_trait_hydro_potential_1 }
+	
+	### SOUTH EUROPE ### = { add_state_trait = state_trait_hydro_potential_1 }
+	s:STATE_SARDINIA = { add_state_trait = state_trait_hydro_potential_1 }
+	s:STATE_CAMPANIA = { add_state_trait = state_trait_hydro_potential_1 }
+	s:STATE_CALABRIA = { add_state_trait = state_trait_hydro_potential_1 }
+	s:STATE_EMILIA = { add_state_trait = state_trait_hydro_potential_1 }
+	s:STATE_SICILY = { add_state_trait = state_trait_hydro_potential_1 }
+	s:STATE_ANDALUSIA = { add_state_trait = state_trait_hydro_potential_1 }
+	s:STATE_GRANADA = { add_state_trait = state_trait_hydro_potential_1 }
+	s:STATE_BADAJOZ = { add_state_trait = state_trait_hydro_potential_1 }
+	s:STATE_NORTHERN_THRACE = { add_state_trait = state_trait_hydro_potential_1 }
+	s:STATE_BULGARIA = { add_state_trait = state_trait_hydro_potential_1 }
+	s:STATE_ATTICA = { add_state_trait = state_trait_hydro_potential_1 }
+	s:STATE_MACEDONIA = { add_state_trait = state_trait_hydro_potential_1 }
+	s:STATE_PELOPONNESE = { add_state_trait = state_trait_hydro_potential_1 }
+	
+	### EAST EUROPE ###
+	s:STATE_GALICH = { add_state_trait = state_trait_hydro_potential_1 }
+	s:STATE_PERM = { add_state_trait = state_trait_hydro_potential_1 }
+	s:STATE_BANAT = { add_state_trait = state_trait_hydro_potential_1 }
+	s:STATE_SOUTHERN_TRANSYLVANIA = { add_state_trait = state_trait_hydro_potential_1 }
+	s:STATE_NORTHERN_TRANSYLVANIA = { add_state_trait = state_trait_hydro_potential_1 }
+	
+	### NORTH AFRICA ###
+	s:STATE_DARFUR = { add_state_trait = state_trait_hydro_potential_1 }
+	s:STATE_MARRAKECH = { add_state_trait = state_trait_hydro_potential_1 }
+	s:STATE_FEZ = { add_state_trait = state_trait_hydro_potential_1 }
+	s:STATE_AL_RIF = { add_state_trait = state_trait_hydro_potential_1 }
+	s:STATE_ALGIERS = { add_state_trait = state_trait_hydro_potential_1 }
+	s:STATE_CONSTANTINE = { add_state_trait = state_trait_hydro_potential_1 }
+	s:STATE_ORAN = { add_state_trait = state_trait_hydro_potential_1 }
+	s:STATE_TUNISIA = { add_state_trait = state_trait_hydro_potential_1 }
+	s:STATE_EASTERN_MALI = { add_state_trait = state_trait_hydro_potential_1 }
+	s:STATE_TIMBUKTU = { add_state_trait = state_trait_hydro_potential_1 }
+	
+	### SUBSAHARAN AFRICA ###
+	s:STATE_IVORY_COAST = { add_state_trait = state_trait_hydro_potential_1 }
+	s:STATE_SENEGAL = { add_state_trait = state_trait_hydro_potential_1 }
+	s:STATE_GAMBIA = { add_state_trait = state_trait_hydro_potential_1 }
+	s:STATE_SIERRA_LEONE = { add_state_trait = state_trait_hydro_potential_1 }
+	s:STATE_HAUSALAND = { add_state_trait = state_trait_hydro_potential_1 }
+	s:STATE_BENIN = { add_state_trait = state_trait_hydro_potential_1 }
+	s:STATE_NIGERIA = { add_state_trait = state_trait_hydro_potential_1 }
+	s:STATE_GUINEA = { add_state_trait = state_trait_hydro_potential_1 }
+	s:STATE_SOUTH_CAMEROON = { add_state_trait = state_trait_hydro_potential_1 }
+	s:STATE_UBANGI_SHARI = { add_state_trait = state_trait_hydro_potential_1 }
+	s:STATE_CONGO = { add_state_trait = state_trait_hydro_potential_1 }
+	s:STATE_CONGO_ORIENTALE = { add_state_trait = state_trait_hydro_potential_1 }
+	s:STATE_KASAI = { add_state_trait = state_trait_hydro_potential_1 }
+	s:STATE_BAS_CONGO = { add_state_trait = state_trait_hydro_potential_1 }
+	s:STATE_EQUATEUR = { add_state_trait = state_trait_hydro_potential_1 }
+	s:STATE_NORTH_ANGOLA = { add_state_trait = state_trait_hydro_potential_1 }
+	s:STATE_SOUTH_ANGOLA = { add_state_trait = state_trait_hydro_potential_1 }
+	s:STATE_EAST_ANGOLA = { add_state_trait = state_trait_hydro_potential_1 }
+	s:STATE_KATANGA = { add_state_trait = state_trait_hydro_potential_1 }
+	s:STATE_GABON = { add_state_trait = state_trait_hydro_potential_1 }
+	s:STATE_ZAMBEZIA = { add_state_trait = state_trait_hydro_potential_1 }
+	s:STATE_ZULULAND = { add_state_trait = state_trait_hydro_potential_1 }
+	s:STATE_VRYSTAAT = { add_state_trait = state_trait_hydro_potential_1 }
+	s:STATE_EASTERN_CAPE = { add_state_trait = state_trait_hydro_potential_1 }
+	
+	### NORTH AMERICA ###
+	s:STATE_LOUISIANA = { add_state_trait = state_trait_hydro_potential_1 }
+	s:STATE_VIRGINIA = { add_state_trait = state_trait_hydro_potential_1 }
+	s:STATE_COLORADO = { add_state_trait = state_trait_hydro_potential_1 }
+	s:STATE_ARKANSAS = { add_state_trait = state_trait_hydro_potential_1 }
+	s:STATE_TENNESSEE = { add_state_trait = state_trait_hydro_potential_1 }
+	s:STATE_ALABAMA = { add_state_trait = state_trait_hydro_potential_1 }
+	s:STATE_GEORGIA = { add_state_trait = state_trait_hydro_potential_1 }
+	s:STATE_CONNECTICUT = { add_state_trait = state_trait_hydro_potential_1 }
+	s:STATE_MASSACHUSETTS = { add_state_trait = state_trait_hydro_potential_1 }
+	s:STATE_NEW_HAMPSHIRE = { add_state_trait = state_trait_hydro_potential_1 }
+	s:STATE_VERMONT = { add_state_trait = state_trait_hydro_potential_1 }
+	s:STATE_MAINE = { add_state_trait = state_trait_hydro_potential_1 }
+	s:STATE_NORTH_CAROLINA = { add_state_trait = state_trait_hydro_potential_1 }
+	s:STATE_ONTARIO = { add_state_trait = state_trait_hydro_potential_1 }
+	s:STATE_NORTHWEST_TERRITORIES = { add_state_trait = state_trait_hydro_potential_1 }
+	s:STATE_NEW_MEXICO = { add_state_trait = state_trait_hydro_potential_1 }
+	s:STATE_RIO_GRANDE = { add_state_trait = state_trait_hydro_potential_1 }
+	s:STATE_DURANGO = { add_state_trait = state_trait_hydro_potential_1 }
+	
+	### CENTRAL AMERICA ###
+	s:STATE_HAITI = { add_state_trait = state_trait_hydro_potential_1 }
+	s:STATE_SANTO_DOMINGO = { add_state_trait = state_trait_hydro_potential_1 }
+	s:STATE_PUERTO_RICO = { add_state_trait = state_trait_hydro_potential_1 }
+	s:STATE_JAMAICA = { add_state_trait = state_trait_hydro_potential_1 }
+	
+	### SOUTH AMERICA ###
+	s:STATE_GUAYANA = { add_state_trait = state_trait_hydro_potential_1 }
+	s:STATE_ZULIA = { add_state_trait = state_trait_hydro_potential_1 }
+	s:STATE_MIRANDA = { add_state_trait = state_trait_hydro_potential_1 }
+	s:STATE_PASTAZA = { add_state_trait = state_trait_hydro_potential_1 }
+	s:STATE_SANTA_FE = { add_state_trait = state_trait_hydro_potential_1 }
+	s:STATE_CORRIENTES = { add_state_trait = state_trait_hydro_potential_1 }
+	s:STATE_CHACO = { add_state_trait = state_trait_hydro_potential_1 }
+	s:STATE_ARAUCANIA = { add_state_trait = state_trait_hydro_potential_1 }
+	s:STATE_PARA = { add_state_trait = state_trait_hydro_potential_1 }
+	s:STATE_MARANHAO = { add_state_trait = state_trait_hydro_potential_1 }
+	s:STATE_PARANA = { add_state_trait = state_trait_hydro_potential_1 }
+	s:STATE_BAHIA = { add_state_trait = state_trait_hydro_potential_1 }
+	
+	### MIDDLE EAST ###
+	s:STATE_TRANSJORDAN = { add_state_trait = state_trait_hydro_potential_1 }
+	s:STATE_PALESTINE = { add_state_trait = state_trait_hydro_potential_1 }
+	s:STATE_LEBANON = { add_state_trait = state_trait_hydro_potential_1 }
+	s:STATE_BAGHDAD = { add_state_trait = state_trait_hydro_potential_1 }
+	s:STATE_DEIR_EZ_ZOR = { add_state_trait = state_trait_hydro_potential_1 }
+	s:STATE_AYDIN = { add_state_trait = state_trait_hydro_potential_1 }
+	s:STATE_KARS = { add_state_trait = state_trait_hydro_potential_1 }
+	
+	### CENTRAL ASIA ###
+	s:STATE_ARMENIA = { add_state_trait = state_trait_hydro_potential_1 }
+	s:STATE_AZERBAIJAN = { add_state_trait = state_trait_hydro_potential_1 }
+	s:STATE_UZBEKIA = { add_state_trait = state_trait_hydro_potential_1 }
+	s:STATE_KIRGHIZIA = { add_state_trait = state_trait_hydro_potential_1 }
+	s:STATE_TURKMENIA = { add_state_trait = state_trait_hydro_potential_1 }
+	s:STATE_JETISY = { add_state_trait = state_trait_hydro_potential_1 }
+	s:STATE_PASHTUNISTAN = { add_state_trait = state_trait_hydro_potential_1 }
+	#state_region = s:STATE_EASTERN_AFGHANISTAN = { add_state_trait = state_trait_hydro_potential_1 }
+	
+	### INDIA ###
+	# s:STATE_CENTRAL_INDIA = { add_state_trait = state_trait_hydro_potential_1 } # agra, bundelkund, malwa, STATE_AWADH already has lvl 2
+	s:STATE_AGRA = { add_state_trait = state_trait_hydro_potential_1 }
+	s:STATE_CEYLON = { add_state_trait = state_trait_hydro_potential_1 }
+	s:STATE_MYSORE = { add_state_trait = state_trait_hydro_potential_1 }
+	s:STATE_TRAVANCORE = { add_state_trait = state_trait_hydro_potential_1 }
+	s:STATE_HYDERABAD = { add_state_trait = state_trait_hydro_potential_1 }
+	s:STATE_BOMBAY = { add_state_trait = state_trait_hydro_potential_1 }
+	
+	### EAST ASIA ###
+	s:STATE_BEIJING = { add_state_trait = state_trait_hydro_potential_1 }
+	s:STATE_SOUTHERN_MANCHURIA = { add_state_trait = state_trait_hydro_potential_1 }
+	s:STATE_NORTHERN_MANCHURIA = { add_state_trait = state_trait_hydro_potential_1 }
+	s:STATE_XIAN = { add_state_trait = state_trait_hydro_potential_1 }
+	s:STATE_NANJING = { add_state_trait = state_trait_hydro_potential_1 }
+	s:STATE_HENAN = { add_state_trait = state_trait_hydro_potential_1 }
+	s:STATE_KANTO = { add_state_trait = state_trait_hydro_potential_1 }
+	s:STATE_BUSAN = { add_state_trait = state_trait_hydro_potential_1 }
+	s:STATE_PYONGYANG = { add_state_trait = state_trait_hydro_potential_1 }
+	
+	### INDONESIA ###
+	
+	### AUSTRALASIA ###
+	s:STATE_NEW_SOUTH_WALES = { add_state_trait = state_trait_hydro_potential_1 }
+	s:STATE_VICTORIA = { add_state_trait = state_trait_hydro_potential_1 }
+	s:STATE_TASMANIA = { add_state_trait = state_trait_hydro_potential_1 }
+	s:STATE_NORTHERN_TERRITORY = { add_state_trait = state_trait_hydro_potential_1 }
+	
+	### SIBERIA ###
+	s:STATE_URAL = { add_state_trait = state_trait_hydro_potential_1 }
+	s:STATE_TOMSK = { add_state_trait = state_trait_hydro_potential_1 }
+	
+	########### GOOD POTENTIAL ###########
+	
+	### WEST EUROPE ###
+	s:STATE_NORRLAND = { add_state_trait = state_trait_hydro_potential_2 }
+	s:STATE_NORTHERN_NORWAY = { add_state_trait = state_trait_hydro_potential_2 }
+	s:STATE_WALES = { add_state_trait = state_trait_hydro_potential_2 }
+	s:STATE_YORKSHIRE = { add_state_trait = state_trait_hydro_potential_2 }
+	s:STATE_LOWLANDS = { add_state_trait = state_trait_hydro_potential_2 }
+	s:STATE_ULSTER = { add_state_trait = state_trait_hydro_potential_2 }
+	s:STATE_MUNSTER = { add_state_trait = state_trait_hydro_potential_2 }
+	s:STATE_AUVERGNE_LIMOUSIN = { add_state_trait = state_trait_hydro_potential_2 }
+	s:STATE_FRANCHE_COMTE = { add_state_trait = state_trait_hydro_potential_2 }
+	s:STATE_AQUITAINE = { add_state_trait = state_trait_hydro_potential_2 }
+	s:STATE_AUSTRIA = { add_state_trait = state_trait_hydro_potential_2 }
+	s:STATE_WEST_PRUSSIA = { add_state_trait = state_trait_hydro_potential_2 }
+	
+	### SOUTH EUROPE ### = { add_state_trait = state_trait_hydro_potential_2 }
+	s:STATE_CATALONIA = { add_state_trait = state_trait_hydro_potential_2 }
+	s:STATE_UMBRIA = { add_state_trait = state_trait_hydro_potential_2 }
+	s:STATE_CORSICA = { add_state_trait = state_trait_hydro_potential_2 }
+	s:STATE_TUSCANY = { add_state_trait = state_trait_hydro_potential_2 }
+	s:STATE_GALICIA = { add_state_trait = state_trait_hydro_potential_2 }
+	s:STATE_ASTURIAS = { add_state_trait = state_trait_hydro_potential_2 }
+	s:STATE_CASTILE = { add_state_trait = state_trait_hydro_potential_2 }
+	s:STATE_NAVARRA = { add_state_trait = state_trait_hydro_potential_2 }
+	s:STATE_BEIRA = { add_state_trait = state_trait_hydro_potential_2 }
+	s:STATE_ALBANIA = { add_state_trait = state_trait_hydro_potential_2 }
+	s:STATE_SLOVENIA = { add_state_trait = state_trait_hydro_potential_2 }
+	s:STATE_CROATIA = { add_state_trait = state_trait_hydro_potential_2 }
+	s:STATE_MONTENEGRO = { add_state_trait = state_trait_hydro_potential_2 }
+	s:STATE_NORTHERN_SERBIA = { add_state_trait = state_trait_hydro_potential_2 }
+	s:STATE_SOUTHERN_SERBIA = { add_state_trait = state_trait_hydro_potential_2 }
+	s:STATE_CRETE = { add_state_trait = state_trait_hydro_potential_2 }
+	s:STATE_THESSALIA = { add_state_trait = state_trait_hydro_potential_2 }
+	s:STATE_SKOPIA = { add_state_trait = state_trait_hydro_potential_2 }
+	
+	### EAST EUROPE ### = { add_state_trait = state_trait_hydro_potential_2 }
+	s:STATE_SILESIA = { add_state_trait = state_trait_hydro_potential_2 }
+	s:STATE_EAST_GALICIA = { add_state_trait = state_trait_hydro_potential_2 }
+	s:STATE_EAST_SLOVAKIA = { add_state_trait = state_trait_hydro_potential_2 }
+	s:STATE_MOLDAVIA = { add_state_trait = state_trait_hydro_potential_2 }
+	s:STATE_WALLACHIA = { add_state_trait = state_trait_hydro_potential_2 }
+	
+	### NORTH AFRICA ### = { add_state_trait = state_trait_hydro_potential_2 }
+	s:STATE_LOWER_EGYPT = { add_state_trait = state_trait_hydro_potential_2 }
+	s:STATE_UPPER_EGYPT = { add_state_trait = state_trait_hydro_potential_2 }
+	s:STATE_MIDDLE_EGYPT = { add_state_trait = state_trait_hydro_potential_2 }
+	s:STATE_DONGOLA = { add_state_trait = state_trait_hydro_potential_2 }
+	
+	### SUBSAHARAN AFRICA ### = { add_state_trait = state_trait_hydro_potential_2 }
+	s:STATE_WINDWARD_COAST = { add_state_trait = state_trait_hydro_potential_2 }
+	s:STATE_LIBERIA = { add_state_trait = state_trait_hydro_potential_2 }
+	s:STATE_LINDI = { add_state_trait = state_trait_hydro_potential_2 }
+	s:STATE_ZANZIBAR = { add_state_trait = state_trait_hydro_potential_2 }
+	s:STATE_KAZEMBE = { add_state_trait = state_trait_hydro_potential_2 }
+	s:STATE_UGANDA = { add_state_trait = state_trait_hydro_potential_2 }
+	s:STATE_EQUATORIA = { add_state_trait = state_trait_hydro_potential_2 }
+	s:STATE_MOCAMBIQUE = { add_state_trait = state_trait_hydro_potential_2 }
+	s:STATE_NORTH_CAMEROON = { add_state_trait = state_trait_hydro_potential_2 }
+	s:STATE_ZAMBIA = { add_state_trait = state_trait_hydro_potential_2 }
+	
+	### NORTH AMERICA ### = { add_state_trait = state_trait_hydro_potential_2 }
+	s:STATE_WASHINGTON = { add_state_trait = state_trait_hydro_potential_2 }
+	s:STATE_OREGON = { add_state_trait = state_trait_hydro_potential_2 }
+	s:STATE_IDAHO = { add_state_trait = state_trait_hydro_potential_2 }
+	s:STATE_WYOMING = { add_state_trait = state_trait_hydro_potential_2 }
+	s:STATE_MONTANA = { add_state_trait = state_trait_hydro_potential_2 }
+	s:STATE_WEST_VIRGINIA = { add_state_trait = state_trait_hydro_potential_2 }
+	s:STATE_PENNSYLVANIA = { add_state_trait = state_trait_hydro_potential_2 }
+	s:STATE_UTAH = { add_state_trait = state_trait_hydro_potential_2 }
+	s:STATE_NEWFOUNDLAND = { add_state_trait = state_trait_hydro_potential_2 }
+	s:STATE_YUKON_TERRITORY = { add_state_trait = state_trait_hydro_potential_2 }
+	s:STATE_CALIFORNIA = { add_state_trait = state_trait_hydro_potential_2 }
+	s:STATE_MEXICO = { add_state_trait = state_trait_hydro_potential_2 }
+	s:STATE_GUERRERO = { add_state_trait = state_trait_hydro_potential_2 }
+	s:STATE_OAXACA = { add_state_trait = state_trait_hydro_potential_2 }
+	s:STATE_JALISCO = { add_state_trait = state_trait_hydro_potential_2 }
+	
+	### CENTRAL AMERICA ### = { add_state_trait = state_trait_hydro_potential_2 }
+	s:STATE_SAN_SALVADOR = { add_state_trait = state_trait_hydro_potential_2 }
+	s:STATE_NICARAGUA = { add_state_trait = state_trait_hydro_potential_2 }
+	s:STATE_PANAMA = { add_state_trait = state_trait_hydro_potential_2 }
+	
+	### SOUTH AMERICA ### = { add_state_trait = state_trait_hydro_potential_2 }
+	s:STATE_ANTIOQUIA = { add_state_trait = state_trait_hydro_potential_2 }
+	s:STATE_GUAVIARE = { add_state_trait = state_trait_hydro_potential_2 }
+	s:STATE_SANTA_CRUZ = { add_state_trait = state_trait_hydro_potential_2 }
+	s:STATE_JUJUY = { add_state_trait = state_trait_hydro_potential_2 }
+	s:STATE_TUCUMAN = { add_state_trait = state_trait_hydro_potential_2 }
+	s:STATE_SANTIAGO = { add_state_trait = state_trait_hydro_potential_2 }
+	s:STATE_LOS_RIOS = { add_state_trait = state_trait_hydro_potential_2 }
+	s:STATE_GOIAS = { add_state_trait = state_trait_hydro_potential_2 }
+	s:STATE_MATO_GROSSO = { add_state_trait = state_trait_hydro_potential_2 }
+	s:STATE_SANTA_CATARINA = { add_state_trait = state_trait_hydro_potential_2 }
+	s:STATE_SAO_PAULO = { add_state_trait = state_trait_hydro_potential_2 }
+	s:STATE_MINAS_GERAIS = { add_state_trait = state_trait_hydro_potential_2 }
+	s:STATE_RIO_DE_JANEIRO = { add_state_trait = state_trait_hydro_potential_2 }
+	s:STATE_PERNAMBUCO = { add_state_trait = state_trait_hydro_potential_2 }
+	
+	### MIDDLE EAST ### = { add_state_trait = state_trait_hydro_potential_2 }
+	s:STATE_SYRIA = { add_state_trait = state_trait_hydro_potential_2 }
+	s:STATE_ALEPPO = { add_state_trait = state_trait_hydro_potential_2 }
+	s:STATE_MOSUL = { add_state_trait = state_trait_hydro_potential_2 }
+	s:STATE_FARS = { add_state_trait = state_trait_hydro_potential_2 }
+	s:STATE_IRAKAJEMI = { add_state_trait = state_trait_hydro_potential_2 }
+	s:STATE_TABRIZ = { add_state_trait = state_trait_hydro_potential_2 }
+	s:STATE_LURISTAN = { add_state_trait = state_trait_hydro_potential_2 }
+	s:STATE_KONYA = { add_state_trait = state_trait_hydro_potential_2 }
+	s:STATE_KASTAMONU = { add_state_trait = state_trait_hydro_potential_2 }
+	s:STATE_ADANA = { add_state_trait = state_trait_hydro_potential_2 }
+	s:STATE_ERZURUM = { add_state_trait = state_trait_hydro_potential_2 }
+	s:STATE_ANKARA = { add_state_trait = state_trait_hydro_potential_2 }
+	
+	### CENTRAL ASIA ### = { add_state_trait = state_trait_hydro_potential_2 }
+	s:STATE_DAGESTAN = { add_state_trait = state_trait_hydro_potential_2 }
+	s:STATE_TAJIKISTAN = { add_state_trait = state_trait_hydro_potential_2 }
+	s:STATE_NGARI = { add_state_trait = state_trait_hydro_potential_2 }
+	
+	### INDIA ### = { add_state_trait = state_trait_hydro_potential_2 }
+	s:STATE_BIHAR = { add_state_trait = state_trait_hydro_potential_2 }
+	s:STATE_EAST_BENGAL = { add_state_trait = state_trait_hydro_potential_2 }
+	s:STATE_AWADH = { add_state_trait = state_trait_hydro_potential_2 }
+	s:STATE_PUNJAB = { add_state_trait = state_trait_hydro_potential_2 }
+	s:STATE_CENTRAL_PROVINCES = { add_state_trait = state_trait_hydro_potential_2 }
+	s:STATE_SINDH = { add_state_trait = state_trait_hydro_potential_2 }
+	s:STATE_ORISSA = { add_state_trait = state_trait_hydro_potential_2 }
+	s:STATE_CIRCARS = { add_state_trait = state_trait_hydro_potential_2 }
+	
+	### EAST ASIA ### = { add_state_trait = state_trait_hydro_potential_2 }
+	s:STATE_SHAOZHOU = { add_state_trait = state_trait_hydro_potential_2 }
+	s:STATE_OUTER_MANCHURIA = { add_state_trait = state_trait_hydro_potential_2 }
+	s:STATE_NINGXIA = { add_state_trait = state_trait_hydro_potential_2 }
+	s:STATE_SHANXI = { add_state_trait = state_trait_hydro_potential_2 }
+	s:STATE_CHONGQING = { add_state_trait = state_trait_hydro_potential_2 }
+	s:STATE_FUJIAN = { add_state_trait = state_trait_hydro_potential_2 }
+	s:STATE_ZHEJIANG = { add_state_trait = state_trait_hydro_potential_2 }
+	s:STATE_JIANGXI = { add_state_trait = state_trait_hydro_potential_2 }
+	s:STATE_SOUTHERN_ANHUI = { add_state_trait = state_trait_hydro_potential_2 }
+	s:STATE_WESTERN_HUBEI = { add_state_trait = state_trait_hydro_potential_2 }
+	s:STATE_EASTERN_HUBEI = { add_state_trait = state_trait_hydro_potential_2 }
+	s:STATE_HUNAN = { add_state_trait = state_trait_hydro_potential_2 }
+	s:STATE_BANGKOK = { add_state_trait = state_trait_hydro_potential_2 }
+	s:STATE_TONKIN = { add_state_trait = state_trait_hydro_potential_2 }
+	s:STATE_ANNAM = { add_state_trait = state_trait_hydro_potential_2 }
+	s:STATE_MEKONG = { add_state_trait = state_trait_hydro_potential_2 }
+	s:STATE_TENASSERIM = { add_state_trait = state_trait_hydro_potential_2 }
+	s:STATE_SAKHALIN = { add_state_trait = state_trait_hydro_potential_2 }
+	s:STATE_HOKKAIDO = { add_state_trait = state_trait_hydro_potential_2 }
+	s:STATE_TOHOKU = { add_state_trait = state_trait_hydro_potential_2 }
+	s:STATE_KANSAI = { add_state_trait = state_trait_hydro_potential_2 }
+	s:STATE_KYUSHU = { add_state_trait = state_trait_hydro_potential_2 }
+	s:STATE_CHUGOKU = { add_state_trait = state_trait_hydro_potential_2 }
+	s:STATE_SHIKOKU = { add_state_trait = state_trait_hydro_potential_2 }
+	s:STATE_SEOUL = { add_state_trait = state_trait_hydro_potential_2 }
+	s:STATE_SARIWON = { add_state_trait = state_trait_hydro_potential_2 }
+	
+	### INDONESIA ### = { add_state_trait = state_trait_hydro_potential_2 }
+	s:STATE_MALAYA = { add_state_trait = state_trait_hydro_potential_2 }
+	s:STATE_EAST_JAVA = { add_state_trait = state_trait_hydro_potential_2 }
+	s:STATE_CENTRAL_JAVA = { add_state_trait = state_trait_hydro_potential_2 }
+	s:STATE_MOLUCCAS = { add_state_trait = state_trait_hydro_potential_2 }
+	s:STATE_SUNDA_ISLANDS = { add_state_trait = state_trait_hydro_potential_2 }
+	s:STATE_LUZON = { add_state_trait = state_trait_hydro_potential_2 }
+	s:STATE_VISAYAS = { add_state_trait = state_trait_hydro_potential_2 }
+	
+	### AUSTRALASIA ### = { add_state_trait = state_trait_hydro_potential_2 }
+	s:STATE_QUEENSLAND = { add_state_trait = state_trait_hydro_potential_2 }
+	s:STATE_NORTH_ISLAND = { add_state_trait = state_trait_hydro_potential_2 }
+	
+	### SIBERIA ### = { add_state_trait = state_trait_hydro_potential_2 }
+	s:STATE_TUVA = { add_state_trait = state_trait_hydro_potential_2 }
+	s:STATE_CHUKOTKA = { add_state_trait = state_trait_hydro_potential_2 }
+	s:STATE_KAMCHATKA = { add_state_trait = state_trait_hydro_potential_2 }
+	s:STATE_OKHOTSK = { add_state_trait = state_trait_hydro_potential_2 }
+	s:STATE_IRKUTSK = { add_state_trait = state_trait_hydro_potential_2 }
+	
+	### RUSSIA ### = { add_state_trait = state_trait_hydro_potential_2 }
+	s:STATE_WEST_KARELIA = { add_state_trait = state_trait_hydro_potential_2 }
+	
+	########### GREAT POTENTIAL ###########
+	
+	### WEST EUROPE 	
+	s:STATE_WESTERN_NORWAY = { add_state_trait = state_trait_hydro_potential_3 }
+	s:STATE_EASTERN_NORWAY = { add_state_trait = state_trait_hydro_potential_3 }
+	s:STATE_ICELAND = { add_state_trait = state_trait_hydro_potential_3 }
+	s:STATE_HIGHLANDS = { add_state_trait = state_trait_hydro_potential_3 }
+	s:STATE_PROVENCE = { add_state_trait = state_trait_hydro_potential_3 }
+	s:STATE_LANGUEDOC = { add_state_trait = state_trait_hydro_potential_3 }
+	s:STATE_RHONE = { add_state_trait = state_trait_hydro_potential_3 }
+	s:STATE_STYRIA = { add_state_trait = state_trait_hydro_potential_3 }
+	s:STATE_TYROL = { add_state_trait = state_trait_hydro_potential_3 }
+	s:STATE_SOUTH_TYROL = { add_state_trait = state_trait_hydro_potential_3 }
+	s:STATE_EAST_SWITZERLAND = { add_state_trait = state_trait_hydro_potential_3 }
+	s:STATE_WEST_SWITZERLAND = { add_state_trait = state_trait_hydro_potential_3 }
+	
+	### SOUTH EUROPE 	
+	s:STATE_PIEDMONT = { add_state_trait = state_trait_hydro_potential_3 }
+	s:STATE_LOMBARDY = { add_state_trait = state_trait_hydro_potential_3 }
+	s:STATE_ABRUZZO = { add_state_trait = state_trait_hydro_potential_3 }
+	s:STATE_SAVOY = { add_state_trait = state_trait_hydro_potential_3 }
+	s:STATE_ARAGON = { add_state_trait = state_trait_hydro_potential_3 }
+	s:STATE_BOSNIA = { add_state_trait = state_trait_hydro_potential_3 }
+	
+	### EAST EUROPE 	
+	
+	### NORTH AFRICA 	
+	
+	### SUBSAHARAN AFRICA 	
+	s:STATE_OROMIA = { add_state_trait = state_trait_hydro_potential_3 }
+	s:STATE_AMHARA = { add_state_trait = state_trait_hydro_potential_3 }
+	s:STATE_GONDER = { add_state_trait = state_trait_hydro_potential_3 }
+	s:STATE_SOUTH_MADAGASCAR = { add_state_trait = state_trait_hydro_potential_3 }
+	s:STATE_NORTH_MADAGASCAR = { add_state_trait = state_trait_hydro_potential_3 }
+	
+	### NORTH AMERICA 	
+	s:STATE_NEW_YORK = { add_state_trait = state_trait_hydro_potential_3 }
+	s:STATE_QUEBEC = { add_state_trait = state_trait_hydro_potential_3 }
+	s:STATE_BRITISH_COLUMBIA = { add_state_trait = state_trait_hydro_potential_3 }
+	s:STATE_ALASKA = { add_state_trait = state_trait_hydro_potential_3 }
+	s:STATE_NEVADA = { add_state_trait = state_trait_hydro_potential_3 }
+	s:STATE_BAJIO = { add_state_trait = state_trait_hydro_potential_3 }
+	s:STATE_CHIAPAS = { add_state_trait = state_trait_hydro_potential_3 }
+	
+	### CENTRAL AMERICA 	
+	s:STATE_GUATEMALA = { add_state_trait = state_trait_hydro_potential_3 }
+	s:STATE_HONDURAS = { add_state_trait = state_trait_hydro_potential_3 }
+	s:STATE_COSTA_RICA = { add_state_trait = state_trait_hydro_potential_3 }
+	
+	### SOUTH AMERICA 	
+	s:STATE_ECUADOR = { add_state_trait = state_trait_hydro_potential_3 }
+	s:STATE_CUNDINAMARCA = { add_state_trait = state_trait_hydro_potential_3 }
+	s:STATE_CAUCA = { add_state_trait = state_trait_hydro_potential_3 }
+	s:STATE_LA_PAZ = { add_state_trait = state_trait_hydro_potential_3 }
+	s:STATE_POTOSI = { add_state_trait = state_trait_hydro_potential_3 }
+	s:STATE_LIMA = { add_state_trait = state_trait_hydro_potential_3 }
+	s:STATE_ICA = { add_state_trait = state_trait_hydro_potential_3 }
+	s:STATE_AREQUIPA = { add_state_trait = state_trait_hydro_potential_3 }
+	s:STATE_PATAGONIA = { add_state_trait = state_trait_hydro_potential_3 }
+	s:STATE_AMAZONAS = { add_state_trait = state_trait_hydro_potential_3 }
+	s:STATE_RIO_GRANDE_DO_SUL = { add_state_trait = state_trait_hydro_potential_3 }
+	
+	### MIDDLE EAST 	
+	s:STATE_ISFAHAN = { add_state_trait = state_trait_hydro_potential_3 }
+	s:STATE_MAZANDARAN = { add_state_trait = state_trait_hydro_potential_3 }
+	s:STATE_DIYARBAKIR = { add_state_trait = state_trait_hydro_potential_3 }
+	s:STATE_TRABZON = { add_state_trait = state_trait_hydro_potential_3 }
+	
+	### CENTRAL ASIA 	
+	s:STATE_GREATER_CAUCASUS = { add_state_trait = state_trait_hydro_potential_3 }
+	s:STATE_LHASA = { add_state_trait = state_trait_hydro_potential_3 }
+	s:STATE_HIMALAYAS = { add_state_trait = state_trait_hydro_potential_3 }
+	
+	### INDIA 	
+	s:STATE_ASSAM = { add_state_trait = state_trait_hydro_potential_3 }
+	s:STATE_DELHI = { add_state_trait = state_trait_hydro_potential_3 }
+	s:STATE_KASHMIR = { add_state_trait = state_trait_hydro_potential_3 }
+	
+	### EAST ASIA 	
+	s:STATE_SICHUAN = { add_state_trait = state_trait_hydro_potential_3 }
+	s:STATE_YUNNAN = { add_state_trait = state_trait_hydro_potential_3 }
+	s:STATE_GUIZHOU = { add_state_trait = state_trait_hydro_potential_3 }
+	s:STATE_GUANGXI = { add_state_trait = state_trait_hydro_potential_3 }
+	s:STATE_FORMOSA = { add_state_trait = state_trait_hydro_potential_3 }
+	s:STATE_LAOS = { add_state_trait = state_trait_hydro_potential_3 }
+	s:STATE_KACHIN = { add_state_trait = state_trait_hydro_potential_3 }
+	s:STATE_SHAN_STATES = { add_state_trait = state_trait_hydro_potential_3 }
+	s:STATE_CHUBU = { add_state_trait = state_trait_hydro_potential_3 }
+	
+	### INDONESIA 	
+	s:STATE_NORTH_BORNEO = { add_state_trait = state_trait_hydro_potential_3 }
+	s:STATE_WEST_BORNEO = { add_state_trait = state_trait_hydro_potential_3 }
+	s:STATE_EAST_BORNEO = { add_state_trait = state_trait_hydro_potential_3 }
+	s:STATE_WEST_JAVA = { add_state_trait = state_trait_hydro_potential_3 }
+	s:STATE_NORTH_SUMATRA = { add_state_trait = state_trait_hydro_potential_3 }
+	s:STATE_SOUTH_SUMATRA = { add_state_trait = state_trait_hydro_potential_3 }
+	s:STATE_ACEH = { add_state_trait = state_trait_hydro_potential_3 }
+	s:STATE_WESTERN_NEW_GUINEA = { add_state_trait = state_trait_hydro_potential_3 }
+	s:STATE_CELEBES = { add_state_trait = state_trait_hydro_potential_3 }
+	s:STATE_EASTERN_NEW_GUINEA = { add_state_trait = state_trait_hydro_potential_3 }
+	s:STATE_MINDANAO = { add_state_trait = state_trait_hydro_potential_3 }
+	
+	### AUSTRALASIA 	
+	s:STATE_SOUTH_ISLAND = { add_state_trait = state_trait_hydro_potential_3 }
+	
+	### SIBERIA 	
+	s:STATE_TRANS_BAIKAL = { add_state_trait = state_trait_hydro_potential_3 }
+	
+	### RUSSIA 	
+	s:STATE_BURYATIA = { add_state_trait = state_trait_hydro_potential_3 }
+}

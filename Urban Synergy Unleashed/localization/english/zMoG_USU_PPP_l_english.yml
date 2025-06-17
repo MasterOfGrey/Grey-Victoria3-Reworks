@@ -1,5 +1,6 @@
 ﻿l_english:
     # Building
+    usu_bg_power_grid: "Electrical Grid"
     ppp_building_power_grid: "Electrical Grid"
     
     # Technologies
@@ -21,12 +22,6 @@
     goods_output_ppp_hv_power_add_desc:  "The amount of @ppp_hv_power![Nbsp]$ppp_hv_power$ produced by buildings"
     goods_input_ppp_hv_power_mult_desc:  "A bonus or penalty to the amount of @ppp_hv_power![Nbsp]$ppp_hv_power$ consumed by buildings"
     goods_output_ppp_hv_power_mult_desc: "A bonus or penalty to the amount of @ppp_hv_power![Nbsp]$ppp_hv_power$ produced by buildings"
-    
-    goods_input_steel_mult: "Building $goods_input_steel_add$"
-    goods_input_tools_mult: "Building $goods_input_tools_add$"
-    
-    goods_input_steel_mult_desc: "$goods_input_steel_add_desc$" # I'm lazy + they just do this for
-    goods_input_tools_mult_desc: "$goods_input_tools_add_desc$" # mobilization options anyways
     
     # PMGs
     PPP_pmg_generation_machinery: "Generation Machinery"

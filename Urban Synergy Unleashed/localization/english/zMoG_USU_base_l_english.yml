@@ -7,6 +7,8 @@
     mog_mapi: "Urban Synergy MAPI"
     
     # Building
+    USU_bg_port_infrastructure: "Ports"
+    
     building_river_port: "River Docks"
     usu_building_public_green: "Public Green"
     
@@ -14,6 +16,8 @@
     
     # Goods
     usu_logistics: "Logistics Services"
+    trade_route_import_lens_option_usu_logistics_tooltip: "Establish an $usu_logistics$ import trade route"
+    trade_route_export_lens_option_usu_logistics_tooltip: "Establish an $usu_logistics$ export trade route"
     
     # Modifier types
     state_building_river_port_max_level_add: "River Port Max Level"
@@ -21,7 +25,7 @@
     
     goods_input_usu_logistics_add:   "@usu_logistics![Nbsp]$usu_logistics$ input"
     goods_output_usu_logistics_add:  "@usu_logistics![Nbsp]$usu_logistics$ output"
-    goods_input_usu_logisticsr_mult:  "Building @usu_logistics![Nbsp]$usu_logistics$ input"
+    goods_input_usu_logistics_mult:  "Building @usu_logistics![Nbsp]$usu_logistics$ input"
     goods_output_usu_logistics_mult: "Building @usu_logistics![Nbsp]$usu_logistics$ output"
     
     goods_input_usu_logistics_add_desc:   "The amount of @usu_logistics![Nbsp]$usu_logistics$ consumed by buildings"
@@ -29,15 +33,33 @@
     goods_input_usu_logistics_mult_desc:  "A bonus or penalty to the amount of @usu_logistics![Nbsp]$usu_logistics$ consumed by buildings"
     goods_output_usu_logistics_mult_desc: "A bonus or penalty to the amount of @usu_logistics![Nbsp]$usu_logistics$ produced by buildings"
     
-    modifier_goods_input_tools_mult: "@tools![Nbsp]Tools input"
-    modifier_goods_input_tools_mult_desc: "The amount of @tools![Nbsp]Tools consumed by buildings"
-    
     usu_building_public_green_throughput_add: "$usu_building_public_green$ building [concept_throughput]"
     usu_building_public_green_throughput_add_desc: "A bonus or penalty to both input and output of $usu_building_public_green$"
     ppp_building_power_grid_throughput_add: "$ppp_building_power_grid$ building [concept_throughput]"
     ppp_building_power_grid_throughput_add_desc: "A bonus or penalty to both input and output of $ppp_building_power_grid$"
     building_river_port_throughput_add: "$building_river_port$ building [concept_throughput]"
     building_river_port_throughput_add_desc: "A bonus or penalty to both input and output of $building_river_port$"
+    usu_building_hydro_power_plant_throughput_add: "$usu_building_hydro_power_plant$ building [concept_throughput]"
+    usu_building_hydro_power_plant_throughput_add_desc: "A bonus or penalty to both input and output of $usu_building_hydro_power_plant$"
+    
+    # Vanilla Modifier types
+    
+    goods_input_luxury_clothes_add: "@luxury_clothes![Nbsp]$luxury_clothes$ input"
+    goods_input_luxury_clothes_add_desc: "The amount of @luxury_clothes![Nbsp]$luxury_clothes$ consumed by buildings"
+    goods_input_services_add: "@services![Nbsp]$services$ input"
+    goods_input_services_add_desc: "The amount of @services![Nbsp]$services$ consumed by buildings"
+    
+    goods_input_tools_mult: "Building @tools![Nbsp]$tools$ input"
+    goods_input_tools_mult_desc: "The amount of @tools![Nbsp]$tools$ consumed by buildings"
+    goods_input_steel_mult: "Building @steel![Nbsp]$steel$ input"
+    goods_input_steel_mult_desc: "The amount of @steel![Nbsp]$steel$ consumed by buildings"
+    
+    goods_input_transportation_mult: "Building @transportation![Nbsp]$transportation$ input"
+    goods_input_transportation_mult_desc: "A bonus or penalty to the amount of @transportation![Nbsp]$transportation$ consumed by buildings"
+    goods_output_transportation_mult: "Building @transportation![Nbsp]$transportation$ output"
+    goods_output_transportation_mult_desc: "A bonus or penalty to the amount of @transportation![Nbsp]$transportation$ produced by buildings"
+    goods_output_electricity_mult: "Building @electricity![Nbsp]$electricity$ output"
+    goods_output_electricity_mult_desc: "A bonus or penalty to the amount of @electricity![Nbsp]$electricity$ produced by buildings"
     
     # PMGs
     pmg_base_building_river_port: "Docks"
@@ -69,8 +91,8 @@
     USU_pm_seasonal_fairgrounds: "Seasonal Fairgrounds"
     
     # State Traits
-    state_trait_rotterdam:0 "Rotterdam Harbor"
-    state_trait_hudson_river:0 "Hudson River"
+    state_trait_rotterdam: "Rotterdam Harbor"
+    state_trait_hudson_river: "Hudson River"
     
     # Autoexpand tooltip(s)
     is_industrial_building: "Is a natural $concept_building_industry$ for tradeable [Concept('concept_good', '$concept_goods$')]"
