@@ -5,42 +5,42 @@
 # These are ADDITIVE with the law defines, they do not replace them.
 
 mog_spa_diff_religious_schools_literacy = {
-    icon = gfx/interface/icons/generic_icons/literacy.dds
-    state_education_access_add = -0.036						# Desired institution has 0.064 access, Vanilla has 0.1. Difference = -0.036
+	icon = gfx/interface/icons/generic_icons/literacy.dds
+	state_education_access_add = -0.036						# Desired institution has 0.064 access, Vanilla has 0.1. Difference = -0.036
 	state_slaves_education_access_add = -0.1				# Slaves don't get to go to school
 	state_education_access_wealth_add = 0.0005
 }
 
 mog_spa_diff_private_schools_literacy = {
-    icon = gfx/interface/icons/generic_icons/literacy.dds
-    state_education_access_wealth_add = -0.0018				# Desired institution has 0.0032 access, Vanilla has 0.005. Difference = -0.0018
+	icon = gfx/interface/icons/generic_icons/literacy.dds
+	state_education_access_wealth_add = -0.0018				# Desired institution has 0.0032 access, Vanilla has 0.005. Difference = -0.0018
 }
 
 mog_spa_diff_public_schools_literacy = {
-    icon = gfx/interface/icons/generic_icons/literacy.dds
-    state_education_access_add = -0.045						# Desired institution has 0.08 access, Vanilla has 0.125. Difference = -0.045
+	icon = gfx/interface/icons/generic_icons/literacy.dds
+	state_education_access_add = -0.045						# Desired institution has 0.08 access, Vanilla has 0.125. Difference = -0.045
 }
 
 mog_spa_diff_compulsory_school_literacy = {
-    icon = gfx/interface/icons/generic_icons/literacy.dds
-    state_education_access_add = 0.02
+	icon = gfx/interface/icons/generic_icons/literacy.dds
+	state_education_access_add = 0.02
 	state_slaves_education_access_add = -0.02
 }
 
 # Flat Law Modifier
 
 mog_spa_child_labor_allowed_literacy = {
-    icon = gfx/interface/icons/generic_icons/literacy.dds
-    state_education_access_add = -0.1						# Intended to remove education access from wealth among the poorest pops
+	icon = gfx/interface/icons/generic_icons/literacy.dds
+	state_education_access_add = -0.1						# Intended to remove education access from wealth among the poorest pops
 }
 
 mog_spa_restricted_child_labor_literacy = {
-    icon = gfx/interface/icons/generic_icons/literacy.dds
-    state_education_access_add = -0.05						# Intended to remove education access from wealth among the poorest pops
-    state_slaves_education_access_add = -0.05				# Slaves are exempt
+	icon = gfx/interface/icons/generic_icons/literacy.dds
+	state_education_access_add = -0.05						# Intended to remove education access from wealth among the poorest pops
+	state_slaves_education_access_add = -0.05				# Slaves are exempt
 }
 
 mog_spa_compulsory_primary_school_literacy = {
-    icon = gfx/interface/icons/generic_icons/literacy.dds
-    state_slaves_education_access_add = -0.1				# Slaves are exempt
+	icon = gfx/interface/icons/generic_icons/literacy.dds
+	state_slaves_education_access_add = -0.1				# Slaves are exempt
 }

@@ -57,13 +57,7 @@ law_religious_schools = {
 	institution = institution_schools
 	institution_modifier = {
 		state_conversion_mult = 0.2
-		#state_education_access_add = 0.1
-		# Give religious schools educational tradeoffs compared to public.
-		# In general, this makes religious schools more BUR efficient and less equitable than public
-		# Public gives more education access, but less BUR efficiently, giving a reason to switch to public if you can afford it
-		state_education_access_add = 0.064
-		state_slaves_education_access_add = -0.064 # Slaves don't get to go to school
-		state_education_access_wealth_add = 0.0005
+		state_education_access_add = 0.1
 		interest_group_ig_devout_pol_str_mult = 0.1
 	}
 	
@@ -161,7 +155,7 @@ law_private_schools = {
 	
 	institution = institution_schools
 	institution_modifier = {
-		state_education_access_wealth_add = 0.0032
+		state_education_access_wealth_add = 0.005
 		interest_group_ig_intelligentsia_pol_str_mult = 0.1
 	}
 	
@@ -261,8 +255,7 @@ law_public_schools = {
 	institution = institution_schools
 	institution_modifier = {
 		state_assimilation_mult = 0.125
-		state_education_access_add = 0.08
-		state_slaves_education_access_add = -0.08 # Slaves don't get to go to school
+		state_education_access_add = 0.1
 	}
 	
 	can_impose = {

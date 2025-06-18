@@ -12,9 +12,6 @@
 		state_peasants_mortality_mult = 0.05
 		
 		state_dependent_wage_mult = 0.30
-
-		# Intended to remove education access from wealth among the poorest pops
-		state_education_access_add = -0.1
 	}
 	
 	ai_will_do = {
@@ -53,10 +50,6 @@ law_restricted_child_labor = {
 		state_dependent_wage_mult = 0.15
 		
 		country_institution_schools_max_investment_add = 1
-
-		# Intended to remove education access from wealth among the poorest pops
-		state_education_access_add = -0.05
-		state_slaves_education_access_add = -0.05 # Slaves are exempt
 	}
 	
 	ai_will_do = {
@@ -98,14 +91,6 @@ law_compulsory_primary_school = {
 	
 	modifier = {
 		country_institution_schools_max_investment_add = 2
-		state_slaves_education_access_add = -0.1 # Slaves are exempt
-	}
-
-	institution = institution_schools
-	institution_modifier = {
-		# The strength of forcing kids to go to school depends on educational investment
-		state_education_access_add = 0.02
-		state_slaves_education_access_add = -0.02 # Slaves don't get to go to school
 	}
 	
 	ai_enact_weight_modifier = { #Petitions
