@@ -1,5 +1,0 @@
-GLOBAL = {
-    every_state = {
-        trigger_event = mog_literacy_event.1
-    }
-}

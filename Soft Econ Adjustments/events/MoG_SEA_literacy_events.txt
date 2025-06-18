@@ -1,4 +1,4 @@
-namespace = mog_literacy_event
+﻿namespace = mog_literacy_event
 
 # Reduce MAPI by illiteracy
 # Reflects the ability of the population to comprehend and utilize market data
