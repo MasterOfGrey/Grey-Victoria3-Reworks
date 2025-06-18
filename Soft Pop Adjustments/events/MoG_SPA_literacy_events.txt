@@ -1,0 +1,88 @@
+﻿﻿namespace = mog_literacy_event
+
+# Increase education access along with urbanization
+# Both books and educational institutions are more available in urban areas
+
+
+# Initialise education access effects for laws and institutions.
+mog_literacy_event.3 = {
+	type = country_event
+	hidden = yes
+
+	trigger = {
+		# by on_game_started
+	}
+
+	immediate = {
+		if = {
+			limit = {
+				has_law = law_type:law_child_labor_allowed
+			}
+			add_modifier = mog_spa_child_labor_allowed_literacy
+		}
+		else_if = {
+			limit = {
+				has_law = law_type:law_restricted_child_labor
+			}
+			add_modifier = mog_spa_restricted_child_labor_literacy
+		}
+		else_if = {
+			limit = {
+				has_law = law_type:law_compulsory_primary_school
+			}
+			add_modifier = mog_spa_compulsory_primary_school_literacy
+		}
+		
+		if = {
+			limit = {
+				exists = institution:institution_schools
+				has_law = law_type:law_compulsory_primary_school
+			}
+			institution:institution_schools = {
+				add_modifier = {
+					name = mog_spa_diff_compulsory_school_literacy
+					multiplier = investment
+				}
+			}
+		}
+		
+		if = {
+			limit = {
+				exists = institution:institution_schools
+			}
+			if = {
+				limit = {
+					has_law = law_type:law_religious_schools
+				}
+				institution:institution_schools = {
+					add_modifier = {
+						name = mog_spa_diff_religious_schools_literacy
+						multiplier = investment
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_law = law_type:law_private_schools
+				}
+				institution:institution_schools = {
+					add_modifier = {
+						name = mog_spa_diff_private_schools_literacy
+						multiplier = investment
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_law = law_type:law_public_schools
+				}
+				institution:institution_schools = {
+					add_modifier = {
+						name = mog_spa_diff_public_schools_literacy
+						multiplier = investment
+					}
+				}
+			}
+		}
+	}
+}
