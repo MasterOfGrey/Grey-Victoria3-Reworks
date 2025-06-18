@@ -1,0 +1,31 @@
+﻿namespace = mog_literacy_event
+
+# Reduce MAPI by illiteracy
+# Reflects the ability of the population to comprehend and utilize market data
+mog_literacy_event.1 = {
+	type = state_event
+	hidden = yes
+
+	trigger = {
+		# by global
+	}
+
+	immediate = {
+        if = {
+            limit = {
+                has_modifier = mog_market_access_from_literacy
+            }
+            remove_modifier = mog_market_access_from_literacy
+        }
+
+        add_modifier = {
+            name = mog_market_access_from_literacy
+            multiplier = {
+                add = {
+                    value = -1
+                    add = literacy_rate
+                }
+            }
+        }
+    }
+}

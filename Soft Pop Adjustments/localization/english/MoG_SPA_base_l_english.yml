@@ -1,6 +1,7 @@
-﻿l_english:
+l_english:
   # Modifiers
   mog_company_migration_penalty: "Extractive Colonial Administration"
+  mog_education_access_from_urbanization: "Education access from [concept_urbanization]"
   
   mog_spa_child_labor_allowed_literacy: "SPA: Child Labour Law Literacy Effect"
   mog_spa_restricted_child_labor_literacy: "SPA: Child Labour Law Literacy Effect"

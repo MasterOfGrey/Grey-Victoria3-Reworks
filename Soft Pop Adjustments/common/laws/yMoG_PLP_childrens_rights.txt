@@ -103,7 +103,6 @@ law_compulsory_primary_school = {
 
 	institution = institution_schools
 	institution_modifier = {
-		# The strength of forcing kids to go to school depends on educational investment
 		state_education_access_add = 0.02
 		state_slaves_education_access_add = -0.02 # Slaves don't get to go to school
 	}
