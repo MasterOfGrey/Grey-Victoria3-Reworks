@@ -1,4 +1,4 @@
-namespace = mog_literacy_event
+﻿namespace = mog_literacy_event
 
 # Increase education access along with urbanization
 # Both books and educational institutions are more available in urban areas
@@ -117,6 +117,8 @@ mog_literacy_event.3 = {
 						multiplier = investment
 					}
 				}
+			}
+			else = {
 			}
 		}
 	}

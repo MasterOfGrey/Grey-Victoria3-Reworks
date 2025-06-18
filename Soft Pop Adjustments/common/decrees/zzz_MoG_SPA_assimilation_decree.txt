@@ -12,6 +12,12 @@ decree_promote_national_values = {
 	unlocking_technologies = {
 		centralization
 	}
+	#state_trigger = {	# The player may have other mods which mean this is still sensible to be used, but the AI shouldn't (added to ai_weight block)
+	#	OR = {
+	#		has_assimilating_pops = yes
+	#		has_converting_pops = yes
+	#	}
+	#}
 	modifier = {
 		state_assimilation_mult = 1
 		state_conversion_mult = 1
@@ -74,6 +80,17 @@ decree_promote_national_values = {
 				}
 			}
 			multiply = 1.5
+		}
+		if = {
+			limit = {
+				NOT = {
+					OR = {
+						has_assimilating_pops = yes
+						has_converting_pops = yes
+					}
+				}
+			}
+			multiply = 0
 		}
 	}
 }

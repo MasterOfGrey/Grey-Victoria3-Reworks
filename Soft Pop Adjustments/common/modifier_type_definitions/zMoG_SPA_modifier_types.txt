@@ -1,6 +1,17 @@
-state_slaves_education_access_add={
+﻿state_slaves_education_access_add={
 	decimals=0
 	color=good
+	percent=yes
+	game_data={
+		ai_value=0
+	}
+}
+
+# Vanilla - Needs more decimals
+state_education_access_wealth_add={
+	decimals=2
+	color=good
+	suffix="per_wealth"
 	percent=yes
 	game_data={
 		ai_value=0

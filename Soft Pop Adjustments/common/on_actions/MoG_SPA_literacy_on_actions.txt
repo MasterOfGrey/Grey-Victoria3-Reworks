@@ -8,8 +8,10 @@ on_game_started = {
 }
 
 MoG_SPA_literacy_setup_action = {
-	every_country = {
-		trigger_event = mog_literacy_event.3
+	effect = {
+		every_country = {
+			trigger_event = mog_literacy_event.3
+		}
 	}
 }
 
