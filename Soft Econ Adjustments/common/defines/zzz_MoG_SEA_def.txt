@@ -1,4 +1,4 @@
-﻿NEconomy = {
+NEconomy = {
 	# Honestly the Vanilla minimum is a joke
 	MIN_CONSTRUCTION_EFFICIENCY = 0.15 # 0.05					# Construction efficiency cannot go below this amount
 	
@@ -132,6 +132,11 @@
 	COMPANY_ON_DISBAND_COOLDOWN_MONTHS = 36 # 48			# Cooldown in months after disbanding a company before you can re-establish it
 	COMPANY_INITIAL_LEVELS = 2 # 5							# How many levels of ownership in other buildings required to establish a company
 	COMPANY_MIN_LEVELS_OWNED = 2 # 5						# Min amount of ownerships that company can have, more can't be nationalized or privatized
+
+	
+	## GDP reinvestment scaling
+	REINVESTMENT_EFFICIENCY_MAX = 2.0 # 3.0					# Maximum conversion of reinvestment to investment pool
+	REINVESTMENT_BASE_EFFICIENCY_THRESHOLD = 20000000 # 50000000	# Below this amount of GDP, increase reinvestment multiplier on a linear scale up to REINVESTMENT_EFFICIENCY_MAX at 0
 }
 
 NAI = {
