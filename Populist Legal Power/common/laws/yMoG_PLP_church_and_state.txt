@@ -314,7 +314,7 @@ law_state_atheism = {
 	on_enact = {
 		add_modifier = {
 			name = antireligious_policies
-			months = long_modifier_time
+			days = long_modifier_time
 		}
 		custom_tooltip = {
 			text = state_atheism_conversion_tt

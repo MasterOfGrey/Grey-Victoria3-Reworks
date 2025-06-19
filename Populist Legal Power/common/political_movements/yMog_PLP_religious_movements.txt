@@ -1,13 +1,13 @@
 ﻿movement_religious_minority = {
 	category = movement_category_religious
 	
-	ideology = ideology_traditionalist_minoritarian	
+	ideology = ideology_traditionalist_minoritarian_movement
 	character_ideologies = {
 		ideology_traditionalist_minoritarian
 	}
 	
 	creation_trigger = {
-		NOT = {
+		NAND = {
 			c:BIC ?= this
 			has_technology_researched = pan-nationalism
 		}
@@ -22,6 +22,12 @@
 			scope:political_movement ?= {
 				religion = {
 					is_state_religion = root
+				}
+				root = {
+					religion_percent_country = {
+						target = scope:political_movement.religion
+						value <= 0.08
+					}
 				}
 			}
 			AND = {
@@ -72,7 +78,7 @@
 		scope:country = {
 			religion_percent_country = {
 				target = root
-				value >= 0.05
+				value >= 0.1
 			}
 		}		
 	}
@@ -157,6 +163,46 @@
 	}
 
 	pop_support_weight = {
+		if = {
+			limit = {
+				owner ?= {
+					any_political_movement = {
+						is_political_movement_type = movement_religious_minority
+						religion ?= root.religion
+						OR = {
+							is_being_suppressed = yes
+							is_being_bolstered = yes
+						}
+						save_temporary_scope_as = affected_movement
+					}
+				}
+			}
+			if = {
+				limit = {
+					scope:affected_movement = {
+						is_being_suppressed = yes
+					}
+				}
+				add = {
+					value = 10
+					multiply = {
+						value = -0.5
+						add = owner.modifier:country_suppression_attraction_factor
+					}
+					desc = "concept_suppressed"
+				}
+			}
+			else = {
+				add = {
+					value = 10
+					multiply = {
+						value = 0.5
+						add = owner.modifier:country_bolster_attraction_factor
+					}
+					desc = "concept_bolstered"
+				}
+			}
+		}
 		add = {
 			value = 10
 			desc = "POP_BASE_SUPPORT"
@@ -297,11 +343,10 @@
 	
 	secession = {
 		possible = {
-			political_movement_identity_support >= 0.25
 			owner ?= {
 				any_scope_state = {
 					religion_percent_state = {
-						target = scope:political_movement.religion
+						target = root.religion
 						value >= 0.15 # 0.10
 					}
 				}
@@ -377,6 +422,13 @@
 			max = 0.5
 			min = 0
 			desc = "STANDARD_OF_LIVING_FOR_RELIGION"
+		}
+
+		subtract = {
+			value = 0.5
+			subtract = political_movement_identity_support
+			min = 0
+			desc = "LOW_MOVEMENT_IDENTITY_SUPPORT"
 		}
 	}
 }
