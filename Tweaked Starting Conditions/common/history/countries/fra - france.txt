@@ -1,19 +1,19 @@
 ﻿COUNTRIES = {
 	c:FRA ?= {
 		set_next_election_date = 1837.11.4
-
+		
 		effect_starting_technology_tier_1_tech = yes
 
 		set_tax_level = medium
-
+		
 		add_taxed_goods = g:wine
 		add_taxed_goods = g:liquor
-
+		
 		set_import_tariff_level = {
 			goods = g:engines
 			level = low_subventions
 		}
-
+		
 		# Laws
 		activate_law = law_type:law_monarchy
 		activate_law = law_type:law_wealth_voting
@@ -33,8 +33,6 @@
 		activate_law = law_type:law_censorship # The July Monarchy was already backtracking on promises made in 1830
 		activate_law = law_type:law_national_guard
 		activate_law = law_type:law_tenant_farmers
-
-
 		set_institution_investment_level = {
 			institution = institution_schools
 			level = 2
@@ -53,7 +51,7 @@
 		ig:ig_landowners = { # Victor de Broglie was Prime Minister until February 22, 1836
 			add_ruling_interest_group = yes
 		}
-
+		
 		ig:ig_industrialists = {
 			add_ruling_interest_group = yes
 		}
@@ -80,7 +78,7 @@
 				type = je_conquest_of_algeria
 			}
 		}
-
+		
 		add_company = company_type:company_dmc
 		company:company_dmc = {
 			set_company_establishment_date = 1746.1.1

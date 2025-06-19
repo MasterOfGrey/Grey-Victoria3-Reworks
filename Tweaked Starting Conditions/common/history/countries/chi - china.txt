@@ -5,9 +5,9 @@
 		add_technology_researched = sericulture
 		add_technology_researched = academia
 		add_technology_researched = law_enforcement
-
+		
 		set_market_capital = STATE_GUANGDONG
-
+		
 		activate_law = law_type:law_monarchy
 		activate_law = law_type:law_autocracy
 		activate_law = law_type:law_serfdom
@@ -19,10 +19,10 @@
 		activate_law = law_type:law_migration_controls
 		activate_law = law_type:law_canton_system
 		activate_law = law_type:law_freedom_of_conscience
-
+		
 		set_government_wage_level = high
 		set_tax_level = low
-
+		
 		set_variable = {
 			name = china_warlord_explosion
 			value = 0
