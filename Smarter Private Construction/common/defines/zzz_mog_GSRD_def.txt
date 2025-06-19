@@ -22,7 +22,8 @@ NAI = {
 	PRODUCTION_BUILDING_OUTPUT_NEW_GOODS_STATE_UNINCORPORATED_POPULATION_THRESHOLD = 400000 # 1000000	# When the AI prioritizes 'new goods' in a state rather than a market (because of local goods) it only cares about unincorporated states with at least this much population
 	
 	PRODUCTION_BUILDING_OTHER_BUILDING_TYPES_UNDER_CONSTRUCTION_DIV = 0.3 # 0.5		# Divide score by (1 + this * number of other building types queued in the state)
-	PRODUCTION_BUILDING_COMPANY_MULT = 3.0 # 2.0									# Multiply score by this if we have at least one established company for the building type
+
+	PRODUCTION_BUILDING_LOW_EMPLOYMENT_THRESHOLD = 0.9 # 0.8 # The AI will not expand buildings with less than this employment unless those buildings hired last week
 	
 	# For Reference:
 	# PRODUCTION_BUILDING_RANDOM_FACTOR = 10.0 # The higher this is, the more random AI construction will be
@@ -43,6 +44,16 @@ NAI = {
 	# GOVERNMENT_CONSTRUCTION_DOMESTIC_INVESTMENT_BIAS = 2.0
 	# GOVERNMENT_CONSTRUCTION_SUBJECT_INVESTMENT_BIAS = 1.5
 	# Untouched for now.
+
+	# COMPANY WEIGHTS
+
+	# 1.8 reference
+	# PRODUCTION_BUILDING_COMPANY_MULT = 3.0 # 2.0									# Multiply score by this if we have at least one established company for the building type
+	# 1.9 company weights untouched for now. With companies able to aquire existing building levels, it's less important that they're the ones to perform the initial construction
+	# PRODUCTION_BUILDING_FOREIGN_INVESTMENT_COMPANY_MULT = 10 # Multiply score by this if the construction is a foreign investment by the country that has at least one established company for the building type
+	# PRODUCTION_BUILDING_AUTONOMOUS_INVESTMENT_COMPANY_MULT = 2.0 # Multiply score by 1 + this if we have at least one established company for the building type, scales by fraction of investment pool coming from companies compared to historical amount of investment by companies
+	# PRODUCTION_BUILDING_AUTONOMOUS_INVESTMENT_COMPANY_MONOPOLY_MULT = 3.0 # Replaces PRODUCTION_BUILDING_COMPANY_MULT for buildings on which a company has a monopoly
+	# PRODUCTION_BUILDING_AUTONOMOUS_INVESTMENT_COMPANY_CHARTERED_COUNTRY_MULT = 2.0 # Additional multiplier to company weights above if the investment is targeting a company's chartered country
 	
 	
 	# AUTONOMOUS BUILDING WEIGHTS
@@ -94,12 +105,18 @@ NAI = {
 	OWNER_BUILDING_LOCATION_NO_AVAILABLE_INFRASTRUCTURE_MULT = 0.1	# Multiply owner building location score by this if the state lacks infrastructure
 	OWNER_BUILDING_LOCATION_UNINCORPORATED_MULT = 0.01				# Multiply owner building location score by this if the state is unincorporated
 	
-	OWNER_COMPANY_SCORE_MULT = 10 # 3.0								# Multiply owner company score by this in case of new construction, the higher this is, the more likely a company building is chosen instead of other owning building types
-	OWNER_COMPANY_PRIVATIZATION_SCORE_MULT = 30 # 7.0				# Multiply owner company score by this in case of privatization, the higher this is, the more likely a company building is chosen instead of other owning building types
-	OWNER_COMPANY_MIN_LEVELS_IN_OWN_STATE = 10						# How many levels should the company building invest in buildings in its own state
-	OWNER_COMPANY_MIN_LEVELS_IN_OWN_STATE_PENALTY_MULT = 0.5 # 0.05	# Multiply owner company score by this if the number of levels in its own state is below minimum
-	OWNER_COMPANY_MIN_LEVELS_IN_OWN_COUNTRY = 100					# How many levels should the company building invest in buildings in its own country
-	OWNER_COMPANY_MIN_LEVELS_IN_OWN_COUNTRY_PENALTY_MULT = 0.2 # 0.05	# Multiply owner company score by this if the number of levels in its own country is below minimum
+	# 1.8 reference
+	# OWNER_COMPANY_SCORE_MULT = 10 # 3.0								# Multiply owner company score by this in case of new construction, the higher this is, the more likely a company building is chosen instead of other owning building types
+	# OWNER_COMPANY_PRIVATIZATION_SCORE_MULT = 30 # 7.0				# Multiply owner company score by this in case of privatization, the higher this is, the more likely a company building is chosen instead of other owning building types
+	# OWNER_COMPANY_MIN_LEVELS_IN_OWN_STATE = 10						# How many levels should the company building invest in buildings in its own state
+	# OWNER_COMPANY_MIN_LEVELS_IN_OWN_STATE_PENALTY_MULT = 0.5 # 0.05	# Multiply owner company score by this if the number of levels in its own state is below minimum
+	# OWNER_COMPANY_MIN_LEVELS_IN_OWN_COUNTRY = 100					# How many levels should the company building invest in buildings in its own country
+	# OWNER_COMPANY_MIN_LEVELS_IN_OWN_COUNTRY_PENALTY_MULT = 0.2 # 0.05	# Multiply owner company score by this if the number of levels in its own country is below minimum
+
+	# 1.9 company weights untouched for now. With companies able to aquire existing building levels, it's less important that they're the ones to initially privatize
+	# OWNER_COMPANY_EXPANSION_CHANCE_MULTIPLIER = 0.5					# Base chance for a company to be selected as the owner of a new investment of one of their relevant building types, scales by fraction of investment pool coming from companies compared to historical amount of investment by companies
+	# OWNER_COMPANY_PRIVATIZATION_CHANCE_MULTIPLIER = 0.75			# Used instead of OWNER_COMPANY_EXPANSION_CHANCE for privatization, uses the same scaling
+	# OWNER_COMPANY_OWN_STATE_MULT = 100.0							# Multiply the chance for a company to be selected as the owner of a building (compared to other companies) if it's being built/invested in their HQ state
 
 	
 	# Untouched autonomous lines:
