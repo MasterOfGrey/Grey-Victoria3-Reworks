@@ -11,7 +11,7 @@ pm_barbed_wire_fences = {
 	}	
 	building_modifiers = {
 		workforce_scaled = {
-			goods_input_iron_add = 1		# 2
+			goods_input_iron_add = 1		# 2 # Vanilla now = 1
 		}
 
 		level_scaled = {
@@ -27,8 +27,8 @@ pm_electric_fencing = {
 	}
 	building_modifiers = {
 		workforce_scaled = {
-			goods_input_iron_add = 1		# 2
-			goods_input_electricity_add = 2
+			goods_input_iron_add = 1		# 2 # Vanilla now = 1
+			goods_input_electricity_add = 1		# Vanilla now = 1
 		}
 
 		level_scaled = {

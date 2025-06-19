@@ -33,7 +33,7 @@ pm_refrigerated_storage_building_livestock_ranch = {
 	
 	building_modifiers = {
 		workforce_scaled = {
-			goods_input_electricity_add = 3
+			goods_input_electricity_add = 1
 			goods_input_transportation_add = 1
 		}
 		level_scaled = {

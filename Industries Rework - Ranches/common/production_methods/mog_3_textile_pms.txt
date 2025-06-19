@@ -1,4 +1,21 @@
-﻿pm_simple_ranch = {
+﻿pm_beasts_of_burden = {
+	texture = "gfx/interface/icons/production_method_icons/beasts_of_burden.dds"
+
+	building_modifiers = {
+		workforce_scaled = {
+			goods_output_fabric_add = 2
+			goods_output_transportation_add = 2
+		}
+	}
+	state_modifiers = {
+		workforce_scaled = {
+			building_millet_farm_throughput_add = 0.005
+			goods_output_grain_mult = 0.005
+		}
+	}
+}
+
+pm_simple_ranch = {
 	texture = "gfx/interface/icons/production_method_icons/leather_animals.dds"
 
 	building_modifiers = {
@@ -35,9 +52,9 @@ pm_sheep_farms = {
 	
 	building_modifiers = {
 		workforce_scaled = {
-			goods_output_meat_add = -10
+			goods_output_meat_add = -9
 			goods_output_fabric_add = 20
-			goods_output_fertilizer_add = 10
+			goods_output_fertilizer_add = 4
 		}
 	}
 }
@@ -64,10 +81,10 @@ pm_intensive_diet_control = {
 		workforce_scaled = {
 			goods_input_grain_add = 10
 			goods_input_fruit_add = 6
-			goods_output_meat_add = -20
-			goods_output_fabric_add = 30
-			goods_output_silk_add = 5
-			goods_output_fertilizer_add = 20
+			goods_output_meat_add = -9
+			goods_output_fabric_add = 20
+			goods_output_silk_add = 8
+			goods_output_fertilizer_add = 4
 		}
 	}
 }
