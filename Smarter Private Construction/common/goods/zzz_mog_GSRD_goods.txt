@@ -9,12 +9,12 @@ fabric = {
 	texture = "gfx/interface/icons/goods_icons/fabric.dds"
 	cost = 20
 	category = industrial
-
+	
 	prestige_factor = 3
-
+	
 	traded_quantity = 10 # 200
 	convoy_cost_multiplier = 0.25
-
+	
 	consumption_tax_cost = 300
 }
 
@@ -22,12 +22,12 @@ wood = {
 	texture = "gfx/interface/icons/goods_icons/wood.dds"
 	cost = 20
 	category = industrial
-
+	
 	prestige_factor = 3
-
+	
 	traded_quantity = 10 # 200
 	convoy_cost_multiplier = 0.25
-
+	
 	consumption_tax_cost = 300
 }
 
@@ -36,7 +36,7 @@ transportation = {
 	cost = 30
 	category = industrial
 	local = yes
-
+	
 	consumption_tax_cost = 200
 }
 
@@ -45,7 +45,7 @@ electricity = {
 	cost = 30
 	category = industrial
 	local = yes
-
+	
 	consumption_tax_cost = 200
 }
 
@@ -53,7 +53,7 @@ merchant_marine = {
 	texture = "gfx/interface/icons/goods_icons/merchant_marine.dds"
 	cost = 50
 	category = industrial
-
+	
 	prestige_factor = 8
 	traded_quantity = 4 # 200
 	convoy_cost_multiplier = 0.05
