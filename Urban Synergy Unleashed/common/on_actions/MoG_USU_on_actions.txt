@@ -38,8 +38,9 @@ mog_urban_on_action = {
 ## MONTHLIES
 on_monthly_pulse_country = {
 	on_actions = {
-		delay = { days = { 5 27 } }
+		# delay = { days = { 5 27 } }
 		mog_logistics_land_trade_on_action
+		mog_trade_centre_type_on_action
 	}
 }
 
@@ -57,6 +58,12 @@ mog_logistics_land_trade_on_action = {
 	}
 }
 
+# Set Trade Center as inland or port-side.
+mog_trade_centre_type_on_action = {
+    effect = {
+        usu_manage_trade_centre_type = yes
+    }
+}
 
 ### Construction Action
 # Root = The applicable country
