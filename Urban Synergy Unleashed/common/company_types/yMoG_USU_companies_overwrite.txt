@@ -1,4 +1,48 @@
-﻿# Great Indian Peninsula Railway
+﻿### DEFAULT COMPANIES
+company_basic_shipyards = {
+	icon = "gfx/interface/icons/company_icons/basic_shipyards.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_harbor_shipbuilding.dds"
+	
+	uses_dynamic_naming = yes
+	
+	dynamic_company_type_names = {
+		"dynamic_company_type_company"
+		"dynamic_company_type_consortium"
+		"dynamic_company_type_corporation"
+		"dynamic_company_type_conglomerate"
+		"dynamic_company_type_syndicate"
+		"dynamic_company_type_combine"
+	}
+	
+	building_types = {
+		building_shipyards
+		building_military_shipyards
+		building_port
+		building_river_port
+	}
+
+	possible = { 
+		any_scope_state = {
+			is_incorporated = yes
+			any_scope_building = {
+				OR = {
+					is_building_type = building_shipyards
+					is_building_type = building_military_shipyards
+				}
+				level >= 3
+			}
+		}
+	}
+
+	prosperity_modifier = {
+		unit_navy_offense_mult = 0.05
+	}
+}
+
+
+### SPECIAL COMPANIES
+## Railways
+# Great Indian Peninsula Railway
 company_great_indian_railway = {
 	icon = "gfx/interface/icons/company_icons/historical_company_icons/india_great_indian_peninsula_railway.dds"
 	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_railways.dds"
@@ -51,6 +95,851 @@ company_great_indian_railway = {
 	prosperity_modifier = {
 		state_infrastructure_from_population_add = 2		# 0.5 <- what the heck weak crap was this???
 		state_infrastructure_from_population_max_add = 40	# 40  <- actually be better than a default company please
+	}	
+	
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}
+}
+
+## Ports / Shipyards
+# Imperial Arsenal
+company_imperial_arsenal = {
+	icon = "gfx/interface/icons/company_icons/historical_company_icons/imperial_arsenal.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_harbor_shipbuilding.dds"
+	
+	flavored_company = yes
+	
+	building_types = {  
+		building_military_shipyards
+		building_port
+		building_river_port
+	}
+	
+	potential = {
+		has_interest_marker_in_region = region_anatolia
+	}
+	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_EASTERN_THRACE
+			}
+		}
+	}			
+	
+	possible = {
+		any_scope_state = {
+			state_region = s:STATE_EASTERN_THRACE
+			is_incorporated = yes
+			any_scope_building = {
+				is_building_type = building_military_shipyards
+				level >= 3
+			}
+		}
+		has_technology_researched = hydraulic_cranes
+	}
+	
+	prosperity_modifier = {
+		unit_navy_defense_mult = 0.10
+	}
+	
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}
+}
+
+# Foochow Arsenal
+company_foochow_arsenal = {
+	icon = "gfx/interface/icons/company_icons/historical_company_icons/chinese_foochow_arsenal.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_harbor_shipbuilding.dds"
+	
+	flavored_company = yes
+	
+	building_types = { 
+		building_shipyards
+		building_military_shipyards
+		building_port
+		building_river_port
+	}
+	
+	potential = {
+		has_interest_marker_in_region = region_south_china
+	}
+	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_FUJIAN
+			}
+		}
+	}		
+	
+	possible = {
+		any_scope_state = {
+			state_region = s:STATE_FUJIAN
+			is_incorporated = yes
+			any_scope_building = {
+				is_building_type = building_military_shipyards
+				level >= 3
+			}
+		}
+		has_technology_researched = ironclad_tech
+		has_technology_researched = gantry_cranes
+	}
+	
+	prosperity_modifier = {
+		unit_navy_offense_mult = 0.05
+		state_building_port_max_level_add = 5
+	}	
+	
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}
+}
+
+# Estaleiro Mauá
+company_estaleiro_maua = {
+	icon = "gfx/interface/icons/company_icons/historical_company_icons/brazil_estaleiro_maua.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_harbor_shipbuilding.dds"
+	
+	building_types = {  
+		building_shipyards
+		building_military_shipyards
+		building_port
+		building_river_port
+	}
+	
+	potential = {
+		has_dlc_feature = rp1_content
+		has_interest_marker_in_region = region_brazil
+	}
+	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_RIO_DE_JANEIRO
+			}
+		}
+	}		
+
+	possible = {
+		any_scope_state = {
+			state_region = s:STATE_RIO_DE_JANEIRO
+			is_incorporated = yes
+			any_scope_building = {
+				OR = {
+					is_building_type = building_shipyards
+					is_building_type = building_military_shipyards
+				}
+				level >= 3
+			}
+		}
+	}
+	
+	prosperity_modifier = {
+		country_convoys_capacity_mult = 0.1
+		building_steel_mills_throughput_add = 0.1
+	}
+	
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}
+}
+
+# Compañía Sudamericana de Vapores
+company_sudamericana_de_vapores = {
+	icon = "gfx/interface/icons/company_icons/historical_company_icons/chile_csav.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_harbor_shipbuilding.dds"
+	
+	building_types = {  
+		building_shipyards
+		building_port
+		building_river_port
+	}
+	
+	potential = {
+		has_dlc_feature = rp1_content
+		has_interest_marker_in_region = region_la_plata
+	}
+	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_SANTIAGO
+			}
+		}
+	}		
+
+	possible = {
+		any_scope_state = {
+			state_region = s:STATE_SANTIAGO
+			is_incorporated = yes
+			any_scope_building = {
+				is_building_type = building_shipyards
+				level >= 2
+			}
+		}
+		has_technology_researched = screw_frigate
+	}
+	
+	prosperity_modifier = {
+		state_colony_growth_speed_mult = 0.1
+		country_convoys_capacity_mult = 0.1
+	}
+	
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}
+}
+
+# Basileiades
+company_basileiades = {
+	icon = "gfx/interface/icons/company_icons/historical_company_icons/basileiades.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufacturing_heavy.dds"
+	
+	flavored_company = yes
+	
+	building_types = {  
+		building_motor_industry
+		building_shipyards
+		building_port
+		building_river_port
+	}
+	
+	potential = {
+		has_interest_marker_in_region = region_balkans
+	}
+	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_ATTICA			
+			}		
+		}
+	}		
+	
+	possible = {
+		any_scope_state = {
+			state_region = s:STATE_ATTICA
+			is_incorporated = yes
+			any_scope_building = {
+				OR = {
+					is_building_type = building_motor_industry
+					is_building_type = building_shipyards
+				}
+				level >= 3
+			}
+		}
+		has_technology_researched = railways
+	}
+	
+	prosperity_modifier = {
+		country_convoys_capacity_mult = 0.2
+		state_infrastructure_mult = 0.05
+	}	
+	
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}
+}
+
+# Götaverken
+company_gotaverken = {
+	icon = "gfx/interface/icons/company_icons/historical_company_icons/götaverken.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_harbor_shipbuilding.dds"
+	
+	flavored_company = yes
+	
+	building_types = {  
+		building_shipyards
+		building_military_shipyards
+		building_motor_industry
+		building_port
+		building_river_port
+	}
+	
+	potential = {
+		has_interest_marker_in_region = region_baltic
+	}
+	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_GOTALAND
+			}
+		}
+	}		
+	
+	possible = {
+		any_scope_state = {
+			state_region = s:STATE_GOTALAND
+			is_incorporated = yes
+			any_scope_building = {
+				OR = {
+					is_building_type = building_shipyards
+					is_building_type = building_military_shipyards
+				}
+				level >= 3
+			}
+		}
+		has_technology_researched = gantry_cranes
+	}
+	
+	prosperity_modifier = {
+		unit_navy_defense_mult = 0.05
+		unit_navy_offense_mult = 0.05
+	}	
+	
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}
+}
+
+# Aker Mek
+company_aker_mek = {
+	icon = "gfx/interface/icons/company_icons/historical_company_icons/aker_mek.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_harbor_shipbuilding.dds"
+	
+	flavored_company = yes
+	
+	building_types = {  
+		building_shipyards
+		building_motor_industry
+		building_port
+		building_river_port
+	}
+	
+	potential = {
+		has_interest_marker_in_region = region_baltic
+	}
+	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_EASTERN_NORWAY
+			}
+		}
+	}		
+	
+	possible = {
+		any_scope_state = {
+			state_region = s:STATE_EASTERN_NORWAY
+			is_incorporated = yes
+			any_scope_building = {
+				is_building_type = building_shipyards
+				level >= 3
+			}
+		}
+		has_technology_researched = gantry_cranes
+	}
+	
+	prosperity_modifier = {
+		country_convoys_capacity_mult = 0.15
+		building_fishing_wharf_throughput_add = 0.05
+	}	
+	
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}
+}
+
+# A.P. Møller (later Mærsk)
+company_ap_moller = {
+	icon = "gfx/interface/icons/company_icons/historical_company_icons/ap_moller.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_harbor_shipbuilding.dds"
+	
+	flavored_company = yes
+	
+	building_types = {  
+		building_shipyards
+		building_port
+		building_river_port
+	}
+	
+	potential = {
+		has_interest_marker_in_region = region_baltic
+	}
+	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_ZEALAND
+			}
+		}
+	}		
+	
+	possible = {
+		any_scope_state = {
+			state_region = s:STATE_ZEALAND
+			is_incorporated = yes
+			any_scope_building = {
+				is_building_type = building_shipyards
+				level >= 3
+			}
+		}
+	}
+	
+	prosperity_modifier = {
+		country_convoys_capacity_mult = 0.2
+		interest_group_ig_industrialists_pop_attraction_mult = 0.1
+	}	
+	
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}
+}
+
+# Căile Ferate Române
+company_cfr = {
+	icon = "gfx/interface/icons/company_icons/historical_company_icons/romania_cfr.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_railways.dds"
+	
+	flavored_company = yes
+	
+	building_types = {  
+		building_railway
+		building_river_port
+	}
+	
+	potential = {
+		country_has_primary_culture = cu:romanian
+	}
+	
+	possible = {
+		any_scope_state = {
+			state_region = {
+				is_homeland = cu:romanian
+			}
+			is_incorporated = yes
+			has_building = building_railway
+			count >= 2
+		}
+	}
+	
+	prosperity_modifier = {
+		state_infrastructure_mult = 0.05
+		market_land_trade_capacity_add = 15
+	}
+	
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}
+}
+
+# Société Nouvelle des Forges et Chantiers de la Méditerranée
+company_fcm = {
+	icon = "gfx/interface/icons/company_icons/historical_company_icons/france_forges_et_chantiers_de_la_méditerranée.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_harbor_shipbuilding.dds"
+
+	flavored_company = yes
+	
+	building_types = {  
+		building_shipyards
+		building_military_shipyards
+		building_war_machine_industry # Produced the Char 2C
+		building_port
+		building_river_port
+
+	}
+	
+	potential = {
+		has_interest_marker_in_region = region_occitania
+	}
+	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_PROVENCE
+			}
+		}
+	}		
+	
+	possible = { 
+		any_scope_state = {
+			state_region = s:STATE_PROVENCE
+			is_incorporated = yes
+			any_scope_building = {
+				OR = {
+					is_building_type = building_shipyards
+					is_building_type = building_military_shipyards
+				}
+				level >= 3
+			}
+		}
+		has_technology_researched = ironclad_tech
+	}
+	
+	prosperity_modifier = {
+		unit_navy_offense_mult = 0.05
+		unit_combat_unit_type_heavy_tank_offense_mult = 0.1
+	}	
+	
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}
+}
+
+# F. Schichau, Maschinen- und Lokomotivfabrik, Schiffswerft und Eisengießerei GmbH
+company_schichau = {
+	icon = "gfx/interface/icons/company_icons/historical_company_icons/german_schichau.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufacturing_heavy.dds"
+	
+	flavored_company = yes
+	
+	building_types = {  
+		building_motor_industry
+		building_military_shipyards
+		building_shipyards
+		building_port
+		building_river_port
+	}
+	
+	potential = {
+		has_interest_marker_in_region = region_poland
+	}
+	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_WEST_PRUSSIA			
+			}
+		}
+	}	
+	
+	possible = { 
+		any_scope_state = {
+			state_region = s:STATE_WEST_PRUSSIA
+			is_incorporated = yes
+			any_scope_building = {
+				is_building_type = building_motor_industry
+				level >= 3
+			}
+		}
+		has_technology_researched = atmospheric_engine
+	}
+	
+	prosperity_modifier = {
+		unit_navy_offense_mult = 0.05
+		unit_combat_unit_type_submarine_offense_mult = 0.1
+	}	
+	
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}
+}
+
+
+# John Brown & Company
+company_john_brown = {
+	icon = "gfx/interface/icons/company_icons/historical_company_icons/gb_jb_co.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_harbor_shipbuilding.dds"
+	
+	flavored_company = yes
+	
+	building_types = {  
+		building_military_shipyards
+		building_shipyards
+		building_steel_mills
+		building_port
+		building_river_port
+	}
+	
+	potential = {
+		has_interest_marker_in_region = region_north_sea_coast
+	}
+	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_LOWLANDS
+			}
+		}
+	}			
+	
+	possible = {
+		any_scope_state = {
+			state_region = s:STATE_LOWLANDS
+			is_incorporated = yes
+			any_scope_building = {
+				is_building_type = building_shipyards
+				level >= 3
+			}
+		}
+		has_technology_researched = steelworking
+		has_technology_researched = hydraulic_cranes
+	}
+	
+	prosperity_modifier = {
+		country_prestige_mult = 0.05
+		country_convoys_capacity_mult = 0.1
+	}	
+	
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}
+}
+
+# Wadia Shipbuilders / Bombay Dockyard
+company_wadia_shipbuilders = {
+	icon = "gfx/interface/icons/company_icons/historical_company_icons/ip2_wadia_shipbuilders.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_harbor_shipbuilding.dds"
+	
+	flavored_company = yes
+	
+	building_types = {  
+		building_shipyards
+		building_military_shipyards
+		building_port
+		building_river_port
+	}
+	
+	potential = {
+		has_interest_marker_in_region = region_bombay
+		has_dlc_feature = ip2_content
+	}
+	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_BOMBAY
+			}
+		}
+	}		
+	
+	possible = {
+		any_scope_state = {
+			state_region = s:STATE_BOMBAY
+			is_incorporated = yes
+			any_scope_building = {
+				OR = {
+					is_building_type = building_shipyards
+					is_building_type = building_military_shipyards
+				}
+				level >= 4
+			}
+		}
+		has_technology_researched = gantry_cranes
+	}
+	
+	prosperity_modifier = {
+		interest_group_ig_petty_bourgeoisie_pop_attraction_mult = 0.1
+		country_convoys_capacity_mult = 0.1
+		state_radicalism_increases_violent_hostility_mult = -0.05
+		state_radicalism_increases_cultural_erasure_mult = -0.05
+		state_radicalism_increases_open_prejudice_mult = -0.05
+
+	}	
+	
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}
+}
+
+# Stabilimento Tecnico Triestino
+company_stt = {
+	icon = "gfx/interface/icons/company_icons/historical_company_icons/stt.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_harbor_shipbuilding.dds"
+	
+	flavored_company = yes
+	
+	building_types = {
+		building_shipyards
+		building_military_shipyards
+		building_port
+		building_river_port
+	}
+	
+	potential = {
+		has_interest_marker_in_region = region_italy
+	}
+	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_ISTRIA
+			}
+		}
+	}		
+	
+	possible = { 
+		any_scope_state = {
+			state_region = s:STATE_ISTRIA
+			is_incorporated = yes
+			any_scope_building = {
+				OR = {
+					is_building_type = building_shipyards
+					is_building_type = building_military_shipyards
+				}
+				level >= 3
+			}
+		}
+		has_technology_researched = gantry_cranes
+	}
+	
+	prosperity_modifier = {
+		unit_navy_defense_mult = 0.05
+		country_convoys_capacity_mult = 0.05
+	}
+	
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}
+}
+
+# Mitsubishi
+company_mitsubishi = {
+	icon = "gfx/interface/icons/company_icons/historical_company_icons/japanese_mitsubishi.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufacturing_heavy.dds"
+	
+	flavored_company = yes
+	
+	building_types = {  
+		building_military_shipyards
+		building_coal_mine
+		building_motor_industry
+		building_port
+	}
+	
+	potential = {
+		country_has_primary_culture = cu:japanese
+	}
+	
+	possible = { 
+		any_scope_state = {
+			state_region = s:STATE_CHUGOKU
+			is_incorporated = yes
+			any_scope_building = {
+				OR = {
+					is_building_type = building_shipyards
+					is_building_type = building_military_shipyards
+					is_building_type = building_coal_mine
+				}
+				level >= 3
+			}
+		}
+		has_technology_researched = ironclad_tech
+		custom_tooltip = {
+			text = is_meiji_japan
+			has_variable = meiji_restoration_complete
+		}
+	}
+	
+	prosperity_modifier = {
+		building_war_machine_industry_throughput_add = 0.1
+		interest_group_ig_industrialists_approval_add = 2
+	}	
+	
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}
+}
+
+# Society of Putilov Factories
+company_putilov_company = {
+	icon = "gfx/interface/icons/company_icons/historical_company_icons/russian_putilov.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufacturing_heavy.dds"
+	
+	flavored_company = yes
+	
+	building_types = {  
+		building_motor_industry
+		building_military_shipyards
+		building_artillery_foundries
+		building_river_port
+	}
+	
+	potential = {
+		has_interest_marker_in_region = region_russia
+	}
+	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_INGRIA
+			}
+		}
+	}		
+	
+	possible = { 
+		any_scope_state = {
+			state_region = s:STATE_INGRIA
+			is_incorporated = yes
+			any_scope_building = {
+				OR = {
+					is_building_type = building_motor_industry
+					is_building_type = building_military_shipyards
+					is_building_type = building_artillery_foundries
+				}
+				level >= 3
+			}
+		}
+		has_technology_researched = railways
+	}
+	
+	prosperity_modifier = {
+		building_railway_throughput_add = 0.1
+		state_infrastructure_mult = 0.05
+	}	
+	
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}
+}
+
+# William Cramp & Sons
+company_william_cramp = {
+	icon = "gfx/interface/icons/company_icons/historical_company_icons/american_william_and_sons.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_harbor_shipbuilding.dds"
+	
+	flavored_company = yes
+	
+	building_types = {  
+		building_military_shipyards
+		building_shipyards
+		building_motor_industry
+		building_port
+		building_river_port
+	}
+	
+	potential = {
+		has_interest_marker_in_region = region_new_england
+	}
+	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				OR = {
+					state_region = s:STATE_NEW_JERSEY # This Should be Philly, but due to map issues that won't work
+					state_region = s:STATE_DELAWARE
+					state_region = s:STATE_MARYLAND
+				}
+			}
+		}
+	}		
+	
+	possible = {
+		any_scope_state = {
+			OR = {
+				state_region = s:STATE_NEW_JERSEY # This Should be Philly, but due to map issues that won't work
+				state_region = s:STATE_DELAWARE
+				state_region = s:STATE_MARYLAND
+			}
+			is_incorporated = yes
+			any_scope_building = {
+				OR = {
+					is_building_type = building_military_shipyards
+					is_building_type = building_shipyards
+				}
+				level >= 3
+			}
+		}
+		has_technology_researched = gantry_cranes
+	}
+	
+	prosperity_modifier = {
+		unit_navy_offense_mult = 0.05
+		unit_navy_defense_mult = 0.05
 	}	
 	
 	ai_weight = {

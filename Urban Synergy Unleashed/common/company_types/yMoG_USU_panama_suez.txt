@@ -1,0 +1,167 @@
+﻿
+# Panama And Suez Canal Company
+company_panama_suez_company = {
+	icon = "gfx/interface/icons/company_icons/historical_company_icons/panama_suez_company.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_harbor_shipbuilding.dds"
+	
+	flavored_company = yes
+	
+	building_types = { 
+		building_panama_canal
+		building_suez_canal
+		building_trade_center
+		building_shipyards
+		building_military_shipyards
+		building_port
+		building_river_port
+	}
+	
+	potential = {
+		has_interest_marker_in_region = region_central_america
+		has_interest_marker_in_region = region_nile_basin
+	}
+	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_PANAMA
+			}
+		}
+	}		
+	
+	possible = {
+		any_scope_state = {
+			state_region = s:STATE_PANAMA
+			is_incorporated = yes
+			any_scope_building = {
+				is_building_type = building_panama_canal
+				occupancy >= 0.2
+			}
+		}
+		any_scope_state = {
+			state_region = s:STATE_SINAI
+			any_scope_building = {
+				is_building_type = building_suez_canal
+				occupancy >= 0.2
+			}
+		}
+	}
+	
+	prosperity_modifier = {
+		country_trade_route_competitiveness_mult = 0.50
+		unit_convoy_requirements_mult = -0.50
+		state_market_access_price_impact = 0.10
+		country_minting_add = 50000
+		country_minting_mult = 0.25
+		military_formation_movement_speed_mult = 0.20
+	}
+	
+	ai_weight = {
+		value = 9 # Higher base value for flavored companies
+	}
+}
+
+# Panama Canal Company
+company_panama_company = {
+	icon = "gfx/interface/icons/company_icons/historical_company_icons/panama_company.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_harbor_shipbuilding.dds"
+	
+	flavored_company = yes
+	
+	building_types = {
+		building_panama_canal
+		building_trade_center
+		building_shipyards
+		building_military_shipyards
+		building_port
+	}
+	
+	potential = {
+		has_interest_marker_in_region = region_central_america
+	}
+	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_PANAMA
+			}
+			NOT = { has_company = company_type:company_panama_suez_company }
+		}
+	}		
+	
+	possible = {
+		any_scope_state = {
+			state_region = s:STATE_PANAMA
+			is_incorporated = yes
+			any_scope_building = {
+				is_building_type = building_panama_canal
+				occupancy >= 0.2
+			}
+		}
+		NOT = { has_company = company_type:company_panama_suez_company }
+	}
+	
+	prosperity_modifier = {
+		country_trade_route_competitiveness_mult = 0.25
+		unit_convoy_requirements_mult = -0.20
+		state_market_access_price_impact = 0.05
+		country_minting_add = 20000
+		country_minting_mult = 0.10
+		military_formation_movement_speed_mult = 0.10
+	}
+	
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}
+}
+
+# Suez Canal Company
+company_suez_company = {
+	icon = "gfx/interface/icons/company_icons/historical_company_icons/suez_company.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_harbor_shipbuilding.dds"
+	
+	building_types = {
+		building_suez_canal
+		building_trade_center
+		building_shipyards
+		building_military_shipyards
+		building_port
+	}
+	
+	potential = {
+		has_interest_marker_in_region = region_nile_basin
+	}
+	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_SINAI
+			}
+			NOT = { has_company = company_type:company_panama_suez_company }
+		}
+	}	
+	
+	possible = {
+		any_scope_state = {
+			state_region = s:STATE_SINAI
+			any_scope_building = {
+				is_building_type = building_suez_canal
+				occupancy >= 0.2
+			}
+		}
+		NOT = { has_company = company_type:company_panama_suez_company }
+	}
+	
+	prosperity_modifier = {
+		country_trade_route_competitiveness_mult = 0.25
+		unit_convoy_requirements_mult = -0.30
+		state_market_access_price_impact = 0.05
+		country_minting_add = 30000
+		country_minting_mult = 0.15
+		military_formation_movement_speed_mult = 0.10
+	}
+	
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}
+}

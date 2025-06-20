@@ -83,7 +83,7 @@ pm_industrial_port = {
 			goods_input_coal_add = 4
 			goods_input_groceries_add = 4
 			goods_output_transportation_add = 50
-			goods_output_usu_logistics_add = 80
+			goods_output_usu_logistics_add = 70
 		}
 		level_scaled = {
 			building_employment_laborers_add = 2000
@@ -125,7 +125,7 @@ pm_modern_port = {
 			goods_input_oil_add = 6
 			goods_input_groceries_add = 8
 			goods_output_transportation_add = 90
-			goods_output_usu_logistics_add = 170
+			goods_output_usu_logistics_add = 120
 		}
 		level_scaled = {
 			building_employment_laborers_add = 1000

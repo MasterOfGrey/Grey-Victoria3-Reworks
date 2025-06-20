@@ -3,7 +3,7 @@
 USU_bg_public_greens = {
 	parent_group = bg_ranching
 	
-	default_building = USU_building_public_green
+	default_building = usu_building_public_green
 	
 	always_possible = yes
 	cash_reserves_max = 25000
@@ -67,12 +67,38 @@ bg_power = {
 		default_auto_expand_rule = yes		# This is in Vanilla - ensuring it's not overwritten by someone else.
 	}
 	
-	economy_of_scale_ai_factor = 0.5			# Stops the AI from deciding to overbuild a local good just because economy of scale applies
+	economy_of_scale_ai_factor = 0.8			# Stops the AI from deciding to overbuild a local good just because economy of scale applies - but power plants later have economies of scale, so some overbuilding is tolerable (0.8 vs 0.5)
 	foreign_investment_ai_factor = 0.5
 	
 	infrastructure_usage_per_level = 2
 	
 	urbanization = 20 # 10
+}
+
+usu_bg_hydro_power = {
+	parent_group = bg_power
+	
+	default_building = usu_building_hydro_power_plant
+	
+	infrastructure_usage_per_level = 3
+	
+	should_auto_expand = { 
+		default_auto_expand_rule = yes
+	}
+	
+	economy_of_scale_ai_factor = 4.0
+}
+
+usu_bg_power_grid = {
+	parent_group = bg_power
+	
+	default_building = usu_building_public_green
+	
+	economy_of_scale_ai_factor = 0.5			# Stops the AI from deciding to overbuild a local good just because economy of scale applies
+	
+	infrastructure_usage_per_level = 1
+	
+	urbanization = 2
 }
 
 ## Government Admins & Universities

@@ -5,7 +5,7 @@ building_river_port = {
 	
 	ai_nationalization_desire = 0.5 	# Copied from railways - AI is reluctant to privatize vital infrastructure
 	ai_value = {
-		value = 3000 # Just get it done, eh
+		value = 30000 # Just get it done, eh
 		
 		if = {
 			limit = {
@@ -29,6 +29,7 @@ building_river_port = {
 	production_method_groups = {
 		pmg_base_building_river_port
 		pmg_logistics_services_port_river
+		pmg_automation_port
 	}
 	
 	required_construction = construction_cost_low

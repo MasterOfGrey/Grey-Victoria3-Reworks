@@ -1,6 +1,6 @@
 ﻿l_turkish:
      # Building 
- PPP_building_power_grid: "Elektrik Şebekesi"
+ ppp_building_power_grid: "Elektrik Şebekesi"
   
      # Technologies 
  PPP_tech_hv_power: "Güç Aktarımı"

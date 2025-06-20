@@ -1,4 +1,5 @@
-﻿goods_input_ppp_hv_power_add = {
+﻿# New Types
+goods_input_ppp_hv_power_add = {
 	color = bad
 	percent = no
 }
@@ -20,6 +21,15 @@ goods_output_ppp_hv_power_mult = {
     decimals = 1
 }
 
+state_usu_building_hydro_power_plant_max_level_add = {
+	color=good
+	#num_decimals = 0
+	game_data={
+		ai_value=0
+	}
+}
+
+# Forgotten Vanilla Types
 goods_input_steel_mult = {
 	color = bad
 	percent = yes
@@ -30,4 +40,10 @@ goods_input_tools_mult = {
 	color = bad
 	percent = yes
     decimals = 1
+}
+
+goods_output_electricity_mult = {
+	color=good
+	percent = yes
+	decimals = 1
 }

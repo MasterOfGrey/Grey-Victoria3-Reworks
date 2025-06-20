@@ -1,0 +1,36 @@
+﻿l_english:
+ state_trait_hydro_potential_1: "Some Hydropower Potential"
+ state_trait_hydro_potential_2: "Good Hydropower Potential"
+ state_trait_hydro_potential_3: "Great Hydropower Potential"
+ 
+ state_usu_building_hydro_power_plant_max_level_add: "Hydro Power Station Max Level"
+ state_usu_building_hydro_power_plant_max_level_add_desc: "A bonus or penalty to the maximum level of $usu_building_hydro_power_plant$ buildings in the state."
+ mog_usu_hp_hydro_potential_adjustment: "Altered Hydropower Potential"
+ 
+ building_power_plant: "Thermal Power Plants"
+ usu_building_hydro_power_plant: "Hydro Power Plant"
+ 
+ bg_power: "Thermal Power Stations"
+ usu_bg_hydro_power: "Hydro Power Stations"
+ 
+ hp_pmg_hydro_power_plant: "Dynamo Generation"
+ hp_pmg_turbines: "Turbine Technology"
+ hp_pmg_HV_generation: "Power Distribution"
+
+ hp_pm_hydro_plant_1: "First Generation Power Plant"
+ hp_pm_hydro_plant_2: "Second Generation Power Plant"
+ hp_pm_hydro_plant_3: "Third Generation Power Plant"
+ 
+ hp_pm_turbine_1: "Early Turbines"
+ hp_pm_turbine_2: "Improved Turbines"
+ hp_pm_turbine_3: "Modern Turbines"
+ 
+ PPP_pm_t1_local_power: "Local Electricity"
+ PPP_pm_t1_hybrid_power: "Mixed Grid Supply"
+ PPP_pm_t1_grid_power: "Electrical Grid"
+ PPP_pm_t2_local_power: "Local Electricity"
+ PPP_pm_t2_hybrid_power: "Mixed Grid Supply"
+ PPP_pm_t2_grid_power: "Electrical Grid"
+ PPP_pm_t3_local_power: "Local Electricity"
+ PPP_pm_t3_hybrid_power: "Mixed Grid Supply"
+ PPP_pm_t3_grid_power: "Electrical Grid"

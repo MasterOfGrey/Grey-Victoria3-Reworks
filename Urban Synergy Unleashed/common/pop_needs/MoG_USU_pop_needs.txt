@@ -1,0 +1,108 @@
+﻿# If this gets overwritten it's ok, but... it doesn't hurt.
+popneed_leisure = {
+	default = fine_art
+	
+	entry = {
+		goods = fine_art
+		
+		weight = 1.0
+		max_supply_share = 1.0 # Keeping
+		min_supply_share = 0.1
+	}
+	
+	entry = {
+		goods = wine
+		
+		weight = 1.0
+		max_supply_share = 0.2 # From Morgenrote, pairs well with art
+		min_supply_share = 0.0
+	}
+	
+	entry = {
+		goods = services
+		
+		weight = 0.125  # 0.1 Semi-Keeping
+		max_supply_share = 0.125
+		min_supply_share = 0.0125
+	}
+	
+	entry = {
+		goods = transportation
+		
+		weight = 0.125
+		max_supply_share = 0.125  # Ride on the Orient Express or something
+		min_supply_share = 0.0125
+	}
+	
+	entry = {
+		goods = usu_logistics
+		
+		weight = 0.125
+		max_supply_share = 0.125  # Organizing exotic holidays requires middle-men in this era.
+		min_supply_share = 0.0125
+	}
+	
+	entry = {
+		goods = small_arms
+		
+		weight = 0.25
+		max_supply_share = 0.25 # Keeping
+		min_supply_share = 0.025
+	}
+	
+	entry = {
+		goods = aeroplanes
+		
+		weight = 1.0 # New Tech
+		max_supply_share = 0.05 # idgaf whether they're radio-esque - not everyone can just buy a plane! - PDT: 0.25 # Semi-Keeping, radio-esque
+		min_supply_share = 0.0
+	}
+	
+	#entry = { 					# Gets added with Morgenrote
+	#	goods = air_travel
+	#	
+	#	weight = 1.0 # New Tech
+	#	max_supply_share = 0.25 # Keeping, radio-esque		# This is what they get instead of buying private planes...
+	#	min_supply_share = 0.0
+	#}
+	
+	entry = {
+		goods = clippers
+		
+		weight = 0.25
+		max_supply_share = 0.25  # Keeping
+		min_supply_share = 0.0 # Allowing steamers to replace this
+	}
+	
+	entry = {
+		goods = steamers
+		
+		weight = 1.0 # New Tech
+		max_supply_share = 0.25 # Keeping, radio-esque
+		min_supply_share = 0.0
+	}
+	
+	#entry = {
+	#	goods = automobiles # Remove Double Counted
+	#	
+	#	weight = 0.5
+	#	max_supply_share = 0.25 # Keeping, radio-esque
+	#	min_supply_share = 0.0
+	#}
+	#
+	#entry = {
+	#	goods = radios # Remove Double Counted
+	#	
+	#	weight = 0.5
+	#	max_supply_share = 0.25 # Keeping, radio-esque
+	#	min_supply_share = 0.0
+	#}
+	#
+	#entry = {
+	#	goods = opium # Remove Double Counted
+	#	
+	#	weight = 0.25
+	#	max_supply_share = 0.25 # Semi-Keeping
+	#	min_supply_share = 0.025
+	#}
+}

@@ -140,7 +140,6 @@ pm_stagecoaches_and_wagons = {
 		workforce_scaled = { #makes 30 at base prices
 			goods_input_grain_add = 4
 			goods_input_wood_add = 2
-			goods_input_services_add = 2
 			goods_output_transportation_add = 9
 		}
 	}
@@ -164,7 +163,6 @@ pm_motor_vehicles = {
 		workforce_scaled = { #makes 40 at base prices
 			goods_input_automobiles_add = 1
 			goods_input_oil_add = 1
-			goods_input_services_add = 4
 			goods_output_transportation_add = 14
 		}
 	}

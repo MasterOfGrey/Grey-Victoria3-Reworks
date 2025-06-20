@@ -1,4 +1,5 @@
-﻿pm_trade_center = {
+﻿## Base PM's
+pm_trade_center = {
 	texture = "gfx/interface/icons/production_method_icons/trade_center.dds"
 	replacement_if_valid = pm_trade_center_principle_external_trade_2
 	is_hidden_when_unavailable = yes	
@@ -13,7 +14,7 @@
 	
 	state_modifiers = {
 		unscaled = {
-			state_migration_pull_mult = 0.10
+			state_migration_pull_add = 2
 		}
 	}
 }
@@ -30,12 +31,14 @@ pm_trade_center_principle_external_trade_2 = {
 	building_modifiers = {
 		level_scaled = {
 			goods_input_usu_logistics_add = 1
+			building_employment_laborers_add = 100
+			building_employment_clerks_add = 25
 		}
 	}
 	
 	state_modifiers = {
 		unscaled = {
-			state_migration_pull_mult = 0.25
+			state_migration_pull_add = 3
 		}
 	}
 	
@@ -44,4 +47,50 @@ pm_trade_center_principle_external_trade_2 = {
 			country_influence_add = 2
 		}
 	}	
+}
+
+## Trade Center Ownership... (aligned with owner building pm's, but in this file for compatibility overwrite purposes)
+pm_trade_center_merchant_guilds = {
+	texture = "gfx/interface/icons/production_method_icons/merchant_guilds.dds"
+	
+	unlocking_laws = {
+		law_mercantilism
+	}
+	
+	building_modifiers = { 
+		level_scaled = {
+			building_employment_shopkeepers_add = 25 # 250
+		}
+	}
+}
+
+pm_trade_center_privately_owned = {
+	texture = "gfx/interface/icons/production_method_icons/privately_owned.dds"
+	
+	disallowing_laws = {
+		law_command_economy
+		law_cooperative_ownership
+		law_mercantilism
+	}
+	
+	building_modifiers = { 
+		level_scaled = {
+			building_employment_capitalists_add = 5 # 50
+		}
+	}
+}
+
+pm_trade_center_bureaucrat_ownership = {
+	texture = "gfx/interface/icons/production_method_icons/government_run.dds"
+
+	unlocking_laws = {
+		law_command_economy
+		law_cooperative_ownership
+	}
+	
+	building_modifiers = { 
+		level_scaled = {
+			building_employment_bureaucrats_add = 10 # 100
+		}
+	}
 }
