@@ -98,65 +98,8 @@ on_country_released_as_own_subject = {
 }
 MoG_SPA_literacy_on_country_released = {
 	effect = {
-		if = {
-			limit = {
-				scope:target = {
-					exists = institution:institution_schools
-				}
-			}
-			if = {
-				limit = {
-					scope:target = { has_law = law_type:law_religious_schools }
-				}
-				scope:target = {
-					institution:institution_schools = {
-						add_modifier = {
-							name = mog_spa_diff_religious_schools_literacy
-							multiplier = investment
-						}
-					}
-				}
-			}
-			else_if = {
-				limit = {
-					scope:target = { has_law = law_type:law_private_schools }
-				}
-				scope:target = {
-					institution:institution_schools = {
-						add_modifier = {
-							name = mog_spa_diff_private_schools_literacy
-							multiplier = investment
-						}
-					}
-				}
-			}
-			else_if = {
-				limit = {
-					scope:target = { has_law = law_type:law_public_schools }
-				}
-				scope:target = {
-					institution:institution_schools = {
-						add_modifier = {
-							name = mog_spa_diff_public_schools_literacy
-							multiplier = investment
-						}
-					}
-				}
-			}
-		}
-		if = {
-			limit = {
-				scope:target = { exists = institution:institution_schools }
-				scope:target = { has_law = law_type:law_compulsory_primary_school }
-			}
-			scope:target = {
-				institution:institution_schools = {
-					add_modifier = {
-						name = mog_spa_diff_compulsory_school_literacy
-						multiplier = investment
-					}
-				}
-			}
+		scope:target = {
+			refresh_institution_schools_modifier = yes
 		}
 	}
 }
