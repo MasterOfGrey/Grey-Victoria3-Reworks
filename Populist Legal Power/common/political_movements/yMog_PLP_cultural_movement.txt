@@ -849,7 +849,7 @@ movement_minority_rights = {
 			value = 1.0
 			add = {
 				value = "owner.average_sol_for_primary_cultures"
-				subtract = "owner.average_sol_for_culture(pop.culture)"
+				subtract = "owner.average_sol_for_culture(root.culture)"
 				multiply = 0.05
 			}
 			desc = "STANDARD_OF_LIVING_FOR_CULTURE"
