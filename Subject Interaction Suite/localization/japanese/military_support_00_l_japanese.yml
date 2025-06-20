@@ -1,35 +1,35 @@
 ﻿l_japanese:
- military_support: "領土拡大を支援" #NT!
- military_support_action_name: "領土拡大を支援" #NT!
- military_support_action_propose_name: "領土拡大を支援" #NT!
- military_support_action_break_name: "領土拡大の支援終了" #NT!
- military_support_action_notification_name: "領土拡大を支援" #NT!
- military_support_action_notification_desc: "[INITIATOR_COUNTRY.GetName]と領土拡大支援協定を締結しました。" #NT!
- military_support_desc: "#header $military_support$#!\n$TOOLTIP_DELIMITER$\nA [concept_diplomatic_pact] は、2 つの [Concept('concept_country', '$concept_countries$')] 間でサポート領土拡張契約を確立します。" #NT!
- military_support_pact_desc: "[SCOPE.GetRootScope.GetDiplomaticPact.GetFirstCountry.GetName]は[SCOPE.GetRootScope.GetDiplomaticPact.GetSecondCountry.GetName]の領土拡大をサポートします。" #NT!
- military_support_proposal_notification_name: "支援地域拡大の提案" #NT!
- military_support_proposal_notification_desc: "[INITIATOR_COUNTRY.GetName] 私たちと一緒に領土拡大を支援してください。" #NT!
- military_support_proposal_notification_effects_desc: "$military_support_desc$" #NT!
- military_support_proposal_accepted_name: "支援領土拡大を承認" #NT!
- military_support_proposal_accepted_desc: "[TARGET_COUNTRY.GetName] は領土拡大を支援するという私たちの提案を承認しました。" #NT!
- military_support_proposal_declined_name: "領土拡大の支持は拒否" #NT!
- military_support_proposal_declined_desc: "[TARGET_COUNTRY.GetName] は領土拡大を支援するという私たちの提案を拒否しました。" #NT!
- military_support_action_notification_break_name: "領土拡大の支援は破綻" #NT!
- military_support_action_notification_break_desc: "[INITIATOR_COUNTRY.GetName] は私たちとの領土拡大支援を打ち切りました。" #NT!
- military_support_proposal_third_party_accepted_name: "領土拡大支援署名" #NT!
- military_support_proposal_third_party_accepted_desc: "[INITIATOR_COUNTRY.GetName]と[TARGET_COUNTRY.GetName]はサポート地域拡張契約を締結しました。" #NT!
- military_support_proposal_third_party_declined_name: "領土拡大の支持は拒否" #NT!
- military_support_proposal_third_party_declined_desc: "[TARGET_COUNTRY.GetName]は[INITIATOR_COUNTRY.GetName]による領土拡張支援を拒否しました。" #NT!
- military_support_action_notification_third_party_break_name: "領土拡大の支援は破綻" #NT!
- military_support_action_notification_third_party_break_desc: "[INITIATOR_COUNTRY.GetName] は [TARGET_COUNTRY.GetName] との支援領土拡張を中止しました。" #NT!
+ military_support: "領土拡大を支援"
+ military_support_action_name: "領土拡大を支援"
+ military_support_action_propose_name: "領土拡大を支援"
+ military_support_action_break_name: "領土拡大の支援終了"
+ military_support_action_notification_name: "領土拡大を支援"
+ military_support_action_notification_desc: "[INITIATOR_COUNTRY.GetName]と領土拡大支援協定を締結しました。"
+ military_support_desc: "#header $military_support$#!\n$TOOLTIP_DELIMITER$\nA [concept_diplomatic_pact] は、2 つの [Concept('concept_country', '$concept_countries$')] 間でサポート領土拡張契約を確立します。"
+ military_support_pact_desc: "[SCOPE.GetRootScope.GetDiplomaticPact.GetFirstCountry.GetName]は[SCOPE.GetRootScope.GetDiplomaticPact.GetSecondCountry.GetName]の領土拡大をサポートします。"
+ military_support_proposal_notification_name: "支援地域拡大の提案"
+ military_support_proposal_notification_desc: "[INITIATOR_COUNTRY.GetName] 私たちと一緒に領土拡大を支援してください。"
+ military_support_proposal_notification_effects_desc: "$military_support_desc$"
+ military_support_proposal_accepted_name: "支援領土拡大を承認"
+ military_support_proposal_accepted_desc: "[TARGET_COUNTRY.GetName] は領土拡大を支援するという私たちの提案を承認しました。"
+ military_support_proposal_declined_name: "領土拡大の支持は拒否"
+ military_support_proposal_declined_desc: "[TARGET_COUNTRY.GetName] は領土拡大を支援するという私たちの提案を拒否しました。"
+ military_support_action_notification_break_name: "領土拡大の支援は破綻"
+ military_support_action_notification_break_desc: "[INITIATOR_COUNTRY.GetName] は私たちとの領土拡大支援を打ち切りました。"
+ military_support_proposal_third_party_accepted_name: "領土拡大支援署名"
+ military_support_proposal_third_party_accepted_desc: "[INITIATOR_COUNTRY.GetName]と[TARGET_COUNTRY.GetName]はサポート地域拡張契約を締結しました。"
+ military_support_proposal_third_party_declined_name: "領土拡大の支持は拒否"
+ military_support_proposal_third_party_declined_desc: "[TARGET_COUNTRY.GetName]は[INITIATOR_COUNTRY.GetName]による領土拡張支援を拒否しました。"
+ military_support_action_notification_third_party_break_name: "領土拡大の支援は破綻"
+ military_support_action_notification_third_party_break_desc: "[INITIATOR_COUNTRY.GetName] は [TARGET_COUNTRY.GetName] との支援領土拡張を中止しました。"
   
- military_support_effect_desc_global: "領土拡大への支持を確立" #NT!
- military_support_effect_desc_first: "[COUNTRY.GetAdjectiveNoFlag]は[TARGET_COUNTRY.GetName]との領土拡大支援を確立する" #NT!
- military_support_effect_desc_third: "[COUNTRY.GetName]は[AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)]との領土拡大支援を確立する" #NT!
+ military_support_effect_desc_global: "領土拡大への支持を確立"
+ military_support_effect_desc_first: "[COUNTRY.GetAdjectiveNoFlag]は[TARGET_COUNTRY.GetName]との領土拡大支援を確立する"
+ military_support_effect_desc_third: "[COUNTRY.GetName]は[AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)]との領土拡大支援を確立する"
   
- military_support_trigger_desc_global: "領土拡大を支持" #NT!
- military_support_trigger_false_desc_global: "#bは#!は領土拡大を支持しているか" #NT!
- military_support_trigger_desc_first: "[COUNTRY.GetAdjectiveNoFlag]は[TARGET_COUNTRY.GetName]とともに領土拡大を支持している" #NT!
- military_support_trigger_false_desc_first: "[COUNTRY.GetAdjectiveNoFlag] #b は#! [TARGET_COUNTRY.GetName] による領土拡大を支持していない" #NT!
- military_support_trigger_desc_third: "[COUNTRY.GetName]は[AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)]による領土拡大を支持している" #NT!
- military_support_trigger_false_desc_third: "[COUNTRY.GetName] #b は#! は[AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)] による領土拡大を支持していない[AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)]" #NT!
+ military_support_trigger_desc_global: "領土拡大を支持"
+ military_support_trigger_false_desc_global: "#b は#! は領土拡大を支持しているか"
+ military_support_trigger_desc_first: "[COUNTRY.GetAdjectiveNoFlag]は[TARGET_COUNTRY.GetName]とともに領土拡大を支持している"
+ military_support_trigger_false_desc_first: "[COUNTRY.GetAdjectiveNoFlag] #b は#! [TARGET_COUNTRY.GetName] による領土拡大を支持していない"
+ military_support_trigger_desc_third: "[COUNTRY.GetName]は[AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)]による領土拡大を支持している"
+ military_support_trigger_false_desc_third: "[COUNTRY.GetName] #b は#! は[AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)] による領土拡大を支持していない[AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)]"

@@ -11,7 +11,7 @@
  LIBERTY_DESIRE_LEVEL_INACTIVE_TOOLTIP: "#header [LibertyDesireLevel.GetNameNoFormatting]#!\n$LIBERTY_DESIRE_LEVEL_BOUNDS_DESC$\n$TOOLTIP_DELIMITER$\n#title [Country.GetName] üzerindeki etkileri:#!#indent_newline:2 \n[LibertyDesireLevel.GetEffects]#!"
   
   
- LIBERTY_DESIRE_LEVEL_ACTIVE_TOOLTIP: "#header [LibertyDesireLevel.GetNameNoFormatting]#! $LIBERTY_DESIRE_LEVEL_ACTIVE$\n$LIBERTY_DESIRE_LEVEL_BOUNDS_DESC$\n$LIBERTY_DESIRE_LEVEL_CURRENT_LIBERTY_DESIRE_DESC$\n$TOOLTIP_DELIMITER$\n[Country.GetWeeklyLibertyDesireChangeDesc]\n$TOOLTIP_DELIMITER$\n[Country.GetName] üzerindeki etkileri:[LibertyDesireLevel.GetNameNoFormatting]0 \n[LibertyDesireLevel.GetNameNoFormatting]1#!" #NT!
+ LIBERTY_DESIRE_LEVEL_ACTIVE_TOOLTIP: "#header [LibertyDesireLevel.GetNameNoFormatting]#! $LIBERTY_DESIRE_LEVEL_ACTIVE$\n$LIBERTY_DESIRE_LEVEL_BOUNDS_DESC$\n$LIBERTY_DESIRE_LEVEL_CURRENT_LIBERTY_DESIRE_DESC$\n$TOOLTIP_DELIMITER$\n[Country.GetWeeklyLibertyDesireChangeDesc]\n$TOOLTIP_DELIMITER$\n[Country.GetName] üzerindeki etkileri:[LibertyDesireLevel.GetNameNoFormatting]0 \n[LibertyDesireLevel.GetNameNoFormatting]1#!"
   
   
  LIBERTY_DESIRE_LEVEL_CURRENT_LIBERTY_DESIRE_DESC: "Mevcut [concept_liberty_desire] değeri: [Country.GetLibertyDesireRaw|v0]"
@@ -28,76 +28,76 @@
  LIBERTY_SUBJECT_DESIRE_WEEKLY_CHANGE_DESC_ADDITIONAL_ADDS: "#indent_newline:3 ilave antlaşmalar:\n[SCOPE.GetRootScope.GetDiplomaticPact.GetFirstCountry.GetModifier.GetDescFor('country_liberty_desire_of_subjects_add')]#!"
  LIBERTY_DESIRE_WEEKLY_CHANGE_DESC_ADDITIONAL_MULTS: "#indent_newline:3 ilave antlaşmalar:\n[SCOPE.GetRootScope.GetDiplomaticPact.GetSecondCountry.GetModifier.GetDescFor('country_liberty_desire_add')][SCOPE.GetRootScope.GetDiplomaticPact.GetSecondCountry.GetModifier.GetDescFor('country_liberty_desire_increase_mult')][SCOPE.GetRootScope.GetDiplomaticPact.GetSecondCountry.GetModifier.GetDescFor('country_liberty_desire_decrease_mult')]#!"
   
- LIBERTY_DESIRE_WEEKLY_CHANGE_RELATIONS_HOSTILE: "#r Düşmanca #![concept_relations]" #NT!
- LIBERTY_DESIRE_WEEKLY_CHANGE_RELATIONS_COLD: "#r Soğuk #![concept_relations]" #NT!
- LIBERTY_DESIRE_WEEKLY_CHANGE_RELATIONS_POOR: "#r Zayıf #![concept_relations]" #NT!
- LIBERTY_DESIRE_WEEKLY_CHANGE_RELATIONS_NEUTRAL: "#b Tarafsız #![concept_relations]" #NT!
- LIBERTY_DESIRE_WEEKLY_CHANGE_RELATIONS_CORDIAL: "#green Samimi #![concept_relations]" #NT!
- LIBERTY_DESIRE_WEEKLY_CHANGE_RELATIONS_AMICABLE: "#green Dostça #![concept_relations]" #NT!
- LIBERTY_DESIRE_WEEKLY_CHANGE_RELATIONS_FRIENDLY: "#greenFriendly #![concept_relations]" #NT!
+ LIBERTY_DESIRE_WEEKLY_CHANGE_RELATIONS_HOSTILE: "#r Düşmanca #![concept_relations]"
+ LIBERTY_DESIRE_WEEKLY_CHANGE_RELATIONS_COLD: "#r Soğuk #![concept_relations]"
+ LIBERTY_DESIRE_WEEKLY_CHANGE_RELATIONS_POOR: "#r Zayıf #![concept_relations]"
+ LIBERTY_DESIRE_WEEKLY_CHANGE_RELATIONS_NEUTRAL: "#b Tarafsız #![concept_relations]"
+ LIBERTY_DESIRE_WEEKLY_CHANGE_RELATIONS_CORDIAL: "#green Samimi #![concept_relations]"
+ LIBERTY_DESIRE_WEEKLY_CHANGE_RELATIONS_AMICABLE: "#green Dostça #![concept_relations]"
+ LIBERTY_DESIRE_WEEKLY_CHANGE_RELATIONS_FRIENDLY: "#greenFriendly #![concept_relations]"
   
- LIBERTY_DESIRE_WEEKLY_CHANGE_INFAMY: "[concept_infamy] / [concept_overlord]" #NT!
+ LIBERTY_DESIRE_WEEKLY_CHANGE_INFAMY: "[concept_infamy] / [concept_overlord]"
   
- LIBERTY_DESIRE_WEEKLY_CHANGE_BANKROLL: "[GetDiplomaticActionType('bankroll').GetName]" #NT!
+ LIBERTY_DESIRE_WEEKLY_CHANGE_BANKROLL: "[GetDiplomaticActionType('bankroll').GetName]"
  LIBERTY_DESIRE_WEEKLY_CHANGE_SUPPORT_REGIME: "[GetDiplomaticActionType('da_support_regime').GetName]"
  LIBERTY_DESIRE_WEEKLY_CHANGE_KNOWLEDGE_SHARING: "[GetDiplomaticActionType('da_knowledge_sharing').GetName]"
  LIBERTY_DESIRE_WEEKLY_CHANGE_EXEMPT_FROM_SERVICE: "[GetDiplomaticActionType('exempt_from_service').GetName]"
  LIBERTY_DESIRE_WEEKLY_CHANGE_RAISE_PAYMENTS: "[GetDiplomaticActionType('raise_payments').GetName]"
  LIBERTY_DESIRE_WEEKLY_CHANGE_DECREASE_PAYMENTS: "[GetDiplomaticActionType('decrease_payments').GetName]"
- LIBERTY_DESIRE_WEEKLY_CHANGE_CULTURE_CONVERT: "[GetDiplomaticActionType('change_primary_culture').GetName]" #NT!
+ LIBERTY_DESIRE_WEEKLY_CHANGE_CULTURE_CONVERT: "[GetDiplomaticActionType('change_primary_culture').GetName]"
   
- LIBERTY_DESIRE_RELATIVE_PRESTIGE_VALUE_FORMAT: "$TAB$[SelectLocalization(GreaterThan_CFixedPoint('(CFixedPoint)$VALUE$','(CFixedPoint)0'),'$VALUE|bo=2$','$VALUE|bu=2$')] $KEY$ için" #NT!
- LIBERTY_DESIRE_WEEKLY_CHANGE_RELATIVE_PRESTIGE: "[concept_overlord] [concept_prestige] [SCOPE.GetRootScope.GetDiplomaticPact.GetSecondCountry.GetName]'ye göre (Şu anda #v [SCOPE.GetRootScope.GetDiplomaticPact.GetFirstCountry.GetRelativePrestige( SCOPE.GetRootScope.GetDiplomaticPact.GetSecondCountry )|v1]x#!)\n$TAB$[SCOPE.GetRootScope.GetDiplomaticPact.GetSecondCountry.GetSubjectType.GetName] memnuniyet şunlardan etkileniyor:\n[SCOPE.GetScriptValueDesc('liberty_desire_weekly_change_relative_prestige')]" #NT!
+ LIBERTY_DESIRE_RELATIVE_PRESTIGE_VALUE_FORMAT: "$TAB$[SelectLocalization(GreaterThan_CFixedPoint('(CFixedPoint)$VALUE$','(CFixedPoint)0'),'$VALUE|bo=2$','$VALUE|bu=2$')] $KEY$ için"
+ LIBERTY_DESIRE_WEEKLY_CHANGE_RELATIVE_PRESTIGE: "[concept_overlord] [concept_prestige] [SCOPE.GetRootScope.GetDiplomaticPact.GetSecondCountry.GetName]'ye göre (Şu anda #v [SCOPE.GetRootScope.GetDiplomaticPact.GetFirstCountry.GetRelativePrestige( SCOPE.GetRootScope.GetDiplomaticPact.GetSecondCountry )|v1]x#!)\n$TAB$[SCOPE.GetRootScope.GetDiplomaticPact.GetSecondCountry.GetSubjectType.GetName] memnuniyet şunlardan etkileniyor:\n[SCOPE.GetScriptValueDesc('liberty_desire_weekly_change_relative_prestige')]"
   
  LIBERTY_DESIRE_WEEKLY_CHANGE_NO_PRESTIGE_NEGATIVE: "[SCOPE.GetRootScope.GetDiplomaticPact.GetSecondCountry.GetAdjective] [Concept('concept_prestige', 'Prestiji')] #v 0#! değerinde"
  LIBERTY_DESIRE_WEEKLY_CHANGE_NO_PRESTIGE_POSITIVE: "[SCOPE.GetRootScope.GetDiplomaticPact.GetFirstCountry.GetAdjective] [Concept('concept_prestige', 'Prestiji')] #v 0#! değerinde"
- LIBERTY_DESIRE_WEEKLY_CHANGE_PRESTIGE_DIFFERENCE_1_5_POSITIVE: "#v 1.5x#!'in altında prestije sahip olanlar" #NT!
- LIBERTY_DESIRE_WEEKLY_CHANGE_PRESTIGE_DIFFERENCE_2_0_POSITIVE: "#v 2.0x#!'in altında prestije sahip olanlar" #NT!
- LIBERTY_DESIRE_WEEKLY_CHANGE_PRESTIGE_DIFFERENCE_3_0_POSITIVE: "#v 3.0x#!'in altında prestije sahip olanlar" #NT!
+ LIBERTY_DESIRE_WEEKLY_CHANGE_PRESTIGE_DIFFERENCE_1_5_POSITIVE: "#v 1.5x#!'in altında prestije sahip olanlar"
+ LIBERTY_DESIRE_WEEKLY_CHANGE_PRESTIGE_DIFFERENCE_2_0_POSITIVE: "#v 2.0x#!'in altında prestije sahip olanlar"
+ LIBERTY_DESIRE_WEEKLY_CHANGE_PRESTIGE_DIFFERENCE_3_0_POSITIVE: "#v 3.0x#!'in altında prestije sahip olanlar"
   
- LIBERTY_DESIRE_WEEKLY_CHANGE_PRESTIGE_DIFFERENCE_1_5_NEGATIVE: "#v 1.5x#!'den fazla prestije sahip olmak" #NT!
- LIBERTY_DESIRE_WEEKLY_CHANGE_PRESTIGE_DIFFERENCE_2_0_NEGATIVE: "#v 2.0x#!'den fazla prestije sahip olmak" #NT!
- LIBERTY_DESIRE_WEEKLY_CHANGE_PRESTIGE_DIFFERENCE_3_0_NEGATIVE: "#v 3.0x#!'den fazla prestije sahip olmak" #NT!
- LIBERTY_DESIRE_WEEKLY_CHANGE_PRESTIGE_DIFFERENCE_4_0_NEGATIVE: "#v 4.0x#!'den fazla prestije sahip olmak" #NT!
- LIBERTY_DESIRE_WEEKLY_CHANGE_PRESTIGE_DIFFERENCE_6_0_NEGATIVE: "#v 6.0x#!'den fazla prestije sahip olmak" #NT!
- LIBERTY_DESIRE_WEEKLY_CHANGE_PRESTIGE_DIFFERENCE_8_0_NEGATIVE: "#v 8.0x#!'den fazla prestije sahip olmak" #NT!
- LIBERTY_DESIRE_WEEKLY_CHANGE_PRESTIGE_DIFFERENCE_12_0_NEGATIVE: "#v 12.0x#!'den fazla prestije sahip olmak" #NT!
- LIBERTY_DESIRE_WEEKLY_CHANGE_PRESTIGE_DIFFERENCE_16_0_NEGATIVE: "#v 16.0x#!'den fazla prestije sahip olmak" #NT!
- LIBERTY_DESIRE_WEEKLY_CHANGE_PRESTIGE_DIFFERENCE_24_0_NEGATIVE: "#v 24.0x#!'den fazla prestije sahip olmak" #NT!
- LIBERTY_DESIRE_WEEKLY_CHANGE_PRESTIGE_DIFFERENCE_32_0_NEGATIVE: "#v 32.0x#!'den fazla prestije sahip olmak" #NT!
- LIBERTY_DESIRE_WEEKLY_CHANGE_PRESTIGE_DIFFERENCE_48_0_NEGATIVE: "#v 48.0x#!'den fazla prestije sahip olmak" #NT!
+ LIBERTY_DESIRE_WEEKLY_CHANGE_PRESTIGE_DIFFERENCE_1_5_NEGATIVE: "#v 1.5x#!'den fazla prestije sahip olmak"
+ LIBERTY_DESIRE_WEEKLY_CHANGE_PRESTIGE_DIFFERENCE_2_0_NEGATIVE: "#v 2.0x#!'den fazla prestije sahip olmak"
+ LIBERTY_DESIRE_WEEKLY_CHANGE_PRESTIGE_DIFFERENCE_3_0_NEGATIVE: "#v 3.0x#!'den fazla prestije sahip olmak"
+ LIBERTY_DESIRE_WEEKLY_CHANGE_PRESTIGE_DIFFERENCE_4_0_NEGATIVE: "#v 4.0x#!'den fazla prestije sahip olmak"
+ LIBERTY_DESIRE_WEEKLY_CHANGE_PRESTIGE_DIFFERENCE_6_0_NEGATIVE: "#v 6.0x#!'den fazla prestije sahip olmak"
+ LIBERTY_DESIRE_WEEKLY_CHANGE_PRESTIGE_DIFFERENCE_8_0_NEGATIVE: "#v 8.0x#!'den fazla prestije sahip olmak"
+ LIBERTY_DESIRE_WEEKLY_CHANGE_PRESTIGE_DIFFERENCE_12_0_NEGATIVE: "#v 12.0x#!'den fazla prestije sahip olmak"
+ LIBERTY_DESIRE_WEEKLY_CHANGE_PRESTIGE_DIFFERENCE_16_0_NEGATIVE: "#v 16.0x#!'den fazla prestije sahip olmak"
+ LIBERTY_DESIRE_WEEKLY_CHANGE_PRESTIGE_DIFFERENCE_24_0_NEGATIVE: "#v 24.0x#!'den fazla prestije sahip olmak"
+ LIBERTY_DESIRE_WEEKLY_CHANGE_PRESTIGE_DIFFERENCE_32_0_NEGATIVE: "#v 32.0x#!'den fazla prestije sahip olmak"
+ LIBERTY_DESIRE_WEEKLY_CHANGE_PRESTIGE_DIFFERENCE_48_0_NEGATIVE: "#v 48.0x#!'den fazla prestije sahip olmak"
   
- LIBERTY_DESIRE_WEEKLY_CHANGE_RELIGION: "[SCOPE.GetRootScope.GetDiplomaticPact.GetSecondCountry.GetSubjectType.GetName]'ları [concept_state_religion]'i değiştirmeye çalışmak" #NT!
- LIBERTY_DESIRE_WEEKLY_CHANGE_DEVOUT_RESISTANCE: "[GetDiplomaticActionType('change_state_religion').GetName]'a karşı dindar direniş" #NT!
- LIBERTY_DESIRE_WEEKLY_CHANGE_CULTURE: "[SCOPE.GetRootScope.GetDiplomaticPact.GetSecondCountry.GetSubjectType.GetName]'ın [Concept('concept_primary_cultures','$concept_primary_culture$')]'i yerini almaya çalışıyor" #NT!
- LIBERTY_DESIRE_WEEKLY_CHANGE_NATIONALIST_RESISTANCE: ""[GetDiplomaticActionType('change_primary_culture').GetName]"a karşı milliyetçi direniş" #NT!
- LIBERTY_DESIRE_WEEKLY_CHANGE_INCLUDE_CULTURE: "[SCOPE.GetRootScope.GetDiplomaticPact.GetSecondCountry.GetSubjectType.GetName]'ları [Concept('concept_primary_cultures','$concept_primary_culture$')]'e dahil etmeye çalışıyorum" #NT!
+ LIBERTY_DESIRE_WEEKLY_CHANGE_RELIGION: "[SCOPE.GetRootScope.GetDiplomaticPact.GetSecondCountry.GetSubjectType.GetName]'ları [concept_state_religion]'i değiştirmeye çalışmak"
+ LIBERTY_DESIRE_WEEKLY_CHANGE_DEVOUT_RESISTANCE: "[GetDiplomaticActionType('change_state_religion').GetName]'a karşı dindar direniş"
+ LIBERTY_DESIRE_WEEKLY_CHANGE_CULTURE: "[SCOPE.GetRootScope.GetDiplomaticPact.GetSecondCountry.GetSubjectType.GetName]'ın [Concept('concept_primary_cultures','$concept_primary_culture$')]'i yerini almaya çalışıyor"
+ LIBERTY_DESIRE_WEEKLY_CHANGE_NATIONALIST_RESISTANCE: ""[GetDiplomaticActionType('change_primary_culture').GetName]"a karşı milliyetçi direniş"
+ LIBERTY_DESIRE_WEEKLY_CHANGE_INCLUDE_CULTURE: "[SCOPE.GetRootScope.GetDiplomaticPact.GetSecondCountry.GetSubjectType.GetName]'ları [Concept('concept_primary_cultures','$concept_primary_culture$')]'e dahil etmeye çalışıyorum"
   
- legal_systems: "Hukuk Sistemleri" #NT!
- LIBERTY_DESIRE_LEGAL_FRICTION: "Sürtünme" #NT!
- LIBERTY_DESIRE_LEGAL_FRICTION_VALUE_FORMAT: "$TAB$[SelectLocalization(GreaterThan_CFixedPoint('(CFixedPoint)$VALUE$','(CFixedPoint)0'),'$VALUE|bo=2$','$VALUE|bu=2$')] $KEY$ için" #NT!
- LIBERTY_DESIRE_WEEKLY_CHANGE_LEGAL_FRICTION: "$LIBERTY_DESIRE_LEGAL_FRICTION$ arasında [Concept('concept_law', '$legal_systems$')]:\n[SCOPE.GetScriptValueDesc('liberty_desire_weekly_change_legal_friction')]" #NT!
+ legal_systems: "Hukuk Sistemleri"
+ LIBERTY_DESIRE_LEGAL_FRICTION: "Sürtünme"
+ LIBERTY_DESIRE_LEGAL_FRICTION_VALUE_FORMAT: "$TAB$[SelectLocalization(GreaterThan_CFixedPoint('(CFixedPoint)$VALUE$','(CFixedPoint)0'),'$VALUE|bo=2$','$VALUE|bu=2$')] $KEY$ için"
+ LIBERTY_DESIRE_WEEKLY_CHANGE_LEGAL_FRICTION: "$LIBERTY_DESIRE_LEGAL_FRICTION$ arasında [Concept('concept_law', '$legal_systems$')]:\n[SCOPE.GetScriptValueDesc('liberty_desire_weekly_change_legal_friction')]"
   
- LIBERTY_DESIRE_LEGAL_FRICTION_GOVERNANCE: "[GetLawGroup('lawgroup_governance_principles').GetName]" #NT!
- LIBERTY_DESIRE_LEGAL_FRICTION_CHURCH: "[GetLawGroup('lawgroup_church_and_state').GetName]" #NT!
- LIBERTY_DESIRE_LEGAL_FRICTION_BUREAUCRACY: "[GetLawGroup('lawgroup_bureaucracy').GetName]" #NT!
- LIBERTY_DESIRE_LEGAL_FRICTION_ECONOMY: "[GetLawGroup('lawgroup_economic_system').GetName]" #NT!
- LIBERTY_DESIRE_LEGAL_FRICTION_LAND: "[GetLawGroup('lawgroup_land_reform').GetName]" #NT!
- LIBERTY_DESIRE_LEGAL_FRICTION_TRADE: "[GetLawGroup('lawgroup_trade_policy').GetName]" #NT!
- LIBERTY_DESIRE_LEGAL_FRICTION_SLAVERY: "[GetLawGroup('lawgroup_slavery').GetName]" #NT!
- LIBERTY_DESIRE_LEGAL_FRICTION_FEMINISM: "[GetLawGroup('lawgroup_rights_of_women').GetName]" #NT!
- LIBERTY_DESIRE_LEGAL_FRICTION_SPEECH: "[GetLawGroup('lawgroup_free_speech').GetName]" #NT!
- LIBERTY_DESIRE_LEGAL_FRICTION_LABOR: "[GetLawGroup('lawgroup_labor_rights').GetName]" #NT!
+ LIBERTY_DESIRE_LEGAL_FRICTION_GOVERNANCE: "[GetLawGroup('lawgroup_governance_principles').GetName]"
+ LIBERTY_DESIRE_LEGAL_FRICTION_CHURCH: "[GetLawGroup('lawgroup_church_and_state').GetName]"
+ LIBERTY_DESIRE_LEGAL_FRICTION_BUREAUCRACY: "[GetLawGroup('lawgroup_bureaucracy').GetName]"
+ LIBERTY_DESIRE_LEGAL_FRICTION_ECONOMY: "[GetLawGroup('lawgroup_economic_system').GetName]"
+ LIBERTY_DESIRE_LEGAL_FRICTION_LAND: "[GetLawGroup('lawgroup_land_reform').GetName]"
+ LIBERTY_DESIRE_LEGAL_FRICTION_TRADE: "[GetLawGroup('lawgroup_trade_policy').GetName]"
+ LIBERTY_DESIRE_LEGAL_FRICTION_SLAVERY: "[GetLawGroup('lawgroup_slavery').GetName]"
+ LIBERTY_DESIRE_LEGAL_FRICTION_FEMINISM: "[GetLawGroup('lawgroup_rights_of_women').GetName]"
+ LIBERTY_DESIRE_LEGAL_FRICTION_SPEECH: "[GetLawGroup('lawgroup_free_speech').GetName]"
+ LIBERTY_DESIRE_LEGAL_FRICTION_LABOR: "[GetLawGroup('lawgroup_labor_rights').GetName]"
   
- LIBERTY_DESIRE_WEEKLY_CHANGE_REL_MILITARY_WEAK: "[SCOPE.GetRootScope.GetDiplomaticPact.GetSecondCountry.GetName]'ın [concept_army]'i yok!" #NT!
- LIBERTY_DESIRE_WEEKLY_CHANGE_REL_MILITARY_SCALING: "Göreceli [concept_army] [concept_power_projection] / [concept_overlord] (10x'te maksimum etki)" #NT!
- LIBERTY_DESIRE_WEEKLY_CHANGE_REL_MILITARY_APPROACH: "Göreceli Ordu Gücü > Overlord'un %80'i" #NT!
- LIBERTY_DESIRE_WEEKLY_CHANGE_REL_MILITARY_EXCCEED: "Göreceli Ordu Gücü > Overlord'un %100'ü" #NT!
- LIBERTY_DESIRE_WEEKLY_CHANGE_REL_NAVY_SCALING: "[SCOPE.GetRootScope.GetDiplomaticPact.GetSecondCountry.GetName]'ın akrabası Donanma [concept_power_projection]" #NT!
- LIBERTY_DESIRE_WEEKLY_CHANGE_REL_MILITARY_SCALING_REDUCTION: "[concept_subject] Deniz Kuvvetleri denizaşırı önemini azaltıyor [concept_overlord] [concept_army]" #NT!
- LIBERTY_DESIRE_WEEKLY_CHANGE_COMBINED_SUBJECTS: "Tüm [Concept('concept_subject', '$concept_subjects$')] [concept_power_projection], [SCOPE.GetRootScope.GetDiplomaticPact.GetFirstCountry.GetName]\n[SCOPE.GetScriptValueDesc('liberty_desire_weekly_change_combined_subjects')] ile karşılaştırıldığında" #NT!
- LIBERTY_DESIRE_WEEKLY_CHANGE_OWN_COMBINED_SUBJECTS: "[SCOPE.GetRootScope.GetDiplomaticPact.GetSecondCountry.GetName]'ın kendi [Concept('concept_subject', '$concept_subjects$')]'inin tehdidi)" #NT!
- LIBERTY_DESIRE_CHANGE_OWN_COMBINED_SUBJECTS_VALUE_FORMAT: "$TAB$([SelectLocalization(GreaterThan_CFixedPoint('(CFixedPoint)$VALUE$','(CFixedPoint)0'),'$VALUE|bo=2$','$VALUE|bu=2$')]'den $KEY$'ye kadar içerir" #NT!
+ LIBERTY_DESIRE_WEEKLY_CHANGE_REL_MILITARY_WEAK: "[SCOPE.GetRootScope.GetDiplomaticPact.GetSecondCountry.GetName]'ın [concept_army]'i yok!"
+ LIBERTY_DESIRE_WEEKLY_CHANGE_REL_MILITARY_SCALING: "Göreceli [concept_army] [concept_power_projection] / [concept_overlord] (10x'te maksimum etki)"
+ LIBERTY_DESIRE_WEEKLY_CHANGE_REL_MILITARY_APPROACH: "Göreceli Ordu Gücü > Overlord'un %80'i"
+ LIBERTY_DESIRE_WEEKLY_CHANGE_REL_MILITARY_EXCCEED: "Göreceli Ordu Gücü > Overlord'un %100'ü"
+ LIBERTY_DESIRE_WEEKLY_CHANGE_REL_NAVY_SCALING: "[SCOPE.GetRootScope.GetDiplomaticPact.GetSecondCountry.GetName]'ın akrabası Donanma [concept_power_projection]"
+ LIBERTY_DESIRE_WEEKLY_CHANGE_REL_MILITARY_SCALING_REDUCTION: "[concept_subject] Deniz Kuvvetleri denizaşırı önemini azaltıyor [concept_overlord] [concept_army]"
+ LIBERTY_DESIRE_WEEKLY_CHANGE_COMBINED_SUBJECTS: "Tüm [Concept('concept_subject', '$concept_subjects$')] [concept_power_projection], [SCOPE.GetRootScope.GetDiplomaticPact.GetFirstCountry.GetName]\n[SCOPE.GetScriptValueDesc('liberty_desire_weekly_change_combined_subjects')] ile karşılaştırıldığında"
+ LIBERTY_DESIRE_WEEKLY_CHANGE_OWN_COMBINED_SUBJECTS: "[SCOPE.GetRootScope.GetDiplomaticPact.GetSecondCountry.GetName]'ın kendi [Concept('concept_subject', '$concept_subjects$')]'inin tehdidi)"
+ LIBERTY_DESIRE_CHANGE_OWN_COMBINED_SUBJECTS_VALUE_FORMAT: "$TAB$([SelectLocalization(GreaterThan_CFixedPoint('(CFixedPoint)$VALUE$','(CFixedPoint)0'),'$VALUE|bo=2$','$VALUE|bu=2$')]'den $KEY$'ye kadar içerir"
   
  LIBERTY_DESIRE_WEEKLY_CHANGE_LOW_SUPPLY_NETWORK_STRENGTH: "[SCOPE.GetRootScope.GetDiplomaticPact.GetFirstCountry.GetAdjective] [concept_supply_network] gücü düşük ([SCOPE.GetRootScope.GetDiplomaticPact.GetFirstCountry.GetSupplyNetworkStrength|v0%])"
  LIBERTY_DESIRE_WEEKLY_CHANGE_SACRED_CIVICS: "#v $principle_group_sacred_civics$#! altında aynı devlet [Concept('concept_religion', 'Dini')]"
@@ -108,7 +108,7 @@
  LIBERTY_DESIRE_WEEKLY_CHANGE_ANTI_LOBBY_INTEREST_GROUP_IN_GOVERNMENT: "[concept_in_government] [concept_political_lobby] [Concept('concept_interest_group','$concept_interest_groups$nın')] [Concept'('concept_clout', 'Tesiri')] (#v x2#!)"
  LIBERTY_DESIRE_WEEKLY_CHANGE_PRO_LOBBY_INTEREST_GROUP_IN_OPPOSITION: "[concept_in_opposition] [concept_political_lobby] [Concept('concept_interest_group','$concept_interest_groups$nın')] [Concept'('concept_clout', 'Tesiri')]"
  LIBERTY_DESIRE_WEEKLY_CHANGE_ANTI_LOBBY_INTEREST_GROUP_IN_OPPOSITION: "[concept_in_opposition] [concept_political_lobby] [Concept('concept_interest_group','$concept_interest_groups$nın')] [Concept'('concept_clout', 'Tesiri')]"
- LIBERTY_DESIRE_WEEKLY_CHANGE_SCALING_LOW: "Statükonun Düşük Seviyeden Değişimine Direnç [concept_liberty_desire]" #NT!
- LIBERTY_DESIRE_WEEKLY_CHANGE_SCALING_HIGH: "Statükonun değişmesine karşı direnç Yüksek [concept_liberty_desire]" #NT!
+ LIBERTY_DESIRE_WEEKLY_CHANGE_SCALING_LOW: "Statükonun Düşük Seviyeden Değişimine Direnç [concept_liberty_desire]"
+ LIBERTY_DESIRE_WEEKLY_CHANGE_SCALING_HIGH: "Statükonun değişmesine karşı direnç Yüksek [concept_liberty_desire]"
   
   

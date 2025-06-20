@@ -1,9 +1,9 @@
 ﻿l_korean:
   # Missing Modifier Types 
- goods_output_grain_mult: "@grain을 구축 중! 곡물 생산량" #NT!
- goods_output_grain_mult_desc: "@grain의 양에 대한 보너스 또는 페널티! 건물에서 생산되는 곡물" #NT!
- goods_output_meat_mult: "@meat를 빌드하세요! 고기 출력" #NT!
- goods_output_meat_mult_desc: "@meat의 양에 대한 보너스 또는 페널티! 건물에서 생산되는 고기" #NT!
+ goods_output_grain_mult: "@grain을 구축 중! 곡물 생산량"
+ goods_output_grain_mult_desc: "@grain의 양에 대한 보너스 또는 페널티! 건물에서 생산되는 곡물"
+ goods_output_meat_mult: "@meat를 빌드하세요! 고기 출력"
+ goods_output_meat_mult_desc: "@meat의 양에 대한 보너스 또는 페널티! 건물에서 생산되는 고기"
   
   # Flavour Easter Eggs 
- company_somali_food_chain: "카르도 푸드 체인 신디케이트" #NT!
+ company_somali_food_chain: "카르도 푸드 체인 신디케이트"

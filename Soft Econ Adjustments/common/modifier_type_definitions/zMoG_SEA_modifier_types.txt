@@ -1,0 +1,9 @@
+﻿# Vanilla - Needs more ai_value
+state_trade_quantity_mult={
+    decimals=1
+    color=good
+    percent=yes
+    game_data={
+        ai_value=5000
+    }
+}

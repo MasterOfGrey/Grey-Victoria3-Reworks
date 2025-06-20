@@ -1,33 +1,33 @@
 ﻿l_german:
- laws_synergize_economy: "Synergien schaffen" #NT!
- laws_synergize_economy_action_name: "$laws_synergize_economy$" #NT!
- laws_synergize_economy_action_propose_name: "Beginnen Sie mit der Synergieeffekt-Wirtschaft" #NT!
- laws_synergize_economy_action_break_name: "Schluss mit der Synergiebildung in Volkswirtschaften" #NT!
- laws_synergize_economy_pact_desc: "[SCOPE.GetRootScope.GetDiplomaticPact.GetFirstCountry.GetName] strukturiert die Wirtschaft von [SCOPE.GetRootScope.GetDiplomaticPact.GetSecondCountry.GetName] um, um Synergien mit ihrer Wirtschaft zu erzielen.\n Derzeit durchlaufen #variable [SCOPE.GetRootScope.GetDiplomaticPact.GetSecondCountry.MakeScope.Var('synergize_economy_progress').GetValue]#! 8 Stufen." #NT!
- laws_synergize_economy_desc: "#header $laws_synergize_economy$#!\n$TOOLTIP_DELIMITER$\nSynergizes die Wirtschaftssysteme des angegebenen Landes." #NT!
- laws_synergize_economy_action_notification_name: "[INITIATOR_COUNTRY.GetName] Synergieeffekte" #NT!
- laws_synergize_economy_action_notification_desc: "[INITIATOR_COUNTRY.GetName] sorgt für Synergien zwischen den Wirtschaftssystemen unseres Landes." #NT!
- laws_synergize_economy_action_notification_break_name: "Beenden Sie Synergieeffekte durch [INITIATOR_COUNTRY.GetName]" #NT!
- laws_synergize_economy_action_notification_break_desc: "[INITIATOR_COUNTRY.GetName] hat aufgehört, zu versuchen, die Wirtschaftssysteme unseres Landes zu synergisieren." #NT!
+ laws_synergize_economy: "Wirtschaftssystem angleichen"
+ laws_synergize_economy_action_name: "$laws_synergize_economy$"
+ laws_synergize_economy_action_propose_name: "Angleichung des Wirtschaftssystems initiieren"
+ laws_synergize_economy_action_break_name: "Stoppe die Angleichung des Wirtschaftssystems"
+ laws_synergize_economy_pact_desc: "[SCOPE.GetRootScope.GetDiplomaticPact.GetFirstCountry.GetName] strukturiert die Wirtschaft von [SCOPE.GetRootScope.GetDiplomaticPact.GetSecondCountry.GetName] um, um Synergien mit seiner Wirtschaft zu erzielen.\nDer aktuelle Fortschritt beträgt #variable [SCOPE.GetRootScope.GetDiplomaticPact.GetSecondCountry.MakeScope.Var('synergize_economy_progress').GetValue]#! von 8 Stufen."
+ laws_synergize_economy_desc: "#header $laws_synergize_economy$#!\n$TOOLTIP_DELIMITER$\nPasst das Wirtschaftssystem des angegebenen Landes an."
+ laws_synergize_economy_action_notification_name: "[INITIATOR_COUNTRY.GetName] gleicht unser Wirtschaftssystem an"
+ laws_synergize_economy_action_notification_desc: "[INITIATOR_COUNTRY.GetName] sorgt für eine Angleichung unseres Wirtschaftssystems an das Seinige."
+ laws_synergize_economy_action_notification_break_name: "[INITIATOR_COUNTRY.GetName] stoppt die Angleuchung unseres Wirtschaftssystems"
+ laws_synergize_economy_action_notification_break_desc: "[INITIATOR_COUNTRY.GetName] hat aufgehört, zu versuchen, unser Wirtschaftssystem an das Seinige anzugleichen."
   
- laws_synergize_economy_effect_desc_global: "Beginnen Sie mit der Synergieeffekt-Wirtschaft" #NT!
- laws_synergize_economy_effect_desc_first: "[COUNTRY.GetAdjectiveNoFlag] initiiert wirtschaftliche Synergien mit [TARGET_COUNTRY.GetName]." #NT!
- laws_synergize_economy_effect_desc_third: "[COUNTRY.GetName] initiiert wirtschaftliche Synergien mit [AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)]." #NT!
+ laws_synergize_economy_effect_desc_global: "Angleichung des Wirtschaftssystems initiieren"
+ laws_synergize_economy_effect_desc_first: "[COUNTRY.GetAdjectiveNoFlag] initiiert die Angleichung der Wirtschaftssysteme mit [TARGET_COUNTRY.GetName]."
+ laws_synergize_economy_effect_desc_third: "[COUNTRY.GetName] initiiert die Angleichung der Wirtschaftssysteme mit [AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)]."
   
- laws_synergize_economy_trigger_desc_global: "Wirtschaftliche Synergien laufen" #NT!
- laws_synergize_economy_trigger_false_desc_global: "Befindet sich derzeit nicht im Prozess der Synergiebildung wirtschaftlicher Systeme." #NT!
- laws_synergize_economy_trigger_desc_first: "[COUNTRY.GetAdjectiveNoFlag] verfügt über synergetische Wirtschaftssysteme mit [TARGET_COUNTRY.GetName]." #NT!
- laws_synergize_economy_trigger_false_desc_first: "[COUNTRY.GetAdjectiveNoFlag] verfügt derzeit nicht über synergetische Wirtschaftssysteme mit [TARGET_COUNTRY.GetName]." #NT!
- laws_synergize_economy_trigger_desc_third: "[COUNTRY.GetName] hat synergetische Wirtschaftssysteme mit [AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)]." #NT!
- laws_synergize_economy_trigger_false_desc_third: "[COUNTRY.GetName] verfügt derzeit nicht über synergetische Wirtschaftssysteme mit [AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)]." #NT!
+ laws_synergize_economy_trigger_desc_global: "Angleichung der Wirtschaftssysteme läuft"
+ laws_synergize_economy_trigger_false_desc_global: "Befindet sich derzeit nicht im Prozess der Angleichung der Wirtschaftssysteme eines [concept_subject]."
+ laws_synergize_economy_trigger_desc_first: "[COUNTRY.GetNameNoFlag] verfügt über synergetische Wirtschaftssysteme mit [TARGET_COUNTRY.GetName]."
+ laws_synergize_economy_trigger_false_desc_first: "[COUNTRY.GetNameNoFlag] verfügt derzeit nicht über synergetische Wirtschaftssysteme mit [TARGET_COUNTRY.GetName]."
+ laws_synergize_economy_trigger_desc_third: "[COUNTRY.GetName] hat synergetische Wirtschaftssysteme mit [AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)]."
+ laws_synergize_economy_trigger_false_desc_third: "[COUNTRY.GetName] verfügt derzeit nicht über synergetische Wirtschaftssysteme mit [AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)]."
   
- mog_syn_events.02.t: "Wirtschaftliche Synergie!" #NT!
- mog_syn_events.02.d: "Die stolze Nation [ROOT.GetCountry.GetName] hat die Synergie ihrer Wirtschaftssysteme mit [SCOPE.sCountry('synergize_economy_target_country').GetName] erfolgreich abgeschlossen. [SCOPE.sCountry('synergize_economy_target_country').GetName] wird durch den verstärkten Zusammenhalt mit dem Heimatland in ewigem Wohlstand gedeihen." #NT!
- mog_syn_events.02.f: "„Lang lebe [ROOT.GetCountry.GetName]!“" #NT!
- mog_syn_events.02.a: "Gut gemacht." #NT!
+ mog_syn_events.02.t: "Wirtschaftliche Synergie!"
+ mog_syn_events.02.d: "Die stolze Nation [ROOT.GetCountry.GetName] hat die Angleichung des Wirtschaftssystems in [SCOPE.sCountry('synergize_economy_target_country').GetName] erfolgreich abgeschlossen. [SCOPE.sCountry('synergize_economy_target_country').GetName] wird durch den verstärkten Zusammenhalt mit dem Heimatland in ewigem Wohlstand gedeihen."
+ mog_syn_events.02.f: "„Lang lebe [ROOT.GetCountry.GetName]!“"
+ mog_syn_events.02.a: "Gut gemacht."
   
- laws_synergize_economy_weekly_effect: "Arbeitet daran, ihr Wirtschaftssystem an unseres anzupassen. Hat jede Woche eine Chance von 20 %, Fortschritte zu machen, wobei 8 Fortschrittspunkte für den Erfolg erforderlich sind." #NT!
+ laws_synergize_economy_weekly_effect: "Arbeitet daran, ihr Wirtschaftssystem an unseres anzupassen. Hat jede Woche eine Chance von 20%, Fortschritte zu machen, wobei 8 Fortschrittspunkte für den Erfolg erforderlich sind."
   
- overlord_syn_cost_economy: "Kosten für Synergieeffekte" #NT!
+ overlord_syn_cost_economy: "Kosten für Synergieeffekte"
   
- active_synergize_economy_tt: "Die Anzahl anderer $laws_synergize_economy$-Aktionen ist kleiner als 1." #NT!
+ active_synergize_economy_tt: "Die Anzahl anderer "$laws_synergize_economy$"-Aktionen ist kleiner als 1."

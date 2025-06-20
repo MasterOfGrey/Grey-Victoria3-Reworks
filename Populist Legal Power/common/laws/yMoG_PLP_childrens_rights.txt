@@ -91,7 +91,6 @@ law_compulsory_primary_school = {
 	
 	modifier = {
 		country_institution_schools_max_investment_add = 2
-		state_education_access_add = 0.05
 	}
 	
 	ai_enact_weight_modifier = { #Petitions

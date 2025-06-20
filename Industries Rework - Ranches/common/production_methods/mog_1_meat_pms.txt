@@ -29,7 +29,7 @@ pm_intensive_grazing_ranch = {
 		workforce_scaled = {
 			goods_input_grain_add = 10
 			goods_output_meat_add = 40
-			goods_output_fertilizer_add = 5
+			goods_output_fertilizer_add = 2
 		}
 		
 		level_scaled = {
@@ -62,7 +62,7 @@ pm_battery_farming = {
 			goods_input_grain_add = 20
 			goods_input_fruit_add = 6
 			goods_output_meat_add = 60
-			goods_output_fertilizer_add = 10
+			goods_output_fertilizer_add = 4
 		}
 		
 		level_scaled = {

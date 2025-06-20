@@ -16,13 +16,13 @@
 		activate_law = law_type:law_racial_segregation
 		activate_law = law_type:law_mercantilism
 		activate_law = law_type:law_agrarianism
-		activate_law = law_type:law_colonial_resettlement
+		activate_law = law_type:law_frontier_colonization
 		activate_law = law_type:law_homesteading
-
+		
 		ig:ig_rural_folk = {
 			add_ruling_interest_group = yes
 		}
-
+		
 		add_taxed_goods = g:grain
 	}
 }

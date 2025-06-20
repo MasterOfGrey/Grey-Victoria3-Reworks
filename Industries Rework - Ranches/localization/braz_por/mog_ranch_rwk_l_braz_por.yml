@@ -1,9 +1,9 @@
 ﻿l_braz_por:
   # Missing Modifier Types 
- goods_output_grain_mult: "Construindo @grain! Produção de grãos" #NT!
- goods_output_grain_mult_desc: "Um bônus ou penalidade para a quantidade de @grain! Grão produzido por edifícios" #NT!
- goods_output_meat_mult: "Construindo @meat! Produção de carne" #NT!
- goods_output_meat_mult_desc: "Um bônus ou penalidade para a quantidade de @meat! Carne produzida por edifícios" #NT!
+ goods_output_grain_mult: "Construindo @grain! Produção de grãos"
+ goods_output_grain_mult_desc: "Um bônus ou penalidade para a quantidade de @grain! Grão produzido por edifícios"
+ goods_output_meat_mult: "Construindo @meat! Produção de carne"
+ goods_output_meat_mult_desc: "Um bônus ou penalidade para a quantidade de @meat! Carne produzida por edifícios"
   
   # Flavour Easter Eggs 
- company_somali_food_chain: "Sindicato da cadeia alimentar Qardho" #NT!
+ company_somali_food_chain: "Sindicato da cadeia alimentar Qardho"

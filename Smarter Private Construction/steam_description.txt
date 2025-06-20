@@ -1,0 +1,84 @@
+[img]https://i.imgur.com/7xuCZqW.png[/img]
+Supports Victoria 3: V1.8.6  (and onwards) - Should [i]never[/i] get out of date.
+Mod Version: V1.9
+Please consider rating this if you like it! It really helps out. [img]https://i.imgur.com/tE28cZ7.gif[/img]
+[spoiler]Originally made for: Version 1.5.12[/spoiler]
+[table]
+    [tr]
+        [td][img]https://i.imgur.com/WjDSfUn.png[/img][/td]
+        [td][img]https://i.imgur.com/h5VwTNL.png[/img][/td]
+    [/tr]
+[/table]
+
+[img]https://i.imgur.com/6o9HyTD.png[/img]
+WORKS WITH OTHER AI MODS
+
+This mod does these things:
+[list]
+[*]Moves Transportation to the "Industrial" goods category.
+[*]Alters the AI weights for the Private Construction queue's autonomous investment decision making.
+[*]V1.1: Also moves Wood, Fabric, and Electricity to the Industrial category.
+[*]V1.1: Alters the AI weights to better consider MAPI impacts relative to other changed weights.
+[*]V1.2: Modifies the relevant privatisation weights to be consistently scaled with previous changes.
+[*]V1.3: Increases the likelihood of privatisation and improves capitalists getting going.
+[*]V1.4: Increases the weighting proportion for your pops to invest in your own country.
+[*]V1.5: Added a high level fix that should stop the AI overbuilding power plants, and still allow railways and power plants to benefit from economy of scale (unless you have another mod that overwrites their building groups).
+[*]V1.6: Rebalanced the placement logic for owner buildings so that they don't excessively centralise in your capital as much.
+[*]V1.7: Made Companies more likely to become owners of new buildings of their type.
+[*]V1.8: Tweaked priorities and lowered the low pop lockout on states + boosted privatisation chance until pdx fixes the privatisation logic bug.
+[*]V1.9: Un-did owner changes (no longer needed) + Merchant Marine -> Industrial good.
+[/list]
+
+What this means is that you should [i]generally[/i] see:
+[olist]
+[*]The investment group choosing what to build will generally build whatever is most profitable for them.
+[*]Where they build it will be a little random (not necessarily the most profitable place), BUT;
+  - they'll generally prefer to upgrade existing industries to take advantage of state trait and economy of scale bonuses.
+  - they'll be responsive to market shortages.
+[*] There's more weighting on profit than on the value of the individual goods, so they'll be more likely to build the extractive industries like iron mines when they're needed, rather than running up your base resource costs by building steel mills until the market is saturated.
+[/olist]
+
+[b]This also helps the AI build basic things in their own countries![/b]
+
+If you come across any incompatibilities please let me know!
+
+[img]https://i.imgur.com/Qp8JBtZ.png[/img]
+This will never conflict with anything.
+No, really, it won't.
+
+[b]Explicitly compatible with:[/b]
+[list][*][b]Victoria Tweaks Mod[/b] (VTM) [i]by One Proud Bavarian[/i]
+[*][b]Kuromi's AI[/b] (kAI) [i]by KuromiAK[/i]
+[*][b]Smarter Ai[/b] [i]by TheGamingNot[/i]
+[/list]
+
+I recommend combining with other mods that make auto-expanding railways more sensible.
+(Like "Railway Automatic Expansion Fixed" or "Nahan's Transportation Overhaul".)
+
+If you find it doesn't behave as advertised; LOAD THIS LAST and try again before reporting issues.
+
+[img]https://i.imgur.com/lQRf9dG.png[/img]
+[b]Why is Transportation an Industrial good now?[/b]
+[i]This shift allows us to take advantage of hard-coded autonomous investment code to make building railways when there's a transport shortage a desirable option.[/i]
+
+[b]My railways still aren't getting built autonomously?[/b]
+[i]They have to be operated by capitalists (or shopkeepers). If you've made them government run, then no one is going to profit by building them...[/i]
+
+[b]Could you make them build the same way that a player would?[/b]
+[i]Realistically, no.
+All I've effectively done is worked up a more logical way of pulling the levers that the AI is already built to listen to. Those levers aren't all that easy to interpret, which is probably why there aren't dozens of mods doing the same sort of thing - but they are pre-existing functions that were already built in.
+To have them build like a player would require new functions, which is not something that can be modded in.
+
+Having said that, I don't think you actually want them to build like a player. A player will focus on particular things and can do so to the detriment of other areas, particularly in a large empire.
+To my mind, you want the autonomous construction to [u]complement[/u] a player, not [u]be[/u] a player; and I think it's in a place where it complements a player pretty well now.[/i]
+
+[img]https://i.imgur.com/UN80Om5.png[/img]
+Shoutout to Ferrous for letting me bounce the logic off them. 
+
+Shoutout to BrokenRobot for identifying the way to prevent overbuilding of power plants!
+
+#Railways #Capitalists
+#Private Construction Queue
+#Autonomous Investment
+#Smarter AI #SPC #GSPC
+You can support me on Patreon: [url=https://patreon.com/MasterOfGreyVic3?utm_medium=unknown&utm_source=join_link&utm_campaign=creatorshare_creator&utm_content=copyLink] [img]https://ufo2.site44.com/become_a_patron_button.png[/img] [/url]

@@ -1,0 +1,25 @@
+﻿on_game_started = {
+    on_actions = {
+        state_education_access_setup_action
+    }
+}
+
+state_education_access_setup_action = {
+	effect = {
+		every_state = {
+			trigger_event = mog_literacy_event.2
+		}
+	}
+}
+
+on_monthly_pulse_state = {
+    on_actions = {
+        state_education_access_update_action
+    }
+}
+
+state_education_access_update_action = {
+    effect = {
+		trigger_event = mog_literacy_event.2
+	}
+}

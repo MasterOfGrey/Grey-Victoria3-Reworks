@@ -11,7 +11,7 @@
 			goods_input_tools_add = 5 # cost 40, total = 200
 			goods_input_steel_add = 5 # cost 50, total 250
 			
-			goods_output_automobiles_add = 12 # cost 100, total 1200
+			goods_output_automobiles_add = 6 # cost 100, total 600	# Previously 12
 		}
 		
 		level_scaled = {

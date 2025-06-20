@@ -1,9 +1,9 @@
 ﻿l_turkish:
   # Missing Modifier Types 
- goods_output_grain_mult: "@grain! inşa ediliyor Tahıl çıktısı" #NT!
- goods_output_grain_mult_desc: "Binaların ürettiği @grain miktarına bir bonus veya ceza!" #NT!
- goods_output_meat_mult: "@et inşa ediliyor! Et üretimi" #NT!
- goods_output_meat_mult_desc: "@et miktarına bir bonus veya ceza! Binalar tarafından üretilen et" #NT!
+ goods_output_grain_mult: "@grain! inşa ediliyor Tahıl çıktısı"
+ goods_output_grain_mult_desc: "Binaların ürettiği @grain miktarına bir bonus veya ceza!"
+ goods_output_meat_mult: "@et inşa ediliyor! Et üretimi"
+ goods_output_meat_mult_desc: "@et miktarına bir bonus veya ceza! Binalar tarafından üretilen et"
   
   # Flavour Easter Eggs 
- company_somali_food_chain: "Qardho Gıda Zinciri Sendikası" #NT!
+ company_somali_food_chain: "Qardho Gıda Zinciri Sendikası"

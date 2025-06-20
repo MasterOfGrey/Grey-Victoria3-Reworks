@@ -1,29 +1,29 @@
 ﻿l_turkish:
- include_primary_culture: "Kültürel Kapsayıcılık" #NT!
- include_primary_culture_action_name: "$include_primary_culture$" #NT!
- include_primary_culture_action_propose_name: "Kültürel Katılımı Başlatın" #NT!
- include_primary_culture_action_break_name: "Kültürel Kapsayıcılığı Durdurun" #NT!
- include_primary_culture_pact_desc: "[SCOPE.GetRootScope.GetDiplomaticPact.GetFirstCountry.GetName] birincil kültürlerini [SCOPE.GetRootScope.GetDiplomaticPact.GetSecondCountry.GetName]'e dahil ediyor.\n Şu anda 8 aşamadan #variable [SCOPE.GetRootScope.GetDiplomaticPact.GetSecondCountry.MakeScope.Var('include_primary_culture_progress').GetValue]#!'ü ilerliyor." #NT!
- include_primary_culture_desc: "#header $include_primary_culture$#!\n$TOOLTIP_DELIMITER$\nAdd birincil kültürlerini hedef ülkenin birincil kültürüne uyarlamak." #NT!
- include_primary_culture_action_notification_name: "[INITIATOR_COUNTRY.GetName] kendi ana kültürlerini ülkemizin ana kültürüne dahil etmektir." #NT!
- include_primary_culture_action_notification_desc: "[INITIATOR_COUNTRY.GetName] kendi birincil kültürlerini ülkemize dahil ediyor." #NT!
- include_primary_culture_action_notification_break_name: "Birincil Kültür Dahil Etme [INITIATOR_COUNTRY.GetName] Tarafından Durduruldu" #NT!
- include_primary_culture_action_notification_break_desc: "[INITIATOR_COUNTRY.GetName] ülkemiz için birincil kültür kapsayıcılığını sonlandırmıştır." #NT!
+ include_primary_culture: "Kültürel Kapsayıcılık"
+ include_primary_culture_action_name: "$include_primary_culture$"
+ include_primary_culture_action_propose_name: "Kültürel Katılımı Başlatın"
+ include_primary_culture_action_break_name: "Kültürel Kapsayıcılığı Durdurun"
+ include_primary_culture_pact_desc: "[SCOPE.GetRootScope.GetDiplomaticPact.GetFirstCountry.GetName] birincil kültürlerini [SCOPE.GetRootScope.GetDiplomaticPact.GetSecondCountry.GetName]'e dahil ediyor.\n Şu anda 8 aşamadan #variable [SCOPE.GetRootScope.GetDiplomaticPact.GetSecondCountry.MakeScope.Var('include_primary_culture_progress').GetValue]#!'ü ilerliyor."
+ include_primary_culture_desc: "#header $include_primary_culture$#!\n$TOOLTIP_DELIMITER$\nAdd birincil kültürlerini hedef ülkenin birincil kültürüne uyarlamak."
+ include_primary_culture_action_notification_name: "[INITIATOR_COUNTRY.GetName] kendi ana kültürlerini ülkemizin ana kültürüne dahil etmektir."
+ include_primary_culture_action_notification_desc: "[INITIATOR_COUNTRY.GetName] kendi birincil kültürlerini ülkemize dahil ediyor."
+ include_primary_culture_action_notification_break_name: "Birincil Kültür Dahil Etme [INITIATOR_COUNTRY.GetName] Tarafından Durduruldu"
+ include_primary_culture_action_notification_break_desc: "[INITIATOR_COUNTRY.GetName] ülkemiz için birincil kültür kapsayıcılığını sonlandırmıştır."
   
- include_primary_culture_effect_desc_global: "Kültürel Katılımı Başlatın" #NT!
- include_primary_culture_effect_desc_first: "[COUNTRY.GetAdjectiveNoFlag], [TARGET_COUNTRY.GetName]'de birincil kültür dahil edilmesini başlatıyor." #NT!
- include_primary_culture_effect_desc_third: "[COUNTRY.GetName], [AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)]'de kültürel katılımı başlatıyor." #NT!
+ include_primary_culture_effect_desc_global: "Kültürel Katılımı Başlatın"
+ include_primary_culture_effect_desc_first: "[COUNTRY.GetAdjectiveNoFlag], [TARGET_COUNTRY.GetName]'de birincil kültür dahil edilmesini başlatıyor."
+ include_primary_culture_effect_desc_third: "[COUNTRY.GetName], [AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)]'de kültürel katılımı başlatıyor."
   
- include_primary_culture_trigger_desc_global: "Kültürel Katılım İlerliyor" #NT!
- include_primary_culture_trigger_false_desc_global: "Artık kültürel katılım sürecinde değiliz #b#!" #NT!
- include_primary_culture_trigger_desc_first: "[COUNTRY.GetAdjectiveNoFlag], birincil kültürlerini [TARGET_COUNTRY.GetName]'e dahil ediyor." #NT!
- include_primary_culture_trigger_false_desc_first: "[COUNTRY.GetAdjectiveNoFlag] artık birincil kültürlerini [TARGET_COUNTRY.GetName] #b'ye dahil etmiyor#!" #NT!
- include_primary_culture_trigger_desc_third: "[COUNTRY.GetName], birincil kültürlerini [AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)]'ye dahil ediyor." #NT!
- include_primary_culture_trigger_false_desc_third: "[COUNTRY.GetName] artık birincil kültürlerini [AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)] #b#!'e dahil etmiyor" #NT!
+ include_primary_culture_trigger_desc_global: "Kültürel Katılım İlerliyor"
+ include_primary_culture_trigger_false_desc_global: "Artık kültürel katılım sürecinde değiliz."
+ include_primary_culture_trigger_desc_first: "[COUNTRY.GetAdjectiveNoFlag], birincil kültürlerini [TARGET_COUNTRY.GetName]'e dahil ediyor."
+ include_primary_culture_trigger_false_desc_first: "[COUNTRY.GetAdjectiveNoFlag] artık birincil kültürlerini [TARGET_COUNTRY.GetName] #b 'ye dahil etmiyor#!"
+ include_primary_culture_trigger_desc_third: "[COUNTRY.GetName], birincil kültürlerini [AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)]'ye dahil ediyor."
+ include_primary_culture_trigger_false_desc_third: "[COUNTRY.GetName] artık birincil kültürlerini [AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)] #b 'e dahil etmiyor.#!"
   
- ib_events.05.t: "Birincil Kültür Dahil Etme" #NT!
- ib_events.05.d: "Gururlu [ROOT.GetCountry.GetName], [SCOPE.sCountry('culture_include_country').GetName] için kültürel katılımı başarıyla tamamladı. [SCOPE.sCountry('culture_target_country').GetName] artık vatanın kültürünü kucaklayarak sonsuza dek refah içinde yaşayacak." #NT!
- ib_events.05.f: ""Selam [ROOT.GetCountry.GetName]!"" #NT!
- ib_events.05.a: "Tebrikler." #NT!
+ ib_events.05.t: "Birincil Kültür Dahil Etme"
+ ib_events.05.d: "Gururlu [ROOT.GetCountry.GetName], [SCOPE.sCountry('culture_include_country').GetName] için kültürel katılımı başarıyla tamamladı. [SCOPE.sCountry('culture_target_country').GetName] artık vatanın kültürünü kucaklayarak sonsuza dek refah içinde yaşayacak."
+ ib_events.05.f: ""Selam [ROOT.GetCountry.GetName]!""
+ ib_events.05.a: "Tebrikler."
   
- include_primary_culture_weekly_effect: "Overlord'un birincil kültürlerini her hafta %20 ilerleme şansıyla kendi Konularına dahil etmek için çalışır ve başarılı olmak için 8 ilerleme puanı gerekir." #NT!
+ include_primary_culture_weekly_effect: "Overlord'un birincil kültürlerini her hafta %20 ilerleme şansıyla kendi Konularına dahil etmek için çalışır ve başarılı olmak için 8 ilerleme puanı gerekir."

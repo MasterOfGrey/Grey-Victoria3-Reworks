@@ -1,5 +1,5 @@
 ﻿l_turkish:
- law_imposition_events.4.t: "[SCOPE.sC('country_imposed_upon').GetName] Başarısızlığına Uygulanan Mevzuat" #NT!
- law_imposition_events.4.d: "[SCOPE.sC('country_imposed_upon').GetName], iç kuvvetler nedeniyle [SCOPE.sLaw('foreign_imposition_law').GetName]'i yürürlüğe koyamadı." #NT!
- law_imposition_events.4.f: "Büyükelçi, başarısızlık haberini taşıyarak geri döner. "Desteğimize rağmen başaramadılar," diye bildirir.\n\nSonraki sessizlik konsey odasında ağırlaşır." #NT!
- law_imposition_events.4.a: "Belki bir dahaki sefere başka bir şey denemeliyiz?" #NT!
+ law_imposition_events.4.t: "[SCOPE.sC('country_imposed_upon').GetName] Başarısızlığına Uygulanan Mevzuat"
+ law_imposition_events.4.d: "[SCOPE.sC('country_imposed_upon').GetName], iç kuvvetler nedeniyle [SCOPE.sLaw('foreign_imposition_law').GetName]'i yürürlüğe koyamadı."
+ law_imposition_events.4.f: "Büyükelçi, başarısızlık haberini taşıyarak geri döner. "Desteğimize rağmen başaramadılar," diye bildirir.\n\nSonraki sessizlik konsey odasında ağırlaşır."
+ law_imposition_events.4.a: "Belki bir dahaki sefere başka bir şey denemeliyiz?"

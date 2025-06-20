@@ -15,4 +15,15 @@
  forced_industry_ban_action_notification_name: "[INITIATOR_COUNTRY.GetName](이)가 우리의 공업을 강제로 금지함"
  forced_industry_ban_action_notification_desc: "우리의 [concept_overlord]인 [INITIATOR_COUNTRY.GetName](이)가 우리의 [GetLawGroup('lawgroup_economic_system').GetName] [concept_law]을 강제로 [GetLawType('law_industry_banned').GetName]로 변경했습니다. 우리를 향한 상대의 [concept_attitude]는 #tooltippable #tooltip:[INITIATOR_COUNTRY.GetTooltipTag],COUNTRY_ATTITUDE_TOOLTIP [INITIATOR_COUNTRY.GetAttitudeTowards(GetPlayer).GetName]#!#!입니다."
   
- forced_industry_ban_liberty_desire_custom_tooltip: "[SCOPE.sCountry('target_country').GetAdjectiveNoFormatting] 공무원이 [SCOPE.GetRootScope.GetCountry.GetName] 산업 금지에 대응할 것입니다. [SCOPE.sCountry('target_country').GetName]. 이 [concept_subject]의 [concept_liberty_desire]와 [concept_attitude]가 변경될 것입니다." #NT!
+ forced_industry_ban_liberty_desire_custom_tooltip: "[SCOPE.sCountry('target_country').GetAdjectiveNoFormatting] 공무원이 [SCOPE.GetRootScope.GetCountry.GetName] 산업 금지에 대응할 것입니다. [SCOPE.sCountry('target_country').GetName]. 이 [concept_subject]의 [concept_liberty_desire]와 [concept_attitude]가 변경될 것입니다."
+  
+ forced_slavery_ban: "강제 노예제 금지"
+ forced_slavery_ban_desc: "대상의 [GetLawGroup('lawgroup_slavery').GetName] [concept_law]의 변화를 강요하는 ces_3. 대상 [concept_subject]의 손상 [concept_relations] 및 일부 [concept_subject] [concept_pop]은 [concept_radical]가됩니다."
+ forced_slavery_ban_action_name: "강제 산업 금지"
+ forced_slavery_ban_action_notification_name: "[INITIATOR_COUNTRY.GetName]은 우리에게 노예 제도를 금지하도록 강요했습니다"
+ forced_slavery_ban_action_notification_desc: "우리의 [concept_overlord] 0_1은 우리의 [GetLawGroup('lawgroup_slavery').GetName] [concept_law]을 [GetLawType('law_slavery_banned').GetName]로 강요했습니다. 우리를 향한 그들의 is_5는 #tooltippable #tooltip:[INITIATOR_COUNTRY.GetTooltipTag],COUNTRY_ATTITUDE_TOOLTIP [INITIATOR_COUNTRY.GetAttitudeTowards(GetPlayer).GetName]#!#!.입니다"
+ forced_slave_trade: "강제 노예 무역"
+ forced_slave_trade_desc: "대상의 [GetLawGroup('lawgroup_slavery').GetName] [concept_law]의 변화를 강요하는 ces_3. 대상 [concept_subject]의 손상 [concept_relations] 및 일부 [concept_subject] [concept_pop]은 [concept_radical]가됩니다."
+ forced_slave_trade_action_name: "강제 노예 무역"
+ forced_slave_trade_action_notification_name: "[INITIATOR_COUNTRY.GetName]은 우리에게 노예를 거래하도록 강요했습니다"
+ forced_slave_trade_action_notification_desc: "우리의 [concept_overlord] 0_1은 우리의 [GetLawGroup('lawgroup_slavery').GetName] [concept_law]을 [GetLawType('law_slave_trade').GetName]로 강요했습니다. 우리를 향한 그들의 is_5는 #tooltippable #tooltip:[INITIATOR_COUNTRY.GetTooltipTag],COUNTRY_ATTITUDE_TOOLTIP [INITIATOR_COUNTRY.GetAttitudeTowards(GetPlayer).GetName]#!#!.입니다"

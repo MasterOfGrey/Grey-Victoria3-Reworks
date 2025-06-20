@@ -1,3 +1,15 @@
 ﻿l_english:
-    # Modifiers
-    mog_company_migration_penalty: "Extractive Colonial Administration"
+  # Modifiers
+  mog_company_migration_penalty: "Extractive Colonial Administration"
+  mog_education_access_from_urbanization: "Education access from [concept_urbanization]"
+  state_slaves_education_access_add: "Education Access for [GetPopType('slaves').GetName]"
+  state_slaves_education_access_add_desc: "A bonus or penalty to education access for [GetPopType('slaves').GetName]"
+  
+  mog_spa_child_labor_allowed_literacy: "SPA: Child Labour Law Literacy Effect"
+  mog_spa_restricted_child_labor_literacy: "SPA: Child Labour Law Literacy Effect"
+  mog_spa_compulsory_primary_school_literacy: "SPA: Child Labour Law Literacy Effect"
+  
+  mog_spa_diff_religious_schools_literacy: "SPA: Literacy Change (Religious Schools)"
+  mog_spa_diff_private_schools_literacy: "SPA: Literacy Change (Private Schools)"
+  mog_spa_diff_public_schools_literacy: "SPA: Literacy Change (Public Schools)"
+  mog_spa_diff_compulsory_school_literacy: "SPA: Literacy Change (Compulsory Primary School)"

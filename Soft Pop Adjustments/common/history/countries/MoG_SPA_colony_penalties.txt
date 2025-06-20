@@ -6,6 +6,7 @@ COUNTRIES = {
 				c:BIC ?= this
 				c:DEI ?= this
 				c:HBC ?= this
+				c:ALK ?= this
 			}
 		}
 		add_modifier = {

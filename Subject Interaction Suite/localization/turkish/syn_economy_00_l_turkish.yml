@@ -1,33 +1,33 @@
 ﻿l_turkish:
- laws_synergize_economy: "Sinerji Ekonomileri" #NT!
- laws_synergize_economy_action_name: "$laws_synergize_economy$" #NT!
- laws_synergize_economy_action_propose_name: "Ekonomileri Sinerji Haline Getirmeye Başlayın" #NT!
- laws_synergize_economy_action_break_name: "Ekonomileri Sinerji Haline Getirmeyi Durdurun" #NT!
- laws_synergize_economy_pact_desc: "[SCOPE.GetRootScope.GetDiplomaticPact.GetFirstCountry.GetName], [SCOPE.GetRootScope.GetDiplomaticPact.GetSecondCountry.GetName]'in ekonomisini onlarınkiyle sinerji yaratacak şekilde yeniden yapılandırır.\n Şu anda 8 aşamadan #variable [SCOPE.GetRootScope.GetDiplomaticPact.GetSecondCountry.MakeScope.Var('synergize_economy_progress').GetValue]#!'ü ilerledi." #NT!
- laws_synergize_economy_desc: "#header $laws_synergize_economy$#!\n$TOOLTIP_DELIMITER$\nSynergizes belirtilen ülkenin ekonomik sistemleri." #NT!
- laws_synergize_economy_action_notification_name: "[INITIATOR_COUNTRY.GetName] Sinerji Oluşturan Ekonomiler" #NT!
- laws_synergize_economy_action_notification_desc: "[INITIATOR_COUNTRY.GetName] ülkemizin ekonomik sistemleri arasında sinerji yaratıyor." #NT!
- laws_synergize_economy_action_notification_break_name: "[INITIATOR_COUNTRY.GetName] Tarafından Sinerji Oluşturan Ekonomileri Durdurun" #NT!
- laws_synergize_economy_action_notification_break_desc: "[INITIATOR_COUNTRY.GetName] ülkemizin ekonomik sistemlerini sinerji haline getirmeye çalışmaktan vazgeçti." #NT!
+ laws_synergize_economy: "Sinerji Ekonomileri"
+ laws_synergize_economy_action_name: "$laws_synergize_economy$"
+ laws_synergize_economy_action_propose_name: "Ekonomileri Sinerji Haline Getirmeye Başlayın"
+ laws_synergize_economy_action_break_name: "Ekonomileri Sinerji Haline Getirmeyi Durdurun"
+ laws_synergize_economy_pact_desc: "[SCOPE.GetRootScope.GetDiplomaticPact.GetFirstCountry.GetName], [SCOPE.GetRootScope.GetDiplomaticPact.GetSecondCountry.GetName]'in ekonomisini onlarınkiyle sinerji yaratacak şekilde yeniden yapılandırır.\n Şu anda 8 aşamadan #variable [SCOPE.GetRootScope.GetDiplomaticPact.GetSecondCountry.MakeScope.Var('synergize_economy_progress').GetValue]#!'ü ilerledi."
+ laws_synergize_economy_desc: "#header $laws_synergize_economy$#!\n$TOOLTIP_DELIMITER$\nSynergizes belirtilen ülkenin ekonomik sistemleri."
+ laws_synergize_economy_action_notification_name: "[INITIATOR_COUNTRY.GetName] Sinerji Oluşturan Ekonomiler"
+ laws_synergize_economy_action_notification_desc: "[INITIATOR_COUNTRY.GetName] ülkemizin ekonomik sistemleri arasında sinerji yaratıyor."
+ laws_synergize_economy_action_notification_break_name: "[INITIATOR_COUNTRY.GetName] Tarafından Sinerji Oluşturan Ekonomileri Durdurun"
+ laws_synergize_economy_action_notification_break_desc: "[INITIATOR_COUNTRY.GetName] ülkemizin ekonomik sistemlerini sinerji haline getirmeye çalışmaktan vazgeçti."
   
- laws_synergize_economy_effect_desc_global: "Ekonomileri Sinerji Haline Getirmeye Başlayın" #NT!
- laws_synergize_economy_effect_desc_first: "[COUNTRY.GetAdjectiveNoFlag], [TARGET_COUNTRY.GetName] ile ekonomik sinerjiyi başlatır." #NT!
- laws_synergize_economy_effect_desc_third: "[COUNTRY.GetName], [AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)] ile ekonomik sinerjiyi başlatır." #NT!
+ laws_synergize_economy_effect_desc_global: "Ekonomileri Sinerji Haline Getirmeye Başlayın"
+ laws_synergize_economy_effect_desc_first: "[COUNTRY.GetAdjectiveNoFlag], [TARGET_COUNTRY.GetName] ile ekonomik sinerjiyi başlatır."
+ laws_synergize_economy_effect_desc_third: "[COUNTRY.GetName], [AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)] ile ekonomik sinerjiyi başlatır."
   
- laws_synergize_economy_trigger_desc_global: "Ekonomik Sinerji Oluşturma Devam Ediyor" #NT!
- laws_synergize_economy_trigger_false_desc_global: "Şu anda ekonomik sistemler arasında sinerji yaratma sürecinde değiliz." #NT!
- laws_synergize_economy_trigger_desc_first: "[COUNTRY.GetAdjectiveNoFlag], [TARGET_COUNTRY.GetName] ile sinerjik ekonomik sistemlere sahiptir." #NT!
- laws_synergize_economy_trigger_false_desc_first: "[COUNTRY.GetAdjectiveNoFlag] şu anda [TARGET_COUNTRY.GetName] ile sinerjik ekonomik sistemlere sahip değil." #NT!
- laws_synergize_economy_trigger_desc_third: "[COUNTRY.GetName], [AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)] ile sinerjik ekonomik sistemlere sahiptir." #NT!
- laws_synergize_economy_trigger_false_desc_third: "[COUNTRY.GetName] şu anda [AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)] ile sinerjik ekonomik sistemlere sahip değil." #NT!
+ laws_synergize_economy_trigger_desc_global: "Ekonomik Sinerji Oluşturma Devam Ediyor"
+ laws_synergize_economy_trigger_false_desc_global: "Şu anda ekonomik sistemler arasında sinerji yaratma sürecinde değiliz."
+ laws_synergize_economy_trigger_desc_first: "[COUNTRY.GetAdjectiveNoFlag], [TARGET_COUNTRY.GetName] ile sinerjik ekonomik sistemlere sahiptir."
+ laws_synergize_economy_trigger_false_desc_first: "[COUNTRY.GetAdjectiveNoFlag] şu anda [TARGET_COUNTRY.GetName] ile sinerjik ekonomik sistemlere sahip değil."
+ laws_synergize_economy_trigger_desc_third: "[COUNTRY.GetName], [AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)] ile sinerjik ekonomik sistemlere sahiptir."
+ laws_synergize_economy_trigger_false_desc_third: "[COUNTRY.GetName] şu anda [AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)] ile sinerjik ekonomik sistemlere sahip değil."
   
- mog_syn_events.02.t: "Ekonomik Sinerji!" #NT!
- mog_syn_events.02.d: "[ROOT.GetCountry.GetName]'ın gururlu milleti, [SCOPE.sCountry('synergize_economy_target_country').GetName] ile ekonomik sistemlerin sinerjisini başarıyla tamamladı. [SCOPE.sCountry('synergize_economy_target_country').GetName], vatanla artan uyum sayesinde sonsuz refah içinde gelişecektir." #NT!
- mog_syn_events.02.f: ""Çok yaşa [ROOT.GetCountry.GetName]!"" #NT!
- mog_syn_events.02.a: "Tebrikler." #NT!
+ mog_syn_events.02.t: "Ekonomik Sinerji!"
+ mog_syn_events.02.d: "[ROOT.GetCountry.GetName]'ın gururlu milleti, [SCOPE.sCountry('synergize_economy_target_country').GetName] ile ekonomik sistemlerin sinerjisini başarıyla tamamladı. [SCOPE.sCountry('synergize_economy_target_country').GetName], vatanla artan uyum sayesinde sonsuz refah içinde gelişecektir."
+ mog_syn_events.02.f: ""Çok yaşa [ROOT.GetCountry.GetName]!""
+ mog_syn_events.02.a: "Tebrikler."
   
- laws_synergize_economy_weekly_effect: "Ekonomik sistemlerini bizimkiyle uyumlu hale getirmek için çalışır. Her hafta ilerleme kaydetme şansı %20'dir ve başarılı olmak için 8 ilerleme puanı gerekir." #NT!
+ laws_synergize_economy_weekly_effect: "Ekonomik sistemlerini bizimkiyle uyumlu hale getirmek için çalışır. Her hafta ilerleme kaydetme şansı %20'dir ve başarılı olmak için 8 ilerleme puanı gerekir."
   
- overlord_syn_cost_economy: "Sinerji Oluşturan Ekonomilerin Maliyeti" #NT!
+ overlord_syn_cost_economy: "Sinerji Oluşturan Ekonomilerin Maliyeti"
   
- active_synergize_economy_tt: "Diğer $laws_synergize_economy$ eylemlerinin sayısı 1'den azdır." #NT!
+ active_synergize_economy_tt: "Diğer $laws_synergize_economy$ eylemlerinin sayısı 1'den azdır."

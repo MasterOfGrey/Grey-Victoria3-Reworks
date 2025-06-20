@@ -1,5 +1,5 @@
 ﻿l_japanese:
- law_imposition_events.4.t: "[SCOPE.sC('country_imposed_upon').GetName] 失敗に課せられた法律" #NT!
- law_imposition_events.4.d: "[SCOPE.sC('country_imposed_upon').GetName] は内部的な力により [SCOPE.sLaw('foreign_imposition_law').GetName] を施行できませんでした。" #NT!
- law_imposition_events.4.f: "大使が戻ってきて、失敗の知らせを告げる。「我々の支援にもかかわらず、彼らはそれを成し遂げることができなかった」と彼は報告する。\n\nその後、評議会の部屋に重苦しい沈黙が広がる。" #NT!
- law_imposition_events.4.a: "次回は何か別のものを試したほうがいいでしょうか?" #NT!
+ law_imposition_events.4.t: "[SCOPE.sC('country_imposed_upon').GetName] 失敗に課せられた法律"
+ law_imposition_events.4.d: "[SCOPE.sC('country_imposed_upon').GetName] は内部的な力により [SCOPE.sLaw('foreign_imposition_law').GetName] を施行できませんでした。"
+ law_imposition_events.4.f: "大使が戻ってきて、失敗の知らせを告げる。「我々の支援にもかかわらず、彼らはそれを成し遂げることができなかった」と彼は報告する。\n\nその後、評議会の部屋に重苦しい沈黙が広がる。"
+ law_imposition_events.4.a: "次回は何か別のものを試したほうがいいでしょうか?"

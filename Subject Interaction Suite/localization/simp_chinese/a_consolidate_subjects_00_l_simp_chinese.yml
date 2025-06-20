@@ -8,8 +8,23 @@
  consolidate_subject_action_notification_third_party_desc: "[INITIATOR_COUNTRY.GetName]合并了[TARGET_COUNTRY.GetName]"
   
  is_not_african_subject: "目标附庸不是非洲殖民政府"
+ consolidate_subject_country_tier_tt: "[SCOPE.sCountry('target_country').GetName]的[concept_country_tier]低于$country_tier_kingdom$"
+ consolidate_subject_country_tier_kingdom_tt: "[SCOPE.sCountry('target_country').GetName]的[concept_country_tier]是$country_tier_kingdom$并且"
+ consolidate_subject_country_tier_kingdom_overlord_research_tt: "[SCOPE.GetRootScope.GetCountry.GetName]已研究出[GetTechnology('pan-nationalism').GetName]与 [GetTechnology('civilizing_mission').GetName]之一， 或者[GetTechnology('corporatism').GetName]"
+ consolidate_subject_either_tt: "任何一国:"
+ consolidate_subject_vassal_type_tt: "$TAB$[SCOPE.sCountry('target_country').GetName]是[GetSubjectType('subject_type_vassal').GetName]或[GetSubjectType('subject_type_puppet').GetName]"
+ consolidate_subject_dominion_type_tt: "[SCOPE.sCountry('target_country').GetName]是[GetSubjectType('subject_type_dominion').GetName]并且"
+ consolidate_subject_dominion_type_laws_tt: "制定了[GetLawType('law_parliamentary_republic').GetName], [GetLawType('law_presidential_republic').GetName], [GetLawType('law_council_republic').GetName]之一"
+ consolidate_subject_union_type_tt: "[SCOPE.sCountry('target_country').GetName]是[GetSubjectType('subject_type_personal_union').GetName]并且"
+ consolidate_subject_primary_culture_tt: "[SCOPE.sCountry('target_country').GetPrimaryCulturesDesc]是目标的一个[concept_primary_cultures]"
+ consolidate_subject_acceptance_tt: "[concept_overlord]已研究出泛民族主义与开化使命科技，合并的两个附属国所有的[concept_primary_cultures]有相同的特质且至少处于@acceptance_status_4!$second_rate_citizen$[concept_acceptance_status]"
+ consolidate_subject_multicultural_tt: "[concept_overlord]已研究出泛民族主义与开化使命科技，合并的两个附属国的[concept_primary_cultures]有相同的特质，接受国已研究出法团主义与人权科技并且制定了[GetLawType('law_multicultural').GetName]"
   
  alert_overlord_can_consolidate_subject_name: "[GetDiplomaticActionType('consolidate_subject').GetName]已可用于[SCOPE.GetRootScope.GetCountry.GetName]"
  alert_overlord_can_consolidate_subject_desc: "我们的[concept_subject] [SCOPE.GetRootScope.GetCountry.GetName]以可被合并进相邻的附属国"
  alert_overlord_can_consolidate_subject_hint: "您可以使用外交行动中的“宗主国行动”一栏执行[GetDiplomaticActionType('consolidate_subject').GetName] [concept_diplomatic_action]."
  alert_overlord_can_consolidate_subject_action: "外交行动"
+  
+ ag_can_consolidate_subject_name: "可以[GetDiplomaticActionType('consolidate_subject').GetName]"
+ ag_can_consolidate_subject_desc: "有[concept_subject] [Concept('concept_country', '$concept_countries$')]可以作为[GetDiplomaticActionType('consolidate_subject').GetName]行动的对象"
+ ag_can_consolidate_subject_tooltip: "#header $ag_can_consolidate_subject_name$#!\n$TOOLTIP_DELIMITER$\n$ag_can_consolidate_subject_desc$\n\n$ALERT_GROUP_TOOLTIP_FOOTER$"

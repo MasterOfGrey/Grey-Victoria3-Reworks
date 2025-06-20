@@ -6,6 +6,10 @@
  FX_subject_fight.1.t: "代理人战争"
  FX_subject_fight.1.d: "选择附属国"
  FX_subject_fight.1.f: "被选择的附属国将对该国家发起外交博弈"
+ FX_subject_fight.LD.return_state: "[SCOPE.sCountry('subject_initiator').GetName]至少有1个关于[SCOPE.sCountry('FX_subject_fight_target_country').GetName]的主张。"
+ FX_subject_fight.LD.treaty_port: "[SCOPE.sCountry('FX_subject_fight_target_country').GetName]至少有1[concept_treaty_port]。"
+ FX_subject_fight.LD.conquer_state: "[SCOPE.sCountry('FX_subject_fight_target_country').GetName]具有1[concept_state]以上。"
+ FX_subject_fight.LD.annex_war: "[SCOPE.sCountry('FX_subject_fight_target_country').GetName]具有3个或更少的[Concept('concept_state','$concept_states$')]。"
  subject_initiator1: "[SCOPE.sCountry('subject_initiator1').GetName]"
  subject_initiator2: "[SCOPE.sCountry('subject_initiator2').GetName]"
  subject_initiator3: "[SCOPE.sCountry('subject_initiator3').GetName]"
@@ -16,7 +20,7 @@
  subject_initiator8: "[SCOPE.sCountry('subject_initiator8').GetName]"
  subject_initiator9: "[SCOPE.sCountry('subject_initiator9').GetName]"
  subject_initiator10: "[SCOPE.sCountry('subject_initiator10').GetName]"
- FX_abort: "调试：中止并重置" #NT!
+ FX_abort: "调试：中止并重置"
   
  potential_target_state1: "[SCOPE.sState('potential_target_state1').GetName]"
  potential_target_state2: "[SCOPE.sState('potential_target_state2').GetName]"

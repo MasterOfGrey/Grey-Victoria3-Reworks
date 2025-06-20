@@ -12,6 +12,7 @@ NPops = {
 	MAX_NUM_OBSESSIONS = 3								# A culture can only have this number of obsessions at the same time
 	OBSESSION_SPAWN_CHANCE = 4 # 0.1 (vanilla since moved to 0.5 - still bad)			# Per year (1.0 = 1%), multiplied by goods supply and market size mult
 	OBSESSION_SPAWN_CHANCE_MAX_SUPPLY_MULT = 2.0 # 3.0	# Supply relative to demand above this isn't factored into spawn chance
+	OBSESSION_SPAWN_CHANCE_PRESTIGE_GOODS_MULT = 4.0	# Chance for a new obsession to spawn is multiplied by 1 + this, scaled by fraction of the goods supply that is prestige goods
 	TABOO_DEMAND_MULT = 0.5								# Demand of a taboo is multiplied by this
 	MAX_DEMAND_ADJUSTMENT_BASE_AMOUNT = 0.01			# Controls how much a pop can change demand of a substitutable goods in a single update (base)
 	MAX_DEMAND_ADJUSTMENT_SCALED_AMOUNT = 0.09			# Controls how much a pop can change demand of a substitutable goods in a single update (scaled)
@@ -20,18 +21,25 @@ NPops = {
 	OBSESSION_POP_NEED_EXPENSE_MULT = 0.25		# Total spent on pop needs including obsessions is changed by this (scaled by number of obsessions, money is given or taken from other needs)
 	TABOO_POP_NEED_EXPENSE_MULT = -0.25			# Total spent on pop needs including taboos is changed by this (scaled by number of taboos, money is given or taken from other needs)
 	
+##### DEPENDENTS RATIOS #####
+	
+	WORKING_ADULT_RATIO_BASE = 0.25						# Base ratio of working adults to dependents, this can be overridden by pop type definition and country modifiers.
+	WORKING_ADULT_RATIO_SKEW_MAXIMUM = 4.0 # 2.0		# When the ratio of working adults to dependents is skewed, it tends to correct itself, this value clamps the maximum effect of this
+	DEPENDENT_CONSUMPTION_RATIO = 0.5					# Dependents consume this multiple of Needs compared to Working Adults
 	
 ##### ASSIMILATION/CONVERSION #####
 	
 	ASSIMILATION_RATE = 0.005 # 0.002				# Percentage of pops who will Assimilate into a different Culture each month, if eligible
 	# ASSIMILATION_UNINCORPORATED_MULT = 0.1 	# Vanilla dropped this. (why??)		# ASSIMILATION_RATE is multiplied by this in unincorporated states
-	MIN_ASSIMILATION = 20 # 1						# If there is any assimilation at least this many people will assimilate
+	MIN_ASSIMILATION = 10 # 1						# If there is any assimilation at least this many people will assimilate
 	
 	# Smaller change since this affects every pop, not just accepted pops like assimilation.
 	CONVERSION_RATE = 0.003 # 0.002					# Percentage of pops who will Convert into a different Religion each month, if eligible
 	CONVERSION_UNINCORPORATED_MULT = 0.2 # 0.1 		# CONVERSION_RATE is multiplied by this in unincorporated states
-	MIN_CONVERSION = 20 # 1							# If there is any conversion at least this many people will convert
+	MIN_CONVERSION = 10 # 1							# If there is any conversion at least this many people will convert
 	
+	ALLOW_ASSIMILATION_IN_HOMELANDS = no		# Can pops assimilate when living in their homelands?
+	ALLOW_ASSIMILATION_ACROSS_HERITAGES = yes 	# Can pops assimilate into pops of a different heritage?
 	
 ##### RADICALISM #####
 	
@@ -70,6 +78,12 @@ NPops = {
 	JOB_SATISFACTION_LOSSES_MIN_MULT = -10 # -5					# Min multiplier from the ratio between pop losses and wages (or if you will, max magnitude)
 	JOB_SATISFACTION_LOSSES_BASE = 50							# Base value to be multiplied by the ratio between losses and wages
 	JOB_SATISFACTION_GOVERNMENT = 100 # 50						# Government jobs need a bit more stability
+
+
+##### LITERACY & QUALIFICATIONS #####
+
+	#LITERACY_DIEOFF_BIAS = 0.8 # 0.7					# Percentage of literate pops who die of old age compared to the current literacy rate, the higher this value the faster the population becomes illiterate when literacy suffers
+	QUALIFICATIONS_NUM_MONTHS_AT_START = 120 # 60				# How many months of qualifications should be seeded to pops at start of game?
 	
 	
 ##### MIGRATION #####
@@ -108,7 +122,7 @@ NPops = {
 	MIGRATION_PULL_FROM_LIVING_STANDARD = 1.6 # 2								# Migration pull from each point of average living standard in target state
 	MIGRATION_PULL_FROM_AVAILABLE_EMPLOYMENT = 3.0 # 1.5						# Migration pull is increased by for each 10k available non subsistence jobs
 	MIGRATION_PULL_FROM_AVAILABLE_EMPLOYMENT_MAX = 20 # 30						# Migration pull from available non-subsistence jobs cannot exceed this
-	MIGRATION_PULL_FROM_AVAILABLE_ARABLE_LAND_MAX_EMPLOYMENT_MULTIPLIER = 0.75	# Count available arable land as though the subsistence farm has only this fraction of its max employment, so that massive states in China with mostly full subsistence farms don't get a huge migration boost
+	MIGRATION_PULL_FROM_AVAILABLE_ARABLE_LAND_MAX_EMPLOYMENT_MULTIPLIER = 0.6 # 0.75	# Count available arable land as though the subsistence farm has only this fraction of its max employment, so that massive states in China with mostly full subsistence farms don't get a huge migration boost
 	MIGRATION_PULL_FROM_AVAILABLE_ARABLE_LAND_EMPLOYMENT = 1.0 # 0.5			# Migration pull is increased by for each 10k available subsistence jobs
 	MIGRATION_PULL_FROM_AVAILABLE_ARABLE_LAND_EMPLOYMENT_MAX = 30				# Migration pull from available subsistence jobs cannot exceed this
 	MIGRATION_PULL_REDUCTION_FROM_UNEMPLOYMENT = 2 # 1 #(5 was too "swingy")	# Migration pull is reduced by this for each 10k unemployed pops

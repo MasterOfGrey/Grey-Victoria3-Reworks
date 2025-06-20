@@ -1,9 +1,9 @@
 ﻿l_russian:
   # Missing Modifier Types 
- goods_output_grain_mult: "Строим @grain! Производство зерна" #NT!
- goods_output_grain_mult_desc: "Бонус или штраф к количеству @grain! Зерно, произведенное зданиями" #NT!
- goods_output_meat_mult: "Строим @meat! Производство мяса" #NT!
- goods_output_meat_mult_desc: "Бонус или штраф к количеству @meat! Мясо, произведенное зданиями" #NT!
+ goods_output_grain_mult: "Строим @grain! Производство зерна"
+ goods_output_grain_mult_desc: "Бонус или штраф к количеству @grain! Зерно, произведенное зданиями"
+ goods_output_meat_mult: "Строим @meat! Производство мяса"
+ goods_output_meat_mult_desc: "Бонус или штраф к количеству @meat! Мясо, произведенное зданиями"
   
   # Flavour Easter Eggs 
- company_somali_food_chain: "Синдикат продовольственной сети Кардхо" #NT!
+ company_somali_food_chain: "Синдикат продовольственной сети Кардхо"

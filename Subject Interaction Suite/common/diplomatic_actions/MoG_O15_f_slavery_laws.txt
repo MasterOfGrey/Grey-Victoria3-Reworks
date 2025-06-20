@@ -1,0 +1,147 @@
+﻿forced_slavery_ban = {
+	groups= {
+		overlord
+	}
+	
+    requires_approval = no
+	show_confirmation_box = yes
+	show_effect_in_tooltip = yes
+	
+	potential = {
+		NOT = { is_country_type = decentralized }
+		scope:target_country = {
+			NOT = { 
+				is_country_type = decentralized
+				is_diplomatic_play_enemy_of = root
+				has_law = law_type:law_slavery_banned
+			}
+			is_subject_of = root
+		}
+	}
+
+	possible = {
+		is_player = yes
+		has_law = law_type:law_slavery_banned
+	}
+
+	accept_effect = {
+		scope:target_country = { 
+			activate_law = law_type:law_slavery_banned
+			add_radicals = { value = small_radicals }
+		}
+		
+		if = {
+			limit = { 
+				scope:target_country = {
+					OR = {
+						is_subject_type = subject_type_tributary
+						is_subject_type = subject_type_protectorate
+						is_subject_type = subject_type_dominion
+					}
+				}
+			}
+			scope:target_country = { add_liberty_desire = 20 }
+			change_relations = {
+				country = scope:target_country
+				value = 30
+			}
+		}
+		else_if = {
+			limit = { 
+				scope:target_country = {
+					OR = {
+						is_subject_type = subject_type_vassal
+						is_subject_type = subject_type_colony
+						is_subject_type = subject_type_puppet
+					}
+				}
+			}
+			scope:target_country = { add_liberty_desire = 40 }
+			change_relations = {
+				country = scope:target_country
+				value = 20
+			}
+		}
+		else = {
+			scope:target_country = { add_liberty_desire = 30 }
+			change_relations = {
+				country = scope:target_country
+				value = -10
+			}
+		}
+	}
+}
+
+forced_slave_trade = {
+	groups= {
+		overlord
+	}
+	
+    requires_approval = no
+	show_confirmation_box = yes
+	show_effect_in_tooltip = yes
+	
+	potential = {
+		NOT = { is_country_type = decentralized }
+		scope:target_country = {
+			NOT = { 
+				is_country_type = decentralized
+				is_diplomatic_play_enemy_of = root
+				has_law = law_type:law_slave_trade
+			}
+			is_subject_of = root
+		}
+	}
+
+	possible = {
+		is_player = yes
+		has_law = law_type:law_slave_trade
+	}
+
+	accept_effect = {
+		scope:target_country = { 
+			activate_law = law_type:law_slave_trade
+			add_radicals = { value = large_radicals }
+		}
+		
+		if = {
+			limit = { 
+				scope:target_country = {
+					OR = {
+						is_subject_type = subject_type_tributary
+						is_subject_type = subject_type_protectorate
+						is_subject_type = subject_type_dominion
+					}
+				}
+			}
+			scope:target_country = { add_liberty_desire = 60 }
+			change_relations = {
+				country = scope:target_country
+				value = -80
+			}
+		}
+		else_if = {
+			limit = { 
+				scope:target_country = {
+					OR = {
+						is_subject_type = subject_type_vassal
+						is_subject_type = subject_type_colony
+						is_subject_type = subject_type_puppet
+					}
+				}
+			}
+			scope:target_country = { add_liberty_desire = 80 }
+			change_relations = {
+				country = scope:target_country
+				value = -60
+			}
+		}
+		else = {
+			scope:target_country = { add_liberty_desire = 60 }
+			change_relations = {
+				country = scope:target_country
+				value = -40
+			}
+		}
+	}
+}

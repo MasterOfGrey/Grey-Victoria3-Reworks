@@ -1,9 +1,9 @@
 ﻿l_japanese:
   # Missing Modifier Types 
- goods_output_grain_mult: "@grain の構築！Grain 出力" #NT!
- goods_output_grain_mult_desc: "@grainの量にボーナスまたはペナルティ！建物によって生産される穀物" #NT!
- goods_output_meat_mult: "@meat! 肉の生産量を増やす" #NT!
- goods_output_meat_mult_desc: "@meatの量にボーナスまたはペナルティ！建物で生産された肉" #NT!
+ goods_output_grain_mult: "@grain の構築！Grain 出力"
+ goods_output_grain_mult_desc: "@grainの量にボーナスまたはペナルティ！建物によって生産される穀物"
+ goods_output_meat_mult: "@meat! 肉の生産量を増やす"
+ goods_output_meat_mult_desc: "@meatの量にボーナスまたはペナルティ！建物で生産された肉"
   
   # Flavour Easter Eggs 
- company_somali_food_chain: "カルドフードチェーンシンジケート" #NT!
+ company_somali_food_chain: "カルドフードチェーンシンジケート"

@@ -1,0 +1,51 @@
+[img]https://i.imgur.com/7xuCZqW.png[/img]
+Supports Victoria 3: V1.8.3  (and onwards)
+Mod Version: V1.2
+Please consider rating this if you like it! It really helps out. [img]https://i.imgur.com/tE28cZ7.gif[/img]
+[spoiler]Originally made for: Version 1.7[/spoiler]
+[table]
+    [tr]
+        [td][img]https://imgur.com/ySigJAT.png[/img][/td]
+    [/tr]
+[/table]
+[img]https://i.imgur.com/6o9HyTD.png[/img]
+This mod adjusts a number of starting conditions in ways that are still plausible interpretations of the historical state, to better enable some nations to perform successfully.
+
+[img]https://i.imgur.com/Wh5EspM.png[/img]
+[h1]Changes by Country:[/h1]
+[h3]Denmark:[/h3]
+[list][*]Starting laws changed to Agrarianism and Homesteading.
+[/list]
+[h3]Netherlands:[/h3]
+[list][*]Starting laws changed to Commercialized Agriculture.
+[*]Starting agriculture in the state of Holland mostly converted to capitalist ownership.
+[/list]
+[h3]Portugal:[/h3]
+[list][*]Starting laws changed to Wealth Voting, National Guard, & Public Schools.
+[*]Begins with the University of Coimbra.
+[/list]
+[h3]Oman:[/h3]
+[list][*]Omani Trucial Coast starts with an anchorage.
+[/list]
+[h3]All Australian Colonies:[/h3]
+[list][*]Starting laws variously changed to Agrarianism and Homesteading.
+[*]Romanticism technology unlocked from the start.
+[/list]
+
+[h2]Inherited some elements from VTM:[/h2]
+[list][*]Tweaks for Austria, China, France, Great Britain, Nova Scotia, Ontario, Quebec, Russia, & Spain (NOT the full Carlist rebellion)
+[*]State traits (+ regular difficult terrain now negated with nitroglycerin instead of dynamite).
+[/list]
+I expect to add more things to this over time.
+
+[img]https://i.imgur.com/Qp8JBtZ.png[/img]
+This is a pretty safe mod.
+It will conflict slightly with anything changing [i]these country's[/i] history files, but it [u]should be harmless.[/u]
+
+[img]https://i.imgur.com/lQRf9dG.png[/img]
+[b]Why?[/b]
+[i]Agricultural reform was a big deal often overlooked in the study of this period. The new ownership mechanics make poor representation of the state at the time into a very impactful issue for some nations.[/i]
+
+#Farming #Historical
+#Management #TSC #GTSC
+You can support me on Patreon: [url=https://patreon.com/MasterOfGreyVic3?utm_medium=unknown&utm_source=join_link&utm_campaign=creatorshare_creator&utm_content=copyLink] [img]https://ufo2.site44.com/become_a_patron_button.png[/img] [/url]

@@ -1,34 +1,34 @@
 ﻿l_korean:
- laws_synergize_bureaucracy: "관료주의의 시너지 효과" #NT!
- laws_synergize_bureaucracy_action_name: "$laws_synergize_bureaucracy$" #NT!
- laws_synergize_bureaucracy_action_propose_name: "관료주의의 협력을 시작하다" #NT!
- laws_synergize_bureaucracy_action_break_name: "관료주의의 협력 중단" #NT!
- laws_synergize_bureaucracy_pact_desc: "[SCOPE.GetRootScope.GetDiplomaticPact.GetFirstCountry.GetName]은 [SCOPE.GetRootScope.GetDiplomaticPact.GetSecondCountry.GetName]의 관료 조직을 개편하여 서로의 관료 조직과 시너지 효과를 낼 수 있도록 합니다.\n 현재 8단계 중 #variable [SCOPE.GetRootScope.GetDiplomaticPact.GetSecondCountry.MakeScope.Var('synergize_bureaucracy_progress').GetValue]#!가 진행 중입니다." #NT!
- laws_synergize_bureaucracy_desc: "#header $laws_synergize_bureaucracy$#!\n$TOOLTIP_DELIMITER$\nSynergizes 지정된 국가의 관료주의 법률." #NT!
- laws_synergize_bureaucracy_action_notification_name: "[INITIATOR_COUNTRY.GetName] 관료주의의 협력" #NT!
- laws_synergize_bureaucracy_action_notification_desc: "[INITIATOR_COUNTRY.GetName]는 우리나라 관료주의 법률을 시너지 효과를 내고 있습니다." #NT!
- laws_synergize_bureaucracy_action_notification_break_name: "[INITIATOR_COUNTRY.GetName]으로 관료주의 협력 중단" #NT!
- laws_synergize_bureaucracy_action_notification_break_desc: "[INITIATOR_COUNTRY.GetName]는 더 이상 우리나라 관료주의 법률을 협력적으로 적용하려는 시도를 중단했습니다." #NT!
+ laws_synergize_bureaucracy: "관료주의의 시너지 효과"
+ laws_synergize_bureaucracy_action_name: "$laws_synergize_bureaucracy$"
+ laws_synergize_bureaucracy_action_propose_name: "관료주의의 협력을 시작하다"
+ laws_synergize_bureaucracy_action_break_name: "관료주의의 협력 중단"
+ laws_synergize_bureaucracy_pact_desc: "[SCOPE.GetRootScope.GetDiplomaticPact.GetFirstCountry.GetName]은 [SCOPE.GetRootScope.GetDiplomaticPact.GetSecondCountry.GetName]의 관료 조직을 개편하여 서로의 관료 조직과 시너지 효과를 낼 수 있도록 합니다.\n 현재 8단계 중 #variable [SCOPE.GetRootScope.GetDiplomaticPact.GetSecondCountry.MakeScope.Var('synergize_bureaucracy_progress').GetValue]#!가 진행 중입니다."
+ laws_synergize_bureaucracy_desc: "#header $laws_synergize_bureaucracy$#!\n$TOOLTIP_DELIMITER$\nSynergizes 지정된 국가의 관료주의 법률."
+ laws_synergize_bureaucracy_action_notification_name: "[INITIATOR_COUNTRY.GetName] 관료주의의 협력"
+ laws_synergize_bureaucracy_action_notification_desc: "[INITIATOR_COUNTRY.GetName]는 우리나라 관료주의 법률을 시너지 효과를 내고 있습니다."
+ laws_synergize_bureaucracy_action_notification_break_name: "[INITIATOR_COUNTRY.GetName]으로 관료주의 협력 중단"
+ laws_synergize_bureaucracy_action_notification_break_desc: "[INITIATOR_COUNTRY.GetName]는 더 이상 우리나라 관료주의 법률을 협력적으로 적용하려는 시도를 중단했습니다."
   
- laws_synergize_bureaucracy_effect_desc_global: "관료주의의 협력을 시작하다" #NT!
- laws_synergize_bureaucracy_effect_desc_first: "[COUNTRY.GetAdjectiveNoFlag]은 [TARGET_COUNTRY.GetName]과 관료적 협력을 시작합니다." #NT!
- laws_synergize_bureaucracy_effect_desc_third: "[COUNTRY.GetName]은 [AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)]와 관료적 협력을 시작합니다." #NT!
+ laws_synergize_bureaucracy_effect_desc_global: "관료주의의 협력을 시작하다"
+ laws_synergize_bureaucracy_effect_desc_first: "[COUNTRY.GetAdjectiveNoFlag]은 [TARGET_COUNTRY.GetName]과 관료적 협력을 시작합니다."
+ laws_synergize_bureaucracy_effect_desc_third: "[COUNTRY.GetName]은 [AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)]와 관료적 협력을 시작합니다."
   
- laws_synergize_bureaucracy_trigger_desc_global: "관료적 협력 진행 중" #NT!
- laws_synergize_bureaucracy_trigger_false_desc_global: "현재 관료주의 법률을 협력적으로 적용하는 과정은 진행 중이 아닙니다." #NT!
- laws_synergize_bureaucracy_trigger_desc_first: "[COUNTRY.GetAdjectiveNoFlag]은 [TARGET_COUNTRY.GetName]과 시너지 효과가 있는 관료 시스템을 갖추고 있습니다." #NT!
- laws_synergize_bureaucracy_trigger_false_desc_first: "[COUNTRY.GetAdjectiveNoFlag]은 현재 [TARGET_COUNTRY.GetName]과 협력적인 관료 시스템을 갖추고 있지 않습니다." #NT!
- laws_synergize_bureaucracy_trigger_desc_third: "[COUNTRY.GetName]은 [AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)]와 시너지 효과가 있는 관료 시스템을 갖추고 있습니다." #NT!
- laws_synergize_bureaucracy_trigger_false_desc_third: "[COUNTRY.GetName]은 현재 [AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)]와 협력적인 관료 시스템을 갖추고 있지 않습니다." #NT!
+ laws_synergize_bureaucracy_trigger_desc_global: "관료적 협력 진행 중"
+ laws_synergize_bureaucracy_trigger_false_desc_global: "현재 관료주의 법률을 협력적으로 적용하는 과정은 진행 중이 아닙니다."
+ laws_synergize_bureaucracy_trigger_desc_first: "[COUNTRY.GetAdjectiveNoFlag]은 [TARGET_COUNTRY.GetName]과 시너지 효과가 있는 관료 시스템을 갖추고 있습니다."
+ laws_synergize_bureaucracy_trigger_false_desc_first: "[COUNTRY.GetAdjectiveNoFlag]은 현재 [TARGET_COUNTRY.GetName]과 협력적인 관료 시스템을 갖추고 있지 않습니다."
+ laws_synergize_bureaucracy_trigger_desc_third: "[COUNTRY.GetName]은 [AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)]와 시너지 효과가 있는 관료 시스템을 갖추고 있습니다."
+ laws_synergize_bureaucracy_trigger_false_desc_third: "[COUNTRY.GetName]은 현재 [AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)]와 협력적인 관료 시스템을 갖추고 있지 않습니다."
   
- mog_syn_events.01.t: "관료적 시너지!" #NT!
- mog_syn_events.01.d: "자랑스러운 [ROOT.GetCountry.GetName] 국가는 관료주의 법률과 [SCOPE.sCountry('synergize_bureaucracy_target_country').GetName]의 협력을 성공적으로 완료했습니다. [SCOPE.sCountry('synergize_bureaucracy_target_country').GetName]은 조국과의 결속력 강화를 통해 영원한 번영을 누릴 것입니다." #NT!
- mog_syn_events.01.f: ""[ROOT.GetCountry.GetName] 오래 살아요!"" #NT!
- mog_syn_events.01.a: "잘하셨어요." #NT!
+ mog_syn_events.01.t: "관료적 시너지!"
+ mog_syn_events.01.d: "자랑스러운 [ROOT.GetCountry.GetName] 국가는 관료주의 법률과 [SCOPE.sCountry('synergize_bureaucracy_target_country').GetName]의 협력을 성공적으로 완료했습니다. [SCOPE.sCountry('synergize_bureaucracy_target_country').GetName]은 조국과의 결속력 강화를 통해 영원한 번영을 누릴 것입니다."
+ mog_syn_events.01.f: ""[ROOT.GetCountry.GetName] 오래 살아요!""
+ mog_syn_events.01.a: "잘하셨어요."
   
- laws_synergize_bureaucracy_weekly_effect: "그들의 관료주의 시스템을 우리의 관료주의 시스템과 일치시키기 위해 노력합니다. 매주 20%의 진척도를 보이며, 성공하려면 8개의 진척도 포인트가 필요합니다." #NT!
+ laws_synergize_bureaucracy_weekly_effect: "그들의 관료주의 시스템을 우리의 관료주의 시스템과 일치시키기 위해 노력합니다. 매주 20%의 진척도를 보이며, 성공하려면 8개의 진척도 포인트가 필요합니다."
   
- overlord_syn_cost_bureau: "관료주의의 협력에 따른 비용" #NT!
- BUREAUCRACY_SYNERGY_COST_BUREAU: "관료주의의 협력에 따른 비용" #NT!
+ overlord_syn_cost_bureau: "관료주의의 협력에 따른 비용"
+ BUREAUCRACY_SYNERGY_COST_BUREAU: "관료주의의 협력에 따른 비용"
   
- active_synergize_bureaucracy_tt: "다른 $laws_synergize_bureaucracy$ 작업의 수가 1보다 작습니다." #NT!
+ active_synergize_bureaucracy_tt: "다른 $laws_synergize_bureaucracy$ 작업의 수가 1보다 작습니다."
