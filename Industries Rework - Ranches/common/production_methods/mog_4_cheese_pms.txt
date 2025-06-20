@@ -32,11 +32,17 @@ pm_industrial_preserves = {
 		pm_refrigerated_workspaces
 	}
 	
+	state_modifiers = {
+		workforce_scaled = {
+			building_food_industry_throughput_add = 0.005
+		}
+	}
+	
 	building_modifiers = {
 		workforce_scaled = {
 			goods_input_paper_add = 4
 			goods_output_meat_add = -15
-			goods_output_groceries_add = 26
+			goods_output_groceries_add = 24
 		}
 		
 		level_scaled = {
@@ -57,12 +63,18 @@ pm_ranch_milk_production = {
 		pm_battery_farming
 	}
 	
+	state_modifiers = {
+		workforce_scaled = {
+			building_food_industry_throughput_add = 0.01
+		}
+	}
+	
 	building_modifiers = {
 		workforce_scaled = {
 			goods_input_paper_add = 8
 			goods_input_electricity_add = 4
 			goods_output_meat_add = -30
-			goods_output_groceries_add = 60
+			goods_output_groceries_add = 50
 		}
 		
 		level_scaled = {
@@ -85,12 +97,18 @@ pm_full_eggs_dairy = {
 		pm_battery_farming
 	}
 	
+	state_modifiers = {
+		workforce_scaled = {
+			building_food_industry_throughput_add = 0.02
+		}
+	}
+	
 	building_modifiers = {
 		workforce_scaled = {
 			goods_input_paper_add = 10
 			goods_input_electricity_add = 10
 			goods_output_meat_add = -20
-			goods_output_groceries_add = 60
+			goods_output_groceries_add = 50
 		}
 		
 		level_scaled = {
