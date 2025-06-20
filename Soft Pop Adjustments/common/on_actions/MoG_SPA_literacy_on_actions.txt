@@ -81,6 +81,18 @@ MoG_SPA_literacy_investment_change = {
 	}
 }
 
+# To refresh modifiers when institution levels are reset on bankruptcy
+on_country_no_longer_default = {
+	on_actions = {
+		MoG_SPA_literacy_no_longer_default
+	}
+}
+MoG_SPA_literacy_no_longer_default = {
+	effect = {
+		refresh_institution_schools_modifier = yes
+	}
+}
+
 #######################################################################
 #for activating institution modifiers on countries not existing on start
 
