@@ -1,0 +1,66 @@
+﻿refresh_institution_schools_modifier = {
+	owner.institution:institution_schools ?= {
+		if = {
+			limit = {
+				has_modifier = mog_spa_diff_religious_schools_literacy
+			}
+			remove_modifier = mog_spa_diff_religious_schools_literacy
+		}
+		if = {
+			limit = {
+				has_modifier = mog_spa_diff_private_schools_literacy
+			}
+			remove_modifier = mog_spa_diff_private_schools_literacy
+		}
+		if = {
+			limit = {
+				has_modifier = mog_spa_diff_public_schools_literacy
+			}
+			remove_modifier = mog_spa_diff_public_schools_literacy
+		}
+		if = {
+			limit = {
+				has_modifier = mog_spa_diff_compulsory_school_literacy
+			}
+			remove_modifier = mog_spa_diff_compulsory_school_literacy
+		}
+		
+		if = {
+			limit = {
+				owner = { has_law = law_type:law_religious_schools }
+			}
+			add_modifier_hack = {
+				name = mog_spa_diff_religious_schools_literacy
+				multiplier = investment
+			}
+		}
+		else_if = {
+			limit = {
+				owner = { has_law = law_type:law_private_schools }
+			}
+			add_modifier_hack = {
+				name = mog_spa_diff_private_schools_literacy
+				multiplier = investment
+			}
+		}
+		else_if = {
+			limit = {
+				owner = { has_law = law_type:law_public_schools }
+			}
+			add_modifier_hack = {
+				name = mog_spa_diff_public_schools_literacy
+				multiplier = investment
+			}
+		}
+		
+		if = {
+			limit = {
+				owner = { has_law = law_type:law_compulsory_primary_school }
+			}
+			add_modifier_hack = {
+				name = mog_spa_diff_compulsory_school_literacy
+				multiplier = investment
+			}
+		}
+	}
+}
