@@ -1,4 +1,30 @@
-﻿# Root = Institution
+﻿on_game_started = {
+	on_actions = {
+		LA_on_game_started
+	}
+}
+
+LA_on_game_started = {
+	effect = {
+		every_country = {
+			refresh_LA_modifiers = yes
+		}
+	}
+}
+
+on_law_activated = {
+	on_actions = {
+		LA_on_law_activated
+	}
+}
+
+LA_on_law_activated = {
+	effect = {
+		refresh_LA_modifiers = yes
+	}
+}
+
+# Root = Institution
 on_investment_increased = {
 	on_actions = {
 		LA_on_investment_change
@@ -12,61 +38,12 @@ on_investment_decreased = {
 
 LA_on_investment_change = {
 	effect = {
-		if = {
-			limit = {
-				THIS = owner.institution:institution_home_affairs
-			}
-			owner = {
-				institution:institution_home_affairs = {
-					remove_modifier = LA_Home_Affairs
-					add_modifier = {
-						name = LA_Home_Affairs
-						multiplier = investment
-					}
-				}
-			}
-		}
-		else_if = {
-			limit = {
-				THIS = owner.institution:institution_police
-			}
-			owner = {
-				institution:institution_police = {
-					remove_modifier = LA_Law_Enforcement
-					add_modifier = {
-						name = LA_Law_Enforcement
-						multiplier = investment
-					}
-				}
-			}
-		}
-		else_if = {
-			limit = {
-				THIS = owner.institution:institution_workplace_safety
-			}
-			owner = {
-				institution:institution_workplace_safety = {
-					remove_modifier = LA_Workplace_Safety
-					add_modifier = {
-						name = LA_Workplace_Safety
-						multiplier = investment
-					}
-				}
-			}
-		}
-		else_if = {
-			limit = {
-				THIS = owner.institution:institution_social_security
-			}
-			owner = {
-				institution:institution_workplace_safety = {
-					remove_modifier = LA_Social_Security
-					add_modifier = {
-						name = LA_Social_Security
-						multiplier = investment
-					}
-				}
-			}
+		switch = {
+			trigger = THIS
+			owner.institution:institution_home_affairs     = { refresh_LA_home_affairs_modifier = yes }
+			owner.institution:institution_police           = { refresh_LA_police_modifier = yes }
+			owner.institution:institution_workplace_safety = { refresh_LA_workplace_safety_modifier = yes }
+			owner.institution:institution_social_security  = { refresh_LA_social_security_modifier = yes }
 		}
 	}
 }
@@ -87,64 +64,8 @@ on_country_released_as_own_subject = {
 }
 LA_on_country_released = {
 	effect = {
-		if = {
-			limit = {
-				scope:target = {
-					exists = institution:institution_home_affairs
-				}
-			}
-			scope:target = {
-				institution:institution_home_affairs = {
-					add_modifier = {
-						name = LA_Home_Affairs
-						multiplier = investment
-					}
-				}
-			}
-		}
-		if = {
-			limit = {
-				scope:target = {
-					exists = institution:institution_police
-				}
-			}
-			scope:target = {
-				institution:institution_police = {
-					add_modifier = {
-						name = LA_Law_Enforcement
-						multiplier = investment
-					}
-				}
-			}
-		}
-		if = {
-			limit = {
-				scope:target = {
-					exists = institution:institution_workplace_safety
-				}
-			}
-			scope:target = {
-				institution:institution_workplace_safety = {
-					add_modifier = {
-						name = LA_Workplace_Safety
-						multiplier = investment
-					}
-				}
-			}
-		}
-		if = {
-			limit = {
-				THIS = owner.institution:institution_social_security
-			}
-			owner = {
-				institution:institution_workplace_safety = {
-					remove_modifier = LA_Social_Security
-					add_modifier = {
-						name = LA_Social_Security
-						multiplier = investment
-					}
-				}
-			}
+		scope:target = {
+			refresh_LA_modifiers = yes
 		}
 	}
 }

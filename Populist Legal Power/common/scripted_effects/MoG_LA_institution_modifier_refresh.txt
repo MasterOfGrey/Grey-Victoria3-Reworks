@@ -1,0 +1,58 @@
+﻿refresh_LA_modifiers = {
+	refresh_LA_home_affairs_modifier = yes
+	refresh_LA_police_modifier = yes
+	refresh_LA_workplace_safety_modifier = yes
+	refresh_LA_social_security_modifier	= yes
+}
+
+refresh_LA_home_affairs_modifier = {
+	owner.institution:institution_home_affairs ?= {
+		if = {
+			limit = { has_modifier = LA_Home_Affairs }
+			remove_modifier = LA_Home_Affairs
+		}
+		add_modifier_hack = {
+			name = LA_Home_Affairs
+			multiplier = investment
+		}
+	}
+}
+
+refresh_LA_police_modifier = {
+	owner.institution:institution_police ?= {
+		if = {
+			limit = { has_modifier = LA_Law_Enforcement }
+			remove_modifier = LA_Law_Enforcement
+		}
+		add_modifier_hack = {
+			name = LA_Law_Enforcement
+			multiplier = investment
+		}
+	}
+}
+
+refresh_LA_workplace_safety_modifier = {
+	owner.institution:institution_workplace_safety ?= {
+		if = {
+			limit = { has_modifier = LA_Workplace_Safety }
+			remove_modifier = LA_Workplace_Safety
+		}
+		add_modifier_hack = {
+			name = LA_Workplace_Safety
+			multiplier = investment
+		}
+	}
+}
+
+refresh_LA_social_security_modifier = {
+	owner.institution:institution_social_security ?= {
+		if = {
+			limit = { has_modifier = LA_Social_Security }
+			remove_modifier = LA_Social_Security
+		}
+		add_modifier_hack = {
+			name = LA_Social_Security
+			multiplier = investment
+		}
+	}
+}
