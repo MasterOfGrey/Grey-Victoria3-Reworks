@@ -1,6 +1,6 @@
 [img]https://i.imgur.com/7xuCZqW.png[/img]
 Supports Victoria 3: V1.8.3  (and onwards)
-Mod Version: V1.10
+Mod Version: V1.11
 Please consider rating this if you like it! It really helps out. [img]https://i.imgur.com/tE28cZ7.gif[/img]
 [spoiler]Originally made for: Version 1.7[/spoiler]
 [table]
@@ -44,7 +44,10 @@ It contains a [i]complete overhaul[/i] of Liberty Desire, and a range of additio
 [*]Forced Border Closing - force a subject to close its borders, requires close association, not a huge matter.
 [*]Forced Border Opening - force a subject to open it's borders... a more freely usable but much less popular decision.
 [*]Consolidate Subjects - Merge subjects of similar cultures together (does not count cultures added by you). [i]Many thanks to CaelReader; check out their other [url=https://steamcommunity.com/id/CaelReader/myworkshopfiles/?appid=529340]workshop mods here[/url]![/i]
-[*] Support Subject Expansion - causes subjects to adopt an aggressive strategy towards regional neighbours.
+[*]Support Subject Expansion - causes subjects to adopt an aggressive strategy towards regional neighbours.
+[*]Forced Slavery Ban - forcibly change a subject's law to Slavery Banned, may upset some people...
+[*]Forced Slave Trade - forcibly change a subject's law to Slave Trade, will upset [b]a lot[/b] of people...
+[*]Recognize - Recognise an unrecognized subject.
 [/list]
 
 NOTE: These appear contextually - they won't show for a particular subject if they're not potentially valid.
@@ -86,6 +89,7 @@ Credit to creators of the original mods:
 [*]CuteRiceWalker - "Ask Your Subject to Fight"
 [*]uridogoraeda - "Forced change in subject country law"
 [*]CaelReader - "Consolidate Subjects"
+[*]a.k.a DMDonahue/Marcus - "Diplomatic Recognition"
 [/list]
 
 Credit to Henrax le Chamalax for doing some real AI acceptance logic for Merge Subject.
@@ -102,6 +106,7 @@ Credit to human providers of localisation content:
 [*]Russian: Nihillman
 [*]Japanese: Cosmox
 [*]French: BobbyBob
+[*]German: kindum
 [/list]
 You can submit additional localizations to the pinned Discussions thread.
 
@@ -111,4 +116,5 @@ English, B.Portuguese(Português), Simp. Chinese(中文), French(Français), Ger
 #Diplomacy #Subject
 #Management #Interactions
 #Change Primary Culture
-#Command Subjects #SIS
+#Command Subjects #SIS #GSIS
+You can support me on Patreon: [url=https://patreon.com/MasterOfGreyVic3?utm_medium=unknown&utm_source=join_link&utm_campaign=creatorshare_creator&utm_content=copyLink] [img]https://ufo2.site44.com/become_a_patron_button.png[/img] [/url]

@@ -11,7 +11,7 @@
  LIBERTY_DESIRE_LEVEL_INACTIVE_TOOLTIP: "#header [LibertyDesireLevel.GetNameNoFormatting]#!\n$LIBERTY_DESIRE_LEVEL_BOUNDS_DESC$\n$TOOLTIP_DELIMITER$\n#title [Country.GetName]에 주는 영향:#!#indent_newline:2 \n[LibertyDesireLevel.GetEffects]#!"
   
   
- LIBERTY_DESIRE_LEVEL_ACTIVE_TOOLTIP: "#header [LibertyDesireLevel.GetNameNoFormatting]#! $LIBERTY_DESIRE_LEVEL_ACTIVE$\n$LIBERTY_DESIRE_LEVEL_BOUNDS_DESC$\n$LIBERTY_DESIRE_LEVEL_CURRENT_LIBERTY_DESIRE_DESC$\n$TOOLTIP_DELIMITER$\n[Country.GetWeeklyLibertyDesireChangeDesc]\n$TOOLTIP_DELIMITER$\n[Country.GetName]에 미치는 영향:[LibertyDesireLevel.GetNameNoFormatting]0 \n[LibertyDesireLevel.GetNameNoFormatting]1#!" #NT!
+ LIBERTY_DESIRE_LEVEL_ACTIVE_TOOLTIP: "#header [LibertyDesireLevel.GetNameNoFormatting]#! $LIBERTY_DESIRE_LEVEL_ACTIVE$\n$LIBERTY_DESIRE_LEVEL_BOUNDS_DESC$\n$LIBERTY_DESIRE_LEVEL_CURRENT_LIBERTY_DESIRE_DESC$\n$TOOLTIP_DELIMITER$\n[Country.GetWeeklyLibertyDesireChangeDesc]\n$TOOLTIP_DELIMITER$\n[Country.GetName]에 미치는 영향:[LibertyDesireLevel.GetNameNoFormatting]0 \n[LibertyDesireLevel.GetNameNoFormatting]1#!"
   
   
  LIBERTY_DESIRE_LEVEL_CURRENT_LIBERTY_DESIRE_DESC: "현재 [concept_liberty_desire] 수치: [Country.GetLibertyDesireRaw|v0]"
@@ -28,76 +28,76 @@
  LIBERTY_SUBJECT_DESIRE_WEEKLY_CHANGE_DESC_ADDITIONAL_ADDS: "#indent_newline:3 추가 협정:\n[SCOPE.GetRootScope.GetDiplomaticPact.GetFirstCountry.GetModifier.GetDescFor('country_liberty_desire_of_subjects_add')]#!"
  LIBERTY_DESIRE_WEEKLY_CHANGE_DESC_ADDITIONAL_MULTS: "#indent_newline:3 추가 협정:\n[SCOPE.GetRootScope.GetDiplomaticPact.GetSecondCountry.GetModifier.GetDescFor('country_liberty_desire_add')][SCOPE.GetRootScope.GetDiplomaticPact.GetSecondCountry.GetModifier.GetDescFor('country_liberty_desire_increase_mult')][SCOPE.GetRootScope.GetDiplomaticPact.GetSecondCountry.GetModifier.GetDescFor('country_liberty_desire_decrease_mult')]#!"
   
- LIBERTY_DESIRE_WEEKLY_CHANGE_RELATIONS_HOSTILE: "#r 적대적 #![concept_relations]" #NT!
- LIBERTY_DESIRE_WEEKLY_CHANGE_RELATIONS_COLD: "#r 차가움 #![concept_relations]" #NT!
- LIBERTY_DESIRE_WEEKLY_CHANGE_RELATIONS_POOR: "#r 나쁨 #![concept_relations]" #NT!
- LIBERTY_DESIRE_WEEKLY_CHANGE_RELATIONS_NEUTRAL: "#b 중립 #![concept_relations]" #NT!
- LIBERTY_DESIRE_WEEKLY_CHANGE_RELATIONS_CORDIAL: "#green 친절함 #![concept_relations]" #NT!
- LIBERTY_DESIRE_WEEKLY_CHANGE_RELATIONS_AMICABLE: "#green 우호적 #![concept_relations]" #NT!
- LIBERTY_DESIRE_WEEKLY_CHANGE_RELATIONS_FRIENDLY: "#greenFriendly #![concept_relations]" #NT!
+ LIBERTY_DESIRE_WEEKLY_CHANGE_RELATIONS_HOSTILE: "#r 적대적 #![concept_relations]"
+ LIBERTY_DESIRE_WEEKLY_CHANGE_RELATIONS_COLD: "#r 차가움 #![concept_relations]"
+ LIBERTY_DESIRE_WEEKLY_CHANGE_RELATIONS_POOR: "#r 나쁨 #![concept_relations]"
+ LIBERTY_DESIRE_WEEKLY_CHANGE_RELATIONS_NEUTRAL: "#b 중립 #![concept_relations]"
+ LIBERTY_DESIRE_WEEKLY_CHANGE_RELATIONS_CORDIAL: "#green 친절함 #![concept_relations]"
+ LIBERTY_DESIRE_WEEKLY_CHANGE_RELATIONS_AMICABLE: "#green 우호적 #![concept_relations]"
+ LIBERTY_DESIRE_WEEKLY_CHANGE_RELATIONS_FRIENDLY: "#greenFriendly #![concept_relations]"
   
- LIBERTY_DESIRE_WEEKLY_CHANGE_INFAMY: "[concept_infamy] / [concept_overlord]" #NT!
+ LIBERTY_DESIRE_WEEKLY_CHANGE_INFAMY: "[concept_infamy] / [concept_overlord]"
   
- LIBERTY_DESIRE_WEEKLY_CHANGE_BANKROLL: "[GetDiplomaticActionType('bankroll').GetName]" #NT!
+ LIBERTY_DESIRE_WEEKLY_CHANGE_BANKROLL: "[GetDiplomaticActionType('bankroll').GetName]"
  LIBERTY_DESIRE_WEEKLY_CHANGE_SUPPORT_REGIME: "[GetDiplomaticActionType('da_support_regime').GetName]"
  LIBERTY_DESIRE_WEEKLY_CHANGE_KNOWLEDGE_SHARING: "[GetDiplomaticActionType('da_knowledge_sharing').GetName]"
  LIBERTY_DESIRE_WEEKLY_CHANGE_EXEMPT_FROM_SERVICE: "[GetDiplomaticActionType('exempt_from_service').GetName]"
  LIBERTY_DESIRE_WEEKLY_CHANGE_RAISE_PAYMENTS: "[GetDiplomaticActionType('raise_payments').GetName]"
  LIBERTY_DESIRE_WEEKLY_CHANGE_DECREASE_PAYMENTS: "[GetDiplomaticActionType('decrease_payments').GetName]"
- LIBERTY_DESIRE_WEEKLY_CHANGE_CULTURE_CONVERT: "[GetDiplomaticActionType('change_primary_culture').GetName]" #NT!
+ LIBERTY_DESIRE_WEEKLY_CHANGE_CULTURE_CONVERT: "[GetDiplomaticActionType('change_primary_culture').GetName]"
   
- LIBERTY_DESIRE_RELATIVE_PRESTIGE_VALUE_FORMAT: "$TAB$[SelectLocalization(GreaterThan_CFixedPoint('(CFixedPoint)$VALUE$','(CFixedPoint)0'),'$VALUE|bo=2$','$VALUE|bu=2$')] $KEY$에 대하여" #NT!
- LIBERTY_DESIRE_WEEKLY_CHANGE_RELATIVE_PRESTIGE: "[concept_overlord] [concept_prestige] [SCOPE.GetRootScope.GetDiplomaticPact.GetSecondCountry.GetName] 대비 (현재 #v [SCOPE.GetRootScope.GetDiplomaticPact.GetFirstCountry.GetRelativePrestige( SCOPE.GetRootScope.GetDiplomaticPact.GetSecondCountry )|v1]x#!)\n$TAB$[SCOPE.GetRootScope.GetDiplomaticPact.GetSecondCountry.GetSubjectType.GetName] 만족도는 다음에 의해 영향을 받음:\n[SCOPE.GetScriptValueDesc('liberty_desire_weekly_change_relative_prestige')]" #NT!
+ LIBERTY_DESIRE_RELATIVE_PRESTIGE_VALUE_FORMAT: "$TAB$[SelectLocalization(GreaterThan_CFixedPoint('(CFixedPoint)$VALUE$','(CFixedPoint)0'),'$VALUE|bo=2$','$VALUE|bu=2$')] $KEY$에 대하여"
+ LIBERTY_DESIRE_WEEKLY_CHANGE_RELATIVE_PRESTIGE: "[concept_overlord] [concept_prestige] [SCOPE.GetRootScope.GetDiplomaticPact.GetSecondCountry.GetName] 대비 (현재 #v [SCOPE.GetRootScope.GetDiplomaticPact.GetFirstCountry.GetRelativePrestige( SCOPE.GetRootScope.GetDiplomaticPact.GetSecondCountry )|v1]x#!)\n$TAB$[SCOPE.GetRootScope.GetDiplomaticPact.GetSecondCountry.GetSubjectType.GetName] 만족도는 다음에 의해 영향을 받음:\n[SCOPE.GetScriptValueDesc('liberty_desire_weekly_change_relative_prestige')]"
   
  LIBERTY_DESIRE_WEEKLY_CHANGE_NO_PRESTIGE_NEGATIVE: "[SCOPE.GetRootScope.GetDiplomaticPact.GetSecondCountry.GetAdjective] [concept_prestige]이 #v 0#!임"
  LIBERTY_DESIRE_WEEKLY_CHANGE_NO_PRESTIGE_POSITIVE: "[SCOPE.GetRootScope.GetDiplomaticPact.GetFirstCountry.GetAdjective] [concept_prestige]이 #v 0#!임"
- LIBERTY_DESIRE_WEEKLY_CHANGE_PRESTIGE_DIFFERENCE_1_5_POSITIVE: "#v 1.5x#! 이하의 명성을 가지고 있음" #NT!
- LIBERTY_DESIRE_WEEKLY_CHANGE_PRESTIGE_DIFFERENCE_2_0_POSITIVE: "#v 2.0x#! 이하의 명성을 가지고 있음" #NT!
- LIBERTY_DESIRE_WEEKLY_CHANGE_PRESTIGE_DIFFERENCE_3_0_POSITIVE: "#v 3.0x#! 이하의 명성을 가지고 있음" #NT!
+ LIBERTY_DESIRE_WEEKLY_CHANGE_PRESTIGE_DIFFERENCE_1_5_POSITIVE: "#v 1.5x#! 이하의 명성을 가지고 있음"
+ LIBERTY_DESIRE_WEEKLY_CHANGE_PRESTIGE_DIFFERENCE_2_0_POSITIVE: "#v 2.0x#! 이하의 명성을 가지고 있음"
+ LIBERTY_DESIRE_WEEKLY_CHANGE_PRESTIGE_DIFFERENCE_3_0_POSITIVE: "#v 3.0x#! 이하의 명성을 가지고 있음"
   
- LIBERTY_DESIRE_WEEKLY_CHANGE_PRESTIGE_DIFFERENCE_1_5_NEGATIVE: "#v 1.5x#! 이상의 명성을 가지고 있습니다." #NT!
- LIBERTY_DESIRE_WEEKLY_CHANGE_PRESTIGE_DIFFERENCE_2_0_NEGATIVE: "#v 2.0x#! 이상의 명성을 가지고 있습니다." #NT!
- LIBERTY_DESIRE_WEEKLY_CHANGE_PRESTIGE_DIFFERENCE_3_0_NEGATIVE: "#v 3.0x#! 이상의 명성을 가지고 있습니다." #NT!
- LIBERTY_DESIRE_WEEKLY_CHANGE_PRESTIGE_DIFFERENCE_4_0_NEGATIVE: "#v 4.0x#! 이상의 명성을 가지고 있습니다." #NT!
- LIBERTY_DESIRE_WEEKLY_CHANGE_PRESTIGE_DIFFERENCE_6_0_NEGATIVE: "#v 6.0x#! 이상의 명성을 가지고 있습니다." #NT!
- LIBERTY_DESIRE_WEEKLY_CHANGE_PRESTIGE_DIFFERENCE_8_0_NEGATIVE: "#v 8.0x#! 이상의 명성을 가지고 있습니다." #NT!
- LIBERTY_DESIRE_WEEKLY_CHANGE_PRESTIGE_DIFFERENCE_12_0_NEGATIVE: "#v 12.0x#! 이상의 명성을 가지고 있습니다." #NT!
- LIBERTY_DESIRE_WEEKLY_CHANGE_PRESTIGE_DIFFERENCE_16_0_NEGATIVE: "#v 16.0x#! 이상의 명성을 가지고 있습니다." #NT!
- LIBERTY_DESIRE_WEEKLY_CHANGE_PRESTIGE_DIFFERENCE_24_0_NEGATIVE: "#v 24.0x#! 이상의 명성을 가지고 있습니다." #NT!
- LIBERTY_DESIRE_WEEKLY_CHANGE_PRESTIGE_DIFFERENCE_32_0_NEGATIVE: "#v 32.0x#! 이상의 명성을 가지고 있습니다." #NT!
- LIBERTY_DESIRE_WEEKLY_CHANGE_PRESTIGE_DIFFERENCE_48_0_NEGATIVE: "#v 48.0x#! 이상의 명성을 가지고 있습니다." #NT!
+ LIBERTY_DESIRE_WEEKLY_CHANGE_PRESTIGE_DIFFERENCE_1_5_NEGATIVE: "#v 1.5x#! 이상의 명성을 가지고 있습니다."
+ LIBERTY_DESIRE_WEEKLY_CHANGE_PRESTIGE_DIFFERENCE_2_0_NEGATIVE: "#v 2.0x#! 이상의 명성을 가지고 있습니다."
+ LIBERTY_DESIRE_WEEKLY_CHANGE_PRESTIGE_DIFFERENCE_3_0_NEGATIVE: "#v 3.0x#! 이상의 명성을 가지고 있습니다."
+ LIBERTY_DESIRE_WEEKLY_CHANGE_PRESTIGE_DIFFERENCE_4_0_NEGATIVE: "#v 4.0x#! 이상의 명성을 가지고 있습니다."
+ LIBERTY_DESIRE_WEEKLY_CHANGE_PRESTIGE_DIFFERENCE_6_0_NEGATIVE: "#v 6.0x#! 이상의 명성을 가지고 있습니다."
+ LIBERTY_DESIRE_WEEKLY_CHANGE_PRESTIGE_DIFFERENCE_8_0_NEGATIVE: "#v 8.0x#! 이상의 명성을 가지고 있습니다."
+ LIBERTY_DESIRE_WEEKLY_CHANGE_PRESTIGE_DIFFERENCE_12_0_NEGATIVE: "#v 12.0x#! 이상의 명성을 가지고 있습니다."
+ LIBERTY_DESIRE_WEEKLY_CHANGE_PRESTIGE_DIFFERENCE_16_0_NEGATIVE: "#v 16.0x#! 이상의 명성을 가지고 있습니다."
+ LIBERTY_DESIRE_WEEKLY_CHANGE_PRESTIGE_DIFFERENCE_24_0_NEGATIVE: "#v 24.0x#! 이상의 명성을 가지고 있습니다."
+ LIBERTY_DESIRE_WEEKLY_CHANGE_PRESTIGE_DIFFERENCE_32_0_NEGATIVE: "#v 32.0x#! 이상의 명성을 가지고 있습니다."
+ LIBERTY_DESIRE_WEEKLY_CHANGE_PRESTIGE_DIFFERENCE_48_0_NEGATIVE: "#v 48.0x#! 이상의 명성을 가지고 있습니다."
   
- LIBERTY_DESIRE_WEEKLY_CHANGE_RELIGION: "[SCOPE.GetRootScope.GetDiplomaticPact.GetSecondCountry.GetSubjectType.GetName]의 [concept_state_religion]을 변경하려고 시도 중입니다." #NT!
- LIBERTY_DESIRE_WEEKLY_CHANGE_DEVOUT_RESISTANCE: "[GetDiplomaticActionType('change_state_religion').GetName]에 대한 독실한 저항" #NT!
- LIBERTY_DESIRE_WEEKLY_CHANGE_CULTURE: "[SCOPE.GetRootScope.GetDiplomaticPact.GetSecondCountry.GetSubjectType.GetName]'s [Concept('concept_primary_cultures','$concept_primary_culture$')]을 대체하려고 시도 중입니다." #NT!
- LIBERTY_DESIRE_WEEKLY_CHANGE_NATIONALIST_RESISTANCE: ""[GetDiplomaticActionType('change_primary_culture').GetName]"에 대한 민족주의 저항" #NT!
- LIBERTY_DESIRE_WEEKLY_CHANGE_INCLUDE_CULTURE: "[SCOPE.GetRootScope.GetDiplomaticPact.GetSecondCountry.GetSubjectType.GetName]'s [Concept('concept_primary_cultures','$concept_primary_culture$')]을 포함하려고 시도했습니다." #NT!
+ LIBERTY_DESIRE_WEEKLY_CHANGE_RELIGION: "[SCOPE.GetRootScope.GetDiplomaticPact.GetSecondCountry.GetSubjectType.GetName]의 [concept_state_religion]을 변경하려고 시도 중입니다."
+ LIBERTY_DESIRE_WEEKLY_CHANGE_DEVOUT_RESISTANCE: "[GetDiplomaticActionType('change_state_religion').GetName]에 대한 독실한 저항"
+ LIBERTY_DESIRE_WEEKLY_CHANGE_CULTURE: "[SCOPE.GetRootScope.GetDiplomaticPact.GetSecondCountry.GetSubjectType.GetName]'s [Concept('concept_primary_cultures','$concept_primary_culture$')]을 대체하려고 시도 중입니다."
+ LIBERTY_DESIRE_WEEKLY_CHANGE_NATIONALIST_RESISTANCE: ""[GetDiplomaticActionType('change_primary_culture').GetName]"에 대한 민족주의 저항"
+ LIBERTY_DESIRE_WEEKLY_CHANGE_INCLUDE_CULTURE: "[SCOPE.GetRootScope.GetDiplomaticPact.GetSecondCountry.GetSubjectType.GetName]'s [Concept('concept_primary_cultures','$concept_primary_culture$')]을 포함하려고 시도했습니다."
   
- legal_systems: "법률 시스템" #NT!
- LIBERTY_DESIRE_LEGAL_FRICTION: "마찰" #NT!
- LIBERTY_DESIRE_LEGAL_FRICTION_VALUE_FORMAT: "$TAB$[SelectLocalization(GreaterThan_CFixedPoint('(CFixedPoint)$VALUE$','(CFixedPoint)0'),'$VALUE|bo=2$','$VALUE|bu=2$')] $KEY$에 대하여" #NT!
- LIBERTY_DESIRE_WEEKLY_CHANGE_LEGAL_FRICTION: "$LIBERTY_DESIRE_LEGAL_FRICTION$ [Concept('concept_law', '$legal_systems$')]:\n[SCOPE.GetScriptValueDesc('liberty_desire_weekly_change_legal_friction')] 사이" #NT!
+ legal_systems: "법률 시스템"
+ LIBERTY_DESIRE_LEGAL_FRICTION: "마찰"
+ LIBERTY_DESIRE_LEGAL_FRICTION_VALUE_FORMAT: "$TAB$[SelectLocalization(GreaterThan_CFixedPoint('(CFixedPoint)$VALUE$','(CFixedPoint)0'),'$VALUE|bo=2$','$VALUE|bu=2$')] $KEY$에 대하여"
+ LIBERTY_DESIRE_WEEKLY_CHANGE_LEGAL_FRICTION: "$LIBERTY_DESIRE_LEGAL_FRICTION$ [Concept('concept_law', '$legal_systems$')]:\n[SCOPE.GetScriptValueDesc('liberty_desire_weekly_change_legal_friction')] 사이"
   
- LIBERTY_DESIRE_LEGAL_FRICTION_GOVERNANCE: "[GetLawGroup('lawgroup_governance_principles').GetName]" #NT!
- LIBERTY_DESIRE_LEGAL_FRICTION_CHURCH: "[GetLawGroup('lawgroup_church_and_state').GetName]" #NT!
- LIBERTY_DESIRE_LEGAL_FRICTION_BUREAUCRACY: "[GetLawGroup('lawgroup_bureaucracy').GetName]" #NT!
- LIBERTY_DESIRE_LEGAL_FRICTION_ECONOMY: "[GetLawGroup('lawgroup_economic_system').GetName]" #NT!
- LIBERTY_DESIRE_LEGAL_FRICTION_LAND: "[GetLawGroup('lawgroup_land_reform').GetName]" #NT!
- LIBERTY_DESIRE_LEGAL_FRICTION_TRADE: "[GetLawGroup('lawgroup_trade_policy').GetName]" #NT!
- LIBERTY_DESIRE_LEGAL_FRICTION_SLAVERY: "[GetLawGroup('lawgroup_slavery').GetName]" #NT!
- LIBERTY_DESIRE_LEGAL_FRICTION_FEMINISM: "[GetLawGroup('lawgroup_rights_of_women').GetName]" #NT!
- LIBERTY_DESIRE_LEGAL_FRICTION_SPEECH: "[GetLawGroup('lawgroup_free_speech').GetName]" #NT!
- LIBERTY_DESIRE_LEGAL_FRICTION_LABOR: "[GetLawGroup('lawgroup_labor_rights').GetName]" #NT!
+ LIBERTY_DESIRE_LEGAL_FRICTION_GOVERNANCE: "[GetLawGroup('lawgroup_governance_principles').GetName]"
+ LIBERTY_DESIRE_LEGAL_FRICTION_CHURCH: "[GetLawGroup('lawgroup_church_and_state').GetName]"
+ LIBERTY_DESIRE_LEGAL_FRICTION_BUREAUCRACY: "[GetLawGroup('lawgroup_bureaucracy').GetName]"
+ LIBERTY_DESIRE_LEGAL_FRICTION_ECONOMY: "[GetLawGroup('lawgroup_economic_system').GetName]"
+ LIBERTY_DESIRE_LEGAL_FRICTION_LAND: "[GetLawGroup('lawgroup_land_reform').GetName]"
+ LIBERTY_DESIRE_LEGAL_FRICTION_TRADE: "[GetLawGroup('lawgroup_trade_policy').GetName]"
+ LIBERTY_DESIRE_LEGAL_FRICTION_SLAVERY: "[GetLawGroup('lawgroup_slavery').GetName]"
+ LIBERTY_DESIRE_LEGAL_FRICTION_FEMINISM: "[GetLawGroup('lawgroup_rights_of_women').GetName]"
+ LIBERTY_DESIRE_LEGAL_FRICTION_SPEECH: "[GetLawGroup('lawgroup_free_speech').GetName]"
+ LIBERTY_DESIRE_LEGAL_FRICTION_LABOR: "[GetLawGroup('lawgroup_labor_rights').GetName]"
   
- LIBERTY_DESIRE_WEEKLY_CHANGE_REL_MILITARY_WEAK: "[SCOPE.GetRootScope.GetDiplomaticPact.GetSecondCountry.GetName]에 [concept_army]이 없습니다!" #NT!
- LIBERTY_DESIRE_WEEKLY_CHANGE_REL_MILITARY_SCALING: "상대적 [concept_army] [concept_power_projection] of [concept_overlord] (최대 효과는 10배)" #NT!
- LIBERTY_DESIRE_WEEKLY_CHANGE_REL_MILITARY_APPROACH: "상대군력 > 오버로드의 80%" #NT!
- LIBERTY_DESIRE_WEEKLY_CHANGE_REL_MILITARY_EXCCEED: "상대군력 > 오버로드의 100%" #NT!
- LIBERTY_DESIRE_WEEKLY_CHANGE_REL_NAVY_SCALING: "[SCOPE.GetRootScope.GetDiplomaticPact.GetSecondCountry.GetName]의 상대적 네이비 [concept_power_projection]" #NT!
- LIBERTY_DESIRE_WEEKLY_CHANGE_REL_MILITARY_SCALING_REDUCTION: "[concept_subject] 해군, 해외의 중요성 축소 [concept_overlord] [concept_army]" #NT!
- LIBERTY_DESIRE_WEEKLY_CHANGE_COMBINED_SUBJECTS: "모든 [Concept('concept_subject', '$concept_subjects$')] [concept_power_projection] 과 [SCOPE.GetRootScope.GetDiplomaticPact.GetFirstCountry.GetName]\n[SCOPE.GetScriptValueDesc('liberty_desire_weekly_change_combined_subjects')] 비교" #NT!
- LIBERTY_DESIRE_WEEKLY_CHANGE_OWN_COMBINED_SUBJECTS: "[SCOPE.GetRootScope.GetDiplomaticPact.GetSecondCountry.GetName]의 [Concept('concept_subject', '$concept_subjects$')]에 대한 위협)" #NT!
- LIBERTY_DESIRE_CHANGE_OWN_COMBINED_SUBJECTS_VALUE_FORMAT: "$TAB$($KEY$에서 [SelectLocalization(GreaterThan_CFixedPoint('(CFixedPoint)$VALUE$','(CFixedPoint)0'),'$VALUE|bo=2$','$VALUE|bu=2$')] 포함)" #NT!
+ LIBERTY_DESIRE_WEEKLY_CHANGE_REL_MILITARY_WEAK: "[SCOPE.GetRootScope.GetDiplomaticPact.GetSecondCountry.GetName]에 [concept_army]이 없습니다!"
+ LIBERTY_DESIRE_WEEKLY_CHANGE_REL_MILITARY_SCALING: "상대적 [concept_army] [concept_power_projection] of [concept_overlord] (최대 효과는 10배)"
+ LIBERTY_DESIRE_WEEKLY_CHANGE_REL_MILITARY_APPROACH: "상대군력 > 오버로드의 80%"
+ LIBERTY_DESIRE_WEEKLY_CHANGE_REL_MILITARY_EXCCEED: "상대군력 > 오버로드의 100%"
+ LIBERTY_DESIRE_WEEKLY_CHANGE_REL_NAVY_SCALING: "[SCOPE.GetRootScope.GetDiplomaticPact.GetSecondCountry.GetName]의 상대적 네이비 [concept_power_projection]"
+ LIBERTY_DESIRE_WEEKLY_CHANGE_REL_MILITARY_SCALING_REDUCTION: "[concept_subject] 해군, 해외의 중요성 축소 [concept_overlord] [concept_army]"
+ LIBERTY_DESIRE_WEEKLY_CHANGE_COMBINED_SUBJECTS: "모든 [Concept('concept_subject', '$concept_subjects$')] [concept_power_projection] 과 [SCOPE.GetRootScope.GetDiplomaticPact.GetFirstCountry.GetName]\n[SCOPE.GetScriptValueDesc('liberty_desire_weekly_change_combined_subjects')] 비교"
+ LIBERTY_DESIRE_WEEKLY_CHANGE_OWN_COMBINED_SUBJECTS: "[SCOPE.GetRootScope.GetDiplomaticPact.GetSecondCountry.GetName]의 [Concept('concept_subject', '$concept_subjects$')]에 대한 위협)"
+ LIBERTY_DESIRE_CHANGE_OWN_COMBINED_SUBJECTS_VALUE_FORMAT: "$TAB$($KEY$에서 [SelectLocalization(GreaterThan_CFixedPoint('(CFixedPoint)$VALUE$','(CFixedPoint)0'),'$VALUE|bo=2$','$VALUE|bu=2$')] 포함)"
   
  LIBERTY_DESIRE_WEEKLY_CHANGE_LOW_SUPPLY_NETWORK_STRENGTH: "[SCOPE.GetRootScope.GetDiplomaticPact.GetFirstCountry.GetAdjective] [concept_supply_network] 효력 낮음 ([SCOPE.GetRootScope.GetDiplomaticPact.GetFirstCountry.GetSupplyNetworkStrength|v0%])"
  LIBERTY_DESIRE_WEEKLY_CHANGE_SACRED_CIVICS: "#v $principle_group_sacred_civics$#!에서 동일한 국가 [concept_religion]"
@@ -108,7 +108,7 @@
  LIBERTY_DESIRE_WEEKLY_CHANGE_ANTI_LOBBY_INTEREST_GROUP_IN_GOVERNMENT: "[concept_in_government] [concept_political_lobby] [Concept('concept_interest_group','$concept_interest_groups$')]의 [concept_clout] (#v x2#!)"
  LIBERTY_DESIRE_WEEKLY_CHANGE_PRO_LOBBY_INTEREST_GROUP_IN_OPPOSITION: "[concept_in_opposition] [concept_political_lobby] [Concept('concept_interest_group','$concept_interest_groups$')]의 [concept_clout]"
  LIBERTY_DESIRE_WEEKLY_CHANGE_ANTI_LOBBY_INTEREST_GROUP_IN_OPPOSITION: "[concept_in_opposition] [concept_political_lobby] [Concept('concept_interest_group','$concept_interest_groups$')]의 [concept_clout]"
- LIBERTY_DESIRE_WEEKLY_CHANGE_SCALING_LOW: "낮은 수준에서 현 상태의 변화에 ​​대한 저항 [concept_liberty_desire]" #NT!
- LIBERTY_DESIRE_WEEKLY_CHANGE_SCALING_HIGH: "현상유지에서의 변화에 ​​대한 저항이 높음 [concept_liberty_desire]" #NT!
+ LIBERTY_DESIRE_WEEKLY_CHANGE_SCALING_LOW: "낮은 수준에서 현 상태의 변화에 ​​대한 저항 [concept_liberty_desire]"
+ LIBERTY_DESIRE_WEEKLY_CHANGE_SCALING_HIGH: "현상유지에서의 변화에 ​​대한 저항이 높음 [concept_liberty_desire]"
   
   

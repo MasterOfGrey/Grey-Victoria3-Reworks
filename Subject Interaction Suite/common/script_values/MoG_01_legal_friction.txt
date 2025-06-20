@@ -443,9 +443,7 @@
 					AND = {
 						# L-F law first for major friction
 						root.first_country = {
-							OR = {
-								has_law = law_type:law_laissez_faire
-							}
+							has_law = law_type:law_laissez_faire
 						}
 						root.second_country = {
 							OR = {
@@ -463,9 +461,7 @@
 							}
 						}
 						root.second_country = {
-							OR = {
-								has_law = law_type:law_laissez_faire
-							}
+							has_law = law_type:law_laissez_faire
 						}
 					}
 				}

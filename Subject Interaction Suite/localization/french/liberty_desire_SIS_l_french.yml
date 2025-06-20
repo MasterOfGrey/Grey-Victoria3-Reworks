@@ -71,11 +71,11 @@
  LIBERTY_DESIRE_WEEKLY_CHANGE_DEVOUT_RESISTANCE: "Résistance fervente à [GetDiplomaticActionType('change_state_religion').GetName]"
  LIBERTY_DESIRE_WEEKLY_CHANGE_CULTURE: "Tentative de supplanter la culture principale de [SCOPE.GetRootScope.GetDiplomaticPact.GetSecondCountry.GetSubjectType.GetName]"
  LIBERTY_DESIRE_WEEKLY_CHANGE_NATIONALIST_RESISTANCE: "Résistance nationaliste à [GetDiplomaticActionType('change_primary_culture').GetName]"
- LIBERTY_DESIRE_WEEKLY_CHANGE_INCLUDE_CULTURE: "Tentative d'inclusion de [SCOPE.GetRootScope.GetDiplomaticPact.GetSecondCountry.GetSubjectType.GetName] dans [Concept('concept_primary_cultures','$concept_primary_culture$')]" #NT!
+ LIBERTY_DESIRE_WEEKLY_CHANGE_INCLUDE_CULTURE: "Tentative d'inclusion de [SCOPE.GetRootScope.GetDiplomaticPact.GetSecondCountry.GetSubjectType.GetName] dans [Concept('concept_primary_cultures','$concept_primary_culture$')]"
   
  legal_systems: "Systèmes juridiques"
  LIBERTY_DESIRE_LEGAL_FRICTION: "Friction"
- LIBERTY_DESIRE_LEGAL_FRICTION_VALUE_FORMAT: "$TAB$[SelectLocalization(Supérieur à CFixedPoint('(CFixedPoint)$VALUE$','(CFixedPoint)0'),'$VALUE|bo=2$','$VALUE|bu=2$')] pour $KEY$"
+ LIBERTY_DESIRE_LEGAL_FRICTION_VALUE_FORMAT: "$TAB$[SelectLocalization(GreaterThan_CFixedPoint('(CFixedPoint)$VALUE$','(CFixedPoint)0'),'$VALUE|bo=2$','$VALUE|bu=2$')] pour $KEY$"
  LIBERTY_DESIRE_WEEKLY_CHANGE_LEGAL_FRICTION: "$LIBERTY_DESIRE_LEGAL_FRICTION$ entre [Concept('concept_law', '$legal_systems$')]:\n[SCOPE.GetScriptValueDesc('liberty_desire_weekly_change_legal_friction')]"
   
  LIBERTY_DESIRE_LEGAL_FRICTION_GOVERNANCE: "[GetLawGroup('lawgroup_governance_principles').GetName]"
@@ -95,9 +95,9 @@
  LIBERTY_DESIRE_WEEKLY_CHANGE_REL_MILITARY_EXCCEED: "Puissance militaire relative >100% de l'Overlord"
  LIBERTY_DESIRE_WEEKLY_CHANGE_REL_NAVY_SCALING: "Marine relative de [SCOPE.GetRootScope.GetDiplomaticPact.GetSecondCountry.GetName] [concept_power_projection]"
  LIBERTY_DESIRE_WEEKLY_CHANGE_REL_MILITARY_SCALING_REDUCTION: "Marine de [concept_subject] réduisant l'importance de l'[concept_army] outre-mer de l'[concept_overlord]"
- LIBERTY_DESIRE_WEEKLY_CHANGE_COMBINED_SUBJECTS: "Tous les [Concept('concept_subject', '$concept_subjects$')] [concept_power_projection] comparés à [SCOPE.GetRootScope.GetDiplomaticPact.GetFirstCountry.GetName]\n[SCOPE.GetScriptValueDesc('liberty_desire_weekly_change_combined_subjects')]" #NT!
- LIBERTY_DESIRE_WEEKLY_CHANGE_OWN_COMBINED_SUBJECTS: "menace de [SCOPE.GetRootScope.GetDiplomaticPact.GetSecondCountry.GetName] lui-même [Concept('concept_subject', '$concept_subjects$')])" #NT!
- LIBERTY_DESIRE_CHANGE_OWN_COMBINED_SUBJECTS_VALUE_FORMAT: "$TAB$ (Comprend [SelectLocalization(GreaterThan_CFixedPoint('(CFixedPoint)$VALUE$','(CFixedPoint)0'),'$VALUE|bo=2$','$VALUE|bu=2$')] de $KEY$" #NT!
+ LIBERTY_DESIRE_WEEKLY_CHANGE_COMBINED_SUBJECTS: "Tous les [Concept('concept_subject', '$concept_subjects$')] [concept_power_projection] comparés à [SCOPE.GetRootScope.GetDiplomaticPact.GetFirstCountry.GetName]\n[SCOPE.GetScriptValueDesc('liberty_desire_weekly_change_combined_subjects')]"
+ LIBERTY_DESIRE_WEEKLY_CHANGE_OWN_COMBINED_SUBJECTS: "menace de [SCOPE.GetRootScope.GetDiplomaticPact.GetSecondCountry.GetName] lui-même [Concept('concept_subject', '$concept_subjects$')])"
+ LIBERTY_DESIRE_CHANGE_OWN_COMBINED_SUBJECTS_VALUE_FORMAT: "$TAB$ (Comprend [SelectLocalization(GreaterThan_CFixedPoint('(CFixedPoint)$VALUE$','(CFixedPoint)0'),'$VALUE|bo=2$','$VALUE|bu=2$')] de $KEY$"
   
  LIBERTY_DESIRE_WEEKLY_CHANGE_LOW_SUPPLY_NETWORK_STRENGTH: "Faible résistance [concept_supply_network] [SCOPE.GetRootScope.GetDiplomaticPact.GetFirstCountry.GetAdjective] ([SCOPE.GetRootScope.GetDiplomaticPact.GetFirstCountry.GetSupplyNetworkStrength|v0%])"
  LIBERTY_DESIRE_WEEKLY_CHANGE_SACRED_CIVICS: "Même [concept_religion] sous #v $principle_group_sacred_civics$#!"

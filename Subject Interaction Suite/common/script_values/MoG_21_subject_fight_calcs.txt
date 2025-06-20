@@ -1,0 +1,118 @@
+﻿subject_fight_target_country_baseline = {
+	scope:FX_subject_fight_target_country = {
+		every_scope_state = {
+			add = {
+				add = state_population 
+				divide = define:NDiplomacy|WAR_GOAL_INFAMY_POPULATION_SCALING_FACTOR
+				multiply = define:NDiplomacy|WAR_GOAL_INFAMY_POPULATION_SCALING_MULTIPLIER
+				multiply = {
+					add = 1
+					if = {
+						limit = {
+							is_incorporated = no
+						}
+						add = define:NDiplomacy|WAR_GOAL_INFAMY_UNINCORPORATED_FACTOR
+					}
+				}
+				min = 0.1
+				max = define:NDiplomacy|WAR_GOAL_INFAMY_POPULATION_SCALING_MULTIPLIER_MAX_PER_STATE
+			}
+			max = define:NDiplomacy|WAR_GOAL_INFAMY_POPULATION_SCALING_MULTIPLIER_MAX_TOTAL
+		}
+		multiply = {
+			add = 1
+			if = {
+				limit = { any_scope_state = { is_homeland_of_country_cultures = scope:subject_initiator } }
+				add = define:NDiplomacy|WAR_GOAL_INFAMY_HOMELAND_FACTOR
+			}
+			add = { scope:subject_initiator = { value = modifier:country_infamy_generation_mult } }
+		}
+	}
+}
+
+subject_fight_annex_war_lib_hit = {
+	add = subject_fight_target_country_baseline
+	multiply = {
+		add = define:NDiplomacy|WAR_GOAL_INFAMY_ANNEX_COUNTRY
+		multiply = {
+			add = 1
+			if = {
+				limit = { scope:FX_subject_fight_target_country = {	is_direct_subject_of = scope:subject_initiator } }
+				divide = 2
+			}
+		}
+	}
+	min = 5
+}
+
+subject_fight_annex_war_overlord_infamy = {
+	add = subject_fight_annex_war_lib_hit
+	multiply = {
+		add = 1
+		divide = 4
+		add = modifier:country_infamy_generation_mult
+	}
+}
+
+subject_fight_targeted_state_baseline = {
+	scope:subject_targeted_state = {
+		add = {
+			add = state_population 
+			divide = define:NDiplomacy|WAR_GOAL_INFAMY_POPULATION_SCALING_FACTOR
+			multiply = define:NDiplomacy|WAR_GOAL_INFAMY_POPULATION_SCALING_MULTIPLIER
+			multiply = {
+				add = 1
+				if = {
+					limit = {
+						is_incorporated = no
+					}
+					add = define:NDiplomacy|WAR_GOAL_INFAMY_UNINCORPORATED_FACTOR
+				}
+			}
+			min = 0.1
+			max = define:NDiplomacy|WAR_GOAL_INFAMY_POPULATION_SCALING_MULTIPLIER_MAX_PER_STATE
+		}
+		max = define:NDiplomacy|WAR_GOAL_INFAMY_POPULATION_SCALING_MULTIPLIER_MAX_TOTAL
+		multiply = {
+			add = 1
+			if = {
+				limit = { scope:subject_targeted_state = { is_homeland_of_country_cultures = scope:subject_initiator } }
+				add = define:NDiplomacy|WAR_GOAL_INFAMY_HOMELAND_FACTOR
+			}
+			add = { scope:subject_initiator = { value = modifier:country_infamy_generation_mult } }
+		}
+	}
+}
+
+subject_fight_targeted_state_lib_hit = {
+	add = subject_fight_targeted_state_baseline
+	if = {
+		limit = { scope:subject_targeted_state = { has_claim_by = scope:subject_initiator } }
+		multiply = {
+			add = define:NDiplomacy|WAR_GOAL_INFAMY_RETURN_STATE
+			multiply = -1
+		}
+		max = -1
+	}
+	else = {
+		multiply = {
+			if = {
+				limit = { scope:subject_targeted_state = { is_treaty_port = yes } }
+				add = define:NDiplomacy|WAR_GOAL_INFAMY_TAKE_TREATY_PORT
+			}
+			else = {
+				add = define:NDiplomacy|WAR_GOAL_INFAMY_CONQUER_STATE
+			}
+		}
+		min = 3
+	}
+}
+
+subject_fight_targeted_state_overlord_infamy = {
+	add = subject_fight_targeted_state_lib_hit
+	multiply = {
+		add = 1
+		divide = 4
+		add = modifier:country_infamy_generation_mult
+	}
+}

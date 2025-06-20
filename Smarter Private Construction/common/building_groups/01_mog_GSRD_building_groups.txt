@@ -1,7 +1,7 @@
 ﻿bg_power = {
 	category = development
 	
-	lens = infrastructure	
+	lens = development
 	
 	always_possible = yes
 	
@@ -9,7 +9,7 @@
 	
 	cash_reserves_max = 25000
 	
-	should_auto_expand = { 
+	should_auto_expand = {
 		default_auto_expand_rule = yes
 	}
 	

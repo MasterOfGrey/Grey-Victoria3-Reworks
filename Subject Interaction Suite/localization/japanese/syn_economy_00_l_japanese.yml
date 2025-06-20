@@ -1,33 +1,33 @@
 ﻿l_japanese:
- laws_synergize_economy: "経済の相乗効果" #NT!
- laws_synergize_economy_action_name: "$laws_synergize_economy$" #NT!
- laws_synergize_economy_action_propose_name: "経済の相乗効果を開始する" #NT!
- laws_synergize_economy_action_break_name: "経済の相乗効果を止める" #NT!
- laws_synergize_economy_pact_desc: "[SCOPE.GetRootScope.GetDiplomaticPact.GetFirstCountry.GetName] は [SCOPE.GetRootScope.GetDiplomaticPact.GetSecondCountry.GetName] の経済を再構築して、それらの経済と相乗効果を生み出します。\n 現在、#variable [SCOPE.GetRootScope.GetDiplomaticPact.GetSecondCountry.MakeScope.Var('synergize_economy_progress').GetValue]#! が 8 段階中進行中です。" #NT!
- laws_synergize_economy_desc: "#header $laws_synergize_economy$#!\n$TOOLTIP_DELIMITER$\nSynergizes 指定された国の経済システム。" #NT!
- laws_synergize_economy_action_notification_name: "[INITIATOR_COUNTRY.GetName] 経済の相乗効果" #NT!
- laws_synergize_economy_action_notification_desc: "[INITIATOR_COUNTRY.GetName]は我が国の経済システムに相乗効果をもたらしています。" #NT!
- laws_synergize_economy_action_notification_break_name: "経済の相乗効果を止める [INITIATOR_COUNTRY.GetName]" #NT!
- laws_synergize_economy_action_notification_break_desc: "[INITIATOR_COUNTRY.GetName]は我が国の経済システムの相乗効果を生み出す試みをやめました。" #NT!
+ laws_synergize_economy: "経済の相乗効果"
+ laws_synergize_economy_action_name: "$laws_synergize_economy$"
+ laws_synergize_economy_action_propose_name: "経済の相乗効果を開始する"
+ laws_synergize_economy_action_break_name: "経済の相乗効果を止める"
+ laws_synergize_economy_pact_desc: "[SCOPE.GetRootScope.GetDiplomaticPact.GetFirstCountry.GetName] は [SCOPE.GetRootScope.GetDiplomaticPact.GetSecondCountry.GetName] の経済を再構築して、それらの経済と相乗効果を生み出します。\n 現在、#variable [SCOPE.GetRootScope.GetDiplomaticPact.GetSecondCountry.MakeScope.Var('synergize_economy_progress').GetValue]#! が 8 段階中進行中です。"
+ laws_synergize_economy_desc: "#header $laws_synergize_economy$#!\n$TOOLTIP_DELIMITER$\nSynergizes 指定された国の経済システム。"
+ laws_synergize_economy_action_notification_name: "[INITIATOR_COUNTRY.GetName] 経済の相乗効果"
+ laws_synergize_economy_action_notification_desc: "[INITIATOR_COUNTRY.GetName]は我が国の経済システムに相乗効果をもたらしています。"
+ laws_synergize_economy_action_notification_break_name: "経済の相乗効果を止める [INITIATOR_COUNTRY.GetName]"
+ laws_synergize_economy_action_notification_break_desc: "[INITIATOR_COUNTRY.GetName]は我が国の経済システムの相乗効果を生み出す試みをやめました。"
   
- laws_synergize_economy_effect_desc_global: "経済の相乗効果を開始する" #NT!
- laws_synergize_economy_effect_desc_first: "[COUNTRY.GetAdjectiveNoFlag]は[TARGET_COUNTRY.GetName]との経済的な相乗効果を開始します。" #NT!
- laws_synergize_economy_effect_desc_third: "[COUNTRY.GetName]は[AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)]との経済的な相乗効果を開始します。" #NT!
+ laws_synergize_economy_effect_desc_global: "経済の相乗効果を開始する"
+ laws_synergize_economy_effect_desc_first: "[COUNTRY.GetAdjectiveNoFlag]は[TARGET_COUNTRY.GetName]との経済的な相乗効果を開始します。"
+ laws_synergize_economy_effect_desc_third: "[COUNTRY.GetName]は[AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)]との経済的な相乗効果を開始します。"
   
- laws_synergize_economy_trigger_desc_global: "経済の相乗効果は継続中" #NT!
- laws_synergize_economy_trigger_false_desc_global: "現在、経済システムの相乗効果を図る過程にはありません。" #NT!
- laws_synergize_economy_trigger_desc_first: "[COUNTRY.GetAdjectiveNoFlag] は [TARGET_COUNTRY.GetName] と相乗効果のある経済システムを持っています。" #NT!
- laws_synergize_economy_trigger_false_desc_first: "[COUNTRY.GetAdjectiveNoFlag] は現在、[TARGET_COUNTRY.GetName] と相乗効果のある経済システムを持っていません。" #NT!
- laws_synergize_economy_trigger_desc_third: "[COUNTRY.GetName] は [AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)] と相乗効果のある経済システムを持っています。" #NT!
- laws_synergize_economy_trigger_false_desc_third: "[COUNTRY.GetName] は現在、[AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)] と相乗効果のある経済システムを持っていません。" #NT!
+ laws_synergize_economy_trigger_desc_global: "経済の相乗効果は継続中"
+ laws_synergize_economy_trigger_false_desc_global: "現在、経済システムの相乗効果を図る過程にはありません。"
+ laws_synergize_economy_trigger_desc_first: "[COUNTRY.GetAdjectiveNoFlag] は [TARGET_COUNTRY.GetName] と相乗効果のある経済システムを持っています。"
+ laws_synergize_economy_trigger_false_desc_first: "[COUNTRY.GetAdjectiveNoFlag] は現在、[TARGET_COUNTRY.GetName] と相乗効果のある経済システムを持っていません。"
+ laws_synergize_economy_trigger_desc_third: "[COUNTRY.GetName] は [AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)] と相乗効果のある経済システムを持っています。"
+ laws_synergize_economy_trigger_false_desc_third: "[COUNTRY.GetName] は現在、[AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)] と相乗効果のある経済システムを持っていません。"
   
- mog_syn_events.02.t: "経済シナジー！" #NT!
- mog_syn_events.02.d: "誇り高き[ROOT.GetCountry.GetName]国家は[SCOPE.sCountry('synergize_economy_target_country').GetName]との経済システムの相乗効果を成功裏に達成しました。[SCOPE.sCountry('synergize_economy_target_country').GetName]は祖国との結束力を高めることで永遠の繁栄を成し遂げます。" #NT!
- mog_syn_events.02.f: "「[ROOT.GetCountry.GetName]万歳！」" #NT!
- mog_syn_events.02.a: "よくやった。" #NT!
+ mog_syn_events.02.t: "経済シナジー！"
+ mog_syn_events.02.d: "誇り高き[ROOT.GetCountry.GetName]国家は[SCOPE.sCountry('synergize_economy_target_country').GetName]との経済システムの相乗効果を成功裏に達成しました。[SCOPE.sCountry('synergize_economy_target_country').GetName]は祖国との結束力を高めることで永遠の繁栄を成し遂げます。"
+ mog_syn_events.02.f: "「[ROOT.GetCountry.GetName]万歳！」"
+ mog_syn_events.02.a: "よくやった。"
   
- laws_synergize_economy_weekly_effect: "彼らの経済システムを我々のものと一致させるよう努めています。毎週 20% の確率で進歩し、成功するには 8 つの進歩ポイントが必要です。" #NT!
+ laws_synergize_economy_weekly_effect: "彼らの経済システムを我々のものと一致させるよう努めています。毎週 20% の確率で進歩し、成功するには 8 つの進歩ポイントが必要です。"
   
- overlord_syn_cost_economy: "経済の相乗効果にかかるコスト" #NT!
+ overlord_syn_cost_economy: "経済の相乗効果にかかるコスト"
   
- active_synergize_economy_tt: "その他の$laws_synergize_economy$アクションの数は1未満です。" #NT!
+ active_synergize_economy_tt: "その他の$laws_synergize_economy$アクションの数は1未満です。"

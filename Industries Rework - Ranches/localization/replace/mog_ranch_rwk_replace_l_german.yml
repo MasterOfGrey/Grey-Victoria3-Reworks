@@ -27,6 +27,7 @@
   
  pmg_sheep_ranch: "Wollproduktion"
  pm_simple_ranch: "Wolltierfarm" #NT!
+ pm_beasts_of_burden: "Lasttiere" #NT!
  pm_sheep_farms: "Verbesserte Wollgewinnung"
  pm_intensive_diet_control: "Intensive Diätkontrolle" #NT!
   

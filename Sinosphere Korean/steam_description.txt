@@ -1,0 +1,88 @@
+[img]https://i.imgur.com/7xuCZqW.png[/img]
+Supports Victoria 3: V1.8.3  (and onwards) - Should not ever really get out of date though.
+Mod Version: V1.3
+Please consider rating this if you like it! It really helps out. [img]https://i.imgur.com/tE28cZ7.gif[/img]
+[spoiler]Originally made for: Version 1.5.10[/spoiler]
+[table]
+    [tr]
+        [td][img]https://i.imgur.com/WjDSfUn.png[/img][/td]
+        [td][img]https://i.imgur.com/Be8E2qJ.png[/img][/td]
+    [/tr]
+[/table]
+
+[img]https://i.imgur.com/6o9HyTD.png[/img]
+This is a very simple mod that initially just added the Sinosphere trait to the Korean culture.
+
+Now the full list of cultures that additionally gain the trait is:
+[list]
+[*]Korean
+[*]Hakka
+[*]Miao
+[*]Min
+[*]Zhuang
+[*]Yi
+[*]Yue
+[*]Yuanzhumin
+[/list]
+(Vanilla cultures with Sinosphere trait are: Han, Manchu, & Vietnamese.)
+
+Additionally, adds 2 decisions that enable Dai Nam and Japan to embrace Yamato and Sinosphere cultures respectively - but only with Cultural Exclusion law and Pan-Nationalism researched.
+These "cultures" allow them to selectively be more accepting of each other, without giving them any other cultural acceptance/assimilation routes.
+
+Lastly, to resolve a common conflict between this and the East Asian Namelist Improvement mod, the namelists from EANI have been imported.
+This means new first names and last names for each East Asian culture listed below:
+[list]
+[*]Japanese (& Yamato*)
+[*]Ainu
+[*]Korean*
+[*]Manchu
+[*]Han & Hakka* (& Yue* + Yi*)
+[*]Vietnamese (& Sino*)
+[*]Mongol & Kalmyk
+[/list]
+
+* = Conflict, compatibility, or consistency issue solved by this inclusion.
+
+
+[img]https://i.imgur.com/Qp8JBtZ.png[/img]
+Won't conflict with hardly anything - only other mods that either add extra names to these cultures, or also modify culture traits.
+
+[img]https://i.imgur.com/lQRf9dG.png[/img]
+[b]Why so many cultures? / Why the sub-cultures in China?[/b]
+[i]Initially the idea was that if Vietnamese was in the Sinosphere, then absolutely so was Korean.
+Looking into it though, it became obvious that those cultures in China closest to Vietnam were, for some reason, harder for Dai Nam to accept or assimilate, despite being logically closer to them.
+Very clearly "Han Chinese" is used by the devs for internal-to-china mechanics, so rather than risking messing with that, I simply extended the Sinosphere to all relevant parties.[/i]
+
+[b]Is this a huge buff for Korea/Dai Nam?[/b]
+[i]It's not really a buff for Korea - as Korea can already accept and assimilate all the Chinese cultures easily. It just gives them access to accepting Manchu (historical) and Vietnamese (logical in an alt. history situation).
+It is a buff to Dai Nam because they cannot easily accept all the Chinese cultures, and it also lets Dai Nam accept Korean more easily - but Dai Nam has hurdles to overcome to get that, and realistically Han are going to make up the majority of immigrants anyway in any situation that this is likely to come up in, so the impact isn't massive.[/i]
+
+[b]Why Yuanzhumin?[/b]
+[i]Yes I know they're not even in an Asian heritage group. They are the polynesian group on Formosa though, so there's lots of exposure there.
+I figured that in a hypothetical scenario where they either a) migrate elsewhere in the sinosphere, or b) end up a primary culture of some oceanic tag, that it would simply be nice and fun (and probably improve game performance) to allow an assimilation route with that group.[/i]
+
+[b]Why import all of EANI mod instead of just the conflicts?[/b]
+[i]Firstly, it means if the EANI author disappears, none of it gets lost. Secondly, consistency, after dealing with the actual issues, most of it was in use by that point. Thirdly, it legitimately fixes extra issues; the vanilla Vic 3 game confuses first names and last names of the Korean, Manchu, and Chinese people, and also confused first names and patronyms of the Mongolian people. EANI MOD fixes those problems and increases the number of name candidates themselves.[/i]
+
+[img]https://i.imgur.com/UN80Om5.png[/img]
+Credit to creators of the EANI mod: 
+[list][*]awak (author of East Asian Namelist Improvement MOD)
+[*] hamane (research on 19th century Ainu names)
+[/list]
+
+[h2]Language Support:[/h2]
+[b]Unless Credited below: Localizations are done by Machine Translation!
+ -> Replacements are welcome from anyone![/b]
+Credit to human providers of localisation content:
+[list][*]Chinese: hamane, awak
+[*]Japanese: hamane, awak
+[/list]
+
+Supported Languages:
+English, B.Portuguese(Português), Simp. Chinese(??), French(Français), German(Deutsch), Japanese(???), Korean(???), Polish(Polski), Russian(??????? ????), Spanish(Español), Turkish(Türkçe)
+
+#Korean
+#Dai Nam
+#Vietnamese
+#Yamato
+You can support me on Patreon: [url=https://patreon.com/MasterOfGreyVic3?utm_medium=unknown&utm_source=join_link&utm_campaign=creatorshare_creator&utm_content=copyLink] [img]https://ufo2.site44.com/become_a_patron_button.png[/img] [/url]

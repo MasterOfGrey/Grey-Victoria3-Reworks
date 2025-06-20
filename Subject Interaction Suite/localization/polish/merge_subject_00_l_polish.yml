@@ -14,18 +14,18 @@
  merge_subject_proposal_third_party_accepted_desc: "[INITIATOR_COUNTRY.GetName] wchłania wszystkie terytoria [TARGET_COUNTRY.GetName]."
  merge_subject_proposal_third_party_declined_name: "Reject $merge_subject_action_name$"
  merge_subject_proposal_third_party_declined_desc: "[TARGET_COUNTRY.GetName] odmawia wchłonięcia przez [INITIATOR_COUNTRY.GetName]."
- rule_ai_merge_subject: "$Wchłanianie państw poddańczych$"
+ rule_ai_merge_subject: "$merge_subject$"
  setting_ai_can_not_use: "Zabroń AI na wchłonięcia państw poddańczych"
  setting_ai_can_not_use_desc: "Zabroń AI na urzycie akcji dyplomatycznej:Wchłoń [concept_subject] [Concept('concept_country', '$concept_countries$')]"
  setting_ai_can_use: "Zezwól AI na wchłonięcia państw poddańczych"
- setting_ai_can_use_desc: "Zezwól AI na użycie akcji dyplomatycznej: Połącz [concept_subject] [Concept('concept_country', '$concept_countries$')]。\nUwaga: AI nie wyśle ​​tej akcji dyplomatycznej do gracza." #NT!
- merge_subject_cheat: "Połącz Temat Cheat" #NT!
- rule_merge_subject_cheat: "$merge_subject$" #NT!
- setting_balanced_merge: "Połączone obiekty są zrównoważone" #NT!
- setting_balanced_merge_desc: "Akcja dyplomatyczna: Połącz [concept_subject] [Concept('concept_country', '$concept_countries$')] jest zrównoważona w przypadku normalnej rozgrywki." #NT!
- setting_cheat_merge: "Łączenie tematów to oszustwo" #NT!
- setting_cheat_merge_desc: "Akcja dyplomatyczna: Połącz [concept_subject] [Concept('concept_country', '$concept_countries$')] to potężne oszustwo." #NT!
- DIPLOMATIC_ACCEPTANCE_BREAK_FREE: "Dążą do [concept_ai_strategy] z #v $ai_strategy_subject_break_free$#!" #NT!
- DIPLOMATIC_ACCEPTANCE_STRENGTHEN_SELF: "Dążą do [concept_ai_strategy] z #v $ai_strategy_subject_strengthen_self$#!" #NT!
- DIPLOMATIC_ACCEPTANCE_MAINTAIN_AUTONOMY: "Dążą do [concept_ai_strategy] z #v $ai_strategy_subject_maintain_autonomy$#!" #NT!
- DIPLOMATIC_ACCEPTANCE_OVERLORD_COMPLIANCE: "Dążą do [concept_ai_strategy] z #v $ai_strategy_subject_overlord_compliance$#!" #NT!
+ setting_ai_can_use_desc: "Zezwól AI na użycie akcji dyplomatycznej: Połącz [concept_subject] [Concept('concept_country', '$concept_countries$')]。\nUwaga: AI nie wyśle ​​tej akcji dyplomatycznej do gracza."
+ merge_subject_cheat: "Połącz Temat Cheat"
+ rule_merge_subject_cheat: "$merge_subject$"
+ setting_balanced_merge: "Połączone obiekty są zrównoważone"
+ setting_balanced_merge_desc: "Akcja dyplomatyczna: Połącz [concept_subject] [Concept('concept_country', '$concept_countries$')] jest zrównoważona w przypadku normalnej rozgrywki."
+ setting_cheat_merge: "Łączenie tematów to oszustwo"
+ setting_cheat_merge_desc: "Akcja dyplomatyczna: Połącz [concept_subject] [Concept('concept_country', '$concept_countries$')] to potężne oszustwo."
+ DIPLOMATIC_ACCEPTANCE_BREAK_FREE: "Dążą do [concept_ai_strategy] z #v $ai_strategy_subject_break_free$#!"
+ DIPLOMATIC_ACCEPTANCE_STRENGTHEN_SELF: "Dążą do [concept_ai_strategy] z #v $ai_strategy_subject_strengthen_self$#!"
+ DIPLOMATIC_ACCEPTANCE_MAINTAIN_AUTONOMY: "Dążą do [concept_ai_strategy] z #v $ai_strategy_subject_maintain_autonomy$#!"
+ DIPLOMATIC_ACCEPTANCE_OVERLORD_COMPLIANCE: "Dążą do [concept_ai_strategy] z #v $ai_strategy_subject_overlord_compliance$#!"

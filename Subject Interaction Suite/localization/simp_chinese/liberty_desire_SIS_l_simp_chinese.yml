@@ -95,9 +95,9 @@
  LIBERTY_DESIRE_WEEKLY_CHANGE_REL_MILITARY_EXCCEED: "陆军力量投射>宗主的100%"
  LIBERTY_DESIRE_WEEKLY_CHANGE_REL_NAVY_SCALING: "[SCOPE.GetRootScope.GetDiplomaticPact.GetSecondCountry.GetName]的相对海军[concept_power_projection]"
  LIBERTY_DESIRE_WEEKLY_CHANGE_REL_MILITARY_SCALING_REDUCTION: "[concept_subject]缺少相对于 [concept_overlord] [concept_army]的海军力量存在"
- LIBERTY_DESIRE_WEEKLY_CHANGE_COMBINED_SUBJECTS: "所有 [Concept('concept_subject', '$concept_subjects$')] [concept_power_projection] 与 [SCOPE.GetRootScope.GetDiplomaticPact.GetFirstCountry.GetName]\n[SCOPE.GetScriptValueDesc('liberty_desire_weekly_change_combined_subjects')] 相比" #NT!
- LIBERTY_DESIRE_WEEKLY_CHANGE_OWN_COMBINED_SUBJECTS: "[SCOPE.GetRootScope.GetDiplomaticPact.GetSecondCountry.GetName] 自身[Concept('concept_subject', '$concept_subjects$')] 的威胁）" #NT!
- LIBERTY_DESIRE_CHANGE_OWN_COMBINED_SUBJECTS_VALUE_FORMAT: "$TAB$（包括$KEY$ 中的[SelectLocalization(GreaterThan_CFixedPoint('(CFixedPoint)$VALUE$','(CFixedPoint)0'),'$VALUE|bo=2$','$VALUE|bu=2$')]" #NT!
+ LIBERTY_DESIRE_WEEKLY_CHANGE_COMBINED_SUBJECTS: "所有 [Concept('concept_subject', '$concept_subjects$')] [concept_power_projection] 与 [SCOPE.GetRootScope.GetDiplomaticPact.GetFirstCountry.GetName]\n[SCOPE.GetScriptValueDesc('liberty_desire_weekly_change_combined_subjects')] 相比"
+ LIBERTY_DESIRE_WEEKLY_CHANGE_OWN_COMBINED_SUBJECTS: "[SCOPE.GetRootScope.GetDiplomaticPact.GetSecondCountry.GetName] 自身[Concept('concept_subject', '$concept_subjects$')] 的威胁）"
+ LIBERTY_DESIRE_CHANGE_OWN_COMBINED_SUBJECTS_VALUE_FORMAT: "$TAB$（包括$KEY$ 中的[SelectLocalization(GreaterThan_CFixedPoint('(CFixedPoint)$VALUE$','(CFixedPoint)0'),'$VALUE|bo=2$','$VALUE|bu=2$')]"
   
  LIBERTY_DESIRE_WEEKLY_CHANGE_LOW_SUPPLY_NETWORK_STRENGTH: "[SCOPE.GetRootScope.GetDiplomaticPact.GetFirstCountry.GetAdjective]的[concept_supply_network]强度较低（[SCOPE.GetRootScope.GetDiplomaticPact.GetFirstCountry.GetSupplyNetworkStrength|v0%]）"
  LIBERTY_DESIRE_WEEKLY_CHANGE_SACRED_CIVICS: "#v $principle_group_sacred_civics$#!下的相同国家[concept_religion]"

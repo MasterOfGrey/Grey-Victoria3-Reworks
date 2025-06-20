@@ -1,34 +1,34 @@
 ﻿l_turkish:
- laws_synergize_bureaucracy: "Bürokrasileri Sinerjize Edin" #NT!
- laws_synergize_bureaucracy_action_name: "$laws_synergize_bureaucracy$" #NT!
- laws_synergize_bureaucracy_action_propose_name: "Bürokrasileri Sinerji Haline Getirmeye Başlayın" #NT!
- laws_synergize_bureaucracy_action_break_name: "Bürokrasilerin Sinerji Yaratmasını Durdurun" #NT!
- laws_synergize_bureaucracy_pact_desc: "[SCOPE.GetRootScope.GetDiplomaticPact.GetFirstCountry.GetName], [SCOPE.GetRootScope.GetDiplomaticPact.GetSecondCountry.GetName]'in bürokrasisini onlarınkiyle sinerji yaratacak şekilde yeniden yapılandırıyor.\n Şu anda 8 aşamadan #variable [SCOPE.GetRootScope.GetDiplomaticPact.GetSecondCountry.MakeScope.Var('synergize_bureaucracy_progress').GetValue]#!'ü ilerledi." #NT!
- laws_synergize_bureaucracy_desc: "#header $laws_synergize_bureaucracy$#!\n$TOOLTIP_DELIMITER$\nSynergizes belirtilen ülkenin bürokrasi yasaları." #NT!
- laws_synergize_bureaucracy_action_notification_name: "[INITIATOR_COUNTRY.GetName] Bürokrasileri Sinerjize Etmek" #NT!
- laws_synergize_bureaucracy_action_notification_desc: "[INITIATOR_COUNTRY.GetName] ülkemizin bürokrasi yasalarını sinerji haline getiriyor." #NT!
- laws_synergize_bureaucracy_action_notification_break_name: "Bürokrasilerin Sinerji Oluşturmasını Durdurun [INITIATOR_COUNTRY.GetName]" #NT!
- laws_synergize_bureaucracy_action_notification_break_desc: "[INITIATOR_COUNTRY.GetName] ülkemizin bürokrasi yasalarını sinerji haline getirmeye çalışmaktan vazgeçmiştir." #NT!
+ laws_synergize_bureaucracy: "Bürokrasileri Sinerjize Edin"
+ laws_synergize_bureaucracy_action_name: "$laws_synergize_bureaucracy$"
+ laws_synergize_bureaucracy_action_propose_name: "Bürokrasileri Sinerji Haline Getirmeye Başlayın"
+ laws_synergize_bureaucracy_action_break_name: "Bürokrasilerin Sinerji Yaratmasını Durdurun"
+ laws_synergize_bureaucracy_pact_desc: "[SCOPE.GetRootScope.GetDiplomaticPact.GetFirstCountry.GetName], [SCOPE.GetRootScope.GetDiplomaticPact.GetSecondCountry.GetName]'in bürokrasisini onlarınkiyle sinerji yaratacak şekilde yeniden yapılandırıyor.\n Şu anda 8 aşamadan #variable [SCOPE.GetRootScope.GetDiplomaticPact.GetSecondCountry.MakeScope.Var('synergize_bureaucracy_progress').GetValue]#!'ü ilerledi."
+ laws_synergize_bureaucracy_desc: "#header $laws_synergize_bureaucracy$#!\n$TOOLTIP_DELIMITER$\nSynergizes belirtilen ülkenin bürokrasi yasaları."
+ laws_synergize_bureaucracy_action_notification_name: "[INITIATOR_COUNTRY.GetName] Bürokrasileri Sinerjize Etmek"
+ laws_synergize_bureaucracy_action_notification_desc: "[INITIATOR_COUNTRY.GetName] ülkemizin bürokrasi yasalarını sinerji haline getiriyor."
+ laws_synergize_bureaucracy_action_notification_break_name: "Bürokrasilerin Sinerji Oluşturmasını Durdurun [INITIATOR_COUNTRY.GetName]"
+ laws_synergize_bureaucracy_action_notification_break_desc: "[INITIATOR_COUNTRY.GetName] ülkemizin bürokrasi yasalarını sinerji haline getirmeye çalışmaktan vazgeçmiştir."
   
- laws_synergize_bureaucracy_effect_desc_global: "Bürokrasileri Sinerji Haline Getirmeye Başlayın" #NT!
- laws_synergize_bureaucracy_effect_desc_first: "[COUNTRY.GetAdjectiveNoFlag], [TARGET_COUNTRY.GetName] ile bürokratik sinerjiyi başlatır." #NT!
- laws_synergize_bureaucracy_effect_desc_third: "[COUNTRY.GetName], [AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)] ile bürokratik sinerjiyi başlatır." #NT!
+ laws_synergize_bureaucracy_effect_desc_global: "Bürokrasileri Sinerji Haline Getirmeye Başlayın"
+ laws_synergize_bureaucracy_effect_desc_first: "[COUNTRY.GetAdjectiveNoFlag], [TARGET_COUNTRY.GetName] ile bürokratik sinerjiyi başlatır."
+ laws_synergize_bureaucracy_effect_desc_third: "[COUNTRY.GetName], [AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)] ile bürokratik sinerjiyi başlatır."
   
- laws_synergize_bureaucracy_trigger_desc_global: "Bürokratik Sinerji Oluşturma Devam Ediyor" #NT!
- laws_synergize_bureaucracy_trigger_false_desc_global: "Şu anda bürokrasi yasalarının sinerji oluşturma süreci devam etmiyor." #NT!
- laws_synergize_bureaucracy_trigger_desc_first: "[COUNTRY.GetAdjectiveNoFlag], [TARGET_COUNTRY.GetName] ile sinerjik bürokratik sistemlere sahiptir." #NT!
- laws_synergize_bureaucracy_trigger_false_desc_first: "[COUNTRY.GetAdjectiveNoFlag] şu anda [TARGET_COUNTRY.GetName] ile sinerjik bürokratik sistemlere sahip değil." #NT!
- laws_synergize_bureaucracy_trigger_desc_third: "[COUNTRY.GetName], [AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)] ile sinerjik bürokratik sistemlere sahiptir." #NT!
- laws_synergize_bureaucracy_trigger_false_desc_third: "[COUNTRY.GetName] şu anda [AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)] ile sinerjik bürokratik sistemlere sahip değil." #NT!
+ laws_synergize_bureaucracy_trigger_desc_global: "Bürokratik Sinerji Oluşturma Devam Ediyor"
+ laws_synergize_bureaucracy_trigger_false_desc_global: "Şu anda bürokrasi yasalarının sinerji oluşturma süreci devam etmiyor."
+ laws_synergize_bureaucracy_trigger_desc_first: "[COUNTRY.GetAdjectiveNoFlag], [TARGET_COUNTRY.GetName] ile sinerjik bürokratik sistemlere sahiptir."
+ laws_synergize_bureaucracy_trigger_false_desc_first: "[COUNTRY.GetAdjectiveNoFlag] şu anda [TARGET_COUNTRY.GetName] ile sinerjik bürokratik sistemlere sahip değil."
+ laws_synergize_bureaucracy_trigger_desc_third: "[COUNTRY.GetName], [AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)] ile sinerjik bürokratik sistemlere sahiptir."
+ laws_synergize_bureaucracy_trigger_false_desc_third: "[COUNTRY.GetName] şu anda [AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)] ile sinerjik bürokratik sistemlere sahip değil."
   
- mog_syn_events.01.t: "Bürokratik Sinerji!" #NT!
- mog_syn_events.01.d: "[ROOT.GetCountry.GetName]'ın gururlu milleti, [SCOPE.sCountry('synergize_bureaucracy_target_country').GetName] ile bürokrasi yasalarının sinerjisini başarıyla tamamlamıştır. [SCOPE.sCountry('synergize_bureaucracy_target_country').GetName], vatanla artan uyumu sayesinde sonsuz refah içinde gelişecektir." #NT!
- mog_syn_events.01.f: ""Çok yaşa [ROOT.GetCountry.GetName]!"" #NT!
- mog_syn_events.01.a: "Tebrikler." #NT!
+ mog_syn_events.01.t: "Bürokratik Sinerji!"
+ mog_syn_events.01.d: "[ROOT.GetCountry.GetName]'ın gururlu milleti, [SCOPE.sCountry('synergize_bureaucracy_target_country').GetName] ile bürokrasi yasalarının sinerjisini başarıyla tamamlamıştır. [SCOPE.sCountry('synergize_bureaucracy_target_country').GetName], vatanla artan uyumu sayesinde sonsuz refah içinde gelişecektir."
+ mog_syn_events.01.f: ""Çok yaşa [ROOT.GetCountry.GetName]!""
+ mog_syn_events.01.a: "Tebrikler."
   
- laws_synergize_bureaucracy_weekly_effect: "Bürokrasi sistemlerini bizimkiyle uyumlu hale getirmek için çalışır. Her hafta ilerleme kaydetme şansı %20'dir ve başarılı olmak için 8 ilerleme puanı gerekir." #NT!
+ laws_synergize_bureaucracy_weekly_effect: "Bürokrasi sistemlerini bizimkiyle uyumlu hale getirmek için çalışır. Her hafta ilerleme kaydetme şansı %20'dir ve başarılı olmak için 8 ilerleme puanı gerekir."
   
- overlord_syn_cost_bureau: "Bürokrasileri Sinerji Haline Getirmenin Maliyeti" #NT!
- BUREAUCRACY_SYNERGY_COST_BUREAU: "Bürokrasileri Sinerji Haline Getirmenin Maliyeti" #NT!
+ overlord_syn_cost_bureau: "Bürokrasileri Sinerji Haline Getirmenin Maliyeti"
+ BUREAUCRACY_SYNERGY_COST_BUREAU: "Bürokrasileri Sinerji Haline Getirmenin Maliyeti"
   
- active_synergize_bureaucracy_tt: "Diğer $laws_synergize_bureaucracy$ eylemlerinin sayısı 1'den azdır." #NT!
+ active_synergize_bureaucracy_tt: "Diğer $laws_synergize_bureaucracy$ eylemlerinin sayısı 1'den azdır."

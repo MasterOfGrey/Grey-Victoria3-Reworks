@@ -1,35 +1,35 @@
 ﻿l_polish:
- military_support: "Wspieraj ekspansję terytorialną" #NT!
- military_support_action_name: "Wspieraj ekspansję terytorialną" #NT!
- military_support_action_propose_name: "Wspieraj ekspansję terytorialną" #NT!
- military_support_action_break_name: "Zakończ wsparcie ekspansji terytorialnej" #NT!
- military_support_action_notification_name: "Wspierana ekspansja terytorialna" #NT!
- military_support_action_notification_desc: "Zawarliśmy umowę o wsparciu ekspansji terytorialnej z [INITIATOR_COUNTRY.GetName]." #NT!
- military_support_desc: "#header $military_support$#!\n$TOOLTIP_DELIMITER$\nA [concept_diplomatic_pact], który ustanawia umowę o rozszerzeniu terytorialnym wsparcia pomiędzy dwoma [Concept('concept_country', '$concept_countries$')]." #NT!
- military_support_pact_desc: "[SCOPE.GetRootScope.GetDiplomaticPact.GetFirstCountry.GetName] Wspiera ekspansję terytorialną [SCOPE.GetRootScope.GetDiplomaticPact.GetSecondCountry.GetName]." #NT!
- military_support_proposal_notification_name: "Propozycja wsparcia ekspansji terytorialnej" #NT!
- military_support_proposal_notification_desc: "[INITIATOR_COUNTRY.GetName] życzeń Wspieraj z nami ekspansję terytorialną." #NT!
- military_support_proposal_notification_effects_desc: "$military_support_desc$" #NT!
- military_support_proposal_accepted_name: "Wsparcie rozszerzenia terytorialnego zaakceptowane" #NT!
- military_support_proposal_accepted_desc: "[TARGET_COUNTRY.GetName] zaakceptował naszą propozycję wsparcia ekspansji terytorialnej." #NT!
- military_support_proposal_declined_name: "Wsparcie dla ekspansji terytorialnej spadło" #NT!
- military_support_proposal_declined_desc: "[TARGET_COUNTRY.GetName] odrzucił naszą propozycję wsparcia ekspansji terytorialnej." #NT!
- military_support_action_notification_break_name: "Wsparcie ekspansji terytorialnej złamane" #NT!
- military_support_action_notification_break_desc: "[INITIATOR_COUNTRY.GetName] zerwali z nami współpracę w ramach rozszerzenia terytorialnego wsparcia." #NT!
- military_support_proposal_third_party_accepted_name: "Wsparcie ekspansji terytorialnej podpisane" #NT!
- military_support_proposal_third_party_accepted_desc: "[INITIATOR_COUNTRY.GetName] i [TARGET_COUNTRY.GetName] zawarły umowę o rozszerzeniu terytorialnym wsparcia." #NT!
- military_support_proposal_third_party_declined_name: "Wsparcie dla ekspansji terytorialnej odrzucone" #NT!
- military_support_proposal_third_party_declined_desc: "[TARGET_COUNTRY.GetName] odmówił przyjęcia wsparcia dla rozszerzenia terytorialnego z [INITIATOR_COUNTRY.GetName]." #NT!
- military_support_action_notification_third_party_break_name: "Wsparcie ekspansji terytorialnej złamane" #NT!
- military_support_action_notification_third_party_break_desc: "[INITIATOR_COUNTRY.GetName] zerwało swoją ekspansję terytorialną z [TARGET_COUNTRY.GetName]." #NT!
+ military_support: "Wspieraj ekspansję terytorialną"
+ military_support_action_name: "Wspieraj ekspansję terytorialną"
+ military_support_action_propose_name: "Wspieraj ekspansję terytorialną"
+ military_support_action_break_name: "Zakończ wsparcie ekspansji terytorialnej"
+ military_support_action_notification_name: "Wspierana ekspansja terytorialna"
+ military_support_action_notification_desc: "Zawarliśmy umowę o wsparciu ekspansji terytorialnej z [INITIATOR_COUNTRY.GetName]."
+ military_support_desc: "#header $military_support$#!\n$TOOLTIP_DELIMITER$\nA [concept_diplomatic_pact], który ustanawia umowę o rozszerzeniu terytorialnym wsparcia pomiędzy dwoma [Concept('concept_country', '$concept_countries$')]."
+ military_support_pact_desc: "[SCOPE.GetRootScope.GetDiplomaticPact.GetFirstCountry.GetName] Wspiera ekspansję terytorialną [SCOPE.GetRootScope.GetDiplomaticPact.GetSecondCountry.GetName]."
+ military_support_proposal_notification_name: "Propozycja wsparcia ekspansji terytorialnej"
+ military_support_proposal_notification_desc: "[INITIATOR_COUNTRY.GetName] życzeń Wspieraj z nami ekspansję terytorialną."
+ military_support_proposal_notification_effects_desc: "$military_support_desc$"
+ military_support_proposal_accepted_name: "Wsparcie rozszerzenia terytorialnego zaakceptowane"
+ military_support_proposal_accepted_desc: "[TARGET_COUNTRY.GetName] zaakceptował naszą propozycję wsparcia ekspansji terytorialnej."
+ military_support_proposal_declined_name: "Wsparcie dla ekspansji terytorialnej spadło"
+ military_support_proposal_declined_desc: "[TARGET_COUNTRY.GetName] odrzucił naszą propozycję wsparcia ekspansji terytorialnej."
+ military_support_action_notification_break_name: "Wsparcie ekspansji terytorialnej złamane"
+ military_support_action_notification_break_desc: "[INITIATOR_COUNTRY.GetName] zerwali z nami współpracę w ramach rozszerzenia terytorialnego wsparcia."
+ military_support_proposal_third_party_accepted_name: "Wsparcie ekspansji terytorialnej podpisane"
+ military_support_proposal_third_party_accepted_desc: "[INITIATOR_COUNTRY.GetName] i [TARGET_COUNTRY.GetName] zawarły umowę o rozszerzeniu terytorialnym wsparcia."
+ military_support_proposal_third_party_declined_name: "Wsparcie dla ekspansji terytorialnej odrzucone"
+ military_support_proposal_third_party_declined_desc: "[TARGET_COUNTRY.GetName] odmówił przyjęcia wsparcia dla rozszerzenia terytorialnego z [INITIATOR_COUNTRY.GetName]."
+ military_support_action_notification_third_party_break_name: "Wsparcie ekspansji terytorialnej złamane"
+ military_support_action_notification_third_party_break_desc: "[INITIATOR_COUNTRY.GetName] zerwało swoją ekspansję terytorialną z [TARGET_COUNTRY.GetName]."
   
- military_support_effect_desc_global: "Ustanawia wsparcie dla ekspansji terytorialnej" #NT!
- military_support_effect_desc_first: "[COUNTRY.GetAdjectiveNoFlag] ustanawia Wsparcie dla Ekspansji Terytorialnej z [TARGET_COUNTRY.GetName]" #NT!
- military_support_effect_desc_third: "[COUNTRY.GetName] ustanawia Wsparcie dla Ekspansji Terytorialnej z [AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)]" #NT!
+ military_support_effect_desc_global: "Ustanawia wsparcie dla ekspansji terytorialnej"
+ military_support_effect_desc_first: "[COUNTRY.GetAdjectiveNoFlag] ustanawia Wsparcie dla Ekspansji Terytorialnej z [TARGET_COUNTRY.GetName]"
+ military_support_effect_desc_third: "[COUNTRY.GetName] ustanawia Wsparcie dla Ekspansji Terytorialnej z [AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)]"
   
- military_support_trigger_desc_global: "Posiada wsparcie dla ekspansji terytorialnej" #NT!
- military_support_trigger_false_desc_global: "Czy #b nie#! ma wsparcia dla ekspansji terytorialnej" #NT!
- military_support_trigger_desc_first: "[COUNTRY.GetAdjectiveNoFlag] ma wsparcie dla ekspansji terytorialnej z [TARGET_COUNTRY.GetName]" #NT!
- military_support_trigger_false_desc_first: "[COUNTRY.GetAdjectiveNoFlag] czy #b nie#! ma wsparcia dla ekspansji terytorialnej z [TARGET_COUNTRY.GetName]" #NT!
- military_support_trigger_desc_third: "[COUNTRY.GetName] ma wsparcie dla ekspansji terytorialnej z [AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)]" #NT!
- military_support_trigger_false_desc_third: "[COUNTRY.GetName] czy #b nie#! ma wsparcia dla ekspansji terytorialnej z [AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)]" #NT!
+ military_support_trigger_desc_global: "Posiada wsparcie dla ekspansji terytorialnej"
+ military_support_trigger_false_desc_global: "Czy #b nie#! ma wsparcia dla ekspansji terytorialnej"
+ military_support_trigger_desc_first: "[COUNTRY.GetAdjectiveNoFlag] ma wsparcie dla ekspansji terytorialnej z [TARGET_COUNTRY.GetName]"
+ military_support_trigger_false_desc_first: "[COUNTRY.GetAdjectiveNoFlag] czy #b nie#! ma wsparcia dla ekspansji terytorialnej z [TARGET_COUNTRY.GetName]"
+ military_support_trigger_desc_third: "[COUNTRY.GetName] ma wsparcie dla ekspansji terytorialnej z [AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)]"
+ military_support_trigger_false_desc_third: "[COUNTRY.GetName] czy #b nie#! ma wsparcia dla ekspansji terytorialnej z [AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)]"

@@ -1,5 +1,5 @@
 ﻿l_polish:
- law_imposition_events.4.t: "Ustawodawstwo nałożone na [SCOPE.sC('country_imposed_upon').GetName] Niepowodzenie" #NT!
- law_imposition_events.4.d: "[SCOPE.sC('country_imposed_upon').GetName] nie udało się wdrożyć [SCOPE.sLaw('foreign_imposition_law').GetName] z powodu sił wewnętrznych." #NT!
- law_imposition_events.4.f: "Ambasador wraca, niosąc wieści o porażce. „Pomimo naszego wsparcia nie udało im się tego zrobić” – relacjonuje.\n\nNastępnie w sali rady zapada ciężka cisza." #NT!
- law_imposition_events.4.a: "Może następnym razem powinniśmy spróbować czegoś innego?" #NT!
+ law_imposition_events.4.t: "Ustawodawstwo nałożone na [SCOPE.sC('country_imposed_upon').GetName] Niepowodzenie"
+ law_imposition_events.4.d: "[SCOPE.sC('country_imposed_upon').GetName] nie udało się wdrożyć [SCOPE.sLaw('foreign_imposition_law').GetName] z powodu sił wewnętrznych."
+ law_imposition_events.4.f: "Ambasador wraca, niosąc wieści o porażce. „Pomimo naszego wsparcia nie udało im się tego zrobić” – relacjonuje.\n\nNastępnie w sali rady zapada ciężka cisza."
+ law_imposition_events.4.a: "Może następnym razem powinniśmy spróbować czegoś innego?"

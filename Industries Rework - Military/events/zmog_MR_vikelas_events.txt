@@ -1,0 +1,76 @@
+﻿##################
+# SPORTS EVENTS  #
+#########################
+
+#Morgenrote compatibility with MIR
+
+namespace = vikelas
+
+#Vikelas 505: Race Team
+vikelas.505 = {
+	dlc = dlc_morgenrote
+
+	type = country_event
+
+	placement = scope:vikelas_team_state
+
+	title = vikelas.505.t
+	desc = vikelas.505.d
+	flavor = vikelas.505.f
+
+	duration = 3
+
+	event_image = {
+		texture = "gfx/event_pictures/vikelas_pictures/vikelas_autorace_team.dds"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_autorace.dds"
+
+	trigger = {
+	}
+
+	immediate = {
+		vikelas_racecar_custom_effect = yes
+		random_scope_state = {
+			limit = {
+				any_scope_building = {
+					is_building_type = building_war_machine_industry	# building_motor_industry
+					OR = {												# has_active_production_method = pm_automobile_production
+						has_active_production_method = pm_automobiles
+						has_active_production_method = pm_pneumatic_tyres
+					}
+					level >= 2
+				}
+			}
+			save_scope_as = vikelas_team_state
+		}
+	}
+
+	option = {
+		name = vikelas.505.g #
+		scope:vikelas_team_state = {
+			random_scope_building = {
+				limit = {
+					is_building_type = building_war_machine_industry	# building_motor_industry
+					OR = {												# has_active_production_method = pm_automobile_production
+						has_active_production_method = pm_automobiles
+						has_active_production_method = pm_pneumatic_tyres
+					}
+					level >= 2
+				}
+				add_modifier = {
+					name = vikelas_race_team_modifier
+				}
+			}
+		}
+	}
+
+	after = {
+		trigger_event = {
+			id = vikelas.506
+			days = { 7 21 }
+		}
+	}
+}

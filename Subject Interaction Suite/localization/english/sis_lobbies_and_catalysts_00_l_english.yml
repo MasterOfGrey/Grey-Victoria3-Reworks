@@ -1,0 +1,8 @@
+﻿l_english:
+ appeasement_support_expansion_agreement_formed: "Formed $military_support$ [concept_diplomatic_pact]"
+ appeasement_support_expansion_agreement_formed_desc: "Forming a $military_support$ [concept_diplomatic_pact]"
+ appeasement_support_expansion_agreement_broken: "Broke $military_support$ [concept_diplomatic_pact]"
+ appeasement_support_expansion_agreement_broken_desc: "Breaking a $military_support$ [concept_diplomatic_pact]"
+
+ appeasement_industry_banned: "Industry was banned"
+ appeasement_industry_banned_desc: "Banning Heavy Industry by Law"

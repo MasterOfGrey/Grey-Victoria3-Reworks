@@ -1,0 +1,20 @@
+﻿#########################
+# VIKELAS SCRIPT VALUES #
+#########################
+
+#Morgenrote compatibility with MIR
+
+#This value counts the total level of automobile factories of the country
+vikelas_automobile_industry_score = {
+	value = 0
+	every_scope_building = {
+		limit = {
+			is_building_type = building_war_machine_industry	# building_motor_industry
+			OR = {												# has_active_production_method = pm_automobile_production
+				has_active_production_method = pm_automobiles
+				has_active_production_method = pm_pneumatic_tyres
+			}
+		}
+		add = level
+	}
+}

@@ -15,11 +15,11 @@
  change_state_religion_effect_desc_third:0 "[COUNTRY.GetName] is initiating [INITIATOR_COUNTRY.GetCustom('change_religion_dynamic_name')] in [AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)]."
  
  change_state_religion_trigger_desc_global:0 "[INITIATOR_COUNTRY.GetCustom('change_religion_dynamic_name')] in Progress"
- change_state_religion_trigger_false_desc_global:0 "Not in the process of [INITIATOR_COUNTRY.GetCustom('change_religion_dynamic_name')] #b anymore#!"
+ change_state_religion_trigger_false_desc_global:0 "Not in the process of [INITIATOR_COUNTRY.GetCustom('change_religion_dynamic_name')] #b anymore.#!"
  change_state_religion_trigger_desc_first:0 "[COUNTRY.GetAdjectiveNoFlag] is changing the state religion in [TARGET_COUNTRY.GetName]."
- change_state_religion_trigger_false_desc_first:0 "[COUNTRY.GetAdjectiveNoFlag] is not changing the state religion in [TARGET_COUNTRY.GetName] #b anymore#!"
+ change_state_religion_trigger_false_desc_first:0 "[COUNTRY.GetAdjectiveNoFlag] is not changing the state religion in [TARGET_COUNTRY.GetName] #b anymore.#!"
  change_state_religion_trigger_desc_third:0 "[COUNTRY.GetName] is changing the state religion in [AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)]."
- change_state_religion_trigger_false_desc_third:0 "[COUNTRY.GetName] is not changing the state religion in [AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)] #b anymore#!"
+ change_state_religion_trigger_false_desc_third:0 "[COUNTRY.GetName] is not changing the state religion in [AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)] #b anymore.#!"
  
  ib_events.02.t: "State Religion Change"
  ib_events.02.d: "The proud [ROOT.GetCountry.GetName] has successfully completed the [INITIATOR_COUNTRY.GetCustom('change_religion_dynamic_name')] for [SCOPE.sCountry('religion_target_country').GetName]. [SCOPE.sCountry('religion_target_country').GetName] will now prosper forever, embracing the religious institutions of the homeland."

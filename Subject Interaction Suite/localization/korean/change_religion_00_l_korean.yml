@@ -1,33 +1,33 @@
 ﻿l_korean:
- change_state_religion: "종교 기관 인수" #NT!
- change_state_religion_action_name: "$change_state_religion$" #NT!
- change_state_religion_action_propose_name: "시작 [INITIATOR_COUNTRY.GetCustom('change_religion_dynamic_name')]" #NT!
- change_state_religion_action_break_name: "중지 [INITIATOR_COUNTRY.GetCustom('change_religion_dynamic_name')]" #NT!
- change_state_religion_pact_desc: "[SCOPE.GetRootScope.GetDiplomaticPact.GetFirstCountry.GetName]이 [SCOPE.GetRootScope.GetDiplomaticPact.GetSecondCountry.GetName]의 국가 종교를 변경하고 있습니다.\n 현재 8단계 중 #variable [SCOPE.GetRootScope.GetDiplomaticPact.GetSecondCountry.MakeScope.Var('change_state_religion_progress').GetValue]#!가 진행 중입니다." #NT!
- change_state_religion_desc: "#header $change_state_religion$#!\n$TOOLTIP_DELIMITER$\nChange 대상 국가의 국교." #NT!
- change_state_religion_action_notification_name: "[INITIATOR_COUNTRY.GetName]은 우리나라 국교를 바꾸고 있습니다." #NT!
- change_state_religion_action_notification_desc: "[INITIATOR_COUNTRY.GetName]은 우리나라의 국교를 바꾸고 있습니다." #NT!
- change_state_religion_action_notification_break_name: "상태 [INITIATOR_COUNTRY.GetCustom('change_religion_dynamic_name')] [INITIATOR_COUNTRY.GetName] 에 의해 중단됨" #NT!
- change_state_religion_action_notification_break_desc: "[INITIATOR_COUNTRY.GetName] 님이 우리 국가의 국가 종교 변경을 종료했습니다." #NT!
+ change_state_religion: "종교 기관 인수"
+ change_state_religion_action_name: "$change_state_religion$"
+ change_state_religion_action_propose_name: "시작 [INITIATOR_COUNTRY.GetCustom('change_religion_dynamic_name')]"
+ change_state_religion_action_break_name: "중지 [INITIATOR_COUNTRY.GetCustom('change_religion_dynamic_name')]"
+ change_state_religion_pact_desc: "[SCOPE.GetRootScope.GetDiplomaticPact.GetFirstCountry.GetName]이 [SCOPE.GetRootScope.GetDiplomaticPact.GetSecondCountry.GetName]의 국가 종교를 변경하고 있습니다.\n 현재 8단계 중 #variable [SCOPE.GetRootScope.GetDiplomaticPact.GetSecondCountry.MakeScope.Var('change_state_religion_progress').GetValue]#!가 진행 중입니다."
+ change_state_religion_desc: "#header $change_state_religion$#!\n$TOOLTIP_DELIMITER$\nChange 대상 국가의 국교."
+ change_state_religion_action_notification_name: "[INITIATOR_COUNTRY.GetName]은 우리나라 국교를 바꾸고 있습니다."
+ change_state_religion_action_notification_desc: "[INITIATOR_COUNTRY.GetName]은 우리나라의 국교를 바꾸고 있습니다."
+ change_state_religion_action_notification_break_name: "상태 [INITIATOR_COUNTRY.GetCustom('change_religion_dynamic_name')] [INITIATOR_COUNTRY.GetName] 에 의해 중단됨"
+ change_state_religion_action_notification_break_desc: "[INITIATOR_COUNTRY.GetName] 님이 우리 국가의 국가 종교 변경을 종료했습니다."
   
- change_state_religion_effect_desc_global: "상태 시작 [INITIATOR_COUNTRY.GetCustom('change_religion_dynamic_name')]" #NT!
- change_state_religion_effect_desc_first: "[COUNTRY.GetAdjectiveNoFlag]이 [TARGET_COUNTRY.GetName]에서 국가 종교 변경을 시작합니다." #NT!
- change_state_religion_effect_desc_third: "[COUNTRY.GetName]이 [AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)]에서 [INITIATOR_COUNTRY.GetCustom('change_religion_dynamic_name')]을 시작합니다." #NT!
+ change_state_religion_effect_desc_global: "상태 시작 [INITIATOR_COUNTRY.GetCustom('change_religion_dynamic_name')]"
+ change_state_religion_effect_desc_first: "[COUNTRY.GetAdjectiveNoFlag]이 [TARGET_COUNTRY.GetName]에서 국가 종교 변경을 시작합니다."
+ change_state_religion_effect_desc_third: "[COUNTRY.GetName]이 [AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)]에서 [INITIATOR_COUNTRY.GetCustom('change_religion_dynamic_name')]을 시작합니다."
   
- change_state_religion_trigger_desc_global: "[INITIATOR_COUNTRY.GetCustom('change_religion_dynamic_name')] 진행 중" #NT!
- change_state_religion_trigger_false_desc_global: "더 이상 [INITIATOR_COUNTRY.GetCustom('change_religion_dynamic_name')] #b 진행 중이 아닙니다#!" #NT!
- change_state_religion_trigger_desc_first: "[COUNTRY.GetAdjectiveNoFlag]은 [TARGET_COUNTRY.GetName]의 국가 종교를 변경하고 있습니다." #NT!
- change_state_religion_trigger_false_desc_first: "[COUNTRY.GetAdjectiveNoFlag]은 더 이상 [TARGET_COUNTRY.GetName] #b에서 국가 종교를 변경하지 않습니다#!" #NT!
- change_state_religion_trigger_desc_third: "[COUNTRY.GetName]은 [AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)]에서 국가 종교를 변경하고 있습니다." #NT!
- change_state_religion_trigger_false_desc_third: "[COUNTRY.GetName]은 더 이상 [AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)] #b에서 국가 종교를 변경하지 않습니다#!" #NT!
+ change_state_religion_trigger_desc_global: "[INITIATOR_COUNTRY.GetCustom('change_religion_dynamic_name')] 진행 중"
+ change_state_religion_trigger_false_desc_global: "더 이상 [INITIATOR_COUNTRY.GetCustom('change_religion_dynamic_name')] #b 진행 중이 아닙니다#!"
+ change_state_religion_trigger_desc_first: "[COUNTRY.GetAdjectiveNoFlag]은 [TARGET_COUNTRY.GetName]의 국가 종교를 변경하고 있습니다."
+ change_state_religion_trigger_false_desc_first: "[COUNTRY.GetAdjectiveNoFlag]은 더 이상 [TARGET_COUNTRY.GetName] #b에서 국가 종교를 변경하지 않습니다#!"
+ change_state_religion_trigger_desc_third: "[COUNTRY.GetName]은 [AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)]에서 국가 종교를 변경하고 있습니다."
+ change_state_religion_trigger_false_desc_third: "[COUNTRY.GetName]은 더 이상 [AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)] #b에서 국가 종교를 변경하지 않습니다#!"
   
- ib_events.02.t: "국가 종교 변경" #NT!
- ib_events.02.d: "자랑스러운 [ROOT.GetCountry.GetName]이 [SCOPE.sCountry('religion_target_country').GetName]를 위한 [INITIATOR_COUNTRY.GetCustom('change_religion_dynamic_name')]을 성공적으로 완료했습니다. [SCOPE.sCountry('religion_target_country').GetName]은 이제 조국의 종교 기관을 포용하며 영원히 번영할 것입니다." #NT!
- ib_events.02.f: ""[ROOT.GetCountry.GetName] 만세!"" #NT!
- ib_events.02.a: "잘하셨어요." #NT!
+ ib_events.02.t: "국가 종교 변경"
+ ib_events.02.d: "자랑스러운 [ROOT.GetCountry.GetName]이 [SCOPE.sCountry('religion_target_country').GetName]를 위한 [INITIATOR_COUNTRY.GetCustom('change_religion_dynamic_name')]을 성공적으로 완료했습니다. [SCOPE.sCountry('religion_target_country').GetName]은 이제 조국의 종교 기관을 포용하며 영원히 번영할 것입니다."
+ ib_events.02.f: ""[ROOT.GetCountry.GetName] 만세!""
+ ib_events.02.a: "잘하셨어요."
   
- change_state_religion_weekly_effect: "매주 20%의 확률로 국가 종교의 완전한 일치를 이루기 위해 노력하며, 성공하려면 8개의 진행 포인트가 필요합니다." #NT!
+ change_state_religion_weekly_effect: "매주 20%의 확률로 국가 종교의 완전한 일치를 이루기 위해 노력하며, 성공하려면 8개의 진행 포인트가 필요합니다."
   
- cr_irreligious_conversion: "비종교적 인수" #NT!
- cr_institutionalise_secularism: "세속주의 규제" #NT!
- cr_religious_conversion: "종교적 개종" #NT!
+ cr_irreligious_conversion: "비종교적 인수"
+ cr_institutionalise_secularism: "세속주의 규제"
+ cr_religious_conversion: "종교적 개종"

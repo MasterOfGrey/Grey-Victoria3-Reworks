@@ -1,0 +1,1693 @@
+﻿# Imported for completeness from the East Asian Namelist Improvement Mod
+# Credit:
+# - awak (author of East Asian Namelist Improvement MOD)
+# - hamane (research on 19th century Ainu names)
+
+# Note: Credits must be included in any reproduction.
+
+japanese={
+	color= hsv{ 0 0 90 }
+	religion = mahayana
+	traits = { east_asian_heritage yamato }
+	male_common_first_names = {
+		Aritomo
+		Gentaro
+		Gonnohyoe
+		Goro
+		Hayao
+		Heihachiro
+		Hikonojo
+		Hiroshi
+		Hyoe
+		Iwao
+		Jinzaburo
+		Jiro
+		Kageaki
+		Kagenori
+		Kantaro
+		Kazushige
+		Keisuke
+		Kenkichi
+		Kiyotaka
+		Koichiro
+		Kozo
+		Kuranosuke
+		Maresuke
+		Masatake
+		Masujiro
+		Michisura
+		Mineo
+		Mitsue
+		Mitsuomi
+		Nariaki
+		Nobuyoshi
+		Rokuro
+		Sadao
+		Samata
+		Shichiro
+		Shigeru
+		Shigeto
+		Shinsaku
+		Shoin
+		Soroku
+		Sotokichi
+		Sukenori
+		Sukeyuki
+		Sumiyoshi
+		Tadakuni
+		Takamori
+		Takayoshi
+		Takeaki
+		Tamemoto
+		Taro
+		Tetsutaro
+		Tomasaburo
+		Tomonosuke
+		Toshimichi
+		Toshiyoshi
+		Tsugumichi
+		Yahachi
+		Yasukata
+		Yasuyoshi
+		Yoshifuru
+		Yoshika
+		Yoshimichi
+		Yoshinori
+		Yusaku
+		JNI_M_Arinori JNI_M_Chojiro JNI_M_Chusaburo JNI_M_Eiichi JNI_M_Gengo 
+		JNI_M_Hachiro JNI_M_Hajime JNI_M_Hanpeita JNI_M_Heisuke JNI_M_Hirobumi 
+		JNI_M_Hisanao JNI_M_Ikunosuke JNI_M_Isami JNI_M_Issei JNI_M_Izo 
+		JNI_M_Jurota JNI_M_Jutaro JNI_M_Juutaro JNI_M_Kanzo JNI_M_Keisuke 
+		JNI_M_Keisuke_2 JNI_M_Kenkichi JNI_M_Kimimasa JNI_M_Kinjiro JNI_M_Kogoro 
+		JNI_M_Koshiro JNI_M_Kunimoto JNI_M_Kurata JNI_M_Masaharu JNI_M_Masahiro 
+		JNI_M_Masakuni JNI_M_Masanosuke JNI_M_Masayoshi JNI_M_Michitake JNI_M_Motojiro 
+		JNI_M_Munemitsu JNI_M_Munenori JNI_M_Nagakuni JNI_M_Nagayuki JNI_M_Naoe 
+		JNI_M_Naofumi JNI_M_Naoharu JNI_M_Naonori JNI_M_Naoyuki JNI_M_Nobumasa 
+		JNI_M_Nobuo JNI_M_Nobutake JNI_M_Nobuyoshi JNI_M_Noriyoshi JNI_M_Ryoma 
+		JNI_M_Sadakichi JNI_M_Sakichi JNI_M_Saneomi JNI_M_Sanosuke JNI_M_Seiichiro 
+		JNI_M_Shigenobu JNI_M_Shinpachi JNI_M_Shinpei JNI_M_Shinsuke JNI_M_Shintaro 
+		JNI_M_Shiro JNI_M_Shojiro JNI_M_Shusaku JNI_M_Shuzo JNI_M_Soji 
+		JNI_M_Tadamasa JNI_M_Tadanao JNI_M_Tadasaburo JNI_M_Taneomi JNI_M_Tomoatsu 
+		JNI_M_Tomozane JNI_M_Torataro JNI_M_Toshiaki JNI_M_Toshizo JNI_M_Tota 
+		JNI_M_Tsugunosuke JNI_M_Umanosuke JNI_M_Yaichiro JNI_M_Yajiro JNI_M_Yasumasa 
+		JNI_M_Yataro JNI_M_Yoshimasa JNI_M_Yoshitake JNI_M_Yukichi 
+	}
+	female_common_first_names = {
+		Kei
+		Miki
+		Nobu
+		Teru
+		JNI_F_Atsu JNI_F_Chika JNI_F_Chizuru JNI_F_Den JNI_F_Ei 
+		JNI_F_Fude JNI_F_Fuji JNI_F_Fuku JNI_F_Fumi JNI_F_Futaba 
+		JNI_F_Gin JNI_F_Haru JNI_F_Hide JNI_F_Hisa JNI_F_Ichi 
+		JNI_F_Iku JNI_F_Ine JNI_F_Io JNI_F_Iso JNI_F_Ito 
+		JNI_F_Iwa JNI_F_Iyo JNI_F_Kaji JNI_F_Kame JNI_F_Kane 
+		JNI_F_Katsu JNI_F_Kayo JNI_F_Kichi JNI_F_Kiku JNI_F_Kinu 
+		JNI_F_Kiyo JNI_F_Koto JNI_F_Kuma JNI_F_Kuni JNI_F_Masa 
+		JNI_F_Masu JNI_F_Matsu JNI_F_Mine JNI_F_Mitsu JNI_F_Miya 
+		JNI_F_Miyo JNI_F_Moto JNI_F_Nao JNI_F_Otome JNI_F_Ren 
+		JNI_F_Rin JNI_F_Rui JNI_F_Ryo JNI_F_Sachi JNI_F_Sada 
+		JNI_F_Saki JNI_F_Saku JNI_F_Sana JNI_F_Sen JNI_F_Setsu 
+		JNI_F_Shizu JNI_F_Sono JNI_F_Suga JNI_F_Taka JNI_F_Take 
+		JNI_F_Taki JNI_F_Tami JNI_F_Tane JNI_F_Tase JNI_F_Tatsu 
+		JNI_F_Toku JNI_F_Tome JNI_F_Tomi JNI_F_Tora JNI_F_Tose 
+		JNI_F_Toyo JNI_F_Tsune JNI_F_Tsuru JNI_F_Tsuyu JNI_F_Ume 
+		JNI_F_Uta JNI_F_Yae JNI_F_Yao JNI_F_Yaso JNI_F_Yasu 
+		JNI_F_Yoshi JNI_F_Yuki JNI_F_Yu 
+	}	
+	noble_last_names = {
+		Ito
+		Katsura
+		Kido
+		Matsudaira
+		Makino
+		Mizuno
+		Mori
+		Nabeshima
+		Okubo
+		Saigo
+		Togo
+		JNI_Shimazu JNI_Iwakura JNI_Saionji JNI_Sanjo 
+		JNI_L_Abe JNI_L_Ando JNI_L_Honda JNI_L_Hotta JNI_L_Ii 
+		JNI_L_Itakura JNI_L_Manabe JNI_L_Matsudaira JNI_L_Sakai 
+	}
+	common_last_names = {
+		Akiyama
+		Araki
+		Arichi
+		Dewa
+		Enomoto
+		Hasegawa
+		Honjo
+		Ichinohe
+		Inoue
+		Itagaki
+		Kabayama
+		Kamimura
+		Kamio
+		Kataoka
+		Kato
+		Katsu
+		Kawakami
+		Kawamura
+		Kodama
+		Kuroda
+		Kuroki
+		Masaki
+		Minami
+		Muto
+		Nakamuta
+		Nire
+		Nogi
+		Nozu
+		Okada
+		Oku
+		Omura
+		Osumi
+		Oyama
+		Sakura
+		Sato
+		Shibayama
+		Shimamura
+		Shirakawa
+		Suzuki
+		Tachibana
+		Takashima
+		Takasugi
+		Terauchi
+		Tsuboi
+		Ueda
+		Uehara
+		Ugaki
+		Uryu
+		Yamagata
+		Yamakawa
+		Yamamoto
+		Yamashita
+		Yamaya
+		Yashiro
+		Yui
+		Oshio
+		Ogata
+		Egawa
+		Torii
+		Yoshida
+		Hayashi
+		JNI_L_Akamatsu JNI_L_Akashi JNI_L_Amano 
+		JNI_L_Aoki JNI_L_Arai JNI_L_Beppu JNI_L_Chiba JNI_L_Eto 
+		JNI_L_Fujita JNI_L_Fukushima JNI_L_Fukuzawa JNI_L_Godai JNI_L_Goto 
+		JNI_L_Hara JNI_L_Harada JNI_L_Hashimoto JNI_L_Hayashi JNI_L_Henmi 
+		JNI_L_Hijikata JNI_L_Hirosawa JNI_L_Hori 
+		JNI_L_Iba JNI_L_Ijichi JNI_L_Ijuin JNI_L_Ike 
+		JNI_L_Ikeda JNI_L_Ikegami JNI_L_Imai JNI_L_Inaba 
+		JNI_L_Ito JNI_L_Iwamura JNI_L_Iwasaki JNI_L_Iwase 
+		JNI_L_Jinbo JNI_L_Kaieda JNI_L_Kaneko JNI_L_Kawai JNI_L_Kawaji 
+		JNI_L_Kayano JNI_L_Kikkawa JNI_L_Kimura JNI_L_Kirino JNI_L_Kiyokawa 
+		JNI_L_Kobayashi JNI_L_Koga JNI_L_Kojima JNI_L_Komura JNI_L_Kondo 
+		JNI_L_Kono JNI_L_Kubota JNI_L_Kurimoto JNI_L_Kusaka JNI_L_Kuze 
+		JNI_L_Maebara JNI_L_Maejima JNI_L_Maki 
+		JNI_L_Matsukata JNI_L_Matsumoto JNI_L_Mori JNI_L_Mukunashi JNI_L_Murata 
+		JNI_L_Mutsu JNI_L_Nagakura JNI_L_Nagaoka JNI_L_Nagayama JNI_L_Naito 
+		JNI_L_Nakae JNI_L_Nakajima JNI_L_Nakamura JNI_L_Nakaoka JNI_L_Nagai 
+		JNI_L_Narayama JNI_L_Niijima JNI_L_Nishi JNI_L_Ogasawara JNI_L_Oguri 
+		JNI_L_Okazawa JNI_L_Oki JNI_L_Okita JNI_L_Oku JNI_L_Okuma 
+		JNI_L_Osako JNI_L_Oshima JNI_L_Ota JNI_L_Otani JNI_L_Otori 
+		JNI_L_Otsuki JNI_L_Saito JNI_L_Sakakibara JNI_L_Sakamoto 
+		JNI_L_Sakuma JNI_L_Sano JNI_L_Sasaki JNI_L_Serizawa JNI_L_Shiba 
+		JNI_L_Shibata JNI_L_Shibusawa JNI_L_Shima JNI_L_Shimada JNI_L_Shimizu 
+		JNI_L_Shinagawa JNI_L_Shingu JNI_L_Shinohara JNI_L_Soejima JNI_L_Soma 
+		JNI_L_Sufu JNI_L_Tadaki JNI_L_Takahashi JNI_L_Takasaki JNI_L_Takechi 
+		JNI_L_Takeda JNI_L_Takemoto JNI_L_Takenaka JNI_L_Takeuchi JNI_L_Tanaka 
+		JNI_L_Tani JNI_L_Tanuma JNI_L_Tatsumi JNI_L_Terashima JNI_L_Toda 
+		JNI_L_Todo JNI_L_Toyoda JNI_L_Tsuji JNI_L_Tsutsui 
+		JNI_L_Uchimura JNI_L_Wakisaka JNI_L_Watanabe JNI_L_Yamada JNI_L_Yamaguchi 
+		JNI_L_Yamaji JNI_L_Yamanami JNI_L_Yamaoka JNI_L_Yamazaki JNI_L_Yatabori 
+		JNI_L_Yoshii JNI_L_Yuri 
+	}
+	male_regal_first_names = {
+		Kotohito
+		Taruhito
+		Yoshinobu
+		JNI_M_Ieatsu JNI_M_Iehide JNI_M_Iehisa JNI_M_Iemasa JNI_M_Iemori JNI_M_Iemochi 
+		JNI_M_Iesada JNI_M_Iesato JNI_M_Ietaka JNI_M_Ietake JNI_M_Ieyori JNI_M_Ieyoshi 
+		JNI_M_Haruhito JNI_M_Kuniie JNI_M_Michihito JNI_M_Mutsuhito JNI_M_Takahito 
+		JNI_M_Takehito JNI_M_Teruhito JNI_M_Yorihito JNI_M_Yoshihito JNI_M_Yukihito 
+	}
+	regal_last_names = {
+		Kujo
+		Tokugawa
+		Arisugawa
+		Kanin
+		JNI_Fushimi JNI_Ichijo JNI_Konoe JNI_Nijo JNI_Takatsukasa 
+	}
+	ethnicities = {
+		1 = asian
+	}
+	graphics = east_asian
+}
+
+ainu={
+	color= hsv{ 0 0 0.5 }
+	religion = animist
+	traits = { north_asian_heritage ainu_language }
+	male_common_first_names = {
+		Menkakush
+		Munkeke
+		Shinriki
+		Isonash
+		Turushno
+		JNI_M_Akarakay JNI_M_Antaaynu JNI_M_Antukama JNI_M_Apita JNI_M_Asiri 
+		JNI_M_Atakun JNI_M_Cerama JNI_M_Cikniw JNI_M_Ciwehotapa JNI_M_Ciwere 
+		JNI_M_Ciwkenr JNI_M_Ciwkitu JNI_M_Ciyasikranke JNI_M_Ciyatkre JNI_M_Ekasimatak 
+		JNI_M_Ekasipa JNI_M_Ekasiwakka JNI_M_Ekurkunci JNI_M_Hacita JNI_M_Haerire 
+		JNI_M_Hanketosima JNI_M_Hemosite JNI_M_Hepenrek JNI_M_Hetocisi JNI_M_Hiyawsike 
+		JNI_M_Humataaynu JNI_M_Imaarey JNI_M_Isar JNI_M_Itakisiroma JNI_M_Iwasipi 
+		JNI_M_Kamuyre JNI_M_Kanetuaynu JNI_M_Kanikusiaynu JNI_M_Kannariki JNI_M_Kansiyawmante 
+		JNI_M_Kapusui JNI_M_Kimiyusaaynu JNI_M_Kimurakaaynu JNI_M_Konkama JNI_M_Konkitu 
+		JNI_M_Konore JNI_M_Kowenaw JNI_M_Kukaruk JNI_M_Kusankus JNI_M_Kusurmaita 
+		JNI_M_Kutunkur JNI_M_Makuwet JNI_M_Mawranaaynu JNI_M_Monokute JNI_M_Mumerki 
+		JNI_M_Nawepo JNI_M_Netkasa JNI_M_Nikekari JNI_M_Nimursit JNI_M_Nisenrus 
+		JNI_M_Nisiktaaynu JNI_M_Notekarima JNI_M_Noteksi JNI_M_Nukanuri JNI_M_Numutusma 
+		JNI_M_Penkukari JNI_M_Penriuk JNI_M_Ramante JNI_M_Ramranke JNI_M_Rasutamaka 
+		JNI_M_Rewekor JNI_M_Rikunriki JNI_M_Rituksi JNI_M_Sakitu JNI_M_Sankekur 
+		JNI_M_Satorki JNI_M_Sawahuniaynu JNI_M_Senroku JNI_M_Sianrek JNI_M_Sihuranma 
+		JNI_M_Sikari JNI_M_Sinkitu JNI_M_Sinkoksaaynu JNI_M_Sinum JNI_M_Siromaaynu 
+		JNI_M_Sirotmaaynu JNI_M_Sisikuray JNI_M_Sisratoka JNI_M_Sitkureran JNI_M_Siyusihoho 
+		JNI_M_Soitu JNI_M_Suirante JNI_M_Sukociwre JNI_M_Tecirki JNI_M_Torakot 
+		JNI_M_Torehire JNI_M_Toreusi JNI_M_Torkohar JNI_M_Tosiyanke JNI_M_Towono 
+		JNI_M_Towosiriha JNI_M_Towsaw JNI_M_Ukitu JNI_M_Uniski JNI_M_Uripito 
+		JNI_M_Usikante JNI_M_Usikantoy JNI_M_Utarokute JNI_M_Utokanaaynu JNI_M_Wehonoka 
+		JNI_M_Wenawohusi JNI_M_Wenisikoyuhu JNI_M_Wentoran JNI_M_Wentuk JNI_M_Werasanekur 
+		JNI_M_Wertosi JNI_M_Wesikahaya JNI_M_Wesiyoyure JNI_M_Wetponkur JNI_M_Wikis 
+		JNI_M_Wokera JNI_M_Wokiraw JNI_M_Womannen JNI_M_Wonkuy JNI_M_Wonowankur 
+		JNI_M_Wotanuka JNI_M_Yaenkur JNI_M_Yayomanekuh JNI_M_Yutormaka JNI_M_Yuwaram 
+	}
+	female_common_first_names = {
+		Imekanu
+		Tahkonanna
+		Keutoranke
+		JNI_F_Akatke JNI_F_Apenanka JNI_F_Atkaho JNI_F_Cine JNI_F_Cisinay 
+		JNI_F_Ciyarorikut JNI_F_Ciyarunhuwe JNI_F_Ciyorokaki JNI_F_Ekunrut JNI_F_Epesanke 
+		JNI_F_Erattatuke JNI_F_Har JNI_F_Hawtesiyura JNI_F_Hihutoki JNI_F_Hokimesike 
+		JNI_F_Honsiyotka JNI_F_Ici JNI_F_Iwanohekonoy JNI_F_Kahiki JNI_F_Kahoke 
+		JNI_F_Kaneyanki JNI_F_Kanite JNI_F_Karipa JNI_F_Karutrut JNI_F_Kaweray 
+		JNI_F_Kawranke JNI_F_Kenuya JNI_F_Kinarapuk JNI_F_Kosiyuhusimat JNI_F_Kusintane 
+		JNI_F_Mako JNI_F_Matekir JNI_F_Menraras JNI_F_Metokoros JNI_F_Misasimat 
+		JNI_F_Monasinouk JNI_F_More JNI_F_Nawkurus JNI_F_Nesociw JNI_F_Noyata 
+		JNI_F_Nuino JNI_F_Rapoksuma JNI_F_Rettuko JNI_F_Sanure JNI_F_Saonke 
+		JNI_F_Sayo JNI_F_Sefucis JNI_F_Seremakuwe JNI_F_Sicikaksi JNI_F_Siga 
+		JNI_F_Sige JNI_F_Sikator JNI_F_Sikenrut JNI_F_Sinociri JNI_F_Sintkore 
+		JNI_F_Sita JNI_F_Sitani JNI_F_Siyahari JNI_F_Siyorihake JNI_F_Siyoriw 
+		JNI_F_Siyurano JNI_F_Siyutmi JNI_F_Sunnaranki JNI_F_Sunot JNI_F_Supetawey 
+		JNI_F_Suranki JNI_F_Sutumuy JNI_F_Tasiranke JNI_F_Tatuy JNI_F_Tokisanmat 
+		JNI_F_Tora_2 JNI_F_Tukura JNI_F_Tupasutay JNI_F_Utoiki JNI_F_Wehuwekari 
+		JNI_F_Wekiciya JNI_F_Wemaka JNI_F_Wenkari JNI_F_Weranite JNI_F_Wetakama 
+		JNI_F_Wokonririkma JNI_F_Yapi JNI_F_Yasi JNI_F_Yawetori JNI_F_Yayoronu 
+		JNI_F_Yuki_2 
+	}	
+	noble_last_names = {
+		JNI_L_Ekasi JNI_L_Nispa JNI_L_Poronispa JNI_L_Sapanekur 
+	}
+	common_last_names={
+		JNI_L_Akam JNI_L_Amamsuke JNI_L_Aptapet JNI_L_Atkeusi JNI_L_Atsam 
+		JNI_L_Cipasir JNI_L_Ciroti JNI_L_Esausi JNI_L_Esausi JNI_L_Etuoroop 
+		JNI_L_Huranui JNI_L_Hurpira JNI_L_Ioci JNI_L_Iput JNI_L_Iskar 
+		JNI_L_Iwawnay JNI_L_Kamuykotan JNI_L_Kayaunpesh JNI_L_Kinasir JNI_L_Kumausi 
+		JNI_L_Kusunkotan JNI_L_Kusunnay JNI_L_Kutcaro JNI_L_Maske JNI_L_Menas 
+		JNI_L_Mopet JNI_L_Moruran JNI_L_Mukap JNI_L_Nayoro JNI_L_Nikap 
+		JNI_L_Nimuoro JNI_L_Noyausi JNI_L_Omu JNI_L_Otanay JNI_L_Piporo 
+		JNI_L_Piratur JNI_L_Pontukes JNI_L_Poronay JNI_L_Poropet JNI_L_Rikunpet 
+		JNI_L_Rironay JNI_L_Ruotak JNI_L_Sakkotan JNI_L_Samani JNI_L_Sar 
+		JNI_L_Satnay JNI_L_Satporopet JNI_L_Setanay JNI_L_Sikutut JNI_L_Simukap 
+		JNI_L_Sipet JNI_L_Sipicar JNI_L_Sirawoi JNI_L_Sirpet JNI_L_Sorapci 
+		JNI_L_Soya JNI_L_Sumaomai JNI_L_Susuka JNI_L_Tarayka JNI_L_Teso 
+		JNI_L_Tokapusi JNI_L_Tokor JNI_L_Tounnay JNI_L_Toya JNI_L_Urarpet 
+		JNI_L_Usor JNI_L_Usoro JNI_L_Yamkusnay JNI_L_Yuparo JNI_L_Yupet 
+	}
+	ethnicities = {
+		1 = circumpolar
+	}
+	graphics = east_asian
+}
+
+manchu={
+	color= rgb{ 233 207 84 }
+	religion = confucian
+	traits = { sinosphere north_asian_heritage }
+	male_common_first_names = {
+		Hesehn
+		Mingzhu
+		Oboi
+		Songgotu
+		Sonin
+		Suksaha
+		Linge
+		Xingde
+		Guanwen
+		Buyantai
+		EANI_M_Alinga
+		EANI_M_Baoxing
+		EANI_M_Basui
+		EANI_M_Bichang
+		EANI_M_Bolin
+		EANI_M_Boqitu
+		EANI_M_Chengfu
+		EANI_M_Chengxun
+		EANI_M_Chonghou
+		EANI_M_Chongqi
+		EANI_M_Chongshi
+		EANI_M_Chunfu
+		EANI_M_Dexinga
+		EANI_M_Doxinga
+		EANI_M_Duanhua
+		EANI_M_Duolonga
+		EANI_M_Engui
+		EANI_M_Eshan
+		EANI_M_Fuji
+		EANI_M_Fujin
+		EANI_M_Fukangan
+		EANI_M_Fuminga
+		EANI_M_Fushun
+		EANI_M_Gangyi
+		EANI_M_Gongtang
+		EANI_M_Guiliang
+		EANI_M_Hechun
+		EANI_M_Huiji
+		EANI_M_Jierhanga
+		EANI_M_Jingli
+		EANI_M_Jinglian
+		EANI_M_Jingshou
+		EANI_M_Jingzheng
+		EANI_M_Jinshun
+		EANI_M_Kuiling
+		EANI_M_Linkui
+		EANI_M_Mutushan
+		EANI_M_Muyin
+		EANI_M_Muzhanga
+		EANI_M_Naqingan
+		EANI_M_Nayancheng
+		EANI_M_Neerjinge
+		EANI_M_Qingbao
+		EANI_M_Qingyu
+		EANI_M_Qishan
+		EANI_M_Qiying
+		EANI_M_Quanqing
+		EANI_M_Ronghou
+		EANI_M_Ronglu
+		EANI_M_Ruichang
+		EANI_M_Ruilin
+		EANI_M_Saishanga
+		EANI_M_Shengbao
+		EANI_M_Shoushan
+		EANI_M_Shunyou
+		EANI_M_Songpu
+		EANI_M_Songyun
+		EANI_M_Sushun
+		EANI_M_Tedenge
+		EANI_M_Tuominga
+		EANI_M_Wenfu
+		EANI_M_Wenxiang
+		EANI_M_Wenxing
+		EANI_M_Wuzhonge
+		EANI_M_Xien
+		EANI_M_Xulun
+		EANI_M_Yiketanga
+		EANI_M_Yilibu
+		EANI_M_Yinchang
+		EANI_M_Yinghan
+		EANI_M_Yinghe
+		EANI_M_Yucheng
+		EANI_M_Yulu
+		EANI_M_Yuqian
+		EANI_M_Zengqi
+		EANI_M_Zhangshan
+		EANI_M_Zhangshun
+	}
+	female_common_first_names = {
+		Abahai
+		Huixing
+		Linggui
+		Quejing
+		Wanrong
+		Wengjing
+		Xingzhen
+		EANI_F_Aesuk
+		EANI_F_Atu
+		EANI_F_Batema
+		EANI_F_Bumba
+		EANI_F_Bumbutai
+		EANI_F_Daje
+		EANI_F_Donggo
+		EANI_F_Duleima
+		EANI_F_Eenje
+		EANI_F_Emeci
+		EANI_F_Esitai
+		EANI_F_Gundei
+		EANI_F_Harjol
+		EANI_F_Jerjer
+		EANI_F_Junge
+		EANI_F_Kenje
+		EANI_F_Makata
+		EANI_F_Mangguji
+		EANI_F_Monggo_Jerjer
+		EANI_F_Mukusi
+		EANI_F_Namjung
+		EANI_F_Nunje
+		EANI_F_Qiqige
+		EANI_F_Songgutu
+		EANI_F_Sundai
+		EANI_F_Yanje
+		EANI_F_Yatu
+	}	
+	common_last_names = {
+		Nalan
+		Yanzha
+		Wanggiya
+		EANI_L_Alut
+		EANI_L_Ciaogiya
+		EANI_L_Cigiya
+		EANI_L_Donggo
+		EANI_L_Foimo
+		EANI_L_Fuca
+		EANI_L_Giorca
+		EANI_L_Gobeir
+		EANI_L_Guwalgiya
+		EANI_L_Hada_Nara
+		EANI_L_Heseri
+		EANI_L_Hitara_
+		EANI_L_Hoifa_Nara
+		EANI_L_Hurlat
+		EANI_L_Irgen_Gioro
+		EANI_L_Jalari
+		EANI_L_Janggiya
+		EANI_L_Magiya
+		EANI_L_Namdulu
+		EANI_L_Nara
+		EANI_L_Narata
+		EANI_L_Niohuru
+		EANI_L_Saltu
+		EANI_L_Socoro
+		EANI_L_Sumuru
+		EANI_L_Tatara
+		EANI_L_Tunggiya
+		EANI_L_Ula_Nara
+		EANI_L_Uya
+		EANI_L_Wanggiya
+		EANI_L_Yehe_Nara
+	}
+	male_regal_first_names = {
+		EANI_M_Zaichun
+		EANI_M_Zaitian
+		EANI_M_Zaifeng
+		EANI_M_Zaixun
+		EANI_M_Zaitao
+		EANI_M_Puyi
+		EANI_M_Pujie
+		EANI_M_Puwei
+	}
+	regal_last_names = {
+		Aisin_Gioro
+	}
+	ethnicities = {
+		1 = asian
+	}
+	graphics = east_asian
+}
+
+mongol={
+	color= rgb{ 74 125 155 }
+	religion = gelugpa
+	traits = { north_asian_heritage mongol_language }
+	male_common_first_names = {
+		Badamdorj
+		Batbayar
+		Baterdene
+		Gonchigtseren
+		Injinash
+		Otgonbayar
+		Khajidsuren
+		Amar
+		Bodoo
+		Chagdarjav
+		Choibalsan
+		Damdinbazar
+		Genden
+		Jamyan
+		Murdorj
+		Sukhbaatar
+		Tomorbaatar
+		Tserendorj
+		EANI_M_AltanOchir
+		EANI_M_Artased
+		EANI_M_Baasanjav
+		EANI_M_Bavuujav
+		EANI_M_Damchoy
+		EANI_M_Damdinsuren
+		EANI_M_Danzan
+		EANI_M_Demchigdonrov
+		EANI_M_Demchigdorj
+		EANI_M_Dogsom
+		EANI_M_Dorjpalam
+		EANI_M_Elbegdorj
+		EANI_M_Enkhbat
+		EANI_M_Erkhembat
+		EANI_M_Ganjuurjav
+		EANI_M_Gunsennorov
+		EANI_M_Jengjuurjav
+		EANI_M_Jodobjav
+		EANI_M_Khanddorj
+		EANI_M_Luvsandorj
+		EANI_M_Manibazar
+		EANI_M_Namnansuren
+		EANI_M_Nasanchogt
+		EANI_M_Navaanneren
+		EANI_M_Nayant
+		EANI_M_Senggerincin
+		EANI_M_Sodnomdorj
+		EANI_M_Sodnomravdan
+		EANI_M_TogsOchir
+		EANI_M_Tserendondub
+		EANI_M_Tserendorj
+		EANI_M_Ulanhu
+	}
+	female_common_first_names = {
+		Bayartsetseg
+		Dondogdulam
+		Ider
+		Oyuungerel
+		Tuyaa
+		EANI_F_Altantsetseg
+		EANI_F_Altantuyaa
+		EANI_F_Udval
+		EANI_F_Urantsetseg
+		EANI_F_Erdenechimeg
+		EANI_F_Enkhjargal
+		EANI_F_Enkhmaa
+		EANI_F_Enkhtuyaa
+		EANI_F_Otgontsetseg
+		EANI_F_Oyuun
+		EANI_F_Oyuungerel
+		EANI_F_Oyuunchimeg
+		EANI_F_Oyuuntsetseg
+		EANI_F_Oyuuntuyaa
+		EANI_F_Gerel
+		EANI_F_Gereltuyaa
+		EANI_F_Saran
+		EANI_F_Sarangerel
+		EANI_F_Sansarmaa
+		EANI_F_Sarantuyaa
+		EANI_F_Soyolmaa
+		EANI_F_Tsetseg
+		EANI_F_Tserendulam
+		EANI_F_Dolgormaa
+		EANI_F_Dorjpalam
+		EANI_F_Naran
+		EANI_F_Narangerel
+		EANI_F_Narantsetseg
+		EANI_F_Battsetseg
+		EANI_F_Bayartsetseg
+		EANI_F_Khulan
+		EANI_F_Bolortuyaa
+		EANI_F_Bolormaa
+		EANI_F_Monkhtsetseg
+		EANI_F_Munkhtuyaa
+	}	
+	common_last_names = {
+		Balingiin
+		Dambyan
+		Damdin
+		Dogsomyn
+		Gonchigjalzangiin
+		Khorloogiin
+		Peljidiin
+		Sodnomyn
+		Sonomyn
+		Gonchigjalzangiin
+		Togs-Ochiryn
+		Vanchinbalyn
+		EANI_L_Anandyn
+		EANI_L_KhasOchiryn
+		EANI_L_Rinchingiin
+		EANI_L_Soliin
+	}
+	regal_last_names = {
+		Borjigin
+	}
+	ethnicities = {
+		1 = central_asian
+	}
+	graphics = east_asian
+}
+
+kalmyk={
+	color= rgb{ 250 182 3 }
+	religion = gelugpa
+	traits = { central_asian_heritage mongol_language }
+	male_common_first_names = {
+		Badamdorj
+		Batbayar
+		Baterdene
+		Gonchigtseren
+		Injinash
+		Otgonbayar
+		Khajidsuren
+		Amar
+		Bodoo
+		Chagdarjav
+		Choibalsan
+		Damdinbazar
+		Genden
+		Jamyan
+		Murdorj
+		Sukhbaatar
+		Tomorbaatar
+		Tserendorj
+		EANI_M_AltanOchir
+		EANI_M_Artased
+		EANI_M_Baasanjav
+		EANI_M_Bavuujav
+		EANI_M_Damchoy
+		EANI_M_Damdinsuren
+		EANI_M_Danzan
+		EANI_M_Demchigdonrov
+		EANI_M_Demchigdorj
+		EANI_M_Dogsom
+		EANI_M_Dorjpalam
+		EANI_M_Elbegdorj
+		EANI_M_Enkhbat
+		EANI_M_Erkhembat
+		EANI_M_Ganjuurjav
+		EANI_M_Gunsennorov
+		EANI_M_Jengjuurjav
+		EANI_M_Jodobjav
+		EANI_M_Khanddorj
+		EANI_M_Luvsandorj
+		EANI_M_Manibazar
+		EANI_M_Namnansuren
+		EANI_M_Nasanchogt
+		EANI_M_Navaanneren
+		EANI_M_Nayant
+		EANI_M_Senggerincin
+		EANI_M_Sodnomdorj
+		EANI_M_Sodnomravdan
+		EANI_M_TogsOchir
+		EANI_M_Tserendondub
+		EANI_M_Tserendorj
+		EANI_M_Ulanhu
+	}
+	female_common_first_names = {
+		Bayartsetseg
+		Dondogdulam
+		Ider
+		Oyuungerel
+		Tuyaa
+		EANI_F_Altantsetseg
+		EANI_F_Altantuyaa
+		EANI_F_Udval
+		EANI_F_Urantsetseg
+		EANI_F_Erdenechimeg
+		EANI_F_Enkhjargal
+		EANI_F_Enkhmaa
+		EANI_F_Enkhtuyaa
+		EANI_F_Otgontsetseg
+		EANI_F_Oyuun
+		EANI_F_Oyuungerel
+		EANI_F_Oyuunchimeg
+		EANI_F_Oyuuntsetseg
+		EANI_F_Oyuuntuyaa
+		EANI_F_Gerel
+		EANI_F_Gereltuyaa
+		EANI_F_Saran
+		EANI_F_Sarangerel
+		EANI_F_Sansarmaa
+		EANI_F_Sarantuyaa
+		EANI_F_Soyolmaa
+		EANI_F_Tsetseg
+		EANI_F_Tserendulam
+		EANI_F_Dolgormaa
+		EANI_F_Dorjpalam
+		EANI_F_Naran
+		EANI_F_Narangerel
+		EANI_F_Narantsetseg
+		EANI_F_Battsetseg
+		EANI_F_Bayartsetseg
+		EANI_F_Khulan
+		EANI_F_Bolortuyaa
+		EANI_F_Bolormaa
+		EANI_F_Monkhtsetseg
+		EANI_F_Munkhtuyaa
+	}	
+	common_last_names = {
+		Balingiin
+		Dambyan
+		Damdin
+		Dogsomyn
+		Gonchigjalzangiin
+		Khorloogiin
+		Peljidiin
+		Sodnomyn
+		Sonomyn
+		Gonchigjalzangiin
+		Togs-Ochiryn
+		Vanchinbalyn
+		EANI_L_Anandyn
+		EANI_L_KhasOchiryn
+		EANI_L_Rinchingiin
+		EANI_L_Soliin
+	}
+	regal_last_names = {
+		Borjigin
+	}
+	ethnicities = {
+		1 = central_asian
+	}
+	graphics = east_asian
+}
+
+vietnamese={
+	color= hsv{ 0.31 0.37 0.48 }
+	religion = mahayana
+	traits = { sinosphere southeast_asian_heritage }
+	male_common_first_names = {
+		Bui_An
+		Noang_Cao
+		Buu_Lan
+		Cuong
+		Khai
+		Mien_Lam
+		Mien_Trinh
+		Nien
+		Quang
+		Than
+		Trong_Hiep
+		Tuan
+		Vinh_San
+		vinh_Thuy
+		EANI_M_V_BaQuat
+		EANI_M_V_BichSan
+		EANI_M_V_BoiChau
+		EANI_M_V_CaoKy
+		EANI_M_V_CaoVan
+		EANI_M_V_ChauTrinh
+		EANI_M_V_ChiCong
+		EANI_M_V_ChiMinh
+		EANI_M_V_ChiThanh
+		EANI_M_V_CoMinh
+		EANI_M_V_CoThach
+		EANI_M_V_CongTru
+		EANI_M_V_CuTrinh
+		EANI_M_V_Dam
+		EANI_M_V_DangNghi
+		EANI_M_V_Dieu
+		EANI_M_V_Dinh
+		EANI_M_V_DinhChieu
+		EANI_M_V_DinhDiem
+		EANI_M_V_DinhHue
+		EANI_M_V_DinhHung
+		EANI_M_V_DinhHy
+		EANI_M_V_DinhKhai
+		EANI_M_V_DinhKhoi
+		EANI_M_V_DinhNhu
+		EANI_M_V_DinhPhung
+		EANI_M_V_Du
+		EANI_M_V_DucThang
+		EANI_M_V_DucTho
+		EANI_M_V_DuyAnh
+		EANI_M_V_DuyTrinh
+		EANI_M_V_HoaTham
+		EANI_M_V_Hung
+		EANI_M_V_HuuTho
+		EANI_M_V_HuyLieu
+		EANI_M_V_HuyMan
+		EANI_M_V_HuyQuat
+		EANI_M_V_HuyTru
+		EANI_M_V_HuynhDuc
+		EANI_M_V_KhaPhieu
+		EANI_M_V_KhacSuu
+		EANI_M_V_Khanh
+		EANI_M_V_KimTich
+		EANI_M_V_LeXuan
+		EANI_M_V_ManhTrinh
+		EANI_M_V_MingGiang
+		EANI_M_V_NgocTho
+		EANI_M_V_NguyenGiap
+		EANI_M_V_Quang
+		EANI_M_V_QuangDuc
+		EANI_M_V_QuangLoan
+		EANI_M_V_QuangThanh
+		EANI_M_V_SinhCung
+		EANI_M_V_SinhHung
+		EANI_M_V_SinhHuy
+		EANI_M_V_SinhNham
+		EANI_M_V_SinhSac
+		EANI_M_V_TaViem
+		EANI_M_V_TanBuu
+		EANI_M_V_TanLong
+		EANI_M_V_TatThanh
+		EANI_M_V_ThaiHoc
+		EANI_M_V_ThanhGian
+		EANI_M_V_ThanhLiem
+		EANI_M_V_Thuyet
+		EANI_M_V_TienDung
+		EANI_M_V_Tiep
+		EANI_M_V_TriPhuong
+		EANI_M_V_TrongKim
+		EANI_M_V_TrongTan
+		EANI_M_V_TruongTo
+		EANI_M_V_TuongDuc
+		EANI_M_V_VanAn
+		EANI_M_V_VanBut
+		EANI_M_V_VanChat
+		EANI_M_V_VanChuong
+		EANI_M_V_VanDong
+		EANI_M_V_VanDuyet
+		EANI_M_V_VanGiau
+		EANI_M_V_VanHien
+		EANI_M_V_VanHieu
+		EANI_M_V_VanHung
+		EANI_M_V_VanHuong
+		EANI_M_V_VanKiet
+		EANI_M_V_VanLinh
+		EANI_M_V_VanMau
+		EANI_M_V_VanMinh
+		EANI_M_V_VanNam
+		EANI_M_V_VanNhon
+		EANI_M_V_VanSan
+		EANI_M_V_VanTam
+		EANI_M_V_VanThai
+		EANI_M_V_VanTham
+		EANI_M_V_VanThan
+		EANI_M_V_VanThang
+		EANI_M_V_VanThanh
+		EANI_M_V_VanThieu
+		EANI_M_V_VanThoai
+		EANI_M_V_VanThuy
+		EANI_M_V_VanToan
+		EANI_M_V_VanTon
+		EANI_M_V_VanTra
+		EANI_M_V_VanTuong
+		EANI_M_V_XuanDuc
+		EANI_M_V_XuanKhu
+		EANI_M_V_XuanNguyen
+		EANI_M_V_XuanPhuc
+	}
+	female_common_first_names = {
+		Mai_Loan
+		EANI_F_V_AnhXuan
+		EANI_F_V_HieuNgan
+		EANI_F_V_KimNgan
+		EANI_F_V_MaiHuong
+		EANI_F_V_MinhKhai
+		EANI_F_V_MyHoa
+		EANI_F_V_NgocTrinh
+		EANI_F_V_PhuongLien
+		EANI_F_V_PhuongMai
+		EANI_F_V_ThanhThuy
+		EANI_F_V_ThiBich
+		EANI_F_V_ThiBinh
+		EANI_F_V_ThiDinh
+		EANI_F_V_ThiDoan
+		EANI_F_V_ThiHanh
+		EANI_F_V_ThiHinh
+		EANI_F_V_ThiHoa
+		EANI_F_V_ThiLien
+		EANI_F_V_ThiLoan
+		EANI_F_V_ThiMai
+		EANI_F_V_ThiMinh
+		EANI_F_V_ThiNgo
+		EANI_F_V_ThiSau
+		EANI_F_V_ThiThang
+		EANI_F_V_ThiThanh
+		EANI_F_V_ThiThap
+		EANI_F_V_ThiXuan
+		EANI_F_V_ThiYen
+		EANI_F_V_ThuHuong
+		EANI_F_V_VietAnh
+		EANI_F_V_XuanHuong
+	}	
+	noble_last_names = {
+		EANI_L_V_Nguyen
+		EANI_L_V_Tran
+		EANI_L_V_Le
+		EANI_L_V_Pham
+		EANI_L_V_Hoang
+		Ton_That
+	}
+	common_last_names = {
+		EANI_L_V_Nguyen
+		EANI_L_V_Tran
+		EANI_L_V_Le
+		EANI_L_V_Pham
+		EANI_L_V_Hoang
+		EANI_L_V_An
+		EANI_L_V_Bach
+		EANI_L_V_Bang
+		EANI_L_V_Banh
+		EANI_L_V_Bui
+		EANI_L_V_Cai
+		EANI_L_V_Cam
+		EANI_L_V_Cao
+		EANI_L_V_Cat
+		EANI_L_V_Chau
+		EANI_L_V_Che
+		EANI_L_V_Chu
+		EANI_L_V_Chung
+		EANI_L_V_Chuong
+		EANI_L_V_Co
+		EANI_L_V_Cu
+		EANI_L_V_Cung
+		EANI_L_V_Dai
+		EANI_L_V_Dam
+		EANI_L_V_Dang
+		EANI_L_V_Dao
+		EANI_L_V_Diem
+		EANI_L_V_Dien
+		EANI_L_V_Diep
+		EANI_L_V_Dinh
+		EANI_L_V_Do
+		EANI_L_V_Doan
+		EANI_L_V_Don
+		EANI_L_V_Dong
+		EANI_L_V_Du
+		EANI_L_V_Duong
+		EANI_L_V_Duong
+		EANI_L_V_Gia
+		EANI_L_V_Giang
+		EANI_L_V_Giao
+		EANI_L_V_Ha
+		EANI_L_V_Han
+		EANI_L_V_Hinh
+		EANI_L_V_Ho
+		EANI_L_V_Hoa
+		EANI_L_V_Hong
+		EANI_L_V_Hua
+		EANI_L_V_Hung
+		EANI_L_V_Huong
+		EANI_L_V_Huynh
+		EANI_L_V_Kha
+		EANI_L_V_Khang
+		EANI_L_V_Khau
+		EANI_L_V_Khong
+		EANI_L_V_Khu
+		EANI_L_V_Khuat
+		EANI_L_V_Khuc
+		EANI_L_V_Khuong
+		EANI_L_V_Kieu
+		EANI_L_V_Kim
+		EANI_L_V_La
+		EANI_L_V_Lai
+		EANI_L_V_Lam
+		EANI_L_V_Lieu
+		EANI_L_V_Lo
+		EANI_L_V_Lu
+		EANI_L_V_Luc
+		EANI_L_V_Luong
+		EANI_L_V_Luu
+		EANI_L_V_Ly
+		EANI_L_V_Ma
+		EANI_L_V_Mac
+		EANI_L_V_Mai
+		EANI_L_V_Man
+		EANI_L_V_Nghiem
+		EANI_L_V_Ngo
+		EANI_L_V_Nguy
+		EANI_L_V_Nham
+		EANI_L_V_Ninh
+		EANI_L_V_Nong
+		EANI_L_V_Ong
+		EANI_L_V_Phan
+		EANI_L_V_Phi
+		EANI_L_V_Pho
+		EANI_L_V_Phung
+		EANI_L_V_Phuong
+		EANI_L_V_Quach
+		EANI_L_V_Quan
+		EANI_L_V_Que
+		EANI_L_V_Sam
+		EANI_L_V_Su
+		EANI_L_V_Ta
+		EANI_L_V_Tang
+		EANI_L_V_Tao
+		EANI_L_V_Thach
+		EANI_L_V_Thai
+		EANI_L_V_Tham
+		EANI_L_V_Than
+		EANI_L_V_Thang
+		EANI_L_V_Thi
+		EANI_L_V_Thieu
+		EANI_L_V_Thoi
+		EANI_L_V_Tiet
+		EANI_L_V_Tieu
+		EANI_L_V_To
+		EANI_L_V_Ton
+		EANI_L_V_Tong
+		EANI_L_V_Trac
+		EANI_L_V_Trang
+		EANI_L_V_Trieu
+		EANI_L_V_Trinh
+		EANI_L_V_Trung
+		EANI_L_V_Truong
+		EANI_L_V_Tu
+		EANI_L_V_Tuong
+		EANI_L_V_Uong
+		EANI_L_V_Van
+		EANI_L_V_Vi
+		EANI_L_V_Vien
+		EANI_L_V_Vo
+		EANI_L_V_Vu
+		EANI_L_V_Vuong
+	}
+	male_regal_first_names = {
+		EANI_M_V_Bien
+		EANI_M_V_Canh
+		EANI_M_V_Chieu
+		EANI_M_V_Hao
+		EANI_M_V_Hoang
+		EANI_M_V_Minh
+		EANI_M_V_Thang
+		EANI_M_V_Thi
+		EANI_M_V_Thien
+		EANI_M_V_Tuan
+		EANI_M_V_Tuyen
+	}
+	regal_last_names = {
+		Nguyen_Phuoc
+	}
+	ethnicities = {
+		1 = asian
+	}
+	graphics = east_asian
+}
+
+han={
+	color= rgb{ 190 80 48 }
+	religion = confucian
+	traits = { sinosphere han_chinese east_asian_heritage }
+	obsessions = {
+		opium
+	}
+	male_common_first_names = {
+		An
+		Fang
+		Gao
+		Hui
+		Ning
+		Qian
+		Rong
+		Su
+		Wen
+		Ying
+		Bingzhang
+		Changling
+		Chenbing
+		Delu
+		Huacheng
+		Lexing
+		Ruchang
+		Tianpei
+		Yuan
+		Yunfei
+		Yupian
+		Zexu
+		Zizhen
+		Dakai
+		Fengjia
+		Rengan
+		Xiuqing
+		Xiuquan
+		Yatsen
+		Yongfu
+		Yucheng
+		Yunshan
+		Zicai
+		EANI_M_Baiqian
+		EANI_M_Baiyin
+		EANI_M_Baogui
+		EANI_M_Baozhen
+		EANI_M_Biguang
+		EANI_M_Bingheng
+		EANI_M_Binglin
+		EANI_M_Bingzhang
+		EANI_M_Caichang
+		EANI_M_Caixin
+		EANI_M_Changhui
+		EANI_M_Changjun2
+		EANI_M_Changlin
+		EANI_M_Changqing
+		EANI_M_Changyou
+		EANI_M_Chao
+		EANI_M_Chaogui
+		EANI_M_Chengchun
+		EANI_M_Chengfu2
+		EANI_M_Chengzhong
+		EANI_M_Chongguang
+		EANI_M_Chun
+		EANI_M_Chunfa
+		EANI_M_Chunrong
+		EANI_M_Dacheng
+		EANI_M_Dachun
+		EANI_M_Dagang
+		EANI_M_Daoren
+		EANI_M_Daorong
+		EANI_M_Dashun
+		EANI_M_Debang
+		EANI_M_Decai
+		EANI_M_Decheng
+		EANI_M_Deshu
+		EANI_M_Dian
+		EANI_M_Dingcai
+		EANI_M_Dingming
+		EANI_M_Dingwen
+		EANI_M_Dingxin
+		EANI_M_Fashou
+		EANI_M_Fengxiang
+		EANI_M_Fuqing
+		EANI_M_Futian
+		EANI_M_Fuxiang
+		EANI_M_Fuyou
+		EANI_M_Guanfang
+		EANI_M_Guangtao
+		EANI_M_Guansan
+		EANI_M_Guanxiong
+		EANI_M_Guanying
+		EANI_M_Guifen
+		EANI_M_Guiti
+		EANI_M_Guochen
+		EANI_M_Guofan
+		EANI_M_Guohua
+		EANI_M_Guojie
+		EANI_M_Guoqi
+		EANI_M_Guoquan
+		EANI_M_Haiyang
+		EANI_M_Hanzhang
+		EANI_M_Henian
+		EANI_M_Hongbin
+		EANI_M_Hongnian
+		EANI_M_Hongzao
+		EANI_M_Hongzhang
+		EANI_M_Hongzhao
+		EANI_M_Jianzhong
+		EANI_M_Jihong
+		EANI_M_Jing
+		EANI_M_Jingcheng
+		EANI_M_Jingming
+		EANI_M_Jingshu
+		EANI_M_Jingsong
+		EANI_M_Jingxi
+		EANI_M_Jintang
+		EANI_M_Jize
+		EANI_M_Kaifang
+		EANI_M_Kaisong
+		EANI_M_Kaitai
+		EANI_M_Keding
+		EANI_M_Kewen
+		EANI_M_Kunxiu
+		EANI_M_Kunyi
+		EANI_M_Lichang
+		EANI_M_Mingchuan
+		EANI_M_Mingzhen
+		EANI_M_Ningxue
+		EANI_M_Qichao
+		EANI_M_Qifeng
+		EANI_M_Qing
+		EANI_M_Qingyuan
+		EANI_M_Qingyun
+		EANI_M_Qirong
+		EANI_M_Quanfu
+		EANI_M_Richang
+		EANI_M_Rigang
+		EANI_M_Rong
+		EANI_M_Rongfa
+		EANI_M_Rongguang
+		EANI_M_Ruchang
+		EANI_M_Rugui
+		EANI_M_Ruifen
+		EANI_M_Ruxiao
+		EANI_M_Ruzeng
+		EANI_M_Ruzhang
+		EANI_M_Shangyang
+		EANI_M_Shanxiang
+		EANI_M_Shaoguang
+		EANI_M_Shaozhang
+		EANI_M_Shengbo
+		EANI_M_Shengyun
+		EANI_M_Shichang
+		EANI_M_Shicheng
+		EANI_M_Shijie
+		EANI_M_Shikai
+		EANI_M_Shixian
+		EANI_M_Shouheng
+		EANI_M_Shoujing
+		EANI_M_Shunde
+		EANI_M_Shushan
+		EANI_M_Shusheng
+		EANI_M_Songlin
+		EANI_M_Songnian
+		EANI_M_Songshan
+		EANI_M_Songtao
+		EANI_M_Taizeng
+		EANI_M_Tang
+		EANI_M_Tao
+		EANI_M_Tianfu
+		EANI_M_Tiangu
+		EANI_M_Tianyang
+		EANI_M_Tinggan
+		EANI_M_Tingkui
+		EANI_M_Tingshu
+		EANI_M_Tingxiang
+		EANI_M_Tingzhen
+		EANI_M_Wenguang
+		EANI_M_Wenhong
+		EANI_M_Wenjin
+		EANI_M_Wenqing
+		EANI_M_Wenrong
+		EANI_M_Wenshao
+		EANI_M_Wenying
+		EANI_M_Wenyuan
+		EANI_M_Xiangbo
+		EANI_M_Xiangzhen
+		EANI_M_Xikun
+		EANI_M_Xiling
+		EANI_M_Xingrui
+		EANI_M_Xiucheng
+		EANI_M_Xubin
+		EANI_M_Xun
+		EANI_M_Xunfang
+		EANI_M_Xuyi
+		EANI_M_Yao
+		EANI_M_Yihuang
+		EANI_M_Yili
+		EANI_M_Yingpu
+		EANI_M_Yinhuan
+		EANI_M_Yinlin
+		EANI_M_Yirong
+		EANI_M_Yonghe
+		EANI_M_Yongyi
+		EANI_M_Youling
+		EANI_M_Youwei
+		EANI_M_Yuanbing
+		EANI_M_Yuancai
+		EANI_M_Yuandu
+		EANI_M_Yuanji
+		EANI_M_Yuebin
+		EANI_M_Yuezhao
+		EANI_M_Yujue
+		EANI_M_Yukun
+		EANI_M_Yulin
+		EANI_M_Yunlin
+		EANI_M_Yuntai
+		EANI_M_Yutian
+		EANI_M_Yuxin
+		EANI_M_Zenan
+		EANI_M_Zhanjun
+		EANI_M_Zhaoding
+		EANI_M_Zhaodong
+		EANI_M_Zhaoxi
+		EANI_M_Zhaozhu
+		EANI_M_Zhenfang
+		EANI_M_Zhengan
+		EANI_M_Zhengcai
+		EANI_M_Zhenji
+		EANI_M_Zhichao
+		EANI_M_Zhidong
+		EANI_M_Zhiwan
+		EANI_M_Zhonglin
+		EANI_M_Zhongyi
+		EANI_M_Zhongyuan
+		EANI_M_Zhu
+		EANI_M_Zilong
+		EANI_M_Zonghan
+		EANI_M_Zongtang
+		EANI_M_Zongxi
+		EANI_M_Zongyu
+		EANI_M_Zunxian
+		EANI_M_Zuyin
+	}
+	female_common_first_names = {
+		Akew
+		Jinhong
+		Junying
+		Qingtang
+		Sanniang
+		Shanziang
+		Taiqing
+		Xiefen
+		Xiugu
+		Xuanjiao
+		Yunmei
+		EANI_F_Ai
+		EANI_F_Anniang
+		EANI_F_Anu
+		EANI_F_Baige
+		EANI_F_Bana
+		EANI_F_Baoqin
+		EANI_F_Baoqing
+		EANI_F_Baose
+		EANI_F_Beigu
+		EANI_F_Bingyi
+		EANI_F_Biniang
+		EANI_F_Cainu
+		EANI_F_Chanyun
+		EANI_F_Chaochao
+		EANI_F_Chuanzhu
+		EANI_F_Chundie
+		EANI_F_Chunfang
+		EANI_F_Chunluo
+		EANI_F_Chuntao
+		EANI_F_Chunyan
+		EANI_F_Chunying
+		EANI_F_Chunyun
+		EANI_F_Cong
+		EANI_F_Conger
+		EANI_F_Dagu
+		EANI_F_Daoxuan
+		EANI_F_Duangu
+		EANI_F_Duanniang
+		EANI_F_Ernan
+		EANI_F_Fengniang
+		EANI_F_Fengyang
+		EANI_F_Fengyao
+		EANI_F_Fengying
+		EANI_F_Fengyu
+		EANI_F_Fengyun
+		EANI_F_Fobao
+		EANI_F_Foge
+		EANI_F_Foyou
+		EANI_F_Fufu
+		EANI_F_Fujin
+		EANI_F_Funu
+		EANI_F_Fuyun
+		EANI_F_Guanyin
+		EANI_F_Guigui
+		EANI_F_Guilin
+		EANI_F_Guimei
+		EANI_F_Guizhen
+		EANI_F_Haolang
+		EANI_F_Hegu
+		EANI_F_Henan
+		EANI_F_Hongnu
+		EANI_F_Hongyu
+		EANI_F_Huer
+		EANI_F_Huaishan
+		EANI_F_Huamei
+		EANI_F_Huayun
+		EANI_F_Jianiang
+		EANI_F_Jiaonu
+		EANI_F_Jibao
+		EANI_F_Jiee
+		EANI_F_Jin
+		EANI_F_Jiner
+		EANI_F_Jingguan
+		EANI_F_Jingqiu
+		EANI_F_Jingshen
+		EANI_F_Jingu
+		EANI_F_Jinji
+		EANI_F_Jinling
+		EANI_F_Jinluo
+		EANI_F_Jinnu
+		EANI_F_Jinxian
+		EANI_F_Jinyin
+		EANI_F_Jinzhu
+		EANI_F_Juxian
+		EANI_F_Langu
+		EANI_F_Lanxiu
+		EANI_F_Lianhua
+		EANI_F_Liuyao
+		EANI_F_Luhua
+		EANI_F_Maoer
+		EANI_F_Meiniang
+		EANI_F_Meiyin
+		EANI_F_Meiyu
+		EANI_F_Miaofeng
+		EANI_F_Miaoshan
+		EANI_F_Miaowan
+		EANI_F_Miaozhen
+		EANI_F_Niaoniao
+		EANI_F_Nongyu
+		EANI_F_Numeng
+		EANI_F_Qiao
+		EANI_F_Qiaofang
+		EANI_F_Qiaolang
+		EANI_F_Qiaoqiao
+		EANI_F_Qiaoyun
+		EANI_F_Qin
+		EANI_F_Qing
+		EANI_F_Qingfeng
+		EANI_F_Qinglian
+		EANI_F_Qingyu
+		EANI_F_Qingyun
+		EANI_F_Qingzhao
+		EANI_F_Qionghua
+		EANI_F_Qiongzhen
+		EANI_F_Qiuyue
+		EANI_F_Rou
+		EANI_F_Ruifang
+		EANI_F_Saiyue
+		EANI_F_Sangu
+		EANI_F_Sanhua
+		EANI_F_Sanjin
+		EANI_F_Sannu
+		EANI_F_Shanqing
+		EANI_F_Shanwei
+		EANI_F_Shanxiang
+		EANI_F_Shengqiong
+		EANI_F_Shenyou
+		EANI_F_Shishi
+		EANI_F_Shue
+		EANI_F_Shuangfei
+		EANI_F_Shumei
+		EANI_F_Shunshu
+		EANI_F_Shuyi
+		EANI_F_Shuzhen
+		EANI_F_Suhui
+		EANI_F_Tainu
+		EANI_F_Taohua
+		EANI_F_Wa
+		EANI_F_Wanyue
+		EANI_F_Wenhe
+		EANI_F_Xi
+		EANI_F_Xier
+		EANI_F_Xiane
+		EANI_F_Xianggu
+		EANI_F_Xiangnu
+		EANI_F_Xiangyun
+		EANI_F_Xianlang
+		EANI_F_Xiantao
+		EANI_F_Xiaofeng
+		EANI_F_Xiaohong
+		EANI_F_Xiaohua
+		EANI_F_Xiaojin
+		EANI_F_Xiaolang
+		EANI_F_Xiaolian
+		EANI_F_Xiaonu
+		EANI_F_Xiaoyu
+		EANI_F_Xiaoyun
+		EANI_F_Ximeng
+		EANI_F_Xinglin
+		EANI_F_Xingnu
+		EANI_F_Xinxiang
+		EANI_F_Xiurong
+		EANI_F_Xiuying
+		EANI_F_Xiuyun
+		EANI_F_Xixi
+		EANI_F_Yang
+		EANI_F_Yangu
+		EANI_F_Yanxiang
+		EANI_F_Yian
+		EANI_F_Yigu
+		EANI_F_Yiner
+		EANI_F_Yinling
+		EANI_F_Yuer
+		EANI_F_Yuannu
+		EANI_F_Yuantong
+		EANI_F_Yuanyuan
+		EANI_F_Yuanzhu
+		EANI_F_Yuegong
+		EANI_F_Yuegu
+		EANI_F_Yuejuan
+		EANI_F_Yuemei
+		EANI_F_Yuenu
+		EANI_F_Yuexian
+		EANI_F_Yufeng
+		EANI_F_Yuhua
+		EANI_F_Yuhui
+		EANI_F_Yuniang
+		EANI_F_Yunu
+		EANI_F_Yunxian
+		EANI_F_Yunxiang
+		EANI_F_Yupan
+		EANI_F_Yutao
+		EANI_F_Yuying
+		EANI_F_Zhaoyun
+		EANI_F_Zhen
+		EANI_F_Zhennu
+		EANI_F_Zhenru
+		EANI_F_Zhenyi
+		EANI_F_Zhichong
+		EANI_F_Zhidi
+		EANI_F_Zhuhong
+		EANI_F_Zhuying
+		EANI_F_Zhuyuan
+		EANI_F_Zhuzhu
+		EANI_F_Zongmiao
+	}	
+	common_last_names = {
+		Chen
+		Cui
+		Deng
+		Dong
+		Gao
+		Hsia
+		Hu
+		Huang
+		Jiang
+		Jin
+		Kong
+		Kwong
+		Li
+		Liang
+		Liao
+		Liu
+		Lu
+		Luo
+		Ma
+		Mao
+		Nie
+		Pan
+		Peng
+		Qiu
+		Shen
+		Sun
+		Tan
+		Tian
+		Ting
+		Wang
+		Wu
+		Xie
+		Yang
+		Yu
+		Yun
+		Zhang
+		Zhao
+		Zhu
+		EANI_L_Ji
+		EANI_L_Lan
+		EANI_L_Zeng
+		EANI_L_Zuo
+		EANI_L_Bai
+		EANI_L_Cai
+		EANI_L_Cao
+		EANI_L_Chang
+		EANI_L_Chen
+		EANI_L_Cheng
+		EANI_L_Cui
+		EANI_L_Dai
+		EANI_L_Deng
+		EANI_L_Ding
+		EANI_L_Dong
+		EANI_L_Du
+		EANI_L_Duan
+		EANI_L_Fan
+		EANI_L_Fang
+		EANI_L_Feng
+		EANI_L_Fu
+		EANI_L_Gao
+		EANI_L_Gu
+		EANI_L_Guo
+		EANI_L_Han
+		EANI_L_Hao
+		EANI_L_He
+		EANI_L_He2
+		EANI_L_Hong
+		EANI_L_Hou
+		EANI_L_Hu
+		EANI_L_Huang
+		EANI_L_Jia
+		EANI_L_Jiang
+		EANI_L_Jiang
+		EANI_L_Jiang2
+		EANI_L_Jin
+		EANI_L_Kang
+		EANI_L_Ke
+		EANI_L_Kong
+		EANI_L_Lai
+		EANI_L_Lei
+		EANI_L_Li
+		EANI_L_Li2
+		EANI_L_Liang
+		EANI_L_Liao
+		EANI_L_Lin
+		EANI_L_Liu
+		EANI_L_Long
+		EANI_L_Lu
+		EANI_L_Lu2
+		EANI_L_Lu3
+		EANI_L_Luo
+		EANI_L_Ma
+		EANI_L_Mao
+		EANI_L_Meng
+		EANI_L_Mo
+		EANI_L_Ou
+		EANI_L_Pan
+		EANI_L_Peng
+		EANI_L_Qian
+		EANI_L_Qiao
+		EANI_L_Qin
+		EANI_L_Qiu
+		EANI_L_Ren
+		EANI_L_Shao
+		EANI_L_Shen
+		EANI_L_Shi
+		EANI_L_Shi2
+		EANI_L_Shi3
+		EANI_L_Song
+		EANI_L_Su
+		EANI_L_Sun
+		EANI_L_Tan
+		EANI_L_Tan2
+		EANI_L_Tang
+		EANI_L_Tang2
+		EANI_L_Tao
+		EANI_L_Tian
+		EANI_L_Wan
+		EANI_L_Wang
+		EANI_L_Wang2
+		EANI_L_Wei
+		EANI_L_Wei2
+		EANI_L_Wen
+		EANI_L_Wu
+		EANI_L_Wu2
+		EANI_L_Xia
+		EANI_L_Xiang
+		EANI_L_Xiao
+		EANI_L_Xie
+		EANI_L_Xin
+		EANI_L_Xiong
+		EANI_L_Xu
+		EANI_L_Xu2
+		EANI_L_Xue
+		EANI_L_Yan
+		EANI_L_Yan2
+		EANI_L_Yang
+		EANI_L_Yao
+		EANI_L_Ye
+		EANI_L_Yi2
+		EANI_L_Yin
+		EANI_L_Yu3
+		EANI_L_Yu4
+		EANI_L_Yuan
+		EANI_L_Zeng
+		EANI_L_Zhang
+		EANI_L_Zhao
+		EANI_L_Zheng
+		EANI_L_Zhong
+		EANI_L_Zhou
+		EANI_L_Zhu
+		EANI_L_Zhuang
+		EANI_L_Zou
+	}
+	ethnicities = {
+		1 = asian
+	}
+	graphics = east_asian
+}

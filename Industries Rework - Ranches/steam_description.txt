@@ -1,6 +1,6 @@
 [img]https://i.imgur.com/7xuCZqW.png[/img]
-Supports Victoria 3: V1.8.6  (and onwards)
-Mod Version: V1.0
+Supports Victoria 3: V1.9.1  (and onwards)
+Mod Version: V1.2
 Please consider rating this if you like it! It really helps out. [img]https://i.imgur.com/tE28cZ7.gif[/img]
 [spoiler]Originally made for: Version 1.8.6[/spoiler]
 [table]
@@ -25,6 +25,8 @@ This mod does tweak pop needs a little bit, to bring in compatibility with Pop D
 
 It is compatible with VTM and AI mods, etc.
 
+I recommend pairing this with "[url=https://steamcommunity.com/sharedfiles/filedetails/?id=3306984118]Fertilised Plantations and Other Agricultural Tweaks[/url]" 
+
 [img]https://i.imgur.com/lQRf9dG.png[/img]
 [b]Can you add <insert language> localisation?[/b]
 [i]If you send it to me I will add it.[/i]
@@ -38,7 +40,11 @@ Credit will be given to to providers of localisation content:
 [*]n/a
 [/list]
 
+[b]Other Translation Mods:[/b]
+Independent Vietnamese Translation: [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3457180375][Vietnamese] Grey's Mod[/url]
+
 #Production #Ranch #Rework
 #Products #Meat #Groceries
 #Fertilizer #Fertiliser
 #Textiles #Silken Cloth
+You can support me on Patreon: [url=https://patreon.com/MasterOfGreyVic3?utm_medium=unknown&utm_source=join_link&utm_campaign=creatorshare_creator&utm_content=copyLink] [img]https://ufo2.site44.com/become_a_patron_button.png[/img] [/url]
