@@ -47,13 +47,13 @@ law_commercialized_agriculture = {
 	on_activate = {
 		add_modifier = {
 			name = land_redistribution_modifier
-			months = long_modifier_time
+			days = long_modifier_time
 			is_decaying = yes
 		}
 		add_modifier = {
 			name = land_redistribution_compensation_modifier
 			multiplier = money_amount_multiplier_small
-			months = long_modifier_time
+			days = long_modifier_time
 			is_decaying = yes
 		}
 	}
@@ -82,7 +82,7 @@ law_commercialized_agriculture = {
 				OR = {
 					NOT = { has_strategy = ai_strategy_conservative_agenda }
 					any_political_movement = {
-						law_stance = {
+						law_enactment_stance = {
 							law = law_type:law_commercialized_agriculture
 							value > neutral
 						}
@@ -141,12 +141,12 @@ law_homesteading = {
 	on_activate = {
 		add_modifier = {
 			name = land_redistribution_modifier
-			months = long_modifier_time
+			days = long_modifier_time
 			is_decaying = yes
 		}
 		add_modifier = {
 			name = land_redistribution_compensation_modifier
-			months = long_modifier_time
+			days = long_modifier_time
 			is_decaying = yes
 			multiplier = money_amount_multiplier_medium
 		}
@@ -172,7 +172,7 @@ law_homesteading = {
 				OR = {
 					NOT = { has_strategy = ai_strategy_conservative_agenda }
 					any_political_movement = {
-						law_stance = {
+						law_enactment_stance = {
 							law = law_type:law_homesteading
 							value > neutral
 						}
@@ -236,7 +236,7 @@ law_collectivized_agriculture = {
 	on_activate = {
 		add_modifier = {
 			name = land_redistribution_modifier
-			months = long_modifier_time
+			days = long_modifier_time
 			is_decaying = yes
 		}
 		## Red Sun in the Sky starts playing ##

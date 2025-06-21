@@ -78,6 +78,7 @@ law_interventionism = {
 		building_nationalization_investment_return_add = 0.5
 		country_government_dividends_reinvestment_add = 0.7
 		country_government_dividends_efficiency_add = 0.5
+		country_free_charters_add = 1
 	}
 	
 	ai_enact_weight_modifier = { #Petitions
@@ -109,7 +110,7 @@ law_interventionism = {
 				OR = {
 					NOT = { has_strategy = ai_strategy_conservative_agenda }
 					any_political_movement = {
-						law_stance = {
+						law_enactment_stance = {
 							law = law_type:law_interventionism
 							value > neutral
 						}
@@ -149,6 +150,7 @@ law_agrarianism = {
 		building_nationalization_investment_return_add = 0.5
 		country_government_dividends_reinvestment_add = 0.5
 		country_government_dividends_efficiency_add = 0.5
+		country_free_charters_add = 1
 		
 		state_market_access_price_impact = -0.05
 		country_disable_nationalization_without_compensation_bool = yes
@@ -192,7 +194,7 @@ law_agrarianism = {
 				OR = {
 					NOT = { has_strategy = ai_strategy_conservative_agenda }
 					any_political_movement = {
-						law_stance = {
+						law_enactment_stance = {
 							law = law_type:law_agrarianism
 							value > neutral
 						}
@@ -246,9 +248,9 @@ law_industry_banned = {
 				}
 				if = {
 					limit = {
-						has_building = building_war_machine_industry
+						has_building = building_automotive_industry
 					}
-					remove_building = building_war_machine_industry
+					remove_building = building_automotive_industry
 				}
 				if = {
 					limit = {
@@ -288,6 +290,7 @@ law_industry_banned = {
 		state_peasants_education_access_add = -0.10
 		country_disable_nationalization_without_compensation_bool = yes
 		country_economic_dependence_on_overlord_add = -0.5
+		country_free_charters_add = 1
 	}
 	
 	ai_will_do = {
@@ -366,9 +369,9 @@ law_extraction_economy = {
 				}
 				if = {
 					limit = {
-						has_building = building_war_machine_industry
+						has_building = building_automotive_industry
 					}
-					remove_building = building_war_machine_industry
+					remove_building = building_automotive_industry
 				}
 				if = {
 					limit = {
@@ -446,10 +449,10 @@ law_laissez_faire = {
 		country_private_construction_allocation_mult = 0.75
 		country_government_dividends_reinvestment_add = 0		
 		country_government_dividends_efficiency_add = 0.65
-		country_max_companies_add = 1
+		country_free_charters_add = 2
 		country_disable_nationalization_bool = yes
 		country_force_privatization_bool = yes
-		country_company_pay_to_establish_bool = yes
+		country_forbid_monopoly_bool = yes
 	}
 	
 	ai_enact_weight_modifier = { #Petitions
@@ -462,10 +465,12 @@ law_laissez_faire = {
 		
 		if = {
 			limit = {
-				has_modifier = shogun_ig_forced_to_open_market
-				has_journal_entry = je_meiji_main
+				OR = {
+					has_modifier = shogun_ig_forced_to_open_market
+					has_journal_entry = je_meiji_main
+					has_journal_entry = je_great_reforms_serfdom
+				}
 				has_law = law_type:law_traditionalism
-				has_journal_entry = je_great_reforms_serfdom
 			}
 			add = 10000 # Top priority for Tanzimat/Meiji AI is to get out of Traditionalism
 		}	
@@ -478,7 +483,7 @@ law_laissez_faire = {
 				OR = {
 					NOT = { has_strategy = ai_strategy_conservative_agenda }
 					any_political_movement = {
-						law_stance = {
+						law_enactment_stance = {
 							law = law_type:law_laissez_faire
 							value > neutral
 						}
@@ -516,6 +521,7 @@ law_cooperative_ownership = {
 		country_private_construction_allocation_mult = 0.35
 		country_government_dividends_reinvestment_add = 0.7
 		country_government_dividends_efficiency_add = 0.75
+		country_free_charters_add = 1
 		
 		building_group_bg_manufacturing_allowed_collectivization_add = 1.0
 		building_group_bg_mining_allowed_collectivization_add = 1.0
@@ -536,8 +542,6 @@ law_cooperative_ownership = {
 		
 		# country_allow_national_collectivization_bool = yes # modifier type definition removed in 1.8.4
 		country_foreign_collectivization_bool = yes
-		country_disable_privatization_bool = yes
-		country_company_pay_to_establish_bool = yes
 	}
 	
 	ai_enact_weight_modifier = { #Petitions
@@ -625,6 +629,7 @@ law_command_economy = {
 		building_nationalization_radicals_mult = -0.75
 		country_government_dividends_efficiency_add = 0.75
 		country_private_construction_allocation_mult = 0.1
+		country_free_charters_add = 1
 		
 		country_leverage_resistance_mult = 0.25
 		
