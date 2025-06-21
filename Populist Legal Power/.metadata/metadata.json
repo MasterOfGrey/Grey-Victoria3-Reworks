@@ -11,7 +11,8 @@
         "Gameplay",
         "Historical",
         "Pops",
-        "Utilities"
+        "Utilities",
+        "1.9"
     ],
   "relationships" : [],
   "game_custom_data" : {

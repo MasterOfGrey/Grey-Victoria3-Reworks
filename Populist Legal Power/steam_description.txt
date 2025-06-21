@@ -1,6 +1,6 @@
 [img]https://i.imgur.com/7xuCZqW.png[/img]
-Supports Victoria 3: V1.8.4  (and onwards)
-Mod Version: V1.4
+Supports Victoria 3: V1.9  (and onwards)
+Mod Version: V1.7
 Please consider rating this if you like it! It really helps out. [img]https://i.imgur.com/tE28cZ7.gif[/img]
 [spoiler]Originally made for: Version 1.7.6[/spoiler]
 [table]
@@ -79,6 +79,12 @@ This effectively supercedes the following mods:
 
 Thank you to all the listed authors for their work which inspired various details within this mod.
 
+[h2]Language Support:[/h2]
+[b]Other Translation Mods:[/b]
+Independent Vietnamese Translation: [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3457180375][Vietnamese] Grey's Mod[/url]
+
+
 #Government #Legitimacy
 #Law #Authority #Politics
 #Rework #Balance
+You can support me on Patreon: [url=https://patreon.com/MasterOfGreyVic3?utm_medium=unknown&utm_source=join_link&utm_campaign=creatorshare_creator&utm_content=copyLink] [img]https://ufo2.site44.com/become_a_patron_button.png[/img] [/url]
