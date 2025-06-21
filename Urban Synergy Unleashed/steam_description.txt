@@ -1,6 +1,6 @@
 [img]https://i.imgur.com/7xuCZqW.png[/img]
-Supports Victoria 3: V1.8.4  (and onwards)
-Mod Version: V1.2
+Supports Victoria 3: V1.9  (and onwards)
+Mod Version: V1.3
 Please consider rating this if you like it! It really helps out. [img]https://i.imgur.com/tE28cZ7.gif[/img]
 [spoiler]Originally made for: Version 1.8.2[/spoiler]
 
@@ -52,14 +52,14 @@ This obviously touches a wide range of urban buildings, but it's quite self-cont
 [b]This includes compatibility (which could break on updates to these mods) with:
 [list][*][u]Laws +[/u] for subsistence farm PM's.
 [/list][/b]
-[b]This is [i]reported[/i] compatible with:
-[list][*]Industry Realism??? (somehow - for now at least)
-[/list][/b]
-[h2]Use these compatches for:[/h2]
+[h2]Use my compatches for:[/h2]
 [list]
 [*]Morgenrote: "[url=https://steamcommunity.com/sharedfiles/filedetails/?id=3371690718]USU & Morgenrote[/url]"
 [*]Locomotion Land, Water, & Air (LLWA): "[url=https://steamcommunity.com/sharedfiles/filedetails/?id=3387021675]USU & LLWA[/url]"
 [/list]
+[b]Other available compatibility patches:
+[list][*]Industry Realism: "[url=https://steamcommunity.com/sharedfiles/filedetails/?id=3453226616]Industry Realism + USU Patch[/url]" by AgrarianSlop
+[/list][/b]
 
 For full details on compatibility go to the discussion post here: [url=https://steamcommunity.com/workshop/filedetails/discussion/3371689443/575995078023072709/]Full Compatibility Notes[/url]
 [img]https://i.imgur.com/lQRf9dG.png[/img]
@@ -70,6 +70,9 @@ For full details on compatibility go to the discussion post here: [url=https://s
 [i]That’s intentional: The whole point of industrialisation was that some things became cheap which enabled other things to become possible.
 Transport is a major essential need for pops and agriculture, so it’s designed so that late-game it is possible to have very cheap transport and still have transport be profitable to produce.
 A successful and highly industrialised late-game economy should have cheap electricity, transport, and services.[/i]
+
+[b]My power plants aren’t producing power?[/b]
+[i]You have a mod conflict that I don’t have a patch for. Read the [url=https://steamcommunity.com/workshop/filedetails/discussion/3371689443/575995078023072709/]Full Compatibility Notes[/url][/i]
 
 [img]https://i.imgur.com/UN80Om5.png[/img]
 Many thanks to nahantelhe, Ferrous, ovnxize, Starry Inori, and 1230james for their works which inspired this.
@@ -84,6 +87,10 @@ Credit will be given to to providers of localisation content:
 [*]TBD
 [/list]
 
+[b]Other Translation Mods:[/b]
+Independent Vietnamese Translation: [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3457180375][Vietnamese] Grey's Mod[/url]
+
 #Rework #Services #MAPI
 #Electricity #Urbanization
 #Trade #Economy #USU #GUSU
+You can support me on Patreon: [url=https://patreon.com/MasterOfGreyVic3?utm_medium=unknown&utm_source=join_link&utm_campaign=creatorshare_creator&utm_content=copyLink] [img]https://ufo2.site44.com/become_a_patron_button.png[/img] [/url]
