@@ -11,7 +11,7 @@ USU_pm_port_c_logistics_1 = {
 	}
 	building_modifiers = {
 		workforce_scaled = {	
-			goods_output_usu_logistics_add = 30
+			goods_output_usu_logistics_add = 3 # 30
 		}
 	}
 	state_modifiers = {
@@ -28,7 +28,7 @@ USU_pm_port_c_logistics_2 = {
 	}
 	building_modifiers = {
 		workforce_scaled = {	
-			goods_output_usu_logistics_add = 70
+			goods_output_usu_logistics_add = 7 # 70
 		}
 	}
 	state_modifiers = {
@@ -49,7 +49,7 @@ USU_pm_port_c_logistics_3 = {
 	}
 	building_modifiers = {
 		workforce_scaled = {	
-			goods_output_usu_logistics_add = 105
+			goods_output_usu_logistics_add = 10.5 # 105
 		}
 	}
 	state_modifiers = {
@@ -72,7 +72,7 @@ USU_pm_port_r_logistics_1 = {
 	}
 	building_modifiers = {
 		workforce_scaled = {	
-			goods_output_usu_logistics_add = 40
+			goods_output_usu_logistics_add = 8 # 40
 		}
 	}
 	state_modifiers = {
@@ -89,7 +89,7 @@ USU_pm_port_r_logistics_2 = {
 	}
 	building_modifiers = {
 		workforce_scaled = {	
-			goods_output_usu_logistics_add = 90
+			goods_output_usu_logistics_add = 18 # 90
 		}
 	}
 	state_modifiers = {
@@ -110,7 +110,7 @@ USU_pm_port_r_logistics_3 = {
 	}
 	building_modifiers = {
 		workforce_scaled = {	
-			goods_output_usu_logistics_add = 140
+			goods_output_usu_logistics_add = 28 # 140
 		}
 	}
 	state_modifiers = {

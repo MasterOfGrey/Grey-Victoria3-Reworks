@@ -29,7 +29,7 @@ building_river_port = {
 	production_method_groups = {
 		pmg_base_building_river_port
 		pmg_logistics_services_port_river
-		pmg_automation_port
+		# pmg_automation_port
 	}
 	
 	required_construction = construction_cost_low

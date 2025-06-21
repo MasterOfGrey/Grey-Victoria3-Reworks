@@ -196,6 +196,7 @@ pm_trade_center_trade_quantity_very_high = {
 
 pm_trade_center_inland = {
 	texture = "gfx/interface/icons/production_method_icons/land_trade.dds"
+	is_hidden_when_unavailable = yes
 	unlocking_production_methods = {
 		pm_trade_center_inland
 	}
@@ -203,6 +204,7 @@ pm_trade_center_inland = {
 
 pm_trade_center_port = {
 	texture = "gfx/interface/icons/production_method_icons/anchorage.dds"
+	is_hidden_when_unavailable = yes
 	unlocking_production_methods = {
 		pm_trade_center_port
 	}
