@@ -11,8 +11,8 @@
 
 	production_method_groups = {
 		pmg_base_building_trade_center
-		pmg_trade_quantity_trade_center
 		pmg_trade_center_port_status
+		pmg_trade_quantity_trade_center
 	}
 
 	can_build_government = {

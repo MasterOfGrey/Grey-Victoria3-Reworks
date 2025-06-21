@@ -44,6 +44,18 @@ goods_output_transportation_mult = {
     decimals = 1
 }
 
+goods_input_merchant_marine_mult = {
+	color = bad
+	percent = yes
+    decimals = 1
+}
+
+goods_output_merchant_marine_mult = {
+	color = good
+	percent = yes
+    decimals = 1
+}
+
 # New Building Modifiers:
 usu_building_public_green_throughput_add={
 	decimals=0

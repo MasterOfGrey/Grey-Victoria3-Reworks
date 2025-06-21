@@ -55,7 +55,7 @@ bg_canals = {
 bg_power = {
 	category = development
 	
-	lens = infrastructure	
+	lens = development	
 	
 	always_possible = yes
 	
@@ -111,7 +111,7 @@ bg_government = {
 	
 	economy_of_scale = yes
 	
-	lens = government
+	lens = development
 	
 	urbanization = 30 # 20
 	infrastructure_usage_per_level = 1
@@ -124,13 +124,15 @@ bg_government = {
 bg_financial_districts = {
 	parent_group = bg_owner_buildings
 	
-	urbanization = 1 # 0
+	urbanization = 2 # 0 (Vanilla now = 5)
 }
 
 bg_company_headquarter = {
 	parent_group = bg_owner_buildings
-
-	urbanization = 5 # 0	# These have a *much* bigger impact on service consumption
+	
+	company_headquarter = yes
+	
+	urbanization = 5 # 0 (Vanilla now = 5)	# These have a *much* bigger impact on service consumption 
 }
 
 ## Construction
@@ -139,7 +141,7 @@ bg_construction = {
 	
 	infrastructure_usage_per_level = 0.8
 	
-	lens = government
+	lens = development
 	
 	is_government_funded = yes
 	
@@ -154,42 +156,37 @@ bg_construction = {
 # Thanks to logistics services they have a reduced contribution to urbanization now use a teeny tiny bit more infrastructure.
 # This is not critical so if some other mod overwrites it, meh.
 bg_trade = {
-	parent_group = bg_urban_facilities
+	parent_group = bg_private_infrastructure	# bg_urban_facilities
 	
-	category = urban
+	stateregion_max_level = no
 	
 	lens = trade
 	
 	always_possible = yes	
 	
+	## Old Stuff:
+	# category = urban
 	# subsidized = yes
+	# always_self_owning = yes
+	# created_by_trade_routes = yes
+	# auto_place_buildings = yes
+	# min_hiring_rate = 1.0
+	# max_hiring_rate = 1.0
+	# ignores_productivity_when_hiring = yes
+	# proportionality_limit = 1.0
+	# cash_reserves_max = 5000
+	# fired_pops_become_radical = no
+	# should_auto_expand = { always = no }
 	
-	always_self_owning = yes
-	
-	created_by_trade_routes = yes
-	
-	auto_place_buildings = yes
-	
-	min_hiring_rate = 1.0
-	max_hiring_rate = 1.0
-	
-	ignores_productivity_when_hiring = yes
-	
-	proportionality_limit = 1.0
+	has_trade_revenue = yes
 	
 	economy_of_scale = no
 	
 	default_building = building_trade_center
 	
-	cash_reserves_max = 5000	
+	can_use_slaves = yes
+
+	infrastructure_usage_per_level = 0.15 # 0.5
 	
-	urbanization = 2 # 5
-	
-	infrastructure_usage_per_level = 0.15 # 0.1
-	
-	fired_pops_become_radical = no
-	
-	should_auto_expand = {
-		always = no
-	}
+	urbanization = 2 # down from 10
 }

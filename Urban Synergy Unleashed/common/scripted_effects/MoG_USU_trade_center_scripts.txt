@@ -7,13 +7,27 @@ usu_manage_trade_centre_type = {
 					has_building = building_port
 					has_building = building_river_port
 				}
+				NOT = {
+					is_production_method_active = {
+						building_type = building_trade_center
+						production_method = pm_trade_center_port
+					}
+				}
 			}
 			activate_production_method = {
 				building_type     = building_trade_center
 				production_method = pm_trade_center_port
 			}
 		}
-		else = {
+		else_if = {
+			limit = {
+				NOT = {
+					is_production_method_active = {
+						building_type = building_trade_center
+						production_method = pm_trade_center_inland
+					}
+				}
+			}
 			activate_production_method = {
 				building_type     = building_trade_center
 				production_method = pm_trade_center_inland
