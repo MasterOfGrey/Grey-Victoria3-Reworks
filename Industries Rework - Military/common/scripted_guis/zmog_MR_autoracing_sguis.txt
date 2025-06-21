@@ -24,7 +24,7 @@ mr_autoracing_found_team_button = {
 		custom_tooltip = {
 			text = MR_AUTORACING_FOUND_TEAM_BUTTON_TRIGGER_TT
 			any_scope_building = {
-				is_building_type = building_war_machine_industry	# building_motor_industry
+				is_building_type = building_automotive_industry	# building_motor_industry
 				OR = {												# has_active_production_method = pm_automobile_production
 					has_active_production_method = pm_automobiles
 					has_active_production_method = pm_pneumatic_tyres

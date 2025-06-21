@@ -1,6 +1,6 @@
 ﻿l_german:
  building_motor_industry: "Lokomotivfabriken" #NT!
- building_war_machine_industry: "Automobilindustrie" #NT!
+ building_automotive_industry: "Automobilindustrie" #NT!
   
  dough_rollers: "Vollständige Prozessautomatisierung" #NT!
  dough_rollers_desc: "Durch die Integration von Maschinen zur vollständigen Automatisierung sich wiederholender Aufgaben können Branchen eine beispiellose Effizienz, Konsistenz und Größenordnung in der Produktion erreichen." #NT!

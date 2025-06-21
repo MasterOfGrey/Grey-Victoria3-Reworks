@@ -36,7 +36,7 @@ vikelas.505 = {
 		random_scope_state = {
 			limit = {
 				any_scope_building = {
-					is_building_type = building_war_machine_industry	# building_motor_industry
+					is_building_type = building_automotive_industry	# building_motor_industry
 					OR = {												# has_active_production_method = pm_automobile_production
 						has_active_production_method = pm_automobiles
 						has_active_production_method = pm_pneumatic_tyres
@@ -53,7 +53,7 @@ vikelas.505 = {
 		scope:vikelas_team_state = {
 			random_scope_building = {
 				limit = {
-					is_building_type = building_war_machine_industry	# building_motor_industry
+					is_building_type = building_automotive_industry	# building_motor_industry
 					OR = {												# has_active_production_method = pm_automobile_production
 						has_active_production_method = pm_automobiles
 						has_active_production_method = pm_pneumatic_tyres

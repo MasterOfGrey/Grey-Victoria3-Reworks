@@ -1,6 +1,6 @@
 ﻿l_japanese:
  building_motor_industry: "機関車工場" #NT!
- building_war_machine_industry: "自動車産業" #NT!
+ building_automotive_industry: "自動車産業" #NT!
   
  dough_rollers: "完全なプロセス自動化" #NT!
  dough_rollers_desc: "機械を統合して反復的なタスクを完全に自動化することで、業界ではこれまでにない効率、一貫性、生産規模を実現できます。" #NT!

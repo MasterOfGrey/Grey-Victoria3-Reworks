@@ -1,7 +1,7 @@
 ﻿# This file is the automotive industry with tank and plane demobilisation PM's
 # Credit to indexo4 for the initial version
 
-building_war_machine_industry = {
+building_automotive_industry = {
 	building_group = bg_heavy_industry
 	icon = "gfx/interface/icons/building_icons/automotive_industry.dds"
 	city_type = city

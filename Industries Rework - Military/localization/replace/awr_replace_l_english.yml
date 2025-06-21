@@ -1,6 +1,6 @@
 ﻿l_english:
  building_motor_industry: "Locomotive Factories"
- building_war_machine_industry: "Automotive Industries"
+ building_automotive_industry: "Automotive Industries"
  
  dough_rollers: "Full Process Automation"
  dough_rollers_desc: "By integrating machines to fully automate repetitive tasks, industries can achieve unprecedented efficiency, consistency, and scale in production."

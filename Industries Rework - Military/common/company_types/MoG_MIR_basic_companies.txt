@@ -9,7 +9,7 @@ company_mitsubishi = {
 		building_military_shipyards
 		building_coal_mine
 		building_motor_industry
-		building_war_machine_industry
+		building_automotive_industry
 	}
 	
 	potential = {
@@ -37,7 +37,7 @@ company_mitsubishi = {
 	}
 	
 	prosperity_modifier = {
-		building_war_machine_industry_throughput_add = 0.1
+		building_automotive_industry_throughput_add = 0.1
 		interest_group_ig_industrialists_approval_add = 2
 	}	
 	
@@ -57,7 +57,7 @@ company_skoda = {
 		building_steel_mills
 		building_motor_industry
 		building_artillery_foundries
-		building_war_machine_industry
+		building_automotive_industry
 	}
 	
 	potential = {
