@@ -1,5 +1,5 @@
-﻿PPP_building_power_grid = {
-	building_group = bg_power
+﻿ppp_building_power_grid = {
+	building_group = usu_bg_power_grid
 	icon = "gfx/interface/icons/building_icons/PPP_power_grid.dds"
 	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_monuments.dds"
 	ownership_type = self
@@ -14,7 +14,7 @@
 		# pmg_ownership_capital_building_power_plant
 	}
 	
-	required_construction = construction_cost_medium
+	required_construction = construction_cost_low
 	
 	possible = {
 		OR = {
@@ -25,7 +25,7 @@
 			any_neighbouring_state = {
 				owner ?= prev.owner
 				state_has_building_type_levels = {
-					target = bt:PPP_building_power_grid
+					target = bt:ppp_building_power_grid
 					value  > 0
 				}
 			}
@@ -36,14 +36,14 @@
 		if = { # Get the grid started
 			limit = {
 				NOR = {
-					has_building = PPP_building_power_grid
+					has_building = ppp_building_power_grid
 					any_scope_building = {
-						is_building_type = PPP_building_power_grid
+						is_building_type = ppp_building_power_grid
 						is_under_construction = yes
 					}
 				}
 			}
-			add = 8000	# A firm encouragement
+			add = 80000	# An *extremely* firm encouragement
 		}
 	}
 }

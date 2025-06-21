@@ -38,6 +38,7 @@ pm_market_stalls = {
 			building_food_industry_throughput_add = 0.01
 			building_textile_mills_throughput_add = 0.01
 			building_furniture_manufacturies_throughput_add = 0.01
+			usu_building_public_green_throughput_add = 0.01
 		}	
 	}
 }
@@ -86,6 +87,7 @@ pm_market_squares = {
 			building_food_industry_throughput_add = 0.01
 			building_textile_mills_throughput_add = 0.01
 			building_furniture_manufacturies_throughput_add = 0.01
+			usu_building_public_green_throughput_add = 0.01
 		}	
 	}
 }
@@ -134,6 +136,7 @@ pm_covered_markets = {
 			building_food_industry_throughput_add = 0.01
 			building_textile_mills_throughput_add = 0.01
 			building_furniture_manufacturies_throughput_add = 0.01
+			usu_building_public_green_throughput_add = 0.01
 		}	
 	}
 }
@@ -184,6 +187,7 @@ pm_arcades = {
 			building_food_industry_throughput_add = 0.01
 			building_textile_mills_throughput_add = 0.01
 			building_furniture_manufacturies_throughput_add = 0.01
+			usu_building_public_green_throughput_add = 0.01
 		}	
 	}
 	
@@ -242,6 +246,7 @@ USU_pm_hv_arcades = {
 			building_food_industry_throughput_add = 0.01
 			building_textile_mills_throughput_add = 0.01
 			building_furniture_manufacturies_throughput_add = 0.01
+			usu_building_public_green_throughput_add = 0.01
 		}	
 	}
 	

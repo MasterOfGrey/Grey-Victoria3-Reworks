@@ -44,6 +44,43 @@ goods_output_transportation_mult = {
     decimals = 1
 }
 
+# New Building Modifiers:
+usu_building_public_green_throughput_add={
+	decimals=0
+	color=good
+	percent=yes
+	game_data={
+		ai_value=0
+	}
+}
+
+ppp_building_power_grid_throughput_add={
+	decimals=0
+	color=good
+	percent=yes
+	game_data={
+		ai_value=0
+	}
+}
+
+usu_building_hydro_power_plant_throughput_add={
+	decimals=0
+	color=good
+	percent=yes
+	game_data={
+		ai_value=0
+	}
+}
+
+building_river_port_throughput_add={
+	decimals=0
+	color=good
+	percent=yes
+	game_data={
+		ai_value=0
+	}
+}
+
 # Encourage the AI please to be sensible (vanilla overwrites):
 state_market_access_price_impact={
 	decimals=1
@@ -58,7 +95,7 @@ state_migration_pull_add={
 	decimals=0
 	color=good
 	game_data={
-		ai_value=500	# 0
+		ai_value=100	# 0 - tried 500 and it seems to cause some intense behaviours with the autonomous queue
 	}
 }
 

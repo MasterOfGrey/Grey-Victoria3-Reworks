@@ -1,7 +1,10 @@
 [img]https://i.imgur.com/7xuCZqW.png[/img]
-Designed for Victoria 3: Version 1.8 (and onwards)
-Mod Version V1.0
+Supports Victoria 3: V1.9  (and onwards)
+Mod Version: V1.3
 Please consider rating this if you like it! It really helps out. [img]https://i.imgur.com/tE28cZ7.gif[/img]
+[spoiler]Originally made for: Version 1.8.2[/spoiler]
+
+[b]The "Required" other mods are not required but are STRONGLY RECOMMENDED[/b]
 
 [table]
     [tr]
@@ -40,48 +43,41 @@ Some buildings now consume additional goods. In particular, naval buildings cons
 [img]https://i.imgur.com/Qp8JBtZ.png[/img]
 This obviously touches a wide range of urban buildings, but it's quite self-contained otherwise.
 
-[b]This is [u]Compatible with VTM[/u].
-Includes compatibility with [u]Laws +[/u] for subsistence farm PM's.
-Also natively compatible with Pop Demand Tweak(PDT), Timber to Steel(TTS), and any AI mods (like KAI, etc.)[/b]
-Somehow compatible with Industry Realism??? - for now at least
-
-Use these compatches for:
+[b]This is [u]Compatible[/u] by default with:
+[list][*][u]VTM[/u]
+[*]Pop Demand Tweak(PDT)
+[*]Timber to Steel(TTS)
+[*]and any AI mods (like KAI, etc.)
+[/list][/b]
+[b]This includes compatibility (which could break on updates to these mods) with:
+[list][*][u]Laws +[/u] for subsistence farm PM's.
+[/list][/b]
+[h2]Use my compatches for:[/h2]
 [list]
-[*]Morgenrote: "USU & Morgenrote"
-[*]Locomotion Land, Water, & Air (LLWA): "USU & LLWA" (coming)
+[*]Morgenrote: "[url=https://steamcommunity.com/sharedfiles/filedetails/?id=3371690718]USU & Morgenrote[/url]"
+[*]Locomotion Land, Water, & Air (LLWA): "[url=https://steamcommunity.com/sharedfiles/filedetails/?id=3387021675]USU & LLWA[/url]"
 [/list]
+[b]Other available compatibility patches:
+[list][*]Industry Realism: "[url=https://steamcommunity.com/sharedfiles/filedetails/?id=3453226616]Industry Realism + USU Patch[/url]" by AgrarianSlop
+[/list][/b]
 
-This effectively supercedes (and should not be used with) the following mods:
-[list]
-[*]"Nahan's River Transportation", "Port Rework", and "Transportation Overhaul" by nahantelhe
-[*]"Urban Center Electricity Generation" by Ferrous
-[*]"Urban Centers Create Construction" by ovnxize
-[*]"Make My Railway Profitable Again!" and "We Need More Transportation!" by Starry Inori
-[*]"Power Plants+" by 1230james
-[*]"scale_down_construct" by Zeta-0
-[*]"Canals Add Company Capacity" by Morglom
-[*]"Better Canals" by SkyRipper
-[*]"Canal Dividend Income" by Araxiel
-[*]"Government Administration Auto Expand" by Z先森
-[/list]
-...and probably a few others besides.
-
-Further it is incompatible with:
-[list]
-[*]Urban Center mods: "Construction Rework", "Expanded Urban Centers", "Improve Urban Center" etc.
-[*]Infrastructure mods: "Port MAPI", "Port Buffing Mod", "Railway Connection", "Upgraded Railways", "Realistic Power Plants" etc.
-[*]Big Tent Reworks: "Industry Expanded", "More Technological/Construction Variety" etc.
-[/list]
-..and anything else that explicitly reworks Railways, Power Plants, Ports, or Urban Centers.
-
-This has it's own auto-expand rules rework that will probably overwrite any other auto-expand rework or be incompatible.
-
+For full details on compatibility go to the discussion post here: [url=https://steamcommunity.com/workshop/filedetails/discussion/3371689443/575995078023072709/]Full Compatibility Notes[/url]
 [img]https://i.imgur.com/lQRf9dG.png[/img]
 [b]Can you change <insert language> localisation?[/b]
 [i]If you send it to me I will add it.[/i]
 
+[b]My transport is cheap/below base price, how do I raise demand?[/b]
+[i]That’s intentional: The whole point of industrialisation was that some things became cheap which enabled other things to become possible.
+Transport is a major essential need for pops and agriculture, so it’s designed so that late-game it is possible to have very cheap transport and still have transport be profitable to produce.
+A successful and highly industrialised late-game economy should have cheap electricity, transport, and services.[/i]
+
+[b]My power plants aren’t producing power?[/b]
+[i]You have a mod conflict that I don’t have a patch for. Read the [url=https://steamcommunity.com/workshop/filedetails/discussion/3371689443/575995078023072709/]Full Compatibility Notes[/url][/i]
+
 [img]https://i.imgur.com/UN80Om5.png[/img]
 Many thanks to nahantelhe, Ferrous, ovnxize, Starry Inori, and 1230james for their works which inspired this.
+
+Major Thanks to BrokenRobot, without whom my sanity would never have endured long enough for this to be published.
 
 [h2]Language Support:[/h2]
 [b]Most Localizations are done by Machine Translation!
@@ -91,6 +87,10 @@ Credit will be given to to providers of localisation content:
 [*]TBD
 [/list]
 
+[b]Other Translation Mods:[/b]
+Independent Vietnamese Translation: [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3457180375][Vietnamese] Grey's Mod[/url]
+
 #Rework #Services #MAPI
-#Trade #Urbanization
-#Electricity #Economy
+#Electricity #Urbanization
+#Trade #Economy #USU #GUSU
+You can support me on Patreon: [url=https://patreon.com/MasterOfGreyVic3?utm_medium=unknown&utm_source=join_link&utm_campaign=creatorshare_creator&utm_content=copyLink] [img]https://ufo2.site44.com/become_a_patron_button.png[/img] [/url]

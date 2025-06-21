@@ -4,5 +4,5 @@
     category = industrial
     tradeable = no
     
-    prestige_factor = 5
+    prestige_factor = 8
 }

@@ -1,18 +1,26 @@
-﻿pm_trade_center = {
+﻿## Base PM's
+pm_trade_center = {
 	texture = "gfx/interface/icons/production_method_icons/trade_center.dds"
 	replacement_if_valid = pm_trade_center_principle_external_trade_2
-	is_hidden_when_unavailable = yes	
+	is_hidden_when_unavailable = yes
 	
 	building_modifiers = {
 		level_scaled = {
-			goods_input_usu_logistics_add = 1
-			building_employment_laborers_add = 100
-			building_employment_clerks_add = 25
+			building_employment_clerks_add = 80 # 800
+			building_employment_shopkeepers_add = 20 # 200
 		}
 	}
-	
 	state_modifiers = {
+		workforce_scaled = {
+			state_weekly_trades_add = 1
+			state_trade_capacity_add = 10
+			state_migration_pull_add = -0.1
+		}
+		level_scaled = {
+			state_migration_pull_add = 0.1
+		}
 		unscaled = {
+			state_migration_pull_add = 2
 			state_migration_pull_mult = 0.10
 		}
 	}
@@ -27,21 +35,177 @@ pm_trade_center_principle_external_trade_2 = {
 		principle_external_trade_3
 	}
 	
-	building_modifiers = {
-		level_scaled = {
-			goods_input_usu_logistics_add = 1
-		}
-	}
-	
-	state_modifiers = {
-		unscaled = {
-			state_migration_pull_mult = 0.25
-		}
-	}
-	
 	country_modifiers = {
 		workforce_scaled = {
-			country_influence_add = 2
+			country_influence_add = 0.5
 		}
-	}	
+	}
+	building_modifiers = {
+		level_scaled = {
+			building_employment_clerks_add = 80 # 800
+			building_employment_shopkeepers_add = 20 # 200
+		}
+	}
+	state_modifiers = {
+		workforce_scaled = {
+			state_weekly_trades_add = 1
+			state_trade_capacity_add = 10
+			state_migration_pull_add = -0.1
+		}
+		level_scaled = {
+			state_migration_pull_add = 0.1
+		}
+		unscaled = {
+			state_migration_pull_add = 3
+			state_migration_pull_mult = 0.10
+		}
+	}
+}
+
+## Quantity PM's (for reference, not modified)
+pm_trade_center_trade_quantity_limited_inland = {
+	texture = "gfx/interface/icons/production_method_icons/trade_quantity_1.dds"
+	replacement_if_valid = pm_trade_center_trade_quantity_limited
+	is_hidden_when_unavailable = yes
+
+	building_modifiers = {
+		workforce_scaled = {
+			goods_input_usu_logistics_add = 15		# (conversion is 5:1)
+		}
+	}
+	state_modifiers = {
+		unscaled = {
+			state_trade_quantity_mult = -0.2
+		}
+	}
+}
+
+pm_trade_center_trade_quantity_limited = {
+	texture = "gfx/interface/icons/production_method_icons/trade_quantity_1.dds"
+	replacement_if_valid = pm_trade_center_principle_external_trade_2
+	is_hidden_when_unavailable = yes
+
+	building_modifiers = {
+		workforce_scaled = {
+			goods_input_merchant_marine_add = 3					# goods_input_usu_logistics_add = 1
+		}
+	}
+	state_modifiers = {
+		unscaled = {
+			state_trade_quantity_mult = -0.2
+		}
+	}
+}
+
+pm_trade_center_trade_quantity_normal_inland = {
+	texture = "gfx/interface/icons/production_method_icons/trade_quantity_2.dds"
+	replacement_if_valid = pm_trade_center_trade_quantity_normal
+	is_hidden_when_unavailable = yes
+
+	building_modifiers = {
+		workforce_scaled = {
+			goods_input_usu_logistics_add = 20		# (conversion is 5:1)
+		}
+	}
+}
+
+pm_trade_center_trade_quantity_normal = {
+	texture = "gfx/interface/icons/production_method_icons/trade_quantity_2.dds"
+
+	building_modifiers = {
+		workforce_scaled = {
+			goods_input_merchant_marine_add = 4
+		}
+	}
+}
+
+pm_trade_center_trade_quantity_high_inland = {
+	texture = "gfx/interface/icons/production_method_icons/trade_quantity_3.dds"
+	replacement_if_valid = pm_trade_center_trade_quantity_high
+	is_hidden_when_unavailable = yes
+
+	unlocking_technologies = { hydraulic_cranes }
+
+	building_modifiers = {
+		workforce_scaled = {
+			goods_input_usu_logistics_add = 25		# (conversion is 5:1)
+		}
+	}
+	state_modifiers = {
+		unscaled = {
+			state_trade_quantity_mult = 0.5
+		}
+	}
+}
+
+pm_trade_center_trade_quantity_high = {
+	texture = "gfx/interface/icons/production_method_icons/trade_quantity_3.dds"
+
+	unlocking_technologies = { hydraulic_cranes }
+
+	building_modifiers = {
+		workforce_scaled = {
+			goods_input_merchant_marine_add = 5
+		}
+	}
+	state_modifiers = {
+		unscaled = {
+			state_trade_quantity_mult = 0.5
+		}
+	}
+}
+
+pm_trade_center_trade_quantity_very_high_inland = {
+	texture = "gfx/interface/icons/production_method_icons/trade_quantity_4.dds"
+	replacement_if_valid = pm_trade_center_trade_quantity_very_high
+	is_hidden_when_unavailable = yes
+
+	unlocking_technologies = { floating_harbor }
+
+	building_modifiers = {
+		workforce_scaled = {
+			goods_input_usu_logistics_add = 30		# (conversion is 5:1)
+		}
+	}
+	state_modifiers = {
+		unscaled = {
+			state_trade_quantity_mult = 1.0
+		}
+	}
+}
+
+pm_trade_center_trade_quantity_very_high = {
+	texture = "gfx/interface/icons/production_method_icons/trade_quantity_4.dds"
+
+	unlocking_technologies = { floating_harbor }
+
+	building_modifiers = {
+		workforce_scaled = {
+			goods_input_merchant_marine_add = 6
+		}
+	}
+	state_modifiers = {
+		unscaled = {
+			state_trade_quantity_mult = 1.0
+		}
+	}
+}
+
+
+## Port Status
+
+pm_trade_center_inland = {
+	texture = "gfx/interface/icons/production_method_icons/land_trade.dds"
+	is_hidden_when_unavailable = yes
+	unlocking_production_methods = {
+		pm_trade_center_inland
+	}
+}
+
+pm_trade_center_port = {
+	texture = "gfx/interface/icons/production_method_icons/anchorage.dds"
+	is_hidden_when_unavailable = yes
+	unlocking_production_methods = {
+		pm_trade_center_port
+	}
 }

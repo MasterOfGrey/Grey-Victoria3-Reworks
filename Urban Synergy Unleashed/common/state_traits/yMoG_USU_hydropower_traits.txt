@@ -1,0 +1,19 @@
+﻿# Adapted with permission from modifiers used in "Hydropower Forever!" by Grimhat
+state_trait_hydro_potential_1 = {
+	icon = "gfx/interface/icons/state_trait_icons/hydro_potential_1.dds"
+	modifier = {
+		state_usu_building_hydro_power_plant_max_level_add = 5
+	}
+}
+state_trait_hydro_potential_2 = {
+	icon = "gfx/interface/icons/state_trait_icons/hydro_potential_2.dds"
+	modifier = {
+		state_usu_building_hydro_power_plant_max_level_add = 10		
+	}
+}
+state_trait_hydro_potential_3 = {
+    icon = "gfx/interface/icons/state_trait_icons/hydro_potential_3.dds"
+	modifier = {
+		state_usu_building_hydro_power_plant_max_level_add = 20
+	}
+}

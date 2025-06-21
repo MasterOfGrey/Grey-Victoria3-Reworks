@@ -35,7 +35,7 @@
 			}		
 		}
 	}
-	s:STATE_NORTH_BENGAL={
+	s:STATE_EAST_BENGAL={
 		region_state:BIC={
 			create_building={
 				building="building_river_port"
@@ -44,7 +44,7 @@
 			}		
 		}
 	}
-	s:STATE_SOUTH_BENGAL={
+	s:STATE_WEST_BENGAL={
 		region_state:BIC={
 			create_building={
 				building="building_river_port"
@@ -64,15 +64,6 @@
 		}
 	}
 	
-	s:STATE_SOUTH_BENGAL={
-		region_state:BIC={
-			create_building={
-				building="building_river_port"
-				level=2
-				activate_production_methods={ "pm_rp_small_port" }
-			}		
-		}
-	}
 	s:STATE_MEKONG={
 		region_state:DAI={
 			create_building={

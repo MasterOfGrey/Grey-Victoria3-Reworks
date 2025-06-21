@@ -4,7 +4,22 @@ building_river_port = {
 	icon = "gfx/interface/icons/building_icons/building_port.dds"
 	
 	ai_nationalization_desire = 0.5 	# Copied from railways - AI is reluctant to privatize vital infrastructure
-	ai_value = 50000 # Just get it done, eh
+	ai_value = {
+		value = 30000 # Just get it done, eh
+		
+		if = {
+			limit = {
+				relative_infrastructure < 1.1
+			}
+			multiply = 2
+		}
+		if = {
+			limit = {
+				relative_infrastructure < 1
+			}
+			multiply = 4
+		}
+	}
 	
 	has_max_level = yes
 	port = yes
@@ -14,6 +29,7 @@ building_river_port = {
 	production_method_groups = {
 		pmg_base_building_river_port
 		pmg_logistics_services_port_river
+		# pmg_automation_port
 	}
 	
 	required_construction = construction_cost_low
