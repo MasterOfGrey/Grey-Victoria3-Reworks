@@ -1,0 +1,8 @@
+﻿building_group_bg_trade_allowed_collectivization_add={
+	decimals=0
+	color=good
+	percent=yes
+	game_data={
+		ai_value=0
+	}
+}

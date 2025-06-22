@@ -1,0 +1,3 @@
+﻿l_korean:
+ building_group_bg_trade_allowed_collectivization_add: "노동자 소유 $bg_trade$ $concept_building$의 최소 단계"
+ building_group_bg_trade_allowed_collectivization_add_desc: "노동자 소유가 될 $bg_trade$ [Concept('concept_building','$concept_buildings$')]의 최소치입니다."
