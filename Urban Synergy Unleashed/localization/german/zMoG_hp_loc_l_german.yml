@@ -1,0 +1,36 @@
+﻿l_german:
+ state_trait_hydro_potential_1: "Einige Wasserkraftpotenziale" #deepl:158680267
+ state_trait_hydro_potential_2: "Gutes Wasserkraftpotenzial" #deepl:3095366234
+ state_trait_hydro_potential_3: "Großes Wasserkraftpotenzial" #deepl:3146982405
+ 
+ state_usu_building_hydro_power_plant_max_level_add: "Wasserkraftwerk Max Level" #deepl:2280230892
+ state_usu_building_hydro_power_plant_max_level_add_desc: "Ein Bonus oder eine Strafe auf die maximale Höhe der $usu_building_hydro_power_plant$ Gebäude im Staat." #deepl:3621638740
+ mog_usu_hp_hydro_potential_adjustment: "Verändertes Wasserkraftpotenzial" #deepl:1780358769
+ 
+ building_power_plant: "Thermische Kraftwerke" #deepl:2617968959
+ usu_building_hydro_power_plant: "Wasserkraftwerk" #deepl:3124269973
+ 
+ bg_power: "Thermische Kraftwerke" #deepl:1853276522
+ usu_bg_hydro_power: "Wasserkraftwerke" #deepl:3011532326
+ 
+ hp_pmg_hydro_power_plant: "Generation Dynamo" #deepl:3018806291
+ hp_pmg_turbines: "Turbinen-Technologie" #deepl:1453730292
+ hp_pmg_HV_generation: "Stromverteilung" #deepl:255203450
+
+ hp_pm_hydro_plant_1: "Kraftwerk der ersten Generation" #deepl:2016926551
+ hp_pm_hydro_plant_2: "Kraftwerk der zweiten Generation" #deepl:1283022637
+ hp_pm_hydro_plant_3: "Kraftwerk der dritten Generation" #deepl:186023181
+ 
+ hp_pm_turbine_1: "Frühe Turbinen" #deepl:3789195561
+ hp_pm_turbine_2: "Verbesserte Turbinen" #deepl:2202327205
+ hp_pm_turbine_3: "Moderne Turbinen" #deepl:1607379232
+ 
+ PPP_pm_t1_local_power: "Lokale Elektrizität" #deepl:3960165003
+ PPP_pm_t1_hybrid_power: "Gemischte Netzeinspeisung" #deepl:2921665541
+ PPP_pm_t1_grid_power: "Elektrisches Netz" #deepl:1703735767
+ PPP_pm_t2_local_power: "Lokale Elektrizität" #deepl:3960165003
+ PPP_pm_t2_hybrid_power: "Gemischte Netzeinspeisung" #deepl:2921665541
+ PPP_pm_t2_grid_power: "Elektrisches Netz" #deepl:1703735767
+ PPP_pm_t3_local_power: "Lokale Elektrizität" #deepl:3960165003
+ PPP_pm_t3_hybrid_power: "Gemischte Netzeinspeisung" #deepl:2921665541
+ PPP_pm_t3_grid_power: "Elektrisches Netz" #deepl:1703735767

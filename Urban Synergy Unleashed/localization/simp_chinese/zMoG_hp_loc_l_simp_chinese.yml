@@ -1,0 +1,36 @@
+﻿l_simp_chinese:
+ state_trait_hydro_potential_1: "一些水力发电潜力" #deepl:158680267
+ state_trait_hydro_potential_2: "良好的水力发电潜力" #deepl:3095366234
+ state_trait_hydro_potential_3: "巨大的水力发电潜力" #deepl:3146982405
+ 
+ state_usu_building_hydro_power_plant_max_level_add: "水电站最高水位" #deepl:2280230892
+ state_usu_building_hydro_power_plant_max_level_add_desc: "该州$usu_building_hydro_power_plant$ 建筑最高等级的奖励或惩罚。" #deepl:3621638740
+ mog_usu_hp_hydro_potential_adjustment: "改变水力发电潜力" #deepl:1780358769
+ 
+ building_power_plant: "火力发电厂" #deepl:2617968959
+ usu_building_hydro_power_plant: "水电站" #deepl:3124269973
+ 
+ bg_power: "热电站" #deepl:1853276522
+ usu_bg_hydro_power: "水电站" #deepl:3011532326
+ 
+ hp_pmg_hydro_power_plant: "发电机组" #deepl:3018806291
+ hp_pmg_turbines: "涡轮机技术" #deepl:1453730292
+ hp_pmg_HV_generation: "配电" #deepl:255203450
+
+ hp_pm_hydro_plant_1: "第一代发电厂" #deepl:2016926551
+ hp_pm_hydro_plant_2: "第二代发电厂" #deepl:1283022637
+ hp_pm_hydro_plant_3: "第三代发电厂" #deepl:186023181
+ 
+ hp_pm_turbine_1: "早期涡轮机" #deepl:3789195561
+ hp_pm_turbine_2: "改进的涡轮机" #deepl:2202327205
+ hp_pm_turbine_3: "现代涡轮机" #deepl:1607379232
+ 
+ PPP_pm_t1_local_power: "当地电力" #deepl:3960165003
+ PPP_pm_t1_hybrid_power: "混合电网供电" #deepl:2921665541
+ PPP_pm_t1_grid_power: "电网" #deepl:1703735767
+ PPP_pm_t2_local_power: "当地电力" #deepl:3960165003
+ PPP_pm_t2_hybrid_power: "混合电网供电" #deepl:2921665541
+ PPP_pm_t2_grid_power: "电网" #deepl:1703735767
+ PPP_pm_t3_local_power: "当地电力" #deepl:3960165003
+ PPP_pm_t3_hybrid_power: "混合电网供电" #deepl:2921665541
+ PPP_pm_t3_grid_power: "电网" #deepl:1703735767

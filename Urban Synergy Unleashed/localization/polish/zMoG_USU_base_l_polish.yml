@@ -1,45 +1,75 @@
 ﻿l_polish:
-     # Modifiers 
+    # Modifiers
  mog_urbanization: "Synergia miejska Urbanizm"
  mog_urbanization_mult: "Synergia miejska Urbanizm"
  mog_construction_max_level_adjustment: "Budowa Synergii Miejskiej"
  mog_logistics_land_trade: "Pojemność handlu lądowego z importowanych usług logistycznych"
  mog_mapi: "Synergia miejska MAPI"
-  
-     # Building 
+    
+    # Building
+ USU_bg_port_infrastructure: "Porty" #deepl:687823806
+    
  building_river_port: "Doki rzeczne"
  usu_building_public_green: "Publiczna zieleń"
-  
-     # Technologies 
-  
-     # Goods 
+    
+    # Technologies
+    
+    # Goods
  usu_logistics: "Usługi logistyczne"
-  
-     # Modifier types 
+ trade_route_import_lens_option_usu_logistics_tooltip: "Ustanowienie szlaku handlu importowego $usu_logistics$ " #deepl:29640115
+ trade_route_export_lens_option_usu_logistics_tooltip: "Ustanowienie szlaku handlu eksportowego $usu_logistics$ " #deepl:1994327992
+    
+    # Modifier types
  state_building_river_port_max_level_add: "Maksymalny poziom portu rzecznego"
  state_building_river_port_max_level_add_desc: "Premia lub kara do maksymalnego poziomu budynków portu rzecznego."
-  
+    
  goods_input_usu_logistics_add: "@usu_logistics![Nbsp]$usu_logistics$ wejście"
  goods_output_usu_logistics_add: "@usu_logistics![Nbsp]$usu_logistics$ wynik"
- goods_input_usu_logisticsr_mult: "Budowanie @usu_logistics![Nbsp]$usu_logistics$ wejście"
+ goods_input_usu_logistics_mult: "Budowanie @usu_logistics![Nbsp]$usu_logistics$ wejście" #deepl:3595168342
  goods_output_usu_logistics_mult: "Budowanie @usu_logistics![Nbsp]$usu_logistics$ wyjście"
-  
+    
  goods_input_usu_logistics_add_desc: "Ilość @usu_logistics![Nbsp]$usu_logistics$ zużyta przez budynki"
  goods_output_usu_logistics_add_desc: "Ilość @usu_logistics![Nbsp]$usu_logistics$ wyprodukowana przez budynki"
  goods_input_usu_logistics_mult_desc: "Premia lub kara do kwoty @usu_logistics![Nbsp]$usu_logistics$ zużytej przez budynki"
  goods_output_usu_logistics_mult_desc: "Premia lub kara do kwoty @usu_logistics![Nbsp]$usu_logistics$ wyprodukowanej przez budynki"
-  
- modifier_goods_input_tools_mult: "@tools![Nbsp]Wprowadzenie narzędzi"
- modifier_goods_input_tools_mult_desc: "Ilość @tools![Nbsp]Narzędzia zużywane przez budynki"
-  
-     # PMGs 
+    
+ usu_building_public_green_throughput_add: "$usu_building_public_green$ budynek [concept_throughput]" #deepl:1617626189
+ usu_building_public_green_throughput_add_desc: "Premia lub kara zarówno dla wejścia, jak i wyjścia $usu_building_public_green$" #deepl:3185140157
+ ppp_building_power_grid_throughput_add: "$ppp_building_power_grid$ budynek [concept_throughput]" #deepl:486021742
+ ppp_building_power_grid_throughput_add_desc: "Premia lub kara zarówno dla wejścia, jak i wyjścia $ppp_building_power_grid$" #deepl:1270900800
+ building_river_port_throughput_add: "$building_river_port$ budynek [concept_throughput]" #deepl:530621336
+ building_river_port_throughput_add_desc: "Premia lub kara zarówno dla wejścia, jak i wyjścia $building_river_port$" #deepl:3708668278
+ usu_building_hydro_power_plant_throughput_add: "$usu_building_hydro_power_plant$ budynek [concept_throughput]" #deepl:2682676248
+ usu_building_hydro_power_plant_throughput_add_desc: "Premia lub kara zarówno dla wejścia, jak i wyjścia $usu_building_hydro_power_plant$" #deepl:1139273118
+    
+    # Vanilla Modifier types
+    
+ goods_input_luxury_clothes_add: "@luxury_clothes![Nbsp]$luxury_clothes$ wejście" #deepl:3302038186
+ goods_input_luxury_clothes_add_desc: "Ilość @luxury_clothes![Nbsp]$luxury_clothes$ zużyta przez budynki" #deepl:3477511040
+ goods_input_services_add: "@services![Nbsp]$services$ input" #deepl:2678123429
+ goods_input_services_add_desc: "Ilość @services![Nbsp]$services$ zużywana przez budynki" #deepl:1408821948
+    
+ goods_input_tools_mult: "Tworzenie @tools![Nbsp]$tools$ input" #deepl:1055261592
+ goods_input_tools_mult_desc: "Ilość @tools![Nbsp]$tools$ zużywana przez budynki" #deepl:1892978715
+ goods_input_steel_mult: "Budowanie @steel![Nbsp]$steel$ wejście" #deepl:3508900889
+ goods_input_steel_mult_desc: "Ilość @steel![Nbsp]$steel$ zużywana przez budynki" #deepl:2095881000
+    
+ goods_input_transportation_mult: "Budowanie @transportu![Nbsp]$transportation$ wejście" #deepl:3701781964
+ goods_input_transportation_mult_desc: "Premia lub kara do ilości @transportu![Nbsp]$transportation$ zużywanego przez budynki." #deepl:3299014953
+ goods_output_transportation_mult: "Budowanie @transportu![Nbsp]$transportation$ wyjście" #deepl:171588735
+ goods_output_transportation_mult_desc: "Premia lub kara do ilości @transportu![Nbsp]$transportation$ produkowanego przez budynki." #deepl:296029142
+ goods_output_electricity_mult: "Budowanie @elektryczności![Nbsp]$electricity$ wyjście" #deepl:320784986
+ goods_output_electricity_mult_desc: "Premia lub kara do ilości @elektryczności![Nbsp]$electricity$ produkowanej przez budynki." #deepl:145655897
+    
+    # PMGs
  pmg_base_building_river_port: "Doki"
  USU_pmg_government_administration_emergency_services: "Służby ratunkowe"
  USU_pmg_government_administration_law_enforcement: "Organy ścigania"
  USU_pmg_public_space_management: "Zarządzanie przestrzenią publiczną"
  USU_pmg_public_parklands: "Wykorzystanie parków"
-  
-     # PMs 
+    
+    # PMs
+ pm_rp_anchorage: "Anchorage" #deepl:1916484437
  pm_rp_small_port: "Mola nadrzeczne"
  pm_rp_industrial_port: "Porty przemysłowe"
  pm_rp_modern_port: "Nowoczesne porty"
@@ -59,14 +89,16 @@
  USU_pm_village_stables: "Stajnie społecznościowe"
  USU_pm_contained_wilderness: "Chronione tereny dzikie"
  USU_pm_seasonal_fairgrounds: "Sezonowe tereny targowe"
-  
-     # State Traits 
+    
+    # State Traits
  state_trait_rotterdam: "Port w Rotterdamie"
  state_trait_hudson_river: "Rzeka Hudson"
-  
-     # Autoexpand tooltip(s) 
- is_industrial_building: "Jest naturalnym $concept_building_industry$ dla zbywalnego [Concept('concept_good', '$concept_goods$')]" #NT!
- is_private_infrastructure: "Czy Transport $bg_infrastructure$ może być [Concept('concept_privatize', '$concept_privatized$')]" #NT!
- pos_rel_infrastructure: "Państwo ma dostępne [concept_infrastructure]" #NT!
- neg_rel_infrastructure: "Stan ma deficyt [concept_infrastructure]" #NT!
- bureaucracy_percent: "Poziom krajowej biurokracji jest niższy niż #v 90%#!" #NT!
+    
+    # Autoexpand tooltip(s)
+ is_industrial_building: "Jest naturalnym $concept_building_industry$ dla zbywalnego [Concept('concept_good', '$concept_goods$')]"
+ is_private_infrastructure: "Czy Transport $bg_infrastructure$ może być [Concept('concept_privatize', '$concept_privatized$')]"
+ pos_rel_infrastructure: "Państwo ma dostępne [concept_infrastructure]"
+ neg_rel_infrastructure: "Stan ma deficyt [concept_infrastructure]"
+ bureaucracy_percent: "Poziom krajowej biurokracji jest niższy niż #v 90%#!"
+ is_convoy_provider: "Czy $bg_infrastructure$ zapewnia [concept_convoys]" #deepl:4008457251
+ convoy_ratio: "Dostępnych konwojów jest mniej niż #v 5%.#!" #deepl:361081141

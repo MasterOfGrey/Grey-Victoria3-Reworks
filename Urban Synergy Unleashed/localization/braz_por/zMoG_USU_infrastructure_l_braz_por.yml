@@ -1,57 +1,65 @@
 ﻿l_braz_por:
-  # Railways 
+ # Railways
  pm_ac_electric_trains: "Trens elétricos CA"
  pm_ac_electric_trains_principle_transport_3: "Trens elétricos AC conjuntos"
-  
+ 
  pm_electric_passenger_carriages: "Carruagens elétricas de passageiros"
-  
+ 
  pmg_automation_building_railway: "Automação de instalações"
  pm_auto_disabled_building_railway: "Guindaste de manivela"
  pm_steam_crane_building_railway: "Guindaste a vapor de lança curva"
  pm_watertube_boiler_building_railway: "Caldeira de tubos de fogo"
  pm_rotary_valve_engine_building_railway: "Válvula rotativa Uniflow"
  pm_steam_donkey_building_railway: "Transmissão a vapor com engrenagens"
-  
-  # Logistics 
+ 
+ # Ports
+ pmg_automation_port: "Automação de instalações" #deepl:2147123001
+ pm_auto_disabled_building_port: "Manuseio manual" #deepl:4263907806
+ pm_steam_crane_building_port: "Guindaste a vapor de lança curva" #deepl:1146043665
+ pm_hydraulic_lifters_building_port: "Levantadores hidráulicos" #deepl:3445355814
+ pm_assembly_lines_building_port: "Transportadores de docas" #deepl:3464779635
+
+ # Logistics
  pmg_logistics_services_railway: "Logística Ferroviária"
  pmg_logistics_services_port_coastal: "Logística de Envio"
  pmg_logistics_services_port_river: "Logística Fluvial"
-  
+ 
  USU_pm_rail_logistics_0: "Sem coordenação logística"
  USU_pm_rail_logistics_1: "Planejamento de subsídio de cota"
  USU_pm_rail_logistics_2: "Licitação de acesso remoto"
  USU_pm_rail_logistics_3: "Gestão da cadeia de abastecimento"
-  
+
  USU_pm_port_c_logistics_0: "Sem coordenação logística"
  USU_pm_port_c_logistics_1: "Planejamento de subsídio de cota"
  USU_pm_port_c_logistics_2: "Licitação de acesso remoto"
  USU_pm_port_c_logistics_3: "Gestão da cadeia de abastecimento"
-  
+ 
  USU_pm_port_r_logistics_0: "Sem coordenação logística"
  USU_pm_port_r_logistics_1: "Planejamento de subsídio de cota"
  USU_pm_port_r_logistics_2: "Licitação de acesso remoto"
  USU_pm_port_r_logistics_3: "Gestão da cadeia de abastecimento"
-  
-  # Canals 
+ 
+ # Canals
  # pm_canal: "Fechaduras movidas a vapor"
  pm_canals_electric: "Eclusas elétricas de canal"
  pm_canals_oil: "Travas de bomba de óleo"
-  
+
  pmg_canal_boats: "Gestão de canais"
  pm_no_tugs_building_canals: "Sem rebocadores"
  pm_tugging_building_canals: "Frota de Rebocadores"
-  
+ 
  pmg_canal_logistics: "Logística de Canal"
  pm_no_canal_logistics: "Sem logística"
  pm_minor_canal_logistics: "Logística Menor"
  pm_major_canal_logistics: "Logística principal"
-  
+ 
  canal_dividends.1.t: "Acidente no Canal"
  canal_dividends.1.d: "Um navio mercante não prestou atenção e acidentalmente encalhou no canal, bloqueando o caminho e tornando a passagem mais perigosa até ser completamente desobstruída."
  canal_dividends.1.f: "O grande navio mercante está meio inclinado no canal, de lado, com um ferimento cortante do impacto com a parede, suas mercadorias espalhadas pela passagem, enfeites e artigos exóticos balançando na água, as mercadorias caras de uma terra estrangeira encharcadas e arruinadas.\n\nNa praia está o capitão, com o rosto entre as mãos e o chapéu flutuando no canal. Ao lado dele, o representante de seguros da empresa segurando um manifesto de navio danificado pela água tenta entender tudo, enquanto um agente do canal tenta explicar que a limpeza pode levar meses."
  canal_dividends.1.1: "$expedition_events.542.a$"
  modifier_building_canal_accident: "Acidente no Canal"
-  
-  
-  
-  
+ mog_building_canal_accident: "Acidente no canal" #deepl:3839460779
+
+
+
+

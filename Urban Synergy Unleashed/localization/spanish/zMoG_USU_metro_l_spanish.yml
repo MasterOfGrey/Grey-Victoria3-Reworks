@@ -1,12 +1,12 @@
 ﻿l_spanish:
  pmg_public_transit: "Transporte público"
- # pm_no_public_transport: "Sin transporte público" #NT!
+ # pm_no_public_transport: "Sin transporte público"
  pm_public_omnibus: "Omnibuses tirados por caballos"
- # pm_public_trams: "Tranvías tirados por caballos" #NT!
+ # pm_public_trams: "Tranvías tirados por caballos"
  pm_public_steam_metro: "Metro propulsado por vapor"
  pm_public_electric_metro: "Metro propulsado por electricidad"
- # pm_public_motor_carriages: "Autobuses urbanos" #NT!
-  
+ # pm_public_motor_carriages: "Autobuses urbanos"
+ 
  pmg_local_transport: "Transporte local"
  pm_horses: "Caballos y carros"
  pm_stagecoaches_and_wagons: "Vehículos tirados por caballos"

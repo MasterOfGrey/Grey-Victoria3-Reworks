@@ -1,0 +1,36 @@
+﻿l_braz_por:
+ state_trait_hydro_potential_1: "Algum potencial hidrelétrico" #deepl:158680267
+ state_trait_hydro_potential_2: "Bom potencial hidrelétrico" #deepl:3095366234
+ state_trait_hydro_potential_3: "Grande potencial hidrelétrico" #deepl:3146982405
+ 
+ state_usu_building_hydro_power_plant_max_level_add: "Nível máximo da usina hidrelétrica" #deepl:2280230892
+ state_usu_building_hydro_power_plant_max_level_add_desc: "Um bônus ou penalidade para o nível máximo de edifícios $usu_building_hydro_power_plant$ no estado." #deepl:3621638740
+ mog_usu_hp_hydro_potential_adjustment: "Potencial hidrelétrico alterado" #deepl:1780358769
+ 
+ building_power_plant: "Usinas termelétricas" #deepl:2617968959
+ usu_building_hydro_power_plant: "Usina hidrelétrica" #deepl:3124269973
+ 
+ bg_power: "Estações de energia térmica" #deepl:1853276522
+ usu_bg_hydro_power: "Estações de energia hidrelétrica" #deepl:3011532326
+ 
+ hp_pmg_hydro_power_plant: "Geração Dynamo" #deepl:3018806291
+ hp_pmg_turbines: "Tecnologia de turbinas" #deepl:1453730292
+ hp_pmg_HV_generation: "Distribuição de energia" #deepl:255203450
+
+ hp_pm_hydro_plant_1: "Usina de energia de primeira geração" #deepl:2016926551
+ hp_pm_hydro_plant_2: "Usina de segunda geração" #deepl:1283022637
+ hp_pm_hydro_plant_3: "Usina de terceira geração" #deepl:186023181
+ 
+ hp_pm_turbine_1: "Turbinas antigas" #deepl:3789195561
+ hp_pm_turbine_2: "Turbinas aprimoradas" #deepl:2202327205
+ hp_pm_turbine_3: "Turbinas modernas" #deepl:1607379232
+ 
+ PPP_pm_t1_local_power: "Eletricidade local" #deepl:3960165003
+ PPP_pm_t1_hybrid_power: "Fornecimento de rede mista" #deepl:2921665541
+ PPP_pm_t1_grid_power: "Rede elétrica" #deepl:1703735767
+ PPP_pm_t2_local_power: "Eletricidade local" #deepl:3960165003
+ PPP_pm_t2_hybrid_power: "Fornecimento de rede mista" #deepl:2921665541
+ PPP_pm_t2_grid_power: "Rede elétrica" #deepl:1703735767
+ PPP_pm_t3_local_power: "Eletricidade local" #deepl:3960165003
+ PPP_pm_t3_hybrid_power: "Fornecimento de rede mista" #deepl:2921665541
+ PPP_pm_t3_grid_power: "Rede elétrica" #deepl:1703735767

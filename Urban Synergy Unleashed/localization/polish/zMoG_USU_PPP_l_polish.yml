@@ -1,45 +1,40 @@
 ﻿l_polish:
-     # Building 
+    # Building
+ usu_bg_power_grid: "Sieć elektryczna" #deepl:1703735767
  ppp_building_power_grid: "Sieć elektryczna"
-  
-     # Technologies 
+    
+    # Technologies
  PPP_tech_hv_power: "Przenoszenie mocy"
  PPP_tech_hv_power_desc: "Dzięki zastosowaniu konwerterów i regulatorów przesył energii wysokiego napięcia na duże odległości może być teraz realizowany w wielu miejscach o różnych potrzebach."
  USU_tech_hv_railways: "Transformatory przemysłowe"
  USU_tech_hv_railways_desc: "Dzięki zastosowaniu skalowalnych transformatorów możemy w pełni wykorzystać zalety prądu przemiennego, co pozwala na przesyłanie stałego, wysokiego napięcia na duże odległości i sprawia, że ​​przesył energii elektrycznej staje się ekonomiczny."
-  
-     # Goods 
+	
+    # Goods
  ppp_hv_power: "Moc wysokiego napięcia"
-  
-     # Modifier types - As of USU: None of the multipliers are used anymore. 
+    
+    # Modifier types - As of USU: None of the multipliers are used anymore.
  goods_input_ppp_hv_power_add: "@ppp_hv_power![Nbsp]$ppp_hv_power$ wejście"
  goods_output_ppp_hv_power_add: "@ppp_hv_power![Nbsp]$ppp_hv_power$ wyjście"
  goods_input_ppp_hv_power_mult: "Budowanie @ppp_hv_power![Nbsp]$ppp_hv_power$ wejście"
  goods_output_ppp_hv_power_mult: "Budowanie wyjścia @ppp_hv_power![Nbsp]$ppp_hv_power$"
-  
+    
  goods_input_ppp_hv_power_add_desc: "Ilość @ppp_hv_power![Nbsp]$ppp_hv_power$ zużywana przez budynki"
  goods_output_ppp_hv_power_add_desc: "Ilość @ppp_hv_power![Nbsp]$ppp_hv_power$ wytwarzanej przez budynki"
  goods_input_ppp_hv_power_mult_desc: "Premia lub kara do kwoty @ppp_hv_power![Nbsp]$ppp_hv_power$ zużywanej przez budynki"
  goods_output_ppp_hv_power_mult_desc: "Premia lub kara do ilości @ppp_hv_power![Nbsp]$ppp_hv_power$ wytwarzanej przez budynki"
-  
- goods_input_steel_mult: "Budynek $goods_input_steel_add$"
- goods_input_tools_mult: "Budynek $goods_input_tools_add$"
-  
- goods_input_steel_mult_desc: "$goods_input_steel_add_desc$"
- goods_input_tools_mult_desc: "$goods_input_tools_add_desc$"
-  
-     # PMGs 
+    
+    # PMGs
  PPP_pmg_generation_machinery: "Maszyny generacyjne"
  PPP_pmg_HV_generation: "Dystrybucja mocy"
  PPP_pmg_power_grid: "$pm_base$"
  PPP_pmg_power_grid_scaler: "Pojemność dystrybucyjna"
-  
-     # PMs 
+    
+    # PMs
  PPP_pm_hydro_mechanical: "Turbiny wodne"
  PPP_pm_steam_engine: "Silniki parowe"
  PPP_pm_steam_turbine: "Turbiny parowe"
  PPP_pm_gas_turbine: "Turbiny gazowe"
-  
+    
  PPP_pm_hy_local_power: "Lokalna energia elektryczna"
  PPP_pm_hy_hybrid_power: "Mieszane zasilanie sieciowe"
  PPP_pm_hy_grid_power: "Sieć elektryczna"
@@ -53,11 +48,11 @@
  PPP_pm_gt_hybrid_power: "Mieszane zasilanie sieciowe"
  PPP_pm_gt_grid_power: "Sieć elektryczna"
  PPP_pm_emergency_local_power: "Awaryjne zaopatrzenie lokalne"
-  
+    
  PPP_pm_grid_base: "Dystrybucja regionalna"
-  
+    
  PPP_pm_grid_water: "Normalna pojemność"
  PPP_pm_grid_engine: "Zwiększona pojemność"
  PPP_pm_grid_turbine: "Podwójna pojemność"
  PPP_pm_grid_gas_turbine: "Potrojona pojemność"
-  
+    

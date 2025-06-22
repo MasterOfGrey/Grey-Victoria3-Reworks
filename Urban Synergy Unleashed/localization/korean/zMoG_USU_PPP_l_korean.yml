@@ -1,45 +1,40 @@
 ﻿l_korean:
-     # Building 
+    # Building
+ usu_bg_power_grid: "전기 그리드" #deepl:1703735767
  ppp_building_power_grid: "전기 그리드"
-  
-     # Technologies 
+    
+    # Technologies
  PPP_tech_hv_power: "동력 전달"
  PPP_tech_hv_power_desc: "변환기와 레귤레이터를 활용함으로써 고전압의 장거리 전력 전송이 이제 다양한 요구 사항을 갖춘 다양한 목적지에서 이용 가능합니다."
  USU_tech_hv_railways: "산업용 변압기"
  USU_tech_hv_railways_desc: "확장 가능한 변압기를 활용하면 교류 전기의 이점을 최대한 활용하여 장거리에 걸쳐 일관되게 높은 전압을 전달하고 경제적으로 전력을 전송할 수 있습니다."
-  
-     # Goods 
+	
+    # Goods
  ppp_hv_power: "고전압 전력"
-  
-     # Modifier types - As of USU: None of the multipliers are used anymore. 
+    
+    # Modifier types - As of USU: None of the multipliers are used anymore.
  goods_input_ppp_hv_power_add: "@ppp_hv_power![Nbsp]$ppp_hv_power$ 입력"
  goods_output_ppp_hv_power_add: "@ppp_hv_power![Nbsp]$ppp_hv_power$ 출력"
  goods_input_ppp_hv_power_mult: "@ppp_hv_power![Nbsp]$ppp_hv_power$ 입력을 빌드합니다"
  goods_output_ppp_hv_power_mult: "@ppp_hv_power![Nbsp]$ppp_hv_power$ 출력 구축"
-  
+    
  goods_input_ppp_hv_power_add_desc: "건물에서 소비하는 @ppp_hv_power![Nbsp]$ppp_hv_power$의 양"
  goods_output_ppp_hv_power_add_desc: "건물에서 생산되는 @ppp_hv_power![Nbsp]$ppp_hv_power$의 양"
  goods_input_ppp_hv_power_mult_desc: "건물에서 소모하는 @ppp_hv_power![Nbsp]$ppp_hv_power$ 양에 대한 보너스 또는 패널티"
  goods_output_ppp_hv_power_mult_desc: "건물에서 생산되는 @ppp_hv_power![Nbsp]$ppp_hv_power$의 양에 대한 보너스 또는 패널티"
-  
- goods_input_steel_mult: "건물 $goods_input_steel_add$"
- goods_input_tools_mult: "건물 $goods_input_tools_add$"
-  
- goods_input_steel_mult_desc: "$goods_input_steel_add_desc$"
- goods_input_tools_mult_desc: "$goods_input_tools_add_desc$"
-  
-     # PMGs 
+    
+    # PMGs
  PPP_pmg_generation_machinery: "발전 기계"
  PPP_pmg_HV_generation: "전력 분배"
  PPP_pmg_power_grid: "$pm_base$"
  PPP_pmg_power_grid_scaler: "유통 용량"
-  
-     # PMs 
+    
+    # PMs
  PPP_pm_hydro_mechanical: "수력 터빈"
  PPP_pm_steam_engine: "증기 엔진"
  PPP_pm_steam_turbine: "증기 터빈"
  PPP_pm_gas_turbine: "가스터빈"
-  
+    
  PPP_pm_hy_local_power: "지역 전기"
  PPP_pm_hy_hybrid_power: "혼합 그리드 공급"
  PPP_pm_hy_grid_power: "전기 그리드"
@@ -53,11 +48,11 @@
  PPP_pm_gt_hybrid_power: "혼합 그리드 공급"
  PPP_pm_gt_grid_power: "전기 그리드"
  PPP_pm_emergency_local_power: "긴급 지역 공급"
-  
+    
  PPP_pm_grid_base: "지역 분포"
-  
+    
  PPP_pm_grid_water: "정상 용량"
  PPP_pm_grid_engine: "증가된 용량"
  PPP_pm_grid_turbine: "용량이 두 배로 늘어남"
  PPP_pm_grid_gas_turbine: "3배 용량"
-  
+    

@@ -1,0 +1,36 @@
+﻿l_polish:
+ state_trait_hydro_potential_1: "Pewien potencjał energii wodnej" #deepl:158680267
+ state_trait_hydro_potential_2: "Dobry potencjał hydroenergetyczny" #deepl:3095366234
+ state_trait_hydro_potential_3: "Wielki potencjał energii wodnej" #deepl:3146982405
+ 
+ state_usu_building_hydro_power_plant_max_level_add: "Maksymalny poziom elektrowni wodnej" #deepl:2280230892
+ state_usu_building_hydro_power_plant_max_level_add_desc: "Premia lub kara do maksymalnego poziomu budynków $usu_building_hydro_power_plant$ w stanie." #deepl:3621638740
+ mog_usu_hp_hydro_potential_adjustment: "Zmieniony potencjał energii wodnej" #deepl:1780358769
+ 
+ building_power_plant: "Elektrownie cieplne" #deepl:2617968959
+ usu_building_hydro_power_plant: "Elektrownia wodna" #deepl:3124269973
+ 
+ bg_power: "Elektrownie cieplne" #deepl:1853276522
+ usu_bg_hydro_power: "Elektrownie wodne" #deepl:3011532326
+ 
+ hp_pmg_hydro_power_plant: "Generacja Dynamo" #deepl:3018806291
+ hp_pmg_turbines: "Technologia turbin" #deepl:1453730292
+ hp_pmg_HV_generation: "Dystrybucja zasilania" #deepl:255203450
+
+ hp_pm_hydro_plant_1: "Elektrownia pierwszej generacji" #deepl:2016926551
+ hp_pm_hydro_plant_2: "Elektrownia drugiej generacji" #deepl:1283022637
+ hp_pm_hydro_plant_3: "Elektrownia trzeciej generacji" #deepl:186023181
+ 
+ hp_pm_turbine_1: "Wczesne turbiny" #deepl:3789195561
+ hp_pm_turbine_2: "Ulepszone turbiny" #deepl:2202327205
+ hp_pm_turbine_3: "Nowoczesne turbiny" #deepl:1607379232
+ 
+ PPP_pm_t1_local_power: "Lokalna energia elektryczna" #deepl:3960165003
+ PPP_pm_t1_hybrid_power: "Mieszane zasilanie sieciowe" #deepl:2921665541
+ PPP_pm_t1_grid_power: "Sieć elektryczna" #deepl:1703735767
+ PPP_pm_t2_local_power: "Lokalna energia elektryczna" #deepl:3960165003
+ PPP_pm_t2_hybrid_power: "Mieszane zasilanie sieciowe" #deepl:2921665541
+ PPP_pm_t2_grid_power: "Sieć elektryczna" #deepl:1703735767
+ PPP_pm_t3_local_power: "Lokalna energia elektryczna" #deepl:3960165003
+ PPP_pm_t3_hybrid_power: "Mieszane zasilanie sieciowe" #deepl:2921665541
+ PPP_pm_t3_grid_power: "Sieć elektryczna" #deepl:1703735767

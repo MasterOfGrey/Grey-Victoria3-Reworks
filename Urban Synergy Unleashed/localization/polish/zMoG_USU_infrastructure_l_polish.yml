@@ -1,57 +1,65 @@
 ﻿l_polish:
-  # Railways 
+ # Railways
  pm_ac_electric_trains: "Pociągi elektryczne AC"
  pm_ac_electric_trains_principle_transport_3: "Wspólne pociągi elektryczne AC"
-  
+ 
  pm_electric_passenger_carriages: "Elektryczne wagony pasażerskie"
-  
+ 
  pmg_automation_building_railway: "Automatyzacja obiektów"
  pm_auto_disabled_building_railway: "Dźwig korbowy ręczny"
  pm_steam_crane_building_railway: "Żuraw parowy z wysięgnikiem zakrzywionym"
  pm_watertube_boiler_building_railway: "Kocioł płomieniówkowy"
  pm_rotary_valve_engine_building_railway: "Zawór obrotowy Uniflow"
  pm_steam_donkey_building_railway: "Przekładniowy układ napędowy parowy"
-  
-  # Logistics 
+ 
+ # Ports
+ pmg_automation_port: "Automatyzacja obiektów" #deepl:2147123001
+ pm_auto_disabled_building_port: "Ręczna obsługa" #deepl:4263907806
+ pm_steam_crane_building_port: "Żuraw parowy z zakrzywionym wysięgnikiem" #deepl:1146043665
+ pm_hydraulic_lifters_building_port: "Podnośniki hydrauliczne" #deepl:3445355814
+ pm_assembly_lines_building_port: "Przenośniki dokowe" #deepl:3464779635
+
+ # Logistics
  pmg_logistics_services_railway: "Logistyka kolejowa"
  pmg_logistics_services_port_coastal: "Logistyka wysyłkowa"
  pmg_logistics_services_port_river: "Logistyka rzeczna"
-  
+ 
  USU_pm_rail_logistics_0: "Brak koordynacji logistycznej"
  USU_pm_rail_logistics_1: "Planowanie limitów kwotowych"
  USU_pm_rail_logistics_2: "Zdalne licytowanie dostępu"
  USU_pm_rail_logistics_3: "Zarządzanie łańcuchem dostaw"
-  
+
  USU_pm_port_c_logistics_0: "Brak koordynacji logistycznej"
  USU_pm_port_c_logistics_1: "Planowanie limitów kwotowych"
  USU_pm_port_c_logistics_2: "Zdalne licytowanie dostępu"
  USU_pm_port_c_logistics_3: "Zarządzanie łańcuchem dostaw"
-  
+ 
  USU_pm_port_r_logistics_0: "Brak koordynacji logistycznej"
  USU_pm_port_r_logistics_1: "Planowanie limitów kwotowych"
  USU_pm_port_r_logistics_2: "Zdalne licytowanie dostępu"
  USU_pm_port_r_logistics_3: "Zarządzanie łańcuchem dostaw"
-  
-  # Canals 
+ 
+ # Canals
  # pm_canal: "Zamki napędzane parą"
  pm_canals_electric: "Śluzy Kanałowe Elektryczne"
  pm_canals_oil: "Blokady pomp olejowych"
-  
+
  pmg_canal_boats: "Zarządzanie kanałami"
  pm_no_tugs_building_canals: "Bez holowników"
  pm_tugging_building_canals: "Flota holowników"
-  
+ 
  pmg_canal_logistics: "Logistyka kanałowa"
  pm_no_canal_logistics: "Brak logistyki"
  pm_minor_canal_logistics: "Mniejsza logistyka"
  pm_major_canal_logistics: "Główna logistyka"
-  
+ 
  canal_dividends.1.t: "Wypadek na kanale"
  canal_dividends.1.d: "Statek handlowy nie zwrócił uwagi na sytuację i przypadkowo osiadł na mieliźnie w kanale, blokując drogę i sprawiając, że przejście stało się bardziej niebezpieczne, dopóki kanał nie został całkowicie oczyszczony."
  canal_dividends.1.f: "Duży statek handlowy leży przechylony w kanale, na boku ma ranę ciętą od uderzenia w ścianę, jego towary rozlane na całej długości przejścia, ozdoby i egzotyczne towary unoszą się na wodzie, drogie towary z obcego kraju są przemoczone i zniszczone.\n\nNa brzegu stoi kapitan, z twarzą ukrytą w dłoniach i kapeluszem unoszącym się na wodzie kanału. Obok niego przedstawiciel firmy ubezpieczeniowej trzyma zalany manifest statku, próbując zrozumieć to wszystko, podczas gdy agent kanału próbuje wyjaśnić, że oczyszczenie może potrwać miesiące."
  canal_dividends.1.1: "$expedition_events.542.a$"
  modifier_building_canal_accident: "Wypadek na kanale"
-  
-  
-  
-  
+ mog_building_canal_accident: "Wypadek w kanale" #deepl:3839460779
+
+
+
+

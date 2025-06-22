@@ -1,0 +1,36 @@
+﻿l_russian:
+ state_trait_hydro_potential_1: "Некоторый потенциал гидроэнергетики" #deepl:158680267
+ state_trait_hydro_potential_2: "Хороший гидроэнергетический потенциал" #deepl:3095366234
+ state_trait_hydro_potential_3: "Большой гидроэнергетический потенциал" #deepl:3146982405
+ 
+ state_usu_building_hydro_power_plant_max_level_add: "Гидроэлектростанция Максимальный уровень" #deepl:2280230892
+ state_usu_building_hydro_power_plant_max_level_add_desc: "Бонус или штраф к максимальному уровню зданий $usu_building_hydro_power_plant$ в штате." #deepl:3621638740
+ mog_usu_hp_hydro_potential_adjustment: "Измененный гидроэнергетический потенциал" #deepl:1780358769
+ 
+ building_power_plant: "Тепловые электростанции" #deepl:2617968959
+ usu_building_hydro_power_plant: "Гидроэлектростанция" #deepl:3124269973
+ 
+ bg_power: "Тепловые электростанции" #deepl:1853276522
+ usu_bg_hydro_power: "Гидроэлектростанции" #deepl:3011532326
+ 
+ hp_pmg_hydro_power_plant: "Поколение Динамо" #deepl:3018806291
+ hp_pmg_turbines: "Технология турбин" #deepl:1453730292
+ hp_pmg_HV_generation: "Распределение электроэнергии" #deepl:255203450
+
+ hp_pm_hydro_plant_1: "Электростанция первого поколения" #deepl:2016926551
+ hp_pm_hydro_plant_2: "Электростанция второго поколения" #deepl:1283022637
+ hp_pm_hydro_plant_3: "Электростанция третьего поколения" #deepl:186023181
+ 
+ hp_pm_turbine_1: "Ранние турбины" #deepl:3789195561
+ hp_pm_turbine_2: "Улучшенные турбины" #deepl:2202327205
+ hp_pm_turbine_3: "Современные турбины" #deepl:1607379232
+ 
+ PPP_pm_t1_local_power: "Местная электроэнергия" #deepl:3960165003
+ PPP_pm_t1_hybrid_power: "Смешанное электроснабжение" #deepl:2921665541
+ PPP_pm_t1_grid_power: "Электрическая сеть" #deepl:1703735767
+ PPP_pm_t2_local_power: "Местная электроэнергия" #deepl:3960165003
+ PPP_pm_t2_hybrid_power: "Смешанное электроснабжение" #deepl:2921665541
+ PPP_pm_t2_grid_power: "Электрическая сеть" #deepl:1703735767
+ PPP_pm_t3_local_power: "Местная электроэнергия" #deepl:3960165003
+ PPP_pm_t3_hybrid_power: "Смешанное электроснабжение" #deepl:2921665541
+ PPP_pm_t3_grid_power: "Электрическая сеть" #deepl:1703735767

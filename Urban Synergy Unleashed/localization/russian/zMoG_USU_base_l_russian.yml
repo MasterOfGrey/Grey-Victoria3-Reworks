@@ -1,45 +1,75 @@
 ﻿l_russian:
-     # Modifiers 
+    # Modifiers
  mog_urbanization: "Городская синергия Урбанизм"
  mog_urbanization_mult: "Городская синергия Урбанизм"
  mog_construction_max_level_adjustment: "Строительство городской синергии"
  mog_logistics_land_trade: "Пропускная способность сухопутной торговли за счет импортных логистических услуг"
  mog_mapi: "Городская синергия MAPI"
-  
-     # Building 
+    
+    # Building
+ USU_bg_port_infrastructure: "Порты" #deepl:687823806
+    
  building_river_port: "Речные доки"
  usu_building_public_green: "Общественная зеленая зона"
-  
-     # Technologies 
-  
-     # Goods 
+    
+    # Technologies
+    
+    # Goods
  usu_logistics: "Логистические услуги"
-  
-     # Modifier types 
+ trade_route_import_lens_option_usu_logistics_tooltip: "Создайте торговый маршрут для импорта $usu_logistics$." #deepl:29640115
+ trade_route_export_lens_option_usu_logistics_tooltip: "Создайте экспортный торговый маршрут $usu_logistics$." #deepl:1994327992
+    
+    # Modifier types
  state_building_river_port_max_level_add: "Максимальный уровень речного порта"
  state_building_river_port_max_level_add_desc: "Бонус или штраф к максимальному уровню зданий Речного порта."
-  
+    
  goods_input_usu_logistics_add: "@usu_logistics![Nbsp]$usu_logistics$ ввод"
  goods_output_usu_logistics_add: "@usu_logistics![Nbsp]$usu_logistics$ выход"
- goods_input_usu_logisticsr_mult: "Строим @usu_logistics![Nbsp]$usu_logistics$ вход"
+ goods_input_usu_logistics_mult: "Строительство @usu_logistics![Nbsp]$usu_logistics$ вход" #deepl:3595168342
  goods_output_usu_logistics_mult: "Строим @usu_logistics![Nbsp]$usu_logistics$ выход"
-  
+    
  goods_input_usu_logistics_add_desc: "Количество @usu_logistics![Nbsp]$usu_logistics$, потребляемое зданиями"
  goods_output_usu_logistics_add_desc: "Количество @usu_logistics![Nbsp]$usu_logistics$, произведенное зданиями"
  goods_input_usu_logistics_mult_desc: "Бонус или штраф к сумме @usu_logistics![Nbsp]$usu_logistics$, потребляемой зданиями"
  goods_output_usu_logistics_mult_desc: "Бонус или штраф к сумме @usu_logistics![Nbsp]$usu_logistics$, произведенной зданиями"
-  
- modifier_goods_input_tools_mult: "@tools![Nbsp]Ввод инструментов"
- modifier_goods_input_tools_mult_desc: "Количество @tools![Nbsp]Инструментов, потребляемых зданиями"
-  
-     # PMGs 
+    
+ usu_building_public_green_throughput_add: "$usu_building_public_green$ здание [concept_throughput]" #deepl:1617626189
+ usu_building_public_green_throughput_add_desc: "Премия или штраф как на входе, так и на выходе $usu_building_public_green$" #deepl:3185140157
+ ppp_building_power_grid_throughput_add: "$ppp_building_power_grid$ здание [concept_throughput]" #deepl:486021742
+ ppp_building_power_grid_throughput_add_desc: "Премия или штраф как на входе, так и на выходе $ppp_building_power_grid$" #deepl:1270900800
+ building_river_port_throughput_add: "$building_river_port$ здание [concept_throughput]" #deepl:530621336
+ building_river_port_throughput_add_desc: "Премия или штраф как на входе, так и на выходе $building_river_port$" #deepl:3708668278
+ usu_building_hydro_power_plant_throughput_add: "$usu_building_hydro_power_plant$ здание [concept_throughput]" #deepl:2682676248
+ usu_building_hydro_power_plant_throughput_add_desc: "Премия или штраф как на входе, так и на выходе $usu_building_hydro_power_plant$" #deepl:1139273118
+    
+    # Vanilla Modifier types
+    
+ goods_input_luxury_clothes_add: "@luxury_clothes![Nbsp]$luxury_clothes$ вход" #deepl:3302038186
+ goods_input_luxury_clothes_add_desc: "Количество @luxury_clothes![Nbsp]$luxury_clothes$ , потребляемое зданиями." #deepl:3477511040
+ goods_input_services_add: "@services![Nbsp]$services$ input" #deepl:2678123429
+ goods_input_services_add_desc: "Количество @услуг![Nbsp]$services$ , потребляемых зданиями" #deepl:1408821948
+    
+ goods_input_tools_mult: "Создание @tools![Nbsp]$tools$ вход" #deepl:1055261592
+ goods_input_tools_mult_desc: "Количество @tools![Nbsp]$tools$ , потребляемое зданиями." #deepl:1892978715
+ goods_input_steel_mult: "Строительство @steel![Nbsp]$steel$ вход" #deepl:3508900889
+ goods_input_steel_mult_desc: "Количество @стали![Nbsp]$steel$ , потребляемое зданиями" #deepl:2095881000
+    
+ goods_input_transportation_mult: "Строительство @транспорта![Nbsp]$transportation$ вход" #deepl:3701781964
+ goods_input_transportation_mult_desc: "Бонус или штраф к количеству @транспорта![Nbsp]$transportation$ , потребляемого зданиями." #deepl:3299014953
+ goods_output_transportation_mult: "Строительство @транспорта![Nbsp]$transportation$ выход" #deepl:171588735
+ goods_output_transportation_mult_desc: "Бонус или штраф к количеству @транспорта![Nbsp]$transportation$ , производимого зданиями." #deepl:296029142
+ goods_output_electricity_mult: "Строительство @электричества![Nbsp]$electricity$ выход" #deepl:320784986
+ goods_output_electricity_mult_desc: "Бонус или штраф к количеству @электричества![Nbsp]$electricity$ , производимого зданиями." #deepl:145655897
+    
+    # PMGs
  pmg_base_building_river_port: "Доки"
  USU_pmg_government_administration_emergency_services: "Экстренные службы"
  USU_pmg_government_administration_law_enforcement: "Правоохранительные органы"
  USU_pmg_public_space_management: "Управление общественным пространством"
  USU_pmg_public_parklands: "Использование парковых зон"
-  
-     # PMs 
+    
+    # PMs
+ pm_rp_anchorage: "Анкоридж" #deepl:1916484437
  pm_rp_small_port: "Риверсайд Пирс"
  pm_rp_industrial_port: "Промышленные порты"
  pm_rp_modern_port: "Современные порты"
@@ -59,14 +89,16 @@
  USU_pm_village_stables: "Общественные конюшни"
  USU_pm_contained_wilderness: "Охраняемая дикая природа"
  USU_pm_seasonal_fairgrounds: "Сезонные ярмарки"
-  
-     # State Traits 
+    
+    # State Traits
  state_trait_rotterdam: "Роттердамская гавань"
  state_trait_hudson_river: "Река Гудзон"
-  
-     # Autoexpand tooltip(s) 
- is_industrial_building: "Является естественным $concept_building_industry$ для торгуемого [Concept('concept_good', '$concept_goods$')]" #NT!
- is_private_infrastructure: "Транспорт $bg_infrastructure$, который может быть [Concept('concept_privatize', '$concept_privatized$')]" #NT!
- pos_rel_infrastructure: "Состояние доступно [concept_infrastructure]" #NT!
- neg_rel_infrastructure: "Дефицит штата [concept_infrastructure]" #NT!
- bureaucracy_percent: "Уровень национальной бюрократии составляет менее #v 90%#!" #NT!
+    
+    # Autoexpand tooltip(s)
+ is_industrial_building: "Является естественным $concept_building_industry$ для торгуемого [Concept('concept_good', '$concept_goods$')]"
+ is_private_infrastructure: "Транспорт $bg_infrastructure$, который может быть [Concept('concept_privatize', '$concept_privatized$')]"
+ pos_rel_infrastructure: "Состояние доступно [concept_infrastructure]"
+ neg_rel_infrastructure: "Дефицит штата [concept_infrastructure]"
+ bureaucracy_percent: "Уровень национальной бюрократии составляет менее #v 90%#!"
+ is_convoy_provider: "Это $bg_infrastructure$, который обеспечивает [concept_convoys]" #deepl:4008457251
+ convoy_ratio: "Доступных конвоев меньше, чем #v 5%.#!" #deepl:361081141

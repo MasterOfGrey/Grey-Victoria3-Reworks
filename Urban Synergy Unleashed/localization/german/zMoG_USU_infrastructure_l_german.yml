@@ -1,57 +1,65 @@
 ﻿l_german:
-  # Railways 
+ # Railways
  pm_ac_electric_trains: "Wechselstrom-Elektrozüge"
  pm_ac_electric_trains_principle_transport_3: "Gemeinsame Wechselstrom-Elektrozüge"
-  
+ 
  pm_electric_passenger_carriages: "Elektrische Personenwagen"
-  
+ 
  pmg_automation_building_railway: "Gebäudeautomation"
  pm_auto_disabled_building_railway: "Handkurbelkran"
  pm_steam_crane_building_railway: "Dampfkran mit gebogenem Ausleger"
  pm_watertube_boiler_building_railway: "Rauchrohrkessel"
  pm_rotary_valve_engine_building_railway: "Uniflow-Drehschieberventile"
  pm_steam_donkey_building_railway: "Getriebedampf-Antriebsstrang"
-  
-  # Logistics 
+ 
+ # Ports
+ pmg_automation_port: "Automatisierung von Anlagen" #deepl:2147123001
+ pm_auto_disabled_building_port: "Manuelle Handhabung" #deepl:4263907806
+ pm_steam_crane_building_port: "Dampfkran mit gebogenem Ausleger" #deepl:1146043665
+ pm_hydraulic_lifters_building_port: "Hydraulische Stößel" #deepl:3445355814
+ pm_assembly_lines_building_port: "Dockside-Förderer" #deepl:3464779635
+
+ # Logistics
  pmg_logistics_services_railway: "Bahnlogistik"
  pmg_logistics_services_port_coastal: "Versandlogistik"
  pmg_logistics_services_port_river: "Fluviale Logistik"
-  
+ 
  USU_pm_rail_logistics_0: "Keine logistische Koordination"
  USU_pm_rail_logistics_1: "Kontingentplanung"
  USU_pm_rail_logistics_2: "Gebote für Fernzugriff"
  USU_pm_rail_logistics_3: "Lieferkettenmanagement"
-  
+
  USU_pm_port_c_logistics_0: "Keine logistische Koordination"
  USU_pm_port_c_logistics_1: "Kontingentplanung"
  USU_pm_port_c_logistics_2: "Gebote für Fernzugriff"
  USU_pm_port_c_logistics_3: "Lieferkettenmanagement"
-  
+ 
  USU_pm_port_r_logistics_0: "Keine logistische Koordination"
  USU_pm_port_r_logistics_1: "Kontingentplanung"
  USU_pm_port_r_logistics_2: "Gebote für Fernzugriff"
  USU_pm_port_r_logistics_3: "Lieferkettenmanagement"
-  
-  # Canals 
+ 
+ # Canals
  # pm_canal: "Dampfbetriebene Schlösser"
  pm_canals_electric: "Elektrische Kanalschleusen"
  pm_canals_oil: "Ölpumpenschlösser"
-  
+
  pmg_canal_boats: "Kanalmanagement"
  pm_no_tugs_building_canals: "Keine Schlepper"
  pm_tugging_building_canals: "Schlepperflotte"
-  
+ 
  pmg_canal_logistics: "Kanallogistik"
  pm_no_canal_logistics: "Keine Logistik"
  pm_minor_canal_logistics: "Kleinere Logistik"
  pm_major_canal_logistics: "Große Logistik"
-  
+ 
  canal_dividends.1.t: "Kanalunglück"
  canal_dividends.1.d: "Ein Handelsschiff hatte nicht aufgepasst und lief versehentlich im Kanal auf Grund. Dadurch wurde der Weg blockiert und die Durchfahrt gefährlicher, bis sie wieder vollständig freigegeben war."
  canal_dividends.1.f: "Das große Handelsschiff liegt halb gekippt im Kanal, auf der Seite eine klaffende Wunde vom Aufprall gegen die Wand, seine Waren sind über die Durchfahrt verstreut, Schmuck und exotische Waren treiben im Wasser, die teuren Waren eines fremden Landes sind durchnässt und ruiniert.\n\nAm Ufer steht der Kapitän, sein Gesicht in den Händen und sein Hut schwimmt im Kanal. Neben ihm hält der Versicherungsvertreter der Gesellschaft eine Liste der durch Wasser beschädigten Schiffe in der Hand und versucht, einen Sinn in all dem zu finden, während ein Kanalagent versucht zu erklären, dass die Räumung Monate dauern könnte."
  canal_dividends.1.1: "$expedition_events.542.a$"
  modifier_building_canal_accident: "Kanalunglück"
-  
-  
-  
-  
+ mog_building_canal_accident: "Unfall im Kanal" #deepl:3839460779
+
+
+
+

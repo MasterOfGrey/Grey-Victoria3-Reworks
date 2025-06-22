@@ -1,12 +1,12 @@
 ﻿l_braz_por:
  pmg_public_transit: "Transporte público"
- # pm_no_public_transport: "Sem transporte público" #NT!
+ # pm_no_public_transport: "Sem transporte público"
  pm_public_omnibus: "Ônibus puxados por cavalos"
- # pm_public_trams: "Bondes puxados por cavalos" #NT!
+ # pm_public_trams: "Bondes puxados por cavalos"
  pm_public_steam_metro: "Metrô movido a vapor"
  pm_public_electric_metro: "Metrô movido a eletricidade"
- # pm_public_motor_carriages: "Ônibus urbanos" #NT!
-  
+ # pm_public_motor_carriages: "Ônibus urbanos"
+ 
  pmg_local_transport: "Transporte local"
  pm_horses: "Cavalos e carroças"
  pm_stagecoaches_and_wagons: "Veículos puxados por cavalos"

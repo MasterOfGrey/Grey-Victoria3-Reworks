@@ -1,57 +1,65 @@
 ﻿l_turkish:
-  # Railways 
+ # Railways
  pm_ac_electric_trains: "AC Elektrikli Trenler"
  pm_ac_electric_trains_principle_transport_3: "Ortak AC Elektrikli Trenler"
-  
+ 
  pm_electric_passenger_carriages: "Elektrikli Yolcu Arabaları"
-  
+ 
  pmg_automation_building_railway: "Tesis Otomasyonu"
  pm_auto_disabled_building_railway: "El Kranklı Vinç"
  pm_steam_crane_building_railway: "Kavisli Jib Buharlı Vinç"
  pm_watertube_boiler_building_railway: "Ateş Borulu Kazan"
  pm_rotary_valve_engine_building_railway: "Uniflow Döner Vana Dişlisi"
  pm_steam_donkey_building_railway: "Dişli Buhar Aktarma Organları"
-  
-  # Logistics 
+ 
+ # Ports
+ pmg_automation_port: "Tesis Otomasyonu" #deepl:2147123001
+ pm_auto_disabled_building_port: "Elle Taşıma" #deepl:4263907806
+ pm_steam_crane_building_port: "Kavisli Pergel Buharlı Vinç" #deepl:1146043665
+ pm_hydraulic_lifters_building_port: "Hidrolik Kaldırıcılar" #deepl:3445355814
+ pm_assembly_lines_building_port: "Liman Kenarı Konveyörleri" #deepl:3464779635
+
+ # Logistics
  pmg_logistics_services_railway: "Demiryolu Lojistiği"
  pmg_logistics_services_port_coastal: "Nakliye Lojistiği"
  pmg_logistics_services_port_river: "Nehir Lojistiği"
-  
+ 
  USU_pm_rail_logistics_0: "Lojistik Koordinasyon Yok"
  USU_pm_rail_logistics_1: "Kota Tahsisatı Planlaması"
  USU_pm_rail_logistics_2: "Uzaktan Erişim Teklifi"
  USU_pm_rail_logistics_3: "Tedarik zinciri yönetimi"
-  
+
  USU_pm_port_c_logistics_0: "Lojistik Koordinasyon Yok"
  USU_pm_port_c_logistics_1: "Kota Tahsisatı Planlaması"
  USU_pm_port_c_logistics_2: "Uzaktan Erişim Teklifi"
  USU_pm_port_c_logistics_3: "Tedarik zinciri yönetimi"
-  
+ 
  USU_pm_port_r_logistics_0: "Lojistik Koordinasyon Yok"
  USU_pm_port_r_logistics_1: "Kota Tahsisatı Planlaması"
  USU_pm_port_r_logistics_2: "Uzaktan Erişim Teklifi"
  USU_pm_port_r_logistics_3: "Tedarik zinciri yönetimi"
-  
-  # Canals 
+ 
+ # Canals
  # pm_canal: "Buharla Çalışan Kilitler"
  pm_canals_electric: "Elektrikli Kanal Kilitleri"
  pm_canals_oil: "Yağ Pompası Kilitleri"
-  
+
  pmg_canal_boats: "Kanal Yönetimi"
  pm_no_tugs_building_canals: "Hiçbir Çekme Yok"
  pm_tugging_building_canals: "Römorkör Filosu"
-  
+ 
  pmg_canal_logistics: "Kanal Lojistiği"
  pm_no_canal_logistics: "Lojistik yok"
  pm_minor_canal_logistics: "Küçük Lojistik"
  pm_major_canal_logistics: "Büyük Lojistik"
-  
+ 
  canal_dividends.1.t: "Kanal Kazası"
  canal_dividends.1.d: "Dikkat etmeyen bir ticaret gemisi kazara kanalda karaya oturdu, yol tamamen açılana kadar geçiş daha da tehlikeli hale geldi."
  canal_dividends.1.f: "Büyük ticaret gemisi kanalda yarı yatık bir şekilde yatıyor, yan tarafında duvara çarpması sonucu oluşan derin bir yara var, malları geçide saçılmış, süs eşyaları ve egzotik mallar suda sallanıyor, yabancı bir ülkenin pahalı malları ıslanmış ve mahvolmuş.\n\nKıyıda kaptan duruyor, yüzü ellerinin arasında ve şapkası kanalda yüzüyor. Yanında şirketin sigorta temsilcisi, her şeyi anlamaya çalışarak elinde su hasarlı bir gemi beyannamesi tutuyor, bir kanal acentesi ise temizlemenin aylar sürebileceğini açıklamaya çalışıyor."
  canal_dividends.1.1: "$expedition_events.542.a$"
  modifier_building_canal_accident: "Kanal Kazası"
-  
-  
-  
-  
+ mog_building_canal_accident: "Kanal Kazası" #deepl:3839460779
+
+
+
+

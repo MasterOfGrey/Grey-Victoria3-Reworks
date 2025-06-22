@@ -1,45 +1,40 @@
 ﻿l_turkish:
-     # Building 
+    # Building
+ usu_bg_power_grid: "Elektrik Şebekesi" #deepl:1703735767
  ppp_building_power_grid: "Elektrik Şebekesi"
-  
-     # Technologies 
+    
+    # Technologies
  PPP_tech_hv_power: "Güç Aktarımı"
  PPP_tech_hv_power_desc: "Konvertörler ve regülatörlerin kullanılmasıyla, yüksek gerilimli uzun mesafeli enerji iletimi artık farklı ihtiyaçlara sahip birden fazla noktada kullanılabiliyor."
  USU_tech_hv_railways: "Endüstriyel Transformatörler"
  USU_tech_hv_railways_desc: "Ölçeklenebilir trafo kullanarak alternatif elektrik akımının tüm avantajlarından yararlanabilir, uzun mesafelerde sürekli yüksek voltajların iletilmesini sağlayabilir ve enerji iletimini ekonomik hale getirebiliriz."
-  
-     # Goods 
+	
+    # Goods
  ppp_hv_power: "Yüksek Gerilim Gücü"
-  
-     # Modifier types - As of USU: None of the multipliers are used anymore. 
+    
+    # Modifier types - As of USU: None of the multipliers are used anymore.
  goods_input_ppp_hv_power_add: "@ppp_hv_power![Nbsp]$ppp_hv_power$ giriş"
  goods_output_ppp_hv_power_add: "@ppp_hv_power![Nbsp]$ppp_hv_power$ çıktı"
  goods_input_ppp_hv_power_mult: "@ppp_hv_power! inşa ediliyor.[Nbsp]$ppp_hv_power$ girdi"
  goods_output_ppp_hv_power_mult: "@ppp_hv_power![Nbsp]$ppp_hv_power$ çıktısı oluşturuluyor"
-  
+    
  goods_input_ppp_hv_power_add_desc: "Binalar tarafından tüketilen @ppp_hv_power![Nbsp]$ppp_hv_power$ miktarı"
  goods_output_ppp_hv_power_add_desc: "Binaların ürettiği @ppp_hv_power![Nbsp]$ppp_hv_power$ miktarı"
  goods_input_ppp_hv_power_mult_desc: "Binalar tarafından tüketilen @ppp_hv_power![Nbsp]$ppp_hv_power$ miktarına bir bonus veya ceza"
  goods_output_ppp_hv_power_mult_desc: "Binaların ürettiği @ppp_hv_power![Nbsp]$ppp_hv_power$ miktarına bir bonus veya ceza"
-  
- goods_input_steel_mult: "Bina $goods_input_steel_add$"
- goods_input_tools_mult: "Bina $goods_input_tools_add$"
-  
- goods_input_steel_mult_desc: "$goods_input_steel_add_desc$"
- goods_input_tools_mult_desc: "$goods_input_tools_add_desc$"
-  
-     # PMGs 
+    
+    # PMGs
  PPP_pmg_generation_machinery: "Nesil Makinaları"
  PPP_pmg_HV_generation: "Güç Dağıtımı"
  PPP_pmg_power_grid: "$pm_base$"
  PPP_pmg_power_grid_scaler: "Dağıtım Kapasitesi"
-  
-     # PMs 
+    
+    # PMs
  PPP_pm_hydro_mechanical: "Su Türbinleri"
  PPP_pm_steam_engine: "Buhar Makineleri"
  PPP_pm_steam_turbine: "Buhar Türbinleri"
  PPP_pm_gas_turbine: "Gaz Türbinleri"
-  
+    
  PPP_pm_hy_local_power: "Yerel Elektrik"
  PPP_pm_hy_hybrid_power: "Karma Şebeke Tedarik"
  PPP_pm_hy_grid_power: "Elektrik Şebekesi"
@@ -53,11 +48,11 @@
  PPP_pm_gt_hybrid_power: "Karma Şebeke Tedarik"
  PPP_pm_gt_grid_power: "Elektrik Şebekesi"
  PPP_pm_emergency_local_power: "Acil Yerel Tedarik"
-  
+    
  PPP_pm_grid_base: "Bölgesel Dağıtım"
-  
+    
  PPP_pm_grid_water: "Normal Kapasite"
  PPP_pm_grid_engine: "Arttırılmış Kapasite"
  PPP_pm_grid_turbine: "İki Katı Kapasite"
  PPP_pm_grid_gas_turbine: "Üç Kat Kapasite"
-  
+    

@@ -1,45 +1,40 @@
 ﻿l_russian:
-     # Building 
+    # Building
+ usu_bg_power_grid: "Электрическая сеть" #deepl:1703735767
  ppp_building_power_grid: "Электрическая сеть"
-  
-     # Technologies 
+    
+    # Technologies
  PPP_tech_hv_power: "Передача мощности"
  PPP_tech_hv_power_desc: "Благодаря использованию преобразователей и регуляторов передача электроэнергии высокого напряжения на большие расстояния теперь может использоваться в различных пунктах назначения с различными потребностями."
  USU_tech_hv_railways: "Промышленные трансформаторы"
  USU_tech_hv_railways_desc: "Используя масштабируемые трансформаторы, мы можем в полной мере воспользоваться преимуществами переменного электрического тока, обеспечивая подачу стабильно высокого напряжения на большие расстояния и делая передачу электроэнергии экономичной."
-  
-     # Goods 
+	
+    # Goods
  ppp_hv_power: "Высоковольтная мощность"
-  
-     # Modifier types - As of USU: None of the multipliers are used anymore. 
+    
+    # Modifier types - As of USU: None of the multipliers are used anymore.
  goods_input_ppp_hv_power_add: "@ppp_hv_power![Nbsp]$ppp_hv_power$ вход"
  goods_output_ppp_hv_power_add: "@ppp_hv_power![Nbsp]$ppp_hv_power$ выход"
  goods_input_ppp_hv_power_mult: "Строительство @ppp_hv_power![Nbsp]$ppp_hv_power$ вход"
  goods_output_ppp_hv_power_mult: "Строим @ppp_hv_power![Nbsp]$ppp_hv_power$ выход"
-  
+    
  goods_input_ppp_hv_power_add_desc: "Количество @ppp_hv_power![Nbsp]$ppp_hv_power$ потребляемой зданиями"
  goods_output_ppp_hv_power_add_desc: "Количество @ppp_hv_power![Nbsp]$ppp_hv_power$, производимое зданиями"
  goods_input_ppp_hv_power_mult_desc: "Бонус или штраф к количеству @ppp_hv_power![Nbsp]$ppp_hv_power$ потребляемой зданиями"
  goods_output_ppp_hv_power_mult_desc: "Бонус или штраф к количеству @ppp_hv_power![Nbsp]$ppp_hv_power$, произведенному зданиями"
-  
- goods_input_steel_mult: "Здание $goods_input_steel_add$"
- goods_input_tools_mult: "Здание $goods_input_tools_add$"
-  
- goods_input_steel_mult_desc: "$goods_input_steel_add_desc$"
- goods_input_tools_mult_desc: "$goods_input_tools_add_desc$"
-  
-     # PMGs 
+    
+    # PMGs
  PPP_pmg_generation_machinery: "Генерация Машин"
  PPP_pmg_HV_generation: "Распределение мощности"
  PPP_pmg_power_grid: "$pm_base$"
  PPP_pmg_power_grid_scaler: "Распределительная способность"
-  
-     # PMs 
+    
+    # PMs
  PPP_pm_hydro_mechanical: "Водяные турбины"
  PPP_pm_steam_engine: "Паровые двигатели"
  PPP_pm_steam_turbine: "Паровые турбины"
  PPP_pm_gas_turbine: "Газовые турбины"
-  
+    
  PPP_pm_hy_local_power: "Местное электричество"
  PPP_pm_hy_hybrid_power: "Смешанная сетевая поставка"
  PPP_pm_hy_grid_power: "Электрическая сеть"
@@ -53,11 +48,11 @@
  PPP_pm_gt_hybrid_power: "Смешанная сетевая поставка"
  PPP_pm_gt_grid_power: "Электрическая сеть"
  PPP_pm_emergency_local_power: "Аварийное местное снабжение"
-  
+    
  PPP_pm_grid_base: "Региональное распределение"
-  
+    
  PPP_pm_grid_water: "Нормальная вместимость"
  PPP_pm_grid_engine: "Увеличенная емкость"
  PPP_pm_grid_turbine: "Удвоенная емкость"
  PPP_pm_grid_gas_turbine: "Утроенная емкость"
-  
+    
