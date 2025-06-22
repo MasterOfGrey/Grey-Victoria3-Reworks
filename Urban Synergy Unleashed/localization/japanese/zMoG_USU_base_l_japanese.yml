@@ -25,8 +25,8 @@
     
  goods_input_usu_logistics_add: "@usu_logistics![Nbsp]$usu_logistics$ 入力"
  goods_output_usu_logistics_add: "@usu_logistics![Nbsp]$usu_logistics$ 出力"
- goods_input_usu_logistics_mult: "usu_logisticsの構築！[Nbsp]$usu_logistics$ 入力" #deepl:3595168342
- goods_output_usu_logistics_mult: "@usu_logistics を構築中![Nbsp]$usu_logistics$ 出力"
+ goods_input_usu_logistics_mult: "の構築@usu_logistics![Nbsp]$usu_logistics$ 入力" #deepl:3595168342
+ goods_output_usu_logistics_mult: "を構築中@usu_logistics![Nbsp]$usu_logistics$ 出力"
     
  goods_input_usu_logistics_add_desc: "建物によって消費される@usu_logistics![Nbsp]$usu_logistics$の量"
  goods_output_usu_logistics_add_desc: "建物が生み出す@usu_logistics![Nbsp]$usu_logistics$の量"
@@ -44,8 +44,8 @@
     
     # Vanilla Modifier types
     
- goods_input_luxury_clothes_add: "[Nbsp]$luxury_clothes$ 。" #deepl:3302038186
- goods_input_luxury_clothes_add_desc: "ビルで消費される @luxury_clothes の量！[Nbsp]$luxury_clothes$ " #deepl:3477511040
+ goods_input_luxury_clothes_add: "@luxury_clothes![Nbsp]$luxury_clothes$ 。" #deepl:3302038186
+ goods_input_luxury_clothes_add_desc: "ビルで消費されるの量@luxury_clothes![Nbsp]$luxury_clothes$ " #deepl:3477511040
  goods_input_services_add: "[Nbsp]$services$ 入力" #deepl:2678123429
  goods_input_services_add_desc: "サービス！[Nbsp]$services$ ビルが消費する量" #deepl:1408821948
     

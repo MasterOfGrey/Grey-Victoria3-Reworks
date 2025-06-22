@@ -45,21 +45,21 @@
     # Vanilla Modifier types
     
  goods_input_luxury_clothes_add: "@luxury_clothes![Nbsp]$luxury_clothes$ entrada" #deepl:3302038186
- goods_input_luxury_clothes_add_desc: "La cantidad de @ropa_de_lujo![Nbsp]$luxury_clothes$ consumida por los edificios" #deepl:3477511040
+ goods_input_luxury_clothes_add_desc: "La cantidad de @luxury_clothes![Nbsp]$luxury_clothes$ consumida por los edificios" #deepl:3477511040
  goods_input_services_add: "@services![Nbsp]$services$ entrada" #deepl:2678123429
- goods_input_services_add_desc: "La cantidad de @servicios![Nbsp]$services$ consumida por los edificios" #deepl:1408821948
+ goods_input_services_add_desc: "La cantidad de @services![Nbsp]$services$ consumida por los edificios" #deepl:1408821948
     
  goods_input_tools_mult: "Construyendo @tools![Nbsp]$tools$ input" #deepl:1055261592
  goods_input_tools_mult_desc: "La cantidad de @tools![Nbsp]$tools$ consumida por los edificios" #deepl:1892978715
  goods_input_steel_mult: "Construyendo @steel![Nbsp]$steel$ input" #deepl:3508900889
- goods_input_steel_mult_desc: "La cantidad de @acero![Nbsp]$steel$ consumida por los edificios" #deepl:2095881000
+ goods_input_steel_mult_desc: "La cantidad de @steel![Nbsp]$steel$ consumida por los edificios" #deepl:2095881000
     
  goods_input_transportation_mult: "Building @transportation![Nbsp]$transportation$ input" #deepl:3701781964
- goods_input_transportation_mult_desc: "Una bonificación o penalización a la cantidad de @transporte![Nbsp]$transportation$ consumida por los edificios." #deepl:3299014953
- goods_output_transportation_mult: "Construyendo @transporte![Nbsp]$transportation$ output" #deepl:171588735
- goods_output_transportation_mult_desc: "Una bonificación o penalización a la cantidad de @transporte![Nbsp]$transportation$ producida por los edificios." #deepl:296029142
- goods_output_electricity_mult: "Construyendo @electricidad![Nbsp]$electricity$ output" #deepl:320784986
- goods_output_electricity_mult_desc: "Una bonificación o penalización a la cantidad de @electricidad![Nbsp]$electricity$ producida por los edificios." #deepl:145655897
+ goods_input_transportation_mult_desc: "Una bonificación o penalización a la cantidad de @transportation![Nbsp]$transportation$ consumida por los edificios." #deepl:3299014953
+ goods_output_transportation_mult: "Construyendo @transportation![Nbsp]$transportation$ output" #deepl:171588735
+ goods_output_transportation_mult_desc: "Una bonificación o penalización a la cantidad de @transportation![Nbsp]$transportation$ producida por los edificios." #deepl:296029142
+ goods_output_electricity_mult: "Construyendo @electricity![Nbsp]$electricity$ output" #deepl:320784986
+ goods_output_electricity_mult_desc: "Una bonificación o penalización a la cantidad de @electricity![Nbsp]$electricity$ producida por los edificios." #deepl:145655897
     
     # PMGs
  pmg_base_building_river_port: "Muelles"

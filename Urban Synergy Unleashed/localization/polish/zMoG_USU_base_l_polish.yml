@@ -54,12 +54,12 @@
  goods_input_steel_mult: "Budowanie @steel![Nbsp]$steel$ wejście" #deepl:3508900889
  goods_input_steel_mult_desc: "Ilość @steel![Nbsp]$steel$ zużywana przez budynki" #deepl:2095881000
     
- goods_input_transportation_mult: "Budowanie @transportu![Nbsp]$transportation$ wejście" #deepl:3701781964
- goods_input_transportation_mult_desc: "Premia lub kara do ilości @transportu![Nbsp]$transportation$ zużywanego przez budynki." #deepl:3299014953
- goods_output_transportation_mult: "Budowanie @transportu![Nbsp]$transportation$ wyjście" #deepl:171588735
- goods_output_transportation_mult_desc: "Premia lub kara do ilości @transportu![Nbsp]$transportation$ produkowanego przez budynki." #deepl:296029142
- goods_output_electricity_mult: "Budowanie @elektryczności![Nbsp]$electricity$ wyjście" #deepl:320784986
- goods_output_electricity_mult_desc: "Premia lub kara do ilości @elektryczności![Nbsp]$electricity$ produkowanej przez budynki." #deepl:145655897
+ goods_input_transportation_mult: "Budowanie @transportation![Nbsp]$transportation$ wejście" #deepl:3701781964
+ goods_input_transportation_mult_desc: "Premia lub kara do ilości @transportation![Nbsp]$transportation$ zużywanego przez budynki." #deepl:3299014953
+ goods_output_transportation_mult: "Budowanie @transportation![Nbsp]$transportation$ wyjście" #deepl:171588735
+ goods_output_transportation_mult_desc: "Premia lub kara do ilości @transportation![Nbsp]$transportation$ produkowanego przez budynki." #deepl:296029142
+ goods_output_electricity_mult: "Budowanie @electricity![Nbsp]$electricity$ wyjście" #deepl:320784986
+ goods_output_electricity_mult_desc: "Premia lub kara do ilości @electricity![Nbsp]$electricity$ produkowanej przez budynki." #deepl:145655897
     
     # PMGs
  pmg_base_building_river_port: "Doki"

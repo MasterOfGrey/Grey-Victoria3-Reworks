@@ -47,19 +47,19 @@
  goods_input_luxury_clothes_add: "@luxury_clothes![Nbsp]$luxury_clothes$ вход" #deepl:3302038186
  goods_input_luxury_clothes_add_desc: "Количество @luxury_clothes![Nbsp]$luxury_clothes$ , потребляемое зданиями." #deepl:3477511040
  goods_input_services_add: "@services![Nbsp]$services$ input" #deepl:2678123429
- goods_input_services_add_desc: "Количество @услуг![Nbsp]$services$ , потребляемых зданиями" #deepl:1408821948
+ goods_input_services_add_desc: "Количество @services![Nbsp]$services$ , потребляемых зданиями" #deepl:1408821948
     
  goods_input_tools_mult: "Создание @tools![Nbsp]$tools$ вход" #deepl:1055261592
  goods_input_tools_mult_desc: "Количество @tools![Nbsp]$tools$ , потребляемое зданиями." #deepl:1892978715
  goods_input_steel_mult: "Строительство @steel![Nbsp]$steel$ вход" #deepl:3508900889
- goods_input_steel_mult_desc: "Количество @стали![Nbsp]$steel$ , потребляемое зданиями" #deepl:2095881000
+ goods_input_steel_mult_desc: "Количество @steel![Nbsp]$steel$ , потребляемое зданиями" #deepl:2095881000
     
- goods_input_transportation_mult: "Строительство @транспорта![Nbsp]$transportation$ вход" #deepl:3701781964
- goods_input_transportation_mult_desc: "Бонус или штраф к количеству @транспорта![Nbsp]$transportation$ , потребляемого зданиями." #deepl:3299014953
- goods_output_transportation_mult: "Строительство @транспорта![Nbsp]$transportation$ выход" #deepl:171588735
- goods_output_transportation_mult_desc: "Бонус или штраф к количеству @транспорта![Nbsp]$transportation$ , производимого зданиями." #deepl:296029142
- goods_output_electricity_mult: "Строительство @электричества![Nbsp]$electricity$ выход" #deepl:320784986
- goods_output_electricity_mult_desc: "Бонус или штраф к количеству @электричества![Nbsp]$electricity$ , производимого зданиями." #deepl:145655897
+ goods_input_transportation_mult: "Строительство @transportation![Nbsp]$transportation$ вход" #deepl:3701781964
+ goods_input_transportation_mult_desc: "Бонус или штраф к количеству @transportation![Nbsp]$transportation$ , потребляемого зданиями." #deepl:3299014953
+ goods_output_transportation_mult: "Строительство @transportation![Nbsp]$transportation$ выход" #deepl:171588735
+ goods_output_transportation_mult_desc: "Бонус или штраф к количеству @transportation![Nbsp]$transportation$ , производимого зданиями." #deepl:296029142
+ goods_output_electricity_mult: "Строительство @electricity![Nbsp]$electricity$ выход" #deepl:320784986
+ goods_output_electricity_mult_desc: "Бонус или штраф к количеству @electricity![Nbsp]$electricity$ , производимого зданиями." #deepl:145655897
     
     # PMGs
  pmg_base_building_river_port: "Доки"

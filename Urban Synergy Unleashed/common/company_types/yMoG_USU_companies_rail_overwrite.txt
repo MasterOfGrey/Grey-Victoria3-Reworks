@@ -1,0 +1,85 @@
+﻿### RAILWAY COMPANIES
+# Great Indian Peninsula Railway
+company_great_indian_railway = {
+	icon = "gfx/interface/icons/company_icons/historical_company_icons/india_great_indian_peninsula_railway.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_railways.dds"
+	
+	flavored_company = yes
+	
+	building_types = {  
+		building_railway
+	}
+	
+	extension_building_types = {
+		building_iron_mine
+		building_motor_industry
+		building_river_port
+	}
+	
+	potential = {
+		OR = {
+			has_interest_marker_in_region = region_madras
+			has_interest_marker_in_region = region_bombay
+			has_interest_marker_in_region = region_bengal
+			has_interest_marker_in_region = region_central_india
+			has_interest_marker_in_region = region_punjab
+		}
+	}
+	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				OR = {
+					region = sr:region_madras
+					region = sr:region_bombay
+					region = sr:region_bengal
+					region = sr:region_central_india
+					region = sr:region_punjab
+				}
+			}
+		}
+	}			
+	
+	possible = {
+		any_scope_state = {
+			OR = {
+				region = sr:region_madras
+				region = sr:region_bombay
+				region = sr:region_bengal
+				region = sr:region_central_india
+				region = sr:region_punjab
+			}
+			is_incorporated = yes
+			any_scope_building = {
+				is_building_type = building_railway
+				level >= 5
+			}
+			count >= 3
+		}
+	}
+	
+	prosperity_modifier = {
+		state_infrastructure_from_population_add = 2		# 0.5 <- what the heck weak crap was this???
+		state_infrastructure_from_population_max_add = 40	# 40  <- actually be better than a default company please
+	}	
+
+	ai_construction_targets = {
+		building_railway = {
+			level = 5
+			state_trigger = {
+				OR = {
+					region = sr:region_madras
+					region = sr:region_bombay
+					region = sr:region_bengal
+					region = sr:region_central_india
+					region = sr:region_punjab
+				}
+				is_incorporated = yes
+			}
+		}
+	}
+	
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}
+}

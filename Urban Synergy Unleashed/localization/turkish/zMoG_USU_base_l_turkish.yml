@@ -46,8 +46,8 @@
     
  goods_input_luxury_clothes_add: "@luxury_clothes![Nbsp]$luxury_clothes$ giriş" #deepl:3302038186
  goods_input_luxury_clothes_add_desc: "Binalar tarafından tüketilen @luxury_clothes![Nbsp]$luxury_clothes$ miktarı" #deepl:3477511040
- goods_input_services_add: "@hizmetler![Nbsp]$services$ giriş" #deepl:2678123429
- goods_input_services_add_desc: "Binalar tarafından tüketilen @hizmetler![Nbsp]$services$ miktarı" #deepl:1408821948
+ goods_input_services_add: "@services![Nbsp]$services$ giriş" #deepl:2678123429
+ goods_input_services_add_desc: "Binalar tarafından tüketilen @services![Nbsp]$services$ miktarı" #deepl:1408821948
     
  goods_input_tools_mult: "Building @tools![Nbsp]$tools$ giriş" #deepl:1055261592
  goods_input_tools_mult_desc: "Binalar tarafından tüketilen @tools![Nbsp]$tools$ miktarı" #deepl:1892978715
@@ -59,7 +59,7 @@
  goods_output_transportation_mult: "Building @transportation![Nbsp]$transportation$ çıktı" #deepl:171588735
  goods_output_transportation_mult_desc: "Binalar tarafından üretilen @transportation![Nbsp]$transportation$ miktarına bonus veya ceza" #deepl:296029142
  goods_output_electricity_mult: "Building @electricity![Nbsp]$electricity$ çıktı" #deepl:320784986
- goods_output_electricity_mult_desc: "Binalar tarafından üretilen @elektrik miktarına bonus veya ceza![Nbsp]$electricity$ " #deepl:145655897
+ goods_output_electricity_mult_desc: "Binalar tarafından üretilen elektrik miktarına bonus veya ceza @electricity![Nbsp]$electricity$ " #deepl:145655897
     
     # PMGs
  pmg_base_building_river_port: "Rıhtımlar"

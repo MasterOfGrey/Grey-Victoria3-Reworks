@@ -39,24 +39,24 @@ mog_urban_on_action = {
 on_monthly_pulse_country = {
 	on_actions = {
 		# delay = { days = { 5 27 } }
-		mog_logistics_land_trade_on_action
+		# mog_logistics_land_trade_on_action # land trade is no more
 		mog_trade_centre_type_on_action
 	}
 }
 
 ### Logistics Action
-mog_logistics_land_trade_on_action = {
-	effect = {
-		remove_modifier = mog_logistics_land_trade
-		add_modifier = {
-			name = mog_logistics_land_trade
-			multiplier = {
-				add = 1
-				multiply = mog_land_trade_from_logistics
-			}
-		}
-	}
-}
+#mog_logistics_land_trade_on_action = {
+#	effect = {
+#		remove_modifier = mog_logistics_land_trade
+#		add_modifier = {
+#			name = mog_logistics_land_trade
+#			multiplier = {
+#				add = 1
+#				multiply = mog_land_trade_from_logistics
+#			}
+#		}
+#	}
+#}
 
 # Set Trade Center as inland or port-side.
 mog_trade_centre_type_on_action = {

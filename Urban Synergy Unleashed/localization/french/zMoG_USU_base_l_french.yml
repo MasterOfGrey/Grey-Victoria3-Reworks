@@ -25,7 +25,7 @@
     
  goods_input_usu_logistics_add: "@usu_logistics![Nbsp]$usu_logistics$ contribution"
  goods_output_usu_logistics_add: "@usu_logistics![Nbsp]$usu_logistics$ résultat"
- goods_input_usu_logistics_mult: "Construction de @usu_logistics ![Nbsp]$usu_logistics$ input" #deepl:3595168342
+ goods_input_usu_logistics_mult: "Construction de @usu_logistics![Nbsp]$usu_logistics$ input" #deepl:3595168342
  goods_output_usu_logistics_mult: "Bâtiment @usu_logistics![Nbsp]$usu_logistics$ résultat"
     
  goods_input_usu_logistics_add_desc: "La quantité de @usu_logistics![Nbsp]$usu_logistics$ consommée par les bâtiments"
@@ -44,22 +44,22 @@
     
     # Vanilla Modifier types
     
- goods_input_luxury_clothes_add: "@luxury_clothes ![Nbsp]$luxury_clothes$ input" #deepl:3302038186
- goods_input_luxury_clothes_add_desc: "La quantité de vêtements @luxury_clothes ![Nbsp]$luxury_clothes$ consommée par les bâtiments" #deepl:3477511040
- goods_input_services_add: "@services ![Nbsp]$services$ input" #deepl:2678123429
- goods_input_services_add_desc: "La quantité de @services ![Nbsp]$services$ consommée par les bâtiments" #deepl:1408821948
+ goods_input_luxury_clothes_add: "@luxury_clothes![Nbsp]$luxury_clothes$ input" #deepl:3302038186
+ goods_input_luxury_clothes_add_desc: "La quantité de vêtements @luxury_clothes![Nbsp]$luxury_clothes$ consommée par les bâtiments" #deepl:3477511040
+ goods_input_services_add: "@services![Nbsp]$services$ input" #deepl:2678123429
+ goods_input_services_add_desc: "La quantité de @services![Nbsp]$services$ consommée par les bâtiments" #deepl:1408821948
     
- goods_input_tools_mult: "Construction des @tools ![Nbsp]$tools$ input" #deepl:1055261592
- goods_input_tools_mult_desc: "La quantité d'@tools ![Nbsp]$tools$ consommée par les bâtiments" #deepl:1892978715
- goods_input_steel_mult: "Construction @steel ![Nbsp]$steel$ input" #deepl:3508900889
- goods_input_steel_mult_desc: "La quantité d'@steel ![Nbsp]$steel$ consommée par les bâtiments" #deepl:2095881000
+ goods_input_tools_mult: "Construction des @tools![Nbsp]$tools$ input" #deepl:1055261592
+ goods_input_tools_mult_desc: "La quantité d'@tools![Nbsp]$tools$ consommée par les bâtiments" #deepl:1892978715
+ goods_input_steel_mult: "Construction @steel![Nbsp]$steel$ input" #deepl:3508900889
+ goods_input_steel_mult_desc: "La quantité d'@steel![Nbsp]$steel$ consommée par les bâtiments" #deepl:2095881000
     
- goods_input_transportation_mult: "Construction @transport ![Nbsp]$transportation$ input" #deepl:3701781964
- goods_input_transportation_mult_desc: "Un bonus ou une pénalité sur la quantité de @transportation ![Nbsp]$transportation$ consommée par les bâtiments" #deepl:3299014953
- goods_output_transportation_mult: "Construction @transport ![Nbsp]$transportation$ production" #deepl:171588735
- goods_output_transportation_mult_desc: "Un bonus ou une pénalité sur la quantité de @transportation ![Nbsp]$transportation$ produite par les bâtiments" #deepl:296029142
- goods_output_electricity_mult: "Construire @electricity ![Nbsp]$electricity$ output" #deepl:320784986
- goods_output_electricity_mult_desc: "Un bonus ou une pénalité sur la quantité d'@électricité ![Nbsp]$electricity$ produite par les bâtiments" #deepl:145655897
+ goods_input_transportation_mult: "Construction @transportation![Nbsp]$transportation$ input" #deepl:3701781964
+ goods_input_transportation_mult_desc: "Un bonus ou une pénalité sur la quantité de @transportation![Nbsp]$transportation$ consommée par les bâtiments" #deepl:3299014953
+ goods_output_transportation_mult: "Construction @transportation![Nbsp]$transportation$ production" #deepl:171588735
+ goods_output_transportation_mult_desc: "Un bonus ou une pénalité sur la quantité de @transportation![Nbsp]$transportation$ produite par les bâtiments" #deepl:296029142
+ goods_output_electricity_mult: "Construire @electricity![Nbsp]$electricity$ output" #deepl:320784986
+ goods_output_electricity_mult_desc: "Un bonus ou une pénalité sur la quantité d'@electricity![Nbsp]$electricity$ produite par les bâtiments" #deepl:145655897
     
     # PMGs
  pmg_base_building_river_port: "Quais"

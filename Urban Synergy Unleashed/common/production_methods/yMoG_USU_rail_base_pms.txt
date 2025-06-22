@@ -29,11 +29,11 @@ pm_early_trains = {
 		}
 	}
 	
-	country_modifiers = {
-		level_scaled = {
-			market_land_trade_capacity_add = 5
-        }
-    }
+#	country_modifiers = {
+#		level_scaled = {
+#			market_land_trade_capacity_add = 5
+#		}
+#	}
 }
 
 pm_steam_trains = {
@@ -71,11 +71,11 @@ pm_steam_trains = {
 		}
 	}
 	
-	country_modifiers = {
-		level_scaled = {
-			market_land_trade_capacity_add = 10
-        }
-    }
+#	country_modifiers = {
+#		level_scaled = {
+#			market_land_trade_capacity_add = 10
+#		}
+#	}
 }
 
 pm_electric_trains = {
@@ -111,11 +111,11 @@ pm_electric_trains = {
 		}
 	}
 	
-	country_modifiers = {
-		level_scaled = {
-			market_land_trade_capacity_add = 15
-        }
-    }
+#	country_modifiers = {
+#		level_scaled = {
+#			market_land_trade_capacity_add = 15
+#		}
+#	}
 	
 	required_input_goods = electricity
 }
@@ -154,11 +154,11 @@ pm_diesel_trains = {
 		}
 	}
 	
-	country_modifiers = {
-		level_scaled = {
-			market_land_trade_capacity_add = 20
-        }
-    }
+#	country_modifiers = {
+#		level_scaled = {
+#			market_land_trade_capacity_add = 20
+#		}
+#	}
 }
 
 pm_ac_electric_trains = {
@@ -194,11 +194,11 @@ pm_ac_electric_trains = {
 		}
 	}
 	
-	country_modifiers = {
-		level_scaled = {
-			market_land_trade_capacity_add = 20
-        }
-    }
+#	country_modifiers = {
+#		level_scaled = {
+#			market_land_trade_capacity_add = 20
+#		}
+#	}
 	
 	required_input_goods = electricity
 }
@@ -243,11 +243,11 @@ pm_steam_trains_principle_transport_3 = {
 		}
 	}
 	
-	country_modifiers = {
-		level_scaled = {
-			market_land_trade_capacity_add = 10
-        }
-    }
+#	country_modifiers = {
+#		level_scaled = {
+#			market_land_trade_capacity_add = 10
+#		}
+#	}
 }
 
 pm_electric_trains_principle_transport_3 = {
@@ -287,11 +287,11 @@ pm_electric_trains_principle_transport_3 = {
 		}
 	}
 	
-	country_modifiers = {
-		level_scaled = {
-			market_land_trade_capacity_add = 15
-        }
-    }
+#	country_modifiers = {
+#		level_scaled = {
+#			market_land_trade_capacity_add = 15
+#		}
+#	}
 	
 	required_input_goods = electricity
 }
@@ -334,11 +334,11 @@ pm_diesel_trains_principle_transport_3 = {
 		}
 	}
 	
-	country_modifiers = {
-		level_scaled = {
-			market_land_trade_capacity_add = 20
-        }
-    }
+#	country_modifiers = {
+#		level_scaled = {
+#			market_land_trade_capacity_add = 20
+#		}
+#	}
 }
 
 pm_ac_electric_trains_principle_transport_3 = {
@@ -378,11 +378,11 @@ pm_ac_electric_trains_principle_transport_3 = {
 		}
 	}
 	
-	country_modifiers = {
-		level_scaled = {
-			market_land_trade_capacity_add = 20
-        }
-    }
+#	country_modifiers = {
+#		level_scaled = {
+#			market_land_trade_capacity_add = 20
+#		}
+#	}
 	
 	required_input_goods = electricity
 }

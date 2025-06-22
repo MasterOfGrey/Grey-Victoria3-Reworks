@@ -52,14 +52,14 @@
  goods_input_tools_mult: "Aufbau von @tools![Nbsp]$tools$ input" #deepl:1055261592
  goods_input_tools_mult_desc: "Die von den Gebäuden verbrauchte Menge an @tools![Nbsp]$tools$ " #deepl:1892978715
  goods_input_steel_mult: "Gebäude @steel![Nbsp]$steel$ Eingabe" #deepl:3508900889
- goods_input_steel_mult_desc: "Die von Gebäuden verbrauchte Menge an @Stahl![Nbsp]$steel$ " #deepl:2095881000
+ goods_input_steel_mult_desc: "Die von Gebäuden verbrauchte Menge an @steel![Nbsp]$steel$ " #deepl:2095881000
     
  goods_input_transportation_mult: "Gebäude @transportation![Nbsp]$transportation$ input" #deepl:3701781964
- goods_input_transportation_mult_desc: "Ein Bonus oder Malus auf die von Gebäuden verbrauchte Menge an @Transportmittel![Nbsp]$transportation$ " #deepl:3299014953
+ goods_input_transportation_mult_desc: "Ein Bonus oder Malus auf die von Gebäuden verbrauchte Menge an @transportation![Nbsp]$transportation$ " #deepl:3299014953
  goods_output_transportation_mult: "Gebäude @transportation![Nbsp]$transportation$ output" #deepl:171588735
- goods_output_transportation_mult_desc: "Ein Bonus oder Malus auf die Menge an @Transport![Nbsp]$transportation$ die von Gebäuden erzeugt wird" #deepl:296029142
+ goods_output_transportation_mult_desc: "Ein Bonus oder Malus auf die Menge an @transportation![Nbsp]$transportation$ die von Gebäuden erzeugt wird" #deepl:296029142
  goods_output_electricity_mult: "Gebäude @electricity![Nbsp]$electricity$ Ausgang" #deepl:320784986
- goods_output_electricity_mult_desc: "Ein Bonus oder Malus auf die von Gebäuden erzeugte Menge an @Strom![Nbsp]$electricity$ " #deepl:145655897
+ goods_output_electricity_mult_desc: "Ein Bonus oder Malus auf die von Gebäuden erzeugte Menge an @electricity![Nbsp]$electricity$ " #deepl:145655897
     
     # PMGs
  pmg_base_building_river_port: "Anlegestellen"

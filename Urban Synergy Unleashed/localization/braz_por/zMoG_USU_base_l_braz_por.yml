@@ -54,12 +54,12 @@
  goods_input_steel_mult: "Construindo @steel![Nbsp]$steel$ input" #deepl:3508900889
  goods_input_steel_mult_desc: "A quantidade de @steel![Nbsp]$steel$ consumida pelos edifícios" #deepl:2095881000
     
- goods_input_transportation_mult: "Construindo o @transporte![Nbsp]$transportation$ input" #deepl:3701781964
+ goods_input_transportation_mult: "Construindo o @transportation![Nbsp]$transportation$ input" #deepl:3701781964
  goods_input_transportation_mult_desc: "Um bônus ou penalidade para a quantidade de @transportation![Nbsp]$transportation$ consumida pelos edifícios" #deepl:3299014953
- goods_output_transportation_mult: "Construindo o @transporte![Nbsp]$transportation$ output" #deepl:171588735
+ goods_output_transportation_mult: "Construindo o @transportation![Nbsp]$transportation$ output" #deepl:171588735
  goods_output_transportation_mult_desc: "Um bônus ou penalidade para a quantidade de @transportation![Nbsp]$transportation$ produzida por edifícios" #deepl:296029142
- goods_output_electricity_mult: "Construindo @eletricidade![Nbsp]$electricity$ output" #deepl:320784986
- goods_output_electricity_mult_desc: "Um bônus ou penalidade para a quantidade de @eletricidade![Nbsp]$electricity$ produzida pelos edifícios" #deepl:145655897
+ goods_output_electricity_mult: "Construindo @electricity![Nbsp]$electricity$ output" #deepl:320784986
+ goods_output_electricity_mult_desc: "Um bônus ou penalidade para a quantidade de @electricity![Nbsp]$electricity$ produzida pelos edifícios" #deepl:145655897
     
     # PMGs
  pmg_base_building_river_port: "Docas"

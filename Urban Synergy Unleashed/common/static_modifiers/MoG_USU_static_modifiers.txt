@@ -10,10 +10,10 @@ mog_urbanization_mult = {
 	state_urbanization_per_level_mult = 1		# Target for this is to always make the net effect = 0 to get rid of the vanilla modifiers.
 }
 
-mog_logistics_land_trade = {
-	icon = gfx/interface/icons/timed_modifier_icons/modifier_coins_positive.dds
-	market_land_trade_capacity_add = 1
-}
+#mog_logistics_land_trade = {
+#	icon = gfx/interface/icons/timed_modifier_icons/modifier_coins_positive.dds
+#	market_land_trade_capacity_add = 1
+#}
 
 mog_construction_max_level_adjustment = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_gear_positive.dds
@@ -35,6 +35,6 @@ mog_building_canal_accident = {
 
 ## FLEXIBLE STATIC MODIFIERS (usable in events to alter a baseline with a multiplier of this)
 mog_usu_hp_hydro_potential_adjustment = {
-	icon = gfx/interface/icons/hp_hydro_power_1.dds
+	icon = gfx/interface/icons/timed_modifier_icons/hp_hydro_power_bonus.dds
 	state_usu_building_hydro_power_plant_max_level_add = 1
 }

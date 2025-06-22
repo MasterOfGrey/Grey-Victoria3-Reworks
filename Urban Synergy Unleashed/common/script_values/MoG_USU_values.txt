@@ -34,44 +34,44 @@ mog_usu_urbanization_target_calc = {		# The vanilla tech discounts ain't gonna g
 mog_usu_urbanization_target_mult = 0
 
 ### LAND TRADE
-mog_land_trade_from_logistics = {
-	value = 1
-	if = {
-		limit = {
-			root = {
-				any_trade_route = {
-					importer.owner = root
-					goods = g:usu_logistics
-				}
-			}
-		}
-		market = {
-			mg:usu_logistics = {
-				multiply = market_goods_imports
-			}
-		}
-	}
-	else_if = {
-		limit = {
-			root.market = {
-				mg:usu_logistics = {
-					market_goods_imports > 0.1
-				}
-			}
-		}
-		market = {
-			mg:usu_logistics = {
-				multiply = {
-					add = market_goods_imports
-					divide = 2
-				}
-			}
-		}
-	}
-	else = {
-		multiply = 0
-	}
-}
+#mog_land_trade_from_logistics = {
+#	value = 1
+#	if = {
+#		limit = {
+#			root = {
+#				any_trade_route = {
+#					importer.owner = root
+#					goods = g:usu_logistics
+#				}
+#			}
+#		}
+#		market = {
+#			mg:usu_logistics = {
+#				multiply = market_goods_imports
+#			}
+#		}
+#	}
+#	else_if = {
+#		limit = {
+#			root.market = {
+#				mg:usu_logistics = {
+#					market_goods_imports > 0.1
+#				}
+#			}
+#		}
+#		market = {
+#			mg:usu_logistics = {
+#				multiply = {
+#					add = market_goods_imports
+#					divide = 2
+#				}
+#			}
+#		}
+#	}
+#	else = {
+#		multiply = 0
+#	}
+#}
 
 ### CONSTRUCTION
 construction_cost_consec = 20	# Shrunk construction cost for construction sectors since they are smaller, and the AI is more likely to build/demolish them frequently as a result.
