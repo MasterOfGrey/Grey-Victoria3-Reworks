@@ -1,52 +1,49 @@
-﻿culture_enslaved_percent_cache_update = {
-    every_country = {
-        set_dict_id = yes
-        save_temporary_scope_as = country
-        every_scope_culture = {
-            save_temporary_scope_as = culture
-            save_temporary_scope_value_as = {
-                name = enslaved_percent
-                value = {
-                    if = {
-                        limit = {
-                            owner = {
-                                NOT = { has_law = law_type:law_slavery_banned }
-                            }
-                            any_scope_pop = {
-                                owner = scope:country
-                                is_pop_type = slaves
-                            }
-                        }
-                        value = {
-                            value = 0
-                            every_scope_pop = {
-                                limit = {
-                                    owner = scope:country
-                                    is_pop_type = slaves
-                                }
-                                add = total_size
-                            }
-                        }
-                        divide = {
-                            value = 0
-                            every_scope_pop = {
-                                limit = {
-                                    owner = scope:country
-                                }
-                                add = total_size
-                            }
-                        }
-                    }
-                    else = {
-                        value = 0
-                    }
-                }
-            }
-            add_to_dict = {
-                dict = culture_enslaved_percent_cache
-                key = scope:country.var:dict_id
-                value = scope:enslaved_percent
-            }
-        }
-    }
+﻿# root = country
+culture_enslaved_percent_country_cache_update = {
+	set_dict_id = yes
+	#save_temporary_scope_as = country
+	every_scope_culture = {
+		save_temporary_scope_as = culture
+		save_temporary_scope_value_as = {
+			name = enslaved_percent
+			value = {
+				if = {
+					limit = {
+						NOT = { root = { has_law = law_type:law_slavery_banned } }
+						any_scope_pop = {
+							owner = root
+							is_pop_type = slaves
+						}
+					}
+					value = {
+						value = 0
+						every_scope_pop = {
+							limit = {
+								owner = root
+								is_pop_type = slaves
+							}
+							add = total_size
+						}
+					}
+					divide = {
+						value = 0
+						every_scope_pop = {
+							limit = {
+								owner = root
+							}
+							add = total_size
+						}
+					}
+				}
+				else = {
+					value = 0
+				}
+			}
+		}
+		add_to_dict = {
+			dict = culture_enslaved_percent_cache
+			key = root.var:dict_id
+			value = scope:enslaved_percent
+		}
+	}
 }
