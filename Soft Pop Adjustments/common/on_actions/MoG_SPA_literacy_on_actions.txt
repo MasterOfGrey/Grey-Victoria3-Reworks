@@ -10,12 +10,12 @@ on_game_started = {
 MoG_SPA_literacy_setup_action = {
 	effect = {
 		every_country = {
-			trigger_event = mog_literacy_event.3
+			refresh_institution_schools_modifier = yes
 		}
 	}
 }
 
-on_law_enactment_pass = {
+on_law_activated = {
 	on_actions = {
 		MoG_SPA_literacy_law_enact
 	}
@@ -23,37 +23,11 @@ on_law_enactment_pass = {
 
 MoG_SPA_literacy_law_enact = {
 	effect = {
-		if = {
-			limit = {
-				is_enacting_law = law_type:law_compulsory_primary_school
-			}
+		owner = {
+			# Clean up old modifiers
 			if = {
 				limit = { has_modifier = mog_spa_child_labor_allowed_literacy }
 				remove_modifier = mog_spa_child_labor_allowed_literacy
-			}
-			if = {
-				limit = { has_modifier = mog_spa_restricted_child_labor_literacy }
-				remove_modifier = mog_spa_restricted_child_labor_literacy
-			}
-			add_modifier = mog_spa_compulsory_primary_school_literacy
-		}
-		if = {
-			limit = {
-				is_enacting_law = law_type:law_restricted_child_labor
-			}
-			if = {
-				limit = { has_modifier = mog_spa_child_labor_allowed_literacy }
-				remove_modifier = mog_spa_child_labor_allowed_literacy
-			}
-			if = {
-				limit = { has_modifier = mog_spa_compulsory_primary_school_literacy }
-				remove_modifier = mog_spa_compulsory_primary_school_literacy
-			}
-			add_modifier = mog_spa_restricted_child_labor_literacy
-		}
-		if = {
-			limit = {
-				is_enacting_law = law_type:law_child_labor_allowed
 			}
 			if = {
 				limit = { has_modifier = mog_spa_restricted_child_labor_literacy }
@@ -63,7 +37,23 @@ MoG_SPA_literacy_law_enact = {
 				limit = { has_modifier = mog_spa_compulsory_primary_school_literacy }
 				remove_modifier = mog_spa_compulsory_primary_school_literacy
 			}
-			add_modifier = mog_spa_child_labor_allowed_literacy
+			
+			# Reapply modifiers
+			
+			if = {
+				limit = { has_law = law_type:law_compulsory_primary_school }
+				add_modifier = mog_spa_compulsory_primary_school_literacy
+			}
+			else_if = {
+				limit = { has_law = law_type:law_restricted_child_labor }
+				add_modifier = mog_spa_restricted_child_labor_literacy
+			}
+			else_if = {
+				limit = { has_law = law_type:law_child_labor_allowed }
+				add_modifier = mog_spa_child_labor_allowed_literacy
+			}
+			
+			refresh_institution_schools_modifier = yes
 		}
 	}
 }
@@ -85,64 +75,21 @@ MoG_SPA_literacy_investment_change = {
 			limit = {
 				THIS = owner.institution:institution_schools
 			}
-			if = {
-				limit = {
-					owner = { has_law = law_type:law_religious_schools }
-				}
-				owner = {
-					institution:institution_schools = {
-						remove_modifier = mog_spa_diff_religious_schools_literacy
-						add_modifier = {
-							name = mog_spa_diff_religious_schools_literacy
-							multiplier = investment
-						}
-					}
-				}
-			}
-			else_if = {
-				limit = {
-					owner = { has_law = law_type:law_private_schools }
-				}
-				owner = {
-					institution:institution_schools = {
-						remove_modifier = mog_spa_diff_private_schools_literacy
-						add_modifier = {
-							name = mog_spa_diff_private_schools_literacy
-							multiplier = investment
-						}
-					}
-				}
-			}
-			else_if = {
-				limit = {
-					owner = { has_law = law_type:law_public_schools }
-				}
-				owner = {
-					institution:institution_schools = {
-						remove_modifier = mog_spa_diff_public_schools_literacy
-						add_modifier = {
-							name = mog_spa_diff_public_schools_literacy
-							multiplier = investment
-						}
-					}
-				}
-			}
+			
+			refresh_institution_schools_modifier = yes
 		}
-		if = {
-			limit = {
-				THIS = owner.institution:institution_schools
-				owner = { has_law = law_type:law_compulsory_primary_school }
-			}
-			owner = {
-				institution:institution_schools = {
-					remove_modifier = mog_spa_diff_compulsory_school_literacy
-					add_modifier = {
-						name = mog_spa_diff_compulsory_school_literacy
-						multiplier = investment
-					}
-				}
-			}
-		}
+	}
+}
+
+# To refresh modifiers when institution levels are reset on bankruptcy
+on_country_no_longer_default = {
+	on_actions = {
+		MoG_SPA_literacy_no_longer_default
+	}
+}
+MoG_SPA_literacy_no_longer_default = {
+	effect = {
+		refresh_institution_schools_modifier = yes
 	}
 }
 
@@ -163,65 +110,8 @@ on_country_released_as_own_subject = {
 }
 MoG_SPA_literacy_on_country_released = {
 	effect = {
-		if = {
-			limit = {
-				scope:target = {
-					exists = institution:institution_schools
-				}
-			}
-			if = {
-				limit = {
-					scope:target = { has_law = law_type:law_religious_schools }
-				}
-				scope:target = {
-					institution:institution_schools = {
-						add_modifier = {
-							name = mog_spa_diff_religious_schools_literacy
-							multiplier = investment
-						}
-					}
-				}
-			}
-			else_if = {
-				limit = {
-					scope:target = { has_law = law_type:law_private_schools }
-				}
-				scope:target = {
-					institution:institution_schools = {
-						add_modifier = {
-							name = mog_spa_diff_private_schools_literacy
-							multiplier = investment
-						}
-					}
-				}
-			}
-			else_if = {
-				limit = {
-					scope:target = { has_law = law_type:law_public_schools }
-				}
-				scope:target = {
-					institution:institution_schools = {
-						add_modifier = {
-							name = mog_spa_diff_public_schools_literacy
-							multiplier = investment
-						}
-					}
-				}
-			}
-		}
-		if = {
-			limit = {
-				scope:target = { exists = institution:institution_schools }
-				scope:target = { has_law = law_type:law_compulsory_primary_school }
-			}
-			scope:target = {
-				institution:institution_schools = {
-					add_modifier = {
-						name = mog_spa_diff_compulsory_school_literacy
-						multiplier = investment
-					}
-				}
-			}
+		scope:target = {
+			refresh_institution_schools_modifier = yes
 		}
 	}
 }
