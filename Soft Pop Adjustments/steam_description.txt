@@ -1,8 +1,8 @@
 [img]https://i.imgur.com/7xuCZqW.png[/img]
-Designed for Victoria 3: Version 1.7 (and onwards)
-Mod Version V1.0
+Supports Victoria 3: V1.9.1  (and onwards)
+Mod Version: V1.8
 Please consider rating this if you like it! It really helps out. [img]https://i.imgur.com/tE28cZ7.gif[/img]
-
+[spoiler]Originally made for: Version 1.7.6[/spoiler]
 [table]
     [tr]
         [td][img]https://i.imgur.com/WjDSfUn.png[/img][/td]
@@ -19,6 +19,8 @@ It's also madness that you can have virgin land where people could literally sle
 
 So, this mod essentially retouches almost everything that happens in the background about how pops think, move, and change.
 
+It also has a companion mod: [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3345217364]Soft Econ Adjustments[/url]
+
 [img]https://i.imgur.com/Wh5EspM.png[/img]
 [h1]Features:[/h1]
 [h2]Obsessions:[/h2]
@@ -28,15 +30,20 @@ Obsessions are much more likely to develop, but are harder to actively encourage
 Assimilation and Conversion rates have been *slightly* improved.
 Additionally;
 [list]
-[*]The minimum assimilation and conversion rates have been increased from 1 to 20.
+[*]The minimum [b]normal[/b] assimilation and conversion has been increased from 1 to 10.
+[*] -- (does not impact the next 2 points)
 [*]Discriminated cultures will (very slowly) assimilate based on how similar they are - representing the minority that have always dodged such things historically.
 [*]Accepted religions will (very slowly) convert to the state religion under Freedom of Conscience or Total Separation - representing institutional advantages.
 [/list]
-This [i]mostly[/i] just means that small pop fragments will actually disappear inside of a decade. Typically any assimilation worth talking about is happening much faster than that, but the vanilla default leaves many pop fragments that are just too large to consolidate, and just too small to matter. This quietly sorts them out - which has substantial performance gains into the late game.
+This [i]mostly[/i] just means that small pop fragments will actually disappear inside of a decade. Typically assimilation worth mentioning happens much faster than that, but vanilla leaves many pop fragments that are just too large to consolidate, and just too small to matter. This quietly sorts them out - which substantially improves late-game performance.
 
 [h2]Job Satisfaction:[/h2]
 People now care much more about their own situation relative to expectations, than they do about national averages and such like. A farmer with SoL of 26 and expected SoL of 11, will now be much happier about their good fortune compared to how upset they are about bureaucrats in the capital being rich. Also, destitute aristocrats will find new jobs etc.
-(However, they do still compare themselves to other same-strata pops in their own state somewhat strongly. [i]Local[/i] bureaucrats living the high life will make them jealous still.)
+(They do still compare themselves a lot to other same-strata pops in their own state. [i]Local[/i] bureaucrats living the high life will make them jealous still.)
+
+[h2]Literacy & Education Access:[/h2]
+Urbanization now affects a pops access to education, scaling up to 20% in a city with >2000 urbanization.
+Different modifiers are also applied based on education laws (i.e. the poorest pops are excluded from the benefits of private schools).
 
 [h2]Cultural Communities:[/h2]
 Cultural communities linger a bit more with none of the culture present.
@@ -54,15 +61,16 @@ In general;
 [/list]
 
 [h2]Population Growth:[/h2]
-The population growth rate curve encourages higher growth when the early benefits of industrialisation start to be realised. (Similar to VTM.)
+The population growth rate curve encourages higher growth when the early benefits of industrialisation start to be realised.
 
 [img]https://i.imgur.com/Qp8JBtZ.png[/img]
-This mod has been set up to overwrite any conflicts, simply because it's such a deep rework that things will break if you get half and half of it and something else.
+This mod has been set up to overwrite any conflicts, simply because it's such a deep rework that things will break if you get half and half of it and something else. (i.e. IF something touches the same things, and you get half and half, your pops are gonna do weird stuff. -> So for the stuff that it touches, it's set up to take priority, but very few mods touch the same things as this.)
 This means it is effectively compatible with anything.
 
 Having said that, some specific callouts:
 [list]
-[*]Victoria Tweaks Mod - These changes are similar to VTM where applicable, so it works with VTM by design.
+[*][url=https://steamcommunity.com/sharedfiles/filedetails/?id=2889925770]Morgenröte - Dawn of Flavor[/url] - Combining Morgenrote with other mods is actually what led me to discovering the issues this mod addresses, so these are compatible by design.
+[*][url=https://steamcommunity.com/sharedfiles/filedetails/?id=2880089689]Victoria Flavor Mod[/url] - Our mass migrations are different, but the outcomes should be comparable. No known issues. 
 [*][url=https://steamcommunity.com/sharedfiles/filedetails/?id=3104861812]New Homelands[/url] - This is a particularly good companion mod.
 [*] All AI Mods - KAI, LAI, Smarter AI, etc. are all compatible, don't worry.
 
@@ -71,6 +79,12 @@ Having said that, some specific callouts:
 [img]https://i.imgur.com/lQRf9dG.png[/img]
 [b]Why?[/b]
 [i]This makes the underlying system for pop behaviours much more robust, no matter which mods you have installed and what they do to the economy.[/i]
+
+[b]Does this mod make a difference in terms of performance??[/b]
+[i]In theory it should slightly improve performance, especially into late-game. Results may vary a little bit if you have very large and very diverse empires with lots of discrimination, but in general you should see neutral or positive impact on performance compared to vanilla.[/i]
+
+[b]Why is my game lagging on Tuesday’s?[/b]
+[i]It appears that the game calculates which cultural communities to spawn every week on a Tuesday. This mod only tweaks that a little bit, so if you are getting this then either; a) you’re using other mods that add extra cultures and this is causing extra lag - try not using mods with many extra cultures, or b) your computer is not very good. I have already made this as efficient as I can.[/i]
 
 [img]https://i.imgur.com/UN80Om5.png[/img]
 This effectively supercedes the following mods:
@@ -84,5 +98,7 @@ This effectively supercedes the following mods:
 [/list]
 Thank you to all the listed authors for their work which provided insights into creating this whole-of-system rework.
 
-#Population #Rework
-#Growth #Migration
+#Population #Migration
+#Growth #Rework
+#SPA #GSPA #VTM
+You can support me on Patreon: [url=https://patreon.com/MasterOfGreyVic3?utm_medium=unknown&utm_source=join_link&utm_campaign=creatorshare_creator&utm_content=copyLink] [img]https://ufo2.site44.com/become_a_patron_button.png[/img] [/url]
