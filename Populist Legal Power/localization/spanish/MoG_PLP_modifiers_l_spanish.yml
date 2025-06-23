@@ -1,0 +1,3 @@
+﻿l_spanish:
+ building_group_bg_trade_allowed_collectivization_add: "Niveles mínimos de $concept_building$ de $bg_trade$ propiedad de trabajadores"
+ building_group_bg_trade_allowed_collectivization_add_desc: "La cantidad mínima de [Concept('concept_building','$concept_buildings$')|l] de $bg_trade$ que será propiedad de trabajadores."

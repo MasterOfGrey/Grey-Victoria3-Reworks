@@ -1,0 +1,3 @@
+﻿l_polish:
+ building_group_bg_trade_allowed_collectivization_add: "Minimalne poziomy budynków zakładów produkcyjnych stanowiących własność robotników"
+ building_group_bg_trade_allowed_collectivization_add_desc: "Minimalna liczba [Concept('concept_building', 'budynków')] zakładów produkcyjnych, które będą własnością robotników."

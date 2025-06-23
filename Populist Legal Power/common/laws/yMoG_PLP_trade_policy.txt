@@ -9,13 +9,6 @@ law_mercantilism = {
 	
 	progressiveness = 0
 	
-	modifier = {
-		country_authority_mult = 0.1
-		building_goods_input_mult = -0.05
-		building_unincorporated_throughput_add = 0.05
-		building_group_bg_manufacturing_throughput_add = 0.05
-	}
-	
 	unlocking_technologies = {
 		international_trade
 	}
@@ -27,6 +20,12 @@ law_mercantilism = {
 		state_subvention_import_add = 0.20
 		state_import_advantage_mult = -0.25
 		state_export_advantage_mult = 0.25
+		
+		country_authority_mult = 0.1
+		building_goods_input_mult = -0.05
+		building_unincorporated_throughput_add = 0.05
+		building_group_bg_manufacturing_throughput_add = 0.05
+		building_group_bg_trade_allowed_collectivization_add = 0.5
 	}
 	
 	# Don't change back to mercantilism once we have protectionism or free trade
@@ -282,6 +281,8 @@ law_canton_system = {
 
 		building_goods_input_mult = -0.1
 		building_throughput_add = 0.05
+		
+		building_group_bg_trade_allowed_collectivization_add = 1		
 	}
 
 	ai_will_do = {

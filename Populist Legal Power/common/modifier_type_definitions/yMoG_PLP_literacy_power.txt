@@ -1,11 +1,11 @@
-﻿state_political_strength_from_literacy_mult={
-	decimals=0
-	color=neutral
-	percent=yes
-	game_data={
-		ai_value=0
-	}
-}
+﻿#state_political_strength_from_literacy_mult={
+#	decimals=0
+#	color=neutral
+#	percent=yes
+#	game_data={
+#		ai_value=0
+#	}
+#}
 # Not used
 #state_slaves_education_access_add={
 #	decimals=0

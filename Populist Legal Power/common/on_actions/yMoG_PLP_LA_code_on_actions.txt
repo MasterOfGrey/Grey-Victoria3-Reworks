@@ -82,16 +82,3 @@ LA_on_country_released = {
 		}
 	}
 }
-
-## Script value cache updates
-on_monthly_pulse {
-	on_actions = {
-		culture_enslaved_percent_cache_update_action
-	}
-}
-
-culture_enslaved_percent_cache_update_action = {
-	effect = {
-		culture_enslaved_percent_cache_update
-	}
-}

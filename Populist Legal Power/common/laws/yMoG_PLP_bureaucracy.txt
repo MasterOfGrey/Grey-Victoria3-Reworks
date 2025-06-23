@@ -58,7 +58,7 @@ law_appointed_bureaucrats = {
 		country_authority_add = 80
 		country_bureaucrats_pol_str_mult = 0.25
 		country_voting_power_wealth_threshold_add = 5
-		state_political_strength_from_literacy_mult = 0.25
+		# state_political_strength_from_literacy_mult = 0.25 # Not working
 		# country_pol_str_from_literacy_add = 0.25				# Not actually sure if either of these work but the state one is consistent with other similar modifier types
 		state_tax_capacity_mult = 0.25
 	}
