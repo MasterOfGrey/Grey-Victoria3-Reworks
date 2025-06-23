@@ -4,7 +4,8 @@
 	building_modifiers = {
 		workforce_scaled = {
 			goods_output_fabric_add = 2
-			goods_output_transportation_add = 2
+			goods_output_transportation_add = 1
+			goods_input_transportation_add = -1
 		}
 	}
 	state_modifiers = {
