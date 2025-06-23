@@ -1,8 +1,8 @@
 [img]https://i.imgur.com/7xuCZqW.png[/img]
-Designed for Victoria 3: Version 1.7 (and onwards)
-Mod Version V1.0
+Supports Victoria 3: V1.9  (and onwards)
+Mod Version: V1.8
 Please consider rating this if you like it! It really helps out. [img]https://i.imgur.com/tE28cZ7.gif[/img]
-
+[spoiler]Originally made for: Version 1.7.6[/spoiler]
 [table]
     [tr]
         [td][img]https://i.imgur.com/WjDSfUn.png[/img][/td]
@@ -21,7 +21,7 @@ Government dividends efficiency no longer gets worse when you're in debt - this 
 Which is to say, being in debt now [i]improves[/i] government dividends efficiency.
 
 [h2]Goods and Trade:[/h2]
-For the sake of completeness, this effectively a tiny update to Henrax Le Chamalax's "Better trade routes".
+Reduced the employee requirements for trade centres.
 Additionally, the min/max price of goods is now 90% from base price, instead of 75%, and limits around buy/sell and shortages have been tweaked.
 
 [h2]Miscellaneous:[/h2]
@@ -53,9 +53,10 @@ This effectively supercedes the following mods:
 [*]"Trade Rework" by TheGamingNot
 [*]"Minor Economy Modifications" by Alderon Tyran
 [/list]
-It also serves as a less sever alternative to "Vince's Downsize Buildings".
+It also serves as a less severe alternative to "Vince's Downsize Buildings".
 
-Thank you to all the listed authors for their work which provided insights into creating this whole-of-system rework.
+Thank you to all the listed authors for their work which provided insights into creating this lite whole-of-system rework.
 
-#Economics #Rework
-#Trade #Credit #Tax
+#Economics #Credit #Rework
+#Trade #Tax #SEA #GSEA
+You can support me on Patreon: [url=https://patreon.com/MasterOfGreyVic3?utm_medium=unknown&utm_source=join_link&utm_campaign=creatorshare_creator&utm_content=copyLink] [img]https://ufo2.site44.com/become_a_patron_button.png[/img] [/url]

@@ -75,6 +75,8 @@
 	# Must be < BUILDING_PROFIT_TARGET_TO_RAISE_WAGES
 	BUILDING_PROFIT_TARGET_TO_LOWER_WAGES = 0.2999 # 0.5 # 0.15				# If profit margin is this or below, buildings should lower their wages, with BUILDING_WEEKS_BETWEEN_PAY_CHANGES weeks cooldown
 																										# (previously: consider lowering wages for SoL or employment reasons)
+	# To-Do: ^Put this one back to 0.5 if PDX ever fixes their code to work sensibly again
+	
 	BUILDING_PROFIT_TARGET_TO_WITHDRAW_CASH = 0.2 # 0.15			# If profit margin is this or below, buildings should withdraw money from the cash reserves to make up the difference
 		# Previously: BUILDING_CASH_RESERVES_WITHDRAW_PROFIT_TARGET before directional revamp in 1.8
 	OWNERSHIP_BUILDING_PROFIT_TARGET_TO_RAISE_WAGES = 0.5			# Overrides BUILDING_PROFIT_TARGET_TO_RAISE_WAGES for buildings that own other buildings
@@ -106,6 +108,7 @@
 	# If owner buildings don't hire then it can create a ratchet effect on the cash reserves of the buildings they own:
 	# Must be >= OWNERSHIP_BUILDING_PROFIT_TARGET_TO_LOWER_WAGES
 	OWNERSHIP_BUILDING_PROFIT_TARGET_TO_HIRE_EMPLOYEES = 0.3 # 0.05 # 0.5	 	# Overrides BUILDING_PROFIT_TARGET_TO_HIRE_EMPLOYEES for buildings that own other buildings
+	# To-Do: ^Put this one back to 0.5 if PDX ever fixes their code to work sensibly again
 	
 	# These two are inversely related:
 	BUILDING_PAUSE_HIRES_CASH_RESERVES_THRESHOLD = 0.25 # 0.75 				# If cash reserves are higher than this, and employment fraction is below BUILDING_MAX_EMPLOYMENT_FRACTION_TO_CONSIDER_CASH_RESERVES, then allow hiring even if profits are low															# (previously: less than this, buildings should consider pausing new hires to wait for cash reserves)
