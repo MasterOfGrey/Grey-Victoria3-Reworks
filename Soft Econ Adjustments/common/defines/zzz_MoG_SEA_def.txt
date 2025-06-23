@@ -15,7 +15,7 @@
 	BUY_SELL_DIFF_AT_MAX_FACTOR = 3 # 2				# the difference between buy/consumption and sell/production at min/max pricing, e.g. if set to 4 then if buy orders are 4x sell orders price is maxed
 	
 	# Slightly less severe than VTM
-	GOODS_SHORTAGE_PENALTY_THRESHOLD = 0.32 # 0.4 # 0.5	# If supply / demand is lower than this, start applying output penalties, by default this should be ( 1 / BUY_SELL_DIFF_AT_MAX_FACTOR )
+	GOODS_SHORTAGE_PENALTY_THRESHOLD = 0.4 # 0.5	# If supply / demand is lower than this, start applying output penalties, by default this should be ( 1 / BUY_SELL_DIFF_AT_MAX_FACTOR )
 	GOODS_SHORTAGE_PENALTY_INCREASE_SPEED = 0.01  	# Goods shortage penalty increases by this fraction of the target each day
 	GOODS_SHORTAGE_PENALTY_DECREASE_SPEED = 0.01  	# Goods shortage penalty goes down by this fraction of GOODS_SHORTAGE_PENALTY_MAX each day
 	GOODS_SHORTAGE_PENALTY_MIN = 0.05				# Goods shortage penalty can't be lower than this if there is any shortage
