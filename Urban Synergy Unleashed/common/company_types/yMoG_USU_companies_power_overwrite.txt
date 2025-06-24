@@ -1,0 +1,1264 @@
+﻿### RAILWAY COMPANIES
+## Africa
+# nil
+
+## Latin Americas
+# Compañía Mexicana de Petróleo El Águila SA
+company_el_aguila = {
+	icon = "gfx/interface/icons/company_icons/historical_company_icons/el_aguila.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_oil_drills.dds"
+
+	flavored_company = yes
+
+	building_types = {
+		building_oil_rig
+		ppp_building_power_grid
+	}
+
+	extension_building_types = {
+		building_power_plant
+	}
+
+	potential = {
+		has_interest_marker_in_region = region_mexico
+	}
+
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				region = sr:region_mexico
+			}
+		}
+	}
+
+	possible = {
+		has_technology_researched = pumpjacks
+		any_scope_state = {
+			region = sr:region_mexico
+			is_incorporated = yes
+			any_scope_building = {
+				is_building_type = building_oil_rig
+				level >= 5
+			}
+			is_coastal = yes
+		}
+	}
+
+	prosperity_modifier = {
+		country_convoys_capacity_mult = 0.15
+		interest_group_ig_industrialists_approval_add = 3
+	}
+
+	ai_will_do = {
+		has_technology_researched = pumpjacks
+		any_scope_state = {
+			region = sr:region_mexico
+			is_incorporated = yes
+			is_coastal = yes
+			has_potential_resource = bg_oil_extraction
+		}
+	}
+
+	ai_construction_targets = {
+		building_oil_rig = {
+			level = 5
+			state_trigger = {
+				region = sr:region_mexico
+				is_incorporated = yes
+				is_coastal = yes
+			}
+		}
+	}
+
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}
+}
+
+# Caribbean Petroleum Company
+company_caribbean_petroleum = {
+	icon = "gfx/interface/icons/company_icons/historical_company_icons/venezuela_caribbean_petroleum_company.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_oil_drills.dds"
+
+	flavored_company = yes
+
+	preferred_headquarters = { STATE_ZULIA STATE_MIRANDA }
+
+	building_types = {
+		building_oil_rig
+		ppp_building_power_grid
+	}
+
+	extension_building_types = {
+		building_power_plant
+	}
+
+	potential = {
+		has_interest_marker_in_region = region_gran_colombia
+	}
+
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				OR = {
+					state_region = s:STATE_ZULIA
+					state_region = s:STATE_MIRANDA
+				}
+			}
+		}
+	}
+
+	possible = {
+		has_technology_researched = pumpjacks
+		any_scope_state = {
+			OR = {
+				state_region = s:STATE_ZULIA
+				state_region = s:STATE_MIRANDA
+			}
+			is_incorporated = yes
+			any_scope_building = {
+				is_building_type = building_oil_rig
+				level >= 5
+			}
+		}
+	}
+
+	prosperity_modifier = {
+		country_convoys_capacity_mult = 0.1
+		interest_group_ig_industrialists_approval_add = 3
+	}
+
+	ai_will_do = {
+		has_technology_researched = pumpjacks
+		any_scope_state = {
+			OR = {
+				state_region = s:STATE_ZULIA
+				state_region = s:STATE_MIRANDA
+			}
+			is_incorporated = yes
+		}
+	}
+
+	ai_construction_targets = {
+		building_oil_rig = {
+			level = 5
+			state_trigger = {
+				OR = {
+					state_region = s:STATE_ZULIA
+					state_region = s:STATE_MIRANDA
+				}
+			}
+		}
+	}
+
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}
+}
+
+## Canada (Americas)
+# nil
+
+## Asia
+# nil
+
+## Austria-Hungary
+# Galizisch-Karpathische Petroleum AG
+company_galician_carpathian_oil = {
+	icon = "gfx/interface/icons/company_icons/historical_company_icons/galician_carpathian_oil.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_oil_drills.dds"
+
+	flavored_company = yes
+
+	preferred_headquarters = { STATE_EAST_GALICIA STATE_WEST_GALICIA }
+
+	building_types = {
+		building_oil_rig
+		ppp_building_power_grid
+	}
+
+	extension_building_types = {
+		building_power_plant
+		building_coal_mine
+	}
+
+	potential = {
+		has_interest_marker_in_region = region_poland
+	}
+
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				OR = {
+					state_region = s:STATE_EAST_GALICIA
+					state_region = s:STATE_WEST_GALICIA
+				}
+			}
+		}
+	}
+
+	possible = {
+		has_technology_researched = pumpjacks
+		any_scope_state = {
+			OR = {
+				state_region = s:STATE_EAST_GALICIA
+				state_region = s:STATE_WEST_GALICIA
+			}
+			is_incorporated = yes
+			any_scope_building = {
+				is_building_type = building_oil_rig
+				level >= 5
+			}
+		}
+	}
+
+	prosperity_modifier = {
+		building_railway_throughput_add = 0.05
+		building_tooling_workshops_throughput_add = 0.1
+	}
+
+	ai_will_do = {
+		has_technology_researched = pumpjacks
+		any_scope_state = {
+			OR = {
+				state_region = s:STATE_EAST_GALICIA
+				state_region = s:STATE_WEST_GALICIA
+			}
+			is_incorporated = yes
+		}
+	}
+
+	ai_construction_targets = {
+		building_steel_mills = {
+			level = 5
+			state_trigger = {
+				OR = {
+					state_region = s:STATE_EAST_GALICIA
+					state_region = s:STATE_WEST_GALICIA
+				}
+				is_incorporated = yes
+			}
+		}
+	}
+
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}
+}
+
+## China
+# nil
+
+## Colossus of the South (cots) (More Latin Americas)
+# C.A. La Electricidad de Caracas
+company_electricidad_de_caracas = {
+	icon = "gfx/interface/icons/company_icons/historical_company_icons/venezuela_c_a_la_electricidad_de_caracas.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufacturing_light.dds"
+
+	flavored_company = yes
+
+	preferred_headquarters = { STATE_MIRANDA }
+
+	building_types = {
+		building_power_plant
+		usu_building_hydro_power_plant
+		ppp_building_power_grid
+	}
+
+	extension_building_types = {
+		building_motor_industry
+		building_coal_mine
+	}
+
+	potential = {
+		has_dlc_feature = rp1_content
+		has_interest_marker_in_region = region_gran_colombia
+	}
+
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_MIRANDA
+			}
+		}
+	}
+
+	possible = {
+		has_technology_researched = electrical_generation
+		any_scope_state = {
+			state_region = s:STATE_MIRANDA
+			is_incorporated = yes
+			any_scope_building = {
+				is_building_type = building_power_plant
+				level >= 5
+			}
+		}
+	}
+
+	prosperity_modifier = {
+		state_infrastructure_from_population_add = 5
+		state_infrastructure_from_population_max_add = 10
+	}
+
+	ai_will_do = {
+		has_technology_researched = electrical_generation
+		any_scope_state = {
+			state_region = s:STATE_MIRANDA
+			is_incorporated = yes
+		}
+	}
+
+	ai_construction_targets = {
+		building_power_plant = {
+			level = 5
+			state_trigger = {
+				state_region = s:STATE_MIRANDA
+			}
+		}
+	}
+
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}
+}
+
+# Empresas Eléctricas Asociadas
+company_eea = {
+	icon = "gfx/interface/icons/company_icons/historical_company_icons/peru_empresas_electricas_asociadas.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufacturing_light.dds"
+
+	flavored_company = yes
+
+	preferred_headquarters = { STATE_LIMA }
+
+	building_types = {
+		building_power_plant
+		usu_building_hydro_power_plant
+		ppp_building_power_grid
+	}
+
+	extension_building_types = {
+		building_motor_industry
+		building_coal_mine
+	}
+
+	potential = {
+		has_dlc_feature = rp1_content
+		has_interest_marker_in_region = region_andes
+	}
+
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_LIMA
+			}
+		}
+	}
+
+	possible = {
+		has_technology_researched = electrical_generation
+		any_scope_state = {
+			state_region = s:STATE_LIMA
+			is_incorporated = yes
+			any_scope_building = {
+				is_building_type = building_power_plant
+				level >= 5
+			}
+		}
+	}
+
+	prosperity_modifier = {
+		state_infrastructure_from_population_mult = 0.05
+		state_construction_mult = 0.05
+	}
+
+	ai_will_do = {
+		has_technology_researched = electrical_generation
+		any_scope_state = {
+			state_region = s:STATE_LIMA
+			is_incorporated = yes
+		}
+	}
+
+	ai_construction_targets = {
+		building_power_plant = {
+			level = 5
+			state_trigger = {
+				state_region = s:STATE_LIMA
+			}
+		}
+	}
+
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}
+}
+
+## Europe
+# Koninklijke Nederlandse Petroleum Maatschappij
+company_nederlandse_petroleum = {
+	icon = "gfx/interface/icons/company_icons/historical_company_icons/maatschappij.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_oil_drills.dds"
+
+	flavored_company = yes
+
+	building_types = {
+		building_oil_rig
+		ppp_building_power_grid
+	}
+
+	extension_building_types = {
+		building_power_plant
+	}
+
+	potential = {
+		country_has_primary_culture = cu:dutch
+	}
+
+	possible = {
+		has_technology_researched = pumpjacks
+		any_scope_state = {
+			region = sr:region_indonesia
+			is_incorporated = yes
+			any_scope_building = {
+				is_building_type = building_oil_rig
+				level >= 5
+			}
+		}
+	}
+
+	prosperity_modifier = {
+		state_colony_growth_speed_mult = 0.1
+	}
+
+	ai_will_do = {
+		has_technology_researched = pumpjacks
+		any_scope_state = {
+			region = sr:region_indonesia
+			is_incorporated = yes
+			has_potential_resource = bg_oil_extraction
+		}
+	}
+
+	ai_construction_targets = {
+		building_oil_rig = {
+			level = 5
+			state_trigger = {
+				region = sr:region_indonesia
+				is_incorporated = yes
+			}
+		}
+	}
+
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}
+}
+
+# Steaua Română
+company_romanian_star = {
+	icon = "gfx/interface/icons/company_icons/historical_company_icons/romania_steaua_romana.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_oil_drills.dds"
+
+	flavored_company = yes
+
+	preferred_headquarters = { STATE_WALLACHIA }
+
+	building_types = {
+		building_oil_rig
+		ppp_building_power_grid
+	}
+
+	extension_building_types = {
+		building_power_plant
+	}
+
+	potential = {
+		has_interest_marker_in_region = region_danubia
+	}
+
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_WALLACHIA
+			}
+		}
+	}
+
+	possible = {
+		has_technology_researched = pumpjacks
+		any_scope_state = {
+			state_region = s:STATE_WALLACHIA
+			is_incorporated = yes
+			any_scope_building = {
+				is_building_type = building_oil_rig
+				level >= 5
+			}
+		}
+	}
+
+	prosperity_modifier = {
+		building_group_bg_oil_extraction_throughput_add = 0.2
+	}
+
+	ai_will_do = {
+		has_technology_researched = pumpjacks
+		any_scope_state = {
+			state_region = s:STATE_WALLACHIA
+			is_incorporated = yes
+		}
+	}
+
+	ai_construction_targets = {
+		building_railway = {
+			level = 5
+			state_trigger = {
+				state_region = s:STATE_WALLACHIA
+			}
+		}
+	}
+
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}
+}
+
+## France
+# nil
+
+## Germany
+# nil
+
+## Great Britain
+# nil
+
+## Pivot of Empire? (ip2)
+# Calcutta Electric Supply Corporation Limited
+company_calcutta_electric = {
+	icon = "gfx/interface/icons/company_icons/historical_company_icons/ip2_calcutta_electric.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufacturing_light.dds"
+
+	flavored_company = yes
+
+	preferred_headquarters = { STATE_WEST_BENGAL }
+
+	building_types = {
+		building_power_plant
+		usu_building_hydro_power_plant
+		ppp_building_power_grid
+	}
+
+	extension_building_types = {
+		building_coal_mine
+	}
+
+	potential = {
+		has_interest_marker_in_region = region_bengal
+	}
+
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_WEST_BENGAL
+			}
+		}
+	}
+
+	possible = {
+		has_technology_researched = electrical_generation
+		any_scope_state = {
+			state_region = s:STATE_WEST_BENGAL
+			is_incorporated = yes
+			any_scope_building = {
+				is_building_type = building_power_plant
+				level >= 5
+			}
+		}
+	}
+
+	prosperity_modifier = {
+		state_infrastructure_from_population_add = 6
+		state_infrastructure_from_population_max_add = 12
+	}
+
+	ai_will_do = {
+		has_technology_researched = electrical_generation
+		any_scope_state = {
+			state_region = s:STATE_WEST_BENGAL
+			is_incorporated = yes
+		}
+	}
+
+	ai_construction_targets = {
+		building_power_plant = {
+			level = 5
+			state_trigger = {
+				state_region = s:STATE_WEST_BENGAL
+			}
+		}
+	}
+
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}
+}
+
+## Italy
+# nil
+
+## Japan
+# nil
+
+## Charters of Commerce (mp1)
+# Norsk Hydroelektrisk Kvælstofaktieselskap
+company_norsk_hydro = {
+	icon = "gfx/interface/icons/company_icons/historical_company_icons/company_norsk_hydro.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufacturing_light.dds"
+
+	flavored_company = yes
+
+	preferred_headquarters = { STATE_WESTERN_NORWAY }
+
+	building_types = {
+		building_chemical_plants
+		usu_building_hydro_power_plant
+		ppp_building_power_grid
+	}
+
+	extension_building_types = {
+		building_power_plant
+		building_sulfur_mine
+	}
+
+	potential = {
+		has_interest_marker_in_region = region_baltic
+	}
+
+	attainable = {
+	}
+
+	possible = {
+		has_technology_researched = electrical_generation
+		any_scope_state = {
+			state_region = s:STATE_WESTERN_NORWAY
+			is_incorporated = yes
+			any_scope_building = {
+				is_building_type = building_chemical_plants
+				level >= 5
+			}
+			any_scope_building = {
+				is_building_type = building_power_plant
+			}
+		}
+	}
+
+	prosperity_modifier = {
+		building_group_bg_agriculture_throughput_add = 0.1
+		country_production_tech_spread_mult = 0.05
+	}
+
+	ai_will_do = {
+		has_technology_researched = electrical_generation
+		any_scope_state = {
+			state_region = s:STATE_WESTERN_NORWAY
+			is_incorporated = yes
+		}
+	}
+
+	ai_construction_targets = {
+		building_chemical_plants = {
+			level = 5
+			state_trigger = {
+				state_region = s:STATE_WESTERN_NORWAY
+			}
+		}
+		building_power_plant = {
+			level = 1
+			state_trigger = {
+				state_region = s:STATE_WESTERN_NORWAY
+			}
+		}
+	}
+
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}
+}
+
+## Russia
+# The Petroleum Production Company Nobel Brothers, Limited
+company_branobel = {
+	icon = "gfx/interface/icons/company_icons/historical_company_icons/russian_branobel.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_oil_drills.dds"
+
+	flavored_company = yes
+
+	preferred_headquarters = { STATE_AZERBAIJAN }
+
+	building_types = {
+		building_oil_rig
+		ppp_building_power_grid
+	}
+
+	extension_building_types = {
+		building_power_plant
+	}
+
+	possible_prestige_goods = {
+		prestige_good_baku_oil
+	}
+
+	potential = {
+		has_interest_marker_in_region = region_caucasus
+	}
+
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_AZERBAIJAN
+			}
+		}
+	}
+
+	possible = {
+		has_technology_researched = pumpjacks
+		any_scope_state = {
+			state_region = s:STATE_AZERBAIJAN
+			any_scope_building = {
+				is_building_type = building_oil_rig
+				level >= 5
+			}
+		}
+	}
+
+	prosperity_modifier = {
+		state_migration_pull_mult = 0.1
+		building_railway_throughput_add = 0.05
+	}
+
+	ai_will_do = {
+		has_technology_researched = pumpjacks
+		any_scope_state = {
+			state_region = s:STATE_AZERBAIJAN
+		}
+	}
+
+	ai_construction_targets = {
+		building_oil_rig = {
+			level = 5
+			state_trigger = {
+				state_region = s:STATE_AZERBAIJAN
+			}
+		}
+	}
+
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}
+}
+
+## Sphere of Influence (soi)
+# West Ural Petroleum Company, Limited
+company_west_ural_petroleum = {
+	icon = "gfx/interface/icons/company_icons/historical_company_icons/historical_west_ural_petroleum_company_limited.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_oil_drills.dds"
+
+	flavored_company = yes
+
+	preferred_headquarters = { STATE_URALSK }
+
+	building_types = {
+		building_oil_rig
+		ppp_building_power_grid
+	}
+
+	extension_building_types = {
+		building_power_plant
+		building_railway
+	}
+
+	potential = {
+		has_dlc_feature = ep1_content
+		has_interest_marker_in_region = region_central_asia
+	}
+
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_URALSK
+			}
+		}
+	}
+
+	possible = {
+		has_technology_researched = pumpjacks
+		any_scope_state = {
+			state_region = s:STATE_URALSK
+			is_incorporated = yes
+			any_scope_building = {
+				is_building_type = building_oil_rig
+				level >= 5
+			}
+		}
+	}
+
+	prosperity_modifier = {
+		state_colony_growth_speed_mult = 0.1
+		building_power_plant_throughput_add = 0.05
+	}
+
+	ai_will_do = {
+		has_technology_researched = pumpjacks
+		any_scope_state = {
+			state_region = s:STATE_URALSK
+			is_incorporated = yes
+		}
+	}
+
+	ai_construction_targets = {
+		building_oil_rig = {
+			level = 5
+			state_trigger = {
+				state_region = s:STATE_URALSK
+			}
+		}
+	}
+
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}
+}
+
+# Hanseong Jeongi Hoesa
+company_hanseong_jeongi_hoesa = {
+	icon = "gfx/interface/icons/company_icons/historical_company_icons/hanseong_jeongi_hoesa.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufacturing_heavy.dds"
+
+	flavored_company = yes
+
+	preferred_headquarters = { STATE_SEOUL }
+
+	building_types = {
+		building_power_plant
+		usu_building_hydro_power_plant
+		ppp_building_power_grid
+	}
+
+	extension_building_types = {
+		building_railway
+		building_coal_mine
+	}
+
+	potential = {
+		has_dlc_feature = ep1_content
+		has_interest_marker_in_region = region_manchuria
+	}
+
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_SEOUL
+			}
+		}
+	}
+
+	possible = {
+		has_technology_researched = electrical_generation
+		any_scope_state = {
+			state_region = s:STATE_SEOUL
+			is_incorporated = yes
+			any_scope_building = {
+				is_building_type = building_power_plant
+				level >= 5
+			}
+		}
+	}
+
+	prosperity_modifier = {
+		building_arts_academy_throughput_add = 0.05
+		building_railway_throughput_add = 0.05
+	}
+
+	ai_will_do = {
+		has_technology_researched = electrical_generation
+		any_scope_state = {
+			state_region = s:STATE_SEOUL
+			is_incorporated = yes
+		}
+	}
+
+	ai_construction_targets = {
+		building_power_plant = {
+			level = 5
+			state_trigger = {
+				state_region = s:STATE_SEOUL
+			}
+		}
+	}
+
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}
+}
+
+# Turkish Petroleum Company
+company_turkish_petroleum = {
+	icon = "gfx/interface/icons/company_icons/historical_company_icons/turkish_petroleum_company.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_oil_drills.dds"
+
+	flavored_company = yes
+
+	preferred_headquarters = { STATE_BAGHDAD STATE_BASRA STATE_MOSUL }
+
+	building_types = {
+		building_oil_rig
+		ppp_building_power_grid
+	}
+
+	extension_building_types = {
+		building_power_plant
+	}
+
+	potential = {
+		has_interest_marker_in_region = region_arabic
+	}
+
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				OR = {
+					state_region = s:STATE_BAGHDAD
+					state_region = s:STATE_BASRA
+					state_region = s:STATE_MOSUL
+				}
+			}
+		}
+	}
+
+	possible = {
+		has_technology_researched = pumpjacks
+		any_scope_state = {
+			OR = {
+				state_region = s:STATE_BAGHDAD
+				state_region = s:STATE_BASRA
+				state_region = s:STATE_MOSUL
+			}
+			is_incorporated = yes
+			any_scope_building = {
+				is_building_type = building_oil_rig
+				level >= 5
+			}
+		}
+	}
+
+	prosperity_modifier = {
+		state_trade_capacity_mult = 0.05
+		building_railway_throughput_add = 0.05
+	}
+
+	ai_will_do = {
+		has_technology_researched = pumpjacks
+		any_scope_state = {
+			OR = {
+				state_region = s:STATE_BAGHDAD
+				state_region = s:STATE_BASRA
+				state_region = s:STATE_MOSUL
+			}
+			is_incorporated = yes
+		}
+	}
+
+	ai_construction_targets = {
+		building_oil_rig = {
+			level = 5
+			state_trigger = {
+				OR = {
+					state_region = s:STATE_BAGHDAD
+					state_region = s:STATE_BASRA
+					state_region = s:STATE_MOSUL
+				}
+				is_incorporated = yes
+			}
+		}
+	}
+
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}
+}
+
+# Anglo-Persian Oil Company
+company_anglo_persian_oil = {
+	icon = "gfx/interface/icons/company_icons/historical_company_icons/anglo_persian_oil_company.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_oil_drills.dds"
+
+	flavored_company = yes
+
+	preferred_headquarters = { STATE_KHUZESTAN }
+
+	building_types = {
+		building_oil_rig
+		ppp_building_power_grid
+	}
+
+	extension_building_types = {
+		building_power_plant
+	}
+
+	potential = {
+		has_dlc_feature = ep1_content
+		has_interest_marker_in_region = region_persia
+		OR = {
+			country_has_primary_culture = cu:british
+			country_has_primary_culture = cu:persian
+		}
+	}
+
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_KHUZESTAN
+			}
+		}
+	}
+
+	possible = {
+		has_technology_researched = pumpjacks
+		OR = {
+			country_has_primary_culture = cu:british
+			any_scope_ally = {
+				country_has_primary_culture = cu:british
+			}
+		}
+		custom_tooltip = {
+			text = company_anglo_persian_oil_tt
+			NOT = {
+				has_company = company_type:company_national_iranian_oil
+			}
+		}
+		any_scope_state = {
+			state_region = s:STATE_KHUZESTAN
+			is_incorporated = yes
+			any_scope_building = {
+				is_building_type = building_oil_rig
+				level >= 5
+			}
+		}
+	}
+
+	prosperity_modifier = {
+		building_group_bg_oil_extraction_throughput_add = 0.3
+	}
+
+	ai_will_do = {
+		has_technology_researched = pumpjacks
+		OR = {
+			country_has_primary_culture = cu:british
+			any_scope_ally = {
+				country_has_primary_culture = cu:british
+			}
+		}
+		NOT = {
+			has_company = company_type:company_national_iranian_oil
+		}
+		any_scope_state = {
+			state_region = s:STATE_KHUZESTAN
+			is_incorporated = yes
+		}
+	}
+
+	ai_construction_targets = {
+		building_oil_rig = {
+			level = 5
+			state_trigger = {
+				state_region = s:STATE_KHUZESTAN
+			}
+		}
+	}
+
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}
+}
+
+# National Iranian Oil Company
+company_national_iranian_oil = {
+	icon = "gfx/interface/icons/company_icons/historical_company_icons/national_iranian_oil_company.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_oil_drills.dds"
+
+	flavored_company = yes
+
+	preferred_headquarters = { STATE_KHUZESTAN }
+
+	building_types = {
+		building_oil_rig
+		ppp_building_power_grid
+	}
+
+	extension_building_types = {
+		building_power_plant
+	}
+
+	potential = {
+		has_dlc_feature = ep1_content
+		has_interest_marker_in_region = region_persia
+		country_has_primary_culture = cu:persian
+	}
+
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_KHUZESTAN
+			}
+		}
+	}
+
+	possible = {
+		has_technology_researched = pumpjacks
+		NOR = {
+			country_has_primary_culture = cu:british
+			any_scope_ally = {
+				country_has_primary_culture = cu:british
+			}
+		}
+		custom_tooltip = {
+			text = company_national_iranian_oil_tt
+			NOT = {
+				has_company = company_type:company_anglo_persian_oil
+			}
+		}
+		any_scope_state = {
+			state_region = s:STATE_KHUZESTAN
+			is_incorporated = yes
+			any_scope_building = {
+				is_building_type = building_oil_rig
+				level >= 5
+			}
+		}
+	}
+
+	prosperity_modifier = {
+		interest_group_ig_industrialists_pop_attraction_mult = 0.1
+		country_loyalists_from_legitimacy_mult = 0.1
+	}
+
+	ai_will_do = {
+		has_technology_researched = pumpjacks
+		NOR = {
+			country_has_primary_culture = cu:british
+			any_scope_ally = {
+				country_has_primary_culture = cu:british
+			}
+		}
+		NOT = {
+			has_company = company_type:company_anglo_persian_oil
+		}
+		any_scope_state = {
+			state_region = s:STATE_KHUZESTAN
+			is_incorporated = yes
+		}
+	}
+
+	ai_construction_targets = {
+		building_oil_rig = {
+			level = 5
+			state_trigger = {
+				state_region = s:STATE_KHUZESTAN
+			}
+		}
+	}
+
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}
+}
+
+## USA
+# General Electric
+company_general_electric = {
+	icon = "gfx/interface/icons/company_icons/historical_company_icons/american_general_electric.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufacturing_heavy.dds"
+
+	flavored_company = yes
+
+	preferred_headquarters = { STATE_MASSACHUSETTS STATE_NEW_YORK }
+
+	building_types = {
+		building_electrics_industry
+		building_power_plant
+		usu_building_hydro_power_plant
+	}
+
+	extension_building_types = {
+		building_motor_industry
+		ppp_building_power_grid
+	}
+
+	possible_prestige_goods = {
+		prestige_good_radiola_radios
+	}
+
+	potential = {
+		has_interest_marker_in_region = region_new_england
+	}
+
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				OR = {
+					state_region = s:STATE_MASSACHUSETTS
+					state_region = s:STATE_NEW_YORK
+				}
+			}
+		}
+	}
+
+	possible = {
+		has_technology_researched = telephone
+		any_scope_state = {
+			OR = {
+				state_region = s:STATE_MASSACHUSETTS
+				state_region = s:STATE_NEW_YORK
+			}
+			is_incorporated = yes
+			any_scope_building = {
+				is_building_type = building_electrics_industry
+				level >= 5
+			}
+		}
+	}
+
+	prosperity_modifier = {
+		building_motor_industry_throughput_add = 0.1
+		country_weekly_innovation_mult = 0.05
+	}
+
+	ai_will_do = {
+		has_technology_researched = telephone
+		any_scope_state = {
+			OR = {
+				state_region = s:STATE_MASSACHUSETTS
+				state_region = s:STATE_NEW_YORK
+			}
+			is_incorporated = yes
+		}
+	}
+
+	ai_construction_targets = {
+		building_electrics_industry = {
+			level = 5
+			state_trigger = {
+				OR = {
+					state_region = s:STATE_MASSACHUSETTS
+					state_region = s:STATE_NEW_YORK
+				}
+				is_incorporated = yes
+			}
+		}
+	}
+
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}
+}
+

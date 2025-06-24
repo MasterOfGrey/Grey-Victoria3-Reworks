@@ -58,7 +58,7 @@ canal_dividends.1 = {
 				b:building_suez_canal = {
 					add_modifier = {
 						name = mog_building_canal_accident
-						months = short_modifier_time
+						days = short_modifier_time
 					}
 					save_scope_as = canal_accident_suez
 				}
@@ -70,7 +70,7 @@ canal_dividends.1 = {
 				b:building_panama_canal = {
 					add_modifier = {
 						name = mog_building_canal_accident
-						months = short_modifier_time
+						days = short_modifier_time
 					}
 					save_scope_as = canal_accident_panama
 				}
@@ -78,7 +78,7 @@ canal_dividends.1 = {
 
 			#add_modifier = {
 			#	name = modifier_state_canal_accident
-			#	months = normal_modifier_time
+			#	days = normal_modifier_time
 			#}
 		}
 	}

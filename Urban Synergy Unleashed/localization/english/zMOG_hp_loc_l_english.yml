@@ -7,7 +7,7 @@
  state_usu_building_hydro_power_plant_max_level_add_desc: "A bonus or penalty to the maximum level of $usu_building_hydro_power_plant$ buildings in the state."
  mog_usu_hp_hydro_potential_adjustment: "Altered Hydropower Potential"
  
- building_power_plant: "Thermal Power Plants"
+ # building_power_plant: "Thermal Power Plant" # moved to replace file
  usu_building_hydro_power_plant: "Hydro Power Plant"
  
  bg_power: "Thermal Power Stations"

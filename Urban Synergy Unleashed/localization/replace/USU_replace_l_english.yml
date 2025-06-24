@@ -5,13 +5,15 @@
  alert_wasted_construction_action: "Construction Panel"
  wasted_construction_setting_name: "Unused Construction"
  
- pm_electric_trains:0 "DC Electric Trains"
- pm_electric_trains_principle_transport_3:0 "Joint DC Electric Trains"
- pm_electric_streetlights:0 "Moonlight Towers"
-
+ pm_electric_trains: "DC Electric Trains"
+ pm_electric_trains_principle_transport_3: "Joint DC Electric Trains"
+ pm_electric_streetlights: "Moonlight Towers"
+ 
  pm_canal: "Steam Powered Locks"
  company_panama_suez_company: "Panama-Suez Canal Company"
-
- pm_no_public_transport:0 "No Public Transportation"
- pm_public_trams:0 "Horse-drawn Trams"
- pm_public_motor_carriages:0 "City Busses"
+ 
+ pm_no_public_transport: "No Public Transportation"
+ pm_public_trams: "Horse-drawn Trams"
+ pm_public_motor_carriages: "City Busses"
+ 
+ building_power_plant: "Thermal Power Plant"

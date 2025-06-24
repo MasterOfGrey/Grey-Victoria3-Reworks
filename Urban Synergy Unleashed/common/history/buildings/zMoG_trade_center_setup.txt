@@ -1,0 +1,46 @@
+﻿BUILDINGS = {
+	if = { # Add top-up consecs to iron-potential states to make up for blanket downsize of consec sizes.
+		limit = { Grey_USU_is_active = yes }
+		every_state = {
+			limit = {
+				has_building = building_port
+				NOT = { owner ?= c:CHI }
+				NOT = { owner ?= { has_law = law_type:law_isolationism } }
+			}
+			create_building={
+				building="building_trade_center"
+				level=1
+			}
+		}
+		every_state = {
+			limit = {
+				has_building = building_urban_center
+				NOT = { owner ?= c:CHI }
+				NOT = { owner ?= { has_law = law_type:law_isolationism } }
+			}
+			create_building={
+				building="building_trade_center"
+				level=1
+			}
+		}
+		every_state = {
+			limit = {
+				state_population >= 1000000
+				NOT = { owner ?= c:CHI }
+				NOT = { owner ?= { has_law = law_type:law_isolationism } }
+			}
+			create_building={
+				building="building_trade_center"
+				level=1
+				#add_ownership={	# Sadly this does not work.
+				#	building={
+				#		type="building_trade_center"
+				#		country=prev.owner
+				#		levels=1
+				#		region=prev
+				#	}
+				#}
+			}
+		}
+	}
+}

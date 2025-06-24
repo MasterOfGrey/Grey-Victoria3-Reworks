@@ -26,6 +26,8 @@ usu_manage_trade_centre_type = {
 						building_type = building_trade_center
 						production_method = pm_trade_center_inland
 					}
+					has_building = building_port
+					has_building = building_river_port
 				}
 			}
 			activate_production_method = {

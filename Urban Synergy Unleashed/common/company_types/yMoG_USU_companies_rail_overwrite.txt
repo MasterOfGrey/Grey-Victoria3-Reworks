@@ -1,4 +1,218 @@
 ﻿### RAILWAY COMPANIES
+## Africa
+# Egyptian National Railways
+company_egyptian_rail = {
+	icon = "gfx/interface/icons/company_icons/historical_company_icons/egyptian_rail.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_railways.dds"
+
+	flavored_company = yes
+
+	building_types = {
+		building_railway
+		building_river_port
+	}
+
+	extension_building_types = {
+		building_motor_industry
+		building_iron_mine
+	}
+
+	potential = {
+		country_has_primary_culture = cu:misri
+	}
+
+	possible = {
+		has_technology_researched = corporate_charters
+		any_scope_state = {
+			region = sr:region_nile_basin
+			is_incorporated = yes
+			any_scope_building = {
+				is_building_type = building_railway
+				level >= 5
+			}
+			count >= 2
+		}
+	}
+
+	prosperity_modifier = {
+		state_infrastructure_from_population_max_add = 20
+		state_trade_capacity_mult = 0.1
+	}
+
+	ai_will_do = {
+		has_technology_researched = corporate_charters
+		any_scope_state = {
+			region = sr:region_nile_basin
+			is_incorporated = yes
+		}
+	}
+
+	ai_construction_targets = {
+		building_railway = {
+			level = 5
+			state_trigger = {
+				region = sr:region_nile_basin
+				is_incorporated = yes
+			}
+		}
+	}
+
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}
+}
+
+## Latin Americas
+# Compañía de Salitres y Ferrocarril de Antofagasta
+company_csfa = {
+	icon = "gfx/interface/icons/company_icons/historical_company_icons/bolivia_csfa.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_railways.dds"
+
+	flavored_company = yes
+
+	preferred_headquarters = { STATE_ANTOFAGASTA }
+
+	building_types = {
+		building_sulfur_mine
+		building_railway
+	}
+
+	extension_building_types = {
+		building_iron_mine
+		building_motor_industry
+	}
+
+	potential = {
+		has_interest_marker_in_region = region_andes
+	}
+
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_ANTOFAGASTA
+			}
+		}
+	}
+
+	possible = {
+		has_technology_researched = railways
+		any_scope_state = {
+			state_region = s:STATE_ANTOFAGASTA
+			is_incorporated = yes
+			any_scope_building = {
+				is_building_type = building_sulfur_mine
+				level >= 5
+			}
+		}
+	}
+
+	prosperity_modifier = {
+		state_infrastructure_mult = 0.05
+		interest_group_ig_industrialists_approval_add = 3
+	}
+
+	ai_will_do = {
+		has_technology_researched = railways
+		any_scope_state = {
+			state_region = s:STATE_ANTOFAGASTA
+			is_incorporated = yes
+		}
+	}
+
+	ai_construction_targets = {
+		building_sulfur_mine = {
+			level = 5
+			state_trigger = {
+				state_region = s:STATE_ANTOFAGASTA
+			}
+		}
+	}
+
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}
+}
+
+## Canada (Americas)
+# nil
+
+## Asia
+# Chemins de fer Orientaux
+company_orient_express = {
+	icon = "gfx/interface/icons/company_icons/historical_company_icons/chemins_de_fer_orientaux.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_railways.dds"
+
+	flavored_company = yes
+
+	preferred_headquarters = { STATE_EASTERN_THRACE }
+
+	building_types = {
+		building_railway
+	}
+
+	extension_building_types = {
+		building_motor_industry
+		building_iron_mine
+		building_river_port
+	}
+
+	potential = {
+		OR = {
+			has_interest_marker_in_region = region_anatolia
+			has_interest_marker_in_region = region_balkans
+		}
+	}
+
+	attainable = {
+		owns_entire_state_region = STATE_EASTERN_THRACE
+	}
+
+	possible = {
+		NOR = {
+			has_modifier = sick_man_of_europe
+			is_country_type = unrecognized
+		}
+		any_scope_state = {
+			region = sr:region_balkans
+			is_incorporated = yes
+			any_scope_building = {
+				is_building_type = building_railway
+				level >= 5
+			}
+			count >= 3
+		}
+	}
+
+	prosperity_modifier = {
+		country_prestige_mult = 0.1
+	}
+
+	ai_will_do = {
+		NOR = {
+			has_modifier = sick_man_of_europe
+			is_country_type = unrecognized
+		}
+		any_scope_state = {
+			region = sr:region_balkans
+			is_incorporated = yes
+		}
+	}
+
+	ai_construction_targets = {
+		building_railway = {
+			level = 5
+			state_trigger = {
+				region = sr:region_balkans
+				is_incorporated = yes
+			}
+		}
+	}
+
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}
+}
+
 # Great Indian Peninsula Railway
 company_great_indian_railway = {
 	icon = "gfx/interface/icons/company_icons/historical_company_icons/india_great_indian_peninsula_railway.dds"
@@ -83,3 +297,934 @@ company_great_indian_railway = {
 		value = 3 # Higher base value for flavored companies
 	}
 }
+
+## Austria-Hungary
+# nil
+
+## China
+# Kaiping Mining Company
+company_kaiping_mining = {
+	icon = "gfx/interface/icons/company_icons/historical_company_icons/chinese_kaiping_mining_company.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_mining.dds"
+
+	flavored_company = yes
+
+	preferred_headquarters = { STATE_BEIJING STATE_ZHILI }
+
+	building_types = {
+		building_coal_mine
+		building_railway
+	}
+
+	extension_building_types = {
+		building_iron_mine
+		building_lead_mine
+		building_motor_industry
+	}
+
+	potential = {
+		has_interest_marker_in_region = region_north_china
+	}
+
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				OR = {
+					state_region = s:STATE_BEIJING
+					state_region = s:STATE_ZHILI
+				}
+			}
+		}
+	}
+
+	possible = {
+		has_technology_researched = steam_donkey
+		has_technology_researched = railways
+		any_scope_state = {
+			OR = {
+				state_region = s:STATE_BEIJING
+				state_region = s:STATE_ZHILI
+			}
+			is_incorporated = yes
+			any_scope_building = {
+				is_building_type = building_coal_mine
+				level >= 5
+			}
+		}
+	}
+
+	prosperity_modifier = {
+		country_tech_spread_mult = 0.1
+	}
+
+	ai_will_do = {
+		has_technology_researched = steam_donkey
+		has_technology_researched = railways
+		any_scope_state = {
+			OR = {
+				state_region = s:STATE_BEIJING
+				state_region = s:STATE_ZHILI
+			}
+			is_incorporated = yes
+		}
+	}
+
+	ai_construction_targets = {
+		building_coal_mine = {
+			level = 5
+			state_trigger = {
+				OR = {
+					state_region = s:STATE_BEIJING
+					state_region = s:STATE_ZHILI
+				}
+				is_incorporated = yes
+			}
+		}
+	}
+
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}
+}
+
+## Colossus of the South (cots) (More Latin Americas)
+# São Paulo Railway Co. Ltd.
+company_sao_paulo_railway = {
+	icon = "gfx/interface/icons/company_icons/historical_company_icons/brazil_sao_paulo_railway.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_railways.dds"
+
+	flavored_company = yes
+
+	preferred_headquarters = { STATE_SAO_PAULO }
+
+	building_types = {
+		building_railway
+		building_river_port
+	}
+
+	extension_building_types = {
+		building_logging_camp
+		building_motor_industry
+	}
+
+	potential = {
+		has_dlc_feature = rp1_content
+		has_interest_marker_in_region = region_brazil
+	}
+
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_SAO_PAULO
+			}
+		}
+	}
+
+	possible = {
+		has_technology_researched = railways
+		any_scope_state = {
+			state_region = s:STATE_SAO_PAULO
+			is_incorporated = yes
+			has_building = building_railway
+			any_scope_building = {
+				is_building_type = building_coffee_plantation
+				level >= 5
+			}
+		}
+		any_scope_state = {
+			region = sr:region_brazil
+			is_incorporated = yes
+			any_scope_building = {
+				is_building_type = building_railway
+				level >= 5
+			}
+			count >= 2
+		}
+	}
+
+	prosperity_modifier = {
+		building_group_bg_coffee_plantations_throughput_add = 0.15
+		state_trade_capacity_mult = 0.1
+	}
+
+	ai_will_do = {
+		has_technology_researched = railways
+		any_scope_state = {
+			state_region = s:STATE_SAO_PAULO
+			is_incorporated = yes
+		}
+	}
+
+	ai_construction_targets = {
+		building_coffee_plantation = {
+			level = 5
+			state_trigger = {
+				state_region = s:STATE_SAO_PAULO
+			}
+		}
+		building_railway = {
+			level = 5
+			state_trigger = {
+				region = sr:region_brazil
+				is_incorporated = yes
+			}
+		}
+	}
+
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}
+}
+
+# Córdoba Central Railway
+company_cordoba_railway = {
+	icon = "gfx/interface/icons/company_icons/historical_company_icons/argentina_cordoba_cenral_railway.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_railways.dds"
+
+	flavored_company = yes
+
+	preferred_headquarters = { STATE_LA_PAMPA }
+
+	building_types = {
+		building_railway
+		building_river_port
+	}
+
+	extension_building_types = {
+		building_coal_mine
+		building_motor_industry
+	}
+
+	potential = {
+		has_dlc_feature = rp1_content
+		has_interest_marker_in_region = region_la_plata
+	}
+
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_LA_PAMPA
+			}
+		}
+	}
+
+	possible = {
+		has_technology_researched = railways
+		any_scope_state = {
+			state_region = s:STATE_LA_PAMPA
+			is_incorporated = yes
+			has_building = building_railway
+		}
+		any_scope_state = {
+			has_state_trait = state_trait_pampas
+			is_incorporated = yes
+			any_scope_building = {
+				is_building_type = building_railway
+				level >= 5
+			}
+			count >= 2
+		}
+	}
+
+	prosperity_modifier = {
+		building_wheat_farm_throughput_add = 0.1
+		building_livestock_ranch_throughput_add = 0.05
+	}
+
+	ai_will_do = {
+		has_technology_researched = railways
+		any_scope_state = {
+			state_region = s:STATE_LA_PAMPA
+			is_incorporated = yes
+		}
+	}
+
+	ai_construction_targets = {
+		building_railway = {
+			level = 5
+			state_trigger = {
+				has_state_trait = state_trait_pampas
+				is_incorporated = yes
+			}
+		}
+	}
+
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}
+}
+
+## Europe
+# Société Franco-Belge
+company_franco_belge = {
+	icon = "gfx/interface/icons/company_icons/historical_company_icons/franco_belge.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufacturing_heavy.dds"
+
+	flavored_company = yes
+
+	preferred_headquarters = { STATE_FLANDERS STATE_WALLONIA }
+
+	building_types = {
+		building_motor_industry
+		building_railway
+	}
+
+	extension_building_types = {
+		building_steel_mills
+		building_river_port
+	}
+
+	potential = {
+		has_interest_marker_in_region = region_rhine
+	}
+
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				OR = {
+					state_region = s:STATE_WALLONIA
+					state_region = s:STATE_FLANDERS
+				}
+			}
+		}
+	}
+
+	possible = {
+		any_scope_state = {
+			OR = {
+				state_region = s:STATE_WALLONIA
+				state_region = s:STATE_FLANDERS
+			}
+			is_incorporated = yes
+			any_scope_building = {
+				is_building_type = building_motor_industry
+				level >= 5
+			}
+		}
+	}
+
+	prosperity_modifier = {
+		state_infrastructure_mult = 0.05
+	}
+
+	ai_will_do = {
+		any_scope_state = {
+			OR = {
+				state_region = s:STATE_WALLONIA
+				state_region = s:STATE_FLANDERS
+			}
+			is_incorporated = yes
+		}
+	}
+
+	ai_construction_targets = {
+		building_motor_industry = {
+			level = 5
+			state_trigger = {
+				OR = {
+					state_region = s:STATE_WALLONIA
+					state_region = s:STATE_FLANDERS
+				}
+				is_incorporated = yes
+			}
+		}
+	}
+
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}
+}
+
+# Căile Ferate Române
+company_cfr = {
+	icon = "gfx/interface/icons/company_icons/historical_company_icons/romania_cfr.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_railways.dds"
+	
+	flavored_company = yes
+	
+	preferred_headquarters = { STATE_WALLACHIA }
+	
+	building_types = {  
+		building_railway
+		building_river_port
+	}
+	
+	extension_building_types = {
+		building_motor_industry
+	}
+	
+	potential = {
+		country_has_primary_culture = cu:romanian
+	}
+	
+	possible = {
+		any_scope_state = {
+			state_region = {
+				is_homeland = cu:romanian
+			}
+			is_incorporated = yes
+			has_building = building_railway
+			count >= 2
+		}
+	}
+	
+	prosperity_modifier = {
+		state_infrastructure_mult = 0.05
+		state_trade_capacity_mult = 0.15
+	}
+	
+	ai_will_do = {
+		has_technology_researched = railways
+		any_scope_state = {
+			state_region = {
+				is_homeland = cu:romanian
+			}
+			is_incorporated = yes
+		}
+	}
+	
+	ai_construction_targets = {
+		building_railway = {
+			level = 5
+			state_trigger = {
+				state_region = {
+					is_homeland = cu:romanian
+				}
+				is_incorporated = yes
+			}
+		}
+	}
+	
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}
+}
+
+## France
+# nil
+
+## Germany
+# Preußische Staatseisenbahnen
+company_prussian_state_railways = {
+	icon = "gfx/interface/icons/company_icons/historical_company_icons/german_kpev.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_railways.dds"
+
+	flavored_company = yes
+
+	building_types = {
+		building_railway
+		building_river_port
+	}
+
+	extension_building_types = {
+		building_motor_industry
+	}
+
+	potential = {
+		OR = {
+			c:PRU ?= this
+			was_formed_from = PRU
+		}
+	}
+
+	possible = {
+		has_technology_researched = railways
+		any_scope_state = {
+			OR = {
+				region = sr:region_north_germany
+				region = sr:region_south_germany
+			}
+			is_incorporated = yes
+			any_scope_building = {
+				is_building_type = building_railway
+				level >= 5
+			}
+			count >= 3
+		}
+	}
+
+	prosperity_modifier = {
+		military_formation_movement_speed_mult = 0.1
+	}
+
+	ai_will_do = {
+		has_technology_researched = railways
+		any_scope_state = {
+			OR = {
+				region = sr:region_north_germany
+				region = sr:region_south_germany
+			}
+			is_incorporated = yes
+		}
+	}
+
+	ai_construction_targets = {
+		building_railway = {
+			level = 5
+			state_trigger = {
+				OR = {
+					region = sr:region_north_germany
+					region = sr:region_south_germany
+				}
+				is_incorporated = yes
+			}
+		}
+	}
+
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}
+}
+
+## Great Britain
+# Great Western Railway
+company_gwr = {
+	icon = "gfx/interface/icons/company_icons/historical_company_icons/gb_great_western_railway.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_railways.dds"
+
+	flavored_company = yes
+
+	building_types = {
+		building_railway
+	}
+
+	extension_building_types = {
+		building_river_port
+		building_coal_mine
+	}
+
+	potential = {
+		has_interest_marker_in_region = region_england
+	}
+
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				region = sr:region_england
+			}
+		}
+	}
+
+	possible = {
+		has_technology_researched = railways
+		any_scope_state = {
+			region = sr:region_england
+			is_incorporated = yes
+			any_scope_building = {
+				is_building_type = building_railway
+				level >= 5
+			}
+			count >= 3
+		}
+	}
+
+	prosperity_modifier = {
+		country_prestige_mult = 0.05
+		state_radicals_from_political_movements_mult = -0.05
+	}
+
+	ai_will_do = {
+		has_technology_researched = railways
+		any_scope_state = {
+			region = sr:region_england
+			is_incorporated = yes
+			count >= 3
+		}
+	}
+
+	ai_construction_targets = {
+		building_railway = {
+			level = 5
+			state_trigger = {
+				region = sr:region_england
+				is_incorporated = yes
+			}
+		}
+	}
+
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}
+}
+
+## Pivot of Empire? (ip2)
+# nil
+
+## Italy
+# nil
+
+## Japan
+# South Manchuria Railway
+company_mantetsu = {
+	icon = "gfx/interface/icons/company_icons/historical_company_icons/japanese_mantetsu.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_railways.dds"
+
+	flavored_company = yes
+
+	preferred_headquarters = { STATE_SHENGJING }
+
+	building_types = {
+		building_railway
+		building_coal_mine
+		building_glassworks
+	}
+
+	extension_building_types = {
+		building_food_industry
+		building_chemical_plants
+		building_river_port
+	}
+
+	potential = {
+		country_has_primary_culture = cu:japanese
+	}
+
+	possible = {
+		country_or_subject_owns_entire_state_region = STATE_SHENGJING
+		has_technology_researched = railways
+		custom_tooltip = {
+			text = is_meiji_japan
+			has_variable = meiji_restoration_complete
+		}
+		any_scope_state = {
+			OR = {
+				region = sr:region_manchuria
+				region = sr:region_north_china
+			}
+			any_scope_building = {
+				is_building_type = building_railway
+				level >= 5
+			}
+			count >= 2
+		}
+	}
+
+	prosperity_modifier = {
+		state_non_homeland_colony_growth_speed_mult = 0.1
+		building_wheat_farm_throughput_add = 0.15
+	}
+
+	ai_will_do = {
+		country_or_subject_owns_entire_state_region = STATE_SHENGJING
+		has_technology_researched = railways
+		custom_tooltip = {
+			text = is_meiji_japan
+			has_variable = meiji_restoration_complete
+		}
+		any_scope_state = {
+			OR = {
+				region = sr:region_manchuria
+				region = sr:region_north_china
+			}
+		}
+	}
+
+	ai_construction_targets = {
+		building_railway = {
+			level = 5
+			state_trigger = {
+				OR = {
+					region = sr:region_manchuria
+					region = sr:region_north_china
+				}
+			}
+		}
+	}
+
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}
+}
+
+## Charters of Commerce (mp1)
+# Imperial Ethiopian Railway Company
+company_imperial_ethiopian_railways = {
+	icon = "gfx/interface/icons/company_icons/historical_company_icons/company_imperial_ethiopian_railways.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_railways.dds"
+
+	flavored_company = yes
+
+	building_types = {
+		building_railway
+		building_river_port
+	}
+
+	extension_building_types = {
+		building_motor_industry
+	}
+
+	potential = {
+		has_interest_marker_in_region = region_ethiopia
+	}
+
+	attainable = {
+	}
+
+	possible = {
+		has_technology_researched = railways
+		any_scope_state = {
+			region = sr:region_ethiopia
+			has_building = building_railway
+			any_scope_building = {
+				is_building_type = building_coffee_plantation
+				level >= 5
+			}
+		}
+		any_scope_state = {
+			region = sr:region_ethiopia
+			is_coastal = yes
+			any_scope_building = {
+				is_building_type = building_railway
+				level >= 5
+			}
+		}
+	}
+
+	prosperity_modifier = {
+		building_group_bg_coffee_plantations_throughput_add = 0.1
+		building_livestock_ranch_throughput_add = 0.05
+	}
+
+	ai_will_do = {
+		has_technology_researched = railways
+		any_scope_state = {
+			region = sr:region_ethiopia
+		}
+	}
+
+	ai_construction_targets = {
+		building_coffee_plantation = {
+			level = 5
+			state_trigger = {
+				region = sr:region_ethiopia
+			}
+		}
+		building_railway = {
+			level = 5
+			state_trigger = {
+				region = sr:region_ethiopia
+			}
+		}
+	}
+
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}
+}
+
+## Russia
+# nil
+
+## Sphere of Influence (soi)
+# Iranian State Railway
+company_iranian_state_railway = {
+	icon = "gfx/interface/icons/company_icons/historical_company_icons/trans_iranian_railway.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_railways.dds"
+
+	flavored_company = yes
+
+	building_types = {
+		building_railway
+	}
+
+	extension_building_types = {
+		building_river_port
+		building_motor_industry
+	}
+
+	potential = {
+		has_interest_marker_in_region = region_persia
+		country_has_primary_culture = cu:persian
+	}
+
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = {
+					is_homeland = cu:persian
+				}
+			}
+		}
+	}
+
+	possible = {
+		has_technology_researched = railways
+		any_scope_state = {
+			region = sr:region_persia
+			is_incorporated = yes
+			any_scope_building = {
+				is_building_type = building_railway
+				level >= 5
+			}
+			count >= 2
+		}
+	}
+
+	prosperity_modifier = {
+		state_migration_pull_mult = 0.05
+		state_assimilation_mult = 0.1
+	}
+
+	ai_will_do = {
+		has_technology_researched = railways
+		any_scope_state = {
+			region = sr:region_persia
+			is_incorporated = yes
+		}
+	}
+
+	ai_construction_targets = {
+		building_railway = {
+			level = 5
+			state_trigger = {
+				region = sr:region_persia
+				is_incorporated = yes
+			}
+		}
+	}
+
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}
+}
+
+# Tashkent Railroad
+company_tashkent_railroad = {
+	icon = "gfx/interface/icons/company_icons/historical_company_icons/tashkent_railroad.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_railways.dds"
+
+	flavored_company = yes
+
+	preferred_headquarters = { STATE_FERGANA }
+
+	building_types = {
+		building_railway
+		building_river_port
+	}
+
+	extension_building_types = {
+		building_motor_industry
+	}
+
+	potential = {
+		has_dlc_feature = ep1_content
+		has_interest_marker_in_region = region_central_asia
+	}
+
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_FERGANA
+			}
+		}
+	}
+
+	possible = {
+		has_technology_researched = railways
+		any_scope_state = {
+			region = sr:region_central_asia
+			is_incorporated = yes
+			any_scope_building = {
+				is_building_type = building_railway
+				level >= 5
+			}
+			count >= 2
+		}
+	}
+
+	prosperity_modifier = {
+		building_cotton_plantation_throughput_add = 0.1
+	}
+
+	ai_will_do = {
+		has_technology_researched = railways
+		any_scope_state = {
+			region = sr:region_central_asia
+			is_incorporated = yes
+		}
+	}
+
+	ai_construction_targets = {
+		building_railway = {
+			level = 5
+			state_trigger = {
+				region = sr:region_central_asia
+				is_incorporated = yes
+			}
+		}
+	}
+
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}
+}
+
+## USA
+company_standard_oil = {
+	icon = "gfx/interface/icons/company_icons/historical_company_icons/american_standard_oil.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_oil_drills.dds"
+
+	flavored_company = yes
+
+	building_types = {
+		building_oil_rig
+		building_railway
+	}
+
+	extension_building_types = {
+		building_port
+		building_river_port
+	}
+
+	potential = {
+		has_interest_marker_in_region = region_the_midwest
+	}
+
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				region = sr:region_the_midwest
+			}
+		}
+	}
+
+	possible = {
+		has_technology_researched = pumpjacks
+		any_scope_state = {
+			region = sr:region_the_midwest
+			is_incorporated = yes
+			any_scope_building = {
+				is_building_type = building_oil_rig
+				level >= 5
+			}
+		}
+	}
+
+	prosperity_modifier = {
+		building_railway_throughput_add = 0.2
+	}
+
+	ai_will_do = {
+		has_technology_researched = pumpjacks
+		any_scope_state = {
+			region = sr:region_the_midwest
+			is_incorporated = yes
+			has_potential_resource = bg_oil_extraction
+		}
+	}
+
+	ai_construction_targets = {
+		building_oil_rig = {
+			level = 5
+			state_trigger = {
+				region = sr:region_the_midwest
+				is_incorporated = yes
+			}
+		}
+	}
+
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}
+}
+
