@@ -1,6 +1,6 @@
 [img]https://i.imgur.com/7xuCZqW.png[/img]
-Supports Victoria 3: V1.8.6  (and onwards)
-Mod Version: V1.4
+Supports Victoria 3: V1.9.1  (and onwards)
+Mod Version: V1.5
 Please consider rating this if you like it! It really helps out. [img]https://i.imgur.com/tE28cZ7.gif[/img]
 [spoiler]Originally made for: Version 1.7.6[/spoiler]
 [table]
@@ -30,7 +30,7 @@ The elements of this mod can be broadly grouped into 3 categories:
 [h2]Mobilisation/Demobilisation:[/h2]
 To better represent the ability of a country with large civilian industry to "mobilize" its factories to a wartime economy:
 [h3]Automotive Industry Rework:[/h3]
-[list][*]The "War Machine Industries" have been replaced with "Automotive Industries", which produces Automobiles and has secondary PM's to [u]mobilise[/u] for Tanks and Aeroplanes.
+[list][*]The "War "Automotive Industries" have additional secondary PM's to [u]mobilise[/u] varying production levels for Tanks and Aeroplanes.
 [*]Besides those changes, the costs involved with making automobiles have been rebalanced (they require engines), to bring them more in line with other heavy industries.
 [/list]
 [h3]Tooling from Small Arms and Artillery:[/h3]
@@ -78,11 +78,9 @@ New PM line on Automotive Industries (and military shipyards) allows you to expa
 [/list]
 
 [img]https://i.imgur.com/Qp8JBtZ.png[/img]
-This and the original Automotive Rework mod will be managed by load order - in case their content ever diverges.
+The original Automotive Rework mod has been superseded by vanilla update 1.9.
 
 Otherwise this only touches motor, electrics, and military industries. It should otherwise not bother anything else.
-
-COMPATIBLE WITH VTM!
 
 Incompatible with: 
 [list]
@@ -96,7 +94,7 @@ Incompatible with:
 [i]If you send it to me I will add it.[/i]
 
 [img]https://i.imgur.com/UN80Om5.png[/img]
-Builds on the Automotive Industry Rework by indexo4
+Builds on the old Automotive Industry Rework by indexo4
 Content from the Automotive Industry Rework is available in English, Brazilian Portuguese, German (by CertainDeath), French (by Choupy) and Spanish (by ByKalitos ESP).
 
 [h2]Language Support:[/h2]
@@ -112,4 +110,5 @@ Credit to providers of localisation content:
 #Production Methods #Rework
 #Radio #Firearm & Munitions Economy
 #Mobilize #Demobilize #Airplane
-#Sensible Guns #MIR #GMIR
+#Sensible Guns #MIR #GMIR #VTM
+You can support me on Patreon: [url=https://patreon.com/MasterOfGreyVic3?utm_medium=unknown&utm_source=join_link&utm_campaign=creatorshare_creator&utm_content=copyLink] [img]https://ufo2.site44.com/become_a_patron_button.png[/img] [/url]

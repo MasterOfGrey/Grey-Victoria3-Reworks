@@ -2,97 +2,84 @@
 company_mitsubishi = {
 	icon = "gfx/interface/icons/company_icons/historical_company_icons/japanese_mitsubishi.dds"
 	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufacturing_heavy.dds"
-	
+
 	flavored_company = yes
-	
-	building_types = {  
+
+	preferred_headquarters = { STATE_CHUGOKU }
+
+	building_types = {
 		building_military_shipyards
 		building_coal_mine
-		building_motor_industry
+		building_paper_mills
 		building_automotive_industry
 	}
-	
+
+	extension_building_types = {
+		building_shipyards
+		building_motor_industry
+		building_port
+		building_iron_mine
+	}
+
+	possible_prestige_goods = {
+		prestige_good_washi_paper
+	}
+
 	potential = {
 		country_has_primary_culture = cu:japanese
 	}
-	
-	possible = { 
-		any_scope_state = {
-			state_region = s:STATE_CHUGOKU
-			is_incorporated = yes
-			any_scope_building = {
-				OR = {
-					is_building_type = building_shipyards
-					is_building_type = building_military_shipyards
-					is_building_type = building_coal_mine
-				}
-				level >= 3
-			}
-		}
+
+	possible = {
 		has_technology_researched = ironclad_tech
 		custom_tooltip = {
 			text = is_meiji_japan
 			has_variable = meiji_restoration_complete
 		}
-	}
-	
-	prosperity_modifier = {
-		building_automotive_industry_throughput_add = 0.1
-		interest_group_ig_industrialists_approval_add = 2
-	}	
-	
-	ai_weight = {
-		value = 3 # Higher base value for flavored companies
-	}
-}
-
-# Škoda Works
-company_skoda = {
-	icon = "gfx/interface/icons/company_icons/historical_company_icons/skoda.dds"
-	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufacturing_heavy.dds"
-	
-	flavored_company = yes
-	
-	building_types = {
-		building_steel_mills
-		building_motor_industry
-		building_artillery_foundries
-		building_automotive_industry
-	}
-	
-	potential = {
-		has_interest_marker_in_region = region_south_germany
-	}
-	
-	attainable = {
-		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
-			any_scope_state = {
-				state_region = s:STATE_BOHEMIA
-			}
-		}
-	}			
-	
-	possible = { 
 		any_scope_state = {
-			state_region = s:STATE_BOHEMIA
+			state_region = s:STATE_CHUGOKU
 			is_incorporated = yes
 			any_scope_building = {
 				OR = {
-					is_building_type = building_steel_mills
-					is_building_type = building_arms_industry
-					is_building_type = building_artillery_foundries
+					is_building_type = building_paper_mills
+					is_building_type = building_military_shipyards
 				}
-				level >= 3
+				level >= 5
 			}
 		}
-		has_technology_researched = shell_gun
 	}
-	
+
 	prosperity_modifier = {
-		character_advancement_speed_add = 1
-		unit_combat_unit_type_siege_artillery_offense_mult = 0.15
-	}	
-	
+		building_automotive_industry_throughput_add = 0.1
+		interest_group_ig_industrialists_approval_add = 2
+	}
+
+	ai_will_do = {
+		has_technology_researched = ironclad_tech
+		custom_tooltip = {
+			text = is_meiji_japan
+			has_variable = meiji_restoration_complete
+		}
+		any_scope_state = {
+			state_region = s:STATE_CHUGOKU
+			is_incorporated = yes
+		}
+	}
+
+	ai_construction_targets = {
+		building_paper_mills = {
+			level = 5
+			state_trigger = {
+				state_region = s:STATE_CHUGOKU
+			}
+		}
+		building_military_shipyards = {
+			level = 5
+			state_trigger = {
+				state_region = s:STATE_CHUGOKU
+			}
+		}
+	}
+
 	ai_weight = {
 		value = 3 # Higher base value for flavored companies
 	}
