@@ -1,6 +1,9 @@
-﻿company_basic_oil = {
+﻿## BASIC
+company_basic_oil = {
 	icon = "gfx/interface/icons/company_icons/basic_oil.dds"
 	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_oil_drills.dds"
+	
+	flavored_company = no
 	
 	uses_dynamic_naming = yes
 	
@@ -17,13 +20,17 @@
 		building_oil_rig
 		building_mendelejew_hydrogenation_plants
 	}
-
+	
+	extension_building_types = {
+		building_coal_mine
+	}
+	
 	possible = { 
 		any_scope_state = {
 			any_scope_building = {
 				is_building_type = building_oil_rig
 				is_building_type = building_mendelejew_hydrogenation_plants
-				level >= 5
+				level >= 3
 			}
 		}
 	}
@@ -32,11 +39,26 @@
 		state_migration_pull_mult = 0.1
 		building_mendelejew_hydrogenation_plants_throughput_add = 0.3
 	}
+	
+	ai_will_do = {
+		#MOD: Slightly changed this to use both buildings
+		OR = {
+			any_scope_building = {
+				OR = {
+					is_building_type = building_oil_rig
+					is_building_type = building_mendelejew_hydrogenation_plants
+				}
+				level >= 3
+			}
+		}
+	}
 }
 
 company_basic_electrics = {
 	icon = "gfx/interface/icons/company_icons/basic_electrics.dds"
 	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufacturing_heavy.dds"
+	
+	flavored_company = no
 	
 	uses_dynamic_naming = yes
 	
@@ -51,7 +73,13 @@ company_basic_electrics = {
 	
 	building_types = {
 		building_electrics_industry
-		building_mendelejew_synthetic_rubber_factory
+		# building_mendelejew_synthetic_rubber_factory
+	}
+	
+	extension_building_types = {
+		building_iron_mine
+		building_rubber_plantation
+		building_mendelejew_synthetic_rubber_factory #MOD: added this building
 	}
 
 	possible = { 
@@ -70,11 +98,22 @@ company_basic_electrics = {
 		building_power_plant_throughput_add = 0.1
 		building_mendelejew_synthetic_rubber_factory_throughput_add = 0.3
 	}
+	
+	ai_will_do = {
+		any_scope_state = {
+			any_scope_building = {
+				is_building_type = building_electrics_industry
+				level >= 5
+			}
+		}
+	}
 }
 
 company_basic_chemicals = {
 	icon = "gfx/interface/icons/company_icons/basic_chemicals.dds"
 	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufacturing_heavy.dds"
+	
+	flavored_company = no
 	
 	uses_dynamic_naming = yes
 	
@@ -91,7 +130,24 @@ company_basic_chemicals = {
 		building_chemical_plants
 		building_synthetics_plants
 	}
-
+	
+	extension_building_types = {
+		building_sulfur_mine
+		building_mendelejew_synthetic_rubber_factory #MOD: added this building
+		building_mendelejew_hydrogenation_plants #MOD: added this building
+	}
+	
+	possible_prestige_goods = {
+		prestige_good_generic_fertilizer
+	}
+	
+	prestige_goods_trigger = {
+		custom_tooltip = {
+			text = je_prestige_goods_fertilizer_complete_tt
+			has_variable = prestige_good_generic_fertilizer_var
+		}
+	}
+	
 	possible = { 
 		any_scope_state = {
 			is_incorporated = yes
@@ -109,5 +165,104 @@ company_basic_chemicals = {
 		unit_supply_consumption_mult = -0.05
 		building_mendelejew_hydrogenation_plants_throughput_add = 0.5
 		building_mendelejew_synthetic_rubber_factory_throughput_add = 0.5
+	}
+	
+	ai_will_do = {
+		any_scope_state = {
+			is_incorporated = yes
+			any_scope_building = {
+				OR = {
+					is_building_type = building_chemical_plants
+					is_building_type = building_synthetics_plants
+				}
+				level >= 5
+			}
+		}
+	}
+}
+
+### FLAVOURED
+## Austria-Hungary
+# Galizisch-Karpathische Petroleum AG
+company_galician_carpathian_oil = {
+	icon = "gfx/interface/icons/company_icons/historical_company_icons/galician_carpathian_oil.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_oil_drills.dds"
+
+	flavored_company = yes
+
+	preferred_headquarters = { STATE_EAST_GALICIA STATE_WEST_GALICIA }
+
+	building_types = {
+		building_oil_rig
+		ppp_building_power_grid
+		building_mendelejew_hydrogenation_plants
+	}
+
+	extension_building_types = {
+		building_power_plant
+		building_coal_mine
+	}
+
+	potential = {
+		has_interest_marker_in_region = region_poland
+	}
+
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				OR = {
+					state_region = s:STATE_EAST_GALICIA
+					state_region = s:STATE_WEST_GALICIA
+				}
+			}
+		}
+	}
+
+	possible = {
+		has_technology_researched = pumpjacks
+		any_scope_state = {
+			OR = {
+				state_region = s:STATE_EAST_GALICIA
+				state_region = s:STATE_WEST_GALICIA
+			}
+			is_incorporated = yes
+			any_scope_building = {
+				is_building_type = building_oil_rig
+				level >= 5
+			}
+		}
+	}
+
+	prosperity_modifier = {
+		building_railway_throughput_add = 0.05
+		building_tooling_workshops_throughput_add = 0.1
+	}
+
+	ai_will_do = {
+		has_technology_researched = pumpjacks
+		any_scope_state = {
+			OR = {
+				state_region = s:STATE_EAST_GALICIA
+				state_region = s:STATE_WEST_GALICIA
+			}
+			is_incorporated = yes
+		}
+	}
+
+	ai_construction_targets = {
+		building_steel_mills = {
+			level = 5
+			state_trigger = {
+				OR = {
+					state_region = s:STATE_EAST_GALICIA
+					state_region = s:STATE_WEST_GALICIA
+				}
+				is_incorporated = yes
+			}
+		}
+	}
+
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
 	}
 }
