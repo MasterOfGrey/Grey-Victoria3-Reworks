@@ -49,7 +49,7 @@
 		# Limiting factors
 		if = {
 			limit = {
-				wealth < 15
+				wealth < 14
 			}
 			multiply = {
 				value = 5
@@ -70,7 +70,7 @@
 		# Growth factors
 		else_if = {
 			limit = {
-				wealth >= 15
+				wealth >= 14
 			}
 			multiply = {
 				value = 0.5
