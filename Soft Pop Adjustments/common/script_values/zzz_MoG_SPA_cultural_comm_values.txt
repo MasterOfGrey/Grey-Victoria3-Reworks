@@ -2,7 +2,8 @@
 # scope:culture = the culture we're evaluating the probability to spawn a new cultural community for.
 
 # Each (state, culture) combination is evaluated once per month.
-# Note: only cultures present in the same market as <state> are evaluated.
+# Note: normally only cultures present in the same market as <state> are evaluated,
+# however if a treaty port exists, then cultures present in either of the involved markets will be evaluated.
 
 cultural_community_creation_weight = {
 
@@ -21,9 +22,9 @@ cultural_community_creation_weight = {
 	else_if = {
 		limit = {
 			OR = {
+				devastation >= 0.5
+				turmoil >= 0.6
 				is_isolated_from_market = yes
-				turmoil >= 60
-				devastation >= 50
 			}
 		}
 		value = 0
@@ -138,14 +139,10 @@ cultural_community_creation_weight = {
 		
 		if = {
 			limit = {
-				#scope:culture = {
-				#	culture_is_discriminated_in = root.owner
-				#}
 				owner = {
 					cultural_acceptance_base = { target = scope:culture value <= acceptance_status_2 }
 				}
 			}
-			multiply = 0.3
 			if = {
 				limit = {
 					has_decree = decree_violent_suppression
@@ -165,14 +162,14 @@ cultural_community_creation_weight = {
 		
 		if = {
 			limit = {
-				devastation >= 20
+				devastation >= 0.2
 			}
 			multiply = 0.5
 		}
 	
 		if = {
 			limit = {
-				turmoil >= 30
+				turmoil >= 0.3
 			}
 			multiply = 0.5
 		}
@@ -184,6 +181,15 @@ cultural_community_creation_weight = {
 #			}
 #			multiply = 0.5
 #		}
+
+		if = {
+			limit = {
+				owner = {
+					is_at_war = yes
+				}
+			}
+			multiply = 0.5
+		}
 	
 		if = {
 			limit = {
@@ -223,6 +229,39 @@ cultural_community_creation_weight = {
 				}
 			}
 			multiply = 0.6
+		}
+		
+		if = {
+			limit = {
+				root.owner = {
+					cultural_acceptance_base = { target = scope:culture value < acceptance_status_2 }
+				}
+			}
+			multiply = 0.1
+		}
+		else_if = {
+			limit = {
+				root.owner = {
+					cultural_acceptance_base = { target = scope:culture value < acceptance_status_3 }
+				}
+			}
+			multiply = 0.3
+		}
+		else_if = {
+			limit = {
+				root.owner = {
+					cultural_acceptance_base = { target = scope:culture value < acceptance_status_4 }
+				}
+			}
+			multiply = 0.5
+		}
+		else_if = {
+			limit = {
+				root.owner = {
+					cultural_acceptance_base = { target = scope:culture value < acceptance_status_5 }
+				}
+			}
+			multiply = 0.7
 		}
 		
 		# Brought together in an if-else block so they don't check every option every time.
