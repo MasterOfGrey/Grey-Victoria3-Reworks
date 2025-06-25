@@ -1,13 +1,14 @@
-﻿NEconomy = {
+NEconomy = {
 	# Honestly the Vanilla minimum is a joke
 	MIN_CONSTRUCTION_EFFICIENCY = 0.15 # 0.05					# Construction efficiency cannot go below this amount
 	
 	# Allow downsize from 2->1
 	# Faster but not excessive downsize speed
-	AUTO_DOWNSIZE_BUILDING_PRIVATELY_OWNED_THRESHOLD = 0.2 # 0.5	# At least this fraction of a building's levels must be privately owned for it to be considered for auto-downsizing
-	AUTO_DOWNSIZE_BUILDING_MIN_EMPTY_LEVELS = 1 # 2					# A building must be missing at least this many levels of employment (in absolute numbers) to start considering auto-downsizing (both this and the below requirement are applied)
-	AUTO_DOWNSIZE_BUILDING_MIN_EMPTY_FRACTION = 0.2					# A building must be missing at least this many levels of employment (in relative numbers) to start considering auto-downsizing (both this and the above requirement are applied)
-	AUTO_DOWNSIZE_BUILDING_MONTHS_TO_WAIT = 8 #12					# After a building decides to start auto-downsizing, wait this many months before actually starting to downsize, in case conditions change
+	## 1.8 reference. 1.9 is even more aggressive than these tweaks
+	# AUTO_DOWNSIZE_BUILDING_PRIVATELY_OWNED_THRESHOLD = 0.2 # 0.5	# At least this fraction of a building's levels must be privately owned for it to be considered for auto-downsizing
+	# AUTO_DOWNSIZE_BUILDING_MIN_EMPTY_LEVELS = 1 # 2					# A building must be missing at least this many levels of employment (in absolute numbers) to start considering auto-downsizing (both this and the below requirement are applied)
+	# AUTO_DOWNSIZE_BUILDING_MIN_EMPTY_FRACTION = 0.2					# A building must be missing at least this many levels of employment (in relative numbers) to start considering auto-downsizing (both this and the above requirement are applied)
+	# AUTO_DOWNSIZE_BUILDING_MONTHS_TO_WAIT = 8 #12					# After a building decides to start auto-downsizing, wait this many months before actually starting to downsize, in case conditions change
 	
 	## General market tweaks
 	MIN_GOODS_PRICE	= 1							# A good cannot have a lower base price than this (changing this does nothing unless PRICE_RANGE > 0.95)
@@ -80,7 +81,7 @@
 	BUILDING_PROFIT_TARGET_TO_WITHDRAW_CASH = 0.2 # 0.15			# If profit margin is this or below, buildings should withdraw money from the cash reserves to make up the difference
 		# Previously: BUILDING_CASH_RESERVES_WITHDRAW_PROFIT_TARGET before directional revamp in 1.8
 	OWNERSHIP_BUILDING_PROFIT_TARGET_TO_RAISE_WAGES = 0.5			# Overrides BUILDING_PROFIT_TARGET_TO_RAISE_WAGES for buildings that own other buildings
-	OWNERSHIP_BUILDING_PROFIT_TARGET_TO_LOWER_WAGES = 0.3			# Overrides BUILDING_PROFIT_TARGET_TO_LOWER_WAGES for buildings that own other buildings
+	OWNERSHIP_BUILDING_PROFIT_TARGET_TO_LOWER_WAGES = 0.2999			# Overrides BUILDING_PROFIT_TARGET_TO_LOWER_WAGES for buildings that own other buildings
 	OWNERSHIP_BUILDING_PROFIT_TARGET_TO_WITHDRAW_CASH = 0.2 # 0.3	# Overrides BUILDING_PROFIT_TARGET_TO_WITHDRAW_CASH for buildings that own other buildings
 		# Previously: OWNERSHIP_BUILDING_CASH_RESERVES_WITHDRAW_PROFIT_TARGET before directional revamp in 1.8
 	SUBSISTENCE_BUILDING_PROFIT_TARGET_TO_RAISE_WAGES = 0.7			# Overrides BUILDING_PROFIT_TARGET_TO_RAISE_WAGES for subsistence buildings
@@ -104,9 +105,10 @@
 	BUILDING_LAYOFF_HIRING_COOLDOWN_WEEKS = 2 # 4					# If a building does layoffs, don't hire anymore workers for at least this amount of weeks
 	
 	# Profit targets from above wage profit targets set:				# (Ensure alignment or range overlap when paired with: BUILDING_MAX_PROFIT_TO_PAUSE_HIRES)
-	BUILDING_PROFIT_TARGET_TO_HIRE_EMPLOYEES = 0.2 # 0.25				# If profit margin is this or above, buildings should try to hire new workers
+	# Must be > BUILDING_PROFIT_TARGET_TO_LOWER_WAGES
+	BUILDING_PROFIT_TARGET_TO_HIRE_EMPLOYEES = 0.3 # 0.25				# If profit margin is this or above, buildings should try to hire new workers
 	# If owner buildings don't hire then it can create a ratchet effect on the cash reserves of the buildings they own:
-	# Must be >= OWNERSHIP_BUILDING_PROFIT_TARGET_TO_LOWER_WAGES
+	# Must be > OWNERSHIP_BUILDING_PROFIT_TARGET_TO_LOWER_WAGES
 	OWNERSHIP_BUILDING_PROFIT_TARGET_TO_HIRE_EMPLOYEES = 0.3 # 0.05 # 0.5	 	# Overrides BUILDING_PROFIT_TARGET_TO_HIRE_EMPLOYEES for buildings that own other buildings
 	# To-Do: ^Put this one back to 0.5 if PDX ever fixes their code to work sensibly again
 	
