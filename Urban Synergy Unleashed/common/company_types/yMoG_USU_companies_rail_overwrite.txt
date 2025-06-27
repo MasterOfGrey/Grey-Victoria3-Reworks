@@ -1023,6 +1023,8 @@ company_iranian_state_railway = {
 
 	flavored_company = yes
 
+	preferred_headquarters = { STATE_KHORASAN }
+
 	building_types = {
 		building_railway
 	}

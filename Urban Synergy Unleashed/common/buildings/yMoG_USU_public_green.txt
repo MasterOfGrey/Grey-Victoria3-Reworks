@@ -2,6 +2,8 @@
 	building_group = USU_bg_public_greens
 	icon = "gfx/interface/icons/building_icons/USU_public_green.dds"
 	
+	has_max_level = yes
+	
 	unlocking_technologies = {
 		enclosure
 	}

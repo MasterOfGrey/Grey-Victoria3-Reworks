@@ -66,6 +66,12 @@ usu_building_public_green_throughput_add={
 	}
 }
 
+state_usu_building_public_green_max_level_add={
+	decimals = 1
+	color = good
+	percent = no
+}
+
 ppp_building_power_grid_throughput_add={
 	decimals=0
 	color=good

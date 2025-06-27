@@ -41,10 +41,10 @@ pm_basic_port = {
 	ai_value = 2000
 	building_modifiers = {
 		workforce_scaled = {	
-			goods_input_clippers_add = 7 # 2
+			goods_input_clippers_add = 7 # 2			# -300 value
 			goods_input_grain_add = 2
-			goods_output_transportation_add = 20
-			goods_output_merchant_marine_add = 10 # 500 value
+			goods_output_transportation_add = 14 # 20	# -180 value
+			goods_output_merchant_marine_add = 10 		# +500 value
 			goods_output_usu_logistics_add = 10 # 30
 		}
 		level_scaled = {
@@ -66,6 +66,7 @@ pm_basic_port = {
 		}
 		workforce_scaled = {
 			state_infrastructure_add = 10 # 5
+			building_railway_throughput_add = 0.01
 		}
 		level_scaled = {
 			state_infrastructure_add = 10
@@ -82,11 +83,11 @@ pm_industrial_port = {
 	
 	building_modifiers = {
 		workforce_scaled = {	
-			goods_input_steamers_add = 7 # 2
+			goods_input_steamers_add = 7 # 2			# -350 value
 			goods_input_coal_add = 4
 			goods_input_groceries_add = 4
-			goods_output_transportation_add = 50
-			goods_output_merchant_marine_add = 20 # 1000 value
+			goods_output_transportation_add = 30 # 50	# -600 value
+			goods_output_merchant_marine_add = 20 		# +1000 value
 			goods_output_usu_logistics_add = 10 # 70
 		}
 		level_scaled = {
@@ -109,6 +110,7 @@ pm_industrial_port = {
 		}
 		workforce_scaled = {
 			state_infrastructure_add = 25 # 7.5
+			building_railway_throughput_add = 0.01
 		}
 		level_scaled = {
 			state_infrastructure_add = 15
@@ -125,11 +127,11 @@ pm_modern_port = {
 	
 	building_modifiers = {
 		workforce_scaled = {	
-			goods_input_steamers_add = 7 # 2
+			goods_input_steamers_add = 7 # 2			# -350 value
 			goods_input_oil_add = 6
 			goods_input_groceries_add = 8
-			goods_output_transportation_add = 90
-			goods_output_merchant_marine_add = 30 # 1500 value
+			goods_output_transportation_add = 55 # 90	# -1050 value
+			goods_output_merchant_marine_add = 30		# +1500 value
 			goods_output_usu_logistics_add = 10 # 120
 		}
 		level_scaled = {
@@ -153,6 +155,7 @@ pm_modern_port = {
 		}
 		workforce_scaled = {
 			state_infrastructure_add = 40 # 10
+			building_railway_throughput_add = 0.01
 		}
 		level_scaled = {
 			state_infrastructure_add = 20

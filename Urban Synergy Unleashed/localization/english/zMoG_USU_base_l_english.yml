@@ -42,6 +42,9 @@
     usu_building_hydro_power_plant_throughput_add: "$usu_building_hydro_power_plant$ building [concept_throughput]"
     usu_building_hydro_power_plant_throughput_add_desc: "A bonus or penalty to both input and output of $usu_building_hydro_power_plant$"
     
+    state_usu_building_public_green_max_level_add: "$usu_building_public_green$ Max Level"
+    state_usu_building_public_green_max_level_add_desc: "A bonus or penalty to the maximum level of $usu_building_public_green$ buildings."
+    
     # Vanilla Modifier types
     
     goods_input_luxury_clothes_add: "@luxury_clothes![Nbsp]$luxury_clothes$ input"

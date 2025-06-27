@@ -31,6 +31,11 @@ pm_market_stalls = {
 	state_modifiers = {
 		level_scaled = {
 			state_construction_mult = 0.0005					# The existence of the urban infrastructure (empty roads, refurbishable buildings, etc.) makes construction a breeze.
+			state_migration_pull_add = 0.05
+			state_usu_building_public_green_max_level_add = 0.5
+		}
+		unscaled = {
+			state_migration_pull_add = 5
 		}
 		
 		workforce_scaled = {
@@ -80,6 +85,11 @@ pm_market_squares = {
 	state_modifiers = {
 		level_scaled = {
 			state_construction_mult = 0.001
+			state_migration_pull_add = 0.07
+			state_usu_building_public_green_max_level_add = 0.5
+		}
+		unscaled = {
+			state_migration_pull_add = 5
 		}
 		
 		workforce_scaled = {
@@ -129,6 +139,11 @@ pm_covered_markets = {
 	state_modifiers = {
 		level_scaled = {
 			state_construction_mult = 0.0015
+			state_migration_pull_add = 0.09
+			state_usu_building_public_green_max_level_add = 0.5
+		}
+		unscaled = {
+			state_migration_pull_add = 5
 		}
 		
 		workforce_scaled = {
@@ -180,6 +195,11 @@ pm_arcades = {
 	state_modifiers = {
 		level_scaled = {
 			state_construction_mult = 0.002
+			state_migration_pull_add = 0.1
+			state_usu_building_public_green_max_level_add = 0.5
+		}
+		unscaled = {
+			state_migration_pull_add = 5
 		}
 		
 		workforce_scaled = {
@@ -239,6 +259,11 @@ USU_pm_hv_arcades = {
 	state_modifiers = {
 		level_scaled = {
 			state_construction_mult = 0.002
+			state_migration_pull_add = 0.1
+			state_usu_building_public_green_max_level_add = 0.5
+		}
+		unscaled = {
+			state_migration_pull_add = 5
 		}
 		
 		workforce_scaled = {

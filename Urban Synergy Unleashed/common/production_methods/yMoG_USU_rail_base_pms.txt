@@ -10,9 +10,9 @@ pm_early_trains = {
 			goods_output_transportation_add = 40 # 1200
 		}
 		level_scaled = {
-			building_employment_laborers_add = 3000
-			building_employment_machinists_add = 1000
-			building_employment_clerks_add = 750
+			building_employment_laborers_add = 1600 # 600	# Was 3000
+			building_employment_machinists_add = 200		# Was 1000
+			building_employment_clerks_add = 200			# Was 750
 		}
 	}
 	
@@ -52,9 +52,9 @@ pm_steam_trains = {
 		}
 		
 		level_scaled = {
-			building_employment_laborers_add = 2500
-			building_employment_machinists_add = 1500
-			building_employment_clerks_add = 750
+			building_employment_laborers_add = 1500 # 500	# Was 2500
+			building_employment_machinists_add = 500 # 300	# Was 1500
+			building_employment_clerks_add = 200			# Was 750
 		}
 	}
 	
@@ -93,9 +93,10 @@ pm_electric_trains = {
 			goods_output_transportation_add = 60 # 1800
 		}
 		level_scaled = {
-			building_employment_laborers_add = 2000
-			building_employment_machinists_add = 2000
-			building_employment_clerks_add = 750
+			building_employment_laborers_add = 1400 # 400	# Was 2000
+			building_employment_machinists_add = 750 # 350	# Was 2000
+			building_employment_engineers_add = 50			# Was 0
+			building_employment_clerks_add = 200			# Was 750
 		}
 	}
 	
@@ -135,9 +136,10 @@ pm_diesel_trains = {
 			goods_output_transportation_add = 75 # 2250
 		}
 		level_scaled = {
-			building_employment_laborers_add = 1500
-			building_employment_machinists_add = 2500
-			building_employment_clerks_add = 750
+			building_employment_laborers_add = 1400 # 400	# Was 1500
+			building_employment_machinists_add = 700 # 300	# Was 2500
+			building_employment_engineers_add = 100			# Was 0
+			building_employment_clerks_add = 200			# Was 750
 		}
 	}
 	
@@ -176,9 +178,10 @@ pm_ac_electric_trains = {
 			goods_output_transportation_add = 75 # 1800
 		}
 		level_scaled = {
-			building_employment_laborers_add = 1500
-			building_employment_machinists_add = 2500
-			building_employment_clerks_add = 750
+			building_employment_laborers_add = 1400 # 400	# Was 1500
+			building_employment_machinists_add = 700 # 300	# Was 2500
+			building_employment_engineers_add = 100			# Was 0
+			building_employment_clerks_add = 200			# Was 750
 		}
 	}
 	
@@ -224,9 +227,9 @@ pm_steam_trains_principle_transport_3 = {
 			goods_output_transportation_add = 55 # 1500
 		}
 		level_scaled = {
-			building_employment_laborers_add = 2500
-			building_employment_machinists_add = 1500
-			building_employment_clerks_add = 750
+			building_employment_laborers_add = 1500 # 500	# Was 2500
+			building_employment_machinists_add = 500 # 300	# Was 1500
+			building_employment_clerks_add = 200			# Was 750
 		}
 	}
 	
@@ -269,9 +272,10 @@ pm_electric_trains_principle_transport_3 = {
 			goods_output_transportation_add = 70 # 1050
 		}
 		level_scaled = {
-			building_employment_laborers_add = 2000
-			building_employment_machinists_add = 2000
-			building_employment_clerks_add = 750
+			building_employment_laborers_add = 1400 # 400	# Was 2000
+			building_employment_machinists_add = 750 # 350	# Was 2000
+			building_employment_engineers_add = 50			# Was 0
+			building_employment_clerks_add = 200			# Was 750
 		}
 	}
 	
@@ -315,9 +319,10 @@ pm_diesel_trains_principle_transport_3 = {
 			goods_output_transportation_add = 90 # 2250
 		}
 		level_scaled = {
-			building_employment_laborers_add = 1500
-			building_employment_machinists_add = 2500
-			building_employment_clerks_add = 750
+			building_employment_laborers_add = 1400 # 400	# Was 1500
+			building_employment_machinists_add = 700 # 300	# Was 2500
+			building_employment_engineers_add = 100			# Was 0
+			building_employment_clerks_add = 200			# Was 750
 		}
 	}
 	
@@ -360,9 +365,10 @@ pm_ac_electric_trains_principle_transport_3 = {
 			goods_output_transportation_add = 90 # 1800
 		}
 		level_scaled = {
-			building_employment_laborers_add = 1500
-			building_employment_machinists_add = 2500
-			building_employment_clerks_add = 750
+			building_employment_laborers_add = 1400 # 400	# Was 1500
+			building_employment_machinists_add = 700 # 300	# Was 2500
+			building_employment_engineers_add = 100			# Was 0
+			building_employment_clerks_add = 200			# Was 750
 		}
 	}
 	
