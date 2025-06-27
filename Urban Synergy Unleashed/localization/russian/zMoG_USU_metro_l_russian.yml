@@ -1,11 +1,11 @@
 ﻿l_russian:
  pmg_public_transit: "Общественный транспорт"
- # pm_no_public_transport: "Общественный транспорт не ходит."
+# pm_no_public_transport: "No Public Transportation" # moved to replace file
  pm_public_omnibus: "Конные омнибусы"
- # pm_public_trams: "Конки"
+# pm_public_trams: "Horse-drawn Trams" # moved to replace file
  pm_public_steam_metro: "Метро на паровой тяге"
  pm_public_electric_metro: "Электротранспорт Метро"
- # pm_public_motor_carriages: "Городские Автобусы"
+# pm_public_motor_carriages: "City Buses" # moved to replace file
  
  pmg_local_transport: "Местный транспорт"
  pm_horses: "Лошади и телеги"

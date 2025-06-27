@@ -8,6 +8,7 @@
     
     # Building
  USU_bg_port_infrastructure: "Porty" #deepl:687823806
+ USU_bg_public_greens: "Publiczne tereny zielone" #deepl:1270138251
     
  building_river_port: "Doki rzeczne"
  usu_building_public_green: "Publiczna zieleń"
@@ -42,6 +43,9 @@
  usu_building_hydro_power_plant_throughput_add: "$usu_building_hydro_power_plant$ budynek [concept_throughput]" #deepl:2682676248
  usu_building_hydro_power_plant_throughput_add_desc: "Premia lub kara zarówno dla wejścia, jak i wyjścia $usu_building_hydro_power_plant$" #deepl:1139273118
     
+ state_usu_building_public_green_max_level_add: "$usu_building_public_green$ Maksymalny poziom" #deepl:4158133370
+ state_usu_building_public_green_max_level_add_desc: "Premia lub kara do maksymalnego poziomu budynków $usu_building_public_green$." #deepl:3207423598
+    
     # Vanilla Modifier types
     
  goods_input_luxury_clothes_add: "@luxury_clothes![Nbsp]$luxury_clothes$ wejście" #deepl:3302038186
@@ -60,6 +64,10 @@
  goods_output_transportation_mult_desc: "Premia lub kara do ilości @transportation![Nbsp]$transportation$ produkowanego przez budynki." #deepl:296029142
  goods_output_electricity_mult: "Budowanie @electricity![Nbsp]$electricity$ wyjście" #deepl:320784986
  goods_output_electricity_mult_desc: "Premia lub kara do ilości @electricity![Nbsp]$electricity$ produkowanej przez budynki." #deepl:145655897
+ goods_input_merchant_marine_mult: "Budowanie @merchant_marine![Nbsp]$merchant_marine$ wejście" #deepl:25966241
+ goods_input_merchant_marine_mult_desc: "Premia lub kara do ilości @merchant_marine![Nbsp]$merchant_marine$ zużywanej przez budynki." #deepl:3075274957
+ goods_output_merchant_marine_mult: "Budowanie @merchant_marine![Nbsp]$merchant_marine$ wyjście" #deepl:2695995466
+ goods_output_merchant_marine_mult_desc: "Premia lub kara do ilości @merchant_marine![Nbsp]$merchant_marine$ produkowanych przez budynki." #deepl:1649084978
     
     # PMGs
  pmg_base_building_river_port: "Doki"
@@ -67,6 +75,7 @@
  USU_pmg_government_administration_law_enforcement: "Organy ścigania"
  USU_pmg_public_space_management: "Zarządzanie przestrzenią publiczną"
  USU_pmg_public_parklands: "Wykorzystanie parków"
+ pmg_trade_center_port_status: "Status przylegania portów" #deepl:23372774
     
     # PMs
  pm_rp_anchorage: "Anchorage" #deepl:1916484437
@@ -89,6 +98,8 @@
  USU_pm_village_stables: "Stajnie społecznościowe"
  USU_pm_contained_wilderness: "Chronione tereny dzikie"
  USU_pm_seasonal_fairgrounds: "Sezonowe tereny targowe"
+ pm_trade_center_inland: "Brak dostępu do portu" #deepl:4277007637
+ pm_trade_center_port: "Dostęp do portu" #deepl:931806394
     
     # State Traits
  state_trait_rotterdam: "Port w Rotterdamie"

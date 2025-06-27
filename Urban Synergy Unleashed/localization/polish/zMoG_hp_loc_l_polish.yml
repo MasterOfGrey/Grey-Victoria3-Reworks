@@ -7,7 +7,7 @@
  state_usu_building_hydro_power_plant_max_level_add_desc: "Premia lub kara do maksymalnego poziomu budynków $usu_building_hydro_power_plant$ w stanie." #deepl:3621638740
  mog_usu_hp_hydro_potential_adjustment: "Zmieniony potencjał energii wodnej" #deepl:1780358769
  
- building_power_plant: "Elektrownie cieplne" #deepl:2617968959
+ # building_power_plant: "Thermal Power Plant" # moved to replace file
  usu_building_hydro_power_plant: "Elektrownia wodna" #deepl:3124269973
  
  bg_power: "Elektrownie cieplne" #deepl:1853276522

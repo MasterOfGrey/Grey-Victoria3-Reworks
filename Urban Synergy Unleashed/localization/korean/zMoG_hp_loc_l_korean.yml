@@ -7,7 +7,7 @@
  state_usu_building_hydro_power_plant_max_level_add_desc: "주에서 최대 레벨의 $usu_building_hydro_power_plant$ 건물에 보너스 또는 페널티를 부여합니다." #deepl:3621638740
  mog_usu_hp_hydro_potential_adjustment: "변경된 수력 발전 잠재력" #deepl:1780358769
  
- building_power_plant: "화력 발전소" #deepl:2617968959
+ # building_power_plant: "Thermal Power Plant" # moved to replace file
  usu_building_hydro_power_plant: "수력 발전소" #deepl:3124269973
  
  bg_power: "화력 발전소" #deepl:1853276522

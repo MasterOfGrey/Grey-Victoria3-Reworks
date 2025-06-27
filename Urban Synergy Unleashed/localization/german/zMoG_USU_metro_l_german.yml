@@ -1,11 +1,11 @@
 ﻿l_german:
  pmg_public_transit: "Öffentliche Verkehrsmittel"
- # pm_no_public_transport: "Kein öffentlicher Nahverkehr"
+# pm_no_public_transport: "No Public Transportation" # moved to replace file
  pm_public_omnibus: "Pferdeomnibusse"
- # pm_public_trams: "Pferdestraßenbahnen"
+# pm_public_trams: "Horse-drawn Trams" # moved to replace file
  pm_public_steam_metro: "Dampfbetriebene Metro"
  pm_public_electric_metro: "Elektrisch betriebene Metro"
- # pm_public_motor_carriages: "Stadtbusse"
+# pm_public_motor_carriages: "City Buses" # moved to replace file
  
  pmg_local_transport: "Öffentliche Verkehrsmittel"
  pm_horses: "Pferde und Wagen"

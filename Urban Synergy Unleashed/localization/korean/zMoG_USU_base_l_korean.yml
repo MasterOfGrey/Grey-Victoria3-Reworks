@@ -8,6 +8,7 @@
     
     # Building
  USU_bg_port_infrastructure: "포트" #deepl:687823806
+ USU_bg_public_greens: "공공 녹지 공간" #deepl:1270138251
     
  building_river_port: "강 부두"
  usu_building_public_green: "공공 녹지"
@@ -42,6 +43,9 @@
  usu_building_hydro_power_plant_throughput_add: "$usu_building_hydro_power_plant$ 건물 [concept_throughput]" #deepl:2682676248
  usu_building_hydro_power_plant_throughput_add_desc: "입력과 출력 모두에 보너스 또는 페널티를 적용합니다. $usu_building_hydro_power_plant$" #deepl:1139273118
     
+ state_usu_building_public_green_max_level_add: "$usu_building_public_green$ 최대 레벨" #deepl:4158133370
+ state_usu_building_public_green_max_level_add_desc: "$usu_building_public_green$ 건물의 최대 레벨에 보너스 또는 페널티가 적용됩니다." #deepl:3207423598
+    
     # Vanilla Modifier types
     
  goods_input_luxury_clothes_add: "@luxury_clothes![Nbsp]$luxury_clothes$ 입력" #deepl:3302038186
@@ -60,6 +64,10 @@
  goods_output_transportation_mult_desc: "교통량에 대한 보너스 또는 페널티@transportation![Nbsp]$transportation$ 건물에서 생산되는 교통량" #deepl:296029142
  goods_output_electricity_mult: "건물 전기@electricity![Nbsp]$electricity$ 출력" #deepl:320784986
  goods_output_electricity_mult_desc: "전기량에 대한 보너스 또는 페널티@electricity![Nbsp]$electricity$ 건물에서 생산되는 전기량" #deepl:145655897
+ goods_input_merchant_marine_mult: "merchant_marine 구축![Nbsp]$merchant_marine$ 입력" #deepl:25966241
+ goods_input_merchant_marine_mult_desc: "건물에서 소비하는 의 양에 보너스 또는 페널티@merchant_marine![Nbsp]$merchant_marine$ " #deepl:3075274957
+ goods_output_merchant_marine_mult: "merchant_marine 구축![Nbsp]$merchant_marine$ 출력" #deepl:2695995466
+ goods_output_merchant_marine_mult_desc: "건물에서 생산되는 의 양에 보너스 또는 페널티@merchant_marine![Nbsp]$merchant_marine$ " #deepl:1649084978
     
     # PMGs
  pmg_base_building_river_port: "부두"
@@ -67,6 +75,7 @@
  USU_pmg_government_administration_law_enforcement: "법 집행"
  USU_pmg_public_space_management: "공공 공간 관리"
  USU_pmg_public_parklands: "공원지 사용"
+ pmg_trade_center_port_status: "포트 인접 상태" #deepl:23372774
     
     # PMs
  pm_rp_anchorage: "앵커리지" #deepl:1916484437
@@ -89,6 +98,8 @@
  USU_pm_village_stables: "커뮤니티 마구간"
  USU_pm_contained_wilderness: "보호된 자연"
  USU_pm_seasonal_fairgrounds: "계절별 박람회장"
+ pm_trade_center_inland: "포트 액세스 없음" #deepl:4277007637
+ pm_trade_center_port: "포트 액세스" #deepl:931806394
     
     # State Traits
  state_trait_rotterdam: "로테르담 항구"

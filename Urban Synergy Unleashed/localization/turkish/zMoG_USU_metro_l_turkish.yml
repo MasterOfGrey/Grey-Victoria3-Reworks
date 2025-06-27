@@ -1,11 +1,11 @@
 ﻿l_turkish:
  pmg_public_transit: "Toplu Taşıma"
- # pm_no_public_transport: "Toplu Taşıma Yok"
+# pm_no_public_transport: "No Public Transportation" # moved to replace file
  pm_public_omnibus: "Atlı Otobüsler"
- # pm_public_trams: "Atlı tramvaylar"
+# pm_public_trams: "Horse-drawn Trams" # moved to replace file
  pm_public_steam_metro: "Buharla çalışan metro"
  pm_public_electric_metro: "Elektrikle çalışan metro"
- # pm_public_motor_carriages: "Şehir Otobüsleri"
+# pm_public_motor_carriages: "City Buses" # moved to replace file
  
  pmg_local_transport: "Yerel Taşımacılık"
  pm_horses: "Atlar ve Arabalar"

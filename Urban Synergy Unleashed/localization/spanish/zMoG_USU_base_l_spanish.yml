@@ -8,6 +8,7 @@
     
     # Building
  USU_bg_port_infrastructure: "Puertos" #deepl:687823806
+ USU_bg_public_greens: "Espacios verdes públicos" #deepl:1270138251
     
  building_river_port: "Muelles fluviales"
  usu_building_public_green: "Verde público"
@@ -42,6 +43,9 @@
  usu_building_hydro_power_plant_throughput_add: "$usu_building_hydro_power_plant$ edificio [concept_throughput]" #deepl:2682676248
  usu_building_hydro_power_plant_throughput_add_desc: "Una bonificación o penalización tanto a la entrada como a la salida de $usu_building_hydro_power_plant$" #deepl:1139273118
     
+ state_usu_building_public_green_max_level_add: "$usu_building_public_green$ Nivel máximo" #deepl:4158133370
+ state_usu_building_public_green_max_level_add_desc: "Una bonificación o penalización al nivel máximo de los edificios $usu_building_public_green$." #deepl:3207423598
+    
     # Vanilla Modifier types
     
  goods_input_luxury_clothes_add: "@luxury_clothes![Nbsp]$luxury_clothes$ entrada" #deepl:3302038186
@@ -60,6 +64,10 @@
  goods_output_transportation_mult_desc: "Una bonificación o penalización a la cantidad de @transportation![Nbsp]$transportation$ producida por los edificios." #deepl:296029142
  goods_output_electricity_mult: "Construyendo @electricity![Nbsp]$electricity$ output" #deepl:320784986
  goods_output_electricity_mult_desc: "Una bonificación o penalización a la cantidad de @electricity![Nbsp]$electricity$ producida por los edificios." #deepl:145655897
+ goods_input_merchant_marine_mult: "Construyendo @merchant_marine![Nbsp]$merchant_marine$ entrada" #deepl:25966241
+ goods_input_merchant_marine_mult_desc: "Una bonificación o penalización a la cantidad de @merchant_marine![Nbsp]$merchant_marine$ consumida por los edificios." #deepl:3075274957
+ goods_output_merchant_marine_mult: "Construyendo @merchant_marine![Nbsp]$merchant_marine$ output" #deepl:2695995466
+ goods_output_merchant_marine_mult_desc: "Una bonificación o penalización a la cantidad de @merchant_marine![Nbsp]$merchant_marine$ producida por los edificios." #deepl:1649084978
     
     # PMGs
  pmg_base_building_river_port: "Muelles"
@@ -67,6 +75,7 @@
  USU_pmg_government_administration_law_enforcement: "Aplicación de la ley"
  USU_pmg_public_space_management: "Gestión del espacio público"
  USU_pmg_public_parklands: "Uso de parques"
+ pmg_trade_center_port_status: "Estado de adyacencia de puertos" #deepl:23372774
     
     # PMs
  pm_rp_anchorage: "Anchorage" #deepl:1916484437
@@ -89,6 +98,8 @@
  USU_pm_village_stables: "Establos comunitarios"
  USU_pm_contained_wilderness: "Áreas silvestres protegidas"
  USU_pm_seasonal_fairgrounds: "Recinto ferial de temporada"
+ pm_trade_center_inland: "Sin acceso al puerto" #deepl:4277007637
+ pm_trade_center_port: "Acceso al puerto" #deepl:931806394
     
     # State Traits
  state_trait_rotterdam: "Puerto de Róterdam"

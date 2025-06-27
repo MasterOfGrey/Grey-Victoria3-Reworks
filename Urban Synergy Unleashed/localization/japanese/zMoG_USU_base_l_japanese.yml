@@ -8,6 +8,7 @@
     
     # Building
  USU_bg_port_infrastructure: "港湾" #deepl:687823806
+ USU_bg_public_greens: "公共緑地" #deepl:1270138251
     
  building_river_port: "リバードック"
  usu_building_public_green: "パブリックグリーン"
@@ -42,6 +43,9 @@
  usu_building_hydro_power_plant_throughput_add: "$usu_building_hydro_power_plant$ 建物[concept_throughput]" #deepl:2682676248
  usu_building_hydro_power_plant_throughput_add_desc: "のインプットとアウトプットの両方にボーナスまたはペナルティを与える。$usu_building_hydro_power_plant$" #deepl:1139273118
     
+ state_usu_building_public_green_max_level_add: "$usu_building_public_green$ 最大レベル" #deepl:4158133370
+ state_usu_building_public_green_max_level_add_desc: "$usu_building_public_green$ 建物の最大レベルにボーナスまたはペナルティを与える。" #deepl:3207423598
+    
     # Vanilla Modifier types
     
  goods_input_luxury_clothes_add: "@luxury_clothes![Nbsp]$luxury_clothes$ 。" #deepl:3302038186
@@ -49,17 +53,21 @@
  goods_input_services_add: "[Nbsp]$services$ 入力" #deepl:2678123429
  goods_input_services_add_desc: "サービス！[Nbsp]$services$ ビルが消費する量" #deepl:1408821948
     
- goods_input_tools_mult: "toolsの構築！[Nbsp]$tools$ 入力" #deepl:1055261592
- goods_input_tools_mult_desc: "tools！[Nbsp]$tools$ ビルが消費する量。" #deepl:1892978715
+ goods_input_tools_mult: "の構築tools![Nbsp]$tools$ 入力" #deepl:1055261592
+ goods_input_tools_mult_desc: "tools![Nbsp]$tools$ ビルが消費する量。" #deepl:1892978715
  goods_input_steel_mult: "スティールを作る！[Nbsp]$steel$ 入力" #deepl:3508900889
  goods_input_steel_mult_desc: "スチール！[Nbsp]$steel$ ビルが消費する量" #deepl:2095881000
     
  goods_input_transportation_mult: "ビルディング @transportation![Nbsp]$transportation$ インプット" #deepl:3701781964
- goods_input_transportation_mult_desc: "輸送量にボーナスまたはペナルティ！[Nbsp]$transportation$ 建物が消費する量にボーナスまたはペナルティ。" #deepl:3299014953
- goods_output_transportation_mult: "交通機関を作ろう！[Nbsp]$transportation$ 出力" #deepl:171588735
- goods_output_transportation_mult_desc: "輸送量にボーナスまたはペナルティを与える！[Nbsp]$transportation$ 建物が生み出す。" #deepl:296029142
+ goods_input_transportation_mult_desc: "輸送量にボーナスまたはペナルティ@transportation![Nbsp]$transportation$ 建物が消費する量にボーナスまたはペナルティ。" #deepl:3299014953
+ goods_output_transportation_mult: "交通機関を作ろう@transportation![Nbsp]$transportation$ 出力" #deepl:171588735
+ goods_output_transportation_mult_desc: "輸送量にボーナスまたはペナルティを与える@transportation![Nbsp]$transportation$ 建物が生み出す。" #deepl:296029142
  goods_output_electricity_mult: "電気をつくる！[Nbsp]$electricity$ 出力" #deepl:320784986
  goods_output_electricity_mult_desc: "建物から生み出される電力量にボーナスまたはペナルティを与える！[Nbsp]$electricity$ " #deepl:145655897
+ goods_input_merchant_marine_mult: "を作る@merchant_marine![Nbsp]$merchant_marine$ 入力" #deepl:25966241
+ goods_input_merchant_marine_mult_desc: "@merchant_marine![Nbsp]$merchant_marine$ 建物が消費する の量にボーナスまたはペナルティを与える。" #deepl:3075274957
+ goods_output_merchant_marine_mult: "の構築@merchant_marine![Nbsp]$merchant_marine$ 出力" #deepl:2695995466
+ goods_output_merchant_marine_mult_desc: "建物から生み出される @merchant_marine![Nbsp]$merchant_marine$ の量にボーナスまたはペナルティを与える。" #deepl:1649084978
     
     # PMGs
  pmg_base_building_river_port: "ドック"
@@ -67,6 +75,7 @@
  USU_pmg_government_administration_law_enforcement: "法執行機関"
  USU_pmg_public_space_management: "公共空間管理"
  USU_pmg_public_parklands: "公園の利用"
+ pmg_trade_center_port_status: "ポート隣接状況" #deepl:23372774
     
     # PMs
  pm_rp_anchorage: "アンカレッジ" #deepl:1916484437
@@ -89,6 +98,8 @@
  USU_pm_village_stables: "コミュニティ厩舎"
  USU_pm_contained_wilderness: "保護された自然"
  USU_pm_seasonal_fairgrounds: "季節限定のフェアグラウンド"
+ pm_trade_center_inland: "ポートアクセスなし" #deepl:4277007637
+ pm_trade_center_port: "港湾アクセス" #deepl:931806394
     
     # State Traits
  state_trait_rotterdam: "ロッテルダム港"

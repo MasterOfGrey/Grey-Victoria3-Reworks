@@ -1,11 +1,11 @@
 ﻿l_polish:
  pmg_public_transit: "Transport publiczny"
- # pm_no_public_transport: "Brak transportu publicznego"
+# pm_no_public_transport: "No Public Transportation" # moved to replace file
  pm_public_omnibus: "Omnibusy konne"
- # pm_public_trams: "Tramwaje konne"
+# pm_public_trams: "Horse-drawn Trams" # moved to replace file
  pm_public_steam_metro: "Metro napędzane parą"
  pm_public_electric_metro: "Metro napędzane elektrycznie"
- # pm_public_motor_carriages: "Autobusy miejskie"
+# pm_public_motor_carriages: "City Buses" # moved to replace file
  
  pmg_local_transport: "Transport lokalny"
  pm_horses: "Konie i wozy"

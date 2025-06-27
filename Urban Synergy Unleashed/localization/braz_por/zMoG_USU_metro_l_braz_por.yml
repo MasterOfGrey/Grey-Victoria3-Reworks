@@ -1,11 +1,11 @@
 ﻿l_braz_por:
  pmg_public_transit: "Transporte público"
- # pm_no_public_transport: "Sem transporte público"
+# pm_no_public_transport: "No Public Transportation" # moved to replace file
  pm_public_omnibus: "Ônibus puxados por cavalos"
- # pm_public_trams: "Bondes puxados por cavalos"
+# pm_public_trams: "Horse-drawn Trams" # moved to replace file
  pm_public_steam_metro: "Metrô movido a vapor"
  pm_public_electric_metro: "Metrô movido a eletricidade"
- # pm_public_motor_carriages: "Ônibus urbanos"
+# pm_public_motor_carriages: "City Buses" # moved to replace file
  
  pmg_local_transport: "Transporte local"
  pm_horses: "Cavalos e carroças"

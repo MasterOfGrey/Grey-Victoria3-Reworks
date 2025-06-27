@@ -8,6 +8,7 @@
     
     # Building
  USU_bg_port_infrastructure: "Ports" #deepl:687823806
+ USU_bg_public_greens: "Espaces verts publics" #deepl:1270138251
     
  building_river_port: "Quais fluviaux"
  usu_building_public_green: "Espace vert public"
@@ -42,6 +43,9 @@
  usu_building_hydro_power_plant_throughput_add: "$usu_building_hydro_power_plant$ bâtiment [concept_throughput]" #deepl:2682676248
  usu_building_hydro_power_plant_throughput_add_desc: "Un bonus ou une pénalité pour l'entrée et la sortie de $usu_building_hydro_power_plant$" #deepl:1139273118
     
+ state_usu_building_public_green_max_level_add: "$usu_building_public_green$ Niveau maximum" #deepl:4158133370
+ state_usu_building_public_green_max_level_add_desc: "Un bonus ou un malus au niveau maximum des bâtiments $usu_building_public_green$." #deepl:3207423598
+    
     # Vanilla Modifier types
     
  goods_input_luxury_clothes_add: "@luxury_clothes![Nbsp]$luxury_clothes$ input" #deepl:3302038186
@@ -60,6 +64,10 @@
  goods_output_transportation_mult_desc: "Un bonus ou une pénalité sur la quantité de @transportation![Nbsp]$transportation$ produite par les bâtiments" #deepl:296029142
  goods_output_electricity_mult: "Construire @electricity![Nbsp]$electricity$ output" #deepl:320784986
  goods_output_electricity_mult_desc: "Un bonus ou une pénalité sur la quantité d'@electricity![Nbsp]$electricity$ produite par les bâtiments" #deepl:145655897
+ goods_input_merchant_marine_mult: "Construction de @merchant_marine![Nbsp]$merchant_marine$ input" #deepl:25966241
+ goods_input_merchant_marine_mult_desc: "Un bonus ou une pénalité à la quantité de @merchant_marine![Nbsp]$merchant_marine$ consommée par les bâtiments." #deepl:3075274957
+ goods_output_merchant_marine_mult: "Construction de @merchant_marine![Nbsp]$merchant_marine$ sortie" #deepl:2695995466
+ goods_output_merchant_marine_mult_desc: "Un bonus ou une pénalité à la quantité de @merchant_marine![Nbsp]$merchant_marine$ produite par les bâtiments" #deepl:1649084978
     
     # PMGs
  pmg_base_building_river_port: "Quais"
@@ -67,6 +75,7 @@
  USU_pmg_government_administration_law_enforcement: "Application de la loi"
  USU_pmg_public_space_management: "Gestion de l'espace public"
  USU_pmg_public_parklands: "Utilisation des espaces verts"
+ pmg_trade_center_port_status: "État de l'adjacence des ports" #deepl:23372774
     
     # PMs
  pm_rp_anchorage: "Anchorage" #deepl:1916484437
@@ -89,6 +98,8 @@
  USU_pm_village_stables: "Écuries communautaires"
  USU_pm_contained_wilderness: "Zone sauvage protégée"
  USU_pm_seasonal_fairgrounds: "Foires saisonnières"
+ pm_trade_center_inland: "Pas d'accès au port" #deepl:4277007637
+ pm_trade_center_port: "Accès au port" #deepl:931806394
     
     # State Traits
  state_trait_rotterdam: "Port de Rotterdam"

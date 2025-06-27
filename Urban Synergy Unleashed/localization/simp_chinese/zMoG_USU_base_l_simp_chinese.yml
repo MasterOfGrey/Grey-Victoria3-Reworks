@@ -8,6 +8,7 @@
     
     # Building
  USU_bg_port_infrastructure: "港口" #deepl:687823806
+ USU_bg_public_greens: "公共绿地" #deepl:1270138251
     
  building_river_port: "河码头"
  usu_building_public_green: "公共绿地"
@@ -42,6 +43,9 @@
  usu_building_hydro_power_plant_throughput_add: "$usu_building_hydro_power_plant$ 建筑物[concept_throughput]" #deepl:2682676248
  usu_building_hydro_power_plant_throughput_add_desc: "输入和输出的奖励或惩罚$usu_building_hydro_power_plant$" #deepl:1139273118
     
+ state_usu_building_public_green_max_level_add: "$usu_building_public_green$ 最大水平" #deepl:4158133370
+ state_usu_building_public_green_max_level_add_desc: "$usu_building_public_green$ 建筑最高等级的奖励或惩罚。" #deepl:3207423598
+    
     # Vanilla Modifier types
     
  goods_input_luxury_clothes_add: "@luxury_clothes![Nbsp]$luxury_clothes$ input" #deepl:3302038186
@@ -60,6 +64,10 @@
  goods_output_transportation_mult_desc: "建筑物产生的 @transportation![Nbsp]$transportation$ 量的奖励或惩罚" #deepl:296029142
  goods_output_electricity_mult: "建设 @electricity![Nbsp]$electricity$ 输出" #deepl:320784986
  goods_output_electricity_mult_desc: "建筑物产生的 @electricity![Nbsp]$electricity$ 的奖励或惩罚" #deepl:145655897
+ goods_input_merchant_marine_mult: "构建 @merchant_marine![Nbsp]$merchant_marine$ 输入" #deepl:25966241
+ goods_input_merchant_marine_mult_desc: "建筑消耗的 @merchant_marine![Nbsp]$merchant_marine$ 量的奖励或惩罚" #deepl:3075274957
+ goods_output_merchant_marine_mult: "构建 @merchant_marine![Nbsp]$merchant_marine$ 输出" #deepl:2695995466
+ goods_output_merchant_marine_mult_desc: "建筑物产生的 @merchant_marine![Nbsp]$merchant_marine$ 量的奖励或惩罚" #deepl:1649084978
     
     # PMGs
  pmg_base_building_river_port: "码头"
@@ -67,6 +75,7 @@
  USU_pmg_government_administration_law_enforcement: "执法"
  USU_pmg_public_space_management: "公共空间管理"
  USU_pmg_public_parklands: "公园使用情况"
+ pmg_trade_center_port_status: "端口邻接状态" #deepl:23372774
     
     # PMs
  pm_rp_anchorage: "安克拉治" #deepl:1916484437
@@ -89,6 +98,8 @@
  USU_pm_village_stables: "社区马厩"
  USU_pm_contained_wilderness: "受保护的荒野"
  USU_pm_seasonal_fairgrounds: "季节性展览会"
+ pm_trade_center_inland: "无端口访问" #deepl:4277007637
+ pm_trade_center_port: "端口接入" #deepl:931806394
     
     # State Traits
  state_trait_rotterdam: "鹿特丹港"

@@ -7,7 +7,7 @@
  state_usu_building_hydro_power_plant_max_level_add_desc: "Eyaletteki $usu_building_hydro_power_plant$ binalarının maksimum seviyesine bir bonus veya ceza." #deepl:3621638740
  mog_usu_hp_hydro_potential_adjustment: "Değişen Hidroelektrik Potansiyeli" #deepl:1780358769
  
- building_power_plant: "Termik Santraller" #deepl:2617968959
+ # building_power_plant: "Thermal Power Plant" # moved to replace file
  usu_building_hydro_power_plant: "Hidro Elektrik Santrali" #deepl:3124269973
  
  bg_power: "Termik Güç İstasyonları" #deepl:1853276522

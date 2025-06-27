@@ -7,7 +7,7 @@
  state_usu_building_hydro_power_plant_max_level_add_desc: "Un bonus ou une pénalité pour le niveau maximum de bâtiments $usu_building_hydro_power_plant$ dans l'État." #deepl:3621638740
  mog_usu_hp_hydro_potential_adjustment: "Potentiel hydroélectrique modifié" #deepl:1780358769
  
- building_power_plant: "Centrales thermiques" #deepl:2617968959
+ # building_power_plant: "Thermal Power Plant" # moved to replace file
  usu_building_hydro_power_plant: "Centrale hydroélectrique" #deepl:3124269973
  
  bg_power: "Centrales thermiques" #deepl:1853276522

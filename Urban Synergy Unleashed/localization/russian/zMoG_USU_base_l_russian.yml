@@ -8,6 +8,7 @@
     
     # Building
  USU_bg_port_infrastructure: "Порты" #deepl:687823806
+ USU_bg_public_greens: "Общественные зеленые зоны" #deepl:1270138251
     
  building_river_port: "Речные доки"
  usu_building_public_green: "Общественная зеленая зона"
@@ -42,6 +43,9 @@
  usu_building_hydro_power_plant_throughput_add: "$usu_building_hydro_power_plant$ здание [concept_throughput]" #deepl:2682676248
  usu_building_hydro_power_plant_throughput_add_desc: "Премия или штраф как на входе, так и на выходе $usu_building_hydro_power_plant$" #deepl:1139273118
     
+ state_usu_building_public_green_max_level_add: "$usu_building_public_green$ Максимальный уровень" #deepl:4158133370
+ state_usu_building_public_green_max_level_add_desc: "Бонус или штраф к максимальному уровню зданий $usu_building_public_green$." #deepl:3207423598
+    
     # Vanilla Modifier types
     
  goods_input_luxury_clothes_add: "@luxury_clothes![Nbsp]$luxury_clothes$ вход" #deepl:3302038186
@@ -60,6 +64,10 @@
  goods_output_transportation_mult_desc: "Бонус или штраф к количеству @transportation![Nbsp]$transportation$ , производимого зданиями." #deepl:296029142
  goods_output_electricity_mult: "Строительство @electricity![Nbsp]$electricity$ выход" #deepl:320784986
  goods_output_electricity_mult_desc: "Бонус или штраф к количеству @electricity![Nbsp]$electricity$ , производимого зданиями." #deepl:145655897
+ goods_input_merchant_marine_mult: "Строительство @merchant_marine![Nbsp]$merchant_marine$ вход" #deepl:25966241
+ goods_input_merchant_marine_mult_desc: "Бонус или штраф к количеству @merchant_marine![Nbsp]$merchant_marine$ , потребляемому зданиями." #deepl:3075274957
+ goods_output_merchant_marine_mult: "Строительство @merchant_marine![Nbsp]$merchant_marine$ выход" #deepl:2695995466
+ goods_output_merchant_marine_mult_desc: "Бонус или штраф к количеству @merchant_marine![Nbsp]$merchant_marine$ , производимых зданиями." #deepl:1649084978
     
     # PMGs
  pmg_base_building_river_port: "Доки"
@@ -67,6 +75,7 @@
  USU_pmg_government_administration_law_enforcement: "Правоохранительные органы"
  USU_pmg_public_space_management: "Управление общественным пространством"
  USU_pmg_public_parklands: "Использование парковых зон"
+ pmg_trade_center_port_status: "Состояние смежности портов" #deepl:23372774
     
     # PMs
  pm_rp_anchorage: "Анкоридж" #deepl:1916484437
@@ -89,6 +98,8 @@
  USU_pm_village_stables: "Общественные конюшни"
  USU_pm_contained_wilderness: "Охраняемая дикая природа"
  USU_pm_seasonal_fairgrounds: "Сезонные ярмарки"
+ pm_trade_center_inland: "Нет доступа к порту" #deepl:4277007637
+ pm_trade_center_port: "Доступ к порту" #deepl:931806394
     
     # State Traits
  state_trait_rotterdam: "Роттердамская гавань"

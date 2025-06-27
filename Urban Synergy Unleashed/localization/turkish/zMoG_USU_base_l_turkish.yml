@@ -8,6 +8,7 @@
     
     # Building
  USU_bg_port_infrastructure: "Limanlar" #deepl:687823806
+ USU_bg_public_greens: "Kamusal Yeşil Alanlar" #deepl:1270138251
     
  building_river_port: "Nehir Rıhtımları"
  usu_building_public_green: "Kamu Yeşili"
@@ -42,6 +43,9 @@
  usu_building_hydro_power_plant_throughput_add: "$usu_building_hydro_power_plant$ bina [concept_throughput]" #deepl:2682676248
  usu_building_hydro_power_plant_throughput_add_desc: "Hem girdi hem de çıktı için bir bonus veya ceza $usu_building_hydro_power_plant$" #deepl:1139273118
     
+ state_usu_building_public_green_max_level_add: "$usu_building_public_green$ Maksimum Seviye" #deepl:4158133370
+ state_usu_building_public_green_max_level_add_desc: "$usu_building_public_green$ binalarının maksimum seviyesine bir bonus veya ceza." #deepl:3207423598
+    
     # Vanilla Modifier types
     
  goods_input_luxury_clothes_add: "@luxury_clothes![Nbsp]$luxury_clothes$ giriş" #deepl:3302038186
@@ -60,6 +64,10 @@
  goods_output_transportation_mult_desc: "Binalar tarafından üretilen @transportation![Nbsp]$transportation$ miktarına bonus veya ceza" #deepl:296029142
  goods_output_electricity_mult: "Building @electricity![Nbsp]$electricity$ çıktı" #deepl:320784986
  goods_output_electricity_mult_desc: "Binalar tarafından üretilen elektrik miktarına bonus veya ceza @electricity![Nbsp]$electricity$ " #deepl:145655897
+ goods_input_merchant_marine_mult: "Building @merchant_marine![Nbsp]$merchant_marine$ giriş" #deepl:25966241
+ goods_input_merchant_marine_mult_desc: "Binalar tarafından tüketilen @merchant_marine![Nbsp]$merchant_marine$ miktarına bonus veya ceza" #deepl:3075274957
+ goods_output_merchant_marine_mult: "Building @merchant_marine![Nbsp]$merchant_marine$ çıktı" #deepl:2695995466
+ goods_output_merchant_marine_mult_desc: "Binalar tarafından üretilen @merchant_marine![Nbsp]$merchant_marine$ miktarına bonus veya ceza" #deepl:1649084978
     
     # PMGs
  pmg_base_building_river_port: "Rıhtımlar"
@@ -67,6 +75,7 @@
  USU_pmg_government_administration_law_enforcement: "Hukuk Uygulaması"
  USU_pmg_public_space_management: "Kamusal Alan Yönetimi"
  USU_pmg_public_parklands: "Park Alanlarının Kullanımı"
+ pmg_trade_center_port_status: "Bağlantı Noktası Bitişiklik Durumu" #deepl:23372774
     
     # PMs
  pm_rp_anchorage: "Anchorage" #deepl:1916484437
@@ -89,6 +98,8 @@
  USU_pm_village_stables: "Topluluk Ahırları"
  USU_pm_contained_wilderness: "Korunan Vahşi Doğa"
  USU_pm_seasonal_fairgrounds: "Mevsimsel Fuar Alanları"
+ pm_trade_center_inland: "Liman Erişimi Yok" #deepl:4277007637
+ pm_trade_center_port: "Liman Erişimi" #deepl:931806394
     
     # State Traits
  state_trait_rotterdam: "Rotterdam Limanı"
