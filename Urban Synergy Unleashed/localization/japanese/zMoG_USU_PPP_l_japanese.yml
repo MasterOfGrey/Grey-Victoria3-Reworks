@@ -15,8 +15,8 @@
     # Modifier types - As of USU: None of the multipliers are used anymore.
  goods_input_ppp_hv_power_add: "@ppp_hv_power![Nbsp]$ppp_hv_power$ 入力"
  goods_output_ppp_hv_power_add: "@ppp_hv_power![Nbsp]$ppp_hv_power$ 出力"
- goods_input_ppp_hv_power_mult: "@ppp_hv_power を構築中![Nbsp]$ppp_hv_power$ 入力"
- goods_output_ppp_hv_power_mult: "@ppp_hv_power を構築中![Nbsp]$ppp_hv_power$ 出力"
+ goods_input_ppp_hv_power_mult: "を構築中@ppp_hv_power![Nbsp]$ppp_hv_power$ 入力"
+ goods_output_ppp_hv_power_mult: "を構築中@ppp_hv_power![Nbsp]$ppp_hv_power$ 出力"
     
  goods_input_ppp_hv_power_add_desc: "建物で消費される @ppp_hv_power![Nbsp]$ppp_hv_power$ の量"
  goods_output_ppp_hv_power_add_desc: "建物によって生成される @ppp_hv_power![Nbsp]$ppp_hv_power$ の量"

@@ -92,11 +92,11 @@ pm_trade_center_port = {
 }
 
 ## Quantity PM's (for reference, not modified)
-pm_trade_center_trade_quantity_limited_inland = {
-	texture = "gfx/interface/icons/production_method_icons/trade_quantity_1.dds"
-	replacement_if_valid = pm_trade_center_trade_quantity_limited
-	is_hidden_when_unavailable = yes
-	
+#pm_trade_center_trade_quantity_limited_inland = {
+#	texture = "gfx/interface/icons/production_method_icons/trade_quantity_1.dds"
+#	replacement_if_valid = pm_trade_center_trade_quantity_limited
+#	is_hidden_when_unavailable = yes
+#	
 	#building_modifiers = {
 	#	workforce_scaled = {
 	#		goods_input_usu_logistics_add = 15		# (conversion is 5:1)
@@ -107,7 +107,7 @@ pm_trade_center_trade_quantity_limited_inland = {
 	#		state_trade_quantity_mult = -0.2
 	#	}
 	#}
-}
+#}
 
 pm_trade_center_trade_quantity_limited = {
 	texture = "gfx/interface/icons/production_method_icons/trade_quantity_1.dds"
@@ -125,17 +125,17 @@ pm_trade_center_trade_quantity_limited = {
 	}
 }
 
-pm_trade_center_trade_quantity_normal_inland = {
-	texture = "gfx/interface/icons/production_method_icons/trade_quantity_2.dds"
-	replacement_if_valid = pm_trade_center_trade_quantity_normal
-	is_hidden_when_unavailable = yes
-	
+#pm_trade_center_trade_quantity_normal_inland = {
+#	texture = "gfx/interface/icons/production_method_icons/trade_quantity_2.dds"
+#	replacement_if_valid = pm_trade_center_trade_quantity_normal
+#	is_hidden_when_unavailable = yes
+#	
 	#building_modifiers = {
 	#	workforce_scaled = {
 	#		goods_input_usu_logistics_add = 20		# (conversion is 5:1)
 	#	}
 	#}
-}
+#}
 
 pm_trade_center_trade_quantity_normal = {
 	texture = "gfx/interface/icons/production_method_icons/trade_quantity_2.dds"
@@ -148,13 +148,13 @@ pm_trade_center_trade_quantity_normal = {
 	}
 }
 
-pm_trade_center_trade_quantity_high_inland = {
-	texture = "gfx/interface/icons/production_method_icons/trade_quantity_3.dds"
-	replacement_if_valid = pm_trade_center_trade_quantity_high
-	is_hidden_when_unavailable = yes
-	
-	unlocking_technologies = { hydraulic_cranes }
-	
+#pm_trade_center_trade_quantity_high_inland = {
+#	texture = "gfx/interface/icons/production_method_icons/trade_quantity_3.dds"
+#	replacement_if_valid = pm_trade_center_trade_quantity_high
+#	is_hidden_when_unavailable = yes
+#	
+#	unlocking_technologies = { hydraulic_cranes }
+#	
 	#building_modifiers = {
 	#	workforce_scaled = {
 	#		goods_input_usu_logistics_add = 25		# (conversion is 5:1)
@@ -165,7 +165,7 @@ pm_trade_center_trade_quantity_high_inland = {
 	#		state_trade_quantity_mult = 0.5
 	#	}
 	#}
-}
+#}
 
 pm_trade_center_trade_quantity_high = {
 	texture = "gfx/interface/icons/production_method_icons/trade_quantity_3.dds"
@@ -185,13 +185,13 @@ pm_trade_center_trade_quantity_high = {
 	}
 }
 
-pm_trade_center_trade_quantity_very_high_inland = {
-	texture = "gfx/interface/icons/production_method_icons/trade_quantity_4.dds"
-	replacement_if_valid = pm_trade_center_trade_quantity_very_high
-	is_hidden_when_unavailable = yes
-	
-	unlocking_technologies = { floating_harbor }
-	
+#pm_trade_center_trade_quantity_very_high_inland = {
+#	texture = "gfx/interface/icons/production_method_icons/trade_quantity_4.dds"
+#	replacement_if_valid = pm_trade_center_trade_quantity_very_high
+#	is_hidden_when_unavailable = yes
+#	
+#	unlocking_technologies = { floating_harbor }
+#	
 	#building_modifiers = {
 	#	workforce_scaled = {
 	#		goods_input_usu_logistics_add = 30		# (conversion is 5:1)
@@ -202,7 +202,7 @@ pm_trade_center_trade_quantity_very_high_inland = {
 	#		state_trade_quantity_mult = 1.0
 	#	}
 	#}
-}
+#}
 
 pm_trade_center_trade_quantity_very_high = {
 	texture = "gfx/interface/icons/production_method_icons/trade_quantity_4.dds"

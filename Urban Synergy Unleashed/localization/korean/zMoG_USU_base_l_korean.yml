@@ -58,8 +58,8 @@
  goods_input_transportation_mult_desc: "교통량에 대한 보너스 또는 페널티 @transportation![Nbsp]$transportation$ 건물에서 소비하는 교통량" #deepl:3299014953
  goods_output_transportation_mult: "교통 구축@transportation![Nbsp]$transportation$ 출력" #deepl:171588735
  goods_output_transportation_mult_desc: "교통량에 대한 보너스 또는 페널티@transportation![Nbsp]$transportation$ 건물에서 생산되는 교통량" #deepl:296029142
- goods_output_electricity_mult: "건물 @전기@transportation![Nbsp]$electricity$ 출력" #deepl:320784986
- goods_output_electricity_mult_desc: "전기량에 대한 보너스 또는 페널티@transportation![Nbsp]$electricity$ 건물에서 생산되는 전기량" #deepl:145655897
+ goods_output_electricity_mult: "건물 전기@electricity![Nbsp]$electricity$ 출력" #deepl:320784986
+ goods_output_electricity_mult_desc: "전기량에 대한 보너스 또는 페널티@electricity![Nbsp]$electricity$ 건물에서 생산되는 전기량" #deepl:145655897
     
     # PMGs
  pmg_base_building_river_port: "부두"

@@ -8,6 +8,7 @@
     
     # Building
     USU_bg_port_infrastructure: "Ports"
+    USU_bg_public_greens: "Public Green Spaces"
     
     building_river_port: "River Docks"
     usu_building_public_green: "Public Green"
@@ -63,6 +64,10 @@
     goods_output_transportation_mult_desc: "A bonus or penalty to the amount of @transportation![Nbsp]$transportation$ produced by buildings"
     goods_output_electricity_mult: "Building @electricity![Nbsp]$electricity$ output"
     goods_output_electricity_mult_desc: "A bonus or penalty to the amount of @electricity![Nbsp]$electricity$ produced by buildings"
+    goods_input_merchant_marine_mult: "Building @merchant_marine![Nbsp]$merchant_marine$ input"
+    goods_input_merchant_marine_mult_desc: "A bonus or penalty to the amount of @merchant_marine![Nbsp]$merchant_marine$ consumed by buildings"
+    goods_output_merchant_marine_mult: "Building @merchant_marine![Nbsp]$merchant_marine$ output"
+    goods_output_merchant_marine_mult_desc: "A bonus or penalty to the amount of @merchant_marine![Nbsp]$merchant_marine$ produced by buildings"
     
     # PMGs
     pmg_base_building_river_port: "Docks"
@@ -70,6 +75,7 @@
     USU_pmg_government_administration_law_enforcement: "Law Enforcement"
     USU_pmg_public_space_management: "Public Space Management"
     USU_pmg_public_parklands: "Parklands Usage"
+    pmg_trade_center_port_status: "Port Adjacency Status"
     
     # PMs
     pm_rp_anchorage: "Anchorage"
@@ -92,6 +98,8 @@
     USU_pm_village_stables: "Community Stables"
     USU_pm_contained_wilderness: "Protected Wilderness"
     USU_pm_seasonal_fairgrounds: "Seasonal Fairgrounds"
+    pm_trade_center_inland: "No Port Access"
+    pm_trade_center_port: "Port Access"
     
     # State Traits
     state_trait_rotterdam: "Rotterdam Harbor"

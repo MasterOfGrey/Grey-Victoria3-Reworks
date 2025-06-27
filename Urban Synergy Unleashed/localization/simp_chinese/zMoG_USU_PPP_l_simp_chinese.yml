@@ -15,7 +15,7 @@
     # Modifier types - As of USU: None of the multipliers are used anymore.
  goods_input_ppp_hv_power_add: "@ppp_hv_power![Nbsp]$ppp_hv_power$ 输入"
  goods_output_ppp_hv_power_add: "@ppp_hv_power![Nbsp]$ppp_hv_power$ 输出"
- goods_input_ppp_hv_power_mult: "构建@ppp_hv_power！[Nbsp]$ppp_hv_power$ 输入"
+ goods_input_ppp_hv_power_mult: "构建@ppp_hv_power![Nbsp]$ppp_hv_power$ 输入"
  goods_output_ppp_hv_power_mult: "构建@ppp_hv_power![Nbsp]$ppp_hv_power$ 输出"
     
  goods_input_ppp_hv_power_add_desc: "建筑物消耗的@ppp_hv_power![Nbsp]$ppp_hv_power$ 的数量"

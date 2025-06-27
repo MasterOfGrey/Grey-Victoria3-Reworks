@@ -122,9 +122,9 @@
 			limit = {
 				exists = c:RUS
 				c:RUS ?= owner
-				OR = {
+				# OR = {
 					region = sr:region_manchuria
-				}
+				# }
 				any_scope_building = {
 					is_building_type = building_railway
 					levels_owned_by_country = {  

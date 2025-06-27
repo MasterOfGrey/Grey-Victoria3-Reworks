@@ -15,13 +15,13 @@ pmg_trade_quantity_trade_center = {
 	ai_selection = most_productive
 
 	production_methods = {
-		pm_trade_center_trade_quantity_limited_inland
+	#	pm_trade_center_trade_quantity_limited_inland
 		pm_trade_center_trade_quantity_limited
-		pm_trade_center_trade_quantity_normal_inland
+	#	pm_trade_center_trade_quantity_normal_inland
 		pm_trade_center_trade_quantity_normal
-		pm_trade_center_trade_quantity_high_inland
+	#	pm_trade_center_trade_quantity_high_inland
 		pm_trade_center_trade_quantity_high
-		pm_trade_center_trade_quantity_very_high_inland
+	#	pm_trade_center_trade_quantity_very_high_inland
 		pm_trade_center_trade_quantity_very_high
 	}
 }
