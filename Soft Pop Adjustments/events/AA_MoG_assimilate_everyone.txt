@@ -90,7 +90,7 @@ assimilate_everyone.1 = {
 										}
 									}
 									# Accepted pops in homelands skip this, preserving value 0.001 - allowing acceptance to "boost" some homeland results without dominating others.
-									# Only discriminated pops check against the non-heritage trait:
+									# Only substantially discriminated pops check against the non-heritage trait:
 									if = {
 										limit = {
 											NOT = {
@@ -121,6 +121,15 @@ assimilate_everyone.1 = {
 										}
 									}
 									divide = 2
+								}
+								
+								if = {
+									limit = {
+										scope:current_pop = {
+											is_pop_type = peasants
+										}
+									}
+									multiply = 0.1		# Peasants should be hard to assimilate.
 								}
 								
 								multiply = {
