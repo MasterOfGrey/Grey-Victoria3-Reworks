@@ -58,7 +58,7 @@
 		# Growth factors
 		else_if = {
 			limit = {
-				wealth >= 5
+				wealth >= 8
 			}
 			if = {
 				limit = {
