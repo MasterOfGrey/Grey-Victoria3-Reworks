@@ -46,15 +46,16 @@ assimilate_everyone.1 = {
 								}
 							}
 							has_ongoing_assimilation = no
-							NOT = {
-								root = {
-									or = {
-										has_law = law_type:law_slave_trade
-										has_law = law_type:law_legacy_slavery
-									}
-								}
-								is_pop_type = slaves
-							}
+							NOT = { is_pop_type = slaves }
+						#	NOT = {
+						#		root = {			For reasons unclear, this law check doesn't work.
+						#			or = {
+						#				has_law = law_type:law_slave_trade
+						#				has_law = law_type:law_legacy_slavery
+						#			}
+						#		}
+						#		is_pop_type = slaves
+						#	}
 							# Everything else is literally irrelevant, "has_ongoing_assimilation = no" + not primary culture covers everything
 						}
 						
