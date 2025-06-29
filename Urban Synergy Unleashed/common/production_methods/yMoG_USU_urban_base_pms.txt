@@ -31,7 +31,6 @@ pm_market_stalls = {
 	state_modifiers = {
 		level_scaled = {
 			state_construction_mult = 0.0005					# The existence of the urban infrastructure (empty roads, refurbishable buildings, etc.) makes construction a breeze.
-			state_migration_pull_add = 0.05
 			state_usu_building_public_green_max_level_add = 0.5
 		}
 		unscaled = {
@@ -44,6 +43,7 @@ pm_market_stalls = {
 			building_textile_mills_throughput_add = 0.01
 			building_furniture_manufacturies_throughput_add = 0.01
 			usu_building_public_green_throughput_add = 0.01
+			state_migration_pull_add = 0.05
 		}	
 	}
 }
@@ -85,7 +85,6 @@ pm_market_squares = {
 	state_modifiers = {
 		level_scaled = {
 			state_construction_mult = 0.001
-			state_migration_pull_add = 0.07
 			state_usu_building_public_green_max_level_add = 0.5
 		}
 		unscaled = {
@@ -98,6 +97,7 @@ pm_market_squares = {
 			building_textile_mills_throughput_add = 0.01
 			building_furniture_manufacturies_throughput_add = 0.01
 			usu_building_public_green_throughput_add = 0.01
+			state_migration_pull_add = 0.05
 		}	
 	}
 }
@@ -139,7 +139,6 @@ pm_covered_markets = {
 	state_modifiers = {
 		level_scaled = {
 			state_construction_mult = 0.0015
-			state_migration_pull_add = 0.09
 			state_usu_building_public_green_max_level_add = 0.5
 		}
 		unscaled = {
@@ -152,6 +151,7 @@ pm_covered_markets = {
 			building_textile_mills_throughput_add = 0.01
 			building_furniture_manufacturies_throughput_add = 0.01
 			usu_building_public_green_throughput_add = 0.01
+			state_migration_pull_add = 0.05
 		}	
 	}
 }
@@ -195,7 +195,6 @@ pm_arcades = {
 	state_modifiers = {
 		level_scaled = {
 			state_construction_mult = 0.002
-			state_migration_pull_add = 0.1
 			state_usu_building_public_green_max_level_add = 0.5
 		}
 		unscaled = {
@@ -208,6 +207,7 @@ pm_arcades = {
 			building_textile_mills_throughput_add = 0.01
 			building_furniture_manufacturies_throughput_add = 0.01
 			usu_building_public_green_throughput_add = 0.01
+			state_migration_pull_add = 0.05
 		}	
 	}
 	
@@ -259,7 +259,6 @@ USU_pm_hv_arcades = {
 	state_modifiers = {
 		level_scaled = {
 			state_construction_mult = 0.002
-			state_migration_pull_add = 0.1
 			state_usu_building_public_green_max_level_add = 0.5
 		}
 		unscaled = {
@@ -272,6 +271,7 @@ USU_pm_hv_arcades = {
 			building_textile_mills_throughput_add = 0.01
 			building_furniture_manufacturies_throughput_add = 0.01
 			usu_building_public_green_throughput_add = 0.01
+			state_migration_pull_add = 0.05
 		}	
 	}
 	

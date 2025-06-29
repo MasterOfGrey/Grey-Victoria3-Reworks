@@ -84,7 +84,7 @@ Major Thanks to BrokenRobot, without whom my sanity would never have endured lon
  -> Replacements are welcome from anyone![/b]
 Credit will be given to to providers of localisation content:
 [list]
-[*]TBD
+[*]French: Zhikan
 [/list]
 
 [b]Other Translation Mods:[/b]

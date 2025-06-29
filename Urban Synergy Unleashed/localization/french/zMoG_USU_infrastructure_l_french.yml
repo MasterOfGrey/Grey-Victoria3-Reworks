@@ -3,62 +3,62 @@
  pm_ac_electric_trains: "Trains électriques à courant alternatif"
  pm_ac_electric_trains_principle_transport_3: "Trains électriques à courant alternatif communs"
  
- pm_electric_passenger_carriages: "Voitures électriques pour passagers"
- 
+ pm_electric_passenger_carriages: "Voitures voyageurs électriques"
  pmg_automation_building_railway: "Automatisation des installations"
  pm_auto_disabled_building_railway: "Grue à manivelle"
  pm_steam_crane_building_railway: "Grue à vapeur à flèche courbée"
  pm_watertube_boiler_building_railway: "Chaudière à tubes de fumée"
- pm_rotary_valve_engine_building_railway: "Vanne rotative Uniflow"
- pm_steam_donkey_building_railway: "Transmission à vapeur à engrenages"
+ pm_rotary_valve_engine_building_railway: "Distribution rotative Uniflow"
+ pm_steam_donkey_building_railway: "Transmission vapeur à engrenages"
  
  # Ports
- pmg_automation_port: "Automatisation des installations" #deepl:2147123001
- pm_auto_disabled_building_port: "Manutention manuelle" #deepl:4263907806
- pm_steam_crane_building_port: "Grue à vapeur à flèche courbe" #deepl:1146043665
- pm_hydraulic_lifters_building_port: "Lève-personnes hydrauliques" #deepl:3445355814
- pm_assembly_lines_building_port: "Convoyeurs à quai" #deepl:3464779635
+ pmg_automation_port: "Automatisation des installations" 
+ pm_auto_disabled_building_port: "Manutention manuelle"
+ pm_steam_crane_building_port: "Grue à vapeur à flèche courbe"
+ pm_hydraulic_lifters_building_port: "Élévateurs hydrauliques"
+ pm_assembly_lines_building_port: "Convoyeurs de quai"
 
  # Logistics
  pmg_logistics_services_railway: "Logistique ferroviaire"
- pmg_logistics_services_port_coastal: "Logistique d'expédition"
+ pmg_logistics_services_port_coastal: "Logistique maritime"
  pmg_logistics_services_port_river: "Logistique fluviale"
  
  USU_pm_rail_logistics_0: "Aucune coordination logistique"
- USU_pm_rail_logistics_1: "Planification des quotas"
- USU_pm_rail_logistics_2: "Enchères d'accès à distance"
+ USU_pm_rail_logistics_1: "Planification par quotas"
+ USU_pm_rail_logistics_2: "Appels d'offres à distance"
  USU_pm_rail_logistics_3: "Gestion de la chaîne d'approvisionnement"
 
  USU_pm_port_c_logistics_0: "Aucune coordination logistique"
- USU_pm_port_c_logistics_1: "Planification des quotas"
+ USU_pm_port_c_logistics_1: "Planification par quotas"
  USU_pm_port_c_logistics_2: "Enchères d'accès à distance"
  USU_pm_port_c_logistics_3: "Gestion de la chaîne d'approvisionnement"
  
  USU_pm_port_r_logistics_0: "Aucune coordination logistique"
- USU_pm_port_r_logistics_1: "Planification des quotas"
- USU_pm_port_r_logistics_2: "Enchères d'accès à distance"
+ USU_pm_port_r_logistics_1: "Planification par quotas"
+ USU_pm_port_r_logistics_2: "Appels d'offres à distance"
  USU_pm_port_r_logistics_3: "Gestion de la chaîne d'approvisionnement"
  
  # Canals
  # pm_canal: "Serrures à vapeur"
  pm_canals_electric: "Écluses électriques"
- pm_canals_oil: "Verrouillage de la pompe à huile"
+ pm_canals_oil: "Écluses à pompe à pétrole"
 
  pmg_canal_boats: "Gestion des canaux"
  pm_no_tugs_building_canals: "Pas de remorqueurs"
  pm_tugging_building_canals: "Flotte de remorqueurs"
  
  pmg_canal_logistics: "Logistique des canaux"
- pm_no_canal_logistics: "Pas de logistique"
+ pm_no_canal_logistics: "Aucune logistique"
  pm_minor_canal_logistics: "Logistique mineure"
  pm_major_canal_logistics: "Logistique majeure"
  
- canal_dividends.1.t: "Accident de canal"
- canal_dividends.1.d: "Un navire marchand n'a pas fait attention et s'est échoué accidentellement dans le canal, bloquant la voie et rendant le passage plus dangereux jusqu'à ce qu'il soit complètement dégagé."
- canal_dividends.1.f: "Le grand navire marchand gît à moitié penché dans le canal, sur le flanc blessé par l'impact avec le mur, ses marchandises répandues dans le passage, ses parures et ses articles exotiques flottant dans l'eau, les marchandises coûteuses d'un pays étranger trempées et ruinées.\n\nSur le rivage se tient le capitaine, le visage dans les mains et son chapeau flottant dans le canal. À côté de lui, le représentant de l'assurance de la compagnie tenant un manifeste du navire endommagé par l'eau tente de donner un sens à tout cela, tandis qu'un agent du canal essaie d'expliquer que le déblaiement pourrait prendre des mois."
+ canal_dividends.1.t: "Accident sur le canal"
+ canal_dividends.1.d: "Un navire marchand n’a pas prêté attention et s’est échoué accidentellement dans le canal, bloquant le passage et rendant la navigation plus dangereuse jusqu’à son dégagement complet."
+ canal_dividends.1.f: "Le grand navire commercial gît, penché sur le côté dans le canal, une large brèche visible sur la coque à l’impact contre la paroi. Sa cargaison s’est répandue dans le passage, des étoffes précieuses et des marchandises exotiques flottant dans l’eau, la marchandise coûteuse d’un pays lointain trempée et perdue.\n\nSur la rive, le capitaine, la tête dans les mains, regarde son chapeau dériver dans le canal. À ses côtés, le représentant de l’assurance de la compagnie tente de déchiffrer un manifeste endommagé par l’eau, tandis qu’un agent du canal essaie d’expliquer que le dégagement pourrait prendre des mois."
  canal_dividends.1.1: "$expedition_events.542.a$"
- modifier_building_canal_accident: "Accident de canal"
- mog_building_canal_accident: "Accident de canal" #deepl:3839460779
+ modifier_building_canal_accident: "Accident sur le canal"
+ mog_building_canal_accident: "Accident sur le canal"
+
 
 
 

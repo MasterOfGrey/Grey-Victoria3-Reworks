@@ -1,36 +1,36 @@
 ﻿l_french:
- state_trait_hydro_potential_1: "Un certain potentiel hydroélectrique" #deepl:158680267
- state_trait_hydro_potential_2: "Bon potentiel hydroélectrique" #deepl:3095366234
- state_trait_hydro_potential_3: "Un grand potentiel hydroélectrique" #deepl:3146982405
+ state_trait_hydro_potential_1: "Potentiel hydroélectrique " 
+ state_trait_hydro_potential_2: "Bon potentiel hydroélectrique " 
+ state_trait_hydro_potential_3: "Fort potentiel hydroélectrique " 
  
- state_usu_building_hydro_power_plant_max_level_add: "Niveau maximum de la centrale hydroélectrique" #deepl:2280230892
- state_usu_building_hydro_power_plant_max_level_add_desc: "Un bonus ou une pénalité pour le niveau maximum de bâtiments $usu_building_hydro_power_plant$ dans l'État." #deepl:3621638740
- mog_usu_hp_hydro_potential_adjustment: "Potentiel hydroélectrique modifié" #deepl:1780358769
+ state_usu_building_hydro_power_plant_max_level_add: "Niveau maximum de la centrale hydroélectrique" 
+ state_usu_building_hydro_power_plant_max_level_add_desc: "Un bonus ou une pénalité pour le niveau maximum de bâtiments $usu_building_hydro_power_plant$ dans l'État." 
+ mog_usu_hp_hydro_potential_adjustment: "Potentiel hydroélectrique modifié" 
  
- # building_power_plant: "Thermal Power Plant" # moved to replace file
- usu_building_hydro_power_plant: "Centrale hydroélectrique" #deepl:3124269973
+ # building_power_plant: "Centrales thermiques" # moved to replace file
+ usu_building_hydro_power_plant: "Centrale hydroélectrique" 
  
- bg_power: "Centrales thermiques" #deepl:1853276522
- usu_bg_hydro_power: "Centrales hydroélectriques" #deepl:3011532326
+ bg_power: "Centrale thermique" 
+ usu_bg_hydro_power: "Centrale hydroélectrique" 
  
- hp_pmg_hydro_power_plant: "Génération Dynamo" #deepl:3018806291
- hp_pmg_turbines: "Technologie des turbines" #deepl:1453730292
- hp_pmg_HV_generation: "Distribution de l'énergie" #deepl:255203450
+ hp_pmg_hydro_power_plant: "Génération par dynamo" 
+ hp_pmg_turbines: "Technologie des turbines" 
+ hp_pmg_HV_generation: "Distribution de l'énergie" 
 
- hp_pm_hydro_plant_1: "Centrale électrique de première génération" #deepl:2016926551
- hp_pm_hydro_plant_2: "Centrale électrique de deuxième génération" #deepl:1283022637
- hp_pm_hydro_plant_3: "Centrale électrique de troisième génération" #deepl:186023181
+ hp_pm_hydro_plant_1: "Centrale électrique de 1ère génération" 
+ hp_pm_hydro_plant_2: "Centrale électrique de 2ème génération" 
+ hp_pm_hydro_plant_3: "Centrale électrique de 3ème génération" 
  
- hp_pm_turbine_1: "Les premières turbines" #deepl:3789195561
- hp_pm_turbine_2: "Turbines améliorées" #deepl:2202327205
- hp_pm_turbine_3: "Turbines modernes" #deepl:1607379232
+ hp_pm_turbine_1: "Turbines primitives" 
+ hp_pm_turbine_2: "Turbines améliorées" 
+ hp_pm_turbine_3: "Turbines modernes" 
  
- PPP_pm_t1_local_power: "Électricité locale" #deepl:3960165003
- PPP_pm_t1_hybrid_power: "Alimentation mixte du réseau" #deepl:2921665541
- PPP_pm_t1_grid_power: "Réseau électrique" #deepl:1703735767
- PPP_pm_t2_local_power: "Électricité locale" #deepl:3960165003
- PPP_pm_t2_hybrid_power: "Alimentation mixte du réseau" #deepl:2921665541
- PPP_pm_t2_grid_power: "Réseau électrique" #deepl:1703735767
- PPP_pm_t3_local_power: "Électricité locale" #deepl:3960165003
- PPP_pm_t3_hybrid_power: "Alimentation mixte du réseau" #deepl:2921665541
- PPP_pm_t3_grid_power: "Réseau électrique" #deepl:1703735767
+ PPP_pm_t1_local_power: "Électricité locale" 
+ PPP_pm_t1_hybrid_power: "Réseau mixte" 
+ PPP_pm_t1_grid_power: "Réseau électrique" 
+ PPP_pm_t2_local_power: "Électricité locale" 
+ PPP_pm_t2_hybrid_power: "Réseau mixte" 
+ PPP_pm_t2_grid_power: "Réseau électrique" 
+ PPP_pm_t3_local_power: "Électricité locale" 
+ PPP_pm_t3_hybrid_power: "Réseau mixte" 
+ PPP_pm_t3_grid_power: "Réseau électrique" 

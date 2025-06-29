@@ -1,11 +1,11 @@
 ﻿l_french:
     # Building
- usu_bg_power_grid: "Réseau électrique" #deepl:1703735767
+ usu_bg_power_grid: "Réseau électrique" 
  ppp_building_power_grid: "Réseau électrique"
     
     # Technologies
  PPP_tech_hv_power: "Transmission de puissance"
- PPP_tech_hv_power_desc: "En utilisant des convertisseurs et des régulateurs, la transmission d’énergie longue distance à haute tension est désormais utilisable par plusieurs destinations ayant des besoins différents."
+ PPP_tech_hv_power_desc: "En utilisant des convertisseurs et des régulateurs, la transmission d'électricité à haute tension sur de longues distances est désormais utilisable par plusieurs destinations."
  USU_tech_hv_railways: "Transformateurs industriels"
  USU_tech_hv_railways_desc: "En utilisant des transformateurs évolutifs, nous pouvons bénéficier pleinement du courant électrique alternatif, ce qui permet de fournir des tensions constamment élevées sur de longues distances et de rendre la transmission d'énergie économique."
 	
@@ -13,10 +13,10 @@
  ppp_hv_power: "Alimentation à haute tension"
     
     # Modifier types - As of USU: None of the multipliers are used anymore.
- goods_input_ppp_hv_power_add: "@ppp_hv_power![Nbsp]$ppp_hv_power$ entrée"
- goods_output_ppp_hv_power_add: "@ppp_hv_power![Nbsp]$ppp_hv_power$ sortie"
- goods_input_ppp_hv_power_mult: "Bâtiment @ppp_hv_power![Nbsp]$ppp_hv_power$ entrée"
- goods_output_ppp_hv_power_mult: "Bâtiment @ppp_hv_power![Nbsp]$ppp_hv_power$ sortie"
+ goods_input_ppp_hv_power_add: "Intrant @ppp_hv_power![Nbsp]$ppp_hv_power$"
+ goods_output_ppp_hv_power_add: "Sortant @ppp_hv_power![Nbsp]$ppp_hv_power$"
+ goods_input_ppp_hv_power_mult: "Intrant @ppp_hv_power![Nbsp]$ppp_hv_power$ du bâtiment "
+ goods_output_ppp_hv_power_mult: "Sortant @ppp_hv_power![Nbsp]$ppp_hv_power$ du bâtiment "
     
  goods_input_ppp_hv_power_add_desc: "La quantité de @ppp_hv_power![Nbsp]$ppp_hv_power$ consommée par les bâtiments"
  goods_output_ppp_hv_power_add_desc: "La quantité de @ppp_hv_power![Nbsp]$ppp_hv_power$ produite par les bâtiments"
