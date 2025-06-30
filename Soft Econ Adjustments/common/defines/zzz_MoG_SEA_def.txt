@@ -1,4 +1,4 @@
-NEconomy = {
+﻿NEconomy = {
 	# Honestly the Vanilla minimum is a joke
 	MIN_CONSTRUCTION_EFFICIENCY = 0.15 # 0.05					# Construction efficiency cannot go below this amount
 	
@@ -25,6 +25,29 @@ NEconomy = {
 	# 1.9 Trade Defines
 	MINIMUM_GOODS_TRADED_QUANTITY = 0.5 # Traded quantity for a good can never be lower than this
 	# Search ^this if you need to find the others - vanilla defines look pretty good tbh.
+	
+	# This much of relative advantage translates into a multiplier on price
+	# Applied to the delta between relative advantage and 1
+	# For example, if TRADE_CENTER_ADVANTAGE_PRICE_MULTIPLIER is 0.5 and relative advantage is 2, then the price multiplier is 1 + ( ( 2 - 1 ) * 0.5 ) = 1.5
+	TRADE_CENTER_ADVANTAGE_PRICE_MULTIPLIER = 0.3 # 0.25  # SEA: slight increase to account for reduced advantage generation below
+	
+	#TRADE_CENTER_ADVANTAGE_BASE = 100 										# Base amount of advantage that Trade Centers have
+	
+	## SEA Notes:
+	# Reducing these numbers increases the impact of market prices
+	# This appears to help smaller players and new market entrants establish a presense in the world market
+	# A greater diversity of exporters also helps importers who may not have enough interests to cover all major exporting markets
+	# This also makes it slightly more difficult to overcome no interest, war, and embargo penalties through brute force advantage production
+	TRADE_CENTER_ADVANTAGE_MARKET_AREA_PRODUCTION_FACTOR = 100 # 200 				# Trade Centers get this amount of export advantage for market area production (scaled against global production/consumption, multiplied by Market Access)
+	TRADE_ADVANTAGE_COMPANY_CHARTER_FACTOR = 25 # 50								# Company charters get this amount of export advantage for market production
+	TRADE_CENTER_ADVANTAGE_MARKET_PRESTIGE_GOOD_FACTOR = 50 # 100 				# Trade Centers get this amount of export advantage based on the fraction of goods production in their market that is prestige goods (prestige goods have no effect on import advantage)
+	TRADE_CENTER_ADVANTAGE_TRADE_AGREEMENT_FACTOR = 50 # 100 					# Trade Centers get this amount of export/import advantage, scaled against % of opposite-direction trade is from markets covered by trade agreements
+	TRADE_CENTER_ADVANTAGE_TREATY_PORT_FACTOR = 100 # 200 						# Trade Centers get this amount of export/import advantage, scaled against % of opposite-direction trade from Treaty Ports owned by their parent country
+
+	# Only one of the penalties below is ever applied, in the following priority order: Embargo, War, Lack of Interest
+	#TRADE_CENTER_ADVANTAGE_NO_INTEREST_FACTOR = -50 						# Trade Centers lose this amount of export/import advantage, scaled against % of opposite-direction trade is from markets where the owner has no interest
+	#TRADE_CENTER_ADVANTAGE_AT_WAR_FACTOR = -75 								# Trade Centers lose this amount of export/import advantage, scaled against % of opposite-direction trade is from markets where the owner is at war with the market controller
+	#TRADE_CENTER_ADVANTAGE_EMBARGO_FACTOR = -100							# Trade Centers lose this amount of export/import advantage, scaled against % of opposite-direction trade is from markets where the owner is embargoed by the market controller
 	
 ###### All pre-1.9 trade defines
 #	## Inspired by Henrax Le Chamalax's "Better trade routes" but updated for sensitivity to the new economy balance
