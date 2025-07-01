@@ -13,7 +13,7 @@ lobby_pro_overlord = {
 	texture = "gfx/interface/icons/political_lobby_icons/lobby_pro.dds"
 	
 	can_create = {
-		scope:country = {
+		ROOT.owner = { # Docs were lying about scope:country being set I guess
 			NOT = { is_country_type = decentralized }
 			is_revolutionary = no
 		}
@@ -579,7 +579,7 @@ lobby_anti_overlord = {
 	texture = "gfx/interface/icons/political_lobby_icons/lobby_anti.dds"
 	
 	can_create = {
-		scope:country = {
+		ROOT.owner = { # Docs were lying about scope:country being set I guess
 			NOT = { is_country_type = decentralized }
 			is_revolutionary = no
 		}
