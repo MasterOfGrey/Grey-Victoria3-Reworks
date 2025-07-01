@@ -17,7 +17,7 @@
  LIBERTY_DESIRE_LEVEL_CURRENT_LIBERTY_DESIRE_DESC: "Derzeitiger [concept_liberty_desire]-Wert: [Country.GetLibertyDesireRaw|v0]"
   
  COUNTRY_LIBERTY_DESIRE_ACTIVE_LEVEL_BOUNDS_DESC: "Gilt zwischen einem [concept_liberty_desire] von [Country.CalcLibertyDesireLevel.GetLowerBound|v0] bis [Country.CalcLibertyDesireLevel.GetUpperBound|v0]"
- COUNTRY_LIBERTY_DESIRE_ACTIVE_LEVEL_TOOLTIP: "#header [Country.GetAltName('NOM')|U] ist [Country.CalcLibertyDesireLevel.GetNameNoFormatting]#!\n$COUNTRY_LIBERTY_DESIRE_ACTIVE_LEVEL_BOUNDS_DESC$\n$LIBERTY_DESIRE_LEVEL_CURRENT_LIBERTY_DESIRE_DESC$\n$TOOLTIP_DELIMITER$\n[Country.GetWeeklyLibertyDesireChangeDesc]\n\n#title Auswirkungen auf [Country.GetAlt('AKK')]:#!#indent_newline:2 \n[Country.CalcLibertyDesireLevel.GetEffects]#!"
+ COUNTRY_LIBERTY_DESIRE_ACTIVE_LEVEL_TOOLTIP: "#header [Country.GetAltName('NOM')|U] ist [Country.CalcLibertyDesireLevel.GetNameNoFormatting]#!\n$COUNTRY_LIBERTY_DESIRE_ACTIVE_LEVEL_BOUNDS_DESC$\n$LIBERTY_DESIRE_LEVEL_CURRENT_LIBERTY_DESIRE_DESC$\n$TOOLTIP_DELIMITER$\n[Country.GetWeeklyLibertyDesireChangeDesc]\n\n#title Auswirkungen auf [Country.GetAltName('AKK')]:#!#indent_newline:2 \n[Country.CalcLibertyDesireLevel.GetEffects]#!"
   
  TOOLTIP_TYPE_LIBERTY_DESIRE_LEVEL: "Freiheitsdrangstufe"
   

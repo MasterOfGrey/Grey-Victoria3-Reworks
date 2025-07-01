@@ -101,7 +101,7 @@
   
  LIBERTY_DESIRE_WEEKLY_CHANGE_LOW_SUPPLY_NETWORK_STRENGTH: "Faible résistance [concept_supply_network] [SCOPE.GetRootScope.GetDiplomaticPact.GetFirstCountry.GetAdjective] ([SCOPE.GetRootScope.GetDiplomaticPact.GetFirstCountry.GetSupplyNetworkStrength|v0%])"
  LIBERTY_DESIRE_WEEKLY_CHANGE_SACRED_CIVICS: "Même [concept_religion] sous #v $principle_group_sacred_civics$#!"
- LIBERTY_DESIRE_WEEKLY_CHANGE_ISOLATED_FROM_MARKET: "[SCOPE.GetRootScope.GetDiplomaticPact.GetCapital.GetName] est isolé du [SCOPE.GetRootScope.GetDiplomaticPact.GetFirstCountry.GetMarket.GetName]"
+ LIBERTY_DESIRE_WEEKLY_CHANGE_ISOLATED_FROM_MARKET: "[SCOPE.GetRootScope.GetDiplomaticPact.GetSecondCountry.GetCapital.GetName] est isolé du [SCOPE.GetRootScope.GetDiplomaticPact.GetFirstCountry.GetMarket.GetName]"
  LIBERTY_DESIRE_WEEKLY_CHANGE_ECONOMIC_DEPENDENCE: "[concept_economic_dependence] sur l'[concept_overlord] ([SCOPE.GetRootScope.GetDiplomaticPact.GetSecondCountry.GetEconomicDependenceOn(SCOPE.GetRootScope.GetDiplomaticPact.GetFirstCountry)])"
  LIBERTY_DESIRE_WEEKLY_CHANGE_TRUCE: "[concept_truce] avec [SCOPE.GetRootScope.GetDiplomaticPact.GetFirstCountry.GetName] jusqu'à [SCOPE.GetRootScope.GetDiplomaticPact.GetSecondCountry.GetTruceDate(SCOPE.GetRootScope.GetDiplomaticPact.GetFirstCountry)]"
  LIBERTY_DESIRE_WEEKLY_CHANGE_PRO_LOBBY_INTEREST_GROUP_IN_GOVERNMENT: "[concept_clout] du [concept_political_lobby] [Concept('concept_interest_group','$concept_interest_groups$')] [concept_in_government] (#v x2#!)"

@@ -382,12 +382,6 @@
 		}
 		
 		will_break = { 
-			NOT = {
-				AND = {
-					has_variable = forced_bankroll_time
-					var:forced_bankroll_time ?= scope:target_country
-				}
-			}
 			OR = {		
 				scaled_debt > 0.25
 				AND = {
