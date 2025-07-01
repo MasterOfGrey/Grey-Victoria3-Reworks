@@ -77,6 +77,29 @@ mog_trade_centre_type_on_action = {
     }
 }
 
+# Root = Building
+on_building_built = {
+	on_actions = {
+		mog_usu_building_built_on_action
+	}
+}
+
+mog_usu_building_built_on_action = {
+	effect = {
+		if = {
+			limit = {
+				OR = {
+					is_building_type = building_port
+					is_building_type = building_river_port
+				}
+			}
+			state = {
+				usu_manage_trade_centre_type = yes
+			}
+		}
+	}
+}
+
 ### Construction Action
 # Root = The applicable country
 # scope:technology = The technology type they just acquired
