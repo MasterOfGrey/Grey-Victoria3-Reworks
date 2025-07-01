@@ -16,13 +16,13 @@ consolidate_subject = {
 		# Don't rely on can_be_consolidation_recipient tooltip for this trigger in here - it doesn't resolve correctly as a trigger.
 		can_consolidate_subject = yes		# Consequently, full scope of that trigger part is duplicated here.
 		
-		any_country = {
+		any_direct_subject ?= {
 			is_adjacent_to_country = scope:target_country
 			is_direct_subject_of = root
 			is_diplomatic_play_committed_participant = no 
 			liberty_desire < 50																# disable for testing
 			hidden_trigger = {
-				NOT = { this = scope:target_country }
+				NOT = { this ?= scope:target_country }
 				is_revolutionary = no
 			}
 			OR = {
@@ -94,11 +94,12 @@ consolidate_subject = {
 	}
 
 	accept_effect = {
-		scope:target_country = {
-			random_country = {
+		scope:target_country = {	# Scoping here first is necessary to prevent consolidations happening in the reverse of the intended direction.
+			ordered_country ?= {	# Consider using ordered_country not random_country
 				limit = {
 					can_be_consolidation_recipient = yes
 				}
+				order_by = country_rank		# Huzzah for consistent outcomes that match the tooltip!
 				annex_with_incorporation = scope:target_country
 				add_liberty_desire = -20
 				overlord = {

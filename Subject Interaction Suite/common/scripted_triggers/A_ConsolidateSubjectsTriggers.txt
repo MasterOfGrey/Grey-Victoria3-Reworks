@@ -1,12 +1,12 @@
 ﻿# Adapted with permission from: CaelReader's Consolidate Subjects
 
 can_consolidate_subject = {
-	NOT = { THIS = c:BIC }
+	NOT = { c:BIC ?= THIS }							# Gotta have `c:BIC ?= THIS`, NOT `THIS ?= c:BIC`
 	is_subject = no
 	is_revolutionary = no
 	is_diplomatic_play_committed_participant = no
 	has_technology_researched = nationalism											# disable for testing
-	scope:target_country = {
+	scope:target_country ?= {
 		is_diplomatic_play_committed_participant = no 
 		liberty_desire < 25															# disable for testing
 		subject_can_be_consolidation_target = yes
@@ -108,7 +108,7 @@ can_be_consolidation_recipient = {
 		is_direct_subject_of = root
 		is_diplomatic_play_committed_participant = no 
 		liberty_desire < 50																# disable for testing
-		NOT = { this = scope:target_country }
+		NOT = { this ?= scope:target_country }
 		is_revolutionary = no
 	}
 	OR = {
