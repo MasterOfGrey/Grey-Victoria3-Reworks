@@ -23,5 +23,3 @@ mog_usu_subfarm_infrastructure_monthly_pulse = {
 		mog_usu_subfarm_infrastructure_update = yes
 	}
 }
-
-## occupancy
