@@ -28,7 +28,7 @@ recognize = {
 		change_infamy = -5
 		add_modifier = {
 			name = ignored_concert_country_modifier
-			months = normal_modifier_time
+			days = normal_modifier_time
 		}
 		scope:target_country = {
 			set_country_type = recognized
@@ -83,7 +83,13 @@ get_recognized = {
 				is_in_same_power_bloc = scope:target_country
 				is_owed_obligation_by = scope:target_country
 			}
-			has_diplomatic_pact = { who = scope:target_country type = alliance }
+			any_scope_treaty = {
+				binds = scope:target_country
+				any_scope_article = {
+					has_type = alliance
+				}
+			}
+			# has_diplomatic_pact = { who = scope:target_country type = alliance } # 1.9 replaced with treaty articles
 		}
 	#	scope:target_country = {
 	#		is_allied = yes

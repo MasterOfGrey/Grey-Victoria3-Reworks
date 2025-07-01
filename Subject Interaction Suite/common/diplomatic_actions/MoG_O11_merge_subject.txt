@@ -447,14 +447,14 @@ merge_subject = {
 			
 			
 			add = {
-				desc = "DIPLOMATIC_ACCEPTANCE_ACTOR_PRO_LOBBY_CLOUT"                    
+				desc = "DIPLOMATIC_ACCEPTANCE_SOURCE_PRO_LOBBY_CLOUT"                    
 				value = "scope:actor.lobby_foreign_pro_clout(scope:target_country)"
 				multiply = 50
 				max = 50
 			}
 			
 			add = {
-				desc = "DIPLOMATIC_ACCEPTANCE_ACTOR_ANTI_LOBBY_CLOUT"                   
+				desc = "DIPLOMATIC_ACCEPTANCE_SOURCE_ANTI_LOBBY_CLOUT"                   
 				value = "scope:actor.lobby_foreign_anti_clout(scope:target_country)"
 				multiply = -50
 				min = -50

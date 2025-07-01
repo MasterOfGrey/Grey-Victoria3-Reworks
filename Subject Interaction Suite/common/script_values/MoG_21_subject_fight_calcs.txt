@@ -96,13 +96,13 @@ subject_fight_targeted_state_lib_hit = {
 	}
 	else = {
 		multiply = {
-			if = {
-				limit = { scope:subject_targeted_state = { is_treaty_port = yes } }
-				add = define:NDiplomacy|WAR_GOAL_INFAMY_TAKE_TREATY_PORT
-			}
-			else = {
+	#		if = {
+	#			limit = { scope:subject_targeted_state = { is_treaty_port = yes } }		# Treaty port treaties mean we just aren't dealing with this now.
+	#			add = define:NDiplomacy|WAR_GOAL_INFAMY_TAKE_TREATY_PORT
+	#		}
+	#		else = {
 				add = define:NDiplomacy|WAR_GOAL_INFAMY_CONQUER_STATE
-			}
+	#		}
 		}
 		min = 3
 	}

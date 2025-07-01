@@ -1,0 +1,237 @@
+﻿demand_state = {
+	groups= {
+		subject
+	}
+	
+	texture = "gfx/interface/icons/diplomatic_action_icons/take_state.dds"
+	confirmation_sound = "event:/SFX/UI/MapInteraction/SubjectInteractions/diplomatic_action_subjects_13_handle_states"
+	
+	requires_approval = yes
+	should_notify_third_parties = yes
+	show_effect_in_tooltip = yes
+	state_selection = second_required
+    second_state_list = second_country_and_subjects
+	can_use_obligations = yes
+
+	possible = {
+		is_diplomatic_play_committed_participant = no
+		scope:target_country = { is_diplomatic_play_committed_participant = no }
+		is_revolutionary = no
+	}
+	
+	second_state_trigger = {
+		OR = {
+			scope:country = { is_adjacent_to_state = root } # must either be adjacent to the initiating country, or
+			AND = {											# be a Homeland of its culture, with a port available for market connection
+				is_homeland_of_country_cultures = scope:country
+				has_port = yes
+				scope:country = { has_port = yes }
+			}
+		}
+		OR = {
+			AND = { 										# if owned by the target of the action, it must not be incorporated
+				owner = scope:target_country
+				OR = {
+					is_incorporated = no
+					AND = {
+						is_split_state = yes
+						is_treaty_port = no
+						state_region = { 
+							any_scope_state = { 
+								owner = scope:country
+								is_treaty_port = no
+							}
+						}
+					}
+				}
+			}
+			scope:target_country = { 						# if owned by one of the target's subjects, that subject must either be a Puppet or a Vassal
+				any_subject_or_below = {
+					root.owner = this
+					NOT = { root.owner = scope:country }
+					OR = {
+						is_subject_type = subject_type_colony
+						is_subject_type = subject_type_puppet
+						is_subject_type = subject_type_vassal
+					}
+				}
+			}
+		}
+		NOT = { is_homeland_of_country_cultures = owner }
+		is_capital = no
+		is_under_colonization = no
+	}
+	
+	accept_effect = {
+		if = {
+			limit = { exists = scope:second_state }
+			
+			# Giving a state from one subject to another
+			if = {
+				limit = { scope:second_state = { NOT = { owner = scope:target_country } } }	
+				scope:second_state.owner = { save_temporary_scope_as = subject_taken_from }
+				scope:subject_taken_from = {
+					add_liberty_desire = {
+						value = "scope:second_state.ai_state_value(scope:subject_taken_from)"
+						divide = 5
+						max = 100
+						min = 20
+					}
+				}
+			}
+			
+			add_liberty_desire = {
+				value = 0
+				subtract = "scope:second_state.ai_state_value(root)"
+				divide = 5
+				max = -5
+				min = -50
+			}	
+			scope:second_state = { set_state_owner = root }		
+		}
+	}
+	
+	ai = {
+		evaluation_chance = {
+			value = {
+				add = liberty_desire
+				subtract = 75
+				divide = 100
+			}
+
+			if = {
+				limit = {
+					is_subject_type = subject_type_dominion
+				}
+				add = 0.1
+			}
+			
+			if = {
+				limit = {
+					OR = {
+						c:BIC ?= this
+						c:DEI ?= this
+						is_african_subject = yes
+					}
+				}
+				add = 0.2
+			}
+		}
+		
+		will_propose_with_states = {
+			exists = scope:second_state
+			trigger_if = {
+				limit = { is_african_subject = yes }
+				scope:second_state = {
+					OR = {
+						is_incorporated = no
+						owner = {
+							is_african_subject = yes
+						}
+					}
+				}
+			}
+		}	
+	
+		accept_score = {
+			add = {
+				desc = "DIPLOMATIC_ACCEPTANCE_BASE"
+				value = -100
+			}
+			
+			if = {
+				limit = { exists = scope:second_state }
+				subtract = {
+					value = "scope:second_state.ai_state_value(scope:second_state.owner)"
+					desc = "DIPLOMATIC_ACCEPTANCE_TRADE_STATE_SECOND_STATE"
+					
+					if = {
+						limit = {
+							scope:second_state = { is_split_state = yes }					
+						}
+						divide = 3
+					}
+					
+					if = {
+						limit = {
+							scope:second_state = { owner = scope:target_country }					
+						}
+						multiply = 2
+					}
+					
+					min = 10
+				}
+			}
+			
+			add = {
+				desc = "DIPLOMATIC_ACCEPTANCE_ATTITUDE"
+				if = {
+					limit = {
+						has_attitude = {
+							who = scope:actor
+							attitude = protective
+						}	
+					}
+					value = 50
+				}				
+				else_if = {
+					limit = {
+						has_attitude = {
+							who = scope:actor
+							attitude = domineering
+						}	
+					}
+					value = -50
+				}							
+			}
+
+			add = {
+				desc = "DIPLOMATIC_ACCEPTANCE_ACTOR_LIBERTY_DESIRE"
+				value = "scope:actor.liberty_desire"
+				subtract = 50
+				multiply = 3
+				min = -50
+				max = 100
+			}
+
+			add = {
+				desc = "DIPLOMATIC_ACCEPTANCE_RELATIONS"		
+				if = {
+					limit = {
+						"relations(scope:actor)" >= relations_threshold:friendly
+					}
+					value = 50
+				}	
+				else_if = {
+					limit = {
+						"relations(scope:actor)" >= relations_threshold:amicable
+					}
+					value = 25
+				}					
+				else_if = {
+					limit = {
+						"relations(scope:actor)" >=  relations_threshold:cordial
+					}
+					value = 10
+				}
+				else_if = {
+					limit = {
+						"relations(scope:actor)" > relations_threshold:poor
+					}
+					value = -25
+				}					
+				else = {
+					value = -50
+				}				
+			}
+		}
+		
+		use_obligation_chance = {
+			value = 10
+		}
+		
+		owe_obligation_chance = {
+			value = 10	
+		}
+	}
+}

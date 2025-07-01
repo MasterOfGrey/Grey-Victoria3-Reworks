@@ -6,6 +6,10 @@
 		scope:journal_entry = {
 			NOT = { has_variable = has_been_abandoned }
 		}
+		OR = {
+			has_journal_entry = je_law_imposition
+			has_journal_entry = je_british_dictate_law
+		}
 	}
 	
 	possible = {
@@ -41,51 +45,51 @@
 				}
 			}
 		}
-	}  
-
+	}
+	
 	ai_chance = {
-		base = 0
+		value = 0
 		
-		modifier = {
-			trigger = { "enactment_chance_for_law(imposed_law.type)" > 0.1 }
+		if = {
+			limit = { "enactment_chance_for_law(imposed_law.type)" > 0.1 }
 			add = 10
 		}
 		
-		modifier = {
-			trigger = { "enactment_chance_for_law(imposed_law.type)" > 0.2 }
+		if = {
+			limit = { "enactment_chance_for_law(imposed_law.type)" > 0.2 }
 			add = 20
-		}	
+		}
 		
-		modifier = {
-			trigger = { "enactment_chance_for_law(imposed_law.type)" > 0.3 }
+		if = {
+			limit = { "enactment_chance_for_law(imposed_law.type)" > 0.3 }
 			add = 30
 		}
-
-		modifier = {
-			trigger = { "enactment_chance_for_law(imposed_law.type)" > 0.4 }
+		
+		if = {
+			limit = { "enactment_chance_for_law(imposed_law.type)" > 0.4 }
 			add = 40
-		}		
+		}
 		
-		modifier = {
-			trigger = { "enactment_chance_for_law(imposed_law.type)" > 0.5 }
+		if = {
+			limit = { "enactment_chance_for_law(imposed_law.type)" > 0.5 }
 			add = 50
-		}					
+		}
 		
-		modifier = {
-			trigger = { 
-				is_subject = yes 
+		if = {
+			limit = {
+				is_subject = yes
 				liberty_desire > 50
 			}
 			add = -25
 		}
 		
-		modifier = {
-			trigger = { 
-				is_subject = yes 
+		if = {
+			limit = {
+				is_subject = yes
 				liberty_desire > 75
 			}
 			add = -25
-		}		
+		}
 	}
 }
 
@@ -96,6 +100,10 @@ button_refuse_law_imposition = {
 	visible = {
 		scope:journal_entry = {
 			NOT = { has_variable = has_been_abandoned }
+		}
+		OR = {
+			has_journal_entry = je_law_imposition
+			has_journal_entry = je_british_dictate_law
 		}
 	}
 	
@@ -165,42 +173,50 @@ button_refuse_law_imposition = {
 	}  
 
 	ai_chance = {
-		base = -25
-		modifier = {
-			trigger = {
-				NOT = { currently_enacting_law = imposed_law }
+		value = -25
+		if = {
+			limit = {
+				NOT = { currently_enacting_law ?= imposed_law }
 			}
 			add = 15
-		}
-		modifier = {
-			trigger = {
-				scope:journal_entry = {
-					journal_entry_age > 500 # days
+			# Only consider the age of the journal entry if not currently enacting the law
+			if = {
+				limit = {
+					scope:journal_entry = {
+						journal_entry_age > 500 # days
+					}
 				}
+				add = 10
 			}
-			add = 10
-		}		
-		modifier = {
-			trigger = {
-				scope:journal_entry = {
-					journal_entry_age > 1000 # days
+			if = {
+				limit = {
+					scope:journal_entry = {
+						journal_entry_age > 1000 # days
+					}
 				}
+				add = 10
 			}
-			add = 10
-		}
-		modifier = {
-			trigger = {
-				scope:journal_entry = {
-					journal_entry_age > 1500 # days
+			if = {
+				limit = {
+					scope:journal_entry = {
+						journal_entry_age > 1500 # days
+					}
 				}
+				add = 10
 			}
-			add = 10
-		}
-		modifier = {
-			trigger = {
-				scope:journal_entry = {
-					journal_entry_age > 2000 # days
+			if = {
+				limit = {
+					scope:journal_entry = {
+						journal_entry_age > 2000 # days
+					}
 				}
+				add = 10
+			}
+		}
+		if = {
+			limit = {
+				is_subject = yes
+				liberty_desire > 80
 			}
 			add = 10
 		}
