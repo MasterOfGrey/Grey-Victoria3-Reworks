@@ -1,0 +1,12 @@
+﻿###############################
+# GUI TOPBAR SCRIPTED EFFECTS #
+###############################
+
+#This is used to prevent errors from appearing.
+add_com_topbar_element = {
+	if = {
+		limit = { always = no }
+		set_variable = $element_name$
+		remove_variable = $element_name$
+	}
+}

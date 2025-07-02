@@ -70,7 +70,7 @@
  LIBERTY_DESIRE_WEEKLY_CHANGE_RELIGION: "Attempting to change [SCOPE.GetRootScope.GetDiplomaticPact.GetSecondCountry.GetSubjectType.GetName]'s [concept_state_religion]"
  LIBERTY_DESIRE_WEEKLY_CHANGE_DEVOUT_RESISTANCE: "Devout resistance to [GetDiplomaticActionType('change_state_religion').GetName]"
  LIBERTY_DESIRE_WEEKLY_CHANGE_CULTURE: "Attempting to supplant [SCOPE.GetRootScope.GetDiplomaticPact.GetSecondCountry.GetSubjectType.GetName]'s [Concept('concept_primary_cultures','$concept_primary_culture$')]"
- LIBERTY_DESIRE_WEEKLY_CHANGE_NATIONALIST_RESISTANCE: "Nationalist resistance to "[GetDiplomaticActionType('change_primary_culture').GetName]" "
+ LIBERTY_DESIRE_WEEKLY_CHANGE_NATIONALIST_RESISTANCE: "Nationalist resistance to [GetDiplomaticActionType('change_primary_culture').GetName]"
  LIBERTY_DESIRE_WEEKLY_CHANGE_INCLUDE_CULTURE: "Attempting to include [SCOPE.GetRootScope.GetDiplomaticPact.GetSecondCountry.GetSubjectType.GetName]'s [Concept('concept_primary_cultures','$concept_primary_culture$')]"
  
  legal_systems: "Legal Systems"

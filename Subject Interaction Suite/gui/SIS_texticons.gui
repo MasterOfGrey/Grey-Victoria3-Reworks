@@ -1,0 +1,9 @@
+texticon = {
+	icon = all_subject_pp
+	iconsize = {
+		texture = "gfx/interface/icons/commander_order_icons/unused/power_projection.dds"
+		size = { 25 25 }
+		offset = { 0 7 }
+		fontsize = 18
+	}
+}

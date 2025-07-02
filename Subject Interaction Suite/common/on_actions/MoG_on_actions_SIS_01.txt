@@ -1,0 +1,40 @@
+﻿on_game_started_after_lobby = {
+	on_actions = { mog_sis_topbar_activate }
+}
+
+mog_sis_topbar_activate = {
+	effect = {
+		mog_sis_add_topbar_elements = yes
+	}
+}
+
+on_monthly_pulse = {
+	on_actions = {
+		mog_sis_topbar_save_game_compatibility
+	}
+}
+on_monthly_pulse_country = {
+	on_actions = {
+		mog_sis_topbar_calculations
+	}
+}
+
+### These run effects in MoG_SIS_topbar_effects.txt
+# Add/Re-add the elements for the Topbar
+mog_sis_topbar_save_game_compatibility = {
+	effect = {
+		mog_sis_add_topbar_elements = yes
+	}
+}
+
+# Calculate the actual value for the element
+mog_sis_topbar_calculations = {
+	effect = {
+		if = {
+			limit = {
+				is_player = yes			# We only need to update it for player countries
+			}
+			mog_sis_topbar_calculate_all_subject_pp = yes
+		}
+	}
+}

@@ -1,0 +1,9 @@
+﻿### All Subjects Relative Power Projection ###
+mog_topbar_element_all_subject_pp = {
+    scope = country
+	
+    is_shown = {
+        always = yes
+		# num_subjects > 0
+    }
+}

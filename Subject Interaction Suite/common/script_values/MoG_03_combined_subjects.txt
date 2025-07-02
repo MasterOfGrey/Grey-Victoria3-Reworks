@@ -66,6 +66,22 @@ liberty_desire_weekly_change_own_combined_subjects = {
 			min = 0.001
 		}
 		# division gives you the % of all subject armies combined relative to the overlord's army.
-		multiply = -0.5
+		# COMBINED NAVY STRENGTH
+		# Uses: naval_power_projection
+		if = {
+			# Subject navies are collectively < Overlord navy = reduce the effect
+			limit = {
+				root.second_country.naval_power_projection > {
+					add = {
+						root.second_country = {
+							every_direct_subject = {
+								add = naval_power_projection
+							}
+						}
+					}
+				}
+			}
+			multiply = -0.8		# -0.5 # Subjects are pretty concerned about having a disagreement with their overlord while also dealing with disloyal subjects of their own. A bigger navy is less impactful.
+		}
 	}
 }

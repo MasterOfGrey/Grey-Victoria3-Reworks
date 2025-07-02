@@ -1,0 +1,87 @@
+﻿###############################
+# GUI TOPBAR SCRIPTED EFFECTS #
+###############################
+
+# Let every country know how strong their subjects are!
+mog_sis_add_topbar_elements = {
+	if = {
+		limit = {
+			NOT = {
+				any_in_global_list = {
+					variable = com_topbar_items
+					var:com_name ?= flag:mog_topbar_element_all_subject_pp
+				}
+			}
+		}
+		add_com_topbar_element = {
+			element_name = mog_topbar_element_all_subject_pp
+		}
+		every_country = {
+			add_to_variable_list = {
+				name = com_topbar_second_line
+				target = scope:mog_topbar_element_all_subject_pp
+			}
+		}
+	}
+}
+
+mog_sis_topbar_calculate_all_subject_pp = {
+	set_variable = {
+		name = mog_topbar_value_all_subject_pp
+		value = {
+			value = 0
+			if = {
+				limit = { num_subjects > 0 }
+				add = {
+					every_direct_subject = {
+						# COMBINED ARMY STRENGTH
+						# Uses: army_power_projection
+						add = army_power_projection
+					}
+					# COMBINED NAVY STRENGTH
+					# Uses: naval_power_projection
+					if = {
+						# Subject navies are collectively < Overlord navy = reduce the effect
+						limit = {
+							root.naval_power_projection > {
+								add = {
+									root = {
+										every_direct_subject = {
+											add = naval_power_projection
+										}
+									}
+								}
+							}
+						}
+						multiply = 0.5
+					}
+					# Divide by overlord army_power_projection to get a %
+					divide = {
+						add = root.army_power_projection
+						min = 0.001
+					}
+				}
+			}
+		}
+	}
+	set_variable = {
+		name = mog_topbar_value_all_subject_navy_pp
+		value = {
+			value = 0
+			if = {
+				limit = { num_subjects > 0 }
+				add = {
+					every_direct_subject = {
+						# COMBINED NAVY STRENGTH
+						add = naval_power_projection
+					}
+					# Divide by overlord naval_power_projection to get a %
+					divide = {
+						add = root.naval_power_projection
+						min = 0.001
+					}
+				}
+			}
+		}
+	}
+}

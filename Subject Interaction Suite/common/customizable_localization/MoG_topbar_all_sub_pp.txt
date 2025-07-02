@@ -1,0 +1,39 @@
+﻿mog_topbar_coloured_all_subject_pp = {
+	type = country
+	random_valid = no
+	
+	
+	text = {
+		trigger = {
+			var:mog_topbar_value_all_subject_pp <= 0.2
+		}
+		localization_key = mog_topbar_coloured_all_subject_pp_green
+	}
+	text = {			# If it's green, no one cares if the lack of navy is part of it, but afterwards knowing the navy disparity affects things is meaningful.
+		trigger = {
+			var:mog_topbar_value_all_subject_navy_pp > 1
+		}
+		localization_key = mog_topbar_coloured_all_subject_pp_purple
+	}
+	text = {
+		trigger = {
+			var:mog_topbar_value_all_subject_pp <= 0.4
+		}
+		localization_key = mog_topbar_coloured_all_subject_pp_yellow
+	}
+	text = {
+		trigger = {
+			var:mog_topbar_value_all_subject_pp <= 1
+		}
+		localization_key = mog_topbar_coloured_all_subject_pp_orange
+	}
+	text = {
+		trigger = {
+			var:mog_topbar_value_all_subject_pp > 1
+		}
+		localization_key = mog_topbar_coloured_all_subject_pp_red
+	}
+	text = {
+		localization_key = mog_topbar_coloured_all_subject_pp_backup
+	}
+}

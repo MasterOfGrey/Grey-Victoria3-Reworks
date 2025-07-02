@@ -2,3 +2,26 @@
  unused_interests_alert_setting_name: "$unused_interests_alert$"
  overlord_can_consolidate_subject_setting_name: "$consolidate_subject$"
  IB_success: "Overlord Legislative Assistance"
+ relations_positive: "#P Positive [concept_relations]#!"
+ relations_negative: "#N Negative [concept_relations]#!"
+ 
+ mog_topbar_element_all_subject_pp: "mog_topbar_element_all_subject_pp"
+ mog_topbar_element_all_subject_pp_icon: "@all_subject_pp!"
+ mog_topbar_element_all_subject_pp_value: "[GetPlayer.GetCustom('mog_topbar_coloured_all_subject_pp')]"
+ mog_topbar_element_all_subject_pp_tooltip: "#header [Concept('concept_subject','$concept_subjects$')] Relative [concept_power_projection]#!\n$concept_relative_subject_power_projection_desc$"
+ mog_topbar_element_all_subject_pp_source: "Grey's Subject Interaction Suite"
+ mog_topbar_element_all_subject_pp_source_tooltip: "This element is part of Grey's Subject Interaction Suite."
+
+ concept_relative_subject_power_projection: "Relative Subject Power Projection"
+ concept_relative_subject_power_projection_desc: "The perceived [concept_power_projection] of a [Concept('concept_subject','$concept_subject_possessive$')] military forces. Since a subject's bid for independence is defensive, it is chiefly concerned with relative power of [Concept('concept_army','$concept_armies$')]. The [concept_liberty_desire] of all [Concept('concept_subject','$concept_subjects$')] is affected by their combined $country_army_power_projection$ compared to their [concept_overlord].\nThey perceive their combined strength to be 50% lower when their combined $country_navy_power_projection$ is #b less#! than their [Concept('concept_overlord','$concept_overlord_possessive$')] Navy, due to the difficulties of coordinating with each other. A subject will be less affected by this if they are challenged by subjects of their own.\n\n#b;green Green:#! Your [Concept('concept_subject','$concept_subject_possessive$')] [Concept('concept_army','$concept_armies$')] are irrelevant.\n#b;yellow Yellow:#! High [concept_relations] will suppress excess [concept_liberty_desire].\n#b;orange Orange:#! Strong [Concept('concept_subject','$concept_subjects$')] should be monitored.\n#b;red Red:#! Strong [Concept('concept_subject','$concept_subjects$')] are likely to become $ai_attitude_rebellious$.\n#b;purple Purple:#! Your lack of Navy is encouraging [Concept('concept_subject','$concept_subject_possessive$')] [concept_liberty_desire]."
+
+# We Want Green at <20%, Yellow at <40% (army + relations), Orange at <100%, Red at >100%, and Purple if Navy is >100% no matter how the army compares.
+# Default: [GetPlayer.MakeScope.Var('mog_topbar_value_all_subject_pp').GetValue|%v]
+ mog_topbar_coloured_all_subject_pp_backup: "#b;white [GetPlayer.MakeScope.Var('mog_topbar_value_all_subject_pp').GetValue|0%]#!"
+ mog_topbar_coloured_all_subject_pp_green: "#b;green [GetPlayer.MakeScope.Var('mog_topbar_value_all_subject_pp').GetValue|0%]#!"
+ mog_topbar_coloured_all_subject_pp_yellow: "#b;yellow [GetPlayer.MakeScope.Var('mog_topbar_value_all_subject_pp').GetValue|0%]#!"
+ mog_topbar_coloured_all_subject_pp_orange: "#b;orange [GetPlayer.MakeScope.Var('mog_topbar_value_all_subject_pp').GetValue|0%]#!"
+ mog_topbar_coloured_all_subject_pp_red: "#b;red [GetPlayer.MakeScope.Var('mog_topbar_value_all_subject_pp').GetValue|0%]#!"
+ mog_topbar_coloured_all_subject_pp_purple: "#b;purple [GetPlayer.MakeScope.Var('mog_topbar_value_all_subject_pp').GetValue|0%]#!"
+
+ # \n\n#b;green Green:#! Your [Concept('concept_subject','$concept_subject_possessive$')] [Concept('concept_army','$concept_armies$')] are irrelevant.\n#b;yellow Yellow:#! High [concept_relations] will suppress excess [concept_liberty_desire].\n#b;orange Orange:#! Strong [Concept('concept_subject','$concept_subjects$')] should be monitored.\n#b;red Red:#! Strong [Concept('concept_subject','$concept_subjects$')] are likely to become $ai_attitude_rebellious$.\n#b;purple Purple:#! Your lack of Navy is encouraging [Concept('concept_subject','$concept_subject_possessive$')] [concept_liberty_desire].
