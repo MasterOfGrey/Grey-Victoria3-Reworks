@@ -31,7 +31,7 @@ default_building_subsistence_farms = {
 	state_modifiers = {
 		workforce_scaled = {
 			state_birth_rate_mult = -0.0045		# For some reason this one gets modifiers but the other doesn't, and the goal is to cancel out when fully employed.
-			state_infrastructure_from_population_max_add = -1		# The existence of easily usable land allows people to use it trivially (infra from pop max), but actually having people using the land uses that up.
+			#state_infrastructure_from_population_max_add = -1		# The existence of easily usable land allows people to use it trivially (infra from pop max), but actually having people using the land uses that up.
 		}
 		level_scaled = {
 			state_birth_rate_mult = 0.005
@@ -62,7 +62,7 @@ default_building_subsistence_orchards = {
 	state_modifiers = {
 		workforce_scaled = {
 			state_birth_rate_mult = -0.0045
-			state_infrastructure_from_population_max_add = -1		# The existence of easily usable land allows people to use it trivially (infra from pop max), but actually having people using the land uses that up.
+			#state_infrastructure_from_population_max_add = -1		# The existence of easily usable land allows people to use it trivially (infra from pop max), but actually having people using the land uses that up.
 		}
 		level_scaled = {
 			state_birth_rate_mult = 0.005
@@ -93,7 +93,7 @@ default_building_subsistence_pastures = {
 	state_modifiers = {
 		workforce_scaled = {
 			state_birth_rate_mult = -0.0045
-			state_infrastructure_from_population_max_add = -1		# The existence of easily usable land allows people to use it trivially (infra from pop max), but actually having people using the land uses that up.
+			#state_infrastructure_from_population_max_add = -1		# The existence of easily usable land allows people to use it trivially (infra from pop max), but actually having people using the land uses that up.
 		}
 		level_scaled = {
 			state_birth_rate_mult = 0.005
@@ -124,7 +124,7 @@ default_building_subsistence_fishing_villages = {
 	state_modifiers = {
 		workforce_scaled = {
 			state_birth_rate_mult = -0.0045
-			state_infrastructure_from_population_max_add = -1		# The existence of easily usable land allows people to use it trivially (infra from pop max), but actually having people using the land uses that up.
+			#state_infrastructure_from_population_max_add = -1		# The existence of easily usable land allows people to use it trivially (infra from pop max), but actually having people using the land uses that up.
 		}
 		level_scaled = {
 			state_birth_rate_mult = 0.005
@@ -154,7 +154,7 @@ default_building_subsistence_rice_paddies = {
 	state_modifiers = {
 		workforce_scaled = {
 			state_birth_rate_mult = -0.0045
-			state_infrastructure_from_population_max_add = -1		# The existence of easily usable land allows people to use it trivially (infra from pop max), but actually having people using the land uses that up.
+			#state_infrastructure_from_population_max_add = -1		# The existence of easily usable land allows people to use it trivially (infra from pop max), but actually having people using the land uses that up.
 		}
 		level_scaled = {
 			state_birth_rate_mult = 0.005
