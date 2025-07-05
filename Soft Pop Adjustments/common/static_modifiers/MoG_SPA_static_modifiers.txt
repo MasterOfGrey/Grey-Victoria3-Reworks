@@ -9,3 +9,18 @@ mog_education_access_from_urbanization = {
 	icon = "gfx/interface/icons/generic_icons/literacy.dds"
 	state_education_access_add = 0.2
 }
+
+mog_lower_strata_expected_sol_from_average = {
+	icon = "gfx/interface/icons/generic_icons/sol_icon.dds"
+	state_lower_strata_expected_sol_add = 1
+}
+
+mog_middle_strata_expected_sol_from_average = {
+	icon = "gfx/interface/icons/generic_icons/sol_icon.dds"
+	state_middle_strata_expected_sol_add = 1
+}
+
+mog_upper_strata_expected_sol_from_average = {
+	icon = "gfx/interface/icons/generic_icons/sol_icon.dds"	
+	state_upper_strata_expected_sol_add = 1
+}

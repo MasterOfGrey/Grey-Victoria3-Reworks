@@ -5,7 +5,7 @@
 	unemployment_wealth = 5
 	
 	can_always_hire = yes
-	start_quality_of_life = 5
+	start_quality_of_life = 105 # 5
 	wage_weight = 1
 	paid_private_wage = yes
 	dependent_wage = 0.5	# per year
