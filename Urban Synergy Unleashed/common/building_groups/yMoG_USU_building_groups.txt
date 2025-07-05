@@ -132,7 +132,7 @@ bg_company_headquarter = {
 	
 	company_headquarter = yes
 	
-	urbanization = 5 # 0 (Vanilla now = 5)	# These have a *much* bigger impact on service consumption 
+	urbanization = 2 # 3 # 0 (Vanilla now = 5)	# These have a bigger impact on service consumption # but they seriously blow out the urbanization levels.
 }
 
 ## Construction

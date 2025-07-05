@@ -25,8 +25,8 @@ USU_pm_basic_fire_brigade = {
 		}
 		
 		level_scaled = {
-			building_employment_laborers_add = 150
-			building_employment_clerks_add = 100
+			building_employment_laborers_add = 100 # 150
+			building_employment_clerks_add = 50 # 100
 		}
 	}
 	
@@ -54,9 +54,9 @@ USU_pm_response_planning = {
 		}
 		
 		level_scaled = {
-			building_employment_machinists_add = 100
-			building_employment_clerks_add = 100
-			building_employment_officers_add = 50
+			building_employment_machinists_add = 50 # 100
+			building_employment_clerks_add = 70 # 100
+			building_employment_officers_add = 30 # 50
 		}
 	}
 	
@@ -88,13 +88,13 @@ USU_pm_modern_emergency_services = {
 		}
 		
 		level_scaled = {
-			building_employment_laborers_add = 150
-			building_employment_machinists_add = 150
-			building_employment_clerks_add = 150
-			building_employment_officers_add = 150
+			building_employment_laborers_add = 50 # 150
+			building_employment_machinists_add = 100 # 150
+			building_employment_clerks_add = 100 # 150
+			building_employment_officers_add = 50 # 150
 			building_employment_academics_add = 50
-			building_employment_academics_add = 50
-			building_employment_bureaucrats_add = 50
+			building_employment_engineers_add = 20
+			building_employment_bureaucrats_add = 30
 		}
 	}
 	
@@ -123,8 +123,8 @@ USU_pm_no_police = {
 		}
 		
 		level_scaled = {
-			building_employment_laborers_add = 150
-			building_employment_clerks_add = 100
+			building_employment_laborers_add = 70 # 150
+			building_employment_clerks_add = 30 # 100
 		}
 	}
 }
@@ -144,9 +144,9 @@ USU_pm_local_police = {
 		}
 		
 		level_scaled = {
-			building_employment_aristocrats_add = 50
-			building_employment_soldiers_add = 100
-			building_employment_clerks_add = 100
+			building_employment_aristocrats_add = 10 # 50
+			building_employment_soldiers_add = 60 # 100
+			building_employment_clerks_add = 30 # 100
 		}
 	}
 }
@@ -166,9 +166,9 @@ USU_pm_dedicated_police = {
 		}
 		
 		level_scaled = {
-			building_employment_officers_add = 100
-			building_employment_soldiers_add = 50
-			building_employment_clerks_add = 100
+			building_employment_officers_add = 60 # 100
+			building_employment_soldiers_add = 20 # 50
+			building_employment_clerks_add = 20 # 100
 		}
 	}
 }
@@ -188,9 +188,9 @@ USU_pm_militarized_police = {
 		
 		level_scaled = {
 			building_training_rate_add = 1
-			building_employment_officers_add = 50
-			building_employment_soldiers_add = 150
-			building_employment_clerks_add = 50
+			building_employment_officers_add = 20 # 50
+			building_employment_soldiers_add = 60 # 150
+			building_employment_clerks_add = 20 # 50
 		}
 	}
 }

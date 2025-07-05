@@ -1,0 +1,16 @@
+﻿# Important design considerations to remember:
+#
+# Building Synergies:
+# - "Enabling" goods for other buildings (transport, electricity, merchant marine) must always be able to scale to remain profitable enough to prevent outright shortages from lack of workforce.
+# - If 2 buildings produce the same thing (e.g. Services) as their primary output, ideally, one building should be strictly level capped in relation to the other.
+# - If one cannot be safely level capped one should be strictly at a disadvantage, and also produce some good that no other building produces (i.e. ports with Merchant Marine).
+# - Any workforce_scaled throughput bonuses granted to a building by another building must be unidirectional - no cyclically buffing each other.
+# - Where buildings should buff each other as they grow in level, have 1 buff be level_scaled, and the other be work_force scaled.
+# - Level-scaled buffs should be strictly limited to buildings that are level-limited or at least unable to be built by the player/investment pool.
+# - Level scaled buffs provided by buildings that can/are likely to be not fully employed must *never* buff their competing goods production (i.e. no empty urban centers buffing public greens).
+#
+# Employment Levels:
+# - Mainline Industries = 5k/level
+# - Primary Infrastructure = 1k/level base, up to 1.5k for prestige pms (Gov Admin, Rail, Port, Power)
+# - Secondary Infrastructure = 500/level (public greens, power grids, logistics hubs if they get added)
+# - Owner buildings = 50/level or that gets crazy (consider: unscaled base of 50/100, and only 20/level?)

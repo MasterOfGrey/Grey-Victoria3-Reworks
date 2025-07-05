@@ -22,6 +22,10 @@
 				target = bt:building_power_plant
 				value  > 0
 			}
+			state_has_building_type_levels = {
+				target = bt:usu_building_hydro_power_plant
+				value  > 0
+			}
 			any_neighbouring_state = {
 				owner ?= prev.owner
 				state_has_building_type_levels = {

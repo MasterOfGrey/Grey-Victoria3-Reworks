@@ -145,7 +145,7 @@ pm_financial_district_principle_divine_economics_2 = {
 	}
 }
 
-## Company Headquarters (1 PM, reduced to total 50 people/level employed)
+## Company Headquarters (4  PM's in 1 PMG, reduced to total 50 people/level employed)
 pm_company_headquarter_privately_owned = {
 	texture = "gfx/interface/icons/production_method_icons/privately_owned.dds"
 	
@@ -161,3 +161,69 @@ pm_company_headquarter_privately_owned = {
 		}
 	}
 }
+
+pm_company_headquarter_principle_divine_economics_2 = {
+	texture = "gfx/interface/icons/production_method_icons/privately_owned.dds"
+	is_hidden_when_unavailable = yes
+
+	disallowing_laws = {
+		law_command_economy
+		law_cooperative_ownership
+	}
+
+	unlocking_principles = {
+		principle_divine_economics_2
+		principle_divine_economics_3
+	}
+
+	building_modifiers = {
+		level_scaled = {
+			building_employment_capitalists_add = 10 # 50
+			building_employment_clergymen_add = 10 # 50
+			building_employment_clerks_add = 30 # 150
+		}
+		unscaled = {
+			building_capitalists_shares_add = 10
+			building_clergymen_shares_add = 2
+		}
+	}
+}
+
+pm_company_headquarter_government_run = {
+	texture = "gfx/interface/icons/production_method_icons/government_run.dds"
+
+	unlocking_laws = {
+		law_command_economy
+	}
+
+	building_modifiers = {
+		level_scaled = {
+			building_employment_bureaucrats_add = 20 # 200
+			building_employment_clerks_add = 30 # 300
+		}
+		unscaled = {
+			building_bureaucrats_shares_add = 10
+			building_clerks_shares_add = 2
+		}
+	}
+}
+
+pm_company_headquarter_worker_cooperative = {
+	texture = "gfx/interface/icons/production_method_icons/worker_cooperative.dds"
+
+	unlocking_laws = {
+		law_cooperative_ownership
+	}
+
+	building_modifiers = {
+		level_scaled = {
+			building_employment_shopkeepers_add = 25 # 500
+			building_employment_clerks_add = 25 # 500
+		}
+		unscaled = {
+			building_shopkeepers_shares_add = 10
+			building_clerks_shares_add = 2
+		}
+	}
+}
+

@@ -50,6 +50,10 @@ usu_building_hydro_power_plant = {
 	
 	required_construction = construction_cost_hydro
 	
+	potential = {
+		modifier:state_usu_building_hydro_power_plant_max_level_add > 0
+	}
+	
 	possible = {
 		owner = { 
 			NOT = { has_law = law_type:law_industry_banned } 

@@ -29,7 +29,8 @@ USU_pm_private_firms = {
 	
 	building_modifiers = {
 		workforce_scaled = {
-			goods_input_fertilizer_add = 4
+			goods_input_fertilizer_add = 1
+			goods_input_paper_add = 2
 			goods_output_services_add = 30
 		}
 	
@@ -55,8 +56,8 @@ USU_pm_pub_priv_partners = {
 	
 	building_modifiers = {
 		workforce_scaled = {
-			goods_input_fertilizer_add = 4
-			goods_input_paper_add = 2
+			goods_input_fertilizer_add = 2
+			goods_input_paper_add = 4
 			goods_output_services_add = 54
 		}
 	
@@ -124,6 +125,9 @@ USU_pm_seasonal_fairgrounds = {
 		}
 	}
 	state_modifiers = {	
+		level_scaled = {
+			building_urban_center_throughput_add = 0.02
+		}
 		unscaled = {
 			state_migration_pull_add = 2
 		}

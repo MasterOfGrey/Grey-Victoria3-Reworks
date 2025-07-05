@@ -10,7 +10,7 @@ pm_anchorage = {
 		workforce_scaled = {	
 			goods_input_wood_add = 2
 			goods_input_fabric_add = 1
-			goods_output_usu_logistics_add = 10
+			goods_output_usu_logistics_add = 6
 			goods_output_transportation_add = 2
 		}
 		level_scaled = {
@@ -29,6 +29,7 @@ pm_anchorage = {
 	state_modifiers = {
 		unscaled = {
 			state_market_access_price_impact = 0.02		# Starts at 2%, upgrades to maximum 5% at modern port
+			state_migration_pull_add = 1				# Seaports don't get workforce scaled boosts to migration pull because they provide throughput bonuses to the urban centre's migration pull bonus
 		}
 		level_scaled = {
 			state_infrastructure_add = 5
@@ -43,9 +44,9 @@ pm_basic_port = {
 		workforce_scaled = {	
 			goods_input_clippers_add = 7 # 2			# -300 value
 			goods_input_grain_add = 2
-			goods_output_transportation_add = 14 # 20	# -180 value
+			goods_output_transportation_add = 10 ## 14 # 20	# -180 value
 			goods_output_merchant_marine_add = 10 		# +500 value
-			goods_output_usu_logistics_add = 10 # 30
+			goods_output_usu_logistics_add = 6 # 30
 		}
 		level_scaled = {
 			building_employment_laborers_add = 700 # 3000
@@ -63,6 +64,7 @@ pm_basic_port = {
 	state_modifiers = {
 		unscaled = {
 			state_market_access_price_impact = 0.03
+			state_migration_pull_add = 2
 		}
 		workforce_scaled = {
 			state_infrastructure_add = 10 # 5
@@ -86,9 +88,9 @@ pm_industrial_port = {
 			goods_input_steamers_add = 7 # 2			# -350 value
 			goods_input_coal_add = 4
 			goods_input_groceries_add = 4
-			goods_output_transportation_add = 30 # 50	# -600 value
+			goods_output_transportation_add = 26 ## 30 # 50	# -600 value
 			goods_output_merchant_marine_add = 20 		# +1000 value
-			goods_output_usu_logistics_add = 10 # 70
+			goods_output_usu_logistics_add = 6 # 70
 		}
 		level_scaled = {
 			building_employment_laborers_add = 500 # 2000
@@ -107,6 +109,7 @@ pm_industrial_port = {
 	state_modifiers = {
 		unscaled = {
 			state_market_access_price_impact = 0.04
+			state_migration_pull_add = 2
 		}
 		workforce_scaled = {
 			state_infrastructure_add = 25 # 7.5
@@ -130,9 +133,9 @@ pm_modern_port = {
 			goods_input_steamers_add = 7 # 2			# -350 value
 			goods_input_oil_add = 6
 			goods_input_groceries_add = 8
-			goods_output_transportation_add = 55 # 90	# -1050 value
+			goods_output_transportation_add = 50 ## 55 # 90	# -1050 value
 			goods_output_merchant_marine_add = 30		# +1500 value
-			goods_output_usu_logistics_add = 10 # 120
+			goods_output_usu_logistics_add = 6 # 120
 		}
 		level_scaled = {
 			building_employment_laborers_add = 400 # 1000
@@ -152,6 +155,7 @@ pm_modern_port = {
 	state_modifiers = {
 		unscaled = {
 			state_market_access_price_impact = 0.05
+			state_migration_pull_add = 2
 		}
 		workforce_scaled = {
 			state_infrastructure_add = 40 # 10

@@ -230,6 +230,11 @@ pm_electric_streetlights = {
 			building_employment_engineers_add = 170
 		}
 	}
+	state_modifiers = {
+		workforce_scaled = {
+			ppp_building_power_grid_throughput_add = 0.01
+		}	
+	}
 }
 
 USU_pm_grid_streetlights = {
@@ -253,5 +258,10 @@ USU_pm_grid_streetlights = {
 			building_employment_machinists_add = 200
 			building_employment_engineers_add = 200
 		}
+	}
+	state_modifiers = {
+		workforce_scaled = {
+			ppp_building_power_grid_throughput_add = 0.01
+		}	
 	}
 }
