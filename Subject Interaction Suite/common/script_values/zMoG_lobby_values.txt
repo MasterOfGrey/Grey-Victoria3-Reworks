@@ -6,7 +6,7 @@
 pro_overlord_lobby_starting_appeasement = {
 	value = 0
 	
-	scope:country = {	# scope:lobby_country isn't a real scope - and was originally created *incorrectly* with save_temporary_scope_as = lobby_country in the root scope (which is interest group)
+	ROOT.owner = {	# scope:lobby_country isn't a real scope - and was originally created *incorrectly* with save_temporary_scope_as = lobby_country in the root scope (which is interest group)
 		if = {
 			limit = { 
 				"relations(scope:target_country)" >= relations_threshold:friendly		
@@ -66,7 +66,7 @@ pro_overlord_lobby_starting_appeasement = {
 anti_overlord_lobby_starting_appeasement = {
 	value = 0
 	
-	scope:country = {	# scope:lobby_country isn't a real scope - and was originally created *incorrectly* with save_temporary_scope_as = lobby_country in the root scope (which is interest group)
+	ROOT.owner = {	# scope:lobby_country isn't a real scope - and was originally created *incorrectly* with save_temporary_scope_as = lobby_country in the root scope (which is interest group)
 		if = {
 			limit = { 
 				"relations(scope:target_country)" >= relations_threshold:friendly		
