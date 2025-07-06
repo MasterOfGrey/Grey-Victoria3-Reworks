@@ -40,18 +40,15 @@ PM's for construction sectors have been scaled down to 40% of their original siz
 [h2]Extra Consumption:[/h2]
 Some buildings now consume additional goods. In particular, naval buildings consume additional supplies to represent the specific goods in excess of pop consumption that the government would fund to support the crews while they maintain a fleet at sea. Ports also consume groceries as supplies proportional to the modernness.
 
-[img]https://i.imgur.com/Qp8JBtZ.png[/img]
-This obviously touches a wide range of urban buildings, but it's quite self-contained otherwise.
+[h2]Subsistence Changes:[/h2]
+Subsistence farms now produce small amounts of transport, services, & logistics to smooth out the economic demand shifts. This also contains an experimental boost to pop growth from [i]empty[/i] subsistence farms that helps global population reach its intended target.
 
-[b]This is [u]Compatible[/u] by default with:
-[list][*][u]VTM[/u]
-[*]Pop Demand Tweak(PDT)
-[*]Timber to Steel(TTS)
-[*]and any AI mods (like KAI, etc.)
-[/list][/b]
-[b]This includes compatibility (which could break on updates to these mods) with:
-[list][*][u]Laws +[/u] for subsistence farm PM's.
-[/list][/b]
+[img]https://i.imgur.com/Qp8JBtZ.png[/img]
+This tries to be self-contained and avoid conflicting with things it doesn't explicitly need to.
+However, it's a decent sized mod so compatibility is an issue in lots of cases.
+For full details on compatibility go to the discussion post here: [url=https://steamcommunity.com/workshop/filedetails/discussion/3371689443/575995078023072709/]Full Compatibility Notes[/url]
+#Safe for: #KAI #PDT #TTS
+
 [h2]Use my compatches for:[/h2]
 [list]
 [*]Morgenrote: "[url=https://steamcommunity.com/sharedfiles/filedetails/?id=3371690718]USU & Morgenrote[/url]"
@@ -60,8 +57,6 @@ This obviously touches a wide range of urban buildings, but it's quite self-cont
 [b]Other available compatibility patches:
 [list][*]Industry Realism: "[url=https://steamcommunity.com/sharedfiles/filedetails/?id=3453226616]Industry Realism + USU Patch[/url]" by AgrarianSlop
 [/list][/b]
-
-For full details on compatibility go to the discussion post here: [url=https://steamcommunity.com/workshop/filedetails/discussion/3371689443/575995078023072709/]Full Compatibility Notes[/url]
 [img]https://i.imgur.com/lQRf9dG.png[/img]
 [b]Can you change <insert language> localisation?[/b]
 [i]If you send it to me I will add it.[/i]
