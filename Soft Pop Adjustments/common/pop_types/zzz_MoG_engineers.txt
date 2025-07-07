@@ -1,7 +1,7 @@
 ﻿engineers = {
 	texture = "gfx/interface/icons/pops_icons/engineers.dds"
 	color = hsv{ 0.07 0.57 0.77 }
-	start_quality_of_life = 10
+	start_quality_of_life = 110 # 10
 	wage_weight = 3
 	paid_private_wage = yes
 	literacy_target = 0.80

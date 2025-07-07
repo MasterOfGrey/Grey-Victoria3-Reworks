@@ -1,0 +1,129 @@
+﻿# Expects state scope
+refresh_expected_sol_modifier = {
+	set_local_variable = {
+		name = national_weight
+		value = {
+			value = 0.05
+			add = {
+				value = 0.35
+				multiply = literacy_rate
+			}
+		}
+	}
+	
+	save_temporary_scope_value_as = {
+		name = weighted_average_sol
+		value = {
+			# Mostly state average
+			add = {
+				value = average_sol
+				multiply = {
+					value = 1
+					subtract = local_var:national_weight
+				}
+			}
+			
+			# a little nation average
+			add = {
+				value = owner.average_sol
+				multiply = local_var:national_weight
+			}
+		}
+	}
+	
+	save_temporary_scope_value_as = {
+		name = average_expected_sol_from_literacy
+		value = {
+			value = owner.modifier:state_expected_sol_from_literacy
+			multiply = literacy_rate
+		}
+	}
+	
+	# scale           - How much of average SOL does this strata expect
+	# literacy_factor - How much impact does literacy have. Pulls expectations upwards towards the average
+	refresh_strata_expected_sol_modifier = { strata = lower  scale = 0.5 literacy_factor = 0.8 }
+	refresh_strata_expected_sol_modifier = { strata = middle scale = 1   literacy_factor = 0.4 }
+	refresh_strata_expected_sol_modifier = { strata = upper  scale = 2   literacy_factor = 0   }
+}
+
+refresh_strata_expected_sol_modifier = {
+	if = {
+		limit = { has_modifier = mog_$strata$_strata_expected_sol_from_average }
+		remove_modifier = mog_$strata$_strata_expected_sol_from_average
+	}
+	
+	save_temporary_scope_value_as = {
+		name = base_expectation
+		value = {
+			value = owner.modifier:state_$strata$_strata_expected_sol_add
+			add = scope:average_expected_sol_from_literacy
+		}
+	}
+	
+	save_temporary_scope_value_as = {
+		name = scaled_average_sol
+		value = {
+			value = scope:weighted_average_sol
+			multiply = $scale$
+		}
+	}
+	
+	save_temporary_scope_value_as = {
+		name = expected_sol_from_average
+		value = {
+			if = { # Below base expectation, slope towards base strata expectation, rather than zero
+				limit = {
+					scope:scaled_average_sol < scope:base_expectation
+				}
+				value = owner.modifier:state_$strata$_strata_expected_sol_add
+				add = {
+					value = scope:average_expected_sol_from_literacy
+					multiply = $scale$
+					divide = scope:base_expectation
+					multiply = scope:weighted_average_sol
+				}
+			}
+			else = {
+				value = scope:scaled_average_sol
+				
+				# Scale slope down slightly to keep average expectations below median sol
+				subtract = scope:base_expectation
+				multiply = 0.8
+				add = scope:base_expectation
+			}
+		}
+	}
+	
+	set_local_variable = {
+		name = expectation_modifier
+		value = {
+			value = scope:expected_sol_from_average
+			
+			if = { # Pull expectations upwards towards average sol based on literacy
+				limit = {
+					scope:expected_sol_from_average < scope:weighted_average_sol
+				}
+				multiply = {
+					value = 1
+					subtract = {
+						value = $literacy_factor$
+						multiply = literacy_rate
+					}
+				}
+				add = {
+					value = scope:weighted_average_sol
+					multiply = $literacy_factor$
+					multiply = literacy_rate
+				}
+			}
+			
+			# Don't double count base expectations in the modifier
+			subtract = scope:base_expectation
+		}
+	}
+	
+	add_modifier = {
+		name = mog_$strata$_strata_expected_sol_from_average
+		multiplier = local_var:expectation_modifier
+	}
+}
