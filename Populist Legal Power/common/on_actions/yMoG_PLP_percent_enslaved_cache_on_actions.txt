@@ -1,6 +1,14 @@
 ﻿on_game_started = {
 	on_actions = {
-		culture_enslaved_percent_country_cache_update_action
+		culture_enslaved_percent_country_cache_on_game_started
+	}
+}
+
+culture_enslaved_percent_country_cache_on_game_started = {
+	effect = {
+		every_country = {
+			culture_enslaved_percent_country_cache_update = yes
+		}
 	}
 }
 
@@ -12,6 +20,6 @@ on_monthly_pulse_country = {
 
 culture_enslaved_percent_country_cache_update_action = {
 	effect = {
-		culture_enslaved_percent_country_cache_update
+		culture_enslaved_percent_country_cache_update = yes
 	}
 }

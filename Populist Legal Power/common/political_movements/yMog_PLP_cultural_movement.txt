@@ -669,7 +669,7 @@ movement_minority_rights = {
 				exists = owner
 			}
 			culture = {
-				NOT = { is_primary_culture_of = owner }
+				NOT = { is_primary_culture_of = root.owner }
 			}
 		}
 		OR = {
@@ -704,7 +704,7 @@ movement_minority_rights = {
 
 	pop_support_trigger = {
 		culture = {
-			NOT = { is_primary_culture_of = owner }
+			NOT = { is_primary_culture_of = root.owner }
 		}
 		owner = {
 			cultural_acceptance_base = { target = root.culture value < acceptance_status_5 }
@@ -989,18 +989,6 @@ movement_minority_rights = {
 			add = {
 				value = 0.25
 				desc = "law_national_supremacy"
-			}
-		}
-		else_if = {
-			limit = {
-				owner = {
-					has_technology_researched = nationalism
-					has_law = law_type:law_subjecthood
-				}
-			}
-			add = {
-				value = 0.2
-				desc = "law_subjecthood"
 			}
 		}
 		else_if = {
