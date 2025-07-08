@@ -18,9 +18,9 @@
 	}
 }
 
-pm_no_aeroplanes = {
-	texture = "gfx/interface/icons/production_method_icons/no_aeroplanes.dds"
-}
+#pm_no_aeroplanes = {
+#	texture = "gfx/interface/icons/production_method_icons/no_aeroplanes.dds"
+#}
 
 pm_limited_aeroplanes = {
 	texture = "gfx/interface/icons/production_method_icons/aeroplanes_secondary.dds"
@@ -59,9 +59,9 @@ pm_extensive_aeroplanes = {
 	}
 }
 
-pm_no_tanks = {
-	texture = "gfx/interface/icons/production_method_icons/no_tanks_secondary.dds"
-}
+#pm_no_tanks = {
+#	texture = "gfx/interface/icons/production_method_icons/no_tanks_secondary.dds"
+#}
 
 pm_limited_tanks = {
 	texture = "gfx/interface/icons/production_method_icons/tanks_secondary.dds"
