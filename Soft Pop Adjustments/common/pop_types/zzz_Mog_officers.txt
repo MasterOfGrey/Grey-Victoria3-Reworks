@@ -1,4 +1,4 @@
-﻿officers = {
+officers = {
 	texture = "gfx/interface/icons/pops_icons/officers.dds"
 	color = hsv{ 0.12 0.51 0.36 }
 	military = yes
@@ -84,6 +84,17 @@
 				multiply = {
 					value = 5
 					desc = "QUALIFICATIONS_DEPLOYED_SERVICEMEN"
+				}
+			}
+			else_if = {
+				limit = {
+					state = {
+						has_decree = decree_enlistment_efforts
+					}
+				}
+				multiply = {
+					value = 2
+					desc = "decree_enlistment_efforts"
 				}
 			}
 			if = {
