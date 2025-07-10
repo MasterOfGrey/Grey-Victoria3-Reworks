@@ -4,8 +4,8 @@ NPops = {
 	
 ##### OBSESSIONS #####
 	
-	OBSESSION_DEMAND_MIN = 1.0							# The minimum relative demand of an obsession (overrides min demand in buy package goods categories)
-	OBSESSION_DEMAND_MULT = 2.0							# Demand of an obsession is multiplied by this
+	DEFAULT_OBSESSION_DEMAND_MIN = 0.5					# The minimum relative demand of an obsession (overrides min demand in buy package goods categories), can be overriden in pop need
+	DEFAULT_OBSESSION_DEMAND_MULT = 1.5					# Demand of an obsession is multiplied by this, can be overriden in pop need
 	MIN_POPS_FOR_NEW_OBSESSION = 500000					# At least this many pops of a culture must live in a market to get an obsession from its goods
 	MIN_SUPPLY_LEVEL_FOR_NEW_OBSESSION = 0.3 # 0.75	(vanilla since moved to 0.5)		# Supply needs to be at least this times the demand
 	MIN_DEMAND_VALUE_FOR_NEW_OBSESSION = 500 # 1000	(vanilla since caught up to 500)	# At this amount of (number of units * goods base price) needs to be demanded in a market to create a new obsession

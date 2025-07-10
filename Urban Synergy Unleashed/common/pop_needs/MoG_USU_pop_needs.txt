@@ -1,6 +1,10 @@
 ﻿# If this gets overwritten it's ok, but... it doesn't hurt.
 popneed_leisure = {
 	default = fine_art
+		
+	obsession_demand_min = 0.5
+	obsession_demand_mult = 2.0
+	prestige_goods_demand_increase = 1.0
 	
 	entry = {
 		goods = fine_art

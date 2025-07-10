@@ -97,7 +97,7 @@ NEconomy = {
 	DEFAULT_MIN_HIRING_RATE = 0.01 								# Default weekly min hiring limit applied in a building per profession as a ratio of full employment
 	DEFAULT_MAX_HIRING_RATE = 0.2 # 0.1 						# Default weekly max hiring limit applied in a building per profession as a ratio of full employment
 	
-	BUILDING_PREFER_LAYOFFS_TARGET_WEALTH_MULT = 0.7 # 0.5		# Buildings will prefer laying off pops if any significant pops working in them have this * the target wealth to expected SoL ratio or below
+	BUILDING_PREFER_LAYOFFS_TARGET_WEALTH_MULT = 0.7 # 0.66 # 0.5 (1.9.5)		# Buildings will prefer laying off pops if any significant pops working in them have this * the target wealth to expected SoL ratio or below
 	
 	# Don't hire below this productivity as default behavior unless overridden in building group (not here in defines):
 	BUILDING_DEFAULT_MIN_EARNINGS_TO_HIRE_EMPLOYEES = 3  			# Non-subsidized buildings will not hire if it would result in their annual earnings/employee falling below this threshold (default value, can be overridden for building group)
@@ -161,6 +161,13 @@ NEconomy = {
 }
 
 NAI = {
+	# GDP limiters on where the AI will construct Trade Centers - note that decreasing these can adversely affect performance!
+	TRADE_CENTER_MINIMUM_GDP_MARKET_CAPITAL = 100000			# For market capital states, yearly GDP
+	TRADE_CENTER_MINIMUM_GDP_NON_MARKET_CAPITAL = 500000		# For all other states, yearly GDP
+	TRADE_CENTER_MINIMUM_GDP_NON_COASTAL_MULT = 2.0 			# Multiplies the GDP threshold for non-coastal states (additive)
+	TRADE_CENTER_MINIMUM_GDP_UNRECOGNIZED_MULT = 1 # 2.0 			# Multiplies the GDP threshold for unrecognized countries (additive)
+	TRADE_CENTER_MINIMUM_GDP_PASSED_YEARS_MULT = 0.02 			# Above values are multiplied by 1 + ( number of years since game start * this ) (additive)
+	
 ###### All pre-1.9 trade defines
 #	# The AI never cancels current trade routes of this level or above
 #	TRADE_ROUTE_MAX_LEVEL_TO_CANCEL_SCALING = 0.001 # 0.002 		# Scales with (acting market trade potential * goods quantity per trade route level)

@@ -47,7 +47,7 @@ law_mercantilism = {
 		if = {
 			limit = {
 				has_journal_entry = je_meiji_diplomacy
-				has_law = law_type:law_isolationism
+				has_law_or_variant = law_type:law_isolationism
 			}
 			add = 1000
 		}
@@ -96,7 +96,7 @@ law_protectionism = {
 		if = {
 			limit = { 
 				has_journal_entry = je_meiji_diplomacy
-				has_law = law_type:law_isolationism
+				has_law_or_variant = law_type:law_isolationism
 			}
 			add = 1000
 		}
@@ -147,7 +147,7 @@ law_free_trade = {
 		if = {
 			limit = { 
 				has_journal_entry = je_meiji_diplomacy
-				has_law = law_type:law_isolationism
+				has_law_or_variant = law_type:law_isolationism
 			}
 			add = 1000
 		}
@@ -267,7 +267,7 @@ law_canton_system = {
 		country_authority_mult = 0.25
 		state_tax_capacity_mult = 0.15
 		country_tech_spread_mult = -0.075 # -0.10
-		state_trade_capacity_mult = -0.5
+		state_trade_capacity_mult = -0.25
 		state_tariff_import_add = 0.50
 		state_tariff_export_add = 0.50
 		state_subvention_export_add = 0.20
