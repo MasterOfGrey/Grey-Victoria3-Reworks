@@ -6,7 +6,7 @@
 # This is useful if you want your mod to interact with one of these.
 
 # You can use them by adding a scripted_trigger_file in your mod that you use to enable/disable things.
-# You need to create a file, and the File Name should start with "00_", so that it gets loaded before my actual active trigger files.
+# You need to create a file, and the File Name should start with numbers (e.g. "00_"), so that it gets loaded before my actual active trigger files.
 # Add this to your file (without the "#" obviously, and replacing XXX with the mod you want to reference from below):
 
 #Grey_XXX_is_active = {
@@ -17,31 +17,48 @@
 # If that mod is active then my Trigger will take priority and it will result in a "yes".
 # If my mod is not active your Trigger will be used and the Trigger will return "no".
 
+# Reworks
+Grey_CIR_is_active = { # Clothing Industry Rework
+    always = no
+}
 
 Grey_FIR_is_active = { # Food Industry Rework
-	always = no
+    always = no
 }
 
 Grey_MIR_is_active = { # Military Industry Rework
 	always = no
 }
 
+Grey_PLP_is_active = { # Populist Legal Power
+    always = no
+}
+
+Grey_RPR_is_active = { # Ranch Production Rework
+    always = no
+}
+
+Grey_SEA_is_active = { # Soft Econ Adjustments
+    always = no
+}
+
+Grey_SPA_is_active = { # Soft Pop Adjustments
+    always = no
+}
+
 Grey_SIS_is_active = { # Subject Interaction Suite
-	always = no
+    always = no
 }
 
 Grey_TSC_is_active = { # Tweaked Start Conditions
 	always = no
 }
 
-Grey_SPA_is_active = { # Soft Pop Adjustments
-	always = no
-}
-
-Grey_SEA_is_active = { # Soft Econ Adjustments
-	always = no
-}
-
 Grey_USU_is_active = { # Urban Synergy Unleashed
+	always = no
+}
+
+# Other
+Grey_AHD_is_active = { # Austria-Hungary Divided
 	always = no
 }
