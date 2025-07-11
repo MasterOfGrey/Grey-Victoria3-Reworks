@@ -4,6 +4,6 @@
         value = 0
     }
     every_country = {
-        set_dict_id
+        set_dict_id = yes
     }
 }

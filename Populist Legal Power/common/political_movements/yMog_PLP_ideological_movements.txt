@@ -277,15 +277,9 @@
 					every_in_list = {
 						variable = culture_enslaved_percent_cache
 						limit = {
-							dict_key_for_kvp = {
-								lookup_key = root.owner.var:dict_id
-							}
+							this.kvp_to_key = root.owner.var:dict_id
 						}
-						save_temporary_scope_value_as = {
-							name = kvp
-							value = this
-						}
-						multiply = kvp_to_value
+						multiply = this.kvp_to_value
 					}
 				}
 			}
@@ -636,25 +630,17 @@ movement_pro_slavery = {
 			}
 		}
 
-		if = {
-			multiply = {
-				desc = "CULTURE_ENSLAVED_PERCENT"
-				value = 1
+		multiply = {
+			desc = "CULTURE_ENSLAVED_PERCENT"
+			value = 1
 
-				this.culture = {
-					every_in_list = {
-						variable = culture_enslaved_percent_cache
-						limit = {
-							dict_key_for_kvp = {
-								lookup_key = root.owner.var:dict_id
-							}
-						}
-						save_temporary_scope_value_as = {
-							name = kvp
-							value = this
-						}
-						subtract = kvp_to_value
+			this.culture = {
+				every_in_list = {
+					variable = culture_enslaved_percent_cache
+					limit = {
+						this.kvp_to_key = root.owner.var:dict_id
 					}
+					subtract = this.kvp_to_value
 				}
 			}
 		}

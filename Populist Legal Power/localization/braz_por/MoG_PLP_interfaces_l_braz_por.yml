@@ -1,4 +1,4 @@
-﻿l_english:
+﻿l_braz_por:
  state_political_strength_from_literacy_mult:0 "[concept_political_strength] from [concept_literacy]"
  state_political_strength_from_literacy_mult_desc:0 "An increase or decrease to the amount of [concept_political_strength] of [Concept('concept_pop','$concept_pops$')] from [concept_literacy]"
  
