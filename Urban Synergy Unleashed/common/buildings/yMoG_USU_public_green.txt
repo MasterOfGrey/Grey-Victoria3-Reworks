@@ -13,6 +13,26 @@
 		USU_pmg_public_parklands
 	}
 	
+	can_build_government = {
+		OR = {
+			free_arable_land > 0
+			any_scope_building = {
+				is_building_type = usu_building_public_green
+				level < 3
+			}
+		}
+	}
+	
+	can_build_private = {
+		OR = {
+			free_arable_land > 0
+			any_scope_building = {
+				is_building_type = usu_building_public_green
+				level < 3
+			}
+		}
+	}
+	
 	required_construction = construction_cost_low
 	
 	ownership_type = self

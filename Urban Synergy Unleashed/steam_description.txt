@@ -44,7 +44,7 @@ Some buildings now consume additional goods. In particular, naval buildings cons
 Subsistence farms now produce small amounts of transport, services, & logistics to smooth out the economic demand shifts. This also contains an experimental boost to pop growth from [i]empty[/i] subsistence farms that helps global population reach its intended target.
 
 [img]https://i.imgur.com/Qp8JBtZ.png[/img]
-This tries to be self-contained and avoid conflicting with things it doesn't explicitly need to.
+This tries to be self-contained and avoid conflicting with things it doesn't need to.
 However, it's a decent sized mod so compatibility is an issue in lots of cases.
 For full details on compatibility go to the discussion post here: [url=https://steamcommunity.com/workshop/filedetails/discussion/3371689443/575995078023072709/]Full Compatibility Notes[/url]
 #Safe for: #KAI #PDT #TTS
@@ -70,7 +70,7 @@ A successful and highly industrialised late-game economy should have cheap elect
 [i]You have a mod conflict that I don’t have a patch for. Read the [url=https://steamcommunity.com/workshop/filedetails/discussion/3371689443/575995078023072709/]Full Compatibility Notes[/url][/i]
 
 [img]https://i.imgur.com/UN80Om5.png[/img]
-Many thanks to nahantelhe, Ferrous, ovnxize, Starry Inori, and 1230james for their works which inspired this.
+Many thanks to nahantelhe, Ferrous, ovnxize, Starry Inori, 1230james and Grimhat for their works which inspired this.
 
 Major Thanks to BrokenRobot, without whom my sanity would never have endured long enough for this to be published.
 

@@ -50,7 +50,7 @@ mog_urban_on_action = {
 
 
 ## MONTHLIES
-on_monthly_pulse_state = {
+on_monthly_pulse_country = {
 	on_actions = {
 		mog_trade_centre_type_on_action
 	}
@@ -72,9 +72,11 @@ on_monthly_pulse_state = {
 
 # Set Trade Center as inland or port-side.
 mog_trade_centre_type_on_action = {
-    effect = {
-        usu_manage_trade_centre_type = yes
-    }
+	effect = {
+		every_scope_state = {
+			usu_manage_trade_centre_type = yes
+		}
+	}
 }
 
 # Root = Building

@@ -4,11 +4,11 @@ USU_pm_community_orgs = {
 	
 	building_modifiers = {
 		workforce_scaled = {
-			goods_output_services_add = 16
+			goods_output_services_add = 10 # 16
 		}
 	
 		level_scaled = {
-			building_employment_laborers_add   = 4850
+			building_employment_laborers_add   = 350
 			building_employment_clerks_add   = 150
 		}
 	}
@@ -31,12 +31,12 @@ USU_pm_private_firms = {
 		workforce_scaled = {
 			goods_input_fertilizer_add = 1
 			goods_input_paper_add = 2
-			goods_output_services_add = 30
+			goods_output_services_add = 24 # 30
 		}
 	
 		level_scaled = {
-			building_employment_laborers_add   = 4000
-			building_employment_clerks_add   = 1000
+			building_employment_laborers_add   = 300
+			building_employment_clerks_add   = 200
 		}
 	}
 	state_modifiers = {	
@@ -58,14 +58,14 @@ USU_pm_pub_priv_partners = {
 		workforce_scaled = {
 			goods_input_fertilizer_add = 2
 			goods_input_paper_add = 4
-			goods_output_services_add = 54
+			goods_output_services_add = 38 # 54
 		}
 	
 		level_scaled = {
-			building_employment_laborers_add   = 3000
-			building_employment_clerks_add   = 1000
-			building_employment_shopkeepers_add   = 500
-			building_employment_bureaucrats_add   = 500
+			building_employment_laborers_add   = 300
+			building_employment_clerks_add   = 100
+			building_employment_shopkeepers_add   = 50
+			building_employment_bureaucrats_add   = 50
 		}
 	}
 	state_modifiers = {	
@@ -118,10 +118,7 @@ USU_pm_seasonal_fairgrounds = {
 		workforce_scaled = {
 			goods_input_groceries_add = 2
 			goods_input_fertilizer_add = 1
-			goods_output_services_add = 28
-		}
-		level_scaled = {
-			building_employment_laborers_add   = -1000
+			goods_output_services_add = 21 # 28
 		}
 	}
 	state_modifiers = {	
