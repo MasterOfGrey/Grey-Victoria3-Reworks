@@ -1,4 +1,4 @@
-NEconomy = {
+﻿NEconomy = {
 	# Honestly the Vanilla minimum is a joke
 	MIN_CONSTRUCTION_EFFICIENCY = 0.15 # 0.05					# Construction efficiency cannot go below this amount
 	
@@ -9,6 +9,14 @@ NEconomy = {
 	# AUTO_DOWNSIZE_BUILDING_MIN_EMPTY_LEVELS = 1 # 2					# A building must be missing at least this many levels of employment (in absolute numbers) to start considering auto-downsizing (both this and the below requirement are applied)
 	# AUTO_DOWNSIZE_BUILDING_MIN_EMPTY_FRACTION = 0.2					# A building must be missing at least this many levels of employment (in relative numbers) to start considering auto-downsizing (both this and the above requirement are applied)
 	# AUTO_DOWNSIZE_BUILDING_MONTHS_TO_WAIT = 8 #12					# After a building decides to start auto-downsizing, wait this many months before actually starting to downsize, in case conditions change
+	
+	# Since 1.9 is having building hiring issues:
+	AUTO_DOWNSIZE_BUILDING_MONTHS_TO_WAIT = 3 # 6
+	
+	BUILDING_CASH_RESERVES_MIN_DEPOSIT_PERCENT = 0.25	# The minimum percentage of weekly profits that building owners will try to deposit into a building's cash reserves. Must be >= 0.
+	BUILDING_CASH_RESERVES_MAX_DEPOSIT_PERCENT = 0.90 # 0.50	# The maximum percentage of weekly profits that building owners will try to deposit into a building's cash reserves. Must be >= BUILDING_CASH_RESERVES_MIN_DEPOSIT_PERCENT
+	OWNERSHIP_BUILDING_CASH_RESERVES_MIN_DEPOSIT_PERCENT = 0.125 # Replaces BUILDING_CASH_RESERVES_MIN_DEPOSIT_PERCENT for buildings that own other buildings
+	OWNERSHIP_BUILDING_CASH_RESERVES_MAX_DEPOSIT_PERCENT = 0.45 # 0.25	# Replaces BUILDING_CASH_RESERVES_MAX_DEPOSIT_PERCENT for buildings that own other buildings
 	
 	## General market tweaks
 	MIN_GOODS_PRICE	= 1							# A good cannot have a lower base price than this (changing this does nothing unless PRICE_RANGE > 0.95)

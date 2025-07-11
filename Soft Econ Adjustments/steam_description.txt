@@ -28,7 +28,8 @@ Additionally, the min/max price of goods is now 90% from base price, instead of 
 Other minor tweaks include:
 [list]
 [*]Higher minimum construction efficiency
-[*]Faster building downsizing & adjust hiring practices
+[*]Adjusted hiring practices
+[*]Nerf reinvestment efficiency GDP scaling for small countries
 [*]Peasants demand more from the market
 [/list]
 
