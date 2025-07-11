@@ -19,11 +19,11 @@
 
 # Reworks
 Grey_CIR_is_active = { # Clothing Industry Rework
-    always = no
+	always = no
 }
 
 Grey_FIR_is_active = { # Food Industry Rework
-    always = no
+	always = no
 }
 
 Grey_MIR_is_active = { # Military Industry Rework
@@ -31,23 +31,23 @@ Grey_MIR_is_active = { # Military Industry Rework
 }
 
 Grey_PLP_is_active = { # Populist Legal Power
-    always = no
+	always = no
 }
 
 Grey_RPR_is_active = { # Ranch Production Rework
-    always = no
+	always = no
 }
 
 Grey_SEA_is_active = { # Soft Econ Adjustments
-    always = no
+	always = no
 }
 
 Grey_SPA_is_active = { # Soft Pop Adjustments
-    always = no
+	always = no
 }
 
 Grey_SIS_is_active = { # Subject Interaction Suite
-    always = no
+	always = no
 }
 
 Grey_TSC_is_active = { # Tweaked Start Conditions
