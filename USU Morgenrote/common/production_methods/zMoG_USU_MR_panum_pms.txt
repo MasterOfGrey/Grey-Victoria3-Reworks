@@ -1,0 +1,86 @@
+﻿############################
+# PANUM PRODUCTION METHODS #
+############################
+
+#Clinic&Hospital
+
+pm_panum_no_clinic = {
+	texture = "gfx/interface/icons/production_method_icons/panum_no_clinic_pm.dds"
+
+	unlocking_production_methods = {
+		pm_panum_no_clinic
+	}
+}
+
+pm_panum_clinic = {
+	texture = "gfx/interface/icons/production_method_icons/panum_clinic_pm.dds"
+
+	disallowing_laws = {
+		law_no_health_system
+	}
+
+	unlocking_production_methods = {
+		pm_panum_clinic
+	}
+
+	building_modifiers = {
+		level_scaled = {
+			building_employment_academics_add = 125 # 500
+		}
+	}
+
+	state_modifiers = {
+		unscaled = { 
+			state_standard_of_living_add = 0.25
+			state_mortality_mult = -0.01
+			state_harvest_condition_panum_cholera_condition_impact_mult = -0.1
+			state_harvest_condition_panum_tuberculosis_condition_impact_mult = -0.1
+			state_harvest_condition_panum_smallpox_condition_impact_mult = -0.1
+			state_harvest_condition_panum_typhus_condition_impact_mult = -0.1
+			state_harvest_condition_panum_yellow_fever_condition_impact_mult = -0.1
+			state_harvest_condition_panum_measles_condition_impact_mult = -0.1
+			state_harvest_condition_panum_scarlet_condition_impact_mult = -0.1
+			state_harvest_condition_panum_plague_condition_impact_mult = -0.1
+			state_harvest_condition_panum_diphteria_condition_impact_mult = -0.1
+			state_harvest_condition_panum_polio_condition_impact_mult = -0.1
+		}
+	}
+
+}
+
+pm_panum_hospital = {
+	texture = "gfx/interface/icons/production_method_icons/panum_hospital_pm.dds"
+
+	disallowing_laws = {
+		law_no_health_system
+	}
+
+	unlocking_production_methods = {
+		pm_panum_hospital
+	}
+
+	building_modifiers = {
+		level_scaled = {
+			building_employment_academics_add = 250 # 1000
+		}
+	}
+
+	state_modifiers = {
+		unscaled = { 
+			state_standard_of_living_add = 0.5
+			state_mortality_mult = -0.02
+			state_birth_rate_mult = 0.01
+			state_harvest_condition_panum_cholera_condition_impact_mult = -0.15
+			state_harvest_condition_panum_tuberculosis_condition_impact_mult = -0.15
+			state_harvest_condition_panum_smallpox_condition_impact_mult = -0.15
+			state_harvest_condition_panum_typhus_condition_impact_mult = -0.15
+			state_harvest_condition_panum_yellow_fever_condition_impact_mult = -0.15
+			state_harvest_condition_panum_measles_condition_impact_mult = -0.15
+			state_harvest_condition_panum_scarlet_condition_impact_mult = -0.15
+			state_harvest_condition_panum_plague_condition_impact_mult = -0.15
+			state_harvest_condition_panum_diphteria_condition_impact_mult = -0.15
+			state_harvest_condition_panum_polio_condition_impact_mult = -0.15
+		}
+	}
+
+}
