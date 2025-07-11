@@ -9,6 +9,9 @@ pm_trade_center = {
 			building_employment_clerks_add = 160 # 800
 			building_employment_shopkeepers_add = 40 # 200
 		}
+		unscaled = {
+			building_employment_shopkeepers_add = 60 # Minimum 100 shopkeepers so hiring doesn't get stuck
+		}
 	}
 	state_modifiers = {
 		workforce_scaled = {
@@ -40,6 +43,9 @@ pm_trade_center_principle_external_trade_2 = {
 		level_scaled = {
 			building_employment_clerks_add = 160 # 800
 			building_employment_shopkeepers_add = 40 # 200
+		}
+		unscaled = {
+			building_employment_shopkeepers_add = 60 # Minimum 100 shopkeepers so hiring doesn't get stuck
 		}
 	}
 	state_modifiers = {
