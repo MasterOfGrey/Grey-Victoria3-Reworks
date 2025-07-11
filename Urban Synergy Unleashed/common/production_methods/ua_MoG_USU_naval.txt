@@ -3,6 +3,11 @@
 pm_no_naval_theory = {
 	texture = "gfx/interface/icons/production_method_icons/no_naval_theory.dds"
 	ai_value = 0
+
+	profession_ratio = {
+		soldiers = 90
+		officers = 10
+	}
 	building_modifiers = {
 		workforce_scaled = {	
 			goods_input_usu_logistics_add = 2
@@ -11,8 +16,6 @@ pm_no_naval_theory = {
 			goods_input_luxury_clothes_add = 0.1
 		}
 		level_scaled = {
-			building_employment_soldiers_add = 900
-			building_employment_officers_add = 100
 			building_training_rate_add = 4
 		}
 		
@@ -24,6 +27,12 @@ pm_no_naval_theory = {
 
 pm_power_of_the_purse = {
 	texture = "gfx/interface/icons/production_method_icons/power_of_the_purse.dds"
+
+	profession_ratio = {
+		soldiers = 875
+		officers = 125
+	}
+
 	unlocking_technologies = {
 		power_of_the_purse
 	}
@@ -36,8 +45,6 @@ pm_power_of_the_purse = {
 			goods_input_luxury_clothes_add = 0.15
 		}
 		level_scaled = {
-			building_employment_soldiers_add = 875
-			building_employment_officers_add = 125
 			building_training_rate_add = 5.5
 		}
 		
@@ -51,6 +58,12 @@ pm_power_of_the_purse = {
 
 pm_jeune_ecole = {
 	texture = "gfx/interface/icons/production_method_icons/jeune_ecole.dds"
+
+	profession_ratio = {
+		soldiers = 85
+		officers = 15
+	}
+
 	unlocking_technologies = {
 		jeune_ecole
 	}
@@ -63,8 +76,6 @@ pm_jeune_ecole = {
 			goods_input_luxury_clothes_add = 0.2
 		}
 		level_scaled = {
-			building_employment_soldiers_add = 850
-			building_employment_officers_add = 150
 			building_training_rate_add = 6
 		}
 		
@@ -78,6 +89,12 @@ pm_jeune_ecole = {
 
 pm_sea_lane_strategies = {
 	texture = "gfx/interface/icons/production_method_icons/mahanian_thought.dds"
+
+	profession_ratio = {
+		soldiers = 825
+		officers = 175
+	}
+
 	unlocking_technologies = {
 		sea_lane_strategies
 	}
@@ -90,8 +107,6 @@ pm_sea_lane_strategies = {
 			goods_input_luxury_clothes_add = 0.25
 		}
 		level_scaled = {
-			building_employment_soldiers_add = 825
-			building_employment_officers_add = 175
 			building_training_rate_add = 6.5
 		}
 		
@@ -105,6 +120,12 @@ pm_sea_lane_strategies = {
 
 pm_battlefleet_tactics = {
 	texture = "gfx/interface/icons/production_method_icons/battlefleet_tactics.dds"
+
+	profession_ratio = {
+		soldiers = 80
+		officers = 20
+	}
+
 	unlocking_technologies = {
 		battlefleet_tactics
 	}
@@ -117,8 +138,6 @@ pm_battlefleet_tactics = {
 			goods_input_luxury_clothes_add = 0.3
 		}
 		level_scaled = {
-			building_employment_soldiers_add = 800
-			building_employment_officers_add = 200
 			building_training_rate_add = 7
 		}
 		

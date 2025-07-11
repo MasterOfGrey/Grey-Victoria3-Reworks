@@ -15,7 +15,7 @@
 		PPP_pmg_HV_generation
 	}
 	
-	required_construction = construction_cost_very_high
+	required_construction = construction_cost_medium
 	
 	possible = {
 		owner = {
