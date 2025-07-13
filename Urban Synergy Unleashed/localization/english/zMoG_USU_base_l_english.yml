@@ -8,6 +8,7 @@
     
     # Building
     USU_bg_port_infrastructure: "Ports"
+    USU_bg_river_port_infrastructure: "Ports"
     USU_bg_public_greens: "Public Green Spaces"
     
     building_river_port: "River Docks"

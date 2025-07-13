@@ -50,6 +50,20 @@ merchant_marine = {
 	convoy_cost_multiplier = 0.05
 }
 
+##############
+# INDUSTRIAL #
+
+clippers = {
+	texture = "gfx/interface/icons/goods_icons/clippers.dds"
+	cost = 60
+	category = industrial
+
+	obsession_chance = 0.5
+	prestige_factor = 4
+	traded_quantity = 7 # 420 ## 3.5 # 210 # Make importing clippers "cheap" to avoid countries crashing out.
+	convoy_cost_multiplier = 0.05 # 0.25 # Importing sail boats is easy.
+}
+
 ###################
 #    LOGISTICS    #
 
@@ -61,5 +75,5 @@ usu_logistics = {
 	prestige_factor = 1
 	
 	traded_quantity = 30
-	convoy_cost_multiplier = 0
+	convoy_cost_multiplier = 3 # 0 # Discourage trading via sea.
 }

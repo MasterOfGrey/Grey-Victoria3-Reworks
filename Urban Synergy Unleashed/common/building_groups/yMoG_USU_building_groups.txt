@@ -39,7 +39,13 @@ USU_bg_port_infrastructure = {
 	
 	subsidized = no
 	
-	urbanization = 50 # 5
+	urbanization = 15 # 50 # 5		# Now ports are unlimited, 50 is way too high
+}
+
+USU_bg_river_port_infrastructure = {
+	parent_group = USU_bg_port_infrastructure
+	
+	urbanization = 50				# River ports are a big deal for spawning an urban centre though
 }
 
 ## Canals													# Change these over to private infrastructure of some sort!!!

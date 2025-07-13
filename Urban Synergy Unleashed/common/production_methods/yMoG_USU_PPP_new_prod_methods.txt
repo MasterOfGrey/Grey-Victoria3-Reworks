@@ -36,9 +36,9 @@ PPP_pm_steam_engine = {
 		}
 		
 		level_scaled = {
-			building_employment_laborers_add   = 1000 # T:2500, V:2000
-			building_employment_machinists_add = 300 # T:1300, V:1500
-			building_employment_engineers_add  = 200 # T:1200, V:1400
+			# building_employment_laborers_add   = 1000 # T:2500, V:2000
+			building_employment_machinists_add = 400 # 300 # T:1300, V:1500
+			building_employment_engineers_add  = 100 # 200 # T:1200, V:1400
 		}
 	}
 }
@@ -62,9 +62,9 @@ PPP_pm_steam_turbine = {
 		}
 		
 		level_scaled = {
-			building_employment_laborers_add   = 500 # T:2000, V:2000
-			building_employment_machinists_add = 500 # T:1500, V:1500
-			building_employment_engineers_add  = 300 # T:1300, V:1400
+			# building_employment_laborers_add   = 500 # T:2000, V:2000
+			building_employment_machinists_add = 350 # 500 # T:1500, V:1500
+			building_employment_engineers_add  = 150 # 300 # T:1300, V:1400
 		}
 	}
 }
@@ -87,64 +87,64 @@ PPP_pm_gas_turbine = {
 		}
 		
 		level_scaled = {
-			building_employment_laborers_add   = 200 # T:1200, V:2000
-			building_employment_machinists_add = 800 # T:1800, V:1500
-			building_employment_engineers_add  = 500 # T:1500, V:1400
+			# building_employment_laborers_add   = 200 # T:1200, V:2000
+			building_employment_machinists_add = 300 # 800 # T:1800, V:1500
+			building_employment_engineers_add  = 200 # 500 # T:1500, V:1400
 		}
 	}
 }
 
 ## HV generation
 # Hydro-based
-PPP_pm_hy_local_power = {
-	texture = "gfx/interface/icons/production_method_icons/PPP_local_power.dds"
-	is_hidden_when_unavailable = yes
-	replacement_if_valid = PPP_pm_hy_hybrid_power
-	
-	unlocking_production_methods = {
-		PPP_pm_hydro_mechanical			# Base 50 electricity
-	}
-}
-
-PPP_pm_hy_hybrid_power = {
-	texture = "gfx/interface/icons/production_method_icons/PPP_hybrid_power.dds"
-	is_hidden_when_unavailable = yes
-	
-	unlocking_production_methods = {
-		PPP_pm_hydro_mechanical
-	}
-	
-	unlocking_technologies = {
-		PPP_tech_hv_power
-	}
-	
-	building_modifiers = {
-		workforce_scaled = {
-			goods_output_electricity_add = -20
-			goods_output_ppp_hv_power_add = 8
-		}
-	}
-}
-
-PPP_pm_hy_grid_power = {
-	texture = "gfx/interface/icons/production_method_icons/PPP_grid_power.dds"
-	is_hidden_when_unavailable = yes
-	
-	unlocking_production_methods = {
-		PPP_pm_hydro_mechanical
-	}
-	
-	unlocking_technologies = {
-		PPP_tech_hv_power
-	}
-	
-	building_modifiers = {
-		workforce_scaled = {
-			goods_output_electricity_add = -50
-			goods_output_ppp_hv_power_add = 20
-		}
-	}
-}
+#PPP_pm_hy_local_power = {
+#	texture = "gfx/interface/icons/production_method_icons/PPP_local_power.dds"
+#	is_hidden_when_unavailable = yes
+#	replacement_if_valid = PPP_pm_hy_hybrid_power
+#	
+#	unlocking_production_methods = {
+#		PPP_pm_hydro_mechanical			# Base 50 electricity
+#	}
+#}
+#
+#PPP_pm_hy_hybrid_power = {
+#	texture = "gfx/interface/icons/production_method_icons/PPP_hybrid_power.dds"
+#	is_hidden_when_unavailable = yes
+#	
+#	unlocking_production_methods = {
+#		PPP_pm_hydro_mechanical
+#	}
+#	
+#	unlocking_technologies = {
+#		PPP_tech_hv_power
+#	}
+#	
+#	building_modifiers = {
+#		workforce_scaled = {
+#			goods_output_electricity_add = -20
+#			goods_output_ppp_hv_power_add = 8
+#		}
+#	}
+#}
+#
+#PPP_pm_hy_grid_power = {
+#	texture = "gfx/interface/icons/production_method_icons/PPP_grid_power.dds"
+#	is_hidden_when_unavailable = yes
+#	
+#	unlocking_production_methods = {
+#		PPP_pm_hydro_mechanical
+#	}
+#	
+#	unlocking_technologies = {
+#		PPP_tech_hv_power
+#	}
+#	
+#	building_modifiers = {
+#		workforce_scaled = {
+#			goods_output_electricity_add = -50
+#			goods_output_ppp_hv_power_add = 20
+#		}
+#	}
+#}
 
 # Steam Engine-based
 PPP_pm_se_local_power = {

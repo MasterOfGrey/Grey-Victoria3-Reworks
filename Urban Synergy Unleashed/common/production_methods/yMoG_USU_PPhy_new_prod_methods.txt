@@ -17,9 +17,9 @@ hp_pm_hydro_plant_1 = {
 		}
 		
 		level_scaled = {
-			building_employment_laborers_add = 500
-			building_employment_machinists_add = 1400
-			building_employment_engineers_add = 1100
+			building_employment_laborers_add = 90 # 500
+			building_employment_machinists_add = 230 # 1400
+			building_employment_engineers_add = 180 # 1100
 		}
 	}
 }
@@ -45,9 +45,9 @@ hp_pm_hydro_plant_2 = {
 		}
 		
 		level_scaled = {
-			building_employment_laborers_add = 300
-			building_employment_machinists_add = 1200
-			building_employment_engineers_add = 1000
+			building_employment_laborers_add = 70 # 300
+			building_employment_machinists_add = 270 # 1200
+			building_employment_engineers_add = 160 # 1000
 		}
 	}
 }
@@ -73,9 +73,9 @@ hp_pm_hydro_plant_3 = {
 		}
 		
 		level_scaled = {
-			building_employment_laborers_add = 100
-			building_employment_machinists_add = 1000
-			building_employment_engineers_add = 900
+			building_employment_laborers_add = 50 # 100
+			building_employment_machinists_add = 310 # 1000
+			building_employment_engineers_add = 140 # 900
 		}
 	}
 }
@@ -92,7 +92,7 @@ hp_pm_turbine_1 = {
 	building_modifiers = {
 		workforce_scaled = {
 			goods_input_tools_add = 5
-			goods_output_electricity_add = 50
+			goods_output_electricity_add = 60 # 50
 			ppp_building_power_grid_throughput_add = 0.005
 		}
 		
@@ -124,7 +124,7 @@ hp_pm_turbine_2 = {
 		workforce_scaled = {
 			goods_input_tools_add = 10
 			goods_input_steel_add = 10
-			goods_output_electricity_add = 85
+			goods_output_electricity_add = 100 # 85
 			ppp_building_power_grid_throughput_add = 0.01
 		}
 
@@ -201,8 +201,8 @@ PPP_pm_t1_hybrid_power = {
 	
 	building_modifiers = {
 		workforce_scaled = {
-			goods_output_electricity_add = -20
-			goods_output_ppp_hv_power_add = 8
+			goods_output_electricity_add = -24 # -20
+			goods_output_ppp_hv_power_add = 10 #(round from 9.6) # 8
 		}
 	}
 }
@@ -221,8 +221,8 @@ PPP_pm_t1_grid_power = {
 	
 	building_modifiers = {
 		workforce_scaled = {
-			goods_output_electricity_add = -50
-			goods_output_ppp_hv_power_add = 20
+			goods_output_electricity_add = -60 # -50
+			goods_output_ppp_hv_power_add = 24 # 20
 		}
 	}
 }
@@ -252,8 +252,8 @@ PPP_pm_t2_hybrid_power = {
 	
 	building_modifiers = {
 		workforce_scaled = {
-			goods_output_electricity_add = -35
-			goods_output_ppp_hv_power_add = 14
+			goods_output_electricity_add = -42 #(round from 41.4) # -35
+			goods_output_ppp_hv_power_add = 17 #(round from 16.4) # 14
 		}
 	}
 }
@@ -272,8 +272,8 @@ PPP_pm_t2_grid_power = {
 	
 	building_modifiers = {
 		workforce_scaled = {
-			goods_output_electricity_add = -85
-			goods_output_ppp_hv_power_add = 34
+			goods_output_electricity_add = -100 # -85
+			goods_output_ppp_hv_power_add = 40 # 34
 		}
 	}
 }

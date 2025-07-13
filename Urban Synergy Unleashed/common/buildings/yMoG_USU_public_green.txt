@@ -15,20 +15,34 @@
 	
 	can_build_government = {
 		OR = {
-			free_arable_land > 0
-			any_scope_building = {
-				is_building_type = usu_building_public_green
-				level < 3
+			free_arable_land > {
+				value = 0
+				b:usu_building_public_green ?= {
+					add = level_after_queued_constructions
+					subtract = level
+				}
+			}
+			NOT = {
+				b:usu_building_public_green ?= {
+					level_after_queued_constructions >= 3
+				}
 			}
 		}
 	}
 	
 	can_build_private = {
 		OR = {
-			free_arable_land > 0
-			any_scope_building = {
-				is_building_type = usu_building_public_green
-				level < 3
+			free_arable_land > {
+				value = 0
+				b:usu_building_public_green ?= {
+					add = level_after_queued_constructions
+					subtract = level
+				}
+			}
+			NOT = {
+				b:usu_building_public_green ?= {
+					level_after_queued_constructions >= 3
+				}
 			}
 		}
 	}
