@@ -1,20 +1,20 @@
 ﻿l_turkish:
-     # PMGs 
- pmg_tourism_airport: "İthalat ve Turizm" #NT!
- pmg_mendelejew_automation_oil: "Otomasyon" #NT!
- pmg_mendelejew_automation_rubber: "Otomasyon" #NT!
-  
-     # PMs 
- pm_luxury_requisitions: "Lüks Talepler" #NT!
- pm_travel_agencies: "Seyahat Acenteleri" #NT!
-  
- pm_mendelejew_automation_disabled: "Manuel İşlemler" #NT!
- pm_pneumatic_transfer_system: "Pnömatik Transfer Sistemleri" #NT!
- pm_continuous_process_systems_hydrogenation: "Sürekli Hidrojenasyon" #NT!
- pm_continuous_process_systems_polymerisation: "Sürekli Polimerizasyon" #NT!
-  
-     # Modifier Types 
- building_mendelejew_hydrogenation_plants_throughput_add: "$building_mendelejew_hydrogenation_plants$ bina [concept_throughput]" #NT!
- building_mendelejew_hydrogenation_plants_throughput_add_desc: "$building_mendelejew_hydrogenation_plants$'ın hem girişine hem de çıkışına bir bonus veya ceza" #NT!
- building_mendelejew_synthetic_rubber_factory_throughput_add: "$building_mendelejew_synthetic_rubber_factory$ bina [concept_throughput]" #NT!
- building_mendelejew_synthetic_rubber_factory_throughput_add_desc: "$building_mendelejew_synthetic_rubber_factory$'ın hem girişine hem de çıkışına bir bonus veya ceza" #NT!
+ # PMGs
+ pmg_tourism_airport: "İthalat ve Turizm"
+ pmg_mendelejew_automation_oil: "Otomasyon"
+ pmg_mendelejew_automation_rubber: "Otomasyon"
+ 
+ # PMs
+ pm_luxury_requisitions: "Lüks Talepler"
+ pm_travel_agencies: "Seyahat Acenteleri"
+ 
+ pm_mendelejew_automation_disabled: "Manuel İşlemler"
+ pm_pneumatic_transfer_system: "Pnömatik Transfer Sistemleri"
+ pm_continuous_process_systems_hydrogenation: "Sürekli Hidrojenasyon"
+ pm_continuous_process_systems_polymerisation: "Sürekli Polimerizasyon"
+ 
+ # Modifier Types
+ building_mendelejew_hydrogenation_plants_throughput_add: "$building_mendelejew_hydrogenation_plants$ bina [concept_throughput]"
+ building_mendelejew_hydrogenation_plants_throughput_add_desc: "$building_mendelejew_hydrogenation_plants$'ın hem girişine hem de çıkışına bir bonus veya ceza"
+ building_mendelejew_synthetic_rubber_factory_throughput_add: "$building_mendelejew_synthetic_rubber_factory$ bina [concept_throughput]"
+ building_mendelejew_synthetic_rubber_factory_throughput_add_desc: "$building_mendelejew_synthetic_rubber_factory$'ın hem girişine hem de çıkışına bir bonus veya ceza"

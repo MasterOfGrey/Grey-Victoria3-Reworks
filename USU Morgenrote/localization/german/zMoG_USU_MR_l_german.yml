@@ -1,20 +1,20 @@
 ﻿l_german:
-     # PMGs 
- pmg_tourism_airport: "Import & Tourismus" #NT!
- pmg_mendelejew_automation_oil: "Automatisierung" #NT!
- pmg_mendelejew_automation_rubber: "Automatisierung" #NT!
-  
-     # PMs 
- pm_luxury_requisitions: "Luxus-Anforderungen" #NT!
- pm_travel_agencies: "Reisebüros" #NT!
-  
- pm_mendelejew_automation_disabled: "Manuelle Vorgänge" #NT!
- pm_pneumatic_transfer_system: "Pneumatische Transfersysteme" #NT!
- pm_continuous_process_systems_hydrogenation: "Kontinuierliche Hydrierung" #NT!
- pm_continuous_process_systems_polymerisation: "Kontinuierliche Polymerisation" #NT!
-  
-     # Modifier Types 
- building_mendelejew_hydrogenation_plants_throughput_add: "$building_mendelejew_hydrogenation_plants$ Gebäude [concept_throughput]" #NT!
- building_mendelejew_hydrogenation_plants_throughput_add_desc: "Ein Bonus oder Malus auf Input und Output von $building_mendelejew_hydrogenation_plants$" #NT!
- building_mendelejew_synthetic_rubber_factory_throughput_add: "$building_mendelejew_synthetic_rubber_factory$ Gebäude [concept_throughput]" #NT!
- building_mendelejew_synthetic_rubber_factory_throughput_add_desc: "Ein Bonus oder Malus auf Input und Output von $building_mendelejew_synthetic_rubber_factory$" #NT!
+ # PMGs
+ pmg_tourism_airport: "Import & Tourismus"
+ pmg_mendelejew_automation_oil: "Automatisierung"
+ pmg_mendelejew_automation_rubber: "Automatisierung"
+ 
+ # PMs
+ pm_luxury_requisitions: "Luxus-Anforderungen"
+ pm_travel_agencies: "Reisebüros"
+ 
+ pm_mendelejew_automation_disabled: "Manuelle Vorgänge"
+ pm_pneumatic_transfer_system: "Pneumatische Transfersysteme"
+ pm_continuous_process_systems_hydrogenation: "Kontinuierliche Hydrierung"
+ pm_continuous_process_systems_polymerisation: "Kontinuierliche Polymerisation"
+ 
+ # Modifier Types
+ building_mendelejew_hydrogenation_plants_throughput_add: "$building_mendelejew_hydrogenation_plants$ Gebäude [concept_throughput]"
+ building_mendelejew_hydrogenation_plants_throughput_add_desc: "Ein Bonus oder Malus auf Input und Output von $building_mendelejew_hydrogenation_plants$"
+ building_mendelejew_synthetic_rubber_factory_throughput_add: "$building_mendelejew_synthetic_rubber_factory$ Gebäude [concept_throughput]"
+ building_mendelejew_synthetic_rubber_factory_throughput_add_desc: "Ein Bonus oder Malus auf Input und Output von $building_mendelejew_synthetic_rubber_factory$"

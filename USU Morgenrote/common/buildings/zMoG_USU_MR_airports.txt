@@ -25,8 +25,10 @@ building_airport = {
 							state.b:building_urban_center ?= {
 								add = level
 							}
-							divide = 10						# 1 additional level per urban centre
+							divide = 10						# 1 additional level per 10 urban centres
 							floor = yes						# Otherwise this rounds UP for all decimals
+							# Whatever curtiss flight route variable you would like:
+							# add = var:curtiss_local_aviation_enthusiasm
 						}
 					}
 				}
@@ -45,8 +47,10 @@ building_airport = {
 							state.b:building_urban_center ?= {
 								add = level
 							}
-							divide = 10						# 1 additional level per urban centre
+							divide = 10						# 1 additional level per 10 urban centres
 							floor = yes						# Otherwise this rounds UP for all decimals
+							# Whatever curtiss flight route variable you would like:
+							# add = var:curtiss_local_aviation_enthusiasm
 						}
 					}
 				}

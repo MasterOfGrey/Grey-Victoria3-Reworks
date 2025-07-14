@@ -1,20 +1,20 @@
 ﻿l_korean:
-     # PMGs 
- pmg_tourism_airport: "수입 및 관광" #NT!
- pmg_mendelejew_automation_oil: "오토메이션" #NT!
- pmg_mendelejew_automation_rubber: "오토메이션" #NT!
-  
-     # PMs 
- pm_luxury_requisitions: "사치품 징수" #NT!
- pm_travel_agencies: "여행사" #NT!
-  
- pm_mendelejew_automation_disabled: "수동 작업" #NT!
- pm_pneumatic_transfer_system: "공압 전달 시스템" #NT!
- pm_continuous_process_systems_hydrogenation: "연속 수소화" #NT!
- pm_continuous_process_systems_polymerisation: "연속 중합" #NT!
-  
-     # Modifier Types 
- building_mendelejew_hydrogenation_plants_throughput_add: "$building_mendelejew_hydrogenation_plants$ 건물 [concept_throughput]" #NT!
- building_mendelejew_hydrogenation_plants_throughput_add_desc: "$building_mendelejew_hydrogenation_plants$의 입력과 출력 모두에 대한 보너스 또는 페널티" #NT!
- building_mendelejew_synthetic_rubber_factory_throughput_add: "$building_mendelejew_synthetic_rubber_factory$ 건물 [concept_throughput]" #NT!
- building_mendelejew_synthetic_rubber_factory_throughput_add_desc: "$building_mendelejew_synthetic_rubber_factory$의 입력과 출력 모두에 대한 보너스 또는 페널티" #NT!
+ # PMGs
+ pmg_tourism_airport: "수입 및 관광"
+ pmg_mendelejew_automation_oil: "오토메이션"
+ pmg_mendelejew_automation_rubber: "오토메이션"
+ 
+ # PMs
+ pm_luxury_requisitions: "사치품 징수"
+ pm_travel_agencies: "여행사"
+ 
+ pm_mendelejew_automation_disabled: "수동 작업"
+ pm_pneumatic_transfer_system: "공압 전달 시스템"
+ pm_continuous_process_systems_hydrogenation: "연속 수소화"
+ pm_continuous_process_systems_polymerisation: "연속 중합"
+ 
+ # Modifier Types
+ building_mendelejew_hydrogenation_plants_throughput_add: "$building_mendelejew_hydrogenation_plants$ 건물 [concept_throughput]"
+ building_mendelejew_hydrogenation_plants_throughput_add_desc: "$building_mendelejew_hydrogenation_plants$의 입력과 출력 모두에 대한 보너스 또는 페널티"
+ building_mendelejew_synthetic_rubber_factory_throughput_add: "$building_mendelejew_synthetic_rubber_factory$ 건물 [concept_throughput]"
+ building_mendelejew_synthetic_rubber_factory_throughput_add_desc: "$building_mendelejew_synthetic_rubber_factory$의 입력과 출력 모두에 대한 보너스 또는 페널티"

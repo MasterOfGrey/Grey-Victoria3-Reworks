@@ -1,20 +1,20 @@
 ﻿l_japanese:
-     # PMGs 
- pmg_tourism_airport: "輸入と観光" #NT!
- pmg_mendelejew_automation_oil: "オートメーション" #NT!
- pmg_mendelejew_automation_rubber: "オートメーション" #NT!
-  
-     # PMs 
- pm_luxury_requisitions: "贅沢品の要求" #NT!
- pm_travel_agencies: "旅行代理店" #NT!
-  
- pm_mendelejew_automation_disabled: "手動操作" #NT!
- pm_pneumatic_transfer_system: "空気圧搬送システム" #NT!
- pm_continuous_process_systems_hydrogenation: "連続水素化" #NT!
- pm_continuous_process_systems_polymerisation: "連続重合" #NT!
-  
-     # Modifier Types 
- building_mendelejew_hydrogenation_plants_throughput_add: "$building_mendelejew_hydrogenation_plants$ 建物 [concept_throughput]" #NT!
- building_mendelejew_hydrogenation_plants_throughput_add_desc: "$building_mendelejew_hydrogenation_plants$の入力と出力の両方に対するボーナスまたはペナルティ" #NT!
- building_mendelejew_synthetic_rubber_factory_throughput_add: "$building_mendelejew_synthetic_rubber_factory$ 建物 [concept_throughput]" #NT!
- building_mendelejew_synthetic_rubber_factory_throughput_add_desc: "$building_mendelejew_synthetic_rubber_factory$の入力と出力の両方に対するボーナスまたはペナルティ" #NT!
+ # PMGs
+ pmg_tourism_airport: "輸入と観光"
+ pmg_mendelejew_automation_oil: "オートメーション"
+ pmg_mendelejew_automation_rubber: "オートメーション"
+ 
+ # PMs
+ pm_luxury_requisitions: "贅沢品の要求"
+ pm_travel_agencies: "旅行代理店"
+ 
+ pm_mendelejew_automation_disabled: "手動操作"
+ pm_pneumatic_transfer_system: "空気圧搬送システム"
+ pm_continuous_process_systems_hydrogenation: "連続水素化"
+ pm_continuous_process_systems_polymerisation: "連続重合"
+ 
+ # Modifier Types
+ building_mendelejew_hydrogenation_plants_throughput_add: "$building_mendelejew_hydrogenation_plants$ 建物 [concept_throughput]"
+ building_mendelejew_hydrogenation_plants_throughput_add_desc: "$building_mendelejew_hydrogenation_plants$の入力と出力の両方に対するボーナスまたはペナルティ"
+ building_mendelejew_synthetic_rubber_factory_throughput_add: "$building_mendelejew_synthetic_rubber_factory$ 建物 [concept_throughput]"
+ building_mendelejew_synthetic_rubber_factory_throughput_add_desc: "$building_mendelejew_synthetic_rubber_factory$の入力と出力の両方に対するボーナスまたはペナルティ"
