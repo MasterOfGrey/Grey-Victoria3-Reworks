@@ -44,7 +44,7 @@ company_basic_oil = {
 	
 	ai_will_do = {
 		#MOD: Slightly changed this to use both buildings
-		OR = {
+		any_scope_state = {
 			any_scope_building = {
 				OR = {
 					is_building_type = building_oil_rig
