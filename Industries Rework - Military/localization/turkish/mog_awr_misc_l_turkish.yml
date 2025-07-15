@@ -1,9 +1,9 @@
 ﻿l_turkish:
  # Production methods 
- pmg_base_building_automotive_industry: "Automobiles"
+ pmg_automobile_production: "Automobiles"
  pmg_automotive_shiftwork: "Vardiyalı Çalışma"
- pmg_automotive_aeroplanes: "Aeroplanes"
- pmg_automotive_tanks: "Tanks"
+ pmg_aeroplanes: "Aeroplanes"
+ pmg_tanks: "Tanks"
   
  pm_gear_transmissions: "Erken Vites Şanzımanları"
  pm_automobiles: "Automobiles"

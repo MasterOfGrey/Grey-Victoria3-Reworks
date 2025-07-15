@@ -1,9 +1,9 @@
 ﻿l_braz_por:
   
  # Production methods 
- pmg_base_building_automotive_industry: "Automóveis"
- pmg_automotive_aeroplanes: "Aviões"
- pmg_automotive_tanks: "Tanques"
+ pmg_automobile_production: "Automóveis"
+ pmg_aeroplanes: "Aviões"
+ pmg_tanks: "Tanques"
   
  pm_automobiles: "Automóveis"
  pm_no_aeroplanes: "Sem Produção de Aviões"

@@ -1,9 +1,9 @@
 ﻿l_simp_chinese:
   
  # Production methods 
- pmg_base_building_automotive_industry: "汽车"
- pmg_automotive_aeroplanes: "飞机"
- pmg_automotive_tanks: "坦克"
+ pmg_automobile_production: "汽车"
+ pmg_aeroplanes: "飞机"
+ pmg_tanks: "坦克"
   
  pm_automobiles: "汽车"
  pm_no_aeroplanes: "没有飞机生产"

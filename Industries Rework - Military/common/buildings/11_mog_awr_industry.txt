@@ -12,10 +12,11 @@ building_automotive_industry = {
 	}
 	
 	production_method_groups = {
-		pmg_base_building_automotive_industry
+		pmg_automobile_production
 		pmg_automotive_shiftwork
-		pmg_automotive_aeroplanes
-		pmg_automotive_tanks
+		pmg_aeroplanes
+		pmg_tanks
+		#pmg_automation_building_automotive_industry
 	}
 	
 	required_construction = construction_cost_very_high

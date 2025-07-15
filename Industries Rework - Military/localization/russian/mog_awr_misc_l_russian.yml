@@ -1,9 +1,9 @@
 ﻿l_russian:
  # Production methods 
- pmg_base_building_automotive_industry: "Автомобили"
+ pmg_automobile_production: "Автомобили"
  pmg_automotive_shiftwork: "Сменная работа"
- pmg_automotive_aeroplanes: "Самолеты"
- pmg_automotive_tanks: "Танки"
+ pmg_aeroplanes: "Самолеты"
+ pmg_tanks: "Танки"
   
  pm_gear_transmissions: "Ранние трансмиссии"
  pm_automobiles: "Автомобили"

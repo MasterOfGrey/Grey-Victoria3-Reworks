@@ -1,9 +1,9 @@
 ﻿l_polish:
  # Production methods 
- pmg_base_building_automotive_industry: "Samochody"
+ pmg_automobile_production: "Samochody"
  pmg_automotive_shiftwork: "Praca zmianowa"
- pmg_automotive_aeroplanes: "Samoloty"
- pmg_automotive_tanks: "Czołgi"
+ pmg_aeroplanes: "Samoloty"
+ pmg_tanks: "Czołgi"
   
  pm_gear_transmissions: "Wczesne skrzynie biegów"
  pm_automobiles: "Samochody"

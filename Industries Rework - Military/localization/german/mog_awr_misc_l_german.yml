@@ -1,9 +1,9 @@
 ﻿l_german:
  # Production methods 
- pmg_base_building_automotive_industry: "Automobile"
+ pmg_automobile_production: "Automobile"
  pmg_automotive_shiftwork: "Schichtarbeit"
- pmg_automotive_aeroplanes: "Flugzeuge"
- pmg_automotive_tanks: "Panzer"
+ pmg_aeroplanes: "Flugzeuge"
+ pmg_tanks: "Panzer"
   
  pm_gear_transmissions: "Frühe Zahnradgetriebe"
  pm_automobiles: "Automobile"

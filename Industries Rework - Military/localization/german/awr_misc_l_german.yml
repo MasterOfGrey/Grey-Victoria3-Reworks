@@ -1,9 +1,9 @@
 ﻿l_german:
   
  # Production methods 
- pmg_base_building_automotive_industry: "Automobile"
- pmg_automotive_aeroplanes: "Flugzeuge"
- pmg_automotive_tanks: "Panzer"
+ pmg_automobile_production: "Automobile"
+ pmg_aeroplanes: "Flugzeuge"
+ pmg_tanks: "Panzer"
   
  pm_automobiles: "Automobile"
  pm_no_aeroplanes: "Keine Flugzeugproduktion"

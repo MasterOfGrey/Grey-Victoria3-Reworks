@@ -1,9 +1,9 @@
 ﻿l_russian:
   
  # Production methods 
- pmg_base_building_automotive_industry: "Автомобили"
- pmg_automotive_aeroplanes: "Самолеты"
- pmg_automotive_tanks: "Танки"
+ pmg_automobile_production: "Автомобили"
+ pmg_aeroplanes: "Самолеты"
+ pmg_tanks: "Танки"
   
  pm_automobiles: "Автомобили"
  pm_no_aeroplanes: "Производство самолетов не ведется"

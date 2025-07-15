@@ -1,9 +1,9 @@
 ﻿l_japanese:
  # Production methods 
- pmg_base_building_automotive_industry: "自動車"
+ pmg_automobile_production: "自動車"
  pmg_automotive_shiftwork: "シフト勤務"
- pmg_automotive_aeroplanes: "飛行機"
- pmg_automotive_tanks: "戦車"
+ pmg_aeroplanes: "飛行機"
+ pmg_tanks: "戦車"
   
  pm_gear_transmissions: "初期のギアトランスミッション"
  pm_automobiles: "自動車"

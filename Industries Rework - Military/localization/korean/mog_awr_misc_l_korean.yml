@@ -1,9 +1,9 @@
 ﻿l_korean:
  # Production methods 
- pmg_base_building_automotive_industry: "자동차"
+ pmg_automobile_production: "자동차"
  pmg_automotive_shiftwork: "교대근무"
- pmg_automotive_aeroplanes: "비행기"
- pmg_automotive_tanks: "탱크"
+ pmg_aeroplanes: "비행기"
+ pmg_tanks: "탱크"
   
  pm_gear_transmissions: "초기 기어 변속기"
  pm_automobiles: "자동차"

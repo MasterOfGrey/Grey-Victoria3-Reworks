@@ -1,9 +1,9 @@
 ﻿l_spanish:
   
  # Production methods 
- pmg_base_building_automotive_industry: "Automóviles"
- pmg_automotive_aeroplanes: "Aviones"
- pmg_automotive_tanks: "Tanques"
+ pmg_automobile_production: "Automóviles"
+ pmg_aeroplanes: "Aviones"
+ pmg_tanks: "Tanques"
   
  pm_automobiles: "Automóviles"
  pm_no_aeroplanes: "Sin producción de aviones"
