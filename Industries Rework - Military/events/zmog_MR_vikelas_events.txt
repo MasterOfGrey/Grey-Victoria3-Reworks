@@ -1,4 +1,4 @@
-##################
+﻿##################
 # SPORTS EVENTS  #
 #########################
 
@@ -7,6 +7,7 @@
 namespace = vikelas
 
 #Vikelas 505: Race Team
+#tiger-ignore(key=duplicate-item)
 vikelas.505 = {
 	dlc = dlc_morgenrote
 

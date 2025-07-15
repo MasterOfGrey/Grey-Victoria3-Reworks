@@ -71,13 +71,14 @@ pmg_automation_building_explosives_factory = {									# Modded PMG
 
 ## Military Shipyards
 
-pmg_mil_shipyards_shiftwork = {													# Modded PMG
-	texture = "gfx/interface/icons/generic_icons/mixed_icon_automation.dds"
-	production_methods = {
-		pm_single_shift_days
-		pm_mil_shipyards_double_shifts
-		pm_mil_shipyards_double_shifts_arc_weld
-		pm_mil_shipyards_triple_shifts
-		pm_mil_shipyards_triple_shifts_arc_weld
-	}
-}
+# Overwritten by "tmog_tts_pmg.txt"
+#pmg_mil_shipyards_shiftwork = {													# Modded PMG
+#	texture = "gfx/interface/icons/generic_icons/mixed_icon_automation.dds"
+#	production_methods = {
+#		pm_single_shift_days
+#		pm_mil_shipyards_double_shifts
+#		pm_mil_shipyards_double_shifts_arc_weld
+#		pm_mil_shipyards_triple_shifts
+#		pm_mil_shipyards_triple_shifts_arc_weld
+#	}
+#}
