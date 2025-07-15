@@ -1,9 +1,0 @@
-﻿l_french:
-  
- # Production methods 
- pmg_automobile_production: "Automobiles"
-  
- pm_limited_aeroplanes: "Production d'avions limitée"
- pm_extensive_aeroplanes: "Production d'avions importante"
- pm_limited_tanks: "Production de chars limitée"
- pm_extensive_tanks: "Production de chars importante"

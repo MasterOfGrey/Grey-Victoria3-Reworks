@@ -1,9 +1,0 @@
-﻿l_spanish:
-  
- # Production methods 
- pmg_automobile_production: "Automóviles"
-  
- pm_limited_aeroplanes: "Producción Limitada de Aviones"
- pm_extensive_aeroplanes: "Producción Extensiva de Aviones"
- pm_limited_tanks: "Producción limitada de tanques"
- pm_extensive_tanks: "Producción Extensiva de tanques"

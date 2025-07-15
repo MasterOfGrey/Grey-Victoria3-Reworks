@@ -1,9 +1,0 @@
-﻿l_japanese:
-  
- # Production methods 
- pmg_automobile_production: "自動車"
-  
- pm_limited_aeroplanes: "限定的な航空機生産"
- pm_extensive_aeroplanes: "大規模な航空機生産"
- pm_limited_tanks: "限定生産戦車"
- pm_extensive_tanks: "大規模なタンク生産"

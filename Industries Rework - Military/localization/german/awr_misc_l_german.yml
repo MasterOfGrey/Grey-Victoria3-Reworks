@@ -1,9 +1,0 @@
-﻿l_german:
-  
- # Production methods 
- pmg_automobile_production: "Automobile"
-  
- pm_limited_aeroplanes: "Begrenzte Flugzeugproduktion"
- pm_extensive_aeroplanes: "Umfangreiche Flugzeugproduktion"
- pm_limited_tanks: "Begrenzte Panzerproduktion"
- pm_extensive_tanks: "Umfangreiche Panzerproduktion"

@@ -1,9 +1,0 @@
-﻿l_polish:
-  
- # Production methods 
- pmg_automobile_production: "Samochody"
-  
- pm_limited_aeroplanes: "Ograniczona produkcja samolotów"
- pm_extensive_aeroplanes: "Szeroka produkcja samolotów"
- pm_limited_tanks: "Ograniczona produkcja czołgów"
- pm_extensive_tanks: "Szeroka produkcja zbiorników"

@@ -1,9 +1,0 @@
-﻿l_russian:
-  
- # Production methods 
- pmg_automobile_production: "Автомобили"
-  
- pm_limited_aeroplanes: "Ограниченное производство самолетов"
- pm_extensive_aeroplanes: "Масштабное производство самолетов"
- pm_limited_tanks: "Ограниченное производство танков"
- pm_extensive_tanks: "Масштабное производство танков"

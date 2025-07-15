@@ -1,9 +1,0 @@
-﻿l_turkish:
-  
- # Production methods 
- pmg_automobile_production: "Automobiles"
-  
- pm_limited_aeroplanes: "Limited Aeroplane Production"
- pm_extensive_aeroplanes: "Extensive Aeroplane Production"
- pm_limited_tanks: "Limited Tank Production"
- pm_extensive_tanks: "Extensive Tank Production"

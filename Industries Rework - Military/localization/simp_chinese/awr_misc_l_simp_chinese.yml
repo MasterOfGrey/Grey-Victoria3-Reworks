@@ -1,9 +1,0 @@
-﻿l_simp_chinese:
-  
- # Production methods 
- pmg_automobile_production: "汽车"
-  
- pm_limited_aeroplanes: "限量飞机生产"
- pm_extensive_aeroplanes: "大规模飞机生产"
- pm_limited_tanks: "有限的坦克生产"
- pm_extensive_tanks: "大规模坦克生产"
