@@ -2,13 +2,8 @@
   
  # Production methods 
  pmg_automobile_production: "Samochody"
- pmg_aeroplanes: "Samoloty"
- pmg_tanks: "Czołgi"
   
- pm_automobiles: "Samochody"
- pm_no_aeroplanes: "Brak produkcji samolotów"
  pm_limited_aeroplanes: "Ograniczona produkcja samolotów"
  pm_extensive_aeroplanes: "Szeroka produkcja samolotów"
- pm_no_tanks: "Brak produkcji czołgów"
  pm_limited_tanks: "Ograniczona produkcja czołgów"
  pm_extensive_tanks: "Szeroka produkcja zbiorników"

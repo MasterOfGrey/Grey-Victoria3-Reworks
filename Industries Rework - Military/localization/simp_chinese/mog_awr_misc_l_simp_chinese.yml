@@ -2,11 +2,8 @@
  # Production methods 
  pmg_automobile_production: "汽车"
  pmg_automotive_shiftwork: "轮班工作"
- pmg_aeroplanes: "飞机"
- pmg_tanks: "坦克"
   
  pm_gear_transmissions: "早期齿轮传动"
- pm_automobiles: "汽车"
  pm_pneumatic_tyres: "充气轮胎"
   
  pm_single_shift_days: "单班制"
@@ -15,7 +12,6 @@
  pm_automotive_triple_shifts: "三班倒"
  pm_automotive_triple_shifts_pneumatic: "三班倒"
   
- pm_no_aeroplanes: "没有飞机生产"
  pm_limited_aeroplanes: "限量飞机生产"
  pm_limited_aeroplanes_double: "限量飞机生产"
  pm_limited_aeroplanes_triple: "限量飞机生产"
@@ -23,7 +19,6 @@
  pm_extensive_aeroplanes_triple: "大规模飞机生产"
  pm_overtime_aeroplanes: "加班生产飞机"
   
- pm_no_tanks: "没有坦克生产"
  pm_limited_tanks: "有限的坦克生产"
  pm_limited_tanks_double: "有限的坦克生产"
  pm_limited_tanks_triple: "有限的坦克生产"

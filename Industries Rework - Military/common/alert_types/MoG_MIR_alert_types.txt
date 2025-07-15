@@ -205,7 +205,7 @@ MIR_war_demob_planes = {
 		}
 		any_scope_state = {
 			OR = {
-				is_production_method_active = { building_type = building_automotive_industry production_method = pm_no_aeroplanes }
+				is_production_method_active = { building_type = building_automotive_industry production_method = pm_no_aeroplane_production }
 				is_production_method_active = { building_type = building_automotive_industry production_method = pm_limited_aeroplanes }
 			}
 		}
@@ -254,7 +254,7 @@ MIR_war_demob_tanks = {
 		}
 		any_scope_state = {
 			OR = {
-				is_production_method_active = { building_type = building_automotive_industry production_method = pm_no_tanks }
+				is_production_method_active = { building_type = building_automotive_industry production_method = pm_no_tank_production }
 				is_production_method_active = { building_type = building_automotive_industry production_method = pm_limited_tanks }
 			}
 		}

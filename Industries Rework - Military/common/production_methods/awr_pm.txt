@@ -1,4 +1,4 @@
-﻿pm_automobiles = {
+﻿pm_automobile_production = {
 	texture = "gfx/interface/icons/production_method_icons/automobiles_primary.dds"
 
 	building_modifiers = {
@@ -18,7 +18,7 @@
 	}
 }
 
-#pm_no_aeroplanes = {
+#pm_no_aeroplane_production = {
 #	texture = "gfx/interface/icons/production_method_icons/no_aeroplanes.dds"
 #}
 
@@ -59,7 +59,7 @@ pm_extensive_aeroplanes = {
 	}
 }
 
-#pm_no_tanks = {
+#pm_no_tank_production = {
 #	texture = "gfx/interface/icons/production_method_icons/no_tanks_secondary.dds"
 #}
 

@@ -2,11 +2,8 @@
  # Production methods 
  pmg_automobile_production: "Automobiles"
  pmg_automotive_shiftwork: "Vardiyalı Çalışma"
- pmg_aeroplanes: "Aeroplanes"
- pmg_tanks: "Tanks"
   
  pm_gear_transmissions: "Erken Vites Şanzımanları"
- pm_automobiles: "Automobiles"
  pm_pneumatic_tyres: "Pnömatik Lastikler"
   
  pm_single_shift_days: "Tek Vardiyalar"
@@ -15,7 +12,6 @@
  pm_automotive_triple_shifts: "Üçlü Vardiyalar"
  pm_automotive_triple_shifts_pneumatic: "Üçlü Vardiyalar"
   
- pm_no_aeroplanes: "No Uçak Üretimi"
  pm_limited_aeroplanes: "Sınırlı Uçak Üretimi"
  pm_limited_aeroplanes_double: "Sınırlı Uçak Üretimi" #NT!
  pm_limited_aeroplanes_triple: "Sınırlı Uçak Üretimi" #NT!
@@ -23,7 +19,6 @@
  pm_extensive_aeroplanes_triple: "Kapsamlı Uçak Üretimi" #NT!
  pm_overtime_aeroplanes: "Fazla Mesai Uçak Üretimi"
   
- pm_no_tanks: "No Tank Üretimi"
  pm_limited_tanks: "Sınırlı Tank Üretimi"
  pm_limited_tanks_double: "Sınırlı Tank Üretimi" #NT!
  pm_limited_tanks_triple: "Sınırlı Tank Üretimi" #NT!

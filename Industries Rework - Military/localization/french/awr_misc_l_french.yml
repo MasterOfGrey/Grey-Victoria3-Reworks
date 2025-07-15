@@ -2,13 +2,8 @@
   
  # Production methods 
  pmg_automobile_production: "Automobiles"
- pmg_aeroplanes: "Avions"
- pmg_tanks: "Chars"
   
- pm_automobiles: "Automobiles"
- pm_no_aeroplanes: "Pas de production d'avions"
  pm_limited_aeroplanes: "Production d'avions limitée"
  pm_extensive_aeroplanes: "Production d'avions importante"
- pm_no_tanks: "Pas de production de chars"
  pm_limited_tanks: "Production de chars limitée"
  pm_extensive_tanks: "Production de chars importante"

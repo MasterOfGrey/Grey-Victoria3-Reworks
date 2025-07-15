@@ -2,13 +2,8 @@
   
  # Production methods 
  pmg_automobile_production: "Автомобили"
- pmg_aeroplanes: "Самолеты"
- pmg_tanks: "Танки"
   
- pm_automobiles: "Автомобили"
- pm_no_aeroplanes: "Производство самолетов не ведется"
  pm_limited_aeroplanes: "Ограниченное производство самолетов"
  pm_extensive_aeroplanes: "Масштабное производство самолетов"
- pm_no_tanks: "Производство танков не ведется"
  pm_limited_tanks: "Ограниченное производство танков"
  pm_extensive_tanks: "Масштабное производство танков"

@@ -2,13 +2,8 @@
   
  # Production methods 
  pmg_automobile_production: "汽车"
- pmg_aeroplanes: "飞机"
- pmg_tanks: "坦克"
   
- pm_automobiles: "汽车"
- pm_no_aeroplanes: "没有飞机生产"
  pm_limited_aeroplanes: "限量飞机生产"
  pm_extensive_aeroplanes: "大规模飞机生产"
- pm_no_tanks: "没有坦克生产"
  pm_limited_tanks: "有限的坦克生产"
  pm_extensive_tanks: "大规模坦克生产"

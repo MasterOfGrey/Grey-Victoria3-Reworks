@@ -1,4 +1,4 @@
-﻿##################
+##################
 # SPORTS EVENTS  #
 #########################
 
@@ -38,7 +38,7 @@ vikelas.505 = {
 				any_scope_building = {
 					is_building_type = building_automotive_industry	# building_motor_industry
 					OR = {												# has_active_production_method = pm_automobile_production
-						has_active_production_method = pm_automobiles
+						has_active_production_method = pm_automobile_production
 						has_active_production_method = pm_pneumatic_tyres
 					}
 					level >= 2
@@ -55,7 +55,7 @@ vikelas.505 = {
 				limit = {
 					is_building_type = building_automotive_industry	# building_motor_industry
 					OR = {												# has_active_production_method = pm_automobile_production
-						has_active_production_method = pm_automobiles
+						has_active_production_method = pm_automobile_production
 						has_active_production_method = pm_pneumatic_tyres
 					}
 					level >= 2

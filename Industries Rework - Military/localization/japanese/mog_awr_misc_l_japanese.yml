@@ -2,11 +2,8 @@
  # Production methods 
  pmg_automobile_production: "自動車"
  pmg_automotive_shiftwork: "シフト勤務"
- pmg_aeroplanes: "飛行機"
- pmg_tanks: "戦車"
   
  pm_gear_transmissions: "初期のギアトランスミッション"
- pm_automobiles: "自動車"
  pm_pneumatic_tyres: "空気入りタイヤ"
   
  pm_single_shift_days: "シングルシフト"
@@ -15,7 +12,6 @@
  pm_automotive_triple_shifts: "トリプルシフト"
  pm_automotive_triple_shifts_pneumatic: "トリプルシフト"
   
- pm_no_aeroplanes: "航空機生産なし"
  pm_limited_aeroplanes: "限定的な航空機生産"
  pm_limited_aeroplanes_double: "限定的な航空機生産"
  pm_limited_aeroplanes_triple: "限定的な航空機生産"
@@ -23,7 +19,6 @@
  pm_extensive_aeroplanes_triple: "大規模な航空機生産"
  pm_overtime_aeroplanes: "航空機生産残業"
   
- pm_no_tanks: "戦車生産なし"
  pm_limited_tanks: "限定生産戦車"
  pm_limited_tanks_double: "限定生産戦車"
  pm_limited_tanks_triple: "限定生産戦車"

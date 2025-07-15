@@ -2,11 +2,8 @@
  # Production methods 
  pmg_automobile_production: "Автомобили"
  pmg_automotive_shiftwork: "Сменная работа"
- pmg_aeroplanes: "Самолеты"
- pmg_tanks: "Танки"
   
  pm_gear_transmissions: "Ранние трансмиссии"
- pm_automobiles: "Автомобили"
  pm_pneumatic_tyres: "Пневматические шины"
   
  pm_single_shift_days: "Отдельные смены"
@@ -15,7 +12,6 @@
  pm_automotive_triple_shifts: "Тройные смены"
  pm_automotive_triple_shifts_pneumatic: "Тройные смены"
   
- pm_no_aeroplanes: "Производство самолетов не ведется"
  pm_limited_aeroplanes: "Ограниченное производство самолетов"
  pm_limited_aeroplanes_double: "Ограниченное производство самолетов" #NT!
  pm_limited_aeroplanes_triple: "Ограниченное производство самолетов" #NT!
@@ -23,7 +19,6 @@
  pm_extensive_aeroplanes_triple: "Масштабное производство самолетов" #NT!
  pm_overtime_aeroplanes: "Сверхурочное производство самолетов"
   
- pm_no_tanks: "Производство танков не ведется"
  pm_limited_tanks: "Ограниченное производство танков"
  pm_limited_tanks_double: "Ограниченное производство танков" #NT!
  pm_limited_tanks_triple: "Ограниченное производство танков" #NT!

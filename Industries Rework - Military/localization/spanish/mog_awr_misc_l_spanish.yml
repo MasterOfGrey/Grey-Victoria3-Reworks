@@ -2,11 +2,8 @@
  # Production methods 
  pmg_automobile_production: "Automóviles"
  pmg_automotive_shiftwork: "Trabajo por turnos"
- pmg_aeroplanes: "Aviones"
- pmg_tanks: "Tanques"
   
  pm_gear_transmissions: "Transmisiones de engranajes tempranas"
- pm_automobiles: "Automóviles"
  pm_pneumatic_tyres: "Neumáticos"
   
  pm_single_shift_days: "Turnos individuales"
@@ -15,7 +12,6 @@
  pm_automotive_triple_shifts: "Turnos triples"
  pm_automotive_triple_shifts_pneumatic: "Turnos triples"
   
- pm_no_aeroplanes: "Sin producción de aviones"
  pm_limited_aeroplanes: "Producción Limitada de Aviones"
  pm_limited_aeroplanes_double: "Producción Limitada de Aviones" #NT!
  pm_limited_aeroplanes_triple: "Producción Limitada de Aviones" #NT!
@@ -23,7 +19,6 @@
  pm_extensive_aeroplanes_triple: "Producción Extensiva de Aviones" #NT!
  pm_overtime_aeroplanes: "Producción de Aviones en horas extras"
   
- pm_no_tanks: "Sin producción de Tanques"
  pm_limited_tanks: "Producción Limitada de Tanques"
  pm_limited_tanks_double: "Producción Limitada de Tanques" #NT!
  pm_limited_tanks_triple: "Producción Limitada de Tanques" #NT!
