@@ -1,0 +1,24 @@
+﻿state_trait_niagara_falls = {
+	icon = "gfx/interface/icons/state_trait_icons/waterfall.dds"
+
+	modifier = {
+		goods_output_electricity_mult = 0.2
+		goods_output_ppp_hv_power_mult = 0.2
+	}
+}
+state_trait_krka_falls = {
+	icon = "gfx/interface/icons/state_trait_icons/waterfall.dds"
+
+	modifier = {
+		goods_output_electricity_mult = 0.15
+		goods_output_ppp_hv_power_mult = 0.15
+	}
+}
+state_trait_angara_river = {
+	icon = "gfx/interface/icons/state_trait_icons/river.dds"
+	modifier = {
+		goods_output_electricity_mult = 0.2
+		goods_output_ppp_hv_power_mult = 0.2
+		state_infrastructure_add = 15
+	}
+}

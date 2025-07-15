@@ -159,6 +159,15 @@ mog_construct_special_building_allow = {
 			}
 		}
 		AND = {
+			is_building_type = usu_building_hydro_power_plant
+			
+			state = {
+				sg:ppp_hv_power = { 
+					state_goods_pricier >= 0.10
+				}
+			}
+		}
+		AND = {
 			is_building_type = ppp_building_power_grid
 			state = {
 				sg:electricity = {

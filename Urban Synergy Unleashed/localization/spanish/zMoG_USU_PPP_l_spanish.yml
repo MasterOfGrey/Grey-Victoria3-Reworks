@@ -1,40 +1,40 @@
 ﻿l_spanish:
-    # Building
+ # Building
  usu_bg_power_grid: "Red eléctrica" #deepl:1703735767
  ppp_building_power_grid: "Red eléctrica"
-    
-    # Technologies
+ 
+ # Technologies
  PPP_tech_hv_power: "Transmisión de potencia"
  PPP_tech_hv_power_desc: "Al utilizar convertidores y reguladores, la transmisión de energía de alto voltaje a larga distancia ahora puede ser utilizada por múltiples destinos con diferentes necesidades."
  USU_tech_hv_railways: "Transformadores industriales"
  USU_tech_hv_railways_desc: "Al utilizar transformadores escalables podemos obtener el beneficio completo de la corriente eléctrica alterna, lo que permite entregar voltajes altos y constantes a largas distancias y hacer que la transmisión de energía sea económica."
 	
-    # Goods
+ # Goods
  ppp_hv_power: "Energía de alto voltaje"
-    
-    # Modifier types - As of USU: None of the multipliers are used anymore.
+ 
+ # Modifier types - As of USU: None of the multipliers are used anymore.
  goods_input_ppp_hv_power_add: "@ppp_hv_power![Nbsp]$ppp_hv_power$ entrada"
  goods_output_ppp_hv_power_add: "@ppp_hv_power![Nbsp]$ppp_hv_power$ salida"
  goods_input_ppp_hv_power_mult: "Edificio @ppp_hv_power![Nbsp]$ppp_hv_power$ entrada"
  goods_output_ppp_hv_power_mult: "Construyendo la salida @ppp_hv_power![Nbsp]$ppp_hv_power$"
-    
+ 
  goods_input_ppp_hv_power_add_desc: "La cantidad de @ppp_hv_power![Nbsp]$ppp_hv_power$ consumida por los edificios"
  goods_output_ppp_hv_power_add_desc: "La cantidad de @ppp_hv_power![Nbsp]$ppp_hv_power$ producida por los edificios"
  goods_input_ppp_hv_power_mult_desc: "Una bonificación o penalización a la cantidad de @ppp_hv_power![Nbsp]$ppp_hv_power$ consumida por los edificios"
  goods_output_ppp_hv_power_mult_desc: "Una bonificación o penalización a la cantidad de @ppp_hv_power![Nbsp]$ppp_hv_power$ producida por los edificios"
-    
-    # PMGs
+ 
+ # PMGs
  PPP_pmg_generation_machinery: "Maquinaria de generación"
  PPP_pmg_HV_generation: "Distribución de energía"
  PPP_pmg_power_grid: "$pm_base$"
  PPP_pmg_power_grid_scaler: "Capacidad de distribución"
-    
-    # PMs
+ 
+ # PMs
  PPP_pm_hydro_mechanical: "Turbinas de agua"
  PPP_pm_steam_engine: "Máquinas de vapor"
  PPP_pm_steam_turbine: "Turbinas de vapor"
  PPP_pm_gas_turbine: "Turbinas de gas"
-    
+ 
  PPP_pm_hy_local_power: "Electricidad local"
  PPP_pm_hy_hybrid_power: "Suministro de red mixta"
  PPP_pm_hy_grid_power: "Red eléctrica"
@@ -48,11 +48,11 @@
  PPP_pm_gt_hybrid_power: "Suministro de red mixta"
  PPP_pm_gt_grid_power: "Red eléctrica"
  PPP_pm_emergency_local_power: "Suministro local de emergencia"
-    
+ 
  PPP_pm_grid_base: "Distribución regional"
-    
+ 
  PPP_pm_grid_water: "Capacidad normal"
  PPP_pm_grid_engine: "Mayor capacidad"
  PPP_pm_grid_turbine: "Capacidad duplicada"
  PPP_pm_grid_gas_turbine: "Capacidad triplicada"
-    
+ 

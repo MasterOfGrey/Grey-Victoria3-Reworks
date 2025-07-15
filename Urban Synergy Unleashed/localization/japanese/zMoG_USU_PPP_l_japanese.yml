@@ -1,40 +1,40 @@
 ﻿l_japanese:
-    # Building
+ # Building
  usu_bg_power_grid: "電気グリッド" #deepl:1703735767
  ppp_building_power_grid: "電力網"
-    
-    # Technologies
+ 
+ # Technologies
  PPP_tech_hv_power: "動力伝達"
  PPP_tech_hv_power_desc: "コンバータとレギュレータを利用することで、高電圧の長距離電力伝送を、さまざまなニーズを持つ複数の目的地で利用できるようになりました。"
  USU_tech_hv_railways: "産業用変圧器"
  USU_tech_hv_railways_desc: "スケーラブルな変圧器を利用することで、交流電流の利点を最大限に活用し、長距離にわたって一貫して高電圧を供給し、電力伝送を経済的に行うことができます。"
 	
-    # Goods
+ # Goods
  ppp_hv_power: "高電圧電源"
-    
-    # Modifier types - As of USU: None of the multipliers are used anymore.
+ 
+ # Modifier types - As of USU: None of the multipliers are used anymore.
  goods_input_ppp_hv_power_add: "@ppp_hv_power![Nbsp]$ppp_hv_power$ 入力"
  goods_output_ppp_hv_power_add: "@ppp_hv_power![Nbsp]$ppp_hv_power$ 出力"
  goods_input_ppp_hv_power_mult: "を構築中@ppp_hv_power![Nbsp]$ppp_hv_power$ 入力"
  goods_output_ppp_hv_power_mult: "を構築中@ppp_hv_power![Nbsp]$ppp_hv_power$ 出力"
-    
+ 
  goods_input_ppp_hv_power_add_desc: "建物で消費される @ppp_hv_power![Nbsp]$ppp_hv_power$ の量"
  goods_output_ppp_hv_power_add_desc: "建物によって生成される @ppp_hv_power![Nbsp]$ppp_hv_power$ の量"
  goods_input_ppp_hv_power_mult_desc: "建物によって消費される @ppp_hv_power![Nbsp]$ppp_hv_power$ の量に対するボーナスまたはペナルティ"
  goods_output_ppp_hv_power_mult_desc: "建物によって生成される @ppp_hv_power![Nbsp]$ppp_hv_power$ の量に対するボーナスまたはペナルティ"
-    
-    # PMGs
+ 
+ # PMGs
  PPP_pmg_generation_machinery: "発電機械"
  PPP_pmg_HV_generation: "電力分配"
  PPP_pmg_power_grid: "$pm_base$"
  PPP_pmg_power_grid_scaler: "流通能力"
-    
-    # PMs
+ 
+ # PMs
  PPP_pm_hydro_mechanical: "水力タービン"
  PPP_pm_steam_engine: "蒸気機関"
  PPP_pm_steam_turbine: "蒸気タービン"
  PPP_pm_gas_turbine: "ガスタービン"
-    
+ 
  PPP_pm_hy_local_power: "地域電力"
  PPP_pm_hy_hybrid_power: "混合グリッド供給"
  PPP_pm_hy_grid_power: "電力網"
@@ -48,11 +48,11 @@
  PPP_pm_gt_hybrid_power: "混合グリッド供給"
  PPP_pm_gt_grid_power: "電力網"
  PPP_pm_emergency_local_power: "緊急現地供給"
-    
+ 
  PPP_pm_grid_base: "地域別分布"
-    
+ 
  PPP_pm_grid_water: "通常容量"
  PPP_pm_grid_engine: "容量の増加"
  PPP_pm_grid_turbine: "容量倍増"
  PPP_pm_grid_gas_turbine: "容量3倍"
-    
+ 

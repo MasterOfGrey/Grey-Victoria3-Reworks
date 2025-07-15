@@ -37,11 +37,11 @@ company_basic_utilities = {
 		any_scope_state = {
 			OR = {
 				any_scope_building = {
-					building_power_plant
+					is_building_type = building_power_plant
 					level >= 5
 				}
 				any_scope_building = {
-					usu_building_hydro_power_plant
+					is_building_type = usu_building_hydro_power_plant
 					level >= 3
 				}
 			}
@@ -57,11 +57,11 @@ company_basic_utilities = {
 		any_scope_state = {
 			OR = {
 				any_scope_building = {
-					building_power_plant
+					is_building_type = building_power_plant
 					level >= 5
 				}
 				any_scope_building = {
-					usu_building_hydro_power_plant
+					is_building_type = usu_building_hydro_power_plant
 					level >= 3
 				}
 			}
@@ -117,11 +117,11 @@ company_basic_infrastructure = {
 			is_incorporated = yes
 			OR = {
 				any_scope_building = {
-					building_railway
+					is_building_type = building_railway
 					level >= 3
 				}
 				any_scope_building = {
-					building_river_port
+					is_building_type = building_river_port
 					level >= 2
 				}
 			}
@@ -138,11 +138,11 @@ company_basic_infrastructure = {
 			is_incorporated = yes
 			any_scope_building = {
 				OR = {
-					building_railway
+					is_building_type = building_railway
 					level >= 3
 				}
 				OR = {
-					building_river_port
+					is_building_type = building_river_port
 					level >= 2
 				}
 			}

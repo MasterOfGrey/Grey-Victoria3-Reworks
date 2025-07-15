@@ -40,9 +40,9 @@ pm_market_stalls = {
 		
 		workforce_scaled = {
 			state_construction_mult = -0.0005					# The more people are utilising the urban spaces though, the more this benefit is negated by all the people and businesses in the way.
-			building_food_industry_throughput_add = 0.01
-			building_textile_mills_throughput_add = 0.01
-			building_furniture_manufacturies_throughput_add = 0.01
+			building_food_industry_throughput_add = 0.005
+			building_textile_mills_throughput_add = 0.005
+			building_furniture_manufacturies_throughput_add = 0.005
 			usu_building_public_green_throughput_add = 0.01
 			state_migration_pull_add = 0.02			# Throughput bonuses can get high so this needs to start low.
 		}	
@@ -95,10 +95,10 @@ pm_market_squares = {
 		}
 		
 		workforce_scaled = {
-			state_construction_mult = -0.001
-			building_food_industry_throughput_add = 0.01
-			building_textile_mills_throughput_add = 0.01
-			building_furniture_manufacturies_throughput_add = 0.01
+			state_construction_mult = -0.0008 # -0.001		# Better urban centres = penalty grows slower
+			building_food_industry_throughput_add = 0.005
+			building_textile_mills_throughput_add = 0.005
+			building_furniture_manufacturies_throughput_add = 0.005
 			usu_building_public_green_throughput_add = 0.013
 			state_migration_pull_add = 0.02			# Throughput bonuses can get high so this needs to start low.
 		}	
@@ -150,10 +150,10 @@ pm_covered_markets = {
 		}
 		
 		workforce_scaled = {
-			state_construction_mult = -0.0015
-			building_food_industry_throughput_add = 0.01
-			building_textile_mills_throughput_add = 0.01
-			building_furniture_manufacturies_throughput_add = 0.01
+			state_construction_mult = -0.001 # -0.0015
+			building_food_industry_throughput_add = 0.005
+			building_textile_mills_throughput_add = 0.005
+			building_furniture_manufacturies_throughput_add = 0.005
 			usu_building_public_green_throughput_add = 0.016
 			state_migration_pull_add = 0.02			# Throughput bonuses can get high so this needs to start low.
 		}	
@@ -207,10 +207,10 @@ pm_arcades = {
 		}
 		
 		workforce_scaled = {
-			state_construction_mult = -0.002
-			building_food_industry_throughput_add = 0.01
-			building_textile_mills_throughput_add = 0.01
-			building_furniture_manufacturies_throughput_add = 0.01
+			state_construction_mult = -0.0011 # -0.002
+			building_food_industry_throughput_add = 0.005
+			building_textile_mills_throughput_add = 0.005
+			building_furniture_manufacturies_throughput_add = 0.005
 			ppp_building_power_grid_throughput_add = 0.01
 			usu_building_public_green_throughput_add = 0.019
 			state_migration_pull_add = 0.02			# Throughput bonuses can get high so this needs to start low.
@@ -273,10 +273,10 @@ USU_pm_hv_arcades = {
 		}
 		
 		workforce_scaled = {
-			state_construction_mult = -0.002
-			building_food_industry_throughput_add = 0.01
-			building_textile_mills_throughput_add = 0.01
-			building_furniture_manufacturies_throughput_add = 0.01
+			state_construction_mult = -0.0011 # -0.002
+			building_food_industry_throughput_add = 0.005
+			building_textile_mills_throughput_add = 0.005
+			building_furniture_manufacturies_throughput_add = 0.005
 			ppp_building_power_grid_throughput_add = 0.01
 			usu_building_public_green_throughput_add = 0.02				# Very slight advantage for high voltage arcades
 			state_migration_pull_add = 0.02			# Throughput bonuses can get high so this needs to start low.

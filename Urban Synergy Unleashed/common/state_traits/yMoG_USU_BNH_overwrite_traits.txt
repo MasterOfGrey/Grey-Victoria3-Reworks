@@ -39,6 +39,7 @@ state_trait_trondhjemsfjorden = {
 		state_trade_capacity_mult = 0.30
 		state_building_naval_base_max_level_add = 15
 		goods_output_electricity_mult = 0.2
+		goods_output_ppp_hv_power_mult = 0.2
 		state_market_access_price_impact = 0.05
 	}
 }
@@ -51,6 +52,7 @@ state_trait_hardangerfjorden = {
 		state_trade_capacity_mult = 0.30
 		state_building_naval_base_max_level_add = 15
 		goods_output_electricity_mult = 0.2
+		goods_output_ppp_hv_power_mult = 0.2
 		state_market_access_price_impact = 0.05
 	}
 }

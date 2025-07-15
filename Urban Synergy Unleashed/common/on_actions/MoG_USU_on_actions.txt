@@ -20,6 +20,7 @@ on_yearly_pulse_country = {
 	on_actions = {
 		delay = { days = { 15 350 } }
 		mog_urban_on_action
+		mog_fix_forgotten_ports_action
 	}
 	
 	### Canal Action
@@ -48,6 +49,23 @@ mog_urban_on_action = {
 	}
 }
 
+mog_fix_forgotten_ports_action = {
+	effect = {
+		every_scope_state = {	# Turn off port subsidies for players who forget so it doesn't break UC's.
+			if = {
+				limit = {
+					b:building_port ?= {
+						is_subsidized = yes
+						level > 5
+					}
+				}
+				b:building_port ?= {
+					set_subsidized = no
+				}
+			}
+		}
+	}
+}
 
 ## MONTHLIES
 on_monthly_pulse_country = {

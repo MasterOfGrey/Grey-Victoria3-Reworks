@@ -1,0 +1,12 @@
+﻿l_simp_chinese:
+ # Fallback names if dynamic naming fails
+ company_basic_utilities: "国家电力公司" #deepl:4177512048
+ company_basic_infrastructure: "国家物流联盟" #deepl:2081115541
+ company_basic_community: "辐射娱乐集团" #deepl:1762075573
+ # Dynamic name elements
+ company_basic_utilities_dynamic_name_tag_singular: "公用设施" #deepl:3155896013
+ company_basic_utilities_dynamic_name_tag_plural: "公用设施" #deepl:3838988151
+ company_basic_infrastructure_dynamic_name_tag_singular: "物流" #deepl:3412261871
+ company_basic_infrastructure_dynamic_name_tag_plural: "物流" #deepl:3412261871
+ company_basic_community_dynamic_name_tag_singular: "娱乐" #deepl:3509057252
+ company_basic_community_dynamic_name_tag_plural: "娱乐" #deepl:3509057252
