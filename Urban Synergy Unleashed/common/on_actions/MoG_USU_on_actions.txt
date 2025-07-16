@@ -1,4 +1,18 @@
-﻿# Root = Country
+﻿on_game_started = {
+	on_actions = {
+		mog_usu_game_started_on_action
+	}
+}
+
+mog_usu_game_started_on_action = {
+	effect = {
+		every_state = {
+			usu_manage_trade_centre_type = yes
+		}
+	}
+}
+
+# Root = Country
 
 ### Urbanization Actions
 on_yearly_pulse_country = {
@@ -6,6 +20,7 @@ on_yearly_pulse_country = {
 	on_actions = {
 		delay = { days = { 15 350 } }
 		mog_urban_on_action
+		mog_fix_forgotten_ports_action
 	}
 	
 	### Canal Action
@@ -34,12 +49,27 @@ mog_urban_on_action = {
 	}
 }
 
+mog_fix_forgotten_ports_action = {
+	effect = {
+		every_scope_state = {	# Turn off port subsidies for players who forget so it doesn't break UC's.
+			if = {
+				limit = {
+					b:building_port ?= {
+						is_subsidized = yes
+						level > 5
+					}
+				}
+				b:building_port ?= {
+					set_subsidized = no
+				}
+			}
+		}
+	}
+}
 
 ## MONTHLIES
 on_monthly_pulse_country = {
 	on_actions = {
-		# delay = { days = { 5 27 } }
-		# mog_logistics_land_trade_on_action # land trade is no more
 		mog_trade_centre_type_on_action
 	}
 }
@@ -60,9 +90,54 @@ on_monthly_pulse_country = {
 
 # Set Trade Center as inland or port-side.
 mog_trade_centre_type_on_action = {
-    effect = {
-        usu_manage_trade_centre_type = yes
-    }
+	effect = {
+		every_scope_state = {
+			usu_manage_trade_centre_type = yes
+		}
+	}
+}
+
+# Root = Building
+on_building_built = {
+	on_actions = {
+		mog_usu_building_built_on_action
+	}
+}
+
+mog_usu_building_built_on_action = {
+	effect = {
+		if = {
+			limit = {
+				OR = {
+					is_building_type = building_port
+					is_building_type = building_river_port
+				}
+			}
+			state = {
+				usu_manage_trade_centre_type = yes
+			}
+		}
+	}
+}
+
+# Root = Building
+on_production_method_changed = {
+	on_actions = {
+		mog_usu_production_method_changed_on_action
+	}
+}
+
+mog_usu_production_method_changed_on_action = {
+	effect = {
+		if = {
+			limit = {
+				is_building_type = building_trade_center
+			}
+			state = {
+				usu_manage_trade_centre_type = yes
+			}
+		}
+	}
 }
 
 ### Construction Action

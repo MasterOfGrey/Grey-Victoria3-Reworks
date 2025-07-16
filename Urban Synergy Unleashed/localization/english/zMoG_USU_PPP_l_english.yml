@@ -1,58 +1,58 @@
 ﻿l_english:
-    # Building
-    usu_bg_power_grid: "Electrical Grid"
-    ppp_building_power_grid: "Electrical Grid"
-    
-    # Technologies
-    PPP_tech_hv_power:      "Power Transmission"
-    PPP_tech_hv_power_desc: "By utilising converters and regulators, long-distance power transmission of high voltages are now useable by multiple destinations with differing needs."
-    USU_tech_hv_railways:      "Industrial Transformers"
-    USU_tech_hv_railways_desc: "By utilising scalable transformers we can gain the full benefit of alternating electrical current, allowing consistently high voltages to be delivered over long-distances and make power transmission economical."
+ # Building
+ usu_bg_power_grid: "Electrical Grid"
+ ppp_building_power_grid: "Electrical Grid"
+ 
+ # Technologies
+ PPP_tech_hv_power:   "Power Transmission"
+ PPP_tech_hv_power_desc: "By utilising converters and regulators, long-distance power transmission of high voltages are now useable by multiple destinations with differing needs."
+ USU_tech_hv_railways:   "Industrial Transformers"
+ USU_tech_hv_railways_desc: "By utilising scalable transformers we can gain the full benefit of alternating electrical current, allowing consistently high voltages to be delivered over long-distances and make power transmission economical."
 	
-    # Goods
-    ppp_hv_power: "High-Voltage Power"
-    
-    # Modifier types - As of USU: None of the multipliers are used anymore.
-    goods_input_ppp_hv_power_add:   "@ppp_hv_power![Nbsp]$ppp_hv_power$ input"
-    goods_output_ppp_hv_power_add:  "@ppp_hv_power![Nbsp]$ppp_hv_power$ output"
-    goods_input_ppp_hv_power_mult:  "Building @ppp_hv_power![Nbsp]$ppp_hv_power$ input"
-    goods_output_ppp_hv_power_mult: "Building @ppp_hv_power![Nbsp]$ppp_hv_power$ output"
-    
-    goods_input_ppp_hv_power_add_desc:   "The amount of @ppp_hv_power![Nbsp]$ppp_hv_power$ consumed by buildings"
-    goods_output_ppp_hv_power_add_desc:  "The amount of @ppp_hv_power![Nbsp]$ppp_hv_power$ produced by buildings"
-    goods_input_ppp_hv_power_mult_desc:  "A bonus or penalty to the amount of @ppp_hv_power![Nbsp]$ppp_hv_power$ consumed by buildings"
-    goods_output_ppp_hv_power_mult_desc: "A bonus or penalty to the amount of @ppp_hv_power![Nbsp]$ppp_hv_power$ produced by buildings"
-    
-    # PMGs
-    PPP_pmg_generation_machinery: "Generation Machinery"
-    PPP_pmg_HV_generation:        "Power Distribution"
-    PPP_pmg_power_grid:           "$pm_base$"
-    PPP_pmg_power_grid_scaler:    "Distribution Capacity"
-    
-    # PMs
-    PPP_pm_hydro_mechanical: "Water Turbines"
-    PPP_pm_steam_engine:     "Steam Engines"
-    PPP_pm_steam_turbine:    "Steam Turbines"
-    PPP_pm_gas_turbine:      "Gas Turbines"
-    
-    PPP_pm_hy_local_power: "Local Electricity"
-    PPP_pm_hy_hybrid_power: "Mixed Grid Supply"
-    PPP_pm_hy_grid_power: "Electrical Grid"
-    PPP_pm_se_local_power: "Local Electricity"
-    PPP_pm_se_hybrid_power: "Mixed Grid Supply"
-    PPP_pm_se_grid_power: "Electrical Grid"
-    PPP_pm_st_local_power: "Local Electricity"
-    PPP_pm_st_hybrid_power: "Mixed Grid Supply"
-    PPP_pm_st_grid_power: "Electrical Grid"
-    PPP_pm_gt_local_power: "Local Electricity"
-    PPP_pm_gt_hybrid_power: "Mixed Grid Supply"
-    PPP_pm_gt_grid_power: "Electrical Grid"
-    PPP_pm_emergency_local_power: "Emergency Local Supply"
-    
-    PPP_pm_grid_base: "Regional Distribution"
-    
-    PPP_pm_grid_water:       "Normal Capacity"
-    PPP_pm_grid_engine:      "Increased Capacity"
-    PPP_pm_grid_turbine:     "Doubled Capacity"
-    PPP_pm_grid_gas_turbine: "Tripled Capacity"
-    
+ # Goods
+ ppp_hv_power: "High-Voltage Power"
+ 
+ # Modifier types - As of USU: None of the multipliers are used anymore.
+ goods_input_ppp_hv_power_add:   "@ppp_hv_power![Nbsp]$ppp_hv_power$ input"
+ goods_output_ppp_hv_power_add:  "@ppp_hv_power![Nbsp]$ppp_hv_power$ output"
+ goods_input_ppp_hv_power_mult:  "Building @ppp_hv_power![Nbsp]$ppp_hv_power$ input"
+ goods_output_ppp_hv_power_mult: "Building @ppp_hv_power![Nbsp]$ppp_hv_power$ output"
+ 
+ goods_input_ppp_hv_power_add_desc:   "The amount of @ppp_hv_power![Nbsp]$ppp_hv_power$ consumed by buildings"
+ goods_output_ppp_hv_power_add_desc:  "The amount of @ppp_hv_power![Nbsp]$ppp_hv_power$ produced by buildings"
+ goods_input_ppp_hv_power_mult_desc:  "A bonus or penalty to the amount of @ppp_hv_power![Nbsp]$ppp_hv_power$ consumed by buildings"
+ goods_output_ppp_hv_power_mult_desc: "A bonus or penalty to the amount of @ppp_hv_power![Nbsp]$ppp_hv_power$ produced by buildings"
+ 
+ # PMGs
+ PPP_pmg_generation_machinery: "Generation Machinery"
+ PPP_pmg_HV_generation:  "Power Distribution"
+ PPP_pmg_power_grid:     "$pm_base$"
+ PPP_pmg_power_grid_scaler: "Distribution Capacity"
+ 
+ # PMs
+ PPP_pm_hydro_mechanical: "Water Turbines"
+ PPP_pm_steam_engine:  "Steam Engines"
+ PPP_pm_steam_turbine: "Steam Turbines"
+ PPP_pm_gas_turbine:   "Gas Turbines"
+ 
+ PPP_pm_hy_local_power: "Local Electricity"
+ PPP_pm_hy_hybrid_power: "Mixed Grid Supply"
+ PPP_pm_hy_grid_power: "Electrical Grid"
+ PPP_pm_se_local_power: "Local Electricity"
+ PPP_pm_se_hybrid_power: "Mixed Grid Supply"
+ PPP_pm_se_grid_power: "Electrical Grid"
+ PPP_pm_st_local_power: "Local Electricity"
+ PPP_pm_st_hybrid_power: "Mixed Grid Supply"
+ PPP_pm_st_grid_power: "Electrical Grid"
+ PPP_pm_gt_local_power: "Local Electricity"
+ PPP_pm_gt_hybrid_power: "Mixed Grid Supply"
+ PPP_pm_gt_grid_power: "Electrical Grid"
+ PPP_pm_emergency_local_power: "Emergency Local Supply"
+ 
+ PPP_pm_grid_base: "Regional Distribution"
+ 
+ PPP_pm_grid_water:    "Normal Capacity"
+ PPP_pm_grid_engine:   "Increased Capacity"
+ PPP_pm_grid_turbine:  "Doubled Capacity"
+ PPP_pm_grid_gas_turbine: "Tripled Capacity"
+ 

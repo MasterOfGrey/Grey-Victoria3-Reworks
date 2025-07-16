@@ -71,9 +71,9 @@ pm_coal-fired_plant = {
 		}
 		
 		level_scaled = {
-			building_employment_laborers_add   = 1500 # This incremental scaling on the base PM helps encourage the AI in a helpful direction.
-			building_employment_machinists_add = 1000
-			building_employment_engineers_add  = 1000
+			building_employment_laborers_add   = 500 # 1500 # This incremental scaling on the base PM helps encourage the AI in a helpful direction.
+			# building_employment_machinists_add = 1000
+			# building_employment_engineers_add  = 1000
 		}
 	}
 }
@@ -98,9 +98,9 @@ pm_oil-fired_plant = {
 			# goods_output_electricity_add = 150
 		}
 		level_scaled = {
-			building_employment_laborers_add   = 1000 # This incremental scaling on the base PM helps encourage the AI in a helpful direction.
-			building_employment_machinists_add = 1000
-			building_employment_engineers_add  = 1000
+			building_employment_laborers_add   = 400 # 1000 # This incremental scaling on the base PM helps encourage the AI in a helpful direction.
+			building_employment_machinists_add = 100 # 1000
+			# building_employment_engineers_add  = 1000
 		}
 	}
 }

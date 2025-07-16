@@ -1,0 +1,219 @@
+﻿### NEW DEFAULT COMPANIES
+company_basic_utilities = {
+	icon = "gfx/interface/icons/company_icons/basic_utilities.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufacturing_heavy.dds"
+
+	flavored_company = no
+
+	uses_dynamic_naming = yes
+
+	dynamic_company_type_names = {
+		"dynamic_company_type_company"
+		"dynamic_company_type_consortium"
+		"dynamic_company_type_corporation"
+		"dynamic_company_type_conglomerate"
+		"dynamic_company_type_syndicate"
+		"dynamic_company_type_combine"
+	}
+
+	building_types = {
+		building_power_plant
+		usu_building_hydro_power_plant
+	}
+
+	extension_building_types = {
+		ppp_building_power_grid
+		building_coal_mine
+		building_oil_rig
+	}
+
+	possible_prestige_goods = {
+	}
+
+	prestige_goods_trigger = {
+	}
+
+	possible = {
+		any_scope_state = {
+			OR = {
+				any_scope_building = {
+					is_building_type = building_power_plant
+					level >= 5
+				}
+				any_scope_building = {
+					is_building_type = usu_building_hydro_power_plant
+					level >= 3
+				}
+			}
+		}
+	}
+
+	prosperity_modifier = {
+		building_urban_center_throughput_add = 0.1
+		building_motor_industry_throughput_add = 0.1
+	}
+
+	ai_will_do = {
+		any_scope_state = {
+			OR = {
+				any_scope_building = {
+					is_building_type = building_power_plant
+					level >= 5
+				}
+				any_scope_building = {
+					is_building_type = usu_building_hydro_power_plant
+					level >= 3
+				}
+			}
+		}
+	}
+	
+	ai_construction_targets = {
+		usu_building_hydro_power_plant = {
+			level = 5
+			state_trigger = {
+				OR = {
+					has_state_trait = state_trait_hydro_potential_1
+					has_state_trait = state_trait_hydro_potential_2
+					has_state_trait = state_trait_hydro_potential_3
+				}
+			}
+		}
+	}
+}
+
+company_basic_infrastructure = {
+	icon = "gfx/interface/icons/company_icons/basic_infrastructure.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_railways.dds"
+	
+	flavored_company = no
+	
+	uses_dynamic_naming = yes
+	
+	dynamic_company_type_names = {
+		"dynamic_company_type_company"
+		"dynamic_company_type_consortium"
+		"dynamic_company_type_corporation"
+		"dynamic_company_type_conglomerate"
+		"dynamic_company_type_syndicate"
+		"dynamic_company_type_guild"
+		"dynamic_company_type_society"
+		"dynamic_company_type_fellowship"
+	}
+	
+	building_types = {
+		building_railway
+		building_river_port
+	}
+	
+	extension_building_types = {
+		ppp_building_power_grid
+		building_port
+		building_motor_industry
+	}
+	
+	possible = { 
+		any_scope_state = {
+			is_incorporated = yes
+			OR = {
+				any_scope_building = {
+					is_building_type = building_railway
+					level >= 3
+				}
+				any_scope_building = {
+					is_building_type = building_river_port
+					level >= 2
+				}
+			}
+		}
+	}
+	
+	prosperity_modifier = {
+		building_urban_center_throughput_add = 0.2
+		state_trade_capacity_mult = 0.05
+	}
+	
+	ai_will_do = {
+		any_scope_state = {
+			is_incorporated = yes
+			any_scope_building = {
+				OR = {
+					is_building_type = building_railway
+					level >= 3
+				}
+				OR = {
+					is_building_type = building_river_port
+					level >= 2
+				}
+			}
+		}
+	}
+}
+
+company_basic_community = {
+	icon = "gfx/interface/icons/company_icons/basic_community.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_plantation.dds"
+
+	flavored_company = no
+
+	uses_dynamic_naming = yes
+
+	dynamic_company_type_names = {
+		"dynamic_company_type_company"
+		"dynamic_company_type_consortium"
+		"dynamic_company_type_corporation"
+		"dynamic_company_type_conglomerate"
+		"dynamic_company_type_syndicate"
+		"dynamic_company_type_combine"
+		"dynamic_company_type_guild"
+		"dynamic_company_type_society"
+		"dynamic_company_type_fellowship"
+	}
+
+	building_types = {
+		usu_building_public_green
+		building_arts_academy
+		# building_elgar_opera		# Morgenrote
+	}
+
+	extension_building_types = {
+		building_vineyard_plantation
+		building_paper_mills
+		building_river_port
+	}
+
+	possible = {
+		any_scope_state = {
+			is_incorporated = yes
+			any_scope_building = {
+				is_building_type = usu_building_public_green
+				level >= 5
+			}
+			any_scope_building = {
+				is_building_type = building_arts_academy
+				level >= 1
+			}
+		}
+	}
+
+	prosperity_modifier = {
+		building_urban_center_throughput_add = 0.1
+		building_railway_throughput_add = 0.05
+		building_river_port_throughput_add = 0.05
+		state_migration_pull_mult = 0.05
+	}
+
+	ai_will_do = {
+		any_scope_state = {
+			is_incorporated = yes
+			any_scope_building = {
+				is_building_type = usu_building_public_green
+				level >= 5
+			}
+			any_scope_building = {
+				is_building_type = building_arts_academy
+				level >= 1
+			}
+		}
+	}
+}

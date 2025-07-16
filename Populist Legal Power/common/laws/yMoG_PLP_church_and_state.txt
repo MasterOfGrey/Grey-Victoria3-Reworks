@@ -1,4 +1,6 @@
-﻿# cultural_acceptance_rule and religious_acceptance_rule are triggers in the pop scope used to check if a pop should be accepted or discriminated against
+﻿# group = this is the law_group a law belongs to
+# icon = graphical icon shown in-game
+# modifier = {} modifier on country for having adopted this law
 
 law_state_religion = {
 	group = lawgroup_church_and_state
@@ -312,6 +314,11 @@ law_state_atheism = {
 	}
 	
 	on_enact = {
+
+	}
+
+	on_activate = {
+		set_state_religion = rel:atheist
 		add_modifier = {
 			name = antireligious_policies
 			days = long_modifier_time
@@ -324,15 +331,11 @@ law_state_atheism = {
 				}
 				convert_population = {
 					target = rel:atheist
-					value = 0.25
+					value = 0.1
 				}
 			}
 		}
 		recalculate_pop_ig_support = yes
-	}
-	
-	on_activate = {
-		set_state_religion = rel:atheist
 	}
 	
 	modifier = {

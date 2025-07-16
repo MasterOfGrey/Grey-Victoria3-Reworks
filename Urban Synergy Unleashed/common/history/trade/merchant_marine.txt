@@ -1,0 +1,50 @@
+﻿TRADE = {
+	every_market = {
+		limit = {
+			mg:merchant_marine = {
+				has_potential_supply = yes
+				OR = {
+					market_goods_sell_orders <= 0
+					market_goods_pricier > 0.5
+				}
+			}
+		}
+		every_country = {
+			random_scope_state = {
+				limit = {
+					has_building = building_trade_center
+					sg:merchant_marine = {
+						has_potential_supply = yes
+					}
+				}
+				sg:merchant_marine = {
+					add_imports = 1
+				}
+			}
+		}
+	}
+	every_market = {
+		limit = {
+			mg:clippers = {
+				has_potential_supply = yes
+				OR = {
+					market_goods_sell_orders <= 0
+					market_goods_pricier > 0.5
+				}
+			}
+		}
+		every_country = {
+			random_scope_state = {
+				limit = {
+					has_building = building_trade_center
+					sg:clippers = {
+						has_potential_supply = yes
+					}
+				}
+				sg:clippers = {
+					add_imports = 1
+				}
+			}
+		}
+	}
+}

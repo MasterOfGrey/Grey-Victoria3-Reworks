@@ -1,0 +1,12 @@
+﻿l_braz_por:
+ # Fallback names if dynamic naming fails
+ company_basic_utilities: "National Electric Company" #deepl:4177512048
+ company_basic_infrastructure: "Consórcio Estadual de Logística" #deepl:2081115541
+ company_basic_community: "Grupo de Entretenimento Radiante" #deepl:1762075573
+ # Dynamic name elements
+ company_basic_utilities_dynamic_name_tag_singular: "Utilidade" #deepl:3155896013
+ company_basic_utilities_dynamic_name_tag_plural: "Utilitários" #deepl:3838988151
+ company_basic_infrastructure_dynamic_name_tag_singular: "Logística" #deepl:3412261871
+ company_basic_infrastructure_dynamic_name_tag_plural: "Logística" #deepl:3412261871
+ company_basic_community_dynamic_name_tag_singular: "Entretenimento" #deepl:3509057252
+ company_basic_community_dynamic_name_tag_plural: "Entretenimento" #deepl:3509057252

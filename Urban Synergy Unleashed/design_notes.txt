@@ -13,4 +13,6 @@
 # - Mainline Industries = 5k/level
 # - Primary Infrastructure = 1k/level base, up to 1.5k for prestige pms (Gov Admin, Rail, Port, Power)
 # - Secondary Infrastructure = 500/level (public greens, power grids, logistics hubs if they get added)
-# - Owner buildings = 50/level or that gets crazy (consider: unscaled base of 50/100, and only 20/level?)
+# - Owner Buildings = 50/level or that gets crazy (consider: unscaled base of 50/100, and only 20/level?)
+# - Facilitative Industries (from mods) = 2k/level, strict (instrument workshops)
+# - Prestige Industries (from mods) = 500/level (up to), strict max (opera houses)

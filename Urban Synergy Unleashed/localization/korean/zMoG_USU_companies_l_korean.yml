@@ -1,0 +1,12 @@
+﻿l_korean:
+ # Fallback names if dynamic naming fails
+ company_basic_utilities: "내셔널 일렉트릭 컴퍼니" #deepl:4177512048
+ company_basic_infrastructure: "주 물류 컨소시엄" #deepl:2081115541
+ company_basic_community: "래디언트 엔터테인먼트 그룹" #deepl:1762075573
+ # Dynamic name elements
+ company_basic_utilities_dynamic_name_tag_singular: "유틸리티" #deepl:3155896013
+ company_basic_utilities_dynamic_name_tag_plural: "유틸리티" #deepl:3838988151
+ company_basic_infrastructure_dynamic_name_tag_singular: "물류" #deepl:3412261871
+ company_basic_infrastructure_dynamic_name_tag_plural: "물류" #deepl:3412261871
+ company_basic_community_dynamic_name_tag_singular: "엔터테인먼트" #deepl:3509057252
+ company_basic_community_dynamic_name_tag_plural: "엔터테인먼트" #deepl:3509057252

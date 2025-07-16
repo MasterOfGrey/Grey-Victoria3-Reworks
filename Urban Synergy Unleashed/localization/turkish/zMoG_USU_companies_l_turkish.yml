@@ -1,0 +1,12 @@
+﻿l_turkish:
+ # Fallback names if dynamic naming fails
+ company_basic_utilities: "Ulusal Elektrik Şirketi" #deepl:4177512048
+ company_basic_infrastructure: "Devlet Lojistik Konsorsiyumu" #deepl:2081115541
+ company_basic_community: "Radiant Eğlence Grubu" #deepl:1762075573
+ # Dynamic name elements
+ company_basic_utilities_dynamic_name_tag_singular: "Yardımcı Program" #deepl:3155896013
+ company_basic_utilities_dynamic_name_tag_plural: "Yardımcı Programlar" #deepl:3838988151
+ company_basic_infrastructure_dynamic_name_tag_singular: "Lojistik" #deepl:3412261871
+ company_basic_infrastructure_dynamic_name_tag_plural: "Lojistik" #deepl:3412261871
+ company_basic_community_dynamic_name_tag_singular: "Eğlence" #deepl:3509057252
+ company_basic_community_dynamic_name_tag_plural: "Eğlence" #deepl:3509057252

@@ -1,0 +1,12 @@
+﻿l_russian:
+ # Fallback names if dynamic naming fails
+ company_basic_utilities: "Национальная электрическая компания" #deepl:4177512048
+ company_basic_infrastructure: "Государственный логистический консорциум" #deepl:2081115541
+ company_basic_community: "Radiant Entertainment Group" #deepl:1762075573
+ # Dynamic name elements
+ company_basic_utilities_dynamic_name_tag_singular: "Коммунальное хозяйство" #deepl:3155896013
+ company_basic_utilities_dynamic_name_tag_plural: "Утилиты" #deepl:3838988151
+ company_basic_infrastructure_dynamic_name_tag_singular: "Логистика" #deepl:3412261871
+ company_basic_infrastructure_dynamic_name_tag_plural: "Логистика" #deepl:3412261871
+ company_basic_community_dynamic_name_tag_singular: "Развлечения" #deepl:3509057252
+ company_basic_community_dynamic_name_tag_plural: "Развлечения" #deepl:3509057252

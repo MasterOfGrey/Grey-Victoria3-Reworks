@@ -1,0 +1,8 @@
+﻿##################################################
+#   GREY - MOD COMPATIBILITY SCRIPTED TRIGGERS   #
+##################################################
+
+# Expect this to be used later.
+Grey_SPA_is_active = { # Soft Pop Adjustments
+	always = no
+}

@@ -23,8 +23,11 @@ USU_pm_port_c_logistics_1 = {
 		unscaled = {
 			building_urban_center_throughput_add = 0.1
 		}
+		level_scaled = {
+			building_urban_center_throughput_add = -0.001 # A large and unemployed port is a bit of a drag.
+		}
 		workforce_scaled = {
-			building_urban_center_throughput_add = 0.01
+			building_urban_center_throughput_add = 0.005 # 0.01
 		}
 	}
 }
@@ -43,8 +46,11 @@ USU_pm_port_c_logistics_2 = {
 		unscaled = {
 			building_urban_center_throughput_add = 0.1
 		}
+		level_scaled = {
+			building_urban_center_throughput_add = -0.002 # A large and unemployed port is a bit of a drag.
+		}
 		workforce_scaled = {
-			building_urban_center_throughput_add = 0.015	# Coastal ports scale slower because they are uncapped and economy of scale applies to workforce_scaled modifiers.
+			building_urban_center_throughput_add = 0.007 # 0.015	# Coastal ports scale slower because they are uncapped and economy of scale applies to workforce_scaled modifiers.
 		}
 	}
 }
@@ -67,8 +73,11 @@ USU_pm_port_c_logistics_3 = {
 		unscaled = {
 			building_urban_center_throughput_add = 0.1
 		}
+		level_scaled = {
+			building_urban_center_throughput_add = -0.003 # A large and unemployed port is a bit of a drag.
+		}
 		workforce_scaled = {
-			building_urban_center_throughput_add = 0.02		# Coastal ports scale slower because they are uncapped and economy of scale applies to workforce_scaled modifiers.
+			building_urban_center_throughput_add = 0.01 # 0.02		# Coastal ports scale slower because they are uncapped and economy of scale applies to workforce_scaled modifiers.
 		}
 	}
 }

@@ -1,12 +1,17 @@
 ﻿# Set whether trade centre is inland or port-access.
 usu_manage_trade_centre_type = {
-	every_scope_state = {
+	if = {
+		limit = {
+			OR = {
+				has_building = building_port
+				has_building = building_river_port
+			}
+			market.mg:merchant_marine = {
+				market_goods_production > 1
+			}
+		}
 		if = {
 			limit = {
-				OR = {
-					has_building = building_port
-					has_building = building_river_port
-				}
 				NOT = {
 					is_production_method_active = {
 						building_type = building_trade_center
@@ -19,21 +24,19 @@ usu_manage_trade_centre_type = {
 				production_method = pm_trade_center_port
 			}
 		}
-		else_if = {
-			limit = {
-				NOT = {
-					is_production_method_active = {
-						building_type = building_trade_center
-						production_method = pm_trade_center_inland
-					}
-					has_building = building_port
-					has_building = building_river_port
+	}
+	else_if = {
+		limit = {
+			NOT = {
+				is_production_method_active = {
+					building_type = building_trade_center
+					production_method = pm_trade_center_inland
 				}
 			}
-			activate_production_method = {
-				building_type     = building_trade_center
-				production_method = pm_trade_center_inland
-			}
+		}
+		activate_production_method = {
+			building_type     = building_trade_center
+			production_method = pm_trade_center_inland
 		}
 	}
 }

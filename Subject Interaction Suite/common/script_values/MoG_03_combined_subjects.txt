@@ -71,7 +71,7 @@ liberty_desire_weekly_change_own_combined_subjects = {
 		if = {
 			# Subject navies are collectively < Overlord navy = reduce the effect
 			limit = {
-				root.second_country.naval_power_projection > {
+				root.second_country.naval_power_projection >= {
 					add = {
 						root.second_country = {
 							every_direct_subject = {
@@ -82,6 +82,9 @@ liberty_desire_weekly_change_own_combined_subjects = {
 				}
 			}
 			multiply = -0.8		# -0.5 # Subjects are pretty concerned about having a disagreement with their overlord while also dealing with disloyal subjects of their own. A bigger navy is less impactful.
+		}
+		else = {
+			multiply = -1
 		}
 	}
 }

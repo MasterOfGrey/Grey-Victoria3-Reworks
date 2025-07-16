@@ -1,39 +1,40 @@
 ﻿l_korean:
-    # Modifiers
+ # Modifiers
  mog_urbanization: "도시 시너지 도시주의"
  mog_urbanization_mult: "도시 시너지 도시주의"
  mog_construction_max_level_adjustment: "어반 시너지 건설"
  mog_logistics_land_trade: "수입 물류 서비스로부터의 육상 무역 용량"
  mog_mapi: "어반 시너지 MAPI"
-    
-    # Building
+ 
+ # Building
  USU_bg_port_infrastructure: "포트" #deepl:687823806
+ USU_bg_river_port_infrastructure: "포트" #deepl:687823806
  USU_bg_public_greens: "공공 녹지 공간" #deepl:1270138251
-    
+ 
  building_river_port: "강 부두"
  usu_building_public_green: "공공 녹지"
-    
-    # Technologies
-    
-    # Goods
+ 
+ # Technologies
+ 
+ # Goods
  usu_logistics: "물류 서비스"
  trade_route_import_lens_option_usu_logistics_tooltip: "$usu_logistics$ 수입 거래 경로 설정" #deepl:29640115
  trade_route_export_lens_option_usu_logistics_tooltip: "$usu_logistics$ 수출 거래 경로 설정" #deepl:1994327992
-    
-    # Modifier types
+ 
+ # Modifier types
  state_building_river_port_max_level_add: "강 항구 최대 수위"
  state_building_river_port_max_level_add_desc: "강 항구 건물의 최대 레벨에 대한 보너스 또는 패널티입니다."
-    
+ 
  goods_input_usu_logistics_add: "@usu_logistics![Nbsp]$usu_logistics$ 입력"
  goods_output_usu_logistics_add: "@usu_logistics![Nbsp]$usu_logistics$ 출력"
  goods_input_usu_logistics_mult: "건물 @usu_logistics![Nbsp]$usu_logistics$ 입력" #deepl:3595168342
  goods_output_usu_logistics_mult: "@usu_logistics![Nbsp]$usu_logistics$ 출력 빌드 중"
-    
+ 
  goods_input_usu_logistics_add_desc: "건물에서 소모한 @usu_logistics![Nbsp]$usu_logistics$의 양"
  goods_output_usu_logistics_add_desc: "건물에서 생산되는 @usu_logistics![Nbsp]$usu_logistics$의 양"
  goods_input_usu_logistics_mult_desc: "건물에서 소모하는 @usu_logistics![Nbsp]$usu_logistics$ 양에 대한 보너스 또는 패널티"
  goods_output_usu_logistics_mult_desc: "건물에서 생산되는 @usu_logistics![Nbsp]$usu_logistics$의 양에 대한 보너스 또는 패널티"
-    
+ 
  usu_building_public_green_throughput_add: "$usu_building_public_green$ 건물 [concept_throughput]" #deepl:1617626189
  usu_building_public_green_throughput_add_desc: "입력과 출력 모두에 보너스 또는 페널티를 적용합니다. $usu_building_public_green$" #deepl:3185140157
  ppp_building_power_grid_throughput_add: "$ppp_building_power_grid$ 건물 [concept_throughput]" #deepl:486021742
@@ -42,22 +43,22 @@
  building_river_port_throughput_add_desc: "입력과 출력 모두에 보너스 또는 페널티를 적용합니다. $building_river_port$" #deepl:3708668278
  usu_building_hydro_power_plant_throughput_add: "$usu_building_hydro_power_plant$ 건물 [concept_throughput]" #deepl:2682676248
  usu_building_hydro_power_plant_throughput_add_desc: "입력과 출력 모두에 보너스 또는 페널티를 적용합니다. $usu_building_hydro_power_plant$" #deepl:1139273118
-    
+ 
  state_usu_building_public_green_max_level_add: "$usu_building_public_green$ 최대 레벨" #deepl:4158133370
  state_usu_building_public_green_max_level_add_desc: "$usu_building_public_green$ 건물의 최대 레벨에 보너스 또는 페널티가 적용됩니다." #deepl:3207423598
-    
-    # Vanilla Modifier types
-    
+ 
+ # Vanilla Modifier types
+ 
  goods_input_luxury_clothes_add: "@luxury_clothes![Nbsp]$luxury_clothes$ 입력" #deepl:3302038186
  goods_input_luxury_clothes_add_desc: "건물에서 소비하는 @luxury_clothes![Nbsp]$luxury_clothes$ " #deepl:3477511040
  goods_input_services_add: "@services![Nbsp]$services$ 입력" #deepl:2678123429
  goods_input_services_add_desc: "건물에서 소비하는 @services![Nbsp]$services$ " #deepl:1408821948
-    
+ 
  goods_input_tools_mult: "@tools![Nbsp]$tools$ 입력" #deepl:1055261592
  goods_input_tools_mult_desc: "건물에서 소비하는 @tools![Nbsp]$tools$ 양" #deepl:1892978715
  goods_input_steel_mult: "@steel![Nbsp]$steel$ 입력" #deepl:3508900889
  goods_input_steel_mult_desc: "건물에서 소비하는 @steel![Nbsp]$steel$ 양" #deepl:2095881000
-    
+ 
  goods_input_transportation_mult: "교통 구축![Nbsp]$transportation$ 입력" #deepl:3701781964
  goods_input_transportation_mult_desc: "교통량에 대한 보너스 또는 페널티 @transportation![Nbsp]$transportation$ 건물에서 소비하는 교통량" #deepl:3299014953
  goods_output_transportation_mult: "교통 구축@transportation![Nbsp]$transportation$ 출력" #deepl:171588735
@@ -68,16 +69,16 @@
  goods_input_merchant_marine_mult_desc: "건물에서 소비하는 의 양에 보너스 또는 페널티@merchant_marine![Nbsp]$merchant_marine$ " #deepl:3075274957
  goods_output_merchant_marine_mult: "merchant_marine 구축![Nbsp]$merchant_marine$ 출력" #deepl:2695995466
  goods_output_merchant_marine_mult_desc: "건물에서 생산되는 의 양에 보너스 또는 페널티@merchant_marine![Nbsp]$merchant_marine$ " #deepl:1649084978
-    
-    # PMGs
+ 
+ # PMGs
  pmg_base_building_river_port: "부두"
  USU_pmg_government_administration_emergency_services: "응급 서비스"
  USU_pmg_government_administration_law_enforcement: "법 집행"
  USU_pmg_public_space_management: "공공 공간 관리"
  USU_pmg_public_parklands: "공원지 사용"
  pmg_trade_center_port_status: "포트 인접 상태" #deepl:23372774
-    
-    # PMs
+ 
+ # PMs
  pm_rp_anchorage: "앵커리지" #deepl:1916484437
  pm_rp_small_port: "리버사이드 피어스"
  pm_rp_industrial_port: "산업 항구"
@@ -100,12 +101,12 @@
  USU_pm_seasonal_fairgrounds: "계절별 박람회장"
  pm_trade_center_inland: "포트 액세스 없음" #deepl:4277007637
  pm_trade_center_port: "포트 액세스" #deepl:931806394
-    
-    # State Traits
+ 
+ # State Traits
  state_trait_rotterdam: "로테르담 항구"
  state_trait_hudson_river: "허드슨 강"
-    
-    # Autoexpand tooltip(s)
+ 
+ # Autoexpand tooltip(s)
  is_industrial_building: "자연스러운 $concept_building_industry$ 거래 가능 [Concept('concept_good', '$concept_goods$')]"
  is_private_infrastructure: "운송 $bg_infrastructure$이 [Concept('concept_privatize', '$concept_privatized$')]이 될 수 있습니까?"
  pos_rel_infrastructure: "상태에 사용 가능한 [concept_infrastructure]이 있습니다."

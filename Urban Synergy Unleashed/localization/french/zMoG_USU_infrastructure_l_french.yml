@@ -4,6 +4,7 @@
  pm_ac_electric_trains_principle_transport_3: "Trains électriques à courant alternatif communs"
  
  pm_electric_passenger_carriages: "Voitures voyageurs électriques"
+ 
  pmg_automation_building_railway: "Automatisation des installations"
  pm_auto_disabled_building_railway: "Grue à manivelle"
  pm_steam_crane_building_railway: "Grue à vapeur à flèche courbée"
@@ -12,7 +13,7 @@
  pm_steam_donkey_building_railway: "Transmission vapeur à engrenages"
  
  # Ports
- pmg_automation_port: "Automatisation des installations" 
+ pmg_automation_port: "Automatisation des installations"
  pm_auto_disabled_building_port: "Manutention manuelle"
  pm_steam_crane_building_port: "Grue à vapeur à flèche courbe"
  pm_hydraulic_lifters_building_port: "Élévateurs hydrauliques"
@@ -58,7 +59,6 @@
  canal_dividends.1.1: "$expedition_events.542.a$"
  modifier_building_canal_accident: "Accident sur le canal"
  mog_building_canal_accident: "Accident sur le canal"
-
 
 
 

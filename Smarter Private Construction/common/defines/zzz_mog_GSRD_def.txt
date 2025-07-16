@@ -50,7 +50,7 @@ NAI = {
 	# 1.8 reference
 	# PRODUCTION_BUILDING_COMPANY_MULT = 3.0 # 2.0									# Multiply score by this if we have at least one established company for the building type
 	# 1.9 company weights untouched for now. With companies able to aquire existing building levels, it's less important that they're the ones to perform the initial construction
-	# PRODUCTION_BUILDING_FOREIGN_INVESTMENT_COMPANY_MULT = 10 # Multiply score by this if the construction is a foreign investment by the country that has at least one established company for the building type
+	# PRODUCTION_BUILDING_FOREIGN_INVESTMENT_COMPANY_MULT = 1.5 # Multiply score by this if the construction is a foreign investment by the country that has at least one established company for the building type
 	# PRODUCTION_BUILDING_AUTONOMOUS_INVESTMENT_COMPANY_MULT = 2.0 # Multiply score by 1 + this if we have at least one established company for the building type, scales by fraction of investment pool coming from companies compared to historical amount of investment by companies
 	# PRODUCTION_BUILDING_AUTONOMOUS_INVESTMENT_COMPANY_MONOPOLY_MULT = 3.0 # Replaces PRODUCTION_BUILDING_COMPANY_MULT for buildings on which a company has a monopoly
 	# PRODUCTION_BUILDING_AUTONOMOUS_INVESTMENT_COMPANY_CHARTERED_COUNTRY_MULT = 2.0 # Additional multiplier to company weights above if the investment is targeting a company's chartered country

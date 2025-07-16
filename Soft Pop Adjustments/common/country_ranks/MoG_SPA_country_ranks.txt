@@ -6,7 +6,8 @@
 # min_commander_rank_random / max_commander_rank_random = min/max ranks when auto-generating commander rank
 # possible = {} must evaluate to true for rank to be able to be assigned
 # can_colonize = whether a country of this rank can colonize
-# diplo_pact_cost = Diplomatic pacts with country of this rank have their cost multiplied by 1 + this amount
+# diplo_pact_cost = Diplomatic pacts with country of this rank have their cost multiplied by this amount - 1
+# treaty_article_cost = Treaty articles with country of this rank have their cost multiplied by this amount - 1
 
 ################
 ## RECOGNIZED ##
@@ -19,6 +20,7 @@ great_power = {
 	enforce_subject_rank_check = yes
 	
 	diplo_pact_cost = 2.0
+	treaty_article_cost = 2.0
 	
 	prestige_average_threshold = 5.0
 	prestige_relative_threshold = 0.75
@@ -29,6 +31,7 @@ great_power = {
 	valid_country_types = {
 		recognized
 		colonial
+		company
 	}
 	
 	modifier = {
@@ -37,8 +40,10 @@ great_power = {
 		country_max_declared_interests_add = 6
 		country_loan_interest_rate_mult = -0.5
 		country_agitator_slots_add = 2
+		country_support_independence_weekly_liberty_desire_add = 0.1
 		state_migration_pull_mult = 0.25				# Unchanged
 		country_leverage_resistance_add = 1000
+		country_free_charters_add = 1
 	}
 }
 
@@ -49,6 +54,7 @@ major_power = {
 	enforce_subject_rank_check = yes
 	
 	diplo_pact_cost = 1.5
+	treaty_article_cost = 1.5
 	
 	prestige_average_threshold = 2.5
 	prestige_relative_threshold = 0.5
@@ -59,6 +65,7 @@ major_power = {
 	valid_country_types = {
 		recognized
 		colonial
+		company
 	}
 	
 	modifier = {
@@ -67,6 +74,7 @@ major_power = {
 		country_max_declared_interests_add = 3
 		country_loan_interest_rate_mult = -0.25
 		country_agitator_slots_add = 2
+		country_support_independence_weekly_liberty_desire_add = 0.05
 		state_migration_pull_mult = 0.15				# Up from 0.10
 		country_leverage_resistance_add = 750
 	}
@@ -84,6 +92,7 @@ minor_power = {
 	valid_country_types = {
 		recognized
 		colonial
+		company
 	}
 	
 	modifier = {
@@ -91,6 +100,7 @@ minor_power = {
 		country_diplomatic_play_maneuvers_add = 60
 		country_max_declared_interests_add = 1
 		country_agitator_slots_add = 1
+		country_support_independence_weekly_liberty_desire_add = 0.03
 		state_migration_pull_mult = 0.05				# Up from 0
 		country_leverage_resistance_add = 500
 	}
@@ -106,6 +116,7 @@ insignificant_power = {
 	valid_country_types = {
 		recognized
 		colonial
+		company
 	}
 	
 	modifier = {
@@ -113,6 +124,7 @@ insignificant_power = {
 		country_diplomatic_play_maneuvers_add = 50
 		country_loan_interest_rate_mult = 0.25
 		state_migration_pull_mult = -0.10				# Up from -0.25
+		country_support_independence_weekly_liberty_desire_add = 0.01
 		country_agitator_slots_add = 1
 		country_leverage_resistance_add = 250
 	}
@@ -146,6 +158,7 @@ unrecognized_major_power = {
 		country_loan_interest_rate_mult = 0.5
 		# No Migration Modifier 						# Unchanged
 		country_agitator_slots_add = 2
+		country_support_independence_weekly_liberty_desire_add = 0.05
 		country_leverage_resistance_add = 750
 	}
 }
@@ -157,6 +170,7 @@ unrecognized_regional_power = {
 	enforce_subject_rank_check = yes
 
 	diplo_pact_cost = 0.75
+	treaty_article_cost = 0.75
 	
 	prestige_average_threshold = 0.6
 	prestige_relative_threshold = 0.15
@@ -176,6 +190,7 @@ unrecognized_regional_power = {
 		country_loan_interest_rate_mult = 0.75
 		state_migration_pull_mult = -0.15				# Up from -0.25
 		country_agitator_slots_add = 1
+		country_support_independence_weekly_liberty_desire_add = 0.03
 		country_leverage_resistance_add = 500
 	}
 }
@@ -186,6 +201,7 @@ unrecognized_power = {
 	icon_index = 1
 
 	diplo_pact_cost = 0.5
+	treaty_article_cost = 0.5
 	
 	infamy_aggressor_scaling = 0.30
 	infamy_target_scaling = -0.50
@@ -200,6 +216,7 @@ unrecognized_power = {
 		country_tech_spread_mult = -0.25
 		country_loan_interest_rate_mult = 1.0
 		country_agitator_slots_add = 1
+		country_support_independence_weekly_liberty_desire_add = 0.01
 		state_migration_pull_mult = -0.3				# Up from -0.5
 		country_leverage_resistance_add = 250
 	}

@@ -1,4 +1,4 @@
-﻿# Global Static Modifiers
+# Global Static Modifiers
 base_values = {
 	country_weekly_innovation_add = 50
 	country_weekly_innovation_max_add = 50
@@ -61,6 +61,8 @@ base_values = {
 	state_max_trade_advantage_from_capacity_add = 0.2
 }
 
+=======
+
 # Add assimilation and education access penalties to states in turmoil
 
 # Applied if state is above 'in turmoil' threshold
@@ -71,6 +73,7 @@ state_turmoil = {
 	state_assimilation_mult = -0.3
 	state_education_access_add = -0.3
 	state_construction_mult = -0.33
+	state_trade_advantage_mult = -0.25
 }
 
 # Applied if state is above 'high turmoil' threshold
@@ -81,6 +84,7 @@ state_turmoil_high = {
 	state_assimilation_mult = -0.5
 	state_education_access_add = -0.5
 	state_construction_mult = -0.5
+	state_trade_advantage_mult = -0.5
 }
 
 # Applied if state is above 'extreme turmoil' threshold
@@ -91,4 +95,5 @@ state_turmoil_extreme = {
 	state_assimilation_mult = -1.0
 	state_education_access_add = -1.0
 	state_construction_mult = -0.75
+	state_trade_advantage_mult = -0.75
 }

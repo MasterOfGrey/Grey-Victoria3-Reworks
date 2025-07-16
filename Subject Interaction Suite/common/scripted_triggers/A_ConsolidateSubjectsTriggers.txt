@@ -1,8 +1,9 @@
 ﻿# Adapted with permission from: CaelReader's Consolidate Subjects
 
 can_consolidate_subject = {
-	NOT = { c:BIC ?= THIS }							# Gotta have `c:BIC ?= THIS`, NOT `THIS ?= c:BIC`
-	is_subject = no
+	# We can let India *try* and consolidate its subjects lol
+	# NOT = { c:BIC ?= THIS }						# Gotta have `c:BIC ?= THIS`, NOT `THIS ?= c:BIC`
+	# is_subject = no
 	is_revolutionary = no
 	is_diplomatic_play_committed_participant = no
 	has_technology_researched = nationalism											# disable for testing
@@ -10,6 +11,11 @@ can_consolidate_subject = {
 		is_diplomatic_play_committed_participant = no 
 		liberty_desire < 25															# disable for testing
 		subject_can_be_consolidation_target = yes
+		NOT = { c:BIC ?= THIS }						# Cannot consolidate India into something else.
+		NOR = { 
+			is_country_type = company
+			is_country_type = colonial
+		}
 	}
 }
 

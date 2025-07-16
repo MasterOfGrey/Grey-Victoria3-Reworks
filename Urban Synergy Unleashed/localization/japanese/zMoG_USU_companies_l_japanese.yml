@@ -1,0 +1,12 @@
+﻿l_japanese:
+ # Fallback names if dynamic naming fails
+ company_basic_utilities: "ナショナル・エレクトリック・カンパニー" #deepl:4177512048
+ company_basic_infrastructure: "州物流コンソーシアム" #deepl:2081115541
+ company_basic_community: "ラディアント・エンターテインメント・グループ" #deepl:1762075573
+ # Dynamic name elements
+ company_basic_utilities_dynamic_name_tag_singular: "ユーティリティ" #deepl:3155896013
+ company_basic_utilities_dynamic_name_tag_plural: "ユーティリティ" #deepl:3838988151
+ company_basic_infrastructure_dynamic_name_tag_singular: "物流" #deepl:3412261871
+ company_basic_infrastructure_dynamic_name_tag_plural: "物流" #deepl:3412261871
+ company_basic_community_dynamic_name_tag_singular: "エンターテイメント" #deepl:3509057252
+ company_basic_community_dynamic_name_tag_plural: "エンターテイメント" #deepl:3509057252

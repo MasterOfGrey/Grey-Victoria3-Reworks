@@ -31,8 +31,8 @@ popneed_free_movement = {
 	
 	entry = {
 		goods = air_travel
-		
-		weight = 10.0				# Now as a local good, heavily weighted for a small proportion of pop need.
+									# Reduced weight due to airport rebalance
+		weight = 4 # 10.0			# Now as a local good, heavily weighted for a small proportion of pop need.
 		max_supply_share = 0.01
 		min_supply_share = 0.0
 	}
@@ -41,6 +41,18 @@ popneed_free_movement = {
 # Tweaking rubber need due to increased economic demands of USU:
 popneed_luxury_items = {
 	default = luxury_clothes
+	
+	obsession_demand_min = 0.75
+	obsession_demand_mult = 1.75
+	prestige_goods_demand_increase = 0.75
+	
+	entry = {
+		goods = silk
+		
+		weight = 0.5
+		max_supply_share = 0.25
+		min_supply_share = 0.1
+	}	
 	
 	entry = {
 		goods = luxury_clothes
@@ -101,12 +113,24 @@ popneed_luxury_items = {
 
 # Because planes goddamn
 popneed_leisure = {
-	default = fine_art
+	default = services		# PDT's use of services is superior to the use of fine_art.
+		
+	obsession_demand_min = 0.5
+	obsession_demand_mult = 2.0
+	prestige_goods_demand_increase = 1.0
+	
+	entry = {
+		goods = services
+		
+		weight = 0.125  # 0.1 Semi-Keeping
+		max_supply_share = 0.125
+		min_supply_share = 0.0125
+	}
 	
 	entry = {
 		goods = fine_art
 		
-		weight = 1.0
+		weight = 2.0
 		max_supply_share = 1.0 # Keeping
 		min_supply_share = 0.1
 	}
@@ -120,11 +144,11 @@ popneed_leisure = {
 	}
 	
 	entry = {
-		goods = services
+		goods = elgar_music
 		
-		weight = 0.125  # 0.1 Semi-Keeping
-		max_supply_share = 0.125
-		min_supply_share = 0.0125
+		weight = 0.5
+		max_supply_share = 0.2 # New from me with Morgenrote, pairs well with wine and art
+		min_supply_share = 0.0
 	}
 	
 	entry = {
@@ -141,6 +165,14 @@ popneed_leisure = {
 		weight = 0.125
 		max_supply_share = 0.125  # Organizing exotic holidays requires middle-men in this era.
 		min_supply_share = 0.0125
+	}
+	
+	entry = {
+		goods = merchant_marine
+		
+		weight = 0.125			  # When you've got nothing else, a merchant trip is an adventure.
+		max_supply_share = 1.0
+		min_supply_share = 0.0
 	}
 	
 	entry = {

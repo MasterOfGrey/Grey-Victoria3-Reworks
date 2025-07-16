@@ -1,11 +1,23 @@
-﻿# If this gets overwritten it's ok, but... it doesn't hurt.
+﻿# If this gets overwritten it's ok, but... it doesn't hurt. Makes underdeveloped countries consume MM
 popneed_leisure = {
-	default = fine_art
+	default = services		# PDT's use of services is superior to the use of fine_art.
+		
+	obsession_demand_min = 0.5
+	obsession_demand_mult = 2.0
+	prestige_goods_demand_increase = 1.0
+	
+	entry = {
+		goods = services
+		
+		weight = 0.125  # 0.1 Semi-Keeping
+		max_supply_share = 0.125
+		min_supply_share = 0.0125
+	}
 	
 	entry = {
 		goods = fine_art
 		
-		weight = 1.0
+		weight = 2.0
 		max_supply_share = 1.0 # Keeping
 		min_supply_share = 0.1
 	}
@@ -16,14 +28,6 @@ popneed_leisure = {
 		weight = 1.0
 		max_supply_share = 0.2 # From Morgenrote, pairs well with art
 		min_supply_share = 0.0
-	}
-	
-	entry = {
-		goods = services
-		
-		weight = 0.125  # 0.1 Semi-Keeping
-		max_supply_share = 0.125
-		min_supply_share = 0.0125
 	}
 	
 	entry = {
@@ -40,6 +44,14 @@ popneed_leisure = {
 		weight = 0.125
 		max_supply_share = 0.125  # Organizing exotic holidays requires middle-men in this era.
 		min_supply_share = 0.0125
+	}
+	
+	entry = {
+		goods = merchant_marine
+		
+		weight = 0.125			  # When you've got nothing else, a merchant trip is an adventure.
+		max_supply_share = 1.0
+		min_supply_share = 0.0
 	}
 	
 	entry = {

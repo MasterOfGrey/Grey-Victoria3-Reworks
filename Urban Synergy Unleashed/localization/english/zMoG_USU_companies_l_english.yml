@@ -1,0 +1,12 @@
+﻿l_english:
+ # Fallback names if dynamic naming fails
+ company_basic_utilities: "National Electric Company"
+ company_basic_infrastructure: "State Logistics Consortium"
+ company_basic_community: "Radiant Entertainment Group"
+ # Dynamic name elements
+ company_basic_utilities_dynamic_name_tag_singular: "Utility"
+ company_basic_utilities_dynamic_name_tag_plural: "Utilities"
+ company_basic_infrastructure_dynamic_name_tag_singular: "Logistics"
+ company_basic_infrastructure_dynamic_name_tag_plural: "Logistics"
+ company_basic_community_dynamic_name_tag_singular: "Entertainment"
+ company_basic_community_dynamic_name_tag_plural: "Entertainment"

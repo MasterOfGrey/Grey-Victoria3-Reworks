@@ -1,10 +1,11 @@
 [img]https://i.imgur.com/7xuCZqW.png[/img]
 Supports Victoria 3: V1.9  (and onwards)
-Mod Version: V1.3
+Mod Version: V1.4
 Please consider rating this if you like it! It really helps out. [img]https://i.imgur.com/tE28cZ7.gif[/img]
 [spoiler]Originally made for: Version 1.8.2[/spoiler]
 
-[b]The "Required" other mods are not required but are STRONGLY RECOMMENDED[/b]
+[b]The Community Modding Framework is [u]Required[/u].[/b]
+The others are [i]Recommended[/i].
 
 [table]
     [tr]
@@ -14,7 +15,7 @@ Please consider rating this if you like it! It really helps out. [img]https://i.
 [/table]
 *MUST have a new game - your save will explode if you either add or remove this mid-game.
 [img]https://i.imgur.com/6o9HyTD.png[/img]
-This mod began life as a compatibility patch designed to make 11 different mods work together. At a certain point it became obvious that it should just be its own thing.
+This mod started as a compatibility patch designed to make 11 different mods work together. At a certain point it ended up becoming its own thing.
 So, this reworks the whole urban buildings environment, and a few related touch points, to create a system with in-built synergies. Urbanization gradually increases the total construction capacity (without necessarily costing the government), railways are profitable throughout the game and have additional options, ports can now be privately owned and contribute to the transport economy, rivers can now have portage, power plants have more diversity and can be extended to powering a distribution grid (this adapts content from "Power Plants+").
 
 All in all, it is a system that has been designed to round off some of the sharp edge-case corners in the urban economy, and to ensure that the AI can naturally benefit from the same things the player can.
@@ -40,18 +41,15 @@ PM's for construction sectors have been scaled down to 40% of their original siz
 [h2]Extra Consumption:[/h2]
 Some buildings now consume additional goods. In particular, naval buildings consume additional supplies to represent the specific goods in excess of pop consumption that the government would fund to support the crews while they maintain a fleet at sea. Ports also consume groceries as supplies proportional to the modernness.
 
-[img]https://i.imgur.com/Qp8JBtZ.png[/img]
-This obviously touches a wide range of urban buildings, but it's quite self-contained otherwise.
+[h2]Subsistence Changes:[/h2]
+Subsistence farms now produce small amounts of transport, services, & logistics to smooth out the economic demand shifts. This also contains an experimental boost to pop growth from [i]empty[/i] subsistence farms that helps global population reach its intended target.
 
-[b]This is [u]Compatible[/u] by default with:
-[list][*][u]VTM[/u]
-[*]Pop Demand Tweak(PDT)
-[*]Timber to Steel(TTS)
-[*]and any AI mods (like KAI, etc.)
-[/list][/b]
-[b]This includes compatibility (which could break on updates to these mods) with:
-[list][*][u]Laws +[/u] for subsistence farm PM's.
-[/list][/b]
+[img]https://i.imgur.com/Qp8JBtZ.png[/img]
+This tries to be self-contained and avoid conflicting with things it doesn't need to.
+However, it's a decent sized mod so compatibility is an issue in lots of cases.
+For full details on compatibility go to the discussion post here: [url=https://steamcommunity.com/workshop/filedetails/discussion/3371689443/575995078023072709/]Full Compatibility Notes[/url]
+#Safe for: #KAI #PDT #TTS
+
 [h2]Use my compatches for:[/h2]
 [list]
 [*]Morgenrote: "[url=https://steamcommunity.com/sharedfiles/filedetails/?id=3371690718]USU & Morgenrote[/url]"
@@ -60,8 +58,6 @@ This obviously touches a wide range of urban buildings, but it's quite self-cont
 [b]Other available compatibility patches:
 [list][*]Industry Realism: "[url=https://steamcommunity.com/sharedfiles/filedetails/?id=3453226616]Industry Realism + USU Patch[/url]" by AgrarianSlop
 [/list][/b]
-
-For full details on compatibility go to the discussion post here: [url=https://steamcommunity.com/workshop/filedetails/discussion/3371689443/575995078023072709/]Full Compatibility Notes[/url]
 [img]https://i.imgur.com/lQRf9dG.png[/img]
 [b]Can you change <insert language> localisation?[/b]
 [i]If you send it to me I will add it.[/i]
@@ -75,7 +71,7 @@ A successful and highly industrialised late-game economy should have cheap elect
 [i]You have a mod conflict that I don’t have a patch for. Read the [url=https://steamcommunity.com/workshop/filedetails/discussion/3371689443/575995078023072709/]Full Compatibility Notes[/url][/i]
 
 [img]https://i.imgur.com/UN80Om5.png[/img]
-Many thanks to nahantelhe, Ferrous, ovnxize, Starry Inori, and 1230james for their works which inspired this.
+Many thanks to nahantelhe, Ferrous, ovnxize, Starry Inori, 1230james and Grimhat for their works which inspired this.
 
 Major Thanks to BrokenRobot, without whom my sanity would never have endured long enough for this to be published.
 

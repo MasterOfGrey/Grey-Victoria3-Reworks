@@ -1,5 +1,5 @@
 [img]https://i.imgur.com/7xuCZqW.png[/img]
-Supports Victoria 3: V1.9.1  (and onwards)
+Supports Victoria 3: V1.9.6  (and onwards)
 Mod Version: V1.8
 Please consider rating this if you like it! It really helps out. [img]https://i.imgur.com/tE28cZ7.gif[/img]
 [spoiler]Originally made for: Version 1.7.6[/spoiler]
@@ -73,7 +73,6 @@ Having said that, some specific callouts:
 [*][url=https://steamcommunity.com/sharedfiles/filedetails/?id=2880089689]Victoria Flavor Mod[/url] - Our mass migrations are different, but the outcomes should be comparable. No known issues. 
 [*][url=https://steamcommunity.com/sharedfiles/filedetails/?id=3104861812]New Homelands[/url] - This is a particularly good companion mod.
 [*] All AI Mods - KAI, LAI, Smarter AI, etc. are all compatible, don't worry.
-
 [/list]
 
 [img]https://i.imgur.com/lQRf9dG.png[/img]
@@ -84,7 +83,10 @@ Having said that, some specific callouts:
 [i]In theory it should slightly improve performance, especially into late-game. Results may vary a little bit if you have very large and very diverse empires with lots of discrimination, but in general you should see neutral or positive impact on performance compared to vanilla.[/i]
 
 [b]Why is my game lagging on Tuesday’s?[/b]
-[i]It appears that the game calculates which cultural communities to spawn every week on a Tuesday. This mod only tweaks that a little bit, so if you are getting this then either; a) you’re using other mods that add extra cultures and this is causing extra lag - try not using mods with many extra cultures, or b) your computer is not very good. I have already made this as efficient as I can.[/i]
+[i]The game calculates which cultural communities to spawn every week on a Tuesday. This mod tweaks that a little bit, so if you are getting this then either; a) you’re using other mods that add extra cultures and this is causing extra lag, or b) your computer is not very good. This is as efficient as I can make it.[/i]
+
+[b]Is this compatible with Ultra Historical Demographics?[/b]
+[i]It won't break things - it may not behave nicely though.[/i]
 
 [img]https://i.imgur.com/UN80Om5.png[/img]
 This effectively supercedes the following mods:

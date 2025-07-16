@@ -1,0 +1,2 @@
+﻿l_german:
+ mr_airport_can_construct_tt: "Die maximale Stufe von [Concept('concept_curtiss_airport','$concept_curtiss_airports$')], die ein Staat unterstützen kann, entspricht 1 plus 1 für jede #G 10 Stufen#! von [GetBuildingType('building_urban_center').GetName]." #deepl:1884813676

@@ -1,5 +1,5 @@
 [img]https://i.imgur.com/7xuCZqW.png[/img]
-Supports Victoria 3: V1.9  (and onwards)
+Supports Victoria 3: V1.9.6  (and onwards)
 Mod Version: V1.8
 Please consider rating this if you like it! It really helps out. [img]https://i.imgur.com/tE28cZ7.gif[/img]
 [spoiler]Originally made for: Version 1.7.6[/spoiler]
@@ -22,13 +22,19 @@ Which is to say, being in debt now [i]improves[/i] government dividends efficien
 
 [h2]Goods and Trade:[/h2]
 Reduced the employee requirements for trade centres.
+Bureaucracy deficits reduce the effectiveness of tariffs.
 Additionally, the min/max price of goods is now 90% from base price, instead of 75%, and limits around buy/sell and shortages have been tweaked.
+
+[h2]Buildings & Cash Management:[/h2]
+Buildings will downsize in only 3 months now.
+Additionally, the maximum amount that owners are allowed to leave in the building cash reserves is increased substantially. This stops premature bankruptcy and downsizing when the owner buildings still have plenty of money to pay their dividends. (They will still take as much as they need to support the owner building's pops.)
 
 [h2]Miscellaneous:[/h2]
 Other minor tweaks include:
 [list]
 [*]Higher minimum construction efficiency
-[*]Faster building downsizing & adjust hiring practices
+[*]Adjusted hiring practices
+[*]Nerf reinvestment efficiency GDP scaling for small countries
 [*]Peasants demand more from the market
 [/list]
 

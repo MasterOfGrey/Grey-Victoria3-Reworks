@@ -1,0 +1,12 @@
+﻿l_french:
+ # Fallback names if dynamic naming fails
+ company_basic_utilities: "National Electric Company" #deepl:4177512048
+ company_basic_infrastructure: "Consortium logistique de l'État" #deepl:2081115541
+ company_basic_community: "Radiant Entertainment Group" #deepl:1762075573
+ # Dynamic name elements
+ company_basic_utilities_dynamic_name_tag_singular: "Utilité" #deepl:3155896013
+ company_basic_utilities_dynamic_name_tag_plural: "Utilitaires" #deepl:3838988151
+ company_basic_infrastructure_dynamic_name_tag_singular: "Logistique" #deepl:3412261871
+ company_basic_infrastructure_dynamic_name_tag_plural: "Logistique" #deepl:3412261871
+ company_basic_community_dynamic_name_tag_singular: "Divertissement" #deepl:3509057252
+ company_basic_community_dynamic_name_tag_plural: "Divertissement" #deepl:3509057252

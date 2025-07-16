@@ -547,7 +547,7 @@ lobby_pro_overlord = {
 			scope:target_country = {
 				if = {
 					limit = {
-						relations:root.owner < 0			# This throws an error but it works - the version that is error free DOES NOT
+						"relations(root.owner)" < 0			# This throws an error but it works - the version that is error free DOES NOT
 					}
 					
 					multiply = {
@@ -1013,7 +1013,7 @@ lobby_anti_overlord = {
 			limit = {
 				is_in_government = yes
 				scope:target_country = {
-					relations:root.owner < 0			# This throws an error but it works - the version that is error free DOES NOT
+					"relations(root.owner)" < 0			# This throws an error but it works - the version that is error free DOES NOT
 				}
 			}
 			multiply = {

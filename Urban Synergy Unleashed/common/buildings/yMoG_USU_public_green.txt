@@ -13,6 +13,40 @@
 		USU_pmg_public_parklands
 	}
 	
+	can_build_government = {
+		OR = {
+			free_arable_land > {
+				value = 0
+				b:usu_building_public_green ?= {
+					add = level_after_queued_constructions
+					subtract = level
+				}
+			}
+			NOT = {
+				b:usu_building_public_green ?= {
+					level_after_queued_constructions >= 3
+				}
+			}
+		}
+	}
+	
+	can_build_private = {
+		OR = {
+			free_arable_land > {
+				value = 0
+				b:usu_building_public_green ?= {
+					add = level_after_queued_constructions
+					subtract = level
+				}
+			}
+			NOT = {
+				b:usu_building_public_green ?= {
+					level_after_queued_constructions >= 3
+				}
+			}
+		}
+	}
+	
 	required_construction = construction_cost_low
 	
 	ownership_type = self

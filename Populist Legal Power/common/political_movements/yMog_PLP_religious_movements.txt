@@ -105,7 +105,7 @@
 		value = 200
 		if = {
 			limit = {
-				interest_group ?= {
+				scope:interest_group ?= {
 					is_interest_group_type = ig_devout
 				}
 			}
@@ -135,7 +135,7 @@
 		else_if = {
 			limit = {
 				NOT = {
-					interest_group ?= {
+					scope:interest_group ?= {
 						is_interest_group_type = ig_devout
 					}
 				}
@@ -165,26 +165,22 @@
 	pop_support_weight = {
 		if = {
 			limit = {
-				owner ?= {
-					any_political_movement = {
-						is_political_movement_type = movement_religious_minority
-						religion ?= root.religion
-						OR = {
-							is_being_suppressed = yes
-							is_being_bolstered = yes
-						}
-						save_temporary_scope_as = affected_movement
+				exists = scope:political_movement
+				scope:political_movement ?= {
+					OR = {
+						is_being_suppressed = yes
+						is_being_bolstered = yes
 					}
 				}
 			}
 			if = {
 				limit = {
-					scope:affected_movement = {
+					scope:political_movement = {
 						is_being_suppressed = yes
 					}
 				}
 				add = {
-					value = 10
+					value = suppression_base_value
 					multiply = {
 						value = -0.5
 						add = owner.modifier:country_suppression_attraction_factor
@@ -194,7 +190,7 @@
 			}
 			else = {
 				add = {
-					value = 10
+					value = bolstering_base_value
 					multiply = {
 						value = 0.5
 						add = owner.modifier:country_bolster_attraction_factor
@@ -322,19 +318,19 @@
 			}
 			if = {
 				limit = {
-					owner = { cultural_acceptance_base = { target = culture value <= acceptance_status_1 } }
+					owner = { cultural_acceptance_base = { target = root.culture value <= acceptance_status_1 } }
 				}
 				multiply = 0.1
 			}
 			else_if = {
 				limit = {
-					owner = { cultural_acceptance_base = { target = culture value <= acceptance_status_2 } }
+					owner = { cultural_acceptance_base = { target = root.culture value <= acceptance_status_2 } }
 				}
 				multiply = 0.25	
 			}
 			else_if = {
 				limit = {
-					owner = { cultural_acceptance_base = { target = culture value <= acceptance_status_3 } }
+					owner = { cultural_acceptance_base = { target = root.culture value <= acceptance_status_3 } }
 				}
 				multiply = 0.5	
 			}

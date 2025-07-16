@@ -1,21 +1,8 @@
-﻿# Adopted from Nahan's Port Rework
+﻿# Originally adopted from Nahan's Port Rework, adapted for subsequent updates.
 
-navigation = {
-	# Unlocks Shipyards
-	# Unlocks Ports
-	# Increases Port max level by 1
-	era = era_1
-	texture = "gfx/interface/icons/invention_icons/navigation.dds"
-	category = military    
-	
-	modifier = {
-		building_port_throughput_add = 0.1
-	}
-	
-	ai_weight = {
-		value = 2 # Important tech in general
-	}
-}
+# Don't mess with Navigation - unnecessary with more recent USU developments.
+# navigation = {
+# }
 
 drydocks = {
 	# Increases Port max level by 1
@@ -24,7 +11,7 @@ drydocks = {
 	category = military
 	
 	modifier = {
-		building_port_throughput_add = 0.1
+		building_port_throughput_add = 0.05
 	}
 	
 	unlocking_technologies = {	
@@ -49,7 +36,7 @@ hydraulic_cranes = {
 	category = military
 	
 	modifier = {
-		building_port_throughput_add = 0.2
+		building_port_throughput_add = 0.1
 	}
 	
 	unlocking_technologies = {	
@@ -67,6 +54,9 @@ hydraulic_cranes = {
 	}
 }
 
+# Don't mess with Gantry Cranes - unnecessary & compatibility risk.
+# gantry_cranes = {
+# }
 
 floating_harbor = {
 	# Unlocks Industrial Port PM in Ports
@@ -76,7 +66,7 @@ floating_harbor = {
 	category = military
 	
 	modifier = {
-		building_port_throughput_add = 0.2
+		building_port_throughput_add = 0.1
 	}
 	
 	unlocking_technologies = {	
@@ -94,30 +84,6 @@ floating_harbor = {
 	}
 }
 
-gantry_cranes = {
-	# Allows port upgrade
-	era = era_3
-	texture = "gfx/interface/icons/invention_icons/gantry_crane.dds"
-	category = military
-	
-	modifier = {
-	}
-	
-	unlocking_technologies = {	
-		hydraulic_cranes
-	}
-	
-	ai_weight = {
-		value = 1
-		
-		# Important for anyone with a navy
-		if = {
-			limit = { navy_size >= 5 }
-			add = 1
-		}		
-	}
-}
-
 concrete_dockyards = {
 	# Unlocks Modern Port PM in Ports
 	# Allows port upgrade
@@ -127,7 +93,7 @@ concrete_dockyards = {
 	category = military
 	
 	modifier = {
-		building_port_throughput_add = 0.2
+		building_port_throughput_add = 0.1
 	}
 	
 	unlocking_technologies = {	

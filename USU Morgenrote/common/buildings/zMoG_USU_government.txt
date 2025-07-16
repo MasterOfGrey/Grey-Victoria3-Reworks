@@ -22,7 +22,7 @@
 			}
 			AND = {
 				state.tax_capacity < state.tax_capacity_usage
-				state.is_incorporated = yes
+				state.is_incorporated = yes						# This throws an error, but works correctly.
 			}
 		}
 	}
