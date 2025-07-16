@@ -1,0 +1,46 @@
+﻿# This is from CMF - it is included only as a fallback.
+# The file is named so that the CMF one will overwrite this no matter which order the mod is loaded in.
+# This is cause I backed out of making the mod *functionally* dependent on CMF in case people get it off GH.
+
+#Scripted Effect to run an on_action weekly
+
+# This effect can be called like this:
+#com_run_weekly_event_country_effect = {
+#   weekday = 1
+#   on_action = example_on_action_weekly
+#}
+
+com_run_weekly_event_country_effect = {
+    set_local_variable = {
+        name = weekday
+        value = $weekday$   # Set value for weekday you want the event to fire on, 0-6 is Sunday-Saturday.
+                            # Monday for example would be 1
+    }
+    set_global_variable = {
+        name = com_added_days
+        value = com_calculate_added_days
+    }
+    every_country = { # This example event is running for every country - can be per state, or scopeless/global, etc.
+        set_local_variable = {
+            name = event_day
+            value = global_var:com_added_days
+        }
+        set_local_variable = {
+            name = month_length
+            value = com_month_length
+        }
+        while = {
+            limit = {
+                local_var:event_day < local_var:month_length
+            }
+            com_delay_event_switch = {
+                on_action_name = $on_action$ #Use on_action = your_on_action in your effect
+                num_days = local_var:event_day
+            }
+            change_local_variable = {
+                name = event_day
+                add = 7
+            }
+        }
+    }
+}

@@ -210,6 +210,7 @@ PPP_pm_t1_hybrid_power = {
 PPP_pm_t1_grid_power = {
 	texture = "gfx/interface/icons/production_method_icons/PPP_grid_power.dds"
 	is_hidden_when_unavailable = yes
+	ai_value = 200		# Just nudge it
 	
 	unlocking_production_methods = {
 		hp_pm_turbine_1
@@ -261,6 +262,7 @@ PPP_pm_t2_hybrid_power = {
 PPP_pm_t2_grid_power = {
 	texture = "gfx/interface/icons/production_method_icons/PPP_grid_power.dds"
 	is_hidden_when_unavailable = yes
+	ai_value = 200		# Just nudge it
 	
 	unlocking_production_methods = {
 		hp_pm_turbine_2
@@ -312,6 +314,7 @@ PPP_pm_t3_hybrid_power = {
 PPP_pm_t3_grid_power = {
 	texture = "gfx/interface/icons/production_method_icons/PPP_grid_power.dds"
 	is_hidden_when_unavailable = yes
+	ai_value = 200		# Just nudge it
 	
 	unlocking_production_methods = {
 		hp_pm_turbine_3

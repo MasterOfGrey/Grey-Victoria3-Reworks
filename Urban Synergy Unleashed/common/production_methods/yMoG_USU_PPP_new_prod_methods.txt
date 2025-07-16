@@ -129,6 +129,7 @@ PPP_pm_gas_turbine = {
 #PPP_pm_hy_grid_power = {
 #	texture = "gfx/interface/icons/production_method_icons/PPP_grid_power.dds"
 #	is_hidden_when_unavailable = yes
+#	ai_value = 200		# Just nudge it
 #	
 #	unlocking_production_methods = {
 #		PPP_pm_hydro_mechanical
@@ -180,6 +181,7 @@ PPP_pm_se_hybrid_power = {
 PPP_pm_se_grid_power = {
 	texture = "gfx/interface/icons/production_method_icons/PPP_grid_power.dds"
 	is_hidden_when_unavailable = yes
+	ai_value = 200		# Just nudge it
 	
 	unlocking_production_methods = {
 		PPP_pm_steam_engine
@@ -231,6 +233,7 @@ PPP_pm_st_hybrid_power = {
 PPP_pm_st_grid_power = {
 	texture = "gfx/interface/icons/production_method_icons/PPP_grid_power.dds"
 	is_hidden_when_unavailable = yes
+	ai_value = 200		# Just nudge it
 	
 	unlocking_production_methods = {
 		PPP_pm_steam_turbine
@@ -282,6 +285,7 @@ PPP_pm_gt_hybrid_power = {
 PPP_pm_gt_grid_power = {
 	texture = "gfx/interface/icons/production_method_icons/PPP_grid_power.dds"
 	is_hidden_when_unavailable = yes
+	ai_value = 200		# Just nudge it
 	
 	unlocking_production_methods = {
 		PPP_pm_gas_turbine

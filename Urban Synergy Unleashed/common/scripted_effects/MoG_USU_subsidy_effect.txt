@@ -1,0 +1,10 @@
+﻿# AI-specific processing
+# Country scope
+MoG_USU_disable_AI_subsidies_effect = {
+	every_scope_state = {
+		# Disable subsidies for infrastructure buildings no matter if the AI wants it to be subsidised.
+		trigger_event = {
+			id = MoG_USU_subsidy_event.1
+		}
+	}
+}
