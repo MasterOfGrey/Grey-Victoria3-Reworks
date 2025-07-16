@@ -1,0 +1,28 @@
+﻿# on_actions to apply expected standard of living modifiers
+
+# Root = Institution
+on_game_started = {
+	on_actions = {
+		MoG_SPA_sol_setup_action
+	}
+}
+
+MoG_SPA_sol_setup_action = {
+	effect = {
+		every_state = {
+			refresh_expected_sol_modifier = yes
+		}
+	}
+}
+
+on_monthly_pulse_state = {
+	on_actions = {
+		MoG_SPA_sol_monthly_pulse_state
+	}
+}
+
+MoG_SPA_sol_monthly_pulse_state = {
+	effect = {
+		refresh_expected_sol_modifier = yes
+	}	
+}
