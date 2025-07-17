@@ -1,9 +1,9 @@
 ﻿# on_actions to apply expected standard of living modifiers
 
-# Root = Institution
 on_game_started = {
 	on_actions = {
 		MoG_SPA_sol_setup_action
+		MoG_SPA_sol_game_started_base_action
 	}
 }
 
@@ -24,5 +24,37 @@ on_monthly_pulse_state = {
 MoG_SPA_sol_monthly_pulse_state = {
 	effect = {
 		refresh_expected_sol_modifier = yes
-	}	
+	}
+}
+
+# Base Modifier Safety check-up:
+on_monthly_pulse_country = { on_actions = { MoG_SPA_sol_base_modifier_action } }
+
+# scope:target = Uprising country
+on_revolution_start = { on_actions = { MoG_SPA_sol_base_modifier_action } }
+on_secession_start = { on_actions = { MoG_SPA_sol_base_modifier_action } }
+
+# Root = Releasing Country
+# scope:target = Released Country
+on_country_released_as_own_subject = { on_actions = { MoG_SPA_sol_base_modifier_action } }
+on_country_released_as_overlord_subject = { on_actions = { MoG_SPA_sol_base_modifier_action } }
+on_country_released_as_independent = { on_actions = { MoG_SPA_sol_base_modifier_action } }
+
+MoG_SPA_sol_game_started_base_action = {
+	effect = {
+		every_country = {
+			add_modifier = mog_spa_base_sol_from_literacy
+		}
+	}
+}
+
+MoG_SPA_sol_base_modifier_action = {
+	effect = {
+		if = {
+			limit = {
+				NOT = { has_modifier = mog_spa_base_sol_from_literacy }
+			}
+			add_modifier = mog_spa_base_sol_from_literacy
+		}
+	}
 }

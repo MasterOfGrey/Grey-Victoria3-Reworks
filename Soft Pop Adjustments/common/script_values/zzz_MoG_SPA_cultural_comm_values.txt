@@ -33,7 +33,7 @@ cultural_community_creation_weight = {
 		add = 0.001
 	
 		# Conditions that add
-		if = {
+		# if = {
 			b:building_port ?= {
 				# Base amount for having a port
 				add = 0.002
@@ -44,7 +44,7 @@ cultural_community_creation_weight = {
 					multiply = level
 				}
 			}
-		}
+		# }
 		
 		if = {
 			limit = {
