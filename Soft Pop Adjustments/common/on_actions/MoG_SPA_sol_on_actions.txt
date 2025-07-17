@@ -43,7 +43,12 @@ on_country_released_as_independent = { on_actions = { MoG_SPA_sol_base_modifier_
 MoG_SPA_sol_game_started_base_action = {
 	effect = {
 		every_country = {
-			add_modifier = mog_spa_base_sol_from_literacy
+			if = {
+				limit = {
+					NOT = { has_modifier = mog_spa_base_sol_from_literacy }
+				}
+				add_modifier = mog_spa_base_sol_from_literacy
+			}
 		}
 	}
 }
