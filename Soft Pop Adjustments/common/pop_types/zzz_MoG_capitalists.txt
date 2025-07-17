@@ -28,7 +28,6 @@
 		}
 	}	
 	
-	qualifications_growth_desc = "CAPITALISTS_QUALIFICATIONS_DESC"
 	qualifications = {
 		# baseline: ( wealth - 10 ) / 10 + ( literacy * 2 ), norm 2 for Wealth 20 and Literacy 50%
 		add = {

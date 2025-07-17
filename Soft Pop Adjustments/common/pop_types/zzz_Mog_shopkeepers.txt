@@ -34,7 +34,6 @@
 		}
 	}	
 	
-	qualifications_growth_desc = "SHOPKEEPERS_QUALIFICATIONS_DESC"
 	qualifications = {
 		# baseline: ( wealth - 5 ) / 2, norm 10 for Clerks with Wealth 15
 		add = {

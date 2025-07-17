@@ -36,7 +36,6 @@
 		
 	}
 	
-	qualifications_growth_desc = "ACADEMICS_QUALIFICATIONS_DESC"
 	qualifications = {
 		# baseline: ( literacy - 0.2 ) * 20 + ( wealth / 10 ), norm 5
 		add = {

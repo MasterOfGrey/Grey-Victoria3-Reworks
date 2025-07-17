@@ -1,0 +1,20 @@
+﻿l_japanese:
+ # Modifiers
+ mog_company_migration_penalty: "採掘植民地行政" #deepl:2992389861
+ mog_education_access_from_urbanization: "教育へのアクセス[concept_urbanization]" #deepl:3673977485
+ state_slaves_education_access_add: "教育へのアクセス[GetPopType('slaves').GetName]" #deepl:637100415
+ state_slaves_education_access_add_desc: "教育へのアクセスに対するボーナスまたはペナルティ[GetPopType('slaves').GetName]" #deepl:3338121199
+ 
+ mog_spa_child_labor_allowed_literacy: "SPA：児童労働法の識字効果" #deepl:928140866
+ mog_spa_restricted_child_labor_literacy: "SPA：児童労働法の識字効果" #deepl:928140866
+ mog_spa_compulsory_primary_school_literacy: "SPA：児童労働法の識字効果" #deepl:928140866
+ 
+ mog_spa_diff_religious_schools_literacy: "SPAリテラシーの変化（宗教学校）" #deepl:1440751240
+ mog_spa_diff_private_schools_literacy: "SPAリテラシーの変化（私立学校）" #deepl:3610556517
+ mog_spa_diff_public_schools_literacy: "SPAリテラシーの変化（公立学校）" #deepl:4080575972
+ mog_spa_diff_compulsory_school_literacy: "SPA識字率の変化（義務教育の小学校）" #deepl:3429410775
+ 
+ mog_lower_strata_expected_sol_from_average: "SPA: 全国平均[concept_sol] 識字率から期待されるSOLへの影響$lower$" #deepl:3918755864
+ mog_middle_strata_expected_sol_from_average: "SPA: 全国平均[concept_sol] 識字率から期待されるSOLへの影響$middle$" #deepl:444091936
+ mog_upper_strata_expected_sol_from_average: "SPA: 全国平均[concept_sol] 識字率から期待されるSOLへの影響$upper$" #deepl:2132612309
+ mog_spa_base_sol_from_literacy: "SPA：ベース・モディファイアの変更" #deepl:2619766621

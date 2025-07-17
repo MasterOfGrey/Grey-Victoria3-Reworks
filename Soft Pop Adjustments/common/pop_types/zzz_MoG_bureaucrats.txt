@@ -34,7 +34,6 @@
 		}
 	}
 	
-	qualifications_growth_desc = "BUREAUCRATS_QUALIFICATIONS_DESC"
 	qualifications = {
 		# baseline: ( literacy - 0.2 ) * 10 * ( 2 if accepted culture and religion), norm 6 for Literacy 50% and Accepted C/R
 		add = {

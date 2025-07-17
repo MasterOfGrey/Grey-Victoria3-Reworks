@@ -1,0 +1,20 @@
+﻿l_russian:
+ # Modifiers
+ mog_company_migration_penalty: "Добывающая колониальная администрация" #deepl:2992389861
+ mog_education_access_from_urbanization: "Доступ к образованию от [concept_urbanization]" #deepl:3673977485
+ state_slaves_education_access_add: "Доступ к образованию для [GetPopType('slaves').GetName]" #deepl:637100415
+ state_slaves_education_access_add_desc: "Бонус или штраф к доступу к образованию для [GetPopType('slaves').GetName]" #deepl:3338121199
+ 
+ mog_spa_child_labor_allowed_literacy: "SPA: Закон о детском труде Эффект грамотности" #deepl:928140866
+ mog_spa_restricted_child_labor_literacy: "SPA: Закон о детском труде Эффект грамотности" #deepl:928140866
+ mog_spa_compulsory_primary_school_literacy: "SPA: Закон о детском труде Эффект грамотности" #deepl:928140866
+ 
+ mog_spa_diff_religious_schools_literacy: "SPA: Изменение грамотности (религиозные школы)" #deepl:1440751240
+ mog_spa_diff_private_schools_literacy: "SPA: Изменение грамотности (частные школы)" #deepl:3610556517
+ mog_spa_diff_public_schools_literacy: "SPA: Изменение грамотности (государственные школы)" #deepl:4080575972
+ mog_spa_diff_compulsory_school_literacy: "SPA: Изменение грамотности (обязательная начальная школа)" #deepl:3429410775
+ 
+ mog_lower_strata_expected_sol_from_average: "SPA: среднее по стране [concept_sol] влияние на ожидаемый SOL от грамотности для $lower$" #deepl:3918755864
+ mog_middle_strata_expected_sol_from_average: "SPA: среднее по стране [concept_sol] влияние на ожидаемый SOL от грамотности для $middle$" #deepl:444091936
+ mog_upper_strata_expected_sol_from_average: "SPA: среднее по стране [concept_sol] влияние на ожидаемый SOL от грамотности для $upper$" #deepl:2132612309
+ mog_spa_base_sol_from_literacy: "SPA: Изменения базового модификатора" #deepl:2619766621

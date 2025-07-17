@@ -1,0 +1,20 @@
+﻿l_korean:
+ # Modifiers
+ mog_company_migration_penalty: "추출 식민지 관리" #deepl:2992389861
+ mog_education_access_from_urbanization: "교육 액세스 위치 [concept_urbanization]" #deepl:3673977485
+ state_slaves_education_access_add: "교육 액세스 대상 [GetPopType('slaves').GetName]" #deepl:637100415
+ state_slaves_education_access_add_desc: "교육 액세스 권한에 대한 보너스 또는 페널티 [GetPopType('slaves').GetName]" #deepl:3338121199
+ 
+ mog_spa_child_labor_allowed_literacy: "SPA: 아동 노동법 문해력 효과" #deepl:928140866
+ mog_spa_restricted_child_labor_literacy: "SPA: 아동 노동법 문해력 효과" #deepl:928140866
+ mog_spa_compulsory_primary_school_literacy: "SPA: 아동 노동법 문해력 효과" #deepl:928140866
+ 
+ mog_spa_diff_religious_schools_literacy: "SPA: 문해력 변화(종교 학교)" #deepl:1440751240
+ mog_spa_diff_private_schools_literacy: "SPA: 문해력 변화(사립학교)" #deepl:3610556517
+ mog_spa_diff_public_schools_literacy: "SPA: 문해력 변화(공립학교)" #deepl:4080575972
+ mog_spa_diff_compulsory_school_literacy: "SPA: 문해력 변화(의무 초등학교)" #deepl:3429410775
+ 
+ mog_lower_strata_expected_sol_from_average: "SPA: 전국 평균 [concept_sol] 문해력에서 예상 SOL에 미치는 영향 $lower$" #deepl:3918755864
+ mog_middle_strata_expected_sol_from_average: "SPA: 전국 평균 [concept_sol] 문해력에서 예상 SOL에 미치는 영향 $middle$" #deepl:444091936
+ mog_upper_strata_expected_sol_from_average: "SPA: 전국 평균 [concept_sol] 문해력에서 예상 SOL에 미치는 영향 $upper$" #deepl:2132612309
+ mog_spa_base_sol_from_literacy: "SPA: 기본 수정자 변경" #deepl:2619766621

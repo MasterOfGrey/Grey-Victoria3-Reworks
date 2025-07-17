@@ -35,7 +35,6 @@
 		}
 	}
 	
-	qualifications_growth_desc = "OFFICERS_QUALIFICATIONS_DESC"
 	qualifications = {
 		value = 0.5
 

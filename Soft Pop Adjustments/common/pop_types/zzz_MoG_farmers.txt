@@ -60,8 +60,7 @@
 			}		
 		}	
 	}
-
-	qualifications_growth_desc = "FARMERS_QUALIFICATIONS_DESC"	
+	
 	qualifications = {
 		# baseline: wealth (max 30) / 2, norm 10 for Peasants with Wealth 10
 		value = {

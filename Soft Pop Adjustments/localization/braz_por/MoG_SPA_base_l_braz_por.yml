@@ -1,0 +1,20 @@
+﻿l_braz_por:
+ # Modifiers
+ mog_company_migration_penalty: "Administração Colonial Extrativista" #deepl:2992389861
+ mog_education_access_from_urbanization: "Acesso à educação a partir de [concept_urbanization]" #deepl:3673977485
+ state_slaves_education_access_add: "Acesso à educação para [GetPopType('slaves').GetName]" #deepl:637100415
+ state_slaves_education_access_add_desc: "Um bônus ou penalidade para o acesso à educação para [GetPopType('slaves').GetName]" #deepl:3338121199
+ 
+ mog_spa_child_labor_allowed_literacy: "SPA: Efeito da alfabetização da Lei do Trabalho Infantil" #deepl:928140866
+ mog_spa_restricted_child_labor_literacy: "SPA: Efeito da alfabetização da Lei do Trabalho Infantil" #deepl:928140866
+ mog_spa_compulsory_primary_school_literacy: "SPA: Efeito da alfabetização da Lei do Trabalho Infantil" #deepl:928140866
+ 
+ mog_spa_diff_religious_schools_literacy: "SPA: Mudança na alfabetização (escolas religiosas)" #deepl:1440751240
+ mog_spa_diff_private_schools_literacy: "SPA: Mudança na alfabetização (escolas particulares)" #deepl:3610556517
+ mog_spa_diff_public_schools_literacy: "SPA: Mudança na alfabetização (escolas públicas)" #deepl:4080575972
+ mog_spa_diff_compulsory_school_literacy: "SPA: Mudança na alfabetização (Escola Primária Obrigatória)" #deepl:3429410775
+ 
+ mog_lower_strata_expected_sol_from_average: "SPA: Média nacional [concept_sol] impacto no SOL esperado da alfabetização para $lower$" #deepl:3918755864
+ mog_middle_strata_expected_sol_from_average: "SPA: Média nacional [concept_sol] impacto no SOL esperado da alfabetização para $middle$" #deepl:444091936
+ mog_upper_strata_expected_sol_from_average: "SPA: Média nacional [concept_sol] impacto no SOL esperado da alfabetização para $upper$" #deepl:2132612309
+ mog_spa_base_sol_from_literacy: "SPA: Alterações no modificador de base" #deepl:2619766621

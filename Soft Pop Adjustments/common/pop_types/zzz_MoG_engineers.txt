@@ -48,7 +48,6 @@
 		}		
 	}
 	
-	qualifications_growth_desc = "ENGINEERS_QUALIFICATIONS_DESC"
 	qualifications = {
 		# baseline: ( literacy - 0.2 ) * 5 + ( wealth / 20 ), norm 2.5 for Wealth 20 and Literacy 50%
 		add = {

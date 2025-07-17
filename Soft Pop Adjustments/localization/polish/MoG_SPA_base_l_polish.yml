@@ -1,0 +1,20 @@
+﻿l_polish:
+ # Modifiers
+ mog_company_migration_penalty: "Administracja kolonii wydobywczych" #deepl:2992389861
+ mog_education_access_from_urbanization: "Dostęp do edukacji z [concept_urbanization]" #deepl:3673977485
+ state_slaves_education_access_add: "Dostęp do edukacji dla [GetPopType('slaves').GetName]" #deepl:637100415
+ state_slaves_education_access_add_desc: "Premia lub kara za dostęp do edukacji dla [GetPopType('slaves').GetName]" #deepl:3338121199
+ 
+ mog_spa_child_labor_allowed_literacy: "SPA: Wpływ prawa pracy dzieci na umiejętność czytania i pisania" #deepl:928140866
+ mog_spa_restricted_child_labor_literacy: "SPA: Wpływ prawa pracy dzieci na umiejętność czytania i pisania" #deepl:928140866
+ mog_spa_compulsory_primary_school_literacy: "SPA: Wpływ prawa pracy dzieci na umiejętność czytania i pisania" #deepl:928140866
+ 
+ mog_spa_diff_religious_schools_literacy: "SPA: Zmiana umiejętności czytania i pisania (szkoły religijne)" #deepl:1440751240
+ mog_spa_diff_private_schools_literacy: "SPA: Zmiana umiejętności czytania i pisania (szkoły prywatne)" #deepl:3610556517
+ mog_spa_diff_public_schools_literacy: "SPA: Zmiana umiejętności czytania i pisania (szkoły publiczne)" #deepl:4080575972
+ mog_spa_diff_compulsory_school_literacy: "SPA: Zmiana umiejętności czytania i pisania (obowiązkowa szkoła podstawowa)" #deepl:3429410775
+ 
+ mog_lower_strata_expected_sol_from_average: "SPA: średnia krajowa [concept_sol] wpływ na oczekiwany SOL z umiejętności czytania i pisania dla $lower$" #deepl:3918755864
+ mog_middle_strata_expected_sol_from_average: "SPA: średnia krajowa [concept_sol] wpływ na oczekiwany SOL z umiejętności czytania i pisania dla $middle$" #deepl:444091936
+ mog_upper_strata_expected_sol_from_average: "SPA: średnia krajowa [concept_sol] wpływ na oczekiwany SOL z umiejętności czytania i pisania dla $upper$" #deepl:2132612309
+ mog_spa_base_sol_from_literacy: "SPA: Zmiany w modyfikatorach bazowych" #deepl:2619766621

@@ -1,0 +1,20 @@
+﻿l_simp_chinese:
+ # Modifiers
+ mog_company_migration_penalty: "殖民采掘管理" #deepl:2992389861
+ mog_education_access_from_urbanization: "从[concept_urbanization]" #deepl:3673977485
+ state_slaves_education_access_add: "教育机会[GetPopType('slaves').GetName]" #deepl:637100415
+ state_slaves_education_access_add_desc: "教育机会的奖励或惩罚[GetPopType('slaves').GetName]" #deepl:3338121199
+ 
+ mog_spa_child_labor_allowed_literacy: "SPA: 《童工法》的扫盲效果" #deepl:928140866
+ mog_spa_restricted_child_labor_literacy: "SPA: 《童工法》的扫盲效果" #deepl:928140866
+ mog_spa_compulsory_primary_school_literacy: "SPA: 《童工法》的扫盲效果" #deepl:928140866
+ 
+ mog_spa_diff_religious_schools_literacy: "SPA：扫盲变革（宗教学校）" #deepl:1440751240
+ mog_spa_diff_private_schools_literacy: "SPA：扫盲变革（私立学校）" #deepl:3610556517
+ mog_spa_diff_public_schools_literacy: "SPA：扫盲变革（公立学校）" #deepl:4080575972
+ mog_spa_diff_compulsory_school_literacy: "SPA：扫盲变革（小学义务教育阶段）" #deepl:3429410775
+ 
+ mog_lower_strata_expected_sol_from_average: "SPA：全国平均水平[concept_sol] 对预期 SOL 扫盲的影响$lower$" #deepl:3918755864
+ mog_middle_strata_expected_sol_from_average: "SPA：全国平均水平[concept_sol] 对预期 SOL 扫盲的影响$middle$" #deepl:444091936
+ mog_upper_strata_expected_sol_from_average: "SPA：全国平均水平[concept_sol] 对预期 SOL 扫盲的影响$upper$" #deepl:2132612309
+ mog_spa_base_sol_from_literacy: "SPA: 基本修改器变更" #deepl:2619766621

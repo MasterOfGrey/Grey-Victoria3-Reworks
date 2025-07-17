@@ -1,0 +1,20 @@
+﻿l_german:
+ # Modifiers
+ mog_company_migration_penalty: "Koloniale Verwaltung des Bergbaus" #deepl:2992389861
+ mog_education_access_from_urbanization: "Bildungszugang von [concept_urbanization]" #deepl:3673977485
+ state_slaves_education_access_add: "Bildungszugang für [GetPopType('slaves').GetName]" #deepl:637100415
+ state_slaves_education_access_add_desc: "Ein Bonus oder eine Strafe für den Bildungszugang für [GetPopType('slaves').GetName]" #deepl:3338121199
+ 
+ mog_spa_child_labor_allowed_literacy: "SPA: Kinderarbeitsgesetz - Alphabetisierungseffekt" #deepl:928140866
+ mog_spa_restricted_child_labor_literacy: "SPA: Kinderarbeitsgesetz - Alphabetisierungseffekt" #deepl:928140866
+ mog_spa_compulsory_primary_school_literacy: "SPA: Kinderarbeitsgesetz - Alphabetisierungseffekt" #deepl:928140866
+ 
+ mog_spa_diff_religious_schools_literacy: "SPA: Alphabetisierung ändern (Religionsschulen)" #deepl:1440751240
+ mog_spa_diff_private_schools_literacy: "SPA: Alphabetisierung ändern (Privatschulen)" #deepl:3610556517
+ mog_spa_diff_public_schools_literacy: "SPA: Veränderung der Alphabetisierung (öffentliche Schulen)" #deepl:4080575972
+ mog_spa_diff_compulsory_school_literacy: "SPA: Änderung der Alphabetisierung (obligatorische Primarschule)" #deepl:3429410775
+ 
+ mog_lower_strata_expected_sol_from_average: "SPA: Nationaler Durchschnitt [concept_sol] Auswirkungen auf die erwartete SOL von Literacy für $lower$" #deepl:3918755864
+ mog_middle_strata_expected_sol_from_average: "SPA: Nationaler Durchschnitt [concept_sol] Auswirkungen auf die erwartete SOL von Literacy für $middle$" #deepl:444091936
+ mog_upper_strata_expected_sol_from_average: "SPA: Nationaler Durchschnitt [concept_sol] Auswirkungen auf die erwartete SOL von Literacy für $upper$" #deepl:2132612309
+ mog_spa_base_sol_from_literacy: "SPA: Änderungen der Basismodifikatoren" #deepl:2619766621
