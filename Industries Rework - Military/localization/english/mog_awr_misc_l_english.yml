@@ -1,12 +1,9 @@
 ﻿l_english:
 # Production methods
- pmg_base_building_automotive_industry: "Automobiles"
+ pmg_automobile_production: "Automobiles"
  pmg_automotive_shiftwork: "Shift Work"
- pmg_automotive_aeroplanes: "Aeroplanes"
- pmg_automotive_tanks: "Tanks"
  
  pm_gear_transmissions: "Early Gear Transmissions"
- pm_automobiles: "Automobiles"
  pm_pneumatic_tyres: "Pneumatic Tyres"
  
  pm_single_shift_days: "Single Shifts"
@@ -15,7 +12,6 @@
  pm_automotive_triple_shifts: "Triple Shifts"
  pm_automotive_triple_shifts_pneumatic: "Triple Shifts"
 
- pm_no_aeroplanes: "No Aeroplane Production"
  pm_limited_aeroplanes: "Limited Aeroplane Production"
  pm_limited_aeroplanes_double: "Limited Aeroplane Production"
  pm_limited_aeroplanes_triple: "Limited Aeroplane Production"
@@ -23,7 +19,6 @@
  pm_extensive_aeroplanes_triple: "Extensive Aeroplane Production"
  pm_overtime_aeroplanes: "Overtime Aeroplane Production"
 
- pm_no_tanks: "No Tank Production"
  pm_limited_tanks: "Limited Tank Production"
  pm_limited_tanks_double: "Limited Tank Production"
  pm_limited_tanks_triple: "Limited Tank Production"

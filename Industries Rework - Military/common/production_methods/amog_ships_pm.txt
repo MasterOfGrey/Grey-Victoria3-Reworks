@@ -2,6 +2,7 @@
 
 # Base PM's
 
+#tiger-ignore(key=duplicate-item) # Overwritten by TTS
 pm_military_shipbuilding_wooden = {
 	texture = "gfx/interface/icons/production_method_icons/military_shipbuilding_wooden.dds"
 	
@@ -26,6 +27,7 @@ pm_military_shipbuilding_wooden = {
 	}
 }
 
+#tiger-ignore(key=duplicate-item) # Overwritten by TTS
 pm_military_shipbuilding_wooden_2 = {
 	texture = "gfx/interface/icons/production_method_icons/military_shipbuilding_wooden_2.dds"
 	
