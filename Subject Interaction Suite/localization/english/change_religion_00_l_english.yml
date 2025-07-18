@@ -31,3 +31,7 @@
  cr_irreligious_conversion: "Irreligious Takeover"
  cr_institutionalise_secularism: "Secularist Regulation"
  cr_religious_conversion: "Religious Conversion"
+
+notification_MoG_SIS_religion_changed_name: "[SCOPE.sCountry('religion_target_country').GetName] Religion Changed"
+notification_MoG_SIS_religion_changed_desc: "The [concept_state_religion] of [SCOPE.sCountry('religion_target_country').GetName] is now [SCOPE.sReligion('new_religion').GetName]."
+notification_MoG_SIS_religion_changed_tooltip: "#header $notification_MoG_SIS_religion_changed_name$#!\n$notification_MoG_SIS_religion_changed_desc$"

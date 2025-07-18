@@ -26,4 +26,8 @@
  ib_events.03.f: ""Long live [ROOT.GetCountry.GetName]!""
  ib_events.03.a: "Well done."
 
- open_border_weekly_effect: "Works to open their borders with a 20% chance to make progress each week, with 8 progress points required to succeed."
+ open_border_weekly_effect: "Changes the [GetLawGroup('lawgroup_migration').GetName] [concept_law] of a [concept_subject]: [GetLawType('law_closed_borders').GetName] will become [GetLawType('law_migration_controls').GetName], while [GetLawType('law_migration_controls').GetName] will become [GetLawType('law_no_migration_controls').GetName]. Has a 20% chance to make progress each week, with 8 progress points required to succeed.Has a 20% chance to make progress each week, with 8 progress points required to succeed."
+
+notification_MoG_SIS_border_opened_name: "[SCOPE.sCountry('openborders_target_country').GetName] Borders Opened"
+notification_MoG_SIS_border_opened_desc: "[SCOPE.sCountry('openborders_target_country').GetName] has adopted [SCOPE.sLawType('new_law').GetName]."
+notification_MoG_SIS_border_opened_tooltip: "#header $notification_MoG_SIS_border_opened_name$#!\n$notification_MoG_SIS_border_opened_desc$"

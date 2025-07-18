@@ -13,6 +13,7 @@ change_state_religion = {
 	}
 	
 	potential = {
+		NOT = { has_game_rule = sis_cultural_religion_disabled }
 		NOT = { is_country_type = decentralized }
 		scope:target_country = {
 			NOT = { is_country_type = decentralized }
@@ -74,14 +75,97 @@ change_state_religion = {
 							}
 						if = {
 							limit = {
-								scope:target_country.var:change_state_religion_progress > 7.5 # Just in case of rounding edge-cases.
-							}
-							root = {
-								trigger_event = {
-								   id = ib_events.02
-								   popup = yes
+								scope:target_country = {
+									has_variable = change_state_religion_progress
+									var:change_state_religion_progress > 7.5 # Just in case of rounding edge-cases.
 								}
 							}
+							root = {
+								religion = {
+									save_scope_as = new_religion
+								}
+								random_country = {
+									limit = {
+										root = {
+											has_diplomatic_pact = {
+												who = prev
+												type = change_state_religion
+											}
+										}
+										# Produces a "used but never set" error that can be ignored.
+										var:change_state_religion_progress > 7.5
+									}
+									save_scope_as = religion_target_country
+									set_variable = { name = change_state_religion_progress value = 0 }
+								}
+								if = {
+									limit = {
+										has_law = law_type:law_state_atheism
+									}
+									scope:religion_target_country = {
+										activate_law = law_type:law_state_atheism
+										set_state_religion = rel:atheist
+										capital = {
+											convert_population = {
+												target = rel:atheist
+												value = 0.05
+											}
+										}
+									}
+									law_type:law_state_atheism = {
+										save_scope_as = new_law
+									}
+								}
+								else_if = {
+									limit = {
+										NOT = {has_law = law_type:law_state_atheism }
+										country_has_state_religion = rel:atheist
+									}
+									scope:religion_target_country = {
+										activate_law = law_type:law_total_separation
+										set_state_religion = rel:atheist
+										capital = {
+											convert_population = {
+												target = rel:atheist
+												value = 0.05
+											}
+										}
+									}
+									law_type:law_total_separation = {
+										save_scope_as = new_law
+									}
+								}
+								else = {
+									scope:religion_target_country = {
+										set_state_religion = root.religion
+										capital = {
+											convert_population = {
+												target = root.religion
+												value = 0.05
+											}
+										}
+									}
+								}
+								hidden_effect = {
+									scope:religion_target_country = {
+										every_scope_state = {
+											limit = { is_capital = no }
+											convert_population = { 
+						#						limit = {
+						#							is_pop_type = aristocrats
+						#							pop_has_primary_culture = yes
+						#						}
+												target = root.religion
+												value = 0.01 
+											}
+										}
+										every_scope_character = {
+											kill_character = yes
+										}
+									}
+								}	
+							}
+							post_notification = MoG_SIS_religion_changed
 							if = {
 								limit = {
 									scope:target_country = {

@@ -28,3 +28,11 @@
  ag_can_consolidate_subject_name: "Can [GetDiplomaticActionType('consolidate_subject').GetName]"
  ag_can_consolidate_subject_desc: "There are [concept_subject] [Concept('concept_country', '$concept_countries$')] which are eligible for the [GetDiplomaticActionType('consolidate_subject').GetName] action"
  ag_can_consolidate_subject_tooltip: "#header $ag_can_consolidate_subject_name$#!\n$TOOLTIP_DELIMITER$\n$ag_can_consolidate_subject_desc$\n\n$ALERT_GROUP_TOOLTIP_FOOTER$"
+
+rule_consolidate_subject_action: "Consolidate Subjects"
+setting_consolidate_subject_enabled: "Enabled"
+setting_consolidate_subject_enabled_desc: "[Concept('concept_subject', '$concept_subjects$')] with similar [concept_primary_cultures] can be merged via [concept_overlord_action]."
+setting_consolidate_subject_player_only: "Player Only"
+setting_consolidate_subject_player_only_desc: "[Concept('concept_subject', '$concept_subjects$')] with similar [concept_primary_cultures] can be merged via [concept_overlord_action]. The AI cannot consolidate subjects."
+setting_consolidate_subject_disabled: "Disabled"
+setting_consolidate_subject_disabled_desc: "The Consolidate Subject [concept_overlord_action] is unavailable."

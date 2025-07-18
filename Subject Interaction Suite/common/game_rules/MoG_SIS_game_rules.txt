@@ -1,0 +1,29 @@
+﻿sis_synergize_actions = {
+	default = sis_synergize_enabled
+	
+	sis_synergize_enabled = {}
+	sis_synergize_disabled = {}
+}
+
+sis_force_law_actions = {
+	default = sis_force_laws_enabled
+	
+	sis_force_laws_enabled = {}
+	sis_force_laws_only_slavery = {}
+	sis_force_laws_disabled = {}
+}
+
+sis_cultural_religion_actions = {
+	default = sis_cultural_religion_enabled
+	
+	sis_cultural_religion_enabled = {}
+	sis_cultural_religion_disabled = {}
+}
+
+consolidate_subject_action = {
+	default = consolidate_subject_enabled
+
+	consolidate_subject_enabled = {}
+	consolidate_subject_player_only = {}
+	consolidate_subject_disabled = {}
+}
