@@ -1,0 +1,50 @@
+﻿namespace = mog_syn_events
+
+mog_syn_events.03 = {
+	type = country_event
+	title = mog_syn_events.03.t
+	desc = mog_syn_events.03.d
+	flavor = mog_syn_events.03.f
+	orphan = yes #remove these events entirely on next save-breaking update
+	event_image = {
+		video = "gfx/event_pictures/southamerica_aristocrats.bk2"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/southamerica/aristocrats"
+
+	icon = "gfx/interface/icons/event_icons/event_protest.dds"
+
+	duration = 1
+
+	trigger = {
+		# triggered by laws_synergize_land (diplomatic action)
+	}
+
+	immediate = {
+		random_country = {
+			limit = {
+				root = {
+					has_diplomatic_pact = {
+						who = prev
+						type = laws_synergize_land
+					}
+				}
+				# May produce a "used but never set" error that can be ignored.
+				var:synergize_land_progress > 7.5
+			}
+			save_scope_as = synergize_land_target_country
+			set_variable = { name = synergize_land_progress value = 0 }
+		}	
+	}
+
+	option = {
+		name = mog_syn_events.03.a
+		root.active_law:lawgroup_land_reform.type = {
+			save_scope_as = initiator_law
+		}
+		scope:synergize_land_target_country = {
+			activate_law = scope:initiator_law
+		}
+	}
+}

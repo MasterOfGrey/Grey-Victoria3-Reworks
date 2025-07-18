@@ -1,0 +1,74 @@
+﻿# *Partially* derived from source material in: Koa's Change Subject Culture
+
+namespace = ib_events
+
+ib_events.05 = {
+	type = country_event
+	title = ib_events.05.t
+	desc = ib_events.05.d
+	flavor = ib_events.05.f
+	orphan = yes #remove on next save-breaking update
+	event_image = {
+		video = "gfx/event_pictures/southamerica_aristocrats.bk2"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/southamerica/aristocrats"
+
+	icon = "gfx/interface/icons/event_icons/event_protest.dds"
+
+	duration = 3
+
+	trigger = {
+		# triggered by include_primary_culture (diplomatic action)
+	}
+
+	immediate = {
+		random_country = {
+			limit = {
+				root = {
+					has_diplomatic_pact = {
+						who = prev
+						type = include_primary_culture
+					}
+				}
+				# Produces a "used but never set" error that can be ignored.
+				var:include_primary_culture_progress > 7.5
+			}
+			save_scope_as = culture_include_country
+			set_variable = { name = include_primary_culture_progress value = 0 }
+		}	
+	}
+
+	option = {
+		name = ib_events.05.a
+		
+		every_primary_culture = {
+			scope:culture_include_country = {
+				add_primary_culture = prev
+			}
+		}
+		hidden_effect = {
+			scope:culture_include_country = {
+				if = {
+					limit = {
+						NOT = {
+							any_scope_pop ={
+								pop_has_primary_culture = yes
+							}
+						}
+					}
+					random_primary_culture ={
+						save_temporary_scope_as = target_culture_include
+					}
+					every_scope_pop = {
+						limit = {
+							is_pop_type = aristocrats
+						}
+						change_pop_culture = { target = scope:target_culture_include value = 0.01 }
+					}
+				}
+			}
+		}
+	}
+}
