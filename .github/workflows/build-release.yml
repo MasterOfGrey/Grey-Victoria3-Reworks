@@ -41,6 +41,7 @@ jobs:
           mv "${{ steps.metadata.outputs.mod-name }}/STEAM_PAGE.bbcode" ../steam-release/STEAM_PAGE.bbcode
           rm -f "${{ steps.metadata.outputs.mod-name }}/vic3-tiger.conf"
           rm -f "${{ steps.metadata.outputs.mod-name }}/design_notes.txt"
+        # Use rm -f for files and rm -rf for folders.
 
         # Create mod metadata for the steam release
         # Uses STEAM_PAGE.bbcode to update steam description
