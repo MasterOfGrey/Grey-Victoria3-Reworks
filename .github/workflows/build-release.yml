@@ -50,7 +50,7 @@ jobs:
         id: steam-metadata
         shell: bash
         run: |
-          ../steam-release/create-release-vdf.sh "${{ github.workspace }}/${{ steps.metadata.outputs.mod-name }}" ../steam-release/STEAM_PAGE.bbcode "${{ steps.metadata.outputs.mod-id }}"
+          ./script/create-release-vdf.sh "${{ github.workspace }}/${{ steps.metadata.outputs.mod-name }}" ../steam-release/STEAM_PAGE.bbcode "${{ steps.metadata.outputs.mod-id }}"
           mv workshop.vdf ../steam-release/workshop.vdf
           echo "vdf=$(realpath ../steam-release/workshop.vdf)" >> "$GITHUB_OUTPUT"
           echo "# Workflow Metadata" >> $GITHUB_STEP_SUMMARY
