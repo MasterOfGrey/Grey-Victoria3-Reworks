@@ -8,7 +8,6 @@ on:
         required: true
         type: choice
         options:
-          - 'Industries Rework - Food;0'
           - 'Industries Rework - Food;3330261506'
           - 'Industries Rework - Military;3324254588'
           - 'Industries Rework - Ranches;3394847149'
