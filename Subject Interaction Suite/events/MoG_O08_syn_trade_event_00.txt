@@ -5,7 +5,7 @@ mog_syn_events.04 = {
 	title = mog_syn_events.04.t
 	desc = mog_syn_events.04.d
 	flavor = mog_syn_events.04.f
-
+	orphan = yes #remove these events entirely on next save-breaking update
 	event_image = {
 		video = "gfx/event_pictures/southamerica_aristocrats.bk2"
 	}

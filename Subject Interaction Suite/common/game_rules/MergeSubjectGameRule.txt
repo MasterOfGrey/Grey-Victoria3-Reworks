@@ -10,4 +10,5 @@ merge_subject_cheat = {
 	
 	balanced_merge = {}
 	cheat_merge = {}
+	disabled_merge = {}
 }

@@ -7,7 +7,7 @@ ib_events.01 = {
 	title = ib_events.01.t
 	desc = ib_events.01.d
 	flavor = ib_events.01.f
-
+	orphan = yes #remove in next save-breaking update
 	event_image = {
 		video = "gfx/event_pictures/southamerica_aristocrats.bk2"
 	}
