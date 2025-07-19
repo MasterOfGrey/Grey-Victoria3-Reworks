@@ -12,6 +12,16 @@ consolidate_subject = {
 	should_notify_third_parties = yes
 	show_effect_in_tooltip = yes
 
+	potential = {
+		OR = {
+			has_game_rule = consolidate_subject_enabled
+			AND = {
+				is_player = yes
+				has_game_rule = consolidate_subject_player_only
+			}
+		}
+	}
+
 	possible = {
 		# Don't rely on can_be_consolidation_recipient tooltip for this trigger in here - it doesn't resolve correctly as a trigger.
 		can_consolidate_subject = yes		# Consequently, full scope of that trigger part is duplicated here.

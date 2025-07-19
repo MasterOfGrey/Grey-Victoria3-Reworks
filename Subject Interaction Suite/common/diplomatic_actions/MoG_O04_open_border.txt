@@ -9,6 +9,7 @@ open_border = {
 	should_notify_third_parties = no
 	
 	potential = {
+		NOT = { has_game_rule = sis_synergize_disabled }
 		scope:target_country = {
 			NOT = { is_country_type = decentralized }
 			OR = {
@@ -57,13 +58,49 @@ open_border = {
 							}
 						if = {
 							limit = {
-								scope:target_country.var:border_opening_progress > 7.5 # Just in case of rounding edge-cases.
+								scope:target_country = {
+									has_variable = border_opening_progress
+									var:border_opening_progress > 7.5 # Just in case of rounding edge-cases.
+								}
 							}
 							root = {
-								trigger_event = {
-								   id = ib_events.03
-								   popup = yes
+								random_country = {
+									limit = {
+										root = {
+											has_diplomatic_pact = {
+												who = prev
+												type = open_border
+											}
+										}
+										# Produces a "used but never set" error that can be ignored.
+										var:border_opening_progress > 7.5
+									}
+									save_scope_as = openborders_target_country
+									set_variable = { name = border_opening_progress value = 0 }
+								}	
+								scope:openborders_target_country = {
+									if = {
+										limit = {
+											has_law = law_type:law_migration_controls
+										}
+										activate_law = law_type:law_no_migration_controls
+										law_type:law_no_migration_controls = {
+											save_scope_as = new_law
+										}
+									}
 								}
+								scope:openborders_target_country = {
+									if = {
+										limit = {
+											has_law = law_type:law_closed_borders
+										}
+										activate_law = law_type:law_migration_controls
+										law_type:law_migration_controls = {
+											save_scope_as = new_law
+										} 
+									}
+								}
+								post_notification = MoG_SIS_border_opened
 							}
 							if = {
 								limit = {

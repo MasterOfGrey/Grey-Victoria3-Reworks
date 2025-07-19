@@ -27,3 +27,7 @@
  ib_events.01.a: "Well done."
 
  change_primary_culture_weekly_effect: "Works to achieve complete alignment of primary culture with a 20% chance to make progress each week, with 8 progress points required to succeed."
+
+notification_MoG_SIS_culture_changed_name: "[SCOPE.sCountry('culture_target_country').GetName] [concept_primary_cultures] Changed"
+notification_MoG_SIS_culture_changed_desc: "[SCOPE.sCountry('culture_target_country').GetName]'s [concept_primary_cultures] have been changed to match ours."
+notification_MoG_SIS_culture_changed_tooltip: "#header $notification_MoG_SIS_culture_changed_name$#!\n$notification_MoG_SIS_culture_changed_desc$"

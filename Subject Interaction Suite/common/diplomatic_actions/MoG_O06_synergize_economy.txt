@@ -7,6 +7,7 @@
 	should_notify_third_parties = no
 	
 	potential = {
+		NOT = { has_game_rule = sis_synergize_disabled }
 		scope:target_country = {
 			NOT = { is_country_type = decentralized }
 			is_direct_subject_of = root
@@ -84,46 +85,18 @@
 						}
 						if = {
 							limit = {
-								scope:target_country.var:synergize_economy_progress > 7.5 # Just in case of rounding edge-cases.
-							}
-							root = {
-								# Successful completion effect.
-								remove_modifier = overlord_syn_cost_economy
-								remove_variable = synergize_economy_active
-								trigger_event = {
-								   id = mog_syn_events.02
-								   popup = yes
-								}
-							}
-							if = {
-								limit = {
-									scope:target_country = {
-										has_diplomatic_pact = {
-											who = root
-											type = laws_synergize_economy
-										}									
-									}			
-								}
 								scope:target_country = {
-									remove_diplomatic_pact = {
-										country = root
-										type = laws_synergize_economy
-									}			
-								}
-							}	
-							else_if = {
-								limit = {
-									has_diplomatic_pact = {
-										who = scope:target_country
-										type = laws_synergize_economy
-									}		
-								}
-								remove_diplomatic_pact = {
-									country = scope:target_country
-									type = laws_synergize_economy
+									has_variable = synergize_economy_progress
+									var:synergize_economy_progress > 7.5 # Just in case of rounding edge-cases.
 								}
 							}
-							
+							mog_sis_synergy_complete_effect = {
+								COST_MODIFIER = overlord_syn_cost_economy
+								ACTIVE_VARIABLE = synergize_economy_active
+								SYNERGY_VARIABLE = synergize_economy_progress
+								DIPLO_PACT = laws_synergize_economy
+								ACTIVE_LAW = active_law:lawgroup_economic_system.type
+							}
 						}
 					}
 				}

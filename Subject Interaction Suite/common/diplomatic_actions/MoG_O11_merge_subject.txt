@@ -10,6 +10,7 @@ merge_subject = {
 	show_effect_in_tooltip = yes
 	
 	potential = {
+		NOT = {has_game_rule = disabled_merge}
 		NOT = { is_country_type = decentralized }
 		scope:target_country = {
 			NOT = { 
