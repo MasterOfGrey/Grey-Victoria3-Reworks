@@ -1,0 +1,39 @@
+﻿MoG_SIS_synergy_complete = {
+	type = country
+	group = "MoG_SIS_synergy_complete_group"
+	texture = "gfx/interface/icons/notification_icons/laws.dds"
+	notification_type = toast
+	color = good
+}
+
+MoG_SIS_border_opened = {
+	type = country
+	group = "MoG_SIS_synergy_complete_group"
+	texture = "gfx/interface/icons/notification_icons/laws.dds"
+	notification_type = toast
+	color = good
+}
+
+MoG_SIS_religion_changed = {
+	type = country
+	group = "MoG_SIS_synergy_complete_group"
+	texture = "gfx/interface/icons/notification_icons/laws.dds"
+	notification_type = toast
+	color = good
+}
+
+MoG_SIS_culture_included = {
+	type = country
+	group = "MoG_SIS_synergy_complete_group"
+	texture = "gfx/interface/icons/notification_icons/laws.dds"
+	notification_type = toast
+	color = good
+}
+
+MoG_SIS_culture_changed = {
+	type = country
+	group = "MoG_SIS_synergy_complete_group"
+	texture = "gfx/interface/icons/notification_icons/laws.dds"
+	notification_type = toast
+	color = good
+}

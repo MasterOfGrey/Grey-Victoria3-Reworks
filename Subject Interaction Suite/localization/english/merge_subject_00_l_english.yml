@@ -25,6 +25,8 @@
  setting_balanced_merge_desc:0 "The diplomatic action: Merge [concept_subject] [Concept('concept_country', '$concept_countries$')] is balanced for normal play."
  setting_cheat_merge:0 "Merge Subject is a Cheat"
  setting_cheat_merge_desc:0 "The diplomatic action: Merge [concept_subject] [Concept('concept_country', '$concept_countries$')] is a powerful cheat."
+setting_disabled_merge: "Merge Subject Disabled"
+setting_disabled_merge_desc: "The diplomatic action: Merge [concept_subject] [Concept('concept_country', '$concept_countries$')] is unavailable."
  DIPLOMATIC_ACCEPTANCE_BREAK_FREE: "They are pursuing a [concept_ai_strategy] of #v $ai_strategy_subject_break_free$#!"
  DIPLOMATIC_ACCEPTANCE_STRENGTHEN_SELF: "They are pursuing a [concept_ai_strategy] of #v $ai_strategy_subject_strengthen_self$#!"
  DIPLOMATIC_ACCEPTANCE_MAINTAIN_AUTONOMY: "They are pursuing a [concept_ai_strategy] of #v $ai_strategy_subject_maintain_autonomy$#!"

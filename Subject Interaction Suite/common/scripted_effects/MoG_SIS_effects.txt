@@ -1,0 +1,62 @@
+﻿#completion effect for "synergize" actions
+#relevant $inputs$: 
+#COST_MODIFIER: overlord_syn_cost_(bureau/economy/land/trade)
+#ACTIVE_VARIABLE: synergize_(bureaucracy/economy/land/trade)_active
+#SYNERGY_VARIABLE: synergize_(bureaucracy/economy/land/trade)_progress
+#DIPLO_PACT: laws_synergize_(bureaucracy/economy/land/trade)
+#ACTIVE_LAW: active_law:lawgroup_(bureaucracy/trade_policy/land_reform/economic_system).type
+mog_sis_synergy_complete_effect = {
+    root = {
+        remove_modifier = $COST_MODIFIER$
+        remove_variable = $ACTIVE_VARIABLE$ #why is there a variable involved?
+		random_country = {
+			limit = {
+				root = {
+					has_diplomatic_pact = {
+						who = prev
+						type = $DIPLO_PACT$
+					}
+				}
+				# May produce a "used but never set" error that can be ignored.
+				var:$SYNERGY_VARIABLE$ > 7.5
+			}
+			save_scope_as = synergize_target_country
+			set_variable = { name = $SYNERGY_VARIABLE$ value = 0 }
+		}
+		$ACTIVE_LAW$ = {
+			save_scope_as = initiator_law
+		}
+		scope:synergize_target_country = {
+			activate_law = scope:initiator_law
+		}
+        post_notification = MoG_SIS_synergy_complete
+        if = {
+            limit = {
+                scope:target_country = {
+                    has_diplomatic_pact = {
+                        who = root
+                        type = $DIPLO_PACT$
+                    }									
+                }			
+            }
+            scope:target_country = {
+                remove_diplomatic_pact = {
+                    country = root
+                    type = $DIPLO_PACT$
+                }			
+            }
+        }	
+        else_if = {
+            limit = {
+                has_diplomatic_pact = {
+                    who = scope:target_country
+                    type = $DIPLO_PACT$
+                }		
+            }
+            remove_diplomatic_pact = {
+                country = scope:target_country
+                type = $DIPLO_PACT$
+            }
+        }
+	}
+}

@@ -9,6 +9,10 @@ forced_industry_ban = {
 	show_confirmation_box = yes
 	
 	potential = {
+		NOR = { 
+			has_game_rule = sis_force_laws_disabled
+			has_game_rule = sis_force_laws_only_slavery
+		 }
 		NOT = { is_country_type = decentralized }
 		scope:target_country = {
 			NOT = { 

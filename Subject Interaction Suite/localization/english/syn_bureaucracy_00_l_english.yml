@@ -26,9 +26,20 @@
  mog_syn_events.01.f: ""Long live [ROOT.GetCountry.GetName]!""
  mog_syn_events.01.a: "Well done."
  
- laws_synergize_bureaucracy_weekly_effect: "Works to align their system of bureaucracy with ours. Has a 20% chance to make progress each week, with 8 progress points required to succeed."
+ laws_synergize_bureaucracy_weekly_effect: "Changes the [GetLawGroup('lawgroup_bureaucracy').GetName] [concept_law] of a [concept_subject] to match our own. Has a 20% chance to make progress each week, with 8 progress points required to succeed."
  
  overlord_syn_cost_bureau: "Cost for Synergizing Bureaucracies"
  BUREAUCRACY_SYNERGY_COST_BUREAU: "Cost for Synergizing Bureaucracies"
  
  active_synergize_bureaucracy_tt: "Number of other $laws_synergize_bureaucracy$ actions is less than 1."
+
+MoG_SIS_synergy_complete_group: "SIS | Subject Synergization"
+notification_MoG_SIS_synergy_complete_name: "[SCOPE.sCountry('synergize_target_country').GetName] Synergized"
+notification_MoG_SIS_synergy_complete_desc: "[SCOPE.sCountry('synergize_target_country').GetName] has adopted [SCOPE.sLawType('initiator_law').GetName]."
+notification_MoG_SIS_synergy_complete_tooltip: "#header $notification_MoG_SIS_synergy_complete_name$#!\n$notification_MoG_SIS_synergy_complete_desc$"
+
+rule_sis_synergize_actions: "Synergize Subject Laws"
+setting_sis_synergize_enabled: "Enabled"
+setting_sis_synergize_enabled_desc: "The Player can alter the [GetLawGroup('lawgroup_bureaucracy').GetName], [GetLawGroup('lawgroup_economic_system').GetName], [GetLawGroup('lawgroup_land_reform').GetName] and [GetLawGroup('lawgroup_trade_policy').GetName]of their [Concept('concept_subject', '$concept_subjects$')] via [concept_overlord_action]."
+setting_sis_synergize_disabled: "Disabled"
+setting_sis_synergize_disabled_desc: "The Synergize [Concept('concept_overlord_action', '$concept_overlord_actions$')] are unvailable."

@@ -26,7 +26,7 @@
  mog_syn_events.03.f: ""Long live [ROOT.GetCountry.GetName]!""
  mog_syn_events.03.a: "Well done."
  
- laws_synergize_land_weekly_effect: "Works to align their land law reforms with ours. Has a 20% chance to make progress each week, with 8 progress points required to succeed."
+ laws_synergize_land_weekly_effect: "Changes the [GetLawGroup('lawgroup_land_reform').GetName] [concept_law] of a [concept_subject] to match our own. Has a 20% chance to make progress each week, with 8 progress points required to succeed."
  
  overlord_syn_cost_land: "Cost for Synergizing Land Reforms"
  

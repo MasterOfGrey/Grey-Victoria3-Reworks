@@ -27,3 +27,13 @@
  ib_events.05.a: "Well done."
 
  include_primary_culture_weekly_effect: "Works to include Overlord's primary cultures into their Subject with a 20% chance to make progress each week, with 8 progress points required to succeed."
+
+rule_sis_cultural_religion_actions: "Cultural & Religious Alignment"
+setting_sis_cultural_religion_enabled: "Enabled"
+setting_sis_cultural_religion_enabled_desc: "The Player can alter the [concept_state_religion] and [concept_primary_cultures] of their [Concept('concept_subject', '$concept_subjects$')] via [concept_overlord_action]."
+setting_sis_cultural_religion_disabled: "Disabled"
+setting_sis_cultural_religion_disabled_desc: "The Player cannot alter the [concept_state_religion] and [concept_primary_cultures] of their [Concept('concept_subject', '$concept_subjects$')] via [concept_overlord_action]."
+
+notification_MoG_SIS_culture_included_name: "Cultures Integrated into [SCOPE.sCountry('culture_include_country').GetName]"
+notification_MoG_SIS_culture_included_desc: "Added our [concept_primary_cultures] to [SCOPE.sCountry('culture_include_country').GetName]."
+notification_MoG_SIS_culture_included_tooltip: "#header $notification_MoG_SIS_culture_included_name$#!\n$notification_MoG_SIS_culture_included_desc$"
