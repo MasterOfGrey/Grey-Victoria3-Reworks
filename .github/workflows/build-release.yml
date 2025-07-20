@@ -1,0 +1,73 @@
+name: Publish Release
+
+on:
+  workflow_dispatch:
+    inputs:
+      mod:
+        description: 'Which mod?'
+        required: true
+        type: choice
+        options:
+          - 'Industries Rework - Food;3330261506'
+          - 'Industries Rework - Military;3324254588'
+          - 'Industries Rework - Ranches;3394847149'
+          - 'Populist Legal Power;3351014672'
+          - 'Sinosphere Korean;3108195724'
+          - 'Smarter Private Construction;3115017647'
+          - 'Soft Econ Adjustments;3345217364'
+          - 'Soft Pop Adjustments;3336914177'
+          - 'Subject Interaction Suite;3276243851'
+          - 'Tweaked Starting Conditions;3306851845'
+          - 'Urban Synergy Unleashed;3371689443'
+          - 'USU LLWA;3387021675'
+          - 'USU Morgenrote;3371690718'
+
+jobs:
+  release:
+    name: "Publish Release"
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4.2.2
+
+      - name: Setup Metadata
+        id: metadata
+        run: script/split-mod.sh "${{ inputs.mod }}"
+
+      - name: Clean Repository
+        run: |
+          mkdir ../steam-release
+          mv "${{ steps.metadata.outputs.mod-name }}/STEAM_PAGE.bbcode" ../steam-release/STEAM_PAGE.bbcode
+          rm -f "${{ steps.metadata.outputs.mod-name }}/vic3-tiger.conf"
+          rm -f "${{ steps.metadata.outputs.mod-name }}/design_notes.txt"
+        # Use rm -f for files and rm -rf for folders.
+
+        # Create mod metadata for the steam release
+        # Uses STEAM_PAGE.bbcode to update steam description
+        # Report: Generated metadata
+      - name: Create Workshop Metadata
+        id: steam-metadata
+        shell: bash
+        run: |
+          ./script/create-release-vdf.sh "${{ github.workspace }}/${{ steps.metadata.outputs.mod-name }}" ../steam-release/STEAM_PAGE.bbcode "${{ steps.metadata.outputs.mod-id }}"
+          mv workshop.vdf ../steam-release/workshop.vdf
+          echo "vdf=$(realpath ../steam-release/workshop.vdf)" >> "$GITHUB_OUTPUT"
+          echo "# Workflow Metadata" >> $GITHUB_STEP_SUMMARY
+          echo "\`\`\`" >> $GITHUB_STEP_SUMMARY
+          echo "$(cat < ../steam-release/workshop.vdf)" >> $GITHUB_STEP_SUMMARY
+          echo "\`\`\`" >> $GITHUB_STEP_SUMMARY
+
+      - name: Setup SteamCMD
+        uses: CyberAndrii/setup-steamcmd@v1
+
+        # Publish to steam workshop
+        # Uses generated metadata and configured workshop user
+      - name: Publish to Workshop
+        shell: bash
+        run: |
+          steamcmd +login ${{ secrets.WORKSHOP_USERNAME }} ${{ secrets.WORKSHOP_PASSWORD }} +workshop_build_item ${{ steps.steam-metadata.outputs.vdf }} +quit
+          rm -rf "$STEAM_CMD"
+          rm -rf "$STEAM_DIR"
+          rm -rf "$STEAM_TEMP"
+

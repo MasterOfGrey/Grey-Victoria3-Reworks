@@ -1,0 +1,22 @@
+widget = {
+	name = mir_hidden_triggers
+	datacontext = "[GetMetaPlayer.GetPlayedOrObservedCountry]"
+	enabled = "[Country.IsValid]"
+	visible = "[Country.IsValid]"
+	allow_outside = yes
+	size = { 0 0 }
+	alpha = 0
+	
+	# Shortcuts
+	widget = {
+		# Redirection to Buildings/PMs
+		visible = "[GetVariableSystem.HasValue('com_alert_action', Localize('mir_alert_send_to_building_registry'))]"
+		state = {
+			name = _show
+			#Activates the GUI
+			on_finish = "[InformationPanelBar.OpenCompactBuildingBrowserPanelCycleFilters(Country.Self, 'is_urban')]"
+			on_finish = "[GetVariableSystem.Clear('com_alert_action')]"
+		}
+	}
+}
+

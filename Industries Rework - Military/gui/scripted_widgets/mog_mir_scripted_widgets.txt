@@ -1,0 +1,1 @@
+﻿gui/mog_mir_hidden_triggers.gui = mir_hidden_triggers

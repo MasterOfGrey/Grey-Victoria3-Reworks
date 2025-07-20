@@ -48,7 +48,7 @@ MIR_war_demob_arms = {
 		}
 	}
 	
-	open_panel = building_browser|production_methods
+	open_panel = production_methods|urban
 	type = alert
 	color = yellow
 }
@@ -74,7 +74,7 @@ MIR_peace_mob_arms = {
 		}
 	}
 	
-	open_panel = building_browser|production_methods
+	open_panel = production_methods|urban
 	type = alert
 	color = yellow
 }
@@ -102,7 +102,7 @@ MIR_war_demob_arty = {
 		}
 	}
 	
-	open_panel = building_browser|production_methods
+	open_panel = production_methods|urban
 	type = alert
 	color = yellow
 }
@@ -128,7 +128,7 @@ MIR_peace_mob_arty = {
 		}
 	}
 	
-	open_panel = building_browser|production_methods
+	open_panel = production_methods|urban
 	type = alert
 	color = yellow
 }
@@ -158,7 +158,7 @@ MIR_war_demob_ammo = {
 		}
 	}
 	
-	open_panel = building_browser|production_methods
+	open_panel = production_methods|urban
 	type = alert
 	color = yellow
 }
@@ -185,7 +185,7 @@ MIR_peace_mob_ammo = {
 		}
 	}
 	
-	open_panel = building_browser|production_methods
+	open_panel = production_methods|urban
 	type = alert
 	color = yellow
 }
@@ -211,7 +211,7 @@ MIR_war_demob_planes = {
 		}
 	}
 	
-	open_panel = building_browser|production_methods
+	open_panel = production_methods|urban
 	type = alert
 	color = yellow
 }
@@ -235,7 +235,7 @@ MIR_peace_mob_planes = {
 		}
 	}
 	
-	open_panel = building_browser|production_methods
+	open_panel = production_methods|urban
 	type = alert
 	color = yellow
 }
@@ -260,7 +260,7 @@ MIR_war_demob_tanks = {
 		}
 	}
 	
-	open_panel = building_browser|production_methods
+	open_panel = production_methods|urban
 	type = alert
 	color = yellow
 }
@@ -284,7 +284,7 @@ MIR_peace_mob_tanks = {
 		}
 	}
 	
-	open_panel = building_browser|production_methods
+	open_panel = production_methods|urban
 	type = alert
 	color = yellow
 }
