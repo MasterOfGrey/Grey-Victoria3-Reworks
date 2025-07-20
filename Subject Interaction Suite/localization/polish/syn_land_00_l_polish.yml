@@ -9,25 +9,25 @@
  laws_synergize_land_action_notification_desc: "[INITIATOR_COUNTRY.GetName] synergizuje reformy rolne w naszym kraju."
  laws_synergize_land_action_notification_break_name: "Zaprzestań synergistycznych reform rolnych do [INITIATOR_COUNTRY.GetName]"
  laws_synergize_land_action_notification_break_desc: "[INITIATOR_COUNTRY.GetName] zaprzestał prób synergii reformy rolnej w naszym kraju."
-  
+ 
  laws_synergize_land_effect_desc_global: "Rozpocznij synergię reform rolnych"
  laws_synergize_land_effect_desc_first: "[COUNTRY.GetAdjectiveNoFlag] inicjuje synergię reformy rolnej z [TARGET_COUNTRY.GetName]."
  laws_synergize_land_effect_desc_third: "[COUNTRY.GetName] inicjuje synergię reformy rolnej z [AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)]."
-  
+ 
  laws_synergize_land_trigger_desc_global: "Synergia reformy rolnej w toku"
  laws_synergize_land_trigger_false_desc_global: "Obecnie nie prowadzimy procesu synergii reform rolnych."
  laws_synergize_land_trigger_desc_first: "[COUNTRY.GetAdjectiveNoFlag] przeprowadza synergistyczne reformy rolne z [TARGET_COUNTRY.GetName]."
  laws_synergize_land_trigger_false_desc_first: "[COUNTRY.GetAdjectiveNoFlag] nie prowadzi obecnie synergistycznych reform rolnych z [TARGET_COUNTRY.GetName]."
  laws_synergize_land_trigger_desc_third: "[COUNTRY.GetName] przeprowadza synergistyczne reformy rolne z [AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)]."
  laws_synergize_land_trigger_false_desc_third: "[COUNTRY.GetName] nie prowadzi obecnie synergistycznych reform rolnych z [AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)]."
-  
+ 
  mog_syn_events.03.t: "Synergia reformy rolnej!"
  mog_syn_events.03.d: "Dumny naród [ROOT.GetCountry.GetName] pomyślnie zrealizował synergię reformy rolnej z [SCOPE.sCountry('synergize_land_target_country').GetName]. [SCOPE.sCountry('synergize_land_target_country').GetName] będzie cieszył się wiecznym dobrobytem dzięki zwiększonej spójności z ojczyzną."
  mog_syn_events.03.f: ""Niech żyje [ROOT.GetCountry.GetName]!""
  mog_syn_events.03.a: "Dobrze zrobiony."
-  
+ 
  laws_synergize_land_weekly_effect: "Pracuje nad dostosowaniem swoich reform prawa gruntowego do naszych. Ma 20% szans na postęp w każdym tygodniu, a do osiągnięcia sukcesu wymagane jest 8 punktów postępu."
-  
+ 
  overlord_syn_cost_land: "Koszty synergii reform rolnych"
-  
+ 
  active_synergize_land_tt: "Liczba innych akcji $laws_synergize_land$ jest mniejsza niż 1."

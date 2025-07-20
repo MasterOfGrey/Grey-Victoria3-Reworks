@@ -25,6 +25,8 @@
  setting_balanced_merge_desc: "L'action diplomatique : Fusionner [concept_subject] [Concept('concept_country', '$concept_countries$')] est équilibrée pour le jeu normal."
  setting_cheat_merge: "Merge Subject est une triche"
  setting_cheat_merge_desc: "L'action diplomatique : Fusionner [concept_subject] [Concept('concept_country', '$concept_countries$')] est une triche puissante."
+ setting_disabled_merge: "Fusionner les sujets désactivée" #deepl:354449469
+ setting_disabled_merge_desc: "L'action diplomatique : Fusionner [concept_subject] [Concept('concept_country', '$concept_countries$')] n'est pas disponible." #deepl:3670147245
  DIPLOMATIC_ACCEPTANCE_BREAK_FREE: "Ils poursuivent un [concept_ai_strategy] de #v $ai_strategy_subject_break_free$#!"
  DIPLOMATIC_ACCEPTANCE_STRENGTHEN_SELF: "Ils poursuivent un [concept_ai_strategy] de #v $ai_strategy_subject_strengthen_self$#!"
  DIPLOMATIC_ACCEPTANCE_MAINTAIN_AUTONOMY: "Ils poursuivent un [concept_ai_strategy] de #v $ai_strategy_subject_maintain_autonomy$#!"

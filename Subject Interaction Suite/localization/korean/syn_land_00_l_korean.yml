@@ -9,25 +9,25 @@
  laws_synergize_land_action_notification_desc: "[INITIATOR_COUNTRY.GetName]는 우리나라 토지개혁을 시너지효과로 이어가고 있습니다."
  laws_synergize_land_action_notification_break_name: "[INITIATOR_COUNTRY.GetName]으로 토지 개혁 시너지 효과 중단"
  laws_synergize_land_action_notification_break_desc: "[INITIATOR_COUNTRY.GetName]는 더 이상 우리나라 토지개혁을 협력적으로 추진하려는 시도를 중단했습니다."
-  
+ 
  laws_synergize_land_effect_desc_global: "토지 개혁의 시너지 효과를 시작하다"
  laws_synergize_land_effect_desc_first: "[COUNTRY.GetAdjectiveNoFlag]은 [TARGET_COUNTRY.GetName]과 토지개혁 시너지 효과를 시작합니다."
  laws_synergize_land_effect_desc_third: "[COUNTRY.GetName]은 [AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)]와 토지개혁 시너지화를 시작합니다."
-  
+ 
  laws_synergize_land_trigger_desc_global: "토지 개혁 협력 진행 중"
  laws_synergize_land_trigger_false_desc_global: "현재 토지개혁을 협력적으로 추진하고 있지 않습니다."
  laws_synergize_land_trigger_desc_first: "[COUNTRY.GetAdjectiveNoFlag]은 [TARGET_COUNTRY.GetName]과 협력하여 토지개혁을 추진합니다."
  laws_synergize_land_trigger_false_desc_first: "[COUNTRY.GetAdjectiveNoFlag]은 현재 [TARGET_COUNTRY.GetName]과 협력적인 토지 개혁을 실시하지 않습니다."
  laws_synergize_land_trigger_desc_third: "[COUNTRY.GetName]은 [AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)]와 협력적인 토지개혁을 실시합니다."
  laws_synergize_land_trigger_false_desc_third: "[COUNTRY.GetName]은 현재 [AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)]와 협력적인 토지 개혁을 실시하지 않습니다."
-  
+ 
  mog_syn_events.03.t: "토지개혁 시너지!"
  mog_syn_events.03.d: "자랑스러운 [ROOT.GetCountry.GetName] 국가는 [SCOPE.sCountry('synergize_land_target_country').GetName]과의 토지개혁 시너지 효과를 성공적으로 완료했습니다. [SCOPE.sCountry('synergize_land_target_country').GetName]은 조국과의 결속력 강화를 통해 영원한 번영을 누릴 것입니다."
  mog_syn_events.03.f: ""[ROOT.GetCountry.GetName] 오래 살아요!""
  mog_syn_events.03.a: "잘하셨어요."
-  
+ 
  laws_synergize_land_weekly_effect: "토지법 개혁을 우리의 개혁과 일치시키기 위해 노력합니다. 매주 20%의 진척률을 보이며, 성공하려면 8개의 진척 포인트가 필요합니다."
-  
+ 
  overlord_syn_cost_land: "토지 개혁 협력 비용"
-  
+ 
  active_synergize_land_tt: "다른 $laws_synergize_land$ 작업의 수가 1보다 작습니다."

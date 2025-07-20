@@ -9,25 +9,25 @@
  laws_synergize_land_action_notification_desc: "[INITIATOR_COUNTRY.GetName] sorgt für Synergien bei den Grundreform-Gesetzen unseres Landes."
  laws_synergize_land_action_notification_break_name: "[INITIATOR_COUNTRY.GetName] stoppt die Angleichung der Grundreform-Gesetze"
  laws_synergize_land_action_notification_break_desc: "[INITIATOR_COUNTRY.GetName] hat aufgehört, zu versuchen, die Grundreformgesetze unseres Landes anzugleichen."
-  
+ 
  laws_synergize_land_effect_desc_global: "Angleichung der Grundreform-Gesetze initiieren"
  laws_synergize_land_effect_desc_first: "[COUNTRY.GetNameNoFlag] passt die Grundreform-Gesetze von [TARGET_COUNTRY.GetName] an die Seinigen an."
  laws_synergize_land_effect_desc_third: "[COUNTRY.GetName] passt die Grundreform-Gesetze von [AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)] an."
-  
+ 
  laws_synergize_land_trigger_desc_global: "Angleichung der Grundreform-Gesetze läuft"
  laws_synergize_land_trigger_false_desc_global: "Derzeit keine Angleichung der Grundreform-Gesetze läuft."
  laws_synergize_land_trigger_desc_first: "[COUNTRY.GetAdjectiveNoFlag] hat angepasste Grundreform-Gesetze mit [TARGET_COUNTRY.GetName]."
  laws_synergize_land_trigger_false_desc_first: "[COUNTRY.GetAdjectiveNoFlag] hat derzeit keine angepassten Grundreform-Gesetze mit [TARGET_COUNTRY.GetName]."
  laws_synergize_land_trigger_desc_third: "[COUNTRY.GetName] hat angepasste Grundreform-Gesetze mit [AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)]."
  laws_synergize_land_trigger_false_desc_third: "[COUNTRY.GetName] hat derzeit keine angepassten Grundreform-Gesetze mit [AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)]."
-  
+ 
  mog_syn_events.03.t: "Angleichung der Grundreform-Gesetze!"
  mog_syn_events.03.d: "Die stolze Nation [ROOT.GetCountry.GetName] hat die Angleichung der Grundreform-Gesetze in [SCOPE.sCountry('synergize_land_target_country').GetName] erfolgreich abgeschlossen. [SCOPE.sCountry('synergize_land_target_country').GetName] wird durch verstärkten Zusammenhalt mit dem Heimatland in ewigem Wohlstand gedeihen."
  mog_syn_events.03.f: "„Lang lebe [ROOT.GetCountry.GetName]!“"
  mog_syn_events.03.a: "Gut gemacht."
-  
+ 
  laws_synergize_land_weekly_effect: "Arbeitet daran, ihre Grundrechtsreformen mit unseren in Einklang zu bringen. Hat jede Woche eine Chance von 20 %, Fortschritte zu machen, wobei 8 Fortschrittspunkte für den Erfolg erforderlich sind."
-  
+ 
  overlord_syn_cost_land: "Kosten für die Angleichung der Grundreform-Gesetze"
-  
+ 
  active_synergize_land_tt: "Die Anzahl anderer "$laws_synergize_land$"-Aktionen ist kleiner als 1."

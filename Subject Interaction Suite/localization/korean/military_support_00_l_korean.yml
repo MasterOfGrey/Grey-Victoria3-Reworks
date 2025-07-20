@@ -22,11 +22,11 @@
  military_support_proposal_third_party_declined_desc: "[TARGET_COUNTRY.GetName]은(는) [INITIATOR_COUNTRY.GetName]와의 영토 확장 지원을 거부했습니다."
  military_support_action_notification_third_party_break_name: "영토 확장 지원 중단"
  military_support_action_notification_third_party_break_desc: "[INITIATOR_COUNTRY.GetName]은 [TARGET_COUNTRY.GetName]과의 영토 확장 지원을 중단했습니다."
-  
+
  military_support_effect_desc_global: "영토 확장 지원 시작"
  military_support_effect_desc_first: "[COUNTRY.GetAdjectiveNoFlag](이)가 [TARGET_COUNTRY.GetName]에 영토 확장 지원을 시작함"
  military_support_effect_desc_third: "[COUNTRY.GetName](이)가 [AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)]에 영토 확장 지원를 시작함"
-  
+ 
  military_support_trigger_desc_global: "영토 확장 지원 중"
  military_support_trigger_false_desc_global: "영토 확장 지원 중이지 #b 않음#!"
  military_support_trigger_desc_first: "[COUNTRY.GetAdjectiveNoFlag](이)가 [TARGET_COUNTRY.GetName]에 영토 확장 지원 중"

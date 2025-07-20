@@ -1,0 +1,8 @@
+﻿l_german:
+ appeasement_support_expansion_agreement_formed: "Gegründet $military_support$ [concept_diplomatic_pact]" #deepl:1685444258
+ appeasement_support_expansion_agreement_formed_desc: "Bildung einer $military_support$ [concept_diplomatic_pact]" #deepl:842507572
+ appeasement_support_expansion_agreement_broken: "Gebrochen $military_support$ [concept_diplomatic_pact]" #deepl:839355471
+ appeasement_support_expansion_agreement_broken_desc: "Breaking a $military_support$ [concept_diplomatic_pact]" #deepl:2893503874
+
+ appeasement_industry_banned: "Die Industrie wurde verboten" #deepl:1084509673
+ appeasement_industry_banned_desc: "Verbot der Schwerindustrie per Gesetz" #deepl:4093288237

@@ -1,0 +1,8 @@
+﻿l_polish:
+ appeasement_support_expansion_agreement_formed: "Utworzono $military_support$ [concept_diplomatic_pact]" #deepl:1685444258
+ appeasement_support_expansion_agreement_formed_desc: "Tworzenie strony $military_support$ [concept_diplomatic_pact]" #deepl:842507572
+ appeasement_support_expansion_agreement_broken: "Broke $military_support$ [concept_diplomatic_pact]" #deepl:839355471
+ appeasement_support_expansion_agreement_broken_desc: "Złamanie $military_support$ [concept_diplomatic_pact]" #deepl:2893503874
+
+ appeasement_industry_banned: "Przemysł został zakazany" #deepl:1084509673
+ appeasement_industry_banned_desc: "Prawo zakazujące przemysłu ciężkiego" #deepl:4093288237

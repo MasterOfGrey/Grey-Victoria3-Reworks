@@ -9,21 +9,25 @@
  change_primary_culture_action_notification_desc: "[INITIATOR_COUNTRY.GetName]は私たちの国の主要な文化を変えています。"
  change_primary_culture_action_notification_break_name: "一次文化の変化は[INITIATOR_COUNTRY.GetName]によって停止されました"
  change_primary_culture_action_notification_break_desc: "[INITIATOR_COUNTRY.GetName] は我が国の主要な文化変革を終了させました。"
-  
+ 
  change_primary_culture_effect_desc_global: "基本的な文化の変化を起こす"
  change_primary_culture_effect_desc_first: "[COUNTRY.GetAdjectiveNoFlag] は [TARGET_COUNTRY.GetName] で主要な文化の変化を開始しています。"
  change_primary_culture_effect_desc_third: "[COUNTRY.GetName] は [AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)] で文化的整合を開始しています。"
-  
+ 
  change_primary_culture_trigger_desc_global: "文化の整合が進行中"
  change_primary_culture_trigger_false_desc_global: "文化的整合の過程にはもうありません。"
  change_primary_culture_trigger_desc_first: "[COUNTRY.GetAdjectiveNoFlag] は [TARGET_COUNTRY.GetName] の主要な文化を変えています。"
  change_primary_culture_trigger_false_desc_first: "[COUNTRY.GetAdjectiveNoFlag] は [TARGET_COUNTRY.GetName] #b の主要な文化をもう変えません#!"
  change_primary_culture_trigger_desc_third: "[COUNTRY.GetName] は [AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)] の主要な文化を変えています。"
  change_primary_culture_trigger_false_desc_third: "[COUNTRY.GetName] は [AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)] #b の主要な文化をもう変更していません#!"
-  
+ 
  ib_events.01.t: "主要な文化の変化"
  ib_events.01.d: "誇り高き[ROOT.GetCountry.GetName]は[SCOPE.sCountry('culture_target_country').GetName]の文化的調和を無事に完了しました。[SCOPE.sCountry('culture_target_country').GetName]はこれから、祖国の文化を受け入れながら永遠に繁栄するでしょう。"
  ib_events.01.f: "「万歳[ROOT.GetCountry.GetName]！」"
  ib_events.01.a: "よくやった。"
-  
+
  change_primary_culture_weekly_effect: "プライマリー カルチャーの完全な整合を達成するために取り組みます。毎週 20% の確率で進捗し、成功するには 8 つの進捗ポイントが必要です。"
+
+ notification_MoG_SIS_culture_changed_name: "[SCOPE.sCountry('culture_target_country').GetName] [concept_primary_cultures] 変更" #deepl:552504647
+ notification_MoG_SIS_culture_changed_desc: "[SCOPE.sCountry('culture_target_country').GetName]の[concept_primary_cultures] 。" #deepl:3077399724
+ notification_MoG_SIS_culture_changed_tooltip: "#header $notification_MoG_SIS_culture_changed_name$#!\n$notification_MoG_SIS_culture_changed_desc$" #deepl:4084126901

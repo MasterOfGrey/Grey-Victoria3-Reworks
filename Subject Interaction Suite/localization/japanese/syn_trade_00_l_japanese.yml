@@ -9,25 +9,25 @@
  laws_synergize_trade_action_notification_desc: "[INITIATOR_COUNTRY.GetName]は我が国の貿易政策を相乗的に強化しています。"
  laws_synergize_trade_action_notification_break_name: "貿易政策の相乗効果を止めよう [INITIATOR_COUNTRY.GetName]"
  laws_synergize_trade_action_notification_break_desc: "[INITIATOR_COUNTRY.GetName]は我が国の貿易政策の相乗効果を図る試みをやめた。"
-  
+ 
  laws_synergize_trade_effect_desc_global: "貿易政策の相乗効果を開始する"
  laws_synergize_trade_effect_desc_first: "[COUNTRY.GetAdjectiveNoFlag] は [TARGET_COUNTRY.GetName] との貿易政策の相乗効果を開始します。"
  laws_synergize_trade_effect_desc_third: "[COUNTRY.GetName] は [AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)] との貿易政策の相乗効果を開始します。"
-  
+ 
  laws_synergize_trade_trigger_desc_global: "貿易政策の相乗効果は継続中"
  laws_synergize_trade_trigger_false_desc_global: "現在、貿易政策の相乗効果を図る過程にはない。"
  laws_synergize_trade_trigger_desc_first: "[COUNTRY.GetAdjectiveNoFlag] は [TARGET_COUNTRY.GetName] と相乗効果のある貿易政策システムを持っています。"
  laws_synergize_trade_trigger_false_desc_first: "[COUNTRY.GetAdjectiveNoFlag] は現在、[TARGET_COUNTRY.GetName] と相乗効果のある貿易政策システムを持っていません。"
  laws_synergize_trade_trigger_desc_third: "[COUNTRY.GetName] は[AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)] と相乗効果のある貿易政策システムを持っています。"
  laws_synergize_trade_trigger_false_desc_third: "[COUNTRY.GetName] は現在、[AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)] と相乗効果のある貿易政策システムを持っていません。"
-  
+ 
  mog_syn_events.04.t: "商取引の相乗効果！"
  mog_syn_events.04.d: "誇り高き[ROOT.GetCountry.GetName]国家は[SCOPE.sCountry('synergize_trade_target_country').GetName]との貿易政策の相乗効果を成功裏に達成しました。[SCOPE.sCountry('synergize_trade_target_country').GetName]は祖国との結束力を高めることで永遠の繁栄を勝ち取るでしょう。"
  mog_syn_events.04.f: "「[ROOT.GetCountry.GetName]万歳！」"
  mog_syn_events.04.a: "よくやった。"
-  
+ 
  laws_synergize_trade_weekly_effect: "彼らの貿易政策を我々の政策と一致させるよう努めます。毎週 20% の確率で進歩し、成功するには 8 つの進歩ポイントが必要です。"
-  
+ 
  overlord_syn_cost_trade: "貿易政策の相乗効果にかかるコスト"
-  
+ 
  active_synergize_trade_tt: "その他の$laws_synergize_trade$アクションの数は1未満です。"

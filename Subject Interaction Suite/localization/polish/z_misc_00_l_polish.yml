@@ -1,3 +1,28 @@
 ﻿l_polish:
- unused_interests_alert_setting_name: "$unused_interests_alert$" #NT!
- overlord_can_consolidate_subject_setting_name: "$consolidate_subject$" #NT!
+ unused_interests_alert_setting_name: "$unused_interests_alert$"
+ overlord_can_consolidate_subject_setting_name: "$consolidate_subject$"
+ IB_success: "Pomoc legislacyjna Overlord" #deepl:3913329574
+ relations_positive: "#P Pozytywny [concept_relations]#!" #deepl:1387841350
+ relations_negative: "#N Negatywny [concept_relations]#!" #deepl:1759414233
+ 
+ mog_topbar_element_all_subject_pp: "mog_topbar_element_all_subject_pp" #deepl:2643924773
+ mog_topbar_element_all_subject_pp_icon: "@all_subject_pp!" #deepl:1932202303
+ mog_topbar_element_all_subject_pp_value: "[GetMetaPlayer.GetPlayedOrObservedCountry.GetCustom('mog_topbar_coloured_all_subject_pp')]" #deepl:1681609592
+ mog_topbar_element_all_subject_pp_tooltip: "#header [Concept('concept_subject','$concept_subjects$')] Względny [concept_power_projection]#!\n$concept_relative_subject_power_projection_desc$" #deepl:644475639
+ mog_topbar_element_all_subject_pp_source: "Grey's Subject Interaction Suite" #deepl:1223459637
+ mog_topbar_element_all_subject_pp_source_tooltip: "Ten element jest częścią pakietu Grey's Subject Interaction Suite." #deepl:3657650752
+
+ concept_relative_subject_power_projection: "Projekcja względnej mocy podmiotu" #deepl:3297416644
+ concept_relative_subject_power_projection_desc: "Postrzegana [concept_power_projection] sił wojskowych [Concept('concept_subject','$concept_subject_possessive$')]. Ponieważ dążenie podmiotu do niezależności ma charakter defensywny, dotyczy ono głównie względnej siły [Concept('concept_army','$concept_armies$')]. Na [concept_liberty_desire] wszystkich [Concept('concept_subject','$concept_subjects$')] wpływa ich łączna $country_army_power_projection$ w porównaniu do ich [concept_overlord].\nPostrzegają oni swoją łączną siłę jako o 50% niższą, gdy ich łączna $country_navy_power_projection$ jest #b mniejsza#! niż ich [Concept('concept_overlord','$concept_overlord_possessive$')] marynarki wojennej, ze względu na trudności w koordynacji między sobą. Podmiot będzie miał na to mniejszy wpływ, jeśli zostanie wyzwany przez własny podmiot.\n\n #b;green Green:#! Twoje [Concept('concept_subject','$concept_subject_possessive$')] [Concept('concept_army','$concept_armies$')] są nieistotne.\n#b;yellow Żółty:#! Wysoki [concept_relations] będzie tłumił nadmiar [concept_liberty_desire].\n#b;orange Orange:#! Silny [Concept('concept_subject','$concept_subjects$')] powinien być monitorowany.\n#b;red Czerwony:#! Silne [Concept('concept_subject','$concept_subjects$')] mogą stać się $ai_attitude_rebellious$.\n#b;purple Purple:#! Brak marynarki zachęca do [Concept('concept_subject','$concept_subject_possessive$')] [concept_liberty_desire] ." #deepl:248716341
+
+# We Want Green at <20%, Yellow at <40% (army + relations), Orange at <100%, Red at >100%, and Purple if Navy is >100% no matter how the army compares.
+# Default: [GetMetaPlayer.GetPlayedOrObservedCountry.MakeScope.Var('mog_topbar_value_all_subject_pp').GetValue|%v]
+ mog_topbar_coloured_all_subject_pp_backup: "#b;biały [GetMetaPlayer.GetPlayedOrObservedCountry.MakeScope.Var('mog_topbar_value_all_subject_pp').GetValue|0%]#!" #deepl:3593051260
+ mog_topbar_coloured_all_subject_pp_green: "#b;zielony [GetMetaPlayer.GetPlayedOrObservedCountry.MakeScope.Var('mog_topbar_value_all_subject_pp').GetValue|0%]#!" #deepl:2377499616
+ mog_topbar_coloured_all_subject_pp_yellow: "#b;żółty [GetMetaPlayer.GetPlayedOrObservedCountry.MakeScope.Var('mog_topbar_value_all_subject_pp').GetValue|0%]#!" #deepl:3208069794
+ mog_topbar_coloured_all_subject_pp_orange: "#b;pomarańczowy [GetMetaPlayer.GetPlayedOrObservedCountry.MakeScope.Var('mog_topbar_value_all_subject_pp').GetValue|0%]#!" #deepl:2512115759
+ mog_topbar_coloured_all_subject_pp_red: "#b;red [GetMetaPlayer.GetPlayedOrObservedCountry.MakeScope.Var('mog_topbar_value_all_subject_pp').GetValue|0%]#!" #deepl:1582262069
+ mog_topbar_coloured_all_subject_pp_purple: "#b;fioletowy [GetMetaPlayer.GetPlayedOrObservedCountry.MakeScope.Var('mog_topbar_value_all_subject_pp').GetValue|0%]#!" #deepl:690812862
+ 
+ DIPLOMATIC_PACT_REQUIREMENT_MODERATE_LIBERTY_DESIRE: "[SCOPE.sCountry('actor').GetAdjective] [concept_liberty_desire] musi wynosić co najmniej [GetDefine('NDiplomacy','WAR_GOAL_INFAMY_LOW_LIBERTY_DESIRE_THRESHOLD')]" #deepl:1877752227
+ STRONGER_SUBJECT_NEGATE_ALOOF: "z oferty [Concept('concept_subject','$concept_subject_possessive$')] siła względna vs. nastawienie [SCOPE.sCountry('target').GetAttitudeTowards(SCOPE.sCountry('target').GetOverlord).GetName] " #deepl:679978240

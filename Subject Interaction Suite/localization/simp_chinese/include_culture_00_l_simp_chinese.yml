@@ -9,21 +9,31 @@
  include_primary_culture_action_notification_desc: "[INITIATOR_COUNTRY.GetName]正在让我国容纳他们的主流文化"
  include_primary_culture_action_notification_break_name: "[INITIATOR_COUNTRY.GetName]停止了文化植入"
  include_primary_culture_action_notification_break_desc: "[INITIATOR_COUNTRY.GetName]已停止将主流文化植入我国"
-  
+ 
  include_primary_culture_effect_desc_global: "实施文化植入"
  include_primary_culture_effect_desc_first: "[COUNTRY.GetAdjectiveNoFlag]正在将主流文化植入[TARGET_COUNTRY.GetName]。"
  include_primary_culture_effect_desc_third: "[COUNTRY.GetName]正在将主流文化植入[AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)]。"
-  
+ 
  include_primary_culture_trigger_desc_global: "正进行文化植入"
  include_primary_culture_trigger_false_desc_global: "#b 不再#!进行文化植入运动。"
  include_primary_culture_trigger_desc_first: "[COUNTRY.GetAdjectiveNoFlag]正在将主流文化植入[TARGET_COUNTRY.GetName]。"
  include_primary_culture_trigger_false_desc_first: "[COUNTRY.GetAdjectiveNoFlag]不再将主流文化植入[TARGET_COUNTRY.GetName] #b anymore#!"
  include_primary_culture_trigger_desc_third: "[COUNTRY.GetName]正在将主流文化植入[AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)]。"
  include_primary_culture_trigger_false_desc_third: "[COUNTRY.GetName]不再将主流文化植入[AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)] #b anymore#!"
-  
+ 
  ib_events.05.t: "主流文化已植入"
  ib_events.05.d: "[ROOT.GetCountry.GetName]已成功将主流文化植入[SCOPE.sCountry('culture_include_country').GetName]，[SCOPE.sCountry('culture_include_country').GetName]将在母国文化的熏陶下永远繁荣。"
  ib_events.05.f: "壮哉我[ROOT.GetCountry.GetName]!"
  ib_events.05.a: "干得漂亮。"
-  
+
  include_primary_culture_weekly_effect: "植入主流文化需要完成八个阶段，每周有20%机会推进一个阶段。"
+
+ rule_sis_cultural_religion_actions: "文化与宗教一致" #deepl:3257962580
+ setting_sis_cultural_religion_enabled: "已启用" #deepl:3001197554
+ setting_sis_cultural_religion_enabled_desc: "玩家可通过[concept_overlord_action] 更改其[Concept('concept_subject', '$concept_subjects$')] 的[concept_state_religion] 和[concept_primary_cultures] 。" #deepl:1306075704
+ setting_sis_cultural_religion_disabled: "残疾" #deepl:1603118088
+ setting_sis_cultural_religion_disabled_desc: "玩家无法通过[concept_overlord_action] 更改其[Concept('concept_subject', '$concept_subjects$')] 的[concept_state_religion] 和[concept_primary_cultures] 。" #deepl:2471144945
+
+ notification_MoG_SIS_culture_included_name: "文化融入[SCOPE.sCountry('culture_include_country').GetName]" #deepl:1239178518
+ notification_MoG_SIS_culture_included_desc: "将我们的[concept_primary_cultures] 添加到[SCOPE.sCountry('culture_include_country').GetName] 。" #deepl:2103492833
+ notification_MoG_SIS_culture_included_tooltip: "#header $notification_MoG_SIS_culture_included_name$#!\n$notification_MoG_SIS_culture_included_desc$" #deepl:2894990033

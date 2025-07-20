@@ -9,21 +9,31 @@
  include_primary_culture_action_notification_desc: "[INITIATOR_COUNTRY.GetName]は彼らの主要な文化を私たちの国に取り入れています。"
  include_primary_culture_action_notification_break_name: "プライマリカルチャーインクルージョンは[INITIATOR_COUNTRY.GetName]によって停止されました"
  include_primary_culture_action_notification_break_desc: "[INITIATOR_COUNTRY.GetName] は我が国の主要な文化の包含を終了しました。"
-  
+ 
  include_primary_culture_effect_desc_global: "文化的包摂を開始する"
  include_primary_culture_effect_desc_first: "[COUNTRY.GetAdjectiveNoFlag] は [TARGET_COUNTRY.GetName] への一次培養の組み込みを開始しています。"
  include_primary_culture_effect_desc_third: "[COUNTRY.GetName] は [AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)] で文化的包摂を開始しています。"
-  
+ 
  include_primary_culture_trigger_desc_global: "文化的包摂の進展"
  include_primary_culture_trigger_false_desc_global: "文化的包摂の過程にはもういない。"
  include_primary_culture_trigger_desc_first: "[COUNTRY.GetAdjectiveNoFlag] は、その主要な文化を [TARGET_COUNTRY.GetName] に含めています。"
  include_primary_culture_trigger_false_desc_first: "[COUNTRY.GetAdjectiveNoFlag] はもはや[TARGET_COUNTRY.GetName] #b に主要な文化を含めていません#!"
  include_primary_culture_trigger_desc_third: "[COUNTRY.GetName] は、主要な文化を [AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)] に含めています。"
  include_primary_culture_trigger_false_desc_third: "[COUNTRY.GetName] はもはや[AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)] #b に主要な文化を含めていません#!"
-  
+ 
  ib_events.05.t: "プライマリーカルチャーインクルージョン"
  ib_events.05.d: "誇り高き[ROOT.GetCountry.GetName]は[SCOPE.sCountry('culture_include_country').GetName]の文化的包摂を成功裏に完了しました。[SCOPE.sCountry('culture_target_country').GetName]は祖国の文化を抱きしめながら永遠に繁栄するでしょう。"
  ib_events.05.f: "「万歳[ROOT.GetCountry.GetName]！」"
  ib_events.05.a: "よくやった。"
-  
+
  include_primary_culture_weekly_effect: "オーバーロードの主要な文化をその主題に組み込む作業。毎週 20% の確率で進歩し、成功するには 8 つの進歩ポイントが必要です。"
+
+ rule_sis_cultural_religion_actions: "文化的・宗教的調整" #deepl:3257962580
+ setting_sis_cultural_religion_enabled: "有効" #deepl:3001197554
+ setting_sis_cultural_religion_enabled_desc: "[Concept('concept_subject', '$concept_subjects$')] [concept_overlord_action]プレーヤーは[concept_state_religion] と[concept_primary_cultures] を変更することができる。" #deepl:1306075704
+ setting_sis_cultural_religion_disabled: "無効" #deepl:1603118088
+ setting_sis_cultural_religion_disabled_desc: "プレーヤーは、[Concept('concept_subject', '$concept_subjects$')] の[concept_state_religion] と[concept_primary_cultures] を、[concept_overlord_action] を介して変更することはできない。" #deepl:2471144945
+
+ notification_MoG_SIS_culture_included_name: "統合された文化[SCOPE.sCountry('culture_include_country').GetName]" #deepl:1239178518
+ notification_MoG_SIS_culture_included_desc: "[SCOPE.sCountry('culture_include_country').GetName] に[concept_primary_cultures] を追加した。" #deepl:2103492833
+ notification_MoG_SIS_culture_included_tooltip: "#header $notification_MoG_SIS_culture_included_name$#!\n$notification_MoG_SIS_culture_included_desc$" #deepl:2894990033

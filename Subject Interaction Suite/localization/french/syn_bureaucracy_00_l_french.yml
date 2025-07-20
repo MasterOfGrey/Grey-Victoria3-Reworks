@@ -9,26 +9,37 @@
  laws_synergize_bureaucracy_action_notification_desc: "[INITIATOR_COUNTRY.GetName] met en synergie les lois bureaucratiques de notre pays."
  laws_synergize_bureaucracy_action_notification_break_name: "Cesser de créer des synergies entre les bureaucraties par [INITIATOR_COUNTRY.GetName]"
  laws_synergize_bureaucracy_action_notification_break_desc: "[INITIATOR_COUNTRY.GetName] a cessé d'essayer de synergiser les lois bureaucratiques de notre pays."
-  
+ 
  laws_synergize_bureaucracy_effect_desc_global: "Commencer à créer des synergies entre les bureaucraties"
  laws_synergize_bureaucracy_effect_desc_first: "[COUNTRY.GetAdjectiveNoFlag] initie une synergie bureaucratique avec [TARGET_COUNTRY.GetName]."
  laws_synergize_bureaucracy_effect_desc_third: "[COUNTRY.GetName] initie une synergie bureaucratique avec [AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)]."
-  
+ 
  laws_synergize_bureaucracy_trigger_desc_global: "Synergisation bureaucratique en cours"
  laws_synergize_bureaucracy_trigger_false_desc_global: "Nous ne sommes pas actuellement en train de mettre en synergie les lois sur la bureaucratie."
  laws_synergize_bureaucracy_trigger_desc_first: "[COUNTRY.GetAdjectiveNoFlag] a des systèmes bureaucratiques synergétiques avec [TARGET_COUNTRY.GetName]."
  laws_synergize_bureaucracy_trigger_false_desc_first: "[COUNTRY.GetAdjectiveNoFlag] ne dispose pas actuellement de systèmes bureaucratiques synergétiques avec [TARGET_COUNTRY.GetName]."
  laws_synergize_bureaucracy_trigger_desc_third: "[COUNTRY.GetName] a des systèmes bureaucratiques synergétiques avec [AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)]."
  laws_synergize_bureaucracy_trigger_false_desc_third: "[COUNTRY.GetName] ne dispose pas actuellement de systèmes bureaucratiques synergétiques avec [AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)]."
-  
+ 
  mog_syn_events.01.t: "Synergie bureaucratique !"
  mog_syn_events.01.d: "La fière nation de [ROOT.GetCountry.GetName] a achevé avec succès la synergie des lois bureaucratiques avec [SCOPE.sCountry('synergize_bureaucracy_target_country').GetName]. [SCOPE.sCountry('synergize_bureaucracy_target_country').GetName] prospérera dans une prospérité éternelle grâce à une cohésion accrue avec la patrie."
  mog_syn_events.01.f: ""Longue vie à [ROOT.GetCountry.GetName] !""
  mog_syn_events.01.a: "Bien joué."
-  
+ 
  laws_synergize_bureaucracy_weekly_effect: "Travaille à aligner son système bureaucratique sur le nôtre. A 20 % de chances de progresser chaque semaine, avec 8 points de progression requis pour réussir."
-  
+ 
  overlord_syn_cost_bureau: "Coût de la synergie des bureaucraties"
  BUREAUCRACY_SYNERGY_COST_BUREAU: "Coût de la synergie des bureaucraties"
-  
+ 
  active_synergize_bureaucracy_tt: "Le nombre d'autres actions $laws_synergize_bureaucracy$ est inférieur à 1."
+
+ MoG_SIS_synergy_complete_group: "SIS | Synergisation des matières" #deepl:1389400629
+ notification_MoG_SIS_synergy_complete_name: "[SCOPE.sCountry('synergize_target_country').GetName] Synergique" #deepl:822550072
+ notification_MoG_SIS_synergy_complete_desc: "[SCOPE.sCountry('synergize_target_country').GetName] a adopté le site [SCOPE.sLawType('initiator_law').GetName]." #deepl:223132594
+ notification_MoG_SIS_synergy_complete_tooltip: "#header $notification_MoG_SIS_synergy_complete_name$#!\n$notification_MoG_SIS_synergy_complete_desc$" #deepl:4008717488
+
+ rule_sis_synergize_actions: "Synergiser les lois sur les matières" #deepl:2622198769
+ setting_sis_synergize_enabled: "Activé" #deepl:3001197554
+ setting_sis_synergize_enabled_desc: "Le joueur peut modifier les adresses [GetLawGroup('lawgroup_bureaucracy').GetName], [GetLawGroup('lawgroup_economic_system').GetName], [GetLawGroup('lawgroup_land_reform').GetName] et [GetLawGroup('lawgroup_trade_policy').GetName]de son [Concept('concept_subject', '$concept_subjects$')] via [concept_overlord_action]." #deepl:1000946573
+ setting_sis_synergize_disabled: "Handicapés" #deepl:1603118088
+ setting_sis_synergize_disabled_desc: "Le site Synergize [Concept('concept_overlord_action', '$concept_overlord_actions$')] n'est pas disponible." #deepl:3544678059

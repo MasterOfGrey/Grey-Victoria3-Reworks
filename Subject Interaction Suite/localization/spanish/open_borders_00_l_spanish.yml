@@ -9,21 +9,25 @@
  open_border_action_notification_desc: "[INITIATOR_COUNTRY.GetName] está abriendo las fronteras de nuestro país."
  open_border_action_notification_break_name: "Dejen de abrir fronteras por [INITIATOR_COUNTRY.GetName]"
  open_border_action_notification_break_desc: "[INITIATOR_COUNTRY.GetName] ha dejado de intentar abrir las fronteras de nuestro país."
-  
+ 
  open_border_effect_desc_global: "Iniciar fronteras abiertas"
  open_border_effect_desc_first: "[COUNTRY.GetAdjectiveNoFlag] inicia la apertura de fronteras con [TARGET_COUNTRY.GetName]."
  open_border_effect_desc_third: "[COUNTRY.GetName] inicia la apertura de fronteras con [AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)]."
-  
+ 
  open_border_trigger_desc_global: "Fronteras abiertas en curso"
  open_border_trigger_false_desc_global: "Actualmente no está en proceso de apertura de fronteras."
  open_border_trigger_desc_first: "[COUNTRY.GetAdjectiveNoFlag] tiene fronteras abiertas con [TARGET_COUNTRY.GetName]."
  open_border_trigger_false_desc_first: "[COUNTRY.GetAdjectiveNoFlag] actualmente no tiene fronteras abiertas con [TARGET_COUNTRY.GetName]."
  open_border_trigger_desc_third: "[COUNTRY.GetName] tiene fronteras abiertas con [AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)]."
  open_border_trigger_false_desc_third: "[COUNTRY.GetName] actualmente no tiene fronteras abiertas con [AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)]."
-  
+ 
  ib_events.03.t: "Fronteras abiertas"
  ib_events.03.d: "La orgullosa nación de [ROOT.GetCountry.GetName] ha completado con éxito la apertura de fronteras con [SCOPE.sCountry('openborders_target_country').GetName]. [SCOPE.sCountry('openborders_target_country').GetName] prosperará en eterna prosperidad a través del aumento de los intercambios con la patria."
  ib_events.03.f: ""¡Viva [ROOT.GetCountry.GetName]!""
  ib_events.03.a: "Bien hecho."
-  
+
  open_border_weekly_effect: "Trabaja para abrir sus fronteras con un 20% de posibilidades de progresar cada semana, siendo necesarios 8 puntos de progreso para tener éxito."
+
+ notification_MoG_SIS_border_opened_name: "[SCOPE.sCountry('openborders_target_country').GetName] Fronteras abiertas" #deepl:2601998025
+ notification_MoG_SIS_border_opened_desc: "[SCOPE.sCountry('openborders_target_country').GetName] ha adoptado [SCOPE.sLawType('new_law').GetName]." #deepl:3655565798
+ notification_MoG_SIS_border_opened_tooltip: "#header $notification_MoG_SIS_border_opened_name$#!\n$notification_MoG_SIS_border_opened_desc$" #deepl:1031819825

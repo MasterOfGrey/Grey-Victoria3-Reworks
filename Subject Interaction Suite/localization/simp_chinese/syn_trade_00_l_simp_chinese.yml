@@ -9,25 +9,25 @@
  laws_synergize_trade_action_notification_desc: "[INITIATOR_COUNTRY.GetName]正在改变我国的贸易政策"
  laws_synergize_trade_action_notification_break_name: "[INITIATOR_COUNTRY.GetName]已停止统一贸易政策"
  laws_synergize_trade_action_notification_break_desc: "[INITIATOR_COUNTRY.GetName]已停止改变我国的贸易政策"
-  
+ 
  laws_synergize_trade_effect_desc_global: "实施统一贸易政策"
  laws_synergize_trade_effect_desc_first: "[COUNTRY.GetAdjectiveNoFlag]正在将自身贸易政策推行进[TARGET_COUNTRY.GetName]."
  laws_synergize_trade_effect_desc_third: "[COUNTRY.GetName]正在将自身贸易政策推行进[AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)]."
-  
+ 
  laws_synergize_trade_trigger_desc_global: "正在进行贸易政策统一"
  laws_synergize_trade_trigger_false_desc_global: "不再进行贸易政策统一"
  laws_synergize_trade_trigger_desc_first: "[COUNTRY.GetAdjectiveNoFlag]正在将自身贸易政策推行进[TARGET_COUNTRY.GetName]."
  laws_synergize_trade_trigger_false_desc_first: "[COUNTRY.GetAdjectiveNoFlag]不再将自身贸易政策推行进[TARGET_COUNTRY.GetName]."
  laws_synergize_trade_trigger_desc_third: "[COUNTRY.GetName]正在将自身贸易政策推行进[AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)]."
  laws_synergize_trade_trigger_false_desc_third: "[COUNTRY.GetName]不再将自身贸易政策推行进[AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)]."
-  
+ 
  mog_syn_events.04.t: "贸易政策已统一!"
  mog_syn_events.04.d: "[ROOT.GetCountry.GetName]已成功将贸易政策推行进[SCOPE.sCountry('synergize_land_target_country').GetName]. [SCOPE.sCountry('synergize_land_target_country').GetName]将通过增强与母国的凝聚力而永远繁荣昌盛。"
  mog_syn_events.04.f: "睿哉我[ROOT.GetCountry.GetName]!"
  mog_syn_events.04.a: "干得漂亮。"
-  
+ 
  laws_synergize_trade_weekly_effect: "统一贸易政策工作需要完成八个阶段，每周有20%机会推进一个阶段。"
-  
+ 
  overlord_syn_cost_trade: "统一贸易政策行动经费"
-  
+ 
  active_synergize_trade_tt: "已实施的$laws_synergize_trade$行动数量小于1。"

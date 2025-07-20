@@ -6,7 +6,7 @@
  consolidate_subject_action_notification_desc: "[INITIATOR_COUNTRY.GetName] は私たちを統合することを選択しました。"
  consolidate_subject_action_notification_third_party_name: "[INITIATOR_COUNTRY.GetName]は主題を統合する"
  consolidate_subject_action_notification_third_party_desc: "[INITIATOR_COUNTRY.GetName] は [TARGET_COUNTRY.GetName] を統合しました。"
-  
+ 
  is_not_african_subject: "この主題は、アフリカの植民地政権の1つではない"
  consolidate_subject_country_tier_tt: "[SCOPE.sCountry('target_country').GetName]の[concept_country_tier]は$country_tier_kingdom$未満です"
  consolidate_subject_country_tier_kingdom_tt: "[SCOPE.sCountry('target_country').GetName]の[concept_country_tier]は$country_tier_kingdom$であり、"
@@ -19,12 +19,20 @@
  consolidate_subject_primary_culture_tt: "ターゲット被験者の[concept_primary_cultures]：[SCOPE.sCountry('target_country').GetPrimaryCulturesDesc]の1つです"
  consolidate_subject_acceptance_tt: "[concept_overlord]は汎ナショナリズムと文明化の使命を研究しており、すべての統合された被験者の[concept_primary_cultures]は特性を共有し、少なくとも @acceptance_status_4! を持っている必要があります！ $second_rate_citizen$[concept_acceptance_status]"
  consolidate_subject_multicultural_tt: "[concept_overlord]は汎ナショナリズムと文明化の使命を研究しており、ターゲットの被験者の[concept_primary_cultures]は少なくともある程度重複しており、受け取る被験者は人権とコーポラティズムを研究しており、[GetLawType('law_multicultural').GetName]を持っています"
-  
+ 
  alert_overlord_can_consolidate_subject_name: "[GetDiplomaticActionType('consolidate_subject').GetName] は [SCOPE.GetRootScope.GetCountry.GetName] でご利用いただけます"
  alert_overlord_can_consolidate_subject_desc: "[concept_subject] [SCOPE.GetRootScope.GetCountry.GetName] は隣接する主題に統合できます。"
  alert_overlord_can_consolidate_subject_hint: "外交パネルの [主題] タブを使用して、[GetDiplomaticActionType('consolidate_subject').GetName] [concept_diplomatic_action] を実行できます。"
  alert_overlord_can_consolidate_subject_action: "外交パネル"
-  
+ 
  ag_can_consolidate_subject_name: "CAN [GetDiplomaticActionType('consolidate_subject').GetName]"
  ag_can_consolidate_subject_desc: "[GetDiplomaticActionType('consolidate_subject').GetName]アクションの対象となる[concept_subject][Concept('concept_country', '$concept_countries$')]があります"
  ag_can_consolidate_subject_tooltip: "#header$ag_can_consolidate_subject_name$#!\n$TOOLTIP_DELIMITER$\n$ag_can_consolidate_subject_desc$\n\n$ALERT_GROUP_TOOLTIP_FOOTER$"
+
+ rule_consolidate_subject_action: "教科の統合" #deepl:1832589325
+ setting_consolidate_subject_enabled: "有効" #deepl:3001197554
+ setting_consolidate_subject_enabled_desc: "[Concept('concept_subject', '$concept_subjects$')] 似たような は、 を介してマージすることができる。[concept_primary_cultures] [concept_overlord_action]" #deepl:1738154614
+ setting_consolidate_subject_player_only: "選手のみ" #deepl:3920533262
+ setting_consolidate_subject_player_only_desc: "[Concept('concept_subject', '$concept_subjects$')] 似たような を持つものは、 を介して統合することができる。AIは科目を統合することはできない。[concept_primary_cultures] [concept_overlord_action]" #deepl:434434159
+ setting_consolidate_subject_disabled: "無効" #deepl:1603118088
+ setting_consolidate_subject_disabled_desc: "Consolidate Subject[concept_overlord_action] は使用できません。" #deepl:2288228809

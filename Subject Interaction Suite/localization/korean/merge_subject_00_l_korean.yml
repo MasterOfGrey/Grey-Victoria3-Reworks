@@ -25,6 +25,8 @@
  setting_balanced_merge_desc: "외교적 행동: 병합 [concept_subject] [Concept('concept_country', '$concept_countries$')]은 일반 플레이에 맞게 조정되었습니다."
  setting_cheat_merge: "제목 병합은 속임수입니다"
  setting_cheat_merge_desc: "외교적 행동: Merge [concept_subject] [Concept('concept_country', '$concept_countries$')]은 강력한 치트입니다."
+ setting_disabled_merge: "제목 비활성화 병합" #deepl:354449469
+ setting_disabled_merge_desc: "외교적 조치: 병합 [concept_subject] [Concept('concept_country', '$concept_countries$')] 을 사용할 수 없습니다." #deepl:3670147245
  DIPLOMATIC_ACCEPTANCE_BREAK_FREE: "[concept_ai_strategy] of #v $ai_strategy_subject_break_free$#!을 추구하고 있습니다"
  DIPLOMATIC_ACCEPTANCE_STRENGTHEN_SELF: "[concept_ai_strategy] of #v $ai_strategy_subject_strengthen_self$#!을 추구하고 있습니다"
  DIPLOMATIC_ACCEPTANCE_MAINTAIN_AUTONOMY: "[concept_ai_strategy] of #v $ai_strategy_subject_maintain_autonomy$#!을 추구하고 있습니다"

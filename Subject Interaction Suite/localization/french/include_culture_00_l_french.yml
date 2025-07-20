@@ -9,21 +9,31 @@
  include_primary_culture_action_notification_desc: "[INITIATOR_COUNTRY.GetName] inclut sa culture primaire dans notre pays."
  include_primary_culture_action_notification_break_name: "L'inclusion culturelle primaire arrêtée par [INITIATOR_COUNTRY.GetName]"
  include_primary_culture_action_notification_break_desc: "[INITIATOR_COUNTRY.GetName] a mis fin à l’inclusion culturelle primaire de notre nation."
-  
+ 
  include_primary_culture_effect_desc_global: "Initier l'inclusion culturelle"
  include_primary_culture_effect_desc_first: "[COUNTRY.GetAdjectiveNoFlag] initie l’inclusion de la culture primaire dans [TARGET_COUNTRY.GetName]."
  include_primary_culture_effect_desc_third: "[COUNTRY.GetName] initie l'inclusion culturelle dans [AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)]."
-  
+ 
  include_primary_culture_trigger_desc_global: "L'inclusion culturelle en marche"
  include_primary_culture_trigger_false_desc_global: "Je ne suis plus en voie d'inclusion culturelle."
  include_primary_culture_trigger_desc_first: "[COUNTRY.GetAdjectiveNoFlag] inclut sa culture principale dans [TARGET_COUNTRY.GetName]."
  include_primary_culture_trigger_false_desc_first: "[COUNTRY.GetAdjectiveNoFlag] n'inclut plus sa culture principale dans [TARGET_COUNTRY.GetName]."
  include_primary_culture_trigger_desc_third: "[COUNTRY.GetName] inclut sa culture principale dans [AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)]."
  include_primary_culture_trigger_false_desc_third: "[COUNTRY.GetName] n'inclut plus sa culture principale dans [AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)]."
-  
+ 
  ib_events.05.t: "Inclusion culturelle primaire"
  ib_events.05.d: "Le fier [ROOT.GetCountry.GetName] a réussi à terminer l'inclusion culturelle de [SCOPE.sCountry('culture_include_country').GetName]. [SCOPE.sCountry('culture_target_country').GetName] prospérera désormais pour toujours, en embrassant la culture de la patrie."
  ib_events.05.f: ""Salut [ROOT.GetCountry.GetName] !""
  ib_events.05.a: "Bien joué."
-  
+
  include_primary_culture_weekly_effect: "Travaillez pour inclure les cultures primaires d'Overlord dans leur sujet avec 20 % de chances de progresser chaque semaine, avec 8 points de progression requis pour réussir."
+
+ rule_sis_cultural_religion_actions: "Alignement culturel et religieux" #deepl:3257962580
+ setting_sis_cultural_religion_enabled: "Activé" #deepl:3001197554
+ setting_sis_cultural_religion_enabled_desc: "Le joueur peut modifier les [concept_state_religion] et [concept_primary_cultures] de son [Concept('concept_subject', '$concept_subjects$')] via [concept_overlord_action]." #deepl:1306075704
+ setting_sis_cultural_religion_disabled: "Handicapés" #deepl:1603118088
+ setting_sis_cultural_religion_disabled_desc: "Le joueur ne peut pas modifier les [concept_state_religion] et [concept_primary_cultures] de son [Concept('concept_subject', '$concept_subjects$')] via [concept_overlord_action]." #deepl:2471144945
+
+ notification_MoG_SIS_culture_included_name: "Cultures intégrées dans [SCOPE.sCountry('culture_include_country').GetName]" #deepl:1239178518
+ notification_MoG_SIS_culture_included_desc: "Nous avons ajouté notre [concept_primary_cultures] à [SCOPE.sCountry('culture_include_country').GetName]." #deepl:2103492833
+ notification_MoG_SIS_culture_included_tooltip: "#header $notification_MoG_SIS_culture_included_name$#!\n$notification_MoG_SIS_culture_included_desc$" #deepl:2894990033

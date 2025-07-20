@@ -9,25 +9,29 @@
  change_state_religion_action_notification_desc: "[INITIATOR_COUNTRY.GetName] ülkemizde resmi dini değiştiriyor."
  change_state_religion_action_notification_break_name: "Durum [INITIATOR_COUNTRY.GetCustom('change_religion_dynamic_name')] [INITIATOR_COUNTRY.GetName] tarafından durduruldu"
  change_state_religion_action_notification_break_desc: "[INITIATOR_COUNTRY.GetName] Ülkemiz için resmi din değişikliğini sonlandırdı."
-  
+ 
  change_state_religion_effect_desc_global: "Durumu Başlat [INITIATOR_COUNTRY.GetCustom('change_religion_dynamic_name')]"
  change_state_religion_effect_desc_first: "[COUNTRY.GetAdjectiveNoFlag], [TARGET_COUNTRY.GetName]'de devlet dini değişikliğini başlatıyor."
  change_state_religion_effect_desc_third: "[COUNTRY.GetName], [AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)]'te [INITIATOR_COUNTRY.GetCustom('change_religion_dynamic_name')]'i başlatıyor."
-  
+ 
  change_state_religion_trigger_desc_global: "[INITIATOR_COUNTRY.GetCustom('change_religion_dynamic_name')] Devam Ediyor"
  change_state_religion_trigger_false_desc_global: "[INITIATOR_COUNTRY.GetCustom('change_religion_dynamic_name')] #b artık devam etmiyor#!"
  change_state_religion_trigger_desc_first: "[COUNTRY.GetAdjectiveNoFlag], [TARGET_COUNTRY.GetName]'deki resmi dini değiştiriyor."
  change_state_religion_trigger_false_desc_first: "[COUNTRY.GetAdjectiveNoFlag] artık [TARGET_COUNTRY.GetName] #b 'deki devlet dinini değiştirmiyor#!"
  change_state_religion_trigger_desc_third: "[COUNTRY.GetName], [AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)]'deki resmi dini değiştiriyor."
  change_state_religion_trigger_false_desc_third: "[COUNTRY.GetName] artık [AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)] #b 'teki devlet dinini değiştirmiyor#!"
-  
+ 
  ib_events.02.t: "Devlet Din Değişikliği"
  ib_events.02.d: "Gururlu [ROOT.GetCountry.GetName], [SCOPE.sCountry('religion_target_country').GetName] için [INITIATOR_COUNTRY.GetCustom('change_religion_dynamic_name')]'i başarıyla tamamladı. [SCOPE.sCountry('religion_target_country').GetName] artık vatanın dini kurumlarını kucaklayarak sonsuza dek refah içinde yaşayacak."
  ib_events.02.f: ""Selam [ROOT.GetCountry.GetName]!""
  ib_events.02.a: "Tebrikler."
-  
+ 
  change_state_religion_weekly_effect: "Her hafta %20 ilerleme şansı ile devlet dininin tam olarak uyumlu hale getirilmesi için çalışmalar yapılır ve başarılı olmak için 8 ilerleme puanı gerekir."
-  
+ 
  cr_irreligious_conversion: "Dinsiz Devralma"
  cr_institutionalise_secularism: "Laik Düzenleme"
  cr_religious_conversion: "Dini dönüşüm"
+
+ notification_MoG_SIS_religion_changed_name: "[SCOPE.sCountry('religion_target_country').GetName] Din Değişti" #deepl:359024940
+ notification_MoG_SIS_religion_changed_desc: "[concept_state_religion] [SCOPE.sCountry('religion_target_country').GetName] artık [SCOPE.sReligion('new_religion').GetName]." #deepl:3458999851
+ notification_MoG_SIS_religion_changed_tooltip: "#header $notification_MoG_SIS_religion_changed_name$#!\n$notification_MoG_SIS_religion_changed_desc$" #deepl:1202615841

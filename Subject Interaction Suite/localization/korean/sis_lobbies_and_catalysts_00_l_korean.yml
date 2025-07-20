@@ -1,0 +1,8 @@
+﻿l_korean:
+ appeasement_support_expansion_agreement_formed: "결성 $military_support$ [concept_diplomatic_pact]" #deepl:1685444258
+ appeasement_support_expansion_agreement_formed_desc: "$military_support$ [concept_diplomatic_pact]" #deepl:842507572
+ appeasement_support_expansion_agreement_broken: "브로크 $military_support$ [concept_diplomatic_pact]" #deepl:839355471
+ appeasement_support_expansion_agreement_broken_desc: "$military_support$ [concept_diplomatic_pact]" #deepl:2893503874
+
+ appeasement_industry_banned: "산업이 금지되었습니다." #deepl:1084509673
+ appeasement_industry_banned_desc: "법에 의한 중공업 금지" #deepl:4093288237

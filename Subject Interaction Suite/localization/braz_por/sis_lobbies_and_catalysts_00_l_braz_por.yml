@@ -1,0 +1,8 @@
+﻿l_braz_por:
+ appeasement_support_expansion_agreement_formed: "Formado $military_support$ [concept_diplomatic_pact]" #deepl:1685444258
+ appeasement_support_expansion_agreement_formed_desc: "Formando um $military_support$ [concept_diplomatic_pact]" #deepl:842507572
+ appeasement_support_expansion_agreement_broken: "Quebrado $military_support$ [concept_diplomatic_pact]" #deepl:839355471
+ appeasement_support_expansion_agreement_broken_desc: "Quebrando um $military_support$ [concept_diplomatic_pact]" #deepl:2893503874
+
+ appeasement_industry_banned: "O setor foi banido" #deepl:1084509673
+ appeasement_industry_banned_desc: "Proibição da indústria pesada por lei" #deepl:4093288237

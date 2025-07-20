@@ -9,26 +9,37 @@
  laws_synergize_bureaucracy_action_notification_desc: "[INITIATOR_COUNTRY.GetName] объединяет бюрократические законы нашей страны."
  laws_synergize_bureaucracy_action_notification_break_name: "Прекратите синергетические бюрократии [INITIATOR_COUNTRY.GetName]"
  laws_synergize_bureaucracy_action_notification_break_desc: "[INITIATOR_COUNTRY.GetName] прекратил попытки синергизировать бюрократические законы нашей страны."
-  
+ 
  laws_synergize_bureaucracy_effect_desc_global: "Начните синергию бюрократии"
  laws_synergize_bureaucracy_effect_desc_first: "[COUNTRY.GetAdjectiveNoFlag] инициирует бюрократическую синергию с [TARGET_COUNTRY.GetName]."
  laws_synergize_bureaucracy_effect_desc_third: "[COUNTRY.GetName] инициирует бюрократическую синергию с [AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)]."
-  
+ 
  laws_synergize_bureaucracy_trigger_desc_global: "Бюрократическая синергия продолжается"
  laws_synergize_bureaucracy_trigger_false_desc_global: "В настоящее время процесс синергии законов о бюрократии не ведется."
  laws_synergize_bureaucracy_trigger_desc_first: "[COUNTRY.GetAdjectiveNoFlag] имеет синергетические бюрократические системы с [TARGET_COUNTRY.GetName]."
  laws_synergize_bureaucracy_trigger_false_desc_first: "[COUNTRY.GetAdjectiveNoFlag] в настоящее время не имеет синергетических бюрократических систем с [TARGET_COUNTRY.GetName]."
  laws_synergize_bureaucracy_trigger_desc_third: "[COUNTRY.GetName] имеет синергетические бюрократические системы с [AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)]."
  laws_synergize_bureaucracy_trigger_false_desc_third: "[COUNTRY.GetName] в настоящее время не имеет синергетических бюрократических систем с [AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)]."
-  
+ 
  mog_syn_events.01.t: "Бюрократическая синергия!"
  mog_syn_events.01.d: "Гордая нация [ROOT.GetCountry.GetName] успешно завершила синергию бюрократических законов с [SCOPE.sCountry('synergize_bureaucracy_target_country').GetName]. [SCOPE.sCountry('synergize_bureaucracy_target_country').GetName] будет процветать в вечном процветании благодаря усилению сплоченности с родиной."
  mog_syn_events.01.f: "«Да здравствует [ROOT.GetCountry.GetName]!»"
  mog_syn_events.01.a: "Отличная работа."
-  
+ 
  laws_synergize_bureaucracy_weekly_effect: "Работает над согласованием своей системы бюрократии с нашей. Имеет 20% шанс добиться прогресса каждую неделю, для успеха требуется 8 очков прогресса."
-  
+ 
  overlord_syn_cost_bureau: "Стоимость синергетической бюрократии"
  BUREAUCRACY_SYNERGY_COST_BUREAU: "Стоимость синергетической бюрократии"
-  
+ 
  active_synergize_bureaucracy_tt: "Количество других действий $laws_synergize_bureaucracy$ меньше 1."
+
+ MoG_SIS_synergy_complete_group: "SIS | Предметная синергетика" #deepl:1389400629
+ notification_MoG_SIS_synergy_complete_name: "[SCOPE.sCountry('synergize_target_country').GetName] Синергия" #deepl:822550072
+ notification_MoG_SIS_synergy_complete_desc: "[SCOPE.sCountry('synergize_target_country').GetName] был принят [SCOPE.sLawType('initiator_law').GetName]." #deepl:223132594
+ notification_MoG_SIS_synergy_complete_tooltip: "#header $notification_MoG_SIS_synergy_complete_name$#!\n$notification_MoG_SIS_synergy_complete_desc$" #deepl:4008717488
+
+ rule_sis_synergize_actions: "Синергия предметных законов" #deepl:2622198769
+ setting_sis_synergize_enabled: "Включено" #deepl:3001197554
+ setting_sis_synergize_enabled_desc: "Игрок может изменять [GetLawGroup('lawgroup_bureaucracy').GetName], [GetLawGroup('lawgroup_economic_system').GetName], [GetLawGroup('lawgroup_land_reform').GetName] и [GetLawGroup('lawgroup_trade_policy').GetName]своих [Concept('concept_subject', '$concept_subjects$')] через [concept_overlord_action]." #deepl:1000946573
+ setting_sis_synergize_disabled: "Инвалид" #deepl:1603118088
+ setting_sis_synergize_disabled_desc: "Synergize [Concept('concept_overlord_action', '$concept_overlord_actions$')] недоступен." #deepl:3544678059

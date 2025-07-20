@@ -25,6 +25,8 @@
  setting_balanced_merge_desc: "外交アクション: マージ [concept_subject] [Concept('concept_country', '$concept_countries$')] は通常のプレイではバランスが取れています。"
  setting_cheat_merge: "件名のマージはチートです"
  setting_cheat_merge_desc: "外交アクション：マージ[concept_subject] [Concept('concept_country', '$concept_countries$')] は強力なチートです。"
+ setting_disabled_merge: "マージ対象無効" #deepl:354449469
+ setting_disabled_merge_desc: "外交行動：Merge[concept_subject] [Concept('concept_country', '$concept_countries$')] はコメントを受け付けていません。" #deepl:3670147245
  DIPLOMATIC_ACCEPTANCE_BREAK_FREE: "彼らは#v $ai_strategy_subject_break_free$#!の[concept_ai_strategy]を追求しています"
  DIPLOMATIC_ACCEPTANCE_STRENGTHEN_SELF: "彼らは#v $ai_strategy_subject_strengthen_self$#!の[concept_ai_strategy]を追求しています"
  DIPLOMATIC_ACCEPTANCE_MAINTAIN_AUTONOMY: "彼らは#v $ai_strategy_subject_maintain_autonomy$#!の[concept_ai_strategy]を追求しています"

@@ -6,7 +6,7 @@
  consolidate_subject_action_notification_desc: "[INITIATOR_COUNTRY.GetName]决定合并我们"
  consolidate_subject_action_notification_third_party_name: "[INITIATOR_COUNTRY.GetName]合并了附庸"
  consolidate_subject_action_notification_third_party_desc: "[INITIATOR_COUNTRY.GetName]合并了[TARGET_COUNTRY.GetName]"
-  
+ 
  is_not_african_subject: "目标附庸不是非洲殖民政府"
  consolidate_subject_country_tier_tt: "[SCOPE.sCountry('target_country').GetName]的[concept_country_tier]低于$country_tier_kingdom$"
  consolidate_subject_country_tier_kingdom_tt: "[SCOPE.sCountry('target_country').GetName]的[concept_country_tier]是$country_tier_kingdom$并且"
@@ -19,12 +19,20 @@
  consolidate_subject_primary_culture_tt: "[SCOPE.sCountry('target_country').GetPrimaryCulturesDesc]是目标的一个[concept_primary_cultures]"
  consolidate_subject_acceptance_tt: "[concept_overlord]已研究出泛民族主义与开化使命科技，合并的两个附属国所有的[concept_primary_cultures]有相同的特质且至少处于@acceptance_status_4!$second_rate_citizen$[concept_acceptance_status]"
  consolidate_subject_multicultural_tt: "[concept_overlord]已研究出泛民族主义与开化使命科技，合并的两个附属国的[concept_primary_cultures]有相同的特质，接受国已研究出法团主义与人权科技并且制定了[GetLawType('law_multicultural').GetName]"
-  
+ 
  alert_overlord_can_consolidate_subject_name: "[GetDiplomaticActionType('consolidate_subject').GetName]已可用于[SCOPE.GetRootScope.GetCountry.GetName]"
  alert_overlord_can_consolidate_subject_desc: "我们的[concept_subject] [SCOPE.GetRootScope.GetCountry.GetName]以可被合并进相邻的附属国"
  alert_overlord_can_consolidate_subject_hint: "您可以使用外交行动中的“宗主国行动”一栏执行[GetDiplomaticActionType('consolidate_subject').GetName] [concept_diplomatic_action]."
  alert_overlord_can_consolidate_subject_action: "外交行动"
-  
+ 
  ag_can_consolidate_subject_name: "可以[GetDiplomaticActionType('consolidate_subject').GetName]"
  ag_can_consolidate_subject_desc: "有[concept_subject] [Concept('concept_country', '$concept_countries$')]可以作为[GetDiplomaticActionType('consolidate_subject').GetName]行动的对象"
  ag_can_consolidate_subject_tooltip: "#header $ag_can_consolidate_subject_name$#!\n$TOOLTIP_DELIMITER$\n$ag_can_consolidate_subject_desc$\n\n$ALERT_GROUP_TOOLTIP_FOOTER$"
+
+ rule_consolidate_subject_action: "巩固学科" #deepl:1832589325
+ setting_consolidate_subject_enabled: "已启用" #deepl:3001197554
+ setting_consolidate_subject_enabled_desc: "[Concept('concept_subject', '$concept_subjects$')] [concept_primary_cultures] 相似，可通过 进行合并。[concept_overlord_action]" #deepl:1738154614
+ setting_consolidate_subject_player_only: "仅限玩家" #deepl:3920533262
+ setting_consolidate_subject_player_only_desc: "[Concept('concept_subject', '$concept_subjects$')] [concept_primary_cultures] 可通过 合并。人工智能无法合并主题。[concept_overlord_action]" #deepl:434434159
+ setting_consolidate_subject_disabled: "残疾" #deepl:1603118088
+ setting_consolidate_subject_disabled_desc: "合并主题[concept_overlord_action] 不可用。" #deepl:2288228809

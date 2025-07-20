@@ -1,0 +1,8 @@
+﻿l_japanese:
+ appeasement_support_expansion_agreement_formed: "フォーム$military_support$ [concept_diplomatic_pact]" #deepl:1685444258
+ appeasement_support_expansion_agreement_formed_desc: "$military_support$ [concept_diplomatic_pact]" #deepl:842507572
+ appeasement_support_expansion_agreement_broken: "Broke$military_support$ [concept_diplomatic_pact]" #deepl:839355471
+ appeasement_support_expansion_agreement_broken_desc: "$military_support$ [concept_diplomatic_pact]" #deepl:2893503874
+
+ appeasement_industry_banned: "産業は禁止された" #deepl:1084509673
+ appeasement_industry_banned_desc: "法律による重工業の禁止" #deepl:4093288237

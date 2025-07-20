@@ -1,3 +1,28 @@
 ﻿l_turkish:
- unused_interests_alert_setting_name: "$unused_interests_alert$" #NT!
- overlord_can_consolidate_subject_setting_name: "$consolidate_subject$" #NT!
+ unused_interests_alert_setting_name: "$unused_interests_alert$"
+ overlord_can_consolidate_subject_setting_name: "$consolidate_subject$"
+ IB_success: "Overlord Yasama Yardımı" #deepl:3913329574
+ relations_positive: "#P Pozitif [concept_relations]#!" #deepl:1387841350
+ relations_negative: "#N Negatif [concept_relations]#!" #deepl:1759414233
+ 
+ mog_topbar_element_all_subject_pp: "mog_topbar_element_all_subject_pp" #deepl:2643924773
+ mog_topbar_element_all_subject_pp_icon: "@all_subject_pp!" #deepl:1932202303
+ mog_topbar_element_all_subject_pp_value: "[GetMetaPlayer.GetPlayedOrObservedCountry.GetCustom('mog_topbar_coloured_all_subject_pp')]" #deepl:1681609592
+ mog_topbar_element_all_subject_pp_tooltip: "#header [Concept('concept_subject','$concept_subjects$')] Göreceli [concept_power_projection]#!\n$concept_relative_subject_power_projection_desc$" #deepl:644475639
+ mog_topbar_element_all_subject_pp_source: "Grey'in Konu Etkileşim Süiti" #deepl:1223459637
+ mog_topbar_element_all_subject_pp_source_tooltip: "Bu unsur Grey'in Konu Etkileşim Paketinin bir parçasıdır." #deepl:3657650752
+
+ concept_relative_subject_power_projection: "Göreli Özne Gücü Projeksiyonu" #deepl:3297416644
+ concept_relative_subject_power_projection_desc: "Bir [Concept('concept_subject','$concept_subject_possessive$')] askeri kuvvetinin algılanan [concept_power_projection] gücü. [Concept('concept_overlord','$concept_overlord_possessive$')] Bir öznenin bağımsızlık teklifi savunmaya yönelik olduğundan, esas olarak [Concept('concept_army','$concept_armies$')]'un göreceli gücüyle ilgilidir. Tüm [Concept('concept_subject','$concept_subjects$')] 'ların [concept_liberty_desire] 'u, [concept_overlord]'larına kıyasla birleşik $country_army_power_projection$ 'larından etkilenir.\nBirbirleriyle koordine olmanın zorlukları nedeniyle birleşik $country_navy_power_projection$ 'ları #b 'larından daha az#! olduğunda birleşik güçlerini %50 daha düşük olarak algılarlar. Bir özne, kendi özneleri tarafından zorlanırsa bundan daha az etkilenecektir.\n\n #b;green Green:#! Sizin [Concept('concept_subject','$concept_subject_possessive$')] [Concept('concept_army','$concept_armies$')] ilgisizdir.\n#b;yellow Sarı:#! Yüksek [concept_relations] aşırı [concept_liberty_desire] bastıracaktır.\n#b;orange Turuncu:#! Güçlü [Concept('concept_subject','$concept_subjects$')] izlenmelidir.\n#b;red Kırmızı:#! Güçlü [Concept('concept_subject','$concept_subjects$')] 'un $ai_attitude_rebellious$ olması muhtemeldir.\n#b;mor Mor:#! Donanma eksikliğiniz cesaretlendirici [Concept('concept_subject','$concept_subject_possessive$')] [concept_liberty_desire] ." #deepl:248716341
+
+# We Want Green at <20%, Yellow at <40% (army + relations), Orange at <100%, Red at >100%, and Purple if Navy is >100% no matter how the army compares.
+# Default: [GetMetaPlayer.GetPlayedOrObservedCountry.MakeScope.Var('mog_topbar_value_all_subject_pp').GetValue|%v]
+ mog_topbar_coloured_all_subject_pp_backup: "#b;beyaz [GetMetaPlayer.GetPlayedOrObservedCountry.MakeScope.Var('mog_topbar_value_all_subject_pp').GetValue|0%]#!" #deepl:3593051260
+ mog_topbar_coloured_all_subject_pp_green: "#b;yeşil [GetMetaPlayer.GetPlayedOrObservedCountry.MakeScope.Var('mog_topbar_value_all_subject_pp').GetValue|0%]#!" #deepl:2377499616
+ mog_topbar_coloured_all_subject_pp_yellow: "#b;sarı [GetMetaPlayer.GetPlayedOrObservedCountry.MakeScope.Var('mog_topbar_value_all_subject_pp').GetValue|0%]#!" #deepl:3208069794
+ mog_topbar_coloured_all_subject_pp_orange: "#b;turuncu [GetMetaPlayer.GetPlayedOrObservedCountry.MakeScope.Var('mog_topbar_value_all_subject_pp').GetValue|0%]#!" #deepl:2512115759
+ mog_topbar_coloured_all_subject_pp_red: "#b;kırmızı [GetMetaPlayer.GetPlayedOrObservedCountry.MakeScope.Var('mog_topbar_value_all_subject_pp').GetValue|0%]#!" #deepl:1582262069
+ mog_topbar_coloured_all_subject_pp_purple: "#b;mor [GetMetaPlayer.GetPlayedOrObservedCountry.MakeScope.Var('mog_topbar_value_all_subject_pp').GetValue|0%]#!" #deepl:690812862
+ 
+ DIPLOMATIC_PACT_REQUIREMENT_MODERATE_LIBERTY_DESIRE: "[SCOPE.sCountry('actor').GetAdjective] [concept_liberty_desire] en az olmalıdır [GetDefine('NDiplomacy','WAR_GOAL_INFAMY_LOW_LIBERTY_DESIRE_THRESHOLD')]" #deepl:1877752227
+ STRONGER_SUBJECT_NEGATE_ALOOF: "tekliften [Concept('concept_subject','$concept_subject_possessive$')] göreceli güç ve [SCOPE.sCountry('target').GetAttitudeTowards(SCOPE.sCountry('target').GetOverlord).GetName] tutumu" #deepl:679978240

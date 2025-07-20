@@ -9,25 +9,25 @@
  laws_synergize_land_action_notification_desc: "[INITIATOR_COUNTRY.GetName] está sinergizando as reformas agrárias do nosso país."
  laws_synergize_land_action_notification_break_name: "Cessar as reformas agrárias sinergéticas por [INITIATOR_COUNTRY.GetName]"
  laws_synergize_land_action_notification_break_desc: "[INITIATOR_COUNTRY.GetName] deixou de tentar sinergizar as reformas agrárias do nosso país."
-  
+ 
  laws_synergize_land_effect_desc_global: "Comece a Sinergizar Reformas Agrárias"
  laws_synergize_land_effect_desc_first: "[COUNTRY.GetAdjectiveNoFlag] inicia sinergia de reforma agrária com [TARGET_COUNTRY.GetName]."
  laws_synergize_land_effect_desc_third: "[COUNTRY.GetName] inicia sinergia de reforma agrária com [AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)]."
-  
+ 
  laws_synergize_land_trigger_desc_global: "Sinergização da Reforma Agrária em andamento"
  laws_synergize_land_trigger_false_desc_global: "Atualmente não está em processo de sinergia de reformas agrárias."
  laws_synergize_land_trigger_desc_first: "[COUNTRY.GetAdjectiveNoFlag] tem reformas agrárias sinérgicas com [TARGET_COUNTRY.GetName]."
  laws_synergize_land_trigger_false_desc_first: "[COUNTRY.GetAdjectiveNoFlag] não tem atualmente reformas agrárias sinérgicas com [TARGET_COUNTRY.GetName]."
  laws_synergize_land_trigger_desc_third: "[COUNTRY.GetName] tem reformas agrárias sinérgicas com [AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)]."
  laws_synergize_land_trigger_false_desc_third: "[COUNTRY.GetName] não tem atualmente reformas agrárias sinérgicas com [AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)]."
-  
+ 
  mog_syn_events.03.t: "Sinergia da Reforma Agrária!"
  mog_syn_events.03.d: "A orgulhosa nação de [ROOT.GetCountry.GetName] concluiu com sucesso a sinergia das reformas agrárias com [SCOPE.sCountry('synergize_land_target_country').GetName]. [SCOPE.sCountry('synergize_land_target_country').GetName] prosperará em prosperidade eterna por meio do aumento da coesão com a pátria."
  mog_syn_events.03.f: ""Vida longa a [ROOT.GetCountry.GetName]!""
  mog_syn_events.03.a: "Bom trabalho."
-  
+ 
  laws_synergize_land_weekly_effect: "Trabalha para alinhar suas reformas de leis de terras com as nossas. Tem 20% de chance de progredir a cada semana, com 8 pontos de progresso necessários para ter sucesso."
-  
+ 
  overlord_syn_cost_land: "Custo para sinergizar reformas agrárias"
-  
+ 
  active_synergize_land_tt: "O número de outras ações $laws_synergize_land$ é menor que 1."

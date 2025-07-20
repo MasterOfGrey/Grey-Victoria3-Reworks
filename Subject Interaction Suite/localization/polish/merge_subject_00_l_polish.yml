@@ -25,6 +25,8 @@
  setting_balanced_merge_desc: "Akcja dyplomatyczna: Połącz [concept_subject] [Concept('concept_country', '$concept_countries$')] jest zrównoważona w przypadku normalnej rozgrywki."
  setting_cheat_merge: "Łączenie tematów to oszustwo"
  setting_cheat_merge_desc: "Akcja dyplomatyczna: Połącz [concept_subject] [Concept('concept_country', '$concept_countries$')] to potężne oszustwo."
+ setting_disabled_merge: "Scalanie tematów wyłączone" #deepl:354449469
+ setting_disabled_merge_desc: "Akcja dyplomatyczna: Merge [concept_subject] [Concept('concept_country', '$concept_countries$')] jest niedostępna." #deepl:3670147245
  DIPLOMATIC_ACCEPTANCE_BREAK_FREE: "Dążą do [concept_ai_strategy] z #v $ai_strategy_subject_break_free$#!"
  DIPLOMATIC_ACCEPTANCE_STRENGTHEN_SELF: "Dążą do [concept_ai_strategy] z #v $ai_strategy_subject_strengthen_self$#!"
  DIPLOMATIC_ACCEPTANCE_MAINTAIN_AUTONOMY: "Dążą do [concept_ai_strategy] z #v $ai_strategy_subject_maintain_autonomy$#!"

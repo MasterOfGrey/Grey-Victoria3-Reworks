@@ -9,26 +9,37 @@
  laws_synergize_bureaucracy_action_notification_desc: "[INITIATOR_COUNTRY.GetName]正在改变我国的官僚体制"
  laws_synergize_bureaucracy_action_notification_break_name: "[INITIATOR_COUNTRY.GetName]已停止统一官僚体制"
  laws_synergize_bureaucracy_action_notification_break_desc: "[INITIATOR_COUNTRY.GetName]已停止改变我国的官僚体制"
-  
+ 
  laws_synergize_bureaucracy_effect_desc_global: "实施统一官僚体制"
  laws_synergize_bureaucracy_effect_desc_first: "[COUNTRY.GetAdjectiveNoFlag]正在将自身官僚体制推行进[TARGET_COUNTRY.GetName]."
  laws_synergize_bureaucracy_effect_desc_third: "[COUNTRY.GetName]正在将自身官僚体制推行进[AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)]."
-  
+ 
  laws_synergize_bureaucracy_trigger_desc_global: "正在进行官僚体制统一"
  laws_synergize_bureaucracy_trigger_false_desc_global: "不再进行官僚体制统一"
  laws_synergize_bureaucracy_trigger_desc_first: "[COUNTRY.GetAdjectiveNoFlag]正在将自身官僚体制推行进[TARGET_COUNTRY.GetName]."
  laws_synergize_bureaucracy_trigger_false_desc_first: "[COUNTRY.GetAdjectiveNoFlag]停止将自身官僚体制推行进[TARGET_COUNTRY.GetName]."
  laws_synergize_bureaucracy_trigger_desc_third: "[COUNTRY.GetName]正在将自身官僚体制推行进[AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)]."
  laws_synergize_bureaucracy_trigger_false_desc_third: "[COUNTRY.GetName]停止将自身官僚体制推行进[AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)]."
-  
+ 
  mog_syn_events.01.t: "官僚体制已统一"
  mog_syn_events.01.d: "[ROOT.GetCountry.GetName]已成功将官僚体制推行进[SCOPE.sCountry('synergize_bureaucracy_target_country').GetName]. [SCOPE.sCountry('synergize_bureaucracy_target_country').GetName]将通过增强与母国的凝聚力而永远繁荣昌盛。"
  mog_syn_events.01.f: "耀哉我[ROOT.GetCountry.GetName]!"
  mog_syn_events.01.a: "干得漂亮。"
-  
+ 
  laws_synergize_bureaucracy_weekly_effect: "统一官僚体制工作需要完成八个阶段，每周有20%机会推进一个阶段。"
-  
+ 
  overlord_syn_cost_bureau: "统一官僚体制行动经费"
  BUREAUCRACY_SYNERGY_COST_BUREAU: "统一官僚体制行动经费"
-  
+ 
  active_synergize_bureaucracy_tt: "已实施的$laws_synergize_bureaucracy$行动数量小于1"
+
+ MoG_SIS_synergy_complete_group: "SIS | 学科协同" #deepl:1389400629
+ notification_MoG_SIS_synergy_complete_name: "[SCOPE.sCountry('synergize_target_country').GetName] 协同增效" #deepl:822550072
+ notification_MoG_SIS_synergy_complete_desc: "[SCOPE.sCountry('synergize_target_country').GetName] [SCOPE.sLawType('initiator_law').GetName] 。" #deepl:223132594
+ notification_MoG_SIS_synergy_complete_tooltip: "#header $notification_MoG_SIS_synergy_complete_name$#!\n$notification_MoG_SIS_synergy_complete_desc$" #deepl:4008717488
+
+ rule_sis_synergize_actions: "协同主题法律" #deepl:2622198769
+ setting_sis_synergize_enabled: "已启用" #deepl:3001197554
+ setting_sis_synergize_enabled_desc: "玩家可通过[concept_overlord_action] 更改其[Concept('concept_subject', '$concept_subjects$')] 的[GetLawGroup('lawgroup_bureaucracy').GetName] 、[GetLawGroup('lawgroup_economic_system').GetName] 、[GetLawGroup('lawgroup_land_reform').GetName] 和[GetLawGroup('lawgroup_trade_policy').GetName]。" #deepl:1000946573
+ setting_sis_synergize_disabled: "残疾" #deepl:1603118088
+ setting_sis_synergize_disabled_desc: "Synergize[Concept('concept_overlord_action', '$concept_overlord_actions$')] 无法使用。" #deepl:3544678059

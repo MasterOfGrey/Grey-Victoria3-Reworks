@@ -9,25 +9,29 @@
  change_state_religion_action_notification_desc: "[INITIATOR_COUNTRY.GetName]は我が国の国教を変えています。"
  change_state_religion_action_notification_break_name: "状態 [INITIATOR_COUNTRY.GetCustom('change_religion_dynamic_name')] [INITIATOR_COUNTRY.GetName] によって停止"
  change_state_religion_action_notification_break_desc: "[INITIATOR_COUNTRY.GetName] は我が国の国教変更を中止しました。"
-  
+ 
  change_state_religion_effect_desc_global: "開始状態 [INITIATOR_COUNTRY.GetCustom('change_religion_dynamic_name')]"
  change_state_religion_effect_desc_first: "[COUNTRY.GetAdjectiveNoFlag] は [TARGET_COUNTRY.GetName] で国教の変更を開始しています。"
  change_state_religion_effect_desc_third: "[COUNTRY.GetName] は [AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)] で [INITIATOR_COUNTRY.GetCustom('change_religion_dynamic_name')] を開始します。"
-  
+ 
  change_state_religion_trigger_desc_global: "[INITIATOR_COUNTRY.GetCustom('change_religion_dynamic_name')] 進行中"
  change_state_religion_trigger_false_desc_global: "もう[INITIATOR_COUNTRY.GetCustom('change_religion_dynamic_name')] #b の過程ではありません#!"
  change_state_religion_trigger_desc_first: "[COUNTRY.GetAdjectiveNoFlag]は[TARGET_COUNTRY.GetName]の国教を変えています。"
  change_state_religion_trigger_false_desc_first: "[COUNTRY.GetAdjectiveNoFlag] は[TARGET_COUNTRY.GetName] #b の国教をもう変えません#!"
  change_state_religion_trigger_desc_third: "[COUNTRY.GetName]は[AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)]の国教を変更します。"
  change_state_religion_trigger_false_desc_third: "[COUNTRY.GetName] は[AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)] #b の国教をもう変えません#!"
-  
+ 
  ib_events.02.t: "国教の変更"
  ib_events.02.d: "誇り高き[ROOT.GetCountry.GetName]は[SCOPE.sCountry('religion_target_country').GetName]の[INITIATOR_COUNTRY.GetCustom('change_religion_dynamic_name')]を無事に完了しました。[SCOPE.sCountry('religion_target_country').GetName]は祖国の宗教制度を受け入れ、永遠に繁栄するでしょう。"
  ib_events.02.f: "「万歳[ROOT.GetCountry.GetName]！」"
  ib_events.02.a: "よくやった。"
-  
+ 
  change_state_religion_weekly_effect: "国教の完全な整合を達成するために取り組みます。毎週 20% の確率で進捗し、成功するには 8 つの進捗ポイントが必要です。"
-  
+ 
  cr_irreligious_conversion: "非宗教的乗っ取り"
  cr_institutionalise_secularism: "世俗主義の規制"
  cr_religious_conversion: "宗教的改宗"
+
+ notification_MoG_SIS_religion_changed_name: "[SCOPE.sCountry('religion_target_country').GetName] 宗教の変化" #deepl:359024940
+ notification_MoG_SIS_religion_changed_desc: "[SCOPE.sCountry('religion_target_country').GetName] の[concept_state_religion] が[SCOPE.sReligion('new_religion').GetName] になった。" #deepl:3458999851
+ notification_MoG_SIS_religion_changed_tooltip: "#header $notification_MoG_SIS_religion_changed_name$#!\n$notification_MoG_SIS_religion_changed_desc$" #deepl:1202615841

@@ -9,25 +9,25 @@
  laws_synergize_economy_action_notification_desc: "[INITIATOR_COUNTRY.GetName] усиливает синергию экономических систем нашей страны."
  laws_synergize_economy_action_notification_break_name: "Прекратить синергию экономик [INITIATOR_COUNTRY.GetName]"
  laws_synergize_economy_action_notification_break_desc: "[INITIATOR_COUNTRY.GetName] прекратил попытки объединить экономические системы нашей страны."
-  
+ 
  laws_synergize_economy_effect_desc_global: "Начните синергию экономик"
  laws_synergize_economy_effect_desc_first: "[COUNTRY.GetAdjectiveNoFlag] инициирует экономическую синергию с [TARGET_COUNTRY.GetName]."
  laws_synergize_economy_effect_desc_third: "[COUNTRY.GetName] инициирует экономическую синергию с [AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)]."
-  
+ 
  laws_synergize_economy_trigger_desc_global: "Экономическая синергия продолжается"
  laws_synergize_economy_trigger_false_desc_global: "В настоящее время процесс синергии экономических систем не осуществляется."
  laws_synergize_economy_trigger_desc_first: "[COUNTRY.GetAdjectiveNoFlag] имеет синергетические экономические системы с [TARGET_COUNTRY.GetName]."
  laws_synergize_economy_trigger_false_desc_first: "[COUNTRY.GetAdjectiveNoFlag] в настоящее время не имеет синергетических экономических систем с [TARGET_COUNTRY.GetName]."
  laws_synergize_economy_trigger_desc_third: "[COUNTRY.GetName] имеет синергетические экономические системы с [AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)]."
  laws_synergize_economy_trigger_false_desc_third: "[COUNTRY.GetName] в настоящее время не имеет синергетических экономических систем с [AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)]."
-  
+ 
  mog_syn_events.02.t: "Экономическая синергия!"
  mog_syn_events.02.d: "Гордая нация [ROOT.GetCountry.GetName] успешно завершила синергию экономических систем с [SCOPE.sCountry('synergize_economy_target_country').GetName]. [SCOPE.sCountry('synergize_economy_target_country').GetName] будет процветать в вечном процветании за счет усиления сплоченности с родиной."
  mog_syn_events.02.f: "«Да здравствует [ROOT.GetCountry.GetName]!»"
  mog_syn_events.02.a: "Отличная работа."
-  
+ 
  laws_synergize_economy_weekly_effect: "Работает над согласованием своей экономической системы с нашей. Имеет 20% шанс добиться прогресса каждую неделю, для успеха требуется 8 очков прогресса."
-  
+ 
  overlord_syn_cost_economy: "Стоимость синергетической экономики"
-  
+ 
  active_synergize_economy_tt: "Количество других действий $laws_synergize_economy$ меньше 1."

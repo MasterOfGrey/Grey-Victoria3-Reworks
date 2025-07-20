@@ -9,25 +9,25 @@
  laws_synergize_economy_action_notification_desc: "[INITIATOR_COUNTRY.GetName] crée des synergies entre les systèmes économiques de notre pays."
  laws_synergize_economy_action_notification_break_name: "Cesser de créer des synergies entre les économies par [INITIATOR_COUNTRY.GetName]"
  laws_synergize_economy_action_notification_break_desc: "[INITIATOR_COUNTRY.GetName] a cessé d'essayer de créer des synergies entre les systèmes économiques de notre pays."
-  
+ 
  laws_synergize_economy_effect_desc_global: "Commencer à créer des synergies entre les économies"
  laws_synergize_economy_effect_desc_first: "[COUNTRY.GetAdjectiveNoFlag] initie une synergie économique avec [TARGET_COUNTRY.GetName]."
  laws_synergize_economy_effect_desc_third: "[COUNTRY.GetName] initie une synergie économique avec [AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)]."
-  
+ 
  laws_synergize_economy_trigger_desc_global: "Synergisation économique en cours"
  laws_synergize_economy_trigger_false_desc_global: "Pas actuellement en train de mettre en synergie les systèmes économiques."
  laws_synergize_economy_trigger_desc_first: "[COUNTRY.GetAdjectiveNoFlag] possède des systèmes économiques synergétiques avec [TARGET_COUNTRY.GetName]."
  laws_synergize_economy_trigger_false_desc_first: "[COUNTRY.GetAdjectiveNoFlag] n’a pas actuellement de systèmes économiques synergétiques avec [TARGET_COUNTRY.GetName]."
  laws_synergize_economy_trigger_desc_third: "[COUNTRY.GetName] a des systèmes économiques synergétiques avec [AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)]."
  laws_synergize_economy_trigger_false_desc_third: "[COUNTRY.GetName] n'a pas actuellement de systèmes économiques synergétiques avec [AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)]."
-  
+ 
  mog_syn_events.02.t: "Synergie économique !"
  mog_syn_events.02.d: "La fière nation de [ROOT.GetCountry.GetName] a achevé avec succès la synergie des systèmes économiques avec [SCOPE.sCountry('synergize_economy_target_country').GetName]. [SCOPE.sCountry('synergize_economy_target_country').GetName] prospérera dans une prospérité éternelle grâce à une cohésion accrue avec la patrie."
  mog_syn_events.02.f: ""Longue vie à [ROOT.GetCountry.GetName] !""
  mog_syn_events.02.a: "Bien joué."
-  
+ 
  laws_synergize_economy_weekly_effect: "Travaille à aligner son système économique sur le nôtre. A 20 % de chances de progresser chaque semaine, avec 8 points de progression requis pour réussir."
-  
+ 
  overlord_syn_cost_economy: "Coût de la synergie des économies"
-  
+ 
  active_synergize_economy_tt: "Le nombre d'autres actions $laws_synergize_economy$ est inférieur à 1."

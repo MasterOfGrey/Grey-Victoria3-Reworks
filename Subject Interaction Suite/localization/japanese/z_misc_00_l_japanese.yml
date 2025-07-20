@@ -1,3 +1,28 @@
 ﻿l_japanese:
- unused_interests_alert_setting_name: "$unused_interests_alert$" #NT!
- overlord_can_consolidate_subject_setting_name: "$consolidate_subject$" #NT!
+ unused_interests_alert_setting_name: "$unused_interests_alert$"
+ overlord_can_consolidate_subject_setting_name: "$consolidate_subject$"
+ IB_success: "オーバーロード議会支援" #deepl:3913329574
+ relations_positive: "#P ポジティブ[concept_relations]#!" #deepl:1387841350
+ relations_negative: "#N ネガティブ[concept_relations]#!" #deepl:1759414233
+ 
+ mog_topbar_element_all_subject_pp: "mog_topbar_element_all_subject_pp" #deepl:2643924773
+ mog_topbar_element_all_subject_pp_icon: "@all_subject_pp!" #deepl:1932202303
+ mog_topbar_element_all_subject_pp_value: "[GetMetaPlayer.GetPlayedOrObservedCountry.GetCustom('mog_topbar_coloured_all_subject_pp')]" #deepl:1681609592
+ mog_topbar_element_all_subject_pp_tooltip: "#header [Concept('concept_subject','$concept_subjects$')] 相対的[concept_power_projection]#!\n$concept_relative_subject_power_projection_desc$" #deepl:644475639
+ mog_topbar_element_all_subject_pp_source: "グレイズ・サブジェクト・インタラクション・スイート" #deepl:1223459637
+ mog_topbar_element_all_subject_pp_source_tooltip: "このエレメントは、Grey's Subject Interaction Suiteの一部である。" #deepl:3657650752
+
+ concept_relative_subject_power_projection: "相対的被写体パワー投影" #deepl:3297416644
+ concept_relative_subject_power_projection_desc: "[concept_power_projection] [Concept('concept_subject','$concept_subject_possessive$')] 軍事力の知覚。臣民が独立を目指すのは防衛的なものであるため、主に[Concept('concept_army','$concept_armies$')] の相対的な力に関係する。すべての[Concept('concept_subject','$concept_subjects$')] の[concept_liberty_desire] は、彼らの[concept_overlord] と比較して、彼らの$country_army_power_projection$ を合わせたものに影響される。\n彼らは、彼らの$country_navy_power_projection$ を合わせたものが、彼らの[Concept('concept_overlord','$concept_overlord_possessive$')] 海軍よりも#b #! が少ない場合、互いに調整するのが困難なため、彼らの総合力は 50% 低いと認識する。\n\n #b;green 緑：#! あなたの[Concept('concept_subject','$concept_subject_possessive$')] [Concept('concept_army','$concept_armies$')] は無関係。\n#b;yellow 黄色：#! 高い[concept_relations] は過剰な[concept_liberty_desire] を抑制する。\n#b;orange オレンジ：#! [Concept('concept_subject','$concept_subjects$')]\n#b;red 赤： #b;purple 紫：あなたのネイビー不足は  を助長しています。#! [Concept('concept_subject','$concept_subjects$')] $ai_attitude_rebellious$\n#! [Concept('concept_subject','$concept_subject_possessive$')] [concept_liberty_desire]" #deepl:248716341
+
+# We Want Green at <20%, Yellow at <40% (army + relations), Orange at <100%, Red at >100%, and Purple if Navy is >100% no matter how the army compares.
+# Default: [GetMetaPlayer.GetPlayedOrObservedCountry.MakeScope.Var('mog_topbar_value_all_subject_pp').GetValue|%v]
+ mog_topbar_coloured_all_subject_pp_backup: "#白[GetMetaPlayer.GetPlayedOrObservedCountry.MakeScope.Var('mog_topbar_value_all_subject_pp').GetValue|0%]#!" #deepl:3593051260
+ mog_topbar_coloured_all_subject_pp_green: "#緑[GetMetaPlayer.GetPlayedOrObservedCountry.MakeScope.Var('mog_topbar_value_all_subject_pp').GetValue|0%]#!" #deepl:2377499616
+ mog_topbar_coloured_all_subject_pp_yellow: "#b;黄色[GetMetaPlayer.GetPlayedOrObservedCountry.MakeScope.Var('mog_topbar_value_all_subject_pp').GetValue|0%]#!" #deepl:3208069794
+ mog_topbar_coloured_all_subject_pp_orange: "#オレンジ[GetMetaPlayer.GetPlayedOrObservedCountry.MakeScope.Var('mog_topbar_value_all_subject_pp').GetValue|0%]#!" #deepl:2512115759
+ mog_topbar_coloured_all_subject_pp_red: "#赤[GetMetaPlayer.GetPlayedOrObservedCountry.MakeScope.Var('mog_topbar_value_all_subject_pp').GetValue|0%]#!" #deepl:1582262069
+ mog_topbar_coloured_all_subject_pp_purple: "#紫[GetMetaPlayer.GetPlayedOrObservedCountry.MakeScope.Var('mog_topbar_value_all_subject_pp').GetValue|0%]#!" #deepl:690812862
+ 
+ DIPLOMATIC_PACT_REQUIREMENT_MODERATE_LIBERTY_DESIRE: "[SCOPE.sCountry('actor').GetAdjective] [concept_liberty_desire] 少なくとも[GetDefine('NDiplomacy','WAR_GOAL_INFAMY_LOW_LIBERTY_DESIRE_THRESHOLD')]" #deepl:1877752227
+ STRONGER_SUBJECT_NEGATE_ALOOF: "オファリングより[Concept('concept_subject','$concept_subject_possessive$')] 相対的な強さ vs[SCOPE.sCountry('target').GetAttitudeTowards(SCOPE.sCountry('target').GetOverlord).GetName] 態度" #deepl:679978240

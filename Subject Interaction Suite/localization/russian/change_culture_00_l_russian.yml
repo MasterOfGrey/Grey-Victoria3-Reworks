@@ -9,21 +9,25 @@
  change_primary_culture_action_notification_desc: "[INITIATOR_COUNTRY.GetName] меняет основную культуру в нашей стране."
  change_primary_culture_action_notification_break_name: "Первичное изменение культуры остановлено [INITIATOR_COUNTRY.GetName]"
  change_primary_culture_action_notification_break_desc: "[INITIATOR_COUNTRY.GetName] прекратил основные изменения культуры для нашей нации."
-  
+ 
  change_primary_culture_effect_desc_global: "Инициировать первичное изменение культуры"
  change_primary_culture_effect_desc_first: "[COUNTRY.GetAdjectiveNoFlag] инициирует первичное изменение культуры в [TARGET_COUNTRY.GetName]."
  change_primary_culture_effect_desc_third: "[COUNTRY.GetName] инициирует культурное выравнивание в [AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)]."
-  
+ 
  change_primary_culture_trigger_desc_global: "Культурное согласование в процессе"
  change_primary_culture_trigger_false_desc_global: "Больше не в процессе культурного выравнивания."
  change_primary_culture_trigger_desc_first: "[COUNTRY.GetAdjectiveNoFlag] меняет основную культуру в [TARGET_COUNTRY.GetName]."
  change_primary_culture_trigger_false_desc_first: "[COUNTRY.GetAdjectiveNoFlag] больше не меняет основную культуру в [TARGET_COUNTRY.GetName]."
  change_primary_culture_trigger_desc_third: "[COUNTRY.GetName] меняет основную культуру в [AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)]."
  change_primary_culture_trigger_false_desc_third: "[COUNTRY.GetName] больше не меняет основную культуру в [AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)]."
-  
+ 
  ib_events.01.t: "Первичное изменение культуры"
  ib_events.01.d: "Гордый [ROOT.GetCountry.GetName] успешно завершил культурное выравнивание для [SCOPE.sCountry('culture_target_country').GetName]. [SCOPE.sCountry('culture_target_country').GetName] теперь будет процветать вечно, принимая культуру своей родины."
  ib_events.01.f: "«Приветствую [ROOT.GetCountry.GetName]!»"
  ib_events.01.a: "Отличная работа."
-  
+
  change_primary_culture_weekly_effect: "Работает над достижением полного соответствия первичной культуре с вероятностью прогресса 20% каждую неделю, для достижения успеха требуется 8 очков прогресса."
+
+ notification_MoG_SIS_culture_changed_name: "[SCOPE.sCountry('culture_target_country').GetName] [concept_primary_cultures] Изменено" #deepl:552504647
+ notification_MoG_SIS_culture_changed_desc: "[SCOPE.sCountry('culture_target_country').GetName]Сайт [concept_primary_cultures] был изменен, чтобы соответствовать нашему." #deepl:3077399724
+ notification_MoG_SIS_culture_changed_tooltip: "#header $notification_MoG_SIS_culture_changed_name$#!\n$notification_MoG_SIS_culture_changed_desc$" #deepl:4084126901

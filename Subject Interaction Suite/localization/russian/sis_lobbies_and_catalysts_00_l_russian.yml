@@ -1,0 +1,8 @@
+﻿l_russian:
+ appeasement_support_expansion_agreement_formed: "Сформированный $military_support$ [concept_diplomatic_pact]" #deepl:1685444258
+ appeasement_support_expansion_agreement_formed_desc: "Формирование сайта $military_support$ [concept_diplomatic_pact]" #deepl:842507572
+ appeasement_support_expansion_agreement_broken: "Сломался $military_support$ [concept_diplomatic_pact]" #deepl:839355471
+ appeasement_support_expansion_agreement_broken_desc: "Сломать $military_support$ [concept_diplomatic_pact]" #deepl:2893503874
+
+ appeasement_industry_banned: "Промышленность была запрещена" #deepl:1084509673
+ appeasement_industry_banned_desc: "Запрет тяжелой промышленности на законодательном уровне" #deepl:4093288237

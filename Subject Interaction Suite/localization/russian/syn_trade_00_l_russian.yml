@@ -9,25 +9,25 @@
  laws_synergize_trade_action_notification_desc: "[INITIATOR_COUNTRY.GetName] усиливает торговую политику нашей страны."
  laws_synergize_trade_action_notification_break_name: "Прекратить синергическую торговую политику [INITIATOR_COUNTRY.GetName]"
  laws_synergize_trade_action_notification_break_desc: "[INITIATOR_COUNTRY.GetName] прекратил попытки скоординировать торговую политику нашей страны."
-  
+ 
  laws_synergize_trade_effect_desc_global: "Начните синергию торговой политики"
  laws_synergize_trade_effect_desc_first: "[COUNTRY.GetAdjectiveNoFlag] инициирует синергию торговой политики с [TARGET_COUNTRY.GetName]."
  laws_synergize_trade_effect_desc_third: "[COUNTRY.GetName] инициирует синергию торговой политики с [AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)]."
-  
+ 
  laws_synergize_trade_trigger_desc_global: "Продолжается синергия торговой политики"
  laws_synergize_trade_trigger_false_desc_global: "В настоящее время процесс синергии торговой политики не ведется."
  laws_synergize_trade_trigger_desc_first: "[COUNTRY.GetAdjectiveNoFlag] имеет синергетические системы торговой политики с [TARGET_COUNTRY.GetName]."
  laws_synergize_trade_trigger_false_desc_first: "[COUNTRY.GetAdjectiveNoFlag] в настоящее время не имеет синергетических систем торговой политики с [TARGET_COUNTRY.GetName]."
  laws_synergize_trade_trigger_desc_third: "[COUNTRY.GetName] имеет синергетические системы торговой политики с [AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)]."
  laws_synergize_trade_trigger_false_desc_third: "[COUNTRY.GetName] в настоящее время не имеет синергетических систем торговой политики с [AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)]."
-  
+ 
  mog_syn_events.04.t: "Коммерческая торговая синергия!"
  mog_syn_events.04.d: "Гордая нация [ROOT.GetCountry.GetName] успешно завершила синергию торговой политики с [SCOPE.sCountry('synergize_trade_target_country').GetName]. [SCOPE.sCountry('synergize_trade_target_country').GetName] будет процветать в вечном процветании благодаря усилению сплоченности с родиной."
  mog_syn_events.04.f: "«Да здравствует [ROOT.GetCountry.GetName]!»"
  mog_syn_events.04.a: "Отличная работа."
-  
+ 
  laws_synergize_trade_weekly_effect: "Работает над согласованием своей торговой политики с нашей. Имеет 20% шанс на прогресс каждую неделю, для успеха требуется 8 очков прогресса."
-  
+ 
  overlord_syn_cost_trade: "Стоимость синергетической торговой политики"
-  
+ 
  active_synergize_trade_tt: "Количество других действий $laws_synergize_trade$ меньше 1."

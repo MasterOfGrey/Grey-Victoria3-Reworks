@@ -9,21 +9,25 @@
  change_primary_culture_action_notification_desc: "[INITIATOR_COUNTRY.GetName]正在改变我国的主流文化。"
  change_primary_culture_action_notification_break_name: "[INITIATOR_COUNTRY.GetName]停止改变主流文化"
  change_primary_culture_action_notification_break_desc: "[INITIATOR_COUNTRY.GetName]停止了改变我国的主流文化。"
-  
+ 
  change_primary_culture_effect_desc_global: "实施文化一致"
  change_primary_culture_effect_desc_first: "[COUNTRY.GetAdjectiveNoFlag]正在改变[TARGET_COUNTRY.GetName]的主流文化。"
  change_primary_culture_effect_desc_third: "[COUNTRY.GetName]正在改变[AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)]的主流文化。"
-  
+ 
  change_primary_culture_trigger_desc_global: "文化一致运动进行中"
  change_primary_culture_trigger_false_desc_global: "#b 不再#!进行文化一致运动。"
  change_primary_culture_trigger_desc_first: "[COUNTRY.GetAdjectiveNoFlag]正在改变[TARGET_COUNTRY.GetName]的主流文化。"
  change_primary_culture_trigger_false_desc_first: "[COUNTRY.GetAdjectiveNoFlag]#b 不再#!改变[TARGET_COUNTRY.GetName]的主流文化。"
  change_primary_culture_trigger_desc_third: "[COUNTRY.GetName]正在改变[AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)]的主流文化。"
  change_primary_culture_trigger_false_desc_third: "[COUNTRY.GetName]#b 不再#!改变[AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)]的主流文化。"
-  
+ 
  ib_events.01.t: "主流文化已取代"
  ib_events.01.d: "[ROOT.GetCountry.GetName]已成功改变了[SCOPE.sCountry('culture_target_country').GetName]的主流文化，[SCOPE.sCountry('culture_target_country').GetName]将沐浴在母国的文化中永远繁荣。"
  ib_events.01.f: "伟哉我[ROOT.GetCountry.GetName]！"
  ib_events.01.a: "干得漂亮。"
-  
+
  change_primary_culture_weekly_effect: "改变主流文化需要完成八个阶段，每周有20%机会推进一个阶段。"
+
+ notification_MoG_SIS_culture_changed_name: "[SCOPE.sCountry('culture_target_country').GetName] [concept_primary_cultures] 已更改" #deepl:552504647
+ notification_MoG_SIS_culture_changed_desc: "[SCOPE.sCountry('culture_target_country').GetName] [concept_primary_cultures] 已改为与我们的一致。" #deepl:3077399724
+ notification_MoG_SIS_culture_changed_tooltip: "#header $notification_MoG_SIS_culture_changed_name$#!\n$notification_MoG_SIS_culture_changed_desc$" #deepl:4084126901

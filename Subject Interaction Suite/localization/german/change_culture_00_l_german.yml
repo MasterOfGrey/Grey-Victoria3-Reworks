@@ -9,21 +9,25 @@
  change_primary_culture_action_notification_desc: "[INITIATOR_COUNTRY.GetName] verändert die [Concept('concept_primary_cultures', '$concept_primary_culture$')] unseres Landes."
  change_primary_culture_action_notification_break_name: "Die Änderung der [Concept('concept_primary_cultures', '$concept_primary_culture$')] durch [INITIATOR_COUNTRY.GetName] wurde gestoppt"
  change_primary_culture_action_notification_break_desc: "[INITIATOR_COUNTRY.GetName] hat die Änderung der [Concept('concept_primary_cultures', '$concept_primary_culture$')] für unserer Nation eingeleitet."
-  
+ 
  change_primary_culture_effect_desc_global: "Änderung der [Concept('concept_primary_cultures', '$concept_primary_culture$')] starten"
  change_primary_culture_effect_desc_first: "[COUNTRY.GetAdjectiveNoFlag] startet die Änderung der [Concept('concept_primary_cultures', '$concept_primary_culture$')] in [TARGET_COUNTRY.GetName]."
  change_primary_culture_effect_desc_third: "[COUNTRY.GetName] initiiert die kulturelle Angleichung in [AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)]."
-  
+ 
  change_primary_culture_trigger_desc_global: "Kulturelle Angleichung im Gange"
  change_primary_culture_trigger_false_desc_global: "Kulturelle Angleichung #b angehalten#!"
  change_primary_culture_trigger_desc_first: "[COUNTRY.GetAdjectiveNoFlag] ändert die [Concept('concept_primary_cultures', '$concept_primary_culture$')] in [TARGET_COUNTRY.GetName]."
  change_primary_culture_trigger_false_desc_first: "[COUNTRY.GetAdjectiveNoFlag] ändert die [Concept('concept_primary_cultures', '$concept_primary_culture$')] in [TARGET_COUNTRY.GetName] #b nicht mehr#!"
  change_primary_culture_trigger_desc_third: "[COUNTRY.GetName] ändert die [Concept('concept_primary_cultures', '$concept_primary_culture$')] in [AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)]."
  change_primary_culture_trigger_false_desc_third: "[COUNTRY.GetName] ändert die [Concept('concept_primary_cultures', '$concept_primary_culture$')] in [AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)] #b nicht mehr #!"
-  
+ 
  ib_events.01.t: "Erfolgreiche Änderung der [Concept('concept_primary_cultures', '$concept_primary_culture$')]"
  ib_events.01.d: "[ROOT.GetCountry.GetName] hat die kulturelle Angleichung für [SCOPE.sCountry('culture_target_country').GetName] erfolgreich abgeschlossen. [SCOPE.sCountry('culture_target_country').GetName] wird nun für immer gedeihen und die Kultur des Heimatlandes annehmen."
  ib_events.01.f: "„Lang lebe [ROOT.GetCountry.GetName]!“"
  ib_events.01.a: "Gut gemacht."
-  
+
  change_primary_culture_weekly_effect: "Arbeitet an einer vollständigen Anpassung der [Concept('concept_primary_cultures', '$concept_primary_culture$')] mit einer 20%igen Chance, jede Woche Fortschritte zu machen. Für den Erfolg sind 8 Fortschrittspunkte erforderlich."
+
+ notification_MoG_SIS_culture_changed_name: "[SCOPE.sCountry('culture_target_country').GetName] [concept_primary_cultures] Geändert" #deepl:552504647
+ notification_MoG_SIS_culture_changed_desc: "[SCOPE.sCountry('culture_target_country').GetName]Die Website [concept_primary_cultures] wurde an unsere angepasst." #deepl:3077399724
+ notification_MoG_SIS_culture_changed_tooltip: "#header $notification_MoG_SIS_culture_changed_name$#!\n$notification_MoG_SIS_culture_changed_desc$" #deepl:4084126901

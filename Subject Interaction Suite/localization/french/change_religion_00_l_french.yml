@@ -9,25 +9,29 @@
  change_state_religion_action_notification_desc: "[INITIATOR_COUNTRY.GetName] modifie la religion d'État dans notre pays."
  change_state_religion_action_notification_break_name: "Arrêt de la conversion religieuse par [INITIATOR_COUNTRY.GetName]"
  change_state_religion_action_notification_break_desc: "[INITIATOR_COUNTRY.GetName] a mis fin au changement de religion d'État pour notre nation."
-  
+ 
  change_state_religion_effect_desc_global: "Initier la conversion de la religion d'État"
  change_state_religion_effect_desc_first: "[COUNTRY.GetAdjectiveNoFlag] initie le changement de religion d'État dans [TARGET_COUNTRY.GetName]."
  change_state_religion_effect_desc_third: "[COUNTRY.GetName] initie la conversion religieuse dans [AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)]."
-  
+ 
  change_state_religion_trigger_desc_global: "Conversion religieuse en cours"
  change_state_religion_trigger_false_desc_global: "Plus de conversion religieuse en cours."
  change_state_religion_trigger_desc_first: "[COUNTRY.GetAdjectiveNoFlag] change la religion d'État dans [TARGET_COUNTRY.GetName]."
  change_state_religion_trigger_false_desc_first: "[COUNTRY.GetAdjectiveNoFlag] ne change plus la religion d'État dans [TARGET_COUNTRY.GetName]."
  change_state_religion_trigger_desc_third: "[COUNTRY.GetName] change la religion d'État dans [AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)]."
  change_state_religion_trigger_false_desc_third: "[COUNTRY.GetName] ne change plus la religion d'État dans [AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)]."
-  
+ 
  ib_events.02.t: "Changement de religion d'État"
  ib_events.02.d: "Le fier [ROOT.GetCountry.GetName] a réussi à achever la conversion religieuse pour [SCOPE.sCountry('religion_target_country').GetName]. [SCOPE.sCountry('religion_target_country').GetName] prospérera désormais pour toujours, embrassant la religion du pays d'origine."
  ib_events.02.f: ""Vive [ROOT.GetCountry.GetName] !""
  ib_events.02.a: "Bien joué."
-  
+ 
  change_state_religion_weekly_effect: "Travaille pour atteindre un alignement complet de la religion d'État avec 20 % de chances de progresser chaque semaine, avec 8 points de progression requis pour réussir."
-  
+ 
  cr_irreligious_conversion: "Prise de contrôle irréligieuse"
  cr_institutionalise_secularism: "Régulation laïque"
  cr_religious_conversion: "Conversion religieuse"
+
+ notification_MoG_SIS_religion_changed_name: "[SCOPE.sCountry('religion_target_country').GetName] La religion a changé" #deepl:359024940
+ notification_MoG_SIS_religion_changed_desc: "Le site [concept_state_religion] de [SCOPE.sCountry('religion_target_country').GetName] est maintenant [SCOPE.sReligion('new_religion').GetName]." #deepl:3458999851
+ notification_MoG_SIS_religion_changed_tooltip: "#header $notification_MoG_SIS_religion_changed_name$#!\n$notification_MoG_SIS_religion_changed_desc$" #deepl:1202615841

@@ -1,3 +1,28 @@
 ﻿l_simp_chinese:
- unused_interests_alert_setting_name: "$unused_interests_alert$" #NT!
- overlord_can_consolidate_subject_setting_name: "$consolidate_subject$" #NT!
+ unused_interests_alert_setting_name: "$unused_interests_alert$"
+ overlord_can_consolidate_subject_setting_name: "$consolidate_subject$"
+ IB_success: "霸王立法援助" #deepl:3913329574
+ relations_positive: "#P 积极的[concept_relations]#!" #deepl:1387841350
+ relations_negative: "#N 阴性[concept_relations]#!" #deepl:1759414233
+ 
+ mog_topbar_element_all_subject_pp: "mog_topbar_element_all_subject_pp" #deepl:2643924773
+ mog_topbar_element_all_subject_pp_icon: "@all_subject_pp!" #deepl:1932202303
+ mog_topbar_element_all_subject_pp_value: "[GetMetaPlayer.GetPlayedOrObservedCountry.GetCustom('mog_topbar_coloured_all_subject_pp')]" #deepl:1681609592
+ mog_topbar_element_all_subject_pp_tooltip: "#header [Concept('concept_subject','$concept_subjects$')] 相关[concept_power_projection]#!\n$concept_relative_subject_power_projection_desc$" #deepl:644475639
+ mog_topbar_element_all_subject_pp_source: "灰色主题互动套件" #deepl:1223459637
+ mog_topbar_element_all_subject_pp_source_tooltip: "该元素是格雷主题互动套件的一部分。" #deepl:3657650752
+
+ concept_relative_subject_power_projection: "相对主体力量投影" #deepl:3297416644
+ concept_relative_subject_power_projection_desc: "[concept_power_projection] 对[Concept('concept_subject','$concept_subject_possessive$')] 军事力量的感知。由于一个主体争取独立是防御性的，因此它主要关注的是[Concept('concept_army','$concept_armies$')] 的相对实力。所有[Concept('concept_subject','$concept_subjects$')] 的[concept_liberty_desire] 受其联合$country_army_power_projection$ 与[concept_overlord] 相比的影响。\n，由于相互协调的困难，当其联合$country_navy_power_projection$ #b  小于其[Concept('concept_overlord','$concept_overlord_possessive$')] 海军#! 时，他们认为其联合实力要低 50%。如果受试者受到自己受试者的挑战，则受此影响较小。\n\n #b;green 绿色：#! 您的[Concept('concept_subject','$concept_subject_possessive$')] [Concept('concept_army','$concept_armies$')] 与此无关。\n#b;yellow 黄色：#! 高[concept_relations] 会抑制过多的[concept_liberty_desire] 。\n#b;orange 橙色：#! [Concept('concept_subject','$concept_subjects$')]\n#b;red 红色：强烈的 很可能会变成 . #b;purple 紫色：您的海军不足正在鼓励  .#! [Concept('concept_subject','$concept_subjects$')] $ai_attitude_rebellious$\n#! [Concept('concept_subject','$concept_subject_possessive$')] [concept_liberty_desire]" #deepl:248716341
+
+# We Want Green at <20%, Yellow at <40% (army + relations), Orange at <100%, Red at >100%, and Purple if Navy is >100% no matter how the army compares.
+# Default: [GetMetaPlayer.GetPlayedOrObservedCountry.MakeScope.Var('mog_topbar_value_all_subject_pp').GetValue|%v]
+ mog_topbar_coloured_all_subject_pp_backup: "#b;white[GetMetaPlayer.GetPlayedOrObservedCountry.MakeScope.Var('mog_topbar_value_all_subject_pp').GetValue|0%]#!" #deepl:3593051260
+ mog_topbar_coloured_all_subject_pp_green: "#b;green[GetMetaPlayer.GetPlayedOrObservedCountry.MakeScope.Var('mog_topbar_value_all_subject_pp').GetValue|0%]#!" #deepl:2377499616
+ mog_topbar_coloured_all_subject_pp_yellow: "#b;yellow[GetMetaPlayer.GetPlayedOrObservedCountry.MakeScope.Var('mog_topbar_value_all_subject_pp').GetValue|0%]#!" #deepl:3208069794
+ mog_topbar_coloured_all_subject_pp_orange: "#b;orange[GetMetaPlayer.GetPlayedOrObservedCountry.MakeScope.Var('mog_topbar_value_all_subject_pp').GetValue|0%]#!" #deepl:2512115759
+ mog_topbar_coloured_all_subject_pp_red: "#b;red[GetMetaPlayer.GetPlayedOrObservedCountry.MakeScope.Var('mog_topbar_value_all_subject_pp').GetValue|0%]#!" #deepl:1582262069
+ mog_topbar_coloured_all_subject_pp_purple: "#b;purple[GetMetaPlayer.GetPlayedOrObservedCountry.MakeScope.Var('mog_topbar_value_all_subject_pp').GetValue|0%]#!" #deepl:690812862
+ 
+ DIPLOMATIC_PACT_REQUIREMENT_MODERATE_LIBERTY_DESIRE: "[SCOPE.sCountry('actor').GetAdjective] [concept_liberty_desire] 必须至少[GetDefine('NDiplomacy','WAR_GOAL_INFAMY_LOW_LIBERTY_DESIRE_THRESHOLD')]" #deepl:1877752227
+ STRONGER_SUBJECT_NEGATE_ALOOF: "来自[Concept('concept_subject','$concept_subject_possessive$')] 相对实力与[SCOPE.sCountry('target').GetAttitudeTowards(SCOPE.sCountry('target').GetOverlord).GetName] 态度的比较" #deepl:679978240

@@ -21,7 +21,7 @@
  subject_initiator9: "[SCOPE.sCountry('subject_initiator9').GetName]"
  subject_initiator10: "[SCOPE.sCountry('subject_initiator10').GetName]"
  FX_abort: "DEBUG: Abortar e Redefinir"
-  
+ 
  potential_target_state1: "[SCOPE.sState('potential_target_state1').GetName]"
  potential_target_state2: "[SCOPE.sState('potential_target_state2').GetName]"
  potential_target_state3: "[SCOPE.sState('potential_target_state3').GetName]"

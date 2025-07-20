@@ -25,6 +25,8 @@
  setting_balanced_merge_desc: "Die diplomatische Aktion, Klientelländer einvernehmlich einzuverleiben, ist für das normale Spiel ausgeglichen."
  setting_cheat_merge: "Klientelländer einverleiben ist ein Cheat"
  setting_cheat_merge_desc: "Die diplomatische Aktion, Klientelländer einvernehmlich einzuverleiben, ist ein mächtiger Cheat."
+ setting_disabled_merge: "Thema zusammenführen Deaktiviert" #deepl:354449469
+ setting_disabled_merge_desc: "Die diplomatische Aktion: Zusammenführen [concept_subject] [Concept('concept_country', '$concept_countries$')] ist nicht verfügbar." #deepl:3670147245
  DIPLOMATIC_ACCEPTANCE_BREAK_FREE: "Sie verfolgen die [concept_ai_strategy] "#v $ai_strategy_subject_break_free$#!""
  DIPLOMATIC_ACCEPTANCE_STRENGTHEN_SELF: "Sie verfolgen die [concept_ai_strategy] "#v $ai_strategy_subject_strengthen_self$#!""
  DIPLOMATIC_ACCEPTANCE_MAINTAIN_AUTONOMY: "Sie verfolgen die [concept_ai_strategy] "#v $ai_strategy_subject_maintain_autonomy$#!""

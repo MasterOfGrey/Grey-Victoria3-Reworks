@@ -9,21 +9,25 @@
  open_border_action_notification_desc: "[INITIATOR_COUNTRY.GetName]は私たちの国の国境を開設しています。"
  open_border_action_notification_break_name: "国境開放をやめる [INITIATOR_COUNTRY.GetName]"
  open_border_action_notification_break_desc: "[INITIATOR_COUNTRY.GetName]は我が国の国境を開こうとする試みをやめました。"
-  
+ 
  open_border_effect_desc_global: "国境開放を開始する"
  open_border_effect_desc_first: "[COUNTRY.GetAdjectiveNoFlag] は [TARGET_COUNTRY.GetName] との国境開放を開始します。"
  open_border_effect_desc_third: "[COUNTRY.GetName] は [AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)] とのオープンボーダーを開始します。"
-  
+ 
  open_border_trigger_desc_global: "国境開放は継続中"
  open_border_trigger_false_desc_global: "現在、国境開放の過程には入っていません。"
  open_border_trigger_desc_first: "[COUNTRY.GetAdjectiveNoFlag] は [TARGET_COUNTRY.GetName] と国境が開いています。"
  open_border_trigger_false_desc_first: "[COUNTRY.GetAdjectiveNoFlag] は現在、[TARGET_COUNTRY.GetName] と国境が開かれていません。"
  open_border_trigger_desc_third: "[COUNTRY.GetName] は [AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)] と境界が開いています。"
  open_border_trigger_false_desc_third: "[COUNTRY.GetName] は現在、[AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)] と国境が開いていません。"
-  
+ 
  ib_events.03.t: "国境開放"
  ib_events.03.d: "誇り高き[ROOT.GetCountry.GetName] 国は[SCOPE.sCountry('openborders_target_country').GetName] 国との国境開放に成功しました。[SCOPE.sCountry('openborders_target_country').GetName] 国は祖国との交流を深めることで永遠に繁栄するでしょう。"
  ib_events.03.f: "「[ROOT.GetCountry.GetName]万歳！」"
  ib_events.03.a: "よくやった。"
-  
+
  open_border_weekly_effect: "毎週 20% の確率で国境を開くよう努め、成功するには 8 つの進捗ポイントが必要です。"
+
+ notification_MoG_SIS_border_opened_name: "[SCOPE.sCountry('openborders_target_country').GetName] 国境が開かれる" #deepl:2601998025
+ notification_MoG_SIS_border_opened_desc: "[SCOPE.sCountry('openborders_target_country').GetName] は を採用した。[SCOPE.sLawType('new_law').GetName]" #deepl:3655565798
+ notification_MoG_SIS_border_opened_tooltip: "#header $notification_MoG_SIS_border_opened_name$#!\n$notification_MoG_SIS_border_opened_desc$" #deepl:1031819825

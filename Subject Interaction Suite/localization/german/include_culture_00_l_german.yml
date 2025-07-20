@@ -9,21 +9,31 @@
  include_primary_culture_action_notification_desc: "[INITIATOR_COUNTRY.GetName] integriert seine [Concept('concept_primary_cultures', '$concept_primary_culture$')] in die [Concept('concept_primary_cultures', '$concept_primary_culture$')] unseres Landes."
  include_primary_culture_action_notification_break_name: "Kulturelle Inklusion von [INITIATOR_COUNTRY.GetName] gestoppt"
  include_primary_culture_action_notification_break_desc: "[INITIATOR_COUNTRY.GetName] hat die Integration seiner [Concept('concept_primary_cultures', '$concept_primary_culture$')] in unsere [Concept('concept_primary_cultures', '$concept_primary_culture$')] gestoppt."
-  
+ 
  include_primary_culture_effect_desc_global: "Kulturelle Inklusion initiieren"
  include_primary_culture_effect_desc_first: "[COUNTRY.GetName] leitet die Integration seiner [Concept('concept_primary_cultures', '$concept_primary_culture$')] in [TARGET_COUNTRY.GetName] ein."
  include_primary_culture_effect_desc_third: "[COUNTRY.GetName] initiiert die Integration seiner [Concept('concept_primary_cultures', '$concept_primary_culture$')] in [AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)]."
-  
+ 
  include_primary_culture_trigger_desc_global: "Kulturelle Inklusion im Gange"
  include_primary_culture_trigger_false_desc_global: "Kulturelle Inklusion #b angehalten#!"
  include_primary_culture_trigger_desc_first: "[COUNTRY.GetName] integriert seine [Concept('concept_primary_cultures', '$concept_primary_culture$')] in [TARGET_COUNTRY.GetName]."
  include_primary_culture_trigger_false_desc_first: "[COUNTRY.GetName] integriert seine [Concept('concept_primary_cultures', '$concept_primary_culture$')] in [TARGET_COUNTRY.GetName] #b nicht mehr#!"
  include_primary_culture_trigger_desc_third: "[COUNTRY.GetName] integriert seine [Concept('concept_primary_cultures', '$concept_primary_culture$')] in [AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)]."
  include_primary_culture_trigger_false_desc_third: "[COUNTRY.GetName] integriert seine [Concept('concept_primary_cultures', '$concept_primary_culture$')] #b nicht mehr# in [AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)]!"
-  
+ 
  ib_events.05.t: "Kulturelle Inklusion"
  ib_events.05.d: "[ROOT.GetCountry.GetName] hat die kulturelle Inklusion für [SCOPE.sCountry('culture_include_country').GetName] erfolgreich abgeschlossen. [SCOPE.sCountry('culture_include_country').GetName] wird nun für immer gedeihen und die Kultur des Heimatlandes annehmen."
  ib_events.05.f: "„Lang lebe [ROOT.GetCountry.GetName]!“"
  ib_events.05.a: "Gut gemacht."
-  
+
  include_primary_culture_weekly_effect: "Arbeitet daran, die [Concept('concept_primary_cultures', '$concept_primary_culture$')] des [concept_overlord]s als [Concept('concept_primary_cultures', '$concept_primary_culture$')] des [concept_subject]es aufzunehmen, mit einer 20%igen Chance, jede Woche Fortschritte zu machen, wobei 8 Fortschrittspunkte für den Erfolg erforderlich sind."
+
+ rule_sis_cultural_religion_actions: "Kulturelle und religiöse Ausrichtung" #deepl:3257962580
+ setting_sis_cultural_religion_enabled: "Aktiviert" #deepl:3001197554
+ setting_sis_cultural_religion_enabled_desc: "Der Spieler kann die [concept_state_religion] und [concept_primary_cultures] seiner [Concept('concept_subject', '$concept_subjects$')] über [concept_overlord_action] ändern." #deepl:1306075704
+ setting_sis_cultural_religion_disabled: "Behinderte" #deepl:1603118088
+ setting_sis_cultural_religion_disabled_desc: "Der Spieler kann die [concept_state_religion] und [concept_primary_cultures] seiner [Concept('concept_subject', '$concept_subjects$')] nicht über [concept_overlord_action] ändern." #deepl:2471144945
+
+ notification_MoG_SIS_culture_included_name: "Kulturen integriert in [SCOPE.sCountry('culture_include_country').GetName]" #deepl:1239178518
+ notification_MoG_SIS_culture_included_desc: "Unser [concept_primary_cultures] wurde auf [SCOPE.sCountry('culture_include_country').GetName] hinzugefügt." #deepl:2103492833
+ notification_MoG_SIS_culture_included_tooltip: "#header $notification_MoG_SIS_culture_included_name$#!\n$notification_MoG_SIS_culture_included_desc$" #deepl:2894990033

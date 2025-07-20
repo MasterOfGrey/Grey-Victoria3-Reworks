@@ -9,25 +9,25 @@
  laws_synergize_land_action_notification_desc: "[INITIATOR_COUNTRY.GetName]正在改变我国的土地改革"
  laws_synergize_land_action_notification_break_name: "[INITIATOR_COUNTRY.GetName]已停止统一土地改革"
  laws_synergize_land_action_notification_break_desc: "[INITIATOR_COUNTRY.GetName]已停止改变我国的土地改革"
-  
+ 
  laws_synergize_land_effect_desc_global: "实施统一土地改革"
  laws_synergize_land_effect_desc_first: "[COUNTRY.GetAdjectiveNoFlag]正在将自身土地改革推行进[TARGET_COUNTRY.GetName]."
  laws_synergize_land_effect_desc_third: "[COUNTRY.GetName]正在将自身土地改革推行进[AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)]."
-  
+ 
  laws_synergize_land_trigger_desc_global: "正在进行土地改革统一"
  laws_synergize_land_trigger_false_desc_global: "不再进行土地改革统一"
  laws_synergize_land_trigger_desc_first: "[COUNTRY.GetAdjectiveNoFlag]正在将自身土地改革推行进[TARGET_COUNTRY.GetName]."
  laws_synergize_land_trigger_false_desc_first: "[COUNTRY.GetAdjectiveNoFlag]不再将自身土地改革推行进[TARGET_COUNTRY.GetName]."
  laws_synergize_land_trigger_desc_third: "[COUNTRY.GetName]正在将自身土地改革推行进[AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)]."
  laws_synergize_land_trigger_false_desc_third: "[COUNTRY.GetName]不再将自身土地改革推行进[AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)]."
-  
+ 
  mog_syn_events.03.t: "土地改革已统一!"
  mog_syn_events.03.d: "[ROOT.GetCountry.GetName]已成功将土地改革推行进[SCOPE.sCountry('synergize_land_target_country').GetName]. [SCOPE.sCountry('synergize_land_target_country').GetName]将通过增强与母国的凝聚力而永远繁荣昌盛。"
  mog_syn_events.03.f: "仁哉我[ROOT.GetCountry.GetName]!"
  mog_syn_events.03.a: "干得漂亮。"
-  
+ 
  laws_synergize_land_weekly_effect: "统一土地改革工作需要完成八个阶段，每周有20%机会推进一个阶段。"
-  
+ 
  overlord_syn_cost_land: "统一土地改革行动经费"
-  
+ 
  active_synergize_land_tt: "已实施的$laws_synergize_land$行动数量小于1。"

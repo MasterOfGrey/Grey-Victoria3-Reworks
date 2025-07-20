@@ -9,26 +9,37 @@
  laws_synergize_bureaucracy_action_notification_desc: "[INITIATOR_COUNTRY.GetName]は我が国の官僚制度の法律を相乗的に活用しています。"
  laws_synergize_bureaucracy_action_notification_break_name: "官僚機構の相乗効果を止めよう by [INITIATOR_COUNTRY.GetName]"
  laws_synergize_bureaucracy_action_notification_break_desc: "[INITIATOR_COUNTRY.GetName] は我が国の官僚制度の法律を相乗的に機能させようとする試みをやめました。"
-  
+ 
  laws_synergize_bureaucracy_effect_desc_global: "官僚機構の相乗効果の創出"
  laws_synergize_bureaucracy_effect_desc_first: "[COUNTRY.GetAdjectiveNoFlag] は [TARGET_COUNTRY.GetName] との官僚的相乗効果を開始します。"
  laws_synergize_bureaucracy_effect_desc_third: "[COUNTRY.GetName] は [AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)] との官僚的相乗効果を開始します。"
-  
+ 
  laws_synergize_bureaucracy_trigger_desc_global: "官僚機構の相乗効果は継続中"
  laws_synergize_bureaucracy_trigger_false_desc_global: "現在、官僚制度の法律を相乗的に統合するプロセスには入っていません。"
  laws_synergize_bureaucracy_trigger_desc_first: "[COUNTRY.GetAdjectiveNoFlag] は [TARGET_COUNTRY.GetName] と相乗効果のある官僚システムを持っています。"
  laws_synergize_bureaucracy_trigger_false_desc_first: "[COUNTRY.GetAdjectiveNoFlag] は現在、[TARGET_COUNTRY.GetName] と相乗効果のある官僚システムを持っていません。"
  laws_synergize_bureaucracy_trigger_desc_third: "[COUNTRY.GetName] は [AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)] と相乗効果のある官僚システムを持っています。"
  laws_synergize_bureaucracy_trigger_false_desc_third: "[COUNTRY.GetName] は現在、[AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)] と相乗効果のある官僚システムを持っていません。"
-  
+ 
  mog_syn_events.01.t: "官僚的シナジー！"
  mog_syn_events.01.d: "誇り高き[ROOT.GetCountry.GetName] 国家は、[SCOPE.sCountry('synergize_bureaucracy_target_country').GetName] との官僚制度の相乗効果を成功裏に達成しました。[SCOPE.sCountry('synergize_bureaucracy_target_country').GetName] は祖国との結束力を高めることで永遠の繁栄を享受するでしょう。"
  mog_syn_events.01.f: "「[ROOT.GetCountry.GetName]万歳！」"
  mog_syn_events.01.a: "よくやった。"
-  
+ 
  laws_synergize_bureaucracy_weekly_effect: "彼らの官僚制度を私たちのものと一致させるよう努めています。毎週進歩する可能性は 20% あり、成功するには 8 つの進歩ポイントが必要です。"
-  
+ 
  overlord_syn_cost_bureau: "官僚機構の相乗効果にかかるコスト"
  BUREAUCRACY_SYNERGY_COST_BUREAU: "官僚機構の相乗効果にかかるコスト"
-  
+ 
  active_synergize_bureaucracy_tt: "その他の$laws_synergize_bureaucracy$アクションの数は1未満です。"
+
+ MoG_SIS_synergy_complete_group: "SIS｜主題の相乗効果" #deepl:1389400629
+ notification_MoG_SIS_synergy_complete_name: "[SCOPE.sCountry('synergize_target_country').GetName] 相乗効果" #deepl:822550072
+ notification_MoG_SIS_synergy_complete_desc: "[SCOPE.sCountry('synergize_target_country').GetName] は を採用した。[SCOPE.sLawType('initiator_law').GetName]" #deepl:223132594
+ notification_MoG_SIS_synergy_complete_tooltip: "#header $notification_MoG_SIS_synergy_complete_name$#!\n$notification_MoG_SIS_synergy_complete_desc$" #deepl:4008717488
+
+ rule_sis_synergize_actions: "主題法の相乗効果" #deepl:2622198769
+ setting_sis_synergize_enabled: "有効" #deepl:3001197554
+ setting_sis_synergize_enabled_desc: "プレーヤーは、[concept_overlord_action] を介して、[Concept('concept_subject', '$concept_subjects$')] の[GetLawGroup('lawgroup_bureaucracy').GetName] 、[GetLawGroup('lawgroup_economic_system').GetName] 、[GetLawGroup('lawgroup_land_reform').GetName] 、[GetLawGroup('lawgroup_trade_policy').GetName]を変更することができます。" #deepl:1000946573
+ setting_sis_synergize_disabled: "無効" #deepl:1603118088
+ setting_sis_synergize_disabled_desc: "Synergize[Concept('concept_overlord_action', '$concept_overlord_actions$')] は利用できない。" #deepl:3544678059

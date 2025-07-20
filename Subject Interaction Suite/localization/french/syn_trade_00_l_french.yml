@@ -9,25 +9,25 @@
  laws_synergize_trade_action_notification_desc: "[INITIATOR_COUNTRY.GetName] met en synergie les politiques commerciales de notre pays."
  laws_synergize_trade_action_notification_break_name: "Cesser de mettre en synergie les politiques commerciales par [INITIATOR_COUNTRY.GetName]"
  laws_synergize_trade_action_notification_break_desc: "[INITIATOR_COUNTRY.GetName] a cessé d'essayer de créer une synergie entre les politiques commerciales de notre pays."
-  
+ 
  laws_synergize_trade_effect_desc_global: "Commencer à mettre en synergie les politiques commerciales"
  laws_synergize_trade_effect_desc_first: "[COUNTRY.GetAdjectiveNoFlag] initie une synergie de politique commerciale avec [TARGET_COUNTRY.GetName]."
  laws_synergize_trade_effect_desc_third: "[COUNTRY.GetName] initie une synergie de politique commerciale avec [AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)]."
-  
+ 
  laws_synergize_trade_trigger_desc_global: "Synergisation des politiques commerciales en cours"
  laws_synergize_trade_trigger_false_desc_global: "Nous ne sommes pas actuellement en train de mettre en synergie nos politiques commerciales."
  laws_synergize_trade_trigger_desc_first: "[COUNTRY.GetAdjectiveNoFlag] dispose de systèmes de politique commerciale synergétiques avec [TARGET_COUNTRY.GetName]."
  laws_synergize_trade_trigger_false_desc_first: "[COUNTRY.GetAdjectiveNoFlag] ne dispose pas actuellement de systèmes de politique commerciale synergétiques avec [TARGET_COUNTRY.GetName]."
  laws_synergize_trade_trigger_desc_third: "[COUNTRY.GetName] dispose de systèmes de politique commerciale synergétiques avec [AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)]."
  laws_synergize_trade_trigger_false_desc_third: "[COUNTRY.GetName] ne dispose pas actuellement de systèmes de politique commerciale synergétiques avec [AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)]."
-  
+ 
  mog_syn_events.04.t: "Synergie commerciale !"
  mog_syn_events.04.d: "La fière nation de [ROOT.GetCountry.GetName] a achevé avec succès la synergie des politiques commerciales avec [SCOPE.sCountry('synergize_trade_target_country').GetName]. [SCOPE.sCountry('synergize_trade_target_country').GetName] prospérera dans une prospérité éternelle grâce à une cohésion accrue avec la patrie."
  mog_syn_events.04.f: ""Longue vie à [ROOT.GetCountry.GetName] !""
  mog_syn_events.04.a: "Bien joué."
-  
+ 
  laws_synergize_trade_weekly_effect: "Travaille à aligner ses politiques commerciales sur les nôtres. A 20 % de chances de progresser chaque semaine, avec 8 points de progression requis pour réussir."
-  
+ 
  overlord_syn_cost_trade: "Coût de la synergie des politiques commerciales"
-  
+ 
  active_synergize_trade_tt: "Le nombre d'autres actions $laws_synergize_trade$ est inférieur à 1."

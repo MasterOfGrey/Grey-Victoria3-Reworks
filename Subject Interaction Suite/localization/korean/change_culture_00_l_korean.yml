@@ -9,21 +9,25 @@
  change_primary_culture_action_notification_desc: "[INITIATOR_COUNTRY.GetName](이)가 우리나라의 주문화를 변경하고 있습니다."
  change_primary_culture_action_notification_break_name: "[INITIATOR_COUNTRY.GetName]의 주문화 변경 중단"
  change_primary_culture_action_notification_break_desc: "[INITIATOR_COUNTRY.GetName](이)가 우리 국가에 대한 주문화 변경을 종료했습니다."
-  
+ 
  change_primary_culture_effect_desc_global: "주문화 변경 시작"
  change_primary_culture_effect_desc_first: "[COUNTRY.GetAdjectiveNoFlag](이)가 [TARGET_COUNTRY.GetName]에 주문화 변경을 시작함"
  change_primary_culture_effect_desc_third: "[COUNTRY.GetName](이)가 [AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)]에 주문화 변경을 시작함"
-  
+ 
  change_primary_culture_trigger_desc_global: "주문화 변경 중"
  change_primary_culture_trigger_false_desc_global: "주문화 변경 중이지 #b 않음#!"
  change_primary_culture_trigger_desc_first: "[COUNTRY.GetAdjectiveNoFlag](이)가 [TARGET_COUNTRY.GetName]에 주문화 변경 중"
  change_primary_culture_trigger_false_desc_first: "[COUNTRY.GetAdjectiveNoFlag](이)가 [TARGET_COUNTRY.GetName]에 주문화 변경 중이지 #b 않음#!"
  change_primary_culture_trigger_desc_third: "[COUNTRY.GetName](이)가 [AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)]에 주문화 변경 중"
  change_primary_culture_trigger_false_desc_third: "[COUNTRY.GetName](이)가 [AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)]에 주문화 변경 중이지 #b 않음#!"
-  
+ 
  ib_events.01.t: "주문화 변경"
  ib_events.01.d: "자랑스러운 [ROOT.GetCountry.GetName]의 [SCOPE.sCountry('culture_target_country').GetName]에 대한 주문화 변경이 무사히 종료되었다. [SCOPE.sCountry('culture_target_country').GetName]는 앞으로 본국의 문화를 향유하며 영원히 번영할 것이다."
  ib_events.01.f: ""[ROOT.GetCountry.GetName] 만세!""
  ib_events.01.a: "잘 되었다."
-  
+
  change_primary_culture_weekly_effect: "주마다 20%의 확률로 주요 문화의 완전한 정렬을 달성하고, 성공하려면 8개의 진행 포인트가 필요합니다."
+
+ notification_MoG_SIS_culture_changed_name: "[SCOPE.sCountry('culture_target_country').GetName] [concept_primary_cultures] 변경됨" #deepl:552504647
+ notification_MoG_SIS_culture_changed_desc: "[SCOPE.sCountry('culture_target_country').GetName]의 [concept_primary_cultures] 이 저희와 일치하도록 변경되었습니다." #deepl:3077399724
+ notification_MoG_SIS_culture_changed_tooltip: "#header $notification_MoG_SIS_culture_changed_name$#!\n$notification_MoG_SIS_culture_changed_desc$" #deepl:4084126901

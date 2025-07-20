@@ -9,21 +9,25 @@
  open_border_action_notification_desc: "[INITIATOR_COUNTRY.GetName](이)가 우리나라의 국경을 개방하고 있습니다."
  open_border_action_notification_break_name: "[INITIATOR_COUNTRY.GetName]의 국경 개방 중단"
  open_border_action_notification_break_desc: "[INITIATOR_COUNTRY.GetName](이)가 우리 국가에 대한 국경 개방을 종료했습니다."
-  
+ 
  open_border_effect_desc_global: "국경 개방 시작"
  open_border_effect_desc_first: "[COUNTRY.GetAdjectiveNoFlag](이)가 [TARGET_COUNTRY.GetName]에 국경 개방을 시작함"
  open_border_effect_desc_third: "[COUNTRY.GetName](이)가 [AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)]에 국경 개방을 시작함"
-  
+ 
  open_border_trigger_desc_global: "국경 개방 중"
  open_border_trigger_false_desc_global: "국경 개방 중이지 #b 않음#!"
  open_border_trigger_desc_first: "[COUNTRY.GetAdjectiveNoFlag](이)가 [TARGET_COUNTRY.GetName]에 국경 개방 중"
  open_border_trigger_false_desc_first: "[COUNTRY.GetAdjectiveNoFlag](이)가 [TARGET_COUNTRY.GetName]에 국경 개방 중이지 #b 않음#!"
  open_border_trigger_desc_third: "[COUNTRY.GetName](이)가 [AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)]에 국경 개방 중"
  open_border_trigger_false_desc_third: "[COUNTRY.GetName](이)가 [AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)]에 국경 개방 중이지 #b 않음#!"
-  
+ 
  ib_events.03.t: "국경 개방"
  ib_events.03.d: "자랑스러운 [ROOT.GetCountry.GetName]의 [SCOPE.sCountry('openborders_target_country').GetName]에 대한 국경개방이 무사히 종료되었다. [SCOPE.sCountry('openborders_target_country').GetName]는 앞으로 본국과 교류하면서 영원히 번영할 것이다."
  ib_events.03.f: ""[ROOT.GetCountry.GetName] 만세!""
  ib_events.03.a: "잘 되었다."
-  
+
  open_border_weekly_effect: "매주 20%의 진전 확률로 국경을 개방하기 위해 노력하고 있으며, 성공하려면 8점의 진행 포인트가 필요합니다."
+
+ notification_MoG_SIS_border_opened_name: "[SCOPE.sCountry('openborders_target_country').GetName] 테두리 열기" #deepl:2601998025
+ notification_MoG_SIS_border_opened_desc: "[SCOPE.sCountry('openborders_target_country').GetName] 는 [SCOPE.sLawType('new_law').GetName] 을 채택했습니다." #deepl:3655565798
+ notification_MoG_SIS_border_opened_tooltip: "#header $notification_MoG_SIS_border_opened_name$#!\n$notification_MoG_SIS_border_opened_desc$" #deepl:1031819825

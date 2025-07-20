@@ -9,21 +9,25 @@
  change_primary_culture_action_notification_desc: "[INITIATOR_COUNTRY.GetName] ülkemizdeki birincil kültürü değiştiriyor."
  change_primary_culture_action_notification_break_name: "Birincil Kültür Değişimi [INITIATOR_COUNTRY.GetName] Tarafından Durduruldu"
  change_primary_culture_action_notification_break_desc: "[INITIATOR_COUNTRY.GetName] ülkemiz için birincil kültür değişimini sonlandırmıştır."
-  
+ 
  change_primary_culture_effect_desc_global: "Birincil Kültür Değişimini Başlatın"
  change_primary_culture_effect_desc_first: "[COUNTRY.GetAdjectiveNoFlag], [TARGET_COUNTRY.GetName]'de birincil kültür değişimini başlatıyor."
  change_primary_culture_effect_desc_third: "[COUNTRY.GetName], [AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)]'de kültürel uyumu başlatıyor."
-  
+ 
  change_primary_culture_trigger_desc_global: "Kültürel Uyum Devam Ediyor"
  change_primary_culture_trigger_false_desc_global: "Artık kültürel uyum sürecinde değiliz."
  change_primary_culture_trigger_desc_first: "[COUNTRY.GetAdjectiveNoFlag], [TARGET_COUNTRY.GetName]'deki birincil kültürü değiştiriyor."
  change_primary_culture_trigger_false_desc_first: "[COUNTRY.GetAdjectiveNoFlag] artık [TARGET_COUNTRY.GetName] #b 'deki birincil kültürü değiştirmiyor#!"
  change_primary_culture_trigger_desc_third: "[COUNTRY.GetName], [AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)]'deki birincil kültürü değiştiriyor."
  change_primary_culture_trigger_false_desc_third: "[COUNTRY.GetName] artık [AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)] #b 'teki birincil kültürü değiştirmiyor#!"
-  
+ 
  ib_events.01.t: "Birincil Kültür Değişimi"
  ib_events.01.d: "Gururlu [ROOT.GetCountry.GetName], [SCOPE.sCountry('culture_target_country').GetName] için kültürel uyumu başarıyla tamamladı. [SCOPE.sCountry('culture_target_country').GetName] artık vatanın kültürünü kucaklayarak sonsuza dek refah içinde yaşayacak."
  ib_events.01.f: ""Selam [ROOT.GetCountry.GetName]!""
  ib_events.01.a: "Tebrikler."
-  
+
  change_primary_culture_weekly_effect: "Her hafta %20 ilerleme şansı ile birincil kültürün tam uyumunu sağlamak için çalışır ve başarılı olmak için 8 ilerleme puanı gerekir."
+
+ notification_MoG_SIS_culture_changed_name: "[SCOPE.sCountry('culture_target_country').GetName] [concept_primary_cultures] Değişti" #deepl:552504647
+ notification_MoG_SIS_culture_changed_desc: "[SCOPE.sCountry('culture_target_country').GetName]'nin [concept_primary_cultures] adresi bizimkiyle eşleşecek şekilde değiştirilmiştir." #deepl:3077399724
+ notification_MoG_SIS_culture_changed_tooltip: "#header $notification_MoG_SIS_culture_changed_name$#!\n$notification_MoG_SIS_culture_changed_desc$" #deepl:4084126901

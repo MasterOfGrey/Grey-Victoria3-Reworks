@@ -22,11 +22,11 @@
  military_support_proposal_third_party_declined_desc: "[TARGET_COUNTRY.GetName] hat die Annahme der Unterstützung der territorialen Expansion mit [INITIATOR_COUNTRY.GetName] abgelehnt."
  military_support_action_notification_third_party_break_name: "Unterstützung der territorialen Expansion gebrochen"
  military_support_action_notification_third_party_break_desc: "[INITIATOR_COUNTRY.GetName] hat die Unterstützung der territorialen Expansion mit [TARGET_COUNTRY.GetName] abgebrochen."
-  
+
  military_support_effect_desc_global: "Unterstützt die territoriale Expansion"
  military_support_effect_desc_first: "[COUNTRY.GetName] etabliert Unterstützung für territoriale Expansion von [TARGET_COUNTRY.GetName]"
  military_support_effect_desc_third: "[COUNTRY.GetName] etabliert Unterstützung für territoriale Expansion von [AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)]"
-  
+ 
  military_support_trigger_desc_global: "Unterstützt die territoriale Expansion"
  military_support_trigger_false_desc_global: "Unterstützt #b nicht #! die territoriale Expansion?"
  military_support_trigger_desc_first: "[COUNTRY.GetNameNoFlag] unterstützt die territoriale Expansion von [TARGET_COUNTRY.GetName]"

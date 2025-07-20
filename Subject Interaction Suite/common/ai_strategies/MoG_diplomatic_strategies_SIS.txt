@@ -58,6 +58,8 @@ ai_strategy_territorial_expansion = {
 	
 	aggression = {
 		value = 1
+		
+		# Mod Weights
 		if = {
 			limit = {
 				is_subject = yes
@@ -169,11 +171,13 @@ ai_strategy_territorial_expansion = {
 	}
 	
 	possible = {
-		always = yes
+		always = yes	# Modded
 	}
 
 	weight = {
 		value = 10
+		
+		# Mod Weights
 		if = {
 			limit = {
 				is_subject = yes

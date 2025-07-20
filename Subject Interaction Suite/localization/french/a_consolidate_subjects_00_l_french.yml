@@ -6,7 +6,7 @@
  consolidate_subject_action_notification_desc: "[INITIATOR_COUNTRY.GetName] a choisi de nous consolider."
  consolidate_subject_action_notification_third_party_name: "[INITIATOR_COUNTRY.GetName] consolide les sujets"
  consolidate_subject_action_notification_third_party_desc: "[INITIATOR_COUNTRY.GetName] a consolidé [TARGET_COUNTRY.GetName]."
-  
+ 
  is_not_african_subject: "Ce sujet ne fait pas partie de nos administrations coloniales africaines"
  consolidate_subject_country_tier_tt: "[concept_country_tier] de [SCOPE.sCountry('target_country').GetName] est ci-dessous $country_tier_kingdom$"
  consolidate_subject_country_tier_kingdom_tt: "[concept_country_tier] de [SCOPE.sCountry('target_country').GetName] est $country_tier_kingdom$ et:"
@@ -19,12 +19,20 @@
  consolidate_subject_primary_culture_tt: "Sont l'un des sujets cibles [concept_primary_cultures]: [SCOPE.sCountry('target_country').GetPrimaryCulturesDesc]"
  consolidate_subject_acceptance_tt: "Le [concept_overlord] a fait des recherches sur le pan-nationalisme et la mission de civilisation, et tous les sujets consolidés [concept_primary_cultures] doivent partager un trait et avoir au moins @acceptance_status_4! $second_rate_citizen$ [concept_acceptance_status]"
  consolidate_subject_multicultural_tt: "Le [concept_overlord] a fait des recherches sur le pan-nationalisme et la mission de civilisation, les ☻1 du sujet cible ont au moins un certain chevauchement, et le sujet récepteur a recherché les droits de l'homme et le corporatisme, et a [GetLawType('law_multicultural').GetName]"
-  
+ 
  alert_overlord_can_consolidate_subject_name: "[GetDiplomaticActionType('consolidate_subject').GetName] disponible pour [SCOPE.GetRootScope.GetCountry.GetName]"
  alert_overlord_can_consolidate_subject_desc: "Notre [concept_subject] [SCOPE.GetRootScope.GetCountry.GetName] peut être consolidé dans un sujet voisin."
  alert_overlord_can_consolidate_subject_hint: "Vous pouvez utiliser l'onglet Sujets dans le panneau Diplomatie pour effectuer un [GetDiplomaticActionType('consolidate_subject').GetName] [concept_diplomatic_action]."
  alert_overlord_can_consolidate_subject_action: "Panel sur la diplomatie"
-  
+ 
  ag_can_consolidate_subject_name: "Peut [GetDiplomaticActionType('consolidate_subject').GetName]"
  ag_can_consolidate_subject_desc: "Il y a [concept_subject] [Concept('concept_country', '$concept_countries$')] qui sont éligibles pour l'action [GetDiplomaticActionType('consolidate_subject').GetName]"
  ag_can_consolidate_subject_tooltip: "#header $ag_can_consolidate_subject_name$#!\n$TOOLTIP_DELIMITER$\n$ag_can_consolidate_subject_desc$\n\n$ALERT_GROUP_TOOLTIP_FOOTER$"
+
+ rule_consolidate_subject_action: "Consolider les sujets" #deepl:1832589325
+ setting_consolidate_subject_enabled: "Activé" #deepl:3001197554
+ setting_consolidate_subject_enabled_desc: "[Concept('concept_subject', '$concept_subjects$')] avec des [concept_primary_cultures] similaires peuvent être fusionnés via [concept_overlord_action]." #deepl:1738154614
+ setting_consolidate_subject_player_only: "Joueur uniquement" #deepl:3920533262
+ setting_consolidate_subject_player_only_desc: "[Concept('concept_subject', '$concept_subjects$')] ayant des similitudes avec [concept_primary_cultures] peuvent être fusionnés via [concept_overlord_action]. L'IA ne peut pas consolider les sujets." #deepl:434434159
+ setting_consolidate_subject_disabled: "Handicapés" #deepl:1603118088
+ setting_consolidate_subject_disabled_desc: "La fonction Consolider le sujet [concept_overlord_action] n'est pas disponible." #deepl:2288228809

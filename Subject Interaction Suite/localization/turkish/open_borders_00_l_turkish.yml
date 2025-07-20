@@ -9,21 +9,25 @@
  open_border_action_notification_desc: "[INITIATOR_COUNTRY.GetName] ülkemizin sınırlarını açıyor."
  open_border_action_notification_break_name: "[INITIATOR_COUNTRY.GetName] Tarafından Sınırların Açılmasına Son Verildi"
  open_border_action_notification_break_desc: "[INITIATOR_COUNTRY.GetName] ülkemizin sınırlarını açma çabalarından vazgeçti."
-  
+ 
  open_border_effect_desc_global: "Açık Sınırları Başlatın"
  open_border_effect_desc_first: "[COUNTRY.GetAdjectiveNoFlag], [TARGET_COUNTRY.GetName] ile açık sınırları başlatır."
  open_border_effect_desc_third: "[COUNTRY.GetName], [AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)] ile açık sınırları başlatır."
-  
+ 
  open_border_trigger_desc_global: "Açık Sınırlar Devam Ediyor"
  open_border_trigger_false_desc_global: "Şu anda sınırların açılması süreci devam etmiyor."
  open_border_trigger_desc_first: "[COUNTRY.GetAdjectiveNoFlag]'ın [TARGET_COUNTRY.GetName] ile açık sınırları vardır."
  open_border_trigger_false_desc_first: "[COUNTRY.GetAdjectiveNoFlag]'ın şu anda [TARGET_COUNTRY.GetName] ile açık sınırı yok."
  open_border_trigger_desc_third: "[COUNTRY.GetName], [AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)] ile açık sınırlara sahiptir."
  open_border_trigger_false_desc_third: "[COUNTRY.GetName]'ın şu anda [AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)] ile açık sınırı yok."
-  
+ 
  ib_events.03.t: "Açık Sınırlar"
  ib_events.03.d: "[ROOT.GetCountry.GetName]'ın gururlu milleti, [SCOPE.sCountry('openborders_target_country').GetName] ile sınırlarının açılışını başarıyla tamamladı. [SCOPE.sCountry('openborders_target_country').GetName], anavatanla artan alışverişler sayesinde sonsuz refah içinde gelişecektir."
  ib_events.03.f: ""Çok yaşa [ROOT.GetCountry.GetName]!""
  ib_events.03.a: "Tebrikler."
-  
+
  open_border_weekly_effect: "Her hafta %20 ilerleme şansı ile sınırlarını açmaya çalışırlar ve başarılı olmak için 8 ilerleme puanına ihtiyaç duyarlar."
+
+ notification_MoG_SIS_border_opened_name: "[SCOPE.sCountry('openborders_target_country').GetName] Sınırlar Açıldı" #deepl:2601998025
+ notification_MoG_SIS_border_opened_desc: "[SCOPE.sCountry('openborders_target_country').GetName] [SCOPE.sLawType('new_law').GetName] adresini benimsemiştir." #deepl:3655565798
+ notification_MoG_SIS_border_opened_tooltip: "#header $notification_MoG_SIS_border_opened_name$#!\n$notification_MoG_SIS_border_opened_desc$" #deepl:1031819825

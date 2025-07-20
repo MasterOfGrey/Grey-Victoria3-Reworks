@@ -9,21 +9,31 @@
  include_primary_culture_action_notification_desc: "[INITIATOR_COUNTRY.GetName] kendi birincil kültürlerini ülkemize dahil ediyor."
  include_primary_culture_action_notification_break_name: "Birincil Kültür Dahil Etme [INITIATOR_COUNTRY.GetName] Tarafından Durduruldu"
  include_primary_culture_action_notification_break_desc: "[INITIATOR_COUNTRY.GetName] ülkemiz için birincil kültür kapsayıcılığını sonlandırmıştır."
-  
+ 
  include_primary_culture_effect_desc_global: "Kültürel Katılımı Başlatın"
  include_primary_culture_effect_desc_first: "[COUNTRY.GetAdjectiveNoFlag], [TARGET_COUNTRY.GetName]'de birincil kültür dahil edilmesini başlatıyor."
  include_primary_culture_effect_desc_third: "[COUNTRY.GetName], [AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)]'de kültürel katılımı başlatıyor."
-  
+ 
  include_primary_culture_trigger_desc_global: "Kültürel Katılım İlerliyor"
  include_primary_culture_trigger_false_desc_global: "Artık kültürel katılım sürecinde değiliz."
  include_primary_culture_trigger_desc_first: "[COUNTRY.GetAdjectiveNoFlag], birincil kültürlerini [TARGET_COUNTRY.GetName]'e dahil ediyor."
  include_primary_culture_trigger_false_desc_first: "[COUNTRY.GetAdjectiveNoFlag] artık birincil kültürlerini [TARGET_COUNTRY.GetName] #b 'ye dahil etmiyor#!"
  include_primary_culture_trigger_desc_third: "[COUNTRY.GetName], birincil kültürlerini [AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)]'ye dahil ediyor."
  include_primary_culture_trigger_false_desc_third: "[COUNTRY.GetName] artık birincil kültürlerini [AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)] #b 'e dahil etmiyor.#!"
-  
+ 
  ib_events.05.t: "Birincil Kültür Dahil Etme"
  ib_events.05.d: "Gururlu [ROOT.GetCountry.GetName], [SCOPE.sCountry('culture_include_country').GetName] için kültürel katılımı başarıyla tamamladı. [SCOPE.sCountry('culture_target_country').GetName] artık vatanın kültürünü kucaklayarak sonsuza dek refah içinde yaşayacak."
  ib_events.05.f: ""Selam [ROOT.GetCountry.GetName]!""
  ib_events.05.a: "Tebrikler."
-  
+
  include_primary_culture_weekly_effect: "Overlord'un birincil kültürlerini her hafta %20 ilerleme şansıyla kendi Konularına dahil etmek için çalışır ve başarılı olmak için 8 ilerleme puanı gerekir."
+
+ rule_sis_cultural_religion_actions: "Kültürel ve Dini Uyum" #deepl:3257962580
+ setting_sis_cultural_religion_enabled: "Etkin" #deepl:3001197554
+ setting_sis_cultural_religion_enabled_desc: "Oyuncu [concept_overlord_action] aracılığıyla [concept_state_religion] ve [concept_primary_cultures] adreslerini [Concept('concept_subject', '$concept_subjects$')] değiştirebilir." #deepl:1306075704
+ setting_sis_cultural_religion_disabled: "Engelli" #deepl:1603118088
+ setting_sis_cultural_religion_disabled_desc: "Oyuncu, [concept_overlord_action] aracılığıyla [Concept('concept_subject', '$concept_subjects$')] adresinin [concept_state_religion] ve [concept_primary_cultures] adreslerini değiştiremez." #deepl:2471144945
+
+ notification_MoG_SIS_culture_included_name: "Entegre Edilen Kültürler [SCOPE.sCountry('culture_include_country').GetName]" #deepl:1239178518
+ notification_MoG_SIS_culture_included_desc: "[concept_primary_cultures] adresimizi [SCOPE.sCountry('culture_include_country').GetName] adresine ekledik." #deepl:2103492833
+ notification_MoG_SIS_culture_included_tooltip: "#header $notification_MoG_SIS_culture_included_name$#!\n$notification_MoG_SIS_culture_included_desc$" #deepl:2894990033

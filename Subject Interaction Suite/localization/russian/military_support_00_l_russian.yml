@@ -22,11 +22,11 @@
  military_support_proposal_third_party_declined_desc: "[TARGET_COUNTRY.GetName] отказался принять поддержку территориального расширения с [INITIATOR_COUNTRY.GetName]."
  military_support_action_notification_third_party_break_name: "Поддержка территориального расширения сломана"
  military_support_action_notification_third_party_break_desc: "[INITIATOR_COUNTRY.GetName] прекратили территориальное расширение поддержки с [TARGET_COUNTRY.GetName]."
-  
+
  military_support_effect_desc_global: "Обеспечивает поддержку территориальной экспансии"
  military_support_effect_desc_first: "[COUNTRY.GetAdjectiveNoFlag] устанавливает поддержку территориального расширения с [TARGET_COUNTRY.GetName]"
  military_support_effect_desc_third: "[COUNTRY.GetName] устанавливает поддержку территориального расширения с [AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)]"
-  
+ 
  military_support_trigger_desc_global: "Поддерживает территориальное расширение"
  military_support_trigger_false_desc_global: "Имеет ли #b не#! поддержку территориального расширения?"
  military_support_trigger_desc_first: "[COUNTRY.GetAdjectiveNoFlag] имеет поддержку территориального расширения с [TARGET_COUNTRY.GetName]"

@@ -22,11 +22,11 @@
  military_support_proposal_third_party_declined_desc: "[TARGET_COUNTRY.GetName]は[INITIATOR_COUNTRY.GetName]による領土拡張支援を拒否しました。"
  military_support_action_notification_third_party_break_name: "領土拡大の支援は破綻"
  military_support_action_notification_third_party_break_desc: "[INITIATOR_COUNTRY.GetName] は [TARGET_COUNTRY.GetName] との支援領土拡張を中止しました。"
-  
+
  military_support_effect_desc_global: "領土拡大への支持を確立"
  military_support_effect_desc_first: "[COUNTRY.GetAdjectiveNoFlag]は[TARGET_COUNTRY.GetName]との領土拡大支援を確立する"
  military_support_effect_desc_third: "[COUNTRY.GetName]は[AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)]との領土拡大支援を確立する"
-  
+ 
  military_support_trigger_desc_global: "領土拡大を支持"
  military_support_trigger_false_desc_global: "#b は#! は領土拡大を支持しているか"
  military_support_trigger_desc_first: "[COUNTRY.GetAdjectiveNoFlag]は[TARGET_COUNTRY.GetName]とともに領土拡大を支持している"

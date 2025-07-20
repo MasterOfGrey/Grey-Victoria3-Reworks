@@ -22,11 +22,11 @@
  military_support_proposal_third_party_declined_desc: "[TARGET_COUNTRY.GetName]拒绝了[INITIATOR_COUNTRY.GetName]提供的军援协议。"
  military_support_action_notification_third_party_break_name: "军事援助协议已取消"
  military_support_action_notification_third_party_break_desc: "[INITIATOR_COUNTRY.GetName]已停止对[TARGET_COUNTRY.GetName]提供军援。"
-  
+
  military_support_effect_desc_global: "军事援助生效中"
  military_support_effect_desc_first: "[COUNTRY.GetAdjectiveNoFlag]正在为[TARGET_COUNTRY.GetName]提供军援。"
  military_support_effect_desc_third: "[COUNTRY.GetName]正在为[AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)]提供军援"
-  
+ 
  military_support_trigger_desc_global: "正在提供军事援助"
  military_support_trigger_false_desc_global: "#b 不再#!提供军事援助"
  military_support_trigger_desc_first: "[COUNTRY.GetAdjectiveNoFlag]正在援助[TARGET_COUNTRY.GetName]的扩张行动。"

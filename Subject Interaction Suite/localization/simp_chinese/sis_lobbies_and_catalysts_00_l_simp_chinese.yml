@@ -1,0 +1,8 @@
+﻿l_simp_chinese:
+ appeasement_support_expansion_agreement_formed: "组建$military_support$ [concept_diplomatic_pact]" #deepl:1685444258
+ appeasement_support_expansion_agreement_formed_desc: "组建$military_support$ [concept_diplomatic_pact]" #deepl:842507572
+ appeasement_support_expansion_agreement_broken: "Broke$military_support$ [concept_diplomatic_pact]" #deepl:839355471
+ appeasement_support_expansion_agreement_broken_desc: "打破$military_support$ [concept_diplomatic_pact]" #deepl:2893503874
+
+ appeasement_industry_banned: "工业被禁止" #deepl:1084509673
+ appeasement_industry_banned_desc: "依法取缔重工业" #deepl:4093288237

@@ -9,21 +9,25 @@
  open_border_action_notification_desc: "[INITIATOR_COUNTRY.GetName] otwiera granice naszego kraju."
  open_border_action_notification_break_name: "Zaprzestań otwierania granic do [INITIATOR_COUNTRY.GetName]"
  open_border_action_notification_break_desc: "[INITIATOR_COUNTRY.GetName] zaprzestał prób otwarcia granic naszego kraju."
-  
+ 
  open_border_effect_desc_global: "Zainicjuj otwarte granice"
  open_border_effect_desc_first: "[COUNTRY.GetAdjectiveNoFlag] inicjuje otwarcie granic z [TARGET_COUNTRY.GetName]."
  open_border_effect_desc_third: "[COUNTRY.GetName] inicjuje otwarcie granic za pomocą [AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)]."
-  
+ 
  open_border_trigger_desc_global: "Otwarte granice w toku"
  open_border_trigger_false_desc_global: "Obecnie nie jesteśmy w trakcie otwierania granic."
  open_border_trigger_desc_first: "[COUNTRY.GetAdjectiveNoFlag] ma otwarte granice z [TARGET_COUNTRY.GetName]."
  open_border_trigger_false_desc_first: "[COUNTRY.GetAdjectiveNoFlag] nie ma obecnie otwartych granic z [TARGET_COUNTRY.GetName]."
  open_border_trigger_desc_third: "[COUNTRY.GetName] ma otwarte granice z [AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)]."
  open_border_trigger_false_desc_third: "[COUNTRY.GetName] nie ma obecnie otwartych granic z [AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)]."
-  
+ 
  ib_events.03.t: "Otwarte granice"
  ib_events.03.d: "Dumny naród [ROOT.GetCountry.GetName] pomyślnie otworzył granice z [SCOPE.sCountry('openborders_target_country').GetName]. [SCOPE.sCountry('openborders_target_country').GetName] będzie cieszył się wiecznym dobrobytem dzięki zwiększonej wymianie z ojczyzną."
  ib_events.03.f: ""Niech żyje [ROOT.GetCountry.GetName]!""
  ib_events.03.a: "Dobrze zrobiony."
-  
+
  open_border_weekly_effect: "Pracuje nad otwarciem swoich granic z 20% szansą na postęp co tydzień, przy czym do osiągnięcia sukcesu wymagane jest zdobycie 8 punktów postępu."
+
+ notification_MoG_SIS_border_opened_name: "[SCOPE.sCountry('openborders_target_country').GetName] Granice otwarte" #deepl:2601998025
+ notification_MoG_SIS_border_opened_desc: "[SCOPE.sCountry('openborders_target_country').GetName] przyjęła stronę [SCOPE.sLawType('new_law').GetName]." #deepl:3655565798
+ notification_MoG_SIS_border_opened_tooltip: "#header $notification_MoG_SIS_border_opened_name$#!\n$notification_MoG_SIS_border_opened_desc$" #deepl:1031819825
