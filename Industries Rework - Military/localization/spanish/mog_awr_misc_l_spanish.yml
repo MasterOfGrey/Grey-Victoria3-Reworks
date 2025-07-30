@@ -1,10 +1,13 @@
 ﻿l_spanish:
  # Production methods 
- pmg_automobile_production: "Automóviles"
+ pmg_base_building_automotive_industry: "Automóviles"
  pmg_automotive_shiftwork: "Trabajo por turnos"
+ pmg_automotive_aeroplanes: "Aviones"
+ pmg_automotive_tanks: "Tanques"
   
  pm_gear_transmissions: "Transmisiones de engranajes tempranas"
  pm_pneumatic_tyres: "Neumáticos"
+ pm_automobiles: "Automóviles"
   
  pm_single_shift_days: "Turnos individuales"
  pm_automotive_double_shifts: "Turnos dobles"

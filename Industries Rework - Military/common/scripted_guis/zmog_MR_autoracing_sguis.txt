@@ -25,8 +25,8 @@ mr_autoracing_found_team_button_sgui = {
 			text = MR_AUTORACING_FOUND_TEAM_BUTTON_TRIGGER_TT
 			any_scope_building = {
 				is_building_type = building_automotive_industry
-				OR = {												# has_active_production_method = pm_automobile_production
-					has_active_production_method = pm_automobile_production
+				OR = {		# has_active_production_method = pm_automobile_production
+					has_active_production_method = pm_automobiles
 					has_active_production_method = pm_pneumatic_tyres
 				}
 				level >= 2

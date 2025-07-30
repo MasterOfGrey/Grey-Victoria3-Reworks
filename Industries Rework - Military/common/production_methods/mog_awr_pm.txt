@@ -21,7 +21,7 @@
 	}
 }
 
-pm_automobile_production = {
+pm_automobiles = {
 	texture = "gfx/interface/icons/production_method_icons/automobiles_primary.dds"
 	ai_value = 50000
 	
@@ -84,7 +84,7 @@ pm_automotive_double_shifts = {
 		shift_work
 	}
 	unlocking_production_methods = {
-		pm_automobile_production
+		pm_automobiles
 		pm_pneumatic_tyres
 	}
 	
@@ -145,7 +145,7 @@ pm_automotive_triple_shifts = {
 		conveyors
 	}
 	unlocking_production_methods = {
-		pm_automobile_production
+		pm_automobiles
 		pm_pneumatic_tyres
 	}
 	

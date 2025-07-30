@@ -1,10 +1,13 @@
 ﻿l_simp_chinese:
  # Production methods 
- pmg_automobile_production: "汽车"
+ pmg_base_building_automotive_industry: "汽车"
  pmg_automotive_shiftwork: "轮班工作"
+ pmg_automotive_aeroplanes: "飞机"
+ pmg_automotive_tanks: "坦克"
   
  pm_gear_transmissions: "早期齿轮传动"
  pm_pneumatic_tyres: "充气轮胎"
+ pm_automobiles: "汽车"
   
  pm_single_shift_days: "单班制"
  pm_automotive_double_shifts: "双班制"

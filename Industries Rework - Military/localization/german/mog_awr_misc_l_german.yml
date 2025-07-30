@@ -1,31 +1,34 @@
 ﻿l_german:
  # Production methods 
- pmg_automobile_production: "Automobile"
+ pmg_base_building_automotive_industry: "Automobile"
  pmg_automotive_shiftwork: "Schichtarbeit"
-  
+ pmg_automotive_aeroplanes: "Flugzeuge"
+ pmg_automotive_tanks: "Panzer"
+ 
  pm_gear_transmissions: "Frühe Zahnradgetriebe"
  pm_pneumatic_tyres: "Luftreifen"
-  
+ pm_automobiles: "Automobile"
+ 
  pm_single_shift_days: "Einzelschichten"
  pm_automotive_double_shifts: "Doppelschichten"
  pm_automotive_double_shifts_pneumatic: "Doppelschichten"
  pm_automotive_triple_shifts: "Dreifache Schichten"
  pm_automotive_triple_shifts_pneumatic: "Dreifache Schichten"
-  
+ 
  pm_limited_aeroplanes: "Begrenzte Flugzeugproduktion"
  pm_limited_aeroplanes_double: "Begrenzte Flugzeugproduktion" #NT!
  pm_limited_aeroplanes_triple: "Begrenzte Flugzeugproduktion" #NT!
  pm_extensive_aeroplanes: "Umfangreiche Flugzeugproduktion"
  pm_extensive_aeroplanes_triple: "Umfangreiche Flugzeugproduktion" #NT!
  pm_overtime_aeroplanes: "Überstunden in der Flugzeugproduktion"
-  
+ 
  pm_limited_tanks: "Begrenzte Panzerproduktion"
  pm_limited_tanks_double: "Begrenzte Panzerproduktion" #NT!
  pm_limited_tanks_triple: "Begrenzte Panzerproduktion" #NT!
  pm_extensive_tanks: "Umfangreiche Panzerproduktion"
  pm_extensive_tanks_triple: "Umfangreiche Panzerproduktion" #NT!
  pm_overtime_tanks: "Überstunden in der Panzerproduktion"
-  
+ 
  # Technology 
  pneumatic_tyres: "Luftreifen"
  pneumatic_tyres_desc: "Die Anwendungen von vulkanisiertem Gummi in Kombination mit dem Verbrennungsmotor bergen revolutionäres Potenzial."

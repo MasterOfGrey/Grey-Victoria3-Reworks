@@ -1,10 +1,13 @@
 ﻿l_braz_por:
  # Production methods 
- pmg_automobile_production: "Automóveis"
+ pmg_base_building_automotive_industry: "Automóveis"
  pmg_automotive_shiftwork: "Trabalho por turnos"
+ pmg_automotive_aeroplanes: "Aviões"
+ pmg_automotive_tanks: "Tanques"
   
  pm_gear_transmissions: "Transmissões de engrenagem iniciais"
  pm_pneumatic_tyres: "Pneus Pneumáticos"
+ pm_automobiles: "Automóveis"
   
  pm_single_shift_days: "Turnos Únicos"
  pm_automotive_double_shifts: "Turnos Duplos"

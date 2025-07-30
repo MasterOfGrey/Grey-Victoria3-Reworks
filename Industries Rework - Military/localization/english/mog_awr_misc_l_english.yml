@@ -1,10 +1,13 @@
 ﻿l_english:
 # Production methods
- pmg_automobile_production: "Automobiles"
+ pmg_base_building_automotive_industry: "Automobiles"
  pmg_automotive_shiftwork: "Shift Work"
+ pmg_automotive_aeroplanes: "Aeroplanes"
+ pmg_automotive_tanks: "Tanks"
  
  pm_gear_transmissions: "Early Gear Transmissions"
  pm_pneumatic_tyres: "Pneumatic Tyres"
+ pm_automobiles: "Automobiles"
  
  pm_single_shift_days: "Single Shifts"
  pm_automotive_double_shifts: "Double Shifts"
