@@ -1,12 +1,9 @@
 ﻿l_polish:
  # Production methods 
- pmg_base_building_automotive_industry: "Samochody"
+ pmg_automobile_production: "Samochody"
  pmg_automotive_shiftwork: "Praca zmianowa"
- pmg_automotive_aeroplanes: "Samoloty"
- pmg_automotive_tanks: "Czołgi"
   
  pm_gear_transmissions: "Wczesne skrzynie biegów"
- pm_automobiles: "Samochody"
  pm_pneumatic_tyres: "Opony pneumatyczne"
   
  pm_single_shift_days: "Pojedyncze zmiany"
@@ -15,7 +12,6 @@
  pm_automotive_triple_shifts: "Potrójne zmiany"
  pm_automotive_triple_shifts_pneumatic: "Potrójne zmiany"
   
- pm_no_aeroplanes: "Brak produkcji samolotów"
  pm_limited_aeroplanes: "Ograniczona produkcja samolotów"
  pm_limited_aeroplanes_double: "Ograniczona produkcja samolotów" #NT!
  pm_limited_aeroplanes_triple: "Ograniczona produkcja samolotów" #NT!
@@ -23,7 +19,6 @@
  pm_extensive_aeroplanes_triple: "Szeroka produkcja samolotów" #NT!
  pm_overtime_aeroplanes: "Nadgodziny produkcja samolotów"
   
- pm_no_tanks: "Brak produkcji czołgów"
  pm_limited_tanks: "Ograniczona produkcja czołgów"
  pm_limited_tanks_double: "Ograniczona produkcja czołgów" #NT!
  pm_limited_tanks_triple: "Ograniczona produkcja czołgów" #NT!

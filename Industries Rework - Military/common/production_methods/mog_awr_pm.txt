@@ -21,7 +21,7 @@
 	}
 }
 
-pm_automobiles = {
+pm_automobile_production = {
 	texture = "gfx/interface/icons/production_method_icons/automobiles_primary.dds"
 	ai_value = 50000
 	
@@ -84,7 +84,7 @@ pm_automotive_double_shifts = {
 		shift_work
 	}
 	unlocking_production_methods = {
-		pm_automobiles
+		pm_automobile_production
 		pm_pneumatic_tyres
 	}
 	
@@ -145,7 +145,7 @@ pm_automotive_triple_shifts = {
 		conveyors
 	}
 	unlocking_production_methods = {
-		pm_automobiles
+		pm_automobile_production
 		pm_pneumatic_tyres
 	}
 	
@@ -201,7 +201,7 @@ pm_automotive_triple_shifts_pneumatic = {
 	required_input_goods = electricity
 }
 
-pm_no_aeroplanes = {
+pm_no_aeroplane_production = {
 	texture = "gfx/interface/icons/production_method_icons/no_aeroplanes.dds"
 }
 
@@ -380,7 +380,7 @@ pm_ui_safety_c = {
 	}
 }
 
-pm_no_tanks = {
+pm_no_tank_production = {
 	texture = "gfx/interface/icons/production_method_icons/no_tanks_secondary.dds"
 }
 

@@ -11,7 +11,7 @@ vikelas_automobile_industry_score = {
 		limit = {
 			is_building_type = building_automotive_industry	# building_motor_industry
 			OR = {												# has_active_production_method = pm_automobile_production
-				has_active_production_method = pm_automobiles
+				has_active_production_method = pm_automobile_production
 				has_active_production_method = pm_pneumatic_tyres
 			}
 		}
