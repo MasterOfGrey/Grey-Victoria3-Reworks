@@ -23,7 +23,7 @@ fi
 
 # Check mod description
 if [ -f "$3" ]; then
-  description=$(sed -e ':a;N;$!ba' -e 's/\r//g' -e 's/\\/\\\\/g' -e 's/"/\\"/g' -e 's/\n/\\n/g' "$3")
+  description=$(sed -e ':a;N;$!ba' -e 's/\r//g' -e 's/\n/\\n/g' -e 's/\\/\\\\/g' -e 's/"/\\"/g' "$3")
 # slurp entire file			-e ':a;N;$!ba'
 # remove any stray CR (^M)	-e 's/\r//g'
 # escape backslashes		-e 's/\\/\\\\/g'
