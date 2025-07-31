@@ -24,8 +24,7 @@ fi
 # Check mod description
 if [ -f "$3" ]
 then
-  description="$(cat < "$3")"
-  description=${description//\"/\\\"}
+  description=$(sed 's/"/\\\\\\"/g' "$3")
 fi
 
 # Clean up old file
