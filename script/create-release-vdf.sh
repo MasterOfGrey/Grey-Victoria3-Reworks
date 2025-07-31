@@ -7,7 +7,7 @@ then
 else
   printf 'Missing Mod Directory'
   printf '\n'
-  printf 'Usage: ./create-release-vdf.sh MOD_DIR DESC_FILE [MOD_ID]'
+  printf 'Usage: ./create-release-vdf.sh MOD_DIR [MOD_ID] DESC_FILE'
   exit 1
 fi
 
@@ -24,12 +24,14 @@ fi
 # Check mod description
 if [ -f "$3" ]; then
   description=$(sed \
-    -e ':a;N;$!ba' \                # slurp entire file
-    -e 's/\\/\\\\/g' \             # escape backslashes
-    -e 's/"/\\"/g' \               # escape double-quotes
-    -e 's/\n/\\n/g' \              # turn real newlines into \n
+    -e ':a;N;$!ba' \     # slurp entire file
+    -e 's/\\/\\\\/g' \   # escape backslashes
+    -e 's/"/\\"/g' \     # escape double-quotes
+    -e 's/\n/\\n/g' \    # escape newlines
     "$3")
-  printf '\t"description" "%s"\n' "$description" >> workshop.vdf
+else
+  printf 'Missing Steam description'
+  printf '\n'
 fi
 
 # Clean up old file
