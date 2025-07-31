@@ -41,7 +41,8 @@ fi
 # Check mod description
 if [ -f "$desc_file" ]; then
 # I am suspicious
-  description=$(sed -e ':a;N;$!ba' -e 's/]"/] "/g' "$desc_file")
+#  description=$(sed -e ':a;N;$!ba' -e 's/]"/] "/g' "$desc_file")
+  description=$(sed -e ':a;N;$!ba' -e 's/"/'/g' "$desc_file")
 #  description=$(sed -e ':a;N;$!ba' -e 's/\r//g' -e 's/\n/\\n/g' -e 's/\\/\\\\/g' -e 's/"/\\"/g' "$desc_file")
 # slurp entire file			-e ':a;N;$!ba'
 # remove any stray CR (^M)	-e 's/\r//g'
