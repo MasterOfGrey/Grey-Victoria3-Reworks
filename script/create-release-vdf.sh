@@ -14,6 +14,9 @@ fi
 if [ -f "$2" ]
 then
   description="$(cat < "$2")"
+  description=${description//$'\n'/\\n}
+  description=${description//$'\t'/\\t}
+  description=${description//\"/\\\"}
 else
   printf 'Missing Steam description'
   printf '\n'
