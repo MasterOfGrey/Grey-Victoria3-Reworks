@@ -90,4 +90,18 @@ jobs:
           rm -rf "$STEAM_CMD"
           rm -rf "$STEAM_DIR"
           rm -rf "$STEAM_TEMP"
-
+          
+      - name: Publish description via Steam Web API
+        if: ${{ inputs.update-description == 'true' }}
+        env:
+          STEAM_WEB_API_KEY: ${{ secrets.STEAM_WEB_API_KEY }}
+          APPID: "529340"
+          MOD_ID: ${{ steps.metadata.outputs.mod-id }}
+        run: |
+          desc="$(< ../steam-release/STEAM_PAGE.bbcode)"
+          curl -X POST "https://api.steampowered.com/ISteamRemoteStorage/SetPublishedFileDetails/v1/" \
+               -d "key=${STEAM_WEB_API_KEY}" \
+               -d "appid=${APPID}" \
+               -d "publishedfileid=${MOD_ID}" \
+               --data-urlencode "description=${desc}" \
+            || exit 1
