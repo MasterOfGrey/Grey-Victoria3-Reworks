@@ -22,9 +22,14 @@ else
 fi
 
 # Check mod description
-if [ -f "$3" ]
-then
-  description=$(<"$3" sed -e 's/\\/\\\\/g' -e 's/"/\\"/g')
+if [ -f "$3" ]; then
+  description=$(sed \
+    -e ':a;N;$!ba' \                # slurp entire file
+    -e 's/\\/\\\\/g' \             # escape backslashes
+    -e 's/"/\\"/g' \               # escape double-quotes
+    -e 's/\n/\\n/g' \              # turn real newlines into \n
+    "$3")
+  printf '\t"description" "%s"\n' "$description" >> workshop.vdf
 fi
 
 # Clean up old file
@@ -49,6 +54,6 @@ then
 	printf '\t"description" "%s"' "$description" >> workshop.vdf
 	printf '\n' >> workshop.vdf
 fi
-printf '}' >> workshop.vdf
+printf '}\n' >> workshop.vdf
 
 cat workshop.vdf
