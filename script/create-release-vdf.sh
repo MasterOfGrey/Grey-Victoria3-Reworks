@@ -21,9 +21,26 @@ else
   mod_id='0'
 fi
 
+# Convert any ANSI/Windows-1252 or ISO-8859-1 to UTF-8, strip BOM if present:
+# 1) Prepare a UTF-8 version
+desc_file=$(mktemp)
+enc=$(file --mime-encoding "$3" | cut -d: -f2 | tr -d ' ')
+if [[ $enc == utf-8 || $enc == us-ascii ]]; then
+  cp "$3" "$desc_file"
+else
+  iconv -f WINDOWS-1252 -t UTF-8 "$3" >"$desc_file" \
+    || { echo "? iconv failed" >&2; exit 1; }
+fi
+# 2) Strip BOM if present (byte-wise)
+head_bytes=$(head -c3 "$desc_file" | od -An -tx1 | tr -d ' \n')
+if [[ $head_bytes == "efbbbf" ]]; then
+  tail --bytes=+4 "$desc_file" >"${desc_file}.nobom"
+  mv "${desc_file}.nobom" "$desc_file"
+fi
+
 # Check mod description
-if [ -f "$3" ]; then
-  description=$(sed -e ':a;N;$!ba' -e 's/\r//g' -e 's/\n/\\n/g' -e 's/\\/\\\\/g' -e 's/"/\\"/g' "$3")
+if [ -f "$desc_file" ]; then
+  description=$(sed -e ':a;N;$!ba' -e 's/\r//g' -e 's/\n/\\n/g' -e 's/\\/\\\\/g' -e 's/"/\\"/g' "$desc_file")
 # slurp entire file			-e ':a;N;$!ba'
 # remove any stray CR (^M)	-e 's/\r//g'
 # escape backslashes		-e 's/\\/\\\\/g'
@@ -74,11 +91,13 @@ printf '\t"previewfile" "%s/thumbnail.png"' "$mod_path" >> workshop.vdf
 printf '\n' >> workshop.vdf
 printf '\t"title" "%s"' "$title" >> workshop.vdf
 printf '\n' >> workshop.vdf
-if [ -f "$3" ]
+if [ -f "$desc_file" ]
 then
 	printf '\t"description" "%s"' "$description" >> workshop.vdf
 	printf '\n' >> workshop.vdf
 fi
 printf '}\n' >> workshop.vdf
+
+rm -f "$desc_file"
 
 cat workshop.vdf
