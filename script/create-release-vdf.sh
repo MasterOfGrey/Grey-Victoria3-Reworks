@@ -23,11 +23,12 @@ fi
 
 # Check mod description
 if [ -f "$3" ]; then
-  description=$(sed -e ':a;N;$!ba' -e 's/\\/\\\\/g' -e 's/"/\\"/g' -e 's/\n/\\n/g' "$3")
-# slurp entire file		-e ':a;N;$!ba'
-# escape backslashes	-e 's/\\/\\\\/g'
-# escape double-quotes	-e 's/"/\\"/g'
-# escape newlines		-e 's/\n/\\n/g'
+  description=$(sed -e ':a;N;$!ba' -e 's/\r//g' -e 's/\\/\\\\/g' -e 's/"/\\"/g' -e 's/\n/\\n/g' "$3")
+# slurp entire file			-e ':a;N;$!ba'
+# remove any stray CR (^M)	-e 's/\r//g'
+# escape backslashes		-e 's/\\/\\\\/g'
+# escape double-quotes		-e 's/"/\\"/g'
+# escape newlines			-e 's/\n/\\n/g'
 else
   printf 'Missing Steam description'
   printf '\n'
