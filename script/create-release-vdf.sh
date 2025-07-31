@@ -29,6 +29,8 @@ if [ -f "$3" ]; then
 # escape backslashes		-e 's/\\/\\\\/g'
 # escape double-quotes		-e 's/"/\\"/g'
 # escape newlines			-e 's/\n/\\n/g'
+  echo ">>> DEBUG: first 200 chars of desc:" >&2
+  printf '%s' "$description" | cut -c1-200 >&2
 else
   printf 'Missing Steam description'
   printf '\n'
