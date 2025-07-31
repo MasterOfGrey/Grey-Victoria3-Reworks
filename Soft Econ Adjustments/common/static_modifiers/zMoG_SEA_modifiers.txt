@@ -1,4 +1,7 @@
-﻿government_owned_debt = {
+﻿## Vanilla Static Replacements ##
+#################################
+
+government_owned_debt = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_coins_negative.dds
 	country_government_dividends_waste_add = -1
 }
@@ -11,6 +14,20 @@ administrative_overburden = {
 	state_tariff_export_add = -0.5 # This hits mercantilism a bit harder, but they're mercantile. Why are they tariffing exports in the first place?
 	state_tariff_import_add = -0.5
 }
+
+# Scales with devastation level
+state_region_devastation = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_gear_negative.dds
+	state_infrastructure_mult = -0.9	# -1.0	# I get what they were going for, but foreign aid can be carried in on donkeys if necessary, where there are people there are options.
+	state_mortality_mult = 2.0
+	state_migration_pull_mult = -2.0
+	state_construction_mult = -0.3		# -1.0	# This is hilariously overtuned, high devastation doesn't prevent external construction resources being brought in.
+	building_throughput_add = -0.5
+	building_construction_sector_throughput_add = -0.5 # Stacks with general building throughput penalty. Result is max devastation = no local construction can be *produced*
+}
+
+## NEW MODIFIERS ##
+###################
 
 mog_market_access_from_literacy = {
 	icon = "gfx/interface/icons/timed_modifier_icons/modifier_lightbulb_positive.dds"
