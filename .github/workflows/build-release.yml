@@ -91,7 +91,7 @@ jobs:
           rm -rf "$STEAM_DIR"
           rm -rf "$STEAM_TEMP"
 
-#This method does not exist... T_T
+#This method does not exist... T_T <- But I'm keeping this here because this approach would be superior if it ever gets supported, and I want it for reference if that happens one day.
 #      - name: Publish description via Steam Web API
 #        if: ${{ inputs.update-description == 'true' }}
 #        env:

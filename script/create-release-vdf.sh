@@ -40,17 +40,8 @@ fi
 
 # Check mod description
 if [ -f "$desc_file" ]; then
-# I am suspicious
-#  description=$(sed -e ':a;N;$!ba' -e 's/]"/] "/g' "$desc_file")
+# Escaping double quotes just does not work, despite the documentation. So we just change them to single quotes without exception.
   description=$(sed -e ':a;N;$!ba' -e 's/"/'\''/g' "$desc_file")
-#  description=$(sed -e ':a;N;$!ba' -e 's/\r//g' -e 's/\n/\\n/g' -e 's/\\/\\\\/g' -e 's/"/\\"/g' "$desc_file")
-# slurp entire file			-e ':a;N;$!ba'
-# remove any stray CR (^M)	-e 's/\r//g'
-# escape backslashes		-e 's/\\/\\\\/g'
-# escape double-quotes		-e 's/"/\\"/g'
-# escape newlines			-e 's/\n/\\n/g'
-#  echo ">>> DEBUG: first 200 chars of desc:" >&2
-#  printf '%s' "$description" | cut -c1-200 >&2
 else
   printf 'Missing Steam description'
   printf '\n'
@@ -58,7 +49,7 @@ fi
 # If you need to test with a blank description:
 #description=""
 
-# After building $description (with all backslashes, quotes and newlines escaped):
+# After building $description:
 # 1) Measure its length in characters
 char_len=$(printf '%s' "$description" | wc -m)
 echo ">>> DEBUG: escaped description length = $char_len characters" >&2
@@ -66,7 +57,7 @@ echo ">>> DEBUG: escaped description length = $char_len characters" >&2
 # 2) Define your max in characters (e.g. 8000)
 MAX_CHARS=8000
 
-# 3) If it’s too long, truncate to the first $MAX_CHARS characters
+# 3) If it's too long, truncate to the first $MAX_CHARS characters (otherwise it fails)
 if [ "$char_len" -gt "$MAX_CHARS" ]; then
   echo ">>> WARNING: description too long (${char_len} > ${MAX_CHARS}), truncating" >&2
   # cut -c works on characters
@@ -74,8 +65,6 @@ if [ "$char_len" -gt "$MAX_CHARS" ]; then
   # (optionally append an ellipsis)
   # description="${description}…"
 fi
-
-
 
 # Clean up old file
 printf '' > workshop.vdf
