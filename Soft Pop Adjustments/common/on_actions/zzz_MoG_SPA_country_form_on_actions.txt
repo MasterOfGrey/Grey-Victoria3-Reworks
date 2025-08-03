@@ -22,3 +22,117 @@ clear_colonial_company_migration_penalty_on_actions = {
 		}
 	}
 }
+
+# Backup because apparently some things aren't working.
+
+on_monthly_pulse_country = {
+	on_actions = {
+		MoG_SPA_colonial_company_migration_penalty_check
+	}
+}
+
+MoG_SPA_colonial_company_migration_penalty_check = {
+	effect = {
+		if = {				# If extraction economy or chartered company - action based on subject status
+			limit = {
+				OR = {
+					has_law_or_variant = law_type:law_extraction_economy
+					has_government_type = gov_chartered_company
+				}
+			}
+			if = {			# If subject with extraction economy. Add extraction econ modifier.
+				limit = {
+					NOT = { has_modifier = mog_company_migration_penalty }
+					is_subject = yes
+				}
+				add_modifier = mog_company_migration_penalty
+				if = { 
+					limit = { has_modifier = mog_legacy_migration_penalty }	# Countries can go backwards.
+					remove_modifier = mog_legacy_migration_penalty
+				}
+			}
+			else_if = {		# If no longer subject with extraction economy. Add legacy modifier.
+				limit = {
+					has_modifier = mog_company_migration_penalty
+					is_subject = no
+					has_law_or_variant = law_type:law_extraction_economy
+				}
+				remove_modifier = mog_company_migration_penalty
+				add_modifier = mog_legacy_migration_penalty
+			}
+		}
+		else_if = {			# If have bad modifier - action based on law status
+			limit = {
+				has_modifier = mog_company_migration_penalty
+			}
+			if = {			# If subject that escaped extraction economy. Add legacy modifier.
+				limit = {
+					NOT = { has_modifier = mog_legacy_migration_penalty }
+					NOT = { has_law_or_variant = law_type:law_extraction_economy } 
+					is_subject = yes
+				}
+				remove_modifier = mog_company_migration_penalty
+				add_modifier = mog_legacy_migration_penalty
+			}
+		}
+		else_if = {			# If have legacy modifier - action based on law status
+			limit = {
+				has_modifier = mog_legacy_migration_penalty
+			}
+			if = {			# If independent with legacy. Add extraction econ modifier.
+				limit = {
+					NOR = {
+						has_law_or_variant = law_type:law_extraction_economy
+						has_law_or_variant = law_type:law_traditionalism
+						has_law_or_variant = law_type:law_agrarianism
+						has_law_or_variant = law_type:law_industry_banned
+					}
+					has_law_or_variant = law_type:law_slavery_banned
+					is_subject = no
+				}
+				remove_modifier = mog_company_migration_penalty
+				add_modifier = mog_legacy_migration_penalty
+			}
+		}
+		else_if = {			# If special country check - final cleanup check
+			limit = {
+				OR = {
+					c:BIC ?= this
+					c:DEI ?= this
+					c:ALK ?= this
+					c:HBC ?= this
+					c:CAN ?= this
+					c:JAV ?= this
+					c:IDN ?= this
+					c:BHT ?= this
+					is_country_type = company
+				}
+				NOR = {
+					has_law_or_variant = law_type:law_extraction_economy
+					has_law_or_variant = law_type:law_traditionalism
+					has_law_or_variant = law_type:law_agrarianism
+					has_law_or_variant = law_type:law_industry_banned
+					has_law_or_variant = law_type:law_isolationism
+					has_law_or_variant = law_type:law_colonial_exploitation
+					has_law_or_variant = law_type:law_serfdom
+					has_law_or_variant = law_type:law_tenant_farmers
+					has_law_or_variant = law_type:law_hindu_caste_enforced
+					has_law_or_variant = law_type:law_hindu_caste_codified
+				}
+				has_law_or_variant = law_type:law_slavery_banned
+			}
+			if = {			# If still have legacy modifier, remove.
+				limit = {
+					has_modifier = mog_legacy_migration_penalty
+				}
+				remove_modifier = mog_legacy_migration_penalty
+			}
+			if = {			# If still have bad modifier, remove.
+				limit = {
+					has_modifier = mog_company_migration_penalty
+				}
+				remove_modifier = mog_company_migration_penalty
+			}
+		}
+	}
+}

@@ -1,6 +1,7 @@
 ﻿l_english:
  # Modifiers
  mog_company_migration_penalty: "Extractive Colonial Administration"
+ mog_legacy_migration_penalty: "Legacy of Extractive Administration"
  mog_education_access_from_urbanization: "Education access from [concept_urbanization]"
  state_slaves_education_access_add: "Education Access for [GetPopType('slaves').GetName]"
  state_slaves_education_access_add_desc: "A bonus or penalty to education access for [GetPopType('slaves').GetName]"

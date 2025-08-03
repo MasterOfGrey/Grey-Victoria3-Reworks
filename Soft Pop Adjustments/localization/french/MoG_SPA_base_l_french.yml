@@ -1,6 +1,7 @@
 ﻿l_french:
  # Modifiers
  mog_company_migration_penalty: "Administration des colonies d'extraction" #deepl:2992389861
+ mog_legacy_migration_penalty: "L'héritage de l'administration extractive" #deepl:262004478
  mog_education_access_from_urbanization: "Accès à l'éducation à partir de [concept_urbanization]" #deepl:3673977485
  state_slaves_education_access_add: "Accès à l'éducation pour les [GetPopType('slaves').GetName]" #deepl:637100415
  state_slaves_education_access_add_desc: "Une prime ou une pénalité à l'accès à l'éducation pour [GetPopType('slaves').GetName]" #deepl:3338121199

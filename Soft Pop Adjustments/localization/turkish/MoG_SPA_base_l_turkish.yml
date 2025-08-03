@@ -1,6 +1,7 @@
 ﻿l_turkish:
  # Modifiers
  mog_company_migration_penalty: "Ekstraktif Sömürge İdaresi" #deepl:2992389861
+ mog_legacy_migration_penalty: "Maden Çıkarma İdaresinin Mirası" #deepl:262004478
  mog_education_access_from_urbanization: "Eğitim erişimi [concept_urbanization]" #deepl:3673977485
  state_slaves_education_access_add: "için Eğitim Erişimi [GetPopType('slaves').GetName]" #deepl:637100415
  state_slaves_education_access_add_desc: "Aşağıdakiler için eğitime erişimde bir bonus veya ceza [GetPopType('slaves').GetName]" #deepl:3338121199

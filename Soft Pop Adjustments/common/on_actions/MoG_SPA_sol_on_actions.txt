@@ -15,7 +15,7 @@ MoG_SPA_sol_setup_action = {
 	}
 }
 
-on_monthly_pulse_state = {
+on_monthly_pulse_country = {		# on_monthly_pulse_state = {
 	on_actions = {
 		MoG_SPA_sol_monthly_pulse_state
 	}
@@ -23,7 +23,9 @@ on_monthly_pulse_state = {
 
 MoG_SPA_sol_monthly_pulse_state = {
 	effect = {
-		refresh_expected_sol_modifier = yes
+		every_scope_state = {
+			refresh_expected_sol_modifier = yes
+		}
 	}
 }
 

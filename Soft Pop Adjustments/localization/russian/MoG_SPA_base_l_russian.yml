@@ -1,6 +1,7 @@
 ﻿l_russian:
  # Modifiers
  mog_company_migration_penalty: "Добывающая колониальная администрация" #deepl:2992389861
+ mog_legacy_migration_penalty: "Наследие управления добычей полезных ископаемых" #deepl:262004478
  mog_education_access_from_urbanization: "Доступ к образованию от [concept_urbanization]" #deepl:3673977485
  state_slaves_education_access_add: "Доступ к образованию для [GetPopType('slaves').GetName]" #deepl:637100415
  state_slaves_education_access_add_desc: "Бонус или штраф к доступу к образованию для [GetPopType('slaves').GetName]" #deepl:3338121199

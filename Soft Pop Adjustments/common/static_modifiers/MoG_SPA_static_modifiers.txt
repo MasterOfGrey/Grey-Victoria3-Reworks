@@ -5,6 +5,12 @@ mog_company_migration_penalty = {
 	state_assimilation_mult = -0.7
 }
 
+mog_legacy_migration_penalty = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds"
+	state_migration_pull_mult = -0.3
+	state_assimilation_mult = -0.3
+}
+
 mog_education_access_from_urbanization = {
 	icon = "gfx/interface/icons/generic_icons/literacy.dds"
 	state_education_access_add = 0.2

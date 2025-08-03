@@ -1,6 +1,7 @@
 ﻿l_german:
  # Modifiers
  mog_company_migration_penalty: "Koloniale Verwaltung des Bergbaus" #deepl:2992389861
+ mog_legacy_migration_penalty: "Erbe der Rohstoffverwaltung" #deepl:262004478
  mog_education_access_from_urbanization: "Bildungszugang von [concept_urbanization]" #deepl:3673977485
  state_slaves_education_access_add: "Bildungszugang für [GetPopType('slaves').GetName]" #deepl:637100415
  state_slaves_education_access_add_desc: "Ein Bonus oder eine Strafe für den Bildungszugang für [GetPopType('slaves').GetName]" #deepl:3338121199

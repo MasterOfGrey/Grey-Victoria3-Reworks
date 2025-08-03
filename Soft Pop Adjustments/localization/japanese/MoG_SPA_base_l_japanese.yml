@@ -1,6 +1,7 @@
 ﻿l_japanese:
  # Modifiers
  mog_company_migration_penalty: "採掘植民地行政" #deepl:2992389861
+ mog_legacy_migration_penalty: "採掘行政の遺産" #deepl:262004478
  mog_education_access_from_urbanization: "教育へのアクセス[concept_urbanization]" #deepl:3673977485
  state_slaves_education_access_add: "教育へのアクセス[GetPopType('slaves').GetName]" #deepl:637100415
  state_slaves_education_access_add_desc: "教育へのアクセスに対するボーナスまたはペナルティ[GetPopType('slaves').GetName]" #deepl:3338121199

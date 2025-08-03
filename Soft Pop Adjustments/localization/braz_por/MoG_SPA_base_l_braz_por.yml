@@ -1,6 +1,7 @@
 ﻿l_braz_por:
  # Modifiers
  mog_company_migration_penalty: "Administração Colonial Extrativista" #deepl:2992389861
+ mog_legacy_migration_penalty: "Legado da administração extrativista" #deepl:262004478
  mog_education_access_from_urbanization: "Acesso à educação a partir de [concept_urbanization]" #deepl:3673977485
  state_slaves_education_access_add: "Acesso à educação para [GetPopType('slaves').GetName]" #deepl:637100415
  state_slaves_education_access_add_desc: "Um bônus ou penalidade para o acesso à educação para [GetPopType('slaves').GetName]" #deepl:3338121199

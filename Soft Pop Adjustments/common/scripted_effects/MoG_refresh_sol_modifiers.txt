@@ -1,10 +1,10 @@
 ﻿# Expects state scope
 refresh_expected_sol_modifier = {
-	if = {
-		limit = { this = this.owner }	# This is only needed because apparently on_monthly_pulse_state is bugged and can report a country scope.
+	#if = {
+	#	limit = { this = this.owner }	# This is only needed because apparently on_monthly_pulse_state is bugged and can report a country scope.
 		# I'm in country scope
-	}
-	else = {
+	#}
+	#else = {
 		save_temporary_scope_as = sol_calc_target_state
 		
 		# any_scope_state = THIS
@@ -55,7 +55,7 @@ refresh_expected_sol_modifier = {
 			refresh_strata_expected_sol_modifier = { strata = middle scale = 1   literacy_factor = 0.4 }
 			refresh_strata_expected_sol_modifier = { strata = upper  scale = 2   literacy_factor = 0   }
 		}
-	}
+	#}
 }
 
 refresh_strata_expected_sol_modifier = {
