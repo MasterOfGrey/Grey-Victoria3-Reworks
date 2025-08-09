@@ -1,3 +1,6 @@
 ﻿l_spanish:
+ # Modifier Types
  building_group_bg_trade_allowed_collectivization_add: "Niveles mínimos de $concept_building$ de $bg_trade$ propiedad de trabajadores"
  building_group_bg_trade_allowed_collectivization_add_desc: "La cantidad mínima de [Concept('concept_building','$concept_buildings$')|l] de $bg_trade$ que será propiedad de trabajadores."
+ # Modifiers
+ mog_spa_migration_restrictiveness_add: "SPA: Ajuste de los controles de migración" #deepl:1726668639

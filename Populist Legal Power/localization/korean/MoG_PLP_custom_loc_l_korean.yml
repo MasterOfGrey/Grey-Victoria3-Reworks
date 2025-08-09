@@ -1,0 +1,2 @@
+﻿l_korean:
+ CULTURE_ENSLAVED_PERCENT: "이 [concept_culture] 의 총 비율은 [Concept('concept_slavery', '$concept_enslaved$')] 입니다." #deepl:3203141928

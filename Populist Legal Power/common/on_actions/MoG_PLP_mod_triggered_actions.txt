@@ -1,0 +1,41 @@
+﻿on_game_started = {
+	on_actions = {
+		MoG_global_PLP_SPA_migration_restrictivness_tweak
+	}
+}
+
+MoG_global_PLP_SPA_migration_restrictivness_tweak = {
+	effect = {
+		every_country = {
+			add_plp_spa_border_control_tweak = yes
+		}
+	}
+}
+
+
+#############################################################
+#for activating modifiers on countries not existing on start
+
+# scope:target = Uprising country
+on_revolution_start = { on_actions = { MoG_PLP_SPA_migration_restrictivness_tweak  } }
+on_secession_start = { on_actions = { MoG_PLP_SPA_migration_restrictivness_tweak  } }
+
+# Root = Releasing Country
+# scope:target = Released Country
+on_country_released_as_own_subject = { on_actions = { MoG_PLP_SPA_migration_restrictivness_tweak  } }
+on_country_released_as_overlord_subject = { on_actions = { MoG_PLP_SPA_migration_restrictivness_tweak  } }
+on_country_released_as_independent = { on_actions = { MoG_PLP_SPA_migration_restrictivness_tweak  } }
+
+#safety check back-up
+on_yearly_pulse_country = {
+	on_actions = {
+		MoG_PLP_SPA_migration_restrictivness_tweak 
+	}
+}
+
+
+MoG_PLP_SPA_migration_restrictivness_tweak = {
+	effect = {
+		add_plp_spa_border_control_tweak = yes
+	}
+}

@@ -1,3 +1,6 @@
 ﻿l_braz_por:
+ # Modifier Types
  building_group_bg_trade_allowed_collectivization_add: "Níveis Mínimos da $concept_building$ $bg_trade$ dos Trabalhadores"
  building_group_bg_trade_allowed_collectivization_add_desc: "A quantidade mínima de [Concept('concept_building', '$concept_buildings$')] de $bg_trade$ que serão dos trabalhadores."
+ # Modifiers
+ mog_spa_migration_restrictiveness_add: "SPA: Ajuste dos controles de migração" #deepl:1726668639

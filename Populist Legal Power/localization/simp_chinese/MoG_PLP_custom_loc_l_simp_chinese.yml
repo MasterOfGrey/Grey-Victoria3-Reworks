@@ -1,0 +1,2 @@
+﻿l_simp_chinese:
+ CULTURE_ENSLAVED_PERCENT: "[concept_culture] 中[Concept('concept_slavery', '$concept_enslaved$')] 的总百分比。" #deepl:3203141928

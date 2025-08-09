@@ -1,3 +1,6 @@
 ﻿l_english:
+ # Modifier Types
  building_group_bg_trade_allowed_collectivization_add: "Minimum Worker-Owned $bg_trade$ $concept_building$ Levels"
  building_group_bg_trade_allowed_collectivization_add_desc: "The minimum amount of $bg_trade$ [Concept('concept_building','$concept_buildings$')] that will be worker-owned."
+ # Modifiers
+ mog_spa_migration_restrictiveness_add: "SPA: Migration Controls Adjustment"

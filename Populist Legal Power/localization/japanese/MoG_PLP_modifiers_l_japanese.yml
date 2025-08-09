@@ -1,3 +1,6 @@
 ﻿l_japanese:
+ # Modifier Types
  building_group_bg_trade_allowed_collectivization_add: "労働者所有の$bg_trade$ $concept_building$レベルの最小数"
  building_group_bg_trade_allowed_collectivization_add_desc: "労働者が所有する$bg_trade$ [Concept('concept_building','$concept_buildings$')]の最小数。"
+ # Modifiers
+ mog_spa_migration_restrictiveness_add: "SPA：マイグレーション・コントロールの調整" #deepl:1726668639

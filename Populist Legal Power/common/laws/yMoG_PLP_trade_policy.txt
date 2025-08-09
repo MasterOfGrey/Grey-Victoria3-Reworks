@@ -19,13 +19,14 @@ law_mercantilism = {
 		state_subvention_export_add = 0.50
 		state_subvention_import_add = 0.20
 		state_import_advantage_mult = -0.25
-		state_export_advantage_mult = 0.25
+		state_export_advantage_mult = 0.125 # 0.25
 		
 		country_authority_mult = 0.1
 		building_goods_input_mult = -0.05
 		building_unincorporated_throughput_add = 0.05
 		building_group_bg_manufacturing_throughput_add = 0.05
 		building_group_bg_trade_allowed_collectivization_add = 0.5
+		state_trade_capacity_mult = -0.2
 	}
 	
 	# Don't change back to mercantilism once we have protectionism or free trade
@@ -81,8 +82,12 @@ law_protectionism = {
 		# country_trade_route_quantity_mult = -0.25
 		# country_trade_route_cost_mult = 0.25
 		
-		state_trade_advantage_mult = -0.125
-		state_trade_capacity_mult = -0.25
+		# state_trade_advantage_mult = -0.125
+		state_import_advantage_mult = -0.125
+		state_export_advantage_mult = 0.25
+		state_trade_capacity_mult = -0.1 # -0.25
+		state_trade_advantage_from_capacity_add = 0.0002	# On top of base_values = 0.0005
+		state_max_trade_advantage_from_capacity_add = 0.1	# On top of base_values = 0.2 - only one state, high adv cap if big
 	}
 	
 	ai_enact_weight_modifier = { #Petitions
@@ -119,6 +124,9 @@ law_free_trade = {
 		state_subvention_import_add = 0.50
 		state_trade_advantage_mult = 0.25
 		country_leverage_resistance_mult = -0.25
+		
+		state_trade_advantage_from_capacity_add = 0.0001	# On top of base_values = 0.0005
+		state_max_trade_advantage_from_capacity_add = 0.2	# On top of base_values = 0.2
 	}
 	
 	unlocking_technologies = {
@@ -267,7 +275,7 @@ law_canton_system = {
 		country_authority_mult = 0.25
 		state_tax_capacity_mult = 0.15
 		country_tech_spread_mult = -0.075 # -0.10
-		state_trade_capacity_mult = -0.25
+		state_trade_capacity_mult = -0.2
 		state_tariff_import_add = 0.50
 		state_tariff_export_add = 0.50
 		state_subvention_export_add = 0.20
@@ -281,6 +289,7 @@ law_canton_system = {
 
 		building_goods_input_mult = -0.1
 		building_throughput_add = 0.05
+		state_max_trade_advantage_from_capacity_add = 0.3	# On top of base_values = 0.2 - only one state, high adv cap if big
 		
 		building_group_bg_trade_allowed_collectivization_add = 1		
 	}

@@ -1,0 +1,3 @@
+﻿# Called from country scope.
+
+spa_mig_control_target_threshold = 70	# Not used atm

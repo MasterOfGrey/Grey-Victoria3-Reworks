@@ -1,6 +1,6 @@
 ﻿l_korean:
- state_political_strength_from_literacy_mult:0 "[concept_political_strength] from [concept_literacy]"
- state_political_strength_from_literacy_mult_desc:0 "An increase or decrease to the amount of [concept_political_strength] of [Concept('concept_pop','$concept_pops$')] from [concept_literacy]"
+ state_political_strength_from_literacy_mult: "[concept_political_strength] from [concept_literacy]"
+ state_political_strength_from_literacy_mult_desc: "An increase or decrease to the amount of [concept_political_strength] of [Concept('concept_pop','$concept_pops$')] from [concept_literacy]"
  
- POL_STR_FROM_LITERACY:0 "From [concept_literacy]: #variable $VAL|+=D$#!\n$TAB$Literacy #tooltippable #tooltip:[POP.GetTooltipTag],LITERACY_TOOLTIP #v $LITERACY|0$#!#!#!: #bold $VALPERPOP|+=$#! per Politically Active Pop"
- POL_STR_FROM_LITERACY_AVERAGE:0 "From [concept_literacy]: #variable $VAL|+=K$#!\n$TAB$Average Literacy #variable $LITERACY|1$#!: #bold $VALPERPOP|+=2$#! per Politically Active Pop"
+ POL_STR_FROM_LITERACY: "From [concept_literacy]: #variable $VAL|+=D$#!\n$TAB$Literacy #tooltippable #tooltip:[POP.GetTooltipTag],LITERACY_TOOLTIP #v $LITERACY|0$#!#!#!: #bold $VALPERPOP|+=$#! per Politically Active Pop"
+ POL_STR_FROM_LITERACY_AVERAGE: "From [concept_literacy]: #variable $VAL|+=K$#!\n$TAB$Average Literacy #variable $LITERACY|1$#!: #bold $VALPERPOP|+=2$#! per Politically Active Pop"

@@ -1,0 +1,6 @@
+﻿l_russian:
+ # Modifier Types
+ building_group_bg_trade_allowed_collectivization_add: "Минимальный уровень владения рабочими $bg_trade$ $concept_building$ " #deepl:252255887
+ building_group_bg_trade_allowed_collectivization_add_desc: "Минимальное количество $bg_trade$ [Concept('concept_building','$concept_buildings$')] , которое будет принадлежать работникам." #deepl:163714369
+ # Modifiers
+ mog_spa_migration_restrictiveness_add: "SPA: Регулировка миграционного контроля" #deepl:1726668639

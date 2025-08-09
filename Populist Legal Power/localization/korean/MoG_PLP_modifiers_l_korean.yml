@@ -1,3 +1,6 @@
 ﻿l_korean:
+ # Modifier Types
  building_group_bg_trade_allowed_collectivization_add: "노동자 소유 $bg_trade$ $concept_building$의 최소 단계"
  building_group_bg_trade_allowed_collectivization_add_desc: "노동자 소유가 될 $bg_trade$ [Concept('concept_building','$concept_buildings$')]의 최소치입니다."
+ # Modifiers
+ mog_spa_migration_restrictiveness_add: "SPA: 마이그레이션 제어 조정" #deepl:1726668639

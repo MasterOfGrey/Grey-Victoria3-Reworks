@@ -1,0 +1,2 @@
+﻿l_japanese:
+ CULTURE_ENSLAVED_PERCENT: "この[concept_culture] のうち、[Concept('concept_slavery', '$concept_enslaved$')] が占める割合の合計。" #deepl:3203141928

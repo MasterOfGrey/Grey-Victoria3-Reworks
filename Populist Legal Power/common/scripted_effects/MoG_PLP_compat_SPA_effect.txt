@@ -1,0 +1,20 @@
+﻿add_plp_spa_border_control_tweak = {
+	if = {
+		limit = {
+			Grey_SPA_is_active = yes
+			has_law_or_variant = law_type:law_migration_controls
+		}
+		if = {
+			limit = {
+				NOT = { has_modifier = mog_spa_migration_restrictiveness_add }
+			}
+			add_modifier = mog_spa_migration_restrictiveness_add
+		}
+	}
+	else_if = {	# If NOT have MC law, OR someone has removed SPA mid-run, cleanup
+		limit = {
+			has_modifier = mog_spa_migration_restrictiveness_add
+		}
+		remove_modifier = mog_spa_migration_restrictiveness_add
+	}
+}

@@ -1,3 +1,6 @@
 ﻿l_simp_chinese:
+ # Modifier Types
  building_group_bg_trade_allowed_collectivization_add: "工人所有的$bg_trade$$concept_building$等级下限"
  building_group_bg_trade_allowed_collectivization_add_desc: "工人所有的$bg_trade$[Concept('concept_building','$concept_buildings$')]最低数值。"
+ # Modifiers
+ mog_spa_migration_restrictiveness_add: "SPA: 移民控制调整" #deepl:1726668639

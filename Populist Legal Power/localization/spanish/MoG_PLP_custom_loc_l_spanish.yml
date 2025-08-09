@@ -1,0 +1,2 @@
+﻿l_spanish:
+ CULTURE_ENSLAVED_PERCENT: "Porcentaje total de este [concept_culture] que es [Concept('concept_slavery', '$concept_enslaved$')]." #deepl:3203141928

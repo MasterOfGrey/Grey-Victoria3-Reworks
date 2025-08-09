@@ -1,3 +1,6 @@
 ﻿l_turkish:
+ # Modifier Types
  building_group_bg_trade_allowed_collectivization_add: "İşçi Mülkü Olan $bg_trade$ $concept_building$sı Minimum Seviyesi"
  building_group_bg_trade_allowed_collectivization_add_desc: "İşçi mülkü olacak $bg_trade$ [Concept('concept_building','$concept_buildings$ının')] minimum miktarı."
+ # Modifiers
+ mog_spa_migration_restrictiveness_add: "SPA: Göç Kontrolleri Ayarlaması" #deepl:1726668639

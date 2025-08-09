@@ -1,0 +1,2 @@
+﻿l_russian:
+ CULTURE_ENSLAVED_PERCENT: "Общая доля этого [concept_culture] составляет [Concept('concept_slavery', '$concept_enslaved$')]." #deepl:3203141928

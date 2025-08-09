@@ -10,3 +10,9 @@ land_redistribution_compensation_modifier = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_documents_negative.dds	
 	country_expenses_add = 1
 }
+
+## Migration Restrictiveness compatibility with SPA
+mog_spa_migration_restrictiveness_add = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_authority_positive.dds
+	country_migration_restrictiveness_add = 10
+}
