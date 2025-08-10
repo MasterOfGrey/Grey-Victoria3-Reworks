@@ -1,0 +1,30 @@
+﻿#safety check back-up
+on_monthly_pulse_country = {
+	on_actions = {
+		MoG_PLP_border_institution_check 
+	}
+}
+
+MoG_PLP_border_institution_check = {
+	effect = {
+		if = {
+			limit = { NOT = { has_institution = institution_border_control }}
+			if = {
+				limit = { has_law = law_type:law_no_migration_controls }
+				activate_law = law_type:law_migration_controls
+				activate_law = law_type:law_no_migration_controls
+			}
+			else_if = {
+				limit = { has_law = law_type:law_migration_controls }
+				activate_law = law_type:law_closed_borders
+				activate_law = law_type:law_migration_controls
+			}
+			else_if = {
+				limit = { has_law = law_type:law_closed_borders }
+				activate_law = law_type:law_no_migration_controls
+				activate_law = law_type:law_closed_borders
+			}
+			set_institution_investment_level = { institution = institution_border_control level = 3 }
+		}
+	}
+}

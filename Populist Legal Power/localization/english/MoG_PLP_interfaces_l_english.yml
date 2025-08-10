@@ -1,4 +1,13 @@
 ﻿l_english:
+ institution_border_control: "Border Controls"
+ institution_border_control_desc: "The governance of migration into and out of our nation."
+ country_institution_border_control_max_investment_add: "Max $institution_border_control$ [concept_institution] Investment"
+ country_institution_border_control_max_investment_add_desc: "A bonus or penalty to the maximum investment level of the $institution_border_control$ [concept_institution]"
+ country_institution_cost_institution_border_control_mult: "@bur![Nbsp][concept_bureaucracy] Cost of [GetInstitutionType('institution_border_control').GetName]"
+ country_institution_cost_institution_border_control_mult_desc: "An increase or reduction to the @bur![Nbsp][concept_bureaucracy] cost of bringing [GetInstitutionType('institution_border_control').GetName] to the citizens"
+ country_institution_size_change_speed_institution_border_control_mult: "Institution Size Change Speed for [GetInstitutionType('institution_border_control').GetName]"
+ country_institution_size_change_speed_institution_border_control_mult_desc: "How fast you change the size of [GetInstitutionType('institution_border_control').GetName]"
+
  state_political_strength_from_literacy_mult: "[concept_political_strength] from [concept_literacy]"
  state_political_strength_from_literacy_mult_desc: "An increase or decrease to the amount of [concept_political_strength] of [Concept('concept_pop','$concept_pops$')] from [concept_literacy]"
  

@@ -1,4 +1,11 @@
-﻿institution_police = {
+﻿# New:
+institution_border_control = {
+	icon = "gfx/interface/icons/institution_icons/borders.dds"
+    background_texture = "gfx/interface/illustrations/institutions/police.dds"
+}
+
+# Vanilla Overwritten:
+institution_police = {
 	icon = "gfx/interface/icons/institution_icons/police.dds"
     background_texture = "gfx/interface/illustrations/institutions/police.dds"
 	modifier = {

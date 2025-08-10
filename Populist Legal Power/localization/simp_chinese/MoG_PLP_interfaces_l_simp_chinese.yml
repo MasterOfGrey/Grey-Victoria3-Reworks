@@ -1,4 +1,13 @@
 ﻿l_simp_chinese:
+ institution_border_control: "边境管制" #deepl:4270088215
+ institution_border_control_desc: "管理进出我国的移民。" #deepl:1183018315
+ country_institution_border_control_max_investment_add: "最大$institution_border_control$ [concept_institution] 投资" #deepl:1851209207
+ country_institution_border_control_max_investment_add_desc: "$institution_border_control$ 最高投资额的奖励或惩罚[concept_institution]" #deepl:1509504501
+ country_institution_cost_institution_border_control_mult: "@bur![Nbsp][concept_bureaucracy] 费用[GetInstitutionType('institution_border_control').GetName]" #deepl:199647270
+ country_institution_cost_institution_border_control_mult_desc: "增加或减少@bur![Nbsp] [concept_bureaucracy] 为市民提供[GetInstitutionType('institution_border_control').GetName] 的费用" #deepl:1956462980
+ country_institution_size_change_speed_institution_border_control_mult: "机构规模[GetInstitutionType('institution_border_control').GetName]" #deepl:1547957541
+ country_institution_size_change_speed_institution_border_control_mult_desc: "改变[GetInstitutionType('institution_border_control').GetName]" #deepl:3550573092
+
  state_political_strength_from_literacy_mult: "[concept_political_strength] from [concept_literacy]"
  state_political_strength_from_literacy_mult_desc: "An increase or decrease to the amount of [concept_political_strength] of [Concept('concept_pop','$concept_pops$')] from [concept_literacy]"
  

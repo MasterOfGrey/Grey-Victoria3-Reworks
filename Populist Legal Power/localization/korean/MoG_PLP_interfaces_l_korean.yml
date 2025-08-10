@@ -1,4 +1,13 @@
 ﻿l_korean:
+ institution_border_control: "국경 통제" #deepl:4270088215
+ institution_border_control_desc: "국가 안팎의 마이그레이션 거버넌스." #deepl:1183018315
+ country_institution_border_control_max_investment_add: "최대 $institution_border_control$ [concept_institution] 투자" #deepl:1851209207
+ country_institution_border_control_max_investment_add_desc: "최대 투자 수준에 대한 보너스 또는 페널티 $institution_border_control$ [concept_institution]" #deepl:1509504501
+ country_institution_cost_institution_border_control_mult: "@bur![Nbsp][concept_bureaucracy] 비용 [GetInstitutionType('institution_border_control').GetName]" #deepl:199647270
+ country_institution_cost_institution_border_control_mult_desc: "@bur![Nbsp] [concept_bureaucracy] [GetInstitutionType('institution_border_control').GetName] 시민에게 제공하는 비용의 증가 또는 감소" #deepl:1956462980
+ country_institution_size_change_speed_institution_border_control_mult: "교육기관 규모 변경 속도 [GetInstitutionType('institution_border_control').GetName]" #deepl:1547957541
+ country_institution_size_change_speed_institution_border_control_mult_desc: "크기를 변경하는 속도 [GetInstitutionType('institution_border_control').GetName]" #deepl:3550573092
+
  state_political_strength_from_literacy_mult: "[concept_political_strength] from [concept_literacy]"
  state_political_strength_from_literacy_mult_desc: "An increase or decrease to the amount of [concept_political_strength] of [Concept('concept_pop','$concept_pops$')] from [concept_literacy]"
  

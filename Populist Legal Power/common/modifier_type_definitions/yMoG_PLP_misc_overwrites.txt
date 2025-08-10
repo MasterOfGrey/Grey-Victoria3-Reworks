@@ -51,3 +51,12 @@ state_max_trade_advantage_from_capacity_add={
 		ai_value=1000	# 0
 	}
 }
+
+country_authority_mult={
+	decimals=1	# 0
+	color=good
+	percent=yes
+	game_data={
+		ai_value=20
+	}
+}

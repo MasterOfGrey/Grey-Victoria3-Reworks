@@ -1,4 +1,13 @@
 ﻿l_russian:
+ institution_border_control: "Пограничный контроль" #deepl:4270088215
+ institution_border_control_desc: "Управление миграцией в нашу страну и из нее." #deepl:1183018315
+ country_institution_border_control_max_investment_add: "Макс $institution_border_control$ [concept_institution] Инвестиции" #deepl:1851209207
+ country_institution_border_control_max_investment_add_desc: "Бонус или штраф к максимальному уровню инвестиций $institution_border_control$. [concept_institution]" #deepl:1509504501
+ country_institution_cost_institution_border_control_mult: "@bur![Nbsp][concept_bureaucracy] Стоимость [GetInstitutionType('institution_border_control').GetName]" #deepl:199647270
+ country_institution_cost_institution_border_control_mult_desc: "Увеличение или уменьшение @bur![Nbsp] [concept_bureaucracy] стоимости доставки [GetInstitutionType('institution_border_control').GetName] для граждан" #deepl:1956462980
+ country_institution_size_change_speed_institution_border_control_mult: "Размер учреждения Изменение скорости для [GetInstitutionType('institution_border_control').GetName]" #deepl:1547957541
+ country_institution_size_change_speed_institution_border_control_mult_desc: "Как быстро вы меняете размер [GetInstitutionType('institution_border_control').GetName]" #deepl:3550573092
+
  state_political_strength_from_literacy_mult: "[concept_political_strength] from [concept_literacy]"
  state_political_strength_from_literacy_mult_desc: "An increase or decrease to the amount of [concept_political_strength] of [Concept('concept_pop','$concept_pops$')] from [concept_literacy]"
  

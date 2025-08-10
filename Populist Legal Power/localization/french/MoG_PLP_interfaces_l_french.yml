@@ -1,4 +1,13 @@
 ﻿l_french:
+ institution_border_control: "Contrôles aux frontières" #deepl:4270088215
+ institution_border_control_desc: "La gouvernance des migrations à l'intérieur et à l'extérieur de notre pays." #deepl:1183018315
+ country_institution_border_control_max_investment_add: "Max $institution_border_control$ [concept_institution] Investissement" #deepl:1851209207
+ country_institution_border_control_max_investment_add_desc: "Un bonus ou une pénalité sur le niveau d'investissement maximum du site $institution_border_control$ [concept_institution]" #deepl:1509504501
+ country_institution_cost_institution_border_control_mult: "@bur![Nbsp][concept_bureaucracy] Coût de la [GetInstitutionType('institution_border_control').GetName]" #deepl:199647270
+ country_institution_cost_institution_border_control_mult_desc: "Une augmentation ou une réduction du @bur![Nbsp] [concept_bureaucracy] coût de l'acheminement du [GetInstitutionType('institution_border_control').GetName] aux citoyens" #deepl:1956462980
+ country_institution_size_change_speed_institution_border_control_mult: "Institution Taille Changement Vitesse pour [GetInstitutionType('institution_border_control').GetName]" #deepl:1547957541
+ country_institution_size_change_speed_institution_border_control_mult_desc: "La vitesse à laquelle vous modifiez la taille des [GetInstitutionType('institution_border_control').GetName]" #deepl:3550573092
+
  state_political_strength_from_literacy_mult: "[concept_political_strength] de [concept_literacy]"
  state_political_strength_from_literacy_mult_desc: "Une augmentation ou une diminution de la [concept_political_strength] de la [Concept('concept_pop','$concept_pops$')] en fonction du [concept_literacy]"
  
