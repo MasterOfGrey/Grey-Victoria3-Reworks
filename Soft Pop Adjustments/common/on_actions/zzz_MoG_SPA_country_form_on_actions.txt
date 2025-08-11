@@ -79,19 +79,20 @@ MoG_SPA_colonial_company_migration_penalty_check = {
 			limit = {
 				has_modifier = mog_legacy_migration_penalty
 			}
-			if = {			# If independent with legacy. Add extraction econ modifier.
+			if = {			# If independent with legacy. Remove modifier when meeting criteria.
 				limit = {
 					NOR = {
 						has_law_or_variant = law_type:law_extraction_economy
 						has_law_or_variant = law_type:law_traditionalism
 						has_law_or_variant = law_type:law_agrarianism
 						has_law_or_variant = law_type:law_industry_banned
+						has_law_or_variant = law_type:law_serfdom
+						has_law_or_variant = law_type:law_tenant_farmers
 					}
 					has_law_or_variant = law_type:law_slavery_banned
 					is_subject = no
 				}
-				remove_modifier = mog_company_migration_penalty
-				add_modifier = mog_legacy_migration_penalty
+				remove_modifier = mog_legacy_migration_penalty
 			}
 		}
 		else_if = {			# If special country check - final cleanup check
