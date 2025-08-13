@@ -27,7 +27,7 @@ NAI = {
 	
 	# For Reference:
 	# PRODUCTION_BUILDING_RANDOM_FACTOR = 10.0 # The higher this is, the more random AI construction will be
-	# PRODUCTION_BUILDING_STATE_RANDOM_FACTOR = 1.0 # The higher this is, the more random AI state selection for building types will be
+	# PRODUCTION_BUILDING_STATE_RANDOM_FACTOR = 0.5 #(as of 1.9.8) # 1.0 # The higher this is, the more random AI state selection for building types will be
 	# PRODUCTION_BUILDING_GOODS_PROFIT_FACTOR = 5000 # Per pound of predicted building profit (divided by employee count per level)
 	# PRODUCTION_BUILDING_PRODUCED_VALUE_FACTOR = 0.25 # Per pound of produced goods in base value
 	# PRODUCTION_BUILDING_OUTPUT_WANTED_INDUSTRIAL_GOODS_FACTOR = 0.25 # Add this value to a building for each unit of money worth of industrial goods that aren't overproduced in the country and are used by buildings
