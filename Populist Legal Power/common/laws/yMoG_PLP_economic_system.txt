@@ -15,16 +15,16 @@ law_traditionalism = {
 		law_graduated_taxation
 		law_anarchy
 	}
-		
+	
 	on_activate = {
 	}
 	
 	modifier = {
 		state_shopkeepers_investment_pool_efficiency_mult = -0.5
 		state_capitalists_investment_pool_efficiency_mult = -0.5
-		state_farmers_investment_pool_efficiency_mult = -0.5	
-		state_clergymen_investment_pool_efficiency_mult = -0.5	
-		state_aristocrats_investment_pool_efficiency_mult = -0.5	
+		state_farmers_investment_pool_efficiency_mult = -0.5
+		state_clergymen_investment_pool_efficiency_mult = -0.5
+		state_aristocrats_investment_pool_efficiency_mult = -0.5
 		state_bureaucracy_population_base_cost_factor_mult = -0.25
 		state_tax_capacity_mult = -0.25
 		country_private_construction_allocation_mult = 0.25
@@ -132,7 +132,7 @@ law_agrarianism = {
 	
 	disallowing_laws = {
 		law_anarchy
-	}	
+	}
 	
 	unlocking_technologies = {
 		romanticism
@@ -155,7 +155,7 @@ law_agrarianism = {
 		state_market_access_price_impact = -0.05
 		country_disable_nationalization_without_compensation_bool = yes
 	}
-		
+	
 	ai_will_do = {
 		OR = {
 			has_law = law_type:law_traditionalism
@@ -172,12 +172,12 @@ law_agrarianism = {
 		}
 		
 		if = {
-			limit = { 
+			limit = {
 				has_journal_entry = je_sick_man_bureaucracy
 				has_law = law_type:law_traditionalism
 			}
 			add = 10000 # Top priority for Tanzimat AI is to get out of Traditionalism
-		}	
+		}
 		
 		if = {
 			limit = {
@@ -276,8 +276,8 @@ law_industry_banned = {
 		state_aristocrats_investment_pool_contribution_add = 0.25
 		state_shopkeepers_investment_pool_efficiency_mult = -0.5
 		state_capitalists_investment_pool_efficiency_mult = -0.25
-		state_farmers_investment_pool_efficiency_mult = -0.75	
-		state_clergymen_investment_pool_efficiency_mult = -0.75	
+		state_farmers_investment_pool_efficiency_mult = -0.75
+		state_clergymen_investment_pool_efficiency_mult = -0.75
 		state_aristocrats_investment_pool_efficiency_mult = -0.75
 		country_private_construction_allocation_mult = 0.5
 		country_production_tech_research_speed_mult = -0.25
@@ -354,12 +354,6 @@ law_extraction_economy = {
 						has_building = building_steel_mills
 					}
 					remove_building = building_steel_mills
-				}
-				if = {
-					limit = {
-						has_building = building_power_plant
-					}
-					remove_building = building_power_plant
 				}
 				if = {
 					limit = {
@@ -444,10 +438,10 @@ law_laissez_faire = {
 	
 	modifier = {
 		country_loan_interest_rate_mult = -0.25
-		state_shopkeepers_investment_pool_efficiency_mult = 0.25	
+		state_shopkeepers_investment_pool_efficiency_mult = 0.25
 		state_capitalists_investment_pool_efficiency_mult = 0.25
 		country_private_construction_allocation_mult = 0.75
-		country_government_dividends_reinvestment_add = 0		
+		country_government_dividends_reinvestment_add = 0
 		country_government_dividends_efficiency_add = 0.65
 		country_free_charters_add = 2
 		country_disable_nationalization_bool = yes
@@ -473,7 +467,7 @@ law_laissez_faire = {
 				has_law = law_type:law_traditionalism
 			}
 			add = 10000 # Top priority for Tanzimat/Meiji AI is to get out of Traditionalism
-		}	
+		}
 		
 		# AI should really try to get out of Traditionalism under the right circumstances
 		if = {
@@ -514,7 +508,7 @@ law_cooperative_ownership = {
 	on_activate = {
 		custom_tooltip = {
 			text = enact_law_radical_leftist_economy_warning_desc
-		}	
+		}
 	}
 	
 	modifier = {
@@ -530,7 +524,7 @@ law_cooperative_ownership = {
 		building_group_bg_private_infrastructure_allowed_collectivization_add = 1.0
 		building_group_bg_arts_allowed_collectivization_add = 1.0
 		
-		state_shopkeepers_investment_pool_efficiency_mult = 0.25	
+		state_shopkeepers_investment_pool_efficiency_mult = 0.25
 		state_farmers_investment_pool_efficiency_mult = 0.25
 		state_machinists_investment_pool_efficiency_mult = 0.25
 		state_engineers_investment_pool_efficiency_mult = 0.25
@@ -553,7 +547,7 @@ law_cooperative_ownership = {
 		}
 		
 		if = {
-			limit = { 
+			limit = {
 				has_law = law_type:law_council_republic
 			}
 			add = 350
@@ -576,7 +570,7 @@ law_cooperative_ownership = {
 			limit = {
 				scope:target_country = {
 					c:BIC ?= this
-					OR = {	
+					OR = {
 						has_journal_entry = je_british_dictate_plantations
 						has_journal_entry = je_british_dictate_military
 						has_journal_entry = je_british_dictate_universities
@@ -617,7 +611,7 @@ law_command_economy = {
 		seize_investment_pool = yes
 		custom_tooltip = {
 			text = enact_law_radical_leftist_economy_warning_desc
-		}	
+		}
 	}
 	
 	modifier = {
@@ -646,7 +640,7 @@ law_command_economy = {
 						has_ideology = ideology:ideology_vanguardist
 						has_ideology = ideology:ideology_communist
 					}
-				}			
+				}
 			}
 		}
 	}
@@ -660,14 +654,14 @@ law_command_economy = {
 		}
 		
 		if = {
-			limit = { 
+			limit = {
 				has_law = law_type:law_council_republic
 			}
 			add = 250
 		}
 		
 		if = {
-			limit = { 
+			limit = {
 				has_law = law_type:law_technocracy
 			}
 			add = 100
@@ -690,7 +684,7 @@ law_command_economy = {
 			limit = {
 				scope:target_country = {
 					c:BIC ?= this
-					OR = {	
+					OR = {
 						has_journal_entry = je_british_dictate_plantations
 						has_journal_entry = je_british_dictate_military
 						has_journal_entry = je_british_dictate_universities
