@@ -641,6 +641,31 @@ movement_pro_slavery = {
 				desc = "POP_OFFICERS"
 			}
 		}
+		
+		if = {
+			limit = {
+				and = {
+					is_employed = yes
+					workplace = { is_building_group = bg_owner_buildings }
+				}
+			}
+			add = {
+				desc = SLAVE_OWNER
+				value = 15
+				multiply = {
+					state = {
+						value = "pop_type_percent_state(pop_type:slaves)"
+						multiply = 2
+						divide = {
+							add = "pop_type_percent_state(pop_type:laborer)"
+							add = "pop_type_percent_state(pop_type:peasants)"
+							min = 1
+						}
+					}
+					max = 1
+				}
+			}
+		}
 
 		multiply = {
 			desc = "CULTURE_ENSLAVED_PERCENT"
