@@ -1,6 +1,14 @@
-﻿violent_hostility = {
+﻿## Important Note:
+## Near as I can tell, Migration Desire is simply:
+# FORMULA: MD = base_migration_desire + (job_satisfaction * MIGRATION_DESIRE_FROM_JOB_SATISFACTION_FACTOR)
+#
+# The objective is that people jobseek a decent amount *before* electing to migrate.
+# Ideally job satisfaction doesn't fluctuate by large amounts under "normal" conditions.
+
+violent_hostility = {
 	threshold = 0
 	base_migration_desire = 100 # 100 # Not a binary system so keeping this at 100 now
+	# If the opportunity presents itself to leave, you need *very* good reasons to stay...
 	war_exhaustion_impact_own_side = 0
 	war_exhaustion_impact_other_side = 0
 	color = { 180 75 80 }
@@ -12,6 +20,7 @@
 cultural_erasure = {
 	threshold = 20
 	base_migration_desire = 40 # 100
+	# At this point you need a good reason to stay, but those reasons definitely exist.
 	war_exhaustion_impact_own_side = 0
 	war_exhaustion_impact_other_side = 0
 	color = { 175 100 75 }
@@ -22,7 +31,8 @@ cultural_erasure = {
 
 open_prejudice = {
 	threshold = 45 # 40
-	base_migration_desire = 10 # 50
+	base_migration_desire = -20 # 10(old) # 50
+	# 3rd class has a rough deal, finding a better job is still a good way to beat prejudice, but moving...
 	war_exhaustion_impact_own_side = 0.5
 	war_exhaustion_impact_other_side = 0
 	color = { 155 130 100 }
@@ -33,7 +43,8 @@ open_prejudice = {
 
 second_rate_citizen = {
 	threshold = 70 # 60
-	base_migration_desire = -20.0 # 20
+	base_migration_desire = -100 # -20.0(old) # 20 
+	# 2nd class actually has a pretty good deal - uprooting their lives and migrating is a hefty risk.
 	war_exhaustion_impact_own_side = 1.5
 	war_exhaustion_impact_other_side = 0.5
 	color = { 130 155 90 }
@@ -44,7 +55,8 @@ second_rate_citizen = {
 
 full_acceptance = {
 	threshold = 95 # 80
-	base_migration_desire = -50.0 # 0
+	base_migration_desire = -50 # 0
+	# Jobseek preferentially until below -50 job satisfaction (default rate).
 	war_exhaustion_impact_own_side = 3
 	war_exhaustion_impact_other_side = 3
 	color = { 90 150 150 }

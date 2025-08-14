@@ -9,6 +9,7 @@
 	dependent_wage = 0.5	# per year
 	unemployment = yes
 	education_access = 0.05 # 0
+	ignores_employment_proportionality = yes
 	
 	# 20% - 80% politically engaged	
 	political_engagement_base = 0.20
@@ -18,7 +19,7 @@
 		value = 1
 		
 		add = {
-			desc = "POP_STARVATION"	
+			desc = "POP_STARVATION"
 			
 			if = {
 				limit = {
@@ -33,20 +34,20 @@
 				value = 1.5
 			}
 		}
-
+		
 		multiply = {
-			desc = "HAS_POLITICAL_AGITATION"	
+			desc = "HAS_POLITICAL_AGITATION"
 			value = 1.0
 			
 			if = {
-				limit = { 
+				limit = {
 					owner = {
 						has_technology_researched = political_agitation
 					}
 				}
 				value = 1.5
-			}		
-		}		
+			}
+		}
 	}
 	
 	portrait_age = {
@@ -55,6 +56,6 @@
 			max = 40
 		}
 	}
-	portrait_pose = { value = 0 }			
+	portrait_pose = { value = 0 }
 	portrait_is_female = { always = yes }
 }

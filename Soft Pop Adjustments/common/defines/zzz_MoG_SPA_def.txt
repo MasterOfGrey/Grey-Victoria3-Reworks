@@ -63,16 +63,20 @@ NPops = {
 	
 ##### JOB SATISFACTION #####
 	
-	JOB_SATISFACTION_BASE = -150 # -130										# Base job satisfaction
+	JOB_SATISFACTION_BASE = -120 # -150(old) # -130							# Base job satisfaction
 	JOB_SATISFACTION_FOR_NEWLY_HIRED = 1000									# Job satisfaction gained due to having been newly hired, this state lasts until the pop's next wealth calculation
+	# NOTE: All JOB_SATISFACTION_PER_SOL_ABOVE_X values apply to both the positive and negative side of the reference point.
 	JOB_SATISFACTION_PER_SOL_ABOVE_EXPECTED_SOL = 12 # 3					# Job satisfaction gained per level of SoL above your expected SoL
+	# 5 SOL above expected + employed must be > JOB_SATISFACTION_BASE ( 5*12 + 70 > 120 -> ok )
 	JOB_SATISFACTION_PER_SOL_ABOVE_STATE_STRATA_SOL = 4 # 2					# Job satisfaction gained per level of SoL above the state average for your strata
 	JOB_SATISFACTION_PER_SOL_ABOVE_COUNTRY_STRATA_SOL = 0.5 # 1				# Job satisfaction gained per level of SoL above the country average for your strata
 	JOB_SATISFACTION_PER_PERCENT_WAGE_RATE_ABOVE_NORMAL = 0.5 # 1			# Job satisfaction gained per pound of workplace wage rate (weekly wage of 10k laborers) above country normal
 	JOB_SATISFACTION_FROM_CAN_AFFORD_EXPENSES = 500 # 1000					# Job satisfaction gained from being able to afford your buy package (and taxes)
-	JOB_SATISFACTION_FROM_CANNOT_AFFORD_EXPENSES = -1000 # -100				# Job satisfaction gained from not being able to afford your buy package (and taxes)
+	JOB_SATISFACTION_FROM_CANNOT_AFFORD_EXPENSES = -500 # -1000(old) # -100				# Job satisfaction gained from not being able to afford your buy package (and taxes)
 	JOB_SATISFACTION_PER_PERCENT_HIGHER_SOL_QUALIFICATION = -0.8 # -1 	# Job satisfaction gained per percent of workforce qualified for a job with a higher base standard of living. Note that qualifications are assumed to overlap and the largest qualification is used in this calculation
-	JOB_SATISFACTION_FROM_EMPLOYMENT = 100						# Job satisfaction gained from having a job
+	# Qualification max -ve must slightly exceed JOB_SATISFACTION_FROM_EMPLOYMENT ( 80 > 70 -> ok )
+	JOB_SATISFACTION_FROM_EMPLOYMENT = 70 # 100						# Job satisfaction gained from having a job
+	# Difference between JOB_SATISFACTION_BASE & JOB_SATISFACTION_FROM_EMPLOYMENT is default migration desire. JOB_SATISFACTION_BASE is bigger than most difficult base_migration_desire so unemployed migrate for better opportunities even if they have welfare.
 	JOB_SATISFACTION_DIVIDENDS_MAX_MULT = 5						# Max multiplier from the ratio between pop dividends and wages
 	JOB_SATISFACTION_DIVIDENDS_BASE = 10 # 50					# Base value to be multiplied by the ratio between dividends and wages
 	JOB_SATISFACTION_LOSSES_MIN_MULT = -10 # -5					# Min multiplier from the ratio between pop losses and wages (or if you will, max magnitude)
@@ -110,7 +114,12 @@ NPops = {
 	# Migration Desire #
 	# MIGRATION_DESIRE_BASE = -50.0 # 0								#(Moved to acceptance status)			# Base desire to migrate
 	# MIGRATION_DESIRE_FROM_DISCRIMINATION = 150 # 100				#(Moved to acceptance status)			# Being discriminated will increase desire to migrate by this much
-	MIGRATION_DESIRE_FROM_JOB_SATISFACTION_FACTOR = -2.0 # -1.0					# A pop's desire to migrate will be affected by its job satisfaction multiplied by this value.
+	MIGRATION_DESIRE_FROM_JOB_SATISFACTION_FACTOR = -1.0 # -2.0(old) # -1.0			# A pop's desire to migrate will be affected by its job satisfaction multiplied by this value.
+## Near as I can tell, Migration Desire is simply:
+# FORMULA: MD = base_migration_desire + (job_satisfaction * MIGRATION_DESIRE_FROM_JOB_SATISFACTION_FACTOR)
+#
+# The objective is that people jobseek a decent amount *before* electing to migrate.
+# Ideally job satisfaction doesn't fluctuate by large amounts under "normal" conditions.
 	
 	# Acceptance #
 	MIN_ACCEPTANCE_VALUE = 0													# It is both the minimum acceptance value a pop can have as well as the explicit threshold scripted for the first acceptance status [any signed 32 bit value]
@@ -171,7 +180,7 @@ NPops = {
 	MASS_MIGRATION_NEIGHBORING_TARGET_STATE_LIMIT_FRACTION = 0.5				# Fraction of the limit a neighboring state gets compared to the main target state in a mass migration
 	
 	# Mass Migration Acceptance #
-	MIN_REQUIRED_ACCEPTANCE_FOR_MIGRATION = 30   # If a pop would have less than this much acceptance in a target state, they won't mass migrate there
+	MIN_REQUIRED_ACCEPTANCE_FOR_MIGRATION = 35 # 30   # If a pop would have less than this much acceptance in a target state, they won't mass migrate there
 	EXPECTED_ACCEPTANCE_INCREASE_TO_MIGRATE = 10 # A pop will look to increase their acceptance by this much when mass migrating, but might accept less if mass migration attraction difference is high enough
 	MAX_ACCEPTANCE_RATIO_MULT_MIGRATION = 5      # A difference in acceptance between source and target in mass migrations will result in at most this much increased migration
 	

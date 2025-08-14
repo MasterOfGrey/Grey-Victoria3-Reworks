@@ -9,16 +9,17 @@
 	education_access = 0.3 # 0
 	dependent_wage = 0.5	# per year
 	unemployment = yes
+	ignores_employment_proportionality = yes
 	
 	# 70% - 100% politically engaged
 	political_engagement_base = 0.7
 	political_engagement_literacy_factor = 0.3
 	
 	political_engagement_mult = {
-		value = 1	
-
+		value = 1
+		
 		add = {
-			desc = "POP_STARVATION"	
+			desc = "POP_STARVATION"
 			
 			if = {
 				limit = {
@@ -37,7 +38,7 @@
 	
 	qualifications = {
 		value = 0.5
-
+		
 		# Growth factors
 		if = {
 			limit = {
@@ -126,8 +127,8 @@
 		else = {
 			# Limiting factors
 			if = {
-				limit = { 
-					is_peasant_under_serfdom = yes 
+				limit = {
+					is_peasant_under_serfdom = yes
 				}
 				max = 0
 				subtract = {
@@ -160,6 +161,6 @@
 			max = define:NPortrait|GRACEFUL_AGING_END
 		}
 	}
-	portrait_pose = { value = 0 }			
+	portrait_pose = { value = 0 }
 	portrait_is_female = { always = yes }
 }

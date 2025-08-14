@@ -15,7 +15,7 @@
 	political_engagement_literacy_factor = 0.3
 	
 	political_engagement_mult = {
-		value = 1		
+		value = 1
 		
 		add = {
 			desc = "POP_STARVATION"	
@@ -27,8 +27,7 @@
 				value = 1
 			}
 		}
-		
-	}	
+	}
 	
 	qualifications = {
 		# baseline: ( wealth - 10 ) / 10 + literacy, norm 1.5 for Wealth 20 and Literacy 50%
@@ -44,7 +43,7 @@
 			}
 			desc = "QUALIFICATIONS_WEALTH_FACTOR"
 		}
-
+		
 		# Limiting factors
 		if = {
 			limit = {
@@ -56,8 +55,8 @@
 			}
 		}
 		if = {
-			limit = { 
-				is_peasant_under_serfdom = yes 
+			limit = {
+				is_peasant_under_serfdom = yes
 			}
 			max = 0
 			subtract = {
@@ -65,7 +64,7 @@
 				desc = "QUALIFICATIONS_PEASANTS_UNDER_SERFDOM"
 			}
 		}
-
+		
 		# Growth factors
 		else_if = {
 			limit = {
@@ -79,7 +78,7 @@
 				}
 				desc = "QUALIFICATIONS_LITERACY_FACTOR"
 			}
-
+			
 			if = {
 				limit = {
 					is_pop_type = bureaucrats
@@ -110,11 +109,11 @@
 					desc = "QUALIFICATIONS_FAVORED_TYPE"
 				}
 			}
-
+			
 			if = {
 				limit = {
 					state = {
-						state_cultural_acceptance = {  
+						state_cultural_acceptance = {
 							target = PREV.culture
 						   	value < acceptance_status_4 
 					   	}
@@ -133,7 +132,7 @@
 			min = define:NPortrait|GRACEFUL_AGING_START
 			max = define:NPortrait|GRACEFUL_AGING_END
 		}
-	}			
-	portrait_pose = { value = 0 }			
+	}
+	portrait_pose = { value = 0 }
 	portrait_is_female = { always = yes }
 }
