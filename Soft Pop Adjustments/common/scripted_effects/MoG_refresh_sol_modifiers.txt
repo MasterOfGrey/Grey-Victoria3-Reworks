@@ -12,9 +12,9 @@ refresh_expected_sol_modifier = {
 		set_local_variable = {
 			name = national_weight
 			value = {
-				value = 0.05
+				value = 0.15
 				add = {
-					value = 0.35
+					value = 0.45
 					multiply = literacy_rate
 				}
 			}
@@ -51,9 +51,9 @@ refresh_expected_sol_modifier = {
 		# scale           - How much of average SOL does this strata expect
 		# literacy_factor - How much impact does literacy have. Pulls expectations upwards towards the average
 		scope:sol_calc_target_state = {
-			refresh_strata_expected_sol_modifier = { strata = lower  scale = 0.5 literacy_factor = 0.8 }
-			refresh_strata_expected_sol_modifier = { strata = middle scale = 1   literacy_factor = 0.4 }
-			refresh_strata_expected_sol_modifier = { strata = upper  scale = 2   literacy_factor = 0   }
+			refresh_strata_expected_sol_modifier = { strata = lower  scale = -10       literacy_factor = 0.5 }
+			refresh_strata_expected_sol_modifier = { strata = middle scale =   0       literacy_factor = 0   }
+			refresh_strata_expected_sol_modifier = { strata = upper  scale =  11.52670 literacy_factor = 0   }
 		}
 	#}
 }
@@ -76,7 +76,7 @@ refresh_strata_expected_sol_modifier = {
 		name = scaled_average_sol
 		value = {
 			value = scope:weighted_average_sol
-			multiply = $scale$
+			add = $scale$
 		}
 	}
 	
@@ -89,19 +89,17 @@ refresh_strata_expected_sol_modifier = {
 				}
 				value = owner.modifier:state_$strata$_strata_expected_sol_add
 				add = {
-					value = scope:average_expected_sol_from_literacy
-					multiply = $scale$
-					divide = scope:base_expectation
-					multiply = scope:weighted_average_sol
+					value = scope:weighted_average_sol
+					multiply = scope:average_expected_sol_from_literacy
+					divide = {
+						value = owner.modifier:state_$strata$_strata_expected_sol_add
+						subtract = $scale$
+						add = scope:average_expected_sol_from_literacy
+					}
 				}
 			}
 			else = {
 				value = scope:scaled_average_sol
-				
-				# Scale slope down slightly to keep average expectations below median sol
-				subtract = scope:base_expectation
-				multiply = 0.8
-				add = scope:base_expectation
 			}
 		}
 	}
