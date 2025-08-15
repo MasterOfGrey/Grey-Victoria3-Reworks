@@ -24,7 +24,6 @@
 				workplace = { is_subsistence_building = yes }
 			}
 		}
-		#save_temporary_scope_as = pop
 		change_local_variable = {
 			name = pop_total
 			add = total_size
@@ -40,6 +39,9 @@
 							has_discrimination_trait = indigenous_american_heritage
 							has_discrimination_trait = indigenous_oceanic_heritage
 						}
+					}
+					state.state_region = {
+						is_homeland = prev.culture
 					}
 				}
 			}
