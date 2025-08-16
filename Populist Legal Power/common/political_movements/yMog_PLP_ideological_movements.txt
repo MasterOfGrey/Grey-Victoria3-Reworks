@@ -182,7 +182,7 @@
 					is_pop_type = slaves
 				}
 				add = {
-					value = 30
+					value = 500 # 30
 					desc = "POP_SLAVES"
 				}
 			}
@@ -261,47 +261,57 @@
 			}
 		}
 
-# Test if `can_have_slave_supporters = yes` actually works
-#		if = {
-#			limit = {
-#				owner = {
-#					or = {
-#						has_law = law_type:law_slave_trade
-#						has_law = law_type:law_legacy_slavery
-#					}
-#				}
-#			}
-#			add = {
-#				desc = "CULTURE_ENSLAVED_PERCENT"
-#				value = 100
-#
-#				this.culture = {
-#					every_in_list = {
-#						variable = culture_enslaved_percent_cache
-#						limit = {
-#							this.kvp_to_key = root.owner.var:dict_id
-#						}
-#						multiply = this.kvp_to_value
-#					}
-#				}
-#			}
-#		}
-#
-#		if = {
-#			limit = {
-#				standard_of_living < 15
-#				owner = {
-#					has_law = law_type:law_debt_slavery
-#				}
-#			}
-#			
-#			add = {
-#				value =	standard_of_living
-#				subtract = 15
-#				multiply = -5
-#				desc = "POP_POVERTY"
-#			}
-#		}
+		if = {
+			limit = {
+				owner = {
+					or = {
+						has_law = law_type:law_slave_trade
+						has_law = law_type:law_legacy_slavery
+					}
+				}
+			}
+			add = {
+				desc = "CULTURE_ENSLAVED_PERCENT"
+				value = 100
+
+				save_temporary_scope_as = pop
+				owner = {
+					every_in_list = {
+						variable = culture_enslaved_percent_cache
+						save_temporary_scope_as = kvp
+						scope:pop.owner = {
+							ordered_in_list = {
+								variable = culture_enslaved_percent_cache_keys
+								position = scope:kvp.kvp_to_key
+								save_temporary_scope_as = key
+							}
+						}
+						if = {
+							limit = {
+								scope:pop.culture = scope:key
+							}
+							multiply = scope:kvp.kvp_to_value
+						}
+					}
+				}
+			}
+		}
+
+		if = {
+			limit = {
+				standard_of_living < 15
+				owner = {
+					has_law = law_type:law_debt_slavery
+				}
+			}
+			
+			add = {
+				value =	standard_of_living
+				subtract = 15
+				multiply = -5
+				desc = "POP_POVERTY"
+			}
+		}
 
 		multiply = { # Illiterate pops participate at 1/10 the rate of fully literate pops
 			desc = "POP_LITERACY"
@@ -631,20 +641,60 @@ movement_pro_slavery = {
 				desc = "POP_OFFICERS"
 			}
 		}
+		
+		if = {
+			limit = {
+				and = {
+					is_employed = yes
+					workplace = { is_building_group = bg_owner_buildings }
+				}
+			}
+			add = {
+				desc = SLAVE_OWNER
+				value = 15
+				multiply = {
+					state = {
+						value = "pop_type_percent_state(pop_type:slaves)"
+						multiply = 2
+						divide = {
+							add = "pop_type_percent_state(pop_type:laborer)"
+							add = "pop_type_percent_state(pop_type:peasants)"
+							min = 1
+						}
+					}
+					max = 1
+				}
+			}
+		}
 
 		multiply = {
 			desc = "CULTURE_ENSLAVED_PERCENT"
 			value = 1
 
-			this.culture = {
+			save_temporary_scope_as = pop
+			owner = {
 				every_in_list = {
 					variable = culture_enslaved_percent_cache
-					limit = {
-						this.kvp_to_key = root.owner.var:dict_id
+					save_temporary_scope_as = kvp
+					scope:pop.owner = {
+						ordered_in_list = {
+							variable = culture_enslaved_percent_cache_keys
+							position = scope:kvp.kvp_to_key
+							save_temporary_scope_as = key
+						}
 					}
-					subtract = this.kvp_to_value
+					if = {
+						limit = {
+							scope:pop.culture = scope:key
+						}
+						subtract = {
+							value = scope:kvp.kvp_to_value
+							multiply = 2
+						}
+					}
 				}
 			}
+			min = 0
 		}
 		
 		if = {
@@ -662,6 +712,14 @@ movement_pro_slavery = {
 			desc = "POP_LITERACY"
 			value = literacy_rate
 			add = 0.10
+		}
+		
+		if = {
+			limit = {
+				is_pop_type = slaves
+			}
+			max = 0
+			desc = "POP_SLAVES"
 		}
 	}
 	
