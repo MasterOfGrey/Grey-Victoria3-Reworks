@@ -1,0 +1,17 @@
+﻿# This file is named the same in all mods that it appears in so that it doesn't double up on itself between mods.
+#GLOBAL = {
+#	every_country = {
+#		limit = { bureaucracy < 0 } # bureaucracy_usage > produced_bureaucracy }
+#		# limit = { C:JAP ?= THIS } #bureaucracy_usage > produced_bureaucracy }
+#		every_scope_state = {
+#			limit = {
+#				is_incorporated = yes
+#				tax_capacity < tax_capacity_usage
+#			}
+#			create_building={
+#				building="building_government_administration"
+#				level=mog_building_history_increment
+#			}
+#		}
+#	}
+#}

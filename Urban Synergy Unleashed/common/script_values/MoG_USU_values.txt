@@ -146,3 +146,12 @@ convoy_ratio = {
 		divide = num_convoys_available
 	}
 }
+
+### Building level history increment
+mog_ga_building_history_increment = {
+	value = 1
+	b:building_government_administration ?= {
+		add = level
+	}
+}
+	
