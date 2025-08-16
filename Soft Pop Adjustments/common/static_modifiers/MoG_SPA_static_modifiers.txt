@@ -1,4 +1,4 @@
-﻿# Apply an immigration penalty to extractive Company Colonies like BIC & DEIC
+# Apply an immigration penalty to extractive Company Colonies like BIC & DEIC
 mog_company_migration_penalty = {
 	icon = "gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds"
 	state_migration_pull_mult = -0.7
@@ -31,7 +31,8 @@ mog_upper_strata_expected_sol_from_average = {
 	state_upper_strata_expected_sol_add = 1
 }
 
-mog_spa_base_sol_from_literacy = {
+mog_spa_base_sol = {
 	icon = "gfx/interface/icons/generic_icons/sol_icon.dds"
-	state_expected_sol_from_literacy = 5		# Calibrated on the base modifier being 5 -> for total = 10.
+	state_upper_strata_expected_sol_add = 6.52670     # Calibrated on the base modifier being 15 -> for total = 21.52670. (11.52670 above middle class = 3x middle class income)
+	#state_expected_sol_from_literacy = 5		# Calibrated on the base modifier being 5 -> for total = 10.
 }

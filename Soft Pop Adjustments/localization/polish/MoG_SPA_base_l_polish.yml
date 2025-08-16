@@ -18,4 +18,4 @@
  mog_lower_strata_expected_sol_from_average: "SPA: średnia krajowa [concept_sol] wpływ na oczekiwany SOL z umiejętności czytania i pisania dla $lower$" #deepl:3918755864
  mog_middle_strata_expected_sol_from_average: "SPA: średnia krajowa [concept_sol] wpływ na oczekiwany SOL z umiejętności czytania i pisania dla $middle$" #deepl:444091936
  mog_upper_strata_expected_sol_from_average: "SPA: średnia krajowa [concept_sol] wpływ na oczekiwany SOL z umiejętności czytania i pisania dla $upper$" #deepl:2132612309
- mog_spa_base_sol_from_literacy: "SPA: Zmiany w modyfikatorach bazowych" #deepl:2619766621
+ mog_spa_base_sol: "SPA: Zmiany w modyfikatorach bazowych" #deepl:2619766621
