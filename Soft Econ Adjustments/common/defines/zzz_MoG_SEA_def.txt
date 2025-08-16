@@ -1,4 +1,11 @@
-﻿NEconomy = {
+﻿NWar = { # I kept devastation more severe, so "mere" occupation raises it slower.
+	DEVASTATION_MAX = 100.0
+	DEVASTATION_INCREASE_RATE = 0.05 # 0.1		# Per day, scales with level of occupation
+	DEVASTATION_DECAY_RATE = -0.025				# Per day, when there are no occupations
+	DEVASTATION_FROM_BATTLES = 0.1				# For each battle
+}
+
+NEconomy = {
 	# Honestly the Vanilla minimum is a joke
 	MIN_CONSTRUCTION_EFFICIENCY = 0.15 # 0.05					# Construction efficiency cannot go below this amount
 	
@@ -72,7 +79,7 @@
 	
 	## Wage diversity
 	MINIMUM_WAGE_RATE = 2.0 # 1.0 # 10.0									# The wage rate can never drop below this, no matter what (weekly £ per POP_SIZE_PACKAGE employees)
-	BUILDING_INITIAL_WAGE_WEEKS = 1 # 2			   					# A building will not adjust its wages for the first this many weeks of its existence                                                                    
+	BUILDING_INITIAL_WAGE_WEEKS = 1 # 2			   					# A building will not adjust its wages for the first this many weeks of its existence
 	MAX_WAGE_STEP_CHANGE = 0.3 # 0.5 # 0.1			   					# Wage rates can change at most this much each week
 	
 	BUILDING_RAISE_WAGES_MIN_RELEVANT_POP_SIZE = 50					# Pops with less workforce than this are ignored when checking whether a profitable building should raise wages because of radicalizing workers
@@ -80,7 +87,7 @@
 	BUILDING_LOWER_WAGES_TARGET_WEALTH_MULT = 1.33 # 1.2			# Buildings will consider lowering wages if all significant pops working in them have this * the target wealth to expected SoL ratio
 	
 	# Overlapping range ensures temporarily inflated wages can come down before financial stress sets in.
-	BUILDING_PROFIT_TARGET_TO_RAISE_WAGES = 0.3	# 0.25				# Required profit margin to consider raising wages for SoL or employment reasons, with BUILDING_WEEKS_BETWEEN_PAY_CHANGES weeks cooldown
+	BUILDING_PROFIT_TARGET_TO_RAISE_WAGES = 0.2111 # 0.3(old) # 0.25		# Required profit margin to consider raising wages for SoL or employment reasons, with BUILDING_WEEKS_BETWEEN_PAY_CHANGES weeks cooldown
 	# Must be < BUILDING_PROFIT_TARGET_TO_RAISE_WAGES
 	BUILDING_PROFIT_TARGET_TO_LOWER_WAGES = 0.1999 # 0.5 # 0.15				# If profit margin is this or below, buildings should lower their wages, with BUILDING_WEEKS_BETWEEN_PAY_CHANGES weeks cooldown
 																										# (previously: consider lowering wages for SoL or employment reasons)
@@ -125,9 +132,9 @@
 	BUILDING_MAX_EMPLOYMENT_FRACTION_TO_CONSIDER_CASH_RESERVES = 0.8 # 0.5	# If a building has at least this employment fraction, then ignore the cash reserves override for hiring
 	
 	BUILDING_MIN_EMPLOYMENT_FRACTION_TO_PAUSE_HIRES = 0.2 # 0.1 			# If building has at least this employment, it's OK to pause hiring
-	BUILDING_MAX_PROFIT_TO_PAUSE_HIRES = 0.2						# If building is making less than this fraction of revenue in profit, it's OK to pause hiring
-		
-		
+	# BUILDING_MAX_PROFIT_TO_PAUSE_HIRES = 0.2						# If building is making less than this fraction of revenue in profit, it's OK to pause hiring
+	# For some reason this line is bugging out, but it's unchanged from vanilla 
+	
 	# MEM values to test?
 	# SUBSISTENCE_OUTPUT_AVERAGE_WAGE_RATE_FACTOR = 50 # 150		# Each 1.0 of subsistence output counts as this much wage rate when setting normal wages 
 	
