@@ -3,4 +3,9 @@
  building_group_bg_trade_allowed_collectivization_add: "Минимальный уровень владения рабочими $bg_trade$ $concept_building$ " #deepl:252255887
  building_group_bg_trade_allowed_collectivization_add_desc: "Минимальное количество $bg_trade$ [Concept('concept_building','$concept_buildings$')] , которое будет принадлежать работникам." #deepl:163714369
  # Modifiers
+ LA_Home_Affairs: "PLP: полномочия учреждения внутренних дел" #deepl:2504284031
+ LA_Law_Enforcement: "PLP: полномочия от правоохранительных органов" #deepl:3687311437
+ LA_Workplace_Safety: "PLP: полномочия Института безопасности на рабочем месте" #deepl:1249229579
+ LA_Social_Security: "PLP: Полномочия учреждения социального обеспечения" #deepl:675340117
+ # Compat Modifiers
  mog_spa_migration_restrictiveness_add: "SPA: Регулировка миграционного контроля" #deepl:1726668639

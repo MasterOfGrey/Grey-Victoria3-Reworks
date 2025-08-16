@@ -3,4 +3,9 @@
  building_group_bg_trade_allowed_collectivization_add: "Níveis Mínimos da $concept_building$ $bg_trade$ dos Trabalhadores"
  building_group_bg_trade_allowed_collectivization_add_desc: "A quantidade mínima de [Concept('concept_building', '$concept_buildings$')] de $bg_trade$ que serão dos trabalhadores."
  # Modifiers
+ LA_Home_Affairs: "PLP: Autoridade da Instituição de Assuntos Internos" #deepl:2504284031
+ LA_Law_Enforcement: "PLP: Autoridade da instituição de aplicação da lei" #deepl:3687311437
+ LA_Workplace_Safety: "PLP: Autoridade da instituição de segurança no local de trabalho" #deepl:1249229579
+ LA_Social_Security: "PLP: Autoridade da instituição de seguridade social" #deepl:675340117
+ # Compat Modifiers
  mog_spa_migration_restrictiveness_add: "SPA: Ajuste dos controles de migração" #deepl:1726668639

@@ -3,4 +3,9 @@
  building_group_bg_trade_allowed_collectivization_add: "労働者所有の$bg_trade$ $concept_building$レベルの最小数"
  building_group_bg_trade_allowed_collectivization_add_desc: "労働者が所有する$bg_trade$ [Concept('concept_building','$concept_buildings$')]の最小数。"
  # Modifiers
+ LA_Home_Affairs: "PLP：内務省機関の権限" #deepl:2504284031
+ LA_Law_Enforcement: "PLP：法執行機関からの権限" #deepl:3687311437
+ LA_Workplace_Safety: "PLP：労働安全機関からの権限" #deepl:1249229579
+ LA_Social_Security: "PLP：社会保障機関からの権限" #deepl:675340117
+ # Compat Modifiers
  mog_spa_migration_restrictiveness_add: "SPA：マイグレーション・コントロールの調整" #deepl:1726668639

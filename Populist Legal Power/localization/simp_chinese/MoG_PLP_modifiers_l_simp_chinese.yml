@@ -3,4 +3,9 @@
  building_group_bg_trade_allowed_collectivization_add: "工人所有的$bg_trade$$concept_building$等级下限"
  building_group_bg_trade_allowed_collectivization_add_desc: "工人所有的$bg_trade$[Concept('concept_building','$concept_buildings$')]最低数值。"
  # Modifiers
+ LA_Home_Affairs: "PLP: 民政机构授权" #deepl:2504284031
+ LA_Law_Enforcement: "PLP：执法机构授权" #deepl:3687311437
+ LA_Workplace_Safety: "PLP：工作场所安全机构的授权" #deepl:1249229579
+ LA_Social_Security: "PLP：社会保障机构的授权" #deepl:675340117
+ # Compat Modifiers
  mog_spa_migration_restrictiveness_add: "SPA: 移民控制调整" #deepl:1726668639

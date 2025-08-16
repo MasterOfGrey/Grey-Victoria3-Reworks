@@ -657,7 +657,7 @@ movement_pro_slavery = {
 						value = "pop_type_percent_state(pop_type:slaves)"
 						multiply = 2
 						divide = {
-							add = "pop_type_percent_state(pop_type:laborer)"
+							add = "pop_type_percent_state(pop_type:laborers)"
 							add = "pop_type_percent_state(pop_type:peasants)"
 							min = 1
 						}

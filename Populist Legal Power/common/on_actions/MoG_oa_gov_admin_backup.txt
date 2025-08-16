@@ -1,0 +1,24 @@
+﻿# This file is named the same in all mods that it appears in so that it doesn't double up on itself between mods.
+on_game_started = {
+	on_actions = {
+		mog_oa_gov_admin_backup_action
+	}
+}
+
+mog_oa_gov_admin_backup_action = {
+	effect = {
+		every_country = {
+			limit = { bureaucracy < 0 }
+			every_scope_state = {
+				limit = {
+					is_incorporated = yes
+					tax_capacity < tax_capacity_usage
+				}
+				create_building={
+					building="building_government_administration"
+					level=mog_ga_building_history_increment
+				}
+			}
+		}
+	}
+}
