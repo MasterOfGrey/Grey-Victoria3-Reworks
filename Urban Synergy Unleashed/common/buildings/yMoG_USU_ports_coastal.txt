@@ -42,7 +42,7 @@ building_port = {
 					}
 				}
 			}
-			add = 999999	# Yes uber priority for isolated colonies so the AI doesn't get stuck being dumb
+			add = 30000	# Yes uber priority for isolated colonies so the AI doesn't get stuck being dumb
 		}
 
 		if = {
