@@ -1,0 +1,29 @@
+﻿# on_actions to apply traditional indigenous governance modifiers
+
+on_game_started = {
+    on_actions = {
+		MoG_SPA_indigenous_subsistance_setup_action
+    }
+}
+
+MoG_SPA_indigenous_subsistance_setup_action = {
+	effect = {
+		every_state = {
+			refresh_indigenous_subsistance_modifier = yes
+		}
+	}
+}
+
+on_monthly_pulse_country = {
+	on_actions = {
+		MoG_SPA_indigenous_subsistance_monthly_pulse
+	}
+}
+
+MoG_SPA_indigenous_subsistance_monthly_pulse = {
+	effect = {
+		every_scope_state = {
+			refresh_indigenous_subsistance_modifier = yes
+		}
+	}
+}
