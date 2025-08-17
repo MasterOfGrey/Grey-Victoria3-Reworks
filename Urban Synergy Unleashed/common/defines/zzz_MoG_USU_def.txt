@@ -1,16 +1,4 @@
-﻿NEconomy = {
-	# Overwrites the railways fix in zzz_MoG_SEA_def.txt to return normal price behaviours.
-	# GOODS_SHORTAGE_PENALTY_THRESHOLD = 0.5		# If supply / demand is lower than this, start applying output penalties, by default this should be ( 1 / BUY_SELL_DIFF_AT_MAX_FACTOR )        
-}
-
-NAI = {
-	# Ports are no longer government buildings and react to market conditions, AI should never downgrade them intentionally - and if they're not privatised, then the AI should be using the convoys.
-	# AI doesn't subsidise ports anyway so there's no risk of unplanned government expense burdening small nations saddled with big ports.
-	MONEY_SPENDING_SUPPLY_NETWORK_EXCESSIVE_CONVOYS = 9999999 # 2000	# If AI has more than this amount of free convoys, it's fine to downsize ports to save money
-	
-	# This is essentially a modifier for AI to decide if it wants to subsidise Ports, River Ports, Railways, and such like - we're breaking this relationship so it's only harmful to subsidise these buildings. 
-	SUBSIDIZE_SHARE_OF_INFRA_FACTOR = 0 # 4000		# How highly is subsidization of a building valued if it provides 100% of the infrastructure in the state region
-	
+﻿NAI = {
 	# Investment AI owner building location selection weights and multipliers
 	OWNER_BUILDING_LOCATION_POPULATION_SCORE = 0.5 # 1				# For each 10000 population, increase score for selecting state as owner building location by this
 	OWNER_BUILDING_LOCATION_HAS_OWNER_BUILDING_MULT = 1.2 # 2.0		# Multiply owner building location score by this for any state which already has the requisite owner building type
