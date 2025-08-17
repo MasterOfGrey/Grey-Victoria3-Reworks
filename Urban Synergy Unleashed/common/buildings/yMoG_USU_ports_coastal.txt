@@ -31,9 +31,7 @@ building_port = {
 		value = 3000	# Ports are important - Just get it done, eh
 		
 		if = { # Make colonies happen
-			limit = {
-				# is_isolated_from_market = yes
-				# is_under_colonization = yes		# Honestly, the AI should be encouraged to have at least 1 port in every valid state anyway.
+			limit = {	
 				NOR = {
 					has_building = building_port
 					any_scope_building = {
@@ -41,8 +39,17 @@ building_port = {
 						is_under_construction = yes
 					}
 				}
+				# Honestly, the AI should be encouraged to have at least 1 port in every valid state - but let's try not to go overboard. Hopefully this is a manageable criteria to not wreck Great Britain.
+				OR = {	
+					is_isolated_from_market = yes
+					is_under_colonization = yes
+					is_treaty_port = yes
+					is_homeland_of_country_cultures = owner
+					is_capital = yes
+					is_world_market_hub = yes
+				}
 			}
-			add = 999999	# Yes uber priority for isolated colonies so the AI doesn't get stuck being dumb
+			add = 999999	# Yes uber priority for some places so the AI doesn't get stuck being dumb
 		}
 
 		if = {
