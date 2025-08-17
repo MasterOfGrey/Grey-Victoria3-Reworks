@@ -1,8 +1,8 @@
-﻿NWar = { # I kept devastation more severe, so "mere" occupation raises it slower.
-	DEVASTATION_MAX = 100.0
+﻿NWar = { # I kept devastation more severe, so "mere" occupation raises it slower. Ref values as of vanilla 1.9.8
+	# DEVASTATION_MAX = 100.0
 	DEVASTATION_INCREASE_RATE = 0.05 # 0.1		# Per day, scales with level of occupation
-	DEVASTATION_DECAY_RATE = -0.025				# Per day, when there are no occupations
-	DEVASTATION_FROM_BATTLES = 0.1				# For each battle
+	# DEVASTATION_DECAY_RATE = -0.025				# Per day, when there are no occupations
+	# DEVASTATION_FROM_BATTLES = 0.1				# For each battle
 }
 
 NEconomy = {
