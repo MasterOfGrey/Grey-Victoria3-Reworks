@@ -12,9 +12,9 @@ refresh_expected_sol_modifier = {
 		set_local_variable = {
 			name = national_weight
 			value = {
-				value = 0.05
+				value = 0.15
 				add = {
-					value = 0.35
+					value = 0.45
 					multiply = literacy_rate
 				}
 			}
@@ -51,9 +51,9 @@ refresh_expected_sol_modifier = {
 		# scale           - How much of average SOL does this strata expect
 		# literacy_factor - How much impact does literacy have. Pulls expectations upwards towards the average
 		scope:sol_calc_target_state = {
-			refresh_strata_expected_sol_modifier = { strata = lower  scale = 0.5 literacy_factor = 0.8 }
-			refresh_strata_expected_sol_modifier = { strata = middle scale = 1   literacy_factor = 0.4 }
-			refresh_strata_expected_sol_modifier = { strata = upper  scale = 2   literacy_factor = 0   }
+			refresh_strata_expected_sol_modifier = { strata = lower  scale = -10   literacy_factor = 0.5 }
+			refresh_strata_expected_sol_modifier = { strata = middle scale =   0   literacy_factor = 0   }
+			refresh_strata_expected_sol_modifier = { strata = upper  scale =  11.5 literacy_factor = 0   }
 		}
 	#}
 }
@@ -62,6 +62,21 @@ refresh_strata_expected_sol_modifier = {
 	if = {
 		limit = { has_modifier = mog_$strata$_strata_expected_sol_from_average }
 		remove_modifier = mog_$strata$_strata_expected_sol_from_average
+	}
+	
+	save_temporary_scope_value_as = {
+		name = scale
+		value = {
+			value = $scale$
+			# Pull expectations towards average sol based on literacy
+			multiply = {
+				value = 1
+				subtract = {
+					value = $literacy_factor$
+					multiply = literacy_rate
+				}
+			}
+		}
 	}
 	
 	save_temporary_scope_value_as = {
@@ -76,60 +91,44 @@ refresh_strata_expected_sol_modifier = {
 		name = scaled_average_sol
 		value = {
 			value = scope:weighted_average_sol
-			multiply = $scale$
+			add = scope:scale
 		}
 	}
 	
-	save_temporary_scope_value_as = {
-		name = expected_sol_from_average
-		value = {
+	set_local_variable = {
+		name = expectation_modifier
+		value = {			
 			if = { # Below base expectation, slope towards base strata expectation, rather than zero
 				limit = {
 					scope:scaled_average_sol < scope:base_expectation
 				}
 				value = owner.modifier:state_$strata$_strata_expected_sol_add
 				add = {
-					value = scope:average_expected_sol_from_literacy
-					multiply = $scale$
-					divide = scope:base_expectation
-					multiply = scope:weighted_average_sol
+					value = scope:weighted_average_sol
+					multiply = scope:average_expected_sol_from_literacy
+					divide = {
+						value = owner.modifier:state_$strata$_strata_expected_sol_add
+						subtract = scope:scale
+						add = scope:average_expected_sol_from_literacy
+					}
 				}
 			}
 			else = {
 				value = scope:scaled_average_sol
-				
-				# Scale slope down slightly to keep average expectations below median sol
-				subtract = scope:base_expectation
-				multiply = 0.8
-				add = scope:base_expectation
 			}
-		}
-	}
-	
-	set_local_variable = {
-		name = expectation_modifier
-		value = {
-			value = scope:expected_sol_from_average
 			
-			if = { # Pull expectations upwards towards average sol based on literacy
-				limit = {
-					scope:expected_sol_from_average < scope:weighted_average_sol
-				}
-				multiply = {
-					value = 1
-					subtract = {
-						value = $literacy_factor$
-						multiply = literacy_rate
-					}
-				}
-				add = {
-					value = scope:weighted_average_sol
-					multiply = $literacy_factor$
-					multiply = literacy_rate
-				}
+			# If the average is not starving, the floor can be a little higher
+			min = {
+				value = scope:weighted_average_sol
+				subtract = 5 # define:NPops|SOL_STARVING_THRESHOLD
+				divide = 2
+				add = owner.modifier:state_$strata$_strata_expected_sol_add
 			}
 			
 			# Don't double count base expectations in the modifier
+			# This also removes the *average* effect of expected sol from literacy
+			#  - a highly literate pop surrounded by low literacy pops will have raised expectations
+			#  - a low literacy pop surronded by highly litereate pops will have lowered expectations
 			subtract = scope:base_expectation
 		}
 	}
