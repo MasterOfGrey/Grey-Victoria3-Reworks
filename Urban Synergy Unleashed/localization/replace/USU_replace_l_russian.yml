@@ -1,16 +1,19 @@
 ﻿l_russian:
-  # WCA 
+ # WCA
  alert_wasted_construction_name: "Есть незадействованное [concept_construction|l]"
  alert_wasted_construction_hint: "Есть незадействованное [concept_construction|l]"
  alert_wasted_construction_action: "Панель строительства"
  wasted_construction_setting_name: "Незадействованное Строительство"
-  
- pm_electric_trains: "Электропоезда постоянного тока" #NT!
- pm_electric_trains_principle_transport_3: "Совместные электропоезда постоянного тока" #NT!
- pm_electric_streetlights: "Башни Лунного Света" #NT!
-  
- pm_canal: "Паровые замки" #NT!
-  
+ 
+ pm_electric_trains: "Электропоезда постоянного тока"
+ pm_electric_trains_principle_transport_3: "Совместные электропоезда постоянного тока"
+ pm_electric_streetlights: "Башни Лунного Света"
+ 
+ pm_canal: "Паровые замки"
+ company_panama_suez_company: "Компания Панамо-Суэцкого канала" #deepl:432235005
+ 
  pm_no_public_transport: "Общественный транспорт не ходит."
  pm_public_trams: "Конки"
  pm_public_motor_carriages: "Городские Автобусы"
+ 
+ building_power_plant: "Тепловая электростанция" #deepl:3279637597
