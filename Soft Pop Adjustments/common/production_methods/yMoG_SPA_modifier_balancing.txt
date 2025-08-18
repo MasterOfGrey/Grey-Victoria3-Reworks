@@ -1,0 +1,16 @@
+﻿#Used in both Universities and Art Academies, the original 20% buff is wildly excessive with SPA's changes.
+pm_principle_freedom_of_movement_3 = {
+	texture = "gfx/interface/icons/production_method_icons/government_run.dds"
+
+	is_hidden_when_unavailable = yes
+
+	unlocking_principles = {
+		principle_freedom_of_movement_3
+	}
+
+	state_modifiers = {
+		unscaled = {
+			state_migration_pull_mult = 0.05	# 0.2
+		}
+	}
+}
