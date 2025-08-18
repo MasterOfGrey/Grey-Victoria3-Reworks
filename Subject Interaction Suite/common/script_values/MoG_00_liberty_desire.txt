@@ -668,6 +668,12 @@ liberty_desire_weekly_change = {
 		desc = "COMPATIBLE_MOD_WEEKLY_CHANGE_DESC_5"
 	}
 	
+	# INDEPENDANCE SUPPORTERS
+	add = {
+		value = root.second_country.liberty_desire_weekly_progress_from_support_independence
+		desc = "LIBERTY_DESIRE_WEEKLY_CHANGE_FROM_SUPPORTING_INDEPENDENCE"
+	}
+	
 	# ADDITIONAL NON_SPECIFIC MODIFICATIONS
 	# Modifiers for this country specifically
 	add = {
