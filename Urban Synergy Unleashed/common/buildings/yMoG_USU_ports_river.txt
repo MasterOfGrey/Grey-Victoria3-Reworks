@@ -5,7 +5,7 @@ building_river_port = {
 	
 	ai_nationalization_desire = 0.5 	# Copied from railways - AI is reluctant to privatize vital infrastructure
 	ai_value = {
-		value = 30000 # Just get it done, eh
+		value = 2000 # Just get it done, eh
 		
 		if = {
 			limit = {
@@ -19,10 +19,56 @@ building_river_port = {
 			}
 			multiply = 4
 		}
+		
+		if = {
+			limit = {
+				exists = b:building_river_port
+			}
+			subtract = {
+				sg:transportation ?= {
+					value = state_goods_delta
+				}
+				add = { # transport production once all queued levels are employed
+					value = 0
+					b:building_river_port = {
+						add = modifier:goods_output_transportation_add
+						multiply = {
+							value = modifier:goods_output_transportation_mult
+							add = 1
+						}
+						save_temporary_value_as = current_port_transport_production
+						if = {
+							limit = {
+								level > 0
+								occupancy > 0
+							}
+							divide = occupancy
+							#save_temporary_value_as = port_transport_production_fully_hired
+							divide = level
+						}
+						else = {
+							value = 90 # Assume transport production of best PM
+						}
+						multiply = {
+							value = level_after_queued_constructions
+							add = 1
+						}
+						subtract = scope:current_port_transport_production
+					}
+				}
+				min = 0
+				sg:transportation ?= {
+					divide = {
+						value = state_goods_consumption
+						min = 1
+					}
+				}
+				multiply = 6000
+			}
+		}
 	}
 	
 	has_max_level = yes
-	port = yes
 	
 	unlocking_technologies = { navigation }
 	

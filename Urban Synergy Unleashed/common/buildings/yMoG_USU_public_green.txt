@@ -66,6 +66,52 @@
 			}
 			add = 3000
 		}
+		
+		if = {
+			limit = {
+				exists = b:usu_building_public_green
+			}
+			subtract = {
+				sg:services ?= {
+					value = state_goods_delta
+				}
+				add = { # transport production once all queued levels are employed
+					value = 0
+					b:usu_building_public_green = {
+						add = modifier:goods_output_services_add
+						#multiply = {
+						#	value = modifier:goods_output_services_mult
+						#	add = 1
+						#}
+						save_temporary_value_as = current_port_services_production
+						if = {
+							limit = {
+								level > 0
+								occupancy > 0
+							}
+							divide = occupancy
+							divide = level
+						}
+						else = {
+							value = 59 # Assume services production of best PM
+						}
+						multiply = {
+							value = level_after_queued_constructions
+							add = 1
+						}
+						subtract = scope:current_port_services_production
+					}
+				}
+				min = 0
+				sg:services ?= {
+					divide = {
+						value = state_goods_consumption
+						min = 1
+					}
+				}
+				multiply = 6000
+			}
+		}
 	}
 	
 	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_monuments.dds"
