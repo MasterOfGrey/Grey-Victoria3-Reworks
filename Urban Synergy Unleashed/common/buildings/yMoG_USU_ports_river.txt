@@ -22,49 +22,14 @@ building_river_port = {
 		
 		if = {
 			limit = {
-				exists = b:building_river_port
+				usu_calculate_building_good_ai_value_profit_adjustment = {
+					building = building_river_port
+					good = transportation
+					employees_per_level = 1000
+					fallback_production = 90
+				}
 			}
-			subtract = {
-				sg:transportation ?= {
-					value = state_goods_delta
-				}
-				add = { # transport production once all queued levels are employed
-					value = 0
-					b:building_river_port = {
-						add = modifier:goods_output_transportation_add
-						multiply = {
-							value = modifier:goods_output_transportation_mult
-							add = 1
-						}
-						save_temporary_value_as = current_port_transport_production
-						if = {
-							limit = {
-								level > 0
-								occupancy > 0
-							}
-							divide = occupancy
-							#save_temporary_value_as = port_transport_production_fully_hired
-							divide = level
-						}
-						else = {
-							value = 90 # Assume transport production of best PM
-						}
-						multiply = {
-							value = level_after_queued_constructions
-							add = 1
-						}
-						subtract = scope:current_port_transport_production
-					}
-				}
-				min = 0
-				sg:transportation ?= {
-					divide = {
-						value = state_goods_consumption
-						min = 1
-					}
-				}
-				multiply = 6000
-			}
+			subtract = scope:result
 		}
 	}
 	

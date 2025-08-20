@@ -136,71 +136,36 @@ building_railway = {
 			add = 10000
 		}
 		
-		# AI shouldn't go around building railways before it needs them
-		#if = { # Get them started at least...
-		#	limit = {
-		#		NOT = { exists = b:building_railway }
-		#	}
-		#	add = 2000
-		#}
+		if = { # Get them started at least...
+			limit = {
+				NOT = { exists = b:building_railway }
+			}
+			add = 2000
+		}
 
-		if = {
-			limit = {
-				relative_infrastructure < 1.1
-			}
-			multiply = 2
-		}
-		if = {
-			limit = {
-				relative_infrastructure < 1
-			}
-			multiply = 4
-		}
+		#if = {
+		#	limit = {
+		#		relative_infrastructure < 1.1
+		#	}
+		#	multiply = 2
+		#}
+		#if = {
+		#	limit = {
+		#		relative_infrastructure < 1
+		#	}
+		#	multiply = 2
+		#}
 		
 		if = {
 			limit = {
-				exists = b:building_railway
+				usu_calculate_building_good_ai_value_profit_adjustment = {
+					building = building_railway
+					good = transportation
+					employees_per_level = 1000
+					fallback_production = 115
+				}
 			}
-			subtract = {
-				sg:transportation ?= {
-					value = state_goods_delta
-				}
-				add = { # transport production once all queued levels are employed
-					value = 0
-					b:building_railway = {
-						add = modifier:goods_output_transportation_add
-						multiply = {
-							value = modifier:goods_output_transportation_mult
-							add = 1
-						}
-						save_temporary_value_as = current_port_transport_production
-						if = {
-							limit = {
-								level > 0
-								occupancy > 0
-							}
-							divide = occupancy
-							divide = level
-						}
-						else = {
-							value = 115 # Assume transport production of best PM
-						}
-						multiply = {
-							value = level_after_queued_constructions
-							add = 1
-						}
-						subtract = scope:current_port_transport_production
-					}
-				}
-				min = 0
-				sg:transportation ?= {
-					divide = {
-						value = state_goods_consumption
-						min = 1
-					}
-				}
-				multiply = 12000
-			}
+			subtract = scope:result
 		}
 	}
 	

@@ -32,6 +32,12 @@ goods_input_services_add = {
 	percent = no
 }
 
+goods_output_services_mult={
+	color=good
+	percent=yes
+	decimals=1
+}
+
 goods_input_transportation_mult = {
 	color = bad
 	percent = yes

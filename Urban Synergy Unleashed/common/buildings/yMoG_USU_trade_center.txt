@@ -66,9 +66,11 @@
 		else_if = { # Avoid inland states when ports are available
 			limit = {
 				market = {
-					any_scope_state = {
-						is_incorporated = yes
-						exists = b:building_port
+					any_scope_country = {
+						any_scope_state = {
+							is_incorporated = yes
+							exists = b:building_port
+						}
 					}
 				}
 			}
