@@ -1,0 +1,53 @@
+﻿on_game_started = {
+	on_actions = {
+		mog_usu_subfarm_infrastructure_init
+	}
+}
+
+mog_usu_subfarm_infrastructure_init = {
+	effect = {
+		every_state = {
+			mog_usu_subfarm_infrastructure_update = yes
+		}
+	}
+}
+
+on_monthly_pulse_state = {
+	on_actions = {
+		mog_usu_subfarm_infrastructure_monthly_pulse
+	}
+}
+
+mog_usu_subfarm_infrastructure_monthly_pulse = {
+	effect = {
+		mog_usu_subfarm_infrastructure_update = yes
+	}
+}
+
+on_building_built = {
+	on_actions = {
+		mog_usu_subfarm_infrastructure_building_expanded
+	}
+}
+
+on_building_expanded = {
+	on_actions = {
+		mog_usu_subfarm_infrastructure_building_expanded
+	}
+}
+
+mog_usu_subfarm_infrastructure_building_expanded = {
+	effect = {
+		if = {
+			limit = {
+				# Everything that uses arable land
+				is_building_group = bg_agriculture
+				is_building_group = bg_ranching
+				is_building_group = bg_plantations
+			}
+			state = {
+				mog_usu_subfarm_infrastructure_update = yes
+			}
+		}
+	}
+}
