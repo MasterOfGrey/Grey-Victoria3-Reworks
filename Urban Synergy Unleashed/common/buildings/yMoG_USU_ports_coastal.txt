@@ -28,28 +28,29 @@ building_port = {
 	}
 	
 	ai_value = {		# scope is state the building is located in
-		value = 3000	# Ports are important - Just get it done, eh
+		value = 2000	# Ports are important - Just get it done, eh
 		
 		if = { # Make colonies happen
 			limit = {	
-				NOR = {
-					has_building = building_port
-					any_scope_building = {
-						is_building_type = building_port
-						is_under_construction = yes
-					}
-				}
-				# Honestly, the AI should be encouraged to have at least 1 port in every valid state - but let's try not to go overboard. Hopefully this is a manageable criteria to not wreck Great Britain.
-				OR = {	
+				NOT = { exists = b:building_port }
+			}
+			# Honestly, the AI should be encouraged to have at least 1 port in every valid state - but let's try not to go overboard. Hopefully this is a manageable criteria to not wreck Great Britain.
+			if = {
+				limit = {
 					is_isolated_from_market = yes
+				}
+				add = 999999	# Do it NOW
+			}
+			else_if = {
+				limit = {
 					is_under_colonization = yes
 					is_treaty_port = yes
 					is_homeland_of_country_cultures = owner
 					is_capital = yes
 					is_world_market_hub = yes
 				}
+				add = 5000      # Do it soon
 			}
-			add = 999999	# Yes uber priority for some places so the AI doesn't get stuck being dumb
 		}
 
 		if = {
@@ -63,6 +64,19 @@ building_port = {
 				relative_infrastructure < 1
 			}
 			multiply = 4
+		}
+		
+		if = {
+			limit = {
+				exists = b:building_port
+				usu_calculate_building_good_ai_value_profit_adjustment = {
+					building = building_port
+					good = transportation
+					employees_per_level = 1000
+					fallback_production = 50
+				}
+			}
+			subtract = scope:result
 		}
 	}
 	

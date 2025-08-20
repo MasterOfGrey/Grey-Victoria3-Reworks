@@ -1,4 +1,4 @@
-﻿building_railway = {
+building_railway = {
 	building_group = bg_private_infrastructure
 	icon = "gfx/interface/icons/building_icons/building_railway.dds"
 	
@@ -138,28 +138,34 @@
 		
 		if = { # Get them started at least...
 			limit = {
-				NOR = {
-					has_building = building_railway
-					any_scope_building = {
-						is_building_type = building_railway
-						is_under_construction = yes
-					}
-				}
+				NOT = { exists = b:building_railway }
 			}
-			add = 5000
+			add = 2000
 		}
 
+		#if = {
+		#	limit = {
+		#		relative_infrastructure < 1.1
+		#	}
+		#	multiply = 2
+		#}
+		#if = {
+		#	limit = {
+		#		relative_infrastructure < 1
+		#	}
+		#	multiply = 2
+		#}
+		
 		if = {
 			limit = {
-				relative_infrastructure < 1.1
+				usu_calculate_building_good_ai_value_profit_adjustment = {
+					building = building_railway
+					good = transportation
+					employees_per_level = 1000
+					fallback_production = 115
+				}
 			}
-			multiply = 2
-		}
-		if = {
-			limit = {
-				relative_infrastructure < 1
-			}
-			multiply = 4
+			subtract = scope:result
 		}
 	}
 	
