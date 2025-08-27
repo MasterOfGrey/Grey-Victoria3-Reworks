@@ -143,18 +143,18 @@ building_railway = {
 			add = 2000
 		}
 
-		#if = {
-		#	limit = {
-		#		relative_infrastructure < 1.1
-		#	}
-		#	multiply = 2
-		#}
-		#if = {
-		#	limit = {
-		#		relative_infrastructure < 1
-		#	}
-		#	multiply = 2
-		#}
+		if = {
+			limit = {
+				relative_infrastructure < 1.1
+			}
+			multiply = 2
+		}
+		if = {
+			limit = {
+				relative_infrastructure < 1
+			}
+			multiply = 2
+		}
 		
 		if = {
 			limit = {
