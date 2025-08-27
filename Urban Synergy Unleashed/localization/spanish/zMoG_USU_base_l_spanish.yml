@@ -5,6 +5,7 @@
  mog_construction_max_level_adjustment: "Construcción de Sinergia Urbana"
  mog_logistics_land_trade: "Capacidad de Comercio Terrestre a partir de Servicios Logísticos Importados"
  mog_mapi: "Sinergia urbana MAPI"
+ mog_subfarm_modifiers_occupancy_scaled: "Sinergia urbana Subsistencia Impacto en las infraestructuras" #deepl:1060897918
  
  # Building
  USU_bg_port_infrastructure: "Puertos" #deepl:687823806

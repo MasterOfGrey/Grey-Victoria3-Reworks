@@ -5,6 +5,7 @@
  mog_construction_max_level_adjustment: "Строительство городской синергии"
  mog_logistics_land_trade: "Пропускная способность сухопутной торговли за счет импортных логистических услуг"
  mog_mapi: "Городская синергия MAPI"
+ mog_subfarm_modifiers_occupancy_scaled: "Городская синергия Устойчивость Воздействие на инфраструктуру" #deepl:1060897918
  
  # Building
  USU_bg_port_infrastructure: "Порты" #deepl:687823806

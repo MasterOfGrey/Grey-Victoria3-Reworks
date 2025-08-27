@@ -5,6 +5,7 @@
  mog_construction_max_level_adjustment: "Urban Synergy Construction"
  mog_logistics_land_trade: "Land Trade Capacity from Imported Logistics Services"
  mog_mapi: "Urban Synergy MAPI"
+ mog_subfarm_modifiers_occupancy_scaled: "Urban Synergy Subsistance Impact on Infrastructure"
  
  # Building
  USU_bg_port_infrastructure: "Ports"

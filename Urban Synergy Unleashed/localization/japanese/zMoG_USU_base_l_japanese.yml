@@ -5,6 +5,7 @@
  mog_construction_max_level_adjustment: "アーバンシナジー建設"
  mog_logistics_land_trade: "輸入物流サービスによる陸上貿易能力"
  mog_mapi: "アーバンシナジーMAPI"
+ mog_subfarm_modifiers_occupancy_scaled: "都市の相乗効果 インフラへの影響" #deepl:1060897918
  
  # Building
  USU_bg_port_infrastructure: "港湾" #deepl:687823806

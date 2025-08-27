@@ -5,6 +5,7 @@
  mog_construction_max_level_adjustment: "城市协同建设"
  mog_logistics_land_trade: "进口物流服务的陆路贸易能力"
  mog_mapi: "城市协同 MAPI"
+ mog_subfarm_modifiers_occupancy_scaled: "城市协同对基础设施的影响" #deepl:1060897918
  
  # Building
  USU_bg_port_infrastructure: "港口" #deepl:687823806
