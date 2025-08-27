@@ -20,6 +20,11 @@ mog_construction_max_level_adjustment = {
 	state_building_construction_sector_max_level_add = 1
 }
 
+mog_subfarm_modifiers_occupancy_scaled = {
+	icon = gfx/interface/icons/state_status_icons/state_infrastructure.dds
+	state_infrastructure_from_population_max_add = -1
+}
+
 ## STATIC MODIFIERS
 mog_mapi = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_documents_positive.dds
