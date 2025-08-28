@@ -1,0 +1,84 @@
+﻿##
+# The triggers in this file perform parameterized claculations, saving the results
+# to `scope:result`.
+#
+
+usu_calculate_building_good_ai_value_profit_adjustment = {
+	save_temporary_scope_value_as = {
+		name = result
+		value = {
+			sg:$good$ ?= {
+				#value = state_goods_delta			#used delta initially so the ai value adjustment would drop off quicker in large states, but that approach turns out to have issues
+				value = state_goods_production	#for relative production after queued construction
+			}
+			add = { # goods production once all queued levels are employed
+				value = 0
+				if = {
+					limit = {
+						exists = b:$building$
+					}
+					b:$building$ = {
+						add = modifier:goods_output_$good$_add
+						multiply = {
+							value = modifier:goods_output_$good$_mult
+							add = 1
+						}
+						save_temporary_value_as = good_production_current
+						if = {
+							limit = {
+								level > 0
+								occupancy > 0
+							}
+							divide = occupancy
+							divide = level
+						}
+						else = {
+							value = $fallback_production$ # Assume goods production of best PM
+						}
+						save_temporary_value_as = good_production_per_level
+						multiply = {
+							value = level_after_queued_constructions
+							add = 1 # For value of the next level
+						}
+						subtract = scope:good_production_current
+					}
+				}
+				else = {
+					value = $fallback_production$
+					save_temporary_value_as = good_production_per_level
+				}
+			}
+			min = 0
+			sg:$good$ ?= {
+				divide = {
+					value = state_goods_consumption
+					min = 1
+				}
+			}
+			save_temporary_value_as = relative_after_queued
+			# This multiplier should match the AI value of 1 level of goods production at max price
+			# in order to cancel out a worst case profit estimate where min price goods are
+			# incorectly forcasted to move to max price.
+			# `employees_per_level` can not be calculated. Use highest automation pm numbers for best late game results.
+			# Approximately: 
+			# ```
+			# good.base_price * (1 + NEconomy|PRICE_RANGE)
+			#    * NAI|PRODUCTION_BUILDING_GOODS_PROFIT_FACTOR
+			#    * NAI|PRODUCTION_BUILDING_AUTONOMOUS_INVESTMENT_PROFIT_FACTOR_MULT
+			#    * scope:good_production_per_level / employees_per_level
+			# ```
+			multiply = {
+				value = g:$good$.base_price
+				multiply = {
+					value = 1
+					add = define:NEconomy|PRICE_RANGE
+				}
+				multiply = define:NAI|PRODUCTION_BUILDING_GOODS_PROFIT_FACTOR
+				multiply = define:NAI|PRODUCTION_BUILDING_AUTONOMOUS_INVESTMENT_PROFIT_FACTOR_MULT
+				multiply = scope:good_production_per_level
+				divide = $employees_per_level$
+				save_temporary_value_as = value_mult
+			}
+		}
+	}
+}

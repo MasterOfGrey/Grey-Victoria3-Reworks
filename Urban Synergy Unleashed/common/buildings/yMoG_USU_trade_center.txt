@@ -49,37 +49,32 @@
 		
 		if = { # Ports should encourage trade.
 			limit = {
-				state.is_incorporated = yes						# This throws an error, but works correctly.
-				OR = {
-					has_building = building_port
-					any_scope_building = {
-						is_building_type = building_port
-						is_under_construction = yes
-					}
-				}
-				NOR = {
-					has_building = building_trade_center
-					any_scope_building = {
-						is_building_type = building_trade_center
-						is_under_construction = yes
-					}
-				}
+				is_incorporated = yes
+				exists = b:building_port
+				NOT = { exists = b:building_trade_center }
 			}
 			add = 999999	# Yes really, if you have a port, you should prioritise kicking off trade there.
 		}
 		
 		if = { # Ports should encourage trade.
 			limit = {
-				state.is_incorporated = yes						# This throws an error, but works correctly.
-				OR = {
-					has_building = building_port
-					any_scope_building = {
-						is_building_type = building_port
-						is_under_construction = yes
+				is_incorporated = yes
+				exists = b:building_port
+			}
+			multiply = 1.25
+		}
+		else_if = { # Avoid inland states when ports are available
+			limit = {
+				market = {
+					any_scope_country = {
+						any_scope_state = {
+							is_incorporated = yes
+							exists = b:building_port
+						}
 					}
 				}
 			}
-			multiply = 2			# Yes really, if you have a port, you should prioritise trade centres there.
+			multiply = 0.75
 		}
 		
 		if = { # Support Free Trade

@@ -6,37 +6,40 @@ MoG_USU_subsidy_event.1 = {
 	type = state_event
 	hidden = yes
 	
-	immediate = {
+	#immediate = {
 		# DO NOT Subsidize
-		if = {
-			limit = {
-				b:building_port ?= {
-					level > 3
-				}
-			}
-			b:building_port ?= {
-				set_subsidized = no
-			}
-		}
-		if = {
-			limit = {
-				b:building_railway ?= {
-					level > 3
-				}
-			}
-			b:building_railway ?= {
-				set_subsidized = no
-			}
-		}
-		if = {
-			limit = {
-				b:building_power_plant ?= {
-					level > 1
-				}
-			}
-			b:building_power_plant ?= {
-				set_subsidized = no
-			}
-		}
-	}
+		# if = {
+		# 	limit = {
+		# 		b:building_port ?= {
+		# 			level > 3
+		# 			is_subsidized = yes
+		# 		}
+		# 	}
+		# 	b:building_port ?= {
+		# 		set_subsidized = no
+		# 	}
+		# }
+		# if = {
+		# 	limit = {
+		# 		b:building_railway ?= {
+		# 			level > 3
+		# 			is_subsidized = yes
+		# 		}
+		# 	}
+		# 	b:building_railway ?= {
+		# 		set_subsidized = no
+		# 	}
+		# }
+		# if = {
+		# 	limit = {
+		# 		b:building_power_plant ?= {
+		# 			level > 1
+		# 			is_subsidized = yes
+		# 		}
+		# 	}
+		# 	b:building_power_plant ?= {
+		# 		set_subsidized = no
+		# 	}
+		# }
+	#}
 }
