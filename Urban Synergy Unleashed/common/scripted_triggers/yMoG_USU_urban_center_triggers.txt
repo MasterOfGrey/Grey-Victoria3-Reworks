@@ -1,3 +1,0 @@
-﻿#mog_urbanization = { # identify all states that exist
-#	free_arable_land = >= 0
-#}

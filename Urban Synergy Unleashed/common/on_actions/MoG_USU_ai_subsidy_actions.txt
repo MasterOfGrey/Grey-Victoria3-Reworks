@@ -1,4 +1,8 @@
-﻿# # No root
+﻿# This was, arguably, the superior solution for compatibility and allowing market effects to apply correctly.
+# However, this breaks the AI in ways that prevent it from constructing any government buildings, for no discernable or fixable reason.
+# Therefore, it has been abandoned, at least for the foreseeable.
+
+# # No root
 # on_monthly_pulse = {
 # 	on_actions = {
 # 		MoG_USU_weekly_AI_subsidies_action
