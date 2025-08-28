@@ -1,14 +1,17 @@
 ﻿##
-# The triggers in this file perform parameterized claculations, saving the results
-# to `scope:result`.
+# The triggers in this file perform parameterized calculations, saving the results to `scope:result`.
 #
+# The effect is to clamp down on the AI value when it is inappropriate.
+# i.e. this is a strictly negative effect, we use this to calculate how hard we want to stop the AI
+#  -> the goal is to prevent the AI overbuilding, since we can't force it to let things downgrade...
+##
 
 usu_calculate_building_good_ai_value_profit_adjustment = {
 	save_temporary_scope_value_as = {
 		name = result
 		value = {
 			sg:$good$ ?= {
-				#value = state_goods_delta			#used delta initially so the ai value adjustment would drop off quicker in large states, but that approach turns out to have issues
+				#value = state_goods_delta		#used delta initially so the ai value adjustment would drop off quicker in large states, but that approach turns out to have issues
 				value = state_goods_production	#for relative production after queued construction
 			}
 			add = { # goods production once all queued levels are employed
@@ -29,7 +32,11 @@ usu_calculate_building_good_ai_value_profit_adjustment = {
 								level > 0
 								occupancy > 0
 							}
-							divide = occupancy
+							divide = {
+								add = occupancy
+							#	min = 0.5
+								# This prevents super-low occupancy from skewing results, otherwise relative_after_queued might only be fractionally higher which makes the comparison futile for preventing overbuild.
+							}
 							divide = level
 						}
 						else = {
@@ -40,6 +47,7 @@ usu_calculate_building_good_ai_value_profit_adjustment = {
 							value = level_after_queued_constructions
 							add = 1 # For value of the next level
 						}
+						save_temporary_value_as = good_production_after_queued
 						subtract = scope:good_production_current
 					}
 				}
@@ -56,6 +64,7 @@ usu_calculate_building_good_ai_value_profit_adjustment = {
 				}
 			}
 			save_temporary_value_as = relative_after_queued
+			
 			# This multiplier should match the AI value of 1 level of goods production at max price
 			# in order to cancel out a worst case profit estimate where min price goods are
 			# incorectly forcasted to move to max price.
@@ -78,6 +87,27 @@ usu_calculate_building_good_ai_value_profit_adjustment = {
 				multiply = scope:good_production_per_level
 				divide = $employees_per_level$
 				save_temporary_value_as = value_mult
+			}
+			# Sadly, this works alright on small buildings, but becomes ineffective as buildings grow, and the profitability ai value includes bugged price change estimates for all building levels, not just the next one.
+			
+			# So, situational override:
+			if = {
+				limit = {
+					scope:good_production_after_queued > {	# Avoid bothering small buildings with this.
+						add = $fallback_production$	# Size of lower tech buildings less restricted.
+						multiply = 3
+					}
+					scope:good_production_after_queued > {	# Apply some_threshold to limit it.
+						add = define:NEconomy|BUY_SELL_DIFF_AT_MAX_FACTOR
+						multiply = 0.5
+						sg:$good$ = { multiply = state_goods_consumption }
+					}
+					# If BUY_SELL_DIFF_AT_MAX_FACTOR set to 4 then; if buy orders are 4x sell orders price is maxed.
+					# Therefore if sell orders are equal to state_goods_consumption*BUY_SELL_DIFF_AT_MAX_FACTOR, price is minimised.
+					# Therefore state_goods_consumption*0.5*BUY_SELL_DIFF_AT_MAX_FACTOR = half way to minimum price.
+					# Local Goods are eventually supposed supposed to be cheap, so half way to minimum price is a good cutoff.
+				}
+				value = 99999999999	# (Subtracted) Kill it dead, stop building stuff that's not needed.
 			}
 		}
 	}
