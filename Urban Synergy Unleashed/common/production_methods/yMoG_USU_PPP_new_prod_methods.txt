@@ -172,7 +172,7 @@ PPP_pm_se_hybrid_power = {
 	
 	building_modifiers = {
 		workforce_scaled = {
-			goods_output_electricity_add = -30
+			goods_output_electricity_add = -42 # -30 # Hybrid power needs to be worse
 			goods_output_ppp_hv_power_add = 12
 		}
 	}
@@ -224,7 +224,7 @@ PPP_pm_st_hybrid_power = {
 	
 	building_modifiers = {
 		workforce_scaled = {
-			goods_output_electricity_add = -40
+			goods_output_electricity_add = -56 # -40 # Hybrid power needs to be worse
 			goods_output_ppp_hv_power_add = 16
 		}
 	}
@@ -276,7 +276,7 @@ PPP_pm_gt_hybrid_power = {
 	
 	building_modifiers = {
 		workforce_scaled = {
-			goods_output_electricity_add = -50
+			goods_output_electricity_add = -70 # -50 # Hybrid power needs to be worse
 			goods_output_ppp_hv_power_add = 20
 		}
 	}
@@ -313,7 +313,7 @@ PPP_pm_emergency_local_power = {
 	
 	building_modifiers = {
 		workforce_scaled = {
-			goods_output_electricity_add = -10
+			goods_output_electricity_add = -22 # -10 # AI Needs to be encouraged forcefully to build grids
 			goods_output_ppp_hv_power_add = 2
 		}
 	}

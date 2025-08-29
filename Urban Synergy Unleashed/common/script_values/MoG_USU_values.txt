@@ -154,4 +154,39 @@ mog_ga_building_history_increment = {
 		add = level
 	}
 }
-	
+
+### Power PM Value Helper
+mog_oil_value = {
+	value = 0
+	add = 1
+	add = sg:oil.state_goods_pricier
+	multiply = g:oil.base_price
+}
+mog_coal_value = {
+	value = 0
+	add = 1
+	add = sg:coal.state_goods_pricier
+	multiply = g:coal.base_price
+}
+# Not used cause pm's can't take math/scripts into ai_value - done in on_action instead
+#mog_power_gas_pm_value = {
+#	if = {
+#		limit = { 
+#			state = {
+#				mog_oil_value < {
+#					add = mog_coal_value
+#					multiply = 0.8
+#				}
+#			}
+#		}
+#		value = 2000	# The AI will struggle to switch in various conditions when it should
+#	}
+#}
+mog_hvp_value = {
+	value = 0
+	add = 1
+	add = sg:ppp_hv_power.state_goods_pricier
+}
+
+
+
