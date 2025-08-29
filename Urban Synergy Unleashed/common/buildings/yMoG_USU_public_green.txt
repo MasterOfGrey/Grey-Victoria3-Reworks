@@ -73,7 +73,7 @@
 				usu_calculate_building_good_ai_value_profit_adjustment = {
 					building = usu_building_public_green
 					good = services
-					employees_per_level = 1000
+				#	employees_per_level = 1000 # DO NOT PASS UNUSED VALUES
 					fallback_production = 59
 				}
 			}

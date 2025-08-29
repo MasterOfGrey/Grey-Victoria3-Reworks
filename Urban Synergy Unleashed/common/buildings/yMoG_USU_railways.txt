@@ -142,7 +142,7 @@
 			}
 			add = 2000
 		}
-
+		
 		if = {
 			limit = {
 				relative_infrastructure < 1.1
@@ -161,7 +161,7 @@
 				usu_calculate_building_good_ai_value_profit_adjustment = {
 					building = building_railway
 					good = transportation
-					employees_per_level = 1000
+				#	employees_per_level = 1000 # DO NOT PASS UNUSED VALUES
 					fallback_production = 115
 				}
 			}

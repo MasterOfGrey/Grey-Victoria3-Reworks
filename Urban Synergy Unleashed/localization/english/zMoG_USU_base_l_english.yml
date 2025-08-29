@@ -70,7 +70,11 @@
  goods_input_merchant_marine_mult_desc: "A bonus or penalty to the amount of @merchant_marine![Nbsp]$merchant_marine$ consumed by buildings"
  goods_output_merchant_marine_mult: "Building @merchant_marine![Nbsp]$merchant_marine$ output"
  goods_output_merchant_marine_mult_desc: "A bonus or penalty to the amount of @merchant_marine![Nbsp]$merchant_marine$ produced by buildings"
- 
+ goods_input_services_mult: "Building @services![Nbsp]$services$ input"
+ goods_input_services_mult_desc: "A bonus or penalty to the amount of @services![Nbsp]$services$ consumed by buildings"
+ goods_output_services_mult: "Building @services![Nbsp]$services$ output"
+ goods_output_services_mult_desc: "A bonus or penalty to the amount of @services![Nbsp]$services$ produced by buildings"
+
  # PMGs
  pmg_base_building_river_port: "Docks"
  USU_pmg_government_administration_emergency_services: "Emergency Services"

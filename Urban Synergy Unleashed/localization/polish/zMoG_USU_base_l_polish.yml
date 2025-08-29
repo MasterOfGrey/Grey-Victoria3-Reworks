@@ -70,7 +70,11 @@
  goods_input_merchant_marine_mult_desc: "Premia lub kara do ilości @merchant_marine![Nbsp]$merchant_marine$ zużywanej przez budynki." #deepl:3075274957
  goods_output_merchant_marine_mult: "Budowanie @merchant_marine![Nbsp]$merchant_marine$ wyjście" #deepl:2695995466
  goods_output_merchant_marine_mult_desc: "Premia lub kara do ilości @merchant_marine![Nbsp]$merchant_marine$ produkowanych przez budynki." #deepl:1649084978
- 
+ goods_input_services_mult: "Budynek @services![Nbsp] $services$ wejście" #deepl:3160360280
+ goods_input_services_mult_desc: "Premia lub kara do ilości @services![Nbsp] $services$ zużywanej przez budynki." #deepl:1303153237
+ goods_output_services_mult: "Budowanie @services![Nbsp] $services$ wyjście" #deepl:3559684402
+ goods_output_services_mult_desc: "Premia lub kara do ilości @services![Nbsp] $services$ wytwarzanych przez budynki." #deepl:2561374378
+
  # PMGs
  pmg_base_building_river_port: "Doki"
  USU_pmg_government_administration_emergency_services: "Służby ratunkowe"
