@@ -25,8 +25,8 @@
  setting_balanced_merge_desc: "Diplomatik eylem: Birleştir [concept_subject] [Concept('concept_country', '$concept_countries$')] normal oyun için dengelidir."
  setting_cheat_merge: "Konu Birleştirme bir Hiledir"
  setting_cheat_merge_desc: "Diplomatik eylem: Birleştir [concept_subject] [Concept('concept_country', '$concept_countries$')] güçlü bir hiledir."
- setting_disabled_merge: "Konuyu Birleştir Devre Dışı" #deepl:354449469
- setting_disabled_merge_desc: "Diplomatik eylem: Birleştir [concept_subject] [Concept('concept_country', '$concept_countries$')] kullanılamıyor." #deepl:3670147245
+ setting_disabled_merge: "Engelli Konuyu Entegre Edin" #deepl:2534013759
+ setting_disabled_merge_desc: "Diplomatik eylem: Entegre et [concept_subject] [Concept('concept_country', '$concept_countries$')] kullanılamıyor." #deepl:3393539891
  DIPLOMATIC_ACCEPTANCE_BREAK_FREE: "#v $ai_strategy_subject_break_free$#!'ün [concept_ai_strategy]'ını takip ediyorlar"
  DIPLOMATIC_ACCEPTANCE_STRENGTHEN_SELF: "#v $ai_strategy_subject_strengthen_self$#!'ün [concept_ai_strategy]'ını takip ediyorlar"
  DIPLOMATIC_ACCEPTANCE_MAINTAIN_AUTONOMY: "#v $ai_strategy_subject_maintain_autonomy$#!'ün [concept_ai_strategy]'ını takip ediyorlar"

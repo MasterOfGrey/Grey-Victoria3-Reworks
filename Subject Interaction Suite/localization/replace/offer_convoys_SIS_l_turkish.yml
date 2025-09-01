@@ -1,0 +1,11 @@
+﻿l_turkish:
+
+ occ_offer_convoys: "Konvoy Katkısını Artırın" #deepl:2913419027
+ occ_offer_convoys_desc: "[concept_subject] 'un [concept_market_owner] [concept_overlord] 'a yönelik konvoy katkısını artırır." #deepl:1766763354
+ occ_offer_convoys_action_notification_name: "[INITIATOR_COUNTRY.GetName] konvoy katkısını artırır" #deepl:3624303288
+ occ_offer_convoys_action_notification_desc: "[INITIATOR_COUNTRY.GetName] konvoy katkılarını artırmayı teklif etti." #deepl:1100390230
+ occ_offer_convoys_action_propose_name: "$occ_offer_convoys$" #deepl:1567265931
+ occ_offer_convoys_action_break_name: "Artan Konvoy Katkılarını İptal Edin" #deepl:2418936819
+ occ_offer_convoys_pact_desc: "[SCOPE.GetRootScope.GetDiplomaticPact.GetFirstCountry.GetName] [SCOPE.GetRootScope.GetDiplomaticPact.GetSecondCountry.GetName] adresine konvoy katkılarını artırmayı teklif ediyor." #deepl:2532270182
+ occ_offer_convoys_action_notification_break_name: "[INITIATOR_COUNTRY.GetName] artan konvoy katkılarını iptal etti" #deepl:2309048301
+ occ_offer_convoys_action_notification_break_desc: "[INITIATOR_COUNTRY.GetName] konvoy katkılarını normal seviyesine geri getirmiştir." #deepl:2864753228

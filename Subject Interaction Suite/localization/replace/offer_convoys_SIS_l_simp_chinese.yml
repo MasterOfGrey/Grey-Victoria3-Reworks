@@ -1,0 +1,11 @@
+﻿l_simp_chinese:
+
+ occ_offer_convoys: "增加车队捐款" #deepl:2913419027
+ occ_offer_convoys_desc: "增加[concept_subject] 对其[concept_market_owner] [concept_overlord] 的护航贡献。" #deepl:1766763354
+ occ_offer_convoys_action_notification_name: "[INITIATOR_COUNTRY.GetName] 增加车队捐款" #deepl:3624303288
+ occ_offer_convoys_action_notification_desc: "[INITIATOR_COUNTRY.GetName] 表示愿意增加对车队的捐助。" #deepl:1100390230
+ occ_offer_convoys_action_propose_name: "$occ_offer_convoys$" #deepl:1567265931
+ occ_offer_convoys_action_break_name: "取消增加车队捐款" #deepl:2418936819
+ occ_offer_convoys_pact_desc: "[SCOPE.GetRootScope.GetDiplomaticPact.GetFirstCountry.GetName] 提议增加车队捐款， 。[SCOPE.GetRootScope.GetDiplomaticPact.GetSecondCountry.GetName]" #deepl:2532270182
+ occ_offer_convoys_action_notification_break_name: "[INITIATOR_COUNTRY.GetName] 取消增加车队捐款" #deepl:2309048301
+ occ_offer_convoys_action_notification_break_desc: "[INITIATOR_COUNTRY.GetName] 车队捐款已恢复到正常水平。" #deepl:2864753228

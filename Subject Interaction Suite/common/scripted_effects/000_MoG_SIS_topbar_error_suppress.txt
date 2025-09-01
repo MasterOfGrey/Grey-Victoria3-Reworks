@@ -10,3 +10,10 @@ add_com_topbar_element = {
 		remove_variable = $element_name$
 	}
 }
+
+fix_variable_error = {
+	if = {
+		limit = {has_variable = $variable$ var:$variable$ = flag:$variable$ exists = scope:$variable$ scope:$variable$ = flag:$variable$}
+		set_variable = {name = $variable$ value = flag:$variable$} flag:$variable$ = {save_scope_as = $variable$}
+	}
+}

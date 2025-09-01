@@ -1,0 +1,203 @@
+﻿occ_offer_convoys = {
+	groups= { 
+		subject
+	}
+	
+	requires_approval = no
+	show_effect_in_tooltip = yes
+	
+	confirmation_sound = "event:/SFX/UI/MapInteraction/SubjectInteractions/diplomatic_action_subjects_03_exempt_from_service_benign"
+	selectable = {
+		#has_dlc_feature = subject_and_bloc_actions
+	}
+	
+	potential = {	# The Subject group ensures it can only be shown for overlords anyway.
+		scope:target_country = {
+			NOT = { is_diplomatic_play_enemy_of = root }
+		}
+	}
+	
+	possible = {
+		num_convoys_available > 100 #confirm if working
+	}
+
+	#accept_effect = {}
+	
+	pact = {	
+		cost = 0
+		# forced_duration = 6
+		
+		# is_two_sided_pact = no
+		show_in_outliner = yes
+
+		relations_progress_per_day = 1.5
+		
+		first_modifier = {
+			country_convoy_contribution_to_market_owner_add = 0.3
+		}
+
+		actor_can_break = {
+			always = yes
+		}
+
+		requirement_to_maintain = {
+			trigger = {
+				ROOT.market_capital = {
+					owner = scope:target_country
+				}
+			}
+		}
+		
+		requirement_to_maintain = {
+			trigger = {
+				ROOT = {
+					excess_convoy_surplus_percent > 0
+				}
+			}
+		}
+		#manual_break_effect = {}
+	}
+	
+	ai = {
+		evaluation_chance = {
+			value = 10		
+		}				
+		
+		propose_score = {
+			value = 0
+			
+			if = {
+				limit = {
+					excess_convoy_surplus_percent > 0.1	# Some buffer relative to maintenance requirement.
+				}
+				add = 300
+				if = {
+					limit = {
+						has_attitude = {
+							who = scope:target_country
+							attitude = aloof
+						}
+					}
+					add = -100
+				}
+				if = {
+					limit = {
+						has_attitude = {
+							who = scope:target_country
+							attitude = defiant
+						}
+					}
+					add = -300
+				}
+				if = {
+					limit = {
+						has_attitude = {
+							who = scope:target_country
+							attitude = rebellious
+						}
+					}
+					add = -500
+				}
+				if = {
+					limit = {
+						liberty_desire > 85
+					}
+					add = -350
+				}
+				else_if = {
+					limit = {
+						liberty_desire > 75
+					}
+					add = -300
+				}
+				else_if = {
+					limit = {
+						liberty_desire > 65
+					}
+					add = -250
+				}
+				else_if = {
+					limit = {
+						liberty_desire > 55
+					}
+					add = -200
+				}
+				else_if = {
+					limit = {
+						liberty_desire > 45
+					}
+					add = -150
+				}
+				else_if = {
+					limit = {
+						liberty_desire > 35
+					}
+					add = -100
+				}
+				else_if = {
+					limit = {
+						liberty_desire > 25
+					}
+					add = -50
+				}
+				if = {
+					limit = {
+						"relations(scope:actor)" >= relations_threshold:friendly
+					}
+					add = 100
+				}
+				else_if = {
+					limit = {
+						"relations(scope:actor)" >= relations_threshold:amicable
+					}
+					add = 50
+				}
+				else_if = {
+					limit = {
+						"relations(scope:actor)" >= relations_threshold:cordial
+					}
+					add = 0
+				}
+				else_if = {
+					limit = {
+						"relations(scope:actor)" >= relations_threshold:neutral
+					}
+					add = -50
+				}
+				else_if = {
+					limit = {
+						"relations(scope:actor)" <= relations_threshold:poor
+					}
+					add = -100
+				}
+				else_if = {
+					limit = {
+						"relations(scope:actor)" <= relations_threshold:cold
+					}
+					add = -150
+				}
+				else_if = {
+					limit = {
+						"relations(scope:actor)" <= relations_threshold:hostile
+					}
+					add = -200
+				}
+			}
+			else = {
+				value = 0
+				multiply = 0
+			}
+		}
+		
+		will_break = {
+			OR = { 
+				has_attitude = {
+					who = scope:target_country
+					attitude = rebellious
+				}
+				liberty_desire > 85
+				"relations(scope:actor)" <= relations_threshold:hostile
+			}
+		}
+	}
+}

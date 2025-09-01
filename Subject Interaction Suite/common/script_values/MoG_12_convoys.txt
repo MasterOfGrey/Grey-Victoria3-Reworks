@@ -1,0 +1,6 @@
+﻿# We are using this to identify when a country can afford to give away 30% of its convoy production.
+excess_convoy_surplus_percent = {
+	add = num_convoys_required
+	divide = num_convoys_available	# Result is 0.7 if has enough to give away.
+	add = -1						# If result >0, then has enough to give away.
+}

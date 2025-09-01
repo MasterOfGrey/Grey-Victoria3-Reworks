@@ -25,8 +25,8 @@
  setting_balanced_merge_desc: "A ação diplomática: Mesclar [concept_subject] [Concept('concept_country', '$concept_countries$')] é balanceada para jogo normal."
  setting_cheat_merge: "Mesclar assunto é uma trapaça"
  setting_cheat_merge_desc: "A ação diplomática: Mesclar [concept_subject] [Concept('concept_country', '$concept_countries$')] é um truque poderoso."
- setting_disabled_merge: "Mesclar assunto desativado" #deepl:354449469
- setting_disabled_merge_desc: "A ação diplomática: Merge [concept_subject] [Concept('concept_country', '$concept_countries$')] não está disponível." #deepl:3670147245
+ setting_disabled_merge: "Integrar o assunto desativado" #deepl:2534013759
+ setting_disabled_merge_desc: "A ação diplomática: Integrar [concept_subject] [Concept('concept_country', '$concept_countries$')] não está disponível." #deepl:3393539891
  DIPLOMATIC_ACCEPTANCE_BREAK_FREE: "Eles estão buscando um [concept_ai_strategy] de #v $ai_strategy_subject_break_free$#!"
  DIPLOMATIC_ACCEPTANCE_STRENGTHEN_SELF: "Eles estão buscando um [concept_ai_strategy] de #v $ai_strategy_subject_strengthen_self$#!"
  DIPLOMATIC_ACCEPTANCE_MAINTAIN_AUTONOMY: "Eles estão buscando um [concept_ai_strategy] de #v $ai_strategy_subject_maintain_autonomy$#!"

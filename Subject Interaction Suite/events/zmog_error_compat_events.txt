@@ -1,0 +1,25 @@
+﻿# Error suppression for spurious variable errors relating to the AI (the AI does not need UI variables)
+
+namespace = mog_err_compat_events
+
+mog_err_compat_events.1 = { # Error supression
+    type = country_event
+    placement = root
+    hidden = yes
+
+	# DO NOT CALL THIS EVENT
+	trigger = {
+		always = no
+	}
+	
+	cancellation_trigger = {
+		always = yes
+	}
+
+	immediate = {
+		fix_variable_error = { variable = mog_topbar_value_all_subject_pp }
+	}
+	
+	orphan = yes
+	
+}

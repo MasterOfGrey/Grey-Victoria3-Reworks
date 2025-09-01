@@ -2,32 +2,32 @@
  ld_level_low: "低"
  ld_level_moderate: "中"
  ld_level_high: "高"
-  
+
  LIBERTY_DESIRE_LEVEL_BOUNDS_DESC: "[concept_liberty_desire]が[LibertyDesireLevel.GetLowerBound|v0]から[LibertyDesireLevel.GetUpperBound|v0]のときに適用されます"
  LIBERTY_DESIRE_LEVEL_NO_EFFECT: "#italic 効果なし#!"
-  
+
  LIBERTY_DESIRE_LEVEL_ACTIVE: "#i #b (現在有効)#!#!"
  LIBERTY_DESIRE_LEVEL_TOOLTIP: "[SelectLocalization( LibertyDesireLevel.IsActive( Country.GetLibertyDesireRaw ), 'LIBERTY_DESIRE_LEVEL_ACTIVE_TOOLTIP', 'LIBERTY_DESIRE_LEVEL_INACTIVE_TOOLTIP' )]"
  LIBERTY_DESIRE_LEVEL_INACTIVE_TOOLTIP: "#header [LibertyDesireLevel.GetNameNoFormatting]#!\n$LIBERTY_DESIRE_LEVEL_BOUNDS_DESC$\n$TOOLTIP_DELIMITER$\n#title [Country.GetName]への影響:#!#indent_newline:2 \n[LibertyDesireLevel.GetEffects]#!"
-  
-  
+ 
+ 
  LIBERTY_DESIRE_LEVEL_ACTIVE_TOOLTIP: "#header [LibertyDesireLevel.GetNameNoFormatting]#! $LIBERTY_DESIRE_LEVEL_ACTIVE$\n$LIBERTY_DESIRE_LEVEL_BOUNDS_DESC$\n$LIBERTY_DESIRE_LEVEL_CURRENT_LIBERTY_DESIRE_DESC$\n$TOOLTIP_DELIMITER$\n[Country.GetWeeklyLibertyDesireChangeDesc]\n$TOOLTIP_DELIMITER$\n[Country.GetName] への影響:[LibertyDesireLevel.GetNameNoFormatting]0 \n[LibertyDesireLevel.GetNameNoFormatting]1#!"
-  
-  
+ 
+ 
  LIBERTY_DESIRE_LEVEL_CURRENT_LIBERTY_DESIRE_DESC: "現在の[concept_liberty_desire]値: [Country.GetLibertyDesireRaw|v0]"
-  
+
  COUNTRY_LIBERTY_DESIRE_ACTIVE_LEVEL_BOUNDS_DESC: "[concept_liberty_desire]が[Country.CalcLibertyDesireLevel.GetLowerBound|v0]から[Country.CalcLibertyDesireLevel.GetUpperBound|v0]のときに適用されます"
  COUNTRY_LIBERTY_DESIRE_ACTIVE_LEVEL_TOOLTIP: "#header [Country.GetName]は[Country.CalcLibertyDesireLevel.GetNameNoFormatting]です#!\n$COUNTRY_LIBERTY_DESIRE_ACTIVE_LEVEL_BOUNDS_DESC$\n$LIBERTY_DESIRE_LEVEL_CURRENT_LIBERTY_DESIRE_DESC$\n$TOOLTIP_DELIMITER$\n[Country.GetWeeklyLibertyDesireChangeDesc]\n\n#title [Country.GetName]への影響:#!#indent_newline:2 \n[Country.CalcLibertyDesireLevel.GetEffects]#!"
-  
+
  TOOLTIP_TYPE_LIBERTY_DESIRE_LEVEL: "自由への願望レベル"
-  
+
  LIBERTY_DESIRE_WEEKLY_CHANGE_BASE: "基礎"
  LIBERTY_DESIRE_WEEKLY_CHANGE_VALUE_FORMAT: "$KEY$から[SelectLocalization(GreaterThan_CFixedPoint('(CFixedPoint)$VALUE$','(CFixedPoint)0'),'$VALUE|bo=2$','$VALUE|bu=2$')]"
  LIBERTY_DESIRE_WEEKLY_CHANGE_DESC: "[concept_liberty_desire]は、以下が原因で毎週[SelectLocalization(GreaterThan_CFixedPoint('(CFixedPoint)$VALUE$','(CFixedPoint)0'),'$VALUE|bo=2$','$VALUE|bu=2$')]変化すると予想されます:\n$BREAKDOWN$"
  LIBERTY_DESIRE_WEEKLY_CHANGE_DESC_ADDITIONAL_ADDS: "#indent_newline:3 追加の合意:\n[SCOPE.GetRootScope.GetDiplomaticPact.GetSecondCountry.GetModifier.GetDescFor('country_liberty_desire_add')]#!"
  LIBERTY_SUBJECT_DESIRE_WEEKLY_CHANGE_DESC_ADDITIONAL_ADDS: "#indent_newline:3 追加の合意:\n[SCOPE.GetRootScope.GetDiplomaticPact.GetFirstCountry.GetModifier.GetDescFor('country_liberty_desire_of_subjects_add')]#!"
  LIBERTY_DESIRE_WEEKLY_CHANGE_DESC_ADDITIONAL_MULTS: "#indent_newline:3 追加の合意:\n[SCOPE.GetRootScope.GetDiplomaticPact.GetSecondCountry.GetModifier.GetDescFor('country_liberty_desire_add')][SCOPE.GetRootScope.GetDiplomaticPact.GetSecondCountry.GetModifier.GetDescFor('country_liberty_desire_increase_mult')][SCOPE.GetRootScope.GetDiplomaticPact.GetSecondCountry.GetModifier.GetDescFor('country_liberty_desire_decrease_mult')]#!"
-  
+
  LIBERTY_DESIRE_WEEKLY_CHANGE_RELATIONS_HOSTILE: "#r 敵対的 #![concept_relations]"
  LIBERTY_DESIRE_WEEKLY_CHANGE_RELATIONS_COLD: "#r 寒い #![concept_relations]"
  LIBERTY_DESIRE_WEEKLY_CHANGE_RELATIONS_POOR: "#r 悪い #![concept_relations]"
@@ -35,9 +35,9 @@
  LIBERTY_DESIRE_WEEKLY_CHANGE_RELATIONS_CORDIAL: "#green 心から #![concept_relations]"
  LIBERTY_DESIRE_WEEKLY_CHANGE_RELATIONS_AMICABLE: "#green 友好的 #![concept_relations]"
  LIBERTY_DESIRE_WEEKLY_CHANGE_RELATIONS_FRIENDLY: "#greenFriendly #![concept_relations]"
-  
+ 
  LIBERTY_DESIRE_WEEKLY_CHANGE_INFAMY: "[concept_infamy] / [concept_overlord]"
-  
+ 
  LIBERTY_DESIRE_WEEKLY_CHANGE_BANKROLL: "[GetDiplomaticActionType('bankroll').GetName]"
  LIBERTY_DESIRE_WEEKLY_CHANGE_SUPPORT_REGIME: "[GetDiplomaticActionType('da_support_regime').GetName]"
  LIBERTY_DESIRE_WEEKLY_CHANGE_KNOWLEDGE_SHARING: "[GetDiplomaticActionType('da_knowledge_sharing').GetName]"
@@ -45,16 +45,16 @@
  LIBERTY_DESIRE_WEEKLY_CHANGE_RAISE_PAYMENTS: "[GetDiplomaticActionType('raise_payments').GetName]"
  LIBERTY_DESIRE_WEEKLY_CHANGE_DECREASE_PAYMENTS: "[GetDiplomaticActionType('decrease_payments').GetName]"
  LIBERTY_DESIRE_WEEKLY_CHANGE_CULTURE_CONVERT: "[GetDiplomaticActionType('change_primary_culture').GetName]"
-  
+ 
  LIBERTY_DESIRE_RELATIVE_PRESTIGE_VALUE_FORMAT: "$TAB$[SelectLocalization(GreaterThan_CFixedPoint('(CFixedPoint)$VALUE$','(CFixedPoint)0'),'$VALUE|bo=2$','$VALUE|bu=2$')] は $KEY$ です"
  LIBERTY_DESIRE_WEEKLY_CHANGE_RELATIVE_PRESTIGE: "[concept_overlord] [concept_prestige] [SCOPE.GetRootScope.GetDiplomaticPact.GetSecondCountry.GetName] と比較 (現在 #v [SCOPE.GetRootScope.GetDiplomaticPact.GetFirstCountry.GetRelativePrestige( SCOPE.GetRootScope.GetDiplomaticPact.GetSecondCountry )|v1]x#!)\n$TAB$[SCOPE.GetRootScope.GetDiplomaticPact.GetSecondCountry.GetSubjectType.GetName] 満足度は次のように影響を受けます:\n[SCOPE.GetScriptValueDesc('liberty_desire_weekly_change_relative_prestige')]"
-  
+ 
  LIBERTY_DESIRE_WEEKLY_CHANGE_NO_PRESTIGE_NEGATIVE: "[SCOPE.GetRootScope.GetDiplomaticPact.GetSecondCountry.GetAdjective]の[concept_prestige]は#v 0#!です"
  LIBERTY_DESIRE_WEEKLY_CHANGE_NO_PRESTIGE_POSITIVE: "[SCOPE.GetRootScope.GetDiplomaticPact.GetFirstCountry.GetAdjective]の[concept_prestige]は#v 0#!です"
  LIBERTY_DESIRE_WEEKLY_CHANGE_PRESTIGE_DIFFERENCE_1_5_POSITIVE: "名声が#v 1.5x#!未満である"
  LIBERTY_DESIRE_WEEKLY_CHANGE_PRESTIGE_DIFFERENCE_2_0_POSITIVE: "名声が#v 2.0x#!未満である"
  LIBERTY_DESIRE_WEEKLY_CHANGE_PRESTIGE_DIFFERENCE_3_0_POSITIVE: "名声が#v 3.0x#!未満である"
-  
+ 
  LIBERTY_DESIRE_WEEKLY_CHANGE_PRESTIGE_DIFFERENCE_1_5_NEGATIVE: "名声は#v 1.5x#!以上"
  LIBERTY_DESIRE_WEEKLY_CHANGE_PRESTIGE_DIFFERENCE_2_0_NEGATIVE: "名声は#v 2.0x#!以上"
  LIBERTY_DESIRE_WEEKLY_CHANGE_PRESTIGE_DIFFERENCE_3_0_NEGATIVE: "名声は#v 3.0x#!以上"
@@ -66,18 +66,18 @@
  LIBERTY_DESIRE_WEEKLY_CHANGE_PRESTIGE_DIFFERENCE_24_0_NEGATIVE: "名声は#v 24.0x#!以上"
  LIBERTY_DESIRE_WEEKLY_CHANGE_PRESTIGE_DIFFERENCE_32_0_NEGATIVE: "名声は#v 32.0x#!以上"
  LIBERTY_DESIRE_WEEKLY_CHANGE_PRESTIGE_DIFFERENCE_48_0_NEGATIVE: "名声は#v 48.0x#!以上"
-  
+ 
  LIBERTY_DESIRE_WEEKLY_CHANGE_RELIGION: "[SCOPE.GetRootScope.GetDiplomaticPact.GetSecondCountry.GetSubjectType.GetName] を [concept_state_religion] に変更しようとしています"
  LIBERTY_DESIRE_WEEKLY_CHANGE_DEVOUT_RESISTANCE: "[GetDiplomaticActionType('change_state_religion').GetName]への熱心な抵抗"
  LIBERTY_DESIRE_WEEKLY_CHANGE_CULTURE: "[SCOPE.GetRootScope.GetDiplomaticPact.GetSecondCountry.GetSubjectType.GetName] を [Concept('concept_primary_cultures','$concept_primary_culture$')] に置き換えようとしています"
  LIBERTY_DESIRE_WEEKLY_CHANGE_NATIONALIST_RESISTANCE: "「[GetDiplomaticActionType('change_primary_culture').GetName]」に対するナショナリストの抵抗"
  LIBERTY_DESIRE_WEEKLY_CHANGE_INCLUDE_CULTURE: "[SCOPE.GetRootScope.GetDiplomaticPact.GetSecondCountry.GetSubjectType.GetName] [Concept('concept_primary_cultures','$concept_primary_culture$')] を含めようとしています"
-  
+ 
  legal_systems: "法制度"
  LIBERTY_DESIRE_LEGAL_FRICTION: "摩擦"
  LIBERTY_DESIRE_LEGAL_FRICTION_VALUE_FORMAT: "$TAB$[SelectLocalization(GreaterThan_CFixedPoint('(CFixedPoint)$VALUE$','(CFixedPoint)0'),'$VALUE|bo=2$','$VALUE|bu=2$')] は $KEY$ です"
  LIBERTY_DESIRE_WEEKLY_CHANGE_LEGAL_FRICTION: "$LIBERTY_DESIRE_LEGAL_FRICTION$ と [Concept('concept_law', '$legal_systems$')]:\n[SCOPE.GetScriptValueDesc('liberty_desire_weekly_change_legal_friction')] の間"
-  
+ 
  LIBERTY_DESIRE_LEGAL_FRICTION_GOVERNANCE: "[GetLawGroup('lawgroup_governance_principles').GetName]"
  LIBERTY_DESIRE_LEGAL_FRICTION_CHURCH: "[GetLawGroup('lawgroup_church_and_state').GetName]"
  LIBERTY_DESIRE_LEGAL_FRICTION_BUREAUCRACY: "[GetLawGroup('lawgroup_bureaucracy').GetName]"
@@ -88,7 +88,7 @@
  LIBERTY_DESIRE_LEGAL_FRICTION_FEMINISM: "[GetLawGroup('lawgroup_rights_of_women').GetName]"
  LIBERTY_DESIRE_LEGAL_FRICTION_SPEECH: "[GetLawGroup('lawgroup_free_speech').GetName]"
  LIBERTY_DESIRE_LEGAL_FRICTION_LABOR: "[GetLawGroup('lawgroup_labor_rights').GetName]"
-  
+ 
  LIBERTY_DESIRE_WEEKLY_CHANGE_REL_MILITARY_WEAK: "[SCOPE.GetRootScope.GetDiplomaticPact.GetSecondCountry.GetName] には [concept_army] がありません。"
  LIBERTY_DESIRE_WEEKLY_CHANGE_REL_MILITARY_SCALING: "相対的 [concept_army] [concept_power_projection] / [concept_overlord] (10 倍で最大効果)"
  LIBERTY_DESIRE_WEEKLY_CHANGE_REL_MILITARY_APPROACH: "相対的な軍事力 >オーバーロードの80%"
@@ -98,7 +98,7 @@
  LIBERTY_DESIRE_WEEKLY_CHANGE_COMBINED_SUBJECTS: "すべて[Concept('concept_subject', '$concept_subjects$')] [concept_power_projection] を[SCOPE.GetRootScope.GetDiplomaticPact.GetFirstCountry.GetName]\n[SCOPE.GetScriptValueDesc('liberty_desire_weekly_change_combined_subjects')] と比較"
  LIBERTY_DESIRE_WEEKLY_CHANGE_OWN_COMBINED_SUBJECTS: "[SCOPE.GetRootScope.GetDiplomaticPact.GetSecondCountry.GetName]自身の[Concept('concept_subject', '$concept_subjects$')]の脅威）"
  LIBERTY_DESIRE_CHANGE_OWN_COMBINED_SUBJECTS_VALUE_FORMAT: "$TAB$($KEY$から[SelectLocalization(GreaterThan_CFixedPoint('(CFixedPoint)$VALUE$','(CFixedPoint)0'),'$VALUE|bo=2$','$VALUE|bu=2$')]を含む)"
-  
+ 
  LIBERTY_DESIRE_WEEKLY_CHANGE_LOW_SUPPLY_NETWORK_STRENGTH: "低い[SCOPE.GetRootScope.GetDiplomaticPact.GetFirstCountry.GetAdjective]の[concept_supply_network]強度([SCOPE.GetRootScope.GetDiplomaticPact.GetFirstCountry.GetSupplyNetworkStrength|v0%])"
  LIBERTY_DESIRE_WEEKLY_CHANGE_SACRED_CIVICS: "#v $principle_group_sacred_civics$#!傘下にある同じ[concept_religion]状態"
  LIBERTY_DESIRE_WEEKLY_CHANGE_ISOLATED_FROM_MARKET: "[SCOPE.GetRootScope.GetDiplomaticPact.GetSecondCountry.GetCapital.GetName]は[SCOPE.GetRootScope.GetDiplomaticPact.GetFirstCountry.GetMarket.GetName]から孤立しています"
@@ -110,5 +110,5 @@
  LIBERTY_DESIRE_WEEKLY_CHANGE_ANTI_LOBBY_INTEREST_GROUP_IN_OPPOSITION: "[concept_in_opposition]の[concept_political_lobby] [Concept('concept_interest_group','$concept_interest_groups$')]の[concept_clout]"
  LIBERTY_DESIRE_WEEKLY_CHANGE_SCALING_LOW: "現状の変化に対する抵抗が低い[concept_liberty_desire]"
  LIBERTY_DESIRE_WEEKLY_CHANGE_SCALING_HIGH: "現状の変化に対する抵抗は高い[concept_liberty_desire]"
-  
-  
+
+ 

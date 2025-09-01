@@ -241,28 +241,28 @@ merge_subject = {
 				if = {
 					limit = {
 						has_attitude = {
-								who = scope:actor
-								attitude = loyal
-							}                           
-						}
+							who = scope:actor
+							attitude = loyal
+						}                           
+					}
 					value = 50
 				}
 				else_if = {
 					limit = {
 						has_attitude = {
-								who = scope:actor
-								attitude = defiant
-							}                           
-						}
+							who = scope:actor
+							attitude = defiant
+						}                           
+					}
 					value = -100
 				}
 				else_if = {
 					limit = {
 						has_attitude = {
-								who = scope:actor
-								attitude = rebellious
-							}                           
-						}
+							who = scope:actor
+							attitude = rebellious
+						}                           
+					}
 					value = -1000
 				}
 			}

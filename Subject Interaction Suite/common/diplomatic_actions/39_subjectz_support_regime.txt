@@ -9,7 +9,7 @@
 	texture = "gfx/interface/icons/diplomatic_action_icons/support_regime.dds"
 	confirmation_sound = "event:/SFX/UI/MapInteraction/SubjectInteractions/diplomatic_action_subjects_09_support_regime_benign"
 	
-	possible = {	
+	possible = {
 		scope:target_country = {
 			government_legitimacy < 75 # no point in supporting a regime that's already quite legitimate
 			NOT = { is_diplomatic_play_enemy_of = root }
@@ -17,7 +17,7 @@
 	}
 	
 	accept_effect = {
-		add_overlord_lobby_appeasement_from_diplomacy = { 
+		add_overlord_lobby_appeasement_from_diplomacy = {
 			FIRST = scope:target_country
 			SECOND = root
 			PRO_AMOUNT = 4
@@ -26,11 +26,11 @@
 		}
 	}
 	
-	pact = {	
+	pact = {
 		cost = 50
-		recipient_pays_maintenance = no
+		# recipient_pays_maintenance = no	# Unneeded since 1.9.3?
 		forced_duration = 12
-				
+		
 		first_modifier = {
 			country_legitimacy_base_add = -10
 		}
@@ -44,19 +44,19 @@
 		actor_can_break = {
 			always = yes
 		}
-	
+		
 		manual_break_effect = {
 			scope:target_country = {
 				add_liberty_desire = 10
 			}
 			
-			add_overlord_lobby_appeasement_from_diplomacy = { 
+			add_overlord_lobby_appeasement_from_diplomacy = {
 				FIRST = scope:target_country
 				SECOND = root
 				PRO_AMOUNT = -4
 				ANTI_AMOUNT = 4
 				FACTOR = appeasement_support_regime_ended
-			}				
+			}
 		}
 	}
 	
@@ -66,7 +66,7 @@
 		evaluation_chance = {
 			value = 0.25
 		}
-
+		
 		propose_score = {
 			value = 1 # Low propose score, AI should replace this with other pacts if needed
 			
@@ -75,7 +75,7 @@
 				multiply = 1
 			}
 		}
-	
+		
 		will_propose = {
 			government_legitimacy > 90
 			"ai_ideological_opinion(scope:target_country)" >= 25
@@ -97,7 +97,7 @@
 				}
 			}
 		}
-
+		
 		will_break = {
 			OR = {
 				government_legitimacy < 50
@@ -105,7 +105,7 @@
 				has_attitude = {
 					who = scope:target_country
 					attitude = domineering
-				}					
+				}
 			}
 		}
 		
@@ -116,7 +116,7 @@
 				desc = "DIPLOMATIC_ACCEPTANCE_BASE"
 				value = -100
 			}
-
+			
 			if = {
 				limit = {
 					"scope:actor.ai_ideological_opinion(root)" <= -25
@@ -147,8 +147,8 @@
 					multiply = 2
 					min = -100
 				}
-			}							
-							
+			}
+			
 			add = {
 				desc = "DIPLOMATIC_ACCEPTANCE_ATTITUDE"
 				if = {
@@ -159,7 +159,7 @@
 						}	
 					}
 					value = 75
-				}				
+				}
 				else_if = {
 					limit = {
 						has_attitude = {
@@ -168,7 +168,7 @@
 						}	
 					}
 					value = -50
-				}							
+				}
 			}
 			
 			if = {
@@ -190,31 +190,31 @@
 				add = {
 					desc = "DIPLOMATIC_ACCEPTANCE_LEGITIMACY"
 					value = -1000
-				}				
-			}	
+				}
+			}
 			else = {
 				add = {
 					desc = "DIPLOMATIC_ACCEPTANCE_LEGITIMACY"
 					value = legitimacy
 					subtract = 70
 					multiply = 2
-				}	
-			}			
+				}
+			}
 			
 			add = {
-				desc = "DIPLOMATIC_ACCEPTANCE_RELATIONS"		
+				desc = "DIPLOMATIC_ACCEPTANCE_RELATIONS"
 				if = {
 					limit = {
 						"relations(scope:actor)" >= relations_threshold:friendly
 					}
 					value = 100
-				}	
+				}
 				else_if = {
 					limit = {
 						"relations(scope:actor)" >= relations_threshold:amicable
 					}
 					value = 50
-				}					
+				}
 				else_if = {
 					limit = {
 						"relations(scope:actor)" >=  relations_threshold:cordial
@@ -226,10 +226,10 @@
 						"relations(scope:actor)" > relations_threshold:poor
 					}
 					value = -25
-				}					
+				}
 				else = {
 					value = -50
-				}				
+				}
 			}
 			
 			add = {
@@ -253,8 +253,8 @@
 						"scope:actor.infamy" >= infamy_threshold:pariah
 					}
 					value = -50
-				}					
-			}					
+				}
+			}
 		}
 	}
 }
@@ -280,10 +280,10 @@ da_request_support_regime = {
 					any_diplomatic_catalyst = {
 						is_diplomatic_catalyst_type = catalyst_support_regime_requested
 						target = root
-					}					
+					}
 				}
 			}
-		}	
+		}
 	}
 	
 	accept_effect = {
@@ -309,9 +309,9 @@ da_request_support_regime = {
 				create_diplomatic_catalyst = {
 					type = catalyst_support_regime_requested
 					target = root
-				}		
+				}
 			}
-		}			
+		}
 	}
 	
 	reverse_pact = da_support_regime
@@ -320,16 +320,16 @@ da_request_support_regime = {
 		evaluation_chance = {
 			value = 0.25
 		}
-
+		
 		propose_score = {
 			value = 10
 		}
-	
+		
 		will_propose = {
 			government_legitimacy < 50
 			liberty_desire_weekly_progress > -0.2
 		}
-
+		
 		will_break = {
 			OR = {
 				government_legitimacy < 50

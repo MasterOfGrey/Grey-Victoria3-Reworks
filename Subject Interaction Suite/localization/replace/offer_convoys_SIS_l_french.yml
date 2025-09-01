@@ -1,0 +1,11 @@
+﻿l_french:
+
+ occ_offer_convoys: "Augmentation de la contribution aux convois" #deepl:2913419027
+ occ_offer_convoys_desc: "Augmente la contribution au convoi du [concept_subject] vers son [concept_market_owner] [concept_overlord] ." #deepl:1766763354
+ occ_offer_convoys_action_notification_name: "[INITIATOR_COUNTRY.GetName] augmente la contribution des convois" #deepl:3624303288
+ occ_offer_convoys_action_notification_desc: "[INITIATOR_COUNTRY.GetName] a proposé d'augmenter ses contributions aux convois." #deepl:1100390230
+ occ_offer_convoys_action_propose_name: "$occ_offer_convoys$" #deepl:1567265931
+ occ_offer_convoys_action_break_name: "Annulation de l'augmentation des contributions aux convois" #deepl:2418936819
+ occ_offer_convoys_pact_desc: "[SCOPE.GetRootScope.GetDiplomaticPact.GetFirstCountry.GetName] propose d'augmenter les contributions des convois à [SCOPE.GetRootScope.GetDiplomaticPact.GetSecondCountry.GetName]." #deepl:2532270182
+ occ_offer_convoys_action_notification_break_name: "[INITIATOR_COUNTRY.GetName] a annulé l'augmentation des contributions aux convois" #deepl:2309048301
+ occ_offer_convoys_action_notification_break_desc: "[INITIATOR_COUNTRY.GetName] a rétabli les contributions des convois à leur niveau habituel." #deepl:2864753228

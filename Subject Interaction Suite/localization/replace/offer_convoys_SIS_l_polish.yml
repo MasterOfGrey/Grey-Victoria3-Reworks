@@ -1,0 +1,11 @@
+﻿l_polish:
+
+ occ_offer_convoys: "Zwiększenie wkładu w konwój" #deepl:2913419027
+ occ_offer_convoys_desc: "Zwiększa wkład konwoju [concept_subject] w jego [concept_market_owner] [concept_overlord] ." #deepl:1766763354
+ occ_offer_convoys_action_notification_name: "[INITIATOR_COUNTRY.GetName] zwiększa wkład konwoju" #deepl:3624303288
+ occ_offer_convoys_action_notification_desc: "[INITIATOR_COUNTRY.GetName] zaoferowała zwiększenie swojego wkładu w konwoje." #deepl:1100390230
+ occ_offer_convoys_action_propose_name: "$occ_offer_convoys$" #deepl:1567265931
+ occ_offer_convoys_action_break_name: "Anuluj zwiększone składki na konwoje" #deepl:2418936819
+ occ_offer_convoys_pact_desc: "[SCOPE.GetRootScope.GetDiplomaticPact.GetFirstCountry.GetName] oferuje zwiększenie wkładu w konwoje na [SCOPE.GetRootScope.GetDiplomaticPact.GetSecondCountry.GetName]." #deepl:2532270182
+ occ_offer_convoys_action_notification_break_name: "[INITIATOR_COUNTRY.GetName] anulowano zwiększone składki na konwoje" #deepl:2309048301
+ occ_offer_convoys_action_notification_break_desc: "[INITIATOR_COUNTRY.GetName] przywróciła składki na konwoje do normalnego poziomu." #deepl:2864753228

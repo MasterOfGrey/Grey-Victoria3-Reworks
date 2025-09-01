@@ -25,8 +25,8 @@
  setting_balanced_merge_desc: "该外交行动将被平衡至原版水平"
  setting_cheat_merge: "作弊"
  setting_cheat_merge_desc: "该外交行动将是强力的作弊"
- setting_disabled_merge: "合并主题已禁用" #deepl:354449469
- setting_disabled_merge_desc: "外交行动：合并[concept_subject] [Concept('concept_country', '$concept_countries$')] 无法使用。" #deepl:3670147245
+ setting_disabled_merge: "整合禁用学科" #deepl:2534013759
+ setting_disabled_merge_desc: "外交行动：整合[concept_subject] [Concept('concept_country', '$concept_countries$')] 无法使用。" #deepl:3393539891
  DIPLOMATIC_ACCEPTANCE_BREAK_FREE: "他们正在推动#v $ai_strategy_subject_break_free$#![concept_ai_strategy]"
  DIPLOMATIC_ACCEPTANCE_STRENGTHEN_SELF: "他们正在推动#v $ai_strategy_subject_strengthen_self$#![concept_ai_strategy]"
  DIPLOMATIC_ACCEPTANCE_MAINTAIN_AUTONOMY: "他们正在推动[concept_ai_strategy]#v $ai_strategy_subject_maintain_autonomy$#![concept_ai_strategy]"

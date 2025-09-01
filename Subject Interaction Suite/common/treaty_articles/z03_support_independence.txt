@@ -53,15 +53,17 @@
 	}
 	
 	# Freeze treaty article instead of cancelling if you there's a truce.
-    non_fulfillment = {
-        consequences = freeze
-        # max_consecutive_contraventions = 0 # Default is 0 - always freeze on truce.
-        conditions = {
-            weekly = {
-                ROOT = { has_truce_with = scope:target_country }
-            }
-        }
-    }
+	non_fulfillment = {
+		consequences = freeze
+		# max_consecutive_contraventions = 0 # Default is 0 - always freeze on truce.
+		conditions = {
+			weekly = {
+				scope:article = {
+					source_country = { has_truce_with = prev.target_country }
+				}
+			}
+		}
+	}
 #	requirement_to_maintain = {
 #		trigger = {
 #			NOT = ( has_truce_with = scope:target_country }
@@ -116,13 +118,13 @@
 				}
 			}
 		}
-        custom_tooltip = {
-            text = DUPLICATE_ARTICLE_SAME_INPUTS_TREATY
-            NOT = {
-                scope:source_country = {
-                    any_scope_treaty = {
+		custom_tooltip = {
+			text = DUPLICATE_ARTICLE_SAME_INPUTS_TREATY
+			NOT = {
+				scope:source_country = {
+					any_scope_treaty = {
 						binds = scope:target_country
-                        hidden_trigger = {
+						hidden_trigger = {
 							OR = {
 								scope:treaty = {
 									is_renegotiation = no
@@ -134,10 +136,10 @@
 							has_type = support_independence
 							source_country = scope:source_country
 						}
-                    }
-                }
-            }
-        }
+					}
+				}
+			}
+		}
 		scope:target_country = {
 			NOR = {
 				play_participant_has_war_goal_of_type_against = {
@@ -215,9 +217,9 @@
 		}
 
 		article_ai_usage = {
-            offer
-            request
-        }
+			offer
+			request
+		}
 
 		inherent_accept_score = {
 			value = 0

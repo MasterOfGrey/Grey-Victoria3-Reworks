@@ -1,0 +1,11 @@
+﻿l_russian:
+
+ occ_offer_convoys: "Увеличить взнос на конвоирование" #deepl:2913419027
+ occ_offer_convoys_desc: "Увеличивает вклад конвоя [concept_subject] в его [concept_market_owner] [concept_overlord] ." #deepl:1766763354
+ occ_offer_convoys_action_notification_name: "[INITIATOR_COUNTRY.GetName] увеличивает вклад конвоя" #deepl:3624303288
+ occ_offer_convoys_action_notification_desc: "[INITIATOR_COUNTRY.GetName] предложили увеличить свои взносы на содержание конвоев." #deepl:1100390230
+ occ_offer_convoys_action_propose_name: "$occ_offer_convoys$" #deepl:1567265931
+ occ_offer_convoys_action_break_name: "Отмена повышенных взносов на содержание конвоев" #deepl:2418936819
+ occ_offer_convoys_pact_desc: "[SCOPE.GetRootScope.GetDiplomaticPact.GetFirstCountry.GetName] предлагает увеличить конвойные взносы на [SCOPE.GetRootScope.GetDiplomaticPact.GetSecondCountry.GetName]." #deepl:2532270182
+ occ_offer_convoys_action_notification_break_name: "[INITIATOR_COUNTRY.GetName] отменили увеличение взносов на конвоирование" #deepl:2309048301
+ occ_offer_convoys_action_notification_break_desc: "[INITIATOR_COUNTRY.GetName] восстановила взносы на содержание автоколонн до обычного уровня." #deepl:2864753228
