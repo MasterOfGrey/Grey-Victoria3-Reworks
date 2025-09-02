@@ -27,7 +27,7 @@
 		cost = 0
 		# forced_duration = 6
 		
-		# is_two_sided_pact = no
+		is_two_sided_pact = no
 		show_in_outliner = yes
 
 		relations_progress_per_day = 1.5
@@ -51,7 +51,10 @@
 		requirement_to_maintain = {
 			trigger = {
 				ROOT = {
-					excess_convoy_surplus_percent > 0
+					custom_tooltip = {
+						text = "TRIGGER_COUNTRY_EXCESS_CONVOY_SURPLUS_PERCENT_GREATER_THAN"
+						excess_convoy_surplus_percent > 0
+					}
 				}
 			}
 		}

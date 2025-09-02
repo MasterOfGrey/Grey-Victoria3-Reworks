@@ -9,3 +9,5 @@
  occ_offer_convoys_pact_desc: "[SCOPE.GetRootScope.GetDiplomaticPact.GetFirstCountry.GetName] offers to increase convoy contributions to [SCOPE.GetRootScope.GetDiplomaticPact.GetSecondCountry.GetName]."
  occ_offer_convoys_action_notification_break_name: "[INITIATOR_COUNTRY.GetName] cancelled increased convoy contributions"
  occ_offer_convoys_action_notification_break_desc: "[INITIATOR_COUNTRY.GetName] has restored convoy contributions to their regular level."
+ 
+ TRIGGER_COUNTRY_EXCESS_CONVOY_SURPLUS_PERCENT_GREATER_THAN: "Surplus [concept_convoys] after sharing is #b not#! greater than #BOLD 0%#! (currently: [ROOT.GetCountry.MakeScope.ScriptValue('excess_convoy_surplus_percent')|v%])"
