@@ -9,3 +9,5 @@
  occ_offer_convoys_pact_desc: "[SCOPE.GetRootScope.GetDiplomaticPact.GetFirstCountry.GetName] [SCOPE.GetRootScope.GetDiplomaticPact.GetSecondCountry.GetName] へのコンボイ拠出金の増額を申し出ている。" #deepl:2532270182
  occ_offer_convoys_action_notification_break_name: "[INITIATOR_COUNTRY.GetName] コンボイ拠出金の増額を中止" #deepl:2309048301
  occ_offer_convoys_action_notification_break_desc: "[INITIATOR_COUNTRY.GetName] は護衛艦の貢献度を通常のレベルにまで回復させた。" #deepl:2864753228
+ 
+ TRIGGER_COUNTRY_EXCESS_CONVOY_SURPLUS_PERCENT_GREATER_THAN: "分配後の剰余金[concept_convoys] は#b #! を上回らない#BOLD 0%#! （現在：[ROOT.GetCountry.MakeScope.ScriptValue('excess_convoy_surplus_percent')|v%] ）。" #deepl:70343308

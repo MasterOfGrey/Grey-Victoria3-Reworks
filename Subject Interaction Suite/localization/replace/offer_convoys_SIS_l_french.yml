@@ -9,3 +9,5 @@
  occ_offer_convoys_pact_desc: "[SCOPE.GetRootScope.GetDiplomaticPact.GetFirstCountry.GetName] propose d'augmenter les contributions des convois à [SCOPE.GetRootScope.GetDiplomaticPact.GetSecondCountry.GetName]." #deepl:2532270182
  occ_offer_convoys_action_notification_break_name: "[INITIATOR_COUNTRY.GetName] a annulé l'augmentation des contributions aux convois" #deepl:2309048301
  occ_offer_convoys_action_notification_break_desc: "[INITIATOR_COUNTRY.GetName] a rétabli les contributions des convois à leur niveau habituel." #deepl:2864753228
+ 
+ TRIGGER_COUNTRY_EXCESS_CONVOY_SURPLUS_PERCENT_GREATER_THAN: "L'excédent [concept_convoys] après partage est #b pas#! supérieur à #BOLD 0%#! (actuellement : [ROOT.GetCountry.MakeScope.ScriptValue('excess_convoy_surplus_percent')|v%])" #deepl:70343308

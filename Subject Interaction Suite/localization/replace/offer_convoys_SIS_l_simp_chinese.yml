@@ -9,3 +9,5 @@
  occ_offer_convoys_pact_desc: "[SCOPE.GetRootScope.GetDiplomaticPact.GetFirstCountry.GetName] 提议增加车队捐款， 。[SCOPE.GetRootScope.GetDiplomaticPact.GetSecondCountry.GetName]" #deepl:2532270182
  occ_offer_convoys_action_notification_break_name: "[INITIATOR_COUNTRY.GetName] 取消增加车队捐款" #deepl:2309048301
  occ_offer_convoys_action_notification_break_desc: "[INITIATOR_COUNTRY.GetName] 车队捐款已恢复到正常水平。" #deepl:2864753228
+ 
+ TRIGGER_COUNTRY_EXCESS_CONVOY_SURPLUS_PERCENT_GREATER_THAN: "分摊后的盈余[concept_convoys] 是#b 不是#! 大于#BOLD 0%#! （目前：[ROOT.GetCountry.MakeScope.ScriptValue('excess_convoy_surplus_percent')|v%])" #deepl:70343308
