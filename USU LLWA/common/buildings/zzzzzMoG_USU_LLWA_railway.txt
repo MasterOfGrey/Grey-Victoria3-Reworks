@@ -123,9 +123,9 @@
 			limit = {
 				exists = c:RUS
 				c:RUS ?= owner
-				OR = {
+				# OR = {
 					region = sr:region_manchuria
-				}
+				# }
 				any_scope_building = {
 					is_building_type = building_railway
 					levels_owned_by_country = {  
@@ -136,7 +136,14 @@
 			}
 			add = 10000
 		}
-
+		
+		if = { # Get them started at least...
+			limit = {
+				NOT = { exists = b:building_railway }
+			}
+			add = 2000
+		}
+		
 		if = {
 			limit = {
 				relative_infrastructure < 1.1
@@ -147,7 +154,19 @@
 			limit = {
 				relative_infrastructure < 1
 			}
-			multiply = 4
+			multiply = 2
+		}
+		
+		if = {
+			limit = {
+				usu_calculate_building_good_ai_value_profit_adjustment = {
+					building = building_railway
+					good = transportation
+				#	employees_per_level = 1000 # DO NOT PASS UNUSED VALUES
+					fallback_production = 115
+				}
+			}
+			subtract = scope:result
 		}
 	}
 	
