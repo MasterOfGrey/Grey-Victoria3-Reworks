@@ -10,4 +10,5 @@
  occ_offer_convoys_action_notification_break_name: "[INITIATOR_COUNTRY.GetName] コンボイ拠出金の増額を中止" #deepl:2309048301
  occ_offer_convoys_action_notification_break_desc: "[INITIATOR_COUNTRY.GetName] は護衛艦の貢献度を通常のレベルにまで回復させた。" #deepl:2864753228
  
- TRIGGER_COUNTRY_EXCESS_CONVOY_SURPLUS_PERCENT_GREATER_THAN: "分配後の剰余金[concept_convoys] は#b #! を上回らない#BOLD 0%#! （現在：[ROOT.GetCountry.MakeScope.ScriptValue('excess_convoy_surplus_percent')|v%] ）。" #deepl:70343308
+ TRIGGER_COUNTRY_EXCESS_CONVOY_SURPLUS_PERCENT_GREATER_THAN: "増加後の剰余金[concept_convoys] は#b #! を上回らない#BOLD 0%#! （現在：[ROOT.GetCountry.MakeScope.ScriptValue('excess_convoy_surplus_percent')|v%] ）。" #deepl:3808472463
+ TRIGGER_COUNTRY_CONVOY_CONTRIBUTION_LESS_THAN_MAX: "合計@convoys![Nbsp] [concept_convoys] 増額後の[concept_market_owner] への寄与率は#b 以上#! 以下でなければならない#BOLD 95%#! （現在：[ROOT.GetCountry.GetModifier.GetValueFor('country_convoy_contribution_to_market_owner_add')|v%0] +#v 30%#! =[ROOT.GetCountry.MakeScope.ScriptValue('after_increase_contribution_percent')|v%0] ）。" #deepl:3830302215

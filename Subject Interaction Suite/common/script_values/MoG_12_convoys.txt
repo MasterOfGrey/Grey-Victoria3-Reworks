@@ -4,6 +4,10 @@ excess_convoy_surplus_percent = {
 		add = num_convoys_required
 		min = 1
 	}
+	add = {
+		add = modifier:country_convoy_contribution_to_market_owner_add
+		multiply = num_convoys_available
+	}
 	divide = { 
 		add = num_convoys_available	# Result is 0.7 or lower if has enough to give away.
 		min = 1
@@ -12,4 +16,9 @@ excess_convoy_surplus_percent = {
 	add = 1					# (1-usage)=[surplus as proportion of total] (which must be >0.3)
 	
 	add = -0.3				# If result >0, then has enough to give away.
+}
+
+after_increase_contribution_percent = {
+	add = modifier:country_convoy_contribution_to_market_owner_add
+	add = 0.3
 }

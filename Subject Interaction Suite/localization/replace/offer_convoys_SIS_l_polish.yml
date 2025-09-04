@@ -10,4 +10,5 @@
  occ_offer_convoys_action_notification_break_name: "[INITIATOR_COUNTRY.GetName] anulowano zwiększone składki na konwoje" #deepl:2309048301
  occ_offer_convoys_action_notification_break_desc: "[INITIATOR_COUNTRY.GetName] przywróciła składki na konwoje do normalnego poziomu." #deepl:2864753228
  
- TRIGGER_COUNTRY_EXCESS_CONVOY_SURPLUS_PERCENT_GREATER_THAN: "Nadwyżka [concept_convoys] po podziale jest #b nie#! większa niż #BOLD 0%#! (obecnie: [ROOT.GetCountry.MakeScope.ScriptValue('excess_convoy_surplus_percent')|v%])" #deepl:70343308
+ TRIGGER_COUNTRY_EXCESS_CONVOY_SURPLUS_PERCENT_GREATER_THAN: "Nadwyżka [concept_convoys] po zwiększeniu jest #b nie#! większa niż #BOLD 0%#! (obecnie: [ROOT.GetCountry.MakeScope.ScriptValue('excess_convoy_surplus_percent')|v%])" #deepl:3808472463
+ TRIGGER_COUNTRY_CONVOY_CONTRIBUTION_LESS_THAN_MAX: "Łącznie @convoys![Nbsp] [concept_convoys] Wkład do [concept_market_owner] po zwiększeniu nie może #b #! być większy lub równy #BOLD 95%#! (obecnie: [ROOT.GetCountry.GetModifier.GetValueFor('country_convoy_contribution_to_market_owner_add')|v%0] + #v 30%#! = [ROOT.GetCountry.MakeScope.ScriptValue('after_increase_contribution_percent')|v%0])" #deepl:3830302215

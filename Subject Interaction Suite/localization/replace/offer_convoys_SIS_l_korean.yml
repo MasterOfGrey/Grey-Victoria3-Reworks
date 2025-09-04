@@ -10,4 +10,5 @@
  occ_offer_convoys_action_notification_break_name: "[INITIATOR_COUNTRY.GetName] 호송대 기여금 인상 취소" #deepl:2309048301
  occ_offer_convoys_action_notification_break_desc: "[INITIATOR_COUNTRY.GetName] 호송 기여도를 정상 수준으로 복원했습니다." #deepl:2864753228
  
- TRIGGER_COUNTRY_EXCESS_CONVOY_SURPLUS_PERCENT_GREATER_THAN: "공유 후 잉여 [concept_convoys] 는 #b 이#! 보다 크지 않음 #BOLD 0%#! (현재: [ROOT.GetCountry.MakeScope.ScriptValue('excess_convoy_surplus_percent')|v%])" #deepl:70343308
+ TRIGGER_COUNTRY_EXCESS_CONVOY_SURPLUS_PERCENT_GREATER_THAN: "인상 후 잉여금 [concept_convoys] 은 #b 이#! 보다 크지 않음 #BOLD 0%#! (현재: [ROOT.GetCountry.MakeScope.ScriptValue('excess_convoy_surplus_percent')|v%])" #deepl:3808472463
+ TRIGGER_COUNTRY_CONVOY_CONTRIBUTION_LESS_THAN_MAX: "합계 @convoys![Nbsp] [concept_convoys] 인상 후 [concept_market_owner] 에 대한 기여도 #b 가#! 보다 크지 않아야 함 #BOLD 95%#! (현재: [ROOT.GetCountry.GetModifier.GetValueFor('country_convoy_contribution_to_market_owner_add')|v%0] + #v 30%#! = [ROOT.GetCountry.MakeScope.ScriptValue('after_increase_contribution_percent')|v%0])" #deepl:3830302215
