@@ -1,6 +1,7 @@
 ﻿occ_offer_convoys = {
 	groups= { 
 		subject
+		power_bloc_member
 	}
 	
 	requires_approval = no

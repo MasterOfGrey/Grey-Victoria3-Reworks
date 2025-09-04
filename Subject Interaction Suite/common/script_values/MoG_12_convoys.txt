@@ -14,8 +14,15 @@ excess_convoy_surplus_percent = {
 	}						# We have currently calculated **usage** as a %
 	multiply = -1
 	add = 1					# (1-usage)=[surplus as proportion of total] (which must be >0.3)
-	
-	add = -0.3				# If result >0, then has enough to give away.
+	if = {
+		limit = { 
+			num_diplomatic_pacts = {	# Don't double count this requirement when the pact is active
+				type = occ_offer_convoys
+				value < 1
+			}
+		}
+		add = -0.3				# If result >0, then has enough to give away.
+	}
 }
 
 after_increase_contribution_percent = {
