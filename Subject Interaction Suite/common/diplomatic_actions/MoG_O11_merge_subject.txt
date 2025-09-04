@@ -108,8 +108,10 @@ merge_subject = {
 					if = {
 						limit = { 
 							scope:target_country = {
-								is_ai = no												# Target country is player
-								has_diplomatic_pact = { who = root type = colony }		# AI will not eat its own Colonies but the player can
+								OR = {
+									is_ai = no												# Target country is player
+									has_diplomatic_pact = { who = root type = colony }		# AI will not eat its own Colonies but the player can
+								}
 							}
 						}
 						multiply = 0
@@ -144,8 +146,10 @@ merge_subject = {
 					if = {
 						limit = { 
 							scope:target_country = {
-								is_ai = no												# Target country is player
-								has_diplomatic_pact = { who = root type = colony }		# AI will not eat its own Colonies but the player can
+								OR = {
+									is_ai = no												# Target country is player
+									has_diplomatic_pact = { who = root type = colony }		# AI will not eat its own Colonies but the player can
+								}
 							}
 						}
 						multiply = 0
