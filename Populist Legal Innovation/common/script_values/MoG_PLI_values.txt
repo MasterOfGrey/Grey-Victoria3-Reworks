@@ -19,28 +19,28 @@ mog_pli_investment_increment = {
 	add = {
 		owner.institution:institution_police ?= {
 			add = 0.1
-			multiply = level
+			multiply = investment
 		}
 		desc = PLI_POLICE_INSTITUTION
 	}
 	add = {
 		owner.institution:institution_schools ?= {
 			add = 0.1
-			multiply = level
+			multiply = investment
 		}
 		desc = PLI_SCHOOL_INSTITUTION
 	}
 	add = {
 		owner.institution:institution_health_system ?= {
 			add = 0.1
-			multiply = level
+			multiply = investment
 		}
 		desc = PLI_HEALTH_INSTITUTION
 	}
 	add = {
 		owner.institution:institution_social_security ?= {
 			add = 0.1
-			multiply = level
+			multiply = investment
 		}
 		desc = PLI_SOCSEC_INSTITUTION
 	}
@@ -48,14 +48,14 @@ mog_pli_investment_increment = {
 	add = {		# New Investment has higher overheads
 		owner.institution:institution_workplace_safety ?= {
 			add = -0.1
-			multiply = level
+			multiply = investment
 		}
 		desc = PLI_OHS_INSTITUTION
 	}
 	add = {		# New Investment has either sovereign risk or more noise to filter
 		owner.institution:institution_home_affairs ?= {
 			add = -0.1
-			multiply = level
+			multiply = investment
 		}
 		desc = PLI_HAFFAIRS_INSTITUTION
 	}
@@ -72,37 +72,37 @@ mog_pli_inv_dist_of_power = {
 		}
 		add = 3
 	}
-	else_if {
+	else_if = {
 		limit = { # Elite Captured Power
 			OR = { 
 				has_law_or_variant = law_type:law_technocracy 
 				has_law_or_variant = law_type:law_oligarchy
-				has_law_or_variant = law_type:law_type:law_elder_council
+				has_law_or_variant = law_type:law_elder_council
 			}
 		}
 		add = 5
 	}
-	else_if {
+	else_if = {
 		limit = { has_law_or_variant = law_type:law_landed_voting }
 		add = 7
 	}
-	else_if {
+	else_if = {
 		limit = { has_law_or_variant = law_type:law_wealth_voting }
 		add = 10
 	}
-	else_if {
+	else_if = {
 		limit = { has_law_or_variant = law_type:law_census_voting }
 		add = 15
 	}
-	else_if {
+	else_if = {
 		limit = { has_law_or_variant = law_type:law_universal_suffrage }
 		add = 20
 	}
-	else_if {	# Investor Confidence Collapse
+	else_if = {	# Investor Confidence Collapse
 		limit = { has_law_or_variant = law_type:law_anarchy }
 		add = 1
 	}
-	else {		# For random modded laws
+	else = {		# For random modded laws
 		add = mog_pli_inv_dist_of_power_modded
 	}
 }
@@ -127,7 +127,7 @@ mog_pli_inv_internal_security = {
 		}
 		add = 5
 	}
-	else_if {
+	else_if = {
 		limit = { # Stable Conditions with Known Constraints
 			OR = { 
 				has_law_or_variant = law_type:law_national_guard
@@ -136,11 +136,11 @@ mog_pli_inv_internal_security = {
 		}
 		add = 10
 	}
-	else_if {	# Investment requires playing the Political Game
+	else_if = {	# Investment requires playing the Political Game
 		limit = { has_law_or_variant = law_type:law_secret_police }
 		add = 3
 	}
-	else {		# For Random Modded laws
+	else = {	# For Random Modded laws
 		add = mog_pli_inv_internal_security_modded
 	}
 }
