@@ -1,0 +1,10 @@
+﻿je_mog_pli_investment = {
+	icon = "gfx/interface/icons/event_icons/event_industry.dds"
+	group = je_group_objectives
+	
+	
+	
+	
+	
+	should_be_pinned_by_default = yes
+}
