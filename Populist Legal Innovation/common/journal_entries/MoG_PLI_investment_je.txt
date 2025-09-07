@@ -2,9 +2,58 @@
 	icon = "gfx/interface/icons/event_icons/event_industry.dds"
 	group = je_group_objectives
 	
+	scripted_progress_bar = mog_pli_investment_tracking_bar
+	immediate = {
+		#set/initialize country/journal relevant variables
+	}
 	
-	
-	
+	status_desc = {
+		first_valid = {
+			triggered_desc = {
+				desc = je_mog_pli_investment_good
+				trigger = {
+					always = no
+					#TBD
+				}
+			}
+			triggered_desc = {
+				desc = je_mog_pli_investment_neutral
+				trigger = {
+					always = yes
+					#TBD
+				}
+			}
+			triggered_desc = {
+				desc = je_mog_pli_investment_bad
+				trigger = {
+					always = no
+					#TBD
+				}
+			}
+		}
+	}
+
+	on_weekly_pulse = {
+		effect = {
+			#set modifier from conditions
+			scope:journal_entry = {
+				hidden_effect = {
+					#remove_modifier = je_mog_pli_investment_modifier
+				}
+				#add_modifier = {
+				#	name = je_mog_pli_investment_modifier
+				#	days = -1
+				#	multiplier = {
+				#		value = {
+				#			value = 1
+				#			subtract = root.variable to modify value
+				#		}
+				#		add = 1
+				#	}
+				#}
+			}
+		}
+	}
 	
 	should_be_pinned_by_default = yes
 }
