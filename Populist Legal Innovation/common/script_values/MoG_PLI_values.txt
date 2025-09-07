@@ -1,0 +1,154 @@
+﻿### Investment Values
+mog_pli_investment_target = {
+	value = 0
+	add = mog_pli_inv_dist_of_power
+	add = mog_pli_inv_church_and_state
+	add = mog_pli_inv_economic_system
+	add = mog_pli_inv_taxation
+	add = mog_pli_inv_policing
+	add = mog_pli_inv_internal_security
+	add = mog_pli_inv_rights_of_women
+	add = mog_pli_inv_slavery
+	min = 1
+	max = 100
+}
+
+mog_pli_investment_increment = {
+	value = 0
+	# Accelerators
+	add = {
+		owner.institution:institution_police ?= {
+			add = 0.1
+			multiply = level
+		}
+		desc = PLI_POLICE_INSTITUTION
+	}
+	add = {
+		owner.institution:institution_schools ?= {
+			add = 0.1
+			multiply = level
+		}
+		desc = PLI_SCHOOL_INSTITUTION
+	}
+	add = {
+		owner.institution:institution_health_system ?= {
+			add = 0.1
+			multiply = level
+		}
+		desc = PLI_HEALTH_INSTITUTION
+	}
+	add = {
+		owner.institution:institution_social_security ?= {
+			add = 0.1
+			multiply = level
+		}
+		desc = PLI_SOCSEC_INSTITUTION
+	}
+	# Decelerators
+	add = {		# New Investment has higher overheads
+		owner.institution:institution_workplace_safety ?= {
+			add = -0.1
+			multiply = level
+		}
+		desc = PLI_OHS_INSTITUTION
+	}
+	add = {		# New Investment has either sovereign risk or more noise to filter
+		owner.institution:institution_home_affairs ?= {
+			add = -0.1
+			multiply = level
+		}
+		desc = PLI_HAFFAIRS_INSTITUTION
+	}
+	min = 0.1
+}
+
+mog_pli_inv_dist_of_power = {
+	if = {
+		limit = { # Absolute Power
+			OR = { 
+				has_law_or_variant = law_type:law_autocracy
+				has_law_or_variant = law_type:law_single_party_state
+			}
+		}
+		add = 3
+	}
+	else_if {
+		limit = { # Elite Captured Power
+			OR = { 
+				has_law_or_variant = law_type:law_technocracy 
+				has_law_or_variant = law_type:law_oligarchy
+				has_law_or_variant = law_type:law_type:law_elder_council
+			}
+		}
+		add = 5
+	}
+	else_if {
+		limit = { has_law_or_variant = law_type:law_landed_voting }
+		add = 7
+	}
+	else_if {
+		limit = { has_law_or_variant = law_type:law_wealth_voting }
+		add = 10
+	}
+	else_if {
+		limit = { has_law_or_variant = law_type:law_census_voting }
+		add = 15
+	}
+	else_if {
+		limit = { has_law_or_variant = law_type:law_universal_suffrage }
+		add = 20
+	}
+	else_if {	# Investor Confidence Collapse
+		limit = { has_law_or_variant = law_type:law_anarchy }
+		add = 1
+	}
+	else {		# For random modded laws
+		add = mog_pli_inv_dist_of_power_modded
+	}
+}
+mog_pli_inv_dist_of_power_modded = 1	 # Replace this value for modded laws compatibility
+
+mog_pli_inv_church_and_state = {
+	
+}
+mog_pli_inv_economic_system = {
+	
+}
+mog_pli_inv_taxation = {
+	
+}
+mog_pli_inv_policing = {
+	
+}
+mog_pli_inv_internal_security = {
+	if = {
+		limit = { # Gotta Defend your own Investments
+			has_law_or_variant = law_type:law_no_home_affairs
+		}
+		add = 5
+	}
+	else_if {
+		limit = { # Stable Conditions with Known Constraints
+			OR = { 
+				has_law_or_variant = law_type:law_national_guard
+				has_law_or_variant = law_type:law_guaranteed_liberties
+			}
+		}
+		add = 10
+	}
+	else_if {	# Investment requires playing the Political Game
+		limit = { has_law_or_variant = law_type:law_secret_police }
+		add = 3
+	}
+	else {		# For Random Modded laws
+		add = mog_pli_inv_internal_security_modded
+	}
+}
+mog_pli_inv_internal_security_modded = 1	 # Replace this value for modded laws compatibility
+
+mog_pli_inv_rights_of_women = {
+	
+}
+mog_pli_inv_slavery = {
+	
+}

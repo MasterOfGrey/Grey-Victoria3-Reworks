@@ -1,1 +1,13 @@
 ﻿l_english:
+ mog_pli_investment_tracking_bar_title: ""
+ mog_pli_investment_tracking_bar_left_desc: ""
+ mog_pli_investment_tracking_bar_right_desc: ""
+ mog_pli_investment_tracking_bar_gov_prin: ""
+ 
+ je_mog_pli_investment_modifier: ""
+ PLI_POLICE_INSTITUTION: "Police Institution Level"
+ PLI_SCHOOL_INSTITUTION: "Education Institution Level"
+ PLI_HEALTH_INSTITUTION: "Health System Institution Level"
+ PLI_SOCSEC_INSTITUTION: "Social Security Institution Level"
+ PLI_OHS_INSTITUTION: "Workplace Safety Institution Level"
+ PLI_HAFFAIRS_INSTITUTION: "Home Affairs Institution Level"
