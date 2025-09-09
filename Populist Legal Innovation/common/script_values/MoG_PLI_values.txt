@@ -152,3 +152,17 @@ mog_pli_inv_rights_of_women = {
 mog_pli_inv_slavery = {
 	
 }
+
+mog_pli_corruption_target = {
+	value = 0
+	add = mog_pli_inv_dist_of_power
+	add = mog_pli_inv_church_and_state
+	add = mog_pli_inv_economic_system
+	add = mog_pli_inv_taxation
+	add = mog_pli_inv_policing
+	add = mog_pli_inv_internal_security
+	add = mog_pli_inv_rights_of_women
+	add = mog_pli_inv_slavery
+	min = 1
+	max = 100
+}

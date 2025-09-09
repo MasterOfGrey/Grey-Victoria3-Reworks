@@ -1,0 +1,9 @@
+﻿je_mog_pli_investment_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_documents_positive.dds
+	state_construction_efficiency = 0.1
+}
+
+je_mog_pli_corruption_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_documents_bad.dds
+	state_construction_efficiency = -0.1
+}
