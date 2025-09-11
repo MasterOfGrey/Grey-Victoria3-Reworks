@@ -3,7 +3,16 @@
 	group = je_group_objectives
 	
 	scripted_progress_bar = mog_pli_investment_tracking_bar
+	scripted_progress_bar = mog_pli_investment_corruption_bar
 	immediate = {
+		set_variable = {
+			name = mog_pli_investment_current_value
+			value = "je:je_mog_pli_investment.scripted_bar_progress(mog_pli_investment_tracking_bar)"
+		}
+		set_variable = {
+			name = mog_pli_corruption_current_value
+			value = "je:je_mog_pli_investment.scripted_bar_progress(mog_pli_corruption_tracking_bar)"
+		}
 		#set/initialize country/journal relevant variables
 	}
 	
@@ -12,22 +21,23 @@
 			triggered_desc = {
 				desc = je_mog_pli_investment_good
 				trigger = {
-					always = no
-					#TBD
+					je:je_mog_pli_investment = {
+						"scripted_bar_progress(mog_pli_investment_tracking_bar)" > 60
+					}
+				}
+			}
+			triggered_desc = {
+				desc = je_mog_pli_investment_bad
+				trigger = {
+					je:je_mog_pli_investment = {
+						"scripted_bar_progress(mog_pli_investment_tracking_bar)" < 40
+					}
 				}
 			}
 			triggered_desc = {
 				desc = je_mog_pli_investment_neutral
 				trigger = {
 					always = yes
-					#TBD
-				}
-			}
-			triggered_desc = {
-				desc = je_mog_pli_investment_bad
-				trigger = {
-					always = no
-					#TBD
 				}
 			}
 		}
@@ -35,22 +45,42 @@
 
 	on_weekly_pulse = {
 		effect = {
+			set_variable = {
+				name = mog_pli_investment_current_value
+				value = "je:je_mog_pli_investment.scripted_bar_progress(mog_pli_investment_tracking_bar)"
+			}
+			set_variable = {
+				name = mog_pli_corruption_current_value
+				value = "je:je_mog_pli_investment.scripted_bar_progress(mog_pli_corruption_tracking_bar)"
+			}
 			#set modifier from conditions
 			scope:journal_entry = {
 				hidden_effect = {
-					#remove_modifier = je_mog_pli_investment_modifier
+					remove_modifier = je_mog_pli_investment_modifier
+					remove_modifier = je_mog_pli_corruption_modifier
 				}
-				#add_modifier = {
-				#	name = je_mog_pli_investment_modifier
-				#	days = -1
-				#	multiplier = {
-				#		value = {
-				#			value = 1
-				#			subtract = root.variable to modify value
-				#		}
-				#		add = 1
-				#	}
-				#}
+				add_modifier = {
+					name = je_mog_pli_investment_modifier
+					days = -1
+					multiplier = {
+						value = {
+							value = 50
+							subtract = root.var:mog_pli_investment_current_value
+							divide = 100
+						}
+						add = 1
+					}
+				}
+				add_modifier = {
+					name = je_mog_pli_corruption_modifier
+					days = -1
+					multiplier = {
+						value = {
+							value = root.var:mog_pli_corruption_current_value
+							divide = 100
+						}
+					}
+				}
 			}
 		}
 	}
