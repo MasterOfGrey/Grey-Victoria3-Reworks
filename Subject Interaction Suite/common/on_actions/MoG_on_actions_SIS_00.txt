@@ -123,3 +123,54 @@ law_progress_check_presets_target_on_action = {
 		}
 	}
 }
+
+on_yearly_pulse_country = {
+	on_actions = {
+		mog_sis_synergize_cleanup_check
+	}
+}
+
+mog_sis_synergize_cleanup_check = {
+	effect = {
+		if = {
+			limit = {
+				has_modifier = overlord_syn_cost_bureau
+				num_diplomatic_pacts = {
+					type = laws_synergize_bureaucracy
+					value < 1
+				}
+			}
+			remove_modifier = overlord_syn_cost_bureau
+		}
+		else_if = {
+			limit = {
+				has_modifier = overlord_syn_cost_economy
+				num_diplomatic_pacts = {
+					type = laws_synergize_economy
+					value < 1
+				}
+			}
+			remove_modifier = overlord_syn_cost_economy
+		}
+		else_if = {
+			limit = {
+				has_modifier = overlord_syn_cost_land
+				num_diplomatic_pacts = {
+					type = laws_synergize_land
+					value < 1
+				}
+			}
+			remove_modifier = overlord_syn_cost_land
+		}
+		else_if = {
+			limit = {
+				has_modifier = overlord_syn_cost_trade
+				num_diplomatic_pacts = {
+					type = laws_synergize_trade
+					value < 1
+				}
+			}
+			remove_modifier = overlord_syn_cost_trade
+		}
+	}
+}
