@@ -1,0 +1,59 @@
+﻿### Investment modifiers?
+## These don't actually *work* - but they can be used to make nice tooltips/descriptions to better explain things to the player (as the modifiers will be hard to parse).
+
+state_aristocrats_investment_pool_contribution_mult={
+	decimals=0
+	color=good
+	percent=yes
+	game_data={
+		ai_value=0
+	}
+}
+state_capitalists_investment_pool_contribution_mult={
+	decimals=0
+	color=good
+	percent=yes
+	game_data={
+		ai_value=0
+	}
+}
+state_clergymen_investment_pool_contribution_mult={
+	decimals=0
+	color=good
+	percent=yes
+	game_data={
+		ai_value=0
+	}
+}
+state_shopkeepers_investment_pool_contribution_mult={
+	decimals=0
+	color=good
+	percent=yes
+	game_data={
+		ai_value=0
+	}
+}
+state_farmers_investment_pool_contribution_mult={
+	decimals=0
+	color=good
+	percent=yes
+	game_data={
+		ai_value=0
+	}
+}
+state_engineers_investment_pool_contribution_mult={
+    decimals=0
+    color=good
+    percent=yes
+    game_data={
+        ai_value=0
+    }
+}
+state_machinists_investment_pool_contribution_mult={
+	decimals=0
+	color=good
+	percent=yes
+	game_data={
+		ai_value=0
+	}
+}

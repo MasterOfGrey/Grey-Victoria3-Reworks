@@ -1,14 +1,14 @@
-﻿### Investment Values
-mog_pli_investment_target = {
+﻿### Investment Willingness Values
+mog_pli_investment_target = {	# This represents the conditions which support investor confidence and capability
 	value = 0
-	add = mog_pli_inv_dist_of_power
-	add = mog_pli_inv_church_and_state
-	add = mog_pli_inv_economic_system
-	add = mog_pli_inv_taxation
-	add = mog_pli_inv_policing
-	add = mog_pli_inv_internal_security
-	add = mog_pli_inv_rights_of_women
-	add = mog_pli_inv_slavery
+	add = mog_pli_inv_dist_of_power			# Max 20
+	# add = mog_pli_inv_church_and_state		# Max 20
+	add = mog_pli_inv_economic_system		# Max 20
+	add = mog_pli_inv_taxation				# Max 20
+	add = mog_pli_inv_policing				# Max 20
+	add = mog_pli_inv_internal_security		# Max 20
+	add = mog_pli_inv_rights_of_women		# Max 20
+	add = mog_pli_inv_slavery				# Max 20
 	min = 1
 	max = 100
 }
@@ -122,13 +122,13 @@ mog_pli_inv_policing = {
 }
 mog_pli_inv_internal_security = {
 	if = {
-		limit = { # Gotta Defend your own Investments
+		limit = {	# Gotta Defend your own Investments
 			has_law_or_variant = law_type:law_no_home_affairs
 		}
 		add = 5
 	}
-	else_if = {
-		limit = { # Stable Conditions with Known Constraints
+	else_if {
+		limit = {	# Stable Conditions with Known Constraints
 			OR = { 
 				has_law_or_variant = law_type:law_national_guard
 				has_law_or_variant = law_type:law_guaranteed_liberties
@@ -136,8 +136,10 @@ mog_pli_inv_internal_security = {
 		}
 		add = 10
 	}
-	else_if = {	# Investment requires playing the Political Game
-		limit = { has_law_or_variant = law_type:law_secret_police }
+	else_if {
+		limit = {	# Investment requires playing the Political Game
+			has_law_or_variant = law_type:law_secret_police
+		}
 		add = 3
 	}
 	else = {	# For Random Modded laws
