@@ -1,10 +1,76 @@
-﻿## Cultural Movement Values
+﻿### CMF in-built value overwrites:
+## Cultural Movement Values
 com_movement_cultural_minority_secession_possible_culture_percent_state = 0.15 # 0.05
 com_movement_cultural_minority_secession_state_weight_culture_percent_state_0 = 0.10 # 0.05
-com_movement_cultural_minority_secession_state_weight_culture_percent_state_1 = 0.15 # 0.1
+# com_movement_cultural_minority_secession_state_weight_culture_percent_state_1 = 0.75	# Use Default
+# com_movement_cultural_minority_secession_state_weight_culture_percent_state_2 = 0.5	# Use Default
+# com_movement_cultural_minority_secession_state_weight_culture_percent_state_3 = 0.25	# Use Default
+com_movement_cultural_minority_secession_state_weight_culture_percent_state_4 = 0.15 # 0.1
 com_movement_cultural_minority_secession_target_fraction_of_states_min = 0.05 # 0.15
 com_movement_cultural_minority_secession_target_fraction_of_states_max = 0.90 # 0.75
 
 ## Religious Movement Values
+com_movement_religious_minority_secession_possible_religion_percent_state = 0.15 # 0.10
+# com_movement_religious_minority_secession_state_weight_religion_percent_state_1 = 0.75	# Use Default
+# com_movement_religious_minority_secession_state_weight_religion_percent_state_2 = 0.5		# Use Default
+# com_movement_religious_minority_secession_state_weight_religion_percent_state_3 = 0.25	# Use Default
+com_movement_religious_minority_secession_state_weight_religion_percent_state_4 = 0.15 # 0.1
 com_movement_religious_minority_secession_target_fraction_of_states_min = 0.05 # 0.15
 com_movement_religious_minority_secession_target_fraction_of_states_max = 0.90 # 0.75
+
+### PLP values for CMF:
+## Cultural Movement Values
+mog_plp_movement_cultural_minority_pop_support_weight_mult = {
+	# Actual conditions relative to their neighbours
+	value = 1.0
+	add = {
+		#value = "owner.average_sol"
+		value = "owner.average_sol_for_primary_cultures"
+		subtract = "owner.average_sol_for_culture(scope:culture)"
+		multiply = 0.05
+	}
+	desc = "STANDARD_OF_LIVING_FOR_CULTURE"
+}
+
+mog_plp_movement_cultural_minority_additional_radicalism_factor_add = {		# Not Currently Used
+	value = 0
+#	if = {
+#		limit = {
+#			NOT = {
+#				scope:culture = {
+#					shares_trait_with_any_primary_culture = root.owner
+#				}
+#			}
+#		}
+#		
+#		subtract = {
+#			desc = "INSTITUTION_FUNDING_LEVEL_colonial_affairs"
+#			value = {
+#				owner.institution:institution_colonial_affairs.investment
+#			}
+#			multiply = 0.05
+#		}
+#	}
+}
+
+mog_plp_movement_minority_rights_pop_support_weight_mult = {
+	value = 1.0
+	add = {
+		value = "owner.average_sol_for_primary_cultures"
+		subtract = "owner.average_sol_for_culture(root.culture)"
+		multiply = 0.05
+	}
+	desc = "STANDARD_OF_LIVING_FOR_CULTURE"
+}
+
+## Religious Movement Values
+mog_plp_movement_religious_minority_pop_support_weight_mult = {
+	# Actual conditions relative to their neighbours
+	value = 1
+	add = {
+		value = "owner.average_sol_for_religion(owner.religion)"
+		subtract = "owner.average_sol_for_religion(scope:religion)"
+		multiply = 0.05
+	}
+	desc = "STANDARD_OF_LIVING_FOR_RELIGION"
+}
