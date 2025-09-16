@@ -9,14 +9,14 @@ excess_convoy_surplus_percent = {
 		multiply = num_convoys_available
 	}
 	divide = { 
-		add = num_convoys_available	# Result is 0.7 or lower if has enough to give away.
+		add = num_convoys_available	# If result is 0.7 or lower they will have enough to give away.
 		min = 1
 	}						# We have currently calculated **usage** as a %
 	multiply = -1
-	add = 1					# (1-usage)=[surplus as proportion of total] (which must be >0.3)
-	if = {
+	add = 1					# (1-usage)=[surplus as proportion of total] (which must be >0.3 to share)
+	if = {					# We want to use 0 as a baseline so (surplus-pact requirement) if no pact
 		limit = { 
-			num_diplomatic_pacts = {	# Don't double count this requirement when the pact is active
+			num_diplomatic_pacts = {	# Don't double count the pact requirement when the pact is active
 				type = occ_offer_convoys
 				value < 1
 			}

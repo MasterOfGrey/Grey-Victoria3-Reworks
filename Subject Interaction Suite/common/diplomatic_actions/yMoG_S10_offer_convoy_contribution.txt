@@ -151,43 +151,43 @@
 				}
 				if = {
 					limit = {
-						"relations(scope:actor)" >= relations_threshold:friendly
+						"relations(scope:target_country)" >= relations_threshold:friendly
 					}
 					add = 100
 				}
 				else_if = {
 					limit = {
-						"relations(scope:actor)" >= relations_threshold:amicable
+						"relations(scope:target_country)" >= relations_threshold:amicable
 					}
 					add = 50
 				}
 				else_if = {
 					limit = {
-						"relations(scope:actor)" >= relations_threshold:cordial
+						"relations(scope:target_country)" >= relations_threshold:cordial
 					}
 					add = 0
 				}
 				else_if = {
 					limit = {
-						"relations(scope:actor)" >= relations_threshold:neutral
+						"relations(scope:target_country)" >= relations_threshold:neutral
 					}
 					add = -50
 				}
 				else_if = {
 					limit = {
-						"relations(scope:actor)" <= relations_threshold:poor
+						"relations(scope:target_country)" <= relations_threshold:poor
 					}
 					add = -100
 				}
 				else_if = {
 					limit = {
-						"relations(scope:actor)" <= relations_threshold:cold
+						"relations(scope:target_country)" <= relations_threshold:cold
 					}
 					add = -150
 				}
 				else_if = {
 					limit = {
-						"relations(scope:actor)" <= relations_threshold:hostile
+						"relations(scope:target_country)" <= relations_threshold:hostile
 					}
 					add = -200
 				}
@@ -198,6 +198,17 @@
 			}
 		}
 		
+		will_propose = {
+			NOR = { 
+				has_attitude = {
+					who = scope:target_country
+					attitude = rebellious
+				}
+				liberty_desire > 85
+				"relations(scope:target_country)" <= relations_threshold:hostile
+			}
+		}
+		
 		will_break = {
 			OR = { 
 				has_attitude = {
@@ -205,7 +216,7 @@
 					attitude = rebellious
 				}
 				liberty_desire > 85
-				"relations(scope:actor)" <= relations_threshold:hostile
+				"relations(scope:target_country)" <= relations_threshold:hostile
 			}
 		}
 	}
