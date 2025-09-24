@@ -106,8 +106,38 @@ jobs:
             }
 
             // ---- Scan & collect tags to create ----
-            let created = 0, skippedNoMatch = 0, skippedExists = 0;
-            const toCreate = []; // { name, sha, subject }
+            const planned = new Map(); // tagName -> { sha, subject }
+            let created = 0, skippedNoMatch = 0, skippedAlreadyTagged = 0;
+
+            // Use local tags (fetched with actions/checkout fetch-tags: true) as our "remote view".
+            function localTagExists(name) {
+              try { sh(`git rev-parse -q --verify "refs/tags/${name}"`); return true; } catch { return false; }
+            }
+
+            // Does ANY tag for this base already exist? (base, -a, -b, -aa, ...)
+            // If yes, we skip creating more for this base.
+            function anyLocalTagForBase(base) {
+              const out = sh(`git tag -l "${base}*"`);
+              return out && out.length > 0;
+            }
+
+            // Suffix maker: 0 -> "", 1 -> "-a", 2 -> "-b", ..., 26 -> "-z", 27 -> "-aa", etc.
+            function letterSuffix(n) {
+              if (n <= 0) return "";
+              let s = "";
+              while (n > 0) { n--; s = String.fromCharCode(97 + (n % 26)) + s; n = Math.floor(n / 26); }
+              return "-" + s;
+            }
+
+            // Find the next free name considering BOTH local tags and what's already planned in this run.
+            function nextAvailableNameLocal(base) {
+              let n = 0;
+              for (;;) {
+                const candidate = base + letterSuffix(n);
+                if (!localTagExists(candidate) && !planned.has(candidate)) return candidate;
+                n++;
+              }
+            }
 
             for (const sha of shas) {
               const subject = sh(`git show -s --format=%s ${sha}`);
@@ -115,55 +145,50 @@ jobs:
               if (!m) { skippedNoMatch++; continue; }
 
               const groups = m.groups || {};
-              let rawTag = tagFormat.replace(/\$\{([^}]+)\}/g, (_, name) =>
-                groups[name] != null ? groups[name] : ""
-              );
+              let rawTag = tagFormat.replace(/\$\{([^}]+)\}/g, (_, name) => groups[name] ?? "");
               if (!rawTag) rawTag = subject;
 
-              const tagName = sanitizeTag(rawTag);
+              const baseName = sanitizeTag(rawTag);
 
-              // Skip if tag already exists remotely
-              let exists = false;
-              try {
-                await github.rest.git.getRef({
-                  owner: context.repo.owner,
-                  repo: context.repo.repo,
-                  ref: `tags/${tagName}`,
-                });
-                exists = true;
-              } catch (_) {}
-
-              if (exists) {
-                core.info(`EXISTS  : ${tagName} -> ${sha} (${subject})`);
-                skippedExists++;
+              // RULE: if ANY tag already exists for this base (base or suffixed), skip entirely.
+              if (anyLocalTagForBase(baseName)) {
+                skippedAlreadyTagged++;
+                core.info(`SKIP    : Base already tagged remotely "${baseName}*" -> ${sha} (${subject})`);
                 continue;
               }
 
               if (dryRun) {
-                core.notice(`[DRY RUN] Would create tag "${tagName}" -> ${sha} (${subject})`);
+                const preview = nextAvailableNameLocal(baseName);
+                core.notice(`[DRY RUN] Would create tag "${preview}" -> ${sha} (${subject})`);
                 continue;
               }
 
-              toCreate.push({ name: tagName, sha, subject });
+              // No existing tag for this base -> assign the first free name for this run
+              const finalName = nextAvailableNameLocal(baseName);
+              planned.set(finalName, { sha, subject });
             }
 
             // ---- Create locally & push (batched) ----
-            if (!dryRun && toCreate.length) {
-              for (const t of toCreate) {
-                sh(`git tag --force "${t.name}" ${t.sha}`);
+            if (!dryRun && planned.size) {
+              // Create tags locally
+              for (const [name, { sha, subject }] of planned.entries()) {
+                sh(`git tag --force "${name}" ${sha}`);
                 created++;
-                core.info(`Tagged locally: ${t.name} -> ${t.sha} (${t.subject})`);
+                core.info(`Tagged locally: ${name} -> ${sha} (${subject})`);
               }
-              const chunkSize = 50;
-              for (let i = 0; i < toCreate.length; i += chunkSize) {
-                const chunk = toCreate.slice(i, i + chunkSize)
-                  .map(t => `refs/tags/${t.name}:refs/tags/${t.name}`);
-                sh(`git push origin ${chunk.join(' ')}`);
-                core.notice(`Pushed ${chunk.length} tags`);
-              }
+              // Push in chunks
+                const entries = Array.from(planned.keys());
+                const chunkSize = 50;
+                for (let i = 0; i < entries.length; i += chunkSize) {
+                  const chunk = entries.slice(i, i + chunkSize)
+                    .map(name => `refs/tags/${name}:refs/tags/${name}`);
+                  sh(`git push origin ${chunk.join(' ')}`);
+                  core.notice(`Pushed ${chunk.length} tags`);
+                }
             }
 
             // ---- Summary ----
+            const suffixedCount = Array.from(planned.keys()).filter(n => /-[a-z]+$/.test(n)).length;
             core.summary
               .addHeading("Backfill summary")
               .addRaw(`Ref scanned: ${ref}\n`)
@@ -171,6 +196,7 @@ jobs:
               .addRaw(`Dry run    : ${dryRun}\n`)
               .addRaw(`Total scanned: ${shas.length}\n`)
               .addRaw(`Created tags: ${created}\n`)
-              .addRaw(`Skipped (exists): ${skippedExists}\n`)
+              .addRaw(`Skipped (already tagged base): ${skippedAlreadyTagged}\n`)
               .addRaw(`Skipped (no match): ${skippedNoMatch}\n`)
+              .addRaw(`Suffixed (a/b/c/...): ${suffixedCount}\n`)
               .write();
