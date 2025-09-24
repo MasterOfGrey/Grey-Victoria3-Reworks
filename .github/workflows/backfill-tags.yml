@@ -29,7 +29,8 @@ jobs:
     runs-on: ubuntu-latest
     env:
       # Use the exact same pattern & tagging rules as the auto-tagger:
-      COMMIT_PATTERN: '^(?<subject>(?<mod>.+?)\s+v(?<ver>\d+(?:\.\d+)*(?:[-+][A-Za-z0-9._-]+)?)(?:\s+\((?<qual>[^)]+)\))?)$'
+      # COMMIT_PATTERN: '^(?<subject>(?<mod>.+?)\s+v(?<ver>\d+(?:\.\d+)*(?:[-+][A-Za-z0-9._-]+)?)(?:\s+\((?<qual>[^)]+)\))?)$'
+      COMMIT_PATTERN: '^(?<subject>(?<mod>.+?)\s+v(?<ver>\d+(?:\.\d+)*(?:[A-Za-z][A-Za-z0-9]*)?(?:[-+][A-Za-z0-9._-]+)?)(?:\s+\((?<qual>[^)]+)\))?)$'
       TAG_FORMAT: '${subject}'
     steps:
       - name: Checkout full history & tags
