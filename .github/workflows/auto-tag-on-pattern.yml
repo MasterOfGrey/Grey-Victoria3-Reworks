@@ -1,0 +1,76 @@
+name: Auto-Tag Mod Versions (No Release)
+
+# Controls when the workflow will run
+on:
+  # Triggers the workflow on push or pull request events but only for the main branch
+  push:
+    branches: [ main ]
+
+permissions:
+  contents: write  # needed to create tags via API
+
+jobs:
+  tag-matching-commits:
+    runs-on: ubuntu-latest
+    env:
+      # "<text> v<version>" with optional " (qualifier)" at the end
+      # Examples: "PLP v1.8.2", "USU+LLWA v1.1", "SIS v1.11.3 (beta)"
+      COMMIT_PATTERN: '^(?<subject>(?<mod>.+?)\s+v(?<ver>\d+(?:\.\d+)*(?:[-+][A-Za-z0-9._-]+)?)(?:\s+\((?<qual>[^)]+)\))?)$'
+      TAG_FORMAT: '${subject}'
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+
+      - name: Tag commits whose subject matches "<text> v<version>"
+        uses: actions/github-script@v8
+        with:
+          script: |
+            function sanitizeTag(raw) {
+              // Keep letters, digits, dot, underscore, hyphen, plus, and parentheses.
+              // Convert spaces to '-'; disallow '/'.
+              let t = raw.trim()
+                .replace(/\s+/g, '-')               // spaces -> hyphens
+                .replace(/\//g, '-')                // no slashes
+                .replace(/[^0-9A-Za-z._\-+()]/g, '-') // safe charset inc. '+' and parentheses
+                .replace(/-+/g, '-')
+                .replace(/^[-.]+|[-.]+$/g, '');
+              if (!t) throw new Error(`Invalid tag from "${raw}"`);
+              return t;
+            }
+
+            const pattern = new RegExp(process.env.COMMIT_PATTERN);
+            const tagFormat = process.env.TAG_FORMAT;
+
+            const commits = context.payload.commits?.length
+              ? context.payload.commits
+              : (context.payload.head_commit ? [context.payload.head_commit] : []);
+
+            for (const c of commits) {
+              const subject = (c.message || '').split('\n')[0];
+              const m = subject.match(pattern);
+              if (!m) { core.info(`No match: "${subject}"`); continue; }
+
+              const groups = m.groups || {};
+              let rawTag = tagFormat.replace(/\$\{([^}]+)\}/g, (_, name) =>
+                groups[name] != null ? groups[name] : ''
+              );
+              if (!rawTag) rawTag = subject;
+
+              const tagName = sanitizeTag(rawTag);
+
+              // skip if exists, else create lightweight tag
+              try {
+                await github.rest.git.getRef({
+                  owner: context.repo.owner, repo: context.repo.repo, ref: `tags/${tagName}`,
+                });
+                core.info(`Tag exists: ${tagName} (skip)`);
+                continue;
+              } catch (_) {}
+              await github.rest.git.createRef({
+                owner: context.repo.owner, repo: context.repo.repo,
+                ref: `refs/tags/${tagName}`, sha: c.id,
+              });
+              core.notice(`Created tag "${tagName}" for ${c.id}`);
+            }
