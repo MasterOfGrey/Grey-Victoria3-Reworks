@@ -159,6 +159,7 @@ jobs:
 
               if (dryRun) {
                 const preview = nextAvailableNameLocal(baseName);
+                planned.set(preview, { sha, subject });  // reserve it so later duplicates get -a, -b, ...
                 core.notice(`[DRY RUN] Would create tag "${preview}" -> ${sha} (${subject})`);
                 continue;
               }
