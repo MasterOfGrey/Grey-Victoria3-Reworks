@@ -124,9 +124,11 @@ jobs:
             // Suffix maker: 0 -> "", 1 -> "-a", 2 -> "-b", ..., 26 -> "-z", 27 -> "-aa", etc.
             function letterSuffix(n) {
               if (n <= 0) return "";
+                // shift everything up by one: 1 => b, 2 => c, ...
+                n++; 
               let s = "";
               while (n > 0) { n--; s = String.fromCharCode(97 + (n % 26)) + s; n = Math.floor(n / 26); }
-              return "-" + s;
+              return s;
             }
 
             // Find the next free name considering BOTH local tags and what's already planned in this run.
