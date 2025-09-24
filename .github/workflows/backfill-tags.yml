@@ -46,10 +46,24 @@ jobs:
             function sh(cmd) { return execSync(cmd, { encoding: "utf8" }).trim(); }
 
             // Inputs
-            const ref    = (core.getInput("ref") || "refs/heads/main").trim();
-            const since  = (core.getInput("since") || "").trim();
-            const limit  = parseInt(core.getInput("limit") || "0", 10);
-            const dryRun = (core.getInput("dry_run") || "true").toLowerCase() === "true";
+            // const ref    = (core.getInput("ref") || "refs/heads/main").trim();
+            // const since  = (core.getInput("since") || "").trim();
+            // const limit  = parseInt(core.getInput("limit") || "0", 10);
+            // const dryRun = (core.getInput("dry_run") || "true").toLowerCase() === "true";
+            // Actual Inputs (read workflow_dispatch inputs from context.payload.inputs)
+            const wi = context.payload.inputs || {};
+            const ref    = (wi.ref && wi.ref.trim()) || "refs/heads/main";
+            const since  = (wi.since && wi.since.trim()) || "";
+            const limit  = Number.isFinite(parseInt(wi.limit, 10)) ? parseInt(wi.limit, 10) : 0;
+            // const dryRun = String(wi.dry_run ?? "true").toLowerCase() === "true";
+            // Explicit boolean parsing with validation
+            let dryRaw = (wi.dry_run ?? "true").toLowerCase();
+            if (dryRaw !== "true" && dryRaw !== "false") {
+              throw new Error(`Invalid input for dry_run: "${dryRaw}". Use "true" or "false".`);
+            }
+            const dryRun = dryRaw === "true";
+            
+            core.info(`Inputs -> ref="${ref}" since="${since}" limit=${limit} dry_run=${dryRun}`);
 
             // Same regex & sanitiser as your push workflow
             const pattern = new RegExp(process.env.COMMIT_PATTERN);
