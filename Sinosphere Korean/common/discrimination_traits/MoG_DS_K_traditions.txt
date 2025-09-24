@@ -1,0 +1,5 @@
+﻿# Additional Traditions
+
+tradition_yamato = {
+	type = tradition
+}

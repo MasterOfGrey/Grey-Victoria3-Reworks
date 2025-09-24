@@ -59,13 +59,16 @@ deeper_japan.1 = {
 		name = deeper_japan.1.a
 		default_option = yes
 		custom_tooltip = deepersinosphere_japan
-		if = {
-			limit = {
-				NOT = {
-					country_has_primary_culture = cu:sino
-				}
-			}
-			add_primary_culture = cu:sino
+		#if = {
+		#	limit = {
+		#		NOT = {
+		#			country_has_primary_culture = cu:sino
+		#		}
+		#	}
+		#	add_primary_culture = cu:sino
+		#}
+		cu:japanese = {
+			add_tradition_trait = tradition_sinosphere
 		}
 		if = {
 			limit = {
@@ -173,13 +176,16 @@ deeper_viet.1 = {
 		name = deeper_viet.1.a
 		default_option = yes
 		custom_tooltip = deepersinosphere_viet
-		if = {
-			limit = {
-				NOT = {
-					country_has_primary_culture = cu:yamatos
-				}
-			}
-			add_primary_culture = cu:yamatos
+		#if = {
+		#	limit = {
+		#		NOT = {
+		#			country_has_primary_culture = cu:yamatos
+		#		}
+		#	}
+		#	add_primary_culture = cu:yamatos
+		#}
+		cu:vietnamese = {
+			add_tradition_trait = tradition_yamato
 		}
 	}
 }

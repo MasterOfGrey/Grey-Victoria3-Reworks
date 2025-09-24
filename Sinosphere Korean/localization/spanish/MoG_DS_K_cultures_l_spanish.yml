@@ -1,18 +1,20 @@
 ﻿l_spanish:
- yamatos: "Yamato" #NT!
- yamato_decision: "Abraza el Yamato" #NT!
- yamato_decision_desc: "Con nuestra nueva perspectiva de la identidad nacional y nuestra influencia en Japón firmemente arraigada, es hora de abrazar incluso a aquellos que se han separado a través de nuestra historia compartida de lidiar con la hegemonía sine." #NT!
- sino: "China" #NT!
- sino_decision: "Abraza la sinfera" #NT!
- sino_decision_desc: "Con nuestra nueva perspectiva de la identidad nacional, es hora de abrazar a aquellos que han compartido nuestra historia de ser sometidos a la hegemonía sine." #NT!
- No-See: "No vea este nombre" #NT!
- deeper_viet.1.t: "El Yamato envuelto" #NT!
- deeper_viet.1.d: "La sinfera incluye el Yamato, ya sea que elijan reconocerlo o no. Los brazos abiertos de los antepasados ​​les darán la bienvenida." #NT!
- deeper_viet.1.f: ""Los japoneses son demasiado fuertes para dejarse separados de nuestra gran visión para el mundo"." #NT!
- deeper_viet.1.a: "¡Huzzah!" #NT!
- deepersinosphere_viet: "Los japoneses serán aceptados bajo exclusión cultural" #NT!
- deeper_japan.1.t: "Nuevos hermanos abrazados" #NT!
- deeper_japan.1.d: "El ascenso de nuestra cultura incluye a aquellos que comparten nuestras experiencias, incluso si no se ven igual a nosotros. Los brazos abiertos de los antepasados ​​les darán la bienvenida." #NT!
- deeper_japan.1.f: ""Mientras estemos unidos, somos el mayor poder del mundo"." #NT!
- deeper_japan.1.a: "¡Huzzah!" #NT!
- deepersinosphere_japan: "El vietnamita y el manchú serán aceptados bajo exclusión cultural" #NT!
+ yamatos: "Yamato"
+ yamato_decision: "Abraza el Yamato"
+ yamato_decision_desc: "Con nuestra nueva perspectiva de la identidad nacional y nuestra influencia en Japón firmemente arraigada, es hora de abrazar incluso a aquellos que se han separado a través de nuestra historia compartida de lidiar con la hegemonía sine."
+ sino: "China"
+ sino_decision: "Abraza la sinfera"
+ sino_decision_desc: "Con nuestra nueva perspectiva de la identidad nacional, es hora de abrazar a aquellos que han compartido nuestra historia de ser sometidos a la hegemonía sine."
+ No-See: "No vea este nombre"
+ deeper_viet.1.t: "El Yamato envuelto"
+ deeper_viet.1.d: "La sinfera incluye el Yamato, ya sea que elijan reconocerlo o no. Los brazos abiertos de los antepasados ​​les darán la bienvenida."
+ deeper_viet.1.f: ""Los japoneses son demasiado fuertes para dejarse separados de nuestra gran visión para el mundo"."
+ deeper_viet.1.a: "¡Huzzah!"
+ deepersinosphere_viet: "Los japoneses serán aceptados bajo exclusión cultural"
+ deeper_japan.1.t: "Nuevos hermanos abrazados"
+ deeper_japan.1.d: "El ascenso de nuestra cultura incluye a aquellos que comparten nuestras experiencias, incluso si no se ven igual a nosotros. Los brazos abiertos de los antepasados ​​les darán la bienvenida."
+ deeper_japan.1.f: ""Mientras estemos unidos, somos el mayor poder del mundo"."
+ deeper_japan.1.a: "¡Huzzah!"
+ deepersinosphere_japan: "El vietnamita y el manchú serán aceptados bajo exclusión cultural"
+
+ tradition_yamato: "Yamato" #deepl:1996238145

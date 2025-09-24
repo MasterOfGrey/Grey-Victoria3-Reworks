@@ -1,18 +1,20 @@
 ﻿l_turkish:
- yamatos: "Yamato" #NT!
- yamato_decision: "Yamato'yu kucakla" #NT!
- yamato_decision_desc: "Ulusal kimlik ve Japonya'daki etkimiz hakkındaki yeni bakış açımızla, Sinese hegemonyası ile başa çıkma geçmişimizle ayrı duranları bile kucaklamanın zamanı geldi." #NT!
- sino: "Çin" #NT!
- sino_decision: "Sinosferi kucakla" #NT!
- sino_decision_desc: "Ulusal kimlik konusundaki yeni bakış açımızla, Sinese hegemonyasına maruz kalma tarihimizde paylaşanları kucaklamanın zamanı geldi." #NT!
- No-See: "Hayır bu ismi gör" #NT!
- deeper_viet.1.t: "Yamato kaplandı" #NT!
- deeper_viet.1.d: "Sinosfer, kabul etmeyi seçmeseler de seçmeseler de Yamato'yu içerir. Ataların açık kolları onları karşılayacaktır." #NT!
- deeper_viet.1.f: ""Japonlar dünya için büyük vizyonumuzdan ayrılamayacak kadar güçlü."" #NT!
- deeper_viet.1.a: "Huzzah!" #NT!
- deepersinosphere_viet: "Japonlar kültürel dışlanma altında kabul edilecektir" #NT!
- deeper_japan.1.t: "Yeni kardeşler kucaklandı" #NT!
- deeper_japan.1.d: "Kültürümüzün yükselişi, bizimle aynı görünmese bile, deneyimlerimizi paylaşanları içerir. Ataların açık kolları onları karşılayacaktır." #NT!
- deeper_japan.1.f: ""Birleştiğimiz sürece, dünyanın en büyük gücüyüz."" #NT!
- deeper_japan.1.a: "Huzzah!" #NT!
- deepersinosphere_japan: "Vietnamlılar ve Mançu kültürel dışlanma altında kabul edilecektir" #NT!
+ yamatos: "Yamato"
+ yamato_decision: "Yamato'yu kucakla"
+ yamato_decision_desc: "Ulusal kimlik ve Japonya'daki etkimiz hakkındaki yeni bakış açımızla, Sinese hegemonyası ile başa çıkma geçmişimizle ayrı duranları bile kucaklamanın zamanı geldi."
+ sino: "Çin"
+ sino_decision: "Sinosferi kucakla"
+ sino_decision_desc: "Ulusal kimlik konusundaki yeni bakış açımızla, Sinese hegemonyasına maruz kalma tarihimizde paylaşanları kucaklamanın zamanı geldi."
+ No-See: "Hayır bu ismi gör"
+ deeper_viet.1.t: "Yamato kaplandı"
+ deeper_viet.1.d: "Sinosfer, kabul etmeyi seçmeseler de seçmeseler de Yamato'yu içerir. Ataların açık kolları onları karşılayacaktır."
+ deeper_viet.1.f: ""Japonlar dünya için büyük vizyonumuzdan ayrılamayacak kadar güçlü.""
+ deeper_viet.1.a: "Huzzah!"
+ deepersinosphere_viet: "Japonlar kültürel dışlanma altında kabul edilecektir"
+ deeper_japan.1.t: "Yeni kardeşler kucaklandı"
+ deeper_japan.1.d: "Kültürümüzün yükselişi, bizimle aynı görünmese bile, deneyimlerimizi paylaşanları içerir. Ataların açık kolları onları karşılayacaktır."
+ deeper_japan.1.f: ""Birleştiğimiz sürece, dünyanın en büyük gücüyüz.""
+ deeper_japan.1.a: "Huzzah!"
+ deepersinosphere_japan: "Vietnamlılar ve Mançu kültürel dışlanma altında kabul edilecektir"
+
+ tradition_yamato: "Yamato" #deepl:1996238145
