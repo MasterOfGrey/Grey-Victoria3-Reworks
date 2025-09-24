@@ -41,6 +41,7 @@ jobs:
       - name: Backfill tags over history
         uses: actions/github-script@v8
         with:
+          github-token: ${{ secrets.TEMP_REPO_WRITE_TOKEN }}
           script: |
             const { execSync } = require("node:child_process");
             function sh(cmd) { return execSync(cmd, { encoding: "utf8" }).trim(); }
