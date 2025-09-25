@@ -111,4 +111,4 @@
  LIBERTY_DESIRE_WEEKLY_CHANGE_SCALING_LOW: "Statükonun Düşük Seviyeden Değişimine Direnç [concept_liberty_desire]"
  LIBERTY_DESIRE_WEEKLY_CHANGE_SCALING_HIGH: "Statükonun değişmesine karşı direnç Yüksek [concept_liberty_desire]"
 
- 
+ LIBERTY_DESIRE_OVERLORD_ARMY_POWER_PROJECTION_DIFFERENCE_5_0_NEGATIVE: "[SCOPE.GetRootScope.GetDiplomaticPact.GetFirstCountry.GetName]'nin efendisi [SCOPE.GetRootScope.GetDiplomaticPact.GetFirstCountry.GetOverlord.GetName]'nin [concept_army_power_projection] gücü #b 'nin iki katı#! 'nin üzerinde ve #v 'nin 5.0x#! 'nin üzerinde [SCOPE.GetRootScope.GetDiplomaticPact.GetSecondCountry.GetName] (Şu anda #v [SCOPE.GetRootScope.GetDiplomaticPact.GetSecondCountry.MakeScope.ScriptValue('overlords_overlord_army_projection_comparison')|v1] x#!)" #deepl:4269281265

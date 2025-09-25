@@ -11,15 +11,16 @@
 #	}
 #}
 
-on_yearly_pulse_country = {
-	on_actions = {
-		delay = { days = { 45 330 } }
-		incorporate_state_actions
-	}
-}
-
-incorporate_state_actions = {
-	events = {
-		ib_events.04
-	}
-}
+# Disabled for now to see how things go with new mechanics.
+#on_yearly_pulse_country = {
+#	on_actions = {
+#		delay = { days = { 45 330 } }
+#		incorporate_state_actions
+#	}
+#}
+#
+#incorporate_state_actions = {
+#	events = {
+#		ib_events.04
+#	}
+#}

@@ -159,7 +159,10 @@ overlord_can_consolidate_subject = {
 						scope:consolidation_subject = {
 							any_primary_culture = {
 								count = all
-								shares_trait_with_any_primary_culture = scope:recipient_subject
+								OR = {
+									shares_language_trait_group_with_any_primary_culture = scope:recipient_subject
+									shares_tradition_trait_with_any_primary_culture = scope:recipient_subject
+								} # prev: shares_trait_with_any_primary_culture = scope:recipient_subject
 								scope:recipient_subject = {
 									cultural_acceptance_base = { target = PREV value >= acceptance_status_4 }
 								}
@@ -172,7 +175,11 @@ overlord_can_consolidate_subject = {
 					text = consolidate_subject_multicultural_tt
 					AND = {
 						any_primary_culture = {
-							shares_trait_with_any_primary_culture = scope:consolidation_subject
+							OR = {
+								shares_heritage_trait_group_with_any_primary_culture = scope:target_country
+								shares_language_trait_group_with_any_primary_culture = scope:target_country
+								shares_tradition_trait_with_any_primary_culture = scope:target_country
+							} # prev: shares_trait_with_any_primary_culture = scope:target_country
 						}
 						has_law = law_type:law_multicultural
 						has_technology_researched = corporatism

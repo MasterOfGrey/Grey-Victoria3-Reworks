@@ -111,4 +111,4 @@
  LIBERTY_DESIRE_WEEKLY_CHANGE_SCALING_LOW: "낮은 수준에서 현 상태의 변화에 ​​대한 저항 [concept_liberty_desire]"
  LIBERTY_DESIRE_WEEKLY_CHANGE_SCALING_HIGH: "현상유지에서의 변화에 ​​대한 저항이 높음 [concept_liberty_desire]"
 
- 
+ LIBERTY_DESIRE_OVERLORD_ARMY_POWER_PROJECTION_DIFFERENCE_5_0_NEGATIVE: "[SCOPE.GetRootScope.GetDiplomaticPact.GetFirstCountry.GetName]의 오버로드 [SCOPE.GetRootScope.GetDiplomaticPact.GetFirstCountry.GetOverlord.GetName] 의 [concept_army_power_projection] 은 #b 의 두 배#! 의 힘, #v 의 5.0배#! 의 [SCOPE.GetRootScope.GetDiplomaticPact.GetSecondCountry.GetName] (현재 #v [SCOPE.GetRootScope.GetDiplomaticPact.GetSecondCountry.MakeScope.ScriptValue('overlords_overlord_army_projection_comparison')|v1] x#!)를 넘어섰습니다." #deepl:4269281265

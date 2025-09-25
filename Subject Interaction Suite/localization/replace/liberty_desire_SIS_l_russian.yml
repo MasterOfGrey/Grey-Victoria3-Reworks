@@ -111,4 +111,4 @@
  LIBERTY_DESIRE_WEEKLY_CHANGE_SCALING_LOW: "Сопротивление изменениям в статус-кво от низкого [concept_liberty_desire]"
  LIBERTY_DESIRE_WEEKLY_CHANGE_SCALING_HIGH: "Сопротивление изменениям в статус-кво от высокого [concept_liberty_desire]"
 
- 
+ LIBERTY_DESIRE_OVERLORD_ARMY_POWER_PROJECTION_DIFFERENCE_5_0_NEGATIVE: "[SCOPE.GetRootScope.GetDiplomaticPact.GetFirstCountry.GetName]Повелитель [SCOPE.GetRootScope.GetDiplomaticPact.GetFirstCountry.GetOverlord.GetName] [concept_army_power_projection] превышает #b в два раза#! их силу и превышает #v в 5,0x#! силу [SCOPE.GetRootScope.GetDiplomaticPact.GetSecondCountry.GetName] (в настоящее время #v [SCOPE.GetRootScope.GetDiplomaticPact.GetSecondCountry.MakeScope.ScriptValue('overlords_overlord_army_projection_comparison')|v1] x#!)." #deepl:4269281265

@@ -111,4 +111,4 @@
  LIBERTY_DESIRE_WEEKLY_CHANGE_SCALING_LOW: "Resistencia al cambio del status quo desde Low [concept_liberty_desire]"
  LIBERTY_DESIRE_WEEKLY_CHANGE_SCALING_HIGH: "Resistencia al cambio del status quo desde lo alto [concept_liberty_desire]"
 
- 
+ LIBERTY_DESIRE_OVERLORD_ARMY_POWER_PROJECTION_DIFFERENCE_5_0_NEGATIVE: "[SCOPE.GetRootScope.GetDiplomaticPact.GetFirstCountry.GetName]El señor de [SCOPE.GetRootScope.GetDiplomaticPact.GetFirstCountry.GetOverlord.GetName] [concept_army_power_projection] tiene más de #b el doble de#! de su poder y más de #v 5,0x#! el de [SCOPE.GetRootScope.GetDiplomaticPact.GetSecondCountry.GetName] (Actualmente #v [SCOPE.GetRootScope.GetDiplomaticPact.GetSecondCountry.MakeScope.ScriptValue('overlords_overlord_army_projection_comparison')|v1] x#!)" #deepl:4269281265
