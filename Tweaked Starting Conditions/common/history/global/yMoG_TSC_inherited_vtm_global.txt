@@ -5,13 +5,7 @@
 GLOBAL = {
 	# State traits
 	every_state = { # We have to do this because "has_state_trait" only works on state scopes, not state regions.
-		if = {
-			limit = {
-				state_region = s:STATE_KHUZESTAN
-			}
-			state_region = { remove_state_trait = state_trait_zagros_mountains }
-		}
-		if = { # to stop MAPI stacking
+		if = { # to stop MAPI stacking (river traits don't give MAPI, I guess we're stopping infra and river port stacking?)
 			limit = {
 				state_region = s:STATE_DIYARBAKIR
 			}
@@ -31,22 +25,6 @@ GLOBAL = {
 				state_region = s:STATE_CORRIENTES
 			}
 			state_region = { remove_state_trait = state_trait_paraguay_river }
-		}
-		if = {
-			limit = {
-				OR = {
-					state_region = s:STATE_DAGESTAN
-				}
-			}
-			state_region = { add_state_trait = state_trait_caucasus_mountains }
-		}
-		if = {
-			limit = {
-				OR = {
-					state_region = s:STATE_AZERBAIJAN
-				}
-			}
-			state_region = { remove_state_trait = state_trait_caucasus_mountains }
 		}
 		## Put these last
 		if = {
@@ -69,19 +47,6 @@ GLOBAL = {
 				NOT = { has_state_trait = state_trait_very_difficult_terrain }
 			}
 			state_region = { add_state_trait = state_trait_very_difficult_terrain }
-		}
-	}
-	
-	# Homelands
-	s:STATE_TRANSDANUBIA = {
-		remove_homeland = cu:south_german
-	}
-	
-	# States
-	s:STATE_KENYA = {
-		set_owner_of_provinces = {
-			country = c:OMA
-			provinces = { xA02190 x5C1ADA x6B52F1 }
 		}
 	}
 	
