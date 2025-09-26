@@ -32,6 +32,7 @@ NPops = {
 	ASSIMILATION_RATE = 0.005 # 0.002				# Percentage of pops who will Assimilate into a different Culture each month, if eligible
 	# ASSIMILATION_UNINCORPORATED_MULT = 0.1 	# Vanilla dropped this. (why??)		# ASSIMILATION_RATE is multiplied by this in unincorporated states
 	MIN_ASSIMILATION = 10 # 1						# If there is any assimilation at least this many people will assimilate
+	ASSIMILATION_IN_HOMELAND_MULT = 0.2 # 0.75		# Assimilation rate is multiplied by this in homelands
 	
 	# Smaller change since this affects every pop, not just accepted pops like assimilation.
 	CONVERSION_RATE = 0.003 # 0.002					# Percentage of pops who will Convert into a different Religion each month, if eligible
@@ -125,6 +126,14 @@ NPops = {
 	MIN_ACCEPTANCE_VALUE = 0													# It is both the minimum acceptance value a pop can have as well as the explicit threshold scripted for the first acceptance status [any signed 32 bit value]
 	MAX_ACCEPTANCE_VALUE = 100													# It is both the maximum acceptance value a pop can have as well as the (implied) upper bound of the last acceptance status [> MIN_ACCEPTANCE_VALUE]
 	ACCEPTANCE_FROM_HOMELAND_COMMUNITY = 15 # 10								# The amount of acceptance a pop gets from living in their homeland, applied statically on their Cultural Community
+	ACCEPTANCE_FROM_NOT_HOMELAND_COMMUNITY = 0									# The amount of acceptance a pop gets from not living in their homeland, applied statically on their Cultural Community
+	
+	# New in 1.10, keep en eye out for what these do.
+	BUCKET_MIGRATION_EXPIRATION_YEARS = 5									    # How long a migration bucket will be kept before it is removed
+	BUCKET_MIGRATION_THRESHOLD = 1000											# How many pops need to be in a bucket before it is executes migration
+	BUCKET_MIGRATION_MIN_LEFTOVER_THRESHOLD = 1000								# Minimum number of pops that can stay without being moved over to another state when a bucket migration is executed
+	MIGRATION_PULL_CULTURE_VACANCIES_MODIFIER = 0.25							# Modifies migration pull for pop if there is vacancies available for the pop culture
+	MIGRATION_PULL_CULTURE_NO_VACANCIES_MODIFIER = -0.5							# Modifies migration pull for pop if there is no vacancies available for the pop culture
 	
 ## Migration Attraction ##
 	MIGRATION_PULL_EMPTY_STATE = 100											# If a state has no pops at all, give it a huge migration pull
@@ -153,6 +162,7 @@ NPops = {
 	
 ## Mass Migrations ##
 	# Mass Migration Setup #
+	MASS_MIGRATION_MIN_TRADE_VALUE_BETWEEN_MARKETS = 1							# At least this much monetary value of trade must be happening between two markets for mass migration to occur between them. This counts both world market trade and treaty trade.
 	MASS_MIGRATION_ORIGIN_MIN_TURMOIL = 0.20 # 0.15								# Must have at least this much turmoil in cultural homelands to create a migration target
 	MASS_MIGRATION_ORIGIN_MIN_EMIGRANTS = 150000 # 100000						# A country must have at least this many possible migrants to trigger a mass migration
 	MASS_MIGRATION_TARGET_MAX_TURMOIL = 0.30									# Must have this or less turmoil among the culture for a country to be picked as a mass migration target
