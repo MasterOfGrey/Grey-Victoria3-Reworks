@@ -32,8 +32,8 @@ law_mercantilism = {
 	# Don't change back to mercantilism once we have protectionism or free trade
 	ai_will_do = {
 		NOR = {
-			has_law = law_type:law_protectionism
-			has_law = law_type:law_free_trade
+			has_law_or_variant = law_type:law_protectionism
+			has_law_or_variant = law_type:law_free_trade
 		}
 	}
 	
@@ -99,7 +99,7 @@ law_protectionism = {
 		}
 		
 		if = {
-			limit = { 
+			limit = {
 				has_journal_entry = je_meiji_diplomacy
 				has_law_or_variant = law_type:law_isolationism
 			}
@@ -137,10 +137,22 @@ law_free_trade = {
 		if = {
 			limit = { is_banning_goods = g:opium }
 			remove_banned_goods = g:opium
-		}	
+		}
 		if = {
 			limit = { is_banning_goods = g:liquor }
 			remove_banned_goods = g:liquor
+		}
+	}
+
+	on_activate = {
+		if = { # removes opium ban authority modifier if forced to open market via diplomacy
+			limit = {
+				AND = {
+					c:CHI ?= this
+					has_modifier = opium_ban_authority
+				}
+			}
+			remove_modifier = opium_ban_authority
 		}
 	}
 	
@@ -153,7 +165,7 @@ law_free_trade = {
 		}
 		
 		if = {
-			limit = { 
+			limit = {
 				has_journal_entry = je_meiji_diplomacy
 				has_law_or_variant = law_type:law_isolationism
 			}

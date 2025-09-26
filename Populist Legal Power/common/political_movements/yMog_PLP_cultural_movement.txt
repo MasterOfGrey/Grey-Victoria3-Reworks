@@ -1,14 +1,16 @@
 ﻿movement_cultural_minority = {
 	category = movement_category_cultural
-	
+
 	ideology = ideology_pluralist_movement_1
 	character_ideologies = {
 		ideology_reformer
 	}
-	
+
+	can_cause_obstinance = yes
+
 	creation_trigger = {}
 	creation_weight = {
-		value = 50
+		value = 100
 		if = {
 			limit = {
 				owner ?= {
@@ -39,12 +41,28 @@
 				value = 2
 			}
 		}
+		if = {
+			limit = {
+				owner ?= {
+					has_journal_entry = je_great_eastern_crisis
+				}
+			}
+			multiply = {
+				value = 2
+			}
+		}
 	}
 	on_created = {
 		if = {
 			limit = {
 				culture = {
-					shares_heritage_and_other_trait_with_any_primary_culture = root.owner
+					AND = {
+						shares_heritage_trait_group_with_any_primary_culture = root.owner
+						OR = {
+							shares_language_trait_group_with_any_primary_culture = root.owner
+							shares_tradition_trait_with_any_primary_culture = root.owner
+						}
+					}
 				}
 			}
 			set_core_ideology = ideology_pluralist_movement_1
@@ -52,7 +70,7 @@
 		else_if = {
 			limit = {
 				culture = {
-					shares_heritage_trait_with_any_primary_culture = root.owner
+					shares_heritage_trait_group_with_any_primary_culture = root.owner
 				}
 			}
 			set_core_ideology = ideology_pluralist_movement_2
@@ -60,13 +78,32 @@
 		else_if = {
 			limit = {
 				culture = {
-					shares_non_heritage_trait_with_any_primary_culture = root.owner
+					OR = {
+						shares_language_trait_group_with_any_primary_culture = root.owner
+						shares_tradition_trait_with_any_primary_culture = root.owner
+					}
 				}
 			}
 			set_core_ideology = ideology_pluralist_movement_3
 		}
 		else = {
 			set_core_ideology = ideology_pluralist_movement_4
+		}
+		if = {
+			limit = {
+				owner = {
+					has_variable_list = failed_uprisings_culture_list
+					is_target_in_variable_list = { name = failed_uprisings_culture_list target = root.culture }
+				}
+			}
+			owner = {
+				remove_list_variable = { name = failed_uprisings_culture_list target = root.culture }
+			}
+			add_modifier = {
+				name = movement_suppressed_after_civil_war_copy
+				days = very_long_modifier_time
+				is_decaying = yes
+			}
 		}
 	}
 
@@ -101,9 +138,21 @@
 			}
 		}
 	}
-	
+
 	culture_selection_trigger = {
 		NOT = { is_primary_culture_of = scope:country }
+		OR = {
+			culture_current_fervor >= 10
+			scope:country = {
+				any_scope_diplomatic_pact = {
+					is_diplomatic_action_type = support_separatism
+					second_country = prev
+					"diplomatic_pact_other_country(scope:country)" = {
+						country_has_primary_culture = root
+					}
+				}
+			}
+		}
 		scope:country = {
 			OR = {
 				any_scope_state = {
@@ -127,11 +176,26 @@
 	}
 	culture_selection_weight = {
 		value = 100
+
+		if = {
+			limit = {
+				scope:country = {
+					any_scope_diplomatic_pact = {
+						is_diplomatic_action_type = support_separatism
+						second_country = prev
+						"diplomatic_pact_other_country(scope:country)" = {
+							country_has_primary_culture = root
+						}
+					}
+				}
+			}
+			multiply = 3
+		}
 	}
-	
+
 	character_support_trigger = {
-		culture = scope:culture
 		OR = {
+			culture = scope:culture
 			has_ideology = ideology:ideology_humanitarian
 			has_ideology = ideology:ideology_humanitarian_royalist
 			has_ideology = ideology:ideology_sovereignist_leader
@@ -139,37 +203,39 @@
 		}
 	}
 	character_support_weight = {
-		value = 200
+		value = 50
 		if = {
 			limit = {
 				has_ideology = ideology:ideology_sovereignist_leader
 			}
 			multiply = {
-				value = 5
+				value = 10
 			}
 		}
 		else_if = {
 			limit = {
 				OR = {
+					has_ideology = ideology:ideology_humanitarian_royalist
 					has_ideology = ideology:ideology_humanitarian
 					has_ideology = ideology:ideology_reformer
 				}
 			}
 			multiply = {
-				value = 2
+				value = 5
 			}
 		}
 	}
-	
+
 	pop_support_trigger = {
 		culture = scope:culture
 	}
 
 	pop_support_factors = {
-		movement_support_high_literacy
+		movement_support_national_awakening
+		movement_support_cultural_fervor
 		movement_support_cultural_discrimination
 		movement_support_je_sick_man_main
-		movement_support_je_dual_monarchy
+		movement_support_je_matter_of_hungary
 		movement_support_aristocrats_polish
 		movement_support_academics
 		movement_support_clergymen
@@ -177,8 +243,9 @@
 		movement_support_soldiers
 		movement_support_nationalism_tech
 		movement_support_pan_nationalism_tech
+		movement_support_support_separatism_action
 	}
-	
+
 	pop_support_weight = {
 		if = {
 			limit = {
@@ -216,48 +283,54 @@
 				}
 			}
 		}
-		
-		add = {
-			value = 10
-			desc = "POP_BASE_SUPPORT"
-		}
-		
+
 		if = {
 			limit = {
 				strata = upper
 			}
 			if = {
 				limit = {
-					culture = cu:polish
 					is_pop_type = aristocrats
-					state ?= {
-						OR = {
-							has_variable = lingering_plc_resistance
-							has_variable = christ_of_nations_target
+				}
+				if = {
+					limit = {
+						culture = cu:polish
+						state ?= {
+							OR = {
+								has_variable = lingering_plc_resistance
+								has_variable = christ_of_nations_target
+							}
 						}
 					}
-				}
-				add = {
-					value = 100
-					desc = "POP_POLISH_ARISTOCRATS"
-				}
-			}
-			else_if = {
-				limit = {
-					culture = cu:hungarian
-					is_pop_type = aristocrats
-					owner ?= {
-						has_journal_entry = je_dual_monarchy
+					add = {
+						value = 50
+						desc = "POP_POLISH_ARISTOCRATS"
 					}
 				}
-				add = {
-					value = 100
-					desc = "je_dual_monarchy"
+				else_if = {
+					limit = {
+						culture = cu:hungarian
+						owner ?= {
+							has_journal_entry = je_matter_of_hungary
+						}
+					}
+					add = {
+						value = 50
+						desc = "je_matter_of_hungary"
+					}
+				}
+				else = {
+					add = {
+						value = 6
+						desc = "POP_ARISTOCRATS"
+					}
 				}
 			}
 			else = {
-				value = 6
-				desc = "UPPER_NO_ICON"
+				add = {
+					value = 12
+					desc = "UPPER_NO_ICON"
+				}
 			}
 		}
 		else_if = {
@@ -277,15 +350,55 @@
 				limit = {
 					is_pop_type = clergymen
 				}
+				if = {
+					limit = {
+						NOT = {
+							this.religion = owner.religion
+						}
+					}
+					add = {
+						value = 35
+						desc = "POP_CLERGYMEN"
+					}
+				}
+				else = {
+					add = {
+						value = 25
+						desc = "POP_CLERGYMEN"
+					}
+				}
+			}
+			if = {
+				limit = {
+					is_pop_type = shopkeepers
+				}
 				add = {
 					value = 25
-					desc = "POP_CLERGYMEN"
+					desc = "POP_SHOPKEEPERS"
+				}
+			}
+			else_if = {
+				limit = {
+					is_pop_type = soldiers
+				}
+				add = {
+					value = 20
+					desc = "POP_OFFICERS"
 				}
 			}
 			else = {
 				add = {
-					value = 10
+					value = 15
 					desc = "MIDDLE_NO_ICON"
+				}
+			}
+			if = {
+				limit = {
+					cu:polish ?= culture
+				}
+				add = {
+					value = 25
+					desc = "POP_POLISH_ARISTOCRATS"
 				}
 			}
 		}
@@ -298,7 +411,7 @@
 					is_pop_type = clerks
 				}
 				add = {
-					value = 10
+					value = 20
 					desc = "POP_CLERKS"
 				}
 			}
@@ -307,28 +420,45 @@
 					is_pop_type = soldiers
 				}
 				add = {
-					value = 9
+					value = 15
 					desc = "POP_SOLDIERS"
+				}
+			}
+			else_if = {
+				limit = {
+					is_pop_type = peasants
+				}
+				add = {
+					value = 5
+					desc = "POP_PEASANTS"
 				}
 			}
 			else = {
 				add = {
-					value = 5
+					value = 10
 					desc = "LOWER_NO_ICON"
 				}
 			}
+			if = {
+				limit = {
+					cu:polish ?= culture
+				}
+				add = {
+					value = 10
+					desc = "POP_POLISH_ARISTOCRATS"
+				}
+			}
 		}
-		
+
 		if = {
 			limit = {
-				standard_of_living < 15
+				standard_of_living < state.average_expected_sol
 			}
-			
-			add = {
-				value =	standard_of_living
-				subtract = 15
-				multiply = -5
+			add = { # Increases likelihood of support if impoverished
 				desc = "POP_POVERTY"
+				value = state.average_expected_sol
+				subtract = standard_of_living
+				max = 10
 			}
 		}
 
@@ -353,42 +483,17 @@
 					}
 				}
 			}
-			
-			multiply = {
+			add = { # From +2 at 80 to +10 at 0
 				desc = "POP_DISCRIMINATED"
 				value = 100
 				subtract = pop_acceptance
-				divide = 25
+				divide = 10
 			}
 		}
 		else = { # Non-discriminated pops are less likely to form separatist movements
 			multiply = {
 				desc = "POP_ACCEPTANCE"
-				value = 0.10
-			}
-		}
-		
-		if = {
-			limit = {
-				culture = cu:polish
-				state ?= {
-					OR = {
-						has_variable = lingering_plc_resistance
-						has_variable = christ_of_nations_target
-					}
-				}
-			}
-			multiply = { # Illiterate pops participate at 1/3 the rate of fully literate pops
-				desc = "POP_LITERACY"
-				value = literacy_rate
-				add = 0.33
-			}
-		}
-		else = {
-			multiply = { # Illiterate pops participate at 1/8 the rate of fully literate pops
-				desc = "POP_LITERACY"
-				value = literacy_rate
-				add = 0.15
+				value = 0.25
 			}
 		}
 
@@ -401,17 +506,6 @@
 		if = {
 			limit = {
 				owner ?= {
-					has_technology_researched = nationalism
-				}
-			}
-			multiply = {
-				value = 2.0
-				desc = "NATIONALISM_TECH"
-			}
-		}
-		if = {
-			limit = {
-				owner ?= {
 					has_technology_researched = pan-nationalism
 				}
 			}
@@ -420,13 +514,32 @@
 				desc = "PAN_NATIONALISM_TECH"
 			}
 		}
+		else_if = {
+			limit = {
+				owner ?= {
+					has_technology_researched = nationalism
+				}
+			}
+			multiply = {
+				value = 1.25
+				desc = "NATIONALISM_TECH"
+			}
+		}
+		
+		multiply = { # Range from x0.625 to x3.125
+			desc = "POP_CULTURE_FERVOR"
+			value = culture.culture_current_fervor
+			subtract = 15
+			multiply = 0.025
+			add = 1
+		}
 
 		if = { # Funnel people into Indias unique movements
 			limit = {
 				owner ?= {
 					c:BIC ?= this
 				}
-				culture = { has_discrimination_trait = south_asian_heritage }
+				culture = { has_discrimination_trait_group = heritage_group_south_asian }
 			}
 			multiply = 0.5
 
@@ -439,16 +552,16 @@
 				multiply = 0.1
 			}
 		}
-		
+
 		if = {
 			limit = {
 				owner ?= {
 					has_variable = failed_tanzimat
 				}
-				culture = { has_discrimination_trait = european_heritage }
+				culture = { has_discrimination_trait_group = heritage_group_european }
 			}
 			multiply = {
-				value = 2.0
+				value = 1.25
 				desc = "FAILED_TANZIMAT_REFORMS"
 			}
 		}
@@ -456,28 +569,49 @@
 		if = {
 			limit = {
 				owner ?= {
-					has_journal_entry = je_dual_monarchy
+					has_journal_entry = je_matter_of_hungary
 				}
 				culture = cu:hungarian
 			}
 			multiply = {
-				value = 2.0
-				desc = "je_dual_monarchy"
+				value = 1.25
+				desc = "je_matter_of_hungary"
 			}
 		}
 
 		if = {
 			limit = {
-				owner ?= { has_journal_entry = je_springtime_of_the_peoples }
-				culture = { has_discrimination_trait = european_heritage }
+				culture ?= {
+					culture_has_national_awakening = yes
+				}
 			}
 			multiply = {
-				value = 2.0
-				desc = "SPRINGTIME_OF_THE_PEOPLES_UNDERWAY"
+				value = 1.5
+				desc = "POP_ACTIVE_NATIONAL_AWAKENING"
+			}
+		}
+
+		if = {
+			limit = {
+				owner = {
+					any_scope_diplomatic_pact = {
+						is_diplomatic_action_type = support_separatism
+						second_country = prev
+						"diplomatic_pact_other_country(root.owner)" = {
+							country_has_primary_culture = root.culture
+						}
+					}
+				}
+			}
+			multiply = {
+				desc = "SUPPORT_SEPARATISM_ACTION"
+				value = support_separatism_total_pop_support
+				multiply = 0.01
+				add = 1
 			}
 		}
 	}
-	
+
 	secession = {
 		possible = {
 			owner ?= {
@@ -490,14 +624,14 @@
 				}
 			}
 		}
-	
+
 		weight = {
 			value = 1000
 		}
-		
+
 		state_weight = {
 			value = 0
-		
+
 			if = {
 				limit = {
 					is_capital = no
@@ -546,6 +680,15 @@
 					add = 50
 				}
 			}
+
+			if = { # Agnus Dei, qui tollis peccata mundi, miserere nobis
+				limit = {
+					p:xF0E080.state ?= this
+					is_split_state = yes
+					scope:political_movement.culture ?= cu:polish
+				}
+				multiply = -100
+			}
 		}
 
 		target_fraction_of_states = {
@@ -556,19 +699,19 @@
 			max = 0.90 # 0.75
 		}
 	}
-	
+
 	additional_radicalism_factors = {
 		if = {
 			limit = {
 				owner = { has_journal_entry = je_springtime_of_the_peoples }
-				scope:culture = { has_discrimination_trait = european_heritage }
+				scope:culture = { has_discrimination_trait_group = heritage_group_european }
 			}
 			add = {
 				value = 0.25
 				desc = "SPRINGTIME_OF_THE_PEOPLES_UNDERWAY"
 			}
 		}
-	
+
 		add = {
 			#value = "owner.average_sol"
 			value = "owner.average_sol_for_primary_cultures"
@@ -583,7 +726,7 @@
 			limit = {
 				owner = { cultural_acceptance_base = { target = scope:culture value <= acceptance_status_1 } }
 			}
-			
+
 			add = {
 				value = 0.3
 				desc = "DISCRIMINATION_LEVEL_violent_hostility"
@@ -593,7 +736,7 @@
 			limit = {
 				owner = { cultural_acceptance_base = { target = scope:culture value <= acceptance_status_2 } }
 			}
-			
+
 			add = {
 				value = 0.2
 				desc = "DISCRIMINATION_LEVEL_cultural_erasure"
@@ -603,37 +746,104 @@
 			limit = {
 				owner = { cultural_acceptance_base = { target = scope:culture value <= acceptance_status_3 } }
 			}
-			
+
 			add = {
 				value = 0.1
 				desc = "DISCRIMINATION_LEVEL_open_prejudice"
 			}
 		}
 
+		if = {
+			limit = {
+				owner = {
+					any_scope_diplomatic_pact = {
+						is_diplomatic_action_type = support_separatism
+						second_country = prev
+						"diplomatic_pact_other_country(root.owner)" = {
+							country_has_primary_culture = root.culture
+						}
+					}
+				}
+			}
+			add = {
+				desc = "SUPPORT_SEPARATISM_ACTION"
+				value = support_separatism_radicalism
+			}
+		}
+
 		subtract = {
-			value = 0.5
+			value = 0.25
 			subtract = political_movement_identity_support
 			min = 0
 			desc = "LOW_MOVEMENT_IDENTITY_SUPPORT"
 		}
 
-#		if = {
-#			limit = {
-#				NOT = {
-#					scope:culture = {
-#						shares_trait_with_any_primary_culture = root.owner
-#					}
-#				}
-#			}
-#
-#			subtract = {
-#				desc = "INSTITUTION_FUNDING_LEVEL_colonial_affairs"
-#				value = {
-#					owner.institution:institution_colonial_affairs.investment
-#				}
-#				multiply = 0.05
-#			}
-#		}
+		if = {
+			limit = {
+				owner = { cultural_acceptance_base = { target = scope:culture value <= acceptance_status_4 } }
+			}
+			add = {
+				desc = "FERVOR_OF_CULTURE_ACTIVISM"
+				value = scope:culture.culture_current_fervor
+				divide = 400
+			}
+		}
+
+		if = {
+			limit = {
+				owner = {
+					any_neighbouring_state = {
+						owner = {
+							NOT = { THIS = ROOT.owner }
+							any_political_movement = {
+								culture ?= ROOT.culture
+								is_insurrectionary = yes
+							}
+						}
+					}
+				}
+			}
+			add = {
+				desc = "NEIGHBOURING_COUNTRY_WITH_CULTURE_REVOLUTION"
+				value = 0.15
+			}
+		}
+
+		if = {
+			limit = {
+				owner = {
+					any_political_movement = {
+						NOT = { this = root } # Insurrectionary movements should not make themselves more insurrectionary
+						is_insurrectionary = yes
+					}
+				}
+			}
+			add = {
+				desc = "INSURRECTIONARY_MOVEMENTS"
+				owner = {
+					every_political_movement = {
+						limit = {
+							NOT = { this = root } # Insurrectionary movements should not make themselves more insurrectionary
+							is_insurrectionary = yes
+						}
+						if = {
+							limit = {
+								exists = this.political_movement_identity_support
+							}
+							add = { # Identity support can get a bit high
+								value = this.political_movement_identity_support
+								multiply = 0.5
+							}
+						}
+						else = {
+							add = this.political_movement_support
+						}
+					}
+				}
+				min = 0.05
+				max = 0.25
+			}
+		}
 	}
 }
 
@@ -830,14 +1040,13 @@ movement_minority_rights = {
 
 		if = {
 			limit = {
-				standard_of_living < 15
+				standard_of_living < state.average_expected_sol
 			}
-
-			add = {
-				value =	standard_of_living
-				subtract = 15
-				multiply = -5
+			add = { # Increases likelihood of support if impoverished
 				desc = "POP_POVERTY"
+				value = state.average_expected_sol
+				subtract = standard_of_living
+				max = 10
 			}
 		}
 
@@ -861,12 +1070,12 @@ movement_minority_rights = {
 					}
 				}
 			}
-
-			multiply = {
+			multiply = { # From 1.21x at 79 to 2x at 0
 				desc = "POP_DISCRIMINATED"
 				value = 100
 				subtract = pop_acceptance
-				divide = 25
+				divide = 100
+				add = 1
 			}
 		}
 		else = { # Non-discriminated pops are less likely to form separatist movements
@@ -876,13 +1085,11 @@ movement_minority_rights = {
 			}
 		}
 
-
 		multiply = { # Illiterate pops participate at 1/8 the rate of fully literate pops
 			desc = "POP_LITERACY"
 			value = literacy_rate
 			add = 0.15
 		}
-
 
 		if = { # If a more radical movement exists, it'll poach radicals from this one.
 			limit = {
@@ -917,7 +1124,7 @@ movement_minority_rights = {
 				owner ?= {
 					has_variable = failed_tanzimat
 				}
-				culture = { has_discrimination_trait = european_heritage }
+				culture = { has_discrimination_trait_group = heritage_group_european }
 			}
 			multiply = {
 				value = 0.1
@@ -928,20 +1135,20 @@ movement_minority_rights = {
 		if = {
 			limit = {
 				owner ?= {
-					has_journal_entry = je_dual_monarchy
+					has_journal_entry = je_matter_of_hungary
 				}
 				culture = cu:hungarian
 			}
 			multiply = {
 				value = 0.1
-				desc = "je_dual_monarchy"
+				desc = "je_matter_of_hungary"
 			}
 		}
 
 		if = {
 			limit = {
 				owner ?= { has_journal_entry = je_springtime_of_the_peoples }
-				culture = { has_discrimination_trait = european_heritage }
+				culture = { has_discrimination_trait_group = heritage_group_european }
 			}
 			multiply = {
 				value = 0.1
@@ -974,7 +1181,7 @@ movement_minority_rights = {
 				owner ?= {
 					c:BIC ?= this
 				}
-				culture = { has_discrimination_trait = south_asian_heritage }
+				culture = { has_discrimination_trait_group = heritage_group_south_asian }
 			}
 			multiply = 0.5
 
@@ -996,7 +1203,7 @@ movement_minority_rights = {
 		if = {
 			limit = {
 				owner = {
-					has_law = law_type:law_ethnostate
+					has_law_or_variant = law_type:law_ethnostate
 				}
 			}
 			add = {
@@ -1007,7 +1214,7 @@ movement_minority_rights = {
 		else_if = {
 			limit = {
 				owner = {
-					has_law = law_type:law_national_supremacy
+					has_law_or_variant = law_type:law_national_supremacy
 				}
 			}
 			add = {
@@ -1018,7 +1225,7 @@ movement_minority_rights = {
 		else_if = {
 			limit = {
 				owner = {
-					has_law = law_type:law_racial_segregation
+					has_law_or_variant = law_type:law_racial_segregation
 				}
 			}
 			add = {

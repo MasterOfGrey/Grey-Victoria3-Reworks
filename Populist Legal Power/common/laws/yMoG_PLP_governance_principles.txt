@@ -56,12 +56,39 @@
 				add_ideology = ideology_republican
 			}
 		}
+		crown_land_republic_effect = yes
+		if = {
+			limit = {
+				has_law = law_type:law_neo_absolutism
+			}
+			deactivate_law = law_type:law_neo_absolutism
+			activate_law = law_type:law_autocracy
+		}
 	}
 	
 	ai_will_do = {
 		exists = ruler
-		ruler = {
-			has_ideology = ideology:ideology_republican_leader
+		OR = {
+			ruler = {
+				OR = {
+					has_ideology = ideology:ideology_republican_leader
+					has_ideology = ideology:ideology_radical
+					has_ideology = ideology:ideology_positivist
+					has_socialist_ideology = yes
+				}
+			}
+			any_interest_group = {
+				is_in_government = yes
+				is_powerful = yes
+				leader = {
+					OR = {
+						has_ideology = ideology:ideology_republican_leader
+						has_ideology = ideology:ideology_radical
+						has_ideology = ideology:ideology_positivist
+						has_socialist_ideology = yes
+					}
+				}
+			}
 		}
 	}
 	
@@ -165,6 +192,14 @@ law_corporate_state = {
 			}
 			add_modifier = { name = modifier_corporate_state_intelligentsia_bias }
 		}
+		crown_land_republic_effect = yes
+		if = {
+			limit = {
+				has_law = law_type:law_neo_absolutism
+			}
+			deactivate_law = law_type:law_neo_absolutism
+			activate_law = law_type:law_autocracy
+		}
 	}		
 
 	on_enact = {
@@ -240,10 +275,22 @@ law_corporate_state = {
 	
 	ai_will_do = {
 		exists = ruler
-		ruler = {
-			OR = {
-				has_ideology = ideology:ideology_fascist
-				has_ideology = ideology:ideology_corporatist_leader
+		OR = {
+			ruler = {
+				OR = {
+					has_ideology = ideology:ideology_fascist
+					has_ideology = ideology:ideology_corporatist_leader
+				}
+			}
+			any_interest_group = {
+				is_in_government = yes
+				is_powerful = yes
+				leader = {
+					OR = {
+						has_ideology = ideology:ideology_fascist
+						has_ideology = ideology:ideology_corporatist_leader
+					}
+				}
 			}
 		}
 	}

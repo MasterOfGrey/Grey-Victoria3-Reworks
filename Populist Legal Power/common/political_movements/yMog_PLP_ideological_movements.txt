@@ -7,23 +7,40 @@
 		ideology_abolitionist
 		ideology_humanitarian
 	}
-	
+
 	disband_trigger = {
-		has_law = law_type:law_slavery_banned
+		has_law_or_variant = law_type:law_slavery_banned
 	}
 	on_disbanded = {}
-	
+
 	creation_trigger = {
-		NOT = { has_law = law_type:law_slavery_banned }
+		NOT = { has_law_or_variant = law_type:law_slavery_banned }
 		has_technology_researched = empiricism
 	}
 	creation_weight = {
 		value = 100
+		if = {
+			limit = {
+				owner ?= { # If a movement of this type exists in a neighbouring country, make it more likely to spawn here as well
+					any_neighbouring_state = {
+						owner = {
+							prestige > ROOT.owner.prestige
+							any_political_movement = {
+								is_political_movement_type = movement_anti_slavery
+							}
+						}
+					}
+				}
+			}
+			multiply = {
+				value = 2
+			}
+		}
 	}
 	on_created = {
 		add_movement_enthusiasm_modifier = yes
 	}
-	
+
 	character_support_trigger = {
 		OR = {
 			has_ideology = ideology:ideology_abolitionist
@@ -50,7 +67,7 @@
 			}
 		}
 	}
-	
+
 	pop_support_factors = {
 		movement_support_high_urbanization
 		movement_support_high_literacy
@@ -73,7 +90,6 @@
 						is_being_bolstered = yes
 					}
 				}
-			}
 			if = {
 				limit = {
 					scope:political_movement = {
@@ -135,7 +151,7 @@
 					is_pop_type = academics
 				}
 				add = {
-					value = 25
+					value = 30
 					desc = "POP_ACADEMICS"
 				}
 			}
@@ -144,7 +160,7 @@
 					is_pop_type = clergymen
 				}
 				add = {
-					value = 25
+					value = 30
 					desc = "POP_CLERGYMEN"
 				}
 			}
@@ -173,7 +189,7 @@
 					is_pop_type = clerks
 				}
 				add = {
-					value = 10
+					value = 15
 					desc = "POP_CLERKS"
 				}
 			}
@@ -188,16 +204,19 @@
 			}
 			else = {
 				add = {
-					value = 3
+					value = 10
 					desc = "LOWER_NO_ICON"
 				}
 			}
 		}
-		
+
 		if = {
 			limit = {
 				owner = {
-					has_law = law_type:law_legacy_slavery
+					OR = {
+						has_law_or_variant = law_type:law_legacy_slavery
+						has_law_or_variant = law_type:law_colonial_slavery
+					}
 					OR = {
 						country_has_primary_culture = cu:yankee
 						country_has_primary_culture = cu:dixie
@@ -207,7 +226,7 @@
 			multiply = {
 				desc = "SLAVE_STATE"
 				value = 1.0
-				
+
 				if = {
 					limit = {
 						state = { is_slave_state = yes }
@@ -247,14 +266,14 @@
 					}
 					subtract = 0.5
 				}
-			}			
+			}
 		}
-		
+
 		if = {
-			limit = { 
+			limit = {
 				owner ?= { has_journal_entry = je_acw_countdown }
 			}
-			
+
 			multiply = {
 				value = 3.0
 				desc = "je_acw_countdown"
@@ -263,7 +282,7 @@
 
 		if = {
 			limit = {
-				owner = {
+				owner ?= {
 					or = {
 						has_law = law_type:law_slave_trade
 						has_law = law_type:law_legacy_slavery
@@ -299,17 +318,43 @@
 
 		if = {
 			limit = {
-				standard_of_living < 15
+				standard_of_living < state.average_expected_sol
 				owner = {
 					has_law = law_type:law_debt_slavery
 				}
 			}
-			
-			add = {
-				value =	standard_of_living
-				subtract = 15
-				multiply = -5
+			add = { # Increases likelihood of support if impoverished
+				value =	state.average_expected_sol
+				subtract = standard_of_living
+				max = 10
 				desc = "POP_POVERTY"
+			}
+		}
+
+		if = { # Colonial slavery is out of sight and out of mind
+			limit = {
+				owner ?= { has_law_or_variant = law_type:law_colonial_slavery }
+			}
+			if = {
+				limit = {
+					owner ?= {
+						any_political_movement = { # Pops would rather support liberal/radical movements if slavery is confined to the colonies
+							OR = {
+								is_political_movement_type = movement_liberal
+								is_political_movement_type = movement_radical
+								is_political_movement_type = movement_labor
+							}
+						}
+					}
+				}
+				multiply = {
+					value = 0.5
+				}
+			}
+			else = {
+				multiply = {
+					value = 0.75
+				}
 			}
 		}
 
@@ -336,11 +381,11 @@
 		possible = {
 			political_movement_support >= 0.1 # 0.05
 		}
-		
+
 		weight = {
 			value = 100
 		}
-	
+
 		state_weight = {
 			value = 1
 			if = {
@@ -353,7 +398,10 @@
 						owner ?= {
 							OR = {
 								has_journal_entry = je_acw_countdown
-								has_law = law_type:law_legacy_slavery
+								OR = {
+									has_law_or_variant = law_type:law_legacy_slavery
+									has_law_or_variant = law_type:law_colonial_slavery
+								}
 								has_variable = slavery_recently_enacted
 							}
 							any_scope_state = {
@@ -370,11 +418,11 @@
 					multiply = 0.25
 				}
 			}
-			
+
 			if = {
 				limit = { is_capital = yes }
 				if = {
-					limit = { owner ?= { has_law = law_type:law_slavery_banned } }
+					limit = { owner ?= { has_law_or_variant = law_type:law_slavery_banned } }
 					multiply = 10.0
 				}
 				else = {
@@ -392,13 +440,16 @@
 				owner = {
 					OR = {
 						has_journal_entry = je_acw_countdown
-						has_law = law_type:law_legacy_slavery
+						OR = {
+							has_law_or_variant = law_type:law_legacy_slavery
+							has_law_or_variant = law_type:law_colonial_slavery
+						}
 						has_variable = slavery_recently_enacted
 					}
 				}
 			}
 		}
-	
+
 		weight = {
 			value = 50
 
@@ -409,7 +460,7 @@
 				add = 50
 			}
 		}
-		
+
 		forced_tags = {
 			FSA = {
 				trigger = {
@@ -437,7 +488,10 @@
 						owner ?= {
 							OR = {
 								has_journal_entry = je_acw_countdown
-								has_law = law_type:law_legacy_slavery
+								OR = {
+									has_law_or_variant = law_type:law_legacy_slavery
+									has_law_or_variant = law_type:law_colonial_slavery
+								}
 								has_variable = slavery_recently_enacted
 							}
 							any_scope_state = {
@@ -454,19 +508,19 @@
 					multiply = 0.25
 				}
 			}
-			
+
 			# New York should be FSA capital
 			if = {
 				limit = {
 					owner ?= { has_journal_entry = je_acw_countdown }
 					state_region = s:STATE_NEW_YORK
 				}
-				
+
 				multiply = 10.0
 			}
 		}
 	}
-	
+
 	additional_radicalism_factors = {
 		if = {
 			limit = {
@@ -474,33 +528,76 @@
 					OR = {
 						has_ideology = ideology:ideology_jacksonian_democrat
 						has_ideology = ideology:ideology_slaver
+						AND = {
+							NOR = {
+								has_ideology = ideology:ideology_abolitionist
+								has_ideology = ideology:ideology_utilitarian_leader
+								has_ideology = ideology:ideology_utopian
+							}
+							interest_group = {
+								OR = {
+									has_ideology = ideology:ideology_pro_slavery
+									has_ideology = ideology:ideology_pro_slavery_colonial
+								}
+							}
+						}
 					}
 				}
 			}
-			
+
 			add = {
 				value = 0.1
 				desc = "RULER_IS_PRO_SLAVERY"
 			}
 		}
-	
-		add = {
-			value = 10
-			subtract = "owner.average_sol_for_slaves"
-			multiply = 0.05
-			max = 0.5
-			min = -0.25
-			desc = "STANDARD_OF_LIVING_FOR_SLAVES"
+
+		if = {
+			limit = {
+				owner ?= {
+					pop_type_percent_country = {
+						pop_type = slaves
+						percent > 0
+					}
+				}
+			}
+			add = {
+				value = 10
+				subtract = "owner.average_sol_for_slaves"
+				multiply = 0.05
+				max = 0.5
+				min = -0.25
+				desc = "STANDARD_OF_LIVING_FOR_SLAVES"
+			}
 		}
-		
+
 		if = {
 			limit = {
 				owner ?= { has_journal_entry = je_acw_countdown }
 			}
-			
+
 			add = {
 				value = 0.2
 				desc = "je_acw_countdown"
+			}
+		}
+
+		if = {
+			limit = {
+				owner = {
+					any_neighbouring_state = {
+						owner = {
+							NOT = { THIS = ROOT.owner }
+							any_political_movement = {
+								is_political_movement_type = movement_anti_slavery
+								is_insurrectionary = yes
+							}
+						}
+					}
+				}
+			}
+			add = {
+				desc = "NEIGHBOURING_COUNTRY_WITH_REVOLUTION"
+				value = 0.15
 			}
 		}
 	}
@@ -514,40 +611,77 @@ movement_pro_slavery = {
 		ideology_slaver
 		ideology_jacksonian_democrat
 	}
-	
+
 	creation_trigger = {
-		NOT = { has_law = law_type:law_slavery_banned }
+		NOT = { has_law_or_variant = law_type:law_slavery_banned }
 	}
 	creation_weight = {
 		value = 100
+		if = {
+			limit = {
+				owner ?= { # If a movement of this type exists in a neighbouring country, make it more likely to spawn here as well
+					any_neighbouring_state = {
+						owner = {
+							prestige > ROOT.owner.prestige
+							any_political_movement = {
+								is_political_movement_type = movement_pro_slavery
+							}
+						}
+					}
+				}
+			}
+			multiply = {
+				value = 2
+			}
+		}
 	}
 	on_created = {
 		add_movement_enthusiasm_modifier = yes
-	}
-	
-	character_support_trigger = {
-		OR = {
-			has_ideology = ideology:ideology_slaver
-			has_ideology = ideology:ideology_jacksonian_democrat
+		if = {
+			limit = {
+				owner = {
+					has_law_or_variant = law_type:law_colonial_slavery
+				}
+			}
+			set_core_ideology = ideology_pro_slavery_colonial_movement
 		}
-		scope:interest_group ?= {
-			has_ideology = ideology:ideology_pro_slavery
+	}
+
+	character_support_trigger = {
+		trigger_if = {
+			limit = {
+				is_in_exile_pool = yes
+			}
+			OR = {
+				has_ideology = ideology:ideology_slaver
+				has_ideology = ideology:ideology_jacksonian_democrat
+			}
+		}
+		trigger_else = {
+			OR = {
+				has_ideology = ideology:ideology_slaver
+				has_ideology = ideology:ideology_jacksonian_democrat
+				scope:interest_group ?= {
+					OR = {
+						has_ideology = ideology:ideology_pro_slavery
+						has_ideology = ideology:ideology_pro_slavery_colonial
+					}
+				}
+			}
 		}
 	}
 	character_support_weight = {
 		value = 200
 		if = {
 			limit = {
-				OR = {
-					has_ideology = ideology:ideology_slaver
-				}
+				has_ideology = ideology:ideology_slaver
 			}
 			multiply = {
 				value = 5
 			}
 		}
 	}
-	
+
 	pop_support_trigger = {
 		state = { is_slave_state = yes }
 	}
@@ -604,7 +738,7 @@ movement_pro_slavery = {
 			value = 9
 			desc = "SLAVE_STATE"
 		}
-	
+
 		if = {
 			limit = {
 				is_pop_type = aristocrats
@@ -701,7 +835,7 @@ movement_pro_slavery = {
 			limit = {
 				owner ?= { has_journal_entry = je_acw_countdown }
 			}
-			
+
 			multiply = {
 				value = 3.0
 				desc = "je_acw_countdown"
@@ -713,21 +847,13 @@ movement_pro_slavery = {
 			value = literacy_rate
 			add = 0.10
 		}
-		
-		if = {
-			limit = {
-				is_pop_type = slaves
-			}
-			max = 0
-			desc = "POP_SLAVES"
-		}
 	}
-	
+
 	revolution = {
 		possible = {
 			political_movement_support >= 0.1 # 0.05
 		}
-			
+
 		weight = {
 			value = 100
 		}
@@ -744,7 +870,10 @@ movement_pro_slavery = {
 						owner ?= {
 							OR = {
 								has_journal_entry = je_acw_countdown
-								has_law = law_type:law_legacy_slavery
+								OR = {
+									has_law_or_variant = law_type:law_legacy_slavery
+									has_law_or_variant = law_type:law_colonial_slavery
+								}
 								has_variable = slavery_recently_abolished
 							}
 							any_scope_state = {
@@ -761,11 +890,11 @@ movement_pro_slavery = {
 					multiply = 0.25
 				}
 			}
-			
+
 			if = {
 				limit = { is_capital = yes }
 				if = {
-					limit = { owner ?= { NOT = { has_law = law_type:law_slavery_banned } } }
+					limit = { owner ?= { NOT = { has_law_or_variant = law_type:law_slavery_banned } } }
 					multiply = 10.0
 				}
 				else = {
@@ -774,7 +903,7 @@ movement_pro_slavery = {
 			}
 		}
 	}
-	
+
 	secession = {
 		possible = {
 			political_movement_support >= 0.1 # 0.05
@@ -783,13 +912,16 @@ movement_pro_slavery = {
 				owner = {
 					OR = {
 						has_journal_entry = je_acw_countdown
-						has_law = law_type:law_legacy_slavery
+						OR = {
+							has_law_or_variant = law_type:law_legacy_slavery
+							has_law_or_variant = law_type:law_colonial_slavery
+						}
 						has_variable = slavery_recently_abolished
 					}
 				}
 			}
 		}
-	
+
 		weight = {
 			value = 10
 
@@ -799,6 +931,7 @@ movement_pro_slavery = {
 						owner ?= {
 							OR = {
 								has_journal_entry = je_acw_countdown
+								has_law_or_variant = law_type:law_colonial_slavery
 								has_variable = slavery_recently_abolished
 							}
 						}
@@ -808,7 +941,7 @@ movement_pro_slavery = {
 				add = 1000
 			}
 		}
-		
+
 		forced_tags = {
 			CSA = {
 				trigger = {
@@ -817,7 +950,7 @@ movement_pro_slavery = {
 				weight = 1000
 			}
 		}
-		
+
 		state_weight = {
 			value = 1
 			if = {
@@ -830,7 +963,10 @@ movement_pro_slavery = {
 						owner ?= {
 							OR = {
 								has_journal_entry = je_acw_countdown
-								has_law = law_type:law_legacy_slavery
+								OR = {
+									has_law_or_variant = law_type:law_legacy_slavery
+									has_law_or_variant = law_type:law_colonial_slavery
+								}
 								has_variable = slavery_recently_abolished
 							}
 							any_scope_state = {
@@ -847,12 +983,12 @@ movement_pro_slavery = {
 					multiply = 0.25
 				}
 			}
-			
+
 			if = {
 				limit = {
 					owner ?= { has_journal_entry = je_acw_countdown }
 				}
-				
+
 				if = { # Ensure the union retains Washington DC/Maryland/Delaware in case of southern secession
 					limit = {
 						OR = {
@@ -861,38 +997,54 @@ movement_pro_slavery = {
 							state_region = s:STATE_DISTRICT_OF_COLUMBIA
 						}
 					}
-					
+
 					multiply = 0.0
 				}
 				else_if = { # Virginia should be CSA capital
 					limit = {
 						state_region = s:STATE_VIRGINIA
 					}
-					
+
 					multiply = 10.0
 				}
 			}
 		}
 	}
-	
+
 	additional_radicalism_factors = {
 		if = {
 			limit = {
-				owner.ruler ?= { has_ideology = ideology:ideology_abolitionist }
+				owner.ruler ?= {
+					OR = {
+						has_ideology = ideology:ideology_abolitionist
+						AND = {
+							NOR = {
+								has_ideology = ideology:ideology_slaver
+								has_ideology = ideology:ideology_jacksonian_democrat
+							}
+							interest_group = { has_ideology = ideology:ideology_anti_slavery }
+						}
+					}
+				}
 			}
-			
+
 			add = {
 				value = 0.1
 				desc = "RULER_IS_ANTI_SLAVERY"
 			}
 		}
-	
+
 		if = {
 			limit = {
 				owner.army_size > 0
-				owner = { NOT = { has_law = law_type:law_slavery_banned } }
+				owner = {
+					NOR = {
+						has_law_or_variant = law_type:law_slavery_banned
+						has_law_or_variant = law_type:law_colonial_slavery
+					}
+				}
 			}
-			
+
 			add = {
 				owner = {
 					every_scope_building = {
@@ -903,12 +1055,12 @@ movement_pro_slavery = {
 						add = this.level
 					}
 				}
-				
+
 				divide = {
 					value = owner.army_size
 					min = 1
 				}
-				
+
 				subtract = 0.5
 				multiply = -1
 				min = 0
@@ -916,11 +1068,16 @@ movement_pro_slavery = {
 				desc = "ARMY_FRACTION_IN_SLAVE_STATES"
 			}
 		}
-		
+
 		if = {
 			limit = {
 				owner.navy_size > 0
-				owner = { NOT = { has_law = law_type:law_slavery_banned } }
+				owner = {
+					NOR = {
+						has_law_or_variant = law_type:law_slavery_banned
+						has_law_or_variant = law_type:law_colonial_slavery
+					}
+				}
 			}
 
 			add = {
@@ -933,12 +1090,12 @@ movement_pro_slavery = {
 						add = this.level
 					}
 				}
-				
+
 				divide = {
 					value = owner.navy_size
 					min = 1
 				}
-				
+
 				subtract = 0.5
 				multiply = -0.5
 				min = 0
@@ -946,15 +1103,35 @@ movement_pro_slavery = {
 				desc = "NAVY_FRACTION_IN_SLAVE_STATES"
 			}
 		}
-		
+
 		if = {
 			limit = {
 				owner ?= { has_journal_entry = je_acw_countdown }
 			}
-			
+
 			add = {
 				value = 0.2
 				desc = "je_acw_countdown"
+			}
+		}
+		
+		if = {
+			limit = {
+				owner = {
+					any_neighbouring_state = {
+						owner = {
+							NOT = { THIS = ROOT.owner }
+							any_political_movement = {
+								is_political_movement_type = movement_pro_slavery
+								is_insurrectionary = yes
+							}
+						}
+					}
+				}
+			}
+			add = {
+				desc = "NEIGHBOURING_COUNTRY_WITH_REVOLUTION"
+				value = 0.15
 			}
 		}
 	}

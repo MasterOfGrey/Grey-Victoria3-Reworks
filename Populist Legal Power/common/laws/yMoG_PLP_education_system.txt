@@ -80,11 +80,11 @@ law_religious_schools = {
 		if = {
 			limit = { ai_has_enact_weight_modifier_journal_entries = yes }
 			add = 750
-		}		
+		}
 		
 		if = {
 			limit = {
-				has_law = law_type:law_no_schools
+				has_law_or_variant = law_type:law_no_schools
 			}
 			add = 500
 			
@@ -115,7 +115,7 @@ law_religious_schools = {
 			limit = {
 				has_law = law_type:law_religious_schools
 				scope:target_country = {
-					has_law = law_type:law_no_schools
+					has_law_or_variant = law_type:law_no_schools
 				}
 				power_bloc ?= { has_principle_group = principle_group:principle_group_advanced_research }
 			}
@@ -182,7 +182,7 @@ law_private_schools = {
 		
 		if = {
 			limit = {
-				has_law = law_type:law_no_schools
+				has_law_or_variant = law_type:law_no_schools
 			}
 			add = 500
 			
@@ -213,7 +213,7 @@ law_private_schools = {
 			limit = {
 				has_law = law_type:law_private_schools
 				scope:target_country = {
-					has_law = law_type:law_no_schools
+					has_law_or_variant = law_type:law_no_schools
 				}
 				power_bloc ?= { has_principle_group = principle_group:principle_group_advanced_research }
 			}
@@ -281,7 +281,7 @@ law_public_schools = {
 		
 		if = {
 			limit = {
-				has_law = law_type:law_no_schools
+				has_law_or_variant = law_type:law_no_schools
 			}
 			add = 500
 			
@@ -312,7 +312,7 @@ law_public_schools = {
 			limit = {
 				has_law = law_type:law_public_schools
 				scope:target_country = {
-					has_law = law_type:law_no_schools
+					has_law_or_variant = law_type:law_no_schools
 				}
 				power_bloc ?= { has_principle_group = principle_group:principle_group_advanced_research }
 			}
