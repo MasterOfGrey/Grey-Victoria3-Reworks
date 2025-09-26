@@ -30,19 +30,3 @@ state_engineers_investment_pool_contribution_add={
         ai_value=0
     }
 }
-state_bureaucrats_investment_pool_efficiency_mult={
-    decimals=0
-    color=good
-    percent=yes
-    game_data={
-        ai_value=0
-    }
-}
-state_bureaucrats_investment_pool_contribution_add={
-	decimals=0
-	color=good
-	percent=yes
-	game_data={
-		ai_value=0
-	}
-}
