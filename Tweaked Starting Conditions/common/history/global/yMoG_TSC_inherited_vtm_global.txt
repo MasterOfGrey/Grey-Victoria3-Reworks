@@ -11,12 +11,6 @@ GLOBAL = {
 			}
 			state_region = { remove_state_trait = state_trait_zagros_mountains }
 		}
-		if = {
-			limit = {
-				state_region = s:STATE_EQUATORIA # South Sudan
-			}
-			state_region = { add_state_trait = state_trait_nile_river }
-		}
 		if = { # to stop MAPI stacking
 			limit = {
 				state_region = s:STATE_DIYARBAKIR

@@ -15,7 +15,7 @@ state_trait_oresund = {
     icon = "gfx/interface/icons/state_trait_icons/river.dds"
 	modifier = {
 		building_port_throughput_add = 0.20
-		state_trade_capacity_mult = 0.1
+		state_trade_capacity_mult = 0.15
 		state_building_naval_base_max_level_add = 20
 	}
 }
@@ -135,12 +135,24 @@ state_trait_canales_patagonicos = { # araucania
 		state_market_access_price_impact = 0.05
 	}
 }
-state_trait_bremerhaven = {
+state_trait_hamburger_hafen = {
 	icon = "gfx/interface/icons/state_trait_icons/natural_harbors.dds"
 	modifier = {
 		building_shipyards_throughput_add = 0.1
 		building_military_shipyards_throughput_add = 0.1
 		building_port_throughput_add = 0.40
+		state_trade_capacity_mult = 0.2
+		state_building_naval_base_max_level_add = 10
+		state_market_access_price_impact = 0.05
+	}
+}
+state_trait_venetian_lagoon = {
+	icon = "gfx/interface/icons/state_trait_icons/natural_harbors.dds"
+
+	modifier = {
+		building_shipyards_throughput_add = 0.15
+		building_military_shipyards_throughput_add = 0.15
+		building_port_throughput_add = 0.2
 		state_trade_capacity_mult = 0.2
 		state_building_naval_base_max_level_add = 10
 		state_market_access_price_impact = 0.05
@@ -176,6 +188,17 @@ state_trait_saronic_gulf = {
 		building_military_shipyards_throughput_add = 0.1
 		building_port_throughput_add = 0.2
 		state_trade_capacity_mult = 0.2
+		state_building_naval_base_max_level_add = 10
+		state_market_access_price_impact = 0.05
+	}
+}
+state_trait_gulf_of_trieste = {
+	icon = "gfx/interface/icons/state_trait_icons/natural_harbors.dds"
+
+	modifier = {
+		building_shipyards_throughput_add = 0.1
+		building_military_shipyards_throughput_add = 0.1
+		building_port_throughput_add = 0.20
 		state_building_naval_base_max_level_add = 10
 		state_market_access_price_impact = 0.05
 	}
@@ -442,6 +465,18 @@ state_trait_sydney_harbor = {
 		building_port_throughput_add = 0.3
 		state_trade_capacity_mult = 0.30
 		state_building_naval_base_max_level_add = 15
+		state_market_access_price_impact = 0.05
+	}
+}
+state_trait_bosporus = {
+	icon = "gfx/interface/icons/state_trait_icons/natural_harbors.dds"
+
+	modifier = {
+		building_shipyards_throughput_add = 0.1
+		building_military_shipyards_throughput_add = 0.1
+		building_port_throughput_add = 0.2
+		state_trade_capacity_mult = 0.15
+		state_building_naval_base_max_level_add = 10
 		state_market_access_price_impact = 0.05
 	}
 }
