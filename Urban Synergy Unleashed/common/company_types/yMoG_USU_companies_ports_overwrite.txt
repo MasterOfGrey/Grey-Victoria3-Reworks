@@ -91,6 +91,8 @@ company_hbc = {
 company_imperial_arsenal = {
 	icon = "gfx/interface/icons/company_icons/historical_company_icons/imperial_arsenal.dds"
 	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_harbor_shipbuilding.dds"
+
+	category = bureaucrat_owned
 	
 	flavored_company = yes
 	
@@ -164,6 +166,8 @@ company_imperial_arsenal = {
 company_foochow_arsenal = {
 	icon = "gfx/interface/icons/company_icons/historical_company_icons/chinese_foochow_arsenal.dds"
 	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_harbor_shipbuilding.dds"
+
+	category = bureaucrat_owned
 	
 	flavored_company = yes
 	
@@ -1264,6 +1268,8 @@ company_russian_american_company = {
 	icon = "gfx/interface/icons/company_icons/historical_company_icons/company_russian_american_company.dds"
 	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_harbor_shipbuilding.dds"
 
+	category = bureaucrat_owned
+
 	flavored_company = yes
 
 	building_types = {
@@ -1292,7 +1298,7 @@ company_russian_american_company = {
 	potential = {
 		has_interest_marker_in_region = region_pacific_coast
 		any_primary_culture = {
-			has_discrimination_trait = east_slavic
+			has_discrimination_trait = heritage_east_slavic
 		}
 	}
 
@@ -1444,6 +1450,8 @@ company_john_holt = {
 company_lanfang_kongsi = {
 	icon = "gfx/interface/icons/company_icons/historical_company_icons/company_lanfang_kongsi.dds"
 	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_mining.dds"
+
+	category = shopkeeper_owned
 
 	flavored_company = yes
 
