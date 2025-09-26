@@ -1,7 +1,7 @@
 ﻿building_trade_center = {
 	building_group = bg_trade
 	city_type = city
-	levels_per_mesh = 10
+	levels_per_mesh = 50
 
 	lens = infrastructure
 
@@ -79,7 +79,7 @@
 		
 		if = { # Support Free Trade
 			limit = {
-				owner = { has_law = law_type:law_free_trade } 
+				owner = { has_law_or_variant = law_type:law_free_trade } 
 			}
 			multiply = 2
 		}
