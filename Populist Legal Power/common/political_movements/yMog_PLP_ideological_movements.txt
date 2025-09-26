@@ -284,8 +284,8 @@
 			limit = {
 				owner ?= {
 					or = {
-						has_law = law_type:law_slave_trade
-						has_law = law_type:law_legacy_slavery
+						has_law_or_variant = law_type:law_slave_trade
+						has_law_or_variant = law_type:law_legacy_slavery
 					}
 				}
 			}
@@ -320,7 +320,7 @@
 			limit = {
 				standard_of_living < state.average_expected_sol
 				owner = {
-					has_law = law_type:law_debt_slavery
+					has_law_or_variant = law_type:law_debt_slavery
 				}
 			}
 			add = { # Increases likelihood of support if impoverished

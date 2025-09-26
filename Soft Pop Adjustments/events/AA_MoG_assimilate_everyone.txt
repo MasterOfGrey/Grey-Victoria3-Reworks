@@ -50,8 +50,8 @@ assimilate_everyone.1 = {
 						#	NOT = {
 						#		root = {			For reasons unclear, this law check doesn't work.
 						#			or = {
-						#				has_law = law_type:law_slave_trade
-						#				has_law = law_type:law_legacy_slavery
+						#				has_law_or_variant = law_type:law_slave_trade
+						#				has_law_or_variant = law_type:law_legacy_slavery
 						#			}
 						#		}
 						#		is_pop_type = slaves

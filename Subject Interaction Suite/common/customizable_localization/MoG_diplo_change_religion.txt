@@ -4,13 +4,13 @@
 	
 	text = {
 		trigger = {
-			has_law = law_type:law_state_atheism
+			has_law_or_variant = law_type:law_state_atheism
 		}
 		localization_key = cr_irreligious_conversion
 	}
 	text = {
 		trigger = {
-			has_law = law_type:law_total_separation
+			has_law_or_variant = law_type:law_total_separation
 			country_has_state_religion = rel:atheist
 		}
 		localization_key = cr_institutionalise_secularism
