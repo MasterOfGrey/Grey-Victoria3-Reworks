@@ -90,6 +90,7 @@
 						is_being_bolstered = yes
 					}
 				}
+			}
 			if = {
 				limit = {
 					scope:political_movement = {
@@ -198,7 +199,7 @@
 					is_pop_type = slaves
 				}
 				add = {
-					value = 500 # 30
+					value = 500 # 50
 					desc = "POP_SLAVES"
 				}
 			}
@@ -280,12 +281,15 @@
 			}
 		}
 
+		# PLP - Cultural solidarity between enslaved and non-enslaved pops
 		if = {
 			limit = {
-				owner ?= {
-					or = {
-						has_law_or_variant = law_type:law_slave_trade
-						has_law_or_variant = law_type:law_legacy_slavery
+				OR = {
+					owner = { has_law_or_variant = law_type:law_slave_trade }
+					owner = { has_law_or_variant = law_type:law_legacy_slavery }
+					AND = {
+						owner = { has_law_or_variant = law_type:law_colonial_slavery }
+						state = { is_slave_state = no } # If you're in a slave state, concerns about being personally enslaved apply instead
 					}
 				}
 			}
@@ -316,24 +320,43 @@
 			}
 		}
 
+		# PLP - More opposed if you personally are at risk of being enslaved
 		if = {
 			limit = {
-				standard_of_living < state.average_expected_sol
-				owner = {
-					has_law_or_variant = law_type:law_debt_slavery
-				}
+				owner = { has_law_or_variant = law_type:law_debt_slavery }
 			}
-			add = { # Increases likelihood of support if impoverished
-				value =	state.average_expected_sol
-				subtract = standard_of_living
-				max = 10
+			add = {
 				desc = "POP_POVERTY"
+				value = define:NEconomy|DEBT_SLAVERY_ENSLAVEMENT_RATE_PER_POP
+				subtract = {
+					value = wealth
+					multiply = define:NEconomy|DEBT_SLAVERY_ENSLAVEMENT_RATE_DROP_OFF_PER_WEALTH
+				}
+				multiply = 100
+			}
+		}
+		if = {
+			limit = {
+				owner = { has_law_or_variant = law_type:law_colonial_slavery }
+				state = { is_slave_state = yes }
+				pop_acceptance < define:NEconomy|COLONIAL_SLAVERY_ACCEPTANCE_THRESHOLD
+			}
+			add = {
+				desc = "POP_POVERTY"
+				value = define:NEconomy|COLONIAL_SLAVERY_ENSLAVEMENT_RATE_PER_POP
+				subtract = {
+					value = wealth
+					multiply = define:NEconomy|COLONIAL_SLAVERY_ENSLAVEMENT_RATE_DROP_OFF_PER_WEALTH
+				}
+				multiply = 100
 			}
 		}
 
 		if = { # Colonial slavery is out of sight and out of mind
 			limit = {
 				owner ?= { has_law_or_variant = law_type:law_colonial_slavery }
+				# PLP - Colonial slavery is NOT out of sight and out of mind if you live in a colony
+				state = { is_slave_state = no }
 			}
 			if = {
 				limit = {
