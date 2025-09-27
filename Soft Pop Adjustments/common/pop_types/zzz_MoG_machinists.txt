@@ -9,8 +9,8 @@
 	unemployment = yes
 	education_access = 0.05 # 0
 	
-	# 20% - 80% politically engaged	
-	political_engagement_base = 0.20
+	# 25% - 85% politically engaged
+	political_engagement_base = 0.25
 	political_engagement_literacy_factor = 0.6
 	
 	political_engagement_mult = {
@@ -43,7 +43,7 @@
 						NOT = { has_technology_researched = labor_movement }
 					}
 				}
-				value = 0.5
+				value = 0.75
 			}		
 		}
 
