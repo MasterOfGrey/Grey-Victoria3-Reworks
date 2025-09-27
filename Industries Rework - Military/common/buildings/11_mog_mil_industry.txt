@@ -68,7 +68,7 @@ building_munition_plants = {
 	
 	required_construction = construction_cost_very_high
 
-		possible = {
+	possible = {
 		owner = {
 			NOT = {
 				OR = {
