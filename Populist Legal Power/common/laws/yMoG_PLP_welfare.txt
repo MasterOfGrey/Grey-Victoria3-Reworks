@@ -75,11 +75,11 @@ law_old_age_pension = {
 	
 	institution = institution_social_security
 	institution_modifier = {
-		state_food_security_add = 0.01
-		state_working_adult_ratio_add = 0.005
 		state_decree_cost_mult = 0.02
 		state_dependent_wage_mult = 0.2
+		state_working_adult_ratio_add = 0.005
 		state_dependent_political_participation_add = 0.02
+		state_food_security_add = 0.01
 	}
 	
 	# Below needed since this Law changes Political Participation

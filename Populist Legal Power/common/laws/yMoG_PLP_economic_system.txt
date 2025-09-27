@@ -21,19 +21,19 @@ law_traditionalism = {
 	
 	modifier = {
 		state_shopkeepers_investment_pool_efficiency_mult = -0.5
+		state_bureaucrats_investment_pool_efficiency_mult = -0.5
 		state_capitalists_investment_pool_efficiency_mult = -0.5
 		state_farmers_investment_pool_efficiency_mult = -0.5
 		state_clergymen_investment_pool_efficiency_mult = -0.5
 		state_aristocrats_investment_pool_efficiency_mult = -0.5
 		state_bureaucracy_population_base_cost_factor_mult = -0.25
+		country_government_dividends_reinvestment_add = 0.3
+		country_government_dividends_efficiency_add = 0.25
 		state_tax_capacity_mult = -0.25
 		country_private_construction_allocation_mult = 0.25
 		building_nationalization_cost_mult = 1.0
 		building_nationalization_investment_return_add = 0.1
-		country_government_dividends_reinvestment_add = 0.3
-		country_government_dividends_efficiency_add = 0.25
 		country_leverage_resistance_mult = 0.25
-		
 		state_market_access_price_impact = -0.15
 		country_disable_nationalization_without_compensation_bool = yes
 	}
@@ -96,6 +96,7 @@ law_interventionism = {
 					has_modifier = shogun_ig_forced_to_open_market
 					has_journal_entry = je_meiji_main
 					has_journal_entry = je_great_reforms_serfdom
+					has_journal_entry = je_hawaii
 				}
 				has_law_or_variant = law_type:law_traditionalism
 			}
@@ -321,15 +322,7 @@ law_extraction_economy = {
 	}
 	
 	can_enact = {
-		trigger_if = {
-			limit = {
-				game_date > 1836.1.1
-			}
-			is_subject = yes # Subject relationships load after laws' validities are checked
-		}
-		trigger_else = {
-			always = yes
-		}
+		is_subject = yes
 	}
 	
 	on_activate = {
@@ -434,6 +427,7 @@ law_laissez_faire = {
 		law_serfdom
 		law_isolationism
 		law_anarchy
+		law_guild_system
 	}
 	
 	unlocking_technologies = {
@@ -511,6 +505,7 @@ law_cooperative_ownership = {
 	
 	unlocking_laws = {
 		law_council_republic
+		law_corporate_state
 	}
 	
 	on_activate = {
@@ -520,6 +515,14 @@ law_cooperative_ownership = {
 	}
 	
 	modifier = {
+		state_shopkeepers_investment_pool_efficiency_mult = 0.25
+		state_farmers_investment_pool_efficiency_mult = 0.25
+		state_machinists_investment_pool_efficiency_mult = 0.25
+		state_engineers_investment_pool_efficiency_mult = 0.25
+		
+		state_machinists_investment_pool_contribution_add = 0.05
+		state_engineers_investment_pool_contribution_add = 0.05
+
 		country_private_construction_allocation_mult = 0.35
 		country_government_dividends_reinvestment_add = 0.7
 		country_government_dividends_efficiency_add = 0.75
@@ -532,14 +535,6 @@ law_cooperative_ownership = {
 		building_group_bg_power_allowed_collectivization_add = 1.0
 		building_group_bg_private_infrastructure_allowed_collectivization_add = 1.0
 		building_group_bg_arts_allowed_collectivization_add = 1.0
-		
-		state_shopkeepers_investment_pool_efficiency_mult = 0.25
-		state_farmers_investment_pool_efficiency_mult = 0.25
-		state_machinists_investment_pool_efficiency_mult = 0.25
-		state_engineers_investment_pool_efficiency_mult = 0.25
-		
-		state_machinists_investment_pool_contribution_add = 0.05
-		state_engineers_investment_pool_contribution_add = 0.05
 		
 		state_market_access_price_impact = -0.05
 		
@@ -559,7 +554,7 @@ law_cooperative_ownership = {
 			limit = {
 				has_law_or_variant = law_type:law_council_republic
 			}
-			add = 350
+			add = 400
 		}
 	}
 	
@@ -610,8 +605,10 @@ law_command_economy = {
 	
 	unlocking_laws = {
 		law_autocracy
+		law_neo_absolutism
 		law_theocracy
 		law_oligarchy
+		law_organic_regulation
 		law_single_party_state
 		law_technocracy
 	}
@@ -626,6 +623,7 @@ law_command_economy = {
 	modifier = {
 		country_disable_investment_pool_bool = yes
 		
+		state_bureaucrats_investment_pool_efficiency_mult = 0.25
 		country_authority_mult = 0.25
 		country_bureaucrats_pol_str_mult = 0.25
 		building_nationalization_cost_mult = -0.5

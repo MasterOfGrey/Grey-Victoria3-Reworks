@@ -119,16 +119,6 @@ law_free_trade = {
 		law_command_economy
 	}
 	
-	modifier = {
-		state_subvention_export_add = 0.50
-		state_subvention_import_add = 0.50
-		state_trade_advantage_mult = 0.25
-		country_leverage_resistance_mult = -0.25
-		
-		state_trade_advantage_from_capacity_add = 0.0001	# On top of base_values = 0.0005
-		state_max_trade_advantage_from_capacity_add = 0.2	# On top of base_values = 0.2
-	}
-	
 	unlocking_technologies = {
 		international_trade
 	}
@@ -156,6 +146,16 @@ law_free_trade = {
 		}
 	}
 	
+	modifier = {
+		state_subvention_export_add = 0.50
+		state_subvention_import_add = 0.50
+		state_trade_advantage_mult = 0.25
+		country_leverage_resistance_mult = -0.25
+		
+		state_trade_advantage_from_capacity_add = 0.0001	# On top of base_values = 0.0005
+		state_max_trade_advantage_from_capacity_add = 0.2	# On top of base_values = 0.2
+	}
+
 	ai_enact_weight_modifier = { #Petitions
 		value = 0
 		
@@ -188,26 +188,11 @@ law_isolationism = {
 	is_visible = {
 		NAND = {
 			any_primary_culture = {
-				has_discrimination_trait = han_chinese
+				has_discrimination_trait = heritage_han
 			}
 			any_scope_state = {
 				state_region = s:STATE_GUANGDONG
 				is_largest_state_in_region = yes
-			}
-		}
-	}
-	
-	can_enact = {
-		is_in_power_bloc = no
-		hidden_trigger = {
-			NAND = {
-				any_primary_culture = {
-					has_discrimination_trait = han_chinese
-				}
-				any_scope_state = {
-					state_region = s:STATE_GUANGDONG
-					is_largest_state_in_region = yes
-				}
 			}
 		}
 	}
@@ -218,6 +203,7 @@ law_isolationism = {
 		country_tech_spread_mult = -0.1 # -0.15
 		
 		country_leverage_resistance_mult = 1.0
+		country_support_separatism_resistance_mult = 0.5
 		
 		country_max_declared_interests_mult = -0.25 # -0.5
 		
@@ -264,18 +250,7 @@ law_canton_system = {
 
 	is_visible = {
 		any_primary_culture = {
-			has_discrimination_trait = han_chinese
-		}
-		any_scope_state = {
-			state_region = s:STATE_GUANGDONG
-			is_largest_state_in_region = yes
-		}
-	}
-
-	can_enact = {
-		is_in_power_bloc = no
-		any_primary_culture = {
-			has_discrimination_trait = han_chinese
+			has_discrimination_trait = heritage_han
 		}
 		any_scope_state = {
 			state_region = s:STATE_GUANGDONG

@@ -12,6 +12,10 @@
 		}
 	}
 	
+	modifier = {
+		# country_acceptance_homeland_add = 10 # PLP - removed
+	}
+
 	ai_will_do = {
 		has_law_or_variant = law_type:law_council_republic
 	}
