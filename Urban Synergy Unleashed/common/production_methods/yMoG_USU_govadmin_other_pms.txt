@@ -201,6 +201,7 @@ pm_hereditary_bureaucrats = {
 	
 	unlocking_laws = {
 		law_hereditary_bureaucrats
+		law_crownland_diets
 	}
 	
 	building_modifiers = {
@@ -216,6 +217,7 @@ pm_professional_bureaucrats = {
 	
 	disallowing_laws = {
 		law_hereditary_bureaucrats
+		law_crownland_diets
 	}	
 	
 	building_modifiers = {

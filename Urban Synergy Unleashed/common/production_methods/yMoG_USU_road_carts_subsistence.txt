@@ -208,6 +208,30 @@ pm_serfdom_no = {
 	}
 }
 
+
+pm_corvee_labor = {
+	texture = "gfx/interface/icons/production_method_icons/corvee_labor.dds"
+	unlocking_laws = {
+		law_manorialism
+	}
+	building_modifiers = {
+		workforce_scaled = {
+			goods_output_grain_add = 0.25
+		}
+
+		unscaled = {
+			building_subsistence_output_add = 3
+		}
+	}
+
+	state_modifiers = {
+		workforce_scaled = {
+			state_construction_mult = 0.001
+			state_tax_capacity_add = 0.8
+		}
+	}
+}
+
 pm_serfdom = {
 	texture = "gfx/interface/icons/production_method_icons/serfdom.dds"
 	unlocking_laws = {
