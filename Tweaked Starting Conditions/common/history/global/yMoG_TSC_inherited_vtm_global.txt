@@ -5,27 +5,6 @@
 GLOBAL = {
 	# State traits
 	every_state = { # We have to do this because "has_state_trait" only works on state scopes, not state regions.
-		if = { # to stop MAPI stacking (river traits don't give MAPI, I guess we're stopping infra and river port stacking?)
-			limit = {
-				state_region = s:STATE_DIYARBAKIR
-			}
-			state_region = { remove_state_trait = state_trait_tigris_river }
-		}
-		if = {
-			limit = {
-				OR = {
-					state_region = s:STATE_BAGHDAD
-					state_region = s:STATE_BASRA
-				}
-			}
-			state_region = { remove_state_trait = state_trait_euphrates_river }
-		}
-		if = {
-			limit = {
-				state_region = s:STATE_CORRIENTES
-			}
-			state_region = { remove_state_trait = state_trait_paraguay_river }
-		}
 		## Put these last
 		if = {
 			limit = {
