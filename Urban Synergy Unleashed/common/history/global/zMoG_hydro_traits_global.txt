@@ -188,8 +188,8 @@ GLOBAL = {
 	s:STATE_SLOVENIA = { add_state_trait = state_trait_hydro_potential_2 }
 	s:STATE_CROATIA = { add_state_trait = state_trait_hydro_potential_2 }
 	s:STATE_MONTENEGRO = { add_state_trait = state_trait_hydro_potential_2 }
-	s:STATE_NORTHERN_SERBIA = { add_state_trait = state_trait_hydro_potential_2 }
-	s:STATE_SOUTHERN_SERBIA = { add_state_trait = state_trait_hydro_potential_2 }
+	s:STATE_WESTERN_SERBIA = { add_state_trait = state_trait_hydro_potential_2 }
+	s:STATE_EASTERN_SERBIA = { add_state_trait = state_trait_hydro_potential_2 }
 	s:STATE_CRETE = { add_state_trait = state_trait_hydro_potential_2 }
 	s:STATE_THESSALIA = { add_state_trait = state_trait_hydro_potential_2 }
 	s:STATE_SKOPIA = { add_state_trait = state_trait_hydro_potential_2 }
@@ -197,7 +197,8 @@ GLOBAL = {
 	### EAST EUROPE ### = { add_state_trait = state_trait_hydro_potential_2 }
 	s:STATE_SILESIA = { add_state_trait = state_trait_hydro_potential_2 }
 	s:STATE_EAST_GALICIA = { add_state_trait = state_trait_hydro_potential_2 }
-	s:STATE_EAST_SLOVAKIA = { add_state_trait = state_trait_hydro_potential_2 }
+	s:STATE_SLOVAKIA = { add_state_trait = state_trait_hydro_potential_2 }
+	s:STATE_BUKOVINA = { add_state_trait = state_trait_hydro_potential_2 }
 	s:STATE_MOLDAVIA = { add_state_trait = state_trait_hydro_potential_2 }
 	s:STATE_WALLACHIA = { add_state_trait = state_trait_hydro_potential_2 }
 	

@@ -152,7 +152,7 @@
 			}		
 		}
 	}
-	s:STATE_WEST_SLOVAKIA={
+	s:STATE_SLOVAKIA={
 		region_state:AUS={
 			create_building={
 				building="building_river_port"
@@ -197,7 +197,7 @@
 			}		
 		}
 	}
-	s:STATE_NORTHERN_SERBIA={
+	s:STATE_WESTERN_SERBIA={
 		region_state:SER={
 			create_building={
 				building="building_river_port"
@@ -413,7 +413,16 @@
 			}		
 		}
 	}
-	s:STATE_SILESIA={
+	s:STATE_LOWER_SILESIA={
+		region_state:PRU={
+			create_building={
+				building="building_river_port"
+				level=1
+				activate_production_methods={ "pm_rp_small_port" }
+			}		
+		}
+	}
+	s:STATE_UPPER_SILESIA={
 		region_state:PRU={
 			create_building={
 				building="building_river_port"

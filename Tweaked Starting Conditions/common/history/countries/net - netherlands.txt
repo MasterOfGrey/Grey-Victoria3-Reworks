@@ -3,11 +3,11 @@
 		effect_starting_technology_tier_2_tech = yes
 		effect_starting_politics_liberal = yes
 
-		ig:ig_petty_bourgeoisie = {
+		ig:ig_petty_bourgeoisie ?= {
 			add_ruling_interest_group = yes
 		}
 
-		ig:ig_devout = {
+		ig:ig_devout ?= {
 			add_ruling_interest_group = yes
 		}
 
@@ -25,6 +25,7 @@
 		activate_law = law_type:law_interventionism
 		activate_law = law_type:law_commercialized_agriculture
 		activate_law = law_type:law_colonial_exploitation
+		activate_law = law_type:law_colonial_slavery
 		activate_law = law_type:law_dedicated_police
 		activate_law = law_type:law_public_schools
 		activate_law = law_type:law_right_of_assembly

@@ -5,7 +5,7 @@ building_automotive_industry = {
 	building_group = bg_heavy_industry
 	icon = "gfx/interface/icons/building_icons/automotive_industry.dds"
 	city_type = city
-	levels_per_mesh = 5
+	levels_per_mesh = 50
 	
 	unlocking_technologies = {
 		ironclad_tech # combustion_engine	# Now represents the advent of early steel geared transmissions use for ships and tested for bicycles and some horse-drawn carriages etc.
@@ -22,8 +22,13 @@ building_automotive_industry = {
 	required_construction = construction_cost_very_high
 	
 	possible = {
-		owner = { 
-			NOT = { has_law = law_type:law_industry_banned } 
+		owner = {
+			NOT = {
+				OR = {
+					has_law_or_variant = law_type:law_industry_banned
+					has_law_or_variant = law_type:law_extraction_economy
+				}
+			}
 		}
 	}
 	ownership_type = self

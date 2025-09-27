@@ -32,7 +32,7 @@
 		activate_law = law_type:law_per_capita_based_taxation
 		activate_law = law_type:law_colonial_exploitation
     	activate_law = law_type:law_right_of_assembly
-    	activate_law = law_type:law_colonial_exploitation
+		activate_law = law_type:law_colonial_slavery # Slavery in Danish colonies was only abolished in 1848
 		
 		set_institution_investment_level = {
 			institution = institution_colonial_affairs
@@ -44,7 +44,7 @@
 			level = 3
 		}
 		
-		ig:ig_landowners = {
+		ig:ig_landowners ?= {
 			add_ruling_interest_group = yes
 		}
 	}

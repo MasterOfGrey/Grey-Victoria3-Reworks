@@ -4,7 +4,7 @@ building_electrics_industry = {
 	building_group = bg_heavy_industry
 	icon = "gfx/interface/icons/building_icons/electrics_industry.dds"
 	city_type = city
-	levels_per_mesh = 5
+	levels_per_mesh = 50
 	
 	unlocking_technologies = {
 		telephone
@@ -20,10 +20,16 @@ building_electrics_industry = {
 
 	possible = {
 		owner = {
-			NOT = { has_law = law_type:law_industry_banned }
+			NOT = {
+				OR = {
+					has_law_or_variant = law_type:law_industry_banned
+					has_law_or_variant = law_type:law_extraction_economy
+				}
+			}
 		}
 	}
 	ownership_type = self
+
 	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_heavy_industry.dds"
 }
 
@@ -31,7 +37,7 @@ building_motor_industry = {
 	building_group = bg_heavy_industry
 	icon = "gfx/interface/icons/building_icons/motor_industry.dds"
 	city_type = city
-	levels_per_mesh = 5
+	levels_per_mesh = 50
 	
 	unlocking_technologies = {
 		atmospheric_engine
@@ -45,11 +51,17 @@ building_motor_industry = {
 	required_construction = construction_cost_high
 	
 	possible = {
-		owner = { 
-			NOT = { has_law = law_type:law_industry_banned } 
+		owner = {
+			NOT = {
+				OR = {
+					has_law_or_variant = law_type:law_industry_banned
+					has_law_or_variant = law_type:law_extraction_economy
+				}
+			}
 		}
 	}
 	ownership_type = self
+
 	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_heavy_industry.dds"
 }
 
@@ -62,7 +74,7 @@ building_explosives_factory = {
 	}
 
 	city_type = city
-	levels_per_mesh = 5
+	levels_per_mesh = 50
 
 	production_method_groups = {
 		pmg_explosives_building_chemical_plants
@@ -75,8 +87,8 @@ building_explosives_factory = {
 		owner = {
 			NOT = { 
 				OR = {
-					has_law = law_type:law_industry_banned 
-					has_law = law_type:law_extraction_economy 
+					has_law_or_variant = law_type:law_industry_banned 
+					has_law_or_variant = law_type:law_extraction_economy 
 				}
 			}
 		}

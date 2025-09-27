@@ -81,9 +81,9 @@ overlord_can_consolidate_subject = {
 				custom_tooltip = {
 					text = consolidate_subject_dominion_type_laws_tt
 					OR = {
-						has_law = law_type:law_parliamentary_republic
-						has_law = law_type:law_presidential_republic
-						has_law = law_type:law_council_republic
+						has_law_or_variant = law_type:law_parliamentary_republic
+						has_law_or_variant = law_type:law_presidential_republic
+						has_law_or_variant = law_type:law_council_republic
 					}
 				}
 			}
@@ -181,7 +181,7 @@ overlord_can_consolidate_subject = {
 								shares_tradition_trait_with_any_primary_culture = scope:target_country
 							} # prev: shares_trait_with_any_primary_culture = scope:target_country
 						}
-						has_law = law_type:law_multicultural
+						has_law_or_variant = law_type:law_multicultural
 						has_technology_researched = corporatism
 						has_technology_researched = human_rights
 						overlord = {

@@ -28,10 +28,10 @@ assimilate_everyone.2 = {
 				limit = {
 					# Don't care which laws anymore, everything handled by "has_ongoing_conversion = no"
 					# Only need to handle State Atheism Separately
-					NOT = { has_law = law_type:law_state_atheism }
+					NOT = { has_law_or_variant = law_type:law_state_atheism }
 					# OR = {
-					#	has_law = law_type:law_freedom_of_conscience
-					#	has_law = law_type:law_total_separation
+					#	has_law_or_variant = law_type:law_freedom_of_conscience
+					#	has_law_or_variant = law_type:law_total_separation
 					# }
 				}
 				
@@ -124,7 +124,7 @@ assimilate_everyone.2 = {
 			# For state atheism and it's lack of seeding:
 			if = {
 				limit = {
-					has_law = law_type:law_state_atheism
+					has_law_or_variant = law_type:law_state_atheism
 				}
 				
 				root.religion = { save_scope_as = institutional_religion }

@@ -14,7 +14,7 @@
 			NOT = { 
 				is_country_type = decentralized
 				is_diplomatic_play_enemy_of = root
-				has_law = law_type:law_slavery_banned
+				has_law_or_variant = law_type:law_slavery_banned
 			}
 			is_subject_of = root
 		}
@@ -22,7 +22,7 @@
 
 	possible = {
 		is_player = yes
-		has_law = law_type:law_slavery_banned
+		has_law_or_variant = law_type:law_slavery_banned
 	}
 
 	accept_effect = {
@@ -89,7 +89,7 @@ forced_slave_trade = {
 			NOT = { 
 				is_country_type = decentralized
 				is_diplomatic_play_enemy_of = root
-				has_law = law_type:law_slave_trade
+				has_law_or_variant = law_type:law_slave_trade
 			}
 			is_subject_of = root
 		}
@@ -97,7 +97,7 @@ forced_slave_trade = {
 
 	possible = {
 		is_player = yes
-		has_law = law_type:law_slave_trade
+		has_law_or_variant = law_type:law_slave_trade
 	}
 
 	accept_effect = {

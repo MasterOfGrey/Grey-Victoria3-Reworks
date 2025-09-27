@@ -1,7 +1,7 @@
 ﻿building_power_plant = {
 	building_group = bg_power
 	icon = "gfx/interface/icons/building_icons/power_plant.dds"
-	levels_per_mesh = 5
+	levels_per_mesh = 50
 	
 	city_type = city
 	
@@ -19,7 +19,7 @@
 	
 	possible = {
 		owner = {
-			NOT = { has_law = law_type:law_industry_banned } 
+			NOT = { has_law_or_variant = law_type:law_industry_banned } 
 		}
 	}
 	
@@ -116,7 +116,7 @@ usu_building_hydro_power_plant = {
 	
 	possible = {
 		owner = { 
-			NOT = { has_law = law_type:law_industry_banned } 
+			NOT = { has_law_or_variant = law_type:law_industry_banned } 
 		}
 	}
 	

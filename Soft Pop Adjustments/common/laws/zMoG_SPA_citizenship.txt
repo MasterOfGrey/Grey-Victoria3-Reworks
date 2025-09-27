@@ -125,6 +125,12 @@ law_ethnostate = {
 	
 	on_enact = {
 		recalculate_pop_ig_support = yes
+		if = {
+			limit = {
+				is_subject = yes
+			}
+			custom_tooltip = fervor_effects_ld_tt
+		}
 	}
 	
 	unlocking_technologies = {
@@ -258,6 +264,12 @@ law_national_supremacy = {
 	
 	on_enact = {
 		recalculate_pop_ig_support = yes
+		if = {
+			limit = {
+				is_subject = yes
+			}
+			custom_tooltip = fervor_effects_ld_tt
+		}
 	}
 	
 	modifier = {
@@ -388,6 +400,18 @@ law_racial_segregation = {
 	
 	on_enact = {
 		recalculate_pop_ig_support = yes
+		if = {
+			limit = {
+				is_subject = yes
+			}
+			custom_tooltip = fervor_effects_ld_tt
+		}
+		if = {
+			limit = {
+				has_modifier = modifier_polish_organic_statute
+			}
+			remove_modifier = modifier_polish_organic_statute
+		}
 	}
 	
 	modifier = {
@@ -515,14 +539,23 @@ law_cultural_exclusion = {
 	unlocking_laws = {
 		law_slavery_banned
 		law_debt_slavery
+		law_colonial_slavery
 	}
 	
 	on_enact = {
 		recalculate_pop_ig_support = yes
-	}
-	
-	cultural_acceptance_rule = {
-		shares_trait_with_any_primary_culture = scope:country
+		if = {
+			limit = {
+				is_subject = yes
+			}
+			custom_tooltip = fervor_effects_ld_tt
+		}
+		if = {
+			limit = {
+				has_modifier = modifier_polish_organic_statute
+			}
+			remove_modifier = modifier_polish_organic_statute
+		}
 	}
 	
 	modifier = {
@@ -657,6 +690,18 @@ law_multicultural = {
 	
 	on_enact = {
 		recalculate_pop_ig_support = yes
+		if = {
+			limit = {
+				is_subject = yes
+			}
+			custom_tooltip = fervor_effects_ld_tt
+		}
+		if = {
+			limit = {
+				has_modifier = modifier_polish_organic_statute
+			}
+			remove_modifier = modifier_polish_organic_statute
+		}
 	}
 	
 	modifier = {
