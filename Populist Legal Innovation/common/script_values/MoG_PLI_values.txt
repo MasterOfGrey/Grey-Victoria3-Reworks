@@ -1,4 +1,22 @@
-﻿### Investment Willingness Values
+﻿### Investment Limitations
+mog_pli_ip_gdp_ratio = {
+	value = investment_pool
+	divide = {
+		add = gdp
+		min = 1000000		# We want to know how big the investment pool is relative to gdp, but for very small gdp's (<1mil), we don't want to cause crushing limitations.
+	}
+}
+
+mog_pli_max_investment_willingness_from_ip = {	# We apply this as a ceiling to any/all investment willingness calculations.
+	value = 1
+	subtract = {						# Investment willingness linearly declines as the investment pool grows until it reaches 0 at IP = 50% of GDP
+		value = mog_pli_ip_gdp_ratio	# This will be some value between 0 & 0.5 if everything works properly.
+		multiply = 2					# i.e. max reduction in investment contribution is 100%
+	}
+	min = 0								# But we'll clamp it to be safe.
+}
+
+### Investment Willingness Values
 mog_pli_investment_target = {	# This represents the conditions which support investor confidence and capability
 	value = 0
 	add = mog_pli_inv_dist_of_power			# Max 20
@@ -10,7 +28,10 @@ mog_pli_investment_target = {	# This represents the conditions which support inv
 	add = mog_pli_inv_rights_of_women		# Max 20
 	add = mog_pli_inv_slavery				# Max 20
 	min = 1
-	max = 100
+	max = {									# This can actually take it down to 0, but this is the only thing that should be able to do so.
+		value = 100
+		multiply = mog_pli_max_investment_willingness_from_ip
+	}
 }
 
 mog_pli_investment_increment = {
