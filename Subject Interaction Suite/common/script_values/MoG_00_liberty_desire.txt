@@ -5,8 +5,8 @@
 ## -> This is intentional as LD from combined subject forces is strictly positive - these are in balance.
 
 # root = pact
-# root.first_country: first country in the pact
-# root.second_country: second country in the pact
+# root.first_country: first country in the pact. Overlord.
+# root.second_country: second country in the pact. Subject.
 # root = { liberty_desire < 50 }: compare trigger for current Liberty Desire value root.
 # Must return a value which will be added to the current Liberty Desire in this pact.
 liberty_desire_weekly_change = {
@@ -20,7 +20,7 @@ liberty_desire_weekly_change = {
 		add = {
 			value = -0.2
 			desc = "gov_chartered_company"
-		}	
+		}
 	}
 	
 	# Fervor and primary cultures
@@ -592,6 +592,8 @@ liberty_desire_weekly_change = {
 				OR = {
 					is_diplomatic_action_type = puppet
 					is_diplomatic_action_type = vassal
+					is_diplomatic_action_type = colony
+					is_diplomatic_action_type = crown_land
 				}
 			}
 			add = {
@@ -657,6 +659,8 @@ liberty_desire_weekly_change = {
 				OR = {
 					is_diplomatic_action_type = puppet
 					is_diplomatic_action_type = vassal
+					is_diplomatic_action_type = colony
+					is_diplomatic_action_type = crown_land
 				}
 			}
 			add = {
@@ -736,6 +740,8 @@ liberty_desire_weekly_change = {
 				OR = {
 					is_diplomatic_action_type = puppet
 					is_diplomatic_action_type = vassal
+					is_diplomatic_action_type = colony
+					is_diplomatic_action_type = crown_land
 				}
 			}
 			add = {
@@ -829,7 +835,7 @@ liberty_desire_weekly_change = {
 			subtract = "root.second_country.economic_dependence(root.first_country)"
 			divide = 10
 			desc = "LIBERTY_DESIRE_WEEKLY_CHANGE_ECONOMIC_DEPENDENCE"
-		}		
+		}
 	}
 	else = {
 		add = {
@@ -837,7 +843,7 @@ liberty_desire_weekly_change = {
 			subtract = "root.second_country.economic_dependence(root.first_country)"
 			divide = 3
 			desc = "LIBERTY_DESIRE_WEEKLY_CHANGE_ECONOMIC_DEPENDENCE"
-		}	
+		}
 	}
 	
 	# MARKET ISOLATION
@@ -847,7 +853,7 @@ liberty_desire_weekly_change = {
 			root.second_country.capital = { is_isolated_from_market = yes }
 		}
 		add = {
-			value = 1 
+			value = 1
 			desc = "LIBERTY_DESIRE_WEEKLY_CHANGE_ISOLATED_FROM_MARKET"
 		}
 	}
@@ -856,22 +862,26 @@ liberty_desire_weekly_change = {
 			root.second_country.market = root.first_country.market
 			root.first_country.supply_network_strength < 1
 			root.second_country = { has_port = yes }
+			# NOT = { root.second_country = { is_adjacent_to_country = root.first_country }} # SIS - removed
 		}
 		add = {
 			value = 1
 			subtract = root.first_country.supply_network_strength
 			desc = "LIBERTY_DESIRE_WEEKLY_CHANGE_LOW_SUPPLY_NETWORK_STRENGTH"
 		}
-	}	
+	}
 	
 	# PRINCIPLE Dependent Effects
 	# Sacred Civics
 	if = {
 		limit = {
-			root.first_country = { 
+			root.first_country = {
 				is_in_power_bloc = yes
 				power_bloc = {
-					has_principle = principle:principle_sacred_civics_2
+					OR = {
+						has_principle = principle:principle_sacred_civics_2
+						has_principle = principle:principle_sacred_civics_3
+					}
 				}
 				religion = root.second_country.religion
 			}
@@ -953,7 +963,7 @@ liberty_desire_weekly_change = {
 	
 	# SCALING NORMALISATION
 	if = {
-		limit = { 
+		limit = {
 			scope:pre_scaling_value < 0
 			second_country = {
 				liberty_desire < 50
@@ -985,7 +995,7 @@ liberty_desire_weekly_change = {
 		# max = -0.01 # No, counter forces need to be able to counter at a certain point
 	}
 	else_if = {
-		limit = { 
+		limit = {
 			scope:pre_scaling_value > 0
 			second_country = {
 				liberty_desire > 50

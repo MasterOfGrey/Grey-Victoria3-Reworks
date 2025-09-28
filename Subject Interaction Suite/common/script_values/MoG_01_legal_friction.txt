@@ -660,6 +660,7 @@
 						has_law_or_variant = law_type:law_debt_slavery
 						has_law_or_variant = law_type:law_slave_trade
 						has_law_or_variant = law_type:law_legacy_slavery
+						has_law_or_variant = law_type:law_colonial_slavery
 					}
 				}
 				root.second_country = {
@@ -667,6 +668,7 @@
 						has_law_or_variant = law_type:law_debt_slavery
 						has_law_or_variant = law_type:law_slave_trade
 						has_law_or_variant = law_type:law_legacy_slavery
+						has_law_or_variant = law_type:law_colonial_slavery
 					}
 				}
 				root.first_country = {
@@ -697,6 +699,7 @@
 								has_law_or_variant = law_type:law_debt_slavery
 								has_law_or_variant = law_type:law_slave_trade
 								has_law_or_variant = law_type:law_legacy_slavery
+								has_law_or_variant = law_type:law_colonial_slavery
 							}
 						}
 					}
@@ -706,6 +709,7 @@
 								has_law_or_variant = law_type:law_debt_slavery
 								has_law_or_variant = law_type:law_slave_trade
 								has_law_or_variant = law_type:law_legacy_slavery
+								has_law_or_variant = law_type:law_colonial_slavery
 							}
 						}
 						root.second_country = {
