@@ -37,7 +37,7 @@
 		pmg_government_administration_bureaucrat_professionalism
 		pmg_government_administration_religious_administration
 		pmg_panum_hospital #MORGENRÖTE
-		pmg_sports_facilities #MORGENRÖTE
+		# pmg_sports_facilities #MORGENRÖTE	- Now a government building instead.
 	}
 	
 	required_construction = construction_cost_very_low
