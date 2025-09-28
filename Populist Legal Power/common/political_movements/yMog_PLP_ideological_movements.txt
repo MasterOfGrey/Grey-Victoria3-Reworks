@@ -1,4 +1,4 @@
-﻿movement_anti_slavery = {
+movement_anti_slavery = {
 	category = movement_category_ideological
 	can_have_slave_supporters = yes
 
@@ -1151,6 +1151,4986 @@ movement_pro_slavery = {
 							NOT = { THIS = ROOT.owner }
 							any_political_movement = {
 								is_political_movement_type = movement_pro_slavery
+								is_insurrectionary = yes
+							}
+						}
+					}
+				}
+			}
+			add = {
+				desc = "NEIGHBOURING_COUNTRY_WITH_REVOLUTION"
+				value = 0.15
+			}
+		}
+	}
+}
+
+movement_royalist_absolutist = {
+	category = movement_category_ideological
+
+	ideology = ideology_absolutist_movement
+	character_ideologies = {
+		ideology_royalist
+		ideology_authoritarian
+	}
+
+	disband_trigger = {
+		OR = {
+			AND = {
+				NOT = {
+					has_variable = king_in_parliament_possible
+				}
+				country_has_voting_franchise = yes
+			}
+			has_variable = monarchy_stamped_out_var
+		}
+	}
+	on_disbanded = {
+		if = {
+			limit = {
+				owner ?= {
+					country_has_voting_franchise = yes
+					NOT = {
+						has_variable = monarchy_stamped_out_var
+					}
+					NOT = {
+						any_political_movement = {
+							is_political_movement_type = movement_royalist_constitutional
+						}
+					}
+				}
+			}
+			owner ?= {
+				create_political_movement = { type = movement_royalist_constitutional }
+			}
+		}
+	}
+
+	creation_trigger = {
+		has_law_or_variant = law_type:law_monarchy
+		country_has_voting_franchise = no
+		NOT = {
+			any_political_movement = {
+				is_political_movement_type = movement_royalist_constitutional
+			}
+		}
+		NOT = { c:FRA ?= this }
+	}
+	creation_weight = {
+		value = 100
+		if = {
+			limit = {
+				owner ?= { # If a movement of this type exists in a neighbouring country, make it more likely to spawn here as well
+					any_neighbouring_state = {
+						owner = {
+							prestige > ROOT.owner.prestige
+							any_political_movement = {
+								is_political_movement_type = movement_royalist_absolutist
+							}
+						}
+					}
+				}
+			}
+			multiply = {
+				value = 2
+			}
+		}
+	}
+	on_created = {
+		add_movement_enthusiasm_modifier = yes
+	}
+
+	character_support_trigger = {
+			OR = {
+				has_ideology = ideology:ideology_royalist
+				AND = {
+					has_ideology = ideology:ideology_authoritarian
+				scope:interest_group ?= {
+						law_stance = {
+							law = law_type:law_monarchy
+							value > neutral
+						}
+					}
+				}
+				AND = {
+					scope:interest_group ?= {
+						law_stance = {
+							law = law_type:law_monarchy
+							value > neutral
+						}
+					}
+					NOT = {
+						law_stance = {
+							law = law_type:law_monarchy
+							value < approve
+						}
+						law_stance = {
+							law = law_type:law_autocracy
+							value < approve
+						}
+					}
+				}
+			}
+		}
+	character_support_weight = {
+		value = 200
+		if = {
+			limit = {
+				has_ideology = ideology:ideology_royalist
+			}
+			multiply = {
+				value = 5
+			}
+		}
+	}
+
+	pop_support_trigger = {
+		NOT = {
+			is_pop_type = slaves
+		}
+		# PLP - Colonized pops don't care about mainland politics
+		NOT = {
+			AND = {
+				state = { incorporation_progress = 0 }
+				pop_has_primary_culture = no
+			}
+		}
+	}
+
+	pop_support_factors = {
+		movement_support_ruler_popularity
+		movement_support_low_urbanization
+		movement_support_high_literacy
+		movement_support_aristocrats
+		movement_support_farmers
+		movement_support_peasants
+		movement_support_clergymen
+		movement_support_officers
+	}
+
+	pop_support_weight = {
+		if = {
+			limit = {
+				exists = scope:political_movement
+				scope:political_movement ?= {
+						OR = {
+							is_being_suppressed = yes
+							is_being_bolstered = yes
+						}
+					}
+				}
+			if = {
+				limit = {
+					scope:political_movement = {
+						is_being_suppressed = yes
+					}
+				}
+				add = {
+					value = suppression_base_value
+					multiply = {
+						value = -0.5
+						add = owner.modifier:country_suppression_attraction_factor
+					}
+					desc = "concept_suppressed"
+				}
+			}
+			else = {
+				add = {
+					value = bolstering_base_value
+					multiply = {
+						value = 0.5
+						add = owner.modifier:country_bolster_attraction_factor
+					}
+					desc = "concept_bolstered"
+				}
+			}
+		}
+		add = {
+			desc = "URBAN_STATE" # Increases support in rural states, decreases in urban
+			value = 0.5
+			subtract = state.state_urbanization_rate
+			multiply = 10
+		}
+
+		add = {
+			value = 5
+			desc = "POP_BASE_SUPPORT"
+		}
+
+		if = {
+			limit = {
+				is_pop_type = aristocrats
+			}
+			add = {
+				value = 50
+				desc = "POP_ARISTOCRATS"
+			}
+		}
+		else_if = {
+			limit = {
+				is_pop_type = farmers
+			}
+			add = {
+				value = 20
+				desc = "POP_FARMERS"
+			}
+		}
+		else_if = {
+			limit = {
+				is_pop_type = peasants
+			}
+			add = {
+				value = 20
+				desc = "POP_PEASANTS"
+			}
+		}
+		else_if = {
+			limit = {
+				is_pop_type = clergymen
+			}
+			add = {
+				value = 20
+				desc = "POP_CLERGYMEN"
+			}
+		}
+		else_if = {
+			limit = {
+				is_pop_type = officers
+			}
+			add = {
+				value = 25
+				desc = "POP_OFFICERS"
+			}
+		}
+
+		if = {
+			limit = {
+				owner ?= {
+					has_law_or_variant = law_type:law_monarchy
+				}
+				owner.ruler ?= {
+					NOT = { has_trait = trait_child }
+					law_stance = {
+						law = law_type:law_autocracy
+						value > neutral
+					}
+				}
+			}
+			multiply = { # Absolutist are more reliant on the monarchs popularity than constitutionalists
+				add = owner.ruler.popularity
+				multiply = 0.01
+				add = 1
+				min = 0.2
+				max = 1.8
+				desc = "RULER_POPULARITY"
+			}
+		}
+		else_if = {
+			limit = {
+				owner ?= {
+					has_law_or_variant = law_type:law_monarchy
+				}
+				owner.ruler ?= {
+					has_trait = trait_child
+					law_stance = {
+						law = law_type:law_autocracy
+						value > neutral
+					}
+				}
+			}
+			multiply = {
+				value = 0.75
+				desc = "RULER_IS_CHILD"
+			}
+		}
+		else_if = {
+			limit = {
+				owner ?= {
+					has_law_or_variant = law_type:law_monarchy
+				}
+				owner.ruler ?= {
+					law_stance = {
+						law = law_type:law_autocracy
+						value < neutral
+					}
+				}
+			}
+			multiply = {
+				value = 0.75
+				desc = "RULER_IS_LIBERAL"
+			}
+		}
+
+		multiply = { # Illiterate pops participate at 1/10 the rate of fully literate pops
+			desc = "POP_LITERACY"
+			value = literacy_rate
+			add = 0.2
+			max = 0.7 # Starts more powerful but caps out early
+		}
+		
+		# PLP - Colonized pops care about mainland politics to the extent it affects them
+		if = {
+			limit = {
+				state = { is_incorporated = no }
+				pop_has_primary_culture = no
+			}
+			state = {
+				multiply = incorporation_progress
+			}
+		}
+	}
+
+	revolution = {
+		weight = {
+			value = 100
+		}
+
+		state_weight = {
+			value = 1
+
+			subtract = state_urbanization_rate
+
+			if = {
+				limit = { is_capital = yes }
+				if = {
+					limit = { owner ?= { has_law_or_variant = law_type:law_monarchy } }
+					multiply = 10.0
+				}
+				else = {
+					multiply = 0.1
+				}
+			}
+		}
+	}
+
+	secession = {
+		possible = {
+			political_movement_support >= 0.05
+			scope:clout <= 0
+		}
+
+		weight = {
+			value = 1000
+		}
+
+		state_weight = {
+			value = 1
+
+			subtract = state_urbanization_rate
+
+			if = {
+				limit = { is_capital = yes }
+				if = {
+					limit = { owner ?= { has_law_or_variant = law_type:law_monarchy } }
+					multiply = 10.0
+				}
+				else = {
+					multiply = 0.1
+				}
+			}
+		}
+
+		forced_tags = {
+			BHT = {
+				trigger = {
+					owner ?= { c:BIC ?= this }
+				}
+				weight = 1000
+			}
+		}
+	}
+
+	additional_radicalism_factors = {
+		owner ?= {
+			if = {
+				limit = {
+					has_law_or_variant = law_type:law_monarchy
+				}
+
+				if = {
+					limit = {
+						OR = {
+							is_enacting_law = law_type:law_presidential_republic
+							is_enacting_law = law_type:law_parliamentary_republic
+							is_enacting_law = law_type:law_corporate_state
+							is_enacting_law = law_type:law_theocracy
+							is_enacting_law = law_type:law_council_republic
+						}
+					}
+
+					add = {
+						value = 0.25
+						desc = "MONARCHY_BEING_ABOLISHED"
+					}
+				}
+				else = {
+					add = { # Only care about legitimacy in the context of a monarchy that isn't under direct threat
+						value = 50
+						subtract = legitimacy
+						multiply = 0.005
+						desc = "concept_legitimacy"
+					}
+				}
+			}
+		}
+		
+		if = {
+			limit = {
+				owner = {
+					any_neighbouring_state = {
+						owner = {
+							NOT = { THIS = ROOT.owner }
+							any_political_movement = {
+								is_political_movement_type = movement_royalist_absolutist
+								is_insurrectionary = yes
+							}
+						}
+					}
+				}
+			}
+			add = {
+				desc = "NEIGHBOURING_COUNTRY_WITH_REVOLUTION"
+				value = 0.15
+			}
+		}
+	}
+}
+
+movement_royalist_constitutional = {
+	category = movement_category_ideological
+
+	ideology = ideology_royalist_movement
+	character_ideologies = {
+		ideology_royalist
+		ideology_humanitarian_royalist
+	}
+
+	disband_trigger = {
+		has_variable = monarchy_stamped_out_var # Allowing voting and then abolishing it won't suddenly make absolute monarchism chic again
+	}
+
+	creation_trigger = {
+		has_law_or_variant = law_type:law_monarchy
+		country_has_voting_franchise = yes
+		NOT = {
+			any_political_movement = {
+				is_political_movement_type = movement_royalist_absolutist
+			}
+		}
+		NOT = { c:FRA ?= this }
+	}
+	creation_weight = {
+		value = 100
+		if = {
+			limit = {
+				owner ?= { # If a movement of this type exists in a neighbouring country, make it more likely to spawn here as well
+					any_neighbouring_state = {
+						owner = {
+							prestige > ROOT.owner.prestige
+							any_political_movement = {
+								is_political_movement_type = movement_royalist_constitutional
+							}
+						}
+					}
+				}
+			}
+			multiply = {
+				value = 2
+			}
+		}
+	}
+	on_created = {
+		add_movement_enthusiasm_modifier = yes
+	}
+
+	character_support_trigger = {
+		OR = {
+			has_ideology = ideology:ideology_royalist
+			has_ideology = ideology:ideology_humanitarian_royalist
+			AND = {
+				OR = {
+					is_interest_group_type = ig_landowners
+					is_interest_group_type = ig_devout
+					is_interest_group_type = ig_petty_bourgeoisie
+					is_interest_group_type = ig_armed_forces
+					is_interest_group_type = ig_rural_folk
+				}
+				NOT = {
+					law_stance = {
+						law = law_type:law_monarchy
+						value < approve
+					}
+				}
+			}
+		}
+	}
+	character_support_weight = {
+		value = 200
+		if = {
+			limit = {
+				has_ideology = ideology:ideology_royalist
+			}
+			multiply = {
+				value = 5
+			}
+		}
+	}
+
+	pop_support_trigger = {
+		NOT = {
+			is_pop_type = slaves
+		}
+		# PLP - Colonized pops don't care about mainland politics
+		NOT = {
+			AND = {
+				state = { incorporation_progress = 0 }
+				pop_has_primary_culture = no
+			}
+		}
+	}
+
+	pop_support_factors = {
+		movement_support_ruler_popularity
+		movement_support_low_urbanization
+		movement_support_high_literacy
+		movement_support_aristocrats
+		movement_support_farmers
+		movement_support_peasants
+		movement_support_clergymen
+		movement_support_officers
+		movement_support_shopkeepers
+		movement_support_clerks
+	}
+
+	pop_support_weight = {
+		if = {
+			limit = {
+				exists = scope:political_movement
+				scope:political_movement ?= {
+						OR = {
+							is_being_suppressed = yes
+							is_being_bolstered = yes
+						}
+					}
+				}
+			if = {
+				limit = {
+					scope:political_movement = {
+						is_being_suppressed = yes
+					}
+				}
+				add = {
+					value = suppression_base_value
+					multiply = {
+						value = -0.5
+						add = owner.modifier:country_suppression_attraction_factor
+					}
+					desc = "concept_suppressed"
+				}
+			}
+			else = {
+				add = {
+					value = bolstering_base_value
+					multiply = {
+						value = 0.5
+						add = owner.modifier:country_bolster_attraction_factor
+					}
+					desc = "concept_bolstered"
+				}
+			}
+		}
+		add = {
+			desc = "URBAN_STATE" # Increases support in rural states, decreases in urban
+			value = 0.5
+			subtract = state.state_urbanization_rate
+			multiply = 10
+		}
+
+		add = {
+			value = 5
+			desc = "POP_BASE_SUPPORT"
+		}
+
+		if = {
+			limit = {
+				is_pop_type = aristocrats
+			}
+			add = {
+				value = 50
+				desc = "POP_ARISTOCRATS"
+			}
+		}
+		else_if = {
+			limit = {
+				is_pop_type = farmers
+			}
+			add = {
+				value = 20
+				desc = "POP_FARMERS"
+			}
+		}
+		else_if = {
+			limit = {
+				is_pop_type = peasants
+			}
+			add = {
+				value = 20
+				desc = "POP_PEASANTS"
+			}
+		}
+		else_if = {
+			limit = {
+				is_pop_type = clergymen
+			}
+			add = {
+				value = 20
+				desc = "POP_CLERGYMEN"
+			}
+		}
+		else_if = {
+			limit = {
+				is_pop_type = officers
+			}
+			add = {
+				value = 25
+				desc = "POP_OFFICERS"
+			}
+		}
+		else_if = {
+			limit = {
+				is_pop_type = shopkeepers
+			}
+			add = {
+				value = 15
+				desc = "POP_SHOPKEEPERS"
+			}
+		}
+		else_if = {
+			limit = {
+				is_pop_type = clerks
+			}
+			add = {
+				value = 15
+				desc = "POP_CLERKS"
+			}
+		}
+
+		if = {
+			limit = {
+				owner ?= {
+					has_law_or_variant = law_type:law_monarchy
+				}
+				owner.ruler ?= {
+					NOT = { has_trait = trait_child }
+				}
+			}
+			multiply = { # Constitutionalists are less reliant on the monarchs popularity than absolutists
+				add = owner.ruler.popularity
+				multiply = 0.01
+				add = 1
+				min = 0.5
+				max = 1.5
+				desc = "RULER_POPULARITY"
+			}
+		}
+		else_if = {
+			limit = {
+				owner ?= {
+					has_law_or_variant = law_type:law_monarchy
+				}
+				owner.ruler ?= {
+					has_trait = trait_child
+				}
+			}
+			multiply = {
+				value = 0.75
+				desc = "RULER_IS_CHILD"
+			}
+		}
+
+		multiply = { # Illiterate pops participate at 1/10 the rate of fully literate pops
+			desc = "POP_LITERACY"
+			value = literacy_rate
+			add = 0.10
+		}
+		
+		# PLP - Colonized pops care about mainland politics to the extent it affects them
+		if = {
+			limit = {
+				state = { is_incorporated = no }
+				pop_has_primary_culture = no
+			}
+			state = {
+				multiply = incorporation_progress
+			}
+		}
+	}
+
+	revolution = {
+		possible = {
+			political_movement_support >= 0.05
+		}
+
+		weight = {
+			value = 100
+		}
+
+		state_weight = {
+			value = 1
+
+			subtract = {
+				value = state_urbanization_rate
+				multiply = 0.5
+			}
+
+			if = {
+				limit = { is_capital = yes }
+				if = {
+					limit = { owner ?= { has_law_or_variant = law_type:law_monarchy } }
+					multiply = 10.0
+				}
+				else = {
+					multiply = 0.1
+				}
+			}
+		}
+	}
+
+	secession = {
+		possible = {
+			political_movement_support >= 0.05
+			scope:clout <= 0
+		}
+
+		weight = {
+			value = 1000
+		}
+
+		state_weight = {
+			value = 1
+
+			subtract = {
+				value = state_urbanization_rate
+				multiply = 0.5
+			}
+
+			if = {
+				limit = { is_capital = yes }
+				if = {
+					limit = { owner ?= { has_law_or_variant = law_type:law_monarchy } }
+					multiply = 10.0
+				}
+				else = {
+					multiply = 0.1
+				}
+			}
+		}
+
+		forced_tags = {
+			BHT = {
+				trigger = {
+					owner ?= { c:BIC ?= this }
+				}
+				weight = 1000
+			}
+		}
+	}
+
+	additional_radicalism_factors = {
+		owner ?= {
+			if = {
+				limit = {
+					has_law_or_variant = law_type:law_monarchy
+				}
+
+				if = {
+					limit = {
+						OR = {
+							is_enacting_law = law_type:law_presidential_republic
+							is_enacting_law = law_type:law_parliamentary_republic
+							is_enacting_law = law_type:law_corporate_state
+							is_enacting_law = law_type:law_theocracy
+							is_enacting_law = law_type:law_council_republic
+						}
+					}
+
+					add = {
+						value = 0.25
+						desc = "MONARCHY_BEING_ABOLISHED"
+					}
+				}
+				else = {
+					add = { # Only care about legitimacy in the context of a monarchy that isn't under direct threat
+						value = 50
+						subtract = legitimacy
+						multiply = 0.005
+						desc = "concept_legitimacy"
+					}
+				}
+			}
+		}
+		
+		if = {
+			limit = {
+				owner = {
+					any_neighbouring_state = {
+						owner = {
+							NOT = { THIS = ROOT.owner }
+							any_political_movement = {
+								is_political_movement_type = movement_royalist_constitutional
+								is_insurrectionary = yes
+							}
+						}
+					}
+				}
+			}
+			add = {
+				desc = "NEIGHBOURING_COUNTRY_WITH_REVOLUTION"
+				value = 0.15
+			}
+		}
+	}
+}
+
+movement_labor = { # Explicitly non-socialist labour movement
+	category = movement_category_ideological
+
+	ideology = ideology_proletarian_movement
+	character_ideologies = {
+		ideology_reformer
+		ideology_radical
+		ideology_social_democrat
+		ideology_utopian
+	}
+
+	creation_trigger = {
+		has_technology_researched = labor_movement
+	}
+	creation_weight = {
+		value = 100
+		if = {
+			limit = {
+				owner ?= { # If a movement of this type exists in a neighbouring country, make it more likely to spawn here as well
+					any_neighbouring_state = {
+						owner = {
+							prestige > ROOT.owner.prestige
+							any_political_movement = {
+								is_political_movement_type = movement_labor
+							}
+						}
+					}
+				}
+			}
+			multiply = {
+				value = 2
+			}
+		}
+	}
+	on_created = {
+		add_movement_enthusiasm_modifier = yes
+	}
+
+	character_support_trigger = {
+		OR = {
+			has_ideology = ideology:ideology_reformer
+			has_ideology = ideology:ideology_radical
+			has_ideology = ideology:ideology_social_democrat
+			has_ideology = ideology:ideology_utopian
+			is_interest_group_type = ig_trade_unions
+		}
+	}
+	character_support_weight = {
+		value = 200
+		if = {
+			limit = {
+				has_ideology = ideology:ideology_social_democrat
+			}
+			multiply = {
+				value = 5
+			}
+		}
+		else_if = {
+			limit = {
+				OR = {
+					has_ideology = ideology:ideology_reformer
+					has_ideology = ideology:ideology_radical
+				}
+			}
+			multiply = {
+				value = 2
+			}
+		}
+		if = { # Labour movement is the natural habitat of non-socialist trade unions characters
+			limit = {
+				is_interest_group_type = ig_trade_unions
+				has_socialist_ideology = no
+			}
+			multiply = {
+				value = 2
+			}
+		}
+		if = { # Communists will support the labour movement if they really, really have to
+			limit = {
+				owner ?= {
+					any_political_movement = {
+						OR = {
+							is_political_movement_type = movement_anarchist
+							is_political_movement_type = movement_socialist
+							is_political_movement_type = movement_communist
+						}
+					}
+				}
+				OR = {
+					has_ideology = ideology:ideology_anarchist
+					has_ideology = ideology:ideology_vanguardist
+					has_ideology = ideology:ideology_communist
+				}
+			}
+			multiply = {
+				value = 0.01
+			}
+		}
+	}
+
+	pop_support_trigger = {
+		NOT = {
+			is_pop_type = slaves
+		}
+		# PLP - Colonized pops don't care about mainland politics
+		NOT = {
+			AND = {
+				state = { incorporation_progress = 0 }
+				pop_has_primary_culture = no
+			}
+		}
+	}
+
+	pop_support_factors = {
+		movement_support_high_urbanization
+		movement_support_high_literacy
+		movement_support_below_expected_sol
+		movement_support_engineers
+		movement_support_academics
+		movement_support_laborers
+		movement_support_machinists
+		movement_support_clerks
+	}
+	pop_support_weight = {
+		if = {
+			limit = {
+				exists = scope:political_movement
+				scope:political_movement ?= {
+						OR = {
+							is_being_suppressed = yes
+							is_being_bolstered = yes
+						}
+					}
+				}
+			if = {
+				limit = {
+					scope:political_movement = {
+						is_being_suppressed = yes
+					}
+				}
+				add = {
+					value = suppression_base_value
+					multiply = {
+						value = -0.5
+						add = owner.modifier:country_suppression_attraction_factor
+					}
+					desc = "concept_suppressed"
+				}
+			}
+			else = {
+				add = {
+					value = bolstering_base_value
+					multiply = {
+						value = 0.5
+						add = owner.modifier:country_bolster_attraction_factor
+					}
+					desc = "concept_bolstered"
+				}
+			}
+		}
+		add = {
+			desc = "URBAN_STATE"
+			value = 10
+			multiply = state.state_urbanization_rate
+		}
+
+		if = {
+			limit = {
+				strata = upper
+			}
+			multiply = {
+				value = 0.10
+				desc = "UPPER_NO_ICON"
+			}
+		}
+		else_if = {
+			limit = {
+				strata = middle
+			}
+			multiply = {
+				value = 0.5
+				desc = "MIDDLE_NO_ICON"
+			}
+			if = {
+				limit = {
+					is_pop_type = engineers
+				}
+				add = {
+					value = 3
+					desc = "POP_ENGINEERS"
+				}
+			}
+			else_if = {
+				limit = {
+					is_pop_type = academics
+				}
+				add = {
+					value = 6
+					desc = "POP_ACADEMICS"
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				strata = lower
+			}
+			if = {
+				limit = {
+					is_pop_type = laborers
+				}
+				add = {
+					value = 25
+					desc = "POP_LABORERS"
+				}
+			}
+			else_if = {
+				limit = {
+					is_pop_type = machinists
+				}
+				add = {
+					value = 30
+					desc = "POP_MACHINISTS"
+				}
+			}
+			else_if = {
+				limit = {
+					is_pop_type = clerks
+				}
+				add = {
+					value = 10
+					desc = "POP_CLERKS"
+				}
+			}
+			else = {
+				add = {
+					value = 6
+					desc = "LOWER_NO_ICON"
+				}
+			}
+		}
+
+		if = {
+			limit = {
+				owner = {
+					has_technology_researched = socialism
+				}
+			}
+			if = {
+				limit = {
+					owner = {
+						NOT = { has_law_or_variant = law_type:law_public_schools }
+					}
+				}
+				multiply = 1.25
+			}
+			if = {
+				limit = {
+					owner = {
+						NOT = { has_law_or_variant = law_type:law_public_health_insurance }
+					}
+				}
+				multiply = 1.25
+			}
+			if = {
+				limit = {
+					owner = {
+						has_law_or_variant = law_type:law_no_workers_rights
+					}
+				}
+				multiply = 1.25
+			}
+		}
+
+		if = {
+			limit = {
+				standard_of_living < state.average_expected_sol # It is intentional that a labourer being well-off doesn't decrease support for this.
+			}
+			add = { # Increases likelihood of support if impoverished.
+				desc = "IS_BELOW_EXPECTED_SOL"
+				value = state.average_expected_sol
+				subtract = standard_of_living
+				max = 10
+			}
+		}
+
+		multiply = { # Illiterate pops participate at 1/10 the rate of fully literate pops
+			desc = "POP_LITERACY"
+			value = literacy_rate
+			add = 0.10
+		}
+
+		if = { # If a more radical movement exists, it'll poach radicals from this one.
+			limit = {
+				owner ?= {
+					any_political_movement = {
+						OR = {
+							is_political_movement_type = movement_socialist
+							is_political_movement_type = movement_communist
+							is_political_movement_type = movement_anarchist
+						}
+					}
+				}
+			}
+			multiply = {
+				desc = "POP_RADICAL_MOVEMENT_LOSSES"
+				value = 1
+				subtract = pop_radical_fraction
+			}
+		}
+		
+		# PLP - Colonized pops care about mainland politics to the extent it affects them
+		if = {
+			limit = {
+				state = { is_incorporated = no }
+				pop_has_primary_culture = no
+			}
+			state = {
+				multiply = incorporation_progress
+			}
+		}
+	}
+
+	revolution = {
+		possible = {
+			political_movement_support >= 0.05
+		}
+
+		weight = {
+			value = 100
+		}
+
+		state_weight = {
+			value = state_urbanization_rate
+		}
+	}
+
+	secession = {
+		possible = {
+			political_movement_support >= 0.05
+			scope:clout <= 0
+		}
+
+		weight = {
+			value = 1000
+		}
+
+		state_weight = {
+			value = state_urbanization_rate
+		}
+	}
+
+	additional_radicalism_factors = {
+		owner = {
+			if = {
+				limit = { has_institution = institution_social_security }
+
+				add = {
+					value = 3
+					subtract = "institution_investment_level(institution_social_security)"
+					multiply = 0.05
+					desc = "INSTITUTION_FUNDING_LEVEL_social_security"
+				}
+			}
+			else = {
+				add = {
+					value = 0.1
+					desc = "NO_INSTITUTION_social_security"
+				}
+			}
+
+			if = {
+				limit = { has_institution = institution_workplace_safety }
+
+				add = {
+					value = 3
+					subtract = "institution_investment_level(institution_workplace_safety)"
+					multiply = 0.05
+					desc = "INSTITUTION_FUNDING_LEVEL_workplace_safety"
+				}
+			}
+			else = {
+				add = {
+					value = 0.1
+					desc = "NO_INSTITUTION_workplace_safety"
+				}
+			}
+		}
+		
+		if = {
+			limit = {
+				owner = {
+					any_neighbouring_state = {
+						owner = {
+							NOT = { THIS = ROOT.owner }
+							any_political_movement = {
+								is_political_movement_type = movement_labor
+								is_insurrectionary = yes
+							}
+						}
+					}
+				}
+			}
+			add = {
+				desc = "NEIGHBOURING_COUNTRY_WITH_REVOLUTION"
+				value = 0.15
+			}
+		}
+	}
+}
+
+movement_socialist = {
+	category = movement_category_ideological
+
+	ideology = ideology_socialist_movement
+	character_ideologies = {
+		ideology_communist
+		ideology_anarchist
+		ideology_social_democrat
+		ideology_vanguardist
+	}
+
+	creation_trigger = {
+		has_technology_researched = socialism
+	}
+	creation_weight = {
+		value = 100
+		if = {
+			limit = {
+				owner ?= { # If a movement of this type exists in a neighbouring country, make it more likely to spawn here as well
+					any_neighbouring_state = {
+						owner = {
+							prestige > ROOT.owner.prestige
+							any_political_movement = {
+								is_political_movement_type = movement_socialist
+							}
+						}
+					}
+				}
+			}
+			multiply = {
+				value = 2
+			}
+		}
+	}
+	on_created = {
+		add_movement_enthusiasm_modifier = yes
+	}
+
+	disband_trigger = {
+		any_interest_group = {
+			OR = {
+				has_variable = chose_anarchism
+				has_variable = chose_communism
+				has_variable = chose_vanguardism
+			}
+		}
+	}
+	on_disbanded = {}
+
+	character_support_trigger = {
+		OR = {
+			has_ideology = ideology:ideology_communist
+			has_ideology = ideology:ideology_anarchist
+			has_ideology = ideology:ideology_social_democrat
+			has_ideology = ideology:ideology_vanguardist
+			has_ideology = ideology:ideology_utopian
+			AND = {
+				is_interest_group_type = ig_trade_unions
+				has_ideology = ideology:ideology_humanitarian
+			}
+		}
+	}
+	character_support_weight = {
+		value = 200
+		if = { # Very vulnerable to fragmentation once the more focused movements emerge
+			limit = {
+				OR = {
+					has_ideology = ideology:ideology_vanguardist
+					has_ideology = ideology:ideology_communist
+				}
+				NOT = {
+					owner ?= {
+						any_political_movement = {
+							is_political_movement_type = movement_communist
+						}
+					}
+				}
+			}
+			multiply = {
+				value = 5
+			}
+		}
+		else_if = {
+			limit = {
+				has_ideology = ideology:ideology_anarchist
+				NOT = {
+					owner ?= {
+						any_political_movement = {
+							is_political_movement_type = movement_anarchist
+						}
+					}
+				}
+			}
+			multiply = {
+				value = 5
+			}
+		}
+		else_if = {
+			limit = {
+				has_ideology = ideology:ideology_social_democrat
+				NOT = {
+					owner ?= {
+						any_political_movement = {
+							is_political_movement_type = movement_labor
+						}
+					}
+				}
+			}
+			multiply = {
+				value = 5
+			}
+		}
+	}
+
+	pop_support_trigger = {
+		NOR = {
+			is_pop_type = capitalists
+			is_pop_type = aristocrats
+			is_pop_type = slaves
+		}
+		# PLP - Colonized pops don't care about mainland politics
+		NOT = {
+			AND = {
+				state = { incorporation_progress = 0 }
+				pop_has_primary_culture = no
+			}
+		}
+	}
+
+	pop_support_factors = {
+		movement_support_high_urbanization
+		movement_support_high_literacy
+		movement_support_below_expected_sol
+		movement_support_radicalization
+		movement_support_academics
+		movement_support_laborers
+		movement_support_machinists
+		movement_support_soldiers_conscripts
+	}
+
+	pop_support_weight = {
+		if = {
+			limit = {
+				exists = scope:political_movement
+				scope:political_movement ?= {
+						OR = {
+							is_being_suppressed = yes
+							is_being_bolstered = yes
+						}
+					}
+				}
+			if = {
+				limit = {
+					scope:political_movement = {
+						is_being_suppressed = yes
+					}
+				}
+				add = {
+					value = suppression_base_value
+					multiply = {
+						value = -0.5
+						add = owner.modifier:country_suppression_attraction_factor
+					}
+					desc = "concept_suppressed"
+				}
+			}
+			else = {
+				add = {
+					value = bolstering_base_value
+					multiply = {
+						value = 0.5
+						add = owner.modifier:country_bolster_attraction_factor
+					}
+					desc = "concept_bolstered"
+				}
+			}
+		}
+		add = {
+			desc = "URBAN_STATE"
+			value = 10
+			multiply = state.state_urbanization_rate
+		}
+
+		if = {
+			limit = {
+				strata = middle
+			}
+			multiply = {
+				value = 0.10
+				desc = "MIDDLE_NO_ICON"
+			}
+			if = {
+				limit = {
+					is_pop_type = academics
+				}
+				add = {
+					value = 3
+					desc = "POP_ACADEMICS"
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				strata = lower
+			}
+			if = {
+				limit = {
+					is_pop_type = laborers
+				}
+				add = {
+					value = 18
+					desc = "POP_LABORERS"
+				}
+			}
+			else_if = {
+				limit = {
+					is_pop_type = machinists
+				}
+				add = {
+					value = 24
+					desc = "POP_MACHINISTS"
+				}
+			}
+			else = {
+				add = {
+					value = 6
+					desc = "LOWER_NO_ICON"
+				}
+			}
+
+			if = {
+				limit = {
+					AND = {
+						is_pop_type = soldiers
+						pop_employment_building = building_conscription_center
+					}
+				}
+				multiply = {
+					value = 1.5
+					desc = "CONSCRIPTS"
+				}
+			}
+		}
+
+		if = {
+			limit = {
+				standard_of_living < state.average_expected_sol
+				strata = lower
+			}
+			add = { # Increases likelihood of support if impoverished
+				desc = "IS_BELOW_EXPECTED_SOL"
+				value = state.average_expected_sol
+				subtract = standard_of_living
+				max = 10
+			}
+
+			if = {
+				limit = {
+					owner = {
+						NOR = {
+							has_law_or_variant = law_type:law_council_republic
+							has_law_or_variant = law_type:law_universal_suffrage
+		}
+					}
+				}
+				multiply = 2.0
+			}
+		}
+		else_if = {
+			limit = {
+				standard_of_living > state.average_expected_sol
+				strata = lower
+			}
+			add = { # Decreases likelihood of support if well-off
+				desc = "IS_ABOVE_EXPECTED_SOL"
+				value = state.average_expected_sol
+				subtract = standard_of_living
+			}
+		}
+
+		multiply = { # Illiterate pops participate at 1/10 the rate of fully literate pops
+			desc = "POP_LITERACY"
+			value = literacy_rate
+			add = 0.10
+		}
+
+		multiply = { # Multiplied by 1.5x max
+			desc = "POP_RADICALS"
+			value = pop_radical_fraction
+			divide = 2
+			add = 1
+		}
+
+		if = {
+			limit = {
+				owner = {
+					any_political_movement = {
+						count >= 2
+
+						OR = {
+							is_political_movement_type = movement_labor
+							is_political_movement_type = movement_communist
+							is_political_movement_type = movement_anarchist
+						}
+						political_movement_support >= 0.10
+					}
+				}
+			}
+			multiply = 0.05
+		}
+		
+		# PLP - Colonized pops care about mainland politics to the extent it affects them
+		if = {
+			limit = {
+				state = { is_incorporated = no }
+				pop_has_primary_culture = no
+			}
+			state = {
+				multiply = incorporation_progress
+			}
+		}
+	}
+
+	revolution = {
+		possible = {
+			political_movement_support >= 0.05
+		}
+
+		weight = {
+			value = 100
+		}
+
+		state_weight = {
+			value = state_urbanization_rate
+
+			if = {
+				limit = { is_capital = yes }
+				if = {
+					limit = { owner ?= { has_law_or_variant = law_type:law_council_republic } }
+					multiply = 10.0
+				}
+				else = {
+					multiply = 0.1
+				}
+			}
+		}
+	}
+
+	secession = {
+		possible = {
+			political_movement_support >= 0.05
+			scope:clout <= 0
+		}
+
+		weight = {
+			value = 1000
+		}
+
+		state_weight = {
+			value = state_urbanization_rate
+
+			if = {
+				limit = { is_capital = yes }
+				if = {
+					limit = { owner ?= { has_law_or_variant = law_type:law_council_republic } }
+					multiply = 10.0
+				}
+				else = {
+					multiply = 0.1
+				}
+			}
+		}
+	}
+
+	additional_radicalism_factors = {
+		owner = {
+			if = {
+				limit = { has_institution = institution_social_security }
+
+				add = {
+					value = 3
+					subtract = "institution_investment_level(institution_social_security)"
+					multiply = 0.05
+					desc = "INSTITUTION_FUNDING_LEVEL_social_security"
+				}
+			}
+			else = {
+				add = {
+					value = 0.1
+					desc = "NO_INSTITUTION_social_security"
+				}
+			}
+
+			if = {
+				limit = { has_institution = institution_workplace_safety }
+
+				add = {
+					value = 3
+					subtract = "institution_investment_level(institution_workplace_safety)"
+					multiply = 0.05
+					desc = "INSTITUTION_FUNDING_LEVEL_workplace_safety"
+				}
+			}
+			else = {
+				add = {
+					value = 0.1
+					desc = "NO_INSTITUTION_workplace_safety"
+				}
+			}
+
+			add = {
+				desc = "IS_BELOW_15_SOL"
+				value = 15
+				subtract = average_sol
+				multiply = 0.03
+				min = 0
+			}
+		}
+		
+		if = {
+			limit = {
+				owner = {
+					any_neighbouring_state = {
+						owner = {
+							NOT = { THIS = ROOT.owner }
+							any_political_movement = {
+								is_political_movement_type = movement_socialist
+								is_insurrectionary = yes
+							}
+						}
+					}
+				}
+			}
+			add = {
+				desc = "NEIGHBOURING_COUNTRY_WITH_REVOLUTION"
+				value = 0.15
+			}
+		}
+	}
+}
+
+movement_communist = {
+	category = movement_category_ideological
+
+	ideology = ideology_communist_movement
+	character_ideologies = {
+		ideology_communist
+		ideology_vanguardist
+	}
+
+	creation_trigger = {
+		has_technology_researched = socialism
+	}
+	creation_weight = {
+		value = 100
+		if = {
+			limit = {
+				owner ?= { # If a movement of this type exists in a neighbouring country, make it more likely to spawn here as well
+					any_neighbouring_state = {
+						owner = {
+							prestige > ROOT.owner.prestige
+							any_political_movement = {
+								is_political_movement_type = movement_communist
+							}
+						}
+					}
+				}
+			}
+			multiply = {
+				value = 2
+			}
+		}
+	}
+	on_created = {
+		add_movement_enthusiasm_modifier = yes
+	}
+
+	character_support_trigger = {
+		OR = {
+			has_ideology = ideology:ideology_vanguardist
+			has_ideology = ideology:ideology_communist
+			has_ideology = ideology:ideology_utopian
+			AND = {
+				is_interest_group_type = ig_trade_unions
+				has_ideology = ideology:ideology_humanitarian
+			}
+		}
+	}
+	character_support_weight = {
+		value = 200
+		if = {
+			limit = {
+				OR = {
+					has_ideology = ideology:ideology_communist
+					has_ideology = ideology:ideology_vanguardist
+				}
+			}
+			multiply = {
+				value = 5
+			}
+		}
+	}
+
+	pop_support_trigger = {
+		NOR = {
+			is_pop_type = capitalists
+			is_pop_type = aristocrats
+			is_pop_type = slaves
+		}
+		# PLP - Colonized pops don't care about mainland politics
+		NOT = {
+			AND = {
+				state = { incorporation_progress = 0 }
+				pop_has_primary_culture = no
+			}
+		}
+	}
+
+	pop_support_factors = {
+		movement_support_high_urbanization
+		movement_support_high_literacy
+		movement_support_below_expected_sol
+		movement_support_radicalization
+		movement_support_academics
+		movement_support_laborers
+		movement_support_machinists
+		movement_support_soldiers_conscripts
+	}
+
+	pop_support_weight = {
+		if = {
+			limit = {
+				exists = scope:political_movement
+				scope:political_movement ?= {
+						OR = {
+							is_being_suppressed = yes
+							is_being_bolstered = yes
+						}
+					}
+				}
+			if = {
+				limit = {
+					scope:political_movement = {
+						is_being_suppressed = yes
+					}
+				}
+				add = {
+					value = suppression_base_value
+					multiply = {
+						value = -0.5
+						add = owner.modifier:country_suppression_attraction_factor
+					}
+					desc = "concept_suppressed"
+				}
+			}
+			else = {
+				add = {
+					value = bolstering_base_value
+					multiply = {
+						value = 0.5
+						add = owner.modifier:country_bolster_attraction_factor
+					}
+					desc = "concept_bolstered"
+				}
+			}
+		}
+
+		add = {
+			desc = "URBAN_STATE"
+			value = 10
+			multiply = state.state_urbanization_rate
+		}
+
+		if = {
+			limit = {
+				strata = middle
+			}
+			multiply = {
+				value = 0.10
+				desc = "MIDDLE_NO_ICON"
+			}
+			if = {
+				limit = {
+					is_pop_type = academics
+				}
+				add = {
+					value = 3
+					desc = "POP_ACADEMICS"
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				strata = lower
+			}
+			if = {
+				limit = {
+					is_pop_type = laborers
+				}
+				add = {
+					value = 18
+					desc = "POP_LABORERS"
+				}
+			}
+			else_if = {
+				limit = {
+					is_pop_type = machinists
+				}
+				add = {
+					value = 25
+					desc = "POP_MACHINISTS"
+				}
+			}
+			else_if = {
+				limit = {
+					is_pop_type = clerks
+				}
+				add = {
+					value = 6
+					desc = "POP_CLERKS"
+				}
+			}
+			else_if = {
+				limit = {
+					is_pop_type = peasants
+				}
+				add = {
+					value = 3
+					desc = "POP_PEASANTS"
+				}
+			}
+			else = {
+				add = {
+					value = 6
+					desc = "LOWER_NO_ICON"
+				}
+			}
+
+			if = {
+				limit = {
+					AND = {
+						is_pop_type = soldiers
+						pop_employment_building = building_conscription_center
+					}
+				}
+				multiply = {
+					value = 2
+					desc = "CONSCRIPTS"
+				}
+			}
+		}
+
+		if = {
+			limit = {
+				standard_of_living < state.average_expected_sol
+				strata = lower
+			}
+			add = { # Increases likelihood of support if impoverished
+				desc = "IS_BELOW_EXPECTED_SOL"
+				value = state.average_expected_sol
+				subtract = standard_of_living
+				max = 15
+			}
+
+			if = {
+				limit = {
+					owner = {
+						NOR = {
+							has_law_or_variant = law_type:law_council_republic
+							has_law_or_variant = law_type:law_universal_suffrage
+						}
+					}
+				}
+				multiply = 1.5
+			}
+
+			if = {
+				limit = {
+					owner = {
+						NOR = {
+							has_law_or_variant = law_type:law_council_republic
+							has_law_or_variant = law_type:law_worker_protections
+						}
+					}
+				}
+				multiply = 1.25
+			}
+		}
+		else_if = {
+			limit = {
+				standard_of_living > state.average_expected_sol
+				strata = lower
+			}
+			add = { # Decreases likelihood of support if well-off
+				desc = "IS_ABOVE_EXPECTED_SOL"
+				value = state.average_expected_sol
+				subtract = standard_of_living
+			}
+		}
+
+		multiply = { # Illiterate pops participate at 1/10 the rate of fully literate pops
+			desc = "POP_LITERACY"
+			value = literacy_rate
+			add = 0.10
+		}
+
+		multiply = { # Multiplied by 2x max
+			desc = "POP_RADICALS"
+			value = pop_radical_fraction
+			add = 1
+		}
+		
+		# PLP - Colonized pops care about mainland politics to the extent it affects them
+		if = {
+			limit = {
+				state = { is_incorporated = no }
+				pop_has_primary_culture = no
+			}
+			state = {
+				multiply = incorporation_progress
+			}
+		}
+	}
+
+	revolution = {
+		possible = {
+			political_movement_support >= 0.05
+		}
+
+		weight = {
+			value = 100
+		}
+	}
+
+	secession = {
+		possible = {
+			political_movement_support >= 0.05
+			scope:clout <= 0
+		}
+
+		weight = {
+			value = 1000
+		}
+	}
+
+	additional_radicalism_factors = {
+		owner = {
+			if = {
+				limit = { has_institution = institution_workplace_safety }
+
+				add = {
+					value = 3
+					subtract = "institution_investment_level(institution_workplace_safety)"
+					multiply = 0.05
+					desc = "INSTITUTION_FUNDING_LEVEL_workplace_safety"
+				}
+			}
+			else = {
+				add = {
+					value = 0.1
+					desc = "NO_INSTITUTION_workplace_safety"
+				}
+			}
+		}
+		
+		if = {
+			limit = {
+				owner = {
+					any_neighbouring_state = {
+						owner = {
+							NOT = { THIS = ROOT.owner }
+							any_political_movement = {
+								is_political_movement_type = movement_communist
+								is_insurrectionary = yes
+							}
+						}
+					}
+				}
+			}
+			add = {
+				desc = "NEIGHBOURING_COUNTRY_WITH_REVOLUTION"
+				value = 0.15
+			}
+		}
+	}
+}
+
+movement_fascist = {
+	category = movement_category_ideological
+
+	# Fascists care about a lot of law groups, so the impact of each should be lesser
+	active_law_radicalism_multiplier = 0.5
+
+	ideology = ideology_fascist_movement
+	character_ideologies = {
+		ideology_fascist
+		ideology_integralist
+		ideology_corporatist_leader
+	}
+
+	creation_trigger = {
+		has_technology_researched = political_agitation
+	}
+	creation_weight = {
+		value = 100
+		if = {
+			limit = {
+				owner ?= { # If a movement of this type exists in a neighbouring country, make it more likely to spawn here as well
+					any_neighbouring_state = {
+						owner = {
+							prestige > ROOT.owner.prestige
+							any_political_movement = {
+								is_political_movement_type = movement_fascist
+							}
+						}
+					}
+				}
+			}
+			multiply = {
+				value = 2
+			}
+		}
+	}
+	on_created = {
+		add_movement_enthusiasm_modifier = yes
+		owner ?= {
+			if = {
+				limit = {
+					any_primary_culture = {
+						has_discrimination_trait = language_lusophone
+					}
+				}
+				prev = {
+					set_core_ideology = ideology_integralist_movement
+				}
+			}
+		}
+	}
+
+	character_support_trigger = {
+		OR = {
+			has_ideology = ideology:ideology_fascist
+			has_ideology = ideology:ideology_integralist
+			has_ideology = ideology:ideology_corporatist_leader
+			has_ideology = ideology:ideology_ethno_nationalist
+		}
+	}
+	character_support_weight = {
+		value = 200
+		if = {
+			limit = {
+				OR = {
+					has_ideology = ideology:ideology_fascist
+					has_ideology = ideology:ideology_integralist
+				}
+			}
+			multiply = {
+				value = 5
+			}
+		}
+		else_if = {
+			limit = {
+				OR = {
+					has_ideology = ideology:ideology_corporatist_leader
+					has_ideology = ideology:ideology_ethno_nationalist
+				}
+			}
+			multiply = {
+				value = 2
+			}
+		}
+	}
+
+	pop_support_trigger = {
+		NOT = {
+			is_pop_type = slaves
+		}
+		# PLP - Colonized pops don't care about mainland politics
+		NOT = {
+			AND = {
+				state = { incorporation_progress = 0 }
+				pop_has_primary_culture = no
+			}
+		}
+	}
+
+	pop_support_factors = {
+		movement_support_high_literacy
+		movement_support_middle_below_expected_sol
+		movement_support_radicalization
+		movement_support_unemployed
+		movement_support_capitalists
+		movement_support_aristocrats
+		movement_support_shopkeepers
+		movement_support_officers
+		movement_support_farmers
+		movement_support_clerks
+		movement_support_soldiers
+		movement_support_number_of_claims
+	}
+
+	pop_support_weight = {
+		if = {
+			limit = {
+				exists = scope:political_movement
+				scope:political_movement ?= {
+						OR = {
+							is_being_suppressed = yes
+							is_being_bolstered = yes
+						}
+					}
+				}
+			if = {
+				limit = {
+					scope:political_movement = {
+						is_being_suppressed = yes
+					}
+				}
+				add = {
+					value = suppression_base_value
+					multiply = {
+						value = -0.5
+						add = owner.modifier:country_suppression_attraction_factor
+					}
+					desc = "concept_suppressed"
+				}
+			}
+			else = {
+				add = {
+					value = bolstering_base_value
+					multiply = {
+						value = 0.5
+						add = owner.modifier:country_bolster_attraction_factor
+					}
+					desc = "concept_bolstered"
+				}
+			}
+		}
+
+		add = {
+			value = 3
+			desc = "POP_BASE_SUPPORT"
+		}
+
+		if = {
+			limit = {
+				strata = upper
+			}
+			if = {
+				limit = {
+					is_pop_type = capitalists
+				}
+				add = {
+					value = 7
+					desc = "POP_CAPITALISTS"
+				}
+			}
+			else_if = {
+				limit = {
+					is_pop_type = aristocrats
+				}
+				add = {
+					value = 2
+					desc = "POP_ARISTOCRATS" # Fascism is too populist
+				}
+			}
+			else = {
+				add = {
+					value = 4
+					desc = "UPPER_NO_ICON"
+				}
+			}
+
+			if = {
+				limit = {
+					owner ?= {
+						any_political_movement = {
+							OR = {
+								is_political_movement_type = movement_socialist
+								is_political_movement_type = movement_anarchist
+								is_political_movement_type = movement_communist
+							}
+							political_movement_support >= 0.10 # (chuckles) im in danger
+						}
+					}
+				}
+				multiply = {
+					value = 1.5
+					desc = "STRONG_SOCIALIST_MOVEMENT"
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				strata = middle
+			}
+			if = {
+				limit = {
+					is_pop_type = shopkeepers
+				}
+				add = {
+					value = 15
+					desc = "POP_SHOPKEEPERS"
+				}
+			}
+			else_if = {
+				limit = {
+					is_pop_type = officers
+				}
+				add = {
+					value = 10
+					desc = "POP_OFFICERS"
+				}
+			}
+			else_if = {
+				limit = {
+					is_pop_type = farmers
+				}
+				add = {
+					value = 10
+					desc = "POP_FARMERS"
+				}
+			}
+			else = {
+				add = {
+					value = 7
+					desc = "MIDDLE_NO_ICON"
+				}
+			}
+
+			if = {
+				limit = {
+					owner ?= {
+						any_political_movement = {
+							OR = {
+								is_political_movement_type = movement_socialist
+								is_political_movement_type = movement_anarchist
+								is_political_movement_type = movement_communist
+							}
+							political_movement_support >= 0.10
+						}
+					}
+				}
+				multiply = {
+					value = 1.25
+					desc = "STRONG_SOCIALIST_MOVEMENT"
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				strata = lower
+			}
+			if = {
+				limit = {
+					is_pop_type = clerks
+				}
+				add = {
+					value = 9
+					desc = "POP_CLERKS"
+				}
+			}
+			else_if = {
+				limit = {
+					is_pop_type = soldiers
+				}
+				add = {
+					value = 6
+					desc = "POP_SOLDIERS"
+				}
+			}
+			else = {
+				add = {
+					value = 3
+					desc = "LOWER_NO_ICON"
+				}
+			}
+		}
+
+		owner = {
+			if = {
+				limit = {
+					number_of_claims > 0
+				}
+
+				add = {
+					value = 5 # Add a base value for having claims at all
+					add = {
+						value = number_of_claims
+						multiply = 5
+					}
+					max = 25
+					desc = "NUMBER_OF_CLAIMS"
+				}
+			}
+		}
+
+		if = {
+			limit = {
+				standard_of_living < state.average_expected_sol
+				strata = middle
+			}
+			add = { # Increases likelihood of support if impoverished
+				desc = "IS_BELOW_EXPECTED_SOL"
+				value = state.average_expected_sol
+				subtract = standard_of_living
+				max = 10
+			}
+		}
+		else_if = {
+			limit = {
+				standard_of_living > state.average_expected_sol
+				strata = middle
+			}
+			add = { # Decreases likelihood of support if well-off
+				desc = "IS_ABOVE_EXPECTED_SOL"
+				value = state.average_expected_sol
+				subtract = standard_of_living
+				min = -5
+			}
+		}
+
+		if = {
+			limit = {
+				is_employed = no
+			}
+			multiply = {
+				value = 1.5
+				desc = "UNEMPLOYED"
+			}
+		}
+
+		multiply = { # Illiterate pops participate at 1/10 the rate of fully literate pops
+			desc = "POP_LITERACY"
+			value = literacy_rate
+			add = 0.10
+		}
+
+		multiply = {
+			value = 0.012
+			multiply = pop_acceptance
+			desc = "ACCEPTANCE"
+		}
+		
+		# PLP - Colonized pops care about mainland politics to the extent it affects them
+		if = {
+			limit = {
+				state = { is_incorporated = no }
+				pop_has_primary_culture = no
+			}
+			state = {
+				multiply = incorporation_progress
+			}
+		}
+	}
+
+	revolution = {
+		possible = {
+			political_movement_support >= 0.05
+		}
+
+		weight = {
+			value = 100
+		}
+
+		state_weight = {
+			value = 1
+		}
+	}
+
+	secession = {
+		possible = {
+			political_movement_support >= 0.05
+			scope:clout <= 0
+		}
+
+		weight = {
+			value = 1000
+		}
+	}
+
+	additional_radicalism_factors = {
+		owner = {
+			if = {
+				limit = {
+					owner.number_of_claims > 0
+				}
+
+				add = {
+					value = 5 # Add a base value for having claims at all
+					add = owner.number_of_claims
+					multiply = 0.025
+					max = 0.3
+					desc = "NUMBER_OF_CLAIMS"
+				}
+			}
+		}
+		
+		if = {
+			limit = {
+				owner = {
+					any_neighbouring_state = {
+						owner = {
+							NOT = { THIS = ROOT.owner }
+							any_political_movement = {
+								is_political_movement_type = movement_fascist
+								is_insurrectionary = yes
+							}
+						}
+					}
+				}
+			}
+			add = {
+				desc = "NEIGHBOURING_COUNTRY_WITH_REVOLUTION"
+				value = 0.15
+			}
+		}
+	}
+}
+
+movement_corporatist = {
+	category = movement_category_ideological
+
+	ideology = ideology_corporatist_movement
+	character_ideologies = {
+		ideology_corporatist_leader
+	}
+
+	creation_trigger = {
+		has_technology_researched = corporatism
+	}
+	creation_weight = {
+		value = 100
+		if = {
+			limit = {
+				owner ?= { # If a movement of this type exists in a neighbouring country, make it more likely to spawn here as well
+					any_neighbouring_state = {
+						owner = {
+							prestige > ROOT.owner.prestige
+							any_political_movement = {
+								is_political_movement_type = movement_corporatist
+							}
+						}
+					}
+				}
+			}
+			multiply = {
+				value = 2
+			}
+		}
+	}
+	on_created = {
+		add_movement_enthusiasm_modifier = yes
+	}
+
+	character_support_trigger = {
+		OR = {
+			is_interest_group_type = ig_devout
+			has_ideology = ideology:ideology_corporatist_leader
+			has_ideology = ideology:ideology_fascist
+			has_ideology = ideology:ideology_integralist
+			has_ideology = ideology:ideology_social_democrat
+			has_ideology = ideology:ideology_utopian
+		}
+	}
+	character_support_weight = {
+		value = 200
+		if = {
+			limit = {
+				has_ideology = ideology:ideology_corporatist_leader
+			}
+			multiply = {
+				value = 5
+			}
+		}
+		if = {
+			limit = {
+				OR = {
+					has_ideology = ideology:ideology_fascist
+					has_ideology = ideology:ideology_integralist
+				}
+				NOT = {
+					owner ?= {
+						any_political_movement = {
+							is_political_movement_type = movement_fascist
+						}
+					}
+				}
+			}
+			multiply = {
+				value = 3
+			}
+		}
+		if = {
+			limit = {
+				is_interest_group_type = ig_devout
+			}
+			multiply = {
+				value = 2
+			}
+		}
+	}
+
+	pop_support_trigger = {
+		NOT = {
+			is_pop_type = slaves
+		}
+		# PLP - Colonized pops don't care about mainland politics
+		NOT = {
+			AND = {
+				state = { incorporation_progress = 0 }
+				pop_has_primary_culture = no
+			}
+		}
+	}
+
+	pop_support_factors = {
+		movement_support_high_literacy
+		movement_support_aristocrats
+		movement_support_clergymen
+		movement_support_shopkeepers
+		movement_support_clerks
+		movement_support_peasants
+	}
+
+	pop_support_weight = {
+		if = {
+			limit = {
+				exists = scope:political_movement
+				scope:political_movement ?= {
+						OR = {
+							is_being_suppressed = yes
+							is_being_bolstered = yes
+						}
+					}
+				}
+			if = {
+				limit = {
+					scope:political_movement = {
+						is_being_suppressed = yes
+					}
+				}
+				add = {
+					value = suppression_base_value
+					multiply = {
+						value = -0.5
+						add = owner.modifier:country_suppression_attraction_factor
+					}
+					desc = "concept_suppressed"
+				}
+			}
+			else = {
+				add = {
+					value = bolstering_base_value
+					multiply = {
+						value = 0.5
+						add = owner.modifier:country_bolster_attraction_factor
+					}
+					desc = "concept_bolstered"
+				}
+			}
+		}
+		add = {
+			value = 1
+			desc = "POP_BASE_SUPPORT"
+		}
+
+		if = {
+			limit = {
+				strata = upper
+			}
+			if = {
+				limit = {
+					is_pop_type = aristocrats
+				}
+				add = {
+					value = 18
+					desc = "POP_ARISTOCRATS"
+				}
+			}
+			else = {
+				add = {
+					value = 6
+					desc = "UPPER_NO_ICON"
+				}
+			}
+			if = {
+				limit = {
+					owner ?= {
+						any_political_movement = {
+							OR = {
+								is_political_movement_type = movement_socialist
+								is_political_movement_type = movement_anarchist
+								is_political_movement_type = movement_communist
+							}
+							political_movement_support >= 0.10 # (chuckles) im in danger
+						}
+					}
+				}
+				multiply = {
+					value = 1.5
+					desc = "STRONG_SOCIALIST_MOVEMENT"
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				strata = middle
+			}
+			if = {
+				limit = {
+					is_pop_type = clergymen
+				}
+				add = {
+					value = 25
+					desc = "POP_CLERGYMEN"
+				}
+			}
+			else_if = {
+				limit = {
+					is_pop_type = farmers
+				}
+				add = {
+					value = 15
+					desc = "POP_FARMERS"
+				}
+			}
+			else_if = {
+				limit = {
+					is_pop_type = officers
+				}
+				add = {
+					value = 12
+					desc = "POP_SHOPKEEPERS"
+				}
+			}
+			else_if = {
+				limit = {
+					is_pop_type = shopkeepers
+				}
+				add = {
+					value = 10
+					desc = "POP_SHOPKEEPERS"
+				}
+			}
+			else = {
+				add = {
+					value = 9
+					desc = "MIDDLE_NO_ICON"
+				}
+			}
+
+			if = {
+				limit = {
+					owner ?= {
+						any_political_movement = {
+							OR = {
+								is_political_movement_type = movement_socialist
+								is_political_movement_type = movement_anarchist
+								is_political_movement_type = movement_communist
+							}
+							political_movement_support >= 0.10
+						}
+					}
+				}
+				multiply = {
+					value = 1.25
+					desc = "STRONG_SOCIALIST_MOVEMENT"
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				strata = lower
+			}
+			if = {
+				limit = {
+					is_pop_type = soldiers
+				}
+				add = {
+					value = 6
+					desc = "POP_CLERKS"
+				}
+			}
+			else_if = {
+				limit = {
+					is_pop_type = peasants
+				}
+				add = {
+					value = 15
+					desc = "POP_PEASANTS"
+				}
+			}
+			else = {
+				add = {
+					value = 3
+					desc = "LOWER_NO_ICON"
+				}
+			}
+		}
+
+		if = {
+			limit = {
+				standard_of_living < state.average_expected_sol
+				strata = middle
+			}
+			add = { # Increases likelihood of support if impoverished
+				desc = "IS_BELOW_EXPECTED_SOL"
+				value = state.average_expected_sol
+				subtract = standard_of_living
+				max = 10
+			}
+		}
+		else_if = {
+			limit = {
+				standard_of_living > state.average_expected_sol
+				strata = middle
+			}
+			add = { # Decreases likelihood of support if well-off
+				desc = "IS_ABOVE_EXPECTED_SOL"
+				value = state.average_expected_sol
+				subtract = standard_of_living
+				min = -5
+			}
+		}
+
+		if = {
+			limit = {
+				is_employed = no
+			}
+			multiply = {
+				value = 1.5
+				desc = "UNEMPLOYED"
+			}
+		}
+
+		multiply = { # Illiterate pops participate at 1/10 the rate of fully literate pops
+			desc = "POP_LITERACY"
+			value = literacy_rate
+			add = 0.10
+		}
+
+		multiply = { # Intentional that this is different from fascism
+			value = 0.01
+			multiply = pop_acceptance
+			add = 0.20
+			desc = "ACCEPTANCE"
+		}
+		
+		# PLP - Colonized pops care about mainland politics to the extent it affects them
+		if = {
+			limit = {
+				state = { is_incorporated = no }
+				pop_has_primary_culture = no
+			}
+			state = {
+				multiply = incorporation_progress
+			}
+		}
+	}
+
+	revolution = {
+		possible = {
+			political_movement_support >= 0.05
+		}
+
+		weight = {
+			value = 100
+		}
+
+		state_weight = {
+			value = 1
+		}
+	}
+
+	secession = {
+		possible = {
+			political_movement_support >= 0.05
+			scope:clout <= 0
+		}
+
+		weight = {
+			value = 1000
+		}
+	}
+
+	additional_radicalism_factors = {
+		owner = {
+			if = {
+				limit = { has_institution = institution_schools }
+
+				add = {
+					value = 3
+					subtract = "institution_investment_level(institution_schools)"
+					multiply = 0.05
+					desc = "INSTITUTION_FUNDING_LEVEL_schools"
+				}
+			}
+			else = {
+				add = {
+					value = 0.1
+					desc = "NO_INSTITUTION_schools"
+				}
+			}
+		}
+		
+		if = {
+			limit = {
+				owner = {
+					any_neighbouring_state = {
+						owner = {
+							NOT = { THIS = ROOT.owner }
+							any_political_movement = {
+								is_political_movement_type = movement_corporatist
+								is_insurrectionary = yes
+							}
+						}
+					}
+				}
+			}
+			add = {
+				desc = "NEIGHBOURING_COUNTRY_WITH_REVOLUTION"
+				value = 0.15
+			}
+		}
+	}
+}
+
+movement_liberal = {
+	category = movement_category_ideological
+
+	ideology = ideology_liberal_movement
+	character_ideologies = {
+		ideology_market_liberal
+		ideology_liberal_leader
+		ideology_republican_leader
+		ideology_radical
+		ideology_humanitarian
+	}
+
+	creation_trigger = {
+		has_technology_researched = democracy
+	}
+	creation_weight = {
+		value = 100
+		if = {
+			limit = {
+				has_law_or_variant = law_type:law_monarchy
+				country_has_voting_franchise = no
+			}
+			multiply = {
+				value = 0.1
+			}
+		}
+		if = {
+			limit = {
+				owner ?= { # If a movement of this type exists in a neighbouring country, make it more likely to spawn here as well
+					any_neighbouring_state = {
+						owner = {
+							prestige > ROOT.owner.prestige
+							any_political_movement = {
+								is_political_movement_type = movement_liberal
+							}
+						}
+					}
+				}
+			}
+			multiply = {
+				value = 2
+			}
+		}
+	}
+	on_created = {
+		add_movement_enthusiasm_modifier = yes
+		if = {
+			limit = {
+				owner = {
+					c:FRA ?= this
+				}
+			}
+			set_core_ideology = ideology_liberal_republican_movement
+		}
+	}
+
+	character_support_trigger = {
+			OR = {
+				has_ideology = ideology:ideology_market_liberal
+				has_ideology = ideology:ideology_liberal_leader
+				has_ideology = ideology:ideology_republican_leader
+				has_ideology = ideology:ideology_radical
+				has_ideology = ideology:ideology_humanitarian
+				has_ideology = ideology:ideology_humanitarian_royalist
+				has_ideology = ideology:ideology_reformer
+				has_ideology = ideology:ideology_utopian
+				has_ideology = ideology:ideology_modernizer_leader
+				has_ideology = ideology:ideology_positivist
+				scope:interest_group ?= {
+					OR = {
+						has_ideology = ideology:ideology_liberal
+						has_ideology = ideology:ideology_liberal_modern
+					}
+				}
+			}
+		}
+	character_support_weight = {
+		value = 200
+		if = {
+			limit = {
+				OR = {
+					has_ideology = ideology:ideology_republican_leader
+					has_ideology = ideology:ideology_liberal_leader
+					has_ideology = ideology:ideology_market_liberal
+				}
+			}
+			multiply = {
+				value = 5
+			}
+		}
+		else_if = {
+			limit = {
+				has_ideology = ideology:ideology_radical
+				NOT = {
+					owner ?= {
+						any_political_movement = {
+							is_political_movement_type = movement_radical
+						}
+					}
+				}
+			}
+			multiply = {
+				value = 5
+			}
+		}
+		else_if = {
+			limit = {
+				has_ideology = ideology:ideology_humanitarian
+				NOT = {
+					is_interest_group_type = ig_trade_unions
+				}
+			}
+			multiply = {
+				value = 5
+			}
+		}
+		else_if = {
+			limit = {
+				has_ideology = ideology:ideology_modernizer_leader
+			}
+			multiply = {
+				value = 2
+			}
+		}
+		if = { # Liberal agitators just inherently love liberalism
+			limit = {
+				scope:interest_group ?= {
+					OR = {
+						has_ideology = ideology:ideology_liberal
+						has_ideology = ideology:ideology_liberal_modern
+					}
+				}
+			}
+			multiply = {
+				value = 2
+			}
+		}
+	}
+
+	pop_support_trigger = {
+		NOT = {
+			is_pop_type = slaves
+		}
+		# PLP - Colonized pops don't care about mainland politics
+		NOT = {
+			AND = {
+				state = { incorporation_progress = 0 }
+				pop_has_primary_culture = no
+			}
+		}
+	}
+
+	pop_support_factors = {
+		movement_support_je_hungarian_revolution
+		movement_support_high_urbanization
+		movement_support_high_literacy
+		movement_support_capitalists
+		movement_support_aristocrats
+		movement_support_shopkeepers
+		movement_support_academics
+		movement_support_bureaucrats
+		movement_support_clerks
+	}
+
+	pop_support_weight = {
+		if = {
+			limit = {
+				exists = scope:political_movement
+				scope:political_movement ?= {
+						OR = {
+							is_being_suppressed = yes
+							is_being_bolstered = yes
+						}
+					}
+				}
+			if = {
+				limit = {
+					scope:political_movement = {
+						is_being_suppressed = yes
+					}
+				}
+				add = {
+					value = suppression_base_value
+					multiply = {
+						value = -0.5
+						add = owner.modifier:country_suppression_attraction_factor
+					}
+					desc = "concept_suppressed"
+				}
+			}
+			else = {
+				add = {
+					value = bolstering_base_value
+					multiply = {
+						value = 0.5
+						add = owner.modifier:country_bolster_attraction_factor
+					}
+					desc = "concept_bolstered"
+				}
+			}
+		}
+
+		add = {
+			value = 3
+			desc = "POP_BASE_SUPPORT"
+		}
+
+		add = {
+			desc = "URBAN_STATE"
+			value = 10
+			multiply = state.state_urbanization_rate
+		}
+
+		if = {
+			limit = {
+				strata = upper
+			}
+			if = {
+				limit = {
+					is_pop_type = capitalists
+				}
+				add = {
+					value = 50
+					desc = "POP_CAPITALISTS"
+				}
+			}
+			else_if = {
+				limit = {
+					is_pop_type = aristocrats
+				}
+				if = {
+					limit = {
+						culture = cu:hungarian
+						owner ?= {
+							has_journal_entry = je_hungarian_revolution
+						}
+					}
+					add = {
+						value = 25
+						desc = "je_hungarian_revolution"
+					}
+				}
+				else = {
+					add = {
+						value = 6
+						desc = "POP_ARISTOCRATS"
+					}
+				}
+			}
+			else = {
+				add = {
+					value = 9
+					desc = "UPPER_NO_ICON"
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				strata = middle
+			}
+			if = {
+				limit = {
+					is_pop_type = shopkeepers
+				}
+				add = {
+					value = 20
+					desc = "POP_SHOPKEEPERS"
+				}
+			}
+			else_if = {
+				limit = {
+					is_pop_type = academics
+				}
+				add = {
+					value = 35
+					desc = "POP_ACADEMICS"
+				}
+			}
+			else_if = {
+				limit = {
+					is_pop_type = bureaucrats
+				}
+				add = {
+					value = 15
+					desc = "POP_BUREAUCRATS"
+				}
+			}
+			else = {
+				add = {
+					value = 13
+					desc = "MIDDLE_NO_ICON"
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				strata = lower
+			}
+			if = {
+				limit = {
+					is_pop_type = clerks
+				}
+				add = {
+					value = 9
+					desc = "POP_CLERKS"
+				}
+			}
+			else_if = {
+				limit = {
+					is_pop_type = peasants
+				}
+				add = {
+					value = 0
+					desc = "POP_PEASANTS"
+				}
+			}
+			else = {
+				add = {
+					value = 3
+					desc = "LOWER_NO_ICON"
+				}
+			}
+		}
+
+		multiply = { # Illiterate pops participate at 1/10 the rate of fully literate pops
+			desc = "POP_LITERACY"
+			value = literacy_rate
+			add = 0.10
+		}
+		
+		# PLP - Colonized pops care about mainland politics to the extent it affects them
+		if = {
+			limit = {
+				state = { is_incorporated = no }
+				pop_has_primary_culture = no
+			}
+			state = {
+				multiply = incorporation_progress
+			}
+		}
+	}
+
+	revolution = {
+		possible = {
+			political_movement_support >= 0.05
+		}
+
+		weight = {
+			value = 100
+		}
+
+		state_weight = {
+			value = state_urbanization_rate
+		}
+	}
+
+	secession = {
+		possible = {
+			political_movement_support >= 0.05
+			scope:clout <= 0
+		}
+
+		weight = {
+			value = 1000
+		}
+
+		state_weight = {
+			value = state_urbanization_rate
+		}
+	}
+
+	additional_radicalism_factors = {
+		owner = {
+			if = {
+				limit = { has_institution = institution_schools }
+
+				add = {
+					value = 3
+					subtract = "institution_investment_level(institution_schools)"
+					multiply = 0.05
+					desc = "INSTITUTION_FUNDING_LEVEL_schools"
+				}
+			}
+			else = {
+				add = {
+					value = 0.1
+					desc = "NO_INSTITUTION_schools"
+				}
+			}
+		}
+		
+		if = {
+			limit = {
+				owner = {
+					any_neighbouring_state = {
+						owner = {
+							NOT = { THIS = ROOT.owner }
+							any_political_movement = {
+								is_political_movement_type = movement_liberal
+								is_insurrectionary = yes
+							}
+						}
+					}
+				}
+			}
+			add = {
+				desc = "NEIGHBOURING_COUNTRY_WITH_REVOLUTION"
+				value = 0.15
+			}
+		}
+	}
+}
+
+movement_radical = {
+	category = movement_category_ideological
+
+	ideology = ideology_radical_movement
+	character_ideologies = {
+		ideology_radical
+		ideology_nihilist
+	}
+
+	creation_trigger = {
+		has_technology_researched = egalitarianism
+		NOR = {
+			has_law_or_variant = law_type:law_parliamentary_republic
+			has_law_or_variant = law_type:law_presidential_republic
+			has_law_or_variant = law_type:law_council_republic
+			has_law_or_variant = law_type:law_corporate_state
+		}
+		NOR = {
+			AND = {
+				OR = {
+					country_has_primary_culture = cu:north_german
+					country_has_primary_culture = cu:south_german
+				}
+				NOT = {
+					c:GER ?= this
+				}
+				any_political_movement = {
+					is_political_movement_type = movement_german_national
+				}
+			}
+			AND = {
+				OR = {
+					country_has_primary_culture = cu:north_italian
+					country_has_primary_culture = cu:south_italian
+				}
+				NOR = {
+					c:ITA ?= this
+					c:AUS ?= this
+					c:KUK ?= this
+					c:HRE ?= this
+				}
+				any_political_movement = {
+					is_political_movement_type = movement_italian_national
+				}
+			}
+		}
+	}
+	creation_weight = {
+		value = 100
+		if = {
+			limit = {
+				has_law_or_variant = law_type:law_monarchy
+				country_has_voting_franchise = no
+			}
+			multiply = {
+				value = 2
+			}
+		}
+		if = {
+			limit = {
+				country_has_voting_franchise = yes
+			}
+			multiply = {
+				value = 0.25
+			}
+		}
+		if = {
+			limit = {
+				owner ?= { # If a movement of this type exists in a neighbouring country, make it more likely to spawn here as well
+					any_neighbouring_state = {
+						owner = {
+							prestige > ROOT.owner.prestige
+							any_political_movement = {
+								is_political_movement_type = movement_radical
+							}
+						}
+					}
+				}
+			}
+			multiply = {
+				value = 2
+			}
+		}
+	}
+	on_created = {
+		add_movement_enthusiasm_modifier = yes
+	}
+
+	character_support_trigger = {
+			OR = {
+				has_ideology = ideology:ideology_radical
+				has_ideology = ideology:ideology_nihilist
+				has_ideology = ideology:ideology_republican_leader
+				has_ideology = ideology:ideology_utopian
+			scope:interest_group ?= {
+					has_ideology = ideology:ideology_republican
+				}
+			}
+		}
+	character_support_weight = {
+		value = 200
+		if = {
+			limit = {
+				OR = {
+					has_ideology = ideology:ideology_radical
+					has_ideology = ideology:ideology_nihilist
+					AND = {
+						has_ideology = ideology:ideology_utopian
+						NOT = {
+							owner ?= {
+								any_political_movement = {
+									OR = {
+										is_political_movement_type = movement_socialist
+										is_political_movement_type = movement_communist
+										is_political_movement_type = movement_anarchist
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+			multiply = {
+				value = 5
+			}
+		}
+		else_if = {
+			limit = {
+				OR = {
+					has_ideology = ideology:ideology_republican_leader
+					scope:interest_group ?= {
+						has_ideology = ideology:ideology_republican
+					}
+				}
+			}
+			multiply = {
+				value = 2
+			}
+		}
+	}
+
+	pop_support_trigger = {
+		NOR = {
+			is_pop_type = aristocrats
+			is_pop_type = slaves
+			AND = {
+				is_pop_type = clergymen
+				religion = owner.religion
+			}
+		}
+		# PLP - Colonized pops don't care about mainland politics
+		NOT = {
+			AND = {
+				state = { incorporation_progress = 0 }
+				pop_has_primary_culture = no
+			}
+		}
+	}
+
+	pop_support_factors = {
+		movement_support_country_is_autocratic
+		movement_support_high_urbanization
+		movement_support_high_literacy
+		movement_support_radicalization
+		movement_support_capitalists
+		movement_support_shopkeepers
+		movement_support_academics
+		movement_support_bureaucrats
+		movement_support_clerks
+		movement_support_machinists
+		movement_support_peasants
+	}
+
+	pop_support_weight = {
+		if = {
+			limit = {
+				exists = scope:political_movement
+				scope:political_movement ?= {
+						OR = {
+							is_being_suppressed = yes
+							is_being_bolstered = yes
+						}
+					}
+				}
+			if = {
+				limit = {
+					scope:political_movement = {
+						is_being_suppressed = yes
+					}
+				}
+				add = {
+					value = suppression_base_value
+					multiply = {
+						value = -0.5
+						add = owner.modifier:country_suppression_attraction_factor
+					}
+					desc = "concept_suppressed"
+				}
+			}
+			else = {
+				add = {
+					value = bolstering_base_value
+					multiply = {
+						value = 0.5
+						add = owner.modifier:country_bolster_attraction_factor
+					}
+					desc = "concept_bolstered"
+				}
+			}
+		}
+
+		add = {
+			desc = "URBAN_STATE"
+			value = 10
+			multiply = state.state_urbanization_rate
+		}
+
+		if = {
+			limit = {
+				strata = upper
+			}
+			if = {
+				limit = {
+					is_pop_type = capitalists
+				}
+				add = {
+					value = 6
+					desc = "POP_CAPITALISTS"
+				}
+			}
+			else = {
+				add = {
+					value = 3
+					desc = "UPPER_NO_ICON"
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				strata = middle
+			}
+			if = {
+				limit = {
+					is_pop_type = shopkeepers
+				}
+				add = {
+					value = 25
+					desc = "POP_SHOPKEEPERS"
+				}
+			}
+			else_if = {
+				limit = {
+					is_pop_type = academics
+				}
+				add = {
+					value = 80
+					desc = "POP_ACADEMICS"
+				}
+			}
+			else_if = {
+				limit = {
+					is_pop_type = bureaucrats
+				}
+				add = {
+					value = 12
+					desc = "POP_BUREAUCRATS"
+				}
+			}
+			else = {
+				add = {
+					value = 6
+					desc = "MIDDLE_NO_ICON"
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				strata = lower
+			}
+			if = {
+				limit = {
+					is_pop_type = clerks
+				}
+				add = {
+					value = 18
+					desc = "POP_CLERKS"
+				}
+			}
+			else_if = {
+				limit = {
+					is_pop_type = machinists
+				}
+				add = {
+					value = 21
+					desc = "POP_MACHINISTS"
+				}
+			}
+			else_if = {
+				limit = {
+					is_pop_type = laborers
+				}
+				add = {
+					value = 15
+					desc = "POP_LABORERS"
+				}
+			}
+			else_if = {
+				limit = {
+					is_pop_type = peasants
+				}
+				add = {
+					value = 2
+					desc = "POP_PEASANTS"
+				}
+			}
+			else = {
+				add = {
+					value = 9
+					desc = "LOWER_NO_ICON"
+				}
+			}
+		}
+
+		if = {
+			limit = {
+				owner ?= {
+					country_has_voting_franchise = no
+				}
+			}
+			multiply = {
+				value = 1.25
+				desc = "COUNTRY_IS_AUTOCRATIC"
+			}
+		}
+		else_if = {
+			limit = {
+				owner ?= {
+					OR = {
+						has_law_or_variant = law_type:law_census_voting
+						has_law_or_variant = law_type:law_universal_suffrage
+					}
+				}
+			}
+			multiply = {
+				value = 0.75
+				desc = "COUNTRY_IS_DEMOCRATIC"
+			}
+		}
+
+		multiply = { # Illiterate pops participate at 1/10 the rate of fully literate pops
+			desc = "POP_LITERACY"
+			value = literacy_rate
+			add = 0.10
+		}
+
+		multiply = { # Multiplied by 2x max
+			desc = "POP_RADICALS"
+			value = pop_radical_fraction
+			add = 1
+		}
+		
+		# PLP - Colonized pops care about mainland politics to the extent it affects them
+		if = {
+			limit = {
+				state = { is_incorporated = no }
+				pop_has_primary_culture = no
+			}
+			state = {
+				multiply = incorporation_progress
+			}
+		}
+	}
+
+	revolution = {
+		possible = {
+			political_movement_support >= 0.05
+		}
+
+		weight = {
+			value = 100
+		}
+
+		state_weight = {
+			value = state_urbanization_rate
+		}
+	}
+
+	secession = {
+		possible = {
+			political_movement_support >= 0.05
+			scope:clout <= 0
+		}
+
+		weight = {
+			value = 1000
+		}
+
+		state_weight = {
+			value = state_urbanization_rate
+		}
+	}
+
+	additional_radicalism_factors = {
+		owner = {
+			if = {
+				limit = { has_institution = institution_schools }
+
+				add = {
+					value = 3
+					subtract = "institution_investment_level(institution_schools)"
+					multiply = 0.05
+					desc = "INSTITUTION_FUNDING_LEVEL_schools"
+				}
+			}
+			else = {
+				add = {
+					value = 0.1
+					desc = "NO_INSTITUTION_schools"
+				}
+			}
+
+			if = {
+				limit = { has_institution = institution_police }
+
+				add = {
+					value = "institution_investment_level(institution_police)"
+					subtract = 2
+					multiply = 0.05
+					desc = "INSTITUTION_FUNDING_LEVEL_police"
+				}
+			}
+			else = {
+				add = {
+					value = -0.1
+					desc = "NO_INSTITUTION_police"
+				}
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_law_or_variant = law_type:law_universal_suffrage
+					}
+				}
+				add = {
+					value = 0.20
+					desc = "NO_UNIVERSAL_SUFFRAGE"
+				}
+			}
+		}
+		
+		if = {
+			limit = {
+				owner = {
+					any_neighbouring_state = {
+						owner = {
+							NOT = { THIS = ROOT.owner }
+							any_political_movement = {
+								is_political_movement_type = movement_radical
+								is_insurrectionary = yes
+							}
+						}
+					}
+				}
+			}
+			add = {
+				desc = "NEIGHBOURING_COUNTRY_WITH_REVOLUTION"
+				value = 0.15
+			}
+		}
+	}
+}
+
+movement_positivist = {
+	category = movement_category_ideological
+
+	ideology = ideology_positivist_movement
+	character_ideologies = {
+		ideology_positivist
+	}
+
+	creation_trigger = {
+		has_global_variable = positivism_invented
+		has_technology_researched = psychiatry
+	}
+	creation_weight = {
+		value = 10
+		if = {
+			limit = {
+				has_technology_researched = philosophical_pragmatism
+			}
+			add = {
+				value = 40
+			}
+		}
+		if = {
+			limit = {
+				OR = {
+					country_has_state_religion = rel:catholic
+					has_law_or_variant = law_type:law_state_atheism
+				}
+			}
+			add = {
+				value = 50
+			}
+		}
+		if = { # Catholicism without God
+			limit = {
+				NOR = {
+					country_has_state_religion = rel:catholic
+					root.country_definition.religion = rel:catholic
+				}
+			}
+			add = {
+				value = -100
+			}
+		}
+		if = {
+			limit = {
+				owner ?= { # If a movement of this type exists in a neighbouring country, make it more likely to spawn here as well
+					any_neighbouring_state = {
+						owner = {
+							prestige > ROOT.owner.prestige
+							any_political_movement = {
+								is_political_movement_type = movement_positivist
+							}
+						}
+					}
+				}
+			}
+			multiply = {
+				value = 2
+			}
+		}
+	}
+	on_created = {
+		add_movement_enthusiasm_modifier = yes
+	}
+
+	character_support_trigger = {
+			OR = {
+				has_ideology = ideology:ideology_positivist
+				has_ideology = ideology:ideology_nihilist
+				has_ideology = ideology:ideology_republican_leader
+				scope:interest_group ?= {
+				OR = {
+						is_interest_group_type = ig_armed_forces
+						has_ideology = ideology:ideology_oligarchic
+					}
+				}
+			}
+		}
+	character_support_weight = {
+		value = 200
+		if = {
+			limit = {
+				OR = {
+					has_ideology = ideology:ideology_positivist
+					has_ideology = ideology:ideology_positivist
+				}
+			}
+			multiply = {
+				value = 5
+			}
+		}
+		if = {
+			limit = {
+				has_ideology = ideology:ideology_republican_leader
+			}
+			multiply = {
+				value = 2
+			}
+		}
+		if = {
+			limit = {
+				scope:interest_group ?= {
+					OR = {
+						is_interest_group_type = ig_armed_forces
+						has_ideology = ideology:ideology_oligarchic
+					}
+					ig_approval < 0
+				}
+			}
+			multiply = {
+				value = 2
+			}
+		}
+	}
+
+	pop_support_trigger = {
+		NOR = {
+			is_pop_type = clergymen
+			is_pop_type = peasants
+			is_pop_type = slaves
+		}
+		# PLP - Colonized pops don't care about mainland politics
+		NOT = {
+			AND = {
+				state = { incorporation_progress = 0 }
+				pop_has_primary_culture = no
+			}
+		}
+	}
+
+	pop_support_factors = {
+		movement_support_high_urbanization
+		movement_support_high_literacy
+		movement_support_capitalists
+		movement_support_aristocrats
+		movement_support_officers
+		movement_support_academics
+		movement_support_bureaucrats
+		movement_support_engineers
+		movement_support_clerks
+		movement_support_soldiers
+		movement_support_je_positivist_movement
+	}
+
+	pop_support_weight = {
+		if = {
+			limit = {
+				exists = scope:political_movement
+				scope:political_movement ?= {
+						OR = {
+							is_being_suppressed = yes
+							is_being_bolstered = yes
+						}
+					}
+				}
+			if = {
+				limit = {
+					scope:political_movement = {
+						is_being_suppressed = yes
+					}
+				}
+				add = {
+					value = suppression_base_value
+					multiply = {
+						value = -0.5
+						add = owner.modifier:country_suppression_attraction_factor
+					}
+					desc = "concept_suppressed"
+				}
+			}
+			else = {
+				add = {
+					value = bolstering_base_value
+					multiply = {
+						value = 0.5
+						add = owner.modifier:country_bolster_attraction_factor
+					}
+					desc = "concept_bolstered"
+				}
+			}
+		}
+
+		add = {
+			desc = "URBAN_STATE"
+			value = 10
+			multiply = state.state_urbanization_rate
+		}
+
+		if = {
+			limit = {
+				strata = upper
+			}
+			if = {
+				limit = {
+					is_pop_type = capitalists
+				}
+				add = {
+					value = 6
+					desc = "POP_CAPITALISTS"
+				}
+			}
+			else_if = {
+				limit = {
+					is_pop_type = aristocrats
+				}
+				add = {
+					value = 3
+					desc = "POP_ARISTOCRATS"
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				strata = middle
+			}
+			if = {
+				limit = {
+					is_pop_type = officers
+				}
+				if = {
+					limit = {
+						owner ?= {
+							OR = {
+								has_law_or_variant = law_type:law_professional_army
+								has_law_or_variant = law_type:law_mass_conscription
+							}
+						}
+					}
+					add = {
+						value = 36
+						desc = "POP_OFFICERS"
+					}
+				}
+				else = {
+					add = {
+						value = 25
+						desc = "POP_OFFICERS"
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					is_pop_type = academics
+				}
+				add = {
+					value = 15
+					desc = "POP_ACADEMICS"
+				}
+			}
+			else_if = {
+				limit = {
+					is_pop_type = bureaucrats
+				}
+				add = {
+					value = 10
+					desc = "POP_BUREAUCRATS"
+				}
+			}
+			else_if = {
+				limit = {
+					is_pop_type = engineers
+				}
+				add = {
+					value = 12
+					desc = "POP_BUREAUCRATS"
+				}
+			}
+			else = {
+				add = {
+					value = 3
+					desc = "MIDDLE_NO_ICON"
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				strata = lower
+			}
+			if = {
+				limit = {
+					is_pop_type = clerks
+				}
+				add = {
+					value = 6
+					desc = "POP_CLERKS"
+				}
+			}
+			else_if = {
+				limit = {
+					is_pop_type = soldiers
+				}
+				add = {
+					value = 15
+					desc = "POP_SOLDIERS"
+				}
+			}
+			else = {
+				add = {
+					value = 3
+					desc = "LOWER_NO_ICON"
+				}
+			}
+		}
+
+		if = {
+			limit = {
+				owner ?= {
+					has_variable = positivist_leaders_increase_var
+				}
+			}
+			if = {
+				limit = {
+					is_pop_type = officers
+				}
+				multiply = {
+					value = 1.25
+					desc = "POSITIVISM_BONUS"
+				}
+			}
+			if = {
+				limit = {
+					is_pop_type = soldiers
+				}
+				add = {
+					value = 1.10
+					desc = "POSITIVISM_BONUS"
+				}
+			}
+		}
+		if = {
+			limit = {
+				owner ?= {
+					has_variable = positivist_leaders_large_increase_var
+				}
+			}
+			if = {
+				limit = {
+					is_pop_type = officers
+				}
+				multiply = {
+					value = 1.5
+					desc = "POSITIVISM_BONUS"
+				}
+			}
+			if = {
+				limit = {
+					is_pop_type = soldiers
+				}
+				add = {
+					value = 1.25
+					desc = "POSITIVISM_BONUS"
+				}
+			}
+		}
+
+		multiply = { # Illiterate pops participate at 1/10 the rate of fully literate pops
+			desc = "POP_LITERACY"
+			value = literacy_rate
+			add = 0.10
+		}
+
+		# PLP - Colonized pops care about mainland politics to the extent it affects them
+		if = {
+			limit = {
+				state = { is_incorporated = no }
+				pop_has_primary_culture = no
+			}
+			state = {
+				multiply = incorporation_progress
+			}
+		}
+	}
+
+	revolution = {
+		possible = {
+			political_movement_support >= 0.05
+		}
+
+		weight = {
+			value = 100
+		}
+
+		state_weight = {
+			value = 1
+		}
+	}
+
+	secession = {
+		possible = {
+			political_movement_support >= 0.05
+			scope:clout <= 0
+		}
+
+		weight = {
+			value = 1000
+		}
+	}
+
+	additional_radicalism_factors = {
+		if = {
+			limit = {
+				owner = {
+					any_neighbouring_state = {
+						owner = {
+							NOT = { THIS = ROOT.owner }
+							any_political_movement = {
+								is_political_movement_type = movement_nihilist
+								is_insurrectionary = yes
+							}
+						}
+					}
+				}
+			}
+			add = {
+				desc = "NEIGHBOURING_COUNTRY_WITH_REVOLUTION"
+				value = 0.15
+			}
+		}
+	}
+}
+
+movement_reactionary = {
+	category = movement_category_ideological
+
+	ideology = ideology_reactionary_movement
+	character_ideologies = {
+		ideology_traditionalist
+		ideology_protectionist
+		ideology_authoritarian
+		ideology_luddite
+	}
+
+	creation_trigger = {
+		NOT = {
+			has_law_or_variant = law_type:law_traditionalism
+			has_law_or_variant = law_type:law_serfdom
+		}
+		has_law_or_variant = law_type:law_slavery_banned
+		country_has_voting_franchise = yes
+		NOT = { # Reactionary and Legitimist movements cannot co-exist
+			OR = {
+				c:FRA ?= this
+				civil_war_origin_country ?= c:FRA
+			}
+			any_political_movement = {
+				is_political_movement_type = movement_legitimist
+			}
+		}
+	}
+	creation_weight = {
+		value = 100
+		if = {
+			limit = {
+				owner ?= { # If a movement of this type exists in a neighbouring country, make it more likely to spawn here as well
+					any_neighbouring_state = {
+						owner = {
+							prestige > ROOT.owner.prestige
+							any_political_movement = {
+								is_political_movement_type = movement_reactionary
+							}
+						}
+					}
+				}
+			}
+			multiply = {
+				value = 2
+			}
+		}
+	}
+	on_created = {
+		add_movement_enthusiasm_modifier = yes
+	}
+
+	disband_trigger = {
+		OR = {
+			c:FRA ?= this
+			civil_war_origin_country ?= c:FRA
+		}
+		any_political_movement = {
+			is_political_movement_type = movement_legitimist
+		}
+	}
+
+	character_support_trigger = {
+			OR = {
+				has_ideology = ideology:ideology_traditionalist
+				has_ideology = ideology:ideology_protectionist
+				has_ideology = ideology:ideology_authoritarian
+				has_ideology = ideology:ideology_luddite
+				has_ideology = ideology:ideology_jingoist_leader
+			scope:interest_group ?= {
+			OR = {
+						has_ideology = ideology:ideology_reactionary
+						has_ideology = ideology:ideology_patriarchal
+					}
+				}
+			}
+		}
+	character_support_weight = {
+		value = 200
+		if = {
+			limit = {
+				OR = {
+					has_ideology = ideology:ideology_protectionist
+					has_ideology = ideology:ideology_traditionalist
+					has_ideology = ideology:ideology_luddite
+				}
+			}
+			multiply = {
+				value = 5
+			}
+		}
+		else_if = {
+			limit = {
+				AND = {
+					has_ideology = ideology:ideology_authoritarian
+					scope:interest_group ?= {
+						OR = {
+							is_interest_group_type = ig_intelligentsia
+							is_interest_group_type = ig_trade_unions
+						}
+					}
+				}
+			}
+			multiply = {
+				value = 2
+			}
+		}
+		if = {
+			limit = {
+				scope:interest_group ?= {
+					OR = {
+						has_ideology = ideology:ideology_reactionary
+						has_ideology = ideology:ideology_patriarchal
+					}
+				}
+			}
+			multiply = {
+				value = 2
+			}
+		}
+		if = {
+			limit = {
+				AND = {
+					has_ideology = ideology:ideology_reformer
+					scope:interest_group ?= {
+						has_ideology = ideology:ideology_reactionary
+					}
+				}
+			}
+			multiply = {
+				value = 0.10
+			}
+		}
+	}
+
+	pop_support_trigger = {
+		NOT = {
+			is_pop_type = slaves
+		}
+		# PLP - Colonized pops don't care about mainland politics
+		NOT = {
+			AND = {
+				state = { incorporation_progress = 0 }
+				pop_has_primary_culture = no
+			}
+		}
+	}
+
+	pop_support_factors = {
+		movement_support_high_literacy
+		movement_support_aristocrats
+		movement_support_clergymen
+		movement_support_shopkeepers
+		movement_support_farmers
+		movement_support_clerks
+		movement_support_laborers
+		movement_support_soldiers
+		movement_support_peasants
+	}
+
+	pop_support_weight = {
+		if = {
+			limit = {
+				exists = scope:political_movement
+				scope:political_movement ?= {
+						OR = {
+							is_being_suppressed = yes
+							is_being_bolstered = yes
+						}
+					}
+				}
+			if = {
+				limit = {
+					scope:political_movement = {
+						is_being_suppressed = yes
+					}
+				}
+				add = {
+					value = suppression_base_value
+					multiply = {
+						value = -0.5
+						add = owner.modifier:country_suppression_attraction_factor
+					}
+					desc = "concept_suppressed"
+				}
+			}
+			else = {
+				add = {
+					value = bolstering_base_value
+					multiply = {
+						value = 0.5
+						add = owner.modifier:country_bolster_attraction_factor
+					}
+					desc = "concept_bolstered"
+				}
+			}
+		}
+
+		add = {
+			value = 1
+			desc = "POP_BASE_SUPPORT"
+		}
+
+		if = {
+			limit = {
+				strata = upper
+			}
+			if = {
+				limit = {
+					is_pop_type = aristocrats
+				}
+				add = {
+					value = 15
+					desc = "POP_ARISTOCRATS"
+				}
+			}
+			else = {
+				add = {
+					value = 6
+					desc = "UPPER_NO_ICON"
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				strata = middle
+			}
+			if = {
+				limit = {
+					is_pop_type = clergymen
+				}
+				add = {
+					value = 15
+					desc = "POP_CLERGYMEN"
+				}
+			}
+			if = {
+				limit = {
+					is_pop_type = shopkeepers
+				}
+				add = {
+					value = 12
+					desc = "POP_SHOPKEEPERS"
+				}
+			}
+			else_if = {
+				limit = {
+					is_pop_type = farmers
+				}
+				add = {
+					value = 20
+					desc = "POP_FARMERS"
+				}
+			}
+			else = {
+				add = {
+					value = 9
+					desc = "MIDDLE_NO_ICON"
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				strata = lower
+			}
+			if = {
+				limit = {
+					is_pop_type = clerks
+				}
+				add = {
+					value = 10
+					desc = "POP_CLERKS"
+				}
+			}
+			else_if = {
+				limit = {
+					is_pop_type = laborers
+				}
+				add = {
+					value = -3
+					desc = "POP_LABORERS"
+				}
+			}
+			else_if = {
+				limit = {
+					is_pop_type = soldiers
+				}
+				add = {
+					value = 10
+					desc = "POP_SOLDIERS"
+				}
+			}
+			else_if = {
+				limit = {
+					is_pop_type = peasants
+				}
+				add = {
+					value = 12
+					desc = "POP_PEASANTS"
+				}
+			}
+			else = {
+				add = {
+					value = 3
+					desc = "LOWER_NO_ICON"
+				}
+			}
+		}
+
+		multiply = { # Illiterate pops participate at 1/10 the rate of fully literate pops
+			desc = "POP_LITERACY"
+			value = literacy_rate
+			add = 0.10
+		}
+
+		multiply = {
+			value = 0.012
+			multiply = pop_acceptance
+			desc = "ACCEPTANCE"
+		}
+
+		if = { # If a more radical movement exists, it'll poach radicals from this one.
+			limit = {
+				owner ?= {
+					any_political_movement = {
+						is_political_movement_type = movement_fascist
+					}
+				}
+			}
+			multiply = {
+				desc = "POP_RADICAL_MOVEMENT_LOSSES"
+				value = 1
+				subtract = pop_radical_fraction
+			}
+		}
+		
+		# PLP - Colonized pops care about mainland politics to the extent it affects them
+		if = {
+			limit = {
+				state = { is_incorporated = no }
+				pop_has_primary_culture = no
+			}
+			state = {
+				multiply = incorporation_progress
+			}
+		}
+	}
+
+	revolution = {
+		possible = {
+			political_movement_support >= 0.05
+		}
+
+		weight = {
+			value = 100
+		}
+
+		state_weight = {
+			value = 1
+		}
+	}
+
+	secession = {
+		possible = {
+			political_movement_support >= 0.05
+			scope:clout <= 0
+		}
+
+		weight = {
+			value = 1000
+		}
+	}
+
+	additional_radicalism_factors = {
+		owner ?= {
+			add = {
+				value = country_turmoil
+				multiply = 0.5
+				desc = "COUNTRY_TURMOIL"
+			}
+		}
+		
+		if = {
+			limit = {
+				owner = {
+					any_neighbouring_state = {
+						owner = {
+							NOT = { THIS = ROOT.owner }
+							any_political_movement = {
+								is_political_movement_type = movement_reactionary
+								is_insurrectionary = yes
+							}
+						}
+					}
+				}
+			}
+			add = {
+				desc = "NEIGHBOURING_COUNTRY_WITH_REVOLUTION"
+				value = 0.15
+			}
+		}
+	}
+}
+
+movement_modernizer = {
+	category = movement_category_ideological
+
+	ideology = ideology_modernizer_movement
+	character_ideologies = {
+		ideology_modernizer_leader
+		ideology_reformer
+		ideology_protectionist
+		ideology_market_liberal
+		ideology_abolitionist
+	}
+
+	creation_trigger = {
+		has_technology_researched = academia
+		OR = {
+			AND = {
+				OR = {
+					country_is_in_south_america = yes
+					country_is_in_central_america = yes
+				}
+				country_rank <= rank_value:major_power
+			}
+			is_country_type = colonial
+			is_country_type = unrecognized
+		}
+		NAND = {
+			has_law_or_variant = law_type:law_protectionism
+			has_law_or_variant = law_type:law_compulsory_primary_school
+			has_law_or_variant = law_type:law_public_schools
+			OR = {
+				has_law_or_variant = law_type:law_interventionism
+				has_law_or_variant = law_type:law_command_economy
+				has_law_or_variant = law_type:law_laissez_faire
+			}
+			OR = {
+				has_law_or_variant = law_type:law_graduated_taxation
+				has_law_or_variant = law_type:law_proportional_taxation
+			}
+		}
+	}
+	creation_weight = {
+		value = 100
+		if = {
+			limit = {
+				owner ?= { # If a movement of this type exists in a neighbouring country, make it more likely to spawn here as well
+					any_neighbouring_state = {
+						owner = {
+							prestige > ROOT.owner.prestige
+							any_political_movement = {
+								is_political_movement_type = movement_modernizer
+							}
+						}
+					}
+				}
+			}
+			multiply = {
+				value = 2
+			}
+		}
+	}
+	on_created = {
+		add_movement_enthusiasm_modifier = yes
+	}
+	disband_trigger = {
+		AND = {
+			has_law_or_variant = law_type:law_protectionism
+			OR = {
+				has_law_or_variant = law_type:law_interventionism
+				has_law_or_variant = law_type:law_command_economy
+				has_law_or_variant = law_type:law_laissez_faire
+			}
+			has_law_or_variant = law_type:law_compulsory_primary_school
+		}
+	}
+
+	character_support_trigger = {
+			OR = {
+				has_ideology = ideology:ideology_reformer
+				has_ideology = ideology:ideology_protectionist
+				has_ideology = ideology:ideology_positivist
+				has_ideology = ideology:ideology_abolitionist
+				has_ideology = ideology:ideology_market_liberal
+				has_ideology = ideology:ideology_sovereignist
+				has_ideology = ideology:ideology_utopian
+				has_ideology = ideology:ideology_modernizer_leader
+				scope:interest_group ?= {
+					OR = {
+						has_ideology = ideology:ideology_modernizer
+						has_ideology = ideology:ideology_liberal
+						has_ideology = ideology:ideology_liberal_modern
+						has_ideology = ideology:ideology_plutocratic
+					}
+				}
+			}
+		}
+	character_support_weight = {
+		value = 200
+		if = {
+			limit = {
+				OR = {
+					has_ideology = ideology:ideology_modernizer_leader
+					has_ideology = ideology:ideology_protectionist
+					has_ideology = ideology:ideology_reformer
+					has_ideology = ideology:ideology_sovereignist
+					has_ideology = ideology:ideology_market_liberal
+				}
+			}
+			multiply = {
+				value = 5
+			}
+		}
+		else_if = {
+			limit = {
+				OR = {
+					has_ideology = ideology:ideology_positivist
+					has_ideology = ideology:ideology_abolitionist
+					has_ideology = ideology:ideology_utopian
+				}
+			}
+			multiply = {
+				value = 3
+			}
+		}
+		if = {
+			limit = {
+				scope:interest_group ?= {
+					OR = {
+						has_ideology = ideology:ideology_modernizer
+						has_ideology = ideology:ideology_liberal
+						has_ideology = ideology:ideology_liberal_modern
+						has_ideology = ideology:ideology_plutocratic
+					}
+				}
+			}
+			multiply = {
+				value = 2
+			}
+		}
+	}
+
+	pop_support_trigger = {
+		NOR = {
+			is_pop_type = clergymen
+			is_pop_type = peasants
+			is_pop_type = slaves
+		}
+		# PLP - Colonized pops don't care about mainland politics
+		NOT = {
+			AND = {
+				state = { incorporation_progress = 0 }
+				pop_has_primary_culture = no
+			}
+		}
+	}
+
+	pop_support_factors = {
+		movement_support_je_hungarian_revolution
+		movement_support_high_urbanization
+		movement_support_high_literacy
+		movement_support_capitalists
+		movement_support_aristocrats
+		movement_support_officers
+		movement_support_academics
+		movement_support_bureaucrats
+		movement_support_engineers
+		movement_support_clerks
+		movement_support_soldiers
+	}
+
+	pop_support_weight = {
+		if = {
+			limit = {
+				exists = scope:political_movement
+				scope:political_movement ?= {
+						OR = {
+							is_being_suppressed = yes
+							is_being_bolstered = yes
+						}
+					}
+				}
+			if = {
+				limit = {
+					scope:political_movement = {
+						is_being_suppressed = yes
+					}
+				}
+				add = {
+					value = suppression_base_value
+					multiply = {
+						value = -0.5
+						add = owner.modifier:country_suppression_attraction_factor
+					}
+					desc = "concept_suppressed"
+				}
+			}
+			else = {
+				add = {
+					value = bolstering_base_value
+					multiply = {
+						value = 0.5
+						add = owner.modifier:country_bolster_attraction_factor
+					}
+					desc = "concept_bolstered"
+				}
+			}
+		}
+
+		add = {
+			desc = "URBAN_STATE"
+			value = 10
+			multiply = state.state_urbanization_rate
+		}
+
+		if = {
+			limit = {
+				strata = upper
+			}
+			if = {
+				limit = {
+					is_pop_type = capitalists
+				}
+				add = {
+					value = 15
+					desc = "POP_CAPITALISTS"
+				}
+			}
+			if = {
+				limit = {
+					is_pop_type = aristocrats
+				}
+				if = {
+					limit = {
+						owner ?= {
+							has_journal_entry = je_great_reformer
+						}
+					}
+					add = {
+						value = 25
+						desc = "POP_ARISTOCRATS"
+					}
+				}
+				else_if = {
+					limit = {
+						culture = cu:hungarian
+						owner ?= {
+							has_journal_entry = je_hungarian_revolution
+						}
+					}
+					add = {
+						value = 25
+						desc = "je_hungarian_revolution"
+					}
+				}
+				else = {
+					add = {
+						value = 10
+						desc = "POP_ARISTOCRATS"
+					}
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				strata = middle
+			}
+			if = {
+				limit = {
+					is_pop_type = officers
+				}
+				add = {
+					value = 15
+					desc = "POP_OFFICERS"
+				}
+			}
+			else_if = {
+				limit = {
+					is_pop_type = academics
+				}
+				add = {
+					value = 25
+					desc = "POP_ACADEMICS"
+				}
+			}
+			else_if = {
+				limit = {
+					is_pop_type = bureaucrats
+				}
+				add = {
+					value = 15
+					desc = "POP_BUREAUCRATS"
+				}
+			}
+			else_if = {
+				limit = {
+					is_pop_type = engineers
+				}
+				add = {
+					value = 25
+					desc = "POP_BUREAUCRATS"
+				}
+			}
+			else = {
+				add = {
+					value = 10
+					desc = "MIDDLE_NO_ICON"
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				strata = lower
+			}
+			if = {
+				limit = {
+					is_pop_type = clerks
+				}
+				add = {
+					value = 9
+					desc = "POP_CLERKS"
+				}
+			}
+			else_if = {
+				limit = {
+					is_pop_type = soldiers
+				}
+				add = {
+					value = 6
+					desc = "POP_SOLDIERS"
+				}
+			}
+			else = {
+				add = {
+					value = 3
+					desc = "LOWER_NO_ICON"
+				}
+			}
+		}
+
+		multiply = { # Illiterate pops participate at 1/10 the rate of fully literate pops
+			desc = "POP_LITERACY"
+			value = literacy_rate
+			add = 0.10
+		}
+		
+		# PLP - Colonized pops care about mainland politics to the extent it affects them
+		if = {
+			limit = {
+				state = { is_incorporated = no }
+				pop_has_primary_culture = no
+			}
+			state = {
+				multiply = incorporation_progress
+			}
+		}
+	}
+
+	revolution = {
+		possible = {
+			political_movement_support >= 0.05
+		}
+
+		weight = {
+			value = 100
+		}
+
+		state_weight = {
+			value = 1
+		}
+	}
+
+	secession = {
+		possible = {
+			political_movement_support >= 0.05
+			scope:clout <= 0
+		}
+
+		weight = {
+			value = 1000
+		}
+	}
+
+	additional_radicalism_factors = {
+		if = {
+			limit = {
+				owner = {
+					any_neighbouring_state = {
+						owner = {
+							NOT = { THIS = ROOT.owner }
+							any_political_movement = {
+								is_political_movement_type = movement_modernizer
 								is_insurrectionary = yes
 							}
 						}
