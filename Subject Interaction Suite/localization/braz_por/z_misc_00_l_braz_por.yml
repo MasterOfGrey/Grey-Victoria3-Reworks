@@ -24,5 +24,4 @@
  mog_topbar_coloured_all_subject_pp_red: "#b;vermelho [GetMetaPlayer.GetPlayedOrObservedCountry.MakeScope.Var('mog_topbar_value_all_subject_pp').GetValue|0%]#!" #deepl:1582262069
  mog_topbar_coloured_all_subject_pp_purple: "#b;purple [GetMetaPlayer.GetPlayedOrObservedCountry.MakeScope.Var('mog_topbar_value_all_subject_pp').GetValue|0%]#!" #deepl:690812862
  
- DIPLOMATIC_PACT_REQUIREMENT_MODERATE_LIBERTY_DESIRE: "[SCOPE.sCountry('actor').GetAdjective] [concept_liberty_desire] deve ser de pelo menos [GetDefine('NDiplomacy','WAR_GOAL_INFAMY_LOW_LIBERTY_DESIRE_THRESHOLD')]" #deepl:1877752227
  STRONGER_SUBJECT_NEGATE_ALOOF: "da oferta [Concept('concept_subject','$concept_subject_possessive$')] força relativa versus a atitude [SCOPE.sCountry('target').GetAttitudeTowards(SCOPE.sCountry('target').GetOverlord).GetName] " #deepl:679978240
