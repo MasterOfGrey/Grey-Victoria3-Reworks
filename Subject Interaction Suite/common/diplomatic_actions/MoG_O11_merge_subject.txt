@@ -54,12 +54,8 @@ merge_subject = {
 			scope:target_country.relations:root >= 60
 			scope:target_country = {
 				liberty_desire < 25
-				OR = {
-					has_diplomatic_pact = { who = root type = puppet }
-					has_diplomatic_pact = { who = root type = vassal }
-					has_diplomatic_pact = { who = root type = colony }
-					has_diplomatic_pact = { who = root type = personal_union }
-				}
+				is_direct_subject_of = root
+				can_decrease_autonomy = no # Must already be at the lowest autonomy level
 			}
 			NAND = {
 				has_journal_entry = je_peru_bolivia

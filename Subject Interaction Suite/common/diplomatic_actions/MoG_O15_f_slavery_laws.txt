@@ -54,6 +54,7 @@
 						is_subject_type = subject_type_vassal
 						is_subject_type = subject_type_colony
 						is_subject_type = subject_type_puppet
+						is_subject_type = subject_type_crown_land
 					}
 				}
 			}
@@ -129,6 +130,7 @@ forced_slave_trade = {
 						is_subject_type = subject_type_vassal
 						is_subject_type = subject_type_colony
 						is_subject_type = subject_type_puppet
+						is_subject_type = subject_type_crown_land
 					}
 				}
 			}
