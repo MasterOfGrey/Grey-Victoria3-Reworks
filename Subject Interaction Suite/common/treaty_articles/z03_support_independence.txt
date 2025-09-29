@@ -1,4 +1,4 @@
-support_independence = {
+﻿support_independence = {
 	kind = directed
 	cost = 50
 
