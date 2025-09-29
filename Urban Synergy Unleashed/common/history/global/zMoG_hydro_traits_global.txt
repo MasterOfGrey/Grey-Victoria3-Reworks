@@ -195,7 +195,8 @@ GLOBAL = {
 	s:STATE_SKOPIA = { add_state_trait = state_trait_hydro_potential_2 }
 	
 	### EAST EUROPE ### = { add_state_trait = state_trait_hydro_potential_2 }
-	s:STATE_SILESIA = { add_state_trait = state_trait_hydro_potential_2 }
+	s:STATE_LOWER_SILESIA = { add_state_trait = state_trait_hydro_potential_2 }
+	s:STATE_UPPER_SILESIA = { add_state_trait = state_trait_hydro_potential_2 }
 	s:STATE_EAST_GALICIA = { add_state_trait = state_trait_hydro_potential_2 }
 	s:STATE_SLOVAKIA = { add_state_trait = state_trait_hydro_potential_2 }
 	s:STATE_BUKOVINA = { add_state_trait = state_trait_hydro_potential_2 }
