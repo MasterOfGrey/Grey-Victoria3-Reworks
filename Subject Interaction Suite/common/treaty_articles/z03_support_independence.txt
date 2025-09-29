@@ -1,4 +1,4 @@
-﻿support_independence = {
+support_independence = {
 	kind = directed
 	cost = 50
 
@@ -20,6 +20,8 @@
 		dp_independence
 		dp_increase_autonomy
 		dp_annex_subject
+		dp_hungarian_revolution
+		dp_sepoy_mutiny
 	}
 
 	usage_limit = once_per_side
@@ -82,11 +84,10 @@
 						is_subject = no
 					}
 					scope:source_country = {
-						NOT = { overlord = scope:target_country.overlord }
+						overlord = scope:target_country.overlord
 					}
-					# scope:target_country.liberty_desire >= define:NDiplomacy|WAR_GOAL_INCREASE_AUTONOMY_MIN_LIBERTY_DESIRE
-					# Seriously people, the point of supporting independence is to encourage a subject to seek autonomy, not just to back a subject who already wants it. Geopolitics people...
-					scope:target_country.liberty_desire >= define:NDiplomacy|WAR_GOAL_INFAMY_LOW_LIBERTY_DESIRE_THRESHOLD
+					# SIS - use define for compatability
+					scope:source_country.liberty_desire >= define:NDiplomacy|WAR_GOAL_INFAMY_LOW_LIBERTY_DESIRE_THRESHOLD # 25 #offering country should not be about to lose its own independence 
 				}
 			}
 		}
@@ -94,12 +95,20 @@
 
 	requirement_to_maintain = {
 		trigger = {
-			trigger_if = {
-				limit = { scope:source_country = { is_subject = yes } }
-				scope:target_country.overlord ?= scope:source_country.overlord
-			}
-			trigger_else = {
-				scope:source_country.country_rank >= scope:target_country.country_rank
+			custom_tooltip = {
+				text = "DIPLOMATIC_PACT_REQUIREMENT_HIGHER_RANK_OR_SAME_OVERLORD"
+				trigger_if = {
+					limit = { #exception for same overlords
+						scope:source_country = { 
+							is_subject = yes 
+						}
+						scope:target_country.overlord ?= scope:source_country.overlord
+					}
+					always = yes
+				}
+				trigger_else = { #otherwise must be of same or higher rank
+					scope:source_country.country_rank >= scope:target_country.country_rank
+				}
 			}
 		}
 	}
