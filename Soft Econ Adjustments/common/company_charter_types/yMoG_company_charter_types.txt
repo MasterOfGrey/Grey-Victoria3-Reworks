@@ -25,7 +25,7 @@ monopoly_charter = {
 							source_country = root.owner
 							target_country.country_rank > source_country.country_rank
 							target_country = {
-								has_company = company_type:root
+								has_company = root.type
 							}
 						}
 					}
