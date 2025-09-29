@@ -24,4 +24,5 @@
  mog_topbar_coloured_all_subject_pp_red: "#b;red [GetMetaPlayer.GetPlayedOrObservedCountry.MakeScope.Var('mog_topbar_value_all_subject_pp').GetValue|0%]#!"
  mog_topbar_coloured_all_subject_pp_purple: "#b;purple [GetMetaPlayer.GetPlayedOrObservedCountry.MakeScope.Var('mog_topbar_value_all_subject_pp').GetValue|0%]#!"
  
+ DIPLOMATIC_PACT_REQUIREMENT_MODERATE_LIBERTY_DESIRE: "[SCOPE.sCountry('actor').GetAdjective] [concept_liberty_desire] must be at least [GetDefine('NDiplomacy','WAR_GOAL_INFAMY_LOW_LIBERTY_DESIRE_THRESHOLD')]"
  STRONGER_SUBJECT_NEGATE_ALOOF: "from the offering [Concept('concept_subject','$concept_subject_possessive$')] relative strength vs the [SCOPE.sCountry('target').GetAttitudeTowards(SCOPE.sCountry('target').GetOverlord).GetName] attitude"

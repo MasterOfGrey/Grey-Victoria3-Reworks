@@ -1,4 +1,4 @@
-﻿support_independence = {
+support_independence = {
 	kind = directed
 	cost = 50
 
@@ -78,7 +78,7 @@
 				save_temporary_scope_as = actor
 			}
 			custom_tooltip = {
-				text = "DIPLOMATIC_PACT_REQUIREMENT_HIGH_LIBERTY_DESIRE"
+				text = "DIPLOMATIC_PACT_REQUIREMENT_MODERATE_LIBERTY_DESIRE"
 				OR = {
 					scope:source_country = {
 						is_subject = no
@@ -86,7 +86,8 @@
 					scope:source_country = {
 						overlord = scope:target_country.overlord
 					}
-					scope:source_country.liberty_desire >= 25 #offering country should not be about to lose its own independence 
+					# SIS - use define for compatability
+					scope:source_country.liberty_desire >= define:NDiplomacy|WAR_GOAL_INFAMY_LOW_LIBERTY_DESIRE_THRESHOLD # 25 #offering country should not be about to lose its own independence 
 				}
 			}
 		}
