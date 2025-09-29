@@ -63,6 +63,7 @@ subject_can_be_consolidation_target = {
 			OR = {
 				is_subject_type = subject_type_vassal
 				is_subject_type = subject_type_puppet
+				is_subject_type = subject_type_crown_land
 				is_subject_type = subject_type_protectorate # temporary
 			}
 		}
@@ -120,6 +121,7 @@ can_be_consolidation_recipient = {
 	OR = {
 		is_subject_type = subject_type_puppet
 		is_subject_type = subject_type_vassal
+		is_subject_type = subject_type_crown_land
 		is_subject_type = subject_type_dominion
 		is_subject_type = subject_type_colony
 	#	is_subject_type = subject_type_protectorate # temporary testing
