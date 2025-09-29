@@ -42,7 +42,7 @@
 			level = 2
 		}
 		
-		#ig:ig_devout = {				# Consider replacing with movement suppression if relevant movement starts in play.
+		#ig:ig_devout ?= {				# Consider replacing with movement suppression if relevant movement starts in play.
 		#	set_ig_suppression = yes
 		#}
 	}

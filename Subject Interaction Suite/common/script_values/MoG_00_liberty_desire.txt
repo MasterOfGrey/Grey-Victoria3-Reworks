@@ -605,7 +605,7 @@ liberty_desire_weekly_change = {
 			limit = { 
 				root.second_country = { 
 					OR = {
-						ig:ig_petty_bourgeoisie = {
+						ig:ig_petty_bourgeoisie ?= {
 							is_in_government = yes
 						}
 						any_interest_group = {
@@ -672,7 +672,7 @@ liberty_desire_weekly_change = {
 			limit = { 
 				root.second_country = { 
 					OR = {
-						ig:ig_devout = {
+						ig:ig_devout ?= {
 							is_in_government = yes
 						}
 						any_interest_group = {
@@ -753,7 +753,7 @@ liberty_desire_weekly_change = {
 			limit = { 
 				root.second_country = { 
 					OR = {
-						ig:ig_petty_bourgeoisie = {
+						ig:ig_petty_bourgeoisie ?= {
 							is_in_government = yes
 						}
 						any_interest_group = {

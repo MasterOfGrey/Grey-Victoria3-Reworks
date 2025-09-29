@@ -92,7 +92,7 @@ forced_industry_ban = {
 				if = {
 					limit = {
 						OR = {
-							ig:ig_industrialists = {
+							ig:ig_industrialists ?= {
 								is_in_government = yes
 							}
 							any_interest_group = {
