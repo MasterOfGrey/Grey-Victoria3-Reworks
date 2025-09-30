@@ -1,0 +1,75 @@
+﻿refresh_indigenous_subsistance_modifier = {
+	set_local_variable = {
+		name = pop_indig
+		value = 0
+	}
+	
+	set_local_variable = {
+		name = pop_total
+		value = 0
+	}
+	
+	if = {
+		limit = {
+			has_modifier = mog_spa_indigenous_subsistance
+		}
+		remove_modifier = mog_spa_indigenous_subsistance
+	}
+
+	save_temporary_scope_as = state
+	every_scope_pop = {
+		limit = {
+			AND = {
+				is_employed = yes
+				workplace = { is_subsistence_building = yes }
+			}
+		}
+		change_local_variable = {
+			name = pop_total
+			add = total_size
+		}
+		if = {
+			limit = {
+				AND = {
+					NOT = {
+						is_pop_type = slaves
+					}
+					culture = {
+						OR = {
+							has_discrimination_trait = indigenous_american_heritage
+							has_discrimination_trait = indigenous_oceanic_heritage
+						}
+					}
+					state.state_region = {
+						is_homeland = prev.culture
+					}
+				}
+			}
+			change_local_variable = {
+				name = pop_indig
+				add = total_size
+			}
+		}
+	}
+	if = {
+		limit = {
+			local_var:pop_indig > 0
+		}
+		set_local_variable = {
+			name = indig_ratio
+			value = {
+				value = local_var:pop_indig
+				divide = local_var:pop_total
+				multiply = {
+					value = 1
+					subtract = modifier:building_group_bg_subsistence_agriculture_allowed_collectivization_add # It's assumed ranching has the same value
+				}
+				min = 0
+			}
+		}
+		add_modifier = {
+			name = mog_spa_indigenous_subsistance
+			multiplier = local_var:indig_ratio
+		}
+	}
+}
