@@ -25,10 +25,10 @@
 				any_subject_or_below = {
 					country_has_primary_culture = cu:japanese
 				}
-				c:JAP = {
-					OR = {
+				OR = {
+					NOT = { exists = c:JAP }
+					c:JAP = {
 						is_subject = yes
-						exists = no
 					}
 				}
 			}

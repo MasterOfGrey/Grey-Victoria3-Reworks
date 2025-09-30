@@ -461,7 +461,7 @@ yuanzhumin={
 	ethnicities = {
 		1 = polynesian
 	}
-	graphics = decentralised_americas
+	graphics = polynesian
 }
 
 hakka={
@@ -982,7 +982,7 @@ miao={
 		Xuanjiao
 		Yu
 		Yunmei
-	}	
+	}
 	noble_last_names = {
 		Cui
 		Li
@@ -1049,7 +1049,7 @@ min={
 		Xuanjiao
 		Yu
 		Yunmei
-	}	
+	}
 	noble_last_names = {
 		Cui
 		Li
@@ -1078,7 +1078,9 @@ min={
 zhuang={
 	color= hsv{ 0.92 0.32 0.88 }
 	religion = animist
-	traits = { tai sinosphere east_asian_heritage }
+	heritage = heritage_tai
+	language = language_zhuang
+	traditions = { tradition_sinosphere }
 	male_common_first_names={
 		Be
 		Duc
