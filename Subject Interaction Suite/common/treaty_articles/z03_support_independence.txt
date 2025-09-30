@@ -20,6 +20,8 @@
 		dp_independence
 		dp_increase_autonomy
 		dp_annex_subject
+		dp_hungarian_revolution
+		dp_sepoy_mutiny
 	}
 
 	usage_limit = once_per_side
@@ -53,15 +55,17 @@
 	}
 	
 	# Freeze treaty article instead of cancelling if you there's a truce.
-    non_fulfillment = {
-        consequences = freeze
-        # max_consecutive_contraventions = 0 # Default is 0 - always freeze on truce.
-        conditions = {
-            weekly = {
-                ROOT = { has_truce_with = scope:target_country }
-            }
-        }
-    }
+	non_fulfillment = {
+		consequences = freeze
+		# max_consecutive_contraventions = 0 # Default is 0 - always freeze on truce.
+		conditions = {
+			weekly = {
+				scope:article = {
+					source_country = { has_truce_with = prev.target_country }
+				}
+			}
+		}
+	}
 #	requirement_to_maintain = {
 #		trigger = {
 #			NOT = ( has_truce_with = scope:target_country }
@@ -80,11 +84,10 @@
 						is_subject = no
 					}
 					scope:source_country = {
-						NOT = { overlord = scope:target_country.overlord }
+						overlord = scope:target_country.overlord
 					}
-					# scope:target_country.liberty_desire >= define:NDiplomacy|WAR_GOAL_INCREASE_AUTONOMY_MIN_LIBERTY_DESIRE
-					# Seriously people, the point of supporting independence is to encourage a subject to seek autonomy, not just to back a subject who already wants it. Geopolitics people...
-					scope:target_country.liberty_desire >= define:NDiplomacy|WAR_GOAL_INFAMY_LOW_LIBERTY_DESIRE_THRESHOLD
+					# SIS - use define for compatability
+					scope:source_country.liberty_desire >= define:NDiplomacy|WAR_GOAL_INFAMY_LOW_LIBERTY_DESIRE_THRESHOLD # 25 #offering country should not be about to lose its own independence 
 				}
 			}
 		}
@@ -92,12 +95,20 @@
 
 	requirement_to_maintain = {
 		trigger = {
-			trigger_if = {
-				limit = { scope:source_country = { is_subject = yes } }
-				scope:target_country.overlord ?= scope:source_country.overlord
-			}
-			trigger_else = {
-				scope:source_country.country_rank >= scope:target_country.country_rank
+			custom_tooltip = {
+				text = "DIPLOMATIC_PACT_REQUIREMENT_HIGHER_RANK_OR_SAME_OVERLORD"
+				trigger_if = {
+					limit = { #exception for same overlords
+						scope:source_country = { 
+							is_subject = yes 
+						}
+						scope:target_country.overlord ?= scope:source_country.overlord
+					}
+					always = yes
+				}
+				trigger_else = { #otherwise must be of same or higher rank
+					scope:source_country.country_rank >= scope:target_country.country_rank
+				}
 			}
 		}
 	}
@@ -116,13 +127,13 @@
 				}
 			}
 		}
-        custom_tooltip = {
-            text = DUPLICATE_ARTICLE_SAME_INPUTS_TREATY
-            NOT = {
-                scope:source_country = {
-                    any_scope_treaty = {
+		custom_tooltip = {
+			text = DUPLICATE_ARTICLE_SAME_INPUTS_TREATY
+			NOT = {
+				scope:source_country = {
+					any_scope_treaty = {
 						binds = scope:target_country
-                        hidden_trigger = {
+						hidden_trigger = {
 							OR = {
 								scope:treaty = {
 									is_renegotiation = no
@@ -134,10 +145,10 @@
 							has_type = support_independence
 							source_country = scope:source_country
 						}
-                    }
-                }
-            }
-        }
+					}
+				}
+			}
+		}
 		scope:target_country = {
 			NOR = {
 				play_participant_has_war_goal_of_type_against = {
@@ -215,9 +226,9 @@
 		}
 
 		article_ai_usage = {
-            offer
-            request
-        }
+			offer
+			request
+		}
 
 		inherent_accept_score = {
 			value = 0

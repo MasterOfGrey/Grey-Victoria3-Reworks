@@ -39,7 +39,7 @@ law_restricted_child_labor = {
 	progressiveness = 0
 	
 	unlocking_technologies = {
-		labor_movement 
+		labor_movement
 	}
 	
 	modifier = {
@@ -54,7 +54,7 @@ law_restricted_child_labor = {
 	
 	ai_will_do = {
 		OR = {
-			has_law = law_type:law_child_labor_allowed
+			has_law_or_variant = law_type:law_child_labor_allowed
 			AND = {
 				exists = ruler
 				ruler = {

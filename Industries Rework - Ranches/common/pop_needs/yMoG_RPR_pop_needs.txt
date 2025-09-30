@@ -1,0 +1,144 @@
+﻿#####################
+#   PDT style RPR   #
+#####################
+
+# Basic food should be consumed based on
+#  1. What's cheap
+#  2. What's convenient
+# Stimulating demand with enforced minimum supply causes problems with
+# very poor pops, who don't have the wealth to afford shortage goods.
+# Goods get roughly even weights as pops should favour not starving over
+# purchasing a particular good.
+popneed_basic_food = {
+	default = grain
+
+	entry = {
+		# Grain is generally very plentiful, slightly reduced weight helps ensure
+		# lower supply goods don't get pushed out even with low prices
+		goods = grain
+		
+		weight = 0.85
+		max_supply_share = 0.9
+		min_supply_share = 0.0
+	}
+	
+	entry = {
+		goods = fish
+		
+		weight = 1
+		max_supply_share = 0.9
+		min_supply_share = 0.0
+	}
+
+	entry = {
+		goods = meat
+		
+		weight = 1
+		max_supply_share = 0.9
+		min_supply_share = 0.0
+	}
+	
+	entry = {
+		goods = fruit
+		
+		weight = 1
+		max_supply_share = 0.9
+		min_supply_share = 0.0
+	}
+
+	entry = {
+		# Increased weight for convenience of pre-processed foods
+		goods = groceries
+		
+		weight = 1.15
+		max_supply_share = 0.9
+		min_supply_share = 0.0
+	}
+
+	entry = {
+		## RPR - Added
+		# Sugar is food and deserves to be in this category, but
+		# gets low weight, low max supply as it's not nutriative
+		# enough to fill a significant portion of food needs
+		# Slight reduction in weight and max supply from PDT,
+		# since sugar is also consumed as a stimulant as of 1.10
+		goods = sugar
+		
+		weight = 0.2 # 0.25
+		max_supply_share = 0.2 # 0.25
+		min_supply_share = 0.0
+	}
+	
+	entry = {
+		## RPR - Added
+		# Represents street vendors, restaurants, etc.
+		goods = services
+		
+		weight = 0.125
+		max_supply_share = 0.125
+		min_supply_share = 0.0
+	}
+}
+
+# Luxury food is used to stimulate demand for new food goods.
+# Pops wealthy enough to be purchasing luxury food have the budget
+# to afford small amounts of max price goods without becoming
+# impoverished. Additionally, variety is a luxury of it's own.
+popneed_luxury_food = {
+	default = groceries # meat - RPR: groceries push industrialization better
+	
+	entry = {
+		goods = groceries
+
+		weight = 1.5
+		max_supply_share = 1.0
+		min_supply_share = 0.1 # 0.0 - RPR: demand stimulation
+	}
+
+	entry = {
+		goods = meat
+
+		weight = 1.25
+		max_supply_share = 0.75
+		min_supply_share = 0.1
+	}
+	
+	entry = {
+		## RPR - added
+		# Seafood has often been seen as less prestigious than meat
+		# but there are still exotic foods and delicacies that deserve
+		# representation here, and it makes little sense for rich
+		# Japanese pops for example to stop eating fish entirely
+		goods = fish
+		
+		weight = 0.5 # Less prestigious, low weight
+		max_supply_share = 0.75
+		min_supply_share = 0.05 # demand stimulation
+	}
+
+	entry = {
+		goods = fruit
+
+		weight = 0.75
+		max_supply_share = 0.5 # 0.75 - RPR
+		min_supply_share = 0.1
+	}
+
+	entry = {
+		goods = sugar
+
+		weight = 0.5
+		max_supply_share = 0.3 # 0.5 - RPR: luxurious, but not nutritive
+		min_supply_share = 0.05 # 0.0 - RPR: demand stimulation
+	}
+
+	entry = {
+		## RPR - Added
+		# Represents street vendors, restaurants, etc.
+		goods = services
+		
+		weight = 0.125
+		max_supply_share = 0.125
+		min_supply_share = 0.0 # Service production don't need help launching
+	}
+}

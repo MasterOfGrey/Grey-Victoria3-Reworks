@@ -5,6 +5,7 @@
  mog_construction_max_level_adjustment: "アーバンシナジー建設"
  mog_logistics_land_trade: "輸入物流サービスによる陸上貿易能力"
  mog_mapi: "アーバンシナジーMAPI"
+ mog_subfarm_modifiers_occupancy_scaled: "都市の相乗効果 インフラへの影響" #deepl:1060897918
  
  # Building
  USU_bg_port_infrastructure: "港湾" #deepl:687823806
@@ -69,7 +70,11 @@
  goods_input_merchant_marine_mult_desc: "@merchant_marine![Nbsp]$merchant_marine$ 建物が消費する の量にボーナスまたはペナルティを与える。" #deepl:3075274957
  goods_output_merchant_marine_mult: "の構築@merchant_marine![Nbsp]$merchant_marine$ 出力" #deepl:2695995466
  goods_output_merchant_marine_mult_desc: "建物から生み出される @merchant_marine![Nbsp]$merchant_marine$ の量にボーナスまたはペナルティを与える。" #deepl:1649084978
- 
+ goods_input_services_mult: "建物@services![Nbsp] $services$ 入力" #deepl:3160360280
+ goods_input_services_mult_desc: "@services![Nbsp] $services$ 建物が消費する量にボーナスまたはペナルティを与える。" #deepl:1303153237
+ goods_output_services_mult: "建物@services![Nbsp] $services$ 出力" #deepl:3559684402
+ goods_output_services_mult_desc: "建物から発生する@services![Nbsp] $services$ の量にボーナスまたはペナルティを与える。" #deepl:2561374378
+
  # PMGs
  pmg_base_building_river_port: "ドック"
  USU_pmg_government_administration_emergency_services: "緊急サービス"

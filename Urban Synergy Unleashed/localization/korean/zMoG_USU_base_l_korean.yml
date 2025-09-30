@@ -5,6 +5,7 @@
  mog_construction_max_level_adjustment: "어반 시너지 건설"
  mog_logistics_land_trade: "수입 물류 서비스로부터의 육상 무역 용량"
  mog_mapi: "어반 시너지 MAPI"
+ mog_subfarm_modifiers_occupancy_scaled: "도시 시너지가 인프라에 미치는 영향" #deepl:1060897918
  
  # Building
  USU_bg_port_infrastructure: "포트" #deepl:687823806
@@ -69,7 +70,11 @@
  goods_input_merchant_marine_mult_desc: "건물에서 소비하는 의 양에 보너스 또는 페널티@merchant_marine![Nbsp]$merchant_marine$ " #deepl:3075274957
  goods_output_merchant_marine_mult: "merchant_marine 구축![Nbsp]$merchant_marine$ 출력" #deepl:2695995466
  goods_output_merchant_marine_mult_desc: "건물에서 생산되는 의 양에 보너스 또는 페널티@merchant_marine![Nbsp]$merchant_marine$ " #deepl:1649084978
- 
+ goods_input_services_mult: "건물 @services![Nbsp] $services$ 입력" #deepl:3160360280
+ goods_input_services_mult_desc: "건물에서 소비하는 @services![Nbsp] $services$ 금액에 대한 보너스 또는 페널티" #deepl:1303153237
+ goods_output_services_mult: "건물 @services![Nbsp] $services$ 출력" #deepl:3559684402
+ goods_output_services_mult_desc: "건물에서 생산되는 @services![Nbsp] $services$ 금액에 대한 보너스 또는 페널티" #deepl:2561374378
+
  # PMGs
  pmg_base_building_river_port: "부두"
  USU_pmg_government_administration_emergency_services: "응급 서비스"

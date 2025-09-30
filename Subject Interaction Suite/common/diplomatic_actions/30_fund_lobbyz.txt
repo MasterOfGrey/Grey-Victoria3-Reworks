@@ -65,8 +65,8 @@
 				if = {
 					limit = {
 						OR = {
-							has_law = law_type:law_autocracy
-							has_law = law_type:law_oligarchy
+							has_law_or_variant = law_type:law_autocracy
+							has_law_or_variant = law_type:law_oligarchy
 						}		
 					}
 					add = 0.5
@@ -74,15 +74,15 @@
 				else_if = {
 					limit = {
 						OR = {
-							has_law = law_type:law_wealth_voting
-							has_law = law_type:law_landed_voting
+							has_law_or_variant = law_type:law_wealth_voting
+							has_law_or_variant = law_type:law_landed_voting
 						}		
 					}
 					add = 0.25
 				}				
 				else_if = {
 					limit = {
-						has_law = law_type:law_anarchy
+						has_law_or_variant = law_type:law_anarchy
 					}
 					subtract = 0.25
 				}	
@@ -96,8 +96,8 @@
 				if = {
 					limit = {
 						OR = {
-							has_law = law_type:law_technocracy
-							has_law = law_type:law_single_party_state
+							has_law_or_variant = law_type:law_technocracy
+							has_law_or_variant = law_type:law_single_party_state
 						}		
 					}
 					add = 0.5
@@ -105,8 +105,8 @@
 				else_if = {
 					limit = {
 						OR = {
-							has_law = law_type:law_census_voting
-							has_law = law_type:law_universal_suffrage
+							has_law_or_variant = law_type:law_census_voting
+							has_law_or_variant = law_type:law_universal_suffrage
 						}					
 					}
 					add = 0.25
@@ -121,8 +121,8 @@
 				if = {
 					limit = {
 						OR = {
-							has_law = law_type:law_universal_suffrage		
-							has_law = law_type:law_anarchy
+							has_law_or_variant = law_type:law_universal_suffrage		
+							has_law_or_variant = law_type:law_anarchy
 						}
 					}
 					add = 0.25

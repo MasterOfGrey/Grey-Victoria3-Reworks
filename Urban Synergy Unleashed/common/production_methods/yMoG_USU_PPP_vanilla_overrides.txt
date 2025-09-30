@@ -80,6 +80,7 @@ pm_coal-fired_plant = {
 
 pm_oil-fired_plant = {
 	texture = "gfx/interface/icons/production_method_icons/oil_fired_plant.dds"
+	# ai_value = mog_power_gas_pm_value # Does not accept script values - on_action nudge instead
 	
 	unlocking_technologies = {
 		steam_turbine # Not oil_turbine - as that's for the upgraded PM's

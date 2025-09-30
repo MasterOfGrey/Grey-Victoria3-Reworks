@@ -8,15 +8,15 @@
 	selectable = {
 		has_dlc_feature = subject_and_bloc_actions
 	}
-
+	
 	potential = {
 		any_scope_diplomatic_pact = {
 			"diplomatic_pact_other_country(root)" = scope:target_country
 			income_transfer > 0
 		}
 		OR = {
-			scope:target_country = { 
-				is_subject_of = root 
+			scope:target_country = {
+				is_subject_of = root
 				NOT = { is_diplomatic_play_enemy_of = root }
 			}
 			AND = {	# only valid for subject countries if a pact is already established
@@ -40,22 +40,22 @@
 			}
 		}
 	}
-
-	pact = {	
-		recipient_pays_maintenance = no
+	
+	pact = {
+		# recipient_pays_maintenance = no	# Unneeded since 1.9.3?
 		relations_progress_per_day = -1
 		
 		second_modifier = {
 			country_overlord_income_transfer_mult = 1
 			country_liberty_desire_decrease_mult = -0.25
 		}
-	    
+		
 		requirement_to_maintain = {
 			trigger = {
 				custom_tooltip = {
 					text = "DIPLOMATIC_PACT_REQUIREMENT_AT_PEACE"
 					NOT = { has_war_with = scope:target_country }
-				}			
+				}
 			}
 		}
 		
@@ -67,7 +67,7 @@
 						"diplomatic_pact_other_country(root)" = scope:target_country
 						income_transfer > 0
 					}
-				}			
+				}
 			}
 		}
 	}
@@ -76,25 +76,25 @@
 		max_influence_spending_fraction = 0.1
 		
 		evaluation_chance = {
-			value = 0.25		
-		}		
-	
+			value = 0.25
+		}
+		
 		propose_score = {
 			value = 10
 		}
-	
+		
 		will_propose = {
 			"relations(scope:target_country)" < relations_threshold:cordial
 			has_attitude = {
 				who = scope:target_country
 				attitude = domineering
-			}		
+			}
 			OR = {
 				has_strategy = ai_strategy_economic_imperialism
 				has_strategy = ai_strategy_territorial_expansion
 				has_strategy = ai_strategy_world_revolution
 			}
-			scope:target_country = { "potential_diplomatic_play_power_ratio(root)" <= 0.5 }
+			scope:target_country ?= { "potential_diplomatic_play_power_ratio(root)" <= 0.5 }
 		}
 		
 		will_break = {
@@ -102,18 +102,18 @@
 				has_attitude = {
 					who = scope:target_country
 					attitude = protective
-				}	
+				}
 				AND = {
 					scope:target_country = { liberty_desire >= 50 }
-					"relations(scope:target_country)" >= relations_threshold:friendly	
+					"relations(scope:target_country)" >= relations_threshold:friendly
 					NOR = {
 						has_strategy = ai_strategy_economic_imperialism
 						has_strategy = ai_strategy_territorial_expansion
 						has_strategy = ai_strategy_world_revolution
-					}					
-				}				
-			}	
-		}		
+					}
+				}
+			}
+		}
 	}
 }
 

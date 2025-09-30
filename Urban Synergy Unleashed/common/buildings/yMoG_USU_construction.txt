@@ -4,7 +4,7 @@ building_construction_sector = {
 	building_group = bg_construction
 	icon = "gfx/interface/icons/building_icons/construction_camp.dds"
 	city_type = city
-	levels_per_mesh = 10 # 5
+	levels_per_mesh = 100 # 50
 	
 	has_max_level = yes
 	
@@ -16,8 +16,9 @@ building_construction_sector = {
 		pmg_base_building_construction_sector
 	}
 	
-	ai_value = 2500 # 1000 # Construction sector should generally be preferred over other equal-priority spending items
+	ai_value = 5000 ## 2500 # 1000 # Construction sector should generally be preferred over other equal-priority spending items
 	# Boosted this proportionally because they are cheaper now and should hopefully cause the AI to be more responsive to construction needs/desires.
+	## Boosted this again so it's explicitly higher than other important buildings like ports and such.
 
 	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_farming.dds"
 }

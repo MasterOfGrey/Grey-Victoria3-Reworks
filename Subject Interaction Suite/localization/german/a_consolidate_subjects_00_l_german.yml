@@ -1,7 +1,7 @@
 ﻿l_german:
  consolidate_subject: "Klientelland konsolidieren"
  consolidate_subject_action_name: "[concept_subject] konsolidieren"
- consolidate_subject_desc: "Zwei benachbarte [Concept('concept_subject', '$concept_subjects$')] werden zu einem einzigen [concept_country] zusammengeführt. Beide Klientelländer müssen niedrige [concept_autonomy]- und [concept_liberty_desire]-Werte haben. Beide Klientelländer müssen eine gemeinsame [Concept('concept_primary_cultures', '$concept_primary_culture$')] oder eine gemeinsame [concept_cultural_trait] haben."
+ consolidate_subject_desc: "Zwei benachbarte [Concept('concept_subject', '$concept_subjects$')] werden zu einem einzigen [concept_country] zusammengeführt. Beide Klientelländer müssen niedrige [concept_autonomy]- und [concept_liberty_desire]-Werte haben. Beide Klientelländer müssen eine gemeinsame [Concept('concept_primary_cultures', '$concept_primary_culture$')] oder eine gemeinsame [concept_discrimination_trait] haben."
  consolidate_subject_action_notification_name: "[INITIATOR_COUNTRY.GetName] konsolidiert uns"
  consolidate_subject_action_notification_desc: "[INITIATOR_COUNTRY.GetName] hat sich dafür entschieden uns mit einem anderen Klientelland zusammenzuführen."
  consolidate_subject_action_notification_third_party_name: "[INITIATOR_COUNTRY.GetName] führt Klientelländer zusammen."
@@ -17,7 +17,7 @@
  consolidate_subject_dominion_type_laws_tt: "[GetLawType('law_parliamentary_republic').GetName], [GetLawType('law_presidential_republic').GetName], oder [GetLawType('law_council_republic').GetName]"
  consolidate_subject_union_type_tt: "[SCOPE.sCountry('target_country').GetName] ist eine [GetSubjectType('subject_type_personal_union').GetName] und:"
  consolidate_subject_primary_culture_tt: "Eine der [concept_primary_cultures] der Klientelländer ist: [SCOPE.sCountry('target_country').GetPrimaryCulturesDesc]"
- consolidate_subject_acceptance_tt: "Der [concept_overlord] hat Pan-Nationalismus oder Zivilisierungsmission erforscht, und alle [concept_primary_cultures] des Klientellandes müssen mindestens eine [concept_cultural_trait] teilen und mindestens @acceptance_status_4! $second_rate_citizen$ [concept_acceptance_status] haben."
+ consolidate_subject_acceptance_tt: "Der [concept_overlord] hat Pan-Nationalismus oder Zivilisierungsmission erforscht, und alle [concept_primary_cultures] des Klientellandes müssen mindestens eine [concept_discrimination_trait] teilen und mindestens @acceptance_status_4! $second_rate_citizen$ [concept_acceptance_status] haben."
  consolidate_subject_multicultural_tt: "Der [concept_overlord] hat Pan-Nationalismus oder Zivilisierungsmission erforscht, die [concept_primary_cultures] des Ziel-Klientellandes hat eine Gemeinsamkeit mit der [concept_primary_cultures] des aufnehmenden Klientellandes, and das andere Klientelland hat Menschenrechte und Korporatismus erforscht, und hat [GetLawType('law_multicultural').GetName] verabschiedet."
  
  alert_overlord_can_consolidate_subject_name: "[GetDiplomaticActionType('consolidate_subject').GetName] verfügbar für [SCOPE.GetRootScope.GetCountry.GetName]"

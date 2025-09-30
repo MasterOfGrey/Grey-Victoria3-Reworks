@@ -25,8 +25,8 @@
  setting_balanced_merge_desc: "Дипломатическое действие: Слияние [concept_subject] [Concept('concept_country', '$concept_countries$')] сбалансировано для обычной игры."
  setting_cheat_merge: "Merge Subject — это мошенничество"
  setting_cheat_merge_desc: "Дипломатическое действие: Merge [concept_subject] [Concept('concept_country', '$concept_countries$')] — мощный чит."
- setting_disabled_merge: "Тема слияния отключена" #deepl:354449469
- setting_disabled_merge_desc: "Дипломатическое действие: Слияние [concept_subject] [Concept('concept_country', '$concept_countries$')] недоступно." #deepl:3670147245
+ setting_disabled_merge: "Интеграция предмета с ограниченными возможностями" #deepl:2534013759
+ setting_disabled_merge_desc: "Дипломатическая акция: Интегрировать [concept_subject] [Concept('concept_country', '$concept_countries$')] недоступно." #deepl:3393539891
  DIPLOMATIC_ACCEPTANCE_BREAK_FREE: "Они преследуют [concept_ai_strategy] из #v $ai_strategy_subject_break_free$#!"
  DIPLOMATIC_ACCEPTANCE_STRENGTHEN_SELF: "Они преследуют [concept_ai_strategy] из #v $ai_strategy_subject_strengthen_self$#!"
  DIPLOMATIC_ACCEPTANCE_MAINTAIN_AUTONOMY: "Они преследуют [concept_ai_strategy] из #v $ai_strategy_subject_maintain_autonomy$#!"

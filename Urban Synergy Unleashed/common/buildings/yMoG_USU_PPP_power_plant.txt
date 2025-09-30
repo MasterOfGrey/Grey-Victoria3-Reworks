@@ -1,7 +1,7 @@
 ﻿building_power_plant = {
 	building_group = bg_power
 	icon = "gfx/interface/icons/building_icons/power_plant.dds"
-	levels_per_mesh = 5
+	levels_per_mesh = 50
 	
 	city_type = city
 	
@@ -19,11 +19,71 @@
 	
 	possible = {
 		owner = {
-			NOT = { has_law = law_type:law_industry_banned } 
+			NOT = { has_law_or_variant = law_type:law_industry_banned } 
 		}
 	}
 	
 	ownership_type = self
+	
+	ai_value = {		# scope is state the building is located in
+		value = define:NAI|PRODUCTION_BUILDING_BASE_VALUE	# default value
+		
+		if = {
+			limit = {
+				owner = { NOT = { has_technology_researched = PPP_tech_hv_power } }
+				exists = b:building_power_plant
+				usu_calculate_building_good_ai_value_profit_adjustment = {
+					building = building_power_plant
+					good = electricity
+				#	employees_per_level = 2000 # DO NOT PASS UNUSED VALUES
+					fallback_production = 150
+				}
+			}
+			subtract = scope:result
+		}
+		else_if = {
+			limit = {	# With HV power - encourage building where the fuel is cheap
+				owner = { has_technology_researched = PPP_tech_hv_power }
+				exists = b:building_power_plant
+			}
+			if = {
+				limit = {
+					is_production_method_active = {		# Check coal first for efficiency
+						building_type = building_power_plant
+						production_method = pm_coal-fired_plant
+					}
+				}
+				subtract = {
+					value = mog_coal_value
+					divide = g:coal.base_price
+					multiply = 1000
+				}
+			}
+			else_if = {
+				limit = {
+					is_production_method_active = {
+						building_type = building_power_plant
+						production_method = pm_oil-fired_plant
+					}
+				}
+				subtract = {
+					value = mog_oil_value
+					divide = g:oil.base_price
+					multiply = 1000
+				}
+			}
+			if = {
+				limit = {
+					market = {
+						mg:ppp_hv_power ?= {
+							market_goods_cheaper > 0.01
+						}
+					}
+				}
+				subtract = 99999999999	# (Subtracted) Kill it dead, stop building stuff that's not needed.
+			}
+		}
+	}
 	
 	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_monuments.dds"
 }
@@ -56,7 +116,7 @@ usu_building_hydro_power_plant = {
 	
 	possible = {
 		owner = { 
-			NOT = { has_law = law_type:law_industry_banned } 
+			NOT = { has_law_or_variant = law_type:law_industry_banned } 
 		}
 	}
 	

@@ -1,8 +1,10 @@
 ﻿# Grey's Smarter Autonomous Investment Defines
 
 NAI = {
-	# Below data is used to calculate how much weight the AI places on a production building
+	CONSTRUCTION_MAX_NUM_PRODUCTION_BUILDING_CONSTRUCTIONS_SCALED_MAX = 9999	# 999 # CONSTRUCTION_MAX_NUM_PRODUCTION_BUILDING_CONSTRUCTIONS_SCALED can't be higher than this
+	CONSTRUCTION_MAX_NUM_GOVERNMENT_BUILDING_CONSTRUCTIONS_SCALED_MAX = 999 	# 99 # CONSTRUCTION_MAX_NUM_GOVERNMENT_CONSTRUCTIONS_SCALED can't be higher than this
 	
+	# Below data is used to calculate how much weight the AI places on a production building
 	
 	# BASIC BUILDING WEIGHTS
 	PRODUCTION_BUILDING_BASE_VALUE = 500 # 1000					# If no ai_value is scripted in the building

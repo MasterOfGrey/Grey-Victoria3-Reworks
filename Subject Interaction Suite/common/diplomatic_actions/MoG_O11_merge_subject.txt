@@ -54,12 +54,8 @@ merge_subject = {
 			scope:target_country.relations:root >= 60
 			scope:target_country = {
 				liberty_desire < 25
-				OR = {
-					has_diplomatic_pact = { who = root type = puppet }
-					has_diplomatic_pact = { who = root type = vassal }
-					has_diplomatic_pact = { who = root type = colony }
-					has_diplomatic_pact = { who = root type = personal_union }
-				}
+				is_direct_subject_of = root
+				can_decrease_autonomy = no # Must already be at the lowest autonomy level
 			}
 			NAND = {
 				has_journal_entry = je_peru_bolivia
@@ -108,8 +104,10 @@ merge_subject = {
 					if = {
 						limit = { 
 							scope:target_country = {
-								is_ai = no												# Target country is player
-								has_diplomatic_pact = { who = root type = colony }		# AI will not eat its own Colonies but the player can
+								OR = {
+									is_ai = no												# Target country is player
+									has_diplomatic_pact = { who = root type = colony }		# AI will not eat its own Colonies but the player can
+								}
 							}
 						}
 						multiply = 0
@@ -144,8 +142,10 @@ merge_subject = {
 					if = {
 						limit = { 
 							scope:target_country = {
-								is_ai = no												# Target country is player
-								has_diplomatic_pact = { who = root type = colony }		# AI will not eat its own Colonies but the player can
+								OR = {
+									is_ai = no												# Target country is player
+									has_diplomatic_pact = { who = root type = colony }		# AI will not eat its own Colonies but the player can
+								}
 							}
 						}
 						multiply = 0
@@ -241,28 +241,28 @@ merge_subject = {
 				if = {
 					limit = {
 						has_attitude = {
-								who = scope:actor
-								attitude = loyal
-							}                           
-						}
+							who = scope:actor
+							attitude = loyal
+						}                           
+					}
 					value = 50
 				}
 				else_if = {
 					limit = {
 						has_attitude = {
-								who = scope:actor
-								attitude = defiant
-							}                           
-						}
+							who = scope:actor
+							attitude = defiant
+						}                           
+					}
 					value = -100
 				}
 				else_if = {
 					limit = {
 						has_attitude = {
-								who = scope:actor
-								attitude = rebellious
-							}                           
-						}
+							who = scope:actor
+							attitude = rebellious
+						}                           
+					}
 					value = -1000
 				}
 			}
@@ -415,7 +415,10 @@ merge_subject = {
 						scope:target_country = {
 							NOT = {
 								any_primary_culture = {
-									shares_non_heritage_trait_with_any_primary_culture = scope:actor
+									OR = {
+										shares_language_trait_group_with_any_primary_culture = scope:actor
+										shares_tradition_trait_with_any_primary_culture = scope:actor
+									} # prev: shares_non_heritage_trait_with_any_primary_culture = scope:actor
 								}
 							}
 						}

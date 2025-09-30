@@ -19,7 +19,7 @@ forced_border_opening = {
 			NOT = { 
 				is_country_type = decentralized
 				is_diplomatic_play_enemy_of = root
-				has_law = law_type:law_no_migration_controls 
+				has_law_or_variant = law_type:law_no_migration_controls 
 			}
 			is_subject_of = root
 		}

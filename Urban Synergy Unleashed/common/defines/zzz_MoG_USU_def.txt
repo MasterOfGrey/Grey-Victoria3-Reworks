@@ -1,12 +1,11 @@
-﻿NEconomy = {
-	# Overwrites the railways fix in zzz_MoG_SEA_def.txt to return normal price behaviours.
-	# GOODS_SHORTAGE_PENALTY_THRESHOLD = 0.5		# If supply / demand is lower than this, start applying output penalties, by default this should be ( 1 / BUY_SELL_DIFF_AT_MAX_FACTOR )        
-}
-
+﻿# Overwrites stuff in zzz_MoG_SEA_def.txt for anything that might need tweaking specific to USU.
 NAI = {
+	### (Old - for reference)
 	# Ports are no longer government buildings and react to market conditions, AI should never downgrade them intentionally - and if they're not privatised, then the AI should be using the convoys.
 	# AI doesn't subsidise ports anyway so there's no risk of unplanned government expense burdening small nations saddled with big ports.
-	MONEY_SPENDING_SUPPLY_NETWORK_EXCESSIVE_CONVOYS = 9999999 # 2000	# If AI has more than this amount of free convoys, it's fine to downsize ports to save money
+	# MONEY_SPENDING_SUPPLY_NETWORK_EXCESSIVE_CONVOYS = 9999999 # 2000	# If AI has more than this amount of free convoys, it's fine to downsize ports to save money
+	## Since vanilla made ports non-government, this define appears to impact the build logic for some unknown reason. Either way, this is not necessary to change anymore since it now appears to have either an accidental, or entirely different function to how it is labelled.
+	###
 	
 	# This is essentially a modifier for AI to decide if it wants to subsidise Ports, River Ports, Railways, and such like - we're breaking this relationship so it's only harmful to subsidise these buildings. 
 	SUBSIDIZE_SHARE_OF_INFRA_FACTOR = 0 # 4000		# How highly is subsidization of a building valued if it provides 100% of the infrastructure in the state region
@@ -16,4 +15,16 @@ NAI = {
 	OWNER_BUILDING_LOCATION_HAS_OWNER_BUILDING_MULT = 1.2 # 2.0		# Multiply owner building location score by this for any state which already has the requisite owner building type
 	OWNER_BUILDING_LOCATION_CAPITAL_MULT = 1.5 # 2.0				# Multiply owner building location score by this for our capital
 	OWNER_BUILDING_LOCATION_NOT_HOMELANDS_MULT = 0.9 # 0.5			# Multiply owner building location score by this if the state isn't a homeland of the country's primary cultures
+}
+
+# Because this leads to a surplus of convoys in major powers, we can afford to make it cost more to ship big armies around.
+NMilitary = {
+	BASE_BATTALION_CONVOY_COST = 16 # 10				# Cost in convoys per Battalion for shipping lanes
+}
+NEconomy = {
+	SHIPPING_LANE_CONVOY_COST_SCALING = 0.2 # 0.1				# The cost for a shipping lane for each node beyond the first. So at 0.1 it goes 1.0, 1.1, 1.2 and so on.
+	OVERSEAS_INFRASTRUCTURE_CONVOY_COST_MULTIPLIER = 1.5 # 2	# Convoy cost for each infrastructure usage in overseas state for port connection shipping lanes
+	
+	## These are related but don't appear to need changing - avoid overwriting to minimise compatibility profile surface area:
+	# GOODS_DEFAULT_CONVOY_COST_MULTIPLIER = 1				# The convoy cost of shipping a single unit of goods (can be overriden in defines)
 }

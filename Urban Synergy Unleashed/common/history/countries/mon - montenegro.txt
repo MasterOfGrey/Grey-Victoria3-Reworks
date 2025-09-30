@@ -1,0 +1,94 @@
+﻿COUNTRIES = {
+	c:MON ?= {
+		effect_starting_technology_tier_3_tech = yes
+		ig:ig_armed_forces ?= {
+			add_ruling_interest_group = yes
+		}
+		ig:ig_landowners ?= {
+			add_ruling_interest_group = yes
+		}
+		activate_law = law_type:law_theocracy
+		activate_law = law_type:law_state_religion
+		activate_law = law_type:law_national_supremacy
+		activate_law = law_type:law_tenant_farmers
+		activate_law = law_type:law_traditionalism
+		activate_law = law_type:law_censorship
+		activate_law = law_type:law_consumption_based_taxation
+		activate_law = law_type:law_women_in_the_fields
+		activate_law = law_type:law_chiefs_distribute_aid
+		set_institution_investment_level = {
+			institution = institution_social_security
+			level = 4
+		}	
+		if = { 
+			limit = {
+				has_dlc_feature = ip3_content
+			}
+			add_journal_entry = {
+				type = je_montenegrin_raiding
+			}
+			add_journal_entry = {
+				type = je_mon_state_formation
+			}
+			add_journal_entry = {
+				type = je_mon_serb_unity
+			}
+			add_modifier = {
+				name = modifier_women_work_men_fight
+				days = stupidly_long_modifier_time
+				is_decaying = yes
+			}
+			add_modifier = {
+				name = modifier_lonely_mountain
+				years = 30
+				is_decaying = yes
+			}
+			add_modifier = {
+				name = modifier_no_minting
+				days = stupidly_long_modifier_time
+			}
+			add_modifier = {
+				name = mon_taxes_what_are
+				days = very_long_modifier_time
+				is_decaying = yes
+			}
+			trigger_event = {
+				id = mon_state_formation.15
+			}
+			set_tax_level = very_low
+			set_military_wage_level = low
+			set_import_tariff_level = { 
+				goods = g:usu_logistics # USU - montenagro is landlocked, their TC needs logistics, not Merchant Marine
+				level = max_subventions
+			}	
+			set_import_tariff_level = { 
+				goods = g:small_arms
+				level = max_subventions
+			}
+			set_import_tariff_level = { 
+				goods = g:artillery
+				level = high_subventions
+			}
+			set_import_tariff_level = { 
+				goods = g:clothes
+				level = high_subventions
+			}
+			set_import_tariff_level = { 
+				goods = g:liquor
+				level = high_subventions
+			}
+			set_import_tariff_level = { 
+				goods = g:fruit
+				level = high_subventions
+			}
+			random_scope_state = { #gives infra needed to do anything and still access world market
+				add_modifier = {
+					name = mon_strong_backs
+					years = 40
+					is_decaying = yes
+				}
+			}
+		}
+	}
+}
+ 

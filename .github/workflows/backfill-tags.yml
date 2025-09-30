@@ -1,0 +1,206 @@
+# .github/workflows/backfill-mod-version-tags.yml
+name: Backfill Mod Version Tags
+
+on:
+  workflow_dispatch:
+    inputs:
+      ref:
+        description: "Branch or ref to scan (e.g., refs/heads/main)"
+        required: false
+        default: "refs/heads/main"
+      since:
+        description: 'Only scan commits since this date (e.g., "2024-01-01"), empty = all history'
+        required: false
+        default: ""
+      limit:
+        description: "Max commits to scan (to avoid rate limits). 0 = no limit"
+        required: false
+        default: "0"
+      dry_run:
+        description: "If true, only print what would be tagged"
+        required: false
+        default: "true"  # start safe
+
+permissions:
+  contents: write  # needed to create tags
+
+jobs:
+  backfill:
+    runs-on: ubuntu-latest
+    env:
+      # Use the exact same pattern & tagging rules as the auto-tagger:
+      # COMMIT_PATTERN: '^(?<subject>(?<mod>.+?)\s+v(?<ver>\d+(?:\.\d+)*(?:[-+][A-Za-z0-9._-]+)?)(?:\s+\((?<qual>[^)]+)\))?)$'
+      COMMIT_PATTERN: '^(?<subject>(?<mod>.+?)\s+v(?<ver>\d+(?:\.\d+)*(?:[A-Za-z][A-Za-z0-9]*)?(?:[-+][A-Za-z0-9._-]+)?)(?:\s+\((?<qual>[^)]+)\))?)$'
+      TAG_FORMAT: '${subject}'
+    steps:
+      - name: Checkout full history & tags
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0   # full history
+          fetch-tags: true
+          persist-credentials: false  # we'll push with your PAT
+
+      - name: Configure PAT for pushes
+        run: |
+          git config user.name "${{ github.actor }}"
+          git config user.email "${{ github.actor }}@users.noreply.github.com"
+          git remote set-url origin "https://x-access-token:${{ secrets.TEMP_REPO_WRITE_TOKEN }}@github.com/${{ github.repository }}.git"
+
+      - name: Backfill tags over history
+        uses: actions/github-script@v8
+        with:
+          github-token: ${{ secrets.TEMP_REPO_WRITE_TOKEN }}
+          script: |
+            const { execSync } = require("node:child_process");
+            function sh(cmd) { return execSync(cmd, { encoding: "utf8" }).trim(); }
+
+            // Inputs
+            // const ref    = (core.getInput("ref") || "refs/heads/main").trim();
+            // const since  = (core.getInput("since") || "").trim();
+            // const limit  = parseInt(core.getInput("limit") || "0", 10);
+            // const dryRun = (core.getInput("dry_run") || "true").toLowerCase() === "true";
+            // Actual Inputs (read workflow_dispatch inputs from context.payload.inputs)
+            const wi = context.payload.inputs || {};
+            const ref    = (wi.ref && wi.ref.trim()) || "refs/heads/main";
+            const since  = (wi.since && wi.since.trim()) || "";
+            const limit  = Number.isFinite(parseInt(wi.limit, 10)) ? parseInt(wi.limit, 10) : 0;
+            // const dryRun = String(wi.dry_run ?? "true").toLowerCase() === "true";
+            // Explicit boolean parsing with validation
+            let dryRaw = (wi.dry_run ?? "true").toLowerCase();
+            if (dryRaw !== "true" && dryRaw !== "false") {
+              throw new Error(`Invalid input for dry_run: "${dryRaw}". Use "true" or "false".`);
+            }
+            const dryRun = dryRaw === "true";
+            core.info(`Inputs -> ref="${ref}" since="${since}" limit=${limit} dry_run=${dryRun}`);
+
+            // ---- Pattern & sanitiser (same as auto-tagger) ----
+            const pattern = new RegExp(process.env.COMMIT_PATTERN);
+            const tagFormat = process.env.TAG_FORMAT;
+            function sanitizeTag(raw) {
+              let t = raw.trim()
+                .replace(/\s+/g, "-")
+                .replace(/\//g, "-")
+                .replace(/[^0-9A-Za-z._\-+()]/g, "-")
+                .replace(/-+/g, "-")
+                .replace(/^[-.]+|[-.]+$/g, "");
+              if (!t) throw new Error(`Invalid tag from "${raw}"`);
+              return t;
+            }
+
+            // ---- Ensure ref exists locally ----
+            try { sh(`git rev-parse --verify ${ref}`); }
+            catch {
+              core.info(`Fetching ${ref} from origin...`);
+              sh(`git fetch origin ${ref}:${ref}`);
+            }
+
+            // ---- Build commit list (oldest -> newest) ----
+            const args = [];
+            if (since) args.push(`--since="${since}"`);
+            args.push(ref);
+            const revList = sh(`git rev-list ${args.join(" ")}`);
+            if (!revList) { core.info("No commits to scan."); return; }
+            let shas = revList.split("\n").reverse();
+            if (limit > 0 && shas.length > limit) {
+              core.info(`Limiting to first ${limit} of ${shas.length} commits`);
+              shas = shas.slice(0, limit);
+            }
+
+            // ---- Scan & collect tags to create ----
+            const planned = new Map(); // tagName -> { sha, subject }
+            let created = 0, skippedNoMatch = 0, skippedAlreadyTagged = 0;
+
+            // Use local tags (fetched with actions/checkout fetch-tags: true) as our "remote view".
+            function localTagExists(name) {
+              try { sh(`git rev-parse -q --verify "refs/tags/${name}"`); return true; } catch { return false; }
+            }
+
+            // Does ANY tag for this base already exist? (base, -a, -b, -aa, ...)
+            // If yes, we skip creating more for this base.
+            function anyLocalTagForBase(base) {
+              const out = sh(`git tag -l "${base}*"`);
+              return out && out.length > 0;
+            }
+
+            // Suffix maker: 0 -> "", 1 -> "-a", 2 -> "-b", ..., 26 -> "-z", 27 -> "-aa", etc.
+            function letterSuffix(n) {
+              if (n <= 0) return "";
+                // shift everything up by one: 1 => b, 2 => c, ...
+                n++; 
+              let s = "";
+              while (n > 0) { n--; s = String.fromCharCode(97 + (n % 26)) + s; n = Math.floor(n / 26); }
+              return s;
+            }
+
+            // Find the next free name considering BOTH local tags and what's already planned in this run.
+            function nextAvailableNameLocal(base) {
+              let n = 0;
+              for (;;) {
+                const candidate = base + letterSuffix(n);
+                if (!localTagExists(candidate) && !planned.has(candidate)) return candidate;
+                n++;
+              }
+            }
+
+            for (const sha of shas) {
+              const subject = sh(`git show -s --format=%s ${sha}`);
+              const m = subject.match(pattern);
+              if (!m) { skippedNoMatch++; continue; }
+
+              const groups = m.groups || {};
+              let rawTag = tagFormat.replace(/\$\{([^}]+)\}/g, (_, name) => groups[name] ?? "");
+              if (!rawTag) rawTag = subject;
+
+              const baseName = sanitizeTag(rawTag);
+
+              // RULE: if ANY tag already exists for this base (base or suffixed), skip entirely.
+              if (anyLocalTagForBase(baseName)) {
+                skippedAlreadyTagged++;
+                core.info(`SKIP    : Base already tagged remotely "${baseName}*" -> ${sha} (${subject})`);
+                continue;
+              }
+
+              if (dryRun) {
+                const preview = nextAvailableNameLocal(baseName);
+                planned.set(preview, { sha, subject });  // reserve it so later duplicates get -a, -b, ...
+                core.notice(`[DRY RUN] Would create tag "${preview}" -> ${sha} (${subject})`);
+                continue;
+              }
+
+              // No existing tag for this base -> assign the first free name for this run
+              const finalName = nextAvailableNameLocal(baseName);
+              planned.set(finalName, { sha, subject });
+            }
+
+            // ---- Create locally & push (batched) ----
+            if (!dryRun && planned.size) {
+              // Create tags locally
+              for (const [name, { sha, subject }] of planned.entries()) {
+                sh(`git tag --force "${name}" ${sha}`);
+                created++;
+                core.info(`Tagged locally: ${name} -> ${sha} (${subject})`);
+              }
+              // Push in chunks
+                const entries = Array.from(planned.keys());
+                const chunkSize = 50;
+                for (let i = 0; i < entries.length; i += chunkSize) {
+                  const chunk = entries.slice(i, i + chunkSize)
+                    .map(name => `refs/tags/${name}:refs/tags/${name}`);
+                  sh(`git push origin ${chunk.join(' ')}`);
+                  core.notice(`Pushed ${chunk.length} tags`);
+                }
+            }
+
+            // ---- Summary ----
+            const suffixedCount = Array.from(planned.keys()).filter(n => /-[a-z]+$/.test(n)).length;
+            core.summary
+              .addHeading("Backfill summary")
+              .addRaw(`Ref scanned: ${ref}\n`)
+              .addRaw(`Since      : ${since || "(none)"}\n`)
+              .addRaw(`Dry run    : ${dryRun}\n`)
+              .addRaw(`Total scanned: ${shas.length}\n`)
+              .addRaw(`Created tags: ${created}\n`)
+              .addRaw(`Skipped (already tagged base): ${skippedAlreadyTagged}\n`)
+              .addRaw(`Skipped (no match): ${skippedNoMatch}\n`)
+              .addRaw(`Suffixed (a/b/c/...): ${suffixedCount}\n`)
+              .write();

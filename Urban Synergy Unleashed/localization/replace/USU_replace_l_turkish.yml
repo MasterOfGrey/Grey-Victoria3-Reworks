@@ -1,16 +1,19 @@
 ﻿l_turkish:
-  # WCA 
+ # WCA
  alert_wasted_construction_name: "Kullanılmamış [Concept('concept_construction', 'İnşaatı')] var"
  alert_wasted_construction_hint: "Kullanılmamış [Concept('concept_construction', 'İnşaatı')] var"
  alert_wasted_construction_action: "İnşaat Paneli"
  wasted_construction_setting_name: "Kullanılmamış İnşaat"
-  
- pm_electric_trains: "DC Elektrikli Trenler" #NT!
- pm_electric_trains_principle_transport_3: "Ortak DC Elektrikli Trenler" #NT!
- pm_electric_streetlights: "Ay Işığı Kuleleri" #NT!
-  
- pm_canal: "Buharla Çalışan Kilitler" #NT!
-  
+ 
+ pm_electric_trains: "DC Elektrikli Trenler"
+ pm_electric_trains_principle_transport_3: "Ortak DC Elektrikli Trenler"
+ pm_electric_streetlights: "Ay Işığı Kuleleri"
+ 
+ pm_canal: "Buharla Çalışan Kilitler"
+ company_panama_suez_company: "Panama-Süveyş Kanalı Şirketi" #deepl:432235005
+ 
  pm_no_public_transport: "Toplu Taşıma Yok"
  pm_public_trams: "Atlı tramvaylar"
  pm_public_motor_carriages: "Şehir Otobüsleri"
+ 
+ building_power_plant: "Termik Santral" #deepl:3279637597

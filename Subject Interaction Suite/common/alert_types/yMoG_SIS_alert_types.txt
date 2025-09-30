@@ -70,6 +70,7 @@ overlord_can_consolidate_subject = {
 				OR = {
 					is_subject_type = subject_type_vassal
 					is_subject_type = subject_type_puppet
+					is_subject_type = subject_type_crown_land
 					is_subject_type = subject_type_protectorate # temporary
 				}
 			}
@@ -81,9 +82,9 @@ overlord_can_consolidate_subject = {
 				custom_tooltip = {
 					text = consolidate_subject_dominion_type_laws_tt
 					OR = {
-						has_law = law_type:law_parliamentary_republic
-						has_law = law_type:law_presidential_republic
-						has_law = law_type:law_council_republic
+						has_law_or_variant = law_type:law_parliamentary_republic
+						has_law_or_variant = law_type:law_presidential_republic
+						has_law_or_variant = law_type:law_council_republic
 					}
 				}
 			}
@@ -159,7 +160,10 @@ overlord_can_consolidate_subject = {
 						scope:consolidation_subject = {
 							any_primary_culture = {
 								count = all
-								shares_trait_with_any_primary_culture = scope:recipient_subject
+								OR = {
+									shares_language_trait_group_with_any_primary_culture = scope:recipient_subject
+									shares_tradition_trait_with_any_primary_culture = scope:recipient_subject
+								} # prev: shares_trait_with_any_primary_culture = scope:recipient_subject
 								scope:recipient_subject = {
 									cultural_acceptance_base = { target = PREV value >= acceptance_status_4 }
 								}
@@ -172,9 +176,13 @@ overlord_can_consolidate_subject = {
 					text = consolidate_subject_multicultural_tt
 					AND = {
 						any_primary_culture = {
-							shares_trait_with_any_primary_culture = scope:consolidation_subject
+							OR = {
+								shares_heritage_trait_group_with_any_primary_culture = scope:consolidation_subject
+								shares_language_trait_group_with_any_primary_culture = scope:consolidation_subject
+								shares_tradition_trait_with_any_primary_culture = scope:consolidation_subject
+							} # prev: shares_trait_with_any_primary_culture = scope:consolidation_subject
 						}
-						has_law = law_type:law_multicultural
+						has_law_or_variant = law_type:law_multicultural
 						has_technology_researched = corporatism
 						has_technology_researched = human_rights
 						overlord = {

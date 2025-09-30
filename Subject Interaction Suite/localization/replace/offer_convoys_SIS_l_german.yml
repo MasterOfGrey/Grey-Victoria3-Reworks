@@ -1,0 +1,14 @@
+﻿l_german:
+
+ occ_offer_convoys: "Erhöhung des Konvoi-Beitrags" #deepl:2913419027
+ occ_offer_convoys_desc: "Erhöht den Konvoi-Beitrag des [concept_subject] zu seinem [concept_market_owner] [concept_overlord] ." #deepl:1766763354
+ occ_offer_convoys_action_notification_name: "[INITIATOR_COUNTRY.GetName] erhöht den Konvoi-Beitrag" #deepl:3624303288
+ occ_offer_convoys_action_notification_desc: "[INITIATOR_COUNTRY.GetName] hat angeboten, ihre Konvoibeiträge zu erhöhen." #deepl:1100390230
+ occ_offer_convoys_action_propose_name: "$occ_offer_convoys$" #deepl:1567265931
+ occ_offer_convoys_action_break_name: "Erhöhte Konvoi-Beiträge stornieren" #deepl:2418936819
+ occ_offer_convoys_pact_desc: "[SCOPE.GetRootScope.GetDiplomaticPact.GetFirstCountry.GetName] bietet an, die Konvoibeiträge auf [SCOPE.GetRootScope.GetDiplomaticPact.GetSecondCountry.GetName] zu erhöhen." #deepl:2532270182
+ occ_offer_convoys_action_notification_break_name: "[INITIATOR_COUNTRY.GetName] gestrichene erhöhte Konvoibeiträge" #deepl:2309048301
+ occ_offer_convoys_action_notification_break_desc: "[INITIATOR_COUNTRY.GetName] hat die Konvoi-Beiträge wieder auf ihr reguläres Niveau gebracht." #deepl:2864753228
+ 
+ TRIGGER_COUNTRY_EXCESS_CONVOY_SURPLUS_PERCENT_GREATER_THAN: "Der Überschuss [concept_convoys] nach der Erhöhung ist #b nicht#! größer als #BOLD 0%#! (derzeit: [ROOT.GetCountry.MakeScope.ScriptValue('excess_convoy_surplus_percent')|v%])" #deepl:3808472463
+ TRIGGER_COUNTRY_CONVOY_CONTRIBUTION_LESS_THAN_MAX: "Gesamt @convoys![Nbsp] [concept_convoys] Der Beitrag zu [concept_market_owner] nach der Erhöhung darf #b nicht#! größer oder gleich #BOLD 95%#! sein (derzeit: [ROOT.GetCountry.GetModifier.GetValueFor('country_convoy_contribution_to_market_owner_add')|v%0] + #v 30%#! = [ROOT.GetCountry.MakeScope.ScriptValue('after_increase_contribution_percent')|v%0])" #deepl:3830302215

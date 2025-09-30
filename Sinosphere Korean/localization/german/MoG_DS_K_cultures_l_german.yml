@@ -1,18 +1,20 @@
 ﻿l_german:
- yamatos: "Yamato" #NT!
- yamato_decision: "Umfassen Sie die Yamato" #NT!
- yamato_decision_desc: "Mit unserer neuen Aussichten über die nationale Identität und unseres Einflusses in Japan ist es an der Zeit, selbst diejenigen, die sich durch unsere gemeinsame Geschichte des Umgangs mit Sinesese -Hegemonie zu befassen haben, zu nutzen." #NT!
- sino: "Sino" #NT!
- sino_decision: "Umfassen Sie die Sinosphäre" #NT!
- sino_decision_desc: "Mit unserer neuen Aussichten über die nationale Identität ist es Zeit, diejenigen zu umarmen, die in unserer Geschichte der Sinnesehegemonie geteilt haben." #NT!
- No-See: "Nein, sehen Sie diesen Namen" #NT!
- deeper_viet.1.t: "Der Yamato wurde umgewaltet" #NT!
- deeper_viet.1.d: "Die Sinosphäre umfasst die Yamato, unabhängig davon, ob sie sie anerkennen oder nicht. Die offenen Arme der Vorfahren werden sie willkommen heißen." #NT!
- deeper_viet.1.f: ""Die Japaner sind zu stark, um sich von unserer großen Vision für die Welt abzuheben."" #NT!
- deeper_viet.1.a: "Huzzah!" #NT!
- deepersinosphere_viet: "Die Japaner werden unter kulturellem Ausschluss akzeptiert" #NT!
- deeper_japan.1.t: "Neue Brüder umarmten sich" #NT!
- deeper_japan.1.d: "Der Aufstieg unserer Kultur umfasst diejenigen, die unsere Erfahrungen teilen, auch wenn sie nicht genauso aussehen wie wir. Die offenen Arme der Vorfahren werden sie willkommen heißen." #NT!
- deeper_japan.1.f: ""Solange wir vereint sind, sind wir die größte Macht der Welt."" #NT!
- deeper_japan.1.a: "Huzzah!" #NT!
- deepersinosphere_japan: "Die Vietnamesen und die Mandschu werden unter kulturellem Ausschluss akzeptiert" #NT!
+ yamatos: "Yamato"
+ yamato_decision: "Umfassen Sie die Yamato"
+ yamato_decision_desc: "Mit unserer neuen Aussichten über die nationale Identität und unseres Einflusses in Japan ist es an der Zeit, selbst diejenigen, die sich durch unsere gemeinsame Geschichte des Umgangs mit Sinesese -Hegemonie zu befassen haben, zu nutzen."
+ sino: "Sino"
+ sino_decision: "Umfassen Sie die Sinosphäre"
+ sino_decision_desc: "Mit unserer neuen Aussichten über die nationale Identität ist es Zeit, diejenigen zu umarmen, die in unserer Geschichte der Sinnesehegemonie geteilt haben."
+ No-See: "Nein, sehen Sie diesen Namen"
+ deeper_viet.1.t: "Der Yamato wurde umgewaltet"
+ deeper_viet.1.d: "Die Sinosphäre umfasst die Yamato, unabhängig davon, ob sie sie anerkennen oder nicht. Die offenen Arme der Vorfahren werden sie willkommen heißen."
+ deeper_viet.1.f: ""Die Japaner sind zu stark, um sich von unserer großen Vision für die Welt abzuheben.""
+ deeper_viet.1.a: "Huzzah!"
+ deepersinosphere_viet: "Die Japaner werden unter kulturellem Ausschluss akzeptiert"
+ deeper_japan.1.t: "Neue Brüder umarmten sich"
+ deeper_japan.1.d: "Der Aufstieg unserer Kultur umfasst diejenigen, die unsere Erfahrungen teilen, auch wenn sie nicht genauso aussehen wie wir. Die offenen Arme der Vorfahren werden sie willkommen heißen."
+ deeper_japan.1.f: ""Solange wir vereint sind, sind wir die größte Macht der Welt.""
+ deeper_japan.1.a: "Huzzah!"
+ deepersinosphere_japan: "Die Vietnamesen und die Mandschu werden unter kulturellem Ausschluss akzeptiert"
+
+ tradition_yamato: "Yamato" #deepl:1996238145

@@ -30,6 +30,7 @@
 		activate_law = law_type:law_interventionism
 		activate_law = law_type:law_censorship
 		activate_law = law_type:law_colonial_exploitation
+		activate_law = law_type:law_colonial_slavery
 		activate_law = law_type:law_charitable_health_system
 		activate_law = law_type:law_national_guard		# Added National Guard because they existed in Portugal till 1847
 		activate_law = law_type:law_public_schools		# Government mandated public schools in every country for obligatory schooling, problem was funding, represented by lvl 1 institution
@@ -41,7 +42,7 @@
 			level = 2
 		}
 		
-		#ig:ig_devout = {				# Consider replacing with movement suppression if relevant movement starts in play.
+		#ig:ig_devout ?= {				# Consider replacing with movement suppression if relevant movement starts in play.
 		#	set_ig_suppression = yes
 		#}
 	}

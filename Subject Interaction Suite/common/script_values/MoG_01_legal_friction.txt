@@ -9,18 +9,18 @@
 					AND = {
 						root.first_country = {
 							OR = {
-								has_law = law_type:law_monarchy
-								has_law = law_type:law_theocracy
-								has_law = law_type:law_presidential_republic
-								has_law = law_type:law_corporate_state
+								has_law_or_variant = law_type:law_monarchy
+								has_law_or_variant = law_type:law_theocracy
+								has_law_or_variant = law_type:law_presidential_republic
+								has_law_or_variant = law_type:law_corporate_state
 							}
 						}
 						root.second_country = {
 							OR = {
-								has_law = law_type:law_monarchy
-								has_law = law_type:law_theocracy
-								has_law = law_type:law_presidential_republic
-								has_law = law_type:law_corporate_state
+								has_law_or_variant = law_type:law_monarchy
+								has_law_or_variant = law_type:law_theocracy
+								has_law_or_variant = law_type:law_presidential_republic
+								has_law_or_variant = law_type:law_corporate_state
 							}
 						}
 						root.first_country = {
@@ -37,14 +37,14 @@
 					AND = {
 						root.first_country = {
 							OR = {
-								has_law = law_type:law_presidential_republic
-								has_law = law_type:law_parliamentary_republic
+								has_law_or_variant = law_type:law_presidential_republic
+								has_law_or_variant = law_type:law_parliamentary_republic
 							}
 						}
 						root.second_country = {
 							OR = {
-								has_law = law_type:law_presidential_republic
-								has_law = law_type:law_parliamentary_republic
+								has_law_or_variant = law_type:law_presidential_republic
+								has_law_or_variant = law_type:law_parliamentary_republic
 							}
 						}
 						root.first_country = {
@@ -61,14 +61,14 @@
 					AND = {
 						root.first_country = {
 							OR = {
-								has_law = law_type:law_parliamentary_republic
-								has_law = law_type:law_council_republic
+								has_law_or_variant = law_type:law_parliamentary_republic
+								has_law_or_variant = law_type:law_council_republic
 							}
 						}
 						root.second_country = {
 							OR = {
-								has_law = law_type:law_parliamentary_republic
-								has_law = law_type:law_council_republic
+								has_law_or_variant = law_type:law_parliamentary_republic
+								has_law_or_variant = law_type:law_council_republic
 							}
 						}
 						root.first_country = {
@@ -94,24 +94,24 @@
 				OR = {
 					AND = {
 						root.first_country = {
-							has_law = law_type:law_parliamentary_republic
+							has_law_or_variant = law_type:law_parliamentary_republic
 						}
 						root.second_country = {
 							OR = {
-								has_law = law_type:law_monarchy
-								has_law = law_type:law_theocracy
+								has_law_or_variant = law_type:law_monarchy
+								has_law_or_variant = law_type:law_theocracy
 							}
 						}
 					}
 					AND = {
 						root.first_country = {
 							OR = {
-								has_law = law_type:law_monarchy
-								has_law = law_type:law_theocracy
+								has_law_or_variant = law_type:law_monarchy
+								has_law_or_variant = law_type:law_theocracy
 							}
 						}
 						root.second_country = {
-							has_law = law_type:law_parliamentary_republic
+							has_law_or_variant = law_type:law_parliamentary_republic
 						}
 					}
 				}
@@ -126,48 +126,48 @@
 				OR = {
 					AND = {
 						root.first_country = {
-							has_law = law_type:law_council_republic
+							has_law_or_variant = law_type:law_council_republic
 						}
 						root.second_country = {
 							OR = {
-								has_law = law_type:law_monarchy
-								has_law = law_type:law_theocracy
-								has_law = law_type:law_presidential_republic
+								has_law_or_variant = law_type:law_monarchy
+								has_law_or_variant = law_type:law_theocracy
+								has_law_or_variant = law_type:law_presidential_republic
 							}
 						}
 					}
 					AND = {
 						root.first_country = {
 							OR = {
-								has_law = law_type:law_monarchy
-								has_law = law_type:law_theocracy
-								has_law = law_type:law_presidential_republic
+								has_law_or_variant = law_type:law_monarchy
+								has_law_or_variant = law_type:law_theocracy
+								has_law_or_variant = law_type:law_presidential_republic
 							}
 						}
 						root.second_country = {
-							has_law = law_type:law_council_republic
+							has_law_or_variant = law_type:law_council_republic
 						}
 					}
 					AND = {
 						root.first_country = {
-							has_law = law_type:law_corporate_state
+							has_law_or_variant = law_type:law_corporate_state
 						}
 						root.second_country = {
 							OR = {
-								has_law = law_type:law_parliamentary_republic
-								has_law = law_type:law_council_republic
+								has_law_or_variant = law_type:law_parliamentary_republic
+								has_law_or_variant = law_type:law_council_republic
 							}
 						}
 					}
 					AND = {
 						root.first_country = {
 							OR = {
-								has_law = law_type:law_parliamentary_republic
-								has_law = law_type:law_council_republic
+								has_law_or_variant = law_type:law_parliamentary_republic
+								has_law_or_variant = law_type:law_council_republic
 							}
 						}
 						root.second_country = {
-							has_law = law_type:law_corporate_state
+							has_law_or_variant = law_type:law_corporate_state
 						}
 					}
 				}
@@ -187,14 +187,14 @@
 			limit = {
 				root.first_country = {
 					OR = {
-						has_law = law_type:law_state_religion
-						has_law = law_type:law_freedom_of_conscience
+						has_law_or_variant = law_type:law_state_religion
+						has_law_or_variant = law_type:law_freedom_of_conscience
 					}
 				}
 				root.second_country = {
 					OR = {
-						has_law = law_type:law_state_religion
-						has_law = law_type:law_freedom_of_conscience
+						has_law_or_variant = law_type:law_state_religion
+						has_law_or_variant = law_type:law_freedom_of_conscience
 					}
 				}
 				root.first_country = {
@@ -218,24 +218,24 @@
 				OR = {
 					AND = {
 						root.first_country = {
-							has_law = law_type:law_state_atheism
+							has_law_or_variant = law_type:law_state_atheism
 						}
 						root.second_country = {
 							OR = {
-								has_law = law_type:law_state_religion
-								has_law = law_type:law_freedom_of_conscience
+								has_law_or_variant = law_type:law_state_religion
+								has_law_or_variant = law_type:law_freedom_of_conscience
 							}
 						}
 					}
 					AND = {
 						root.first_country = {
 							OR = {
-								has_law = law_type:law_state_religion
-								has_law = law_type:law_freedom_of_conscience
+								has_law_or_variant = law_type:law_state_religion
+								has_law_or_variant = law_type:law_freedom_of_conscience
 							}
 						}
 						root.second_country = {
-							has_law = law_type:law_state_atheism
+							has_law_or_variant = law_type:law_state_atheism
 						}
 					}
 				}
@@ -255,16 +255,16 @@
 			limit = {
 				root.first_country = {
 					OR = {
-						has_law = law_type:law_hereditary_bureaucrats
-						has_law = law_type:law_appointed_bureaucrats
-						has_law = law_type:law_elected_bureaucrats
+						has_law_or_variant = law_type:law_hereditary_bureaucrats
+						has_law_or_variant = law_type:law_appointed_bureaucrats
+						has_law_or_variant = law_type:law_elected_bureaucrats
 					}
 				}
 				root.second_country = {
 					OR = {
-						has_law = law_type:law_hereditary_bureaucrats
-						has_law = law_type:law_appointed_bureaucrats
-						has_law = law_type:law_elected_bureaucrats
+						has_law_or_variant = law_type:law_hereditary_bureaucrats
+						has_law_or_variant = law_type:law_appointed_bureaucrats
+						has_law_or_variant = law_type:law_elected_bureaucrats
 					}
 				}
 				root.first_country = {
@@ -296,16 +296,16 @@
 						# Regressive laws for light friction
 						root.first_country = {
 							OR = {
-								has_law = law_type:law_traditionalism
-								has_law = law_type:law_agrarianism
-								has_law = law_type:law_industry_banned
+								has_law_or_variant = law_type:law_traditionalism
+								has_law_or_variant = law_type:law_agrarianism
+								has_law_or_variant = law_type:law_industry_banned
 							}
 						}
 						root.second_country = {
 							OR = {
-								has_law = law_type:law_traditionalism
-								has_law = law_type:law_agrarianism
-								has_law = law_type:law_industry_banned
+								has_law_or_variant = law_type:law_traditionalism
+								has_law_or_variant = law_type:law_agrarianism
+								has_law_or_variant = law_type:law_industry_banned
 							}
 						}
 						root.first_country = {
@@ -323,14 +323,14 @@
 						# Capitalist laws light friction
 						root.first_country = {
 							OR = {
-								has_law = law_type:law_interventionism
-								has_law = law_type:law_laissez_faire
+								has_law_or_variant = law_type:law_interventionism
+								has_law_or_variant = law_type:law_laissez_faire
 							}
 						}
 						root.second_country = {
 							OR = {
-								has_law = law_type:law_interventionism
-								has_law = law_type:law_laissez_faire
+								has_law_or_variant = law_type:law_interventionism
+								has_law_or_variant = law_type:law_laissez_faire
 							}
 						}
 						root.first_country = {
@@ -348,14 +348,14 @@
 						# Government laws light friction
 						root.first_country = {
 							OR = {
-								has_law = law_type:law_interventionism
-								has_law = law_type:law_command_economy
+								has_law_or_variant = law_type:law_interventionism
+								has_law_or_variant = law_type:law_command_economy
 							}
 						}
 						root.second_country = {
 							OR = {
-								has_law = law_type:law_interventionism
-								has_law = law_type:law_command_economy
+								has_law_or_variant = law_type:law_interventionism
+								has_law_or_variant = law_type:law_command_economy
 							}
 						}
 						root.first_country = {
@@ -373,14 +373,14 @@
 						# Collectivist laws light friction
 						root.first_country = {
 							OR = {
-								has_law = law_type:law_cooperative_ownership
-								has_law = law_type:law_command_economy
+								has_law_or_variant = law_type:law_cooperative_ownership
+								has_law_or_variant = law_type:law_command_economy
 							}
 						}
 						root.second_country = {
 							OR = {
-								has_law = law_type:law_cooperative_ownership
-								has_law = law_type:law_command_economy
+								has_law_or_variant = law_type:law_cooperative_ownership
+								has_law_or_variant = law_type:law_command_economy
 							}
 						}
 						root.first_country = {
@@ -408,17 +408,17 @@
 						# Regressive laws first for major friction
 						root.first_country = {
 							OR = {
-								has_law = law_type:law_traditionalism
-								has_law = law_type:law_agrarianism
-								has_law = law_type:law_industry_banned
+								has_law_or_variant = law_type:law_traditionalism
+								has_law_or_variant = law_type:law_agrarianism
+								has_law_or_variant = law_type:law_industry_banned
 							}
 						}
 						root.second_country = {
 							OR = {
-								has_law = law_type:law_interventionism
-								has_law = law_type:law_laissez_faire
-								has_law = law_type:law_cooperative_ownership
-								has_law = law_type:law_command_economy
+								has_law_or_variant = law_type:law_interventionism
+								has_law_or_variant = law_type:law_laissez_faire
+								has_law_or_variant = law_type:law_cooperative_ownership
+								has_law_or_variant = law_type:law_command_economy
 							}
 						}
 					}
@@ -426,29 +426,29 @@
 						# Regressive laws last for major friction
 						root.first_country = {
 							OR = {
-								has_law = law_type:law_interventionism
-								has_law = law_type:law_laissez_faire
-								has_law = law_type:law_cooperative_ownership
-								has_law = law_type:law_command_economy
+								has_law_or_variant = law_type:law_interventionism
+								has_law_or_variant = law_type:law_laissez_faire
+								has_law_or_variant = law_type:law_cooperative_ownership
+								has_law_or_variant = law_type:law_command_economy
 							}
 						}
 						root.second_country = {
 							OR = {
-								has_law = law_type:law_traditionalism
-								has_law = law_type:law_agrarianism
-								has_law = law_type:law_industry_banned
+								has_law_or_variant = law_type:law_traditionalism
+								has_law_or_variant = law_type:law_agrarianism
+								has_law_or_variant = law_type:law_industry_banned
 							}
 						}
 					}
 					AND = {
 						# L-F law first for major friction
 						root.first_country = {
-							has_law = law_type:law_laissez_faire
+							has_law_or_variant = law_type:law_laissez_faire
 						}
 						root.second_country = {
 							OR = {
-								has_law = law_type:law_cooperative_ownership
-								has_law = law_type:law_command_economy
+								has_law_or_variant = law_type:law_cooperative_ownership
+								has_law_or_variant = law_type:law_command_economy
 							}
 						}
 					}
@@ -456,12 +456,12 @@
 						# L-F law last for major friction
 						root.first_country = {
 							OR = {
-								has_law = law_type:law_cooperative_ownership
-								has_law = law_type:law_command_economy
+								has_law_or_variant = law_type:law_cooperative_ownership
+								has_law_or_variant = law_type:law_command_economy
 							}
 						}
 						root.second_country = {
-							has_law = law_type:law_laissez_faire
+							has_law_or_variant = law_type:law_laissez_faire
 						}
 					}
 				}
@@ -481,18 +481,18 @@
 			limit = {
 				root.first_country = {
 					OR = {
-						has_law = law_type:law_tenant_farmers
-						has_law = law_type:law_commercialized_agriculture
-						has_law = law_type:law_homesteading
-						has_law = law_type:law_collectivized_agriculture
+						has_law_or_variant = law_type:law_tenant_farmers
+						has_law_or_variant = law_type:law_commercialized_agriculture
+						has_law_or_variant = law_type:law_homesteading
+						has_law_or_variant = law_type:law_collectivized_agriculture
 					}
 				}
 				root.second_country = {
 					OR = {
-						has_law = law_type:law_tenant_farmers
-						has_law = law_type:law_commercialized_agriculture
-						has_law = law_type:law_homesteading
-						has_law = law_type:law_collectivized_agriculture
+						has_law_or_variant = law_type:law_tenant_farmers
+						has_law_or_variant = law_type:law_commercialized_agriculture
+						has_law_or_variant = law_type:law_homesteading
+						has_law_or_variant = law_type:law_collectivized_agriculture
 					}
 				}
 				root.first_country = {
@@ -516,26 +516,26 @@
 				OR = {
 					AND = {
 						root.first_country = {
-							has_law = law_type:law_serfdom
+							has_law_or_variant = law_type:law_serfdom
 						}
 						root.second_country = {
 							OR = {
-								has_law = law_type:law_tenant_farmers
-								has_law = law_type:law_commercialized_agriculture
-								has_law = law_type:law_homesteading
+								has_law_or_variant = law_type:law_tenant_farmers
+								has_law_or_variant = law_type:law_commercialized_agriculture
+								has_law_or_variant = law_type:law_homesteading
 							}
 						}
 					}
 					AND = {
 						root.first_country = {
 							OR = {
-								has_law = law_type:law_tenant_farmers
-								has_law = law_type:law_commercialized_agriculture
-								has_law = law_type:law_homesteading
+								has_law_or_variant = law_type:law_tenant_farmers
+								has_law_or_variant = law_type:law_commercialized_agriculture
+								has_law_or_variant = law_type:law_homesteading
 							}
 						}
 						root.second_country = {
-							has_law = law_type:law_serfdom
+							has_law_or_variant = law_type:law_serfdom
 						}
 					}
 				}
@@ -549,14 +549,14 @@
 			limit = {
 				root.first_country = {
 					OR = {
-						has_law = law_type:law_commercialized_agriculture
-						has_law = law_type:law_serfdom
+						has_law_or_variant = law_type:law_commercialized_agriculture
+						has_law_or_variant = law_type:law_serfdom
 					}
 				}
 				root.second_country = {
 					OR = {
-						has_law = law_type:law_commercialized_agriculture
-						has_law = law_type:law_serfdom
+						has_law_or_variant = law_type:law_commercialized_agriculture
+						has_law_or_variant = law_type:law_serfdom
 					}
 				}
 				root.first_country = {
@@ -585,16 +585,16 @@
 			limit = {
 				root.first_country = {
 					OR = {
-						has_law = law_type:law_mercantilism
-						has_law = law_type:law_protectionism
-						has_law = law_type:law_free_trade
+						has_law_or_variant = law_type:law_mercantilism
+						has_law_or_variant = law_type:law_protectionism
+						has_law_or_variant = law_type:law_free_trade
 					}
 				}
 				root.second_country = {
 					OR = {
-						has_law = law_type:law_mercantilism
-						has_law = law_type:law_protectionism
-						has_law = law_type:law_free_trade
+						has_law_or_variant = law_type:law_mercantilism
+						has_law_or_variant = law_type:law_protectionism
+						has_law_or_variant = law_type:law_free_trade
 					}
 				}
 				root.first_country = {
@@ -618,26 +618,26 @@
 				OR = {
 					AND = {
 						root.first_country = {
-							has_law = law_type:law_isolationism
+							has_law_or_variant = law_type:law_isolationism
 						}
 						root.second_country = {
 							OR = {
-								has_law = law_type:law_mercantilism
-								has_law = law_type:law_protectionism
-								has_law = law_type:law_free_trade
+								has_law_or_variant = law_type:law_mercantilism
+								has_law_or_variant = law_type:law_protectionism
+								has_law_or_variant = law_type:law_free_trade
 							}
 						}
 					}
 					AND = {
 						root.first_country = {
 							OR = {
-								has_law = law_type:law_mercantilism
-								has_law = law_type:law_protectionism
-								has_law = law_type:law_free_trade
+								has_law_or_variant = law_type:law_mercantilism
+								has_law_or_variant = law_type:law_protectionism
+								has_law_or_variant = law_type:law_free_trade
 							}
 						}
 						root.second_country = {
-							has_law = law_type:law_isolationism
+							has_law_or_variant = law_type:law_isolationism
 						}
 					}
 				}
@@ -657,16 +657,18 @@
 			limit = {
 				root.first_country = {
 					OR = {
-						has_law = law_type:law_debt_slavery
-						has_law = law_type:law_slave_trade
-						has_law = law_type:law_legacy_slavery
+						has_law_or_variant = law_type:law_debt_slavery
+						has_law_or_variant = law_type:law_slave_trade
+						has_law_or_variant = law_type:law_legacy_slavery
+						has_law_or_variant = law_type:law_colonial_slavery
 					}
 				}
 				root.second_country = {
 					OR = {
-						has_law = law_type:law_debt_slavery
-						has_law = law_type:law_slave_trade
-						has_law = law_type:law_legacy_slavery
+						has_law_or_variant = law_type:law_debt_slavery
+						has_law_or_variant = law_type:law_slave_trade
+						has_law_or_variant = law_type:law_legacy_slavery
+						has_law_or_variant = law_type:law_colonial_slavery
 					}
 				}
 				root.first_country = {
@@ -690,26 +692,28 @@
 				OR = {
 					AND = {
 						root.first_country = {
-							has_law = law_type:law_slavery_banned
+							has_law_or_variant = law_type:law_slavery_banned
 						}
 						root.second_country = {
 							OR = {
-								has_law = law_type:law_debt_slavery
-								has_law = law_type:law_slave_trade
-								has_law = law_type:law_legacy_slavery
+								has_law_or_variant = law_type:law_debt_slavery
+								has_law_or_variant = law_type:law_slave_trade
+								has_law_or_variant = law_type:law_legacy_slavery
+								has_law_or_variant = law_type:law_colonial_slavery
 							}
 						}
 					}
 					AND = {
 						root.first_country = {
 							OR = {
-								has_law = law_type:law_debt_slavery
-								has_law = law_type:law_slave_trade
-								has_law = law_type:law_legacy_slavery
+								has_law_or_variant = law_type:law_debt_slavery
+								has_law_or_variant = law_type:law_slave_trade
+								has_law_or_variant = law_type:law_legacy_slavery
+								has_law_or_variant = law_type:law_colonial_slavery
 							}
 						}
 						root.second_country = {
-							has_law = law_type:law_slavery_banned
+							has_law_or_variant = law_type:law_slavery_banned
 						}
 					}
 				}
@@ -729,16 +733,16 @@
 			limit = {
 				root.first_country = {
 					OR = {
-						has_law = law_type:law_women_own_property
-						has_law = law_type:law_women_in_the_workplace
-						has_law = law_type:law_womens_suffrage
+						has_law_or_variant = law_type:law_women_own_property
+						has_law_or_variant = law_type:law_women_in_the_workplace
+						has_law_or_variant = law_type:law_womens_suffrage
 					}
 				}
 				root.second_country = {
 					OR = {
-						has_law = law_type:law_women_own_property
-						has_law = law_type:law_women_in_the_workplace
-						has_law = law_type:law_womens_suffrage
+						has_law_or_variant = law_type:law_women_own_property
+						has_law_or_variant = law_type:law_women_in_the_workplace
+						has_law_or_variant = law_type:law_womens_suffrage
 					}
 				}
 				root.first_country = {
@@ -762,26 +766,26 @@
 				OR = {
 					AND = {
 						root.first_country = {
-							has_law = law_type:law_no_womens_rights
+							has_law_or_variant = law_type:law_no_womens_rights
 						}
 						root.second_country = {
 							OR = {
-								has_law = law_type:law_women_own_property
-								has_law = law_type:law_women_in_the_workplace
-								has_law = law_type:law_womens_suffrage
+								has_law_or_variant = law_type:law_women_own_property
+								has_law_or_variant = law_type:law_women_in_the_workplace
+								has_law_or_variant = law_type:law_womens_suffrage
 							}
 						}
 					}
 					AND = {
 						root.first_country = {
 							OR = {
-								has_law = law_type:law_women_own_property
-								has_law = law_type:law_women_in_the_workplace
-								has_law = law_type:law_womens_suffrage
+								has_law_or_variant = law_type:law_women_own_property
+								has_law_or_variant = law_type:law_women_in_the_workplace
+								has_law_or_variant = law_type:law_womens_suffrage
 							}
 						}
 						root.second_country = {
-							has_law = law_type:law_no_womens_rights
+							has_law_or_variant = law_type:law_no_womens_rights
 						}
 					}
 				}
@@ -804,14 +808,14 @@
 						# Regressive laws for light friction
 						root.first_country = {
 							OR = {
-								has_law = law_type:law_outlawed_dissent
-								has_law = law_type:law_censorship
+								has_law_or_variant = law_type:law_outlawed_dissent
+								has_law_or_variant = law_type:law_censorship
 							}
 						}
 						root.second_country = {
 							OR = {
-								has_law = law_type:law_outlawed_dissent
-								has_law = law_type:law_censorship
+								has_law_or_variant = law_type:law_outlawed_dissent
+								has_law_or_variant = law_type:law_censorship
 							}
 						}
 						root.first_country = {
@@ -829,14 +833,14 @@
 						# Progressive laws light friction
 						root.first_country = {
 							OR = {
-								has_law = law_type:law_right_of_assembly
-								has_law = law_type:law_protected_speech
+								has_law_or_variant = law_type:law_right_of_assembly
+								has_law_or_variant = law_type:law_protected_speech
 							}
 						}
 						root.second_country = {
 							OR = {
-								has_law = law_type:law_right_of_assembly
-								has_law = law_type:law_protected_speech
+								has_law_or_variant = law_type:law_right_of_assembly
+								has_law_or_variant = law_type:law_protected_speech
 							}
 						}
 						root.first_country = {
@@ -854,14 +858,14 @@
 						# Moderate laws light friction
 						root.first_country = {
 							OR = {
-								has_law = law_type:law_right_of_assembly
-								has_law = law_type:law_censorship
+								has_law_or_variant = law_type:law_right_of_assembly
+								has_law_or_variant = law_type:law_censorship
 							}
 						}
 						root.second_country = {
 							OR = {
-								has_law = law_type:law_right_of_assembly
-								has_law = law_type:law_censorship
+								has_law_or_variant = law_type:law_right_of_assembly
+								has_law_or_variant = law_type:law_censorship
 							}
 						}
 						root.first_country = {
@@ -886,14 +890,14 @@
 			limit = {
 				root.first_country = {
 					OR = {
-						has_law = law_type:law_protected_speech
-						has_law = law_type:law_outlawed_dissent
+						has_law_or_variant = law_type:law_protected_speech
+						has_law_or_variant = law_type:law_outlawed_dissent
 					}
 				}
 				root.second_country = {
 					OR = {
-						has_law = law_type:law_protected_speech
-						has_law = law_type:law_outlawed_dissent
+						has_law_or_variant = law_type:law_protected_speech
+						has_law_or_variant = law_type:law_outlawed_dissent
 					}
 				}
 				root.first_country = {
@@ -923,24 +927,24 @@
 				OR = {
 					AND = {
 						root.first_country = {
-							has_law = law_type:law_regulatory_bodies
+							has_law_or_variant = law_type:law_regulatory_bodies
 						}
 						root.second_country = {
 							OR = {
-								has_law = law_type:law_no_workers_rights
-								has_law = law_type:law_worker_protections
+								has_law_or_variant = law_type:law_no_workers_rights
+								has_law_or_variant = law_type:law_worker_protections
 							}
 						}
 					}
 					AND = {
 						root.first_country = {
 							OR = {
-								has_law = law_type:law_no_workers_rights
-								has_law = law_type:law_worker_protections
+								has_law_or_variant = law_type:law_no_workers_rights
+								has_law_or_variant = law_type:law_worker_protections
 							}
 						}
 						root.second_country = {
-							has_law = law_type:law_regulatory_bodies
+							has_law_or_variant = law_type:law_regulatory_bodies
 						}
 					}
 				}
@@ -954,14 +958,14 @@
 			limit = {
 				root.first_country = {
 					OR = {
-						has_law = law_type:law_no_workers_rights
-						has_law = law_type:law_worker_protections
+						has_law_or_variant = law_type:law_no_workers_rights
+						has_law_or_variant = law_type:law_worker_protections
 					}
 				}
 				root.second_country = {
 					OR = {
-						has_law = law_type:law_no_workers_rights
-						has_law = law_type:law_worker_protections
+						has_law_or_variant = law_type:law_no_workers_rights
+						has_law_or_variant = law_type:law_worker_protections
 					}
 				}
 				root.first_country = {

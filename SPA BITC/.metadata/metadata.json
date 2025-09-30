@@ -1,0 +1,21 @@
+{
+  "name" : "SPA + BITC Compatch",
+  "id" : "3577410223",
+  "version" : "",
+  "supported_game_version" : "",
+  "short_description" : "",
+  "tags" : [
+        "Balance",
+        "Diplomacy",
+        "Fixes",
+        "Pops",
+        "Gameplay",
+        "Warfare",
+        "ComPatch",
+        "1.10"
+    ],
+  "relationships" : [],
+  "game_custom_data" : {
+    "multiplayer_synchronized" : true
+  }
+}

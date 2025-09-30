@@ -1,7 +1,7 @@
 ﻿building_trade_center = {
 	building_group = bg_trade
 	city_type = city
-	levels_per_mesh = 10
+	levels_per_mesh = 50
 
 	lens = infrastructure
 
@@ -25,5 +25,65 @@
 
 	ownership_type = self
 
+	ai_value = {		# scope is state the building is located in
+		value = 1000	# Increased base value to match all buildings
+		
+		if = { # Greater Powers should think trade is more worthwhile.
+			limit = {
+				owner = { country_rank >= rank_value:great_power } 
+			}
+			add = 2000
+		}
+		else_if = {
+			limit = {
+				owner = { country_rank >= rank_value:major_power } 
+			}
+			add = 1000
+		}
+		else_if = {
+			limit = {
+				owner = { country_rank >= rank_value:minor_power } 
+			}
+			add = 500
+		}
+		
+		if = { # Ports should encourage trade.
+			limit = {
+				is_incorporated = yes
+				exists = b:building_port
+				NOT = { exists = b:building_trade_center }
+			}
+			add = 999999	# Yes really, if you have a port, you should prioritise kicking off trade there.
+		}
+		
+		if = { # Ports should encourage trade.
+			limit = {
+				is_incorporated = yes
+				exists = b:building_port
+			}
+			multiply = 1.25
+		}
+		else_if = { # Avoid inland states when ports are available
+			limit = {
+				market = {
+					any_scope_country = {
+						any_scope_state = {
+							is_incorporated = yes
+							exists = b:building_port
+						}
+					}
+				}
+			}
+			multiply = 0.75
+		}
+		
+		if = { # Support Free Trade
+			limit = {
+				owner = { has_law_or_variant = law_type:law_free_trade } 
+			}
+			multiply = 2
+		}
+	}
+	
 	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_monuments.dds"
 }

@@ -1,10 +1,16 @@
 {
   "name" : "Grey's Deeper Sinosphere",
   "id" : "3108195724",
-  "version" : "1.2",
+  "version" : "",
   "supported_game_version" : "",
   "short_description" : "",
-  "tags" : [],
+  "tags" : [
+        "Cultures And Religions",
+        "Fixes",
+        "Pops",
+        "Gameplay",
+        "1.10"
+    ],
   "relationships" : [],
   "game_custom_data" : {
     "multiplayer_synchronized" : true

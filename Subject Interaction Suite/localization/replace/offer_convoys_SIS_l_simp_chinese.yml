@@ -1,0 +1,14 @@
+﻿l_simp_chinese:
+
+ occ_offer_convoys: "增加车队捐款" #deepl:2913419027
+ occ_offer_convoys_desc: "增加[concept_subject] 对其[concept_market_owner] [concept_overlord] 的护航贡献。" #deepl:1766763354
+ occ_offer_convoys_action_notification_name: "[INITIATOR_COUNTRY.GetName] 增加车队捐款" #deepl:3624303288
+ occ_offer_convoys_action_notification_desc: "[INITIATOR_COUNTRY.GetName] 表示愿意增加对车队的捐助。" #deepl:1100390230
+ occ_offer_convoys_action_propose_name: "$occ_offer_convoys$" #deepl:1567265931
+ occ_offer_convoys_action_break_name: "取消增加车队捐款" #deepl:2418936819
+ occ_offer_convoys_pact_desc: "[SCOPE.GetRootScope.GetDiplomaticPact.GetFirstCountry.GetName] 提议增加车队捐款， 。[SCOPE.GetRootScope.GetDiplomaticPact.GetSecondCountry.GetName]" #deepl:2532270182
+ occ_offer_convoys_action_notification_break_name: "[INITIATOR_COUNTRY.GetName] 取消增加车队捐款" #deepl:2309048301
+ occ_offer_convoys_action_notification_break_desc: "[INITIATOR_COUNTRY.GetName] 车队捐款已恢复到正常水平。" #deepl:2864753228
+ 
+ TRIGGER_COUNTRY_EXCESS_CONVOY_SURPLUS_PERCENT_GREATER_THAN: "增加后的盈余[concept_convoys] #b  不#! 大于#BOLD 0%#! （目前：[ROOT.GetCountry.MakeScope.ScriptValue('excess_convoy_surplus_percent')|v%])" #deepl:3808472463
+ TRIGGER_COUNTRY_CONVOY_CONTRIBUTION_LESS_THAN_MAX: "总计@convoys![Nbsp] [concept_convoys] 增加后对[concept_market_owner] 的捐款#b 不得#! 大于或等于#BOLD 95%#! （目前：[ROOT.GetCountry.GetModifier.GetValueFor('country_convoy_contribution_to_market_owner_add')|v%0] +#v 30%#! =[ROOT.GetCountry.MakeScope.ScriptValue('after_increase_contribution_percent')|v%0])" #deepl:3830302215

@@ -56,12 +56,39 @@
 				add_ideology = ideology_republican
 			}
 		}
+		crown_land_republic_effect = yes
+		if = {
+			limit = {
+				has_law = law_type:law_neo_absolutism
+			}
+			deactivate_law = law_type:law_neo_absolutism
+			activate_law = law_type:law_autocracy
+		}
 	}
 	
 	ai_will_do = {
 		exists = ruler
-		ruler = {
-			has_ideology = ideology:ideology_republican_leader
+		OR = {
+			ruler = {
+				OR = {
+					has_ideology = ideology:ideology_republican_leader
+					has_ideology = ideology:ideology_radical
+					has_ideology = ideology:ideology_positivist
+					has_socialist_ideology = yes
+				}
+			}
+			any_interest_group = {
+				is_in_government = yes
+				is_powerful = yes
+				leader = {
+					OR = {
+						has_ideology = ideology:ideology_republican_leader
+						has_ideology = ideology:ideology_radical
+						has_ideology = ideology:ideology_positivist
+						has_socialist_ideology = yes
+					}
+				}
+			}
 		}
 	}
 	
@@ -88,14 +115,14 @@
 				has_strategy = ai_strategy_progressive_agenda
 				power_bloc ?= { has_identity = identity:identity_ideological_union }
 				scope:target_country = { # Is their law different enough from what we want to impose?
-					NOT = { has_law = law_type:law_parliamentary_republic }
+					NOT = { has_law_or_variant = law_type:law_parliamentary_republic }
 				}
 			}
 			
 			add = base_impose_law_weight
 			if = {
 				limit = { 
-					scope:target_country = { has_law = law_type:law_council_republic } 
+					scope:target_country = { has_law_or_variant = law_type:law_council_republic }
 					NOT = { has_strategy = ai_strategy_egalitarian_agenda }
 				}
 				multiply = 5
@@ -164,6 +191,14 @@ law_corporate_state = {
 				var:corporatist_nominating_body_var ?= 3
 			}
 			add_modifier = { name = modifier_corporate_state_intelligentsia_bias }
+		}
+		crown_land_republic_effect = yes
+		if = {
+			limit = {
+				has_law = law_type:law_neo_absolutism
+			}
+			deactivate_law = law_type:law_neo_absolutism
+			activate_law = law_type:law_autocracy
 		}
 	}		
 
@@ -240,10 +275,22 @@ law_corporate_state = {
 	
 	ai_will_do = {
 		exists = ruler
-		ruler = {
-			OR = {
-				has_ideology = ideology:ideology_fascist
-				has_ideology = ideology:ideology_corporatist_leader
+		OR = {
+			ruler = {
+				OR = {
+					has_ideology = ideology:ideology_fascist
+					has_ideology = ideology:ideology_corporatist_leader
+				}
+			}
+			any_interest_group = {
+				is_in_government = yes
+				is_powerful = yes
+				leader = {
+					OR = {
+						has_ideology = ideology:ideology_fascist
+						has_ideology = ideology:ideology_corporatist_leader
+					}
+				}
 			}
 		}
 	}

@@ -42,7 +42,7 @@
 		
 		if = {
 			limit = {
-				has_law = law_type:law_no_police
+				has_law_or_variant = law_type:law_no_police
 			}
 			add = 500
 		}
@@ -68,7 +68,7 @@
 			limit = {
 				has_law = law_type:law_militarized_police
 				scope:target_country = {
-					has_law = law_type:law_no_police
+					has_law_or_variant = law_type:law_no_police
 				}
 				power_bloc ?= { has_principle_group = principle_group:principle_group_police_coordination }
 			}

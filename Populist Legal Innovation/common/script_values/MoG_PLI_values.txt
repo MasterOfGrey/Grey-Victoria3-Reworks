@@ -1,0 +1,191 @@
+﻿### Investment Limitations
+mog_pli_ip_gdp_ratio = {
+	value = investment_pool
+	divide = {
+		add = gdp
+		min = 1000000		# We want to know how big the investment pool is relative to gdp, but for very small gdp's (<1mil), we don't want to cause crushing limitations.
+	}
+}
+
+mog_pli_max_investment_willingness_from_ip = {	# We apply this as a ceiling to any/all investment willingness calculations.
+	value = 1
+	subtract = {						# Investment willingness linearly declines as the investment pool grows until it reaches 0 at IP = 50% of GDP
+		value = mog_pli_ip_gdp_ratio	# This will be some value between 0 & 0.5 if everything works properly.
+		multiply = 2					# i.e. max reduction in investment contribution is 100%
+	}
+	min = 0								# But we'll clamp it to be safe.
+}
+
+### Investment Willingness Values
+mog_pli_investment_target = {	# This represents the conditions which support investor confidence and capability
+	value = 0
+	add = mog_pli_inv_dist_of_power			# Max 20
+	# add = mog_pli_inv_church_and_state		# Max 20
+	add = mog_pli_inv_economic_system		# Max 20
+	add = mog_pli_inv_taxation				# Max 20
+	add = mog_pli_inv_policing				# Max 20
+	add = mog_pli_inv_internal_security		# Max 20
+	add = mog_pli_inv_rights_of_women		# Max 20
+	add = mog_pli_inv_slavery				# Max 20
+	min = 1
+	max = {									# This can actually take it down to 0, but this is the only thing that should be able to do so.
+		value = 100
+		multiply = mog_pli_max_investment_willingness_from_ip
+	}
+}
+
+mog_pli_investment_increment = {
+	value = 0
+	# Accelerators
+	add = {
+		owner.institution:institution_police ?= {
+			add = 0.1
+			multiply = investment
+		}
+		desc = PLI_POLICE_INSTITUTION
+	}
+	add = {
+		owner.institution:institution_schools ?= {
+			add = 0.1
+			multiply = investment
+		}
+		desc = PLI_SCHOOL_INSTITUTION
+	}
+	add = {
+		owner.institution:institution_health_system ?= {
+			add = 0.1
+			multiply = investment
+		}
+		desc = PLI_HEALTH_INSTITUTION
+	}
+	add = {
+		owner.institution:institution_social_security ?= {
+			add = 0.1
+			multiply = investment
+		}
+		desc = PLI_SOCSEC_INSTITUTION
+	}
+	# Decelerators
+	add = {		# New Investment has higher overheads
+		owner.institution:institution_workplace_safety ?= {
+			add = -0.1
+			multiply = investment
+		}
+		desc = PLI_OHS_INSTITUTION
+	}
+	add = {		# New Investment has either sovereign risk or more noise to filter
+		owner.institution:institution_home_affairs ?= {
+			add = -0.1
+			multiply = investment
+		}
+		desc = PLI_HAFFAIRS_INSTITUTION
+	}
+	min = 0.1
+}
+
+mog_pli_inv_dist_of_power = {
+	if = {
+		limit = { # Absolute Power
+			OR = { 
+				has_law_or_variant = law_type:law_autocracy
+				has_law_or_variant = law_type:law_single_party_state
+			}
+		}
+		add = 3
+	}
+	else_if = {
+		limit = { # Elite Captured Power
+			OR = { 
+				has_law_or_variant = law_type:law_technocracy 
+				has_law_or_variant = law_type:law_oligarchy
+				has_law_or_variant = law_type:law_elder_council
+			}
+		}
+		add = 5
+	}
+	else_if = {
+		limit = { has_law_or_variant = law_type:law_landed_voting }
+		add = 7
+	}
+	else_if = {
+		limit = { has_law_or_variant = law_type:law_wealth_voting }
+		add = 10
+	}
+	else_if = {
+		limit = { has_law_or_variant = law_type:law_census_voting }
+		add = 15
+	}
+	else_if = {
+		limit = { has_law_or_variant = law_type:law_universal_suffrage }
+		add = 20
+	}
+	else_if = {	# Investor Confidence Collapse
+		limit = { has_law_or_variant = law_type:law_anarchy }
+		add = 1
+	}
+	else = {		# For random modded laws
+		add = mog_pli_inv_dist_of_power_modded
+	}
+}
+mog_pli_inv_dist_of_power_modded = 1	 # Replace this value for modded laws compatibility
+
+mog_pli_inv_church_and_state = {
+	
+}
+mog_pli_inv_economic_system = {
+	
+}
+mog_pli_inv_taxation = {
+	
+}
+mog_pli_inv_policing = {
+	
+}
+mog_pli_inv_internal_security = {
+	if = {
+		limit = {	# Gotta Defend your own Investments
+			has_law_or_variant = law_type:law_no_home_affairs
+		}
+		add = 5
+	}
+	else_if {
+		limit = {	# Stable Conditions with Known Constraints
+			OR = { 
+				has_law_or_variant = law_type:law_national_guard
+				has_law_or_variant = law_type:law_guaranteed_liberties
+			}
+		}
+		add = 10
+	}
+	else_if {
+		limit = {	# Investment requires playing the Political Game
+			has_law_or_variant = law_type:law_secret_police
+		}
+		add = 3
+	}
+	else = {	# For Random Modded laws
+		add = mog_pli_inv_internal_security_modded
+	}
+}
+mog_pli_inv_internal_security_modded = 1	 # Replace this value for modded laws compatibility
+
+mog_pli_inv_rights_of_women = {
+	
+}
+mog_pli_inv_slavery = {
+	
+}
+
+mog_pli_corruption_target = {
+	value = 0
+	add = mog_pli_inv_dist_of_power
+	add = mog_pli_inv_church_and_state
+	add = mog_pli_inv_economic_system
+	add = mog_pli_inv_taxation
+	add = mog_pli_inv_policing
+	add = mog_pli_inv_internal_security
+	add = mog_pli_inv_rights_of_women
+	add = mog_pli_inv_slavery
+	min = 1
+	max = 100
+}

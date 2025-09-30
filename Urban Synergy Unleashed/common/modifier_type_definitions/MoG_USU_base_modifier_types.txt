@@ -32,6 +32,12 @@ goods_input_services_add = {
 	percent = no
 }
 
+goods_output_services_mult={
+	color=good
+	percent=yes
+	decimals=1
+}
+
 goods_input_transportation_mult = {
 	color = bad
 	percent = yes
@@ -105,7 +111,7 @@ state_market_access_price_impact={
 	color=neutral
 	percent=yes
 	game_data={
-		ai_value=5000	# 0
+		ai_value=50		# 5000 (was excessive) # 0
 	}
 }
 
@@ -113,7 +119,7 @@ state_migration_pull_add={
 	decimals=0
 	color=good
 	game_data={
-		ai_value=100	# 0 - tried 500 and it seems to cause some intense behaviours with the autonomous queue
+		ai_value=50		# 100 (reducing ai hazard) # 0 - tried 500 and it seems to cause some intense behaviours with the autonomous queue
 	}
 }
 
@@ -121,7 +127,7 @@ country_weekly_innovation_max_add={
 	decimals=1
 	color=good
 	game_data={
-		ai_value=1000	# 0 - Included to maximise compatibility with any university reworks.
+		ai_value=100	# 1000 (reducing ai hazard) # 0 - Included to maximise compatibility with any university reworks.
 	}
 }
 

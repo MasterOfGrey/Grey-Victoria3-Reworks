@@ -14,8 +14,8 @@ pm_manor_house_privately_owned = {
 	
 	building_modifiers = { 
 		level_scaled = {
-			building_employment_aristocrats_add = 10 # 50
-			building_employment_laborers_add = 15 # 100
+			building_employment_aristocrats_add = 25 # 10 # 50
+			# building_employment_laborers_add = 15 # 100
 		}
 		unscaled = {
 			building_aristocrats_shares_add = 10
@@ -40,14 +40,14 @@ pm_manor_house_principle_divine_economics_2 = {
 	
 	building_modifiers = { 
 		level_scaled = {
-			building_employment_aristocrats_add = 5 # 50
-			building_employment_clergymen_add = 5 # 50
-			building_employment_laborers_add = 15 # 100
+			building_employment_aristocrats_add = 15 # 5 # 50
+			building_employment_clergymen_add = 10 # 5 # 50
+			# building_employment_laborers_add = 15 # 100
 		}
 		
 		unscaled = {
 			building_aristocrats_shares_add = 10
-			building_clergymen_shares_add = 1
+			building_clergymen_shares_add = 2
 		}
 	}
 }
@@ -61,8 +61,8 @@ pm_manor_house_bureaucrat_ownership = {
 	
 	building_modifiers = {
 		level_scaled = {
-			building_employment_bureaucrats_add = 10 # 100
-			building_employment_clerks_add = 15 # 0
+			building_employment_bureaucrats_add = 20 # 10 # 100
+			building_employment_clerks_add = 5 # 15 # 0
 		}
 		unscaled = {
 			building_bureaucrats_shares_add = 1
@@ -79,8 +79,8 @@ pm_manor_house_clergy_ownership = {
 
 	building_modifiers = {
 		level_scaled = {
-			building_employment_clergymen_add = 10 # 100
-			building_employment_clerks_add = 15 # 0
+			building_employment_clergymen_add = 20 # 10 # 100
+			building_employment_clerks_add = 5 # 15 # 0
 		}
 		unscaled = {
 			building_clergymen_shares_add = 1
@@ -95,9 +95,9 @@ pm_financial_district_privately_owned = {
 	
 	building_modifiers = { 
 		level_scaled = {
-			building_employment_capitalists_add = 10 # 50
-			building_employment_shopkeepers_add = 20 # 100
-			building_employment_clerks_add = 20 # 100
+			building_employment_capitalists_add = 30 # 10 # 50
+			building_employment_shopkeepers_add = 10 # 20 # 100
+			building_employment_clerks_add = 10 # 20 # 100
 		}
 		unscaled = {
 			building_capitalists_shares_add = 10
@@ -113,12 +113,13 @@ pm_financial_district_publicly_traded = {
 	
 	building_modifiers = { 
 		level_scaled = {
-			building_employment_capitalists_add = 10 # 50
+			building_employment_capitalists_add = 30 # 10 # 50
 			building_employment_bureaucrats_add = 10 # 50
-			building_employment_clerks_add = 30 # 150
+			building_employment_clerks_add = 10 # 30 # 150
 		}
 		unscaled = {
 			building_capitalists_shares_add = 10
+			building_bureaucrats_shares_add = 1
 		}			
 	}	
 }
@@ -134,9 +135,9 @@ pm_financial_district_principle_divine_economics_2 = {
 
 	building_modifiers = { 
 		level_scaled = {
-			building_employment_capitalists_add = 10 # 50
+			building_employment_capitalists_add = 30 # 10 # 50
 			building_employment_clergymen_add = 10 # 50
-			building_employment_clerks_add = 30 # 150
+			building_employment_clerks_add = 10 # 30 # 150
 		}
 		unscaled = {
 			building_capitalists_shares_add = 10
@@ -145,15 +146,25 @@ pm_financial_district_principle_divine_economics_2 = {
 	}
 }
 
-## Company Headquarters (4  PM's in 1 PMG, reduced to total 50 people/level employed)
+## Company Headquarters (reduced to total 50 people/level employed)
 pm_company_headquarter_privately_owned = {
 	texture = "gfx/interface/icons/production_method_icons/privately_owned.dds"
+	is_hidden_when_unavailable = yes
 	
-	building_modifiers = { 
+	unlocking_company_categories = {
+		capitalist_owned
+	}
+
+	disallowing_laws = {
+		law_command_economy
+		law_cooperative_ownership
+	}
+
+	building_modifiers = {
 		level_scaled = {
-			building_employment_capitalists_add = 10 # 50
-			building_employment_shopkeepers_add = 20 # 100
-			building_employment_clerks_add = 20 # 100
+			building_employment_capitalists_add = 30 # 10 # 50
+			building_employment_shopkeepers_add = 10 # 20 # 100
+			building_employment_clerks_add      = 10 # 20 # 100
 		}
 		unscaled = {
 			building_capitalists_shares_add = 10
@@ -162,9 +173,124 @@ pm_company_headquarter_privately_owned = {
 	}
 }
 
+pm_company_headquarter_privately_owned_aristocrats = {
+	texture = "gfx/interface/icons/production_method_icons/privately_owned.dds"
+	is_hidden_when_unavailable = yes
+	
+	unlocking_company_categories = {
+		aristocrat_owned
+	}
+
+	disallowing_laws = {
+		law_command_economy
+		law_cooperative_ownership
+	}
+
+	building_modifiers = {
+		level_scaled = {
+			building_employment_capitalists_add = 10
+			building_employment_aristocrats_add = 20 # 15
+			building_employment_shopkeepers_add = 10 # 0
+			building_employment_clerks_add      = 10 # 25
+		}
+		unscaled = {
+			building_capitalists_shares_add = 10
+			building_aristocrats_shares_add = 10
+			building_shopkeepers_shares_add = 1
+		}
+	}
+}
+
+pm_company_headquarter_privately_owned_shopkeepers = {
+	texture = "gfx/interface/icons/production_method_icons/privately_owned.dds"
+	is_hidden_when_unavailable = yes
+	
+	unlocking_company_categories = {
+		shopkeeper_owned
+	}
+
+	disallowing_laws = {
+		law_command_economy
+		law_cooperative_ownership
+	}
+
+	building_modifiers = {
+		level_scaled = {
+			building_employment_capitalists_add = 10
+			building_employment_shopkeepers_add = 30 # 25
+			building_employment_clerks_add      = 10 # 15
+		}
+		unscaled = {
+			building_capitalists_shares_add = 10
+			# Average of 20 owner at 10 shares + 10 support at 1 share
+			building_shopkeepers_shares_add = 7 # 5
+		}
+	}
+}
+
+pm_company_headquarter_privately_owned_bureaucrats = {
+	texture = "gfx/interface/icons/production_method_icons/privately_owned.dds"
+	is_hidden_when_unavailable = yes
+	
+	unlocking_company_categories = {
+		bureaucrat_owned
+	}
+
+	disallowing_laws = {
+		law_command_economy
+		law_cooperative_ownership
+	}
+
+	building_modifiers = {
+		level_scaled = {
+			building_employment_capitalists_add = 10
+			building_employment_bureaucrats_add = 20 # 25
+			building_employment_shopkeepers_add = 10 # 0
+			building_employment_clerks_add      = 10 # 15
+		}
+		unscaled = {
+			building_capitalists_shares_add = 10
+			building_bureaucrats_shares_add = 10
+			building_shopkeepers_shares_add = 1
+		}
+	}
+}
+
+pm_company_headquarter_privately_owned_academics = {
+	texture = "gfx/interface/icons/production_method_icons/privately_owned.dds"
+	is_hidden_when_unavailable = yes
+	
+	unlocking_company_categories = {
+		academic_owned
+	}
+
+	disallowing_laws = {
+		law_command_economy
+		law_cooperative_ownership
+	}
+
+	building_modifiers = {
+		level_scaled = {
+			building_employment_capitalists_add = 10
+			building_employment_academics_add   = 20 # 25
+			building_employment_shopkeepers_add = 10 # 0
+			building_employment_clerks_add      = 10 # 15
+		}
+		unscaled = {
+			building_capitalists_shares_add = 10
+			building_academics_shares_add   = 10
+			building_shopkeepers_shares_add = 1
+		}
+	}
+}
+
 pm_company_headquarter_principle_divine_economics_2 = {
 	texture = "gfx/interface/icons/production_method_icons/privately_owned.dds"
 	is_hidden_when_unavailable = yes
+	
+	unlocking_company_categories = {
+		capitalist_owned
+	}
 
 	disallowing_laws = {
 		law_command_economy
@@ -178,13 +304,145 @@ pm_company_headquarter_principle_divine_economics_2 = {
 
 	building_modifiers = {
 		level_scaled = {
-			building_employment_capitalists_add = 10 # 50
-			building_employment_clergymen_add = 10 # 50
-			building_employment_clerks_add = 30 # 150
+			building_employment_capitalists_add = 30 # 10 # 50
+			building_employment_clergymen_add   = 10 # 10 # 50
+			building_employment_clerks_add      = 10 # 30 # 150
 		}
 		unscaled = {
 			building_capitalists_shares_add = 10
+			building_clergymen_shares_add   = 2
+		}
+	}
+}
+
+pm_company_headquarter_principle_divine_economics_2_aristocrats = {
+	texture = "gfx/interface/icons/production_method_icons/privately_owned.dds"
+	is_hidden_when_unavailable = yes
+
+	unlocking_company_categories = {
+		aristocrat_owned
+	}	
+	
+	disallowing_laws = {
+		law_command_economy
+		law_cooperative_ownership
+	}
+
+	unlocking_principles = {
+		principle_divine_economics_2
+		principle_divine_economics_3
+	}
+	
+	building_modifiers = {
+		level_scaled = {
+			building_employment_capitalists_add = 10
+			building_employment_aristocrats_add = 20 # 15
+			building_employment_clergymen_add   = 10 # 25
+			building_employment_clerks_add      = 10 # 0
+		}
+		unscaled = {
+			building_capitalists_shares_add = 10
+			building_aristocrats_shares_add = 10
+			building_clergymen_shares_add   = 2
+		}
+	}
+}
+
+pm_company_headquarter_principle_divine_economics_2_shopkeepers = {
+	texture = "gfx/interface/icons/production_method_icons/privately_owned.dds"
+	is_hidden_when_unavailable = yes
+
+	unlocking_company_categories = {
+		shopkeeper_owned
+	}	
+	
+	disallowing_laws = {
+		law_command_economy
+		law_cooperative_ownership
+	}
+
+	unlocking_principles = {
+		principle_divine_economics_2
+		principle_divine_economics_3
+	}
+
+	building_modifiers = {
+		level_scaled = {
+			building_employment_capitalists_add = 10
+			building_employment_shopkeepers_add = 20 # 15
+			building_employment_clergymen_add   = 10 # 25
+			building_employment_clerks_add      = 10 # 0
+		}
+		unscaled = {
+			building_capitalists_shares_add = 10
+			building_shopkeepers_shares_add = 10 # 5
 			building_clergymen_shares_add = 2
+		}
+	}
+}
+
+pm_company_headquarter_principle_divine_economics_2_bureaucrats = {
+	texture = "gfx/interface/icons/production_method_icons/privately_owned.dds"
+	is_hidden_when_unavailable = yes
+
+	unlocking_company_categories = {
+		bureaucrat_owned
+	}	
+	
+	disallowing_laws = {
+		law_command_economy
+		law_cooperative_ownership
+	}
+
+	unlocking_principles = {
+		principle_divine_economics_2
+		principle_divine_economics_3
+	}
+
+	building_modifiers = {
+		level_scaled = {
+			building_employment_capitalists_add = 10
+			building_employment_bureaucrats_add = 20
+			building_employment_clergymen_add   = 10 # 25
+			building_employment_clerks_add      = 10 # 0
+		}
+		unscaled = {
+			building_capitalists_shares_add = 10
+			building_bureaucrats_shares_add = 10 # 5
+			building_clergymen_shares_add = 2
+		}
+	}
+}
+
+pm_company_headquarter_principle_divine_economics_2_academics = {
+	texture = "gfx/interface/icons/production_method_icons/privately_owned.dds"
+	is_hidden_when_unavailable = yes
+
+	unlocking_company_categories = {
+		academic_owned
+	}	
+	
+	disallowing_laws = {
+		law_command_economy
+		law_cooperative_ownership
+	}
+
+	unlocking_principles = {
+		principle_divine_economics_2
+		principle_divine_economics_3
+	}
+
+	building_modifiers = {
+		level_scaled = {
+			building_employment_capitalists_add = 10
+			building_employment_academics_add   = 20 # 15
+			building_employment_clergymen_add   = 10 # 25
+			building_employment_clerks_add      = 10 # 0
+		}
+		unscaled = {
+			building_capitalists_shares_add = 10
+			building_academics_shares_add   = 10 # 5
+			building_clergymen_shares_add   = 2
 		}
 	}
 }
@@ -198,8 +456,8 @@ pm_company_headquarter_government_run = {
 
 	building_modifiers = {
 		level_scaled = {
-			building_employment_bureaucrats_add = 20 # 200
-			building_employment_clerks_add = 30 # 300
+			building_employment_bureaucrats_add = 20 # 50
+			building_employment_clerks_add = 30 # 50
 		}
 		unscaled = {
 			building_bureaucrats_shares_add = 10
@@ -217,8 +475,8 @@ pm_company_headquarter_worker_cooperative = {
 
 	building_modifiers = {
 		level_scaled = {
-			building_employment_shopkeepers_add = 25 # 500
-			building_employment_clerks_add = 25 # 500
+			building_employment_shopkeepers_add = 25 # 50
+			building_employment_clerks_add = 25 # 50
 		}
 		unscaled = {
 			building_shopkeepers_shares_add = 10
@@ -226,4 +484,3 @@ pm_company_headquarter_worker_cooperative = {
 		}
 	}
 }
-

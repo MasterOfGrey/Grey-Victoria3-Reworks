@@ -166,6 +166,7 @@ lobby_pro_overlord = {
 				limit = { 
 					OR = {
 						has_ideology = ideology:ideology_patriotic
+						has_ideology = ideology:ideology_military_absolutist
 						leader ?= {
 							OR = {
 								has_ideology = ideology:ideology_ethno_nationalist
@@ -191,8 +192,9 @@ lobby_pro_overlord = {
 							NOT = {
 								any_primary_culture = {
 									OR = {
-										shares_heritage_trait_with_any_primary_culture = ROOT.owner
-										shares_non_heritage_trait_with_any_primary_culture = ROOT.owner
+										shares_heritage_trait_group_with_any_primary_culture = ROOT.owner
+										shares_language_trait_group_with_any_primary_culture = ROOT.owner
+										shares_tradition_trait_with_any_primary_culture = ROOT.owner
 									}
 								}
 							}
@@ -230,7 +232,7 @@ lobby_pro_overlord = {
 					if = {
 						limit = {
 							scope:target_country = {
-								has_law = law_type:law_religious_schools
+								has_law_or_variant = law_type:law_religious_schools
 							}
 						}
 						add = 15
@@ -238,7 +240,7 @@ lobby_pro_overlord = {
 					if = {
 						limit = {
 							scope:target_country = {
-								has_law = law_type:law_state_religion
+								has_law_or_variant = law_type:law_state_religion
 							}
 						}
 						multiply = {
@@ -247,7 +249,7 @@ lobby_pro_overlord = {
 						if = {
 							limit = {
 								scope:target_country = {
-									has_law = law_type:law_theocracy
+									has_law_or_variant = law_type:law_theocracy
 								}
 							}
 							multiply = {
@@ -269,7 +271,7 @@ lobby_pro_overlord = {
 					if = {
 						limit = {
 							scope:target_country = {
-								has_law = law_type:law_state_religion
+								has_law_or_variant = law_type:law_state_religion
 							}
 						}
 						multiply = {
@@ -278,7 +280,7 @@ lobby_pro_overlord = {
 						if = {
 							limit = {
 								scope:target_country = {
-									has_law = law_type:law_theocracy
+									has_law_or_variant = law_type:law_theocracy
 								}
 							}
 							multiply = {
@@ -310,7 +312,7 @@ lobby_pro_overlord = {
 		if = {
 			limit = {
 				scope:target_country = {
-					has_law = law_type:law_council_republic
+					has_law_or_variant = law_type:law_council_republic
 				}
 			}
 			if = {
@@ -364,8 +366,8 @@ lobby_pro_overlord = {
 				}
 				scope:target_country = {
 					OR = {
-						has_law = law_type:law_monarchy
-						has_law = law_type:law_theocracy
+						has_law_or_variant = law_type:law_monarchy
+						has_law_or_variant = law_type:law_theocracy
 					}
 				}
 			}
@@ -715,6 +717,7 @@ lobby_anti_overlord = {
 				limit = { 
 					OR = {
 						has_ideology = ideology:ideology_patriotic
+						has_ideology = ideology:ideology_military_absolutist
 						leader ?= {
 							OR = {
 								has_ideology = ideology:ideology_ethno_nationalist
@@ -740,8 +743,9 @@ lobby_anti_overlord = {
 							NOT = {
 								any_primary_culture = {
 									OR = {
-										shares_heritage_trait_with_any_primary_culture = ROOT.owner
-										shares_non_heritage_trait_with_any_primary_culture = ROOT.owner
+										shares_heritage_trait_group_with_any_primary_culture = ROOT.owner
+										shares_language_trait_group_with_any_primary_culture = ROOT.owner
+										shares_tradition_trait_with_any_primary_culture = ROOT.owner
 									}
 								}
 							}
@@ -779,7 +783,7 @@ lobby_anti_overlord = {
 					if = {
 						limit = {
 							scope:target_country = {
-								has_law = law_type:law_religious_schools
+								has_law_or_variant = law_type:law_religious_schools
 							}
 						}
 						add = -15
@@ -787,7 +791,7 @@ lobby_anti_overlord = {
 					if = {
 						limit = {
 							scope:target_country = {
-								has_law = law_type:law_state_religion
+								has_law_or_variant = law_type:law_state_religion
 							}
 						}
 						multiply = {
@@ -796,7 +800,7 @@ lobby_anti_overlord = {
 						if = {
 							limit = {
 								scope:target_country = {
-									has_law = law_type:law_theocracy
+									has_law_or_variant = law_type:law_theocracy
 								}
 							}
 							multiply = {
@@ -818,7 +822,7 @@ lobby_anti_overlord = {
 					if = {
 						limit = {
 							scope:target_country = {
-								has_law = law_type:law_theocracy
+								has_law_or_variant = law_type:law_theocracy
 							}
 						}
 						multiply = {
@@ -836,7 +840,7 @@ lobby_anti_overlord = {
 		if = {
 			limit = {
 				scope:target_country = {
-					has_law = law_type:law_council_republic
+					has_law_or_variant = law_type:law_council_republic
 				}
 			}
 			if = {
@@ -892,8 +896,8 @@ lobby_anti_overlord = {
 				}
 				scope:target_country = {
 					OR = {
-						has_law = law_type:law_monarchy
-						has_law = law_type:law_theocracy
+						has_law_or_variant = law_type:law_monarchy
+						has_law_or_variant = law_type:law_theocracy
 					}
 				}
 			}

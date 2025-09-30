@@ -1,0 +1,27 @@
+﻿# Nudge AI into using oil when oil is available and cheaper.
+usu_nudge_power_plant_pms = {
+	if = {
+		limit = {
+			has_building = building_power_plant
+			mog_oil_value < {
+				add = mog_coal_value
+				multiply = 0.8
+			}
+			owner = { has_technology_researched = steam_turbine }
+		}
+		if = {
+			limit = {
+				NOT = {
+					is_production_method_active = {
+						building_type = building_power_plant
+						production_method = pm_oil-fired_plant
+					}
+				}
+			}
+			activate_production_method = {
+				building_type = building_power_plant
+				production_method = pm_oil-fired_plant
+			}
+		}
+	}
+}

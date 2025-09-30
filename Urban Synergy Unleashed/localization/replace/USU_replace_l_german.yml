@@ -1,16 +1,19 @@
 ﻿l_german:
-  # WCA 
+ # WCA
  alert_wasted_construction_name: "Hat ungenutzten [concept_construction]"
  alert_wasted_construction_hint: "Hat ungenutzten [concept_construction]"
  alert_wasted_construction_action: "Bau-Tafel"
  wasted_construction_setting_name: "Ungenutzten Bau"
-  
- pm_electric_trains: "Gleichstrom-Elektrozüge" #NT!
- pm_electric_trains_principle_transport_3: "Gemeinsame Gleichstrom-Elektrozüge" #NT!
- pm_electric_streetlights: "Mondscheintürme" #NT!
-  
- pm_canal: "Dampfbetriebene Schlösser" #NT!
-  
+ 
+ pm_electric_trains: "Gleichstrom-Elektrozüge"
+ pm_electric_trains_principle_transport_3: "Gemeinsame Gleichstrom-Elektrozüge"
+ pm_electric_streetlights: "Mondscheintürme"
+ 
+ pm_canal: "Dampfbetriebene Schlösser"
+ company_panama_suez_company: "Panama-Suez-Kanal-Gesellschaft" #deepl:432235005
+ 
  pm_no_public_transport: "Kein öffentlicher Nahverkehr"
  pm_public_trams: "Pferdestraßenbahnen"
  pm_public_motor_carriages: "Stadtbusse"
+ 
+ building_power_plant: "Wärmekraftwerk" #deepl:3279637597

@@ -145,14 +145,13 @@ ai_strategy_territorial_expansion = {
 	
 	secret_goal_scores = {
 		conquer = {
-			if = {
-				limit = {
-					NOT = { scope:target_country = { is_subject_of = root } }
-					can_reach_target_country = yes
-					has_strategic_adjacency = scope:target_country
-					scope:target_country.country_rank <= root.country_rank
-				}
-				
+			trigger = {
+				NOT = { scope:target_country = { is_subject_of = root } }
+				can_reach_target_country = yes
+				has_strategic_adjacency = scope:target_country
+				scope:target_country.country_rank <= root.country_rank
+			}
+			score = {
 				if = {
 					limit = {
 						NOT = { is_country_type = unrecognized }
@@ -222,7 +221,7 @@ ai_strategy_territorial_expansion = {
 		}
 			
 		if = {
-			limit = { ig:ig_armed_forces = { is_powerful = yes } }
+			limit = { ig:ig_armed_forces = { is_powerful ?= yes } }
 			multiply = 1.5
 		}			
 		

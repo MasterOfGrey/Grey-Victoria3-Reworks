@@ -1,28 +1,40 @@
-﻿# No root
-on_monthly_pulse = {
-	on_actions = {
-		MoG_USU_weekly_AI_subsidies_action
-	}
-}
+﻿# This was, arguably, the superior solution for compatibility and allowing market effects to apply correctly.
+# However, this breaks the AI in ways that prevent it from constructing any government buildings, for no discernable or fixable reason.
+# Therefore, it has been abandoned, at least for the foreseeable.
 
-MoG_USU_weekly_AI_subsidies_action = {
-	effect = {
-		com_run_weekly_event_country_effect = {
-            weekday = 7 # <-- This decides the weekday 0 = Sunday, 6 = Saturday, 1 = Monday
-            on_action = MoG_USU_disable_AI_subsidies_action # <-- this is the on_action you want to fire each week
-        }
-	}
-}
+# # No root
+# on_monthly_pulse = {
+# 	on_actions = {
+# 		MoG_USU_weekly_AI_subsidies_action
+# 	}
+# }
 
-MoG_USU_disable_AI_subsidies_action = {
-    effect = {
-        every_country = {
-            if = {
-                limit = {
-                    is_ai = yes
-                }
-                MoG_USU_disable_AI_subsidies_effect = yes
-            }
-        }
-    }
-}
+# MoG_USU_weekly_AI_subsidies_action = {
+# 	effect = {
+# 		# if = {
+# 		# 	limit = {
+# 		# 		AND = {
+# 		# 			month > 6
+# 		# 			year > 1848
+# 		# 		}
+# 		# 	}
+# 			# com_run_weekly_event_country_effect = {
+# 			# 	weekday = 7 # <-- This decides the weekday 0 = Sunday, 6 = Saturday, 1 = Monday
+# 			# 	on_action = MoG_USU_disable_AI_subsidies_action # <-- this is the on_action you want to fire each week
+# 			# }
+# 		#}
+# 	}
+# }
+
+# MoG_USU_disable_AI_subsidies_action = {
+#     effect = {
+#         every_country = {
+#             if = {
+#                 limit = {
+#                     is_ai = yes
+#                 }
+#                 MoG_USU_disable_AI_subsidies_effect = yes
+#             }
+#         }
+#     }
+# }

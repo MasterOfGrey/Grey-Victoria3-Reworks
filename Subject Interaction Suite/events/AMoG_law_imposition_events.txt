@@ -304,6 +304,7 @@ law_imposition_events.1 = {
 				OR = {
 					is_subject_type = subject_type_puppet			# If not a Puppet, can always defer
 					is_subject_type = subject_type_personal_union	# Or Personal Union
+					is_subject_type = subject_type_crown_land
 				}
 				liberty_desire < 60									# If a Puppet, cannot defer at LD below 60
 			}
@@ -345,6 +346,7 @@ law_imposition_events.1 = {
 				OR = {
 					is_subject_type = subject_type_puppet			# If not a Puppet, can always refuse
 					is_subject_type = subject_type_personal_union	# Or Personal Union
+					is_subject_type = subject_type_crown_land
 				}
 				liberty_desire < 75									# If a Puppet, cannot refuse at LD below 75
 			}

@@ -5,7 +5,7 @@ building_livestock_ranch = {
 	icon = "gfx/interface/icons/building_icons/cattle_ranch.dds"
 	
 	city_type = farm
-	levels_per_mesh = 5
+	levels_per_mesh = 50
 	
 	unlocking_technologies = {
 		enclosure

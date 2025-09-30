@@ -26,18 +26,18 @@ PPP_pmg_HV_generation = {
 	texture = "gfx/interface/icons/generic_icons/mixed_icon_refining.dds"
 	
 	production_methods = {
+		# PPP_pm_hy_grid_power		# Grid power first at each level helps the AI handle PM switches better.
 		# PPP_pm_hy_local_power
 		# PPP_pm_hy_hybrid_power
-		# PPP_pm_hy_grid_power
+		PPP_pm_se_grid_power
 		PPP_pm_se_local_power
 		PPP_pm_se_hybrid_power
-		PPP_pm_se_grid_power
+		PPP_pm_st_grid_power
 		PPP_pm_st_local_power
 		PPP_pm_st_hybrid_power
-		PPP_pm_st_grid_power
+		PPP_pm_gt_grid_power
 		PPP_pm_gt_local_power
 		PPP_pm_gt_hybrid_power
-		PPP_pm_gt_grid_power
 		PPP_pm_emergency_local_power
 	}
 }

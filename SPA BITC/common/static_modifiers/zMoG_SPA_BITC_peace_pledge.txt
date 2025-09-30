@@ -1,0 +1,21 @@
+﻿# common/static_modifiers/98_peace_pedge.txt
+# Flattened migration attraction modifiers in line with SPA balance
+
+country_beacon_of_peace = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_coins_positive.dds
+
+    state_trade_advantage_mult = 0.2
+    state_migration_pull_mult = 0.1 # 0.25	# SPA
+    country_improve_relations_speed_mult = 0.5
+    country_infamy_generation_mult = 0.5
+}
+
+country_peace_and_love = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_coins_positive.dds
+
+    state_trade_advantage_mult = 0.25
+    state_migration_pull_mult = 0.1 # 0.25	# SPA
+    state_birth_rate_mult = 0.05
+    country_improve_relations_speed_mult = 0.75
+    country_infamy_generation_mult = 0.5
+}

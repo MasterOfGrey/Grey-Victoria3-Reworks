@@ -1,6 +1,6 @@
 [img]https://i.imgur.com/7xuCZqW.png[/img]
-Supports Victoria 3: V1.9  (and onwards)
-Mod Version: V1.4
+[img]https://img.shields.io/badge/Supports_Game_Version-1.10-blue[/img] (and onwards)
+[url=https://github.com/MasterOfGrey/Grey-Victoria3-Reworks][img]https://img.shields.io/github/v/tag/MasterOfGrey/Grey-Victoria3-Reworks?sort=date&filter=*USU-*&label=Mod%20Tag%20%26%20Version&color=7700CF[/img][/url][url=https://discord.gg/SnUghEkQQz][img]https://img.shields.io/discord/1377452253715107912?&label=Discord&color=7700CF[/img][/url]
 Please consider rating this if you like it! It really helps out. [img]https://i.imgur.com/tE28cZ7.gif[/img]
 [spoiler]Originally made for: Version 1.8.2[/spoiler]
 
@@ -16,30 +16,31 @@ The others are [i]Recommended[/i].
 *MUST have a new game - your save will explode if you either add or remove this mid-game.
 [img]https://i.imgur.com/6o9HyTD.png[/img]
 This mod started as a compatibility patch designed to make 11 different mods work together. At a certain point it ended up becoming its own thing.
-So, this reworks the whole urban buildings environment, and a few related touch points, to create a system with in-built synergies. Urbanization gradually increases the total construction capacity (without necessarily costing the government), railways are profitable throughout the game and have additional options, ports can now be privately owned and contribute to the transport economy, rivers can now have portage, power plants have more diversity and can be extended to powering a distribution grid (this adapts content from "Power Plants+").
+So, this reworks the whole urban buildings environment, and a few related touch points, to create a system with in-built synergies. Urbanization gradually increases the total construction capacity (without necessarily costing the government), railways are profitable throughout the game and have additional options, ports can now be privately owned and contribute to the transport economy, rivers can now have portage, power plants have more diversity and can be extended to powering a distribution grid (this adapts content from 'Power Plants+').
 
 All in all, it is a system that has been designed to round off some of the sharp edge-case corners in the urban economy, and to ensure that the AI can naturally benefit from the same things the player can.
 
 [img]https://i.imgur.com/Wh5EspM.png[/img]
 [h1]Features:[/h1]
 [h2]Logistics Services[/h2]
-Ports and railways now produce a new good called "Logistics Services". Rather than transport, which is of course the capacity to move goods locally, it represents the ability to organise goods to be transported - which can be done locally [i]or[/i] coordinated from afar. Which also means that this is a tradeable good! Countries can import logistics services to increase their land trade capacity - effectively "buying" access to their neighbour's ports.
+Ports and railways now produce a new good called 'Logistics Services'. Rather than transport, which is of course the capacity to move goods locally, it represents the ability to organise goods to be transported - which can be done locally [i]or[/i] coordinated from afar. Trade Centers in states without Ports use Logistics Services instead of Merchant Marine.
 
 [h2]Urban Center & Electricity Rework[/h2]
-Urban Centers require twice as much urbanization per level now, and the primary PM has been rebalanced and now produces a small amount of construction. Streetlighting has been expanded to also infer general urban electricity supply and these PM's are designed to interact with the Power Plant rework to ensure that the AI can transition to a distribution grid for electricity successfully. The Power Plants are effectively the ones from "Power Plants+", but the structure of the PM's has been reworked to ensure the AI can understand them.
+Urban Centers require twice as much urbanization per level now, and the primary PM has been rebalanced and now produces a small amount of construction. Streetlighting has been expanded to also infer general urban electricity supply and these PM's are designed to interact with the Power Plant rework to ensure that the AI can transition to a distribution grid for electricity successfully. The Power Plants are effectively the ones from 'Power Plants+', but the structure of the PM's has been reworked to ensure the AI can understand them.
+Urban Centres also have mixed impacts on construction based on size and employment. See the FAQ.
 
 [h2]Transportation Rework[/h2]
 Railways, Ports, & River Ports are all profitable providers of transport throughout the game, and both contribute to MAPI. Additionally, the transport economy no longer starts from 0. Subsistence farms provide transport, and basic road cart pm's consume it, so right from the start there is [i]some[/i] transport floating around the local market. This [i]greatly[/i] smooths out the initial industrialisation via rail. Pops also cannot switch en masse to automobiles in the late game, as the amount of their transport need that can be met by automobiles has been limited to a mere 12.5%.
 
 [h2]Services Rework[/h2]
-In addition to the rebalance of Urban Centers - Government Admins now produce a small amount of services and have been rebalanced with reduced workforce needs and extra PM's, and a new Public Green building is available to provide services. This building uses arable land, so it is naturally limited and competes with agriculture for land which can be cultivated.
+In addition to the rebalance of Urban Centers - Government Admins now produce a small amount of services, have reduced workforce needs, and extra PM's. A new Public Green building is available to provide services. This building uses arable land, so it is naturally limited and competes with agriculture for arable land.
 As part of this, Manor Houses now directly reduce state tax capacity as they use their position to try and evade taxation, and financial districts contribute to urbanization which helps to produce the services their pops consume.
 
 [h2]Construction Rework:[/h2]
-PM's for construction sectors have been scaled down to 40% of their original sizes. This means that in the early game it's much easier for small AI nations to maintain at least 1 wooden construction sector - which is critical to enabling the autonomous investment queue. A dynamic country modifier increases the maximum number of construction sectors to compensate so that total capacity is unchanged and no compatibility issues are introduced with technologies.
+PM's for construction sectors have been scaled down to 40% of their original sizes. So, in the early game it's much easier for small AI nations to maintain at least 1 wooden construction sector - which is critical to enabling the autonomous investment queue. A dynamic country modifier increases the maximum number of construction sectors to compensate so that total capacity is unchanged and no compatibility issues are introduced with technologies.
 
 [h2]Extra Consumption:[/h2]
-Some buildings now consume additional goods. In particular, naval buildings consume additional supplies to represent the specific goods in excess of pop consumption that the government would fund to support the crews while they maintain a fleet at sea. Ports also consume groceries as supplies proportional to the modernness.
+Some buildings now consume additional goods: Naval buildings consume additional supplies to represent the specific goods in excess of pop consumption that the government would fund to support the crews while they maintain a fleet at sea. Ports also consume groceries as supplies proportional to the modernness.
 
 [h2]Subsistence Changes:[/h2]
 Subsistence farms now produce small amounts of transport, services, & logistics to smooth out the economic demand shifts. This also contains an experimental boost to pop growth from [i]empty[/i] subsistence farms that helps global population reach its intended target.
@@ -52,23 +53,21 @@ For full details on compatibility go to the discussion post here: [url=https://s
 
 [h2]Use my compatches for:[/h2]
 [list]
-[*]Morgenrote: "[url=https://steamcommunity.com/sharedfiles/filedetails/?id=3371690718]USU & Morgenrote[/url]"
-[*]Locomotion Land, Water, & Air (LLWA): "[url=https://steamcommunity.com/sharedfiles/filedetails/?id=3387021675]USU & LLWA[/url]"
+[*]Morgenrote: '[url=https://steamcommunity.com/sharedfiles/filedetails/?id=3371690718]USU & Morgenrote[/url]'
+[*]Locomotion Land, Water, & Air (LLWA): '[url=https://steamcommunity.com/sharedfiles/filedetails/?id=3387021675]USU & LLWA[/url]'
 [/list]
 [b]Other available compatibility patches:
-[list][*]Industry Realism: "[url=https://steamcommunity.com/sharedfiles/filedetails/?id=3453226616]Industry Realism + USU Patch[/url]" by AgrarianSlop
+[list][*]Industry Realism: '[url=https://steamcommunity.com/sharedfiles/filedetails/?id=3453226616]Industry Realism + USU Patch[/url]' by AgrarianSlop
 [/list][/b]
 [img]https://i.imgur.com/lQRf9dG.png[/img]
 [b]Can you change <insert language> localisation?[/b]
 [i]If you send it to me I will add it.[/i]
 
-[b]My transport is cheap/below base price, how do I raise demand?[/b]
-[i]That’s intentional: The whole point of industrialisation was that some things became cheap which enabled other things to become possible.
-Transport is a major essential need for pops and agriculture, so it’s designed so that late-game it is possible to have very cheap transport and still have transport be profitable to produce.
-A successful and highly industrialised late-game economy should have cheap electricity, transport, and services.[/i]
-
 [b]My power plants aren’t producing power?[/b]
-[i]You have a mod conflict that I don’t have a patch for. Read the [url=https://steamcommunity.com/workshop/filedetails/discussion/3371689443/575995078023072709/]Full Compatibility Notes[/url][/i]
+[i]-> Read the [url=https://steamcommunity.com/workshop/filedetails/discussion/3371689443/575995078023072709/]Full Compatibility Notes[/url][/i]
+
+[b]Re: Cheap Transport, Urban Centres, Construction, Trade Centers, etc.[/b]
+[i]-> Read the [url=https://steamcommunity.com/workshop/filedetails/discussion/3371689443/604167589085856776/]Full FAQ[/url][/i]
 
 [img]https://i.imgur.com/UN80Om5.png[/img]
 Many thanks to nahantelhe, Ferrous, ovnxize, Starry Inori, 1230james and Grimhat for their works which inspired this.

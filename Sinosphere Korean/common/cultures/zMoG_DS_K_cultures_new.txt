@@ -1,7 +1,16 @@
-﻿sino={												# Names from EINI
+﻿# Technically we don't need these anymore, but I'm keeping them here in case I want to use them for flavour content in the future.
+
+sino={												# Names from EINI
 	color= hsv{ 0 0 90 }
 	religion = mahayana
-	traits = { sinosphere east_asian_heritage }		# Don't give Japan additional heritage acceptance, just Sinosphere.
+	heritage = heritage_japanese
+	language = language_japanese
+	traditions = { tradition_sinosphere } # Don't give Japan additional heritage acceptance, just Sinosphere.
+	
+	obsessions = {
+		fruit
+	}
+	
 	male_common_first_names = {
 		Bui_An
 		Noang_Cao
@@ -315,8 +324,15 @@
 
 yamatos={											# Names from JNI
 	color= hsv{ 0.31 0.37 0.48 }
-	religion = shinto
-	traits = { yamato southeast_asian_heritage }	# Don't give Vietnam additional heritage acceptance, just Yamato if Japan is "accepted" into the "Sinosphere".
+	religion = mahayana
+	heritage = heritage_vietnamese
+	language = language_vietic
+	traditions = { tradition_yamato }	# Don't give Vietnam additional heritage acceptance, just Yamato if Japan is "accepted" into the "Sinosphere".
+	
+	obsessions = {
+		fruit
+	}
+	
 	male_common_first_names = {
 		Aritomo
 		Gentaro

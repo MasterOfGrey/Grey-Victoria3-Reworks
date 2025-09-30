@@ -17,12 +17,12 @@
 
 # We Want Green at <20%, Yellow at <40% (army + relations), Orange at <100%, Red at >100%, and Purple if Navy is >100% no matter how the army compares.
 # Default: [GetMetaPlayer.GetPlayedOrObservedCountry.MakeScope.Var('mog_topbar_value_all_subject_pp').GetValue|%v]
- mog_topbar_coloured_all_subject_pp_backup: "#b;white[GetMetaPlayer.GetPlayedOrObservedCountry.MakeScope.Var('mog_topbar_value_all_subject_pp').GetValue|0%]#!" #deepl:3593051260
- mog_topbar_coloured_all_subject_pp_green: "#b;green[GetMetaPlayer.GetPlayedOrObservedCountry.MakeScope.Var('mog_topbar_value_all_subject_pp').GetValue|0%]#!" #deepl:2377499616
- mog_topbar_coloured_all_subject_pp_yellow: "#b;yellow[GetMetaPlayer.GetPlayedOrObservedCountry.MakeScope.Var('mog_topbar_value_all_subject_pp').GetValue|0%]#!" #deepl:3208069794
- mog_topbar_coloured_all_subject_pp_orange: "#b;orange[GetMetaPlayer.GetPlayedOrObservedCountry.MakeScope.Var('mog_topbar_value_all_subject_pp').GetValue|0%]#!" #deepl:2512115759
- mog_topbar_coloured_all_subject_pp_red: "#b;red[GetMetaPlayer.GetPlayedOrObservedCountry.MakeScope.Var('mog_topbar_value_all_subject_pp').GetValue|0%]#!" #deepl:1582262069
- mog_topbar_coloured_all_subject_pp_purple: "#b;purple[GetMetaPlayer.GetPlayedOrObservedCountry.MakeScope.Var('mog_topbar_value_all_subject_pp').GetValue|0%]#!" #deepl:690812862
+ mog_topbar_coloured_all_subject_pp_backup: "#b;white [GetMetaPlayer.GetPlayedOrObservedCountry.MakeScope.Var('mog_topbar_value_all_subject_pp').GetValue|0%]#!" #deepl:3593051260
+ mog_topbar_coloured_all_subject_pp_green: "#b;green [GetMetaPlayer.GetPlayedOrObservedCountry.MakeScope.Var('mog_topbar_value_all_subject_pp').GetValue|0%]#!" #deepl:2377499616
+ mog_topbar_coloured_all_subject_pp_yellow: "#b;yellow [GetMetaPlayer.GetPlayedOrObservedCountry.MakeScope.Var('mog_topbar_value_all_subject_pp').GetValue|0%]#!" #deepl:3208069794
+ mog_topbar_coloured_all_subject_pp_orange: "#b;orange [GetMetaPlayer.GetPlayedOrObservedCountry.MakeScope.Var('mog_topbar_value_all_subject_pp').GetValue|0%]#!" #deepl:2512115759
+ mog_topbar_coloured_all_subject_pp_red: "#b;red [GetMetaPlayer.GetPlayedOrObservedCountry.MakeScope.Var('mog_topbar_value_all_subject_pp').GetValue|0%]#!" #deepl:1582262069
+ mog_topbar_coloured_all_subject_pp_purple: "#b;purple [GetMetaPlayer.GetPlayedOrObservedCountry.MakeScope.Var('mog_topbar_value_all_subject_pp').GetValue|0%]#!" #deepl:690812862
  
  DIPLOMATIC_PACT_REQUIREMENT_MODERATE_LIBERTY_DESIRE: "[SCOPE.sCountry('actor').GetAdjective] [concept_liberty_desire] 必须至少[GetDefine('NDiplomacy','WAR_GOAL_INFAMY_LOW_LIBERTY_DESIRE_THRESHOLD')]" #deepl:1877752227
  STRONGER_SUBJECT_NEGATE_ALOOF: "来自[Concept('concept_subject','$concept_subject_possessive$')] 相对实力与[SCOPE.sCountry('target').GetAttitudeTowards(SCOPE.sCountry('target').GetOverlord).GetName] 态度的比较" #deepl:679978240

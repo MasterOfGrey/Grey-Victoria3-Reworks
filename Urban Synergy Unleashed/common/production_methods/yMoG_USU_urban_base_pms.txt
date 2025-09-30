@@ -283,5 +283,5 @@ USU_pm_hv_arcades = {
 		}	
 	}
 	
-	required_input_goods = electricity
+	required_input_goods = electricity	# The game throws a little complaint error - ignore it.
 }

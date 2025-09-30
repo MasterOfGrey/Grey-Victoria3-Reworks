@@ -11,7 +11,12 @@
 			remove_building = building_shipyards
 			remove_building = building_military_shipyards
 			remove_building = building_port
-			remove_building = building_university
+			if = {
+				limit = {
+					exists = b:building_university
+				}
+				remove_building = building_university
+			}
 			# Add above buildings from scratch.
 			create_building={
 				building="building_government_administration"

@@ -3,7 +3,7 @@
 	icon = "gfx/interface/icons/building_icons/building_government_administration.dds"
 	city_type = city
 	
-	levels_per_mesh = 10
+	levels_per_mesh = 50
 	
 	unlocking_technologies = {
 		tech_bureaucracy
@@ -22,7 +22,10 @@
 			}
 			AND = {
 				state.tax_capacity < state.tax_capacity_usage
-				state.is_incorporated = yes						# This throws an error, but works correctly.
+				OR = {
+					state = { is_incorporated = yes }			# The game has a history of being picky about how is_incorporated wants to work...
+					state = { incorporation_progress > 0.01 }	# Get states which are in the process of being incorporated ready...
+				}
 			}
 		}
 	}

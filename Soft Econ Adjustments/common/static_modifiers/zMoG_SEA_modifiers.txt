@@ -11,8 +11,8 @@ administrative_overburden = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_coins_negative.dds
 	state_tax_waste_add = 1							# Vanilla
 	country_government_dividends_waste_add = 1		# Vanilla
-	state_tariff_export_add = -0.5 # This hits mercantilism a bit harder, but they're mercantile. Why are they tariffing exports in the first place?
-	state_tariff_import_add = -0.5
+	state_tariff_export_add = -0.49 # -0.5 # This hits mercantilism a bit harder, but they're mercantile. Why are they tariffing exports in the first place?
+	state_tariff_import_add = -0.49 # This way maxes at 99% so doesn't reset the options.
 }
 
 # Scales with devastation level

@@ -3,4 +3,9 @@
  building_group_bg_trade_allowed_collectivization_add: "Minimalne poziomy budynków zakładów produkcyjnych stanowiących własność robotników"
  building_group_bg_trade_allowed_collectivization_add_desc: "Minimalna liczba [Concept('concept_building', 'budynków')] zakładów produkcyjnych, które będą własnością robotników."
  # Modifiers
+ LA_Home_Affairs: "PLP: Władza od instytucji spraw wewnętrznych" #deepl:2504284031
+ LA_Law_Enforcement: "PLP: Organ pochodzący od instytucji egzekwującej prawo" #deepl:3687311437
+ LA_Workplace_Safety: "PLP: Władze instytucji ds. bezpieczeństwa w miejscu pracy" #deepl:1249229579
+ LA_Social_Security: "PLP: Organ z Zakładu Ubezpieczeń Społecznych" #deepl:675340117
+ # Compat Modifiers
  mog_spa_migration_restrictiveness_add: "SPA: Dostosowanie kontroli migracji" #deepl:1726668639

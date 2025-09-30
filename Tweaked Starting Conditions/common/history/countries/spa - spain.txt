@@ -24,7 +24,6 @@
 		activate_law = law_type:law_monarchy
 		activate_law = law_type:law_landed_voting
 		activate_law = law_type:law_state_religion
-		activate_law = law_type:law_legacy_slavery
 		activate_law = law_type:law_national_supremacy
 		activate_law = law_type:law_mercantilism
 		activate_law = law_type:law_interventionism
@@ -32,18 +31,19 @@
 		activate_law = law_type:law_religious_schools
 		activate_law = law_type:law_charitable_health_system
 		activate_law = law_type:law_oligarchy
-		activate_law = law_type:law_national_guard
+		#activate_law = law_type:law_colonial_exploitation # spain has nothing to colonize in 1836
+		activate_law = law_type:law_colonial_slavery # Slavery in Spanish colonies was only abolished in 1848
 		
 		set_institution_investment_level = {
 			institution = institution_health_system
 			level = 1
 		}
 		
-		ig:ig_intelligentsia = {
+		ig:ig_intelligentsia ?= {
 			add_ruling_interest_group = yes # Juan Mendizabal was Prime Minister
 		}
 		
-		ig:ig_landowners = {
+		ig:ig_landowners ?= {
 			add_ruling_interest_group = yes # Aristocrats led by Maria Christina
 			add_modifier = {
 				name = weakened_by_internal_war
@@ -52,7 +52,7 @@
 			}
 		}
 		
-		ig:ig_devout = {
+		ig:ig_devout ?= {
 			add_modifier = {
 				name = weakened_by_internal_war
 				years = 10

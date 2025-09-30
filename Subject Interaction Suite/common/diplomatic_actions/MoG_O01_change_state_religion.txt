@@ -30,13 +30,13 @@ change_state_religion = {
 		in_default = no
 		NOT = { has_war_with = scope:target_country }
 		OR = { 
-			NOT = { has_law = law_type:law_total_separation }
+			NOT = { has_law_or_variant = law_type:law_total_separation }
 			country_has_state_religion = rel:atheist
 		}
 		scope:target_country = {
 			NOT = { 
 				AND = {
-					has_law = law_type:law_state_atheism
+					has_law_or_variant = law_type:law_state_atheism
 					country_has_state_religion = rel:atheist	# This extra check is because mods can mess things up, and it stops a messed up situation getting locked in.
 				}
 			}
@@ -100,7 +100,7 @@ change_state_religion = {
 								}
 								if = {
 									limit = {
-										has_law = law_type:law_state_atheism
+										has_law_or_variant = law_type:law_state_atheism
 									}
 									scope:religion_target_country = {
 										activate_law = law_type:law_state_atheism
@@ -118,7 +118,7 @@ change_state_religion = {
 								}
 								else_if = {
 									limit = {
-										NOT = {has_law = law_type:law_state_atheism }
+										NOT = {has_law_or_variant = law_type:law_state_atheism }
 										country_has_state_religion = rel:atheist
 									}
 									scope:religion_target_country = {
@@ -250,7 +250,7 @@ change_state_religion = {
 				scope:target_country = {
 					NOT = { 
 						AND = {
-							has_law = law_type:law_state_atheism
+							has_law_or_variant = law_type:law_state_atheism
 							country_has_state_religion = rel:atheist	# This extra check is because mods can mess things up, and it stops a messed up situation getting locked in.
 						}
 					}
@@ -261,7 +261,7 @@ change_state_religion = {
 		requirement_to_maintain = {
 			trigger = {
 				OR = { 
-					NOT = { has_law = law_type:law_total_separation }
+					NOT = { has_law_or_variant = law_type:law_total_separation }
 					country_has_state_religion = rel:atheist
 				}
 			}

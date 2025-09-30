@@ -3,4 +3,9 @@
  building_group_bg_trade_allowed_collectivization_add: "İşçi Mülkü Olan $bg_trade$ $concept_building$sı Minimum Seviyesi"
  building_group_bg_trade_allowed_collectivization_add_desc: "İşçi mülkü olacak $bg_trade$ [Concept('concept_building','$concept_buildings$ının')] minimum miktarı."
  # Modifiers
+ LA_Home_Affairs: "PLP: İçişleri Kurumundan Yetki" #deepl:2504284031
+ LA_Law_Enforcement: "PLP: Kanun Uygulayıcı Kurumdan Yetki" #deepl:3687311437
+ LA_Workplace_Safety: "PLP: İşyeri Güvenlik Kurumundan Yetki" #deepl:1249229579
+ LA_Social_Security: "PLP: Sosyal Güvenlik Kurumundan Yetki" #deepl:675340117
+ # Compat Modifiers
  mog_spa_migration_restrictiveness_add: "SPA: Göç Kontrolleri Ayarlaması" #deepl:1726668639

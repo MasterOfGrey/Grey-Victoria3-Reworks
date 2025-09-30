@@ -67,6 +67,22 @@ mog_fix_forgotten_ports_action = {
 	}
 }
 
+## HALF-YEARLY NUDGES
+on_half_yearly_pulse_country = {
+	on_actions = {
+		mog_usu_power_plant_nudge_on_action
+	}
+}
+
+# Set Trade Center as inland or port-side.
+mog_usu_power_plant_nudge_on_action = {
+	effect = {
+		every_scope_state = {
+			usu_nudge_power_plant_pms = yes
+		}
+	}
+}
+
 ## MONTHLIES
 on_monthly_pulse_country = {
 	on_actions = {

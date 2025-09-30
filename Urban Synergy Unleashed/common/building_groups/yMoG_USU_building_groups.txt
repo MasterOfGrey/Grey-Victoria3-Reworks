@@ -122,7 +122,9 @@ bg_government = {
 	urbanization = 30 # 20
 	infrastructure_usage_per_level = 1
 	
-	economy_of_scale_ai_factor = 2.0
+	economy_of_scale_ai_factor = 2.0 # Vanilla = 3.0 # (previously 2.0, 2 is better)
+	
+	construction_efficiency_modifier = yes
 }
 
 ## Financial Districts & Company Headquarters

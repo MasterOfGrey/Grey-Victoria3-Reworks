@@ -1,0 +1,38 @@
+mog_pli_investment_tracking_bar = {
+	name = "mog_pli_investment_tracking_bar_title"
+	desc = "mog_pli_investment_tracking_bar_left_desc"
+	second_desc = "mog_pli_investment_tracking_bar_right_desc"
+
+	start_value = 50
+	min_value = 0
+	max_value = 100
+	double_sided_bad = yes
+
+	weekly_progress = {
+		add = {
+			desc = "mog_pli_investment_tracking_bar_drift"
+			value = mog_pli_investment_target
+			subtract = var:mog_pli_investment_current_value
+			multiply = 0.1
+		}
+	}
+}
+
+mog_pli_investment_corruption_bar = {
+	name = "mog_pli_investment_corruption_bar_title"
+	desc = "mog_pli_investment_corruption_bar_desc"
+
+	start_value = 0
+	min_value = 0
+	max_value = 100
+	default_bad = yes
+
+	weekly_progress = {
+		add = {
+			desc = "mog_pli_corruption_tracking_bar_drift"
+			value = mog_pli_corruption_target
+			subtract = var:mog_pli_corruption_current_value
+			multiply = 0.1
+		}
+	}
+}

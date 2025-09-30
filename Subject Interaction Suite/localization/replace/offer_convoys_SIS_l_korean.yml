@@ -1,0 +1,14 @@
+﻿l_korean:
+
+ occ_offer_convoys: "호송대 기여도 증가" #deepl:2913419027
+ occ_offer_convoys_desc: "[concept_market_owner] [concept_overlord] 에 대한 [concept_subject] 의 호송 기여도를 증가시킵니다." #deepl:1766763354
+ occ_offer_convoys_action_notification_name: "[INITIATOR_COUNTRY.GetName] 호송 기여도 증가" #deepl:3624303288
+ occ_offer_convoys_action_notification_desc: "[INITIATOR_COUNTRY.GetName] 에서 호송 기부금을 늘리겠다고 제안했습니다." #deepl:1100390230
+ occ_offer_convoys_action_propose_name: "$occ_offer_convoys$" #deepl:1567265931
+ occ_offer_convoys_action_break_name: "호송대 기부금 증가 취소" #deepl:2418936819
+ occ_offer_convoys_pact_desc: "[SCOPE.GetRootScope.GetDiplomaticPact.GetFirstCountry.GetName] 에 대한 호송 기부금 증액을 제안합니다 [SCOPE.GetRootScope.GetDiplomaticPact.GetSecondCountry.GetName]." #deepl:2532270182
+ occ_offer_convoys_action_notification_break_name: "[INITIATOR_COUNTRY.GetName] 호송대 기여금 인상 취소" #deepl:2309048301
+ occ_offer_convoys_action_notification_break_desc: "[INITIATOR_COUNTRY.GetName] 호송 기여도를 정상 수준으로 복원했습니다." #deepl:2864753228
+ 
+ TRIGGER_COUNTRY_EXCESS_CONVOY_SURPLUS_PERCENT_GREATER_THAN: "인상 후 잉여금 [concept_convoys] 은 #b 이#! 보다 크지 않음 #BOLD 0%#! (현재: [ROOT.GetCountry.MakeScope.ScriptValue('excess_convoy_surplus_percent')|v%])" #deepl:3808472463
+ TRIGGER_COUNTRY_CONVOY_CONTRIBUTION_LESS_THAN_MAX: "합계 @convoys![Nbsp] [concept_convoys] 인상 후 [concept_market_owner] 에 대한 기여도 #b 가#! 보다 크지 않아야 함 #BOLD 95%#! (현재: [ROOT.GetCountry.GetModifier.GetValueFor('country_convoy_contribution_to_market_owner_add')|v%0] + #v 30%#! = [ROOT.GetCountry.MakeScope.ScriptValue('after_increase_contribution_percent')|v%0])" #deepl:3830302215

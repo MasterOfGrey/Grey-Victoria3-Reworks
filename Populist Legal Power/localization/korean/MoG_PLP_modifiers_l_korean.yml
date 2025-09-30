@@ -3,4 +3,9 @@
  building_group_bg_trade_allowed_collectivization_add: "노동자 소유 $bg_trade$ $concept_building$의 최소 단계"
  building_group_bg_trade_allowed_collectivization_add_desc: "노동자 소유가 될 $bg_trade$ [Concept('concept_building','$concept_buildings$')]의 최소치입니다."
  # Modifiers
+ LA_Home_Affairs: "PLP: 내무부 기관의 권한" #deepl:2504284031
+ LA_Law_Enforcement: "PLP: 법 집행 기관의 권한" #deepl:3687311437
+ LA_Workplace_Safety: "PLP: 작업장 안전 기관의 권한" #deepl:1249229579
+ LA_Social_Security: "PLP: 사회 보장 기관의 권한" #deepl:675340117
+ # Compat Modifiers
  mog_spa_migration_restrictiveness_add: "SPA: 마이그레이션 제어 조정" #deepl:1726668639

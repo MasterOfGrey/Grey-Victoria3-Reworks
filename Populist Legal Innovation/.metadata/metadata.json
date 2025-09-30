@@ -1,0 +1,21 @@
+{
+  "name" : "Grey's Populist Legal Innovation",
+  "id" : "",
+  "version" : "",
+  "supported_game_version" : "",
+  "short_description" : "",
+  "tags" : [
+        "Balance",
+        "Expansion",
+        "Fixes",
+        "Gameplay",
+        "Historical",
+        "Journal Entries",
+        "Technologies",
+        "1.9"
+    ],
+  "relationships" : [],
+  "game_custom_data" : {
+    "multiplayer_synchronized" : true
+  }
+}

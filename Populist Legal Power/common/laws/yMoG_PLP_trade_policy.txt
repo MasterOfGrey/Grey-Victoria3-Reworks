@@ -32,8 +32,8 @@ law_mercantilism = {
 	# Don't change back to mercantilism once we have protectionism or free trade
 	ai_will_do = {
 		NOR = {
-			has_law = law_type:law_protectionism
-			has_law = law_type:law_free_trade
+			has_law_or_variant = law_type:law_protectionism
+			has_law_or_variant = law_type:law_free_trade
 		}
 	}
 	
@@ -99,7 +99,7 @@ law_protectionism = {
 		}
 		
 		if = {
-			limit = { 
+			limit = {
 				has_journal_entry = je_meiji_diplomacy
 				has_law_or_variant = law_type:law_isolationism
 			}
@@ -119,6 +119,33 @@ law_free_trade = {
 		law_command_economy
 	}
 	
+	unlocking_technologies = {
+		international_trade
+	}
+	
+	on_enact = {
+		if = {
+			limit = { is_banning_goods = g:opium }
+			remove_banned_goods = g:opium
+		}
+		if = {
+			limit = { is_banning_goods = g:liquor }
+			remove_banned_goods = g:liquor
+		}
+	}
+
+	on_activate = {
+		if = { # removes opium ban authority modifier if forced to open market via diplomacy
+			limit = {
+				AND = {
+					c:CHI ?= this
+					has_modifier = opium_ban_authority
+				}
+			}
+			remove_modifier = opium_ban_authority
+		}
+	}
+	
 	modifier = {
 		state_subvention_export_add = 0.50
 		state_subvention_import_add = 0.50
@@ -128,22 +155,7 @@ law_free_trade = {
 		state_trade_advantage_from_capacity_add = 0.0001	# On top of base_values = 0.0005
 		state_max_trade_advantage_from_capacity_add = 0.2	# On top of base_values = 0.2
 	}
-	
-	unlocking_technologies = {
-		international_trade
-	}
-	
-	on_enact = {
-		if = {
-			limit = { is_banning_goods = g:opium }
-			remove_banned_goods = g:opium
-		}	
-		if = {
-			limit = { is_banning_goods = g:liquor }
-			remove_banned_goods = g:liquor
-		}
-	}
-	
+
 	ai_enact_weight_modifier = { #Petitions
 		value = 0
 		
@@ -153,7 +165,7 @@ law_free_trade = {
 		}
 		
 		if = {
-			limit = { 
+			limit = {
 				has_journal_entry = je_meiji_diplomacy
 				has_law_or_variant = law_type:law_isolationism
 			}
@@ -176,26 +188,11 @@ law_isolationism = {
 	is_visible = {
 		NAND = {
 			any_primary_culture = {
-				has_discrimination_trait = han_chinese
+				has_discrimination_trait = heritage_han
 			}
 			any_scope_state = {
 				state_region = s:STATE_GUANGDONG
 				is_largest_state_in_region = yes
-			}
-		}
-	}
-	
-	can_enact = {
-		is_in_power_bloc = no
-		hidden_trigger = {
-			NAND = {
-				any_primary_culture = {
-					has_discrimination_trait = han_chinese
-				}
-				any_scope_state = {
-					state_region = s:STATE_GUANGDONG
-					is_largest_state_in_region = yes
-				}
 			}
 		}
 	}
@@ -206,6 +203,7 @@ law_isolationism = {
 		country_tech_spread_mult = -0.1 # -0.15
 		
 		country_leverage_resistance_mult = 1.0
+		country_support_separatism_resistance_mult = 0.5
 		
 		country_max_declared_interests_mult = -0.25 # -0.5
 		
@@ -252,18 +250,7 @@ law_canton_system = {
 
 	is_visible = {
 		any_primary_culture = {
-			has_discrimination_trait = han_chinese
-		}
-		any_scope_state = {
-			state_region = s:STATE_GUANGDONG
-			is_largest_state_in_region = yes
-		}
-	}
-
-	can_enact = {
-		is_in_power_bloc = no
-		any_primary_culture = {
-			has_discrimination_trait = han_chinese
+			has_discrimination_trait = heritage_han
 		}
 		any_scope_state = {
 			state_region = s:STATE_GUANGDONG

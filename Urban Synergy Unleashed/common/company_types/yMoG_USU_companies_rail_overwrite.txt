@@ -5,6 +5,8 @@ company_egyptian_rail = {
 	icon = "gfx/interface/icons/company_icons/historical_company_icons/egyptian_rail.dds"
 	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_railways.dds"
 
+	category = bureaucrat_owned
+
 	flavored_company = yes
 
 	building_types = {
@@ -142,6 +144,8 @@ company_orient_express = {
 	icon = "gfx/interface/icons/company_icons/historical_company_icons/chemins_de_fer_orientaux.dds"
 	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_railways.dds"
 
+	category = bureaucrat_owned
+
 	flavored_company = yes
 
 	preferred_headquarters = { STATE_EASTERN_THRACE }
@@ -217,6 +221,8 @@ company_orient_express = {
 company_great_indian_railway = {
 	icon = "gfx/interface/icons/company_icons/historical_company_icons/india_great_indian_peninsula_railway.dds"
 	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_railways.dds"
+	
+	category = bureaucrat_owned
 	
 	flavored_company = yes
 	
@@ -640,6 +646,8 @@ company_cfr = {
 	icon = "gfx/interface/icons/company_icons/historical_company_icons/romania_cfr.dds"
 	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_railways.dds"
 	
+	category = bureaucrat_owned
+	
 	flavored_company = yes
 	
 	preferred_headquarters = { STATE_WALLACHIA }
@@ -708,6 +716,8 @@ company_cfr = {
 company_prussian_state_railways = {
 	icon = "gfx/interface/icons/company_icons/historical_company_icons/german_kpev.dds"
 	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_railways.dds"
+
+	category = bureaucrat_owned
 
 	flavored_company = yes
 
@@ -864,6 +874,8 @@ company_gwr = {
 company_mantetsu = {
 	icon = "gfx/interface/icons/company_icons/historical_company_icons/japanese_mantetsu.dds"
 	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_railways.dds"
+
+	category = bureaucrat_owned
 
 	flavored_company = yes
 
@@ -1027,6 +1039,8 @@ company_iranian_state_railway = {
 	icon = "gfx/interface/icons/company_icons/historical_company_icons/trans_iranian_railway.dds"
 	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_railways.dds"
 
+	category = bureaucrat_owned
+
 	flavored_company = yes
 
 	preferred_headquarters = { STATE_KHORASAN }
@@ -1100,6 +1114,8 @@ company_iranian_state_railway = {
 company_tashkent_railroad = {
 	icon = "gfx/interface/icons/company_icons/historical_company_icons/tashkent_railroad.dds"
 	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_railways.dds"
+
+	category = bureaucrat_owned
 
 	flavored_company = yes
 
@@ -1245,3 +1261,51 @@ company_standard_oil = {
 	}
 }
 
+## ip3
+# Oesterreichisch-Alpine Montangesellschaft
+company_oesterreichisch_alpine_montangesellschaft = {
+	icon = "gfx/interface/icons/company_icons/historical_company_icons/company_oesterreichisch_alpine_montangesellschaft.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_mining.dds"
+
+	flavored_company = yes
+
+	building_types = {
+		building_steel_mills
+		building_iron_mine
+	}
+
+	extension_building_types = {
+		building_railway
+		building_river_port
+	}
+
+	potential = {
+		has_interest_marker_in_region = region_south_germany
+	}
+
+	attainable = {
+	}
+
+	possible = {
+		any_scope_state = {
+			state_region = s:STATE_STYRIA
+			is_incorporated = yes
+			any_scope_building = {
+				OR = {
+					is_building_type = building_steel_mills
+					is_building_type = building_iron_mine
+				}
+				level >= 5
+			}
+		}
+	}
+
+	prosperity_modifier = {
+		building_coal_mine_throughput_add = 0.1
+		building_railway_throughput_add = 0.05
+	}
+
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}
+}

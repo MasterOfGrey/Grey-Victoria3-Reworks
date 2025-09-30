@@ -1,19 +1,19 @@
 ﻿l_french:
-  # WCA 
+ # WCA
  alert_wasted_construction_name: "Possède une [concept_construction|l] inutilisée"
  alert_wasted_construction_hint: "Possède une [concept_construction|l] inutilisée"
  alert_wasted_construction_action: "Panneau de construction"
  wasted_construction_setting_name: "Construction Inutilisée"
-  
- pm_electric_trains: "Trains électriques à courant continu" #NT!
- pm_electric_trains_principle_transport_3: "Société de trains électriques à courant continu" #NT!
- pm_electric_streetlights: "Moonlight Towers" #NT!
-  
- pm_canal: "Écluses à vapeur" #NT!
+ 
+ pm_electric_trains: "Trains électriques à courant continu"
+ pm_electric_trains_principle_transport_3: "Société de trains électriques à courant continu"
+ pm_electric_streetlights: "Moonlight Towers"
+ 
+ pm_canal: "Écluses à vapeur"
  company_panama_suez_company: "Compagnie des canaux de Panama-Suez"
-
+ 
  pm_no_public_transport: "Pas de transport en commun"
  pm_public_trams: "Tramways tirés par des chevaux"
  pm_public_motor_carriages: "Bus urbains"
-
-building_power_plant: "Centrale thermiques"
+ 
+ building_power_plant: "Centrale thermiques"

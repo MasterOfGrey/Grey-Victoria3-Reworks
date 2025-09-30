@@ -29,6 +29,7 @@ liberty_desire_weekly_change_relative_prestige = {
 				is_diplomatic_action_type = puppet
 				is_diplomatic_action_type = vassal
 				is_diplomatic_action_type = colony
+				is_diplomatic_action_type = crown_land
 			}
 		}				
 		if = {
@@ -148,7 +149,7 @@ liberty_desire_weekly_change_relative_prestige = {
 			OR = {
 				is_diplomatic_action_type = protectorate
 				is_diplomatic_action_type = tributary
-				is_diplomatic_action_type = dominion
+				# is_diplomatic_action_type = dominion		# semi-autonomous
 			}
 		}				
 		if = {
@@ -268,6 +269,7 @@ liberty_desire_weekly_change_relative_prestige = {
 		#	OR = {
 		#		is_diplomatic_action_type = personal_union
 		#		is_diplomatic_action_type = dominion
+		#		is_diplomatic_action_type = chartered_company
 		#	}
 		#}				
 		if = {

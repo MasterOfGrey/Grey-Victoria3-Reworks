@@ -834,6 +834,8 @@ company_hanseong_jeongi_hoesa = {
 	icon = "gfx/interface/icons/company_icons/historical_company_icons/hanseong_jeongi_hoesa.dds"
 	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufacturing_heavy.dds"
 
+	category = bureaucrat_owned
+
 	flavored_company = yes
 
 	preferred_headquarters = { STATE_SEOUL }
@@ -1086,6 +1088,8 @@ company_national_iranian_oil = {
 	icon = "gfx/interface/icons/company_icons/historical_company_icons/national_iranian_oil_company.dds"
 	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_oil_drills.dds"
 
+	category = bureaucrat_owned
+
 	flavored_company = yes
 
 	preferred_headquarters = { STATE_KHUZESTAN }
@@ -1261,4 +1265,63 @@ company_general_electric = {
 		value = 3 # Higher base value for flavored companies
 	}
 }
+
+## ip3
+# Getzner, Mutter & Cie
+company_getzner_mutter = {
+	icon = "gfx/interface/icons/company_icons/historical_company_icons/company_getzner_mutter.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufacturing_light.dds"
+
+	flavored_company = yes
+
+	building_types = {
+		building_textile_mills
+		usu_building_hydro_power_plant
+		ppp_building_power_grid
+	}
+
+	extension_building_types = {
+		building_synthetics_plants
+		building_power_plant
+	}
+
+	possible_prestige_goods = {
+		prestige_good_generic_clothes
+	}
+
+	potential = {
+		has_interest_marker_in_region = region_south_germany
+		has_dlc_feature = ip3_content
+	}
+
+	attainable = {
+	}
+
+	possible = {
+		any_scope_state = {
+			state_region = s:STATE_TYROL
+			is_incorporated = yes
+			any_scope_building = {
+				is_building_type = building_textile_mills
+				level >= 5
+			}
+			any_scope_building = {
+				is_building_type = building_power_plant
+			}
+		}
+	}
+
+	prosperity_modifier = {
+		building_synthetics_plants_throughput_add = 0.1
+		interest_group_ig_petty_bourgeoisie_approval_add = 2
+	}
+
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}
+}
+
+# Not company_erste_brunner
+# They built specifically steam engines and turbines
+# extending to other power generation and transission would be out of scope
 

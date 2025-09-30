@@ -115,4 +115,8 @@ subject_fight_targeted_state_overlord_infamy = {
 		divide = 4
 		add = modifier:country_infamy_generation_mult
 	}
+	if = {
+		limit = { scope:subject_targeted_state = { has_claim_by = scope:subject_initiator } }
+		multiply = -1	# Ensure some infamy still gained by overlord when subject loses liberty desire from you helping them with claims.
+	}
 }

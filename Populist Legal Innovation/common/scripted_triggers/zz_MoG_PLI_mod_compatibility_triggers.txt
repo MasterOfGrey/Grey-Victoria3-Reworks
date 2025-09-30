@@ -1,0 +1,7 @@
+﻿##################################################
+#   GREY - MOD COMPATIBILITY SCRIPTED TRIGGERS   #
+##################################################
+
+Grey_PLI_is_active = { # Populist Legal Innovation
+	always = yes
+}

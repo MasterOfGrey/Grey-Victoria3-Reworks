@@ -50,8 +50,8 @@ assimilate_everyone.1 = {
 						#	NOT = {
 						#		root = {			For reasons unclear, this law check doesn't work.
 						#			or = {
-						#				has_law = law_type:law_slave_trade
-						#				has_law = law_type:law_legacy_slavery
+						#				has_law_or_variant = law_type:law_slave_trade
+						#				has_law_or_variant = law_type:law_legacy_slavery
 						#			}
 						#		}
 						#		is_pop_type = slaves
@@ -95,7 +95,10 @@ assimilate_everyone.1 = {
 										limit = {
 											NOT = {
 												scope:current_pop.culture = {
-													shares_non_heritage_trait_with_any_primary_culture = root
+													OR = {
+														shares_language_trait_group_with_any_primary_culture = root
+														shares_tradition_trait_with_any_primary_culture = root
+													}
 												}
 											}
 										}
@@ -107,7 +110,7 @@ assimilate_everyone.1 = {
 									limit = {
 										NOT = {
 											scope:current_pop.culture = {
-												shares_heritage_trait_with_any_primary_culture = root
+												shares_heritage_trait_group_with_any_primary_culture = root
 											}
 										}
 									}
