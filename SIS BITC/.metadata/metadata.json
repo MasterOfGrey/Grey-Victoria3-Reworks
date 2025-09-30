@@ -1,0 +1,20 @@
+{
+  "name" : "SIS + BITC Compatch",
+  "id" : "3577518455",
+  "version" : "",
+  "supported_game_version" : "",
+  "short_description" : "",
+  "tags" : [
+        "Balance",
+        "Diplomacy",
+        "Expansion",
+        "Gameplay",
+        "Warfare",
+        "ComPatch",
+        "1.10"
+    ],
+  "relationships" : [],
+  "game_custom_data" : {
+    "multiplayer_synchronized" : true
+  }
+}
