@@ -36,8 +36,10 @@
 					}
 					culture = {
 						OR = {
-							has_discrimination_trait = indigenous_american_heritage
-							has_discrimination_trait = indigenous_oceanic_heritage
+							# has_discrimination_trait = indigenous_american_heritage
+							# has_discrimination_trait = indigenous_oceanic_heritage
+							has_discrimination_trait_group = heritage_group_indigenous_american
+							has_discrimination_trait_group = heritage_group_indigenous_oceanic
 						}
 					}
 					state.state_region = {

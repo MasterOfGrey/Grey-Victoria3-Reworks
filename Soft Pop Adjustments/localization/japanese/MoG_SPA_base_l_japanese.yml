@@ -19,3 +19,5 @@
  mog_middle_strata_expected_sol_from_average: "SPA: 全国平均[concept_sol] 識字率から期待されるSOLへの影響$middle$" #deepl:444091936
  mog_upper_strata_expected_sol_from_average: "SPA: 全国平均[concept_sol] 識字率から期待されるSOLへの影響$upper$" #deepl:2132612309
  mog_spa_base_sol_from_literacy: "SPA：ベース・モディファイアの変更" #deepl:2619766621
+ 
+ mog_spa_indigenous_subsistance: "SPA: 先住民族[concept_sol] 調整" #deepl:60321970

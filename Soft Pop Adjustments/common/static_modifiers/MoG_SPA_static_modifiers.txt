@@ -1,4 +1,4 @@
-# Apply an immigration penalty to extractive Company Colonies like BIC & DEIC
+﻿# Apply an immigration penalty to extractive Company Colonies like BIC & DEIC
 mog_company_migration_penalty = {
 	icon = "gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds"
 	state_migration_pull_mult = -0.7

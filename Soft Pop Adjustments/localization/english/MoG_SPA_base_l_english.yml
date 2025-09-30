@@ -19,3 +19,5 @@
  mog_middle_strata_expected_sol_from_average: "SPA: National Average [concept_sol] impact on Expected SOL from Literacy for $middle$"
  mog_upper_strata_expected_sol_from_average: "SPA: National Average [concept_sol] impact on Expected SOL from Literacy for $upper$"
  mog_spa_base_sol_from_literacy: "SPA: Base Modifier Changes"
+ 
+ mog_spa_indigenous_subsistance: "SPA: Indigenous [concept_sol] Adjustment"

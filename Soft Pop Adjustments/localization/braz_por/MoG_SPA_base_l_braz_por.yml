@@ -19,3 +19,5 @@
  mog_middle_strata_expected_sol_from_average: "SPA: Média nacional [concept_sol] impacto no SOL esperado da alfabetização para $middle$" #deepl:444091936
  mog_upper_strata_expected_sol_from_average: "SPA: Média nacional [concept_sol] impacto no SOL esperado da alfabetização para $upper$" #deepl:2132612309
  mog_spa_base_sol_from_literacy: "SPA: Alterações no modificador de base" #deepl:2619766621
+ 
+ mog_spa_indigenous_subsistance: "SPA: Indígena [concept_sol] Ajuste" #deepl:60321970
