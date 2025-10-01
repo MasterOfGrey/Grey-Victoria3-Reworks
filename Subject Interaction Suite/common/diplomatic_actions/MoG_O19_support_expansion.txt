@@ -27,12 +27,13 @@ military_support = {
 		scope:target_country = {
 			country_rank < rank_value:great_power
 			is_direct_subject_of = root
-			OR = {
-				is_subject_type = subject_type_protectorate
-				is_subject_type = subject_type_dominion
-				is_subject_type = subject_type_chartered_company
-				is_subject_type = subject_type_tributary
-			}
+			#OR = {
+			#	is_subject_type = subject_type_protectorate
+			#	is_subject_type = subject_type_dominion
+			#	is_subject_type = subject_type_chartered_company
+			#	is_subject_type = subject_type_tributary
+			#}
+			aggressive_diplomatic_plays_permitted = yes		# Better for compatibility
 		}
 		has_diplomatic_relevance = scope:target_country
 	}
@@ -45,7 +46,11 @@ military_support = {
 	
 	pact = {	
 		cost = 50
-		is_alliance = yes	
+		# is_alliance = yes						# Doesn't work anymore
+		auto_support_type = dp_conquer_state	# These work for the tooltip, but...
+		auto_support_type = dp_return_state		# Nothing is hooked up behind them anymore.
+		auto_support_type = dp_annex_subject	# So needs an on_diplomatic_play_started tooltip
+		auto_support_type = dp_annex_war		# that actually does the automatic support part.
 		
 		manual_break_effect = {
 			scope:target_country = {

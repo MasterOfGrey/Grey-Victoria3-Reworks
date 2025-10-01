@@ -1,0 +1,25 @@
+﻿on_diplomatic_play_started = {
+	on_actions = { mog_sis_subject_expansion_support }
+}
+
+mog_sis_subject_expansion_support = {	# For subject action `military_support`
+	effect = {
+		if = {
+			limit = {
+				OR = {
+					is_diplomatic_play_type = dp_conquer_state
+					is_diplomatic_play_type = dp_return_state
+					is_diplomatic_play_type = dp_annex_subject
+					is_diplomatic_play_type = dp_annex_war
+				}
+				scope:initiator.overlord = {
+					has_diplomatic_pact = {
+						who = scope:initiator
+						type = military_support
+					}
+				}
+			}
+			add_initiator_backers = { scope:initiator.overlord }
+		}
+	}
+}

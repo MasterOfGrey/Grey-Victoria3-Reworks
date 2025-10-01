@@ -68,7 +68,10 @@ liberty_desire_weekly_change = {
 					add = culture_current_fervor
 					subtract = 25
 					divide = 150
-					divide = root.second_country.num_primary_cultures
+					divide = {
+						add = root.second_country.num_primary_cultures
+						min = 1
+					}
 					max = 0
 					min = 0.2
 					multiply = -1
@@ -95,7 +98,10 @@ liberty_desire_weekly_change = {
 						add = culture_current_fervor
 						subtract = 25
 						divide = 150
-						divide = root.second_country.num_primary_cultures
+						divide = {
+							add = root.second_country.num_primary_cultures
+							min = 1
+						}
 						max = 0
 						min = 0.25
 						multiply = -1
@@ -115,7 +121,10 @@ liberty_desire_weekly_change = {
 							add = culture_current_fervor
 							subtract = 25
 							divide = 150
-							divide = root.second_country.num_primary_cultures
+							divide = {
+								add = root.second_country.num_primary_cultures
+								min = 1
+							}
 							min = 0
 							max = 0.50
 						}
@@ -332,7 +341,10 @@ liberty_desire_weekly_change = {
 		}
 		add = {
 			add = root.first_country.army_power_projection
-			divide = root.second_country.army_power_projection
+			divide = {
+				add = root.second_country.army_power_projection
+				min = 0.001
+			}
 			divide = 50
 			min = 0.01
 			max = 0.2
@@ -869,7 +881,7 @@ liberty_desire_weekly_change = {
 						is_incorporated = yes
 						incorporation_progress > 0.01
 					}
-				}+
+				}
 			}
 			# NOT = { root.second_country = { is_adjacent_to_country = root.first_country }} # SIS - removed
 		}	# Just because Portugal might be next to Spain, they can still be upset if the Azores have lost connection to the market.
