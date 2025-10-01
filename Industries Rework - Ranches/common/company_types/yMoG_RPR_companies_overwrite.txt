@@ -3,6 +3,8 @@ company_basic_food = {
 	icon = "gfx/interface/icons/company_icons/basic_food.dds"
 	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufacturing_light.dds"
 	
+	category = aristocrat_owned
+	
 	flavored_company = no
 	
 	uses_dynamic_naming = yes

@@ -184,6 +184,7 @@ pm_company_headquarter_privately_owned_aristocrats = {
 	disallowing_laws = {
 		law_command_economy
 		law_cooperative_ownership
+		law_commercialized_agriculture
 	}
 
 	building_modifiers = {
@@ -200,6 +201,39 @@ pm_company_headquarter_privately_owned_aristocrats = {
 		}
 	}
 }
+
+pm_company_headquarter_privately_owned_aristocrats_commercial_agriculture = {
+	texture = "gfx/interface/icons/production_method_icons/privately_owned.dds"
+	is_hidden_when_unavailable = yes
+	
+	unlocking_company_categories = {
+		aristocrat_owned
+	}
+	
+	unlocking_laws = {
+		law_commercialized_agriculture
+	}
+
+	disallowing_laws = {
+		law_command_economy
+		law_cooperative_ownership
+	}
+
+	building_modifiers = {
+		level_scaled = {
+			building_employment_capitalists_add = 20 # 15
+			building_employment_aristocrats_add = 10
+			building_employment_shopkeepers_add = 10 # 0
+			building_employment_clerks_add      = 10 # 25
+		}
+		unscaled = {
+			building_capitalists_shares_add = 10
+			building_aristocrats_shares_add = 10
+			building_shopkeepers_shares_add = 1
+		}
+	}
+}
+
 
 pm_company_headquarter_privately_owned_shopkeepers = {
 	texture = "gfx/interface/icons/production_method_icons/privately_owned.dds"
@@ -224,6 +258,7 @@ pm_company_headquarter_privately_owned_shopkeepers = {
 			building_capitalists_shares_add = 10
 			# Average of 20 owner at 10 shares + 10 support at 1 share
 			building_shopkeepers_shares_add = 7 # 5
+			building_company_worker_dividends_add = 0.25
 		}
 	}
 }
@@ -252,6 +287,7 @@ pm_company_headquarter_privately_owned_bureaucrats = {
 			building_capitalists_shares_add = 10
 			building_bureaucrats_shares_add = 10
 			building_shopkeepers_shares_add = 1
+			building_company_government_dividends_add = 0.25
 		}
 	}
 }
@@ -280,6 +316,7 @@ pm_company_headquarter_privately_owned_academics = {
 			building_capitalists_shares_add = 10
 			building_academics_shares_add   = 10
 			building_shopkeepers_shares_add = 1
+			building_company_worker_dividends_add = 0.25
 		}
 	}
 }
@@ -326,6 +363,7 @@ pm_company_headquarter_principle_divine_economics_2_aristocrats = {
 	disallowing_laws = {
 		law_command_economy
 		law_cooperative_ownership
+		law_commercialized_agriculture
 	}
 
 	unlocking_principles = {
@@ -337,6 +375,44 @@ pm_company_headquarter_principle_divine_economics_2_aristocrats = {
 		level_scaled = {
 			building_employment_capitalists_add = 10
 			building_employment_aristocrats_add = 20 # 15
+			building_employment_clergymen_add   = 10 # 25
+			building_employment_clerks_add      = 10 # 0
+		}
+		unscaled = {
+			building_capitalists_shares_add = 10
+			building_aristocrats_shares_add = 10
+			building_clergymen_shares_add   = 2
+		}
+	}
+}
+
+
+pm_company_headquarter_principle_divine_economics_2_aristocrats_commercial_agriculture = {
+	texture = "gfx/interface/icons/production_method_icons/privately_owned.dds"
+	is_hidden_when_unavailable = yes
+
+	unlocking_company_categories = {
+		aristocrat_owned
+	}	
+	
+	unlocking_laws = {
+		law_commercialized_agriculture
+	}
+	
+	disallowing_laws = {
+		law_command_economy
+		law_cooperative_ownership
+	}
+
+	unlocking_principles = {
+		principle_divine_economics_2
+		principle_divine_economics_3
+	}
+
+	building_modifiers = {
+		level_scaled = {
+			building_employment_capitalists_add = 20 # 15
+			building_employment_aristocrats_add = 10
 			building_employment_clergymen_add   = 10 # 25
 			building_employment_clerks_add      = 10 # 0
 		}
@@ -377,6 +453,7 @@ pm_company_headquarter_principle_divine_economics_2_shopkeepers = {
 			building_capitalists_shares_add = 10
 			building_shopkeepers_shares_add = 10 # 5
 			building_clergymen_shares_add = 2
+			building_company_worker_dividends_add = 0.25
 		}
 	}
 }
@@ -410,6 +487,7 @@ pm_company_headquarter_principle_divine_economics_2_bureaucrats = {
 			building_capitalists_shares_add = 10
 			building_bureaucrats_shares_add = 10 # 5
 			building_clergymen_shares_add = 2
+			building_company_government_dividends_add = 0.25
 		}
 	}
 }
@@ -443,6 +521,7 @@ pm_company_headquarter_principle_divine_economics_2_academics = {
 			building_capitalists_shares_add = 10
 			building_academics_shares_add   = 10 # 5
 			building_clergymen_shares_add   = 2
+			building_company_worker_dividends_add = 0.25
 		}
 	}
 }

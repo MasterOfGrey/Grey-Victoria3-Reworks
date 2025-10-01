@@ -184,7 +184,7 @@ capitulate_to_revolution = {
 		owner = {
 			add_loyalists = {
 				value = 0.8
-				interest_group = PREV
+				interest_group ?= PREV
 			}
 		}
 	}

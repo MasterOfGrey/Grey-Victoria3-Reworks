@@ -478,9 +478,14 @@
 
 			if = {
 				limit = {
-					owner ?= { has_journal_entry = je_acw_countdown }
+					OR = {
+						owner ?= {
+							has_journal_entry = je_acw_countdown
+						}
+						scope:clout <= 0
+					}
 				}
-				add = 50
+				add = 1000
 			}
 		}
 

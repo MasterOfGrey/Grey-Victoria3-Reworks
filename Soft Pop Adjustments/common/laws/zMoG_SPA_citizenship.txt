@@ -32,8 +32,7 @@ law_subjecthood = {
 		country_support_separatism_strength_mult = -0.5
 
 		#If primary culture, only apply this value
-		# country_acceptance_primary_culture_add = 65	# What???
-		country_acceptance_primary_culture_add = 90	# Required to make religious acceptance fit with modified acceptance levels.
+		country_acceptance_primary_culture_add = 100
 		
 		# Homeland
 		country_acceptance_homeland_add = 15 # 30	# (Base is changed to 15)
