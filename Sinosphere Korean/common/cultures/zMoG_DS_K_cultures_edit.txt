@@ -6,7 +6,7 @@
 	language = language_korean
 
 	obsessions = {
-		#liquor
+		liquor
 		fruit
 	}
 

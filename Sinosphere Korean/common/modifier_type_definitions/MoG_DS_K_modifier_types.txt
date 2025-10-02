@@ -13,3 +13,32 @@ state_yamatos_standard_of_living_add = {
 		ai_value=0
 	}
 }
+
+country_sino_cultural_acceptance_add={
+	decimals=1
+	color=good
+	game_data={
+		ai_value=0
+	}
+}
+country_yamatos_cultural_acceptance_add={
+	decimals=1
+	color=good
+	game_data={
+		ai_value=0
+	}
+}
+country_fervor_target_sino_add={
+	decimals=1
+	color=good
+	game_data={
+		ai_value=0
+	}
+}
+country_fervor_target_yamatos_add={
+	decimals=1
+	color=good
+	game_data={
+		ai_value=0
+	}
+}
