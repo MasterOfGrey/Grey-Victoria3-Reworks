@@ -1,7 +1,7 @@
 ﻿### Originally just the Defaults - With state tax capacity changes to rebalance for urban changes.
 ### But actually, ownership buildings employ vastly too many people late-game.
 
-## Manor Houses (4 PM's in 2 PMG's, reduced to total 50 people/level employed)
+## Manor Houses (4 PM's in 2 PMG's, reduced to total 50 people/level employed, 30/20 split)
 pm_manor_house_privately_owned = {
 	texture = "gfx/interface/icons/production_method_icons/ownership_aristocrats.dds"
 	replacement_if_valid = pm_manor_house_principle_divine_economics_2
@@ -14,8 +14,7 @@ pm_manor_house_privately_owned = {
 	
 	building_modifiers = { 
 		level_scaled = {
-			building_employment_aristocrats_add = 25 # 10 # 50
-			# building_employment_laborers_add = 15 # 100
+			building_employment_aristocrats_add = 30 # 50
 		}
 		unscaled = {
 			building_aristocrats_shares_add = 10
@@ -40,14 +39,13 @@ pm_manor_house_principle_divine_economics_2 = {
 	
 	building_modifiers = { 
 		level_scaled = {
-			building_employment_aristocrats_add = 15 # 5 # 50
-			building_employment_clergymen_add = 10 # 5 # 50
-			# building_employment_laborers_add = 15 # 100
+			building_employment_aristocrats_add = 15 # 50	# This is only pm that gives >50 total (+10% vs vanilla +33% total)
+			building_employment_clergymen_add = 20 # 50
 		}
 		
 		unscaled = {
 			building_aristocrats_shares_add = 10
-			building_clergymen_shares_add = 2
+			building_clergymen_shares_add = 2		# *special DE exception: 1 share/10 middle class employees that get dividends
 		}
 	}
 }
@@ -61,11 +59,11 @@ pm_manor_house_bureaucrat_ownership = {
 	
 	building_modifiers = {
 		level_scaled = {
-			building_employment_bureaucrats_add = 20 # 10 # 100
-			building_employment_clerks_add = 5 # 15 # 0
+			building_employment_bureaucrats_add = 15 # 100
+			building_employment_clerks_add = 5 # 0
 		}
 		unscaled = {
-			building_bureaucrats_shares_add = 1
+			building_bureaucrats_shares_add = 1		# 1 share/15 middle class employees that get dividends
 		}		
 	}	
 }
@@ -79,11 +77,11 @@ pm_manor_house_clergy_ownership = {
 
 	building_modifiers = {
 		level_scaled = {
-			building_employment_clergymen_add = 20 # 10 # 100
-			building_employment_clerks_add = 5 # 15 # 0
+			building_employment_clergymen_add = 15 # 100
+			building_employment_clerks_add = 5 # 0
 		}
 		unscaled = {
-			building_clergymen_shares_add = 1
+			building_clergymen_shares_add = 1		# 1 share/15 middle class employees that get dividends
 		}
 	}
 }
@@ -95,13 +93,13 @@ pm_financial_district_privately_owned = {
 	
 	building_modifiers = { 
 		level_scaled = {
-			building_employment_capitalists_add = 30 # 10 # 50
-			building_employment_shopkeepers_add = 10 # 20 # 100
-			building_employment_clerks_add = 10 # 20 # 100
+			building_employment_capitalists_add = 25 # 50
+			building_employment_shopkeepers_add = 15 # 25
+			building_employment_clerks_add = 10 # 25
 		}
 		unscaled = {
 			building_capitalists_shares_add = 10
-			building_shopkeepers_shares_add = 1
+			building_shopkeepers_shares_add = 1		# 1 share/15 middle class employees that get dividends
 		}
 	}
 }
@@ -113,13 +111,13 @@ pm_financial_district_publicly_traded = {
 	
 	building_modifiers = { 
 		level_scaled = {
-			building_employment_capitalists_add = 30 # 10 # 50
-			building_employment_bureaucrats_add = 10 # 50
-			building_employment_clerks_add = 10 # 30 # 150
+			building_employment_capitalists_add = 25 # 50
+			building_employment_bureaucrats_add = 15 # 25
+			building_employment_clerks_add = 10 # 25
 		}
 		unscaled = {
 			building_capitalists_shares_add = 10
-			building_bureaucrats_shares_add = 1
+			building_bureaucrats_shares_add = 1		# 1 share/15 middle class employees that get dividends
 		}			
 	}	
 }
@@ -135,13 +133,13 @@ pm_financial_district_principle_divine_economics_2 = {
 
 	building_modifiers = { 
 		level_scaled = {
-			building_employment_capitalists_add = 30 # 10 # 50
-			building_employment_clergymen_add = 10 # 50
-			building_employment_clerks_add = 10 # 30 # 150
+			building_employment_capitalists_add = 20 # 50
+			building_employment_clergymen_add = 20 # 25
+			building_employment_clerks_add = 10 # 25
 		}
 		unscaled = {
 			building_capitalists_shares_add = 10
-			building_clergymen_shares_add = 2
+			building_clergymen_shares_add = 2		# *special DE exception: 1 share/10 middle class employees that get dividends
 		}
 	}
 }
@@ -162,13 +160,13 @@ pm_company_headquarter_privately_owned = {
 
 	building_modifiers = {
 		level_scaled = {
-			building_employment_capitalists_add = 30 # 10 # 50
-			building_employment_shopkeepers_add = 10 # 20 # 100
-			building_employment_clerks_add      = 10 # 20 # 100
+			building_employment_capitalists_add = 25 # 25
+			building_employment_shopkeepers_add = 15 # 0
+			building_employment_clerks_add      = 10 # 25
 		}
 		unscaled = {
 			building_capitalists_shares_add = 10
-			building_shopkeepers_shares_add = 1
+			building_shopkeepers_shares_add = 1	# 0		# 1 share/15 middle class employees that get dividends
 		}
 	}
 }
@@ -189,15 +187,15 @@ pm_company_headquarter_privately_owned_aristocrats = {
 
 	building_modifiers = {
 		level_scaled = {
-			building_employment_capitalists_add = 10
-			building_employment_aristocrats_add = 20 # 15
-			building_employment_shopkeepers_add = 10 # 0
+			building_employment_capitalists_add = 10 #10
+			building_employment_aristocrats_add = 15 # 15
+			building_employment_shopkeepers_add = 15 # 0
 			building_employment_clerks_add      = 10 # 25
 		}
 		unscaled = {
-			building_capitalists_shares_add = 10
-			building_aristocrats_shares_add = 10
-			building_shopkeepers_shares_add = 1
+			building_capitalists_shares_add = 4	# 10
+			building_aristocrats_shares_add = 6 # 10
+			building_shopkeepers_shares_add = 1	# 0		# 1 share/15 middle class employees that get dividends
 		}
 	}
 }
@@ -221,15 +219,15 @@ pm_company_headquarter_privately_owned_aristocrats_commercial_agriculture = {
 
 	building_modifiers = {
 		level_scaled = {
-			building_employment_capitalists_add = 20 # 15
-			building_employment_aristocrats_add = 10
-			building_employment_shopkeepers_add = 10 # 0
+			building_employment_capitalists_add = 15 # 15
+			building_employment_aristocrats_add = 10 # 10
+			building_employment_shopkeepers_add = 15 # 0
 			building_employment_clerks_add      = 10 # 25
 		}
 		unscaled = {
-			building_capitalists_shares_add = 10
-			building_aristocrats_shares_add = 10
-			building_shopkeepers_shares_add = 1
+			building_capitalists_shares_add = 6	# 10
+			building_aristocrats_shares_add = 4 # 10
+			building_shopkeepers_shares_add = 1	# 0		# 1 share/15 middle class employees that get dividends
 		}
 	}
 }
@@ -250,7 +248,7 @@ pm_company_headquarter_privately_owned_shopkeepers = {
 
 	building_modifiers = {
 		level_scaled = {
-			building_employment_capitalists_add = 10
+			building_employment_capitalists_add = 10 # 10
 			building_employment_shopkeepers_add = 30 # 25
 			building_employment_clerks_add      = 10 # 15
 		}
@@ -278,15 +276,13 @@ pm_company_headquarter_privately_owned_bureaucrats = {
 
 	building_modifiers = {
 		level_scaled = {
-			building_employment_capitalists_add = 10
-			building_employment_bureaucrats_add = 20 # 25
-			building_employment_shopkeepers_add = 10 # 0
+			building_employment_capitalists_add = 10 # 10
+			building_employment_bureaucrats_add = 30 # 25
 			building_employment_clerks_add      = 10 # 15
 		}
 		unscaled = {
 			building_capitalists_shares_add = 10
-			building_bureaucrats_shares_add = 10
-			building_shopkeepers_shares_add = 1
+			building_bureaucrats_shares_add = 7 # 5
 			building_company_government_dividends_add = 0.25
 		}
 	}
@@ -307,15 +303,13 @@ pm_company_headquarter_privately_owned_academics = {
 
 	building_modifiers = {
 		level_scaled = {
-			building_employment_capitalists_add = 10
-			building_employment_academics_add   = 20 # 25
-			building_employment_shopkeepers_add = 10 # 0
+			building_employment_capitalists_add = 10 # 10
+			building_employment_academics_add   = 30 # 25
 			building_employment_clerks_add      = 10 # 15
 		}
 		unscaled = {
 			building_capitalists_shares_add = 10
-			building_academics_shares_add   = 10
-			building_shopkeepers_shares_add = 1
+			building_academics_shares_add   = 7 # 5
 			building_company_worker_dividends_add = 0.25
 		}
 	}
@@ -341,13 +335,13 @@ pm_company_headquarter_principle_divine_economics_2 = {
 
 	building_modifiers = {
 		level_scaled = {
-			building_employment_capitalists_add = 30 # 10 # 50
-			building_employment_clergymen_add   = 10 # 10 # 50
-			building_employment_clerks_add      = 10 # 30 # 150
+			building_employment_capitalists_add = 20 # 25
+			building_employment_clergymen_add   = 20 # 25
+			building_employment_clerks_add      = 10 # 0
 		}
 		unscaled = {
 			building_capitalists_shares_add = 10
-			building_clergymen_shares_add   = 2
+			building_clergymen_shares_add   = 2		# *special DE exception: 1 share/10 middle class employees that get dividends
 		}
 	}
 }
@@ -373,14 +367,14 @@ pm_company_headquarter_principle_divine_economics_2_aristocrats = {
 	
 	building_modifiers = {
 		level_scaled = {
-			building_employment_capitalists_add = 10
-			building_employment_aristocrats_add = 20 # 15
-			building_employment_clergymen_add   = 10 # 25
+			building_employment_capitalists_add = 8 # 10
+			building_employment_aristocrats_add = 12 # 15
+			building_employment_clergymen_add   = 20 # 25
 			building_employment_clerks_add      = 10 # 0
 		}
 		unscaled = {
-			building_capitalists_shares_add = 10
-			building_aristocrats_shares_add = 10
+			building_capitalists_shares_add = 4 # 10
+			building_aristocrats_shares_add = 6 # 10
 			building_clergymen_shares_add   = 2
 		}
 	}
@@ -411,14 +405,14 @@ pm_company_headquarter_principle_divine_economics_2_aristocrats_commercial_agric
 
 	building_modifiers = {
 		level_scaled = {
-			building_employment_capitalists_add = 20 # 15
-			building_employment_aristocrats_add = 10
-			building_employment_clergymen_add   = 10 # 25
+			building_employment_capitalists_add = 12 # 15
+			building_employment_aristocrats_add = 8 # 10
+			building_employment_clergymen_add   = 20 # 25
 			building_employment_clerks_add      = 10 # 0
 		}
 		unscaled = {
-			building_capitalists_shares_add = 10
-			building_aristocrats_shares_add = 10
+			building_capitalists_shares_add = 6
+			building_aristocrats_shares_add = 4
 			building_clergymen_shares_add   = 2
 		}
 	}
@@ -450,9 +444,9 @@ pm_company_headquarter_principle_divine_economics_2_shopkeepers = {
 			building_employment_clerks_add      = 10 # 0
 		}
 		unscaled = {
-			building_capitalists_shares_add = 10
-			building_shopkeepers_shares_add = 10 # 5
-			building_clergymen_shares_add = 2
+			building_capitalists_shares_add = 7.5 # 10
+			building_shopkeepers_shares_add = 5
+			building_clergymen_shares_add = 3 # 2
 			building_company_worker_dividends_add = 0.25
 		}
 	}
@@ -484,9 +478,9 @@ pm_company_headquarter_principle_divine_economics_2_bureaucrats = {
 			building_employment_clerks_add      = 10 # 0
 		}
 		unscaled = {
-			building_capitalists_shares_add = 10
-			building_bureaucrats_shares_add = 10 # 5
-			building_clergymen_shares_add = 2
+			building_capitalists_shares_add = 7.5 # 10
+			building_bureaucrats_shares_add = 5
+			building_clergymen_shares_add = 3 # 2
 			building_company_government_dividends_add = 0.25
 		}
 	}
@@ -518,9 +512,9 @@ pm_company_headquarter_principle_divine_economics_2_academics = {
 			building_employment_clerks_add      = 10 # 0
 		}
 		unscaled = {
-			building_capitalists_shares_add = 10
-			building_academics_shares_add   = 10 # 5
-			building_clergymen_shares_add   = 2
+			building_capitalists_shares_add = 7.5 # 10
+			building_academics_shares_add   = 5
+			building_clergymen_shares_add   = 3 # 2
 			building_company_worker_dividends_add = 0.25
 		}
 	}
