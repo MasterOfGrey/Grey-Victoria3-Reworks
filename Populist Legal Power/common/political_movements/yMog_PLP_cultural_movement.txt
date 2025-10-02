@@ -57,7 +57,7 @@
 			limit = {
 				culture = {
 					AND = {
-						shares_heritage_trait_group_with_any_primary_culture = root.owner
+						shares_heritage_trait_with_any_primary_culture = root.owner
 						OR = {
 							shares_language_trait_group_with_any_primary_culture = root.owner
 							shares_tradition_trait_with_any_primary_culture = root.owner
@@ -71,6 +71,10 @@
 			limit = {
 				culture = {
 					shares_heritage_trait_group_with_any_primary_culture = root.owner
+					OR = {
+						shares_language_trait_group_with_any_primary_culture = root.owner
+						shares_tradition_trait_with_any_primary_culture = root.owner
+					}
 				}
 			}
 			set_core_ideology = ideology_pluralist_movement_2
@@ -79,8 +83,8 @@
 			limit = {
 				culture = {
 					OR = {
-						shares_language_trait_group_with_any_primary_culture = root.owner
-						shares_tradition_trait_with_any_primary_culture = root.owner
+						shares_heritage_trait_group_with_any_primary_culture = root.owner
+						shares_language_trait_with_any_primary_culture = root.owner
 					}
 				}
 			}
@@ -321,14 +325,14 @@
 				}
 				else = {
 					add = {
-						value = 6
+						value = 12
 						desc = "POP_ARISTOCRATS"
 					}
 				}
 			}
 			else = {
 				add = {
-					value = 12
+					value = 18
 					desc = "UPPER_NO_ICON"
 				}
 			}
@@ -342,7 +346,7 @@
 					is_pop_type = academics
 				}
 				add = {
-					value = 35
+					value = 40
 					desc = "POP_ACADEMICS"
 				}
 			}
@@ -357,13 +361,13 @@
 						}
 					}
 					add = {
-						value = 35
+						value = 40
 						desc = "POP_CLERGYMEN"
 					}
 				}
 				else = {
 					add = {
-						value = 25
+						value = 15
 						desc = "POP_CLERGYMEN"
 					}
 				}
@@ -392,15 +396,6 @@
 					desc = "MIDDLE_NO_ICON"
 				}
 			}
-			if = {
-				limit = {
-					cu:polish ?= culture
-				}
-				add = {
-					value = 25
-					desc = "POP_POLISH_ARISTOCRATS"
-				}
-			}
 		}
 		else_if = {
 			limit = {
@@ -411,7 +406,7 @@
 					is_pop_type = clerks
 				}
 				add = {
-					value = 20
+					value = 25
 					desc = "POP_CLERKS"
 				}
 			}
@@ -437,15 +432,6 @@
 				add = {
 					value = 10
 					desc = "LOWER_NO_ICON"
-				}
-			}
-			if = {
-				limit = {
-					cu:polish ?= culture
-				}
-				add = {
-					value = 10
-					desc = "POP_POLISH_ARISTOCRATS"
 				}
 			}
 		}
@@ -526,11 +512,11 @@
 			}
 		}
 		
-		multiply = { # Range from x0.625 to x3.125
+		multiply = { # Range from x0.775 to 2.275
 			desc = "POP_CULTURE_FERVOR"
 			value = culture.culture_current_fervor
 			subtract = 15
-			multiply = 0.025
+			multiply = 0.015
 			add = 1
 		}
 
@@ -641,53 +627,19 @@
 						value >= 0.10 # 0.05
 					}
 				}
-				add = 10
-
-				if = {
-					limit = {
-						culture_percent_state = {
-							target = scope:political_movement.culture
-							value >= 0.75
-						}
+				add = { # These three values must add up to more than 1 - 5 x Obstinance, 1/2 Turmoil, percent of pops of this culture
+					value = -1
+					add = "this.culture_percent_state(scope:political_movement.culture)"
+					add = {
+						value = this.turmoil
+						multiply = 0.5
 					}
-					add = 1000
-				}
-				else_if = {
-					limit = {
-						culture_percent_state = {
-							target = scope:political_movement.culture
-							value >= 0.5
-						}
+					add = {
+						value = this.obstinance
+						multiply = 5
 					}
-					add = 500
+					multiply = 100
 				}
-				else_if = {
-					limit = {
-						culture_percent_state = {
-							target = scope:political_movement.culture
-							value >= 0.25
-						}
-					}
-					add = 100
-				}
-				else_if = {
-					limit = {
-						culture_percent_state = {
-							target = scope:political_movement.culture
-							value >= 0.15 # 0.1
-						}
-					}
-					add = 50
-				}
-			}
-
-			if = { # Agnus Dei, qui tollis peccata mundi, miserere nobis
-				limit = {
-					p:xF0E080.state ?= this
-					is_split_state = yes
-					scope:political_movement.culture ?= cu:polish
-				}
-				multiply = -100
 			}
 		}
 
@@ -701,17 +653,6 @@
 	}
 
 	additional_radicalism_factors = {
-		if = {
-			limit = {
-				owner = { has_journal_entry = je_springtime_of_the_peoples }
-				scope:culture = { has_discrimination_trait_group = heritage_group_european }
-			}
-			add = {
-				value = 0.25
-				desc = "SPRINGTIME_OF_THE_PEOPLES_UNDERWAY"
-			}
-		}
-
 		add = {
 			#value = "owner.average_sol"
 			value = "owner.average_sol_for_primary_cultures"
@@ -724,32 +665,48 @@
 
 		if = {
 			limit = {
-				owner = { cultural_acceptance_base = { target = scope:culture value <= acceptance_status_1 } }
+				owner = {
+					has_law = law_type:law_subjecthood
+				}
 			}
-
 			add = {
-				value = 0.3
-				desc = "DISCRIMINATION_LEVEL_violent_hostility"
+				value = 100
+				subtract = "owner.country_average_cultural_acceptance(scope:culture)"
+				divide = 200 # To get this on the level of the other laws
+				subtract = 0.10 # Compensate for religious acceptance, which is currently inaccessible from here
+				desc = "DISCRIMINATION_LEVEL_subjecthood"
 			}
 		}
-		else_if = {
-			limit = {
-				owner = { cultural_acceptance_base = { target = scope:culture value <= acceptance_status_2 } }
-			}
+		else = {
+			if = {
+				limit = {
+					owner = { cultural_acceptance_base = { target = scope:culture value <= acceptance_status_1 } }
+				}
 
-			add = {
-				value = 0.2
-				desc = "DISCRIMINATION_LEVEL_cultural_erasure"
+				add = {
+					value = 0.3
+					desc = "DISCRIMINATION_LEVEL_violent_hostility"
+				}
 			}
-		}
-		else_if = {
-			limit = {
-				owner = { cultural_acceptance_base = { target = scope:culture value <= acceptance_status_3 } }
-			}
+			else_if = {
+				limit = {
+					owner = { cultural_acceptance_base = { target = scope:culture value <= acceptance_status_2 } }
+				}
 
-			add = {
-				value = 0.1
-				desc = "DISCRIMINATION_LEVEL_open_prejudice"
+				add = {
+					value = 0.2
+					desc = "DISCRIMINATION_LEVEL_cultural_erasure"
+				}
+			}
+			else_if = {
+				limit = {
+					owner = { cultural_acceptance_base = { target = scope:culture value <= acceptance_status_3 } }
+				}
+
+				add = {
+					value = 0.1
+					desc = "DISCRIMINATION_LEVEL_open_prejudice"
+				}
 			}
 		}
 
@@ -792,6 +749,18 @@
 		if = {
 			limit = {
 				owner = {
+					has_modifier = modifier_polish_organic_statute
+				}
+			}
+			add = {
+				desc = "modifier_polish_organic_statute"
+				value = 0.15
+			}
+		}
+
+		if = {
+			limit = {
+				owner = {
 					any_neighbouring_state = {
 						owner = {
 							NOT = { THIS = ROOT.owner }
@@ -819,7 +788,7 @@
 				}
 			}
 			add = {
-				desc = "INSURRECTIONARY_MOVEMENTS"
+				desc = "SIMULTANEOUS_INSURRECTIONARY_MOVEMENTS"
 				owner = {
 					every_political_movement = {
 						limit = {

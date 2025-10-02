@@ -165,6 +165,7 @@ company_basic_chemicals = {
 	
 	prosperity_modifier = {
 		unit_supply_consumption_mult = -0.05
+		building_chemical_plants_throughput_add = 0.1
 		building_mendelejew_hydrogenation_plants_throughput_add = 0.5
 		building_mendelejew_synthetic_rubber_factory_throughput_add = 0.5
 	}

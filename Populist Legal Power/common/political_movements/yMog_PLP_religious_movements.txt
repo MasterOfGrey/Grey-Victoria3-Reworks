@@ -246,11 +246,18 @@
 			}
 		}
 
-		add = { # Weakened by increasing literacy rates
-			desc = "POP_LITERACY"
-			this = {
-				value = literacy_rate
-				multiply = -2
+		if = {
+			limit = {
+				NOT = {
+					is_pop_type = clergymen
+				}
+			}
+			add = { # Weakened by increasing literacy rates
+				desc = "POP_LITERACY"
+				this = {
+					value = literacy_rate
+					multiply = -2
+				}
 			}
 		}
 
@@ -370,43 +377,23 @@
 			if = {
 				limit = {
 					is_capital = no
-				}
-
-				if = {
-					limit = {
-						religion_percent_state = {
-							target = scope:political_movement.religion
-							value >= 0.75
-						}
+					religion_percent_state = {
+						target = scope:political_movement.religion
+						value >= 0.05
 					}
-					add = 250
 				}
-				else_if = {
-					limit = {
-						religion_percent_state = {
-							target = scope:political_movement.religion
-							value >= 0.5
-						}
+				add = { # These three values must add up to more than 1 - 5 x Obstinance, 1/2 Turmoil, percent of pops of this religion
+					value = -1
+					add = "this.religion_percent_state(scope:political_movement.religion)"
+					add = {
+						value = this.turmoil
+						multiply = 0.5
 					}
-					add = 150
-				}
-				else_if = {
-					limit = {
-						religion_percent_state = {
-							target = scope:political_movement.religion
-							value >= 0.25
-						}
+					add = {
+						value = this.obstinance
+						multiply = 5
 					}
-					add = 50
-				}
-				else_if = {
-					limit = {
-						religion_percent_state = {
-							target = scope:political_movement.religion
-							value >= 0.15 # 0.1
-						}
-					}
-					add = 10
+					multiply = 100
 				}
 			}
 		}
@@ -468,7 +455,7 @@
 				}
 			}
 			add = {
-				desc = "INSURRECTIONARY_MOVEMENTS"
+				desc = "SIMULTANEOUS_INSURRECTIONARY_MOVEMENTS"
 				owner = {
 					every_political_movement = {
 						limit = {

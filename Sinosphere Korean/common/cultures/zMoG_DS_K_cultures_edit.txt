@@ -1,14 +1,16 @@
-﻿korean={															# Names from EINI
+﻿korean= {
+	# Names from EINI
 	color= hsv{ 0.17 0.41 0.34 }
 	religion = confucian
 	heritage = heritage_korean
 	language = language_korean
-	traditions = { tradition_sinosphere }
-	
+
 	obsessions = {
+		#liquor
 		fruit
 	}
-	
+
+	traditions = { tradition_sinosphere }
 	male_common_first_names = {
 		Bong-haek
 		Chwa-chin
@@ -441,7 +443,7 @@
 	graphics = east_asian
 }
 
-yuanzhumin={
+yuanzhumin= {
 	color= hsv { 0.272 0.75 0.54 }
 	religion = animist
 	heritage = heritage_formosan
@@ -464,7 +466,7 @@ yuanzhumin={
 	graphics = polynesian
 }
 
-hakka={
+hakka= {
 	color= hsv{ 0.1 0.43 0.34 }
 	religion = confucian
 	heritage = heritage_han
@@ -943,7 +945,7 @@ hakka={
 	graphics = east_asian
 }
 
-miao={
+miao= {
 	color= hsv{ 0.62 0.46 0.50 }
 	religion = animist
 	heritage = heritage_miao
@@ -1010,7 +1012,7 @@ miao={
 	graphics = east_asian
 }
 
-min={
+min= {
 	color= hsv{ 0.71 0.54 0.78 }
 	religion = confucian
 	heritage = heritage_han
@@ -1075,7 +1077,7 @@ min={
 	graphics = east_asian
 }
 
-zhuang={
+zhuang= {
 	color= hsv{ 0.92 0.32 0.88 }
 	religion = animist
 	heritage = heritage_tai
@@ -1132,7 +1134,7 @@ zhuang={
 	graphics = east_asian
 }
 
-yi={
+yi= {
 	color= hsv{ 0.91 0.51 0.52 }
 	religion = animist
 	heritage = heritage_yi
@@ -1745,7 +1747,7 @@ yi={
 	graphics = east_asian
 }
 
-yue={
+yue= {
 	color= hsv{ 0.80 0.36 0.39 }
 	religion = confucian
 	heritage = heritage_han
@@ -2357,7 +2359,7 @@ yue={
 	graphics = east_asian
 }
 
-japanese={
+japanese= {
 	color= hsv{ 0 0 90 }
 	religion = mahayana
 	heritage = heritage_japanese
@@ -2606,11 +2608,16 @@ japanese={
 	graphics = east_asian
 }
 
-vietnamese={
+vietnamese= {
 	color= hsv{ 0.31 0.37 0.48 }
 	religion = mahayana
 	heritage = heritage_vietnamese
 	language = language_vietic
+		
+	obsessions = {
+		coffee
+	}
+
 	traditions = { tradition_sinosphere }
 	
 	obsessions = {

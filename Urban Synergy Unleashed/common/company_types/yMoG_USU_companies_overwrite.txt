@@ -113,7 +113,7 @@ company_basic_shipyards = {
 	}
 	
 	prosperity_modifier = {
-		unit_navy_offense_mult = 0.05
+		unit_navy_offense_mult = 0.1
 	}
 	
 	ai_will_do = {

@@ -22,7 +22,9 @@ pm_simple_organization = {
 		level_scaled = {
 			building_employment_clerks_add = 500	# Was 4000
 		}
-	}		
+	}
+	
+	ai_value = -1000 # AI should get off this PM as fast as possible
 }		
 
 pm_horizontal_drawer_cabinets = {

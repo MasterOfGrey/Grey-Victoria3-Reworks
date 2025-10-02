@@ -5,7 +5,7 @@
 
 # Note: Credits must be included in any reproduction.
 
-ainu={
+ainu= {
 	color= hsv{ 0 0 0.5 }
 	religion = animist
 	heritage = heritage_ainu
@@ -91,11 +91,16 @@ ainu={
 	graphics = east_asian
 }
 
-manchu={
+manchu= {
 	color= rgb{ 233 207 84 }
 	religion = confucian
 	heritage = heritage_manchu
 	language = language_jurchenic
+	
+	obsessions = {
+		tea
+	}
+
 	traditions = { tradition_sinosphere }
 	male_common_first_names = {
 		Hesehn
@@ -277,7 +282,7 @@ manchu={
 	graphics = east_asian
 }
 
-mongol={
+mongol= {
 	color= rgb{ 74 125 155 }
 	religion = gelugpa
 	heritage = heritage_mongolian
@@ -404,7 +409,7 @@ mongol={
 	graphics = east_asian
 }
 
-kalmyk={
+kalmyk= {
 	color= rgb{ 250 182 3 }
 	religion = gelugpa
 	heritage = heritage_mongolian
@@ -531,13 +536,12 @@ kalmyk={
 	graphics = east_asian
 }
 
-han={
+han= {
 	color= rgb{ 190 80 48 }
 	religion = confucian
 	heritage = heritage_han
 	language = language_mandarin
 	traditions = { tradition_sinosphere }
-	
 	obsessions = {
 		opium
 	}
