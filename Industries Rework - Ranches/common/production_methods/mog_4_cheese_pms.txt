@@ -42,7 +42,7 @@ pm_industrial_preserves = {
 		workforce_scaled = {
 			goods_input_paper_add = 4
 			goods_output_meat_add = -15
-			goods_output_groceries_add = 24
+			goods_output_groceries_add = 20 # 24
 		}
 		
 		level_scaled = {
@@ -74,7 +74,7 @@ pm_ranch_milk_production = {
 			goods_input_paper_add = 8
 			goods_input_electricity_add = 4
 			goods_output_meat_add = -30
-			goods_output_groceries_add = 50
+			goods_output_groceries_add = 44 # 50
 		}
 		
 		level_scaled = {
@@ -108,7 +108,7 @@ pm_full_eggs_dairy = {
 			goods_input_paper_add = 10
 			goods_input_electricity_add = 10
 			goods_output_meat_add = -20
-			goods_output_groceries_add = 50
+			goods_output_groceries_add = 44 # 50
 		}
 		
 		level_scaled = {
