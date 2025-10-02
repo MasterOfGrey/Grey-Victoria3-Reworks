@@ -813,6 +813,12 @@
 				max = 0.25
 			}
 		}
+		
+		# Placeholder - Not Used (value = 0) but already in CMF to be used if we need it again.
+		add = { 
+			value = mog_plp_movement_cultural_minority_additional_radicalism_factor_add
+			desc = "INSTITUTION_FUNDING_LEVEL_colonial_affairs"								# Desc only shows when value =/= 0
+		}
 	}
 }
 
@@ -1019,7 +1025,8 @@ movement_minority_rights = {
 			}
 		}
 
-		# Actual conditions relative to their neighbors
+		# PLP - Actual conditions relative to their neighbors
+		# CMF: mog_plp_movement_minority_rights_pop_support_weight_mult
 		multiply = {
 			value = 1.0
 			add = {

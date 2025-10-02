@@ -11,12 +11,20 @@ com_movement_cultural_minority_secession_target_fraction_of_states_max = 0.90 # 
 
 ## Religious Movement Values
 com_movement_religious_minority_secession_possible_religion_percent_state = 0.15 # 0.10
-# com_movement_religious_minority_secession_state_weight_religion_percent_state_1 = 0.75	# Use Default
-# com_movement_religious_minority_secession_state_weight_religion_percent_state_2 = 0.5		# Use Default
-# com_movement_religious_minority_secession_state_weight_religion_percent_state_3 = 0.25	# Use Default
-com_movement_religious_minority_secession_state_weight_religion_percent_state_4 = 0.15 # 0.1
+com_movement_religious_minority_secession_state_weight_religion_percent_state_0 = 0.10 # 0.05
+# com_movement_religious_minority_secession_state_weight_religion_percent_state_1 = 0.75	# Removed in 1.10.3 # Use Default
+# com_movement_religious_minority_secession_state_weight_religion_percent_state_2 = 0.5		# Removed in 1.10.3 # Use Default
+# com_movement_religious_minority_secession_state_weight_religion_percent_state_3 = 0.25	# Removed in 1.10.3 # Use Default
+# com_movement_religious_minority_secession_state_weight_religion_percent_state_4 = 0.15	# Removed in 1.10.3 # 0.1
 com_movement_religious_minority_secession_target_fraction_of_states_min = 0.05 # 0.15
 com_movement_religious_minority_secession_target_fraction_of_states_max = 0.90 # 0.75
+
+## Ideological Movement Values
+com_movement_anti_slavery_pop_support_weight_type_slaves = 500 # 50
+com_movement_anti_slavery_revolution_possible_political_movement_support = 0.1 # 0.05
+com_movement_anti_slavery_secession_possible_political_movement_support = 0.1 # 0.05
+com_movement_pro_slavery_revolution_possible_political_movement_support = 0.1 # 0.05
+com_movement_pro_slavery_secession_possible_political_movement_support = 0.1 # 0.05
 
 ### PLP values for CMF:
 ## Cultural Movement Values
@@ -73,4 +81,153 @@ mog_plp_movement_religious_minority_pop_support_weight_mult = {
 		multiply = 0.05
 	}
 	desc = "STANDARD_OF_LIVING_FOR_RELIGION"
+}
+
+## Ideological Movement Values
+mog_plp_movement_anti_slavery_pop_support_weight_cultural_solidarity_add = {
+	# PLP - Cultural solidarity between enslaved and non-enslaved pops
+	if = {
+		limit = {
+			OR = {
+				owner = { has_law_or_variant = law_type:law_slave_trade }
+				owner = { has_law_or_variant = law_type:law_legacy_slavery }
+				AND = {
+					owner = { has_law_or_variant = law_type:law_colonial_slavery }
+					state = { is_slave_state = no } # If you're in a slave state, concerns about being personally enslaved apply instead
+				}
+			}
+		}
+		add = {
+			desc = "CULTURE_ENSLAVED_PERCENT"
+			value = 100
+
+			save_temporary_scope_as = pop
+			owner = {
+				every_in_list = {
+					variable = culture_enslaved_percent_cache
+					save_temporary_scope_as = kvp
+					scope:pop.owner = {
+						ordered_in_list = {
+							variable = culture_enslaved_percent_cache_keys
+							position = scope:kvp.kvp_to_key
+							save_temporary_scope_as = key
+						}
+					}
+					if = {
+						limit = {
+							scope:pop.culture = scope:key
+						}
+						multiply = scope:kvp.kvp_to_value
+					}
+				}
+			}
+		}
+	}
+}
+
+mog_plp_movement_anti_slavery_pop_support_weight_personal_add = {
+	# PLP - More opposed if you personally are at risk of being enslaved
+	if = {
+		limit = {
+			owner = { has_law_or_variant = law_type:law_debt_slavery }
+		}
+		add = {
+			desc = "POP_POVERTY"
+			value = define:NEconomy|DEBT_SLAVERY_ENSLAVEMENT_RATE_PER_POP
+			subtract = {
+				value = wealth
+				multiply = define:NEconomy|DEBT_SLAVERY_ENSLAVEMENT_RATE_DROP_OFF_PER_WEALTH
+			}
+			multiply = 100
+		}
+	}
+	if = {
+		limit = {
+			owner = { has_law_or_variant = law_type:law_colonial_slavery }
+			state = { is_slave_state = yes }
+			pop_acceptance < define:NEconomy|COLONIAL_SLAVERY_ACCEPTANCE_THRESHOLD
+		}
+		add = {
+			desc = "POP_POVERTY"
+			value = define:NEconomy|COLONIAL_SLAVERY_ENSLAVEMENT_RATE_PER_POP
+			subtract = {
+				value = wealth
+				multiply = define:NEconomy|COLONIAL_SLAVERY_ENSLAVEMENT_RATE_DROP_OFF_PER_WEALTH
+			}
+			multiply = 100
+		}
+	}
+}
+
+mog_plp_movement_pro_slavery_pop_support_weight_owner_add = {
+	if = {
+		limit = {
+			and = {
+				is_employed = yes
+				workplace = { is_building_group = bg_owner_buildings }
+			}
+		}
+		add = {
+			desc = SLAVE_OWNER
+			value = 15
+			multiply = {
+				state = {
+					value = "pop_type_percent_state(pop_type:slaves)"
+					multiply = 2
+					divide = {
+						add = "pop_type_percent_state(pop_type:laborers)"
+						add = "pop_type_percent_state(pop_type:peasants)"
+						min = 1
+					}
+				}
+				max = 1
+			}
+		}
+	}
+}
+
+mog_plp_movement_pro_slavery_pop_support_weight_enslaved_percent_mult = {
+	add = {
+		desc = "CULTURE_ENSLAVED_PERCENT"
+		value = 1
+
+		save_temporary_scope_as = pop
+		owner = {
+			every_in_list = {
+				variable = culture_enslaved_percent_cache
+				save_temporary_scope_as = kvp
+				scope:pop.owner = {
+					ordered_in_list = {
+						variable = culture_enslaved_percent_cache_keys
+						position = scope:kvp.kvp_to_key
+						save_temporary_scope_as = key
+					}
+				}
+				if = {
+					limit = {
+						scope:pop.culture = scope:key
+					}
+					subtract = {
+						value = scope:kvp.kvp_to_value
+						multiply = 2
+					}
+				}
+			}
+		}
+		min = 0
+	}
+}
+
+mog_plp_movement_mainland_general_pop_support_weight_incorporation_percent_mult = {
+	# PLP - Colonized pops care about mainland politics to the extent it affects them
+	value = 1
+	if = {
+		limit = {
+			state = { is_incorporated = no }
+			pop_has_primary_culture = no
+		}
+		state = {
+			multiply = incorporation_progress
+		}
+	}
 }
