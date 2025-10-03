@@ -1,6 +1,44 @@
 ﻿### Originally just the Defaults - With state tax capacity changes to rebalance for urban changes.
 ### But actually, ownership buildings employ vastly too many people late-game.
 
+## If you have a pm with building_company_worker_dividends_add and you want one of the owner building shareholders to receive the same dividends as the workforce...
+## E.g. it looks something like this:
+##			building_capitalists_shares_add = 7.5
+##			building_academics_shares_add   = 5
+##			building_clergymen_shares_add   = 3
+##			building_company_worker_dividends_add = 0.25
+## Then you start with the ratio of:
+##		num_of_workers/building_company_worker_dividends_add = 
+##			PopNumA/(((PNA*ShareValA)/(PNA*SVA+PNB*SVB))*(1-building_company_worker_dividends_add))
+##		i.e.: F/C = A/(((A*x)/(A*x+H*y))*(1-C))
+##	And the general equations are: 
+##		ShareValA = -(building_company_worker_dividends_add*PopNumB*ShareValB)/
+##					(PopNumA*building_company_worker_dividends_add + (-1 + building_company_worker_dividends_add)*num_of_workers)
+##	Or:
+##		ShareValB = ((-PopNumA*building_company_worker_dividends_add + num_of_workers - building_company_worker_dividends_add*num_of_workers)*ShareValA)/
+##					(building_company_worker_dividends_add*PopNumB)
+##					
+##	Where:
+##		A = PopNumA = sum of all pops you want parity for
+##		x = ShareValA = numerical value of the shares for PopTypeA (typically 1)
+##		H = PopNumB = sum of all pops receiving higher shares
+##		y = ShareValB = the higher value of the shares for PopTypeB (which you are trying to calculate)
+##		C = building_company_worker_dividends_add = per the applicable modifier from either a Law or the PM
+##		F = num_of_workers = the number of workers employed in the normal building
+##
+##	You can wolfram this formula like: solve x = -(C H y)/(A C + (-1 + C) F), A = 30, H = 20, C = 0.75, F = 1000		<-- x = ShareValA
+##								or: solve y = ((-A C + F - C F) x)/(C H), A = 30, H = 20, C = 0.75, F = 1000			<-- y = ShareValB
+##		This will give you a result like: y = (91/6)x
+##		Which you can either resolve to: ShareValA = 1, ShareValB = 15.166
+##									or: ShareValA = 6, ShareValB = 91
+## E.g. it looks something like this:
+##			building_capitalists_shares_add = 91
+##			building_academics_shares_add   = 6
+##			building_clergymen_shares_add   = 6
+##			building_company_worker_dividends_add = 0.75
+##
+##	If the building workforce varies, use the minimum workforce number, and this will mean that the dividends the workers receive has a ceiling equivalent to PopTypeA.
+
 ## Manor Houses (4 PM's in 2 PMG's, reduced to total 50 people/level employed, 30/20 split)
 pm_manor_house_privately_owned = {
 	texture = "gfx/interface/icons/production_method_icons/ownership_aristocrats.dds"
