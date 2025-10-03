@@ -1,4 +1,7 @@
 ﻿l_english:
+ # New Owner PMs
+ pm_company_headquarter_coop_collective_agriculture: "$pm_worker_cooperative$"
+ pm_company_headquarter_only_collective_agriculture: "$pm_worker_cooperative$"
  # Fallback names if dynamic naming fails
  company_basic_utilities: "National Electric Company"
  company_basic_infrastructure: "State Logistics Consortium"
