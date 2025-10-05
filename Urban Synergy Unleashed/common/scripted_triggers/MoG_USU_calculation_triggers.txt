@@ -92,12 +92,12 @@ usu_calculate_building_good_ai_value_profit_adjustment = {
 			# So, situational override:
 			if = {
 				limit = {
+					exists = b:$building$ # Avoid this preventing the 1st level being built.
 					scope:relative_after_queued > {	# Apply some threshold of sell/buy to limit it. [t = (BSD+1)*0.5] <- halfway to minimum
 						value = define:NEconomy|BUY_SELL_DIFF_AT_MAX_FACTOR
 						add = 1
 						multiply = 0.5
 					}
-					scope:local_goods_production > $fallback_production$	# Avoid this preventing the 1st level being built.
 		#			# If BUY_SELL_DIFF_AT_MAX_FACTOR set to 4 then; if buy orders are 4x sell orders price is maxed.
 		#			# The inverse is true also that if sell orders are 4x buy orders, price is minimised.
 		#			# Therefore sell/buy fraction halfway between 1 and BUY_SELL_DIFF_AT_MAX_FACTOR = half way to minimum price.
@@ -105,6 +105,9 @@ usu_calculate_building_good_ai_value_profit_adjustment = {
 		#			# Local Goods are eventually supposed supposed to be cheap, so half way to minimum price is a good cutoff.
 				}
 				value = 99999999999	# (Subtracted) Kill it dead, stop building stuff that's not needed.
+			}
+			else = {
+				value = 0
 			}
 		}
 	}
