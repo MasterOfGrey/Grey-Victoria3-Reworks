@@ -74,6 +74,6 @@ usu_logistics = {
 	
 	prestige_factor = 1
 	
-	traded_quantity = 30
+	traded_quantity = 20 # 200 - Matches merchant marine trade value
 	convoy_cost_multiplier = 3 # 0 # Discourage trading via sea.
 }

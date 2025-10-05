@@ -10,13 +10,16 @@ pm_anchorage = {
 		workforce_scaled = {	
 			goods_input_wood_add = 2
 			goods_input_fabric_add = 1
-			goods_output_usu_logistics_add = 6
+			goods_output_usu_logistics_add = 5
 			goods_output_transportation_add = 2
 		}
 		level_scaled = {
 			building_employment_laborers_add = 300
 			building_employment_clerks_add = 150
 			building_employment_bureaucrats_add = 50
+		}
+		unscaled = {
+			goods_output_merchant_marine_add = 1 # At least one boat can dock here, even if nobody's working
 		}
 	}
 	
@@ -46,7 +49,7 @@ pm_basic_port = {
 			goods_input_grain_add = 2
 			goods_output_transportation_add = 10 ## 14 # 20	# -180 value
 			goods_output_merchant_marine_add = 10 		# +500 value
-			goods_output_usu_logistics_add = 6 # 30
+			goods_output_usu_logistics_add = 8 # 30
 		}
 		level_scaled = {
 			building_employment_laborers_add = 700 # 3000
@@ -90,7 +93,7 @@ pm_industrial_port = {
 			goods_input_groceries_add = 4
 			goods_output_transportation_add = 26 ## 30 # 50	# -600 value
 			goods_output_merchant_marine_add = 20 		# +1000 value
-			goods_output_usu_logistics_add = 6 # 70
+			goods_output_usu_logistics_add = 8 # 70
 		}
 		level_scaled = {
 			building_employment_laborers_add = 500 # 2000
@@ -135,7 +138,7 @@ pm_modern_port = {
 			goods_input_groceries_add = 8
 			goods_output_transportation_add = 50 ## 55 # 90	# -1050 value
 			goods_output_merchant_marine_add = 30		# +1500 value
-			goods_output_usu_logistics_add = 6 # 120
+			goods_output_usu_logistics_add = 8 # 120
 		}
 		level_scaled = {
 			building_employment_laborers_add = 400 # 1000

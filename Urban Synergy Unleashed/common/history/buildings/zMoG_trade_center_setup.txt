@@ -8,9 +8,10 @@
 			}
 			
 			every_scope_state = {
-				# limit = {
-				# 	world_market_access > 0 # Currently bugged, should be fixed in upcoming patch
-				# }
+				limit = {
+					#world_market_access > 0 # Always returns `yes` before the game's first weekly tick
+					has_world_market_access_history = yes
+				}
 				
 				create_building = {
 					building = "building_trade_center"
@@ -45,6 +46,10 @@
 					#}
 				}
 			}
+		}
+		
+		every_state = {
+			usu_manage_trade_centre_type_history = yes
 		}
 	}
 }

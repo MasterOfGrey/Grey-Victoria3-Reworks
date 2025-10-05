@@ -1,0 +1,27 @@
+﻿# Annoyingly, existing treaties can't be forcibly ammended, removed, or replaced.
+# this just creates additional treaties with the same name
+
+TREATIES = {
+	# US Military Assistance to Texas (unofficial, but substantial)
+	create_treaty = {
+		name = treaty_name_us_military_mission_to_texas
+		first_country = c:USA
+		second_country = c:TEX
+
+		is_draft = no
+		entered_into_force_on = 1835.10.2 # Start of Texas Revolt
+		binding_period = { years = 5 } # about 5 years
+
+		articles_to_create = {
+			{
+				article = goods_transfer
+				source_country = c:USA
+				target_country = c:TEX
+				inputs = {
+					{ goods = g:usu_logistics }
+					{ quantity = 5 }
+				}
+			}
+		}
+	}	
+}

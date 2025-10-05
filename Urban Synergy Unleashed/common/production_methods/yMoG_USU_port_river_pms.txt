@@ -10,7 +10,7 @@ pm_rp_anchorage = {
 		workforce_scaled = {	
 			goods_input_wood_add = 2
 			goods_input_fabric_add = 1
-			goods_output_usu_logistics_add = 20
+			goods_output_usu_logistics_add = 15
 			goods_output_transportation_add = 2
 		}
 		level_scaled = {
@@ -46,7 +46,7 @@ pm_rp_small_port = {
 			goods_input_meat_add = 1
 			goods_output_transportation_add = 20
 			goods_output_merchant_marine_add = 10 # 500 value
-			goods_output_usu_logistics_add = 20 # 50
+			goods_output_usu_logistics_add = 25 # 50
 		}
 		level_scaled = {
 			building_employment_laborers_add = 500 # 2000
@@ -90,7 +90,7 @@ pm_rp_industrial_port = {
 			goods_input_groceries_add = 2
 			goods_output_transportation_add = 50
 			goods_output_merchant_marine_add = 20 # 1000 value
-			goods_output_usu_logistics_add = 20 # 90
+			goods_output_usu_logistics_add = 25 # 90
 		}
 		level_scaled = {
 			building_employment_laborers_add = 300 # 1500
@@ -135,7 +135,7 @@ pm_rp_modern_port = {
 			goods_input_groceries_add = 4
 			goods_output_transportation_add = 90
 			goods_output_merchant_marine_add = 30 # 1500 value
-			goods_output_usu_logistics_add = 20 # 140
+			goods_output_usu_logistics_add = 25 # 140
 		}
 		level_scaled = {
 			building_employment_laborers_add = 200 # 1000
