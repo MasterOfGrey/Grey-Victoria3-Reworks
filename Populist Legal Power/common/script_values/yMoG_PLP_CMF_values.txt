@@ -27,6 +27,54 @@ com_movement_pro_slavery_revolution_possible_political_movement_support = 0.1 # 
 com_movement_pro_slavery_secession_possible_political_movement_support = 0.1 # 0.05
 
 ### PLP values for CMF:
+## ALL Movement Values
+mog_plp_movement_all_general_state_weight_mult = {
+	value = 1
+	if = {
+		limit = {
+			owner = {
+				is_at_war = yes
+				OR = {
+					any_enemy_in_war = {	# Can't test for a specific state being targeted so here we go.
+						OR = {
+							war_participant_has_war_goal_of_type_against = {
+								type = conquer_state
+								target = prev
+							}
+							war_participant_has_war_goal_of_type_against = {
+								type = return_state
+								target = prev
+							}
+							war_participant_has_war_goal_of_type_against = {
+								type = annex_country
+								target = prev
+							}
+							war_participant_has_war_goal_of_type_against = {
+								type = take_treaty_port
+								target = prev
+							}
+							war_participant_has_war_goal_of_type_against = {
+								type = contain_threat
+								target = prev
+							}
+							war_participant_has_war_goal_of_type_against = {
+								type = unification
+								target = prev
+							}
+							war_participant_has_war_goal_of_type_against = {
+								type = liberate_country
+								target = prev
+							}
+						}
+					}
+					NOT = { this ?= prev.controller }
+				}
+			}
+		}
+		multiply = 0
+	}
+}
+
 ## Cultural Movement Values
 mog_plp_movement_cultural_minority_pop_support_weight_mult = {
 	# Actual conditions relative to their neighbours
