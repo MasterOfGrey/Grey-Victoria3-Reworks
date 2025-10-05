@@ -26,11 +26,11 @@ liberty_desire_weekly_change = {
 	# Fervor and primary cultures
 	if = {
 		limit = {
-			root.second_country = {
-				NOT = {
-					has_law_or_variant = law_type:law_subjecthood
-				}
-			}
+			#root.second_country = {
+			#	NOT = {
+			#		has_law_or_variant = law_type:law_subjecthood
+			#	}
+			#}
 			NOT = {
 				root.second_country = {
 					any_primary_culture = {
@@ -44,12 +44,20 @@ liberty_desire_weekly_change = {
 			value = root.second_country.country_fervor_primary_culture #grabs culture with highest fervor
 			subtract = 25
 			divide = 150
+			if = {
+				limit = {
+					root.second_country = {
+						has_law_or_variant = law_type:law_subjecthood
+					}
+				}
+				multiply = 0.5
+			}	# Having subjecthood doesn't *prevent* cultural agitation for independence, but does reduce it.
 			min = -0.10
 			max = 0.5
 		}
 	}
 	else_if = { #if shares primary culture and no others
-		limit = {
+		limit = {	# Reminder for me: this checks that all primary cultures of second_country match any primary culture of first_country
 			root.second_country = {
 				any_primary_culture = {
 					percent = 1
@@ -61,19 +69,21 @@ liberty_desire_weekly_change = {
 			desc = "LIBERTY_DESIRE_SHARED_PRIMARY_CULTURE"
 			add = -0.05 #base for overlord having same culture
 			root.second_country = {
-				every_primary_culture = {
-					limit = {
-						is_primary_culture_of = root.first_country
-					}	
-					add = culture_current_fervor
-					subtract = 25
-					divide = 150
+				add = {		# Fix the math logic
+					every_primary_culture = {
+						limit = {
+							is_primary_culture_of = root.first_country
+						}	
+						add = culture_current_fervor
+						subtract = 25
+						divide = 150
+					}
 					divide = {
-						add = root.second_country.num_primary_cultures
+						add = { root.second_country = { value = num_primary_cultures } }	# Use script value robustly.
 						min = 1
 					}
-					max = 0
-					min = 0.2
+					min = 0
+					max = 0.2		# Max is positive/higher *before* the multiplier
 					multiply = -1
 				}
 			}
@@ -91,27 +101,30 @@ liberty_desire_weekly_change = {
 			desc = "LIBERTY_DESIRE_SHARED_PRIMARY_CULTURE_MIX"
 			add = { #extra for overlord culture's fervor. Note many overlord cultures do have high fervor because of literacy. 
 				root.second_country = {
-					every_primary_culture = {
-						limit = {
-							is_primary_culture_of = root.first_country
+					add = {		# Fix the math logic
+						every_primary_culture = {
+							limit = {
+								is_primary_culture_of = root.first_country
+							}	
+							add = culture_current_fervor
+							subtract = 25
+							divide = 150
 						}
-						add = culture_current_fervor
-						subtract = 25
-						divide = 150
 						divide = {
-							add = root.second_country.num_primary_cultures
+							add = { root.second_country = { value = num_primary_cultures } }	# Use script value robustly.
 							min = 1
 						}
-						max = 0
-						min = 0.25
+						min = 0
+						max = 0.25		# Max is positive/higher *before* the multiplier
 						multiply = -1
 					}
-					if = {
-						limit = {
-							NOT = {
-								has_law_or_variant = law_type:law_subjecthood
-							}
-						}
+					#if = {
+					#	limit = {
+					#		NOT = {
+					#			has_law_or_variant = law_type:law_subjecthood
+					#		}
+					#	}
+					add = {		# Fix the math logic
 						every_primary_culture = {
 							limit = {
 								NOT = {
@@ -121,14 +134,23 @@ liberty_desire_weekly_change = {
 							add = culture_current_fervor
 							subtract = 25
 							divide = 150
-							divide = {
-								add = root.second_country.num_primary_cultures
-								min = 1
-							}
-							min = 0
-							max = 0.50
+							if = {
+								limit = {
+									root.second_country = {
+										has_law_or_variant = law_type:law_subjecthood
+									}
+								}
+								multiply = 0.5
+							}	# Having subjecthood doesn't *prevent* cultural agitation for independence, but does reduce it.
 						}
+						divide = {
+							add = { root.second_country = { value = num_primary_cultures } }	# Use script value robustly.
+							min = 1
+						}
+						min = 0
+						max = 0.50		# It should mathematically max at 0.5 anyway
 					}
+					# }
 				}
 			}
 		}
@@ -1110,5 +1132,12 @@ liberty_desire_weekly_change = {
 			value = 0.5
 			desc = "LIBERTY_DESIRE_WEEKLY_CHANGE_TRUCE"
 		}
+	}
+}
+
+# For Safety (in case someone has overwritten 00_diplomacy_values.txt)
+num_primary_cultures = {
+	every_primary_culture = {
+		add = 1
 	}
 }
