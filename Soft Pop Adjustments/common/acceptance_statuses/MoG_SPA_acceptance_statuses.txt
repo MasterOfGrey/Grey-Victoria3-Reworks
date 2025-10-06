@@ -5,6 +5,8 @@
 # The objective is that people jobseek a decent amount *before* electing to migrate.
 # Ideally job satisfaction doesn't fluctuate by large amounts under "normal" conditions.
 
+# SPA update note: make sure the thresholds are alligned with common/script_values/yMoG_SPA_event_values_overwrites.txt
+
 violent_hostility = {
 	threshold = 0
 	base_migration_desire = 100 # 100 # Not a binary system so keeping this at 100 now
