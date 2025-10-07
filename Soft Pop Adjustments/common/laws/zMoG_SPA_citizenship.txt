@@ -579,11 +579,11 @@ law_cultural_exclusion = {
 
 		#Language
 		#From this block, we only apply the highest value a Pop qualifies for
-		country_acceptance_shared_language_trait_add = 35 # 50
-		country_acceptance_shared_language_trait_group_add = 15 # 25
+		country_acceptance_shared_language_trait_add = 45 # 50
+		country_acceptance_shared_language_trait_group_add = 35 # 25
 		country_acceptance_no_shared_language_trait_add = 10
 
-		## \|/They care about Culture. The rest is closely aligned with National Supremacy
+		## \|/They care about Culture, and language goes a lot further than heritage...
 		## Sharing Tradition = Open Prejudice or better, otherwise need both to avoid Cultural Erasure
 		#Tradition
 		#From this block, we only apply the highest value a Pop qualifies for
