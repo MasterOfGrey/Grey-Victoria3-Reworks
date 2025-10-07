@@ -28,6 +28,8 @@ com_movement_pro_slavery_secession_possible_political_movement_support = 0.1 # 0
 
 ### PLP values for CMF:
 ## ALL Movement Values
+# Because people aren't actually idiots, and revolts during occupation are how genocides happen.
+# The only exception is Pan-National movements which are a whole different kettle of fish.
 mog_plp_movement_all_general_state_weight_mult = {
 	value = 1
 	if = {
@@ -35,7 +37,7 @@ mog_plp_movement_all_general_state_weight_mult = {
 			owner = {
 				is_at_war = yes
 				OR = {
-					any_enemy_in_war = {	# Can't test for a specific state being targeted so here we go.
+					any_enemy_in_war = {	# Can't test for a specific state being targeted by *any* country so here we go.
 						OR = {
 							war_participant_has_war_goal_of_type_against = {
 								type = conquer_state

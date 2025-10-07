@@ -1,4 +1,4 @@
-mog_plp_movement_anti_slavery_colonial_slavery_trigger = {
+﻿mog_plp_movement_anti_slavery_colonial_slavery_trigger = {
 	AND = {
 		Grey_PLP_is_active = yes # PLP - Colonial slavery is NOT out of sight and out of mind if you live in a colony
 		state = { is_slave_state = no }
