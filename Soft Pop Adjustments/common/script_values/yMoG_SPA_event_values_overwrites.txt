@@ -1,0 +1,7 @@
+﻿# Discrimination statuses, aka acceptance statuses
+# SPA update note: make sure this is alligned with common/acceptance_statuses/MoG_SPA_acceptance_statuses.txt
+acceptance_status_1 = 0
+acceptance_status_2 = 20
+acceptance_status_3 = 45 # 40
+acceptance_status_4 = 70 # 60
+acceptance_status_5 = 95 # 80
