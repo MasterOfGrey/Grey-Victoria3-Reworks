@@ -1,18 +1,4 @@
-﻿on_game_started = {
-	on_actions = {
-		mog_usu_game_started_on_action
-	}
-}
-
-mog_usu_game_started_on_action = {
-	effect = {
-		every_state = {
-			usu_manage_trade_centre_type = yes
-		}
-	}
-}
-
-# Root = Country
+﻿# Root = Country
 
 ### Urbanization Actions
 on_yearly_pulse_country = {

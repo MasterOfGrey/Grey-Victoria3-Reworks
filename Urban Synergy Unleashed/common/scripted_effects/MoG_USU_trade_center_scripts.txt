@@ -7,25 +7,50 @@ usu_manage_trade_centre_type = {
 				has_building = building_river_port
 			}
 			market.mg:merchant_marine = {
-				market_goods_production > 1
+				market_goods_production >= 1
 			}
 		}
-		if = {
-			limit = {
-				NOT = {
-					is_production_method_active = {
-						building_type = building_trade_center
-						production_method = pm_trade_center_port
-					}
+		usu_set_trade_center_port = yes
+	}
+	else = {
+		usu_set_trade_center_inland = yes
+	}
+}
+
+usu_manage_trade_centre_type_history = {
+	if = {
+		limit = {
+			OR = {
+				has_building = building_port
+				has_building = building_river_port
+			}
+		}
+		usu_set_trade_center_port = yes
+	}
+	else = {
+		usu_set_trade_center_inland = yes
+	}
+}
+
+usu_set_trade_center_port = {
+	if = {
+		limit = {
+			NOT = {
+				is_production_method_active = {
+					building_type = building_trade_center
+					production_method = pm_trade_center_port
 				}
 			}
-			activate_production_method = {
-				building_type     = building_trade_center
-				production_method = pm_trade_center_port
-			}
+		}
+		activate_production_method = {
+			building_type     = building_trade_center
+			production_method = pm_trade_center_port
 		}
 	}
-	else_if = {
+}
+
+usu_set_trade_center_inland = {
+	if = {
 		limit = {
 			NOT = {
 				is_production_method_active = {
@@ -38,5 +63,5 @@ usu_manage_trade_centre_type = {
 			building_type     = building_trade_center
 			production_method = pm_trade_center_inland
 		}
-	}
+	}	
 }

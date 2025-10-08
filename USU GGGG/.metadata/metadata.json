@@ -1,0 +1,17 @@
+{
+  "name" : "USU + GGGG Compatch",
+  "id" : "",
+  "version" : "",
+  "supported_game_version" : "",
+  "short_description" : "",
+  "tags" : [
+        "Balance",
+        "Economy And Buildings",
+        "Gameplay",
+        "1.10"
+    ],
+  "relationships" : [],
+  "game_custom_data" : {
+    "multiplayer_synchronized" : true
+  }
+}
