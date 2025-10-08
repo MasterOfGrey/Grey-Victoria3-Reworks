@@ -1,0 +1,7 @@
+﻿##################################################
+#   GREY - MOD COMPATIBILITY SCRIPTED TRIGGERS   #
+##################################################
+
+Grey_DIS_is_active = { # Diplomatic Interaction Suite
+	always = yes
+}
