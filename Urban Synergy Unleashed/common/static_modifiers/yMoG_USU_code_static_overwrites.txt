@@ -1,0 +1,51 @@
+## VANILLA OVERWRITES
+
+insufficient_convoys = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_gear_negative.dds
+	## USU
+	# Insufficient convoys put's direct financial strain on gov finances
+	# and translates into increased port profit
+	goods_input_usu_logistics_mult = 2
+}
+
+unincorporated_state = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_gear_negative.dds
+	state_infrastructure_mult = -0.25
+	state_conscription_rate_mult = -0.5
+	state_expected_sol_mult = -0.33
+	state_pop_pol_str_mult = -0.50
+	building_group_bg_manufacturing_throughput_add = -0.1
+	building_group_bg_government_throughput_add = -0.1
+	building_group_bg_military_throughput_add = -0.1
+	state_market_access_price_impact = -0.1
+	building_group_bg_infrastructure_construction_efficiency_add = -0.2
+	building_group_bg_extraction_construction_efficiency_add = -0.2
+	building_group_bg_heavy_industry_construction_efficiency_add = -0.5
+	building_group_bg_light_industry_construction_efficiency_add = -0.3
+	building_group_bg_government_construction_efficiency_add = -0.3
+	goods_output_usu_logistics_mult = -0.5
+}
+
+###Pollution Changes:
+## Total Pollution penalty = 120%, reducible to -90% or -75% by max healthcare
+## - >100% max intentional because the goal is to get to over -60% with no healthcare even with all modifiers from other sources combined.
+## - This is to counteract the runaway attraction which can come from extra large urban centres when players/AI centralise too many company HQ's in one state.
+
+# Scales with pollution impact, reduced by state_pollution_reduction_health_mult
+# Effect = state_region_pollution_health * impact
+state_region_pollution_health = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_gear_negative.dds
+	state_mortality_mult = 0.5
+	state_standard_of_living_add = -3
+	state_migration_pull_mult = -0.6	# Added - this part can be reduced by healthcare institutions (up to 30% or about 45% on public health)
+}
+
+# Effect = state_region_pollution_health * impact
+state_region_pollution_general = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_gear_negative.dds
+	state_migration_pull_mult = -0.6 # -0.25	# This part not reduced by healthcare institution.
+	state_harvest_condition_drought_impact_mult = 0.5
+	state_harvest_condition_flood_impact_mult = 0.5
+	state_harvest_condition_wildfire_impact_mult = 0.5
+	state_harvest_condition_heatwave_impact_mult = 0.5
+}
