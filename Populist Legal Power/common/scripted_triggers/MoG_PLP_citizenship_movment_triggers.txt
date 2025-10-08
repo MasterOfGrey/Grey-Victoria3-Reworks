@@ -1,4 +1,18 @@
-﻿mog_plp_nat_sup_culture_minority_trigger = {
+﻿# Reworked for SPA/PLP discrimination statuses, aka acceptance statuses
+# PLP update note: make sure alignment is maintained between:
+# 		SPA - common/acceptance_statuses/MoG_SPA_acceptance_statuses.txt
+# 		SPA - common/scripted_triggers/AMoG_SPA-PLP_citizenship_movment_triggers.txt
+# 		SPA - common/laws/zMoG_SPA_citizenship.txt
+# 		PLP - common/scripted_triggers/MoG_PLP_citizenship_movment_triggers.txt
+# 		PLP - common/laws/yMoG_PLP_citizenship.txt
+## AND - SPA Event Value Overwrites:
+# acceptance_status_1 = 0
+# acceptance_status_2 = 20
+# acceptance_status_3 = 45 # 40
+# acceptance_status_4 = 70 # 60
+# acceptance_status_5 = 95 # 80
+
+mog_plp_nat_sup_culture_minority_trigger = {
 	AND = {
 		shares_heritage_trait_with_any_primary_culture = root.owner
 		shares_language_trait_with_any_primary_culture = root.owner
