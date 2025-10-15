@@ -70,6 +70,12 @@ NAI = {
 	PRODUCTION_BUILDING_AUTONOMOUS_INVESTMENT_PRODUCED_VALUE_FACTOR_MULT = 0.5 # Vanilla = 1.25 - Multiplies PRODUCTION_BUILDING_PRODUCED_VALUE_FACTOR for autonomous investment pool constructions
 	PRODUCTION_BUILDING_AUTONOMOUS_INVESTMENT_PRODUCED_VALUE_PRIVATIZE_FACTOR_MULT = 0.8 # Vanilla = 2.0 (vanilla has since moved to 0.5, but leaving this in) - Multiplies PRODUCTION_BUILDING_PRODUCED_VALUE_FACTOR for autonomous investment pool constructions, gives higher weight to buildings that have levels to privatize
 	
+	# New with ~1.9/1.10 
+	# PRODUCTION_BUILDING_AUTONOMOUS_INVESTMENT_PRODUCED_TRADE_CAPACITY_FACTOR_MULT = 150 # Vanilla = 1.5 # Multiplies value from produced trade capacity for autonomous investment pool constructions
+	# This does not appear to actually do anything so disabling this define temporarily
+	
+	# AUTONOMOUS_INVESTMENT_UPDATE_COUNT_DIVISOR = 200000 # 500000 # The performance hit is real
+	
 	# Temp untouched
 	PRODUCTION_BUILDING_AUTONOMOUS_INVESTMENT_MILITARY_GOODS_FACTOR_MULT = 1.2 # Vanilla = 1.5 - discourage military unless profitable. 	# Multiplies PRODUCTION_BUILDING_OUTPUT_NEEDED_MILITARY_GOODS_FACTOR & PRODUCTION_BUILDING_OUTPUT_WANTED_MILITARY_GOODS_FACTOR for autonomous investment pool constructions
 	PRODUCTION_BUILDING_AUTONOMOUS_INVESTMENT_INDUSTRIAL_GOODS_FACTOR_MULT = 3.0 # Vanilla = 4.0 - unchanged								# Multiplies PRODUCTION_BUILDING_OUTPUT_NEEDED_INDUSTRIAL_GOODS_FACTOR & PRODUCTION_BUILDING_OUTPUT_WANTED_INDUSTRIAL_GOODS_FACTOR for autonomous investment pool constructions	
@@ -103,8 +109,8 @@ NAI = {
 	OWNER_BUILDING_LOCATION_SAME_STATE_MULT = 4.0					# Multiply owner building location score by this for the same state we're building/privatizing in
 	OWNER_BUILDING_LOCATION_NOT_HOMELANDS_MULT = 0.9 # 0.5			# Multiply owner building location score by this if the state isn't a homeland of the country's primary cultures
 	OWNER_BUILDING_LOCATION_LOWER_GDP_MULT = 0.25					# Multiply owner building location score by this for any state that has lower GDP than the state we're building/privatizing in
-	OWNER_BUILDING_LOCATION_NO_AVAILABLE_WORKFORCE_MULT = 0.1		# Multiply owner building location score by this if the state lacks workers
-	OWNER_BUILDING_LOCATION_NO_AVAILABLE_INFRASTRUCTURE_MULT = 0.1	# Multiply owner building location score by this if the state lacks infrastructure
+	OWNER_BUILDING_LOCATION_NO_AVAILABLE_WORKFORCE_MULT = 0.8 # 0.1		# Multiply owner building location score by this if the state lacks workers
+	OWNER_BUILDING_LOCATION_NO_AVAILABLE_INFRASTRUCTURE_MULT = 0.8 # 0.1	# Multiply owner building location score by this if the state lacks infrastructure
 	OWNER_BUILDING_LOCATION_UNINCORPORATED_MULT = 0.01				# Multiply owner building location score by this if the state is unincorporated
 	
 	# 1.8 reference
