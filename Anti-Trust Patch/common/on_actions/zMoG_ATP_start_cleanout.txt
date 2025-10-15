@@ -1,0 +1,58 @@
+﻿# This file is named the same in all mods that it appears in so that it doesn't double up on itself between mods.
+on_game_started = {
+	on_actions = {
+		mog_atp_start_cleanout_action
+	}
+}
+
+mog_atp_start_cleanout_action = {
+	effect = {
+		every_country = {
+			save_scope_as = company_owner
+			scope:company_owner = {
+				owning_company ?= {								# Safely fix company owned countries like EIC
+					remove_owned_country = scope:company_owner
+					owner ?= {
+						remove_company = prev.type
+					}
+				}
+			}
+			every_company = {
+				scope:company_owner = {							# In case there are any other companies, get rid of them.
+					remove_company = prev.type
+					## Optional if we wanted to try and replace things cleanly (would require saving company HQ state as a scope):
+					#every_scope_state = {
+					#	if = {
+					#		limit = {
+					#			owner = ROOT
+					#			is_incorporated = yes
+					#			any_scope_building = {
+					#				is_building_type = building_chemical_plants
+					#				level = 1
+					#			}
+					#			OR = {
+					#				region = sr:region_rhine
+					#				region = sr:region_north_germany
+					#				region = sr:region_south_germany
+					#			}
+					#		}
+					#		remove_building = building_chemical_plants
+					#		create_building={
+					#			building="building_chemical_plants"
+					#			add_ownership={
+					#				company={
+					#					type=company_IG_Farben
+					#					country=scope:company_owner
+					#					levels=1
+					#				}
+					#			}
+					#			reserves=1
+					#		}
+					#	}
+					## Repeat this block for x levels as needed.
+					#}
+				}
+			}
+		}
+	}
+}

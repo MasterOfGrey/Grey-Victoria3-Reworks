@@ -23,6 +23,7 @@ on:
           - 'Urban Synergy Unleashed;3371689443'
           - 'USU LLWA;3387021675'
           - 'USU Morgenrote;3371690718'
+          - 'Anti-Trust Patch;3587232850'
       update-description:
           description: 'Update description?'
           required: true
