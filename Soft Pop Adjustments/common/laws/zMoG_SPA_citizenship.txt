@@ -444,7 +444,7 @@ law_racial_segregation = {
 		#Tradition
 		#From this block, we only apply the highest value a Pop qualifies for
 		country_acceptance_shared_tradition_trait_add = 20
-		country_acceptance_no_shared_tradition_trait_add = -5 # 0
+		country_acceptance_no_shared_tradition_trait_add = 10 # 0	# Floor = 5
 
 		#Fervor
 		country_primary_culture_fervor_from_laws_add = 10
