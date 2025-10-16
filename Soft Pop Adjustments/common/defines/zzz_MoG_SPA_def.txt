@@ -42,6 +42,8 @@ NPops = {
 	ALLOW_ASSIMILATION_IN_HOMELANDS = no		# Can pops assimilate when living in their homelands?
 	ALLOW_ASSIMILATION_ACROSS_HERITAGES = yes 	# Can pops assimilate into pops of a different heritage?
 	
+	CULTURAL_FERVOR_ASSIMILATIOM_EFFECT = 0.008 # 0.01		# The effect cultural fervor has on assimilation, it makes it this much harder to assimilate with higher fervor
+	
 ##### RADICALISM #####
 	
 	RADICALS_MAX_FROM_LOW_SOL = 0.25 # 0.15				# If pop is already this % radical, don't add more radicals from low SOL (Scales by delta between SoL and expected min SoL)
@@ -149,8 +151,8 @@ NPops = {
 	MIGRATION_PULL_FROM_AVAILABLE_SUBSISTENCE_EMPLOYMENT_MAX = 10				# Migration pull from available subsistence jobs cannot exceed this
 	# 1.9.x - MIGRATION_PULL_REDUCTION_FROM_UNEMPLOYMENT = 2 # 1 #(5 was too "swingy")	# Migration pull is reduced by this for each 10k unemployed pops
 	# 1.9.x - 	# Instead of using attraction, unemployment impact on migration is better managed by bumping up MIGRATION_MAX_PER_STATE_UNEMPLOYMENT_TARGET_FRACTION. (People hear about jobs drying up and stop coming much quicker than those who've already committed and moved to the state are likely to leave.)
-	MIGRATION_PULL_REDUCTION_FROM_UNEMPLOYMENT = 50								# Migration pull is reduced by the % of unemployed pops compared to employed pops, multiplied by this
-	MIGRATION_PULL_REDUCTION_FROM_UNEMPLOYMENT_MAX = 100 #						# Migration pull reduction from unemployment cannot exceed this
+	MIGRATION_PULL_REDUCTION_FROM_UNEMPLOYMENT = 100 # 50								# Migration pull is reduced by the % of unemployed pops compared to employed pops, multiplied by this
+	MIGRATION_PULL_REDUCTION_FROM_UNEMPLOYMENT_MAX = 200 # 50						# Migration pull reduction from unemployment cannot exceed this
 	
 ## Market Migrations ##
 	# Market Migration Processing #

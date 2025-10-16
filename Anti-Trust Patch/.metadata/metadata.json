@@ -1,15 +1,12 @@
 {
-  "name" : "Grey's Smarter Private Construction",
-  "id" : "3115017647",
+  "name" : "Grey's Anti-Trust Patch",
+  "id" : "",
   "version" : "",
   "supported_game_version" : "",
   "short_description" : "",
   "tags" : [
-        "Balance",
         "Economy And Buildings",
         "Fixes",
-        "Gameplay",
-        "1.9",
         "1.10"
     ],
   "relationships" : [],

@@ -134,7 +134,6 @@ insignificant_power = {
 		country_agitator_slots_add = 1
 		country_leverage_resistance_add = 200	# 250	# SPA
 	}
-	}
 }
 
 ##################
