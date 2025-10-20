@@ -17,6 +17,23 @@ mog_atp_start_cleanout_action = {
 					}
 				}
 			}
+		}
+		every_country = {
+			limit = {
+				any_company = {
+					exists = this
+				}
+			}
+			every_company = {
+				owner = {
+					remove_company = prev.type
+				}
+			}
+		}
+	}
+}
+
+# Reference
 #			every_company = {									# UNNECESSARY
 #				scope:company_owner = {							# In case there are any other companies, get rid of them.
 #					remove_company = prev.type
@@ -53,6 +70,3 @@ mog_atp_start_cleanout_action = {
 #					#}
 #				}
 #			}
-		}
-	}
-}
