@@ -153,7 +153,7 @@
 		}
 	}
 	s:STATE_SLOVAKIA={
-		region_state:AUS={
+		region_state:HUN={
 			create_building={
 				building="building_river_port"
 				level=1
@@ -162,7 +162,7 @@
 		}
 	}
 	s:STATE_TRANSDANUBIA={
-		region_state:AUS={
+		region_state:HUN={
 			create_building={
 				building="building_river_port"
 				level=1
@@ -171,7 +171,7 @@
 		}
 	}
 	s:STATE_CENTRAL_HUNGARY={
-		region_state:AUS={
+		region_state:HUN={
 			create_building={
 				building="building_river_port"
 				level=1
@@ -180,7 +180,7 @@
 		}
 	}
 	s:STATE_SLAVONIA={
-		region_state:AUS={
+		region_state:HUN={
 			create_building={
 				building="building_river_port"
 				level=1
@@ -189,7 +189,7 @@
 		}
 	}
 	s:STATE_DELVIDEK={
-		region_state:AUS={
+		region_state:HUN={
 			create_building={
 				building="building_river_port"
 				level=1
@@ -216,7 +216,7 @@
 		}
 	}
 	s:STATE_CROATIA={
-		region_state:AUS={
+		region_state:HUN={
 			create_building={
 				building="building_river_port"
 				level=1
