@@ -17,8 +17,12 @@ NEconomy = {
 	# AUTO_DOWNSIZE_BUILDING_MIN_EMPTY_FRACTION = 0.2					# A building must be missing at least this many levels of employment (in relative numbers) to start considering auto-downsizing (both this and the above requirement are applied)
 	# AUTO_DOWNSIZE_BUILDING_MONTHS_TO_WAIT = 8 #12					# After a building decides to start auto-downsizing, wait this many months before actually starting to downsize, in case conditions change
 	
-	# Since 1.9 is having building hiring issues:
-	AUTO_DOWNSIZE_BUILDING_MONTHS_TO_WAIT = 3 # 6
+	# Since 1.9 trade rework:
+	AUTO_DOWNSIZE_BUILDING_MIN_EMPTY_PRIVATE_LEVELS = 1.0				# A (non Trade Center) building must be missing at least this many privately held levels of employment to start considering auto-downsizing (both this and the below requirement are applied)
+	AUTO_DOWNSIZE_BUILDING_MIN_EMPTY_FRACTION = 0.1						# A (non Trade Center) building must be missing at least this many levels of employment (in relative numbers) to start considering auto-downsizing (both this and the above requirement are applied)
+	AUTO_DOWNSIZE_BUILDING_MIN_UNUSED_TRADE_CAPACITY_FRACTION = 0.1		# A Trade Center must have at least this much unused Trade Capacity (as a fraction of the whole) to consider auto downsizing
+	AUTO_DOWNSIZE_BUILDING_MIN_UNUSED_TRADE_CAPACITY = 20				# A Trade Center must have at least this much unused Trade Capacity (in absolute numbers) to consider auto downsizing
+	AUTO_DOWNSIZE_BUILDING_MONTHS_TO_WAIT = 2 # 6
 	
 	BUILDING_CASH_RESERVES_MIN_DEPOSIT_PERCENT = 0.25	# The minimum percentage of weekly profits that building owners will try to deposit into a building's cash reserves. Must be >= 0.
 	BUILDING_CASH_RESERVES_MAX_DEPOSIT_PERCENT = 0.90 # 0.50	# The maximum percentage of weekly profits that building owners will try to deposit into a building's cash reserves. Must be >= BUILDING_CASH_RESERVES_MIN_DEPOSIT_PERCENT
@@ -80,7 +84,7 @@ NEconomy = {
 	## Wage diversity
 	MINIMUM_WAGE_RATE = 2.0 # 1.0 # 10.0									# The wage rate can never drop below this, no matter what (weekly £ per POP_SIZE_PACKAGE employees)
 	BUILDING_INITIAL_WAGE_WEEKS = 1 # 2			   					# A building will not adjust its wages for the first this many weeks of its existence
-	MAX_WAGE_STEP_CHANGE = 0.3 # 0.5 # 0.1			   					# Wage rates can change at most this much each week
+	MAX_WAGE_STEP_CHANGE = 0.05 # 0.3 # 0.5 # 0.1			   					# Wage rates can change at most this much each week
 	
 	BUILDING_WAGES_MIN_RELEVANT_POP_SIZE = 25 # 50					# Pops with less workforce than this are ignored when checking whether a profitable building should raise wages because of radicalizing workers
 
@@ -117,7 +121,7 @@ NEconomy = {
 	BUILDING_MAX_EMPLOYMENT_FRACTION_TO_RAISE_WAGES = 0.85 # 0.5	# If the employment fraction of a building is above this, don't raise wages just to try and snipe employees from other buildings
 	
 	## Hiring Practices
-	DEFAULT_MIN_HIRING_RATE = 0.02 # 0.01 								# Default weekly min hiring limit applied in a building per profession as a ratio of full employment
+	DEFAULT_MIN_HIRING_RATE = 0.05 # 0.01 								# Default weekly min hiring limit applied in a building per profession as a ratio of full employment
 	DEFAULT_MAX_HIRING_RATE = 0.2 # 0.1 						# Default weekly max hiring limit applied in a building per profession as a ratio of full employment
 	
 	BUILDING_PREFER_LAYOFFS_TARGET_WEALTH_MULT = 0.7 # 0.66 # 0.5 (1.9.5)		# Buildings will prefer laying off pops if any significant pops working in them have this * the target wealth to expected SoL ratio or below
