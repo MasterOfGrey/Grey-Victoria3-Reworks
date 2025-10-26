@@ -99,5 +99,19 @@ decree_greener_grass_campaign = {
 			}
 			multiply = 0
 		}
+		if = {
+			limit = {	# Have the AI Support low-pop states that are being disadvantaged
+				OR = {
+					any_scope_building = {
+						is_building_type = building_urban_center
+						level > 1
+						occupancy < 0.25
+					}
+					state_is_eligible_as_mass_migration_target = yes
+				}
+				state_population <= 250000
+			}
+			add = 500
+		}
 	}
 }

@@ -115,14 +115,15 @@ NPops = {
 	MIGRATION_PULL_LOW_THRESHOLD = 0.75											# State must have a migration pull of less or equal than market average * this to get full amount of emigration
 	
 	# Migration Desire #
-	# MIGRATION_DESIRE_BASE = -50.0 # 0								#(Moved to acceptance status)			# Base desire to migrate
-	# MIGRATION_DESIRE_FROM_DISCRIMINATION = 150 # 100				#(Moved to acceptance status)			# Being discriminated will increase desire to migrate by this much
-	MIGRATION_DESIRE_FROM_JOB_SATISFACTION_FACTOR = -1.0 # -2.0(old) # -1.0			# A pop's desire to migrate will be affected by its job satisfaction multiplied by this value.
+	MIGRATION_DESIRE_FROM_JOB_SATISFACTION_FACTOR = -0.5 # -2.0(old) # -1.0			# A pop's desire to migrate will be affected by its job satisfaction multiplied by this value.
 ## Near as I can tell, Migration Desire is simply:
 # FORMULA: MD = base_migration_desire + (job_satisfaction * MIGRATION_DESIRE_FROM_JOB_SATISFACTION_FACTOR)
 #
 # The objective is that people jobseek a decent amount *before* electing to migrate.
 # Ideally job satisfaction doesn't fluctuate by large amounts under "normal" conditions.
+	# (Old Defines:)
+	# MIGRATION_DESIRE_BASE = -50.0 # 0								#(Moved to acceptance status)			# Base desire to migrate
+	# MIGRATION_DESIRE_FROM_DISCRIMINATION = 150 # 100				#(Moved to acceptance status)			# Being discriminated will increase desire to migrate by this much
 	
 	# Acceptance #
 	MIN_ACCEPTANCE_VALUE = 0													# It is both the minimum acceptance value a pop can have as well as the explicit threshold scripted for the first acceptance status [any signed 32 bit value]
