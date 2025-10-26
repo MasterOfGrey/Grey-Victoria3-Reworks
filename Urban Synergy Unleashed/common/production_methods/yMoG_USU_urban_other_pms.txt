@@ -146,6 +146,8 @@ pm_stagecoaches_and_wagons = {
 	state_modifiers = {
 		workforce_scaled = {
 			state_pollution_generation_add = 10
+		}
+		level_scaled = {
 			state_infrastructure_add = 2
 		}
 	}
@@ -169,6 +171,8 @@ pm_motor_vehicles = {
 	state_modifiers = {
 		workforce_scaled = {
 			state_pollution_generation_add = 20
+		}
+		level_scaled = {
 			state_infrastructure_add = 4
 		}
 	}
@@ -207,7 +211,7 @@ pm_gas_streetlights = {
 	state_modifiers = {
 		workforce_scaled = {
 			state_pollution_generation_add = 1
-			state_migration_pull_add = -0.06	# Readily counteracts the scaling bonus on the base PM - endless smog kinda sucks!
+			state_migration_pull_add = -0.07	# Readily counteracts the scaling bonus on the base PM - endless smog kinda sucks!
 		}
 	}
 }
@@ -239,7 +243,7 @@ pm_electric_streetlights = {
 	state_modifiers = {
 		workforce_scaled = {
 			ppp_building_power_grid_throughput_add = 0.01
-			state_migration_pull_add = -0.04	# Gradually counteracts the scaling bonus on the base PM - electricity yay, but those are long shadows!
+			state_migration_pull_add = -0.06	# Gradually counteracts the scaling bonus on the base PM - electricity yay, but those are long shadows!
 		}	
 	}
 }
@@ -269,7 +273,7 @@ USU_pm_grid_streetlights = {
 	state_modifiers = {
 		workforce_scaled = {
 			ppp_building_power_grid_throughput_add = 0.01
-			state_migration_pull_add = -0.02	# Eventually counteracts the scaling bonus on the base PM - eventually, that's enough concrete jungle...
+			state_migration_pull_add = -0.05	# Eventually counteracts the scaling bonus on the base PM - eventually, that's enough concrete jungle...
 		}	
 	}
 }

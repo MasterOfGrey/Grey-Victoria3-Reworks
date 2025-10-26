@@ -3,7 +3,6 @@
 	modifier = {
 		state_building_river_port_max_level_add = 2
 		state_infrastructure_add = 20
-		state_market_access_price_impact = 0.05
 	}
 }
 state_trait_mississippi_river = {
@@ -11,7 +10,6 @@ state_trait_mississippi_river = {
 	modifier = {
 		state_building_river_port_max_level_add = 2
 		state_infrastructure_add = 20
-		state_market_access_price_impact = 0.05
 	}
 }
 
@@ -36,7 +34,6 @@ state_trait_great_lakes = {
 	modifier = {
 		state_infrastructure_add = 20
 		state_building_river_port_max_level_add = 2
-		state_market_access_price_impact = 0.05
 	}
 }
 
@@ -106,7 +103,6 @@ state_trait_rhine_river = {
 	modifier = {
 		state_building_river_port_max_level_add = 2
 		state_infrastructure_add = 20
-		state_market_access_price_impact = 0.05
 	}
 }
 
@@ -171,7 +167,6 @@ state_trait_danube_river = {
 	modifier = {
 		state_building_river_port_max_level_add = 2
 		state_infrastructure_add = 20
-		state_market_access_price_impact = 0.05
 	}
 }
 
@@ -180,7 +175,6 @@ state_trait_volga_river = {
 	modifier = {
 		state_building_river_port_max_level_add = 2
 		state_infrastructure_add = 20
-		state_market_access_price_impact = 0.05
 	}
 }
 
@@ -189,7 +183,6 @@ state_trait_dnieper_river = {
 	modifier = {
 		state_building_river_port_max_level_add = 2
 		state_infrastructure_add = 20
-		state_market_access_price_impact = 0.05
 	}
 }
 
@@ -200,7 +193,6 @@ state_trait_nile_river = {
 		building_group_bg_plantations_throughput_add = 0.2
 		state_infrastructure_add = 20
 		state_building_river_port_max_level_add = 2
-		state_market_access_price_impact = 0.05
 	}
 }
 
@@ -273,7 +265,6 @@ state_trait_indus_river = {
 	modifier = {
 		state_building_river_port_max_level_add = 2
 		state_infrastructure_add = 20
-		state_market_access_price_impact = 0.05
 	}
 }
 
@@ -284,7 +275,6 @@ state_trait_ganges_river = {
 		building_group_bg_plantations_throughput_add = 0.15
 		state_building_river_port_max_level_add = 2
 		state_infrastructure_add = 20
-		state_market_access_price_impact = 0.05
 	}
 }
 
@@ -325,7 +315,6 @@ state_trait_pearl_river = {
 	modifier = {
 		state_building_river_port_max_level_add = 2
 		state_infrastructure_add = 20
-		state_market_access_price_impact = 0.05
 	}
 }
 
@@ -334,7 +323,6 @@ state_trait_yangtze_river = {
 	modifier = {
 		state_building_river_port_max_level_add = 4
 		state_infrastructure_add = 40
-		state_market_access_price_impact = 0.05
 	}
 }
 
@@ -343,7 +331,6 @@ state_trait_yellow_river = {
 	modifier = {
 		state_building_river_port_max_level_add = 4
 		state_infrastructure_add = 40
-		state_market_access_price_impact = 0.05
 	}
 }
 

@@ -70,7 +70,7 @@ pm_basic_port = {
 			state_migration_pull_add = 2
 		}
 		workforce_scaled = {
-			state_infrastructure_add = 10 # 3 # 5 (1.9.5)
+			state_infrastructure_add = 5 # 3	# (Was 10 after 1.9.5)
 			building_railway_throughput_add = 0.01
 		}
 		level_scaled = {
@@ -115,7 +115,7 @@ pm_industrial_port = {
 			state_migration_pull_add = 2
 		}
 		workforce_scaled = {
-			state_infrastructure_add = 25 # 4 # 7.5 (1.9.5)
+			state_infrastructure_add = 10 # 4	# (Was 25 after 1.9.5)
 			building_railway_throughput_add = 0.01
 		}
 		level_scaled = {
@@ -161,7 +161,7 @@ pm_modern_port = {
 			state_migration_pull_add = 2
 		}
 		workforce_scaled = {
-			state_infrastructure_add = 40 # 5 # 10 (1.9.5)
+			state_infrastructure_add = 15 # 5	# (Was 40 after 1.9.5)
 			building_railway_throughput_add = 0.01
 		}
 		level_scaled = {

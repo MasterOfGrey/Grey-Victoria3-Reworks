@@ -105,10 +105,10 @@ pm_electric_trains = {
 			state_market_access_price_impact = 0.04
 		}
 		workforce_scaled = {
-			state_infrastructure_add = 15
+			state_infrastructure_add = 10
 		}
 		level_scaled = {
-			state_infrastructure_add = 15
+			state_infrastructure_add = 20
 		}
 	}
 	
@@ -148,11 +148,11 @@ pm_diesel_trains = {
 			state_market_access_price_impact = 0.05
 		}
 		workforce_scaled = {
-			state_infrastructure_add = 20
+			state_infrastructure_add = 10
 			state_pollution_generation_add = 15
 		}
 		level_scaled = {
-			state_infrastructure_add = 20
+			state_infrastructure_add = 25
 		}
 	}
 	
@@ -190,10 +190,10 @@ pm_ac_electric_trains = {
 			state_market_access_price_impact = 0.05
 		}
 		workforce_scaled = {
-			state_infrastructure_add = 20
+			state_infrastructure_add = 10
 		}
 		level_scaled = {
-			state_infrastructure_add = 20
+			state_infrastructure_add = 25
 		}
 	}
 	
@@ -284,7 +284,7 @@ pm_electric_trains_principle_transport_3 = {
 			state_market_access_price_impact = 0.04
 		}
 		workforce_scaled = {
-			state_infrastructure_add = 20
+			state_infrastructure_add = 15
 		}
 		level_scaled = {
 			state_infrastructure_add = 20
@@ -331,7 +331,7 @@ pm_diesel_trains_principle_transport_3 = {
 			state_market_access_price_impact = 0.05
 		}
 		workforce_scaled = {
-			state_infrastructure_add = 30
+			state_infrastructure_add = 15
 			state_pollution_generation_add = 20
 		}
 		level_scaled = {
@@ -377,7 +377,7 @@ pm_ac_electric_trains_principle_transport_3 = {
 			state_market_access_price_impact = 0.05
 		}
 		workforce_scaled = {
-			state_infrastructure_add = 30
+			state_infrastructure_add = 15
 		}
 		level_scaled = {
 			state_infrastructure_add = 25

@@ -32,7 +32,7 @@ pm_rp_anchorage = {
 			state_migration_pull_add = 1
 		}
 		level_scaled = {
-			state_infrastructure_add = 5
+			state_infrastructure_add = 10
 		}
 	}
 }
@@ -67,11 +67,11 @@ pm_rp_small_port = {
 			state_migration_pull_add = 1
 		}
 		workforce_scaled = {
-			state_infrastructure_add = 20
+			state_infrastructure_add = 10
 			state_migration_pull_add = 1				# River ports are attractive (and level-capped).
 		}
 		level_scaled = {
-			state_infrastructure_add = 10
+			state_infrastructure_add = 15
 		}
 	}
 }
@@ -112,11 +112,11 @@ pm_rp_industrial_port = {
 			state_migration_pull_add = 1
 		}
 		workforce_scaled = {
-			state_infrastructure_add = 45
+			state_infrastructure_add = 15
 			state_migration_pull_add = 1
 		}
 		level_scaled = {
-			state_infrastructure_add = 15
+			state_infrastructure_add = 25
 		}
 	}
 }
@@ -158,11 +158,11 @@ pm_rp_modern_port = {
 			state_migration_pull_add = 1
 		}
 		workforce_scaled = {
-			state_infrastructure_add = 60
+			state_infrastructure_add = 20
 			state_migration_pull_add = 1
 		}
 		level_scaled = {
-			state_infrastructure_add = 20
+			state_infrastructure_add = 35
 		}
 	}
 }
