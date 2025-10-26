@@ -1,0 +1,9 @@
+﻿#########################################
+#   GREY - MORGENROE STATIC MODIFIERS   #
+#########################################
+
+# Underwrites (squashes error log complaints and gets overwritten by Morgenrote)
+vikelas_race_team_modifier = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_gear_positive.dds"
+	goods_output_automobiles_mult = 0.2
+}
