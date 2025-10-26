@@ -1,35 +1,41 @@
 ﻿add_modifier_hack = {
-    switch = {
-        trigger = $multiplier$
-        1 = {
-            add_modifier = {
-                name = $name$
-                multiplier = 1
-            }
-        }
-        2 = {
-            add_modifier = {
-                name = $name$
-                multiplier = 2
-            }
-        }
-        3 = {
-            add_modifier = {
-                name = $name$
-                multiplier = 3
-            }
-        }
-        4 = {
-            add_modifier = {
-                name = $name$
-                multiplier = 4
-            }
-        }
-        5 = {
-            add_modifier = {
-                name = $name$
-                multiplier = 5
-            }
-        }
-    }
+	switch = {
+		trigger = $multiplier$
+		1 = {
+			add_modifier = {
+				name = $name$
+				multiplier = 1
+			}
+		}
+		2 = {
+			add_modifier = {
+				name = $name$
+				multiplier = 2
+			}
+		}
+		3 = {
+			add_modifier = {
+				name = $name$
+				multiplier = 3
+			}
+		}
+		4 = {
+			add_modifier = {
+				name = $name$
+				multiplier = 4
+			}
+		}
+		5 = {
+			add_modifier = {
+				name = $name$
+				multiplier = 5
+			}
+		}
+		6 = {
+			add_modifier = {					# For simpler BPM compatibility (matches SPA)
+				name = $name$
+				multiplier = 6
+			}
+		}
+	}
 }
