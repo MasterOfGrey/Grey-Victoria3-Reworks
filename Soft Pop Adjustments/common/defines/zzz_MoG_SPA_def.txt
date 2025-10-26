@@ -69,9 +69,9 @@ NPops = {
 	JOB_SATISFACTION_BASE = -120 # -150(old) # -130							# Base job satisfaction
 	JOB_SATISFACTION_FOR_NEWLY_HIRED = 1000									# Job satisfaction gained due to having been newly hired, this state lasts until the pop's next wealth calculation
 	# NOTE: All JOB_SATISFACTION_PER_SOL_ABOVE_X values apply to both the positive and negative side of the reference point.
-	JOB_SATISFACTION_PER_SOL_ABOVE_EXPECTED_SOL = 12 # 3					# Job satisfaction gained per level of SoL above your expected SoL
+	JOB_SATISFACTION_PER_SOL_ABOVE_EXPECTED_SOL = 8 # 12 # 3					# Job satisfaction gained per level of SoL above your expected SoL
 	# 5 SOL above expected + employed must be > JOB_SATISFACTION_BASE ( 5*12 + 70 > 120 -> ok )
-	JOB_SATISFACTION_PER_SOL_ABOVE_STATE_STRATA_SOL = 4 # 2					# Job satisfaction gained per level of SoL above the state average for your strata
+	JOB_SATISFACTION_PER_SOL_ABOVE_STATE_STRATA_SOL = 8 # 4 # 2					# Job satisfaction gained per level of SoL above the state average for your strata
 	JOB_SATISFACTION_PER_SOL_ABOVE_COUNTRY_STRATA_SOL = 0.5 # 1				# Job satisfaction gained per level of SoL above the country average for your strata
 	JOB_SATISFACTION_PER_PERCENT_WAGE_RATE_ABOVE_NORMAL = 0.5 # 1			# Job satisfaction gained per pound of workplace wage rate (weekly wage of 10k laborers) above country normal
 	JOB_SATISFACTION_FROM_CAN_AFFORD_EXPENSES = 500 # 1000					# Job satisfaction gained from being able to afford your buy package (and taxes)
@@ -108,7 +108,7 @@ NPops = {
 	MIGRATION_MAX_EMIGRATION_AS_POPULATION_FRACTION = 0.005						# Max emigration per week is clamped to this fraction of a state's population
 	
 	MIGRATION_MAX_PER_STATE_UNEMPLOYMENT_ORIGIN_FRACTION = 0.1 # 0.05			# The no. of unemployed workers in a state * this value is added to max emigration (after clamping from MIGRATION_MAX_EMIGRATION_AS_POPULATION_FRACTION)
-	MIGRATION_MAX_PER_STATE_UNEMPLOYMENT_TARGET_FRACTION = 0.2 # 0.4 # 0.05		# The amount of unemployed workers in a state * this value is removed from how many people can move to it (after clamping from MIGRATION_MAX_EMIGRATION_AS_POPULATION_FRACTION)
+	MIGRATION_MAX_PER_STATE_UNEMPLOYMENT_TARGET_FRACTION = 0.1 # 0.2 # 0.4 # 0.05	# The amount of unemployed workers in a state * this value is removed from how many people can move to it (after clamping from MIGRATION_MAX_EMIGRATION_AS_POPULATION_FRACTION)
 	
 	# UX/UI Labeling #
 	MIGRATION_PULL_HIGH_THRESHOLD = 0.75 # 1.25									# State must have a migration pull of at least market average * this to get market immigration

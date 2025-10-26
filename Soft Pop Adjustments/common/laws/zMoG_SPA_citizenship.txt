@@ -429,22 +429,23 @@ law_racial_segregation = {
 
 		#Heritage
 		#From this block, we only apply the highest value a Pop qualifies for
-		country_acceptance_shared_heritage_trait_add = 80 # 60
-		country_acceptance_shared_heritage_trait_group_add = 75 # 50
-		country_acceptance_no_shared_heritage_trait_add = 0 # -20
+		country_acceptance_shared_heritage_trait_add = 65 # 60
+		country_acceptance_shared_heritage_trait_group_add = 60 # 50
+		country_acceptance_no_shared_heritage_trait_add = -15 # -20	# Floor = 5
 		
 		## ^They care about race. The rest is closely aligned with National Supremacy
 		## Sharing both Language + Tradition = Open Prejudice, otherwise Cultural Erasure
+		### Remember: base possible +15 acceptance from religion included in above logic
 		#Language
 		#From this block, we only apply the highest value a Pop qualifies for
 		country_acceptance_shared_language_trait_add = 25 # 30
 		country_acceptance_shared_language_trait_group_add = 15
-		country_acceptance_no_shared_language_trait_add = -5
+		country_acceptance_no_shared_language_trait_add = 10 # -5
 
 		#Tradition
 		#From this block, we only apply the highest value a Pop qualifies for
 		country_acceptance_shared_tradition_trait_add = 20
-		country_acceptance_no_shared_tradition_trait_add = 10 # 0	# Floor = 5
+		country_acceptance_no_shared_tradition_trait_add = 10 # 0
 
 		#Fervor
 		country_primary_culture_fervor_from_laws_add = 10
@@ -574,21 +575,22 @@ law_cultural_exclusion = {
 		#Heritage
 		#From this block, we only apply the highest value a Pop qualifies for
 		country_acceptance_shared_heritage_trait_add = 30 # 60
-		country_acceptance_shared_heritage_trait_group_add = 20 # 50
-		country_acceptance_no_shared_heritage_trait_add = -5 # 10
+		country_acceptance_shared_heritage_trait_group_add = 30 # 50
+		country_acceptance_no_shared_heritage_trait_add = 25 # 10	# Floor = 5
 
+		## \|/They care about Culture and Language...
+		## Sharing Tradition or Language = Open Prejudice or better, otherwise need language group or heritage + religion to avoid Cultural Erasure
+		### Remember: base possible +15 acceptance from religion included in above logic
 		#Language
 		#From this block, we only apply the highest value a Pop qualifies for
-		country_acceptance_shared_language_trait_add = 45 # 50
-		country_acceptance_shared_language_trait_group_add = 35 # 25
-		country_acceptance_no_shared_language_trait_add = 10
-
-		## \|/They care about Culture, and language goes a lot further than heritage...
-		## Sharing Tradition = Open Prejudice or better, otherwise need both to avoid Cultural Erasure
+		country_acceptance_shared_language_trait_add = 60 # 50
+		country_acceptance_shared_language_trait_group_add = 30 # 25
+		country_acceptance_no_shared_language_trait_add = -10 # 10
+		
 		#Tradition
 		#From this block, we only apply the highest value a Pop qualifies for
 		country_acceptance_shared_tradition_trait_add = 60 # 25
-		country_acceptance_no_shared_tradition_trait_add = 0
+		country_acceptance_no_shared_tradition_trait_add = -10 # 0
 
 		#Fervor
 		country_primary_culture_fervor_from_laws_add = 5
