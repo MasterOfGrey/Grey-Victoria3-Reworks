@@ -23,8 +23,11 @@ USU_pm_rail_logistics_1 = {
 	state_modifiers = {
 		level_scaled = {		#It is important that these are level_scaled not workforce_scaaled
 			building_port_throughput_add = 0.01
-			building_river_port_throughput_add = 0.02
-		}	
+			building_river_port_throughput_add = 0.01
+		}
+		unscaled = {
+			building_river_port_throughput_add = 0.1
+		}
 	}
 	ai_value = 1000
 }
@@ -42,9 +45,12 @@ USU_pm_rail_logistics_2 = {
 	}
 	state_modifiers = {
 		level_scaled = {
-			building_port_throughput_add = 0.02
-			building_river_port_throughput_add = 0.04
-		}	
+			building_port_throughput_add = 0.015 # 0.02
+			building_river_port_throughput_add = 0.015 # 0.04
+		}
+		unscaled = {
+			building_river_port_throughput_add = 0.2
+		}
 	}
 	ai_value = 2000
 }
@@ -66,9 +72,12 @@ USU_pm_rail_logistics_3 = {
 	}
 	state_modifiers = {
 		level_scaled = {
-			building_port_throughput_add = 0.03
-			building_river_port_throughput_add = 0.06
-		}	
+			building_port_throughput_add = 0.02 # 0.03
+			building_river_port_throughput_add = 0.02 # 0.06
+		}
+		unscaled = {
+			building_river_port_throughput_add = 0.3
+		}
 	}
 	ai_value = 3000
 }

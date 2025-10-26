@@ -17,10 +17,11 @@ pm_trade_center = {
 		workforce_scaled = {
 			state_weekly_trades_add = 1
 			state_trade_capacity_add = 10
-			state_migration_pull_add = -0.1
+			# state_migration_pull_add = -0.1	# No economy of scale
+			state_migration_pull_mult = -0.001
 		}
 		level_scaled = {
-			state_migration_pull_add = 0.1
+			state_migration_pull_add = 0.05	# 0.1
 		}
 		unscaled = {
 			state_migration_pull_add = 2
@@ -56,10 +57,11 @@ pm_trade_center_principle_external_trade_2 = {
 		workforce_scaled = {
 			state_weekly_trades_add = 1
 			state_trade_capacity_add = 10
-			state_migration_pull_add = -0.1
+			# state_migration_pull_add = -0.1	# No economy of scale
+			state_migration_pull_mult = -0.001
 		}
 		level_scaled = {
-			state_migration_pull_add = 0.1
+			state_migration_pull_add = 0.05	# 0.1
 		}
 		unscaled = {
 			state_migration_pull_add = 3

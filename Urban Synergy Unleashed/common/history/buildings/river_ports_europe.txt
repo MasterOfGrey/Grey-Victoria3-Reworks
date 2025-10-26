@@ -180,7 +180,7 @@
 		}
 	}
 	s:STATE_SLAVONIA={
-		region_state:HUN={
+		region_state:CRO={
 			create_building={
 				building="building_river_port"
 				level=1
@@ -216,7 +216,7 @@
 		}
 	}
 	s:STATE_CROATIA={
-		region_state:HUN={
+		region_state:CRO={
 			create_building={
 				building="building_river_port"
 				level=1
