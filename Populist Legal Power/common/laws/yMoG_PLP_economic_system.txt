@@ -89,6 +89,20 @@ law_interventionism = {
 			limit = { ai_has_enact_weight_modifier_journal_entries = yes }
 			add = 750
 		}
+				
+		# Once the AI gets to a certain society tech level they should try to ditch Traditionalism for either Agrarianism or Interventionism
+		if = {
+			limit = {
+				OR = {
+					has_technology_researched = civilizing_mission
+					has_technology_researched = human_rights
+					has_technology_researched = pan-nationalism
+				}
+				has_law_or_variant = law_type:law_traditionalism
+			}	
+			
+			add = 1000
+		}
 		
 		if = {
 			limit = {
@@ -172,6 +186,20 @@ law_agrarianism = {
 		if = {
 			limit = { ai_has_enact_weight_modifier_journal_entries = yes }
 			add = 750
+		}
+		
+		# Once the AI gets to a certain society tech level they should try to ditch Traditionalism for either Agrarianism or Interventionism
+		if = {
+			limit = {
+				OR = {
+					has_technology_researched = civilizing_mission
+					has_technology_researched = human_rights
+					has_technology_researched = pan-nationalism
+				}
+				has_law_or_variant = law_type:law_traditionalism
+			}	
+			
+			add = 1000
 		}
 		
 		if = {
