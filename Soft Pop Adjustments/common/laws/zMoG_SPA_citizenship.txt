@@ -559,7 +559,7 @@ law_cultural_exclusion = {
 	}
 	
 	modifier = {
-		country_authority_add = 50
+		country_authority_add = 100
 		
 		# Pre 1.10:
 		##From this block, we only apply the highest value a Pop qualifies for
