@@ -20,14 +20,14 @@ mog_pli_max_investment_willingness_from_ip = {	# We apply this as a ceiling to a
 mog_pli_investment_target = {	# This represents the conditions which support investor confidence and capability
 	value = 0
 	add = mog_pli_inv_dist_of_power			# Max 20
-	# add = mog_pli_inv_church_and_state		# Max 20
-	add = mog_pli_inv_economic_system		# Max 20
+	add = mog_pli_inv_church_and_state		# Max 5
+	add = mog_pli_inv_economic_system		# Max 15
 	add = mog_pli_inv_taxation				# Max 20
 	add = mog_pli_inv_policing				# Max 20
-	add = mog_pli_inv_internal_security		# Max 20
-	add = mog_pli_inv_rights_of_women		# Max 20
-	add = mog_pli_inv_slavery				# Max 20
-	min = 1
+	add = mog_pli_inv_internal_security		# Max 10
+	add = mog_pli_inv_rights_of_women		# Max 15
+	add = mog_pli_inv_slavery				# Max 15
+	min = 1												# Max total intentionally > 100 (120)
 	max = {									# This can actually take it down to 0, but this is the only thing that should be able to do so.
 		value = 100
 		multiply = mog_pli_max_investment_willingness_from_ip
@@ -83,7 +83,7 @@ mog_pli_investment_increment = {
 	min = 0.1
 }
 
-mog_pli_inv_dist_of_power = {
+mog_pli_inv_dist_of_power = {			# Max 20
 	if = {
 		limit = { # Absolute Power
 			OR = { 
@@ -129,19 +129,142 @@ mog_pli_inv_dist_of_power = {
 }
 mog_pli_inv_dist_of_power_modded = 1	 # Replace this value for modded laws compatibility
 
-mog_pli_inv_church_and_state = {
-	
+mog_pli_inv_church_and_state = {		# Max 5
+	if = {
+		limit = { # Religious/Ideological Authorities have too much power to rent-seek.
+			OR = { 
+				has_law_or_variant = law_type:law_state_religion
+				has_law_or_variant = law_type:law_state_atheism
+			}
+		}
+		add = 1
+	}
+	else_if = {
+		limit = { has_law_or_variant = law_type:law_freedom_of_conscience }
+		add = 3
+	}
+	else_if = {
+		limit = { has_law_or_variant = law_type:law_total_separation }
+		add = 5
+	}
+	else = {		# For random modded laws
+		add = mog_pli_inv_church_and_state_modded
+	}
 }
-mog_pli_inv_economic_system = {
-	
+mog_pli_inv_church_and_state_modded = 1	 # Replace this value for modded laws compatibility
+
+mog_pli_inv_economic_system = {			# Max 15
+	if = {
+		limit = { # Efficiency and/or priorities are heavy deterrents
+			OR = { 
+				has_law_or_variant = law_type:law_traditionalism		# Some like traditionalism are obviously far
+				has_law_or_variant = law_type:law_agrarianism			# worse than agrarianism, but these have enough
+				has_law_or_variant = law_type:law_industry_banned		# innate penalties built in it's not necessary
+				has_law_or_variant = law_type:law_extraction_economy	# to double-down on making them even worse.
+			}
+		}
+		add = 5
+	}
+	else_if = {
+		limit = { has_law_or_variant = law_type:law_interventionism }
+		add = 10
+	}
+	else_if = {
+		limit = { # This is essentially the peak of functional private decision-making.
+			OR = { 
+				has_law_or_variant = law_type:law_cooperative_ownership
+				has_law_or_variant = law_type:law_laissez_faire
+			}
+		}
+		add = 12
+	}
+	else_if = {
+		limit = { has_law_or_variant = law_type:law_command_economy } # The pop type (bureaucrats) that *can* invest in CE is highly motivated to - the system is limited by the fact that they're the *only* pops that can invest lol.
+		add = 15
+	}
+	else = {		# For random modded laws
+		add = mog_pli_inv_economic_system_modded
+	}
 }
-mog_pli_inv_taxation = {
-	
+mog_pli_inv_economic_system_modded = 1	 # Replace this value for modded laws compatibility
+
+mog_pli_inv_taxation = {				# Max 20
+	if = {
+		limit = { # Taxes that are overly penalising to the poor weakens the market justification for investment
+			OR = { 
+				has_law_or_variant = law_type:law_consumption_based_taxation
+				has_law_or_variant = law_type:law_per_capita_based_taxation
+			}
+		}
+		add = 10
+	}
+	else_if = {
+		limit = {
+			OR = { 
+				has_law_or_variant = law_type:law_graduated_taxation
+				has_law_or_variant = law_type:law_proportional_taxation
+			}
+		}
+		add = 15
+	}
+	else_if = {
+		limit = { has_law_or_variant = law_type:law_land_based_taxation }	# Land taxes surprisingly efficient here
+		add = 20
+	}
+	else = {		# For random modded laws
+		add = mog_pli_inv_taxation_modded
+	}
+	multiply = {
+		value = 5
+		subtract = tax_level_value		# Ranges from 0 to 4
+	}
 }
-mog_pli_inv_policing = {
-	
+mog_pli_inv_taxation_modded = 1	 # Replace this value for modded laws compatibility
+
+mog_pli_inv_policing = {				# Max 20
+	if = {
+		limit = {	# Gotta Defend your own Investments
+			has_law_or_variant = law_type:law_no_police
+		}
+		add = 0
+	}
+	else_if {
+		limit = {	# Local police are ok, but prone to injustice and corruption
+			has_law_or_variant = law_type:law_local_police
+		}
+		add = 10
+		multiply = {
+			value = institution:institution_police.investment
+			min = 1
+		}
+	}
+	else_if {
+		limit = {	# One of the biggest contributors to a healthy investment environment
+			has_law_or_variant = law_type:law_dedicated_police
+		}
+		add = 20
+		multiply = {
+			value = institution:institution_police.investment
+			min = 1
+		}
+	}
+	else_if {
+		limit = {	# The stronger this institution is, the worse it gets...
+			has_law_or_variant = law_type:law_militarized_police
+		}
+		add = 15
+		divide = {
+			value = institution:institution_police.investment
+			min = 1
+		}
+	}
+	else = {	# For Random Modded laws
+		add = mog_pli_inv_policing_modded
+	}
 }
-mog_pli_inv_internal_security = {
+mog_pli_inv_policing_modded = 1	 # Replace this value for modded laws compatibility
+
+mog_pli_inv_internal_security = {		# Max 10
 	if = {
 		limit = {	# Gotta Defend your own Investments
 			has_law_or_variant = law_type:law_no_home_affairs
@@ -169,12 +292,71 @@ mog_pli_inv_internal_security = {
 }
 mog_pli_inv_internal_security_modded = 1	 # Replace this value for modded laws compatibility
 
-mog_pli_inv_rights_of_women = {
-	
+mog_pli_inv_rights_of_women = {			# Max 15
+	if = {
+		limit = {	# Whole chunk of the population has no capacity to participate
+			has_law_or_variant = law_type:law_no_womens_rights
+		}
+		add = 0
+	}
+	else_if {
+		limit = {
+			has_law_or_variant = law_type:law_women_own_property
+		}
+		add = 5
+	}
+	else_if {
+		limit = {
+			has_law_or_variant = law_type:law_women_in_the_workplace
+		}
+		add = 10
+	}
+	else_if {
+		limit = {
+			has_law_or_variant = law_type:law_womens_suffrage
+		}
+		add = 15
+	}
+	else = {	# For Random Modded laws
+		add = mog_pli_inv_rights_of_women_modded
+	}
 }
-mog_pli_inv_slavery = {
-	
+mog_pli_inv_rights_of_women_modded = 1	 # Replace this value for modded laws compatibility
+
+mog_pli_inv_slavery = {					# Max 15
+	if = {
+		limit = {	# When a failed investment can result in slavery...
+			has_law_or_variant = law_type:law_debt_slavery
+		}
+		add = 0
+	}
+	else_if {
+		limit = {	# The effect is all the more pernicious for being less obvious.
+			OR = { 
+				has_law_or_variant = law_type:law_colonial_slavery
+				has_law_or_variant = law_type:law_legacy_slavery
+			}
+		}
+		add = 5
+	}
+	else_if {
+		limit = {	# Access to cheap importable labour has some small advantages...
+			has_law_or_variant = law_type:law_slave_trade
+		}
+		add = 10
+	}
+	else_if {
+		limit = {
+			has_law_or_variant = law_type:law_slavery_banned
+		}
+		add = 15
+	}
+	else = {	# For Random Modded laws
+		add = mog_pli_inv_slavery_modded
+	}
 }
+mog_pli_inv_slavery_modded = 1	 # Replace this value for modded laws compatibility
+
 
 mog_pli_corruption_target = {
 	value = 0
