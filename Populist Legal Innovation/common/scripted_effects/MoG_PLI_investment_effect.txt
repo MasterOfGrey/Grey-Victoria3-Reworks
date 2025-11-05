@@ -1,0 +1,4 @@
+﻿# Country scope or JE Scope?
+MoG_PLI_do_investment_stuff_effect = {
+
+}

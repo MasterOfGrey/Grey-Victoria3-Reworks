@@ -3,17 +3,56 @@ mog_pli_investment_tracking_bar = {
 	desc = "mog_pli_investment_tracking_bar_left_desc"
 	second_desc = "mog_pli_investment_tracking_bar_right_desc"
 
-	start_value = 50
+	start_value = mog_pli_investment_target
 	min_value = 0
 	max_value = 100
-	double_sided_bad = yes
+	default_bad = no	# High number = good
+	# double_sided_bad = yes
 
 	weekly_progress = {
 		add = {
 			desc = "mog_pli_investment_tracking_bar_drift"
-			value = mog_pli_investment_target
-			subtract = var:mog_pli_investment_current_value
-			multiply = 0.1
+			if = {
+				limit = { mog_pli_investment_target < var:mog_pli_investment_current_value } # Target below current state.
+				if = {
+					limit = {
+						mog_pli_investment_increment < {	# If increment is less than the gap, use the increment, else use the gap.
+							value = mog_pli_investment_target
+							subtract = var:mog_pli_investment_current_value
+							multiply = -1
+						}
+					}
+					add = { 
+						value = mog_pli_investment_increment
+						multiply = -1							# Move towards lower target.
+					}
+				}
+				else = {
+					add =  {
+						value = mog_pli_investment_target
+						subtract = var:mog_pli_investment_current_value		# Current value slightly bigger here, so result is -ve and result = target.
+					}
+				}
+			}
+			else = { # Target above current state.
+				if = {
+					limit = {
+						mog_pli_investment_increment < {	# If increment is less than the gap, use the increment, else use the gap.
+							value = mog_pli_investment_target
+							subtract = var:mog_pli_investment_current_value
+						}
+					}
+					add = { 
+						value = mog_pli_investment_increment	# Move towards higher target.
+					}
+				}
+				else = {
+					add =  {
+						value = var:mog_pli_investment_current_value
+						subtract = mog_pli_investment_target		# Current value slightly lower here, so result is +ve and result = target.
+					}
+				}
+			}
 		}
 	}
 }
