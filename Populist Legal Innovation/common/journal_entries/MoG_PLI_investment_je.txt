@@ -59,18 +59,19 @@
 					remove_modifier = je_mog_pli_investment_modifier
 					remove_modifier = je_mog_pli_corruption_modifier
 				}
-				add_modifier = {
-					name = je_mog_pli_investment_modifier
-					days = -1
-					multiplier = {
-						value = {
-							value = 50
-							subtract = root.var:mog_pli_investment_current_value
-							divide = 100
-						}
-						add = 1
-					}
-				}
+				MoG_PLI_do_investment_stuff_effect = yes
+				#add_modifier = {
+				#	name = je_mog_pli_investment_modifier
+				#	days = -1
+				#	multiplier = {
+				#		value = {
+				#			value = 50
+				#			subtract = root.var:mog_pli_investment_current_value
+				#			divide = 100
+				#		}
+				#		add = 1
+				#	}
+				#}
 				add_modifier = {
 					name = je_mog_pli_corruption_modifier
 					days = -1
