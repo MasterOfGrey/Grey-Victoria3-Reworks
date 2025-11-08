@@ -1,13 +1,23 @@
 ﻿je_mog_pli_investment = {
 	icon = "gfx/interface/icons/event_icons/event_industry.dds"
-	group = je_group_objectives
+	group = je_group_internal_affairs
+	should_be_pinned_by_default = yes
+	# weight = 9000
+	#is_shown_when_inactive = {
+	#	is_player = yes
+	#}
+	#possible = {
+	#	always = yes
+	#}
 	
 	scripted_progress_bar = mog_pli_investment_tracking_bar
 	scripted_progress_bar = mog_pli_corruption_tracking_bar
 	immediate = {
-		set_bar_progress = {					# Set starting condition *before* saving progress level to variable.
-			value = mog_pli_investment_target
-			name = mog_pli_investment_tracking_bar
+		scope:journal_entry = {
+			set_bar_progress = {					# Set starting condition *before* saving progress level to variable.
+				value = root.mog_pli_investment_target
+				name = mog_pli_investment_tracking_bar
+			}
 		}
 		set_variable = {
 			name = mog_pli_investment_current_value
@@ -21,30 +31,30 @@
 	}
 	
 	status_desc = {
-		first_valid = {
-			triggered_desc = {
-				desc = je_mog_pli_investment_good
-				trigger = {
-					je:je_mog_pli_investment = {
-						"scripted_bar_progress(mog_pli_investment_tracking_bar)" > 60
-					}
-				}
-			}
-			triggered_desc = {
-				desc = je_mog_pli_investment_bad
-				trigger = {
-					je:je_mog_pli_investment = {
-						"scripted_bar_progress(mog_pli_investment_tracking_bar)" < 40
-					}
-				}
-			}
-			triggered_desc = {
-				desc = je_mog_pli_investment_neutral
-				trigger = {
-					always = yes
-				}
-			}
-		}
+	#	first_valid = {
+	#		triggered_desc = {
+	#			desc = je_mog_pli_investment_good
+	#			trigger = {
+	#				je:je_mog_pli_investment = {
+	#					"scripted_bar_progress(mog_pli_investment_tracking_bar)" > 60
+	#				}
+	#			}
+	#		}
+	#		triggered_desc = {
+	#			desc = je_mog_pli_investment_bad
+	#			trigger = {
+	#				je:je_mog_pli_investment = {
+	#					"scripted_bar_progress(mog_pli_investment_tracking_bar)" < 40
+	#				}
+	#			}
+	#		}
+	#		triggered_desc = {
+	#			desc = je_mog_pli_investment_neutral
+	#			trigger = {
+	#				always = yes
+	#			}
+	#		}
+	#	}
 	}
 
 	on_weekly_pulse = {
@@ -89,6 +99,4 @@
 			}
 		}
 	}
-	
-	should_be_pinned_by_default = yes
 }
