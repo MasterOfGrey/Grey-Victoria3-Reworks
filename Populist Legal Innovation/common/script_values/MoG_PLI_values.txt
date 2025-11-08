@@ -214,9 +214,9 @@ mog_pli_inv_taxation = {				# Max 20
 	else = {		# For random modded laws
 		add = mog_pli_inv_taxation_modded
 	}
-	multiply = {
-		value = 5
-		subtract = tax_level_value		# Ranges from 0 to 4
+	divide = {
+		value = 1
+		add = tax_level_value		# Ranges from 0 to 4
 	}
 }
 mog_pli_inv_taxation_modded = 1	 # Replace this value for modded laws compatibility

@@ -34,13 +34,15 @@ MoG_PLI_do_investment_stuff_effect = {
 			}
 		}												# Now we have the actual magnitude of the negative modifier to be additively applied.
 	}
-	if = { 				# Remove outdated modifier.
-		limit = { has_modifier = je_mog_pli_aristo_investment_modifier }
-		remove_modifier = je_mog_pli_aristo_investment_modifier
-	}
-	add_modifier = {	# Add updated modifier.
-		name = je_mog_pli_aristo_investment_modifier				# (default value: state_aristocrats_investment_pool_contribution_add = -1 )
-		multiplier = var:mog_pli_aristo_contribution_adjustment		# some value between 0 & the unadjusted pop investment contribution modifier value
+	scope:journal_entry = {
+		if = { 				# Remove outdated modifier.
+			limit = { has_modifier = je_mog_pli_aristo_investment_modifier }
+			remove_modifier = je_mog_pli_aristo_investment_modifier
+		}
+		add_modifier = {	# Add updated modifier.
+			name = je_mog_pli_aristo_investment_modifier				# (default value: state_aristocrats_investment_pool_contribution_add = -1 )
+			multiplier = var:mog_pli_aristo_contribution_adjustment		# some value between 0 & the unadjusted pop investment contribution modifier value
+		}
 	}
 	
 	# Calculate adjustment for CAPITALIST investment contributions
@@ -66,13 +68,15 @@ MoG_PLI_do_investment_stuff_effect = {
 			}
 		}
 	}
-	if = { 				# Remove outdated modifier.
-		limit = { has_modifier = je_mog_pli_capis_investment_modifier }
-		remove_modifier = je_mog_pli_capis_investment_modifier
-	}
-	add_modifier = {	# Add updated modifier.
-		name = je_mog_pli_capis_investment_modifier
-		multiplier = var:mog_pli_capis_contribution_adjustment
+	scope:journal_entry = {
+		if = { 				# Remove outdated modifier.
+			limit = { has_modifier = je_mog_pli_capis_investment_modifier }
+			remove_modifier = je_mog_pli_capis_investment_modifier
+		}
+		add_modifier = {	# Add updated modifier.
+			name = je_mog_pli_capis_investment_modifier
+			multiplier = var:mog_pli_capis_contribution_adjustment
+		}
 	}
 	
 	# Calculate adjustment for OFFICER investment contributions
@@ -98,13 +102,15 @@ MoG_PLI_do_investment_stuff_effect = {
 			}
 		}
 	}
-	if = { 				# Remove outdated modifier.
-		limit = { has_modifier = je_mog_pli_offis_investment_modifier }
-		remove_modifier = je_mog_pli_offis_investment_modifier
-	}
-	add_modifier = {	# Add updated modifier.
-		name = je_mog_pli_offis_investment_modifier
-		multiplier = var:mog_pli_offis_contribution_adjustment
+	scope:journal_entry = {
+		if = { 				# Remove outdated modifier.
+			limit = { has_modifier = je_mog_pli_offis_investment_modifier }
+			remove_modifier = je_mog_pli_offis_investment_modifier
+		}
+		add_modifier = {	# Add updated modifier.
+			name = je_mog_pli_offis_investment_modifier
+			multiplier = var:mog_pli_offis_contribution_adjustment
+		}
 	}
 	
 	# Calculate adjustment for ACADEMIC investment contributions
@@ -130,13 +136,15 @@ MoG_PLI_do_investment_stuff_effect = {
 			}
 		}
 	}
-	if = { 				# Remove outdated modifier.
-		limit = { has_modifier = je_mog_pli_acads_investment_modifier }
-		remove_modifier = je_mog_pli_acads_investment_modifier
-	}
-	add_modifier = {	# Add updated modifier.
-		name = je_mog_pli_acads_investment_modifier
-		multiplier = var:mog_pli_acads_contribution_adjustment
+	scope:journal_entry = {
+		if = { 				# Remove outdated modifier.
+			limit = { has_modifier = je_mog_pli_acads_investment_modifier }
+			remove_modifier = je_mog_pli_acads_investment_modifier
+		}
+		add_modifier = {	# Add updated modifier.
+			name = je_mog_pli_acads_investment_modifier
+			multiplier = var:mog_pli_acads_contribution_adjustment
+		}
 	}
 	
 	# Calculate adjustment for BUREAUCRAT investment contributions
@@ -162,13 +170,15 @@ MoG_PLI_do_investment_stuff_effect = {
 			}
 		}
 	}
-	if = { 				# Remove outdated modifier.
-		limit = { has_modifier = je_mog_pli_bcrats_investment_modifier }
-		remove_modifier = je_mog_pli_bcrats_investment_modifier
-	}
-	add_modifier = {	# Add updated modifier.
-		name = je_mog_pli_bcrats_investment_modifier
-		multiplier = var:mog_pli_bcrats_contribution_adjustment
+	scope:journal_entry = {
+		if = { 				# Remove outdated modifier.
+			limit = { has_modifier = je_mog_pli_bcrats_investment_modifier }
+			remove_modifier = je_mog_pli_bcrats_investment_modifier
+		}
+		add_modifier = {	# Add updated modifier.
+			name = je_mog_pli_bcrats_investment_modifier
+			multiplier = var:mog_pli_bcrats_contribution_adjustment
+		}
 	}
 	
 	# Calculate adjustment for CLERGYMEN investment contributions
@@ -194,13 +204,15 @@ MoG_PLI_do_investment_stuff_effect = {
 			}
 		}
 	}
-	if = { 				# Remove outdated modifier.
-		limit = { has_modifier = je_mog_pli_clergy_investment_modifier }
-		remove_modifier = je_mog_pli_clergy_investment_modifier
-	}
-	add_modifier = {	# Add updated modifier.
-		name = je_mog_pli_clergy_investment_modifier
-		multiplier = var:mog_pli_clergy_contribution_adjustment
+	scope:journal_entry = {
+		if = { 				# Remove outdated modifier.
+			limit = { has_modifier = je_mog_pli_clergy_investment_modifier }
+			remove_modifier = je_mog_pli_clergy_investment_modifier
+		}
+		add_modifier = {	# Add updated modifier.
+			name = je_mog_pli_clergy_investment_modifier
+			multiplier = var:mog_pli_clergy_contribution_adjustment
+		}
 	}
 	
 	# Calculate adjustment for ENGINEER investment contributions
@@ -226,13 +238,15 @@ MoG_PLI_do_investment_stuff_effect = {
 			}
 		}
 	}
-	if = { 				# Remove outdated modifier.
-		limit = { has_modifier = je_mog_pli_engies_investment_modifier }
-		remove_modifier = je_mog_pli_engies_investment_modifier
-	}
-	add_modifier = {	# Add updated modifier.
-		name = je_mog_pli_engies_investment_modifier
-		multiplier = var:mog_pli_engies_contribution_adjustment
+	scope:journal_entry = {
+		if = { 				# Remove outdated modifier.
+			limit = { has_modifier = je_mog_pli_engies_investment_modifier }
+			remove_modifier = je_mog_pli_engies_investment_modifier
+		}
+		add_modifier = {	# Add updated modifier.
+			name = je_mog_pli_engies_investment_modifier
+			multiplier = var:mog_pli_engies_contribution_adjustment
+		}
 	}
 	
 	# Calculate adjustment for SHOPKEEPER investment contributions
@@ -258,13 +272,15 @@ MoG_PLI_do_investment_stuff_effect = {
 			}
 		}
 	}
-	if = { 				# Remove outdated modifier.
-		limit = { has_modifier = je_mog_pli_shops_investment_modifier }
-		remove_modifier = je_mog_pli_shops_investment_modifier
-	}
-	add_modifier = {	# Add updated modifier.
-		name = je_mog_pli_shops_investment_modifier
-		multiplier = var:mog_pli_shops_contribution_adjustment
+	scope:journal_entry = {
+		if = { 				# Remove outdated modifier.
+			limit = { has_modifier = je_mog_pli_shops_investment_modifier }
+			remove_modifier = je_mog_pli_shops_investment_modifier
+		}
+		add_modifier = {	# Add updated modifier.
+			name = je_mog_pli_shops_investment_modifier
+			multiplier = var:mog_pli_shops_contribution_adjustment
+		}
 	}
 	
 	# Calculate adjustment for FARMER investment contributions
@@ -290,13 +306,15 @@ MoG_PLI_do_investment_stuff_effect = {
 			}
 		}
 	}
-	if = { 				# Remove outdated modifier.
-		limit = { has_modifier = je_mog_pli_farms_investment_modifier }
-		remove_modifier = je_mog_pli_farms_investment_modifier
-	}
-	add_modifier = {	# Add updated modifier.
-		name = je_mog_pli_farms_investment_modifier
-		multiplier = var:mog_pli_farms_contribution_adjustment
+	scope:journal_entry = {
+		if = { 				# Remove outdated modifier.
+			limit = { has_modifier = je_mog_pli_farms_investment_modifier }
+			remove_modifier = je_mog_pli_farms_investment_modifier
+		}
+		add_modifier = {	# Add updated modifier.
+			name = je_mog_pli_farms_investment_modifier
+			multiplier = var:mog_pli_farms_contribution_adjustment
+		}
 	}
 	
 	# Calculate adjustment for CLERK investment contributions
@@ -322,13 +340,15 @@ MoG_PLI_do_investment_stuff_effect = {
 			}
 		}
 	}
-	if = { 				# Remove outdated modifier.
-		limit = { has_modifier = je_mog_pli_clerks_investment_modifier }
-		remove_modifier = je_mog_pli_clerks_investment_modifier
-	}
-	add_modifier = {	# Add updated modifier.
-		name = je_mog_pli_clerks_investment_modifier
-		multiplier = var:mog_pli_clerks_contribution_adjustment
+	scope:journal_entry = {
+		if = { 				# Remove outdated modifier.
+			limit = { has_modifier = je_mog_pli_clerks_investment_modifier }
+			remove_modifier = je_mog_pli_clerks_investment_modifier
+		}
+		add_modifier = {	# Add updated modifier.
+			name = je_mog_pli_clerks_investment_modifier
+			multiplier = var:mog_pli_clerks_contribution_adjustment
+		}
 	}
 	
 	# Calculate adjustment for MACHINIST investment contributions
@@ -354,13 +374,15 @@ MoG_PLI_do_investment_stuff_effect = {
 			}
 		}
 	}
-	if = { 				# Remove outdated modifier.
-		limit = { has_modifier = je_mog_pli_machs_investment_modifier }
-		remove_modifier = je_mog_pli_machs_investment_modifier
-	}
-	add_modifier = {	# Add updated modifier.
-		name = je_mog_pli_machs_investment_modifier
-		multiplier = var:mog_pli_machs_contribution_adjustment
+	scope:journal_entry = {
+		if = { 				# Remove outdated modifier.
+			limit = { has_modifier = je_mog_pli_machs_investment_modifier }
+			remove_modifier = je_mog_pli_machs_investment_modifier
+		}
+		add_modifier = {	# Add updated modifier.
+			name = je_mog_pli_machs_investment_modifier
+			multiplier = var:mog_pli_machs_contribution_adjustment
+		}
 	}
 	
 	# Calculate adjustment for SERVICEMEN/SOLDIER investment contributions
@@ -386,13 +408,15 @@ MoG_PLI_do_investment_stuff_effect = {
 			}
 		}
 	}
-	if = { 				# Remove outdated modifier.
-		limit = { has_modifier = je_mog_pli_soldies_investment_modifier }
-		remove_modifier = je_mog_pli_soldies_investment_modifier
-	}
-	add_modifier = {	# Add updated modifier.
-		name = je_mog_pli_soldies_investment_modifier
-		multiplier = var:mog_pli_soldies_contribution_adjustment
+	scope:journal_entry = {
+		if = { 				# Remove outdated modifier.
+			limit = { has_modifier = je_mog_pli_soldies_investment_modifier }
+			remove_modifier = je_mog_pli_soldies_investment_modifier
+		}
+		add_modifier = {	# Add updated modifier.
+			name = je_mog_pli_soldies_investment_modifier
+			multiplier = var:mog_pli_soldies_contribution_adjustment
+		}
 	}
 	
 	# Calculate adjustment for LABORER investment contributions
@@ -418,13 +442,15 @@ MoG_PLI_do_investment_stuff_effect = {
 			}
 		}
 	}
-	if = { 				# Remove outdated modifier.
-		limit = { has_modifier = je_mog_pli_labs_investment_modifier }
-		remove_modifier = je_mog_pli_labs_investment_modifier
-	}
-	add_modifier = {	# Add updated modifier.
-		name = je_mog_pli_labs_investment_modifier
-		multiplier = var:mog_pli_labs_contribution_adjustment
+	scope:journal_entry = {
+		if = { 				# Remove outdated modifier.
+			limit = { has_modifier = je_mog_pli_labs_investment_modifier }
+			remove_modifier = je_mog_pli_labs_investment_modifier
+		}
+		add_modifier = {	# Add updated modifier.
+			name = je_mog_pli_labs_investment_modifier
+			multiplier = var:mog_pli_labs_contribution_adjustment
+		}
 	}
 	
 	set_variable = {									# At the end of the process, set the current target as the previous to use for next time.

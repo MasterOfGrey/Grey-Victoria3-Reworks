@@ -3,8 +3,12 @@
 	group = je_group_objectives
 	
 	scripted_progress_bar = mog_pli_investment_tracking_bar
-	scripted_progress_bar = mog_pli_investment_corruption_bar
+	scripted_progress_bar = mog_pli_corruption_tracking_bar
 	immediate = {
+		set_bar_progress = {					# Set starting condition *before* saving progress level to variable.
+			value = mog_pli_investment_target
+			name = mog_pli_investment_tracking_bar
+		}
 		set_variable = {
 			name = mog_pli_investment_current_value
 			value = "je:je_mog_pli_investment.scripted_bar_progress(mog_pli_investment_tracking_bar)"
@@ -54,12 +58,12 @@
 				value = "je:je_mog_pli_investment.scripted_bar_progress(mog_pli_corruption_tracking_bar)"
 			}
 			#set modifier from conditions
+			MoG_PLI_do_investment_stuff_effect = yes
 			scope:journal_entry = {
-				hidden_effect = {
-					remove_modifier = je_mog_pli_investment_modifier
-					remove_modifier = je_mog_pli_corruption_modifier
-				}
-				MoG_PLI_do_investment_stuff_effect = yes
+				#hidden_effect = {
+				#	remove_modifier = je_mog_pli_investment_modifier
+				#	remove_modifier = je_mog_pli_corruption_modifier
+				#}
 				#add_modifier = {
 				#	name = je_mog_pli_investment_modifier
 				#	days = -1
@@ -72,16 +76,16 @@
 				#		add = 1
 				#	}
 				#}
-				add_modifier = {
-					name = je_mog_pli_corruption_modifier
-					days = -1
-					multiplier = {
-						value = {
-							value = root.var:mog_pli_corruption_current_value
-							divide = 100
-						}
-					}
-				}
+				#add_modifier = {
+				#	name = je_mog_pli_corruption_modifier
+				#	days = -1
+				#	multiplier = {
+				#		value = {
+				#			value = root.var:mog_pli_corruption_current_value
+				#			divide = 100
+				#		}
+				#	}
+				#}
 			}
 		}
 	}
