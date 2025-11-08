@@ -1,90 +1,90 @@
 ﻿## Calculation values used exclusively in maths for effect setting.
 
 # Base investment pool contribution ignoring adjustments from this mod - 1 per pop type.
-mog_pli_aristo_contribution_base_sv = {
+mog_pli_aristocrats_contribution_base_sv = {
 	value = {													# Calculate what the default modifier value would be right now - 
 		add = {														# - i.e. the total unadjusted modifier based on previous month:
-			add = var:mog_pli_aristo_contribution_adjustment			# Cross multiply [ investment_current_prev/100 = adjustment/total ]
+			add = var:mog_pli_aristocrats_contribution_adjustment			# Cross multiply [ investment_current_prev/100 = adjustment/total ]
 			multiply = 100												# Solve for total -> [ = (adjustment*100)/investment_current_prev ]
 			divide = var:mog_pli_investment_current_prev
 		}
 	}
 }
 
-mog_pli_capis_contribution_base_sv = {
+mog_pli_capitalists_contribution_base_sv = {
 	value = {
 		add = {
-			add = var:mog_pli_capis_contribution_adjustment
+			add = var:mog_pli_capitalists_contribution_adjustment
 			multiply = 100
 			divide = var:mog_pli_investment_current_prev
 		}
 	}
 }
 
-mog_pli_offis_contribution_base_sv = {
+mog_pli_officers_contribution_base_sv = {
 	value = {
 		add = {
-			add = var:mog_pli_offis_contribution_adjustment
+			add = var:mog_pli_officers_contribution_adjustment
 			multiply = 100
 			divide = var:mog_pli_investment_current_prev
 		}
 	}
 }
 
-mog_pli_acads_contribution_base_sv = {
+mog_pli_academics_contribution_base_sv = {
 	value = {
 		add = {
-			add = var:mog_pli_acads_contribution_adjustment
+			add = var:mog_pli_academics_contribution_adjustment
 			multiply = 100
 			divide = var:mog_pli_investment_current_prev
 		}
 	}
 }
 
-mog_pli_bcrats_contribution_base_sv = {
+mog_pli_bureaucrats_contribution_base_sv = {
 	value = {
 		add = {
-			add = var:mog_pli_bcrats_contribution_adjustment
+			add = var:mog_pli_bureaucrats_contribution_adjustment
 			multiply = 100
 			divide = var:mog_pli_investment_current_prev
 		}
 	}
 }
 
-mog_pli_clergy_contribution_base_sv = {
+mog_pli_clergymen_contribution_base_sv = {
 	value = {
 		add = {
-			add = var:mog_pli_clergy_contribution_adjustment
+			add = var:mog_pli_clergymen_contribution_adjustment
 			multiply = 100
 			divide = var:mog_pli_investment_current_prev
 		}
 	}
 }
 
-mog_pli_engies_contribution_base_sv = {
+mog_pli_engineers_contribution_base_sv = {
 	value = {
 		add = {
-			add = var:mog_pli_engies_contribution_adjustment
+			add = var:mog_pli_engineers_contribution_adjustment
 			multiply = 100
 			divide = var:mog_pli_investment_current_prev
 		}
 	}
 }
 
-mog_pli_shops_contribution_base_sv = {
+mog_pli_shopkeepers_contribution_base_sv = {
 	value = {
 		add = {
-			add = var:mog_pli_shops_contribution_adjustment
+			add = var:mog_pli_shopkeepers_contribution_adjustment
 			multiply = 100
 			divide = var:mog_pli_investment_current_prev
 		}
 	}
 }
 
-mog_pli_farms_contribution_base_sv = {
+mog_pli_farmers_contribution_base_sv = {
 	value = {
 		add = {
-			add = var:mog_pli_farms_contribution_adjustment
+			add = var:mog_pli_farmers_contribution_adjustment
 			multiply = 100
 			divide = var:mog_pli_investment_current_prev
 		}
@@ -101,30 +101,30 @@ mog_pli_clerks_contribution_base_sv = {
 	}
 }
 
-mog_pli_machs_contribution_base_sv = {
+mog_pli_machinists_contribution_base_sv = {
 	value = {
 		add = {
-			add = var:mog_pli_machs_contribution_adjustment
+			add = var:mog_pli_machinists_contribution_adjustment
 			multiply = 100
 			divide = var:mog_pli_investment_current_prev
 		}
 	}
 }
 
-mog_pli_soldies_contribution_base_sv = {
+mog_pli_soldiers_contribution_base_sv = {
 	value = {
 		add = {
-			add = var:mog_pli_soldies_contribution_adjustment
+			add = var:mog_pli_soldiers_contribution_adjustment
 			multiply = 100
 			divide = var:mog_pli_investment_current_prev
 		}
 	}
 }
 
-mog_pli_labs_contribution_base_sv = {
+mog_pli_laborers_contribution_base_sv = {
 	value = {
 		add = {
-			add = var:mog_pli_labs_contribution_adjustment
+			add = var:mog_pli_laborers_contribution_adjustment
 			multiply = 100
 			divide = var:mog_pli_investment_current_prev
 		}

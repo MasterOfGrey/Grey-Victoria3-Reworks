@@ -1,45 +1,45 @@
 ﻿# Investment contribution penalty modifiers by pop type.
-je_mog_pli_aristo_investment_modifier = {
+je_mog_pli_aristocrats_investment_modifier = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_documents_negative.dds
 	state_aristocrats_investment_pool_contribution_add = -1
 }
 
-je_mog_pli_capis_investment_modifier = {
+je_mog_pli_capitalists_investment_modifier = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_documents_negative.dds
 	state_capitalists_investment_pool_contribution_add = -1
 }
 
-je_mog_pli_offis_investment_modifier = {
+je_mog_pli_officers_investment_modifier = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_documents_negative.dds
 	state_officers_investment_pool_contribution_add = -1
 }
 
-je_mog_pli_acads_investment_modifier = {
+je_mog_pli_academics_investment_modifier = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_documents_negative.dds
 	state_academics_investment_pool_contribution_add = -1
 }
 
-je_mog_pli_bcrats_investment_modifier = {
+je_mog_pli_bureaucrats_investment_modifier = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_documents_negative.dds
 	state_bureaucrats_investment_pool_contribution_add = -1
 }
 
-je_mog_pli_clergy_investment_modifier = {
+je_mog_pli_clergymen_investment_modifier = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_documents_negative.dds
 	state_clergymen_investment_pool_contribution_add = -1
 }
 
-je_mog_pli_engies_investment_modifier = {
+je_mog_pli_engineers_investment_modifier = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_documents_negative.dds
 	state_engineers_investment_pool_contribution_add = -1
 }
 
-je_mog_pli_shops_investment_modifier = {
+je_mog_pli_shopkeepers_investment_modifier = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_documents_negative.dds
 	state_shopkeepers_investment_pool_contribution_add = -1
 }
 
-je_mog_pli_farms_investment_modifier = {
+je_mog_pli_farmers_investment_modifier = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_documents_negative.dds
 	state_farmers_investment_pool_contribution_add = -1
 }
@@ -49,17 +49,17 @@ je_mog_pli_clerks_investment_modifier = {
 	state_clerks_investment_pool_contribution_add = -1
 }
 
-je_mog_pli_machs_investment_modifier = {
+je_mog_pli_machinists_investment_modifier = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_documents_negative.dds
 	state_machinists_investment_pool_contribution_add = -1
 }
 
-je_mog_pli_soldies_investment_modifier = {
+je_mog_pli_soldiers_investment_modifier = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_documents_negative.dds
 	state_soldiers_investment_pool_contribution_add = -1
 }
 
-je_mog_pli_labs_investment_modifier = {
+je_mog_pli_laborers_investment_modifier = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_documents_negative.dds
 	state_laborers_investment_pool_contribution_add = -1
 }
