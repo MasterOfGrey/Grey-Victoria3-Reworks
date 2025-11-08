@@ -1,7 +1,7 @@
 ﻿mog_pli_investment_tracking_bar = {
 	name = "mog_pli_investment_tracking_bar_title"
 	desc = "mog_pli_investment_tracking_bar_left_desc"
-	second_desc = "mog_pli_investment_tracking_bar_right_desc"
+	# second_desc = "mog_pli_investment_tracking_bar_right_desc"
 
 	start_value = 50
 	min_value = 0

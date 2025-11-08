@@ -2,13 +2,9 @@
 	icon = "gfx/interface/icons/event_icons/event_industry.dds"
 	group = je_group_internal_affairs
 	should_be_pinned_by_default = yes
-	# weight = 9000
-	#is_shown_when_inactive = {
-	#	is_player = yes
-	#}
-	#possible = {
-	#	always = yes
-	#}
+	weight = 9000
+	is_shown_when_inactive = { always = yes }
+	possible = { always = yes }
 	
 	scripted_progress_bar = mog_pli_investment_tracking_bar
 	scripted_progress_bar = mog_pli_corruption_tracking_bar
