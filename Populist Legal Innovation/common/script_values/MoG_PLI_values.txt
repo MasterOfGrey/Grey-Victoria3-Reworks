@@ -228,7 +228,7 @@ mog_pli_inv_policing = {				# Max 20
 		}
 		add = 0
 	}
-	else_if {
+	else_if = {
 		limit = {	# Local police are ok, but prone to injustice and corruption
 			has_law_or_variant = law_type:law_local_police
 		}
@@ -238,7 +238,7 @@ mog_pli_inv_policing = {				# Max 20
 			min = 1
 		}
 	}
-	else_if {
+	else_if = {
 		limit = {	# One of the biggest contributors to a healthy investment environment
 			has_law_or_variant = law_type:law_dedicated_police
 		}
@@ -248,7 +248,7 @@ mog_pli_inv_policing = {				# Max 20
 			min = 1
 		}
 	}
-	else_if {
+	else_if = {
 		limit = {	# The stronger this institution is, the worse it gets...
 			has_law_or_variant = law_type:law_militarized_police
 		}
@@ -271,7 +271,7 @@ mog_pli_inv_internal_security = {		# Max 10
 		}
 		add = 5
 	}
-	else_if {
+	else_if = {
 		limit = {	# Stable Conditions with Known Constraints
 			OR = { 
 				has_law_or_variant = law_type:law_national_guard
@@ -280,7 +280,7 @@ mog_pli_inv_internal_security = {		# Max 10
 		}
 		add = 10
 	}
-	else_if {
+	else_if = {
 		limit = {	# Investment requires playing the Political Game
 			has_law_or_variant = law_type:law_secret_police
 		}
@@ -299,19 +299,19 @@ mog_pli_inv_rights_of_women = {			# Max 15
 		}
 		add = 0
 	}
-	else_if {
+	else_if = {
 		limit = {
 			has_law_or_variant = law_type:law_women_own_property
 		}
 		add = 5
 	}
-	else_if {
+	else_if = {
 		limit = {
 			has_law_or_variant = law_type:law_women_in_the_workplace
 		}
 		add = 10
 	}
-	else_if {
+	else_if = {
 		limit = {
 			has_law_or_variant = law_type:law_womens_suffrage
 		}
@@ -330,7 +330,7 @@ mog_pli_inv_slavery = {					# Max 15
 		}
 		add = 0
 	}
-	else_if {
+	else_if = {
 		limit = {	# The effect is all the more pernicious for being less obvious.
 			OR = { 
 				has_law_or_variant = law_type:law_colonial_slavery
@@ -339,13 +339,13 @@ mog_pli_inv_slavery = {					# Max 15
 		}
 		add = 5
 	}
-	else_if {
+	else_if = {
 		limit = {	# Access to cheap importable labour has some small advantages...
 			has_law_or_variant = law_type:law_slave_trade
 		}
 		add = 10
 	}
-	else_if {
+	else_if = {
 		limit = {
 			has_law_or_variant = law_type:law_slavery_banned
 		}
