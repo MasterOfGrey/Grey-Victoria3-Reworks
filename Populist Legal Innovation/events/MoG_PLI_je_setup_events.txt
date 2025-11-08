@@ -1,0 +1,19 @@
+﻿namespace = PLI_secret_ev
+
+PLI_secret_ev.1 = {
+	type = country_event
+	hidden = yes
+	
+	immediate = {
+		MoG_PLI_do_investment_setup_effect = yes
+		set_variable = {	# Reset progress level variable now that starting condition is properly applied (since it can't be done *before* saving in JE's immediate block).
+			name = mog_pli_investment_current_value
+			value = "je:je_mog_pli_investment.scripted_bar_progress(mog_pli_investment_tracking_bar)"
+		}
+	#	MoG_PLI_do_corruption_setup_effect = yes
+	#	set_variable = {
+	#		name = mog_pli_corruption_current_value
+	#		value = "je:je_mog_pli_investment.scripted_bar_progress(mog_pli_corruption_tracking_bar)"
+	#	}
+	}
+}

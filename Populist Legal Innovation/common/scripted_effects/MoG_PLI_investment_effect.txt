@@ -1,4 +1,17 @@
-﻿# Country scope or JE Scope?
+﻿# Country scope unless called specifically in JE Scope.
+MoG_PLI_do_investment_setup_effect = {
+	set_local_variable = {
+		name = mog_pli_investment_bar_start_value
+		value = mog_pli_investment_target
+	}
+	je:je_mog_pli_investment = {
+		set_bar_progress = {
+			value = local_var:mog_pli_investment_bar_start_value
+			name = mog_pli_investment_tracking_bar
+		}
+	}
+}
+
 MoG_PLI_do_investment_stuff_effect = {
 	if = { # Create variables if not set already
 		limit = {
@@ -9,6 +22,8 @@ MoG_PLI_do_investment_stuff_effect = {
 		MoG_PLI_set_investment_variables_effect = yes
 	}
 	
+	## Different pop types have different absolute contribution amounts, so each one needs their own calculation (unfortunately).
+	## These are ordered from highest wage multiplier to lowest wage multiplier, and alphabetical within that, just to have some sort of ordering...
 	# Calculate adjustment for ARISTOCRAT investment contributions
 	calculate_pop_investment_adjustment = { POP = aristocrats }
 
@@ -159,15 +174,13 @@ MoG_PLI_set_investment_variables_effect = { # Create variables if not set alread
 
 calculate_pop_investment_adjustment = {
 	# Parameter POP
-	## Different pop types have different absolute contribution amounts, so each one needs their own calculation (unfortunately).
-	## These are ordered from highest wage multiplier to lowest wage multiplier, and alphabetical within that, just to have some sort of ordering...
 	# Calculate adjustment for $POP$ investment contributions
 	set_variable = {
 		name = mog_pli_$POP$_contribution_adjustment	# This a positive number that represents the magnitude of the negative adjustment modifier.
 		value = {										# Contributions are 0-1 so remember we're ultimately getting a % portion of a "percent" value.
 			add = {														# Calculate what the default modifier value would be right now - 
 				add = mog_pli_$POP$_contribution_base_sv					# - i.e. the total unadjusted modifier based on previous month.
-				add = {													# Account for if base sources of the modifier have changed since previously.
+				add = {															# Account for if base sources of the modifier have changed since previously.
 					add = modifier:state_$POP$_investment_pool_contribution_add
 					subtract = {
 						add = mog_pli_$POP$_contribution_base_sv				# base - adjustment = actual modifier value
@@ -190,7 +203,7 @@ calculate_pop_investment_adjustment = {
 			remove_modifier = je_mog_pli_$POP$_investment_modifier
 		}
 		add_modifier = {	# Add updated modifier.
-			name = je_mog_pli_$POP$_investment_modifier				# (default value: state_aristocrats_investment_pool_contribution_add = -1 )
+			name = je_mog_pli_$POP$_investment_modifier					# (default value: state_$POP$_investment_pool_contribution_add = -1 )
 			multiplier = var:mog_pli_$POP$_contribution_adjustment		# some value between 0 & the unadjusted pop investment contribution modifier value
 		}
 	}
