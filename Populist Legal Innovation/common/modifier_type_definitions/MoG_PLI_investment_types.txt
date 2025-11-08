@@ -17,6 +17,30 @@ state_capitalists_investment_pool_contribution_mult={
 		ai_value=0
 	}
 }
+state_officers_investment_pool_contribution_mult={
+	decimals=0
+	color=good
+	percent=yes
+	game_data={
+		ai_value=0
+	}
+}
+state_academics_investment_pool_contribution_mult={
+	decimals=0
+	color=good
+	percent=yes
+	game_data={
+		ai_value=0
+	}
+}
+state_bureaucrats_investment_pool_contribution_mult={
+	decimals=0
+	color=good
+	percent=yes
+	game_data={
+		ai_value=0
+	}
+}
 state_clergymen_investment_pool_contribution_mult={
 	decimals=0
 	color=good
@@ -24,6 +48,14 @@ state_clergymen_investment_pool_contribution_mult={
 	game_data={
 		ai_value=0
 	}
+}
+state_engineers_investment_pool_contribution_mult={
+    decimals=0
+    color=good
+    percent=yes
+    game_data={
+        ai_value=0
+    }
 }
 state_shopkeepers_investment_pool_contribution_mult={
 	decimals=0
@@ -41,15 +73,31 @@ state_farmers_investment_pool_contribution_mult={
 		ai_value=0
 	}
 }
-state_engineers_investment_pool_contribution_mult={
-    decimals=0
-    color=good
-    percent=yes
-    game_data={
-        ai_value=0
-    }
+state_clerks_investment_pool_contribution_mult={
+	decimals=0
+	color=good
+	percent=yes
+	game_data={
+		ai_value=0
+	}
 }
 state_machinists_investment_pool_contribution_mult={
+	decimals=0
+	color=good
+	percent=yes
+	game_data={
+		ai_value=0
+	}
+}
+state_soldiers_investment_pool_contribution_mult={
+	decimals=0
+	color=good
+	percent=yes
+	game_data={
+		ai_value=0
+	}
+}
+state_laborers_investment_pool_contribution_mult={
 	decimals=0
 	color=good
 	percent=yes
