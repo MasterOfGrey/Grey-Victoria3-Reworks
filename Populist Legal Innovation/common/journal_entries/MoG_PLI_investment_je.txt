@@ -8,6 +8,7 @@
 	
 	scripted_progress_bar = mog_pli_investment_tracking_bar
 	scripted_progress_bar = mog_pli_corruption_tracking_bar
+	
 	immediate = {
 		scope:journal_entry = {
 			set_bar_progress = {					# Set starting condition *before* saving progress level to variable.
