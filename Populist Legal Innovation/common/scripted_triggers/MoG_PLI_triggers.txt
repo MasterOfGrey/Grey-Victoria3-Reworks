@@ -1,0 +1,7 @@
+﻿harvest_condition_good = {
+	OR = {
+		has_harvest_condition = pollinator_surge
+		has_harvest_condition = optimal_sunlight
+		has_harvest_condition = moderate_rainfall
+	}
+}

@@ -83,7 +83,7 @@ je_mog_pli_dummy_investment_modifier = {
 
 # Corruption Modifiers
 je_mog_pli_corruption_modifier = {
-	icon = gfx/interface/icons/timed_modifier_icons/modifier_documents_bad.dds
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_coins_negative.dds
 	state_aristocrats_investment_pool_efficiency_mult = -1
 	state_bureaucrats_investment_pool_efficiency_mult = -1
 	state_capitalists_investment_pool_efficiency_mult = -1

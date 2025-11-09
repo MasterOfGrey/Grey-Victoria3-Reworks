@@ -380,6 +380,11 @@ mog_pli_corruption_target = {
 	max = 100		# Economic System excluded because these already have "corruption" penalties built-in
 }
 
+mog_pli_corruption_target_loc_value = {
+	value = mog_pli_corruption_target
+	divide = 100
+}
+
 mog_pli_corruption_increment = {
 	value = 0
 	# Accelerators/Decelerators
@@ -406,7 +411,7 @@ mog_pli_corruption_increment = {
 	}
 	add = {		# Depends on the nature of the institution
 		owner.institution:institution_home_affairs ?= {
-			add = mog_pli_cor_internal_security
+			add = owner.mog_pli_cor_internal_security
 			divide = 400	# 10 becomes 0.025
 			multiply = investment
 		}

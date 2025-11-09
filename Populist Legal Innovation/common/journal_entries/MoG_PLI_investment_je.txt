@@ -3,7 +3,7 @@
 	group = je_group_internal_affairs
 	should_be_pinned_by_default = yes
 	weight = 9000
-	is_shown_when_inactive = { always = yes }
+	is_shown_when_inactive = { NOT = { is_country_type = decentralized } }
 	possible = { always = yes }
 	
 	scripted_progress_bar = mog_pli_investment_tracking_bar
