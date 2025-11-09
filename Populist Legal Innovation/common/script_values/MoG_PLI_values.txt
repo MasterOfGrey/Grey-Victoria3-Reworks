@@ -14,6 +14,7 @@ mog_pli_max_investment_willingness_from_ip = {	# We apply this as a ceiling to a
 		multiply = 2					# i.e. max reduction in investment contribution is 100%
 	}
 	min = 0								# But we'll clamp it to be safe.
+	desc = ""
 }
 
 ### Investment Willingness Values
@@ -34,36 +35,41 @@ mog_pli_investment_target = {	# This represents the conditions which support inv
 	}
 }
 
+mog_pli_resting_target_loc_value = {
+	value = mog_pli_investment_target
+	divide = 100
+}
+
 mog_pli_investment_increment = {
 	value = 0
-	# Accelerators
+	# Accelerators/Decelerators
 	add = {
 		owner.institution:institution_police ?= {
 			add = 0.1
 			multiply = investment
 		}
-		desc = PLI_POLICE_INSTITUTION
+		desc = PLI_POLICE_INSTITUTION		# Max = 0.5
 	}
 	add = {
 		owner.institution:institution_schools ?= {
-			add = 0.1
+			add = 0.04
 			multiply = investment
 		}
-		desc = PLI_SCHOOL_INSTITUTION
+		desc = PLI_SCHOOL_INSTITUTION		# Max = 0.2
 	}
 	add = {
 		owner.institution:institution_health_system ?= {
-			add = 0.1
+			add = 0.04
 			multiply = investment
 		}
-		desc = PLI_HEALTH_INSTITUTION
+		desc = PLI_HEALTH_INSTITUTION		# Max = 0.2
 	}
 	add = {
 		owner.institution:institution_social_security ?= {
 			add = 0.1
 			multiply = investment
 		}
-		desc = PLI_SOCSEC_INSTITUTION
+		desc = PLI_SOCSEC_INSTITUTION		# Max = 0.5
 	}
 	# Decelerators
 	add = {		# New Investment has higher overheads
@@ -71,14 +77,14 @@ mog_pli_investment_increment = {
 			add = -0.1
 			multiply = investment
 		}
-		desc = PLI_OHS_INSTITUTION
+		desc = PLI_OHS_INSTITUTION			# Max = -0.5
 	}
 	add = {		# New Investment has either sovereign risk or more noise to filter
 		owner.institution:institution_home_affairs ?= {
-			add = -0.1
+			add = -0.04
 			multiply = investment
 		}
-		desc = PLI_HAFFAIRS_INSTITUTION
+		desc = PLI_HAFFAIRS_INSTITUTION		# Max = -0.2
 	}
 	min = 0.1
 }
@@ -232,7 +238,7 @@ mog_pli_inv_policing = {				# Max 20
 		limit = {	# Local police are ok, but prone to injustice and corruption
 			has_law_or_variant = law_type:law_local_police
 		}
-		add = 10
+		add = 2		# Max 10
 		multiply = {
 			value = institution:institution_police.investment
 			min = 1
@@ -242,7 +248,7 @@ mog_pli_inv_policing = {				# Max 20
 		limit = {	# One of the biggest contributors to a healthy investment environment
 			has_law_or_variant = law_type:law_dedicated_police
 		}
-		add = 20
+		add = 4		# Max 20
 		multiply = {
 			value = institution:institution_police.investment
 			min = 1
@@ -359,15 +365,380 @@ mog_pli_inv_slavery_modded = 1	 # Replace this value for modded laws compatibili
 
 
 mog_pli_corruption_target = {
-	value = 0
-	add = mog_pli_inv_dist_of_power
-	add = mog_pli_inv_church_and_state
-	add = mog_pli_inv_economic_system
-	add = mog_pli_inv_taxation
-	add = mog_pli_inv_policing
-	add = mog_pli_inv_internal_security
-	add = mog_pli_inv_rights_of_women
-	add = mog_pli_inv_slavery
-	min = 1
-	max = 100
+	value = 100
+	subtract = mog_pli_cor_dist_of_power			# Max 10
+	subtract = mog_pli_cor_church_and_state			# Max 5
+	subtract = mog_pli_cor_bureaucracy				# Max 20
+	subtract = mog_pli_cor_policing					# Max 20
+	subtract = mog_pli_cor_internal_security		# Max 10
+	subtract = mog_pli_cor_rights_of_women			# Max 5
+	subtract = mog_pli_cor_slavery					# Max 10
+	subtract = mog_pli_cor_labour					# Max 10
+	subtract = mog_pli_cor_free_speech				# Max 5
+	subtract = mog_pli_cor_welfare					# Max 5
+	min = 0
+	max = 100		# Economic System excluded because these already have "corruption" penalties built-in
 }
+
+mog_pli_corruption_increment = {
+	value = 0
+	# Accelerators/Decelerators
+	add = {
+		owner.institution:institution_police ?= {
+			add = 0.01
+			multiply = investment
+		}
+		desc = PLI_POLICE_INSTITUTION		# Max = 0.05
+	}
+	add = {
+		owner.institution:institution_schools ?= {
+			add = 0.01
+			multiply = investment
+		}
+		desc = PLI_SCHOOL_INSTITUTION		# Max = 0.05
+	}
+	add = {
+		owner.institution:institution_workplace_safety ?= {
+			add = 0.01
+			multiply = investment
+		}
+		desc = PLI_OHS_INSTITUTION			# Max = 0.05
+	}
+	add = {		# Depends on the nature of the institution
+		owner.institution:institution_home_affairs ?= {
+			add = mog_pli_cor_internal_security
+			divide = 400	# 10 becomes 0.025
+			multiply = investment
+		}
+		desc = PLI_HAFFAIRS_INSTITUTION		# Max = 0.125
+	}
+}
+
+mog_pli_cor_dist_of_power = {			# Max 10
+	if = {
+		limit = { # Absolute Power
+			OR = { 
+				has_law_or_variant = law_type:law_autocracy
+				has_law_or_variant = law_type:law_single_party_state
+			}
+		}
+		add = 0
+	}
+	else_if = {
+		limit = { # Elite Captured Power
+			OR = { 
+				has_law_or_variant = law_type:law_technocracy 
+				has_law_or_variant = law_type:law_oligarchy
+				has_law_or_variant = law_type:law_elder_council
+			}
+		}
+		add = 5
+	}
+	else_if = {
+		limit = { has_law_or_variant = law_type:law_landed_voting }
+		add = 2
+	}
+	else_if = {
+		limit = { has_law_or_variant = law_type:law_wealth_voting }
+		add = 3
+	}
+	else_if = {
+		limit = { has_law_or_variant = law_type:law_census_voting }
+		add = 7
+	}
+	else_if = {
+		limit = { has_law_or_variant = law_type:law_universal_suffrage }
+		add = 10
+	}
+	else_if = {
+		limit = { has_law_or_variant = law_type:law_anarchy }
+		add = 5		# Community Accountability
+	}
+	else = {		# For random modded laws
+		add = mog_pli_cor_dist_of_power_modded
+	}
+}
+mog_pli_cor_dist_of_power_modded = 1	 # Replace this value for modded laws compatibility
+
+mog_pli_cor_church_and_state = {		# Max 5
+	if = {
+		limit = { # Religious/Ideological Authorities have too much power to rent-seek.
+			OR = { 
+				has_law_or_variant = law_type:law_state_religion
+				has_law_or_variant = law_type:law_state_atheism
+			}
+		}
+		add = 1
+	}
+	else_if = {
+		limit = { has_law_or_variant = law_type:law_freedom_of_conscience }
+		add = 3
+	}
+	else_if = {
+		limit = { has_law_or_variant = law_type:law_total_separation }
+		add = 5
+	}
+	else = {		# For random modded laws
+		add = mog_pli_cor_church_and_state_modded
+	}
+}
+mog_pli_cor_church_and_state_modded = 1	 # Replace this value for modded laws compatibility
+
+mog_pli_cor_bureaucracy = {				# Max 20
+	if = {
+		limit = { has_law_or_variant = law_type:law_hereditary_bureaucrats }
+		add = 2		# Max 10
+	}
+	else_if = {
+		limit = { has_law_or_variant = law_type:law_appointed_bureaucrats }
+		add = 2		# Max 10*
+	}
+	else_if = {
+		limit = { has_law_or_variant = law_type:law_elected_bureaucrats }
+		add = 4		# Max 20
+	}
+	else = {		# For random modded laws
+		add = mog_pli_cor_bureaucracy_modded
+	}
+	multiply = {
+		value = 1
+		add = government_wage_level_value		# Ranges from 0 to 4
+	}
+	if = {
+		limit = { has_law_or_variant = law_type:law_appointed_bureaucrats }
+		add = 5		# *Max 15 with higher baseline.
+	}
+}
+mog_pli_cor_bureaucracy_modded = 2	 # Replace this value for modded laws compatibility
+
+mog_pli_cor_policing = {				# Max 20
+	if = {
+		limit = {	# Gotta Defend your own Investments
+			has_law_or_variant = law_type:law_no_police
+		}
+		add = 0
+	}
+	else_if = {
+		limit = {	# Local police are ok, but prone to injustice and corruption
+			has_law_or_variant = law_type:law_local_police
+		}
+		add = 2
+	}
+	else_if = {
+		limit = {	# One of the biggest contributors to a healthy investment environment
+			has_law_or_variant = law_type:law_dedicated_police
+		}
+		add = 4
+	}
+	else_if = {
+		limit = {	# The stronger this institution is, the worse it gets...
+			has_law_or_variant = law_type:law_militarized_police
+		}
+		add = 1
+	}
+	else = {	# For Random Modded laws
+		add = mog_pli_cor_policing_modded
+	}
+	multiply = {
+		value = institution:institution_police.investment
+		min = 1
+	}
+}
+mog_pli_cor_policing_modded = 1	 # Replace this value for modded laws compatibility
+
+mog_pli_cor_internal_security = {		# Max 10
+	if = {
+		limit = {	# Can't corrupt systems that don't exist...
+			has_law_or_variant = law_type:law_no_home_affairs
+		}
+		add = 5
+	}
+	else_if = {
+		limit = {
+			OR = { 
+				has_law_or_variant = law_type:law_national_guard
+				has_law_or_variant = law_type:law_guaranteed_liberties
+			}
+		}
+		add = 2		# Max 10
+		multiply = {
+			value = institution:institution_home_affairs.investment
+			min = 1
+		}
+	}
+	else_if = {
+		limit = {
+			has_law_or_variant = law_type:law_secret_police
+		}
+		add = 10	# The *idea* of secret police deters corruption, but...
+		add = {
+			add = -4	# The stronger this institution is, the worse it gets...
+			multiply = {
+				value = institution:institution_home_affairs.investment
+				min = 1
+			}
+		}
+	}
+	else = {	# For Random Modded laws
+		add = mog_pli_cor_internal_security_modded
+	}
+}
+mog_pli_cor_internal_security_modded = 1	 # Replace this value for modded laws compatibility
+
+mog_pli_cor_rights_of_women = {			# Max 5
+	if = {
+		limit = {
+			has_law_or_variant = law_type:law_no_womens_rights
+		}
+		add = 0
+	}
+	else_if = {
+		limit = {
+			has_law_or_variant = law_type:law_women_own_property
+		}
+		add = 2
+	}
+	else_if = {
+		limit = {
+			has_law_or_variant = law_type:law_women_in_the_workplace
+		}
+		add = 3
+	}
+	else_if = {
+		limit = {
+			has_law_or_variant = law_type:law_womens_suffrage
+		}
+		add = 5
+	}
+	else = {	# For Random Modded laws
+		add = mog_pli_cor_rights_of_women_modded
+	}
+}
+mog_pli_cor_rights_of_women_modded = 1	 # Replace this value for modded laws compatibility
+
+mog_pli_cor_slavery = {					# Max 10
+	if = {
+		limit = {	# When a failed investment can result in slavery...
+			OR = { 
+				has_law_or_variant = law_type:law_debt_slavery
+				has_law_or_variant = law_type:law_slave_trade
+			}
+		}
+		add = 0
+	}
+	else_if = {
+		limit = {	# The existence of structured rules necessitates the enforcement thereof...
+			OR = { 
+				has_law_or_variant = law_type:law_colonial_slavery
+				has_law_or_variant = law_type:law_legacy_slavery
+			}
+		}
+		add = 5
+	}
+	else_if = {
+		limit = {
+			has_law_or_variant = law_type:law_slavery_banned
+		}
+		add = 10
+	}
+	else = {	# For Random Modded laws
+		add = mog_pli_cor_slavery_modded
+	}
+}
+mog_pli_cor_slavery_modded = 1	 # Replace this value for modded laws compatibility
+
+mog_pli_cor_labour = {					# Max 10
+	if = {
+		limit = {
+			has_law_or_variant = law_type:law_combination_acts
+		}
+		add = 0
+	}
+	else_if = {
+		limit = {
+			OR = {		# These systems are not without some benefits...
+				has_law_or_variant = law_type:law_guild_system
+				has_law_or_variant = law_type:law_corporatized_unions
+			}
+		}
+		add = 4
+	}
+	else_if = {
+		limit = {		# Labour associations still exist after all...
+			has_law_or_variant = law_type:law_anti_strike_laws
+		}
+		add = 6
+	}
+	else_if = {
+		limit = {
+			has_law_or_variant = law_type:law_right_to_associate
+		}
+		add = 10
+	}
+	else = {	# For Random Modded laws
+		add = mog_pli_cor_labour_modded
+	}
+}
+mog_pli_cor_labour_modded = 1	 # Replace this value for modded laws compatibility
+
+mog_pli_cor_free_speech = {				# Max 5
+	if = {
+		limit = {
+			has_law_or_variant = law_type:law_outlawed_dissent
+		}
+		add = 0
+	}
+	else_if = {
+		limit = {
+			has_law_or_variant = law_type:law_censorship
+		}
+		add = 2
+	}
+	else_if = {
+		limit = {
+			has_law_or_variant = law_type:law_right_of_assembly
+		}
+		add = 5
+	}
+	else_if = {
+		limit = {
+			has_law_or_variant = law_type:law_protected_speech
+		}
+		add = 3	# It's a double-edged sword
+	}
+	else = {	# For Random Modded laws
+		add = mog_pli_cor_free_speech_modded
+	}
+}
+mog_pli_cor_free_speech_modded = 1	 # Replace this value for modded laws compatibility
+
+mog_pli_cor_welfare = {					# Max 5
+	if = {
+		limit = {
+			has_law_or_variant = law_type:law_no_social_security
+		}
+		add = 0
+	}
+	else_if = {
+		limit = {
+			has_law_or_variant = law_type:law_poor_laws
+		}
+		add = 2
+	}
+	else_if = {
+		limit = {
+			has_law_or_variant = law_type:law_wage_subsidies
+		}
+		add = 5
+	}
+	else_if = {
+		limit = {
+			has_law_or_variant = law_type:law_old_age_pension
+		}
+		add = 3	# If a little corruption can lock in a lucrative pension...
+	}
+	else = {	# For Random Modded laws
+		add = mog_pli_cor_welfare_modded
+	}
+}
+mog_pli_cor_welfare_modded = 1	 # Replace this value for modded laws compatibility

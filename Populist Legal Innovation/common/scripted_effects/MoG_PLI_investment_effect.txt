@@ -12,6 +12,19 @@ MoG_PLI_do_investment_setup_effect = {
 	}
 }
 
+MoG_PLI_do_corruption_setup_effect = {
+	set_local_variable = {
+		name = mog_pli_corruption_bar_start_value
+		value = mog_pli_corruption_target
+	}
+	je:je_mog_pli_investment = {
+		set_bar_progress = {
+			value = local_var:mog_pli_corruption_bar_start_value
+			name = mog_pli_corruption_tracking_bar
+		}
+	}
+}
+
 MoG_PLI_do_investment_stuff_effect = {
 	if = { # Create variables if not set already
 		limit = {
@@ -22,6 +35,42 @@ MoG_PLI_do_investment_stuff_effect = {
 		MoG_PLI_set_investment_variables_effect = yes
 	}
 	
+	## Add the dummy Investment modifier.
+	scope:journal_entry = {	# Explainer modifier
+		if = { 				# Remove outdated modifier.
+			limit = { has_modifier = je_mog_pli_dummy_investment_modifier }
+			remove_modifier = je_mog_pli_dummy_investment_modifier
+		}
+		add_modifier = {	# Add updated modifier.
+			name = je_mog_pli_dummy_investment_modifier
+			multiplier = mog_pli_dummy_contribution_multiplier		# Inverse of the investment % from the JE.
+		}
+	}
+	
+	# Do corruption modifier stuff (done here so modifiers are in the tooltip in a nice order.
+	if = { # Create variables if not set already
+		limit = {
+			NOT = {
+				has_variable = mog_pli_corruption_current_prev
+			}
+		}
+		set_variable = {
+			name  = mog_pli_corruption_current_prev
+			value = 0
+		}
+	}
+	scope:journal_entry = {
+		if = { 				# Remove outdated modifier.
+			limit = { has_modifier = je_mog_pli_corruption_modifier }
+			remove_modifier = je_mog_pli_corruption_modifier
+		}
+		add_modifier = {	# Add updated modifier.
+			name = je_mog_pli_corruption_modifier
+			multiplier = mog_pli_corruption_multiplier		# Inverse of the investment % from the JE.
+		}
+	}
+	
+	# Do real investment contribution modifiers.
 	## Different pop types have different absolute contribution amounts, so each one needs their own calculation (unfortunately).
 	## These are ordered from highest wage multiplier to lowest wage multiplier, and alphabetical within that, just to have some sort of ordering...
 	# Calculate adjustment for ARISTOCRAT investment contributions

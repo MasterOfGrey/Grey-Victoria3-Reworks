@@ -1,5 +1,25 @@
 ﻿## Calculation values used exclusively in maths for effect setting.
 
+mog_pli_dummy_contribution_multiplier = {
+	value = {
+		add = {								# We need to multiply by inverse of the investment % from the JE.
+			add = 100											# investment_current_value is actually the limiting proportion
+			subtract = var:mog_pli_investment_current_value		# 100-current gets the proportion for the negative penalty
+			divide = 100										# Convert to %
+		}
+	}
+}
+
+mog_pli_corruption_multiplier = {
+	value = {
+		add = {								# This one does not need inverting.
+			add = var:mog_pli_corruption_current_value			# gets the corruption value for the negative penalty
+			divide = 100										# Convert to %
+			divide = 2											# max corruption penalty of 50% to avoid overlap with economic system
+		}
+	}
+}
+
 # Base investment pool contribution ignoring adjustments from this mod - 1 per pop type.
 mog_pli_aristocrats_contribution_base_sv = {
 	value = {													# Calculate what the default modifier value would be right now - 

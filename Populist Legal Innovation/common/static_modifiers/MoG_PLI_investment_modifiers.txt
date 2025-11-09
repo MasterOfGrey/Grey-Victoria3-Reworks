@@ -64,8 +64,37 @@ je_mog_pli_laborers_investment_modifier = {
 	state_laborers_investment_pool_contribution_add = -1
 }
 
-# Other Modifiers
-#je_mog_pli_corruption_modifier = {
-#	icon = gfx/interface/icons/timed_modifier_icons/modifier_documents_bad.dds
-#	state_construction_efficiency = -0.1
-#}
+je_mog_pli_dummy_investment_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_documents_positive.dds
+	state_aristocrats_investment_pool_contribution_mult = -1
+	state_capitalists_investment_pool_contribution_mult = -1
+	state_officers_investment_pool_contribution_mult = -1
+	state_academics_investment_pool_contribution_mult = -1
+	state_bureaucrats_investment_pool_contribution_mult = -1
+	state_clergymen_investment_pool_contribution_mult = -1
+	state_engineers_investment_pool_contribution_mult = -1
+	state_shopkeepers_investment_pool_contribution_mult = -1
+	state_farmers_investment_pool_contribution_mult = -1
+	state_clerks_investment_pool_contribution_mult = -1
+	state_machinists_investment_pool_contribution_mult = -1
+	state_soldiers_investment_pool_contribution_mult = -1
+	state_laborers_investment_pool_contribution_mult = -1
+}
+
+# Corruption Modifiers
+je_mog_pli_corruption_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_documents_bad.dds
+	state_aristocrats_investment_pool_efficiency_mult = -1
+	state_bureaucrats_investment_pool_efficiency_mult = -1
+	state_capitalists_investment_pool_efficiency_mult = -1
+	state_engineers_investment_pool_efficiency_mult = -1
+	state_farmers_investment_pool_efficiency_mult = -1
+	state_clergymen_investment_pool_efficiency_mult = -1
+	state_laborers_investment_pool_efficiency_mult = -1
+	state_machinists_investment_pool_efficiency_mult = -1
+	state_officers_investment_pool_efficiency_mult = -1
+	state_soldiers_investment_pool_efficiency_mult = -1
+	state_shopkeepers_investment_pool_efficiency_mult = -1
+	state_clerks_investment_pool_efficiency_mult = -1
+	state_academics_investment_pool_efficiency_mult = -1
+}

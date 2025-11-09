@@ -10,10 +10,10 @@ PLI_secret_ev.1 = {
 			name = mog_pli_investment_current_value
 			value = "je:je_mog_pli_investment.scripted_bar_progress(mog_pli_investment_tracking_bar)"
 		}
-	#	MoG_PLI_do_corruption_setup_effect = yes
-	#	set_variable = {
-	#		name = mog_pli_corruption_current_value
-	#		value = "je:je_mog_pli_investment.scripted_bar_progress(mog_pli_corruption_tracking_bar)"
-	#	}
+		MoG_PLI_do_corruption_setup_effect = yes
+		set_variable = {
+			name = mog_pli_corruption_current_value
+			value = "je:je_mog_pli_investment.scripted_bar_progress(mog_pli_corruption_tracking_bar)"
+		}
 	}
 }
