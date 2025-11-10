@@ -1,4 +1,10 @@
-﻿harvest_condition_good = {
+﻿# Game Rules
+pli_corruption_tracking_trigger = {
+	has_game_rule = pli_corruption_tracking_enabled
+}
+
+# Conditional Triggers
+harvest_condition_good = {
 	OR = {
 		has_harvest_condition = pollinator_surge
 		has_harvest_condition = optimal_sunlight

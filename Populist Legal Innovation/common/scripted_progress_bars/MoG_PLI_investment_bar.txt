@@ -82,50 +82,50 @@ mog_pli_corruption_tracking_bar = {
 	default_bad = yes
 
 	weekly_progress = {
-	#	add = {
-	#		desc = "mog_pli_corruption_tracking_bar_drift"
-	#		value = mog_pli_corruption_target
-	#		subtract = var:mog_pli_corruption_current_value
-	#		multiply = 0.1
-	#	}
 		if = {
-			limit = { mog_pli_corruption_target < var:mog_pli_corruption_current_value } # Target below current state.
-			if = {
-				limit = {
-					mog_pli_corruption_increment < {	# If increment is less than the gap, use the increment, else use the gap.
-						value = mog_pli_corruption_target
-						subtract = var:mog_pli_corruption_current_value
-						multiply = -1
-					}
-				}
-				add = { 
-					value = mog_pli_corruption_increment
-					multiply = -1							# Move towards lower target.
-				}
-			}
-			else = {
-				add =  {
-					value = mog_pli_corruption_target
-					subtract = var:mog_pli_corruption_current_value		# Current value slightly bigger here, so result is -ve and result = target.
-				}
-			}
+			limit = { pli_corruption_tracking_trigger = no }
+			add = 0
 		}
-		else = { # Target above current state.
+		else = {
 			if = {
-				limit = {
-					mog_pli_corruption_increment < {	# If increment is less than the gap, use the increment, else use the gap.
-						value = mog_pli_corruption_target
-						subtract = var:mog_pli_corruption_current_value
+				limit = { mog_pli_corruption_target < var:mog_pli_corruption_current_value } # Target below current state.
+				if = {
+					limit = {
+						mog_pli_corruption_increment < {	# If increment is less than the gap, use the increment, else use the gap.
+							value = mog_pli_corruption_target
+							subtract = var:mog_pli_corruption_current_value
+							multiply = -1
+						}
+					}
+					add = { 
+						value = mog_pli_corruption_increment
+						multiply = -1							# Move towards lower target.
 					}
 				}
-				add = { 
-					value = mog_pli_corruption_increment	# Move towards higher target.
+				else = {
+					add =  {
+						value = mog_pli_corruption_target
+						subtract = var:mog_pli_corruption_current_value		# Current value slightly bigger here, so result is -ve and result = target.
+					}
 				}
 			}
-			else = {
-				add =  {
-					value = var:mog_pli_corruption_current_value
-					subtract = mog_pli_corruption_target		# Current value slightly lower here, so result is +ve and result = target.
+			else = { # Target above current state.
+				if = {
+					limit = {
+						mog_pli_corruption_increment < {	# If increment is less than the gap, use the increment, else use the gap.
+							value = mog_pli_corruption_target
+							subtract = var:mog_pli_corruption_current_value
+						}
+					}
+					add = { 
+						value = mog_pli_corruption_increment	# Move towards higher target.
+					}
+				}
+				else = {
+					add =  {
+						value = var:mog_pli_corruption_current_value
+						subtract = mog_pli_corruption_target		# Current value slightly lower here, so result is +ve and result = target.
+					}
 				}
 			}
 		}

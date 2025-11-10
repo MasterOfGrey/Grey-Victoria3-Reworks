@@ -7,7 +7,7 @@ on_wargoal_added = {
 
 on_harvest_condition_started_in_country = {
 	on_actions = {
-		mog_pli_hc_confidence
+	#	mog_pli_hc_confidence
 	}
 }
 

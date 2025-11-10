@@ -365,19 +365,25 @@ mog_pli_inv_slavery_modded = 1	 # Replace this value for modded laws compatibili
 
 
 mog_pli_corruption_target = {
-	value = 100
-	subtract = mog_pli_cor_dist_of_power			# Max 10
-	subtract = mog_pli_cor_church_and_state			# Max 5
-	subtract = mog_pli_cor_bureaucracy				# Max 20
-	subtract = mog_pli_cor_policing					# Max 20
-	subtract = mog_pli_cor_internal_security		# Max 10
-	subtract = mog_pli_cor_rights_of_women			# Max 5
-	subtract = mog_pli_cor_slavery					# Max 10
-	subtract = mog_pli_cor_labour					# Max 10
-	subtract = mog_pli_cor_free_speech				# Max 5
-	subtract = mog_pli_cor_welfare					# Max 5
-	min = 0
-	max = 100		# Economic System excluded because these already have "corruption" penalties built-in
+	if = {
+		limit = { pli_corruption_tracking_trigger = no }
+		value = 0
+	}
+	else = {
+		value = 100
+		subtract = mog_pli_cor_dist_of_power			# Max 10
+		subtract = mog_pli_cor_church_and_state			# Max 5
+		subtract = mog_pli_cor_bureaucracy				# Max 20
+		subtract = mog_pli_cor_policing					# Max 20
+		subtract = mog_pli_cor_internal_security		# Max 10
+		subtract = mog_pli_cor_rights_of_women			# Max 5
+		subtract = mog_pli_cor_slavery					# Max 10
+		subtract = mog_pli_cor_labour					# Max 10
+		subtract = mog_pli_cor_free_speech				# Max 5
+		subtract = mog_pli_cor_welfare					# Max 5
+		min = 0
+		max = 100		# Economic System excluded because these already have "corruption" penalties built-in
+	}
 }
 
 mog_pli_corruption_target_loc_value = {

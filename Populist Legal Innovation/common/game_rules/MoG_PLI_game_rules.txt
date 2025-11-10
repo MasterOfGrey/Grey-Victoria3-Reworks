@@ -1,0 +1,6 @@
+﻿mog_pli_corruption_tracking = {
+	default = pli_corruption_tracking_enabled
+	
+	pli_corruption_tracking_enabled = {}
+	pli_corruption_tracking_disabled = {}
+}

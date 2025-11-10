@@ -20,6 +20,13 @@
 			value = "je:je_mog_pli_investment.scripted_bar_progress(mog_pli_corruption_tracking_bar)"
 		}
 		#set/initialize country/journal relevant variables
+		if = {
+			limit = {
+				pli_corruption_tracking_trigger = no
+				is_player = yes
+			}
+			set_global_variable = mog_pli_corruption_disabled	# This is used for Loc
+		}
 	}
 	
 	status_desc = {
