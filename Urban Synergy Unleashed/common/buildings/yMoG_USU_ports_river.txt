@@ -1,6 +1,6 @@
 ﻿## RIVER PORTS
 building_river_port = {
-	building_group = USU_bg_river_port_infrastructure
+	building_group = usu_bg_river_port_infrastructure
 	icon = "gfx/interface/icons/building_icons/building_port.dds"
 	
 	ai_nationalization_desire = 0.5 	# Copied from railways - AI is reluctant to privatize vital infrastructure

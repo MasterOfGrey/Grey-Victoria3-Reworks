@@ -1,6 +1,6 @@
 ﻿## PRIVATIZED PORTS (replace regular ports)
 building_port = {
-	building_group = USU_bg_port_infrastructure
+	building_group = usu_bg_port_infrastructure
 	city_type = port
 	icon = "gfx/interface/icons/building_icons/building_port.dds"
 	

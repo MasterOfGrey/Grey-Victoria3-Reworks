@@ -6,8 +6,8 @@
  # Technologies
  PPP_tech_hv_power: "Güç Aktarımı"
  PPP_tech_hv_power_desc: "Konvertörler ve regülatörlerin kullanılmasıyla, yüksek gerilimli uzun mesafeli enerji iletimi artık farklı ihtiyaçlara sahip birden fazla noktada kullanılabiliyor."
- USU_tech_hv_railways: "Endüstriyel Transformatörler"
- USU_tech_hv_railways_desc: "Ölçeklenebilir trafo kullanarak alternatif elektrik akımının tüm avantajlarından yararlanabilir, uzun mesafelerde sürekli yüksek voltajların iletilmesini sağlayabilir ve enerji iletimini ekonomik hale getirebiliriz."
+ usu_tech_hv_railways: "Endüstriyel Transformatörler"
+ usu_tech_hv_railways_desc: "Ölçeklenebilir trafo kullanarak alternatif elektrik akımının tüm avantajlarından yararlanabilir, uzun mesafelerde sürekli yüksek voltajların iletilmesini sağlayabilir ve enerji iletimini ekonomik hale getirebiliriz."
 	
  # Goods
  ppp_hv_power: "Yüksek Gerilim Gücü"

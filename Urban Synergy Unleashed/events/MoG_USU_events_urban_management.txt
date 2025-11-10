@@ -1,6 +1,6 @@
-﻿namespace = USU_secret_ev
+﻿namespace = usu_secret_ev
 
-USU_secret_ev.1 = {
+usu_secret_ev.1 = {
 	type = country_event
 	hidden = yes
 	
@@ -8,11 +8,11 @@ USU_secret_ev.1 = {
 		if = { # Clear modifiers (we'll put them back dw)
 			limit = {
 				has_modifier = mog_urbanization
-				NOT = { has_variable = USU_urban_adjustment }		# This is just for proceeding from initial defaults
+				NOT = { has_variable = usu_urban_adjustment }		# This is just for proceeding from initial defaults
 			}
 			remove_modifier = mog_urbanization
 			set_variable = {
-				name = USU_urban_adjustment
+				name = usu_urban_adjustment
 				value = 100											# From global default
 			}
 		}
@@ -25,11 +25,11 @@ USU_secret_ev.1 = {
 		if = {
 			limit = {
 				NOT = {
-					has_variable = USU_urban_adjustment
+					has_variable = usu_urban_adjustment
 				}
 			}
 			set_variable = {
-				name = USU_urban_adjustment
+				name = usu_urban_adjustment
 				value = 0
 			}
 		}
@@ -43,11 +43,11 @@ USU_secret_ev.1 = {
 		if = { # Create variables for adjusted modifier values if not set already
 			limit = {
 				NOT = {
-					has_variable = USU_urban_adjustment_mult
+					has_variable = usu_urban_adjustment_mult
 				}
 			}
 			set_variable = {
-				name = USU_urban_adjustment_mult
+				name = usu_urban_adjustment_mult
 				value = 0
 			}
 		}
@@ -55,34 +55,34 @@ USU_secret_ev.1 = {
 		
 		# Negate multipliers cause they're gross and make balancing hard.
 		set_variable = {										# Algebra is Var = Target - Current, where Current = Base + Var, Base is numerically unknown, and Base = Current - Var
-			name = USU_urban_adjustment_mult					# Therefore formula Var B = Target value - ( Current value - Var A)
+			name = usu_urban_adjustment_mult					# Therefore formula Var B = Target value - ( Current value - Var A)
 			value = {
 				add = mog_usu_urbanization_target_mult
 				subtract = {
 					add = modifier:state_urbanization_per_level_mult
-					subtract = var:USU_urban_adjustment_mult
+					subtract = var:usu_urban_adjustment_mult
 				}
 			}
 		}
 		add_modifier = {
 			name = mog_urbanization_mult
-			multiplier = var:USU_urban_adjustment_mult
+			multiplier = var:usu_urban_adjustment_mult
 		}
 		
 		# Calculate adjustment for urbanization and apply it.
 		set_variable = {
-			name = USU_urban_adjustment
+			name = usu_urban_adjustment
 			value = {
 				add = mog_usu_urbanization_target_calc
 				subtract = {
 					add = modifier:state_urbanization_per_level_add
-					subtract = var:USU_urban_adjustment
+					subtract = var:usu_urban_adjustment
 				}
 			}
 		}
 		add_modifier = {
 			name = mog_urbanization
-			multiplier = var:USU_urban_adjustment
+			multiplier = var:usu_urban_adjustment
 		}
 	}
 }

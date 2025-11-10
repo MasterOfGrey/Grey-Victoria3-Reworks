@@ -6,8 +6,8 @@
  # Technologies
  PPP_tech_hv_power: "Transmission de puissance"
  PPP_tech_hv_power_desc: "En utilisant des convertisseurs et des régulateurs, la transmission d'électricité à haute tension sur de longues distances est désormais utilisable par plusieurs destinations."
- USU_tech_hv_railways: "Transformateurs industriels"
- USU_tech_hv_railways_desc: "En utilisant des transformateurs évolutifs, nous pouvons bénéficier pleinement du courant électrique alternatif, ce qui permet de fournir des tensions constamment élevées sur de longues distances et de rendre la transmission d'énergie économique."
+ usu_tech_hv_railways: "Transformateurs industriels"
+ usu_tech_hv_railways_desc: "En utilisant des transformateurs évolutifs, nous pouvons bénéficier pleinement du courant électrique alternatif, ce qui permet de fournir des tensions constamment élevées sur de longues distances et de rendre la transmission d'énergie économique."
 	
  # Goods
  ppp_hv_power: "Alimentation à haute tension"

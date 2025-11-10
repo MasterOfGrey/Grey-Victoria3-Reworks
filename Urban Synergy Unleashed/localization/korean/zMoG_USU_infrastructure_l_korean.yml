@@ -24,20 +24,20 @@
  pmg_logistics_services_port_coastal: "배송 물류"
  pmg_logistics_services_port_river: "유체물류"
  
- USU_pm_rail_logistics_0: "물류 조정 없음"
- USU_pm_rail_logistics_1: "할당량 허용 계획"
- USU_pm_rail_logistics_2: "원격 액세스 입찰"
- USU_pm_rail_logistics_3: "공급망 관리"
+ usu_pm_rail_logistics_0: "물류 조정 없음"
+ usu_pm_rail_logistics_1: "할당량 허용 계획"
+ usu_pm_rail_logistics_2: "원격 액세스 입찰"
+ usu_pm_rail_logistics_3: "공급망 관리"
 
- USU_pm_port_c_logistics_0: "물류 조정 없음"
- USU_pm_port_c_logistics_1: "할당량 허용 계획"
- USU_pm_port_c_logistics_2: "원격 액세스 입찰"
- USU_pm_port_c_logistics_3: "공급망 관리"
+ usu_pm_port_c_logistics_0: "물류 조정 없음"
+ usu_pm_port_c_logistics_1: "할당량 허용 계획"
+ usu_pm_port_c_logistics_2: "원격 액세스 입찰"
+ usu_pm_port_c_logistics_3: "공급망 관리"
  
- USU_pm_port_r_logistics_0: "물류 조정 없음"
- USU_pm_port_r_logistics_1: "할당량 허용 계획"
- USU_pm_port_r_logistics_2: "원격 액세스 입찰"
- USU_pm_port_r_logistics_3: "공급망 관리"
+ usu_pm_port_r_logistics_0: "물류 조정 없음"
+ usu_pm_port_r_logistics_1: "할당량 허용 계획"
+ usu_pm_port_r_logistics_2: "원격 액세스 입찰"
+ usu_pm_port_r_logistics_3: "공급망 관리"
  
  # Canals
  # pm_canal: "증기 동력 잠금 장치"

@@ -6,8 +6,8 @@
  # Technologies
  PPP_tech_hv_power: "動力伝達"
  PPP_tech_hv_power_desc: "コンバータとレギュレータを利用することで、高電圧の長距離電力伝送を、さまざまなニーズを持つ複数の目的地で利用できるようになりました。"
- USU_tech_hv_railways: "産業用変圧器"
- USU_tech_hv_railways_desc: "スケーラブルな変圧器を利用することで、交流電流の利点を最大限に活用し、長距離にわたって一貫して高電圧を供給し、電力伝送を経済的に行うことができます。"
+ usu_tech_hv_railways: "産業用変圧器"
+ usu_tech_hv_railways_desc: "スケーラブルな変圧器を利用することで、交流電流の利点を最大限に活用し、長距離にわたって一貫して高電圧を供給し、電力伝送を経済的に行うことができます。"
 	
  # Goods
  ppp_hv_power: "高電圧電源"

@@ -45,7 +45,7 @@ PPP_tech_hv_power = {
 	}
 }
 
-USU_tech_hv_railways = {
+usu_tech_hv_railways = {
 	era = era_5
 	texture = "gfx/interface/icons/invention_icons/USU_hv_railways.dds"
 	category = production

@@ -1,6 +1,6 @@
 ﻿### New group because lower foreign_investment_ai_factor
 ## Public Greens
-USU_bg_public_greens = {
+usu_bg_public_greens = {
 	parent_group = bg_ranching
 	
 	default_building = usu_building_public_green
@@ -34,7 +34,7 @@ bg_private_infrastructure = {
 
 ### New group for port urbanization and for ports not to be default subsidized
 ## Ports & River Ports
-USU_bg_port_infrastructure = {
+usu_bg_port_infrastructure = {
 	parent_group = bg_private_infrastructure
 	
 	subsidized = no
@@ -42,8 +42,8 @@ USU_bg_port_infrastructure = {
 	urbanization = 15 # 50 # 5		# Now ports are unlimited, 50 is way too high
 }
 
-USU_bg_river_port_infrastructure = {
-	parent_group = USU_bg_port_infrastructure
+usu_bg_river_port_infrastructure = {
+	parent_group = usu_bg_port_infrastructure
 	
 	urbanization = 50				# River ports are a big deal for spawning an urban centre though
 }

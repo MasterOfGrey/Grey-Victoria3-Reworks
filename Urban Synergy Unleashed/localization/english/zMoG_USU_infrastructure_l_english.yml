@@ -24,20 +24,20 @@
  pmg_logistics_services_port_coastal: "Shipping Logistics"
  pmg_logistics_services_port_river: "Fluvial Logistics"
  
- USU_pm_rail_logistics_0: "No Logistical Coordination"
- USU_pm_rail_logistics_1: "Quota Allowance Planning"
- USU_pm_rail_logistics_2: "Remote Access Bidding"
- USU_pm_rail_logistics_3: "Supply Chain Management"
+ usu_pm_rail_logistics_0: "No Logistical Coordination"
+ usu_pm_rail_logistics_1: "Quota Allowance Planning"
+ usu_pm_rail_logistics_2: "Remote Access Bidding"
+ usu_pm_rail_logistics_3: "Supply Chain Management"
 
- USU_pm_port_c_logistics_0: "No Logistical Coordination"
- USU_pm_port_c_logistics_1: "Quota Allowance Planning"
- USU_pm_port_c_logistics_2: "Remote Access Bidding"
- USU_pm_port_c_logistics_3: "Supply Chain Management"
+ usu_pm_port_c_logistics_0: "No Logistical Coordination"
+ usu_pm_port_c_logistics_1: "Quota Allowance Planning"
+ usu_pm_port_c_logistics_2: "Remote Access Bidding"
+ usu_pm_port_c_logistics_3: "Supply Chain Management"
  
- USU_pm_port_r_logistics_0: "No Logistical Coordination"
- USU_pm_port_r_logistics_1: "Quota Allowance Planning"
- USU_pm_port_r_logistics_2: "Remote Access Bidding"
- USU_pm_port_r_logistics_3: "Supply Chain Management"
+ usu_pm_port_r_logistics_0: "No Logistical Coordination"
+ usu_pm_port_r_logistics_1: "Quota Allowance Planning"
+ usu_pm_port_r_logistics_2: "Remote Access Bidding"
+ usu_pm_port_r_logistics_3: "Supply Chain Management"
  
  # Canals
  # pm_canal: "Steam Powered Locks"

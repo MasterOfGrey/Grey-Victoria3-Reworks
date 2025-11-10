@@ -24,20 +24,20 @@
  pmg_logistics_services_port_coastal: "航运物流"
  pmg_logistics_services_port_river: "河流物流"
  
- USU_pm_rail_logistics_0: "缺乏后勤协调"
- USU_pm_rail_logistics_1: "配额规划"
- USU_pm_rail_logistics_2: "远程访问竞标"
- USU_pm_rail_logistics_3: "供应链管理"
+ usu_pm_rail_logistics_0: "缺乏后勤协调"
+ usu_pm_rail_logistics_1: "配额规划"
+ usu_pm_rail_logistics_2: "远程访问竞标"
+ usu_pm_rail_logistics_3: "供应链管理"
 
- USU_pm_port_c_logistics_0: "缺乏后勤协调"
- USU_pm_port_c_logistics_1: "配额规划"
- USU_pm_port_c_logistics_2: "远程访问竞标"
- USU_pm_port_c_logistics_3: "供应链管理"
+ usu_pm_port_c_logistics_0: "缺乏后勤协调"
+ usu_pm_port_c_logistics_1: "配额规划"
+ usu_pm_port_c_logistics_2: "远程访问竞标"
+ usu_pm_port_c_logistics_3: "供应链管理"
  
- USU_pm_port_r_logistics_0: "缺乏后勤协调"
- USU_pm_port_r_logistics_1: "配额规划"
- USU_pm_port_r_logistics_2: "远程访问竞标"
- USU_pm_port_r_logistics_3: "供应链管理"
+ usu_pm_port_r_logistics_0: "缺乏后勤协调"
+ usu_pm_port_r_logistics_1: "配额规划"
+ usu_pm_port_r_logistics_2: "远程访问竞标"
+ usu_pm_port_r_logistics_3: "供应链管理"
  
  # Canals
  # pm_canal: "蒸汽动力锁"

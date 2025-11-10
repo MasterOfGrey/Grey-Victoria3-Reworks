@@ -32,8 +32,8 @@
 	
 	production_method_groups = {
 		pmg_base_building_government_administration
-		USU_pmg_government_administration_emergency_services
-		USU_pmg_government_administration_law_enforcement
+		usu_pmg_government_administration_emergency_services
+		usu_pmg_government_administration_law_enforcement
 		pmg_government_administration_bureaucrat_professionalism
 		pmg_government_administration_religious_administration
 		# pmg_panum_hospital #MORGENRÖTE

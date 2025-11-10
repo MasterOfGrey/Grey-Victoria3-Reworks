@@ -6,8 +6,8 @@
  # Technologies
  PPP_tech_hv_power: "Transmissão de energia"
  PPP_tech_hv_power_desc: "Ao utilizar conversores e reguladores, a transmissão de energia de alta tensão em longas distâncias agora pode ser utilizada por diversos destinos com necessidades diferentes."
- USU_tech_hv_railways: "Transformadores Industriais"
- USU_tech_hv_railways_desc: "Ao utilizar transformadores escaláveis, podemos obter todos os benefícios da corrente elétrica alternada, permitindo que tensões altas e consistentes sejam fornecidas por longas distâncias e tornando a transmissão de energia econômica."
+ usu_tech_hv_railways: "Transformadores Industriais"
+ usu_tech_hv_railways_desc: "Ao utilizar transformadores escaláveis, podemos obter todos os benefícios da corrente elétrica alternada, permitindo que tensões altas e consistentes sejam fornecidas por longas distâncias e tornando a transmissão de energia econômica."
 	
  # Goods
  ppp_hv_power: "Energia de alta tensão"

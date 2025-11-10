@@ -3,14 +3,14 @@
 # and include police (total 250 extra) and emergency services!
 
 # Emergency Services
-USU_pm_no_emergency_services = {
+usu_pm_no_emergency_services = {
 	texture = "gfx/interface/icons/production_method_icons/no_police.dds"
 	is_default = yes
 	
 	ai_value = 0
 }
 
-USU_pm_basic_fire_brigade = {
+usu_pm_basic_fire_brigade = {
 	texture = "gfx/interface/icons/production_method_icons/ses_basic_fire.dds"
 	
 	unlocking_technologies = {
@@ -39,7 +39,7 @@ USU_pm_basic_fire_brigade = {
 	ai_value = 1000
 }
 
-USU_pm_response_planning = {
+usu_pm_response_planning = {
 	texture = "gfx/interface/icons/production_method_icons/ses_response_planning.dds"
 	
 	unlocking_technologies = {
@@ -69,7 +69,7 @@ USU_pm_response_planning = {
 	ai_value = 2000
 }
 
-USU_pm_modern_emergency_services = {
+usu_pm_modern_emergency_services = {
 	texture = "gfx/interface/icons/production_method_icons/ses_modern.dds"
 	
 	unlocking_technologies = {
@@ -108,7 +108,7 @@ USU_pm_modern_emergency_services = {
 }
 
 # Law Enforcement:
-USU_pm_no_police = {
+usu_pm_no_police = {
 	texture = "gfx/interface/icons/production_method_icons/no_police.dds"
 	
 	disallowing_laws = {
@@ -129,7 +129,7 @@ USU_pm_no_police = {
 	}
 }
 
-USU_pm_local_police = {
+usu_pm_local_police = {
 	texture = "gfx/interface/icons/production_method_icons/loc_police.dds"
 	
 	disallowing_laws = {
@@ -151,7 +151,7 @@ USU_pm_local_police = {
 	}
 }
 
-USU_pm_dedicated_police = {
+usu_pm_dedicated_police = {
 	texture = "gfx/interface/icons/production_method_icons/ded_police.dds"
 	
 	disallowing_laws = {
@@ -173,7 +173,7 @@ USU_pm_dedicated_police = {
 	}
 }
 
-USU_pm_militarized_police = {
+usu_pm_militarized_police = {
 	texture = "gfx/interface/icons/production_method_icons/mil_police.dds"
 	
 	disallowing_laws = {

@@ -165,7 +165,7 @@ pm_covered_markets = {
 
 pm_arcades = {
 	texture = "gfx/interface/icons/production_method_icons/arcades.dds"
-	replacement_if_valid = USU_pm_hv_arcades
+	replacement_if_valid = usu_pm_hv_arcades
 	ai_value = 2000
 	unlocking_technologies = { elevator }
 	
@@ -224,13 +224,13 @@ pm_arcades = {
 	required_input_goods = electricity
 }
 
-USU_pm_hv_arcades = {
+usu_pm_hv_arcades = {
 	texture = "gfx/interface/icons/production_method_icons/arcades.dds"
 	is_hidden_when_unavailable = yes
 	ai_value = 50000
 	
 	unlocking_production_methods = { 		# de facto counts as needing PPP_tech_hv_power tech unlock
-		USU_pm_grid_streetlights
+		usu_pm_grid_streetlights
 	}
 	unlocking_technologies = {				# means that high voltage arcades auto-replaces regular arcades when they exist as an option	
 		elevator

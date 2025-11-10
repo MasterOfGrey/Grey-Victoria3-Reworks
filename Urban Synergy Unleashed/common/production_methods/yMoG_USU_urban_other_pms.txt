@@ -248,7 +248,7 @@ pm_electric_streetlights = {
 	}
 }
 
-USU_pm_grid_streetlights = {
+usu_pm_grid_streetlights = {
 	texture = "gfx/interface/icons/production_method_icons/electric_streetlights.dds"
 	ai_value = 50000
 	city_lights_color_index = 2	# Needs to match city_graphics_data.settings color array

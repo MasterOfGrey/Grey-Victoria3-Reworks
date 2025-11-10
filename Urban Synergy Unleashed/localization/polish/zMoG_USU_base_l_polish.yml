@@ -8,9 +8,9 @@
  mog_subfarm_modifiers_occupancy_scaled: "Synergia miejska Wpływ na infrastrukturę" #deepl:1060897918
  
  # Building
- USU_bg_port_infrastructure: "Porty" #deepl:687823806
- USU_bg_river_port_infrastructure: "Porty" #deepl:687823806
- USU_bg_public_greens: "Publiczne tereny zielone" #deepl:1270138251
+ usu_bg_port_infrastructure: "Porty" #deepl:687823806
+ usu_bg_river_port_infrastructure: "Porty" #deepl:687823806
+ usu_bg_public_greens: "Publiczne tereny zielone" #deepl:1270138251
  
  building_river_port: "Doki rzeczne"
  usu_building_public_green: "Publiczna zieleń"
@@ -77,10 +77,10 @@
 
  # PMGs
  pmg_base_building_river_port: "Doki"
- USU_pmg_government_administration_emergency_services: "Służby ratunkowe"
- USU_pmg_government_administration_law_enforcement: "Organy ścigania"
- USU_pmg_public_space_management: "Zarządzanie przestrzenią publiczną"
- USU_pmg_public_parklands: "Wykorzystanie parków"
+ usu_pmg_government_administration_emergency_services: "Służby ratunkowe"
+ usu_pmg_government_administration_law_enforcement: "Organy ścigania"
+ usu_pmg_public_space_management: "Zarządzanie przestrzenią publiczną"
+ usu_pmg_public_parklands: "Wykorzystanie parków"
  pmg_trade_center_port_status: "Status przylegania portów" #deepl:23372774
  
  # PMs
@@ -88,22 +88,22 @@
  pm_rp_small_port: "Mola nadrzeczne"
  pm_rp_industrial_port: "Porty przemysłowe"
  pm_rp_modern_port: "Nowoczesne porty"
- USU_pm_hv_arcades: "Pasaże"
- USU_pm_grid_streetlights: "Żarowe latarnie uliczne"
- USU_pm_no_emergency_services: "Brak usług ratunkowych"
- USU_pm_basic_fire_brigade: "Podstawowe jednostki straży pożarnej"
- USU_pm_response_planning: "Planowanie reagowania na katastrofy"
- USU_pm_modern_emergency_services: "Nowoczesne służby ratunkowe"
- USU_pm_no_police: "Grupy działania społecznego"
- USU_pm_local_police: "Lokalna Policja"
- USU_pm_dedicated_police: "Dedykowana Siła Policyjna"
- USU_pm_militarized_police: "Wdrażanie prawa wojennego"
- USU_pm_community_orgs: "Organizacje społeczne"
- USU_pm_private_firms: "Organizacje prywatne"
- USU_pm_pub_priv_partners: "Partnerstwa publiczno-prywatne"
- USU_pm_village_stables: "Stajnie społecznościowe"
- USU_pm_contained_wilderness: "Chronione tereny dzikie"
- USU_pm_seasonal_fairgrounds: "Sezonowe tereny targowe"
+ usu_pm_hv_arcades: "Pasaże"
+ usu_pm_grid_streetlights: "Żarowe latarnie uliczne"
+ usu_pm_no_emergency_services: "Brak usług ratunkowych"
+ usu_pm_basic_fire_brigade: "Podstawowe jednostki straży pożarnej"
+ usu_pm_response_planning: "Planowanie reagowania na katastrofy"
+ usu_pm_modern_emergency_services: "Nowoczesne służby ratunkowe"
+ usu_pm_no_police: "Grupy działania społecznego"
+ usu_pm_local_police: "Lokalna Policja"
+ usu_pm_dedicated_police: "Dedykowana Siła Policyjna"
+ usu_pm_militarized_police: "Wdrażanie prawa wojennego"
+ usu_pm_community_orgs: "Organizacje społeczne"
+ usu_pm_private_firms: "Organizacje prywatne"
+ usu_pm_pub_priv_partners: "Partnerstwa publiczno-prywatne"
+ usu_pm_village_stables: "Stajnie społecznościowe"
+ usu_pm_contained_wilderness: "Chronione tereny dzikie"
+ usu_pm_seasonal_fairgrounds: "Sezonowe tereny targowe"
  pm_trade_center_inland: "Brak dostępu do portu" #deepl:4277007637
  pm_trade_center_port: "Dostęp do portu" #deepl:931806394
  

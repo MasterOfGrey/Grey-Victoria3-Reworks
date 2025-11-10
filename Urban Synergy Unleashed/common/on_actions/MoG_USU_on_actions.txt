@@ -29,7 +29,7 @@ on_country_released_as_independent = { on_actions = { mog_urban_on_action } }
 mog_urban_on_action = {
 	effect = {
 		trigger_event = {			# Call event to update mog_urbanization modifiers.
-			id   = USU_secret_ev.1
+			id   = usu_secret_ev.1
 			days = 1
 		}
 	}

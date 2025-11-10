@@ -24,20 +24,20 @@
  pmg_logistics_services_port_coastal: "Logistyka wysyłkowa"
  pmg_logistics_services_port_river: "Logistyka rzeczna"
  
- USU_pm_rail_logistics_0: "Brak koordynacji logistycznej"
- USU_pm_rail_logistics_1: "Planowanie limitów kwotowych"
- USU_pm_rail_logistics_2: "Zdalne licytowanie dostępu"
- USU_pm_rail_logistics_3: "Zarządzanie łańcuchem dostaw"
+ usu_pm_rail_logistics_0: "Brak koordynacji logistycznej"
+ usu_pm_rail_logistics_1: "Planowanie limitów kwotowych"
+ usu_pm_rail_logistics_2: "Zdalne licytowanie dostępu"
+ usu_pm_rail_logistics_3: "Zarządzanie łańcuchem dostaw"
 
- USU_pm_port_c_logistics_0: "Brak koordynacji logistycznej"
- USU_pm_port_c_logistics_1: "Planowanie limitów kwotowych"
- USU_pm_port_c_logistics_2: "Zdalne licytowanie dostępu"
- USU_pm_port_c_logistics_3: "Zarządzanie łańcuchem dostaw"
+ usu_pm_port_c_logistics_0: "Brak koordynacji logistycznej"
+ usu_pm_port_c_logistics_1: "Planowanie limitów kwotowych"
+ usu_pm_port_c_logistics_2: "Zdalne licytowanie dostępu"
+ usu_pm_port_c_logistics_3: "Zarządzanie łańcuchem dostaw"
  
- USU_pm_port_r_logistics_0: "Brak koordynacji logistycznej"
- USU_pm_port_r_logistics_1: "Planowanie limitów kwotowych"
- USU_pm_port_r_logistics_2: "Zdalne licytowanie dostępu"
- USU_pm_port_r_logistics_3: "Zarządzanie łańcuchem dostaw"
+ usu_pm_port_r_logistics_0: "Brak koordynacji logistycznej"
+ usu_pm_port_r_logistics_1: "Planowanie limitów kwotowych"
+ usu_pm_port_r_logistics_2: "Zdalne licytowanie dostępu"
+ usu_pm_port_r_logistics_3: "Zarządzanie łańcuchem dostaw"
  
  # Canals
  # pm_canal: "Zamki napędzane parą"

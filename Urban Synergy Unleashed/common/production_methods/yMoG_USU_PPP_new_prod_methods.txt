@@ -406,7 +406,7 @@ PPP_pm_grid_gas_turbine = {
 	texture = "gfx/interface/icons/production_method_icons/PPP_grid_capacity_4.dds"
 	
 	unlocking_technologies = {
-		USU_tech_hv_railways
+		usu_tech_hv_railways
 	}
 	
 	building_modifiers = {

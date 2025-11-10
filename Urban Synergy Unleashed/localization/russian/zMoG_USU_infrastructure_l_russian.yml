@@ -24,20 +24,20 @@
  pmg_logistics_services_port_coastal: "Логистика грузоперевозок"
  pmg_logistics_services_port_river: "Речная логистика"
  
- USU_pm_rail_logistics_0: "Отсутствие логистической координации"
- USU_pm_rail_logistics_1: "Планирование квот"
- USU_pm_rail_logistics_2: "Удаленный доступ к торгам"
- USU_pm_rail_logistics_3: "Управление цепочками поставок"
+ usu_pm_rail_logistics_0: "Отсутствие логистической координации"
+ usu_pm_rail_logistics_1: "Планирование квот"
+ usu_pm_rail_logistics_2: "Удаленный доступ к торгам"
+ usu_pm_rail_logistics_3: "Управление цепочками поставок"
 
- USU_pm_port_c_logistics_0: "Отсутствие логистической координации"
- USU_pm_port_c_logistics_1: "Планирование квот"
- USU_pm_port_c_logistics_2: "Удаленный доступ к торгам"
- USU_pm_port_c_logistics_3: "Управление цепочками поставок"
+ usu_pm_port_c_logistics_0: "Отсутствие логистической координации"
+ usu_pm_port_c_logistics_1: "Планирование квот"
+ usu_pm_port_c_logistics_2: "Удаленный доступ к торгам"
+ usu_pm_port_c_logistics_3: "Управление цепочками поставок"
  
- USU_pm_port_r_logistics_0: "Отсутствие логистической координации"
- USU_pm_port_r_logistics_1: "Планирование квот"
- USU_pm_port_r_logistics_2: "Удаленный доступ к торгам"
- USU_pm_port_r_logistics_3: "Управление цепочками поставок"
+ usu_pm_port_r_logistics_0: "Отсутствие логистической координации"
+ usu_pm_port_r_logistics_1: "Планирование квот"
+ usu_pm_port_r_logistics_2: "Удаленный доступ к торгам"
+ usu_pm_port_r_logistics_3: "Управление цепочками поставок"
  
  # Canals
  # pm_canal: "Паровые замки"

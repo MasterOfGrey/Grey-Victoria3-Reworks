@@ -1,5 +1,5 @@
 ﻿usu_building_public_green = {
-	building_group = USU_bg_public_greens
+	building_group = usu_bg_public_greens
 	icon = "gfx/interface/icons/building_icons/USU_public_green.dds"
 	
 	has_max_level = yes
@@ -9,8 +9,8 @@
 	}
 	
 	production_method_groups = {
-		USU_pmg_public_space_management
-		USU_pmg_public_parklands
+		usu_pmg_public_space_management
+		usu_pmg_public_parklands
 	}
 	
 	can_build_government = {
