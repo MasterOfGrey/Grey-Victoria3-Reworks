@@ -1,0 +1,49 @@
+﻿je_mog_pli_innovation = {
+	icon = "gfx/interface/icons/event_icons/event_industry.dds"
+	group = je_group_internal_affairs
+	should_be_pinned_by_default = yes
+	weight = 9000
+	is_shown_when_inactive = { NOT = { is_country_type = decentralized } }
+	possible = { always = yes }
+	
+	scripted_progress_bar = mog_pli_innovation_tracking_bar
+	scripted_progress_bar = mog_pli_proliferation_tracking_bar
+	
+	immediate = {
+		trigger_event = { id = PLI_secret_ev.2 days = 1 }	# Set bar starting level 1 day later, effect doesn't work in immediate
+		set_variable = {									# Set the variables now even though the event changes it straight after
+			name = mog_pli_innovation_current_value			# This stops it from giving errors if the je initialises on the weekly pulse
+			value = "je:je_mog_pli_investment.scripted_bar_progress(mog_pli_innovation_tracking_bar)"
+		}
+		set_variable = {
+			name = mog_pli_proliferation_current_value
+			value = "je:je_mog_pli_investment.scripted_bar_progress(mog_pli_proliferation_tracking_bar)"
+		}
+		#set/initialize country/journal relevant variables
+		if = {
+			limit = {
+				pli_proliferation_tracking_trigger = no
+				is_player = yes
+			}
+			set_global_variable = mog_pli_proliferation_disabled	# This is used for Loc
+		}
+	}
+	
+	status_desc = {
+	}
+
+	on_weekly_pulse = {
+		effect = {
+			set_variable = {
+				name = mog_pli_innovation_current_value
+				value = "je:je_mog_pli_investment.scripted_bar_progress(mog_pli_innovation_tracking_bar)"
+			}
+			set_variable = {
+				name = mog_pli_proliferation_current_value
+				value = "je:je_mog_pli_investment.scripted_bar_progress(mog_pli_proliferation_tracking_bar)"
+			}
+			#set modifier from conditions
+			MoG_PLI_do_innovation_stuff_effect = yes
+		}
+	}
+}

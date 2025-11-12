@@ -1,5 +1,5 @@
 ﻿je_mog_pli_investment = {
-	icon = "gfx/interface/icons/event_icons/event_industry.dds"
+	icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
 	group = je_group_internal_affairs
 	should_be_pinned_by_default = yes
 	weight = 9000
@@ -30,30 +30,6 @@
 	}
 	
 	status_desc = {
-	#	first_valid = {
-	#		triggered_desc = {
-	#			desc = je_mog_pli_investment_good
-	#			trigger = {
-	#				je:je_mog_pli_investment = {
-	#					"scripted_bar_progress(mog_pli_investment_tracking_bar)" > 60
-	#				}
-	#			}
-	#		}
-	#		triggered_desc = {
-	#			desc = je_mog_pli_investment_bad
-	#			trigger = {
-	#				je:je_mog_pli_investment = {
-	#					"scripted_bar_progress(mog_pli_investment_tracking_bar)" < 40
-	#				}
-	#			}
-	#		}
-	#		triggered_desc = {
-	#			desc = je_mog_pli_investment_neutral
-	#			trigger = {
-	#				always = yes
-	#			}
-	#		}
-	#	}
 	}
 
 	on_weekly_pulse = {

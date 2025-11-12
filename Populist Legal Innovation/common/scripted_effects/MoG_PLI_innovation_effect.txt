@@ -1,0 +1,79 @@
+﻿# Country scope unless called specifically in JE Scope.
+MoG_PLI_do_innovation_setup_effect = {
+	set_local_variable = {
+		name = mog_pli_innovation_bar_start_value
+		value = mog_pli_innovation_target
+	}
+	je:je_mog_pli_innovation = {
+		set_bar_progress = {
+			value = local_var:mog_pli_innovation_bar_start_value
+			name = mog_pli_innovation_tracking_bar
+		}
+	}
+}
+
+MoG_PLI_do_proliferation_setup_effect = {
+	set_local_variable = {
+		name = mog_pli_proliferation_bar_start_value
+		value = mog_pli_proliferation_target
+	}
+	je:je_mog_pli_innovation = {
+		set_bar_progress = {
+			value = local_var:mog_pli_proliferation_bar_start_value
+			name = mog_pli_proliferation_tracking_bar
+		}
+	}
+}
+
+MoG_PLI_do_innovation_stuff_effect = {
+	# Do innovation modifier stuff
+	if = { # Create variables if not set already
+		limit = {
+			NOT = {
+				has_variable = mog_pli_innovation_current_prev
+			}
+		}
+		set_variable = {
+			name  = mog_pli_innovation_current_prev
+			value = 0
+		}
+	}
+	scope:journal_entry = {
+		if = { 				# Remove outdated modifier.
+			limit = { has_modifier = je_mog_pli_innovation_modifier }
+			remove_modifier = je_mog_pli_innovation_modifier
+		}
+		add_modifier = {	# Add updated modifier.
+			name = je_mog_pli_innovation_modifier
+			multiplier = mog_pli_contribution_multiplier		# Inverse of the innovation % from the JE.
+		}
+	}
+	
+	# Do corruption modifier stuff
+	if = { # Create variables if not set already
+		limit = {
+			NOT = {
+				has_variable = mog_pli_proliferation_current_prev
+			}
+		}
+		set_variable = {
+			name  = mog_pli_proliferation_current_prev
+			value = 0
+		}
+	}
+	scope:journal_entry = {
+		if = { 				# Remove outdated modifier.
+			limit = { has_modifier = je_mog_pli_proliferation_modifier }
+			remove_modifier = je_mog_pli_proliferation_modifier
+		}
+		add_modifier = {	# Add updated modifier.
+			name = je_mog_pli_proliferation_modifier
+			multiplier = mog_pli_proliferation_multiplier		# Inverse of the innovation % from the JE.
+		}
+	}
+	
+	set_variable = {									# At the end of the process, set the current target as the previous to use for next time.
+		name = mog_pli_innovation_current_prev			# Used in ??
+		value = var:mog_pli_innovation_current_value	# Note: number value between 0-100 & represents ??
+	}
+}
