@@ -1,0 +1,43 @@
+﻿BUILDINGS={
+	s:STATE_PROVENCE={
+		region_state:FRA={
+			# Clean things out to avoid duplication.
+			remove_building = building_textile_mills
+			create_building={
+				building="building_textile_mills"
+				add_ownership={
+					company={
+						type=company_maison_worth	# We swapped the ownership
+						country="c:FRA"
+						levels=3
+					}
+				}
+				reserves=1
+				activate_production_methods={ "pm_dye_workshops"  "pm_traditional_looms" "pm_craftsman_sewing" }
+			}
+		}
+	}
+	s:STATE_NORMANDY={
+		region_state:FRA={
+			remove_building = building_textile_mills
+			create_building={
+				building="building_textile_mills"
+				add_ownership={
+					building={
+						type="building_textile_mills"
+						country="c:FRA"
+						levels=4
+						region="STATE_NORMANDY"
+					}
+					company={
+						type=company_maison_worth	# We swapped the ownership
+						country="c:FRA"
+						levels=2
+					}
+				}
+				reserves=1
+				activate_production_methods={ "pm_dye_workshops"  "pm_traditional_looms" "pm_craftsman_sewing" }
+			}
+		}
+	}
+}

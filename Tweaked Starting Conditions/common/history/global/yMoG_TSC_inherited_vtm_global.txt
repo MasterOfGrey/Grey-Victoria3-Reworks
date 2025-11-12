@@ -37,6 +37,7 @@ GLOBAL = {
 				has_law_or_variant = law_type:law_parliamentary_republic
 				has_law_or_variant = law_type:law_council_republic
 			}
+			NOT = { country_has_primary_culture = cu:polish }	# Krakow (etc.) have special Magnatial trait
 		}
 		ig:ig_landowners ?= {
 			remove_ideology = ideology_paternalistic
