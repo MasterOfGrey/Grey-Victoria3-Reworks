@@ -21,7 +21,7 @@ else
   mod_id='0'
 fi
 
-if [ -d "$3" ]
+if [ -n "$3" ]
 then
   echo 'Updating description'
   
