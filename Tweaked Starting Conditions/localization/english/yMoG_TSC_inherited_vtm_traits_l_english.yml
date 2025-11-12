@@ -1,4 +1,6 @@
 ﻿l_english:
- state_trait_cold_water_port:0 "Cold Water Harbour"
- state_trait_difficult_terrain:0 "Difficult Terrain"
- state_trait_very_difficult_terrain:0 "Very Difficult Terrain"
+ state_trait_cold_water_port: "Cold Water Harbour"
+ state_trait_difficult_terrain: "Difficult Terrain"
+ state_trait_very_difficult_terrain: "Very Difficult Terrain"
+ 
+ weakened_by_internal_war: "Weakened by Internal War"

@@ -1,0 +1,6 @@
+﻿l_turkish:
+ state_trait_cold_water_port: "Soğuk Su Limanı" #deepl:1459935733
+ state_trait_difficult_terrain: "Zorlu Arazi" #deepl:3945389093
+ state_trait_very_difficult_terrain: "Çok Zorlu Arazi" #deepl:743415511
+ 
+ weakened_by_internal_war: "İç Savaşla Zayıfladı" #deepl:83235005

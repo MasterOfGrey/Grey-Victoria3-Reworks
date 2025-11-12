@@ -1,0 +1,14 @@
+﻿COUNTRIES = {
+	c:MAD ?= {
+		effect_starting_technology_tier_5_tech = yes	# Vanilla tier 6
+		add_technology_researched = sericulture			# local silk + international_trade included in tier 5
+
+		effect_starting_politics_traditional = yes
+		activate_law = law_type:law_slave_trade
+		activate_law = law_type:law_mercantilism
+
+		add_modifier = {
+			name = modifier_tangena_ordeal
+		}
+	}
+}

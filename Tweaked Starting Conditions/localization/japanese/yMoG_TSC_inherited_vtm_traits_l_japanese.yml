@@ -1,0 +1,6 @@
+﻿l_japanese:
+ state_trait_cold_water_port: "コールドウォーター・ハーバー" #deepl:1459935733
+ state_trait_difficult_terrain: "難しい地形" #deepl:3945389093
+ state_trait_very_difficult_terrain: "非常に難しい地形" #deepl:743415511
+ 
+ weakened_by_internal_war: "内戦で弱体化" #deepl:83235005
