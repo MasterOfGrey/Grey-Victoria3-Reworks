@@ -45,11 +45,11 @@ MoG_PLI_do_innovation_stuff_effect = {
 		}
 		add_modifier = {	# Add updated modifier.
 			name = je_mog_pli_innovation_modifier
-			multiplier = mog_pli_contribution_multiplier		# Inverse of the innovation % from the JE.
+			multiplier = mog_pli_innovation_multiplier		# Inverse of the innovation % from the JE.
 		}
 	}
 	
-	# Do corruption modifier stuff
+	# Do proliferation modifier stuff
 	if = { # Create variables if not set already
 		limit = {
 			NOT = {
@@ -68,7 +68,7 @@ MoG_PLI_do_innovation_stuff_effect = {
 		}
 		add_modifier = {	# Add updated modifier.
 			name = je_mog_pli_proliferation_modifier
-			multiplier = mog_pli_proliferation_multiplier		# Inverse of the innovation % from the JE.
+			multiplier = mog_pli_proliferation_multiplier
 		}
 	}
 	

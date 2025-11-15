@@ -20,6 +20,7 @@ mog_pli_max_investment_willingness_from_ip = {	# We apply this as a ceiling to a
 ### Investment Willingness Values
 mog_pli_investment_target = {	# This represents the conditions which support investor confidence and capability
 	value = 0
+	add = mog_pli_rank_value				# Max 20
 	add = mog_pli_inv_dist_of_power			# Max 20
 	add = mog_pli_inv_church_and_state		# Max 5
 	add = mog_pli_inv_economic_system		# Max 15
@@ -87,6 +88,11 @@ mog_pli_investment_increment = {
 		desc = PLI_HAFFAIRS_INSTITUTION		# Max = -0.2
 	}
 	min = 0.1
+}
+
+mog_pli_rank_value = {
+	add = country_rank.rank_value
+	multiply = 2
 }
 
 mog_pli_inv_dist_of_power = {			# Max 20
@@ -364,6 +370,7 @@ mog_pli_inv_slavery = {					# Max 15
 mog_pli_inv_slavery_modded = 1	 # Replace this value for modded laws compatibility
 
 
+### Systemic Corruption Values
 mog_pli_corruption_target = {
 	if = {
 		limit = { pli_corruption_tracking_trigger = no }

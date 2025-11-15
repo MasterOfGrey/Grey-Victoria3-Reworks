@@ -1,1 +1,93 @@
 ﻿### Innovation Limitations
+mog_pli_max_proliferation_from_literacy = {	# We apply this as a ceiling to any/all proliferation calculations.
+	value = 0
+	add = {
+		add = capital.literacy_rate		# Capital literacy_rate
+		add = root.literacy_rate		# National literacy_rate
+		divide = 2						# Get the average (should be value between 0-1)
+	}
+	multiply = 100						# Convert % into a whole number for the progress bar i.e. max proliferation rate is 100%
+	max = 100							# But we'll clamp it to be safe.
+	desc = ""
+}
+
+### Innovation Incentive Values
+mog_pli_innovation_target = {	# This represents the conditions which support independent innovation incentives
+	value = 0
+	add = mog_pli_ino_dist_of_power			# Max 20	- Best: Universal Suffrage
+	add = mog_pli_ino_policing				# Max 15	- Best: Dedicated Police
+	add = mog_pli_ino_land_reform			# Max 15	- Best: Commercialised Ag
+	add = mog_pli_ino_church_and_state		# Max 5		- Best: Total Sep.
+	add = mog_pli_ino_bureaucracy			# Max 5		- Best: Elected
+	add = mog_pli_ino_internal_security		# Max 5		- Best: Guaranteed Liberties
+	add = mog_pli_ino_economic_system		# Max 5		- Best: Coop/LF
+	add = mog_pli_ino_trade_policy			# Max 5		- Best: Free Trade
+	add = mog_pli_ino_education				# Max 5		- Best: Public
+	add = mog_pli_ino_healthcare			# Max 5		- Best: Public
+	add = mog_pli_ino_welfare				# Max 5		- Best: Old Age Pensions
+	add = mog_pli_ino_slavery				# Max 5		- Best: Slavery Banned
+	min = 0
+	max = 100		# Min Penalty is 0%, Max Penalty is 100% - realistically getting either should be nearly impossible.
+}
+
+mog_pli_innovation_target_loc_value = {
+	value = mog_pli_innovation_target
+	divide = 100
+}
+
+### Technology Proliferation Values
+mog_pli_proliferation_target = {	# This represents the conditions which support independent innovation incentives
+	value = 0
+	add = mog_pli_pro_governance			# Max 20	- Best: Parliamentary Republic
+	add = mog_pli_pro_bureaucracy			# Max 15	- Best: Appointed
+	add = mog_pli_pro_childrens_rights		# Max 15	- Best: Compulsory P.Schools
+	add = mog_pli_pro_internal_security		# Max 5		- Best: National Guard
+	add = mog_pli_pro_economic_system		# Max 5		- Best: Interventionism/Command Econ
+	add = mog_pli_pro_trade_policy			# Max 5		- Best: Mercantilism
+	add = mog_pli_pro_land_reform			# Max 5		- Best: Collectivised Ag
+	add = mog_pli_pro_education				# Max 5		- Best: Private
+	add = mog_pli_pro_healthcare			# Max 5		- Best: Private
+	add = mog_pli_pro_free_speech			# Max 5		- Best: Free Speech
+	add = mog_pli_pro_labor_rights			# Max 5		- Best: Worker Protections
+	add = mog_pli_pro_women					# Max 5		- Best: Women's Suffrage
+	min = 0
+	max = {
+		value = 100		# Min Bonus is 0%, Max Bonus is 100% - realistically getting either should be nearly impossible.
+		multiply = mog_pli_max_proliferation_from_literacy
+	}
+}
+
+mog_pli_proliferation_target_loc_value = {
+	value = mog_pli_proliferation_target
+	divide = 100
+}
+
+mog_pli_proliferation_increment = {
+	value = 0
+	# Accelerators/Decelerators
+	add = {
+		owner.institution:institution_police ?= {
+			add = 0.01
+			multiply = investment
+		}
+		desc = PLI_POLICE_INSTITUTION		# Max = 0.05
+	}
+	add = {
+		owner.institution:institution_schools ?= {
+			add = 0.01
+			multiply = investment
+		}
+		desc = PLI_SCHOOL_INSTITUTION		# Max = 0.05
+	}
+	add = {
+		owner.institution:institution_workplace_safety ?= {
+			add = 0.01
+			multiply = investment
+		}
+		desc = PLI_OHS_INSTITUTION			# Max = 0.05
+	}
+	min = 0.01
+	multiply = root.literacy_rate
+}
+
+

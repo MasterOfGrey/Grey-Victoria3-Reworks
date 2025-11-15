@@ -77,7 +77,7 @@
  
  je_mog_pli_innovation: "The Innovation Space"
  je_mog_pli_innovation_reason: "More than the existence of universities, or what any single law may encourage enable, the drive for innovation is dynamically affected by the interaction of different laws and economic conditions. \n$PLI_JOURNAL_DELIMITER$\n#header $mog_pli_innovation_tracking_bar_title$#!\n$mog_pli_investorconfidence_exp$\n$PLI_JOURNAL_DELIMITER$\n#header $mog_pli_proliferation_tracking_bar_title$#!\n$mog_pli_techproliferation_exp$"
- mog_pli_innovation_tracking_bar_title: "Investor Confidence"
+ mog_pli_innovation_tracking_bar_title: "Innovation Incentive"
  mog_pli_innovation_tracking_bar_desc: "#header $mog_pli_innovation_tracking_bar_title$:#! #v [JournalEntry.GetCurrentBarProgress(ScriptedProgressBar.Self)|%1]#!"
  mog_pli_innovation_increment_desc: "[Country.MakeScope.GetScriptValueDesc('mog_pli_innovation_increment')]"
  mog_pli_proliferation_tracking_bar_title: "Technology Proliferation"
