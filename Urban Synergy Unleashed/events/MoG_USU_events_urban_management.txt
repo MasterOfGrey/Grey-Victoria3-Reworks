@@ -5,84 +5,128 @@ USU_secret_ev.1 = {
 	hidden = yes
 	
 	immediate = {
-		if = { # Clear modifiers (we'll put them back dw)
-			limit = {
-				has_modifier = mog_urbanization
-				NOT = { has_variable = USU_urban_adjustment }		# This is just for proceeding from initial defaults
-			}
-			remove_modifier = mog_urbanization
-			set_variable = {
-				name = USU_urban_adjustment
-				value = 100											# From global default
-			}
-		}
-		else_if = { # Clear modifiers (we'll put them back dw)
-			limit = {
-				has_modifier = mog_urbanization
-			}
-			remove_modifier = mog_urbanization
-		}
 		if = {
-			limit = {
-				NOT = {
-					has_variable = USU_urban_adjustment
+			limit = { this = this.owner }	# This is only needed because apparently some things in country scope can pull values from state scope as well??
+			# I'm in country scope
+			
+			## Initial (safe) setups for both modifiers.
+			if = { # Clear modifiers (we'll put them back dw)
+				limit = {
+					has_modifier = mog_urbanization
+					NOT = { has_variable = USU_urban_adjustment }		# This is just for proceeding from initial defaults
+				}
+				remove_modifier = mog_urbanization
+				set_variable = {
+					name = USU_urban_adjustment
+					value = {
+						add = mog_usu_urbanization_target_calc					# From MoG_USU_values.txt
+						subtract = root.modifier:state_urbanization_per_level_add	# From global default = 100
+					}
+				}
+				set_variable = USU_urban_setup_base_check
+			}
+			else_if = { # Clear modifiers (we'll put them back dw)
+				limit = {
+					has_modifier = mog_urbanization
+				}
+				remove_modifier = mog_urbanization
+			}
+			if = { # Clear modifiers (we'll put them back dw)
+				limit = {
+					has_modifier = mog_urbanization_mult
+					NOT = { has_variable = USU_urban_adjustment_mult }	# This is just for proceeding from initial defaults
+				}
+				remove_modifier = mog_urbanization_mult
+				set_variable = {
+					name = USU_urban_adjustment_mult
+					value = {											# From initial conditions (global default should be 0)
+						subtract = root.modifier:state_urbanization_per_level_mult
+					}
+				}
+				set_variable = USU_urban_setup_mult_check
+			}
+			else_if = { # Clear modifiers (we'll put them back dw)
+				limit = {
+					has_modifier = mog_urbanization_mult
+				}
+				remove_modifier = mog_urbanization_mult
+			}
+			
+			## Initial default setups for both modifiers.
+			if = {
+				limit = {
+					NOT = { has_variable = USU_urban_adjustment }
+				}
+				set_variable = {
+					name = USU_urban_adjustment
+					value = {
+						add = mog_usu_urbanization_target_calc					# From MoG_USU_values.txt
+						subtract = root.modifier:state_urbanization_per_level_add	# From global default = 100
+					}
 				}
 			}
-			set_variable = {
-				name = USU_urban_adjustment
-				value = 0
+			else_if = {
+				limit = {
+					NOT = { has_variable = USU_urban_setup_base_check }	# Values haven't updated from first setup, don't reset.
+				}
+			
+				# Calculate adjustment for urbanization and apply it.
+				set_variable = {
+					name = USU_urban_adjustment
+					value = {
+						add = mog_usu_urbanization_target_calc
+						subtract = {
+							add = root.modifier:state_urbanization_per_level_add
+							subtract = var:USU_urban_adjustment
+						}
+					}
+				}
+			}
+			else_if = {
+				limit = { has_variable = USU_urban_setup_base_check }
+				remove_variable = USU_urban_setup_base_check	# If the safe setup triggered, clear flag now that default setup skipped
+			}
+			if = {
+				limit = {
+					NOT = { has_variable = USU_urban_adjustment_mult }
+				}
+				set_variable = {
+					name = USU_urban_adjustment_mult
+					value = {											# From initial conditions (global default should be 0)
+						subtract = root.modifier:state_urbanization_per_level_mult
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					NOT = { has_variable = USU_urban_setup_mult_check }	# Values haven't updated from first setup, don't reset.
+				}
+				# Negate multipliers cause they're gross and make balancing hard.
+				set_variable = {										# Algebra is Var = Target - Current, where Current = Base + Var, Base is numerically unknown, and Base = Current - Var
+					name = USU_urban_adjustment_mult					# Therefore formula Var B = Target value - ( Current value - Var A)
+					value = {
+						add = mog_usu_urbanization_target_mult
+						subtract = {
+							add = root.modifier:state_urbanization_per_level_mult
+							subtract = var:USU_urban_adjustment_mult
+						}
+					}
+				}
+			}
+			else_if = {
+				limit = { has_variable = USU_urban_setup_mult_check }
+				remove_variable = USU_urban_setup_mult_check	# If the safe setup triggered, clear flag now that default setup skipped
 			}
 		}
 		
-		if = {
-			limit = {
-				has_modifier = mog_urbanization_mult
-			}
-			remove_modifier = mog_urbanization_mult
-		}
-		if = { # Create variables for adjusted modifier values if not set already
-			limit = {
-				NOT = {
-					has_variable = USU_urban_adjustment_mult
-				}
-			}
-			set_variable = {
-				name = USU_urban_adjustment_mult
-				value = 0
-			}
-		}
-		
-		
-		# Negate multipliers cause they're gross and make balancing hard.
-		set_variable = {										# Algebra is Var = Target - Current, where Current = Base + Var, Base is numerically unknown, and Base = Current - Var
-			name = USU_urban_adjustment_mult					# Therefore formula Var B = Target value - ( Current value - Var A)
-			value = {
-				add = mog_usu_urbanization_target_mult
-				subtract = {
-					add = modifier:state_urbanization_per_level_mult
-					subtract = var:USU_urban_adjustment_mult
-				}
-			}
+		# Add suitable modifiers
+		add_modifier = {
+			name = mog_urbanization
+			multiplier = var:USU_urban_adjustment
 		}
 		add_modifier = {
 			name = mog_urbanization_mult
 			multiplier = var:USU_urban_adjustment_mult
-		}
-		
-		# Calculate adjustment for urbanization and apply it.
-		set_variable = {
-			name = USU_urban_adjustment
-			value = {
-				add = mog_usu_urbanization_target_calc
-				subtract = {
-					add = modifier:state_urbanization_per_level_add
-					subtract = var:USU_urban_adjustment
-				}
-			}
-		}
-		add_modifier = {
-			name = mog_urbanization
-			multiplier = var:USU_urban_adjustment
 		}
 	}
 }
