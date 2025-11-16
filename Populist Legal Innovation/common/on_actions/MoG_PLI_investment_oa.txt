@@ -87,3 +87,26 @@ mog_pli_hc_confidence = {
 		}
 	}
 }
+
+# Responsiveness effects
+on_monthly_pulse_country = {
+	on_actions = {
+		mog_pli_falling_standards_response
+	}
+}
+
+mog_pli_falling_standards_response = {
+	effect = {
+		if = {
+			limit = {
+				var:mog_pli_investment_current_value > mog_pli_investment_target	# Conditions are degrading
+			}
+			add_modifier = {
+				name = je_mog_pli_liberal_reaction
+				years = 10
+				multiplier = je_mog_pli_liberal_reaction_multiplier
+				is_decaying = yes
+			}
+		}
+	}
+}

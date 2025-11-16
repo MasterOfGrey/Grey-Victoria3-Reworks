@@ -2,9 +2,10 @@
 	icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
 	group = je_group_internal_affairs
 	should_be_pinned_by_default = yes
+	can_revolution_inherit = yes
 	weight = 9000
 	is_shown_when_inactive = { NOT = { is_country_type = decentralized } }
-	possible = { always = yes }
+	possible = { is_revolutionary = no }
 	
 	scripted_progress_bar = mog_pli_investment_tracking_bar
 	scripted_progress_bar = mog_pli_corruption_tracking_bar

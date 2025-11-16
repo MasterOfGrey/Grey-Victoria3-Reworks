@@ -1,5 +1,6 @@
 ﻿## Calculation values used exclusively in maths for effect setting.
 
+# Investment je modifier multipliers
 mog_pli_dummy_contribution_multiplier = {
 	value = {
 		add = {								# We need to multiply by inverse of the investment % from the JE.
@@ -148,6 +149,19 @@ mog_pli_laborers_contribution_base_sv = {
 			multiply = 100
 			divide = var:mog_pli_investment_current_prev
 		}
+	}
+}
+
+# Investment je responsiveness modifiers
+je_mog_pli_liberal_reaction_multiplier = {	# Value of 1 will result in 100%
+	add = { 
+		add = mog_pli_investment_increment	# Ranges from 0.1 to 1.4
+		multiply = 2													# E.g. 0.2
+	}
+	multiply = {
+		add = var:mog_pli_investment_current_value
+		subtract = mog_pli_investment_target
+		divide = 100						# Convert to %				# x10% = 2% 
 	}
 }
 

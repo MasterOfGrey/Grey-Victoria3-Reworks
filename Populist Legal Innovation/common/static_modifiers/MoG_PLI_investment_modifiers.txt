@@ -98,3 +98,11 @@ je_mog_pli_corruption_modifier = {
 	state_clerks_investment_pool_efficiency_mult = -1
 	state_academics_investment_pool_efficiency_mult = -1
 }
+
+# Responsiveness Modifiers
+je_mog_pli_liberal_reaction = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds
+	state_pop_support_movement_radical_mult = 1
+	state_pop_support_movement_liberal_mult = 1
+	state_pop_support_movement_modernizer_mult = 1
+}
