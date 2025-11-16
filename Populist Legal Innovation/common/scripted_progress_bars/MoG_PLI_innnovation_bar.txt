@@ -79,7 +79,7 @@ mog_pli_proliferation_tracking_bar = {
 	start_value = 0
 	min_value = 0
 	max_value = 100
-	default_bad = yes
+	default = yes	# High number = good
 
 	weekly_progress = {
 		if = {

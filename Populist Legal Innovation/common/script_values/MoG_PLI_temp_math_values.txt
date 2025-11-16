@@ -150,3 +150,23 @@ mog_pli_laborers_contribution_base_sv = {
 		}
 	}
 }
+
+# Innovation je modifier multipliers
+mog_pli_innovation_multiplier = {
+	value = {
+		add = {								# We need to multiply by inverse of the investment % from the JE.
+			add = 100											# innovation_current_value is actually the limiting proportion
+			subtract = var:mog_pli_innovation_current_value		# 100-current gets the proportion for the negative penalty
+			divide = 100										# Convert to %
+		}
+	}
+}
+
+mog_pli_proliferation_multiplier = {
+	value = {
+		add = {								# This one does not need inverting.
+			add = var:mog_pli_proliferation_current_value		# gets the proliferation value for the bonus
+			divide = 100										# Convert to %
+		}
+	}
+}

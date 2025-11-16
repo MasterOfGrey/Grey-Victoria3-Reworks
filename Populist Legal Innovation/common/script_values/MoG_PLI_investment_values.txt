@@ -91,7 +91,7 @@ mog_pli_investment_increment = {
 }
 
 mog_pli_rank_value = {
-	add = country_rank.rank_value
+	add = country_rank		# Returns the rank_value for the country's rank
 	multiply = 2
 }
 
@@ -139,7 +139,7 @@ mog_pli_inv_dist_of_power = {			# Max 20
 		add = mog_pli_inv_dist_of_power_modded
 	}
 }
-mog_pli_inv_dist_of_power_modded = 1	 # Replace this value for modded laws compatibility
+mog_pli_inv_dist_of_power_modded = 1	# Replace this value for modded laws compatibility
 
 mog_pli_inv_church_and_state = {		# Max 5
 	if = {
@@ -163,7 +163,7 @@ mog_pli_inv_church_and_state = {		# Max 5
 		add = mog_pli_inv_church_and_state_modded
 	}
 }
-mog_pli_inv_church_and_state_modded = 1	 # Replace this value for modded laws compatibility
+mog_pli_inv_church_and_state_modded = 1	# Replace this value for modded laws compatibility
 
 mog_pli_inv_economic_system = {			# Max 15
 	if = {
@@ -198,7 +198,7 @@ mog_pli_inv_economic_system = {			# Max 15
 		add = mog_pli_inv_economic_system_modded
 	}
 }
-mog_pli_inv_economic_system_modded = 1	 # Replace this value for modded laws compatibility
+mog_pli_inv_economic_system_modded = 1	# Replace this value for modded laws compatibility
 
 mog_pli_inv_taxation = {				# Max 20
 	if = {
@@ -231,7 +231,7 @@ mog_pli_inv_taxation = {				# Max 20
 		add = tax_level_value		# Ranges from 0 to 4
 	}
 }
-mog_pli_inv_taxation_modded = 1	 # Replace this value for modded laws compatibility
+mog_pli_inv_taxation_modded = 1	# Replace this value for modded laws compatibility
 
 mog_pli_inv_policing = {				# Max 20
 	if = {
@@ -274,7 +274,7 @@ mog_pli_inv_policing = {				# Max 20
 		add = mog_pli_inv_policing_modded
 	}
 }
-mog_pli_inv_policing_modded = 1	 # Replace this value for modded laws compatibility
+mog_pli_inv_policing_modded = 1	# Replace this value for modded laws compatibility
 
 mog_pli_inv_internal_security = {		# Max 10
 	if = {
@@ -302,7 +302,7 @@ mog_pli_inv_internal_security = {		# Max 10
 		add = mog_pli_inv_internal_security_modded
 	}
 }
-mog_pli_inv_internal_security_modded = 1	 # Replace this value for modded laws compatibility
+mog_pli_inv_internal_security_modded = 1	# Replace this value for modded laws compatibility
 
 mog_pli_inv_rights_of_women = {			# Max 15
 	if = {
@@ -333,7 +333,7 @@ mog_pli_inv_rights_of_women = {			# Max 15
 		add = mog_pli_inv_rights_of_women_modded
 	}
 }
-mog_pli_inv_rights_of_women_modded = 1	 # Replace this value for modded laws compatibility
+mog_pli_inv_rights_of_women_modded = 1	# Replace this value for modded laws compatibility
 
 mog_pli_inv_slavery = {					# Max 15
 	if = {
@@ -367,7 +367,7 @@ mog_pli_inv_slavery = {					# Max 15
 		add = mog_pli_inv_slavery_modded
 	}
 }
-mog_pli_inv_slavery_modded = 1	 # Replace this value for modded laws compatibility
+mog_pli_inv_slavery_modded = 1	# Replace this value for modded laws compatibility
 
 
 ### Systemic Corruption Values
@@ -476,7 +476,7 @@ mog_pli_cor_dist_of_power = {			# Max 10
 		add = mog_pli_cor_dist_of_power_modded
 	}
 }
-mog_pli_cor_dist_of_power_modded = 1	 # Replace this value for modded laws compatibility
+mog_pli_cor_dist_of_power_modded = 1	# Replace this value for modded laws compatibility
 
 mog_pli_cor_church_and_state = {		# Max 5
 	if = {
@@ -500,7 +500,7 @@ mog_pli_cor_church_and_state = {		# Max 5
 		add = mog_pli_cor_church_and_state_modded
 	}
 }
-mog_pli_cor_church_and_state_modded = 1	 # Replace this value for modded laws compatibility
+mog_pli_cor_church_and_state_modded = 1	# Replace this value for modded laws compatibility
 
 mog_pli_cor_bureaucracy = {				# Max 20
 	if = {
@@ -527,7 +527,7 @@ mog_pli_cor_bureaucracy = {				# Max 20
 		add = 5		# *Max 15 with higher baseline.
 	}
 }
-mog_pli_cor_bureaucracy_modded = 2	 # Replace this value for modded laws compatibility
+mog_pli_cor_bureaucracy_modded = 2	# Replace this value for modded laws compatibility
 
 mog_pli_cor_policing = {				# Max 20
 	if = {
@@ -562,7 +562,7 @@ mog_pli_cor_policing = {				# Max 20
 		min = 1
 	}
 }
-mog_pli_cor_policing_modded = 1	 # Replace this value for modded laws compatibility
+mog_pli_cor_policing_modded = 1	# Replace this value for modded laws compatibility
 
 mog_pli_cor_internal_security = {		# Max 10
 	if = {
@@ -601,7 +601,7 @@ mog_pli_cor_internal_security = {		# Max 10
 		add = mog_pli_cor_internal_security_modded
 	}
 }
-mog_pli_cor_internal_security_modded = 1	 # Replace this value for modded laws compatibility
+mog_pli_cor_internal_security_modded = 1	# Replace this value for modded laws compatibility
 
 mog_pli_cor_rights_of_women = {			# Max 5
 	if = {
@@ -632,7 +632,7 @@ mog_pli_cor_rights_of_women = {			# Max 5
 		add = mog_pli_cor_rights_of_women_modded
 	}
 }
-mog_pli_cor_rights_of_women_modded = 1	 # Replace this value for modded laws compatibility
+mog_pli_cor_rights_of_women_modded = 1	# Replace this value for modded laws compatibility
 
 mog_pli_cor_slavery = {					# Max 10
 	if = {
@@ -663,7 +663,7 @@ mog_pli_cor_slavery = {					# Max 10
 		add = mog_pli_cor_slavery_modded
 	}
 }
-mog_pli_cor_slavery_modded = 1	 # Replace this value for modded laws compatibility
+mog_pli_cor_slavery_modded = 1	# Replace this value for modded laws compatibility
 
 mog_pli_cor_labour = {					# Max 10
 	if = {
@@ -697,7 +697,7 @@ mog_pli_cor_labour = {					# Max 10
 		add = mog_pli_cor_labour_modded
 	}
 }
-mog_pli_cor_labour_modded = 1	 # Replace this value for modded laws compatibility
+mog_pli_cor_labour_modded = 1	# Replace this value for modded laws compatibility
 
 mog_pli_cor_free_speech = {				# Max 5
 	if = {
@@ -728,7 +728,7 @@ mog_pli_cor_free_speech = {				# Max 5
 		add = mog_pli_cor_free_speech_modded
 	}
 }
-mog_pli_cor_free_speech_modded = 1	 # Replace this value for modded laws compatibility
+mog_pli_cor_free_speech_modded = 1	# Replace this value for modded laws compatibility
 
 mog_pli_cor_welfare = {					# Max 5
 	if = {
@@ -759,4 +759,4 @@ mog_pli_cor_welfare = {					# Max 5
 		add = mog_pli_cor_welfare_modded
 	}
 }
-mog_pli_cor_welfare_modded = 1	 # Replace this value for modded laws compatibility
+mog_pli_cor_welfare_modded = 1	# Replace this value for modded laws compatibility
