@@ -1,10 +1,8 @@
 ﻿COUNTRIES = {
-#	every_country = {
-#		add_modifier = {
-#			name = mog_urbanization
-#			multiplier = {
-#				add = 100	# Ensures that at game start the urbanization amount is ballpark ok - fine tuned by event later.
-#			}
-#		}
-#	}
+	every_country = {
+		limit = { NOT = { is_country_type = decentralized } }
+		add_modifier = {
+			name = mog_urbanization_start	# Ensures that at game start the urbanization amount is ballpark ok - fine tuned by event later.
+		}									# We need this here for starting employment reasons
+	}
 }

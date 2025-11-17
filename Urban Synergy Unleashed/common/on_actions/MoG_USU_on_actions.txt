@@ -3,21 +3,22 @@
 ### Urbanization Actions
 on_game_started_after_lobby = {
 	on_actions = {
-		# delay = { days = 1 }
-		mog_urban_on_action
+		mog_urban_setup_action
 	}
 }
 
 mog_urban_setup_action = {
-	events = {			# Call event to update mog_urbanization modifiers.
-		USU_secret_ev.1
+	effect = {
+		every_country = {
+			trigger_event = USU_secret_ev.1		# Call event to update mog_urbanization modifiers.
+		}
 	}
 }
 
 on_yearly_pulse_country = {
 	### Urban Action
 	on_actions = {
-		# delay = { days = { 15 350 } }	# It's already the staggered pulse
+		delay = { days = { 180 350 } }	# It's already the staggered pulse but this seems to help
 		mog_urban_on_action
 		mog_fix_forgotten_ports_action
 	}
@@ -34,8 +35,8 @@ on_country_released_as_overlord_subject = { on_actions = { mog_urban_on_action }
 on_country_released_as_independent = { on_actions = { mog_urban_on_action } }
 
 mog_urban_on_action = {
-	events = {			# Call event to update mog_urbanization modifiers.
-		USU_secret_ev.1
+	events = {				# Call event to update mog_urbanization modifiers.
+		USU_secret_ev.1		# Needs to be an event, not scripted effect, to be re-triggered from error-handler.
 	}
 }
 
