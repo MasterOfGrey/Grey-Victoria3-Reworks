@@ -29,25 +29,32 @@ MoG_PLI_do_innovation_stuff_effect = {
 	# Do innovation modifier stuff
 	if = { # Create variables if not set already
 		limit = {
-			NOT = {
-				has_variable = mog_pli_innovation_current_prev
-			}
+			NOT = { has_variable = mog_pli_innovation_current_prev }
 		}
 		set_variable = {
 			name  = mog_pli_innovation_current_prev
 			value = 0
 		}
 	}
-	scope:journal_entry = {
-		if = { 				# Remove outdated modifier.
-			limit = { has_modifier = je_mog_pli_innovation_modifier }
-			remove_modifier = je_mog_pli_innovation_modifier
-		}
-		add_modifier = {	# Add updated modifier.
-			name = je_mog_pli_innovation_modifier
-			multiplier = mog_pli_innovation_multiplier		# Inverse of the innovation % from the JE.
+	if = {
+		limit = { NOT = { has_variable = mog_pli_max_innovation_adjustment } }
+		set_variable = {
+			name  = mog_pli_max_innovation_adjustment
+			value = 0
 		}
 	}
+	
+	## Add the dummy innovation modifier.
+	scope:journal_entry = {	# Explainer modifier
+		if = { 				# Remove outdated modifier.
+			limit = { has_modifier = je_mog_pli_dummy_innovation_modifier }
+			remove_modifier = je_mog_pli_dummy_innovation_modifier
+		}
+		add_modifier = {	# Add updated modifier.
+			name = je_mog_pli_dummy_innovation_modifier
+			multiplier = mog_pli_innovation_multiplier		# Inverse of the investment % from the JE.
+		}
+	}	
 	
 	# Do proliferation modifier stuff
 	if = { # Create variables if not set already
@@ -72,64 +79,114 @@ MoG_PLI_do_innovation_stuff_effect = {
 		}
 	}
 	
+	# Do real innovation modifier.
+	set_variable = {
+		name = mog_pli_max_innovation_adjustment	# This a positive number that represents the magnitude of the negative adjustment modifier.
+		value = {									# Innovation is in whole numbers so remember we're getting a % portion of a number to subtract.
+			add = {									# Calculate what the default modifier value would be right now - 
+				if = {
+					limit = {							# Check if continuing from previous modifier or not first (avoid Div/0 error spam)
+						has_variable = mog_pli_innovation_current_prev
+						var:mog_pli_innovation_current_prev > 0
+					}
+					add = mog_pli_max_innovation_base_sv					# - i.e. the total unadjusted modifier based on previous month.
+					add = {														# Account for if base sources of the modifier have changed since previously.
+						add = modifier:country_weekly_innovation_max_add
+						subtract = {
+							add = mog_pli_max_innovation_base_sv				# base - adjustment = actual modifier value
+							subtract = var:mog_pli_max_innovation_adjustment		# if sources have increased -> result +ve, else -ve if decreased
+						}															# -> tracks underlying changes correctly and adapts to them
+					}
+				}
+				else = {
+					add = modifier:country_weekly_innovation_max_add		# - i.e. the total unadjusted modifier when the JE activates for the first time.
+				}
+			}
+			multiply = {								# ^So now that we have the current base value from above, multiply by investment % from the JE.
+				value = {
+					add = 100											# investment_current_value is actually the limiting proportion
+					subtract = var:mog_pli_innovation_current_value		# 100-current gets the proportion for the negative penalty
+					divide = 100										# Convert to %
+				}
+			}
+		}												# Now we have the actual magnitude of the negative modifier to be additively applied.
+	}
+	scope:journal_entry = {
+		if = { 				# Remove outdated modifier.
+			limit = { has_modifier = je_mog_pli_innovation_modifier }
+			remove_modifier = je_mog_pli_innovation_modifier
+		}
+		add_modifier = {	# Add updated modifier.
+			name = je_mog_pli_innovation_modifier		# Default value is -1
+			multiplier = var:mog_pli_max_innovation_adjustment
+		}
+	}
+	
 	set_variable = {									# At the end of the process, set the current target as the previous to use for next time.
-		name = mog_pli_innovation_current_prev			# Used in ??
-		value = var:mog_pli_innovation_current_value	# Note: number value between 0-100 & represents ??
+		name = mog_pli_innovation_current_prev			# Used in mog_pli_max_innovation_adjustment
+		value = var:mog_pli_innovation_current_value	# Note: number value between 0-100 & represents limiting % multiplier (from JE)
 	}
 }
 
 # scope = country
 pli_innovation_citizenship_percent_cache_update = {
-	save_temporary_scope_as = country
-	# Initialize pop counters
-	set_variable = {
-		name = pli_pop_total
-		value = 0
-	}
-	set_variable = {
-		name = pli_pop_citizens
-		value = 0
-	}
-	# Count the pops
-	every_scope_state = {
-		if = {
-			limit = { is_incorporated = yes }
-			every_scope_pop = {
-				change_variable = {
-					name = pli_pop_total
-					add = total_size
-				}
-				if = {
-					limit = {
-						pop_acceptance >= acceptance_status_4
-					}
-					change_variable = {
-						name = pli_pop_citizens
-						add = total_size
-					}
-				}
-			}
-		}
-	}
-	# Save the percents
-	scope:country = {
-		save_temporary_scope_value_as = {
-			name = pli_innovation_limit
-			value = {
-				value = var:pli_pop_citizens
-				divide = {
-					value = var:pli_pop_total
-					min = 1
-				}
-			}
+	if = {
+		limit = { NOT = { is_country_type = decentralized } }
+		save_temporary_scope_as = country
+		# Initialize pop counters
+		set_variable = {
+			name = pli_pop_total
+			value = 0
 		}
 		set_variable = {
-			name = pli_innovation_citizenship_percent
-			value = scope:pli_innovation_limit
+			name = pli_pop_citizens
+			value = 0
 		}
+		# Count the pops
+		every_scope_state = {
+			if = {
+				limit = { is_incorporated = yes }
+				every_scope_pop = {
+					scope:country = {
+						change_variable = {
+							name = pli_pop_total
+							add = prev.total_size
+						}
+					}
+					if = {
+						limit = {
+							pop_acceptance >= acceptance_status_4
+						}
+						scope:country = {
+							change_variable = {
+								name = pli_pop_citizens
+								add = prev.total_size
+							}
+						}
+					}
+				}
+			}
+		}
+		# Save the percents
+		scope:country = {
+			save_temporary_scope_value_as = {
+				name = pli_innovation_limit
+				value = {
+					value = var:pli_pop_citizens
+					divide = {
+						value = var:pli_pop_total
+						min = 1
+					}
+				}
+			}
+			set_variable = {
+				name = pli_innovation_citizenship_percent
+				value = scope:pli_innovation_limit
+			}
+		}
+		# Cleanup working variables
+		remove_variable = pli_pop_total
+		remove_variable = pli_pop_citizens
 	}
-	# Cleanup working variables
-	remove_variable = pli_pop_total
-	remove_variable = pli_pop_citizens
 }
 

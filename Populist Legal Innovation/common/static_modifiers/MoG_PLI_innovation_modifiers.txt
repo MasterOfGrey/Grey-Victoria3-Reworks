@@ -6,11 +6,11 @@ je_mog_pli_innovation_modifier = {
 
 je_mog_pli_dummy_innovation_modifier = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_lightbulb_negative.dds
-	country_weekly_innovation_max_mult = -0.01
+	country_weekly_innovation_max_mult = -1
 }
 
 #Proliferation Modifiers
 je_mog_pli_proliferation_modifier = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_lightbulb_positive.dds
-	country_tech_research_speed_mult = 0.04		# Max = 400% boost at 100% proliferation ( 100 * 0.05 = 5 ) - with other boni, can *almost* 1-1 turn excess innovation into tech spread
+	country_tech_spread_mult = 4		# Max = 400% boost at 100% proliferation ( 100 * 0.05 = 5 ) - with other boni, can *almost* 1-1 turn excess innovation into tech spread
 }

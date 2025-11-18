@@ -41,6 +41,7 @@ mog_pli_innovation_target = {	# This represents the conditions which support ind
 
 mog_pli_innovation_target_loc_value = {
 	value = mog_pli_innovation_target		# Already in 0-1 range
+	divide = 100
 }
 
 mog_pli_innovation_increment = {

@@ -1,4 +1,23 @@
-﻿# Impacts on Investor Confidence
+﻿# Setup
+on_game_started_after_lobby = {
+	on_actions = {
+		mog_pli_investment_var_setup_oa
+	}
+}
+
+mog_pli_investment_var_setup_oa = {
+	effect = {
+		#set/initialize country/journal relevant variables
+		if = {
+			limit = {
+				pli_corruption_tracking_trigger = no
+			}
+			set_global_variable = mog_pli_corruption_disabled	# This is used for Loc
+		}
+	}
+}
+
+# Impacts on Investor Confidence
 on_wargoal_added = {
 	on_actions = {
 	#	mog_pli_wargoal_confidence
@@ -98,14 +117,17 @@ on_monthly_pulse_country = {
 mog_pli_falling_standards_response = {
 	effect = {
 		if = {
-			limit = {
-				var:mog_pli_investment_current_value > mog_pli_investment_target	# Conditions are degrading
-			}
-			add_modifier = {
-				name = je_mog_pli_liberal_reaction
-				years = 10
-				multiplier = je_mog_pli_liberal_reaction_multiplier
-				is_decaying = yes
+			limit = { has_variable = mog_pli_investment_current_value }
+			if = {
+				limit = {
+					var:mog_pli_investment_current_value > mog_pli_investment_target	# Conditions are degrading
+				}
+				add_modifier = {
+					name = je_mog_pli_liberal_reaction
+					years = 10
+					multiplier = je_mog_pli_liberal_reaction_multiplier
+					is_decaying = yes
+				}
 			}
 		}
 	}

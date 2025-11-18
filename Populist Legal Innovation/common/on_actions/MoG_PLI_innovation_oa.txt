@@ -1,4 +1,32 @@
-﻿# Caching
+﻿# Setup
+on_game_started_after_lobby = {
+	on_actions = {
+		mog_pli_innovation_var_setup_oa
+		mog_pli_citizenship_cache_setup_oa
+	}
+}
+
+mog_pli_innovation_var_setup_oa = {
+	effect = {
+		#set/initialize country/journal relevant variables
+		if = {
+			limit = {
+				pli_proliferation_tracking_trigger = no
+			}
+			set_global_variable = mog_pli_proliferation_disabled	# This is used for Loc
+		}
+	}
+}
+
+mog_pli_citizenship_cache_setup_oa = {
+	effect = {
+		every_country = {
+			pli_innovation_citizenship_percent_cache_update = yes
+		}
+	}
+}
+
+# Caching
 on_monthly_pulse_country = {
 	on_actions = {
 		mog_pli_citizenship_cache_oa

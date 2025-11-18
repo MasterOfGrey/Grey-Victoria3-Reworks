@@ -13,60 +13,66 @@
 			# desc = "mog_pli_innovation_tracking_bar_drift"
 			# desc = "mog_pli_innovation_increment_desc"
 			if = {
-				limit = { mog_pli_innovation_target < var:mog_pli_innovation_current_value } # Target below current state.
+				limit = { has_variable = mog_pli_innovation_current_value }
 				if = {
-					limit = {
-						mog_pli_innovation_increment < {	# If increment is less than the gap, use the increment, else use the gap.
-							value = mog_pli_innovation_target
-							subtract = var:mog_pli_innovation_current_value
-							multiply = -1
-						}
-					}
-					add = {
-						add = {
-							value = mog_pli_innovation_increment
-							multiply = -1							# Move towards lower target.
-						}
-					#	desc = "mog_pli_innovation_increment_desc"
-					}
-				}
-				else = {
-					add = { 
-						add = { 
-							value = mog_pli_innovation_increment
-							multiply = -1							# Move towards lower target.
-							min = {
+					limit = { mog_pli_innovation_target < var:mog_pli_innovation_current_value } # Target below current state.
+					if = {
+						limit = {
+							mog_pli_innovation_increment < {	# If increment is less than the gap, use the increment, else use the gap.
 								value = mog_pli_innovation_target
-								subtract = var:mog_pli_innovation_current_value		# Current value slightly bigger here, so result is -ve and result = target.
+								subtract = var:mog_pli_innovation_current_value
+								multiply = -1
 							}
 						}
-					#	desc = "mog_pli_innovation_increment_desc"
+						add = {
+							add = {
+								value = mog_pli_innovation_increment
+								multiply = -1							# Move towards lower target.
+							}
+						#	desc = "mog_pli_innovation_increment_desc"
+						}
+					}
+					else = {
+						add = { 
+							add = { 
+								value = mog_pli_innovation_increment
+								multiply = -1							# Move towards lower target.
+								min = {
+									value = mog_pli_innovation_target
+									subtract = var:mog_pli_innovation_current_value		# Current value slightly bigger here, so result is -ve and result = target.
+								}
+							}
+						#	desc = "mog_pli_innovation_increment_desc"
+						}
+					}
+				}
+				else = { # Target above current state.
+					if = {
+						limit = {
+							mog_pli_innovation_increment < {	# If increment is less than the gap, use the increment, else use the gap.
+								value = mog_pli_innovation_target
+								subtract = var:mog_pli_innovation_current_value
+							}
+						}
+						add = { 
+							value = mog_pli_innovation_increment	# Move towards higher target.
+						#	desc = "mog_pli_innovation_increment_desc"
+						}
+					}
+					else = {
+						add = { 
+							value = mog_pli_innovation_increment	# Move towards higher target.
+							max =  {
+								value = var:mog_pli_innovation_current_value
+								subtract = mog_pli_innovation_target		# Current value slightly lower here, so result is +ve and result = target.
+							}
+						#	desc = "mog_pli_innovation_increment_desc"
+						}
 					}
 				}
 			}
-			else = { # Target above current state.
-				if = {
-					limit = {
-						mog_pli_innovation_increment < {	# If increment is less than the gap, use the increment, else use the gap.
-							value = mog_pli_innovation_target
-							subtract = var:mog_pli_innovation_current_value
-						}
-					}
-					add = { 
-						value = mog_pli_innovation_increment	# Move towards higher target.
-					#	desc = "mog_pli_innovation_increment_desc"
-					}
-				}
-				else = {
-					add = { 
-						value = mog_pli_innovation_increment	# Move towards higher target.
-						max =  {
-							value = var:mog_pli_innovation_current_value
-							subtract = mog_pli_innovation_target		# Current value slightly lower here, so result is +ve and result = target.
-						}
-					#	desc = "mog_pli_innovation_increment_desc"
-					}
-				}
+			else = {
+				add = 0
 			}
 		}
 	}
@@ -88,45 +94,51 @@ mog_pli_proliferation_tracking_bar = {
 		}
 		else = {
 			if = {
-				limit = { mog_pli_proliferation_target < var:mog_pli_proliferation_current_value } # Target below current state.
+				limit = { has_variable = mog_pli_proliferation_current_value }
 				if = {
-					limit = {
-						mog_pli_proliferation_increment < {	# If increment is less than the gap, use the increment, else use the gap.
-							value = mog_pli_proliferation_target
-							subtract = var:mog_pli_proliferation_current_value
-							multiply = -1
+					limit = { mog_pli_proliferation_target < var:mog_pli_proliferation_current_value } # Target below current state.
+					if = {
+						limit = {
+							mog_pli_proliferation_increment < {	# If increment is less than the gap, use the increment, else use the gap.
+								value = mog_pli_proliferation_target
+								subtract = var:mog_pli_proliferation_current_value
+								multiply = -1
+							}
+						}
+						add = { 
+							value = mog_pli_proliferation_increment
+							multiply = -1							# Move towards lower target.
 						}
 					}
-					add = { 
-						value = mog_pli_proliferation_increment
-						multiply = -1							# Move towards lower target.
+					else = {
+						add =  {
+							value = mog_pli_proliferation_target
+							subtract = var:mog_pli_proliferation_current_value		# Current value slightly bigger here, so result is -ve and result = target.
+						}
 					}
 				}
-				else = {
-					add =  {
-						value = mog_pli_proliferation_target
-						subtract = var:mog_pli_proliferation_current_value		# Current value slightly bigger here, so result is -ve and result = target.
+				else = { # Target above current state.
+					if = {
+						limit = {
+							mog_pli_proliferation_increment < {	# If increment is less than the gap, use the increment, else use the gap.
+								value = mog_pli_proliferation_target
+								subtract = var:mog_pli_proliferation_current_value
+							}
+						}
+						add = { 
+							value = mog_pli_proliferation_increment	# Move towards higher target.
+						}
+					}
+					else = {
+						add =  {
+							value = var:mog_pli_proliferation_current_value
+							subtract = mog_pli_proliferation_target		# Current value slightly lower here, so result is +ve and result = target.
+						}
 					}
 				}
 			}
-			else = { # Target above current state.
-				if = {
-					limit = {
-						mog_pli_proliferation_increment < {	# If increment is less than the gap, use the increment, else use the gap.
-							value = mog_pli_proliferation_target
-							subtract = var:mog_pli_proliferation_current_value
-						}
-					}
-					add = { 
-						value = mog_pli_proliferation_increment	# Move towards higher target.
-					}
-				}
-				else = {
-					add =  {
-						value = var:mog_pli_proliferation_current_value
-						subtract = mog_pli_proliferation_target		# Current value slightly lower here, so result is +ve and result = target.
-					}
-				}
+			else = {
+				add = 0
 			}
 		}
 	}
