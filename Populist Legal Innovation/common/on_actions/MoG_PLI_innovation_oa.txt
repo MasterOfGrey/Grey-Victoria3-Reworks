@@ -38,3 +38,207 @@ mog_pli_citizenship_cache_oa = {
 		pli_innovation_citizenship_percent_cache_update = yes
 	}
 }
+
+# Responsiveness effects
+on_monthly_pulse_country = {
+	on_actions = {
+		mog_pli_innov_war_exhaustion_response
+	}
+}
+
+mog_pli_innov_war_exhaustion_response = {
+	effect = {
+		if = {
+			limit = {
+				NOT = { has_variable = mog_pli_proliferation_disabled }
+				any_scope_war = {
+					has_war_support = {
+						target = ROOT
+						value < 50
+					}
+				}
+			}
+			save_temporary_scope_as = exhausted_country
+			if = {								# All effects can occur concurrently if applicable.
+				limit = {
+					any_scope_war = {
+						attacker_warleader = ROOT		# Attacker loses innovation, gains tech spread
+						has_war_support = {
+							target = ROOT
+							value < 50
+						}
+						save_temporary_scope_as = war
+					}
+				}
+				random_scope_war = {
+					limit = {
+						attacker_warleader = ROOT
+						has_war_exhaustion = {
+							target = ROOT
+							value < 50
+						}
+						NOT = {
+							scope:exhausted_country = {
+								any_scope_war = {
+									has_war_exhaustion = {
+										target = ROOT
+										value > prev.war_exhaustion
+									}
+								}
+							}
+						}
+					}
+					save_temporary_scope_as = war
+				}
+				je:je_mog_pli_innovation = {
+					set_bar_progress = {
+						value = {
+							add = var:mog_pli_innovation_current_value
+							add = {
+								add = scope:exhausted_country.war_exhaustion
+								multiply = -1
+							}
+							min = 0
+						}
+						name = mog_pli_innovation_tracking_bar
+					}
+					set_bar_progress = {
+						value = {
+							add = var:mog_pli_proliferation_current_value
+							add = {
+								add = scope:exhausted_country.war_exhaustion
+								multiply = 1
+							}
+							max = 100
+						}
+						name = mog_pli_proliferation_tracking_bar
+					}
+				}
+				set_variable = {	# Reset progress level variable after changing progress bar.
+					name = mog_pli_innovation_current_value
+					value = "je:je_mog_pli_innovation.scripted_bar_progress(mog_pli_innovation_tracking_bar)"
+				}
+				set_variable = {	# Reset progress level variable after changing progress bar.
+					name = mog_pli_proliferation_current_value
+					value = "je:je_mog_pli_innovation.scripted_bar_progress(mog_pli_proliferation_tracking_bar)"
+				}
+			}
+			if = {
+				limit = {
+					any_scope_war = {
+						defender_warleader = ROOT		# Defender gains innovation, gains some tech spread
+						has_war_support = {
+							target = ROOT
+							value < 50
+						}
+						save_temporary_scope_as = war
+					}
+				}
+				random_scope_war = {
+					limit = {
+						defender_warleader = ROOT
+						has_war_exhaustion = {
+							target = ROOT
+							value < 50
+						}
+						NOT = {
+							scope:exhausted_country = {
+								any_scope_war = {
+									has_war_exhaustion = {
+										target = ROOT
+										value > prev.war_exhaustion
+									}
+								}
+							}
+						}
+					}
+					save_temporary_scope_as = war
+				}
+				je:je_mog_pli_innovation = {
+					set_bar_progress = {
+						value = {
+							add = var:mog_pli_innovation_current_value
+							add = {
+								add = scope:exhausted_country.war_exhaustion
+								multiply = 1
+							}
+							max = 100
+						}
+						name = mog_pli_innovation_tracking_bar
+					}
+					set_bar_progress = {
+						value = {
+							add = var:mog_pli_proliferation_current_value
+							add = {
+								add = scope:exhausted_country.war_exhaustion
+								multiply = 0.5
+							}
+							max = 100
+						}
+						name = mog_pli_proliferation_tracking_bar
+					}
+				}
+				set_variable = {	# Reset progress level variable after changing progress bar.
+					name = mog_pli_innovation_current_value
+					value = "je:je_mog_pli_innovation.scripted_bar_progress(mog_pli_innovation_tracking_bar)"
+				}
+				set_variable = {	# Reset progress level variable after changing progress bar.
+					name = mog_pli_proliferation_current_value
+					value = "je:je_mog_pli_innovation.scripted_bar_progress(mog_pli_proliferation_tracking_bar)"
+				}
+			}
+			if = {
+				limit = {
+					any_scope_war = {
+						NOT = {							# Participant gains tech spread
+							defender_warleader = ROOT
+							attacker_warleader = ROOT
+						}
+						has_war_support = {
+							target = ROOT
+							value < 50
+						}
+						save_temporary_scope_as = war
+					}
+				}
+				random_scope_war = {
+					limit = {
+						defender_warleader = ROOT
+						has_war_exhaustion = {
+							target = ROOT
+							value < 50
+						}
+						NOT = {
+							scope:exhausted_country = {
+								any_scope_war = {
+									has_war_exhaustion = {
+										target = ROOT
+										value > prev.war_exhaustion
+									}
+								}
+							}
+						}
+					}
+					save_temporary_scope_as = war
+				}
+				je:je_mog_pli_innovation = {
+					set_bar_progress = {
+						value = {
+							add = var:mog_pli_proliferation_current_value
+							add = {
+								add = scope:exhausted_country.war_exhaustion
+								multiply = 1
+							}
+							max = 100
+						}
+						name = mog_pli_proliferation_tracking_bar
+					}
+				}
+				set_variable = {	# Reset progress level variable after changing progress bar.
+					name = mog_pli_proliferation_current_value
+					value = "je:je_mog_pli_innovation.scripted_bar_progress(mog_pli_proliferation_tracking_bar)"
+				}
+			}
+		}
+	}
+}
