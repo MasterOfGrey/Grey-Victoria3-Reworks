@@ -18,36 +18,36 @@ mog_pli_investment_var_setup_oa = {
 }
 
 # Impacts on Investor Confidence
-on_wargoal_added = {
+on_diplomatic_play_started = {
 	on_actions = {
-	#	mog_pli_wargoal_confidence
+		mog_pli_war_confidence
 	}
 }
 
 on_harvest_condition_started_in_country = {
 	on_actions = {
-	#	mog_pli_hc_confidence
+		mog_pli_hc_confidence
 	}
 }
 
-mog_pli_wargoal_confidence = {
+mog_pli_war_confidence = {
 	effect = {
-		scope:actor = {
+		scope:initiator = {
 			je:je_mog_pli_investment = {
-		#		set_bar_progress = {		<- This whole bit does not work, Ceasar help?
-		#			value = {
-		#				add = var:mog_pli_investment_current_value
-		#				add = {
-		#					add = 10
-		#			#		multiply = {
-		#			#			add = root.target.army_power_projection
-		#			#			divide = scope:actor.army_power_projection
-		#			#		}
-		#				}
-		#				min = 0
-		#			}
-		#			name = mog_pli_investment_tracking_bar
-		#		}
+				set_bar_progress = {
+					value = {
+						add = var:mog_pli_investment_current_value
+						add = {
+							add = -10
+							multiply = {
+								add = scope:target.army_power_projection
+								divide = scope:initiator.army_power_projection
+							}
+						}
+						min = 0
+					}
+					name = mog_pli_investment_tracking_bar
+				}
 			}
 			set_variable = {	# Reset progress level variable after changing progress bar.
 				name = mog_pli_investment_current_value

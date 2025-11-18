@@ -29,7 +29,8 @@ mog_pli_investment_target = {	# This represents the conditions which support inv
 	add = mog_pli_inv_internal_security		# Max 10
 	add = mog_pli_inv_rights_of_women		# Max 15
 	add = mog_pli_inv_slavery				# Max 15
-	min = 1												# Max total intentionally > 100 (120)
+	add = mog_pli_combo_wombo				# Max 20
+	min = 1												# Max total intentionally > 100 (140)
 	max = {									# This can actually take it down to 0, but this is the only thing that should be able to do so.
 		value = 100
 		multiply = mog_pli_max_investment_willingness_from_ip
@@ -368,6 +369,33 @@ mog_pli_inv_slavery = {					# Max 15
 	}
 }
 mog_pli_inv_slavery_modded = 1	# Replace this value for modded laws compatibility
+
+mog_pli_combo_wombo = {
+	if = {
+		limit = {
+			OR = {
+				has_law_or_variant = law_type:law_local_police			# Any reasonably acceptable police laws.
+				has_law_or_variant = law_type:law_dedicated_police
+			}
+			OR = {
+				has_law_or_variant = law_type:law_landed_voting			# Any voting franchise.
+				has_law_or_variant = law_type:law_wealth_voting
+				has_law_or_variant = law_type:law_census_voting
+				has_law_or_variant = law_type:law_universal_suffrage
+			}
+			OR = {
+				has_law_or_variant = law_type:law_national_guard		# Any supportive home affairs.
+				has_law_or_variant = law_type:law_guaranteed_liberties
+			}
+		}
+		add = 2		# Max 20
+		multiply = {
+			add = institution:institution_police.investment
+			add = institution:institution_home_affairs.investment
+			min = 1
+		}
+	}
+}
 
 
 ### Systemic Corruption Values
