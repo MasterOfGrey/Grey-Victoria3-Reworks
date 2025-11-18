@@ -1,4 +1,11 @@
 ﻿### Innovation Limitations
+mog_pli_max_innovation_potential_from_citizenship = {	# We use this for Loc and to apply a ceiling to any/all innovation incentive calculations.
+	value = 1
+	multiply = var:pli_innovation_citizenship_percent
+	min = 0							# Should be strictly 0-1.
+	max = 1							# But we'll clamp it to be safe.
+}
+
 mog_pli_max_proliferation_from_literacy = {	# We apply this as a ceiling to any/all proliferation calculations.
 	value = 0
 	add = {
@@ -8,7 +15,6 @@ mog_pli_max_proliferation_from_literacy = {	# We apply this as a ceiling to any/
 	}
 	multiply = 100						# Convert % into a whole number for the progress bar i.e. max proliferation rate is 100%
 	max = 100							# But we'll clamp it to be safe.
-	desc = ""
 }
 
 ### Innovation Incentive Values
@@ -27,12 +33,14 @@ mog_pli_innovation_target = {	# This represents the conditions which support ind
 	add = mog_pli_ino_welfare				# Max 5		- Best: Old Age Pensions
 	add = mog_pli_ino_slavery				# Max 5		- Best: Slavery Banned
 	min = 0
-	max = 100		# Min Penalty is 0%, Max Penalty is 100% - realistically getting either should be nearly impossible.
+	max = {
+		value = mog_pli_max_innovation_potential_from_citizenship
+		multiply = 100													# Convert from 0-1 to 0-100 for JE purposes.
+	}
 }
 
 mog_pli_innovation_target_loc_value = {
-	value = mog_pli_innovation_target
-	divide = 100
+	value = mog_pli_innovation_target		# Already in 0-1 range
 }
 
 mog_pli_innovation_increment = {
@@ -491,11 +499,8 @@ mog_pli_proliferation_target = {	# This represents the conditions which support 
 	add = mog_pli_pro_free_speech			# Max 5		- Best: Free Speech
 	add = mog_pli_pro_labor_rights			# Max 5		- Best: Worker Protections
 	add = mog_pli_pro_women					# Max 5		- Best: Women's Suffrage
-	min = 0
-	max = {
-		value = 100		# Min Bonus is 0%, Max Bonus is 100% - realistically getting either should be nearly impossible.
-		multiply = mog_pli_max_proliferation_from_literacy
-	}
+	min = 0												# Min Bonus is 0%, Max Bonus is 100% - realistically getting either should be nearly impossible.
+	max = mog_pli_max_proliferation_from_literacy		# Already in 0-100 range
 }
 
 mog_pli_proliferation_target_loc_value = {
@@ -508,27 +513,416 @@ mog_pli_proliferation_increment = {
 	# Accelerators/Decelerators
 	add = {
 		owner.institution:institution_police ?= {
-			add = 0.01
+			add = 0.1
 			multiply = investment
 		}
-		desc = PLI_POLICE_INSTITUTION		# Max = 0.05
+		desc = PLI_POLICE_INSTITUTION		# Max = 0.5
 	}
 	add = {
 		owner.institution:institution_schools ?= {
-			add = 0.01
+			add = 0.1
 			multiply = investment
 		}
-		desc = PLI_SCHOOL_INSTITUTION		# Max = 0.05
+		desc = PLI_SCHOOL_INSTITUTION		# Max = 0.5
 	}
 	add = {
 		owner.institution:institution_workplace_safety ?= {
-			add = 0.01
+			add = 0.1
 			multiply = investment
 		}
-		desc = PLI_OHS_INSTITUTION			# Max = 0.05
+		desc = PLI_OHS_INSTITUTION			# Max = 0.5
 	}
 	min = 0.01
 	multiply = root.literacy_rate
 }
 
+mog_pli_pro_governance = {				# Max 20	- Best: Parliamentary Republic
+	if = {
+		limit = {	# Power upheld through the Cage of Norms
+			OR = { 
+				has_law_or_variant = law_type:law_chiefdom
+				has_law_or_variant = law_type:law_theocracy
+			}
+		}
+		add = 2
+	}
+	else_if = {		# Power to effect change both provided and constrained by the Cage of Norms
+		limit = { has_law_or_variant = law_type:law_monarchy }
+		add = 10
+	}
+	else_if = {
+		limit = {	# The voice of ridicule is a limiting threat
+			OR = { 
+				has_law_or_variant = law_type:law_corporate_state
+				has_law_or_variant = law_type:law_presidential_republic
+			}
+		}
+		add = 14
+	}
+	else_if = {
+		limit = { has_law_or_variant = law_type:law_council_republic }
+		add = 18
+	}
+	else_if = {
+		limit = { has_law_or_variant = law_type:law_parliamentary_republic }
+		add = 20
+	}
+	else = {		# For random modded laws
+		add = mog_pli_pro_governance_modded
+	}
+}
+mog_pli_pro_governance_modded = 1	# Replace this value for modded laws compatibility
 
+mog_pli_pro_bureaucracy = {				# Max 15	- Best: Appointed
+	if = {
+		limit = { has_law_or_variant = law_type:law_hereditary_bureaucrats }
+		add = 5		# Yes really
+	}
+	else_if = {
+		limit = { has_law_or_variant = law_type:law_elected_bureaucrats }
+		add = 10
+	}
+	else_if = {
+		limit = { has_law_or_variant = law_type:law_appointed_bureaucrats }
+		add = 15
+	}
+	else = {		# For random modded laws
+		add = mog_pli_ino_bureaucracy_modded
+	}
+	multiply = {	# Some value between 50% and 100%
+		value = 0.5
+		add = {
+			value = 1
+			add = government_wage_level_value		# Ranges from 0 to 4
+			divide = 10
+		}
+	}
+}
+mog_pli_pro_bureaucracy_modded = 1			# Replace this value for modded laws compatibility
+
+mog_pli_pro_childrens_rights = {		# Max 15	- Best: Compulsory P.Schools
+	if = {
+		limit = {
+			has_law_or_variant = law_type:law_child_labor_allowed
+		}
+		add = 0
+	}
+	else_if = {
+		limit = {
+			has_law_or_variant = law_type:law_restricted_child_labor
+		}
+		add = 5
+	}
+	else_if = {
+		limit = {
+			has_law_or_variant = law_type:law_compulsory_primary_school
+		}
+		add = 15
+	}
+	else = {	# For Random Modded laws
+		add = mog_pli_pro_childrens_rights_modded
+	}
+}
+mog_pli_pro_childrens_rights_modded = 1		# Replace this value for modded laws compatibility
+
+mog_pli_pro_internal_security = {		# Max 5		- Best: National Guard
+	if = {
+		limit = { has_law_or_variant = law_type:law_no_home_affairs }
+		add = 0		# Yes really
+	}
+	else_if = {
+		limit = { has_law_or_variant = law_type:law_secret_police }
+		add = 0.2		# Max 1
+		multiply = {
+			value = institution:institution_home_affairs.investment
+			min = 1
+		}
+	}
+	else_if = {
+		limit = { has_law_or_variant = law_type:law_guaranteed_liberties }
+		add = 0.5		# Max 2.5
+		multiply = {
+			value = institution:institution_home_affairs.investment
+			min = 1
+		}
+	}
+	else_if = {
+		limit = { has_law_or_variant = law_type:law_national_guard }
+		add = 1			# Max 5
+		multiply = {
+			value = institution:institution_home_affairs.investment
+			min = 1
+		}
+	}
+	else = {	# For Random Modded laws
+		add = mog_pli_pro_internal_security_modded
+	}
+}
+mog_pli_pro_internal_security_modded = 1	# Replace this value for modded laws compatibility
+
+mog_pli_pro_economic_system = {			# Max 5		- Best: Interventionism/Command Econ
+	if = {
+		limit = {
+			OR = { 
+				has_law_or_variant = law_type:law_traditionalism		# There is effectively no functional capacity
+				has_law_or_variant = law_type:law_industry_banned		# to push adoption of new capabilities.
+			}
+		}
+		add = 0
+	}
+	else_if = {
+		limit = {
+			OR = { 
+				has_law_or_variant = law_type:law_laissez_faire			# Established players tend to have very
+				has_law_or_variant = law_type:law_agrarianism			# hard-to-challenge market positions.
+			}
+		}
+		add = 3
+	}
+	else_if = {
+		limit = {
+			OR = {
+				has_law_or_variant = law_type:law_extraction_economy	# Two things that are alright for this
+				has_law_or_variant = law_type:law_cooperative_ownership	# for *vastly* different reasons.
+			}
+		}
+		add = 4		# Things can be a lot worse, this is less institutional and more social
+	}
+	else_if = {
+		limit = {	# Basically the same mechanism, just different scopes.
+			OR = { 
+				has_law_or_variant = law_type:law_interventionism
+				has_law_or_variant = law_type:law_command_economy
+			}
+		}
+		add = 5
+	}
+	else = {		# For random modded laws
+		add = mog_pli_pro_economic_system_modded
+	}
+}
+mog_pli_pro_economic_system_modded = 1		# Replace this value for modded laws compatibility
+
+mog_pli_pro_trade_policy = {			# Max 5		- Best: Mercantilism
+	if = {
+		limit = { has_law_or_variant = law_type:law_isolationism }
+		add = 0		# The government is not looking at outside developments.
+	}
+	else_if = {
+		limit = { has_law_or_variant = law_type:law_protectionism }
+		add = 2		# The incentives to adopt new tech are misaligned.
+	}
+	else_if = {
+		limit = { has_law_or_variant = law_type:law_free_trade }
+		add = 4		# Very difficult to stop proliferation with this.
+	}
+	else_if = {
+		limit = { has_law_or_variant = law_type:law_mercantilism }
+		add = 5		# Institutionalised competitive entities have their advantages.
+	}
+	else = {		# For random modded laws
+		add = mog_pli_pro_trade_policy_modded
+	}
+}
+mog_pli_pro_trade_policy_modded = 1			# Replace this value for modded laws compatibility
+
+mog_pli_pro_land_reform = {				# Max 5		- Best: Collectivised Ag
+	if = {
+		limit = { has_law_or_variant = law_type:law_serfdom }
+		add = 1
+	}
+	else_if = {
+		limit = { has_law_or_variant = law_type:law_tenant_farmers }
+		add = 2
+	}
+	else_if = {
+		limit = { has_law_or_variant = law_type:law_homesteading }
+		add = 3
+	}
+	else_if = {
+		limit = { has_law_or_variant = law_type:law_commercialized_agriculture }
+		add = 4
+	}
+	else_if = {
+		limit = { has_law_or_variant = law_type:law_collectivized_agriculture }
+		add = 5
+	}
+	else = {	# For Random Modded laws
+		add = mog_pli_pro_land_reform_modded
+	}
+}
+mog_pli_pro_land_reform_modded = 2	# Replace this value for modded laws compatibility
+
+mog_pli_pro_education = {				# Max 5		- Best: Private
+	if = {
+		limit = { has_law_or_variant = law_type:law_no_schools }
+		add = 0
+	}
+	else_if = {
+		limit = { has_law_or_variant = law_type:law_religious_schools }	# Reinforces the Cage of Norms
+		add = 0.3		# Max 1.5
+		multiply = {
+			value = institution:institution_schools.investment
+			min = 1
+		}
+	}
+	else_if = {
+		limit = { has_law_or_variant = law_type:law_public_schools }
+		add = 0.5		# Max 2.5
+		multiply = {
+			value = institution:institution_schools.investment
+			min = 1
+		}
+	}
+	else_if = {
+		limit = { has_law_or_variant = law_type:law_private_schools }	# Institutionally supported advantages are strong here
+		add = 1			# Max 5
+		multiply = {
+			value = institution:institution_schools.investment
+			min = 1
+		}
+	}
+	else = {	# For Random Modded laws
+		add = mog_pli_pro_education_modded		# Max 2.5 by default
+		owner.institution:institution_schools ?= {
+			multiply = {
+				value = investment	# institution:institution_schools.investment # already in institution scope
+				min = 1
+			}
+		}
+	}
+}
+mog_pli_pro_education_modded = 0.5	# Replace this value for modded laws compatibility
+
+mog_pli_pro_healthcare = {				# Max 5		- Best: Private
+	if = {
+		limit = { has_law_or_variant = law_type:law_no_health_system }
+		add = 0
+	}
+	else_if = {
+		limit = {
+			OR = { 
+				has_law_or_variant = law_type:law_charitable_health_system		# Top-down health systems are simply
+				has_law_or_variant = law_type:law_public_health_insurance		# slower to adapt to change.
+			}
+		}
+		add = 0.5		# Max 2.5
+		multiply = {
+			value = institution:institution_health_system.investment
+			min = 1
+		}
+	}
+	else_if = {
+		limit = { has_law_or_variant = law_type:law_private_health_insurance }	# For once, the profit incentive helps.
+		add = 1			# Max 5
+		multiply = {
+			value = institution:institution_health_system.investment
+			min = 1
+		}
+	}
+	else = {	# For Random Modded laws
+		add = mog_pli_pro_healthcare_modded		# Max 2.5 by default
+		owner.institution:institution_health_system ?= {
+			multiply = {
+				value = investment	# institution:institution_health_system.investment # already in institution scope
+				min = 1
+			}
+		}
+	}
+}
+mog_pli_pro_healthcare_modded = 0.5	# Replace this value for modded laws compatibility
+
+mog_pli_pro_free_speech = {				# Max 5		- Best: Free Speech
+	if = {
+		limit = {
+			has_law_or_variant = law_type:law_outlawed_dissent
+		}
+		add = 0
+	}
+	else_if = {
+		limit = {
+			has_law_or_variant = law_type:law_censorship
+		}
+		add = 1
+	}
+	else_if = {
+		limit = {
+			has_law_or_variant = law_type:law_right_of_assembly
+		}
+		add = 4
+	}
+	else_if = {
+		limit = {
+			has_law_or_variant = law_type:law_protected_speech
+		}
+		add = 5
+	}
+	else = {	# For Random Modded laws
+		add = mog_pli_pro_free_speech_modded
+	}
+}
+mog_pli_pro_free_speech_modded = 1	# Replace this value for modded laws compatibility
+
+mog_pli_pro_labor_rights = {			# Max 5		- Best: Worker Protections
+	if = {
+		limit = { has_law_or_variant = law_type:law_no_workers_rights }
+		add = 0
+	}
+	else_if = {
+		limit = { has_law_or_variant = law_type:law_regulatory_bodies }
+		add = 0.5		# Max 2.5
+		multiply = {
+			value = institution:institution_workplace_safety.investment
+			min = 1
+		}
+	}
+	else_if = {
+		limit = { has_law_or_variant = law_type:law_worker_protections }
+		add = 1			# Max 5
+		multiply = {
+			value = institution:institution_workplace_safety.investment
+			min = 1
+		}
+	}
+	else = {	# For Random Modded laws
+		add = mog_pli_pro_labor_rights_modded		# Max 2.5 by default
+		owner.institution:institution_workplace_safety ?= {
+			multiply = {
+				value = investment	# institution:institution_workplace_safety.investment # already in institution scope
+				min = 1
+			}
+		}
+	}
+}
+mog_pli_pro_labor_rights_modded = 0.5	# Replace this value for modded laws compatibility
+
+mog_pli_pro_women = {					# Max 5		- Best: Women's Suffrage
+	if = {
+		limit = {
+			has_law_or_variant = law_type:law_no_womens_rights
+		}
+		add = 0
+	}
+	else_if = {
+		limit = {
+			has_law_or_variant = law_type:law_women_own_property
+		}
+		add = 2
+	}
+	else_if = {
+		limit = {
+			has_law_or_variant = law_type:law_women_in_the_workplace
+		}
+		add = 4
+	}
+	else_if = {
+		limit = {
+			has_law_or_variant = law_type:law_womens_suffrage
+		}
+		add = 5
+	}
+	else = {	# For Random Modded laws
+		add = mog_pli_pro_women_modded
+	}
+}
+mog_pli_pro_women_modded = 1	# Replace this value for modded laws compatibility

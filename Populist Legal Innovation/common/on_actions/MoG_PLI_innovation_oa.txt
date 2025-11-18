@@ -1,0 +1,12 @@
+﻿# Caching
+on_monthly_pulse_country = {
+	on_actions = {
+		mog_pli_citizenship_cache_oa
+	}
+}
+
+mog_pli_citizenship_cache_oa = {
+	effect = {
+		pli_innovation_citizenship_percent_cache_update = yes
+	}
+}

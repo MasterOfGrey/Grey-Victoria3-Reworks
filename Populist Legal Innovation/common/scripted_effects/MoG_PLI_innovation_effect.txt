@@ -77,3 +77,59 @@ MoG_PLI_do_innovation_stuff_effect = {
 		value = var:mog_pli_innovation_current_value	# Note: number value between 0-100 & represents ??
 	}
 }
+
+# scope = country
+pli_innovation_citizenship_percent_cache_update = {
+	save_temporary_scope_as = country
+	# Initialize pop counters
+	set_variable = {
+		name = pli_pop_total
+		value = 0
+	}
+	set_variable = {
+		name = pli_pop_citizens
+		value = 0
+	}
+	# Count the pops
+	every_scope_state = {
+		if = {
+			limit = { is_incorporated = yes }
+			every_scope_pop = {
+				change_variable = {
+					name = pli_pop_total
+					add = total_size
+				}
+				if = {
+					limit = {
+						pop_acceptance >= acceptance_status_4
+					}
+					change_variable = {
+						name = pli_pop_citizens
+						add = total_size
+					}
+				}
+			}
+		}
+	}
+	# Save the percents
+	scope:country = {
+		save_temporary_scope_value_as = {
+			name = pli_innovation_limit
+			value = {
+				value = var:pli_pop_citizens
+				divide = {
+					value = var:pli_pop_total
+					min = 1
+				}
+			}
+		}
+		set_variable = {
+			name = pli_innovation_citizenship_percent
+			value = scope:pli_innovation_limit
+		}
+	}
+	# Cleanup working variables
+	remove_variable = pli_pop_total
+	remove_variable = pli_pop_citizens
+}
+
