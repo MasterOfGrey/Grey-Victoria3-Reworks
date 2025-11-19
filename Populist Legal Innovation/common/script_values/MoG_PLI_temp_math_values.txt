@@ -153,6 +153,12 @@ mog_pli_laborers_contribution_base_sv = {
 }
 
 # Investment je responsiveness modifiers
+je_mog_pli_falling_confidence_mult = {	# The better things are beforehand, the slower they decline - accelerates as it falls.
+	add = 100
+	subtract = var:mog_pli_investment_current_value
+	divide = 100
+}
+
 je_mog_pli_liberal_reaction_multiplier = {	# Value of 1 will result in 100%
 	add = { 
 		add = mog_pli_investment_increment	# Ranges from 0.1 to 1.4
@@ -198,6 +204,40 @@ mog_pli_max_innovation_base_sv = {
 			add = var:mog_pli_max_innovation_adjustment					# Cross multiply [ investment_current_prev/100 = adjustment/total ]
 			multiply = 100												# Solve for total -> [ = (adjustment*100)/investment_current_prev ]
 			divide = var:mog_pli_innovation_current_prev
+		}
+	}
+}
+
+# On Action values
+mog_pli_war_confidence_hit_val = {
+	value = {
+		add = local_var:je_var
+		add = {
+			add = -10
+			multiply = {
+				add = local_var:target_var
+				divide = local_var:initiator_var
+			}
+		}
+		min = 0
+	}
+}
+mog_pli_war_confidence_target_hit_val = {
+	value = {
+		add = local_var:je_var
+		add = {
+			add = -10
+			multiply = {
+				add = local_var:initiator_var
+				divide = { 
+					value = local_var:target_var
+					min = 1
+				}
+			}
+		}
+		min = {
+			value = local_var:je_var
+			divide = 2
 		}
 	}
 }

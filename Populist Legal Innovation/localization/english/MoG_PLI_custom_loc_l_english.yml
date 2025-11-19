@@ -1,5 +1,5 @@
 ﻿l_english:
- je_mog_pli_investment: "Investment Environment"
+ je_mog_pli_investment: "The Investment Environment"
  je_mog_pli_investment_reason: "More than just what is technically possible, and more than just what a single law encourages, the investment environment is a dynamic space affected by the interaction of different laws and economic conditions. \n$PLI_JOURNAL_DELIMITER$\n#header $mog_pli_investment_tracking_bar_title$#!\n$mog_pli_investorconfidence_exp$\n$PLI_JOURNAL_DELIMITER$\n#header $mog_pli_corruption_tracking_bar_title$#!\n$mog_pli_systemiccorruption_exp$"
  mog_pli_investment_tracking_bar_title: "Investor Confidence"
  mog_pli_investment_tracking_bar_desc: "#header $mog_pli_investment_tracking_bar_title$:#! #v [JournalEntry.GetCurrentBarProgress(ScriptedProgressBar.Self)|%1]#!"

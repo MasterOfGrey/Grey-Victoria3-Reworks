@@ -22,12 +22,14 @@
 								value = mog_pli_investment_target
 								subtract = var:mog_pli_investment_current_value
 								multiply = -1
+								multiply = je_mog_pli_falling_confidence_mult
 							}
 						}
 						add = {
 							add = {
 								value = mog_pli_investment_increment
 								multiply = -1							# Move towards lower target.
+								multiply = je_mog_pli_falling_confidence_mult
 							}
 						#	desc = "mog_pli_investment_increment_desc"
 						}
@@ -37,6 +39,7 @@
 							add = { 
 								value = mog_pli_investment_increment
 								multiply = -1							# Move towards lower target.
+								multiply = je_mog_pli_falling_confidence_mult
 								min = {
 									value = mog_pli_investment_target
 									subtract = var:mog_pli_investment_current_value		# Current value slightly bigger here, so result is -ve and result = target.
