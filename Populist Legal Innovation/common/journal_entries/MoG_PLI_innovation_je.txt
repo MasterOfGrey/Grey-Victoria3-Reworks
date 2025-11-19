@@ -5,7 +5,10 @@
 	can_revolution_inherit = yes
 	weight = 9000
 	is_shown_when_inactive = { NOT = { is_country_type = decentralized } }
-	possible = { is_revolutionary = no }
+	possible = {
+		has_journal_entry = je_mog_pli_investment
+		is_revolutionary = no
+	}
 	
 	scripted_progress_bar = mog_pli_innovation_tracking_bar
 	scripted_progress_bar = mog_pli_proliferation_tracking_bar
@@ -19,6 +22,26 @@
 		set_variable = {
 			name = mog_pli_proliferation_current_value
 			value = "je:je_mog_pli_innovation.scripted_bar_progress(mog_pli_proliferation_tracking_bar)"
+		}
+		create_com_progress_bar_with_both = {
+			progress_bar = mog_pli_innovation_tracking_bar #just a unique ID, any loc string is fine
+			index = 0 #0-indexed position in JE
+			color = default #just copying base color
+			bar_increase_color = green #drift color when increasing, any bar color is valid, including white
+			bar_decrease_color = bad #drift color when decreasing, any bar color is valid
+			drift_value = mog_pli_innovation_tracking_bar_weekly_drift #script value that sets drift amount
+			target_type = gold_bar #target marker, gold_bar, gold_marker, journal_icon, and "any bar color"_line are options
+			target_value = mog_pli_innovation_target_loc_value #script value that positions target marker
+		}
+		create_com_progress_bar_with_both = {
+			progress_bar = mog_pli_proliferation_tracking_bar
+			index = 1
+			color = default
+			bar_increase_color = green
+			bar_decrease_color = bad
+			drift_value = mog_pli_proliferation_tracking_bar_weekly_drift
+			target_type = gold_bar
+			target_value = mog_pli_proliferation_target_loc_value
 		}
 	}
 	

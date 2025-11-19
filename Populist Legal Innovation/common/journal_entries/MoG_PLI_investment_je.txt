@@ -20,6 +20,26 @@
 			name = mog_pli_corruption_current_value
 			value = "je:je_mog_pli_investment.scripted_bar_progress(mog_pli_corruption_tracking_bar)"
 		}
+		create_com_progress_bar_with_both = {
+			progress_bar = mog_pli_investment_tracking_bar
+			index = 0
+			color = default
+			bar_increase_color = green
+			bar_decrease_color = bad
+			drift_value = mog_pli_investment_tracking_bar_weekly_drift
+			target_type = gold_bar
+			target_value = mog_pli_resting_target_loc_value
+		}
+		create_com_progress_bar_with_both = {
+			progress_bar = mog_pli_corruption_tracking_bar
+			index = 1
+			color = bad
+			bar_increase_color = bad
+			bar_decrease_color = green
+			drift_value = mog_pli_corruption_tracking_bar_weekly_drift
+			target_type = gold_bar
+			target_value = mog_pli_corruption_target_loc_value
+		}
 	}
 	
 	status_desc = {
