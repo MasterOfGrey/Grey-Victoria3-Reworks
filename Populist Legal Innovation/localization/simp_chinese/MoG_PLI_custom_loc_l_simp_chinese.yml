@@ -1,0 +1,97 @@
+﻿l_simp_chinese:
+ je_mog_pli_investment: "投资环境" #deepl:1299785262
+ je_mog_pli_investment_reason: "投资环境不仅仅是技术上可行的，也不仅仅是单一法律所鼓励的，它是一个受不同法律和经济条件相互作用影响的动态空间。\n$PLI_JOURNAL_DELIMITER$\n#header $mog_pli_investment_tracking_bar_title$#!\n$mog_pli_investorconfidence_exp$\n$PLI_JOURNAL_DELIMITER$\n#header $mog_pli_corruption_tracking_bar_title$#!\n$mog_pli_systemiccorruption_exp$" #deepl:2652372920
+ mog_pli_investment_tracking_bar_title: "投资者信心" #deepl:4152636649
+ mog_pli_investment_tracking_bar_desc: "#header $mog_pli_investment_tracking_bar_title$:#! #v [JournalEntry.GetCurrentBarProgress(ScriptedProgressBar.Self)|%1]#!" #deepl:3018594055
+ mog_pli_investment_increment_desc: "[Country.MakeScope.GetScriptValueDesc('mog_pli_investment_increment')]" #deepl:52556006
+ mog_pli_corruption_tracking_bar_title: "系统性腐败" #deepl:3949053749
+ mog_pli_corruption_tracking_bar_desc: "#header $mog_pli_corruption_tracking_bar_title$:#! #v [JournalEntry.GetCurrentBarProgress(ScriptedProgressBar.Self)|%1]#!" #deepl:2916165588
+ mog_pli_corruption_increment_desc: "[Country.MakeScope.GetScriptValueDesc('mog_pli_corruption_increment')]" #deepl:1826878765
+ 
+ mog_pli_investorconfidence_exp: "这代表了所有可自由支配资金的人的净投资意愿。它将朝着#yellow 潜在#! 值的方向发展，并通过降低税率、提供廉价劳动力、提供大量投资机会以及制定相关法律来提高该值；这些法律可赋予更多人口权利（政治多元化），在法律面前实现平等（法治），并确保利润所有权（产权安全）。投资者信心变化的速度取决于您的[Concept('concept_institution','$concept_institutions$')].#indent_newline:2\n#red  注：#! 宣战或突然歉收等事件都可能导致当前投资者信心水平的突然变化...#! \n\n #yellow 投资者信心最大值 与 相比，受到 规模的限制，因为投资池中资金过多代表投资机会薄弱。投资池的最大规模总是小于一个国家国内生产总值的一半。#indent_newline:3   目前的影响是：#indent_newline:3  潜在投资者信心：  最大投资者信心：  投资池捐款：#! [Concept('concept_gdp','$concept_gdp_short$')] [concept_investment_pool] \n\n#i #! \n#b #! #v [Country.MakeScope.ScriptValue('mog_pli_resting_target_loc_value')|%1]#! \n#b #! #v [Country.MakeScope.ScriptValue('mog_pli_max_investment_willingness_from_ip')|%1]#! \n#b #! #v [Country.GetModifier.GetValueFor('state_aristocrats_investment_pool_contribution_mult')|%1]#!#!#!" #deepl:987620402
+ mog_pli_systemiccorruption_exp: "这代表着不同法律之间的相互作用，使个人在正常的商业活动中能够肆意妄为。它将朝着#yellow 的潜在#! 值发展，而资金充足的官僚机构、强大的警察机构以及提高透明度和问责制的法律大多会改善这一状况。腐败的变化速度取决于您的[Concept('concept_institution','$concept_institutions$')] ，但腐败的变化速度很慢。#indent_newline:3\n\n #i  目前的影响是：#! #indent_newline:3\n#b  潜在的系统性腐败：#! #v [Country.MakeScope.ScriptValue('mog_pli_corruption_target_loc_value')|%1]#! \n#b All Pops 投资效率：#! #v  -[Country.MakeScope.ScriptValue('mog_pli_corruption_multiplier')|%1]#! #! #! [AddTextIf(Not(GetPlayer.MakeScope.Var('mog_pli_corruption_disabled').IsSet),'\n\n#instruction Corruption Game Rule is:#! #L Active#!')][AddTextIf(GetPlayer.MakeScope.Var('mog_pli_corruption_disabled').IsSet,'\n\n#instruction Corruption Game Rule is:#! #L Disabled#!')]" #deepl:1532604169
+ 
+ je_mog_pli_investment_modifier: "Total Investor Confidence" # We'll swap back to this one if these modifier types ever work in the future. 
+ je_mog_pli_dummy_investment_modifier: "$je_mog_pli_investment_modifier$#! \n$pli_disclaimer$" #deepl:1663894361
+ je_mog_pli_corruption_modifier: "系统性腐败效应" #deepl:778747261
+ je_mog_pli_aristocrats_investment_modifier: "$aristocrats$ 投资者信心" #deepl:2470171822
+ je_mog_pli_capitalists_investment_modifier: "$capitalists$ 投资者信心" #deepl:1032032325
+ je_mog_pli_officers_investment_modifier: "$officers$ 投资者信心" #deepl:2661194494
+ je_mog_pli_academics_investment_modifier: "$academics$ 投资者信心" #deepl:2377569698
+ je_mog_pli_bureaucrats_investment_modifier: "$bureaucrats$ 投资者信心" #deepl:4088483595
+ je_mog_pli_clergymen_investment_modifier: "$clergymen$ 投资者信心" #deepl:931549533
+ je_mog_pli_engineers_investment_modifier: "$engineers$ 投资者信心" #deepl:905200424
+ je_mog_pli_shopkeepers_investment_modifier: "$shopkeepers$ 投资者信心" #deepl:1042615245
+ je_mog_pli_farmers_investment_modifier: "$farmers$ 投资者信心" #deepl:3221817395
+ je_mog_pli_clerks_investment_modifier: "$clerks$ 投资者信心" #deepl:948245691
+ je_mog_pli_machinists_investment_modifier: "$machinists$ 投资者信心" #deepl:1911477797
+ je_mog_pli_soldiers_investment_modifier: "$soldiers$ 投资者信心" #deepl:1534439934
+ je_mog_pli_laborers_investment_modifier: "$laborers$ 投资者信心" #deepl:4934552
+ je_mog_pli_liberal_reaction: "PLI：自由煽动" #deepl:3883787876
+ PLI_POLICE_INSTITUTION: "警察机构级别" #deepl:3695223093
+ PLI_SCHOOL_INSTITUTION: "教育机构级别" #deepl:119565117
+ PLI_HEALTH_INSTITUTION: "卫生系统机构层面" #deepl:1631231090
+ PLI_SOCSEC_INSTITUTION: "社会保障机构级别" #deepl:40582289
+ PLI_OHS_INSTITUTION: "工作场所安全机构级别" #deepl:2305349007
+ PLI_HAFFAIRS_INSTITUTION: "民政机构层面" #deepl:1435635816
+ 
+ state_aristocrats_investment_pool_contribution_mult: "$aristocrats$ [concept_investment_pool] 贡献热情" #deepl:3643715859
+ state_capitalists_investment_pool_contribution_mult: "$capitalists$ [concept_investment_pool] 贡献热情" #deepl:418366632
+ state_officers_investment_pool_contribution_mult: "$officers$ [concept_investment_pool] 贡献热情" #deepl:3044010018
+ state_academics_investment_pool_contribution_mult: "$academics$ [concept_investment_pool] 贡献热情" #deepl:3706290010
+ state_bureaucrats_investment_pool_contribution_mult: "$bureaucrats$ [concept_investment_pool] 贡献热情" #deepl:3698368248
+ state_clergymen_investment_pool_contribution_mult: "$clergymen$ [concept_investment_pool] 贡献热情" #deepl:3836838717
+ state_engineers_investment_pool_contribution_mult: "$engineers$ [concept_investment_pool] 贡献热情" #deepl:229069879
+ state_shopkeepers_investment_pool_contribution_mult: "$shopkeepers$ [concept_investment_pool] 贡献热情" #deepl:830346259
+ state_farmers_investment_pool_contribution_mult: "$farmers$ [concept_investment_pool] 贡献热情" #deepl:3902244402
+ state_clerks_investment_pool_contribution_mult: "$clerks$ [concept_investment_pool] 贡献热情" #deepl:3892052871
+ state_machinists_investment_pool_contribution_mult: "$machinists$ [concept_investment_pool] 贡献热情" #deepl:28585167
+ state_soldiers_investment_pool_contribution_mult: "$soldiers$ [concept_investment_pool] 贡献热情" #deepl:360686295
+ state_laborers_investment_pool_contribution_mult: "$laborers$ [concept_investment_pool] 贡献热情" #deepl:1186483921
+ state_aristocrats_investment_pool_contribution_mult_desc: "他们实际愿意投入的$aristocrats$ 潜在[concept_investment_pool] 捐款额的增减\n$pli_disclaimer$" #deepl:680045757
+ state_capitalists_investment_pool_contribution_mult_desc: "他们实际愿意投入的$capitalists$ 潜在[concept_investment_pool] 捐款额的增减\n$pli_disclaimer$" #deepl:451649001
+ state_officers_investment_pool_contribution_mult_desc: "他们实际愿意投入的$officers$ 潜在[concept_investment_pool] 捐款额的增减\n$pli_disclaimer$" #deepl:1237242733
+ state_academics_investment_pool_contribution_mult_desc: "他们实际愿意投入的$academics$ 潜在[concept_investment_pool] 捐款额的增减\n$pli_disclaimer$" #deepl:56929338
+ state_bureaucrats_investment_pool_contribution_mult_desc: "他们实际愿意投入的$bureaucrats$ 潜在[concept_investment_pool] 捐款额的增减\n$pli_disclaimer$" #deepl:3267515121
+ state_clergymen_investment_pool_contribution_mult_desc: "他们实际愿意投入的$clergymen$ 潜在[concept_investment_pool] 捐款额的增减\n$pli_disclaimer$" #deepl:147500610
+ state_engineers_investment_pool_contribution_mult_desc: "他们实际愿意投入的$engineers$ 潜在[concept_investment_pool] 捐款额的增减\n$pli_disclaimer$" #deepl:2538640881
+ state_shopkeepers_investment_pool_contribution_mult_desc: "他们实际愿意投入的$shopkeepers$ 潜在[concept_investment_pool] 捐款额的增减\n$pli_disclaimer$" #deepl:1953939059
+ state_farmers_investment_pool_contribution_mult_desc: "他们实际愿意投入的$farmers$ 潜在[concept_investment_pool] 捐款额的增减\n$pli_disclaimer$" #deepl:2374316764
+ state_clerks_investment_pool_contribution_mult_desc: "他们实际愿意投入的$clerks$ 潜在[concept_investment_pool] 捐款额的增减\n$pli_disclaimer$" #deepl:4192098707
+ state_machinists_investment_pool_contribution_mult_desc: "他们实际愿意投入的$machinists$ 潜在[concept_investment_pool] 捐款额的增减\n$pli_disclaimer$" #deepl:3343110742
+ state_soldiers_investment_pool_contribution_mult_desc: "他们实际愿意投入的$soldiers$ 潜在[concept_investment_pool] 捐款额的增减\n$pli_disclaimer$" #deepl:2119022222
+ state_laborers_investment_pool_contribution_mult_desc: "他们实际愿意投入的$laborers$ 潜在[concept_investment_pool] 捐款额的增减\n$pli_disclaimer$" #deepl:3166875677
+ pli_disclaimer: "(这个修饰符实际上没有任何作用，只是以一种更容易理解的方式显示了正在发生的事情）。各个投资者信心修改器的实际效果与此相当）。" #deepl:3292006708
+ 
+ PLI_JOURNAL_DELIMITER: "@divider_start!@divider_mid!@divider_mid!@divider_mid!@divider_mid!@divider_mid!@divider_mid!@divider_mid!@divider_end!" #deepl:3819646036
+ 
+ rule_mog_pli_corruption_tracking: "PLI 腐败" #deepl:511415342
+ setting_pli_corruption_tracking_enabled: "已启用" #deepl:3001197554
+ setting_pli_corruption_tracking_enabled_desc: "腐败机制已启用。\n注意：如果您想要更纯粹的体验，或使用其他具有腐败机制的 MOD，请禁用此功能。" #deepl:3908169042
+ setting_pli_corruption_tracking_disabled: "残疾" #deepl:1603118088
+ setting_pli_corruption_tracking_disabled_desc: "腐败机制已禁用。\n注意：腐败条仍会出现在日志条目中，但值应保持为 0。" #deepl:2794292117
+ rule_mog_pli_proliferation_tracking: "PLI 扩散" #deepl:2893239298
+ setting_pli_proliferation_tracking_enabled: "已启用" #deepl:3001197554
+ setting_pli_proliferation_tracking_enabled_desc: "增殖机制已启用。\n注意：如果您想要更纯粹的体验，或使用其他具有增殖机制的 MOD，请禁用此功能。" #deepl:2295810607
+ setting_pli_proliferation_tracking_disabled: "残疾" #deepl:1603118088
+ setting_pli_proliferation_tracking_disabled_desc: "\n注意：增殖条仍会出现在日志条目中，但数值应保持为 0。" #deepl:2935226836
+ 
+ je_mog_pli_innovation: "创新空间" #deepl:3288668083
+ je_mog_pli_innovation_reason: "与大学的存在或任何单一法律的鼓励作用相比，创新的动力受到不同法律和经济条件相互作用的动态影响。\n$PLI_JOURNAL_DELIMITER$\n#header $mog_pli_innovation_tracking_bar_title$#!\n$mog_pli_innovationincentive_exp$\n$PLI_JOURNAL_DELIMITER$\n#header $mog_pli_proliferation_tracking_bar_title$#!\n$mog_pli_techproliferation_exp$" #deepl:2193131716
+ mog_pli_innovation_tracking_bar_title: "创新激励" #deepl:2103705987
+ mog_pli_innovation_tracking_bar_desc: "#header $mog_pli_innovation_tracking_bar_title$:#! #v [JournalEntry.GetCurrentBarProgress(ScriptedProgressBar.Self)|%1]#!" #deepl:3326922530
+ mog_pli_innovation_increment_desc: "[Country.MakeScope.GetScriptValueDesc('mog_pli_innovation_increment')]" #deepl:3836861569
+ mog_pli_proliferation_tracking_bar_title: "技术扩散" #deepl:823768655
+ mog_pli_proliferation_tracking_bar_desc: "#header $mog_pli_proliferation_tracking_bar_title$:#! #v [JournalEntry.GetCurrentBarProgress(ScriptedProgressBar.Self)|%1]#!" #deepl:2041819127
+ mog_pli_proliferation_increment_desc: "[Country.MakeScope.GetScriptValueDesc('mog_pli_proliferation_increment')]" #deepl:4164039937
+ 
+ mog_pli_innovationincentive_exp: "这代表了民众为影响其生活的问题寻找创新解决方案的积极性。而阻碍人们发挥主观能动性的障碍则会削弱这种动力。(考虑一下这个古老的问题：如果癌症的治疗方法停留在一个没钱接受教育的人的头脑中，那会怎样？）\n它将朝着#yellow 的潜在#! 值发展，而政治多元化、公正执法、富有成效的土地改革，以及通过改善受教育机会、言论自由和脱贫保障来广泛支持人们承担风险的法律，都将改善这一潜在 值。创新激励机制的变化速度取决于您的[Concept('concept_institution','$concept_institutions$')].#indent_newline:2\n#red  注：#! 战争、饥荒和投资者信心不足等持续状况都可能降低创新激励机制......#! \n\n #yellow 创新激励的最大值 受 各州至少 @acceptance_status_4 的人口比例限制！  .#indent_newline:3   目前的影响是：#indent_newline:3  潜在创新激励：  最大创新激励：  当前最大创新减少量：#! [Concept('concept_incorporated_state','$concept_incorporated$')] $second_rate_citizen$ [Concept('concept_acceptance_status','$concept_acceptance_status_short$')] \n\n#i #! \n#b #! #v [Country.MakeScope.ScriptValue('mog_pli_innovation_target_loc_value')|%1]#! \n#b #! #v [Country.MakeScope.ScriptValue('mog_pli_max_innovation_potential_from_citizenship')|%1]#! \n#b #! #v [Country.GetModifier.GetValueFor('country_weekly_innovation_max_mult')|%1]#!#!#!" #deepl:2658091887
+ mog_pli_techproliferation_exp: "这代表了政府从世界其他地方引进创新的能力，也就是所谓的榨取体制下的增长。它将朝着#yellow 的潜在#! 值发展，而代议制治理、资金充足的官僚机构、强有力的儿童权利，以及在受监管的财富榨取结构中提高劳动力参与度和安全性的法律，都会提高这一价值。扩散变化的速度取决于您的[Concept('concept_institution','$concept_institutions$')] 和您的[concept_literacy].#indent_newline:3\n\n #i  目前的效果是：#! #indent_newline:3\n#b  潜在扩散：#! #v [Country.MakeScope.ScriptValue('mog_pli_proliferation_target_loc_value')|%1]#! \n#b 技术传播奖金：#! #v  [Country.MakeScope.ScriptValue('mog_pli_proliferation_multiplier_loc')|%1] #! #! #! [AddTextIf(Not(GetPlayer.MakeScope.Var('mog_pli_proliferation_disabled').IsSet),'\n\n#instruction Proliferation Game Rule is:#! #L Active#!')][AddTextIf(GetPlayer.MakeScope.Var('mog_pli_proliferation_disabled').IsSet,'\n\n#instruction Proliferation Game Rule is:#! #L Disabled#!')]" #deepl:1444742723
+ 
+ je_mog_pli_innovation_modifier: "Innovation Incentive Effect" # We'll swap back to this one if these modifier types ever work in the future. 
+ je_mog_pli_dummy_innovation_modifier: "$je_mog_pli_innovation_modifier$#! \n$pli_disclaimer_2$" #deepl:3807825725
+ je_mog_pli_proliferation_modifier: "技术扩散效应" #deepl:357267381
+ pli_disclaimer_2: "(这个修改器实际上没有任何作用，只是以一种更容易理解的方式显示了正在发生的事情）。数值创新最大值修改器的实际效果与此相当）。" #deepl:1052812032
+ 
+ country_weekly_innovation_max_mult: "创新热情" #deepl:592851823
+ country_weekly_innovation_max_mult_desc: "增加或减少@innovation![Nbsp] [concept_innovation] 每周可投资于[concept_technology] 的最高限额，从[Concept('concept_country','$concept_country_possessive$')] $concept_innovation$ 激励措施" #deepl:2671835167

@@ -1,0 +1,97 @@
+﻿l_turkish:
+ je_mog_pli_investment: "Yatırım Ortamı" #deepl:1299785262
+ je_mog_pli_investment_reason: "Yatırım ortamı, teknik olarak mümkün olanın ve tek bir yasanın teşvik ettiğinin ötesinde, farklı yasaların ve ekonomik koşulların etkileşiminden etkilenen dinamik bir alandır. \n$PLI_JOURNAL_DELIMITER$\n#header $mog_pli_investment_tracking_bar_title$#!\n$mog_pli_investorconfidence_exp$\n$PLI_JOURNAL_DELIMITER$\n#header $mog_pli_corruption_tracking_bar_title$#!\n$mog_pli_systemiccorruption_exp$" #deepl:2652372920
+ mog_pli_investment_tracking_bar_title: "Yatırımcı Güveni" #deepl:4152636649
+ mog_pli_investment_tracking_bar_desc: "#header $mog_pli_investment_tracking_bar_title$:#! #v [JournalEntry.GetCurrentBarProgress(ScriptedProgressBar.Self)|%1]#!" #deepl:3018594055
+ mog_pli_investment_increment_desc: "[Country.MakeScope.GetScriptValueDesc('mog_pli_investment_increment')]" #deepl:52556006
+ mog_pli_corruption_tracking_bar_title: "Sistemik Yolsuzluk" #deepl:3949053749
+ mog_pli_corruption_tracking_bar_desc: "#header $mog_pli_corruption_tracking_bar_title$:#! #v [JournalEntry.GetCurrentBarProgress(ScriptedProgressBar.Self)|%1]#!" #deepl:2916165588
+ mog_pli_corruption_increment_desc: "[Country.MakeScope.GetScriptValueDesc('mog_pli_corruption_increment')]" #deepl:1826878765
+ 
+ mog_pli_investorconfidence_exp: "Bu, isteğe bağlı fonlara erişimi olan tüm insanlar için net yatırım yapma isteğini temsil eder. Daha düşük vergiler, ucuz işgücüne erişim, güçlü yatırım fırsatları ve daha fazla nüfusa hak tanıyan (siyasi çoğulculuk), kanun önünde eşitlik sağlayan (hukukun üstünlüğü) ve karların sahiplenilmesini sağlayan (güvenli mülkiyet hakları) yasalarla iyileştirilen bir #yellow potansiyel#! değerine doğru hareket edecektir. Yatırımcı güveninin değişme hızı [Concept('concept_institution','$concept_institutions$')].#indent_newline:2 \n#red  Not:#! Savaş ilanı veya ani bir hasat başarısızlığı gibi olaylar yatırımcı güveninin mevcut seviyesinde ani bir değişikliğe neden olabilir...#! \n\n #yellow  maksimum yatırımcı güveni#!, yatırım havuzundaki çok fazla para zayıf yatırım fırsatlarını temsil ettiğinden [concept_investment_pool] ile karşılaştırıldığında [Concept('concept_gdp','$concept_gdp_short$')] büyüklüğü ile sınırlıdır. Havuzun maksimum büyüklüğü her zaman bir Ülkenin GSYİH'sinin yarısından az olacaktır.#indent_newline:3 \n\n #i  Bunun mevcut etkileri şunlardır:#! #indent_newline:3 \n#b  Potansiyel Yatırımcı Güveni:#! #v [Country.MakeScope.ScriptValue('mog_pli_resting_target_loc_value')|%1]#! \n#b Maksimum Yatırımcı Güveni:#! #v [Country.MakeScope.ScriptValue('mog_pli_max_investment_willingness_from_ip')|%1]#! \n#b Yatırım Havuzu Katkıları:#! #v [Country.GetModifier.GetValueFor('state_aristocrats_investment_pool_contribution_mult')|%1]#!#!#!" #deepl:987620402
+ mog_pli_systemiccorruption_exp: "Bu, bireylerin normal iş akışında kendi ellerini yağlamalarını sağlayan farklı yasaların etkileşimini temsil eder. Çoğunlukla iyi finanse edilen bir bürokrasi, güçlü polis kurumları ve şeffaflık ve hesap verebilirliği artıran yasalarla iyileştirilen bir #yellow potansiyel#! değerine doğru ilerleyecektir. Yolsuzluğun değişme hızı [Concept('concept_institution','$concept_institutions$')]'unuza bağlıdır, ancak yolsuzluğun değişmesi yavaştır.#indent_newline:3 \n\n #i  Bunun mevcut etkileri şunlardır:#! #indent_newline:3 \n#b  Potansiyel Sistemik Yolsuzluk:#! #v [Country.MakeScope.ScriptValue('mog_pli_corruption_target_loc_value')|%1]#! \n#b Tüm Pops Yatırım Verimliliği:#! #v  -[Country.MakeScope.ScriptValue('mog_pli_corruption_multiplier')|%1]#! #! #! [AddTextIf(Not(GetPlayer.MakeScope.Var('mog_pli_corruption_disabled').IsSet),'\n\n#instruction Corruption Game Rule is:#! #L Active#!')][AddTextIf(GetPlayer.MakeScope.Var('mog_pli_corruption_disabled').IsSet,'\n\n#instruction Corruption Game Rule is:#! #L Disabled#!')]" #deepl:1532604169
+ 
+ je_mog_pli_investment_modifier: "Total Investor Confidence" # We'll swap back to this one if these modifier types ever work in the future. 
+ je_mog_pli_dummy_investment_modifier: "$je_mog_pli_investment_modifier$#! \n$pli_disclaimer$" #deepl:1663894361
+ je_mog_pli_corruption_modifier: "Sistemik Yolsuzluk Etkisi" #deepl:778747261
+ je_mog_pli_aristocrats_investment_modifier: "$aristocrats$ Yatırımcı Güveni" #deepl:2470171822
+ je_mog_pli_capitalists_investment_modifier: "$capitalists$ Yatırımcı Güveni" #deepl:1032032325
+ je_mog_pli_officers_investment_modifier: "$officers$ Yatırımcı Güveni" #deepl:2661194494
+ je_mog_pli_academics_investment_modifier: "$academics$ Yatırımcı Güveni" #deepl:2377569698
+ je_mog_pli_bureaucrats_investment_modifier: "$bureaucrats$ Yatırımcı Güveni" #deepl:4088483595
+ je_mog_pli_clergymen_investment_modifier: "$clergymen$ Yatırımcı Güveni" #deepl:931549533
+ je_mog_pli_engineers_investment_modifier: "$engineers$ Yatırımcı Güveni" #deepl:905200424
+ je_mog_pli_shopkeepers_investment_modifier: "$shopkeepers$ Yatırımcı Güveni" #deepl:1042615245
+ je_mog_pli_farmers_investment_modifier: "$farmers$ Yatırımcı Güveni" #deepl:3221817395
+ je_mog_pli_clerks_investment_modifier: "$clerks$ Yatırımcı Güveni" #deepl:948245691
+ je_mog_pli_machinists_investment_modifier: "$machinists$ Yatırımcı Güveni" #deepl:1911477797
+ je_mog_pli_soldiers_investment_modifier: "$soldiers$ Yatırımcı Güveni" #deepl:1534439934
+ je_mog_pli_laborers_investment_modifier: "$laborers$ Yatırımcı Güveni" #deepl:4934552
+ je_mog_pli_liberal_reaction: "PLI: Liberal Ajitasyon" #deepl:3883787876
+ PLI_POLICE_INSTITUTION: "Polis Kurumu Seviyesi" #deepl:3695223093
+ PLI_SCHOOL_INSTITUTION: "Eğitim Kurumu Seviyesi" #deepl:119565117
+ PLI_HEALTH_INSTITUTION: "Sağlık Sistemi Kurum Seviyesi" #deepl:1631231090
+ PLI_SOCSEC_INSTITUTION: "Sosyal Güvenlik Kurumu Düzeyi" #deepl:40582289
+ PLI_OHS_INSTITUTION: "İşyeri Güvenliği Kurum Seviyesi" #deepl:2305349007
+ PLI_HAFFAIRS_INSTITUTION: "İç İşleri Kurum Seviyesi" #deepl:1435635816
+ 
+ state_aristocrats_investment_pool_contribution_mult: "$aristocrats$ [concept_investment_pool] katkı coşkusu" #deepl:3643715859
+ state_capitalists_investment_pool_contribution_mult: "$capitalists$ [concept_investment_pool] katkı coşkusu" #deepl:418366632
+ state_officers_investment_pool_contribution_mult: "$officers$ [concept_investment_pool] katkı coşkusu" #deepl:3044010018
+ state_academics_investment_pool_contribution_mult: "$academics$ [concept_investment_pool] katkı coşkusu" #deepl:3706290010
+ state_bureaucrats_investment_pool_contribution_mult: "$bureaucrats$ [concept_investment_pool] katkı coşkusu" #deepl:3698368248
+ state_clergymen_investment_pool_contribution_mult: "$clergymen$ [concept_investment_pool] katkı coşkusu" #deepl:3836838717
+ state_engineers_investment_pool_contribution_mult: "$engineers$ [concept_investment_pool] katkı coşkusu" #deepl:229069879
+ state_shopkeepers_investment_pool_contribution_mult: "$shopkeepers$ [concept_investment_pool] katkı coşkusu" #deepl:830346259
+ state_farmers_investment_pool_contribution_mult: "$farmers$ [concept_investment_pool] katkı coşkusu" #deepl:3902244402
+ state_clerks_investment_pool_contribution_mult: "$clerks$ [concept_investment_pool] katkı coşkusu" #deepl:3892052871
+ state_machinists_investment_pool_contribution_mult: "$machinists$ [concept_investment_pool] katkı coşkusu" #deepl:28585167
+ state_soldiers_investment_pool_contribution_mult: "$soldiers$ [concept_investment_pool] katkı coşkusu" #deepl:360686295
+ state_laborers_investment_pool_contribution_mult: "$laborers$ [concept_investment_pool] katkı coşkusu" #deepl:1186483921
+ state_aristocrats_investment_pool_contribution_mult_desc: "$aristocrats$ potansiyel [concept_investment_pool] katkısının ne kadarını gerçekten yatırmaya istekli olduklarında bir artış veya azalma \n$pli_disclaimer$" #deepl:680045757
+ state_capitalists_investment_pool_contribution_mult_desc: "$capitalists$ potansiyel [concept_investment_pool] katkısının ne kadarını gerçekten yatırmaya istekli olduklarında bir artış veya azalma \n$pli_disclaimer$" #deepl:451649001
+ state_officers_investment_pool_contribution_mult_desc: "$officers$ potansiyel [concept_investment_pool] katkısının ne kadarını gerçekten yatırmaya istekli olduklarında bir artış veya azalma \n$pli_disclaimer$" #deepl:1237242733
+ state_academics_investment_pool_contribution_mult_desc: "$academics$ potansiyel [concept_investment_pool] katkısının ne kadarını gerçekten yatırmaya istekli olduklarında bir artış veya azalma \n$pli_disclaimer$" #deepl:56929338
+ state_bureaucrats_investment_pool_contribution_mult_desc: "$bureaucrats$ potansiyel [concept_investment_pool] katkısının ne kadarını gerçekten yatırmaya istekli olduklarında bir artış veya azalma \n$pli_disclaimer$" #deepl:3267515121
+ state_clergymen_investment_pool_contribution_mult_desc: "$clergymen$ potansiyel [concept_investment_pool] katkısının ne kadarını gerçekten yatırmaya istekli olduklarında bir artış veya azalma \n$pli_disclaimer$" #deepl:147500610
+ state_engineers_investment_pool_contribution_mult_desc: "$engineers$ potansiyel [concept_investment_pool] katkısının ne kadarını gerçekten yatırmaya istekli olduklarında bir artış veya azalma \n$pli_disclaimer$" #deepl:2538640881
+ state_shopkeepers_investment_pool_contribution_mult_desc: "$shopkeepers$ potansiyel [concept_investment_pool] katkısının ne kadarını gerçekten yatırmaya istekli olduklarında bir artış veya azalma \n$pli_disclaimer$" #deepl:1953939059
+ state_farmers_investment_pool_contribution_mult_desc: "$farmers$ potansiyel [concept_investment_pool] katkısının ne kadarını gerçekten yatırmaya istekli olduklarında bir artış veya azalma \n$pli_disclaimer$" #deepl:2374316764
+ state_clerks_investment_pool_contribution_mult_desc: "$clerks$ potansiyel [concept_investment_pool] katkısının ne kadarını gerçekten yatırmaya istekli olduklarında bir artış veya azalma \n$pli_disclaimer$" #deepl:4192098707
+ state_machinists_investment_pool_contribution_mult_desc: "$machinists$ potansiyel [concept_investment_pool] katkısının ne kadarını gerçekten yatırmaya istekli olduklarında bir artış veya azalma \n$pli_disclaimer$" #deepl:3343110742
+ state_soldiers_investment_pool_contribution_mult_desc: "$soldiers$ potansiyel [concept_investment_pool] katkısının ne kadarını gerçekten yatırmaya istekli olduklarında bir artış veya azalma \n$pli_disclaimer$" #deepl:2119022222
+ state_laborers_investment_pool_contribution_mult_desc: "$laborers$ potansiyel [concept_investment_pool] katkısının ne kadarını gerçekten yatırmaya istekli olduklarında bir artış veya azalma \n$pli_disclaimer$" #deepl:3166875677
+ pli_disclaimer: "(Bu değiştirici aslında hiçbir şey yapmaz, sadece neler olduğunu daha kolay anlaşılır bir şekilde gösterir. Bireysel Yatırımcı Güven değiştiricileri buna eşdeğer gerçek bir etkiye sahiptir)." #deepl:3292006708
+ 
+ PLI_JOURNAL_DELIMITER: "@divider_start!@divider_mid!@divider_mid!@divider_mid!@divider_mid!@divider_mid!@divider_mid!@divider_mid!@divider_end!" #deepl:3819646036
+ 
+ rule_mog_pli_corruption_tracking: "PLI Yolsuzluk" #deepl:511415342
+ setting_pli_corruption_tracking_enabled: "Etkin" #deepl:3001197554
+ setting_pli_corruption_tracking_enabled_desc: "Yolsuzluk mekaniği etkinleştirildi.\nNot: Daha vanilya bir deneyim istiyorsanız veya yolsuzluk mekaniği olan başka bir modunuz varsa bunu devre dışı bırakın." #deepl:3908169042
+ setting_pli_corruption_tracking_disabled: "Engelli" #deepl:1603118088
+ setting_pli_corruption_tracking_disabled_desc: "Bozulma mekaniği devre dışı bırakılmıştır.\nNot: Bozulma çubuğu günlük girişinde görünmeye devam edecektir ancak değer 0'da kalmalıdır." #deepl:2794292117
+ rule_mog_pli_proliferation_tracking: "PLI Yayılımı" #deepl:2893239298
+ setting_pli_proliferation_tracking_enabled: "Etkin" #deepl:3001197554
+ setting_pli_proliferation_tracking_enabled_desc: "Çoğalma mekaniği etkinleştirildi.\nNot: Daha vanilya bir deneyim istiyorsanız veya çoğalma mekaniğine sahip başka bir modunuz varsa bunu devre dışı bırakın." #deepl:2295810607
+ setting_pli_proliferation_tracking_disabled: "Engelli" #deepl:1603118088
+ setting_pli_proliferation_tracking_disabled_desc: "Çoğalma mekaniği devre dışı bırakılmıştır.\nNot: Çoğalma çubuğu günlük girişinde görünmeye devam edecektir ancak değer 0'da kalmalıdır." #deepl:2935226836
+ 
+ je_mog_pli_innovation: "İnovasyon Alanı" #deepl:3288668083
+ je_mog_pli_innovation_reason: "İnovasyon dürtüsü, üniversitelerin varlığından veya herhangi bir yasanın teşvik edebileceğinden çok daha fazla, farklı yasaların ve ekonomik koşulların etkileşiminden dinamik olarak etkilenmektedir. \n$PLI_JOURNAL_DELIMITER$\n#header $mog_pli_innovation_tracking_bar_title$#!\n$mog_pli_innovationincentive_exp$\n$PLI_JOURNAL_DELIMITER$\n#header $mog_pli_proliferation_tracking_bar_title$#!\n$mog_pli_techproliferation_exp$" #deepl:2193131716
+ mog_pli_innovation_tracking_bar_title: "İnovasyon Teşviki" #deepl:2103705987
+ mog_pli_innovation_tracking_bar_desc: "#header $mog_pli_innovation_tracking_bar_title$:#! #v [JournalEntry.GetCurrentBarProgress(ScriptedProgressBar.Self)|%1]#!" #deepl:3326922530
+ mog_pli_innovation_increment_desc: "[Country.MakeScope.GetScriptValueDesc('mog_pli_innovation_increment')]" #deepl:3836861569
+ mog_pli_proliferation_tracking_bar_title: "Teknoloji Yayılımı" #deepl:823768655
+ mog_pli_proliferation_tracking_bar_desc: "#header $mog_pli_proliferation_tracking_bar_title$:#! #v [JournalEntry.GetCurrentBarProgress(ScriptedProgressBar.Self)|%1]#!" #deepl:2041819127
+ mog_pli_proliferation_increment_desc: "[Country.MakeScope.GetScriptValueDesc('mog_pli_proliferation_increment')]" #deepl:4164039937
+ 
+ mog_pli_innovationincentive_exp: "Bu, yaşamlarını etkileyen sorunlara yenilikçi çözümler bulmak için nüfus düzeyindeki teşviki temsil eder. Bu, insanların inisiyatif almasını engelleyen bariyerler tarafından azaltılır. (Asırlık soruyu düşünün: Ya kanserin tedavisi, eğitim almaya gücü yetmeyen birinin zihninde takılı kalsaydı?)\nSiyasi çoğulculuk, tarafsız kolluk kuvvetleri, verimli toprak reformları ve eğitime erişim, ifade özgürlüğü ve yoksulluğa karşı güvenliği geliştirerek insanların risk almasını genel olarak destekleyen yasalarla iyileştirilen #yellow potansiyel#! değerine doğru ilerleyecektir. İnovasyon teşviklerinin değişme hızı [Concept('concept_institution','$concept_institutions$')].#indent_newline:2 \n#red  Not:#! Savaş, kıtlık ve yatırımcı güveninin olmaması gibi süregelen durumların hepsi inovasyon teşviklerini azaltabilir...#! \n\n #yellow  maksimum inovasyon teşviki#!, [Concept('concept_incorporated_state','$concept_incorporated$')] eyaletlerindeki en az @acceptance_status_4 olan nüfus oranıyla sınırlıdır! $second_rate_citizen$ [Concept('concept_acceptance_status','$concept_acceptance_status_short$')].#indent_newline:3 \n\n #i  Bunun mevcut etkileri şunlardır:#! #indent_newline:3 \n#b  Potansiyel İnovasyon Teşviki:#! #v [Country.MakeScope.ScriptValue('mog_pli_innovation_target_loc_value')|%1]#! \n#b Maksimum İnovasyon Teşviki:#! #v [Country.MakeScope.ScriptValue('mog_pli_max_innovation_potential_from_citizenship')|%1]#! \n#b Mevcut Maksimum İnovasyon Azaltımı:#! #v [Country.GetModifier.GetValueFor('country_weekly_innovation_max_mult')|%1]#!#!#!" #deepl:2658091887
+ mog_pli_techproliferation_exp: "Bu, hükümetlerin dünyanın başka yerlerinden yenilikleri ithal etme kabiliyetini temsil eder, aksi takdirde çıkarıcı kurumlar altında büyüme olarak bilinir. Çoğunlukla temsili yönetişim, iyi finanse edilen bir bürokrasi, çocuklar için güçlü haklar ve düzenlenmiş servet çıkarma yapıları içinde işgücü katılımını ve güvenliğini artıran yasalarla iyileştirilen bir #yellow potansiyel#! değerine doğru hareket edecektir. Çoğalmanın değişme hızı sizin [Concept('concept_institution','$concept_institutions$')] ve [concept_literacy].#indent_newline:3 \n\n #i  Bunun mevcut etkileri şunlardır:#! #indent_newline:3 \n#b  Potansiyel Yayılma:#! #v [Country.MakeScope.ScriptValue('mog_pli_proliferation_target_loc_value')|%1]#! \n#b Teknoloji Yayılımı Bonusu:#! #v  [Country.MakeScope.ScriptValue('mog_pli_proliferation_multiplier_loc')|%1] #! #! #! [AddTextIf(Not(GetPlayer.MakeScope.Var('mog_pli_proliferation_disabled').IsSet),'\n\n#instruction Proliferation Game Rule is:#! #L Active#!')][AddTextIf(GetPlayer.MakeScope.Var('mog_pli_proliferation_disabled').IsSet,'\n\n#instruction Proliferation Game Rule is:#! #L Disabled#!')]" #deepl:1444742723
+ 
+ je_mog_pli_innovation_modifier: "Innovation Incentive Effect" # We'll swap back to this one if these modifier types ever work in the future. 
+ je_mog_pli_dummy_innovation_modifier: "$je_mog_pli_innovation_modifier$#! \n$pli_disclaimer_2$" #deepl:3807825725
+ je_mog_pli_proliferation_modifier: "Teknoloji Yayılma Etkisi" #deepl:357267381
+ pli_disclaimer_2: "(Bu değiştirici aslında hiçbir şey yapmaz, sadece neler olduğunu daha kolay anlaşılır bir şekilde gösterir. Sayısal Yenilik Maks. değiştiricisinin buna eşdeğer gerçek bir etkisi vardır)." #deepl:1052812032
+ 
+ country_weekly_innovation_max_mult: "İnovasyon Coşkusu" #deepl:592851823
+ country_weekly_innovation_max_mult_desc: "Bir [Concept('concept_country','$concept_country_possessive$')] $concept_innovation$ Teşviklerinin verimliliğinden her hafta bir [concept_technology] 'a yatırılabilecek maksimum @innovation![Nbsp] [concept_innovation] miktarında bir artış veya azalma" #deepl:2671835167

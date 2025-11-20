@@ -2,6 +2,10 @@
 #   GREY - MOD COMPATIBILITY SCRIPTED TRIGGERS   #
 ##################################################
 
+community_framework_is_active = {
+	always = no
+}
+
 morgenrote_is_active = { # Morgenrote
 	always = no
 }

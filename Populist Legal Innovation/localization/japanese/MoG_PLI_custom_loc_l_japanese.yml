@@ -1,0 +1,97 @@
+﻿l_japanese:
+ je_mog_pli_investment: "投資環境" #deepl:1299785262
+ je_mog_pli_investment_reason: "技術的に可能なこと以上に、またひとつの法律が奨励すること以上に、投資環境はさまざまな法律や経済状況の相互作用によって影響されるダイナミックな空間である。\n$PLI_JOURNAL_DELIMITER$\n#header $mog_pli_investment_tracking_bar_title$#!\n$mog_pli_investorconfidence_exp$\n$PLI_JOURNAL_DELIMITER$\n#header $mog_pli_corruption_tracking_bar_title$#!\n$mog_pli_systemiccorruption_exp$" #deepl:2652372920
+ mog_pli_investment_tracking_bar_title: "投資家の信頼" #deepl:4152636649
+ mog_pli_investment_tracking_bar_desc: "#header $mog_pli_investment_tracking_bar_title$#! #v [JournalEntry.GetCurrentBarProgress(ScriptedProgressBar.Self)|%1]#!" #deepl:3018594055
+ mog_pli_investment_increment_desc: "[Country.MakeScope.GetScriptValueDesc('mog_pli_investment_increment')]" #deepl:52556006
+ mog_pli_corruption_tracking_bar_title: "システムの腐敗" #deepl:3949053749
+ mog_pli_corruption_tracking_bar_desc: "#header $mog_pli_corruption_tracking_bar_title$#! #v [JournalEntry.GetCurrentBarProgress(ScriptedProgressBar.Self)|%1]#!" #deepl:2916165588
+ mog_pli_corruption_increment_desc: "[Country.MakeScope.GetScriptValueDesc('mog_pli_corruption_increment')]" #deepl:1826878765
+ 
+ mog_pli_investorconfidence_exp: "これは、裁量資金を利用できるすべての人々の純投資意欲を表している。これは、より低い税金、安価な労働力へのアクセス、強力な投資機会、そして、より多くの国民に権利を与え（政治的多元主義）、法の下の平等を実現し（法の支配）、利益の所有権を確保する（確実な財産権）法律によって改善される、#yellow 潜在的な#! 価値へと向かうだろう。投資家信頼感が変化するスピードは、あなたの[Concept('concept_institution','$concept_institutions$')].#indent_newline:2\n#red  注：#! 宣戦布告や突然の収穫失敗などの出来事が、投資家信頼感の現在のレベルを急変させることがある。#! \n\n #yellow 投資家信頼度の最大値 は、 に比べて の大きさによって制限される。投資プールの資金が多すぎることは、投資機会が弱いことを意味するからである。投資プールの最大規模は、常にその国のGDPの半分以下となる。#indent_newline:3   現在の効果は以下の通り：#indent_newline:3  潜在的な投資家の信頼：  最大投資家信頼度  投資プールへの拠出：#! [Concept('concept_gdp','$concept_gdp_short$')] [concept_investment_pool] \n\n#i #! \n#b #! #v [Country.MakeScope.ScriptValue('mog_pli_resting_target_loc_value')|%1]#! \n#b #! #v [Country.MakeScope.ScriptValue('mog_pli_max_investment_willingness_from_ip')|%1]#! \n#b #! #v [Country.GetModifier.GetValueFor('state_aristocrats_investment_pool_contribution_mult')|%1]#!#!#!" #deepl:987620402
+ mog_pli_systemiccorruption_exp: "これは、通常のビジネスの過程で個人が自らの手に油を差すことを可能にする、さまざまな法律の相互作用を表している。それは、#yellow 潜在的な#! の値へと向かうだろう。この値は、資金が潤沢にある官僚機構、強力な警察制度、透明性と説明責任を高める法律によって改善されることがほとんどである。汚職が変化するスピードは、あなたの[Concept('concept_institution','$concept_institutions$')] によって決まるが、汚職が変化するのは遅い。#indent_newline:3\n\n #i  現在の効果はこうだ：#! #indent_newline:3\n#b  潜在的なシステム腐敗：#! #v [Country.MakeScope.ScriptValue('mog_pli_corruption_target_loc_value')|%1]#! \n#b オール・ポップス 投資効率：#! #v  -[Country.MakeScope.ScriptValue('mog_pli_corruption_multiplier')|%1]#! #! #! [AddTextIf(Not(GetPlayer.MakeScope.Var('mog_pli_corruption_disabled').IsSet),'\n\n#instruction Corruption Game Rule is:#! #L Active#!')][AddTextIf(GetPlayer.MakeScope.Var('mog_pli_corruption_disabled').IsSet,'\n\n#instruction Corruption Game Rule is:#! #L Disabled#!')]" #deepl:1532604169
+ 
+ je_mog_pli_investment_modifier: "Total Investor Confidence" # We'll swap back to this one if these modifier types ever work in the future. 
+ je_mog_pli_dummy_investment_modifier: "$je_mog_pli_investment_modifier$#! \n$pli_disclaimer$" #deepl:1663894361
+ je_mog_pli_corruption_modifier: "組織的腐敗の影響" #deepl:778747261
+ je_mog_pli_aristocrats_investment_modifier: "$aristocrats$ 投資家の信頼" #deepl:2470171822
+ je_mog_pli_capitalists_investment_modifier: "$capitalists$ 投資家の信頼" #deepl:1032032325
+ je_mog_pli_officers_investment_modifier: "$officers$ 投資家の信頼" #deepl:2661194494
+ je_mog_pli_academics_investment_modifier: "$academics$ 投資家の信頼" #deepl:2377569698
+ je_mog_pli_bureaucrats_investment_modifier: "$bureaucrats$ 投資家の信頼" #deepl:4088483595
+ je_mog_pli_clergymen_investment_modifier: "$clergymen$ 投資家の信頼" #deepl:931549533
+ je_mog_pli_engineers_investment_modifier: "$engineers$ 投資家の信頼" #deepl:905200424
+ je_mog_pli_shopkeepers_investment_modifier: "$shopkeepers$ 投資家の信頼" #deepl:1042615245
+ je_mog_pli_farmers_investment_modifier: "$farmers$ 投資家の信頼" #deepl:3221817395
+ je_mog_pli_clerks_investment_modifier: "$clerks$ 投資家の信頼" #deepl:948245691
+ je_mog_pli_machinists_investment_modifier: "$machinists$ 投資家の信頼" #deepl:1911477797
+ je_mog_pli_soldiers_investment_modifier: "$soldiers$ 投資家の信頼" #deepl:1534439934
+ je_mog_pli_laborers_investment_modifier: "$laborers$ 投資家の信頼" #deepl:4934552
+ je_mog_pli_liberal_reaction: "PLI：リベラル・アジテーション" #deepl:3883787876
+ PLI_POLICE_INSTITUTION: "警察機関レベル" #deepl:3695223093
+ PLI_SCHOOL_INSTITUTION: "教育機関レベル" #deepl:119565117
+ PLI_HEALTH_INSTITUTION: "医療システム 機関レベル" #deepl:1631231090
+ PLI_SOCSEC_INSTITUTION: "社会保障機関レベル" #deepl:40582289
+ PLI_OHS_INSTITUTION: "労働安全機関レベル" #deepl:2305349007
+ PLI_HAFFAIRS_INSTITUTION: "内務機関レベル" #deepl:1435635816
+ 
+ state_aristocrats_investment_pool_contribution_mult: "$aristocrats$ [concept_investment_pool] 貢献熱意" #deepl:3643715859
+ state_capitalists_investment_pool_contribution_mult: "$capitalists$ [concept_investment_pool] 貢献熱意" #deepl:418366632
+ state_officers_investment_pool_contribution_mult: "$officers$ [concept_investment_pool] 貢献熱意" #deepl:3044010018
+ state_academics_investment_pool_contribution_mult: "$academics$ [concept_investment_pool] 貢献熱意" #deepl:3706290010
+ state_bureaucrats_investment_pool_contribution_mult: "$bureaucrats$ [concept_investment_pool] 貢献熱意" #deepl:3698368248
+ state_clergymen_investment_pool_contribution_mult: "$clergymen$ [concept_investment_pool] 貢献熱意" #deepl:3836838717
+ state_engineers_investment_pool_contribution_mult: "$engineers$ [concept_investment_pool] 貢献熱意" #deepl:229069879
+ state_shopkeepers_investment_pool_contribution_mult: "$shopkeepers$ [concept_investment_pool] 貢献熱意" #deepl:830346259
+ state_farmers_investment_pool_contribution_mult: "$farmers$ [concept_investment_pool] 貢献熱意" #deepl:3902244402
+ state_clerks_investment_pool_contribution_mult: "$clerks$ [concept_investment_pool] 貢献熱意" #deepl:3892052871
+ state_machinists_investment_pool_contribution_mult: "$machinists$ [concept_investment_pool] 貢献熱意" #deepl:28585167
+ state_soldiers_investment_pool_contribution_mult: "$soldiers$ [concept_investment_pool] 貢献熱意" #deepl:360686295
+ state_laborers_investment_pool_contribution_mult: "$laborers$ [concept_investment_pool] 貢献熱意" #deepl:1186483921
+ state_aristocrats_investment_pool_contribution_mult_desc: "$aristocrats$ [concept_investment_pool] の潜在的拠出額のうち、どれだけの額を実際に投資する意思があるかが増減する。\n$pli_disclaimer$" #deepl:680045757
+ state_capitalists_investment_pool_contribution_mult_desc: "$capitalists$ [concept_investment_pool] の潜在的拠出額のうち、どれだけの額を実際に投資する意思があるかが増減する。\n$pli_disclaimer$" #deepl:451649001
+ state_officers_investment_pool_contribution_mult_desc: "$officers$ [concept_investment_pool] の潜在的拠出額のうち、どれだけの額を実際に投資する意思があるかが増減する。\n$pli_disclaimer$" #deepl:1237242733
+ state_academics_investment_pool_contribution_mult_desc: "$academics$ [concept_investment_pool] の潜在的拠出額のうち、どれだけの額を実際に投資する意思があるかが増減する。\n$pli_disclaimer$" #deepl:56929338
+ state_bureaucrats_investment_pool_contribution_mult_desc: "$bureaucrats$ [concept_investment_pool] の潜在的拠出額のうち、どれだけの額を実際に投資する意思があるかが増減する。\n$pli_disclaimer$" #deepl:3267515121
+ state_clergymen_investment_pool_contribution_mult_desc: "$clergymen$ [concept_investment_pool] の潜在的拠出額のうち、どれだけの額を実際に投資する意思があるかが増減する。\n$pli_disclaimer$" #deepl:147500610
+ state_engineers_investment_pool_contribution_mult_desc: "$engineers$ [concept_investment_pool] の潜在的拠出額のうち、どれだけの額を実際に投資する意思があるかが増減する。\n$pli_disclaimer$" #deepl:2538640881
+ state_shopkeepers_investment_pool_contribution_mult_desc: "$shopkeepers$ [concept_investment_pool] の潜在的拠出額のうち、どれだけの額を実際に投資する意思があるかが増減する。\n$pli_disclaimer$" #deepl:1953939059
+ state_farmers_investment_pool_contribution_mult_desc: "$farmers$ [concept_investment_pool] の潜在的拠出額のうち、どれだけの額を実際に投資する意思があるかが増減する。\n$pli_disclaimer$" #deepl:2374316764
+ state_clerks_investment_pool_contribution_mult_desc: "$clerks$ [concept_investment_pool] の潜在的拠出額のうち、どれだけの額を実際に投資する意思があるかが増減する。\n$pli_disclaimer$" #deepl:4192098707
+ state_machinists_investment_pool_contribution_mult_desc: "$machinists$ [concept_investment_pool] の潜在的拠出額のうち、どれだけの額を実際に投資する意思があるかが増減する。\n$pli_disclaimer$" #deepl:3343110742
+ state_soldiers_investment_pool_contribution_mult_desc: "$soldiers$ [concept_investment_pool] の潜在的拠出額のうち、どれだけの額を実際に投資する意思があるかが増減する。\n$pli_disclaimer$" #deepl:2119022222
+ state_laborers_investment_pool_contribution_mult_desc: "$laborers$ [concept_investment_pool] の潜在的拠出額のうち、どれだけの額を実際に投資する意思があるかが増減する。\n$pli_disclaimer$" #deepl:3166875677
+ pli_disclaimer: "(この修飾子は実際に何かをするわけではなく、起こっていることをわかりやすく示しているだけです。個々のInvestor Confidence修飾子は、これと同等の実際の効果を持っている)" #deepl:3292006708
+ 
+ PLI_JOURNAL_DELIMITER: "@divider_start!@divider_mid!@divider_mid!@divider_mid!@divider_mid!@divider_mid!@divider_mid!@divider_mid!@divider_end!" #deepl:3819646036
+ 
+ rule_mog_pli_corruption_tracking: "PLIの汚職" #deepl:511415342
+ setting_pli_corruption_tracking_enabled: "有効" #deepl:3001197554
+ setting_pli_corruption_tracking_enabled_desc: "\n注意: よりバニラ的な体験がしたい場合や、腐敗のメカニズムを持つ他のMODを使用している場合は無効にしてください。" #deepl:3908169042
+ setting_pli_corruption_tracking_disabled: "無効" #deepl:1603118088
+ setting_pli_corruption_tracking_disabled_desc: "\n注：破損バーはジャーナルエントリーに表示されますが、値は0のままであるべきです。" #deepl:2794292117
+ rule_mog_pli_proliferation_tracking: "PLIの普及" #deepl:2893239298
+ setting_pli_proliferation_tracking_enabled: "有効" #deepl:3001197554
+ setting_pli_proliferation_tracking_enabled_desc: "\n注意: よりバニラ的な体験がしたい場合や、増殖メカニズムを持つ他のMODを持っている場合は無効にしてください。" #deepl:2295810607
+ setting_pli_proliferation_tracking_disabled: "無効" #deepl:1603118088
+ setting_pli_proliferation_tracking_disabled_desc: "\n注：増殖バーはジャーナルエントリーに表示されるが、値は 0 のままであるべきである。" #deepl:2935226836
+ 
+ je_mog_pli_innovation: "イノベーション・スペース" #deepl:3288668083
+ je_mog_pli_innovation_reason: "大学が存在すること以上に、あるいは法律が何を奨励するか以上に、イノベーションの推進力は、さまざまな法律や経済状況の相互作用によってダイナミックに影響される。\n$PLI_JOURNAL_DELIMITER$\n#header $mog_pli_innovation_tracking_bar_title$#!\n$mog_pli_innovationincentive_exp$\n$PLI_JOURNAL_DELIMITER$\n#header $mog_pli_proliferation_tracking_bar_title$#!\n$mog_pli_techproliferation_exp$" #deepl:2193131716
+ mog_pli_innovation_tracking_bar_title: "イノベーション奨励金" #deepl:2103705987
+ mog_pli_innovation_tracking_bar_desc: "#header $mog_pli_innovation_tracking_bar_title$#! #v [JournalEntry.GetCurrentBarProgress(ScriptedProgressBar.Self)|%1]#!" #deepl:3326922530
+ mog_pli_innovation_increment_desc: "[Country.MakeScope.GetScriptValueDesc('mog_pli_innovation_increment')]" #deepl:3836861569
+ mog_pli_proliferation_tracking_bar_title: "技術の拡散" #deepl:823768655
+ mog_pli_proliferation_tracking_bar_desc: "#header $mog_pli_proliferation_tracking_bar_title$#! #v [JournalEntry.GetCurrentBarProgress(ScriptedProgressBar.Self)|%1]#!" #deepl:2041819127
+ mog_pli_proliferation_increment_desc: "[Country.MakeScope.GetScriptValueDesc('mog_pli_proliferation_increment')]" #deepl:4164039937
+ 
+ mog_pli_innovationincentive_exp: "これは、自分たちの生活に影響を及ぼす問題に対して革新的な解決策を見出そうとする、集団レベルの意欲を表している。これは、人々がイニシアチブを取ることを妨げる障壁によって減少する。(古くからの疑問を考えてみよう。もし癌の治療法が、教育を受ける余裕のない人の頭の中にあるとしたらどうだろう？)\n #yellow  潜在的な#! 価値へと向かうだろう。これは、政治的多元主義、公平な法執行、生産的な土地改革、そして教育へのアクセス、表現の自由、貧困に対する安全保障を改善することによって、人々がリスクを取ることを広く支援する法律によって改善される。イノベーションのインセンティブが変化するスピードは、あなたの[Concept('concept_institution','$concept_institutions$')].#indent_newline:2\n#red  注：#! 戦争、飢饉、投資家の信頼感の欠如などの継続的な状況は、すべてイノベーションのインセン ティブを低下させる可能性がある。#! \n\n #yellow 最大イノベーション・インセンティブ は、少なくとも @acceptance_status_4 である 州の人口の割合によって制限される！  .#indent_newline:3   これによる現在の効果は以下の通りである：#indent_newline:3  潜在的イノベーション奨励金：  最大イノベーションインセンティブ：  現在の最大イノベーション削減:#! [Concept('concept_incorporated_state','$concept_incorporated$')] $second_rate_citizen$ [Concept('concept_acceptance_status','$concept_acceptance_status_short$')] \n\n#i #! \n#b #! #v [Country.MakeScope.ScriptValue('mog_pli_innovation_target_loc_value')|%1]#! \n#b #! #v [Country.MakeScope.ScriptValue('mog_pli_max_innovation_potential_from_citizenship')|%1]#! \n#b #! #v [Country.GetModifier.GetValueFor('country_weekly_innovation_max_mult')|%1]#!#!#!" #deepl:2658091887
+ mog_pli_techproliferation_exp: "これは、政府が世界の他の地域からイノベーションを輸入する能力を表しており、そうでなければ、抽出的制度の下での成長として知られている。これは、代表的なガバナンス、十分な資金を持つ官僚機構、子どもたちのための強力な権利、そして規制された富の抽出構造の中で労働力の参加と安全を高める法律によって改善される、#yellow 潜在的な#! 価値へと向かうだろう。拡散が変化するスピードは、あなたの[Concept('concept_institution','$concept_institutions$')] と[concept_literacy].#indent_newline:3\n\n #i  現在の効果である：#! #indent_newline:3\n#b  潜在的な拡散：#! #v [Country.MakeScope.ScriptValue('mog_pli_proliferation_target_loc_value')|%1]#! \n#b 技術普及ボーナス:#! #v  [Country.MakeScope.ScriptValue('mog_pli_proliferation_multiplier_loc')|%1] #! #! #! [AddTextIf(Not(GetPlayer.MakeScope.Var('mog_pli_proliferation_disabled').IsSet),'\n\n#instruction Proliferation Game Rule is:#! #L Active#!')][AddTextIf(GetPlayer.MakeScope.Var('mog_pli_proliferation_disabled').IsSet,'\n\n#instruction Proliferation Game Rule is:#! #L Disabled#!')]" #deepl:1444742723
+ 
+ je_mog_pli_innovation_modifier: "Innovation Incentive Effect" # We'll swap back to this one if these modifier types ever work in the future. 
+ je_mog_pli_dummy_innovation_modifier: "$je_mog_pli_innovation_modifier$#! \npli_disclaimer_2$。" #deepl:3807825725
+ je_mog_pli_proliferation_modifier: "技術拡散効果" #deepl:357267381
+ pli_disclaimer_2: "(このモディファイアは実際に何かをするわけではなく、起こっていることをわかりやすく示すだけである。数値Innovation Maxモディファイアは、これと同等の実際の効果を持つ)。" #deepl:1052812032
+ 
+ country_weekly_innovation_max_mult: "イノベーションへの熱意" #deepl:592851823
+ country_weekly_innovation_max_mult_desc: "@innovation![Nbsp] [concept_innovation] [Concept('concept_country','$concept_country_possessive$')] $concept_innovation$ インセンティブの効率性から、毎週[concept_technology] に投資できる最高額の増減。" #deepl:2671835167

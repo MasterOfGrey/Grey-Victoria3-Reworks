@@ -1,0 +1,97 @@
+﻿l_russian:
+ je_mog_pli_investment: "Инвестиционная среда" #deepl:1299785262
+ je_mog_pli_investment_reason: "Инвестиционная среда - это не только то, что технически возможно, и не только то, что поощряет тот или иной закон, это динамичное пространство, на которое влияет взаимодействие различных законов и экономических условий. \n$PLI_JOURNAL_DELIMITER$\n#header $mog_pli_investment_tracking_bar_title$#!\n$mog_pli_investorconfidence_exp$\n$PLI_JOURNAL_DELIMITER$\n#header $mog_pli_corruption_tracking_bar_title$#!\n$mog_pli_systemiccorruption_exp$" #deepl:2652372920
+ mog_pli_investment_tracking_bar_title: "Доверие инвесторов" #deepl:4152636649
+ mog_pli_investment_tracking_bar_desc: "#header $mog_pli_investment_tracking_bar_title$:#! #v [JournalEntry.GetCurrentBarProgress(ScriptedProgressBar.Self)|%1]#!" #deepl:3018594055
+ mog_pli_investment_increment_desc: "[Country.MakeScope.GetScriptValueDesc('mog_pli_investment_increment')]" #deepl:52556006
+ mog_pli_corruption_tracking_bar_title: "Системная коррупция" #deepl:3949053749
+ mog_pli_corruption_tracking_bar_desc: "#header $mog_pli_corruption_tracking_bar_title$:#! #v [JournalEntry.GetCurrentBarProgress(ScriptedProgressBar.Self)|%1]#!" #deepl:2916165588
+ mog_pli_corruption_increment_desc: "[Country.MakeScope.GetScriptValueDesc('mog_pli_corruption_increment')]" #deepl:1826878765
+ 
+ mog_pli_investorconfidence_exp: "Она представляет собой чистую готовность к инвестированию для всех людей, имеющих доступ к свободным средствам. Он будет двигаться в направлении #yellow потенциального#! значения, которое повышается благодаря снижению налогов, доступу к дешевой рабочей силе, широким инвестиционным возможностям и законам, обеспечивающим права большей части населения (политический плюрализм), равенство перед законом (верховенство права) и владение прибылью (гарантированные права собственности). Скорость изменения доверия инвесторов зависит от [Concept('concept_institution','$concept_institutions$')].#indent_newline:2 \n#red  Примечание:#! Такие события, как объявление войны или внезапный неурожай, могут вызвать резкое изменение текущего уровня доверия инвесторов...#! \n\nМаксимальный уровень доверия инвесторов #yellow #! ограничен размером пула [concept_investment_pool] по сравнению с [Concept('concept_gdp','$concept_gdp_short$')], так как слишком большое количество денег в инвестиционном пуле представляет собой слабые инвестиционные возможности. Максимальный размер пула всегда будет меньше половины ВВП страны.#indent_newline:3 \n\n #i  В настоящее время это приводит к следующим последствиям:#! #indent_newline:3 \n#b  Потенциальная уверенность инвестора:#! #v [Country.MakeScope.ScriptValue('mog_pli_resting_target_loc_value')|%1]#! \n#b Максимальное доверие инвесторов:#! #v [Country.MakeScope.ScriptValue('mog_pli_max_investment_willingness_from_ip')|%1]#! \n#b Вклады в инвестиционный пул:#! #v [Country.GetModifier.GetValueFor('state_aristocrats_investment_pool_contribution_mult')|%1]#!#!#!" #deepl:987620402
+ mog_pli_systemiccorruption_exp: "Она представляет собой взаимодействие различных законов, которые позволяют людям мазать свои руки в ходе обычного бизнеса. Она будет двигаться в направлении #yellow потенциального#! значения, которое в основном улучшается благодаря хорошо финансируемой бюрократии, сильным полицейским институтам, а также законам, повышающим прозрачность и подотчетность. Скорость изменения коррупции зависит от вашего [Concept('concept_institution','$concept_institutions$')], но коррупция меняется медленно.#indent_newline:3 \n\n #i  Текущие последствия этого:#! #indent_newline:3 \n#b  Потенциальная системная коррупция:#! #v [Country.MakeScope.ScriptValue('mog_pli_corruption_target_loc_value')|%1]#! \n#b Эффективность инвестиций:#! #v  -[Country.MakeScope.ScriptValue('mog_pli_corruption_multiplier')|%1]#! #! #! [AddTextIf(Not(GetPlayer.MakeScope.Var('mog_pli_corruption_disabled').IsSet),'\n\n#instruction Corruption Game Rule is:#! #L Active#!')][AddTextIf(GetPlayer.MakeScope.Var('mog_pli_corruption_disabled').IsSet,'\n\n#instruction Corruption Game Rule is:#! #L Disabled#!')]" #deepl:1532604169
+ 
+ je_mog_pli_investment_modifier: "Total Investor Confidence" # We'll swap back to this one if these modifier types ever work in the future. 
+ je_mog_pli_dummy_investment_modifier: "$je_mog_pli_investment_modifier$#! \n$pli_disclaimer$" #deepl:1663894361
+ je_mog_pli_corruption_modifier: "Эффект системной коррупции" #deepl:778747261
+ je_mog_pli_aristocrats_investment_modifier: "$aristocrats$ Доверие инвесторов" #deepl:2470171822
+ je_mog_pli_capitalists_investment_modifier: "$capitalists$ Доверие инвесторов" #deepl:1032032325
+ je_mog_pli_officers_investment_modifier: "$officers$ Доверие инвесторов" #deepl:2661194494
+ je_mog_pli_academics_investment_modifier: "$academics$ Доверие инвесторов" #deepl:2377569698
+ je_mog_pli_bureaucrats_investment_modifier: "$bureaucrats$ Доверие инвесторов" #deepl:4088483595
+ je_mog_pli_clergymen_investment_modifier: "$clergymen$ Доверие инвесторов" #deepl:931549533
+ je_mog_pli_engineers_investment_modifier: "$engineers$ Доверие инвесторов" #deepl:905200424
+ je_mog_pli_shopkeepers_investment_modifier: "$shopkeepers$ Доверие инвесторов" #deepl:1042615245
+ je_mog_pli_farmers_investment_modifier: "$farmers$ Доверие инвесторов" #deepl:3221817395
+ je_mog_pli_clerks_investment_modifier: "$clerks$ Доверие инвесторов" #deepl:948245691
+ je_mog_pli_machinists_investment_modifier: "$machinists$ Доверие инвесторов" #deepl:1911477797
+ je_mog_pli_soldiers_investment_modifier: "$soldiers$ Доверие инвесторов" #deepl:1534439934
+ je_mog_pli_laborers_investment_modifier: "$laborers$ Доверие инвесторов" #deepl:4934552
+ je_mog_pli_liberal_reaction: "PLI: Либеральная агитация" #deepl:3883787876
+ PLI_POLICE_INSTITUTION: "Уровень полицейского учреждения" #deepl:3695223093
+ PLI_SCHOOL_INSTITUTION: "Уровень учебного заведения" #deepl:119565117
+ PLI_HEALTH_INSTITUTION: "Уровень учреждения системы здравоохранения" #deepl:1631231090
+ PLI_SOCSEC_INSTITUTION: "Уровень учреждения социального обеспечения" #deepl:40582289
+ PLI_OHS_INSTITUTION: "Безопасность на рабочем месте Уровень учреждения" #deepl:2305349007
+ PLI_HAFFAIRS_INSTITUTION: "Внутренние дела Уровень учреждения" #deepl:1435635816
+ 
+ state_aristocrats_investment_pool_contribution_mult: "$aristocrats$ [concept_investment_pool] энтузиазм" #deepl:3643715859
+ state_capitalists_investment_pool_contribution_mult: "$capitalists$ [concept_investment_pool] энтузиазм" #deepl:418366632
+ state_officers_investment_pool_contribution_mult: "$officers$ [concept_investment_pool] энтузиазм" #deepl:3044010018
+ state_academics_investment_pool_contribution_mult: "$academics$ [concept_investment_pool] энтузиазм" #deepl:3706290010
+ state_bureaucrats_investment_pool_contribution_mult: "$bureaucrats$ [concept_investment_pool] энтузиазм" #deepl:3698368248
+ state_clergymen_investment_pool_contribution_mult: "$clergymen$ [concept_investment_pool] энтузиазм" #deepl:3836838717
+ state_engineers_investment_pool_contribution_mult: "$engineers$ [concept_investment_pool] энтузиазм" #deepl:229069879
+ state_shopkeepers_investment_pool_contribution_mult: "$shopkeepers$ [concept_investment_pool] энтузиазм" #deepl:830346259
+ state_farmers_investment_pool_contribution_mult: "$farmers$ [concept_investment_pool] энтузиазм" #deepl:3902244402
+ state_clerks_investment_pool_contribution_mult: "$clerks$ [concept_investment_pool] энтузиазм" #deepl:3892052871
+ state_machinists_investment_pool_contribution_mult: "$machinists$ [concept_investment_pool] энтузиазм" #deepl:28585167
+ state_soldiers_investment_pool_contribution_mult: "$soldiers$ [concept_investment_pool] энтузиазм" #deepl:360686295
+ state_laborers_investment_pool_contribution_mult: "$laborers$ [concept_investment_pool] энтузиазм" #deepl:1186483921
+ state_aristocrats_investment_pool_contribution_mult_desc: "[concept_investment_pool] Увеличение или уменьшение суммы потенциального взноса $aristocrats$, которую они готовы инвестировать. \n$pli_disclaimer$" #deepl:680045757
+ state_capitalists_investment_pool_contribution_mult_desc: "Увеличение или уменьшение суммы потенциального вклада $capitalists$ в [concept_investment_pool], которую они готовы инвестировать. \n$pli_disclaimer$" #deepl:451649001
+ state_officers_investment_pool_contribution_mult_desc: "[concept_investment_pool] Увеличение или уменьшение суммы потенциального взноса $officers$, которую они готовы инвестировать. \n$pli_disclaimer$" #deepl:1237242733
+ state_academics_investment_pool_contribution_mult_desc: "[concept_investment_pool] Увеличение или уменьшение суммы потенциального взноса $academics$, которую они готовы инвестировать. \n$pli_disclaimer$" #deepl:56929338
+ state_bureaucrats_investment_pool_contribution_mult_desc: "[concept_investment_pool] Увеличение или уменьшение суммы потенциального взноса $bureaucrats$, которую они готовы инвестировать. \n$pli_disclaimer$" #deepl:3267515121
+ state_clergymen_investment_pool_contribution_mult_desc: "[concept_investment_pool] Увеличение или уменьшение суммы потенциального взноса $clergymen$, которую они готовы инвестировать. \n$pli_disclaimer$" #deepl:147500610
+ state_engineers_investment_pool_contribution_mult_desc: "[concept_investment_pool] Увеличение или уменьшение суммы потенциального взноса $engineers$, которую они готовы инвестировать. \n$pli_disclaimer$" #deepl:2538640881
+ state_shopkeepers_investment_pool_contribution_mult_desc: "[concept_investment_pool] Увеличение или уменьшение суммы потенциального взноса $shopkeepers$, которую они готовы инвестировать. \n$pli_disclaimer$" #deepl:1953939059
+ state_farmers_investment_pool_contribution_mult_desc: "[concept_investment_pool] Увеличение или уменьшение суммы потенциального взноса $farmers$, которую они готовы инвестировать. \n$pli_disclaimer$" #deepl:2374316764
+ state_clerks_investment_pool_contribution_mult_desc: "[concept_investment_pool] Увеличение или уменьшение суммы потенциального взноса $clerks$, которую они готовы инвестировать. \n$pli_disclaimer$" #deepl:4192098707
+ state_machinists_investment_pool_contribution_mult_desc: "[concept_investment_pool] Увеличение или уменьшение суммы потенциального взноса $machinists$, которую они готовы инвестировать. \n$pli_disclaimer$" #deepl:3343110742
+ state_soldiers_investment_pool_contribution_mult_desc: "[concept_investment_pool] Увеличение или уменьшение суммы потенциального взноса $soldiers$, которую они готовы инвестировать. \n$pli_disclaimer$" #deepl:2119022222
+ state_laborers_investment_pool_contribution_mult_desc: "Увеличение или уменьшение суммы потенциального вклада $laborers$ в [concept_investment_pool], которую они готовы инвестировать. \n$pli_disclaimer$" #deepl:3166875677
+ pli_disclaimer: "(Этот модификатор на самом деле ничего не делает, он лишь показывает происходящее в более понятном виде. Отдельные модификаторы "Доверие инвестора" оказывают реальный эффект, эквивалентный этому)." #deepl:3292006708
+ 
+ PLI_JOURNAL_DELIMITER: "@divider_start!@divider_mid!@divider_mid!@divider_mid!@divider_mid!@divider_mid!@divider_mid!@divider_mid!@divider_end!" #deepl:3819646036
+ 
+ rule_mog_pli_corruption_tracking: "Коррупция PLI" #deepl:511415342
+ setting_pli_corruption_tracking_enabled: "Включено" #deepl:3001197554
+ setting_pli_corruption_tracking_enabled_desc: "Механика коррупции включена.\nПримечание: отключите это, если вы хотите получить более ванильный опыт или у вас есть другой мод с механикой коррупции." #deepl:3908169042
+ setting_pli_corruption_tracking_disabled: "Инвалид" #deepl:1603118088
+ setting_pli_corruption_tracking_disabled_desc: "Механика коррупции отключена.\nПримечание: полоса коррупции по-прежнему будет отображаться в записи журнала, но ее значение должно оставаться равным 0." #deepl:2794292117
+ rule_mog_pli_proliferation_tracking: "Распространение PLI" #deepl:2893239298
+ setting_pli_proliferation_tracking_enabled: "Включено" #deepl:3001197554
+ setting_pli_proliferation_tracking_enabled_desc: "Механика распространения включена.\nПримечание: отключите это, если вы хотите получить более ванильный опыт или у вас есть другой мод с механикой распространения." #deepl:2295810607
+ setting_pli_proliferation_tracking_disabled: "Инвалид" #deepl:1603118088
+ setting_pli_proliferation_tracking_disabled_desc: "Механика распространения отключена.\nПримечание: полоса распространения по-прежнему будет отображаться в записи журнала, но ее значение должно оставаться равным 0." #deepl:2935226836
+ 
+ je_mog_pli_innovation: "Инновационное пространство" #deepl:3288668083
+ je_mog_pli_innovation_reason: "В большей степени, чем существование университетов или то, что может стимулировать какой-либо отдельный закон, стремление к инновациям динамично зависит от взаимодействия различных законов и экономических условий. \n$PLI_JOURNAL_DELIMITER$\n#header $mog_pli_innovation_tracking_bar_title$#!\n$mog_pli_innovationincentive_exp$\n$PLI_JOURNAL_DELIMITER$\n#header $mog_pli_proliferation_tracking_bar_title$#!\n$mog_pli_techproliferation_exp$" #deepl:2193131716
+ mog_pli_innovation_tracking_bar_title: "Стимул для инноваций" #deepl:2103705987
+ mog_pli_innovation_tracking_bar_desc: "#header $mog_pli_innovation_tracking_bar_title$:#! #v [JournalEntry.GetCurrentBarProgress(ScriptedProgressBar.Self)|%1]#!" #deepl:3326922530
+ mog_pli_innovation_increment_desc: "[Country.MakeScope.GetScriptValueDesc('mog_pli_innovation_increment')]" #deepl:3836861569
+ mog_pli_proliferation_tracking_bar_title: "Распространение технологий" #deepl:823768655
+ mog_pli_proliferation_tracking_bar_desc: "#header $mog_pli_proliferation_tracking_bar_title$:#! #v [JournalEntry.GetCurrentBarProgress(ScriptedProgressBar.Self)|%1]#!" #deepl:2041819127
+ mog_pli_proliferation_increment_desc: "[Country.MakeScope.GetScriptValueDesc('mog_pli_proliferation_increment')]" #deepl:4164039937
+ 
+ mog_pli_innovationincentive_exp: "Это представляет собой стимул населения к поиску инновационных решений проблем, которые влияют на их жизнь. Этот показатель снижается из-за барьеров, которые мешают людям проявлять инициативу. (Задумайтесь над извечным вопросом: что, если лекарство от рака застряло в голове человека, который не может позволить себе образование?)\nОн будет двигаться к значению #yellow potential#!, которое повышается благодаря политическому плюрализму, беспристрастному правоприменению, продуктивным земельным реформам и законам, которые в целом поддерживают людей в стремлении рисковать, улучшая доступ к образованию, свободу слова и безопасность от бедности. Скорость изменения стимулов к инновациям зависит от вашего [Concept('concept_institution','$concept_institutions$')].#indent_newline:2 \n#red  Примечание:#! Текущие ситуации, такие как война, голод и отсутствие доверия инвесторов, могут снизить стимулы к инновациям...#! \n\n #yellow  Максимальный стимул к инновациям#! ограничивается долей населения в штатах [Concept('concept_incorporated_state','$concept_incorporated$')], которые имеют по крайней мере @acceptance_status_4! $second_rate_citizen$ [Concept('concept_acceptance_status','$concept_acceptance_status_short$')].#indent_newline:3 \n\n #i  В настоящее время это имеет следующие последствия:#! #indent_newline:3 \n#b  Потенциальный инновационный стимул:#! #v [Country.MakeScope.ScriptValue('mog_pli_innovation_target_loc_value')|%1]#! \n#b Максимальный инновационный стимул:#! #v [Country.MakeScope.ScriptValue('mog_pli_max_innovation_potential_from_citizenship')|%1]#! \n#b Текущее максимальное снижение инноваций:#! #v [Country.GetModifier.GetValueFor('country_weekly_innovation_max_mult')|%1]#!#!#!" #deepl:2658091887
+ mog_pli_techproliferation_exp: "Это представляет собой способность правительств импортировать инновации из других стран мира, иначе называемую ростом при экстрактивных институтах. Он будет двигаться в направлении #yellow потенциального#! значения, которое в основном улучшается благодаря представительному управлению, хорошо финансируемой бюрократии, сильным правам для детей и законам, повышающим участие рабочей силы и безопасность в рамках структур регулируемой добычи богатства. Скорость изменения распространения зависит от вашего [Concept('concept_institution','$concept_institutions$')] и [concept_literacy].#indent_newline:3 \n\n #i  Текущие эффекты этого таковы:#! #indent_newline:3 \n#b  Потенциальное распространение:#! #v [Country.MakeScope.ScriptValue('mog_pli_proliferation_target_loc_value')|%1]#! \n#b Бонус за распространение технологий:#! #v  [Country.MakeScope.ScriptValue('mog_pli_proliferation_multiplier_loc')|%1] #! #! #! [AddTextIf(Not(GetPlayer.MakeScope.Var('mog_pli_proliferation_disabled').IsSet),'\n\n#instruction Proliferation Game Rule is:#! #L Active#!')][AddTextIf(GetPlayer.MakeScope.Var('mog_pli_proliferation_disabled').IsSet,'\n\n#instruction Proliferation Game Rule is:#! #L Disabled#!')]" #deepl:1444742723
+ 
+ je_mog_pli_innovation_modifier: "Innovation Incentive Effect" # We'll swap back to this one if these modifier types ever work in the future. 
+ je_mog_pli_dummy_innovation_modifier: "$je_mog_pli_innovation_modifier$#! \n$pli_disclaimer_2$" #deepl:3807825725
+ je_mog_pli_proliferation_modifier: "Эффект распространения технологий" #deepl:357267381
+ pli_disclaimer_2: "(Этот модификатор на самом деле ничего не делает, он лишь показывает происходящее в более понятном виде. Модификатор Numberical Innovation Max имеет реальный эффект, эквивалентный этому)." #deepl:1052812032
+ 
+ country_weekly_innovation_max_mult: "Инновационный энтузиазм" #deepl:592851823
+ country_weekly_innovation_max_mult_desc: "Увеличение или уменьшение максимальной суммы @innovation![Nbsp] [concept_innovation] , которую можно инвестировать в [concept_technology] каждую неделю от эффективности [Concept('concept_country','$concept_country_possessive$')] $concept_innovation$ Стимулы" #deepl:2671835167
