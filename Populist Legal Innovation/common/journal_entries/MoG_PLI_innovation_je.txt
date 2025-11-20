@@ -6,7 +6,10 @@
 	weight = 9000
 	is_shown_when_inactive = { NOT = { is_country_type = decentralized } }
 	possible = {
-		has_journal_entry = je_mog_pli_investment
+		OR = {
+			community_framework_is_active = no
+			has_journal_entry = je_mog_pli_investment
+		}
 		is_revolutionary = no
 	}
 	
