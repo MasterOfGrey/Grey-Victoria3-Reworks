@@ -154,7 +154,7 @@ mog_pli_laborers_contribution_base_sv = {
 
 # Investment je responsiveness modifiers
 je_mog_pli_falling_confidence_mult = {	# The better things are beforehand, the slower they decline - accelerates as it falls.
-	add = 100
+	add = 110
 	subtract = var:mog_pli_investment_current_value
 	divide = 100
 }

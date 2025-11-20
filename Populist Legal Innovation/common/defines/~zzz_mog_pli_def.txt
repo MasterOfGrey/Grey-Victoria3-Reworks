@@ -1,0 +1,17 @@
+﻿### Due to the impacts on investor mechanics, big nations need to be much more strongly encouraged to self-invest.
+NAI = {
+	# Government construction applies this multiplier to domestic states when determining where to construct
+	GOVERNMENT_CONSTRUCTION_DOMESTIC_INVESTMENT_BIAS = 5.0		# Vanilla = 2.0
+	GOVERNMENT_CONSTRUCTION_SUBJECT_INVESTMENT_BIAS = 1.5
+	
+	# When the amount of saved value for foreign investment exceeds saved value for domestic investment, we start applying this bias to score for domestic autonomous constructions
+	# This is calculated as 1 + ( ( foreign investment / domestic investment - 1 ) * AUTONOMOUS_INVESTMENT_DOMESTIC_INVESTMENT_BIAS )
+	# The resulting multiplier is capped at AUTONOMOUS_INVESTMENT_DOMESTIC_INVESTMENT_BIAS_MAX
+	AUTONOMOUS_INVESTMENT_DOMESTIC_INVESTMENT_BIAS = 5.0		# Vanilla = 2.0
+	AUTONOMOUS_INVESTMENT_DOMESTIC_INVESTMENT_BIAS_MAX = 100.0	# Vanilla = 10.0
+	## Unfortunately, this doesn't matter much since you need net more foreign than domestic for it to trigger the bias...
+	
+	# Every this number of months, the saved values for domestic/foreign investment are reset to 0
+	# This is to ensure that a prolonged period of domestic investment early game doesn't produce such high saved numbers that anything that comes after it doesn't matter
+	AUTONOMOUS_INVESTMENT_DOMESTIC_INVESTMENT_BIAS_RESET_TIME_IN_MONTHS = 120	# Vanilla = 60.0
+}

@@ -151,6 +151,7 @@ mog_pli_falling_standards_response = {
 			if = {
 				limit = {
 					var:mog_pli_investment_current_value > mog_pli_investment_target	# Conditions are degrading
+					mog_pli_investment_target < 95
 				}
 				add_modifier = {
 					name = je_mog_pli_liberal_reaction
