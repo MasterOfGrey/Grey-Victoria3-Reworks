@@ -1,0 +1,38 @@
+﻿### Madagascar character template file ###
+
+# Madagascar - MAD
+
+MAD_ranavalona_hova = {
+	#Ranavalona I
+	first_name = "Ranavalona"
+	last_name = "Hova"
+	historical = yes
+	culture = primary_culture
+	ruler = yes
+	female = yes
+	dna = dna_ranavalona_i
+	age = 58							# Born 1778, no known date
+	interest_group = ig_landowners
+	ideology = ideology_authoritarian	# ideology_moderate
+	traits = {
+		imperious
+	}
+}
+
+MAD_rakotosehenondradama = {	# Added
+	# Radama II
+	first_name = "Radama"
+	last_name = "Hova"
+	historical = yes
+	culture = primary_culture
+	ruler = yes
+	# dna = ??
+	heir = yes
+	noble = yes
+	birth_date = 1829.9.23
+	interest_group = ig_landowners
+	ideology = ideology_modernizer_leader
+	traits = {
+		direct
+	}
+}

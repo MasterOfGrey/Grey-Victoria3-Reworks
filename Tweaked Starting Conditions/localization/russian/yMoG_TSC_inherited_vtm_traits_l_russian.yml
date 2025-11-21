@@ -1,0 +1,6 @@
+﻿l_russian:
+ state_trait_cold_water_port: "Гавань холодной воды" #deepl:1459935733
+ state_trait_difficult_terrain: "Сложная местность" #deepl:3945389093
+ state_trait_very_difficult_terrain: "Очень сложный рельеф" #deepl:743415511
+ 
+ weakened_by_internal_war: "Ослабленный внутренней войной" #deepl:83235005

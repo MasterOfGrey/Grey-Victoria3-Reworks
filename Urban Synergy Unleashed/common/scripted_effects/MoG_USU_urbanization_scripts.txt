@@ -1,0 +1,171 @@
+﻿## Reference Maths
+# When target changes: new adj = old_adj + target_delta -> t_d = [new_tar - base] - [old_tar - base] & base = mod - old_adj
+#  new_adj = old_adj + [new_tar - mod - old_adj] - [old_tar - mod - old_adj]
+#  new_adj = old_adj + new_tar - mod - old_adj - old_tar + mod + old_adj
+#  new_adj = new_tar - old_tar + old_adj	->	new_adj = new_tar - mod + old_adj
+
+# Seemed to be buggy in an event so....
+usu_manage_urbanization_modifiers = {
+## BASE MODIFIER HANDLING
+	if = {	## Safety Escape Clause 1
+		limit = {
+			OR = {	# If we have the modifier but have lost track of the variable or vice versa, clear out and re-trigger after a tick
+				AND = {
+					has_modifier = mog_urbanization
+					NOT = { has_variable = USU_urban_adjustment }
+				}
+				AND = {
+					NOT = { has_modifier = mog_urbanization }
+					has_variable = USU_urban_adjustment
+				}
+			}
+		}
+		if = {
+			limit = {
+				has_modifier = mog_urbanization
+			}
+			remove_modifier = mog_urbanization
+		}
+		if = {
+			limit = {
+				has_variable = USU_urban_adjustment
+			}
+			remove_variable = USU_urban_adjustment
+		}
+		trigger_event = {			# Re-trigger event to update mog_urbanization modifiers properly at least 1 tick later
+			id   = USU_secret_ev.1
+			days = 1
+		}
+	}
+	else = {	## Regular operation
+	## Initial setup for handling the history modifier replacement & normal follow-up modifier removal handling.
+		if = { # Start of Game: Clear modifiers (we'll put them back dw)
+			limit = {
+				has_modifier = mog_urbanization_start
+				NOT = { has_variable = USU_urban_adjustment }		# This is just for proceeding from initial defaults
+			}
+			remove_modifier = mog_urbanization_start
+			set_variable = {							# Ensure variable is initially set = starting USU modifier val
+				name = USU_urban_adjustment
+				value = 100								# From USU starting country modifier applied in history
+			}
+		}
+		else_if = { # Normal activity: Clear modifiers (we'll put them back dw)
+			limit = {
+				has_modifier = mog_urbanization
+			}
+			remove_modifier = mog_urbanization
+		}
+	## Initial setup for new countries appearing mid-game.
+		if = {
+			limit = { NOT = { has_variable = USU_urban_adjustment } }
+			set_variable = {
+				name = USU_urban_adjustment
+				value = 0								# They do not have an USU modifier so set = 0.
+			}
+		}
+	## Regular variable value setting function.
+		set_variable = {
+			name = USU_urban_adjustment
+			value = {									# Target - Base = Adjustment	& Old_Target = Current_Modifier
+				add = mog_usu_urbanization_target_calc				# Target -> From MoG_USU_values.txt (~200)
+				subtract = {										# Base -> Current_Modifier - Old_Adjustment
+					add = modifier:state_urbanization_per_level_add		# Should be same as target unless target dropped
+					subtract = var:USU_urban_adjustment					# Result should be base value
+				}
+			}
+		}
+	## Add updated modifier
+		if = {	## Safety Catch Clause	-	This is necessary because apparently Britain is a Problem*TM at game start, but could also trigger on revolter states etc.
+			limit = { var:USU_urban_adjustment > 200 }		# Safety Check
+			set_variable = {									# Re-apply initial conditions for variable = starting USU modifier val
+				name = USU_urban_adjustment
+				value = 100										# From USU starting country modifier applied in history
+			}
+			add_modifier = {									# Apply modifier with history equivalent value so things are ballpark ok before trying again.
+				name = mog_urbanization
+				multiplier = var:USU_urban_adjustment
+			}
+			trigger_event = {
+				id   = USU_secret_ev.1							# Re-trigger event to update mog_urbanization modifiers properly at least 1 tick later
+				days = 1
+			}
+		}
+		else = {
+			add_modifier = {
+				name = mog_urbanization
+				multiplier = var:USU_urban_adjustment
+			}
+		}
+	}
+## MULT MODIFIER HANDLING
+	if = {	## Safety Escape Clause 2
+		limit = {
+			OR = {	# If we have the modifier but have lost track of the variable or vice versa, clear out and re-trigger after a few ticks
+				AND = {
+					has_modifier = mog_urbanization_mult
+					NOT = { has_variable = USU_urban_adjustment_mult }
+				}
+				AND = {
+					NOT = { has_modifier = mog_urbanization_mult }
+					has_variable = USU_urban_adjustment_mult
+				}
+				AND = {
+					has_variable = USU_urban_adjustment_mult
+					var:USU_urban_adjustment_mult > 1		# Safety Check
+				}
+			}
+		}
+		if = {
+			limit = {
+				has_modifier = mog_urbanization_mult
+			}
+			remove_modifier = mog_urbanization_mult
+		}
+		if = {
+			limit = {
+				has_variable = USU_urban_adjustment_mult
+			}
+			remove_variable = USU_urban_adjustment_mult
+		}
+		trigger_event = {			# Re-trigger event to update mog_urbanization modifiers properly at least 1 week later
+			id   = USU_secret_ev.1
+			days = 10
+		}
+	}
+	else = {	## Regular operation
+	## No initial setup in history -> straight to normal follow-up modifier removal handling.
+		if = {	# Normal activity: Clear modifiers (we'll put them back dw) - (no history modifier here)
+			limit = {
+				has_modifier = mog_urbanization_mult
+			}
+			remove_modifier = mog_urbanization_mult
+		}
+	## Initial setup for new countries without the modifier.
+		if = { # Create variables for adjusted modifier values if not set already
+			limit = {
+				NOT = { has_variable = USU_urban_adjustment_mult }
+			}
+			set_variable = {							# Ensure variable is initially set = starting USU modifier val
+				name = USU_urban_adjustment_mult
+				value = 0								# From there NOT being an USU starting country modifier
+			}
+		}
+	## Regular variable value setting function - Negate multipliers cause they're gross and make balancing hard.
+		set_variable = {						# Algebra is Var = Target - Current, where Current = Base + Var, Base is numerically unknown, and Base = Current - Var
+			name = USU_urban_adjustment_mult	# Therefore formula Var B = Target value - ( Current value - Var A)
+			value = {
+				add = mog_usu_urbanization_target_mult
+				subtract = {
+					add = modifier:state_urbanization_per_level_mult
+					subtract = var:USU_urban_adjustment_mult
+				}
+			}
+		}
+	## Add updated modifier
+		add_modifier = {
+			name = mog_urbanization_mult
+			multiplier = var:USU_urban_adjustment_mult
+		}
+	}
+}

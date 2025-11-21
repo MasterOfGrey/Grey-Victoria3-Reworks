@@ -1,0 +1,6 @@
+﻿l_french:
+ state_trait_cold_water_port: "Port d'eau froide" #deepl:1459935733
+ state_trait_difficult_terrain: "Terrain difficile" #deepl:3945389093
+ state_trait_very_difficult_terrain: "Terrain très difficile" #deepl:743415511
+ 
+ weakened_by_internal_war: "Affaiblie par une guerre interne" #deepl:83235005

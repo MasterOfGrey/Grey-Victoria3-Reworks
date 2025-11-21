@@ -35,7 +35,7 @@ MoG_PLI_do_investment_stuff_effect = {
 		MoG_PLI_set_investment_variables_effect = yes
 	}
 	
-	## Add the dummy Investment modifier.
+	## Add the dummy investment modifier.
 	scope:journal_entry = {	# Explainer modifier
 		if = { 				# Remove outdated modifier.
 			limit = { has_modifier = je_mog_pli_dummy_investment_modifier }
@@ -227,14 +227,23 @@ calculate_pop_investment_adjustment = {
 	set_variable = {
 		name = mog_pli_$POP$_contribution_adjustment	# This a positive number that represents the magnitude of the negative adjustment modifier.
 		value = {										# Contributions are 0-1 so remember we're ultimately getting a % portion of a "percent" value.
-			add = {														# Calculate what the default modifier value would be right now - 
-				add = mog_pli_$POP$_contribution_base_sv					# - i.e. the total unadjusted modifier based on previous month.
-				add = {															# Account for if base sources of the modifier have changed since previously.
-					add = modifier:state_$POP$_investment_pool_contribution_add
-					subtract = {
-						add = mog_pli_$POP$_contribution_base_sv				# base - adjustment = actual modifier value
-						subtract = var:mog_pli_$POP$_contribution_adjustment	# if sources have increased -> result +ve, else -ve if decreased
-					}															# -> tracks underlying changes correctly and adapts to them
+			add = {											# Calculate what the default modifier value would be right now - 
+				if = {
+					limit = {	# Check if continuing from previous modifier or not first (avoid Div/0 error spam)
+						has_variable = mog_pli_investment_current_prev
+						var:mog_pli_investment_current_prev > 0
+					}
+					add = mog_pli_$POP$_contribution_base_sv					# - i.e. the total unadjusted modifier based on previous month.
+					add = {															# Account for if base sources of the modifier have changed since previously.
+						add = modifier:state_$POP$_investment_pool_contribution_add
+						subtract = {
+							add = mog_pli_$POP$_contribution_base_sv				# base - adjustment = actual modifier value
+							subtract = var:mog_pli_$POP$_contribution_adjustment	# if sources have increased -> result +ve, else -ve if decreased
+						}															# -> tracks underlying changes correctly and adapts to them
+					}
+				}
+				else = {
+					add = modifier:state_$POP$_investment_pool_contribution_add	# - i.e. the total unadjusted modifier when the JE activates for the first time.
 				}
 			}
 			multiply = {								# ^So now that we have the current base value from above, multiply by investment % from the JE.

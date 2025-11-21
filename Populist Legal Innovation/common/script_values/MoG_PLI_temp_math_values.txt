@@ -1,5 +1,6 @@
 ﻿## Calculation values used exclusively in maths for effect setting.
 
+# Investment je modifier multipliers
 mog_pli_dummy_contribution_multiplier = {
 	value = {
 		add = {								# We need to multiply by inverse of the investment % from the JE.
@@ -147,6 +148,96 @@ mog_pli_laborers_contribution_base_sv = {
 			add = var:mog_pli_laborers_contribution_adjustment
 			multiply = 100
 			divide = var:mog_pli_investment_current_prev
+		}
+	}
+}
+
+# Investment je responsiveness modifiers
+je_mog_pli_falling_confidence_mult = {	# The better things are beforehand, the slower they decline - accelerates as it falls.
+	add = 110
+	subtract = var:mog_pli_investment_current_value
+	divide = 100
+}
+
+je_mog_pli_reaction_multiplier = {	# Value of 1 will result in 100%
+	add = { 
+		add = mog_pli_investment_increment	# Ranges from 0.1 to 1.4
+		multiply = 2													# E.g. 0.2
+	}
+	multiply = {
+		add = var:mog_pli_investment_current_value
+		subtract = mog_pli_investment_target
+		divide = 100						# Convert to %				# x10% = 2% 
+	}
+}
+
+# Innovation je modifier multipliers
+mog_pli_innovation_multiplier = {
+	value = {
+		add = {								# We need to multiply by inverse of the investment % from the JE.
+			add = 100											# innovation_current_value is actually the limiting proportion
+			subtract = var:mog_pli_innovation_current_value		# 100-current gets the proportion for the negative penalty
+			divide = 100										# Convert to %
+		}
+	}
+}
+
+mog_pli_proliferation_multiplier = {
+	value = {
+		add = {								# This one does not need inverting.
+			add = var:mog_pli_proliferation_current_value		# gets the proliferation value for the bonus
+			divide = 100										# Convert to %
+		}
+	}
+}
+
+mog_pli_proliferation_multiplier_loc = {
+	value = {
+		add = mog_pli_proliferation_multiplier	
+		multiply = 4							# From the default value for je_mog_pli_proliferation_modifier
+	}
+}
+
+mog_pli_max_innovation_base_sv = {
+	value = {													# Calculate what the default modifier value would be right now - 
+		add = {														# - i.e. the total unadjusted modifier based on previous month:
+			add = var:mog_pli_max_innovation_adjustment					# Cross multiply [ investment_current_prev/100 = adjustment/total ]
+			multiply = 100												# Solve for total -> [ = (adjustment*100)/investment_current_prev ]
+			divide = var:mog_pli_innovation_current_prev
+		}
+	}
+}
+
+# On Action values
+mog_pli_war_confidence_hit_val = {
+	value = {
+		add = local_var:je_var
+		add = {
+			add = -10
+			multiply = {
+				add = local_var:target_var
+				divide = local_var:initiator_var
+			}
+		}
+		min = 0
+	}
+}
+mog_pli_war_confidence_target_hit_val = {
+	value = {
+		add = local_var:je_var
+		add = {
+			add = -10
+			multiply = {
+				add = local_var:initiator_var
+				divide = { 
+					value = local_var:target_var
+					min = 1
+				}
+			}
+		}
+		min = {
+			value = local_var:je_var
+			divide = 2
 		}
 	}
 }

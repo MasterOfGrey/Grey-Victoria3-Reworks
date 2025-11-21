@@ -1,0 +1,6 @@
+﻿l_korean:
+ state_trait_cold_water_port: "콜드 워터 하버" #deepl:1459935733
+ state_trait_difficult_terrain: "어려운 지형" #deepl:3945389093
+ state_trait_very_difficult_terrain: "매우 어려운 지형" #deepl:743415511
+ 
+ weakened_by_internal_war: "내부 전쟁으로 약화됨" #deepl:83235005

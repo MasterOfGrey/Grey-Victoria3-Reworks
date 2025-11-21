@@ -5,6 +5,11 @@ mog_urbanization = {
 	state_urbanization_per_level_add = 1		# Balance point is 200 for new Urban Centre design - modifier applied with a multiplier to achieve this.
 }
 
+mog_urbanization_start = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_positive.dds
+	state_urbanization_per_level_add = 100
+}
+
 mog_urbanization_mult = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_positive.dds
 	state_urbanization_per_level_mult = 1		# Target for this is to always make the net effect = 0 to get rid of the vanilla modifiers.

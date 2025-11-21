@@ -17,3 +17,21 @@ PLI_secret_ev.1 = {
 		}
 	}
 }
+
+PLI_secret_ev.2 = {
+	type = country_event
+	hidden = yes
+	
+	immediate = {
+		MoG_PLI_do_innovation_setup_effect = yes
+		set_variable = {	# Reset progress level variable now that starting condition is properly applied (since it can't be done *before* saving in JE's immediate block).
+			name = mog_pli_innovation_current_value
+			value = "je:je_mog_pli_innovation.scripted_bar_progress(mog_pli_innovation_tracking_bar)"
+		}
+		MoG_PLI_do_proliferation_setup_effect = yes
+		set_variable = {
+			name = mog_pli_proliferation_current_value
+			value = "je:je_mog_pli_innovation.scripted_bar_progress(mog_pli_proliferation_tracking_bar)"
+		}
+	}
+}

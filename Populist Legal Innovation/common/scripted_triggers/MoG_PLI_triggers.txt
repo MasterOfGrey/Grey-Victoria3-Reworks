@@ -3,6 +3,10 @@ pli_corruption_tracking_trigger = {
 	has_game_rule = pli_corruption_tracking_enabled
 }
 
+pli_proliferation_tracking_trigger = {
+	has_game_rule = pli_proliferation_tracking_enabled
+}
+
 # Conditional Triggers
 harvest_condition_good = {
 	OR = {

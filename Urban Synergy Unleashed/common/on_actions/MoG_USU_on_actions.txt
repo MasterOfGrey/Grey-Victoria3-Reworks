@@ -1,18 +1,26 @@
 ﻿# Root = Country
 
 ### Urbanization Actions
+on_game_started_after_lobby = {
+	on_actions = {
+		mog_urban_setup_action
+	}
+}
+
+mog_urban_setup_action = {
+	effect = {
+		every_country = {
+			trigger_event = USU_secret_ev.1		# Call event to update mog_urbanization modifiers.
+		}
+	}
+}
+
 on_yearly_pulse_country = {
 	### Urban Action
 	on_actions = {
-		delay = { days = { 15 350 } }
+		delay = { days = { 180 350 } }	# It's already the staggered pulse but this seems to help
 		mog_urban_on_action
 		mog_fix_forgotten_ports_action
-	}
-	
-	### Canal Action
-	random_events = {
-		9 = 0
-		1 = canal_dividends.1
 	}
 }
 
@@ -27,11 +35,8 @@ on_country_released_as_overlord_subject = { on_actions = { mog_urban_on_action }
 on_country_released_as_independent = { on_actions = { mog_urban_on_action } }
 
 mog_urban_on_action = {
-	effect = {
-		trigger_event = {			# Call event to update mog_urbanization modifiers.
-			id   = usu_secret_ev.1
-			days = 1
-		}
+	events = {				# Call event to update mog_urbanization modifiers.
+		USU_secret_ev.1		# Needs to be an event, not scripted effect, to be re-triggered from error-handler.
 	}
 }
 
@@ -50,6 +55,11 @@ mog_fix_forgotten_ports_action = {
 				}
 			}
 		}
+	}
+	### Canal Action
+	random_events = {
+		9 = 0
+		1 = canal_dividends.1
 	}
 }
 

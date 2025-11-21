@@ -1,10 +1,11 @@
 ﻿je_mog_pli_investment = {
-	icon = "gfx/interface/icons/event_icons/event_industry.dds"
+	icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
 	group = je_group_internal_affairs
 	should_be_pinned_by_default = yes
+	can_revolution_inherit = yes
 	weight = 9000
 	is_shown_when_inactive = { NOT = { is_country_type = decentralized } }
-	possible = { always = yes }
+	possible = { is_revolutionary = no }
 	
 	scripted_progress_bar = mog_pli_investment_tracking_bar
 	scripted_progress_bar = mog_pli_corruption_tracking_bar
@@ -19,41 +20,32 @@
 			name = mog_pli_corruption_current_value
 			value = "je:je_mog_pli_investment.scripted_bar_progress(mog_pli_corruption_tracking_bar)"
 		}
-		#set/initialize country/journal relevant variables
 		if = {
-			limit = {
-				pli_corruption_tracking_trigger = no
-				is_player = yes
+			limit = {community_framework_is_active = yes }
+			create_com_progress_bar_with_both = {
+				progress_bar = mog_pli_investment_tracking_bar
+				index = 0
+				color = default
+				bar_increase_color = green
+				bar_decrease_color = bad
+				drift_value = mog_pli_investment_tracking_bar_weekly_drift
+				target_type = gold_bar
+				target_value = mog_pli_resting_target_loc_value
 			}
-			set_global_variable = mog_pli_corruption_disabled	# This is used for Loc
+			create_com_progress_bar_with_both = {
+				progress_bar = mog_pli_corruption_tracking_bar
+				index = 1
+				color = bad
+				bar_increase_color = bad
+				bar_decrease_color = green
+				drift_value = mog_pli_corruption_tracking_bar_weekly_drift
+				target_type = gold_bar
+				target_value = mog_pli_corruption_target_loc_value
+			}
 		}
 	}
 	
 	status_desc = {
-	#	first_valid = {
-	#		triggered_desc = {
-	#			desc = je_mog_pli_investment_good
-	#			trigger = {
-	#				je:je_mog_pli_investment = {
-	#					"scripted_bar_progress(mog_pli_investment_tracking_bar)" > 60
-	#				}
-	#			}
-	#		}
-	#		triggered_desc = {
-	#			desc = je_mog_pli_investment_bad
-	#			trigger = {
-	#				je:je_mog_pli_investment = {
-	#					"scripted_bar_progress(mog_pli_investment_tracking_bar)" < 40
-	#				}
-	#			}
-	#		}
-	#		triggered_desc = {
-	#			desc = je_mog_pli_investment_neutral
-	#			trigger = {
-	#				always = yes
-	#			}
-	#		}
-	#	}
 	}
 
 	on_weekly_pulse = {

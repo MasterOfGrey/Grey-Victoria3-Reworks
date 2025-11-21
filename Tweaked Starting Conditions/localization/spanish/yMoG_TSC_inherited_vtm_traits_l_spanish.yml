@@ -1,0 +1,6 @@
+﻿l_spanish:
+ state_trait_cold_water_port: "Puerto de Aguas Frías" #deepl:1459935733
+ state_trait_difficult_terrain: "Terreno difícil" #deepl:3945389093
+ state_trait_very_difficult_terrain: "Terreno muy difícil" #deepl:743415511
+ 
+ weakened_by_internal_war: "Debilitado por la guerra interna" #deepl:83235005

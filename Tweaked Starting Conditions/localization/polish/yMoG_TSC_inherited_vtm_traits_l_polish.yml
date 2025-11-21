@@ -1,0 +1,6 @@
+﻿l_polish:
+ state_trait_cold_water_port: "Port zimnej wody" #deepl:1459935733
+ state_trait_difficult_terrain: "Trudny teren" #deepl:3945389093
+ state_trait_very_difficult_terrain: "Bardzo trudny teren" #deepl:743415511
+ 
+ weakened_by_internal_war: "Osłabiony przez wojnę wewnętrzną" #deepl:83235005

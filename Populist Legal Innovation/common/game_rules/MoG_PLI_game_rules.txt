@@ -4,3 +4,10 @@
 	pli_corruption_tracking_enabled = {}
 	pli_corruption_tracking_disabled = {}
 }
+
+mog_pli_proliferation_tracking = {
+	default = pli_proliferation_tracking_enabled
+	
+	pli_proliferation_tracking_enabled = {}
+	pli_proliferation_tracking_disabled = {}
+}

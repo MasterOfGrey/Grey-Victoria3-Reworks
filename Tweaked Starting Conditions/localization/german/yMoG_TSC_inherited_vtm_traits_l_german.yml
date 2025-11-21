@@ -1,0 +1,6 @@
+﻿l_german:
+ state_trait_cold_water_port: "Kaltwasserhafen" #deepl:1459935733
+ state_trait_difficult_terrain: "Schwieriges Terrain" #deepl:3945389093
+ state_trait_very_difficult_terrain: "Sehr schwieriges Terrain" #deepl:743415511
+ 
+ weakened_by_internal_war: "Durch internen Krieg geschwächt" #deepl:83235005

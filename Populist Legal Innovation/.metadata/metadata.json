@@ -1,18 +1,19 @@
 {
   "name" : "Grey's Populist Legal Innovation",
-  "id" : "",
+  "id" : "3609384092",
   "version" : "",
   "supported_game_version" : "",
   "short_description" : "",
   "tags" : [
         "Balance",
         "Expansion",
+        "Economy And Buildings",
         "Fixes",
         "Gameplay",
         "Historical",
         "Journal Entries",
         "Technologies",
-        "1.9"
+        "1.11"
     ],
   "relationships" : [],
   "game_custom_data" : {

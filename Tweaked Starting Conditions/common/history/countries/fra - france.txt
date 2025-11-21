@@ -79,6 +79,12 @@
 			}
 		}
 		
+		add_company = company_type:company_maison_worth		# It shouldn't be founded yet but company_dmc prevents it otherwise
+		company:company_maison_worth = {
+			set_company_establishment_date = 1835.12.1
+			set_company_state_region = s:STATE_ILE_DE_FRANCE
+		}
+		
 		add_company = company_type:company_dmc
 		company:company_dmc = {
 			set_company_establishment_date = 1746.1.1

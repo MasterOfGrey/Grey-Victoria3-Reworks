@@ -1,0 +1,11 @@
+﻿### Innovation modifiers?
+## These don't actually *work* - but they can be used to make nice tooltips/descriptions to better explain things to the player (as the modifiers will be hard to parse).
+
+country_weekly_innovation_max_mult={	# Check if it actually doesn't work
+	decimals=0
+	color=good
+	percent=yes
+	game_data={
+		ai_value=0
+	}
+}
