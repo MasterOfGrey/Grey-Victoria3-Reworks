@@ -28,6 +28,7 @@
  je_mog_pli_soldiers_investment_modifier: "$soldiers$ Investor Confidence"
  je_mog_pli_laborers_investment_modifier: "$laborers$ Investor Confidence"
  je_mog_pli_liberal_reaction: "PLI: Liberal Agitation"
+ je_mog_pli_redistributive_reaction: "PLI: Populist Agitation"
  PLI_POLICE_INSTITUTION: "Police Institution Level"
  PLI_SCHOOL_INSTITUTION: "Education Institution Level"
  PLI_HEALTH_INSTITUTION: "Health System Institution Level"

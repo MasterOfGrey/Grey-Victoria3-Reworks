@@ -28,6 +28,7 @@
  je_mog_pli_soldiers_investment_modifier: "$soldiers$ Anlegervertrauen" #deepl:1534439934
  je_mog_pli_laborers_investment_modifier: "$laborers$ Anlegervertrauen" #deepl:4934552
  je_mog_pli_liberal_reaction: "PLI: Liberale Agitation" #deepl:3883787876
+ je_mog_pli_redistributive_reaction: "PLI: Populistische Agitation" #deepl:1884117642
  PLI_POLICE_INSTITUTION: "Ebene der Polizeieinrichtung" #deepl:3695223093
  PLI_SCHOOL_INSTITUTION: "Bildung Institution Ebene" #deepl:119565117
  PLI_HEALTH_INSTITUTION: "Gesundheitssystem Ebene der Einrichtung" #deepl:1631231090

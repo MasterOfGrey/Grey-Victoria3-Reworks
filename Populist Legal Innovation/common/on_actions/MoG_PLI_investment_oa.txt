@@ -152,11 +152,24 @@ mog_pli_falling_standards_response = {
 				limit = {
 					var:mog_pli_investment_current_value > mog_pli_investment_target	# Conditions are degrading
 					mog_pli_investment_target < 95
+					var:mog_pli_investment_current_value < mog_pli_max_investment_willingness_from_ip
 				}
 				add_modifier = {
 					name = je_mog_pli_liberal_reaction
 					years = 10
-					multiplier = je_mog_pli_liberal_reaction_multiplier
+					multiplier = je_mog_pli_reaction_multiplier
+					is_decaying = yes
+				}
+			}
+			else_if = {
+				limit = {
+					var:mog_pli_investment_current_value > mog_pli_max_investment_willingness_from_ip	# Conditions are overheated AND degrading
+					mog_pli_investment_target < 85
+				}
+				add_modifier = {
+					name = je_mog_pli_redistributive_reaction
+					years = 5
+					multiplier = je_mog_pli_reaction_multiplier
 					is_decaying = yes
 				}
 			}

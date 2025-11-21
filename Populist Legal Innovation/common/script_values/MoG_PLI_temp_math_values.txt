@@ -159,7 +159,7 @@ je_mog_pli_falling_confidence_mult = {	# The better things are beforehand, the s
 	divide = 100
 }
 
-je_mog_pli_liberal_reaction_multiplier = {	# Value of 1 will result in 100%
+je_mog_pli_reaction_multiplier = {	# Value of 1 will result in 100%
 	add = { 
 		add = mog_pli_investment_increment	# Ranges from 0.1 to 1.4
 		multiply = 2													# E.g. 0.2

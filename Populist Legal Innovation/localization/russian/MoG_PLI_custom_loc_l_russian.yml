@@ -28,6 +28,7 @@
  je_mog_pli_soldiers_investment_modifier: "$soldiers$ Доверие инвесторов" #deepl:1534439934
  je_mog_pli_laborers_investment_modifier: "$laborers$ Доверие инвесторов" #deepl:4934552
  je_mog_pli_liberal_reaction: "PLI: Либеральная агитация" #deepl:3883787876
+ je_mog_pli_redistributive_reaction: "PLI: Популистская агитация" #deepl:1884117642
  PLI_POLICE_INSTITUTION: "Уровень полицейского учреждения" #deepl:3695223093
  PLI_SCHOOL_INSTITUTION: "Уровень учебного заведения" #deepl:119565117
  PLI_HEALTH_INSTITUTION: "Уровень учреждения системы здравоохранения" #deepl:1631231090

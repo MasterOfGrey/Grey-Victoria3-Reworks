@@ -28,6 +28,7 @@
  je_mog_pli_soldiers_investment_modifier: "$soldiers$ Zaufanie inwestorów" #deepl:1534439934
  je_mog_pli_laborers_investment_modifier: "$laborers$ Zaufanie inwestorów" #deepl:4934552
  je_mog_pli_liberal_reaction: "PLI: Liberalna agitacja" #deepl:3883787876
+ je_mog_pli_redistributive_reaction: "PLI: Agitacja populistyczna" #deepl:1884117642
  PLI_POLICE_INSTITUTION: "Poziom instytucji policyjnej" #deepl:3695223093
  PLI_SCHOOL_INSTITUTION: "Poziom instytucji edukacyjnej" #deepl:119565117
  PLI_HEALTH_INSTITUTION: "Poziom instytucji systemu opieki zdrowotnej" #deepl:1631231090
