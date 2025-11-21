@@ -17,6 +17,11 @@ mog_pli_max_investment_willingness_from_ip = {	# We apply this as a ceiling to a
 	desc = ""
 }
 
+mog_pli_max_investment_willingness_from_ip_response_val = {
+	value = 100
+	multiply = mog_pli_max_investment_willingness_from_ip
+}
+
 ### Investment Willingness Values
 mog_pli_investment_target = {	# This represents the conditions which support investor confidence and capability
 	value = 0

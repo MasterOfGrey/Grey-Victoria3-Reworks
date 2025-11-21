@@ -163,7 +163,8 @@ mog_pli_falling_standards_response = {
 			}
 			else_if = {
 				limit = {
-					var:mog_pli_investment_current_value > mog_pli_max_investment_willingness_from_ip	# Conditions are overheated AND degrading
+					var:mog_pli_investment_current_value > mog_pli_max_investment_willingness_from_ip_response_val	# Conditions are overheated AND degrading
+					var:mog_pli_investment_current_value > 55
 					mog_pli_investment_target < 85
 				}
 				add_modifier = {
