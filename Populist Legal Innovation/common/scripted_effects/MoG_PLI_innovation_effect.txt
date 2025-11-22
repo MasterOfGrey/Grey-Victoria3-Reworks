@@ -250,7 +250,6 @@ pli_proliferation_potential_cache_update = {
 				name = pli_country_tech_percent_cache
 				value = 100		# If global variable isn't set, don't accidentally crash the nation over it being missing.
 			}
-			
 		}
 	}
 }

@@ -32,46 +32,49 @@ on_harvest_condition_started_in_country = {
 
 mog_pli_war_confidence = {
 	effect = {
-		set_local_variable = {
-			name = target_var
-			value = scope:target.army_power_projection
-		}
-		set_local_variable = {
-			name = initiator_var
-			value = scope:initiator.army_power_projection
-		}
-		scope:initiator = {
+		if = {	# Don't spam errors before JE's initialise properly.
+			limit = { has_variable = mog_pli_investment_current_value }
 			set_local_variable = {
-				name = je_var
-				value = var:mog_pli_investment_current_value
+				name = target_var
+				value = scope:target.army_power_projection
 			}
-			# debug_log = "PLI-varcheck: [SCOPE.GetLocalVariable('je_var').GetValue]"
-			je:je_mog_pli_investment = {
-				set_bar_progress = {
-					value = mog_pli_war_confidence_hit_val
-					name = mog_pli_investment_tracking_bar
+			set_local_variable = {
+				name = initiator_var
+				value = scope:initiator.army_power_projection
+			}
+			scope:initiator = {
+				set_local_variable = {
+					name = je_var
+					value = var:mog_pli_investment_current_value
+				}
+				# debug_log = "PLI-varcheck: [SCOPE.GetLocalVariable('je_var').GetValue]"
+				je:je_mog_pli_investment = {
+					set_bar_progress = {
+						value = mog_pli_war_confidence_hit_val
+						name = mog_pli_investment_tracking_bar
+					}
+				}
+				set_variable = {	# Reset progress level variable after changing progress bar.
+					name = mog_pli_investment_current_value
+					value = "je:je_mog_pli_investment.scripted_bar_progress(mog_pli_investment_tracking_bar)"
 				}
 			}
-			set_variable = {	# Reset progress level variable after changing progress bar.
-				name = mog_pli_investment_current_value
-				value = "je:je_mog_pli_investment.scripted_bar_progress(mog_pli_investment_tracking_bar)"
-			}
-		}
-		scope:target = {
-			set_local_variable = {
-				name = je_var
-				value = var:mog_pli_investment_current_value
-			}
-			# debug_log = "PLI-varcheck: [SCOPE.GetLocalVariable('je_var').GetValue]"
-			je:je_mog_pli_investment = {
-				set_bar_progress = {
-					value = mog_pli_war_confidence_target_hit_val
-					name = mog_pli_investment_tracking_bar
+			scope:target = {
+				set_local_variable = {
+					name = je_var
+					value = var:mog_pli_investment_current_value
 				}
-			}
-			set_variable = {	# Reset progress level variable after changing progress bar.
-				name = mog_pli_investment_current_value
-				value = "je:je_mog_pli_investment.scripted_bar_progress(mog_pli_investment_tracking_bar)"
+				# debug_log = "PLI-varcheck: [SCOPE.GetLocalVariable('je_var').GetValue]"
+				je:je_mog_pli_investment = {
+					set_bar_progress = {
+						value = mog_pli_war_confidence_target_hit_val
+						name = mog_pli_investment_tracking_bar
+					}
+				}
+				set_variable = {	# Reset progress level variable after changing progress bar.
+					name = mog_pli_investment_current_value
+					value = "je:je_mog_pli_investment.scripted_bar_progress(mog_pli_investment_tracking_bar)"
+				}
 			}
 		}
 	}
@@ -79,59 +82,62 @@ mog_pli_war_confidence = {
 
 mog_pli_hc_confidence = {
 	effect = {	# Root = country
-		set_local_variable = {
-			name = je_var
-			value = var:mog_pli_investment_current_value
-		}
-		if = {
-			limit = {
-				scope:state.state_region = { harvest_condition_good = yes}
+		if = {	# Don't spam errors before JE's initialise properly.
+			limit = { has_variable = mog_pli_investment_current_value }
+			set_local_variable = {
+				name = je_var
+				value = var:mog_pli_investment_current_value
 			}
-			je:je_mog_pli_investment = {
-				set_bar_progress = {
-					value = {
-						add = local_var:je_var
-						add = {
-							add = 5
-							multiply = {
-								add = scope:intensity
+			if = {
+				limit = {
+					scope:state.state_region = { harvest_condition_good = yes}
+				}
+				je:je_mog_pli_investment = {
+					set_bar_progress = {
+						value = {
+							add = local_var:je_var
+							add = {
+								add = 5
+								multiply = {
+									add = scope:intensity
+								}
 							}
+							max = 100
 						}
-						max = 100
+						name = mog_pli_investment_tracking_bar
 					}
-					name = mog_pli_investment_tracking_bar
+				}
+				set_variable = {	# Reset progress level variable after changing progress bar.
+					name = mog_pli_investment_current_value
+					value = "je:je_mog_pli_investment.scripted_bar_progress(mog_pli_investment_tracking_bar)"
 				}
 			}
-			set_variable = {	# Reset progress level variable after changing progress bar.
-				name = mog_pli_investment_current_value
-				value = "je:je_mog_pli_investment.scripted_bar_progress(mog_pli_investment_tracking_bar)"
-			}
-		}
-		else = {
-			je:je_mog_pli_investment = {
-				set_bar_progress = {
-					value = {
-						add = local_var:je_var
-						add = {
-							if = {
-								limit = { morgenrote_is_active = yes }
-								add = -3	# Bad events are more common with Morgenrote.
+			else = {
+				je:je_mog_pli_investment = {
+					set_bar_progress = {
+						value = {
+							add = local_var:je_var
+							add = {
+								if = {
+									limit = { morgenrote_is_active = yes }
+									add = -3	# Bad events are more common with Morgenrote.
+								}
+								else = {
+									add = -5
+								}
+								multiply = {
+									add = scope:intensity
+								}
 							}
-							else = {
-								add = -5
-							}
-							multiply = {
-								add = scope:intensity
-							}
+							min = 0
 						}
-						min = 0
+						name = mog_pli_investment_tracking_bar
 					}
-					name = mog_pli_investment_tracking_bar
 				}
-			}
-			set_variable = {	# Reset progress level variable after changing progress bar.
-				name = mog_pli_investment_current_value
-				value = "je:je_mog_pli_investment.scripted_bar_progress(mog_pli_investment_tracking_bar)"
+				set_variable = {	# Reset progress level variable after changing progress bar.
+					name = mog_pli_investment_current_value
+					value = "je:je_mog_pli_investment.scripted_bar_progress(mog_pli_investment_tracking_bar)"
+				}
 			}
 		}
 	}
