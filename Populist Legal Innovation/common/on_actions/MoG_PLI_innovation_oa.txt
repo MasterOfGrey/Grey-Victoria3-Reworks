@@ -15,6 +15,9 @@ mog_pli_innovation_var_setup_oa = {
 			}
 			set_global_variable = mog_pli_proliferation_disabled	# This is used for Loc
 		}
+		else = {
+			pli_proliferation_global_cache_update = yes
+		}
 	}
 }
 
@@ -27,15 +30,40 @@ mog_pli_citizenship_cache_setup_oa = {
 }
 
 # Caching
+on_monthly_pulse = {
+	on_actions = {
+		mog_pli_pro_global_cache_update_oa
+	}
+}
+
+mog_pli_pro_global_cache_update_oa = {
+	effect = {
+		if = {
+			limit = { pli_proliferation_tracking_trigger = yes }
+			pli_proliferation_global_cache_update = yes
+		}
+	}
+}
+
 on_monthly_pulse_country = {
 	on_actions = {
 		mog_pli_citizenship_cache_oa
+		mog_pli_pro_potential_cache_oa
 	}
 }
 
 mog_pli_citizenship_cache_oa = {
 	effect = {
 		pli_innovation_citizenship_percent_cache_update = yes
+	}
+}
+
+mog_pli_pro_potential_cache_oa = {
+	effect = {
+		if = {
+			limit = { pli_proliferation_tracking_trigger = yes }
+			pli_proliferation_potential_cache_update = yes
+		}
 	}
 }
 

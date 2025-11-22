@@ -190,3 +190,67 @@ pli_innovation_citizenship_percent_cache_update = {
 	}
 }
 
+# scope = none/global
+pli_proliferation_global_cache_update = {
+	if = {
+		limit = { NOT = { has_global_variable = pli_global_tech_lead_cache } }
+		set_global_variable = {
+			name = pli_global_tech_lead_cache
+			value = 0
+		}
+	}
+	every_country = {
+		limit = { NOT = { is_country_type = decentralized } }	# Iterate through all non-decents
+		save_temporary_scope_as = country						# and find most techs researched
+		set_local_variable = {									# value to save as global ref.
+			name = pli_global_prolif_temp_var
+			value = scope:country.techs_researched
+		}
+		if = {
+			limit = {
+				local_var:pli_global_prolif_temp_var > global_var:pli_global_tech_lead_cache
+			}
+			set_global_variable = {
+				name = pli_global_tech_lead_cache
+				value = local_var:pli_global_prolif_temp_var
+			}
+		}
+	}
+}
+
+# scope = country
+pli_proliferation_potential_cache_update = {
+	if = {
+		limit = { NOT = { is_country_type = decentralized } }
+		if = {
+			limit = { NOT = { has_variable = pli_country_tech_percent_cache } }
+			set_variable = {
+				name = pli_country_tech_percent_cache
+				value = 0
+			}
+		}
+		if = {
+			limit = { has_global_variable = pli_global_tech_lead_cache }
+			set_variable = {
+				name = pli_country_tech_percent_cache
+				value = {
+					add = 100
+					multiply = {	# Potential is proportional to the number of techs out in the world that you *don't* have...
+						value = 1												# 100%
+						subtract = {											# MINUS the proportion you DO have:	
+							add = techs_researched								# Number of this country's techs
+							divide = global_var:pli_global_tech_lead_cache		# Number of leading country's techs
+						}
+					}
+				}
+			}
+		}
+		else = {
+			set_variable = {
+				name = pli_country_tech_percent_cache
+				value = 100		# If global variable isn't set, don't accidentally crash the nation over it being missing.
+			}
+			
+		}
+	}
+}

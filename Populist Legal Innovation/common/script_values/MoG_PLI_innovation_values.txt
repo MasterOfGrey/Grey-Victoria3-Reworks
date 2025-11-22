@@ -17,6 +17,16 @@ mog_pli_max_proliferation_from_literacy = {	# We apply this as a ceiling to any/
 	max = 100							# But we'll clamp it to be safe.
 }
 
+mog_pli_max_proliferation_from_position = {	# We apply this as a ceiling to any/all proliferation calculations.
+	if = {
+		limit = { has_variable = pli_country_tech_percent_cache }
+		value = var:pli_country_tech_percent_cache
+	}
+	else = {
+		value = 100		# If it doesn't have the variable, don't accidentally crash the nation over it being missing.
+	}
+}
+
 ### Innovation Incentive Values
 mog_pli_innovation_target = {	# This represents the conditions which support independent innovation incentives
 	value = 0
@@ -502,10 +512,18 @@ mog_pli_proliferation_target = {	# This represents the conditions which support 
 	add = mog_pli_pro_women					# Max 5		- Best: Women's Suffrage
 	min = 0												# Min Bonus is 0%, Max Bonus is 100% - realistically getting either should be nearly impossible.
 	max = mog_pli_max_proliferation_from_literacy		# Already in 0-100 range
+	max = mog_pli_max_proliferation_from_position		# Already in 0-100 range
 }
 
 mog_pli_proliferation_target_loc_value = {
 	value = mog_pli_proliferation_target
+	divide = 100
+}
+
+mog_pli_proliferation_max_loc_value = {
+	value = 100
+	max = mog_pli_max_proliferation_from_literacy		# Already in 0-100 range
+	max = mog_pli_max_proliferation_from_position		# Already in 0-100 range
 	divide = 100
 }
 
