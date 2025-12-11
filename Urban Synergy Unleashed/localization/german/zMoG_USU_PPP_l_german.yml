@@ -6,8 +6,8 @@
  # Technologies
  PPP_tech_hv_power: "Kraftübertragung"
  PPP_tech_hv_power_desc: "Durch den Einsatz von Konvertern und Reglern ist die Fernübertragung von Hochspannung nun für mehrere Ziele mit unterschiedlichen Anforderungen nutzbar."
- USU_tech_hv_railways: "Industrielle Transformatoren"
- USU_tech_hv_railways_desc: "Durch die Verwendung skalierbarer Transformatoren können wir den vollen Nutzen aus Wechselstrom ziehen. So können wir konstant hohe Spannungen über weite Entfernungen liefern und die Stromübertragung wirtschaftlich gestalten."
+ usu_tech_hv_railways: "Industrielle Transformatoren"
+ usu_tech_hv_railways_desc: "Durch die Verwendung skalierbarer Transformatoren können wir den vollen Nutzen aus Wechselstrom ziehen. So können wir konstant hohe Spannungen über weite Entfernungen liefern und die Stromübertragung wirtschaftlich gestalten."
 	
  # Goods
  ppp_hv_power: "Hochspannungsleistung"

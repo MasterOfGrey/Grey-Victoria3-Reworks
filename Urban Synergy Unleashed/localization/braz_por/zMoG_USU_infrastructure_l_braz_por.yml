@@ -24,20 +24,20 @@
  pmg_logistics_services_port_coastal: "Logística de Envio"
  pmg_logistics_services_port_river: "Logística Fluvial"
  
- USU_pm_rail_logistics_0: "Sem coordenação logística"
- USU_pm_rail_logistics_1: "Planejamento de subsídio de cota"
- USU_pm_rail_logistics_2: "Licitação de acesso remoto"
- USU_pm_rail_logistics_3: "Gestão da cadeia de abastecimento"
+ usu_pm_rail_logistics_0: "Sem coordenação logística"
+ usu_pm_rail_logistics_1: "Planejamento de subsídio de cota"
+ usu_pm_rail_logistics_2: "Licitação de acesso remoto"
+ usu_pm_rail_logistics_3: "Gestão da cadeia de abastecimento"
 
- USU_pm_port_c_logistics_0: "Sem coordenação logística"
- USU_pm_port_c_logistics_1: "Planejamento de subsídio de cota"
- USU_pm_port_c_logistics_2: "Licitação de acesso remoto"
- USU_pm_port_c_logistics_3: "Gestão da cadeia de abastecimento"
+ usu_pm_port_c_logistics_0: "Sem coordenação logística"
+ usu_pm_port_c_logistics_1: "Planejamento de subsídio de cota"
+ usu_pm_port_c_logistics_2: "Licitação de acesso remoto"
+ usu_pm_port_c_logistics_3: "Gestão da cadeia de abastecimento"
  
- USU_pm_port_r_logistics_0: "Sem coordenação logística"
- USU_pm_port_r_logistics_1: "Planejamento de subsídio de cota"
- USU_pm_port_r_logistics_2: "Licitação de acesso remoto"
- USU_pm_port_r_logistics_3: "Gestão da cadeia de abastecimento"
+ usu_pm_port_r_logistics_0: "Sem coordenação logística"
+ usu_pm_port_r_logistics_1: "Planejamento de subsídio de cota"
+ usu_pm_port_r_logistics_2: "Licitação de acesso remoto"
+ usu_pm_port_r_logistics_3: "Gestão da cadeia de abastecimento"
  
  # Canals
  # pm_canal: "Fechaduras movidas a vapor"

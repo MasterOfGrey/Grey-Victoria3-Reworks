@@ -24,20 +24,20 @@
  pmg_logistics_services_port_coastal: "配送物流"
  pmg_logistics_services_port_river: "フリュービアル・ロジスティクス"
  
- USU_pm_rail_logistics_0: "物流調整なし"
- USU_pm_rail_logistics_1: "割当量計画"
- USU_pm_rail_logistics_2: "リモートアクセス入札"
- USU_pm_rail_logistics_3: "サプライチェーンマネジメント"
+ usu_pm_rail_logistics_0: "物流調整なし"
+ usu_pm_rail_logistics_1: "割当量計画"
+ usu_pm_rail_logistics_2: "リモートアクセス入札"
+ usu_pm_rail_logistics_3: "サプライチェーンマネジメント"
 
- USU_pm_port_c_logistics_0: "物流調整なし"
- USU_pm_port_c_logistics_1: "割当量計画"
- USU_pm_port_c_logistics_2: "リモートアクセス入札"
- USU_pm_port_c_logistics_3: "サプライチェーンマネジメント"
+ usu_pm_port_c_logistics_0: "物流調整なし"
+ usu_pm_port_c_logistics_1: "割当量計画"
+ usu_pm_port_c_logistics_2: "リモートアクセス入札"
+ usu_pm_port_c_logistics_3: "サプライチェーンマネジメント"
  
- USU_pm_port_r_logistics_0: "物流調整なし"
- USU_pm_port_r_logistics_1: "割当量計画"
- USU_pm_port_r_logistics_2: "リモートアクセス入札"
- USU_pm_port_r_logistics_3: "サプライチェーンマネジメント"
+ usu_pm_port_r_logistics_0: "物流調整なし"
+ usu_pm_port_r_logistics_1: "割当量計画"
+ usu_pm_port_r_logistics_2: "リモートアクセス入札"
+ usu_pm_port_r_logistics_3: "サプライチェーンマネジメント"
  
  # Canals
  # pm_canal: "蒸気動力ロック"

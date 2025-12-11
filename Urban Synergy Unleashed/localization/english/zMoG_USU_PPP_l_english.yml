@@ -6,8 +6,8 @@
  # Technologies
  PPP_tech_hv_power:   "Power Transmission"
  PPP_tech_hv_power_desc: "By utilising converters and regulators, long-distance power transmission of high voltages are now useable by multiple destinations with differing needs."
- USU_tech_hv_railways:   "Industrial Transformers"
- USU_tech_hv_railways_desc: "By utilising scalable transformers we can gain the full benefit of alternating electrical current, allowing consistently high voltages to be delivered over long-distances and make power transmission economical."
+ usu_tech_hv_railways:   "Industrial Transformers"
+ usu_tech_hv_railways_desc: "By utilising scalable transformers we can gain the full benefit of alternating electrical current, allowing consistently high voltages to be delivered over long-distances and make power transmission economical."
 	
  # Goods
  ppp_hv_power: "High-Voltage Power"

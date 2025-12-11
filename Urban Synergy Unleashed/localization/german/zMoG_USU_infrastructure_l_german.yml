@@ -24,20 +24,20 @@
  pmg_logistics_services_port_coastal: "Versandlogistik"
  pmg_logistics_services_port_river: "Fluviale Logistik"
  
- USU_pm_rail_logistics_0: "Keine logistische Koordination"
- USU_pm_rail_logistics_1: "Kontingentplanung"
- USU_pm_rail_logistics_2: "Gebote für Fernzugriff"
- USU_pm_rail_logistics_3: "Lieferkettenmanagement"
+ usu_pm_rail_logistics_0: "Keine logistische Koordination"
+ usu_pm_rail_logistics_1: "Kontingentplanung"
+ usu_pm_rail_logistics_2: "Gebote für Fernzugriff"
+ usu_pm_rail_logistics_3: "Lieferkettenmanagement"
 
- USU_pm_port_c_logistics_0: "Keine logistische Koordination"
- USU_pm_port_c_logistics_1: "Kontingentplanung"
- USU_pm_port_c_logistics_2: "Gebote für Fernzugriff"
- USU_pm_port_c_logistics_3: "Lieferkettenmanagement"
+ usu_pm_port_c_logistics_0: "Keine logistische Koordination"
+ usu_pm_port_c_logistics_1: "Kontingentplanung"
+ usu_pm_port_c_logistics_2: "Gebote für Fernzugriff"
+ usu_pm_port_c_logistics_3: "Lieferkettenmanagement"
  
- USU_pm_port_r_logistics_0: "Keine logistische Koordination"
- USU_pm_port_r_logistics_1: "Kontingentplanung"
- USU_pm_port_r_logistics_2: "Gebote für Fernzugriff"
- USU_pm_port_r_logistics_3: "Lieferkettenmanagement"
+ usu_pm_port_r_logistics_0: "Keine logistische Koordination"
+ usu_pm_port_r_logistics_1: "Kontingentplanung"
+ usu_pm_port_r_logistics_2: "Gebote für Fernzugriff"
+ usu_pm_port_r_logistics_3: "Lieferkettenmanagement"
  
  # Canals
  # pm_canal: "Dampfbetriebene Schlösser"

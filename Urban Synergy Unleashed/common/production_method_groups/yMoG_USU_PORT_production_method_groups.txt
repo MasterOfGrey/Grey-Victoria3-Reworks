@@ -15,10 +15,10 @@ pmg_base_building_port = {
 pmg_logistics_services_port_coastal = {
 	texture = "gfx/interface/icons/generic_icons/mixed_icon_refining.dds"
 	production_methods = {
-		USU_pm_port_c_logistics_0
-		USU_pm_port_c_logistics_1
-		USU_pm_port_c_logistics_2
-		USU_pm_port_c_logistics_3
+		usu_pm_port_c_logistics_0
+		usu_pm_port_c_logistics_1
+		usu_pm_port_c_logistics_2
+		usu_pm_port_c_logistics_3
 	}
 }
 
@@ -37,10 +37,10 @@ pmg_base_building_river_port = {
 pmg_logistics_services_port_river = {
 	texture = "gfx/interface/icons/generic_icons/mixed_icon_refining.dds"
 	production_methods = {
-		USU_pm_port_r_logistics_0
-		USU_pm_port_r_logistics_1
-		USU_pm_port_r_logistics_2
-		USU_pm_port_r_logistics_3
+		usu_pm_port_r_logistics_0
+		usu_pm_port_r_logistics_1
+		usu_pm_port_r_logistics_2
+		usu_pm_port_r_logistics_3
 	}
 }
 

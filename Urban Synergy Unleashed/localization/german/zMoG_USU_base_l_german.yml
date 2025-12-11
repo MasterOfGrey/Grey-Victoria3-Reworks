@@ -8,9 +8,9 @@
  mog_subfarm_modifiers_occupancy_scaled: "Urbane Synergie Auswirkungen auf die Infrastruktur" #deepl:1060897918
  
  # Building
- USU_bg_port_infrastructure: "Häfen" #deepl:687823806
- USU_bg_river_port_infrastructure: "Häfen" #deepl:687823806
- USU_bg_public_greens: "Öffentliche Grünflächen" #deepl:1270138251
+ usu_bg_port_infrastructure: "Häfen" #deepl:687823806
+ usu_bg_river_port_infrastructure: "Häfen" #deepl:687823806
+ usu_bg_public_greens: "Öffentliche Grünflächen" #deepl:1270138251
  
  building_river_port: "Flussdocks"
  usu_building_public_green: "Öffentliches Grün"
@@ -77,10 +77,10 @@
 
  # PMGs
  pmg_base_building_river_port: "Anlegestellen"
- USU_pmg_government_administration_emergency_services: "Notdienste"
- USU_pmg_government_administration_law_enforcement: "Strafverfolgung"
- USU_pmg_public_space_management: "Verwaltung öffentlicher Räume"
- USU_pmg_public_parklands: "Parklandschaftsnutzung"
+ usu_pmg_government_administration_emergency_services: "Notdienste"
+ usu_pmg_government_administration_law_enforcement: "Strafverfolgung"
+ usu_pmg_public_space_management: "Verwaltung öffentlicher Räume"
+ usu_pmg_public_parklands: "Parklandschaftsnutzung"
  pmg_trade_center_port_status: "Port Adjacency Status" #deepl:23372774
  
  # PMs
@@ -88,22 +88,22 @@
  pm_rp_small_port: "Piers am Flussufer"
  pm_rp_industrial_port: "Industriehäfen"
  pm_rp_modern_port: "Moderne Häfen"
- USU_pm_hv_arcades: "Arkaden"
- USU_pm_grid_streetlights: "Glühlampen für Straßenlaternen"
- USU_pm_no_emergency_services: "Keine Notdienste"
- USU_pm_basic_fire_brigade: "Basisfeuerwehren"
- USU_pm_response_planning: "Katastrophenschutzplanung"
- USU_pm_modern_emergency_services: "Moderne Notfalldienste"
- USU_pm_no_police: "Gemeinschaftsaktionsgruppen"
- USU_pm_local_police: "Örtliche Polizei"
- USU_pm_dedicated_police: "Engagierte Polizei"
- USU_pm_militarized_police: "Durchsetzung des Kriegsrechts"
- USU_pm_community_orgs: "Gemeinschaftsorganisationen"
- USU_pm_private_firms: "Private Organisationen"
- USU_pm_pub_priv_partners: "Öffentlich-private Partnerschaften"
- USU_pm_village_stables: "Gemeinschaftsställe"
- USU_pm_contained_wilderness: "Geschützte Wildnis"
- USU_pm_seasonal_fairgrounds: "Saisonale Jahrmärkte"
+ usu_pm_hv_arcades: "Arkaden"
+ usu_pm_grid_streetlights: "Glühlampen für Straßenlaternen"
+ usu_pm_no_emergency_services: "Keine Notdienste"
+ usu_pm_basic_fire_brigade: "Basisfeuerwehren"
+ usu_pm_response_planning: "Katastrophenschutzplanung"
+ usu_pm_modern_emergency_services: "Moderne Notfalldienste"
+ usu_pm_no_police: "Gemeinschaftsaktionsgruppen"
+ usu_pm_local_police: "Örtliche Polizei"
+ usu_pm_dedicated_police: "Engagierte Polizei"
+ usu_pm_militarized_police: "Durchsetzung des Kriegsrechts"
+ usu_pm_community_orgs: "Gemeinschaftsorganisationen"
+ usu_pm_private_firms: "Private Organisationen"
+ usu_pm_pub_priv_partners: "Öffentlich-private Partnerschaften"
+ usu_pm_village_stables: "Gemeinschaftsställe"
+ usu_pm_contained_wilderness: "Geschützte Wildnis"
+ usu_pm_seasonal_fairgrounds: "Saisonale Jahrmärkte"
  pm_trade_center_inland: "Kein Hafenzugang" #deepl:4277007637
  pm_trade_center_port: "Zugang zum Hafen" #deepl:931806394
  

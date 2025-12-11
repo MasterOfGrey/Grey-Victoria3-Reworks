@@ -168,7 +168,7 @@ pm_ac_electric_trains = {
 	replacement_if_valid = pm_ac_electric_trains_principle_transport_3
 	
 	unlocking_technologies = {
-		USU_tech_hv_railways
+		usu_tech_hv_railways
 	}
 	
 	building_modifiers = {
@@ -355,7 +355,7 @@ pm_ac_electric_trains_principle_transport_3 = {
 	}
 	
 	unlocking_technologies = {
-		USU_tech_hv_railways
+		usu_tech_hv_railways
 	}
 	
 	building_modifiers = {

@@ -32,10 +32,10 @@ pmg_passenger_trains = {
 pmg_logistics_services_railway = {
 	texture = "gfx/interface/icons/generic_icons/mixed_icon_refining.dds"
 	production_methods = {
-		USU_pm_rail_logistics_0
-		USU_pm_rail_logistics_1
-		USU_pm_rail_logistics_2
-		USU_pm_rail_logistics_3
+		usu_pm_rail_logistics_0
+		usu_pm_rail_logistics_1
+		usu_pm_rail_logistics_2
+		usu_pm_rail_logistics_3
 	}
 }
 

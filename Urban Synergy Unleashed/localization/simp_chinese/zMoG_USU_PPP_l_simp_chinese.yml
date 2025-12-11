@@ -6,8 +6,8 @@
  # Technologies
  PPP_tech_hv_power: "动力传输"
  PPP_tech_hv_power_desc: "通过利用转换器和调节器，长距离高压电力传输现在可供具有不同需求的多个目的地使用。"
- USU_tech_hv_railways: "工业变压器"
- USU_tech_hv_railways_desc: "通过利用可扩展的变压器，我们可以充分利用交流电的优势，实现长距离输送持续的高电压，并使电力传输更加经济。"
+ usu_tech_hv_railways: "工业变压器"
+ usu_tech_hv_railways_desc: "通过利用可扩展的变压器，我们可以充分利用交流电的优势，实现长距离输送持续的高电压，并使电力传输更加经济。"
 	
  # Goods
  ppp_hv_power: "高压电源"

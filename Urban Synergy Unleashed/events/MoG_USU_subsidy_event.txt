@@ -1,9 +1,9 @@
-﻿namespace = MoG_USU_subsidy_event
+﻿namespace = MoG_usu_subsidy_event
 
 ### Pairs with the AI subsidy on_action, disabled in a save-compatible way until if/when the other option becomes available/desirable again.
 # AI subsidies processing
 # State scope
-MoG_USU_subsidy_event.1 = {
+MoG_usu_subsidy_event.1 = {
 	type = state_event
 	hidden = yes
 	

@@ -1,6 +1,6 @@
 ﻿### Sea Ports
 
-USU_pm_port_c_logistics_0 = {
+usu_pm_port_c_logistics_0 = {
 	texture = "gfx/interface/icons/production_method_icons/log_0.dds"
 	state_modifiers = {
 		unscaled = {
@@ -9,7 +9,7 @@ USU_pm_port_c_logistics_0 = {
 	}
 }
 
-USU_pm_port_c_logistics_1 = {
+usu_pm_port_c_logistics_1 = {
 	texture = "gfx/interface/icons/production_method_icons/log_1.dds"
 	unlocking_technologies = {
 		logistics
@@ -32,7 +32,7 @@ USU_pm_port_c_logistics_1 = {
 	}
 }
 
-USU_pm_port_c_logistics_2 = {
+usu_pm_port_c_logistics_2 = {
 	texture = "gfx/interface/icons/production_method_icons/log_2.dds"
 	unlocking_technologies = {
 		electric_telegraph
@@ -55,11 +55,11 @@ USU_pm_port_c_logistics_2 = {
 	}
 }
 
-USU_pm_port_c_logistics_3 = {
+usu_pm_port_c_logistics_3 = {
 	texture = "gfx/interface/icons/production_method_icons/log_3.dds"
 	unlocking_production_methods = {
-		USU_pm_port_c_logistics_2
-		USU_pm_port_c_logistics_3
+		usu_pm_port_c_logistics_2
+		usu_pm_port_c_logistics_3
 	}
 	unlocking_technologies = {
 		corporate_management
@@ -84,7 +84,7 @@ USU_pm_port_c_logistics_3 = {
 
 ### River Ports
 
-USU_pm_port_r_logistics_0 = {
+usu_pm_port_r_logistics_0 = {
 	texture = "gfx/interface/icons/production_method_icons/log_0.dds"
 	state_modifiers = {
 		unscaled = {
@@ -93,7 +93,7 @@ USU_pm_port_r_logistics_0 = {
 	}
 }
 
-USU_pm_port_r_logistics_1 = {
+usu_pm_port_r_logistics_1 = {
 	texture = "gfx/interface/icons/production_method_icons/log_1.dds"
 	unlocking_technologies = {
 		logistics
@@ -113,7 +113,7 @@ USU_pm_port_r_logistics_1 = {
 	}
 }
 
-USU_pm_port_r_logistics_2 = {
+usu_pm_port_r_logistics_2 = {
 	texture = "gfx/interface/icons/production_method_icons/log_2.dds"
 	unlocking_technologies = {
 		electric_telegraph
@@ -133,11 +133,11 @@ USU_pm_port_r_logistics_2 = {
 	}
 }
 
-USU_pm_port_r_logistics_3 = {
+usu_pm_port_r_logistics_3 = {
 	texture = "gfx/interface/icons/production_method_icons/log_3.dds"
 	unlocking_production_methods = {
-		USU_pm_port_r_logistics_2
-		USU_pm_port_r_logistics_3
+		usu_pm_port_r_logistics_2
+		usu_pm_port_r_logistics_3
 	}
 	unlocking_technologies = {
 		corporate_management

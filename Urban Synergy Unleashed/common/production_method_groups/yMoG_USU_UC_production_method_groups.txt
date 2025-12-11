@@ -7,7 +7,7 @@ pmg_amenities = {
 		pm_market_squares
 		pm_covered_markets
 		pm_arcades
-		USU_pm_hv_arcades
+		usu_pm_hv_arcades
 	}
 }
 
@@ -19,7 +19,7 @@ pmg_street_lighting = {
 		pm_no_street_lighting
 		pm_gas_streetlights
 		pm_electric_streetlights
-		USU_pm_grid_streetlights
+		usu_pm_grid_streetlights
 	}
 }
 

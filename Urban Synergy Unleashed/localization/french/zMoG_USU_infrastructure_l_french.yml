@@ -24,20 +24,20 @@
  pmg_logistics_services_port_coastal: "Logistique maritime"
  pmg_logistics_services_port_river: "Logistique fluviale"
  
- USU_pm_rail_logistics_0: "Aucune coordination logistique"
- USU_pm_rail_logistics_1: "Planification par quotas"
- USU_pm_rail_logistics_2: "Appels d'offres à distance"
- USU_pm_rail_logistics_3: "Gestion de la chaîne d'approvisionnement"
+ usu_pm_rail_logistics_0: "Aucune coordination logistique"
+ usu_pm_rail_logistics_1: "Planification par quotas"
+ usu_pm_rail_logistics_2: "Appels d'offres à distance"
+ usu_pm_rail_logistics_3: "Gestion de la chaîne d'approvisionnement"
 
- USU_pm_port_c_logistics_0: "Aucune coordination logistique"
- USU_pm_port_c_logistics_1: "Planification par quotas"
- USU_pm_port_c_logistics_2: "Enchères d'accès à distance"
- USU_pm_port_c_logistics_3: "Gestion de la chaîne d'approvisionnement"
+ usu_pm_port_c_logistics_0: "Aucune coordination logistique"
+ usu_pm_port_c_logistics_1: "Planification par quotas"
+ usu_pm_port_c_logistics_2: "Enchères d'accès à distance"
+ usu_pm_port_c_logistics_3: "Gestion de la chaîne d'approvisionnement"
  
- USU_pm_port_r_logistics_0: "Aucune coordination logistique"
- USU_pm_port_r_logistics_1: "Planification par quotas"
- USU_pm_port_r_logistics_2: "Appels d'offres à distance"
- USU_pm_port_r_logistics_3: "Gestion de la chaîne d'approvisionnement"
+ usu_pm_port_r_logistics_0: "Aucune coordination logistique"
+ usu_pm_port_r_logistics_1: "Planification par quotas"
+ usu_pm_port_r_logistics_2: "Appels d'offres à distance"
+ usu_pm_port_r_logistics_3: "Gestion de la chaîne d'approvisionnement"
  
  # Canals
  # pm_canal: "Serrures à vapeur"

@@ -8,9 +8,9 @@
  mog_subfarm_modifiers_occupancy_scaled: "Kentsel Sinerji Altyapı Üzerindeki Etkisi" #deepl:1060897918
  
  # Building
- USU_bg_port_infrastructure: "Limanlar" #deepl:687823806
- USU_bg_river_port_infrastructure: "Limanlar" #deepl:687823806
- USU_bg_public_greens: "Kamusal Yeşil Alanlar" #deepl:1270138251
+ usu_bg_port_infrastructure: "Limanlar" #deepl:687823806
+ usu_bg_river_port_infrastructure: "Limanlar" #deepl:687823806
+ usu_bg_public_greens: "Kamusal Yeşil Alanlar" #deepl:1270138251
  
  building_river_port: "Nehir Rıhtımları"
  usu_building_public_green: "Kamu Yeşili"
@@ -77,10 +77,10 @@
 
  # PMGs
  pmg_base_building_river_port: "Rıhtımlar"
- USU_pmg_government_administration_emergency_services: "Acil Servisler"
- USU_pmg_government_administration_law_enforcement: "Hukuk Uygulaması"
- USU_pmg_public_space_management: "Kamusal Alan Yönetimi"
- USU_pmg_public_parklands: "Park Alanlarının Kullanımı"
+ usu_pmg_government_administration_emergency_services: "Acil Servisler"
+ usu_pmg_government_administration_law_enforcement: "Hukuk Uygulaması"
+ usu_pmg_public_space_management: "Kamusal Alan Yönetimi"
+ usu_pmg_public_parklands: "Park Alanlarının Kullanımı"
  pmg_trade_center_port_status: "Bağlantı Noktası Bitişiklik Durumu" #deepl:23372774
  
  # PMs
@@ -88,22 +88,22 @@
  pm_rp_small_port: "Nehir kenarı iskeleleri"
  pm_rp_industrial_port: "Endüstriyel Limanlar"
  pm_rp_modern_port: "Modern Limanlar"
- USU_pm_hv_arcades: "Pasajlar"
- USU_pm_grid_streetlights: "akkor sokak lambaları"
- USU_pm_no_emergency_services: "Acil Servis Yok"
- USU_pm_basic_fire_brigade: "Temel İtfaiye Tugayları"
- USU_pm_response_planning: "Afet Müdahale Planlaması"
- USU_pm_modern_emergency_services: "Modern Acil Durum Hizmetleri"
- USU_pm_no_police: "Topluluk Eylem Grupları"
- USU_pm_local_police: "Yerel Polis Gücü"
- USU_pm_dedicated_police: "Adanmış Polis Gücü"
- USU_pm_militarized_police: "Sıkıyönetim Uygulaması"
- USU_pm_community_orgs: "Topluluk Örgütleri"
- USU_pm_private_firms: "Özel Kuruluşlar"
- USU_pm_pub_priv_partners: "Kamu-Özel Sektör Ortaklıkları"
- USU_pm_village_stables: "Topluluk Ahırları"
- USU_pm_contained_wilderness: "Korunan Vahşi Doğa"
- USU_pm_seasonal_fairgrounds: "Mevsimsel Fuar Alanları"
+ usu_pm_hv_arcades: "Pasajlar"
+ usu_pm_grid_streetlights: "akkor sokak lambaları"
+ usu_pm_no_emergency_services: "Acil Servis Yok"
+ usu_pm_basic_fire_brigade: "Temel İtfaiye Tugayları"
+ usu_pm_response_planning: "Afet Müdahale Planlaması"
+ usu_pm_modern_emergency_services: "Modern Acil Durum Hizmetleri"
+ usu_pm_no_police: "Topluluk Eylem Grupları"
+ usu_pm_local_police: "Yerel Polis Gücü"
+ usu_pm_dedicated_police: "Adanmış Polis Gücü"
+ usu_pm_militarized_police: "Sıkıyönetim Uygulaması"
+ usu_pm_community_orgs: "Topluluk Örgütleri"
+ usu_pm_private_firms: "Özel Kuruluşlar"
+ usu_pm_pub_priv_partners: "Kamu-Özel Sektör Ortaklıkları"
+ usu_pm_village_stables: "Topluluk Ahırları"
+ usu_pm_contained_wilderness: "Korunan Vahşi Doğa"
+ usu_pm_seasonal_fairgrounds: "Mevsimsel Fuar Alanları"
  pm_trade_center_inland: "Liman Erişimi Yok" #deepl:4277007637
  pm_trade_center_port: "Liman Erişimi" #deepl:931806394
  

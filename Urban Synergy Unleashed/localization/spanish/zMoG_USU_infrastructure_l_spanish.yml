@@ -24,20 +24,20 @@
  pmg_logistics_services_port_coastal: "Logística de envío"
  pmg_logistics_services_port_river: "Logística fluvial"
  
- USU_pm_rail_logistics_0: "Sin coordinación logística"
- USU_pm_rail_logistics_1: "Planificación de la asignación de cuotas"
- USU_pm_rail_logistics_2: "Licitación con acceso remoto"
- USU_pm_rail_logistics_3: "Gestión de la cadena de suministro"
+ usu_pm_rail_logistics_0: "Sin coordinación logística"
+ usu_pm_rail_logistics_1: "Planificación de la asignación de cuotas"
+ usu_pm_rail_logistics_2: "Licitación con acceso remoto"
+ usu_pm_rail_logistics_3: "Gestión de la cadena de suministro"
 
- USU_pm_port_c_logistics_0: "Sin coordinación logística"
- USU_pm_port_c_logistics_1: "Planificación de la asignación de cuotas"
- USU_pm_port_c_logistics_2: "Licitación con acceso remoto"
- USU_pm_port_c_logistics_3: "Gestión de la cadena de suministro"
+ usu_pm_port_c_logistics_0: "Sin coordinación logística"
+ usu_pm_port_c_logistics_1: "Planificación de la asignación de cuotas"
+ usu_pm_port_c_logistics_2: "Licitación con acceso remoto"
+ usu_pm_port_c_logistics_3: "Gestión de la cadena de suministro"
  
- USU_pm_port_r_logistics_0: "Sin coordinación logística"
- USU_pm_port_r_logistics_1: "Planificación de la asignación de cuotas"
- USU_pm_port_r_logistics_2: "Licitación con acceso remoto"
- USU_pm_port_r_logistics_3: "Gestión de la cadena de suministro"
+ usu_pm_port_r_logistics_0: "Sin coordinación logística"
+ usu_pm_port_r_logistics_1: "Planificación de la asignación de cuotas"
+ usu_pm_port_r_logistics_2: "Licitación con acceso remoto"
+ usu_pm_port_r_logistics_3: "Gestión de la cadena de suministro"
  
  # Canals
  # pm_canal: "Cerraduras accionadas por vapor"

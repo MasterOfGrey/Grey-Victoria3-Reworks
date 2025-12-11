@@ -1,6 +1,6 @@
 ﻿### Logistics Services
 
-USU_pm_rail_logistics_0 = {
+usu_pm_rail_logistics_0 = {
 	texture = "gfx/interface/icons/production_method_icons/log_0.dds"
 	building_modifiers = {
 		workforce_scaled = {	
@@ -9,7 +9,7 @@ USU_pm_rail_logistics_0 = {
 	}
 }
 
-USU_pm_rail_logistics_1 = {
+usu_pm_rail_logistics_1 = {
 	texture = "gfx/interface/icons/production_method_icons/log_1.dds"
 	unlocking_technologies = {
 		logistics
@@ -32,7 +32,7 @@ USU_pm_rail_logistics_1 = {
 	ai_value = 1000
 }
 
-USU_pm_rail_logistics_2 = {
+usu_pm_rail_logistics_2 = {
 	texture = "gfx/interface/icons/production_method_icons/log_2.dds"
 	unlocking_technologies = {
 		electric_telegraph
@@ -55,11 +55,11 @@ USU_pm_rail_logistics_2 = {
 	ai_value = 2000
 }
 
-USU_pm_rail_logistics_3 = {
+usu_pm_rail_logistics_3 = {
 	texture = "gfx/interface/icons/production_method_icons/log_3.dds"
 	unlocking_production_methods = {
-		USU_pm_rail_logistics_2
-		USU_pm_rail_logistics_3
+		usu_pm_rail_logistics_2
+		usu_pm_rail_logistics_3
 	}
 	unlocking_technologies = {
 		corporate_management

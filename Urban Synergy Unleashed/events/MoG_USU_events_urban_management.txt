@@ -1,4 +1,4 @@
-﻿namespace = USU_secret_ev
+﻿namespace = usu_secret_ev
 
 USU_secret_ev.1 = {
 	type = country_event		# Needs to be an event, not scripted effect, to be re-triggered from error-handler.

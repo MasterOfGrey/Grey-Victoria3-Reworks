@@ -24,20 +24,20 @@
  pmg_logistics_services_port_coastal: "Nakliye Lojistiği"
  pmg_logistics_services_port_river: "Nehir Lojistiği"
  
- USU_pm_rail_logistics_0: "Lojistik Koordinasyon Yok"
- USU_pm_rail_logistics_1: "Kota Tahsisatı Planlaması"
- USU_pm_rail_logistics_2: "Uzaktan Erişim Teklifi"
- USU_pm_rail_logistics_3: "Tedarik zinciri yönetimi"
+ usu_pm_rail_logistics_0: "Lojistik Koordinasyon Yok"
+ usu_pm_rail_logistics_1: "Kota Tahsisatı Planlaması"
+ usu_pm_rail_logistics_2: "Uzaktan Erişim Teklifi"
+ usu_pm_rail_logistics_3: "Tedarik zinciri yönetimi"
 
- USU_pm_port_c_logistics_0: "Lojistik Koordinasyon Yok"
- USU_pm_port_c_logistics_1: "Kota Tahsisatı Planlaması"
- USU_pm_port_c_logistics_2: "Uzaktan Erişim Teklifi"
- USU_pm_port_c_logistics_3: "Tedarik zinciri yönetimi"
+ usu_pm_port_c_logistics_0: "Lojistik Koordinasyon Yok"
+ usu_pm_port_c_logistics_1: "Kota Tahsisatı Planlaması"
+ usu_pm_port_c_logistics_2: "Uzaktan Erişim Teklifi"
+ usu_pm_port_c_logistics_3: "Tedarik zinciri yönetimi"
  
- USU_pm_port_r_logistics_0: "Lojistik Koordinasyon Yok"
- USU_pm_port_r_logistics_1: "Kota Tahsisatı Planlaması"
- USU_pm_port_r_logistics_2: "Uzaktan Erişim Teklifi"
- USU_pm_port_r_logistics_3: "Tedarik zinciri yönetimi"
+ usu_pm_port_r_logistics_0: "Lojistik Koordinasyon Yok"
+ usu_pm_port_r_logistics_1: "Kota Tahsisatı Planlaması"
+ usu_pm_port_r_logistics_2: "Uzaktan Erişim Teklifi"
+ usu_pm_port_r_logistics_3: "Tedarik zinciri yönetimi"
  
  # Canals
  # pm_canal: "Buharla Çalışan Kilitler"
