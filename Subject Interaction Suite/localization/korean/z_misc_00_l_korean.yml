@@ -1,28 +1,22 @@
 ﻿l_korean:
- unused_interests_alert_setting_name: "$unused_interests_alert$"
- overlord_can_consolidate_subject_setting_name: "$consolidate_subject$"
- IB_success: "군주 입법 지원" #deepl:3913329574
- relations_positive: "#P 긍정적 [concept_relations]#!" #deepl:1387841350
- relations_negative: "#N 부정적 [concept_relations]#!" #deepl:1759414233
- 
- mog_topbar_element_all_subject_pp: "모그_톱바_요소_모든_주제_pp" #deepl:2643924773
- mog_topbar_element_all_subject_pp_icon: "@all_subject_pp!" #deepl:1932202303
- mog_topbar_element_all_subject_pp_value: "[GetMetaPlayer.GetPlayedOrObservedCountry.GetCustom('mog_topbar_coloured_all_subject_pp')]" #deepl:1681609592
- mog_topbar_element_all_subject_pp_tooltip: "#header [Concept('concept_subject','$concept_subjects$')] 상대 [concept_power_projection]#!\n$concept_relative_subject_power_projection_desc$" #deepl:644475639
- mog_topbar_element_all_subject_pp_source: "그레이의 피사체 인터랙션 제품군" #deepl:1223459637
- mog_topbar_element_all_subject_pp_source_tooltip: "이 요소는 그레이의 피사체 인터랙션 제품군의 일부입니다." #deepl:3657650752
-
- concept_relative_subject_power_projection: "상대 피사체 파워 프로젝션" #deepl:3297416644
- concept_relative_subject_power_projection_desc: "[Concept('concept_subject','$concept_subject_possessive$')] 군대에 대한 인식된 [concept_power_projection]. 한 주체의 독립 요구는 방어적이기 때문에 주로 [Concept('concept_army','$concept_armies$')] 의 상대적 힘에 관심이 있습니다. 모든 [Concept('concept_subject','$concept_subjects$')] 의 [concept_liberty_desire] 은 [concept_overlord] 에 비해 합쳐진 $country_army_power_projection$ 의 영향을 받습니다.\n그들은 서로 협력하는 데 어려움이 있기 때문에 $country_navy_power_projection$ 의 합쳐진 힘이 #b 해군보다#! 적을 때 [Concept('concept_overlord','$concept_overlord_possessive$')] 의 힘이 50% 낮다고 인식합니다. 피험자는 자신의 피험자에게 도전을 받으면 이 영향을 덜 받습니다.\n\n #b;green 녹색:#! 귀하의 [Concept('concept_subject','$concept_subject_possessive$')] [Concept('concept_army','$concept_armies$')] 는 무관합니다.\n#b;yellow 노란색:#! 높음 [concept_relations] 은 과도한 [concept_liberty_desire] 을 억제합니다.\n#b;orange 주황색:#! 강한 [Concept('concept_subject','$concept_subjects$')] 은 모니터링해야 합니다.\n#b;red 빨강:#! 강한 [Concept('concept_subject','$concept_subjects$')] 은 $ai_attitude_rebellious$ 이 될 가능성이 높습니다.\n#b;purple 보라색:#! 해군 부족이 고무적입니다 [Concept('concept_subject','$concept_subject_possessive$')] [concept_liberty_desire] ." #deepl:248716341
-
-# We Want Green at <20%, Yellow at <40% (army + relations), Orange at <100%, Red at >100%, and Purple if Navy is >100% no matter how the army compares.
-# Default: [GetMetaPlayer.GetPlayedOrObservedCountry.MakeScope.Var('mog_topbar_value_all_subject_pp').GetValue|%v]
- mog_topbar_coloured_all_subject_pp_backup: "#b;white [GetMetaPlayer.GetPlayedOrObservedCountry.MakeScope.Var('mog_topbar_value_all_subject_pp').GetValue|0%]#!" #deepl:3593051260
- mog_topbar_coloured_all_subject_pp_green: "#b;green [GetMetaPlayer.GetPlayedOrObservedCountry.MakeScope.Var('mog_topbar_value_all_subject_pp').GetValue|0%]#!" #deepl:2377499616
- mog_topbar_coloured_all_subject_pp_yellow: "#b;yellow [GetMetaPlayer.GetPlayedOrObservedCountry.MakeScope.Var('mog_topbar_value_all_subject_pp').GetValue|0%]#!" #deepl:3208069794
- mog_topbar_coloured_all_subject_pp_orange: "#b;orange [GetMetaPlayer.GetPlayedOrObservedCountry.MakeScope.Var('mog_topbar_value_all_subject_pp').GetValue|0%]#!" #deepl:2512115759
- mog_topbar_coloured_all_subject_pp_red: "#b;red [GetMetaPlayer.GetPlayedOrObservedCountry.MakeScope.Var('mog_topbar_value_all_subject_pp').GetValue|0%]#!" #deepl:1582262069
- mog_topbar_coloured_all_subject_pp_purple: "#b;purple [GetMetaPlayer.GetPlayedOrObservedCountry.MakeScope.Var('mog_topbar_value_all_subject_pp').GetValue|0%]#!" #deepl:690812862
- 
- DIPLOMATIC_PACT_REQUIREMENT_MODERATE_LIBERTY_DESIRE: "[SCOPE.sCountry('actor').GetAdjective] [concept_liberty_desire] 는 최소한 [GetDefine('NDiplomacy','WAR_GOAL_INFAMY_LOW_LIBERTY_DESIRE_THRESHOLD')]" #deepl:1877752227
- STRONGER_SUBJECT_NEGATE_ALOOF: "오퍼링에서 [Concept('concept_subject','$concept_subject_possessive$')] 상대적 강점 대 [SCOPE.sCountry('target').GetAttitudeTowards(SCOPE.sCountry('target').GetOverlord).GetName] 태도" #deepl:679978240
+  unused_interests_alert_setting_name: "$unused_interests_alert$" 
+  overlord_can_consolidate_subject_setting_name: "$consolidate_subject$" 
+  IB_success: "총독부 입법 지원" 
+  relations_positive: "#P 긍정적인 [concept_relations]#!" 
+  relations_negative: "#N 부정적인 [concept_relations]#!" 
+  mog_topbar_element_all_subject_pp: "mog_topbar_element_all_subject_pp" 
+  mog_topbar_element_all_subject_pp_icon: "@all_subject_pp!" 
+  mog_topbar_element_all_subject_pp_value: "[GetMetaPlayer.GetPlayedOrObservedCountry.GetCustom('mog_topbar_coloured_all_subject_pp')]" 
+  mog_topbar_element_all_subject_pp_tooltip: "#header [Concept('concept_subject','$concept_subjects$')] 상대적 [concept_power_projection]#!\n$concept_relative_subject_power_projection_desc$" 
+  mog_topbar_element_all_subject_pp_source: "그레이의 신하 상호작용 모음집" 
+  mog_topbar_element_all_subject_pp_source_tooltip: "이 요소는 그레이의 종속국 상호작용 모음집의 일부입니다." 
+  concept_relative_subject_power_projection: "상대적 주권 투사력" 
+  concept_relative_subject_power_projection_desc: "피지배국의 군사력이 투사하는 [concept_power_projection]에 대한 인식입니다. 피지배국의 독립 시도는 방어적이므로, 주로 [Concept('concept_army','$concept_armies$')]의 상대적인 힘에 초점을 맞춥니다. 모든 피지배국의 [concept_liberty_desire]는 그들의 합산된 $country_army_power_projection$을 그들의 [concept_overlord]와 비교하여 영향을 받습니다.\n그들은 자신들의 합산된 해군력이 그들의 [Concept('concept_overlord','$concept_overlord_possessive$')] 해군력보다 #b 낮을#! 경우, 상호 간의 조율에 어려움이 있기 때문에 자신들의 합산된 힘이 50% 낮다고 인식합니다. 피지배국이 자신과 같은 다른 피지배국들로부터 도전을 받을 경우, 이러한 영향은 덜 받을 것입니다.\n\n#b;green 녹색:#! 귀국의 피지배국들의 [Concept('concept_subject','$concept_subject_possessive$')] [Concept('concept_army','$concept_armies$')]는 무시해도 됩니다.\n#b;yellow 노란색:#! 높은 [concept_relations]는 과도한 [concept_liberty_desire]를 억제할 것입니다.\n#b;orange 주황색:#! 강력한 [Concept('concept_subject','$concept_subjects$')]는 감시해야 합니다.\n#b;red 빨간색:#! 강력한 [Concept('concept_subject','$concept_subjects$')]는 $ai_attitude_rebellious$가 될 가능성이 높습니다.\n#b;purple 보라색:#! 귀국의 해군력 부족은 [Concept('concept_subject','$concept_subject_possessive$')]의 [concept_liberty_desire]를 부추기고 있습니다." 
+  mog_topbar_coloured_all_subject_pp_backup: "#b;white [GetMetaPlayer.GetPlayedOrObservedCountry.MakeScope.Var('mog_topbar_value_all_subject_pp').GetValue|0%]#!" 
+  mog_topbar_coloured_all_subject_pp_green: "#b;green [GetMetaPlayer.GetPlayedOrObservedCountry.MakeScope.Var('mog_topbar_value_all_subject_pp').GetValue|0%]#!" 
+  mog_topbar_coloured_all_subject_pp_yellow: "#b;yellow [GetMetaPlayer.GetPlayedOrObservedCountry.MakeScope.Var('mog_topbar_value_all_subject_pp').GetValue|0%]#!" 
+  mog_topbar_coloured_all_subject_pp_orange: "#b;orange [GetMetaPlayer.GetPlayedOrObservedCountry.MakeScope.Var('mog_topbar_value_all_subject_pp').GetValue|0%]#!" 
+  mog_topbar_coloured_all_subject_pp_red: "#b;red [GetMetaPlayer.GetPlayedOrObservedCountry.MakeScope.Var('mog_topbar_value_all_subject_pp').GetValue|0%]#!" 
+  mog_topbar_coloured_all_subject_pp_purple: "#b;purple [GetMetaPlayer.GetPlayedOrObservedCountry.MakeScope.Var('mog_topbar_value_all_subject_pp').GetValue|0%]#!" 
+  DIPLOMATIC_PACT_REQUIREMENT_MODERATE_LIBERTY_DESIRE: "[SCOPE.sCountry('actor').GetAdjective] [concept_liberty_desire]는 [GetDefine('NDiplomacy','WAR_GOAL_INFAMY_LOW_LIBERTY_DESIRE_THRESHOLD')] 이상이어야 합니다." 
+  STRONGER_SUBJECT_NEGATE_ALOOF: "[Concept('concept_subject','$concept_subject_possessive$')]의 상대적 강세와 [SCOPE.sCountry('target').GetOverlord]에 대한 [SCOPE.sCountry('target').GetAttitudeTowards(SCOPE.sCountry('target').GetOverlord).GetName]의 태도" 
