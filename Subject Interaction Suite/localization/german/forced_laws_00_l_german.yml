@@ -1,37 +1,37 @@
 ﻿l_german:
- forced_border_opening: "Erzwungene Grenzöffnung"
- forced_border_opening_desc: "Eine [concept_instant_diplomatic_action], die eine Änderung des [GetLawGroup('lawgroup_migration').GetName]-[concept_law]es des Ziel-[concept_subject]es zu "[GetLawType('law_no_migration_controls').GetName]" erzwingt. Gleichzeitig werden die [concept_relations] mit dem Ziel-[concept_subject] beschädigt und einige [concept_pop]s des [concept_subject]es [concept_radical]."
- forced_border_opening_action_name: "Erzwungene Grenzöffnung"
- forced_border_opening_action_notification_name: "[INITIATOR_COUNTRY.GetName] zwang uns unsere Grenzen zu öffnen."
- forced_border_opening_action_notification_desc: "Unser [concept_overlord] [INITIATOR_COUNTRY.GetName] zwang uns unser [GetLawGroup('lawgroup_migration').GetName]-[concept_law] zu "[GetLawType('law_no_migration_controls').GetName]" ändern. Ihre [concept_attitude] uns gegenüber ist #tooltippable #tooltip:[INITIATOR_COUNTRY.GetTooltipTag],COUNTRY_ATTITUDE_TOOLTIP [INITIATOR_COUNTRY.GetAttitudeTowards(GetPlayer).GetName]#!#!."
- forced_border_closing: "Erzwungene Grenzschließung"
- forced_border_closing_desc: "Eine [concept_instant_diplomatic_action], die eine Änderung des [GetLawGroup('lawgroup_migration').GetName]-[concept_law]es des Ziel-[concept_subject]es zu "[GetLawType('law_closed_borders').GetName]" erzwingt. Gleichzeitig werden die [concept_relations] mit dem Ziel-[concept_subject] beschädigt und einige der [concept_pop]s des [concept_subject] werden [concept_radical]."
- forced_border_closing_action_name: "Erzwungene Grenzschließung"
- forced_border_closing_action_notification_name: "[INITIATOR_COUNTRY.GetName] zwang uns, unsere Grenzen zu schließen"
- forced_border_closing_action_notification_desc: "Unser [concept_overlord] [INITIATOR_COUNTRY.GetName] zwang uns unser [GetLawGroup('lawgroup_migration').GetName]-[concept_law] zu "[GetLawType('law_closed_borders').GetName].GetName]" ändern. Ihre [concept_attitude] uns gegenüber ist #tooltippable #tooltip:[INITIATOR_COUNTRY.GetTooltipTag],COUNTRY_ATTITUDE_TOOLTIP [INITIATOR_COUNTRY.GetAttitudeTowards(GetPlayer).GetName]#!#!."
- forced_industry_ban: "Erzwungenes Industrieverbot"
- forced_industry_ban_desc: "Eine [concept_instant_diplomatic_action], die eine Änderung des [GetLawGroup('lawgroup_economic_system').GetName]-[concept_law]es des Ziels-[concept_subject]es zu "[GetLawType('law_industry_banned').GetName]" erzwingt. Gleichzeitig werden die [concept_relations] mit dem Ziel-[concept_subject] beschädigt und einige der [concept_pop]s des [concept_subject]es werden [concept_radical]."
- forced_industry_ban_action_name: "Erzwungenes Industrieverbot"
- forced_industry_ban_action_notification_name: "[INITIATOR_COUNTRY.GetName] zwang uns zum Industrieverbot"
- forced_industry_ban_action_notification_desc: "Unser [concept_overlord] [INITIATOR_COUNTRY.GetName] zwang uns unser [GetLawGroup('lawgroup_economic_system').GetName]-[concept_law] zu "[GetLawType('law_industry_banned').GetName]" ändern. Ihre [concept_attitude] uns gegenüber ist #tooltippable #tooltip:[INITIATOR_COUNTRY.GetTooltipTag],COUNTRY_ATTITUDE_TOOLTIP [INITIATOR_COUNTRY.GetAttitudeTowards(GetPlayer).GetName]#!#!."
- 
- forced_industry_ban_liberty_desire_custom_tooltip: "Die [SCOPE.sCountry('target_country').GetAdjectiveNoFormatting]en Behörden werden auf das Industrieverbot in [SCOPE.sCountry('target_country').GetName] reagieren. Der [concept_liberty_desire] und die [concept_attitude] des [concept_subject]es werden sich ändern."
- 
- forced_slavery_ban: "Erzwungene Sklavereiverbot"
- forced_slavery_ban_desc: "Ein [concept_instant_diplomatic_action], der eine Änderung in der [GetLawGroup('lawgroup_slavery').GetName] [concept_law] des Ziels [concept_subject] zum ☻__4 erzwingt. Schäden [concept_relations] mit dem Ziel [concept_subject] und ein Teil des [concept_subject] [concept_pop] wird [concept_radical]."
- forced_slavery_ban_action_name: "Verbot erzwungene Industrie"
- forced_slavery_ban_action_notification_name: "[INITIATOR_COUNTRY.GetName] hat uns gezwungen, die Sklaverei zu verbieten"
- forced_slavery_ban_action_notification_desc: "Unser [concept_overlord] [INITIATOR_COUNTRY.GetName] hat unsere [GetLawGroup('lawgroup_slavery').GetName] [concept_law] zu [GetLawType('law_slavery_banned').GetName] gezwungen. Ihr [concept_attitude] gegenüber uns ist #tooltippable #tooltip:[INITIATOR_COUNTRY.GetTooltipTag],COUNTRY_ATTITUDE_TOOLTIP [INITIATOR_COUNTRY.GetAttitudeTowards(GetPlayer).GetName]#!#!."
- forced_slave_trade: "Erzwungener Sklavenhandel"
- forced_slave_trade_desc: "Ein [concept_instant_diplomatic_action], der eine Änderung in der [GetLawGroup('lawgroup_slavery').GetName] [concept_law] des Ziels [concept_subject] zum ☻__4 erzwingt. Schäden [concept_relations] mit dem Ziel [concept_subject] und ein Teil des [concept_subject] [concept_pop] wird [concept_radical]."
- forced_slave_trade_action_name: "Erzwungener Sklavenhandel"
- forced_slave_trade_action_notification_name: "[INITIATOR_COUNTRY.GetName] hat uns gezwungen, Sklaven zu handeln"
- forced_slave_trade_action_notification_desc: "Unser [concept_overlord] [INITIATOR_COUNTRY.GetName] hat unsere [GetLawGroup('lawgroup_slavery').GetName] [concept_law] zu [GetLawType('law_slave_trade').GetName] gezwungen. Ihr [concept_attitude] gegenüber uns ist #tooltippable #tooltip:[INITIATOR_COUNTRY.GetTooltipTag],COUNTRY_ATTITUDE_TOOLTIP [INITIATOR_COUNTRY.GetAttitudeTowards(GetPlayer).GetName]#!#!."
+ forced_border_opening: "Grenzöffnung erzwingen"
+ forced_border_opening_desc: "Eine [concept_instant_diplomatic_action], die eine Änderung des [GetLawGroup('lawgroup_migration').GetName]-[concept_law]es des Ziel-[concept_subject]es zu [GetLawType('law_no_migration_controls').GetName] erzwingt. Beschädigt die [concept_relations] mit dem Ziel-[concept_subject] und ein Teil der [concept_pop]s im [concept_subject] werden [concept_radical|l]."
+ forced_border_opening_action_name: "Grenzöffnung erzwungen"
+ forced_border_opening_action_notification_name: "[INITIATOR_COUNTRY.GetAltName('NOM')] zwang uns, unsere Grenzen zu öffnen."
+ forced_border_opening_action_notification_desc: "Unser [concept_overlord] [INITIATOR_COUNTRY.GetAltName('NOM')] hat eine Änderung unseres [GetLawGroup('lawgroup_migration').GetName]-[concept_law]es zu [GetLawType('law_no_migration_controls').GetName] erzwungen. Ihre [concept_attitude] uns gegenüber ist #tooltippable #tooltip:[INITIATOR_COUNTRY.GetTooltipTag],COUNTRY_ATTITUDE_TOOLTIP [INITIATOR_COUNTRY.GetAttitudeTowards(GetPlayer).GetName]#!#!."
+ forced_border_closing: "Grenzschließung erzwingen"
+ forced_border_closing_desc: "Eine [concept_instant_diplomatic_action], die eine Änderung des [GetLawGroup('lawgroup_migration').GetName]-[concept_law]es des Ziel-[concept_subject]es zu [GetLawType('law_closed_borders').GetName] erzwingt. Beschädigt die [concept_relations] mit dem Ziel-[concept_subject] und ein Teil der [concept_pop]s im [concept_subject] werden [concept_radical|l]."
+ forced_border_closing_action_name: "Grenzschließung erzwungen"
+ forced_border_closing_action_notification_name: "[INITIATOR_COUNTRY.GetAltName('NOM')] zwang uns, unsere Grenzen zu schließen."
+ forced_border_closing_action_notification_desc: "Unser [concept_overlord] [INITIATOR_COUNTRY.GetAltName('NOM')] hat eine Änderung unseres [GetLawGroup('lawgroup_migration').GetName]-[concept_law]es zu [GetLawType('law_closed_borders').GetName] erzwungen. Ihre [concept_attitude] uns gegenüber ist #tooltippable #tooltip:[INITIATOR_COUNTRY.GetTooltipTag],COUNTRY_ATTITUDE_TOOLTIP [INITIATOR_COUNTRY.GetAttitudeTowards(GetPlayer).GetName]#!#!."
+ forced_industry_ban: "Industrieverbot erzwingen"
+ forced_industry_ban_desc: "Eine [concept_instant_diplomatic_action], die eine Änderung des [GetLawGroup('lawgroup_economic_system').GetName]-[concept_law]es des Ziel-[concept_subject]es zu [GetLawType('law_industry_banned').GetName] erzwingt. Beschädigt die [concept_relations] mit dem Ziel-[concept_subject] und ein Teil der [concept_pop]s im [concept_subject] werden [concept_radical|l]."
+ forced_industry_ban_action_name: "Industrieverbot erzwungen"
+ forced_industry_ban_action_notification_name: "[INITIATOR_COUNTRY.GetAltName('NOM')] zwang uns, ein Industrieverbot zu beschließen."
+ forced_industry_ban_action_notification_desc: "Unser [concept_overlord] [INITIATOR_COUNTRY.GetAltName('NOM')] hat eine Änderung unseres [GetLawGroup('lawgroup_economic_system').GetName]-[concept_law]es zu [GetLawType('law_industry_banned').GetName] erzwungen. Ihre [concept_attitude] uns gegenüber ist #tooltippable #tooltip:[INITIATOR_COUNTRY.GetTooltipTag],COUNTRY_ATTITUDE_TOOLTIP [INITIATOR_COUNTRY.GetAttitudeTowards(GetPlayer).GetName]#!#!."
 
- rule_sis_force_law_actions: "Kraftgesetze" #deepl:2426188440
- setting_sis_force_laws_enabled: "Aktiviert" #deepl:3001197554
- setting_sis_force_laws_enabled_desc: "Die folgenden [Concept('concept_law', '$concept_laws$')] können auf [Concept('concept_subject', '$concept_subjects$')] über [concept_overlord_action] erzwungen werden: [GetLawType('law_no_migration_controls').GetName], [GetLawType('law_closed_borders').GetName], [GetLawType('law_industry_banned').GetName], [GetLawType('law_slavery_banned').GetName], [GetLawType('law_slave_trade').GetName]." #deepl:3536795465
- setting_sis_force_laws_only_slavery: "Nur Sklaverei" #deepl:932556609
- setting_sis_force_laws_only_slavery_desc: "Die folgenden [Concept('concept_law', '$concept_laws$')] können auf [Concept('concept_subject', '$concept_subjects$')] über [concept_overlord_action] erzwungen werden: [GetLawType('law_slavery_banned').GetName], [GetLawType('law_slave_trade').GetName]." #deepl:2975591629
- setting_sis_force_laws_disabled: "Behinderte" #deepl:1603118088
- setting_sis_force_laws_disabled_desc: "Das Kraftgesetz [Concept('concept_overlord_action', '$concept_overlord_actions$')] ist nicht verfügbar." #deepl:823543987
+ forced_industry_ban_liberty_desire_custom_tooltip: "Die [SCOPE.sCountry('target_country').GetAdjectiveNoFormatting|l]en Behörden werden auf das Industrieverbot [SCOPE.sCountry('target_country').GetAltName('IN')] reagieren. Der [concept_liberty_desire] und die [concept_attitude] des [concept_subject]es werden sich ändern."
+ 
+ forced_slavery_ban: "Sklavereiverbot erzwingen"
+ forced_slavery_ban_desc: "Eine [concept_instant_diplomatic_action], die eine Änderung des [GetLawGroup('lawgroup_slavery').GetName]-[concept_law]es des Ziel-[concept_subject]es zu [GetLawType('law_slavery_banned').GetName] erzwingt. Beschädigt die [concept_relations] mit dem Ziel-[concept_subject] und ein Teil der [concept_pop]s im [concept_subject] werden [concept_radical|l]."
+ forced_slavery_ban_action_name: "Sklavereiverbot erzwungen"
+ forced_slavery_ban_action_notification_name: "[INITIATOR_COUNTRY.GetAltName('NOM')] hat uns gezwungen, die Sklaverei zu verbieten."
+ forced_slavery_ban_action_notification_desc: "Unser [concept_overlord] [INITIATOR_COUNTRY.GetAltName('NOM')] hat eine Änderung unseres [GetLawGroup('lawgroup_slavery').GetName]-[concept_law]es zu [GetLawType('law_slavery_banned').GetName] erzwungen. Ihre [concept_attitude] uns gegenüber ist #tooltippable #tooltip:[INITIATOR_COUNTRY.GetTooltipTag],COUNTRY_ATTITUDE_TOOLTIP [INITIATOR_COUNTRY.GetAttitudeTowards(GetPlayer).GetName]#!#!."
+ forced_slave_trade: "Sklavenhandel erzwingen"
+ forced_slave_trade_desc: "Eine [concept_instant_diplomatic_action], die eine Änderung des [GetLawGroup('lawgroup_slavery').GetName]-[concept_law]es des Ziel-[concept_subject]es zu [GetLawType('law_slave_trade').GetName] erzwingt. Beschädigt die [concept_relations] mit dem Ziel-[concept_subject] und ein Teil der [concept_pop]s im [concept_subject] werden [concept_radical|l]."
+ forced_slave_trade_action_name: "Sklavenhandel erzwungen"
+ forced_slave_trade_action_notification_name: "[INITIATOR_COUNTRY.GetAltName('NOM')] zwingt uns, den Sklavenhandel zu erlauben."
+ forced_slave_trade_action_notification_desc: "Unser [concept_overlord] [INITIATOR_COUNTRY.GetAltName('NOM')] hat eine Änderung unseres [GetLawGroup('lawgroup_slavery').GetName]-[concept_law]es zu [GetLawType('law_slave_trade').GetName] erzwungen. Ihre [concept_attitude] uns gegenüber ist #tooltippable #tooltip:[INITIATOR_COUNTRY.GetTooltipTag],COUNTRY_ATTITUDE_TOOLTIP [INITIATOR_COUNTRY.GetAttitudeTowards(GetPlayer).GetName]#!#!."
+
+ rule_sis_force_law_actions: "Gesetze erzwingen"
+ setting_sis_force_laws_enabled: "Aktiviert"
+ setting_sis_force_laws_enabled_desc: "Die folgenden [Concept('concept_law', '$concept_laws$')] können für [Concept('concept_subject', '$concept_subjects$')] über eine [concept_overlord_action] erzwungen werden: [GetLawType('law_no_migration_controls').GetName], [GetLawType('law_closed_borders').GetName], [GetLawType('law_industry_banned').GetName], [GetLawType('law_slavery_banned').GetName], [GetLawType('law_slave_trade').GetName]."
+ setting_sis_force_laws_only_slavery: "Nur Sklaverei"
+ setting_sis_force_laws_only_slavery_desc: "Die folgenden [Concept('concept_law', '$concept_laws$')] können für [Concept('concept_subject', '$concept_subjects$')] über eine [concept_overlord_action] erzwungen werden: [GetLawType('law_slavery_banned').GetName], [GetLawType('law_slave_trade').GetName]."
+ setting_sis_force_laws_disabled: "Deaktiviert"
+ setting_sis_force_laws_disabled_desc: "Das Erzwingen von Gesetzen als [Concept('concept_overlord_action', '$concept_overlord_actions$')] ist nicht verfügbar."

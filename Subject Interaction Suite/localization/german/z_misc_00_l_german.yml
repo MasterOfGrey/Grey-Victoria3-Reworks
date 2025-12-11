@@ -1,28 +1,29 @@
 ﻿l_german:
  unused_interests_alert_setting_name: "$unused_interests_alert$"
  overlord_can_consolidate_subject_setting_name: "$consolidate_subject$"
- IB_success: "Overlord Legislative Unterstützung" #deepl:3913329574
- relations_positive: "#P Positiv [concept_relations]#!" #deepl:1387841350
- relations_negative: "#N Negativ [concept_relations]#!" #deepl:1759414233
+ IB_success: "Legislative Unterstützung durch den Suzerän"
+ relations_positive: "#P Positive [concept_relations]#!"
+ relations_negative: "#N Negative [concept_relations]#!"
  
- mog_topbar_element_all_subject_pp: "mog_topbar_element_all_subject_pp" #deepl:2643924773
- mog_topbar_element_all_subject_pp_icon: "@all_subject_pp!" #deepl:1932202303
- mog_topbar_element_all_subject_pp_value: "[GetMetaPlayer.GetPlayedOrObservedCountry.GetCustom('mog_topbar_coloured_all_subject_pp')]" #deepl:1681609592
- mog_topbar_element_all_subject_pp_tooltip: "#header [Concept('concept_subject','$concept_subjects$')] Relativ [concept_power_projection]#!\n$concept_relative_subject_power_projection_desc$" #deepl:644475639
- mog_topbar_element_all_subject_pp_source: "Grey's Subject Interaction Suite" #deepl:1223459637
- mog_topbar_element_all_subject_pp_source_tooltip: "Dieses Element ist Teil der Grey's Subject Interaction Suite." #deepl:3657650752
+ mog_topbar_element_all_subject_pp: "mog_topbar_element_all_subject_pp"
+ mog_topbar_element_all_subject_pp_icon: "@all_subject_pp!"
+ mog_topbar_element_all_subject_pp_value: "[GetMetaPlayer.GetPlayedOrObservedCountry.GetCustom('mog_topbar_coloured_all_subject_pp')]"
+ mog_topbar_element_all_subject_pp_tooltip: "#header Relative [concept_power_projection] der [Concept('concept_subject','$concept_subjects$')]#!\n$concept_relative_subject_power_projection_desc$"
+ mog_topbar_element_all_subject_pp_source: "Grey's Subject Interaction Suite"
+ mog_topbar_element_all_subject_pp_source_tooltip: "Dieses Element ist Teil der Grey's Subject Interaction Suite."
 
- concept_relative_subject_power_projection: "Projektion der relativen Subjektleistung" #deepl:3297416644
- concept_relative_subject_power_projection_desc: "Die wahrgenommene [concept_power_projection] einer [Concept('concept_subject','$concept_subject_possessive$')] Streitmacht. #b Da das Streben eines Subjekts nach Unabhängigkeit defensiv ist, geht es vor allem um die relative Macht von [Concept('concept_army','$concept_armies$')]. Die [concept_liberty_desire] aller [Concept('concept_subject','$concept_subjects$')] wird durch ihre kombinierte $country_army_power_projection$ im Vergleich zu ihrer [concept_overlord] beeinflusst.\nSie nehmen ihre kombinierte Stärke als 50% niedriger wahr, wenn ihre kombinierte $country_navy_power_projection$ weniger#! als ihre [Concept('concept_overlord','$concept_overlord_possessive$')] Marine ist, aufgrund der Schwierigkeiten, sich miteinander zu koordinieren. Ein Subjekt wird davon weniger betroffen sein, wenn es von seinen eigenen Subjekten herausgefordert wird.\n\n #b;green Green:#! Ihre [Concept('concept_subject','$concept_subject_possessive$')] [Concept('concept_army','$concept_armies$')] sind irrelevant.\n#b;gelb Gelb:#! Hohe [concept_relations] unterdrücken übermäßige [concept_liberty_desire].\n#b;orange Orange:#! Starke [Concept('concept_subject','$concept_subjects$')] sollten überwacht werden.\n#b;rot Rot:#! Starke [Concept('concept_subject','$concept_subjects$')] werden wahrscheinlich $ai_attitude_rebellious$.\n#b;violett Violett:#! Ihr Mangel an Marine ermutigt [Concept('concept_subject','$concept_subject_possessive$')] [concept_liberty_desire] ." #deepl:248716341
+ concept_relative_subject_power_projection: "Relative Machtprojektion der Klientelländer"
+ concept_relative_subject_power_projection_desc: "Die wahrgenommene [concept_power_projection] der Streitkräfte eines [Concept('concept_subject','$concept_subject_possessive$')]es. Da das Unabhängigkeitsbestreben eines Klientellandes defensiv ist, geht es vor allem um die relative Stärke der [Concept('concept_army','$concept_armies$')]. Der [concept_liberty_desire] aller [Concept('concept_subject','$concept_subjects$')] wird durch ihre kombinierte $country_army_power_projection$ im Vergleich zu der ihres [concept_overlord]s beeinflusst.
+Sie nehmen ihre gemeinsame Stärke als 50 % geringer wahr, wenn ihre kombinierte $country_navy_power_projection$ #b geringer#! ist als die Marine ihres [Concept('concept_overlord','$concept_overlord_possessive$')], da die Koordination untereinander erschwert ist. Ein Klientelland ist davon weniger betroffen, wenn es von eigenen Klientelländern herausgefordert wird."
 
 # We Want Green at <20%, Yellow at <40% (army + relations), Orange at <100%, Red at >100%, and Purple if Navy is >100% no matter how the army compares.
 # Default: [GetMetaPlayer.GetPlayedOrObservedCountry.MakeScope.Var('mog_topbar_value_all_subject_pp').GetValue|%v]
- mog_topbar_coloured_all_subject_pp_backup: "#b;weiß [GetMetaPlayer.GetPlayedOrObservedCountry.MakeScope.Var('mog_topbar_value_all_subject_pp').GetValue|0%]#!" #deepl:3593051260
- mog_topbar_coloured_all_subject_pp_green: "#b;grün [GetMetaPlayer.GetPlayedOrObservedCountry.MakeScope.Var('mog_topbar_value_all_subject_pp').GetValue|0%]#!" #deepl:2377499616
- mog_topbar_coloured_all_subject_pp_yellow: "#b;gelb [GetMetaPlayer.GetPlayedOrObservedCountry.MakeScope.Var('mog_topbar_value_all_subject_pp').GetValue|0%]#!" #deepl:3208069794
- mog_topbar_coloured_all_subject_pp_orange: "#b;orange [GetMetaPlayer.GetPlayedOrObservedCountry.MakeScope.Var('mog_topbar_value_all_subject_pp').GetValue|0%]#!" #deepl:2512115759
- mog_topbar_coloured_all_subject_pp_red: "#b;rot [GetMetaPlayer.GetPlayedOrObservedCountry.MakeScope.Var('mog_topbar_value_all_subject_pp').GetValue|0%]#!" #deepl:1582262069
- mog_topbar_coloured_all_subject_pp_purple: "#b;lila [GetMetaPlayer.GetPlayedOrObservedCountry.MakeScope.Var('mog_topbar_value_all_subject_pp').GetValue|0%]#!" #deepl:690812862
+ mog_topbar_coloured_all_subject_pp_backup: "#b;white [GetMetaPlayer.GetPlayedOrObservedCountry.MakeScope.Var('mog_topbar_value_all_subject_pp').GetValue|0%]#!"
+ mog_topbar_coloured_all_subject_pp_green: "#b;green [GetMetaPlayer.GetPlayedOrObservedCountry.MakeScope.Var('mog_topbar_value_all_subject_pp').GetValue|0%]#!"
+ mog_topbar_coloured_all_subject_pp_yellow: "#b;yellow [GetMetaPlayer.GetPlayedOrObservedCountry.MakeScope.Var('mog_topbar_value_all_subject_pp').GetValue|0%]#!"
+ mog_topbar_coloured_all_subject_pp_orange: "#b;orange [GetMetaPlayer.GetPlayedOrObservedCountry.MakeScope.Var('mog_topbar_value_all_subject_pp').GetValue|0%]#!"
+ mog_topbar_coloured_all_subject_pp_red: "#b;red [GetMetaPlayer.GetPlayedOrObservedCountry.MakeScope.Var('mog_topbar_value_all_subject_pp').GetValue|0%]#!"
+ mog_topbar_coloured_all_subject_pp_purple: "#b;purple [GetMetaPlayer.GetPlayedOrObservedCountry.MakeScope.Var('mog_topbar_value_all_subject_pp').GetValue|0%]#!"
  
- DIPLOMATIC_PACT_REQUIREMENT_MODERATE_LIBERTY_DESIRE: "[SCOPE.sCountry('actor').GetAdjective] [concept_liberty_desire] muss mindestens sein [GetDefine('NDiplomacy','WAR_GOAL_INFAMY_LOW_LIBERTY_DESIRE_THRESHOLD')]" #deepl:1877752227
- STRONGER_SUBJECT_NEGATE_ALOOF: "aus dem Angebot [Concept('concept_subject','$concept_subject_possessive$')] relative Stärke gegenüber der [SCOPE.sCountry('target').GetAttitudeTowards(SCOPE.sCountry('target').GetOverlord).GetName] Haltung" #deepl:679978240
+ DIPLOMATIC_PACT_REQUIREMENT_MODERATE_LIBERTY_DESIRE: "Der [SCOPE.sCountry('actor').GetAdjective]e [concept_liberty_desire] muss bei mindestens [GetDefine('NDiplomacy','WAR_GOAL_INFAMY_LOW_LIBERTY_DESIRE_THRESHOLD')] liegen"
+ STRONGER_SUBJECT_NEGATE_ALOOF: "aus dem Verhältnis zwischen der relativen Stärke des [Concept('concept_subject','$concept_subject_possessive$')]es und der Haltung [SCOPE.sCountry('target').GetAttitudeTowards(SCOPE.sCountry('target').GetOverlord).GetAltName('GEN')]"

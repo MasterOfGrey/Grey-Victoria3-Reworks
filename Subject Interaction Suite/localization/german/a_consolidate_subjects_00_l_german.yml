@@ -2,37 +2,37 @@
  consolidate_subject: "Klientelland konsolidieren"
  consolidate_subject_action_name: "[concept_subject] konsolidieren"
  consolidate_subject_desc: "Zwei benachbarte [Concept('concept_subject', '$concept_subjects$')] werden zu einem einzigen [concept_country] zusammengeführt. Beide Klientelländer müssen niedrige [concept_autonomy]- und [concept_liberty_desire]-Werte haben. Beide Klientelländer müssen eine gemeinsame [Concept('concept_primary_cultures', '$concept_primary_culture$')] oder eine gemeinsame [concept_discrimination_trait] haben."
- consolidate_subject_action_notification_name: "[INITIATOR_COUNTRY.GetName] konsolidiert uns"
- consolidate_subject_action_notification_desc: "[INITIATOR_COUNTRY.GetName] hat sich dafür entschieden uns mit einem anderen Klientelland zusammenzuführen."
- consolidate_subject_action_notification_third_party_name: "[INITIATOR_COUNTRY.GetName] führt Klientelländer zusammen."
- consolidate_subject_action_notification_third_party_desc: "[INITIATOR_COUNTRY.GetName] hat [TARGET_COUNTRY.GetName] konsolidiert."
+ consolidate_subject_action_notification_name: "[INITIATOR_COUNTRY.GetAltName('NOM')] konsolidiert uns"
+ consolidate_subject_action_notification_desc: "[INITIATOR_COUNTRY.GetAltName('NOM')] hat sich dafür entschieden, uns mit einem anderen Klientelland zusammenzuführen."
+ consolidate_subject_action_notification_third_party_name: "[INITIATOR_COUNTRY.GetAltName('NOM')] führt Klientelländer zusammen."
+ consolidate_subject_action_notification_third_party_desc: "[INITIATOR_COUNTRY.GetAltName('NOM')] hat [TARGET_COUNTRY.GetAltName('AKK')] konsolidiert."
  
- is_not_african_subject: "Das Klientelland nicht eine unserer afrikanischen Kolonialverwaltungen"
- consolidate_subject_country_tier_tt: "Der [concept_country_tier] von [SCOPE.sCountry('target_country').GetName] ist unter $country_tier_kingdom$"
- consolidate_subject_country_tier_kingdom_tt: "Der [concept_country_tier] von [SCOPE.sCountry('target_country').GetName] ist $country_tier_kingdom$ und:"
- consolidate_subject_country_tier_kingdom_overlord_research_tt: "[SCOPE.GetRootScope.GetCountry.GetName] hat mindestens eine dieser Technologien erforscht: [GetTechnology('pan-nationalism').GetName], [GetTechnology('civilizing_mission').GetName], oder [GetTechnology('corporatism').GetName]"
+ is_not_african_subject: "Das Klientelland ist keine unserer afrikanischen Kolonialverwaltungen"
+ consolidate_subject_country_tier_tt: "Der [concept_country_tier] [SCOPE.sCountry('target_country').GetAltName('VON')] ist unter $country_tier_kingdom$"
+ consolidate_subject_country_tier_kingdom_tt: "Der [concept_country_tier] [SCOPE.sCountry('target_country').GetAltName('VON')] ist $country_tier_kingdom$ und:"
+ consolidate_subject_country_tier_kingdom_overlord_research_tt: "[SCOPE.GetRootScope.GetCountry.GetAltName('NOM')] hat mindestens eine dieser Technologien erforscht: [GetTechnology('pan-nationalism').GetName], [GetTechnology('civilizing_mission').GetName] oder [GetTechnology('corporatism').GetName]"
  consolidate_subject_either_tt: "Entweder:"
- consolidate_subject_vassal_type_tt: "$TAB$[SCOPE.sCountry('target_country').GetName] ist ein [GetSubjectType('subject_type_vassal').GetName] oder [GetSubjectType('subject_type_puppet').GetName]"
- consolidate_subject_dominion_type_tt: "[SCOPE.sCountry('target_country').GetName] ist ein [GetSubjectType('subject_type_dominion').GetName] und erfüllt eine der folgenden Bedingungen:"
+ consolidate_subject_vassal_type_tt: "$TAB$[SCOPE.sCountry('target_country').GetAltName('NOM')] ist ein [GetSubjectType('subject_type_vassal').GetName] oder [GetSubjectType('subject_type_puppet').GetName]"
+ consolidate_subject_dominion_type_tt: "[SCOPE.sCountry('target_country').GetAltName('NOM')] ist ein [GetSubjectType('subject_type_dominion').GetName] und erfüllt eine der folgenden Bedingungen:"
  consolidate_subject_dominion_type_laws_tt: "[GetLawType('law_parliamentary_republic').GetName], [GetLawType('law_presidential_republic').GetName], oder [GetLawType('law_council_republic').GetName]"
- consolidate_subject_union_type_tt: "[SCOPE.sCountry('target_country').GetName] ist eine [GetSubjectType('subject_type_personal_union').GetName] und:"
+ consolidate_subject_union_type_tt: "[SCOPE.sCountry('target_country').GetAltName('NOM')] ist eine [GetSubjectType('subject_type_personal_union').GetName] und:"
  consolidate_subject_primary_culture_tt: "Eine der [concept_primary_cultures] der Klientelländer ist: [SCOPE.sCountry('target_country').GetPrimaryCulturesDesc]"
- consolidate_subject_acceptance_tt: "Der [concept_overlord] hat Pan-Nationalismus oder Zivilisierungsmission erforscht, und alle [concept_primary_cultures] des Klientellandes müssen mindestens eine [concept_discrimination_trait] teilen und mindestens @acceptance_status_4! $second_rate_citizen$ [concept_acceptance_status] haben."
- consolidate_subject_multicultural_tt: "Der [concept_overlord] hat Pan-Nationalismus oder Zivilisierungsmission erforscht, die [concept_primary_cultures] des Ziel-Klientellandes hat eine Gemeinsamkeit mit der [concept_primary_cultures] des aufnehmenden Klientellandes, and das andere Klientelland hat Menschenrechte und Korporatismus erforscht, und hat [GetLawType('law_multicultural').GetName] verabschiedet."
+ consolidate_subject_acceptance_tt: "Der [concept_overlord] hat Pan-Nationalismus oder Zivilisierungsmission erforscht, und alle [concept_primary_cultures] des Klientellandes müssen mindestens eine [concept_discrimination_trait] teilen und mindestens den [concept_acceptance_status] @acceptance_status_4! $second_rate_citizen$ haben."
+ consolidate_subject_multicultural_tt: "Der [concept_overlord] hat Pan-Nationalismus oder Zivilisierungsmission erforscht und die [concept_primary_cultures] des Ziel-Klientellandes haben eine Gemeinsamkeit mit den [concept_primary_cultures] des aufnehmenden Klientellandes; zudem hat das andere Klientelland Menschenrechte sowie Korporatismus erforscht und [GetLawType('law_multicultural').GetName] verabschiedet."
  
- alert_overlord_can_consolidate_subject_name: "[GetDiplomaticActionType('consolidate_subject').GetName] verfügbar für [SCOPE.GetRootScope.GetCountry.GetName]"
+ alert_overlord_can_consolidate_subject_name: "[GetDiplomaticActionType('consolidate_subject').GetName] verfügbar für [SCOPE.GetRootScope.GetCountry.GetAltName('AKK')]"
  alert_overlord_can_consolidate_subject_desc: "Unser [concept_subject] [SCOPE.GetRootScope.GetCountry.GetName] kann mit einem benachbarten Klientelland zusammengeführt werden."
- alert_overlord_can_consolidate_subject_hint: "Sie können die Registerkarte „Klientelländer“ im Diplomatiefenster verwenden, um bei [GetDiplomaticActionType('consolidate_subject').GetName] eine [concept_diplomatic_action] durchzuführen."
+ alert_overlord_can_consolidate_subject_hint: "Sie können die Registerkarte „Klientelländer“ im Diplomatiefenster verwenden, um die [concept_diplomatic_action] [GetDiplomaticActionType('consolidate_subject').GetName] durchzuführen."
  alert_overlord_can_consolidate_subject_action: "Diplomatie-Panel"
  
  ag_can_consolidate_subject_name: "[GetDiplomaticActionType('consolidate_subject').GetName] verfügbar"
  ag_can_consolidate_subject_desc: "Es sind [concept_subject] [Concept('concept_country', '$concept_countries$')] verfügbar, die zusammengeführt werden können."
  ag_can_consolidate_subject_tooltip: "#header $ag_can_consolidate_subject_name$#!\n$TOOLTIP_DELIMITER$\n$ag_can_consolidate_subject_desc$\n\n$ALERT_GROUP_TOOLTIP_FOOTER$"
 
- rule_consolidate_subject_action: "Fächer konsolidieren" #deepl:1832589325
- setting_consolidate_subject_enabled: "Aktiviert" #deepl:3001197554
- setting_consolidate_subject_enabled_desc: "[Concept('concept_subject', '$concept_subjects$')] mit ähnlichen [concept_primary_cultures] können über [concept_overlord_action] zusammengeführt werden." #deepl:1738154614
- setting_consolidate_subject_player_only: "Nur Spieler" #deepl:3920533262
- setting_consolidate_subject_player_only_desc: "[Concept('concept_subject', '$concept_subjects$')] mit ähnlichen [concept_primary_cultures] können über [concept_overlord_action] zusammengeführt werden. Die KI kann keine Themen zusammenführen." #deepl:434434159
- setting_consolidate_subject_disabled: "Behinderte" #deepl:1603118088
- setting_consolidate_subject_disabled_desc: "Das Konsolidierungsfach [concept_overlord_action] ist nicht verfügbar." #deepl:2288228809
+ rule_consolidate_subject_action: "Klientelländer konsolidieren"
+ setting_consolidate_subject_enabled: "Aktiviert"
+ setting_consolidate_subject_enabled_desc: "[Concept('concept_subject', '$concept_subjects$')] mit ähnlichen [concept_primary_cultures] können über [concept_overlord_action] zusammengeführt werden."
+ setting_consolidate_subject_player_only: "Nur Spieler"
+ setting_consolidate_subject_player_only_desc: "[Concept('concept_subject', '$concept_subjects$')] mit ähnlichen [concept_primary_cultures] können über [concept_overlord_action] zusammengeführt werden. Die KI kann keine Klientelländer zusammenführen."
+ setting_consolidate_subject_disabled: "Deaktiviert"
+ setting_consolidate_subject_disabled_desc: "Die Konsolidierung-[concept_overlord_action] für Klientelländer ist nicht verfügbar."
