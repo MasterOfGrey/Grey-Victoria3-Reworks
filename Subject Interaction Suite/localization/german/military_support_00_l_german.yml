@@ -25,11 +25,11 @@
 
  military_support_effect_desc_global: "Unterstützt die territoriale Expansion"
  military_support_effect_desc_first: "[COUNTRY.GetAltName('NOM')] leistet Unterstützung für die territoriale Expansion [TARGET_COUNTRY.GetAltName('VON')]"
- military_support_effect_desc_third: "[COUNTRY.GetAltName('NOM')] leistet Unterstützung für die territoriale Expansion von [AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetAltName('VON')]"
+ military_support_effect_desc_third: "[COUNTRY.GetAltName('NOM')] leistet Unterstützung für die territoriale Expansion von [AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetAltName('VON'))]"
  
  military_support_trigger_desc_global: "Unterstützt die territoriale Expansion"
  military_support_trigger_false_desc_global: "Unterstützt #b nicht#! die territoriale Expansion?"
  military_support_trigger_desc_first: "[COUNTRY.GetAltNameNoFlag('NOM')|U] leistet Unterstützung für die territoriale Expansion [TARGET_COUNTRY.GetAltName('GEN')]"
  military_support_trigger_false_desc_first: "[COUNTRY.GetAltNameNoFlag('NOM')|U] hat #b keinen#! Pakt zur Unterstützung der territorialen Expansion mit [TARGET_COUNTRY.GetAltName('DAT')]"
- military_support_trigger_desc_third: "[COUNTRY.GetAltName('NOM')] unterstützt die territoriale Expansion [AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetAltName('VON')]"
+ military_support_trigger_desc_third: "[COUNTRY.GetAltName('NOM')] unterstützt die territoriale Expansion [AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetAltName('VON'))]"
  military_support_trigger_false_desc_third: "[COUNTRY.GetAltName('NOM')] unterstützt #b nicht#! die territoriale Expansion [AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetAltName('VON'))]"

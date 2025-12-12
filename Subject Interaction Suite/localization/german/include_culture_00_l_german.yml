@@ -19,10 +19,10 @@
  include_primary_culture_trigger_desc_first: "[COUNTRY.GetAltName('NOM')] integriert seine [Concept('concept_primary_cultures', '$concept_primary_culture$')] [TARGET_COUNTRY.GetAltName('IN')]."
  include_primary_culture_trigger_false_desc_first: "[COUNTRY.GetAltName('NOM')] integriert seine [Concept('concept_primary_cultures', '$concept_primary_culture$')] [TARGET_COUNTRY.GetAltName('IN')] #b nicht mehr#!"
  include_primary_culture_trigger_desc_third: "[COUNTRY.GetAltName('NOM')] integriert seine [Concept('concept_primary_cultures', '$concept_primary_culture$')] in [AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)]."
- include_primary_culture_trigger_false_desc_third: "[COUNTRY.GetAltName('NOM')] integriert seine [Concept('concept_primary_cultures', '$concept_primary_culture$')] #b nicht mehr#! [AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetAltName('IN')]."
+ include_primary_culture_trigger_false_desc_third: "[COUNTRY.GetAltName('NOM')] integriert seine [Concept('concept_primary_cultures', '$concept_primary_culture$')] #b nicht mehr#! [AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetAltName('IN'))]."
  
  ib_events.05.t: "Kulturelle Inklusion"
- ib_events.05.d: "[ROOT.GetCountry.GetAltName('NOM')] hat die kulturelle Inklusion für [SCOPE.sCountry('culture_include_country').GetAltName()] erfolgreich abgeschlossen. [SCOPE.sCountry('culture_include_country').GetAltName('NOM')] wird nun für immer gedeihen und die Kultur des Heimatlandes annehmen."
+ ib_events.05.d: "[ROOT.GetCountry.GetAltName('NOM')] hat die kulturelle Inklusion für [SCOPE.sCountry('culture_include_country').GetAltName('NOM')] erfolgreich abgeschlossen. [SCOPE.sCountry('culture_include_country').GetAltName('NOM')] wird nun für immer gedeihen und die Kultur des Heimatlandes annehmen."
  ib_events.05.f: "„Lang lebe [ROOT.GetCountry.GetAltName('NOM')]!“"
  ib_events.05.a: "Gut gemacht."
 

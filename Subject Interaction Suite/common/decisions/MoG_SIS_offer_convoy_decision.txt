@@ -1,0 +1,26 @@
+﻿occ_offer_convoys_decision = {
+	is_shown = {
+		num_diplomatic_pacts = {	# If any subject has the agreement with you.
+			type = occ_offer_convoys
+			value > 0
+		}
+	}
+	
+	possible = {
+		always = yes
+	}
+
+	when_taken = {
+		if = {
+			limit = { has_global_variable = offer_convoys_disabled }
+			remove_global_variable = offer_convoys_disabled
+		}
+		else = {
+			set_global_variable = offer_convoys_disabled
+		}
+	}
+	
+	ai_chance = {
+		value = 0
+	}
+}

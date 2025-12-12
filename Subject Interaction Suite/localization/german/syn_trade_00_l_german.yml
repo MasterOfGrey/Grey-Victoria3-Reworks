@@ -18,7 +18,7 @@
  laws_synergize_trade_trigger_false_desc_global: "Derzeit keine Angleichung der Handelspolitik."
  laws_synergize_trade_trigger_desc_first: "[COUNTRY.GetAltNameNoFlag('NOM')] verfügt über eine synergetisch abgestimmte Handelspolitik mit [TARGET_COUNTRY.GetAltName('DAT')]."
  laws_synergize_trade_trigger_false_desc_first: "[COUNTRY.GetAltNameNoFlag('NOM')] verfügt derzeit nicht über eine synergetisch abgestimmte Handelspolitik mit [TARGET_COUNTRY.GetAltName('DAT')]."
- laws_synergize_trade_trigger_desc_third: "[COUNTRY.GetAltName('NOM')] verfügt über eine synergetisch abgestimmte Handelspolitik mit [AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetAltName('DAT')]."
+ laws_synergize_trade_trigger_desc_third: "[COUNTRY.GetAltName('NOM')] verfügt über eine synergetisch abgestimmte Handelspolitik mit [AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetAltName('DAT'))]."
  laws_synergize_trade_trigger_false_desc_third: "[COUNTRY.GetAltName('NOM')] verfügt derzeit nicht über synergetische Handelspolitiksysteme mit [AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)][AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)]."
  
  mog_syn_events.04.t: "Angleichung der Handelspolitik!"
@@ -30,4 +30,4 @@
  
  overlord_syn_cost_trade: "Kosten für die Angleichung der Handelspolitik"
  
- active_synergize_trade_tt: "Die Anzahl anderer "$laws_synergize_trade$"-Aktionen ist kleiner als 1."
+ active_synergize_trade_tt: "Die Anzahl anderer $laws_synergize_trade$-Aktionen ist kleiner als 1."

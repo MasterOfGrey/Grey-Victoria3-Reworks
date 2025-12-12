@@ -1,0 +1,14 @@
+﻿occ_offer_convoys_decision_dynamic_name = {
+	type = country
+	random_valid = no
+	
+	text = {
+		trigger = {
+			has_global_variable = offer_convoys_disabled
+		}
+		localization_key = occ_enable_convoys
+	}
+	text = {
+		localization_key = occ_disable_convoys
+	}
+}
