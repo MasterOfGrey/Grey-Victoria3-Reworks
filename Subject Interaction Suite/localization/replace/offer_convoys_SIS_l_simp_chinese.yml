@@ -12,3 +12,7 @@
  
  TRIGGER_COUNTRY_EXCESS_CONVOY_SURPLUS_PERCENT_GREATER_THAN: "增加后的盈余[concept_convoys] #b  不#! 大于#BOLD 0%#! （目前：[ROOT.GetCountry.MakeScope.ScriptValue('excess_convoy_surplus_percent')|v%])" #deepl:3808472463
  TRIGGER_COUNTRY_CONVOY_CONTRIBUTION_LESS_THAN_MAX: "总计@convoys![Nbsp] [concept_convoys] 增加后对[concept_market_owner] 的捐款#b 不得#! 大于或等于#BOLD 95%#! （目前：[ROOT.GetCountry.GetModifier.GetValueFor('country_convoy_contribution_to_market_owner_add')|v%0] +#v 30%#! =[ROOT.GetCountry.MakeScope.ScriptValue('after_increase_contribution_percent')|v%0])" #deepl:3830302215
+
+ occ_offer_convoys_decision: "[ROOT.GetCountry.GetCustom('occ_offer_convoys_decision_dynamic_name')]" #deepl:502504601
+ occ_enable_convoys: "启用提供车队行动" #deepl:3419686017
+ occ_disable_convoys: "禁用优惠车队行动" #deepl:399902713

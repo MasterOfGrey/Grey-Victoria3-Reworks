@@ -30,10 +30,10 @@
 
  rule_sis_cultural_religion_actions: "Kulturelle und religiöse Ausrichtung"
  setting_sis_cultural_religion_enabled: "Aktiviert"
- setting_sis_cultural_religion_enabled_desc: "Der Spieler kann die [concept_state_religion] und die [concept_primary_cultures] seiner [Concept('concept_subject', '$concept_subjects$')] über [concept_overlord_action] ändern." 
+ setting_sis_cultural_religion_enabled_desc: "Der Spieler kann die [concept_state_religion] und die [concept_primary_cultures] seiner [Concept('concept_subject', '$concept_subjects$')] über [concept_overlord_action] ändern."
  setting_sis_cultural_religion_disabled: "Deaktiviert"
  setting_sis_cultural_religion_disabled_desc: "Der Spieler kann die [concept_state_religion] und [concept_primary_cultures] seiner [Concept('concept_subject', '$concept_subjects$')] nicht über [concept_overlord_action] ändern."
 
  notification_MoG_SIS_culture_included_name: "Kulturen integriert [SCOPE.sCountry('culture_include_country').GetAltName('IN')]"
- notification_MoG_SIS_culture_included_desc: "Unsere [concept_primary_cultures] wurden zu [SCOPE.sCountry('culture_include_country').GetAltName('DAT')] hinzugefügt." 
- notification_MoG_SIS_culture_included_tooltip: "#header $notification_MoG_SIS_culture_included_name$#!\n$notification_MoG_SIS_culture_included_desc$" 
+ notification_MoG_SIS_culture_included_desc: "Unsere [concept_primary_cultures] wurden zu [SCOPE.sCountry('culture_include_country').GetAltName('DAT')] hinzugefügt."
+ notification_MoG_SIS_culture_included_tooltip: "#header $notification_MoG_SIS_culture_included_name$#!\n$notification_MoG_SIS_culture_included_desc$"

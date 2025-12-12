@@ -12,3 +12,7 @@
  
  TRIGGER_COUNTRY_EXCESS_CONVOY_SURPLUS_PERCENT_GREATER_THAN: "増加後の剰余金[concept_convoys] は#b #! を上回らない#BOLD 0%#! （現在：[ROOT.GetCountry.MakeScope.ScriptValue('excess_convoy_surplus_percent')|v%] ）。" #deepl:3808472463
  TRIGGER_COUNTRY_CONVOY_CONTRIBUTION_LESS_THAN_MAX: "合計@convoys![Nbsp] [concept_convoys] 増額後の[concept_market_owner] への寄与率は#b 以上#! 以下でなければならない#BOLD 95%#! （現在：[ROOT.GetCountry.GetModifier.GetValueFor('country_convoy_contribution_to_market_owner_add')|v%0] +#v 30%#! =[ROOT.GetCountry.MakeScope.ScriptValue('after_increase_contribution_percent')|v%0] ）。" #deepl:3830302215
+
+ occ_offer_convoys_decision: "[ROOT.GetCountry.GetCustom('occ_offer_convoys_decision_dynamic_name')]" #deepl:502504601
+ occ_enable_convoys: "オファー・コンボイ・アクションを有効にする" #deepl:3419686017
+ occ_disable_convoys: "オファーコンボイ動作を無効にする" #deepl:399902713

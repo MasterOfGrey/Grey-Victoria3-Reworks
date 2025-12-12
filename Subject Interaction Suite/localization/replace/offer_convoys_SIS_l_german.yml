@@ -12,3 +12,7 @@
  
  TRIGGER_COUNTRY_EXCESS_CONVOY_SURPLUS_PERCENT_GREATER_THAN: "Der Überschuss an [concept_convoys] nach der Erhöhung ist #b nicht#! größer als #BOLD 0%#! (derzeit: [ROOT.GetCountry.MakeScope.ScriptValue('excess_convoy_surplus_percent')|v%])"
  TRIGGER_COUNTRY_CONVOY_CONTRIBUTION_LESS_THAN_MAX: "Gesamter @convoys![Nbsp] [concept_convoys]beitrag zum [concept_market_owner] nach der Erhöhung darf #b nicht#! größer oder gleich #BOLD 95%#! sein (derzeit: [ROOT.GetCountry.GetModifier.GetValueFor('country_convoy_contribution_to_market_owner_add')|v%0] + #v 30%#! = [ROOT.GetCountry.MakeScope.ScriptValue('after_increase_contribution_percent')|v%0])"
+
+ occ_offer_convoys_decision: "[ROOT.GetCountry.GetCustom('occ_offer_convoys_decision_dynamic_name')]" #deepl:502504601
+ occ_enable_convoys: "Aktion "Konvoi anbieten" aktivieren" #deepl:3419686017
+ occ_disable_convoys: "Aktion Konvoi anbieten deaktivieren" #deepl:399902713

@@ -36,7 +36,8 @@
  MoG_SIS_synergy_complete_group: "SIS | Klientelland-Anpassung"
  notification_MoG_SIS_synergy_complete_name: "[SCOPE.sCountry('synergize_target_country').GetAltName('NOM')] wurde angeglichen"
  notification_MoG_SIS_synergy_complete_desc: "[SCOPE.sCountry('synergize_target_country').GetAltName('NOM')] hat [SCOPE.sLawType('initiator_law').GetName] als Gesetz angenommen."
- notification_MoG_SIS_synergy_complete_tooltip: "#header $notification_MoG_SIS_synergy_complete_name$#!\n$notification_MoG_SIS_synergy_complete_desc$" 
+ notification_MoG_SIS_synergy_complete_tooltip: "#header $notification_MoG_SIS_synergy_complete_name$#!\n$notification_MoG_SIS_synergy_complete_desc$"
+
  rule_sis_synergize_actions: "Anpassung von Gesetzen"
  setting_sis_synergize_enabled: "Aktiviert"
  setting_sis_synergize_enabled_desc: "Der Spieler kann die [GetLawGroup('lawgroup_bureaucracy').GetName]-, [GetLawGroup('lawgroup_economic_system').GetName]-, [GetLawGroup('lawgroup_land_reform').GetName]- und [GetLawGroup('lawgroup_trade_policy').GetName]-Gesetze seiner [Concept('concept_subject', '$concept_subjects$')] über [concept_overlord_action] ändern."
