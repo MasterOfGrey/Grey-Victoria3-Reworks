@@ -1,4 +1,5 @@
-﻿liberty_desire_weekly_change_legal_friction = {
+﻿# For reasons unclear, using REPLACE_OR_CREATE for these sub-components of the script value causes it to error with "Failed to find a valid event target link".
+liberty_desire_weekly_change_legal_friction = {
 	# LEGAL FRICTION
 	add = {
 		# Free Speech - Legal friction between 

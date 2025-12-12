@@ -1,4 +1,4 @@
-﻿je_law_imposition = {
+﻿REPLACE_OR_CREATE:je_law_imposition = {
     icon = "gfx/interface/icons/event_icons/event_scales.dds"
 
 	group = je_group_foreign_affairs
@@ -40,8 +40,9 @@
 		effect = {
 			if = {
 				limit = { 
+					# exists = currently_enacting_law	# Intentionally removed.
 					scope:journal_entry = { NOT = { has_variable = notification_sent_var } } 
-					currently_enacting_law = scope:foreign_imposition_law
+					currently_enacting_law ?= scope:foreign_imposition_law
 				}
 				imposer_of_law = { post_notification = imposition_started }
 				scope:journal_entry = { set_variable = notification_sent_var }
@@ -80,10 +81,10 @@
 				has_variable = has_been_abandoned
 			}
 			# root = {
-			has_variable = imposed_law_failed
+			has_variable = imposed_law_failed	# Reworked in this mod
 			AND = {
 				scope:journal_entry = { has_variable = notification_sent_var }
-				enacting_any_law = no
+				enacting_any_law = no			# Invalidate after failing this specific law being implemented.
 			}
 			scope:foreign_imposition_country ?= {
 				NOT = {

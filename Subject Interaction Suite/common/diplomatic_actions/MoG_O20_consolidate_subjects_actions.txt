@@ -1,6 +1,6 @@
 ﻿# Adapted with permission from: CaelReader's Consolidate Subjects
 
-consolidate_subject = {
+REPLACE_OR_CREATE:consolidate_subject = {
 	groups= {
 		overlord
 	}

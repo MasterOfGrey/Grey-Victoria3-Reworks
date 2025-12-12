@@ -1,4 +1,4 @@
-﻿decrease_payments = {
+﻿REPLACE_OR_CREATE:decrease_payments = {
 	requires_approval = no
 	groups= { overlord }
 	

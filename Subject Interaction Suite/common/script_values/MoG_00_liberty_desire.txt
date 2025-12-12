@@ -9,7 +9,7 @@
 # root.second_country: second country in the pact. Subject.
 # root = { liberty_desire < 50 }: compare trigger for current Liberty Desire value root.
 # Must return a value which will be added to the current Liberty Desire in this pact.
-liberty_desire_weekly_change = {
+REPLACE_OR_CREATE:liberty_desire_weekly_change = {
 #	add = {
 #		value = 0.1
 #		desc = "base_value"
@@ -1136,7 +1136,7 @@ liberty_desire_weekly_change = {
 }
 
 # For Safety (in case someone has overwritten 00_diplomacy_values.txt)
-num_primary_cultures = {
+REPLACE_OR_CREATE:num_primary_cultures = {
 	every_primary_culture = {
 		add = 1
 	}

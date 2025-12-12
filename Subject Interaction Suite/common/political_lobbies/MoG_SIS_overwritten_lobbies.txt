@@ -7,7 +7,7 @@
 # scope:target_country = the country the lobby is targeting (same as scope:country for domestic lobbies)
 # scope:political_lobby = the lobby
 
-lobby_pro_overlord = {
+REPLACE_OR_CREATE:lobby_pro_overlord = {
 	category = foreign_pro_country
 
 	texture = "gfx/interface/icons/political_lobby_icons/lobby_pro.dds"
@@ -575,7 +575,7 @@ lobby_pro_overlord = {
 	}
 }
 
-lobby_anti_overlord = {
+REPLACE_OR_CREATE:lobby_anti_overlord = {
 	category = foreign_anti_country
 
 	texture = "gfx/interface/icons/political_lobby_icons/lobby_anti.dds"

@@ -1,6 +1,6 @@
 ﻿# *Partially* derived from source material in: Koa's Change Subject Culture
 
-include_primary_culture = {
+REPLACE_OR_CREATE:include_primary_culture = {
 	groups= {
 		overlord
 	}

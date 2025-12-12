@@ -1,4 +1,4 @@
-﻿da_appoint_colonial_governor = {
+﻿REPLACE_OR_CREATE:da_appoint_colonial_governor = {
 	groups= { overlord }
 	
 	requires_approval = no

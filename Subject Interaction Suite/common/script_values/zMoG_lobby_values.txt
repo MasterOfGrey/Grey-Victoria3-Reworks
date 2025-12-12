@@ -3,7 +3,7 @@
 # scope:country = the country the lobby belongs to
 # scope:target_country = the country the lobby is targeting (same as scope:country for domestic lobbies)
 # scope:political_lobby = the lobby
-pro_overlord_lobby_starting_appeasement = {
+REPLACE_OR_CREATE:pro_overlord_lobby_starting_appeasement = {
 	value = 0
 	
 	ROOT.owner = {	# scope:lobby_country isn't a real scope - and was originally created *incorrectly* with save_temporary_scope_as = lobby_country in the root scope (which is interest group)
@@ -64,7 +64,7 @@ pro_overlord_lobby_starting_appeasement = {
 	# min = -5
 }
 
-anti_overlord_lobby_starting_appeasement = {
+REPLACE_OR_CREATE:anti_overlord_lobby_starting_appeasement = {
 	value = 0
 	
 	ROOT.owner = {	# scope:lobby_country isn't a real scope - and was originally created *incorrectly* with save_temporary_scope_as = lobby_country in the root scope (which is interest group)

@@ -1,5 +1,5 @@
 ﻿# We are using this to identify when a country can afford to give away 30% of its convoy production.
-excess_convoy_surplus_percent = {
+REPLACE_OR_CREATE:excess_convoy_surplus_percent = {
 	add = {
 		add = num_convoys_required
 		min = 1
@@ -25,7 +25,7 @@ excess_convoy_surplus_percent = {
 	}
 }
 
-after_increase_contribution_percent = {
+REPLACE_OR_CREATE:after_increase_contribution_percent = {
 	add = modifier:country_convoy_contribution_to_market_owner_add
 	add = 0.3
 }

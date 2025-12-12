@@ -1,6 +1,6 @@
 ﻿# Updated and included from: Koa's Colonial Government
 
-military_support = {
+REPLACE_OR_CREATE:military_support = {
 	groups= {
 		overlord
 	}

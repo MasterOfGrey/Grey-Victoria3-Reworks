@@ -1,4 +1,4 @@
-﻿bankroll = {
+﻿REPLACE_OR_CREATE:bankroll = {
 	groups= {
 		overlord
 	}

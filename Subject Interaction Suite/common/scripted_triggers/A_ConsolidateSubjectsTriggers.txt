@@ -1,6 +1,6 @@
 ﻿# Adapted with permission from: CaelReader's Consolidate Subjects
 
-can_consolidate_subject = {
+REPLACE_OR_CREATE:can_consolidate_subject = {
 	# We can let India *try* and consolidate its subjects lol
 	# NOT = { c:BIC ?= THIS }						# Gotta have `c:BIC ?= THIS`, NOT `THIS ?= c:BIC`
 	# is_subject = no
@@ -19,7 +19,7 @@ can_consolidate_subject = {
 	}
 }
 
-subject_can_be_consolidation_target = {
+REPLACE_OR_CREATE:subject_can_be_consolidation_target = {
 	hidden_trigger = {
 		is_ai = yes
 		is_direct_subject_of = root
@@ -108,7 +108,7 @@ subject_can_be_consolidation_target = {
 	}
 }
 
-can_be_consolidation_recipient = {
+REPLACE_OR_CREATE:can_be_consolidation_recipient = {
 	save_temporary_scope_as = recipient_subject
 	hidden_trigger = {
 		is_adjacent_to_country = scope:target_country

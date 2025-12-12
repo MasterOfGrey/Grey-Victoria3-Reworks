@@ -1,6 +1,6 @@
 ﻿# Brought up to date and included from: Infinite's Merge Subject
 
-merge_subject = {
+REPLACE_OR_CREATE:merge_subject = {
 	groups= {
 		general
 	}

@@ -1,6 +1,6 @@
 ﻿# Brought up to date and included from: uridogoraeda's Forced change in subject country law
 
-forced_industry_ban = {
+REPLACE_OR_CREATE:forced_industry_ban = {
 	groups= {
 		overlord
 	}

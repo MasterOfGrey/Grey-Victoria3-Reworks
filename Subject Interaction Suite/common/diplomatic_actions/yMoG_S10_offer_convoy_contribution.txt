@@ -1,4 +1,4 @@
-﻿occ_offer_convoys = {
+﻿REPLACE_OR_CREATE:occ_offer_convoys = {
 	groups= { 
 		subject
 		power_bloc_member

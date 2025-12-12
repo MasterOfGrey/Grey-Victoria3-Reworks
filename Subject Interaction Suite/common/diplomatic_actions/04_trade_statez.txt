@@ -1,4 +1,4 @@
-﻿trade_states = {
+﻿REPLACE_OR_CREATE:trade_states = {
 	groups= {
 		general
 	}

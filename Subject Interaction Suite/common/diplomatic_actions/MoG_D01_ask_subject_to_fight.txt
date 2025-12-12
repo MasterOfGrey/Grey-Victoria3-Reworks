@@ -1,6 +1,6 @@
 ﻿# Brought up to date and included from: FX_ask_subject_to_fight
 
-ask_subject_to_fight = {
+REPLACE_OR_CREATE:ask_subject_to_fight = {
 	groups= {
 		general
 	}

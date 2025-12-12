@@ -1,4 +1,4 @@
-﻿support_independence = {
+﻿REPLACE_OR_CREATE:support_independence = {
 	kind = directed
 	cost = 50
 

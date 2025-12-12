@@ -1,6 +1,6 @@
 ﻿# Brought up to date and included from: Koa's Change Subject Culture
 
-open_border = {
+REPLACE_OR_CREATE:open_border = {
 	groups= {
 		overlord
 	}

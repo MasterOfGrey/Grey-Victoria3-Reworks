@@ -20,7 +20,7 @@ sis_cultural_religion_actions = {
 	sis_cultural_religion_disabled = {}
 }
 
-consolidate_subject_action = {
+REPLACE_OR_CREATE:consolidate_subject_action = {
 	default = consolidate_subject_enabled
 
 	consolidate_subject_enabled = {}

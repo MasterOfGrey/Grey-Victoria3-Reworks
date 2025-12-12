@@ -1,4 +1,4 @@
-﻿button_implement_law_imposition = {
+﻿REPLACE_OR_CREATE:button_implement_law_imposition = {
 	name = "button_implement_law_imposition"
 	desc = "button_implement_law_imposition_desc"
 	
@@ -93,7 +93,7 @@
 	}
 }
 
-button_refuse_law_imposition = {
+REPLACE_OR_CREATE:button_refuse_law_imposition = {
 	name = "button_refuse_law_imposition"
 	desc = "button_refuse_law_imposition_desc"
 	

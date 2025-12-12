@@ -1,6 +1,6 @@
 ﻿# Reminder to expand your area of influence
 
-unused_interests_alert = {
+REPLACE_OR_CREATE:unused_interests_alert = {
 	texture = "gfx/interface/icons/alert_icons/has_decreasing_interests.dds"
 	script_context = player_country
 	
@@ -13,7 +13,7 @@ unused_interests_alert = {
 	color = green
 }
 
-overlord_can_consolidate_subject = {
+REPLACE_OR_CREATE:overlord_can_consolidate_subject = {
 	texture = "gfx/interface/icons/diplomatic_action_icons/consolidate_subject.dds"
 	script_context = player_subject
 	

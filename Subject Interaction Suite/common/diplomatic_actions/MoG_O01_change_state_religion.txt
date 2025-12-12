@@ -1,6 +1,6 @@
 ﻿# Brought up to date, separated from culture, and included from: Koa's Change Subject Culture
 
-change_state_religion = {
+REPLACE_OR_CREATE:change_state_religion = {
 	groups= {
 		overlord
 	}

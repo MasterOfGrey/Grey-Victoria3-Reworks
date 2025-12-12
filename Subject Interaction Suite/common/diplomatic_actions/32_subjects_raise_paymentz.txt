@@ -1,4 +1,4 @@
-﻿raise_payments = {
+﻿REPLACE_OR_CREATE:raise_payments = {
 	requires_approval = no
 	groups= { overlord subject } # this is a subject action only for the sake of breaking it if LD is high enough
 	

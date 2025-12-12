@@ -1,6 +1,6 @@
 ﻿# Brought up to date and included from: (originally) a.k.a DMDonahue's "Diplomatic Recognition" & (more recently) Marcus's "Request and Grant Diplomatic Recognition"
 
-recognize = {
+REPLACE_OR_CREATE:recognize = {
 	groups= {
 		overlord
 	}

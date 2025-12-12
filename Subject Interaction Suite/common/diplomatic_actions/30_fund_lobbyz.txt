@@ -1,4 +1,4 @@
-﻿fund_lobbies = {
+﻿REPLACE_OR_CREATE:fund_lobbies = {
 	groups= {
 		general
 	}
