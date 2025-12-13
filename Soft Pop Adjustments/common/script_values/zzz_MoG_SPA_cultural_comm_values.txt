@@ -5,7 +5,7 @@
 # Note: normally only cultures present in the same market as <state> are evaluated,
 # however if a treaty port exists, then cultures present in either of the involved markets will be evaluated.
 
-cultural_community_creation_weight = {
+TRY_REPLACE:cultural_community_creation_weight = {
 
 	# Conditions that block
 

@@ -1,4 +1,4 @@
-﻿state_slaves_education_access_add={
+﻿REPLACE_OR_CREATE:state_slaves_education_access_add={
 	decimals=0
 	color=good
 	percent=yes
@@ -8,7 +8,7 @@
 }
 
 # Vanilla - Needs more decimals
-state_education_access_wealth_add={
+REPLACE_OR_CREATE:state_education_access_wealth_add={
 	decimals=2
 	color=good
 	suffix="per_wealth"

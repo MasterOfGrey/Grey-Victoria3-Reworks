@@ -1,4 +1,4 @@
-﻿laborers = {
+﻿TRY_REPLACE:laborers = {
 	texture = "gfx/interface/icons/pops_icons/laborers.dds"
 	color = hsv{ 0.02 0.38 0.37 }
 	unemployment = yes

@@ -7,7 +7,8 @@
 # state_trigger										A trigger in state context that determines if the Decree is permitted or not; should invalidate the Decree on a weekly basis if found invalid 
 # ai_weight											Scripted value which determines the chance of getting the Decree by AI
 
-decree_promote_national_values = {
+# Cannot use INJECT because we actually change a weighting block.
+TRY_REPLACE:decree_promote_national_values = {
 	texture = "gfx/interface/icons/decree/decree_promote_national_values.dds"
 	unlocking_technologies = {
 		centralization

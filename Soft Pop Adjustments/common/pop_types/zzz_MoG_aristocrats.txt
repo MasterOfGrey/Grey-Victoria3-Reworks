@@ -1,4 +1,4 @@
-﻿aristocrats = {
+﻿TRY_REPLACE:aristocrats = {
 	texture = "gfx/interface/icons/pops_icons/aristocrats.dds"
 	color = hsv{ 0.60 0.58 0.46 }
 	start_quality_of_life = 120 # 20

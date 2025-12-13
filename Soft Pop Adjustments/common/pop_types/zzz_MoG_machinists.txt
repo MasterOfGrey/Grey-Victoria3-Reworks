@@ -1,4 +1,4 @@
-﻿machinists = {
+﻿TRY_REPLACE:machinists = {
 	texture = "gfx/interface/icons/pops_icons/machinists.dds"
 	color = hsv{ 0.92 0.40 0.78 }
 	start_quality_of_life = 107 # 7

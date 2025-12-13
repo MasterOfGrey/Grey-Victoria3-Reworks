@@ -11,12 +11,14 @@
 
 ### Notes:
 # I basically annihilated the migration pull multipliers because they're broken when you have mostly functional migration logic.
+# Cannot use INJECT due to additive values which would be hugely broken if vanilla or some other mod changes the baseline.
+# We use TRY_REPLACE in case some other mod has completely redesigned these from the ground up, in which case good luck but things might work out.
 
 ################
 ## RECOGNIZED ##
 ################
 
-great_power = {
+TRY_REPLACE:great_power = {
 	rank_value = 7
 	icon_index = 4
 	
@@ -50,7 +52,7 @@ great_power = {
 	}
 }
 
-major_power = {
+TRY_REPLACE:major_power = {
 	rank_value = 6
 	icon_index = 3
 	
@@ -83,7 +85,7 @@ major_power = {
 	}
 }
 
-minor_power = {
+TRY_REPLACE:minor_power = {
 	rank_value = 4
 	icon_index = 2
 	
@@ -109,7 +111,7 @@ minor_power = {
 	}
 }
 
-insignificant_power = {
+TRY_REPLACE:insignificant_power = {
 	rank_value = 2
 	icon_index = 1
 
@@ -137,7 +139,7 @@ insignificant_power = {
 ## UNRECOGNIZED ##
 ##################
 
-unrecognized_major_power = {
+TRY_REPLACE:unrecognized_major_power = {
 	rank_value = 5
 	icon_index = 3
 	
@@ -166,7 +168,7 @@ unrecognized_major_power = {
 	}
 }
 
-unrecognized_regional_power = {
+TRY_REPLACE:unrecognized_regional_power = {
 	rank_value = 3
 	icon_index = 2
 	
@@ -199,7 +201,7 @@ unrecognized_regional_power = {
 }
 
 
-unrecognized_power = {
+TRY_REPLACE:unrecognized_power = {
 	rank_value = 1
 	icon_index = 1
 
@@ -229,7 +231,7 @@ unrecognized_power = {
 ## DECENTRALIZED ##
 ###################
 
-decentralized_power = {
+TRY_REPLACE:decentralized_power = {
 	rank_value = 0
 	icon_index = 1
 	

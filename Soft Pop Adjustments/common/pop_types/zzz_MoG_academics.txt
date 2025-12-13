@@ -1,4 +1,4 @@
-﻿academics = {
+﻿TRY_REPLACE:academics = {
 	texture = "gfx/interface/icons/pops_icons/academics.dds"
 	color = hsv{ 0.94 0.51 0.37 }
 	start_quality_of_life = 110 # 10

@@ -1,4 +1,4 @@
-﻿clerks = {
+﻿TRY_REPLACE:clerks = {
 	texture = "gfx/interface/icons/pops_icons/clerks.dds"
 	start_quality_of_life = 107 # 7
 	color = hsv{ 0.28 0.40 0.75 }

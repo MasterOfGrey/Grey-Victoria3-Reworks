@@ -1,4 +1,4 @@
-﻿soldiers = {
+﻿TRY_REPLACE:soldiers = {
 	texture = "gfx/interface/icons/pops_icons/soldiers.dds"
 	color = hsv{ 0.8 0.20 0.56 }
 	military = yes

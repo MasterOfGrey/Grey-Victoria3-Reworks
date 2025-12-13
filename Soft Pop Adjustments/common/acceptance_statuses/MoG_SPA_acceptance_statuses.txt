@@ -7,7 +7,9 @@
 
 # SPA update note: make sure the thresholds are aligned with common/script_values/yMoG_SPA_event_values_overwrites.txt
 
-violent_hostility = {
+# Cannot use INJECT due to additive values which would be hugely broken if vanilla or some other mod changes the baseline.
+# We use TRY_REPLACE in case some other mod has completely redesigned these from the ground up, in which case good luck but things might work out.
+TRY_REPLACE:violent_hostility = {
 	threshold = 0
 	base_migration_desire = 100 # 100 # Not a binary system so keeping this at 100 now
 	# If the opportunity presents itself to leave, you need *very* good reasons to stay...
@@ -19,7 +21,7 @@ violent_hostility = {
 	background = "gfx/interface/icons/acceptance_icons/bg_illu_acceptance_t1.dds"
 }
 
-cultural_erasure = {
+TRY_REPLACE:cultural_erasure = {
 	threshold = 20
 	base_migration_desire = 40 # 100
 	# At this point you need a good reason to stay, but those reasons definitely exist.
@@ -31,7 +33,7 @@ cultural_erasure = {
 	background = "gfx/interface/icons/acceptance_icons/bg_illu_acceptance_t2.dds"
 }
 
-open_prejudice = {
+TRY_REPLACE:open_prejudice = {
 	threshold = 45 # 40
 	base_migration_desire = -20 # 10(old) # 50
 	# 3rd class has a rough deal, finding a better job is still a good way to beat prejudice, but moving...
@@ -43,7 +45,7 @@ open_prejudice = {
 	background = "gfx/interface/icons/acceptance_icons/bg_illu_acceptance_t3.dds"
 }
 
-second_rate_citizen = {
+TRY_REPLACE:second_rate_citizen = {
 	threshold = 70 # 60
 	base_migration_desire = -100 # -20.0(old) # 20 
 	# 2nd class actually has a pretty good deal - uprooting their lives and migrating is a hefty risk.
@@ -55,7 +57,7 @@ second_rate_citizen = {
 	background = "gfx/interface/icons/acceptance_icons/bg_illu_acceptance_t4.dds"
 }
 
-full_acceptance = {
+TRY_REPLACE:full_acceptance = {
 	threshold = 95 # 80
 	base_migration_desire = -50 # 0
 	# Jobseek preferentially until below -50 job satisfaction (default rate).

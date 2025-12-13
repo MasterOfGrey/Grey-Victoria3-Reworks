@@ -1,4 +1,4 @@
-﻿shopkeepers = {
+﻿TRY_REPLACE:shopkeepers = {
 	texture = "gfx/interface/icons/pops_icons/shopkeepers.dds"
 	color = hsv{ 0.41 0.45 0.88 }
 	start_quality_of_life = 110 # 10

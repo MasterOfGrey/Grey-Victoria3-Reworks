@@ -1,5 +1,5 @@
 ﻿#Used in both Universities and Art Academies, the original 20% buff is wildly excessive with SPA's changes.
-pm_principle_freedom_of_movement_3 = {
+TRY_REPLACE:pm_principle_freedom_of_movement_3 = {
 	texture = "gfx/interface/icons/production_method_icons/government_run.dds"
 
 	is_hidden_when_unavailable = yes
@@ -15,7 +15,7 @@ pm_principle_freedom_of_movement_3 = {
 	}
 }
 
-pm_default_building_statue_of_liberty = {
+TRY_REPLACE:pm_default_building_statue_of_liberty = {
 	texture = "gfx/interface/icons/production_method_icons/wonders.dds"
 
 	is_hidden_when_unavailable = yes
@@ -37,7 +37,7 @@ pm_default_building_statue_of_liberty = {
 	}
 }
 
-pm_default_building_white_house = {
+TRY_REPLACE:pm_default_building_white_house = {
 	texture = "gfx/interface/icons/production_method_icons/wonders.dds"
 
 	is_hidden_when_unavailable = yes
