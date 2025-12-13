@@ -1,7 +1,7 @@
 ﻿# The AI gets itself into trouble using Monopoly Charters quite a lot. So the goal of this is essentially to say, "no, don't give monopoly, but if a country that is higher rank than you has investment rights and the same type of company, then you can use a monopoly defensively".
 # This file is named the same in all mods that it appears in so that it doesn't double up on itself between mods.
 
-monopoly_charter = {
+REPLACE_OR_CREATE:monopoly_charter = {
 	type = monopoly
 
 	icon = "gfx/interface/icons/company_charter_icons/monopoly_charter.dds"

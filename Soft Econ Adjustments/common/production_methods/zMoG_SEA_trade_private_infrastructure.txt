@@ -1,5 +1,5 @@
 ﻿## Base PM's with staffing reductions
-pm_trade_center = {
+TRY_REPLACE:pm_trade_center = {
 	texture = "gfx/interface/icons/production_method_icons/trade_center.dds"
 	replacement_if_valid = pm_trade_center_principle_external_trade_2
 	is_hidden_when_unavailable = yes
@@ -24,7 +24,7 @@ pm_trade_center = {
 	}
 }
 
-pm_trade_center_principle_external_trade_2 = {
+TRY_REPLACE:pm_trade_center_principle_external_trade_2 = {
 	texture = "gfx/interface/icons/production_method_icons/trade_center.dds"
 	is_hidden_when_unavailable = yes
 

@@ -1,4 +1,4 @@
-﻿peasants = {
+﻿TRY_REPLACE:peasants = {
 	texture = "gfx/interface/icons/pops_icons/peasants.dds"
 	color = hsv{ 0.58 0.338 0.812 }
 	subsistence_income = yes

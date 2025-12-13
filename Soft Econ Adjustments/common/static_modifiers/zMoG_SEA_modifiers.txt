@@ -1,13 +1,13 @@
 ﻿## Vanilla Static Replacements ##
 #################################
 
-government_owned_debt = {
+REPLACE_OR_CREATE:government_owned_debt = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_coins_negative.dds
 	country_government_dividends_waste_add = -1
 }
 
 # Insufficient BUR reduces tax & government dividends collected by 100% at 2x usage to production
-administrative_overburden = {
+REPLACE_OR_CREATE:administrative_overburden = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_coins_negative.dds
 	state_tax_waste_add = 1							# Vanilla
 	country_government_dividends_waste_add = 1		# Vanilla
@@ -16,7 +16,7 @@ administrative_overburden = {
 }
 
 # Scales with devastation level
-state_region_devastation = {
+REPLACE_OR_CREATE:state_region_devastation = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_gear_negative.dds
 	state_infrastructure_mult = -0.9	# -1.0	# I get what they were going for, but foreign aid can be carried in on donkeys if necessary, where there are people there are options.
 	state_mortality_mult = 2.0
