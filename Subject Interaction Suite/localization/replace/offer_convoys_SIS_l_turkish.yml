@@ -14,5 +14,6 @@
  TRIGGER_COUNTRY_CONVOY_CONTRIBUTION_LESS_THAN_MAX: "Toplam @convoys![Nbsp] [concept_convoys] Artıştan sonra [concept_market_owner] 'a katkı #b #! #BOLD  %95#! 'den büyük veya eşit olmamalıdır (şu anda: [ROOT.GetCountry.GetModifier.GetValueFor('country_convoy_contribution_to_market_owner_add')|v%0] + #v %30#! = [ROOT.GetCountry.MakeScope.ScriptValue('after_increase_contribution_percent')|v%0])" #deepl:3830302215
 
  occ_offer_convoys_decision: "[ROOT.GetCountry.GetCustom('occ_offer_convoys_decision_dynamic_name')]" #deepl:502504601
+ occ_offer_convoys_decision_desc: "[ROOT.GetCountry.GetCustom('occ_offer_convoys_decision_dynamic_name')]" #deepl:502504601
  occ_enable_convoys: "Teklif Konvoyu Eylemini Etkinleştir" #deepl:3419686017
  occ_disable_convoys: "Teklif Konvoyu Eylemini Devre Dışı Bırak" #deepl:399902713

@@ -14,5 +14,6 @@
  TRIGGER_COUNTRY_CONVOY_CONTRIBUTION_LESS_THAN_MAX: "Total @convoys![Nbsp] [concept_convoys] A contribuição para [concept_market_owner] após o aumento deve #b não#! ser maior ou igual a #BOLD 95%#! (atualmente: [ROOT.GetCountry.GetModifier.GetValueFor('country_convoy_contribution_to_market_owner_add')|v%0] + #v 30%#! = [ROOT.GetCountry.MakeScope.ScriptValue('after_increase_contribution_percent')|v%0])" #deepl:3830302215
 
  occ_offer_convoys_decision: "[ROOT.GetCountry.GetCustom('occ_offer_convoys_decision_dynamic_name')]" #deepl:502504601
+ occ_offer_convoys_decision_desc: "[ROOT.GetCountry.GetCustom('occ_offer_convoys_decision_dynamic_name')]" #deepl:502504601
  occ_enable_convoys: "Habilitar ação de comboio de ofertas" #deepl:3419686017
  occ_disable_convoys: "Desativar a ação de comboio de ofertas" #deepl:399902713
