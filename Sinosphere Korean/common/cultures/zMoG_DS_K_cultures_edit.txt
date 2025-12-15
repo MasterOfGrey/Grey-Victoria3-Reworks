@@ -1,16 +1,17 @@
-﻿korean= {
+﻿TRY_REPLACE:korean= {
 	# Names from EINI
 	color= hsv{ 0.17 0.41 0.34 }
 	religion = confucian
 	heritage = heritage_korean
 	language = language_korean
+	traditions = { tradition_sinosphere }
+	name_format = last_first
 
 	obsessions = {
 		liquor
 		fruit
 	}
 
-	traditions = { tradition_sinosphere }
 	male_common_first_names = {
 		Bong-haek
 		Chwa-chin
@@ -443,7 +444,7 @@
 	graphics = east_asian
 }
 
-yuanzhumin= {
+TRY_REPLACE:yuanzhumin= {
 	color= hsv { 0.272 0.75 0.54 }
 	religion = animist
 	heritage = heritage_formosan
@@ -466,12 +467,13 @@ yuanzhumin= {
 	graphics = polynesian
 }
 
-hakka= {
+TRY_REPLACE:hakka= {
 	color= hsv{ 0.1 0.43 0.34 }
 	religion = confucian
 	heritage = heritage_han
 	language = language_hakka
 	traditions = { tradition_sinosphere }
+	name_format = last_first
 	male_common_first_names = {
 		An
 		Fang
@@ -945,12 +947,13 @@ hakka= {
 	graphics = east_asian
 }
 
-miao= {
+TRY_REPLACE:miao= {
 	color= hsv{ 0.62 0.46 0.50 }
 	religion = animist
 	heritage = heritage_miao
 	language = language_hmong
 	traditions = { tradition_sinosphere }
+	name_format = last_first
 	male_common_first_names={
 		Bang
 		Blong
@@ -1012,12 +1015,13 @@ miao= {
 	graphics = east_asian
 }
 
-min= {
+TRY_REPLACE:min= {
 	color= hsv{ 0.71 0.54 0.78 }
 	religion = confucian
 	heritage = heritage_han
 	language = language_min
 	traditions = { tradition_sinosphere }
+	name_format = last_first
 	male_common_first_names={
 		Bing
 		Chen
@@ -1077,12 +1081,13 @@ min= {
 	graphics = east_asian
 }
 
-zhuang= {
+TRY_REPLACE:zhuang= {
 	color= hsv{ 0.92 0.32 0.88 }
 	religion = animist
 	heritage = heritage_tai
 	language = language_zhuang
 	traditions = { tradition_sinosphere }
+	name_format = last_first
 	male_common_first_names={
 		Be
 		Duc
@@ -1134,13 +1139,14 @@ zhuang= {
 	graphics = east_asian
 }
 
-yi= {
+TRY_REPLACE:yi= {
 	color= hsv{ 0.91 0.51 0.52 }
 	religion = animist
 	heritage = heritage_yi
 	language = language_yi
 	traditions = { tradition_sinosphere }
-	# traits = { tibetan_language sinosphere east_asian_heritage }
+	# old traits = { tibetan_language sinosphere east_asian_heritage }
+	name_format = last_first
 	male_common_first_names = {
 		An
 		Fang
@@ -1747,12 +1753,13 @@ yi= {
 	graphics = east_asian
 }
 
-yue= {
+TRY_REPLACE:yue= {
 	color= hsv{ 0.80 0.36 0.39 }
 	religion = confucian
 	heritage = heritage_han
 	language = language_yue
 	traditions = { tradition_sinosphere }
+	name_format = last_first
 	male_common_first_names = {
 		An
 		Fang
@@ -2359,13 +2366,14 @@ yue= {
 	graphics = east_asian
 }
 
-japanese= {
+TRY_REPLACE:japanese= {
 	color= hsv{ 0 0 90 }
 	religion = mahayana
 	heritage = heritage_japanese
 	language = language_japanese
 	traditions = { tradition_yamato }
 	# traits = { east_asian_heritage yamato }
+	name_format = last_first
 	
 	obsessions = {
 		fruit
@@ -2608,17 +2616,13 @@ japanese= {
 	graphics = east_asian
 }
 
-vietnamese= {
+TRY_REPLACE:vietnamese= {
 	color= hsv{ 0.31 0.37 0.48 }
 	religion = mahayana
 	heritage = heritage_vietnamese
 	language = language_vietic
-		
-	obsessions = {
-		coffee
-	}
-
 	traditions = { tradition_sinosphere }
+	name_format = last_first
 	
 	obsessions = {
 		fruit

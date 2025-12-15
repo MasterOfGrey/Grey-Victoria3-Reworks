@@ -5,12 +5,13 @@
 
 # Note: Credits must be included in any reproduction.
 
-ainu= {
+TRY_REPLACE:ainu= {
 	color= hsv{ 0 0 0.5 }
 	religion = animist
 	heritage = heritage_ainu
 	language = language_ainu
 	traditions = { }
+	name_format = last_first
 	male_common_first_names = {
 		Menkakush
 		Munkeke
@@ -91,17 +92,18 @@ ainu= {
 	graphics = east_asian
 }
 
-manchu= {
+TRY_REPLACE:manchu= {
 	color= rgb{ 233 207 84 }
 	religion = confucian
 	heritage = heritage_manchu
 	language = language_jurchenic
+	traditions = { tradition_sinosphere }
+	name_format = last_first
 	
 	obsessions = {
 		tea
 	}
-
-	traditions = { tradition_sinosphere }
+	
 	male_common_first_names = {
 		Hesehn
 		Mingzhu
@@ -282,7 +284,7 @@ manchu= {
 	graphics = east_asian
 }
 
-mongol= {
+TRY_REPLACE:mongol= {
 	color= rgb{ 74 125 155 }
 	religion = gelugpa
 	heritage = heritage_mongolian
@@ -409,12 +411,13 @@ mongol= {
 	graphics = east_asian
 }
 
-kalmyk= {
+TRY_REPLACE:kalmyk= {
 	color= rgb{ 250 182 3 }
 	religion = gelugpa
 	heritage = heritage_mongolian
 	language = language_mongolian
 	traditions = { tradition_russosphere }
+	name_format = last_first
 	male_common_first_names = {
 		Badamdorj
 		Batbayar
@@ -536,12 +539,13 @@ kalmyk= {
 	graphics = east_asian
 }
 
-han= {
+TRY_REPLACE:han= {
 	color= rgb{ 190 80 48 }
 	religion = confucian
 	heritage = heritage_han
 	language = language_mandarin
 	traditions = { tradition_sinosphere }
+	name_format = last_first
 	obsessions = {
 		opium
 	}

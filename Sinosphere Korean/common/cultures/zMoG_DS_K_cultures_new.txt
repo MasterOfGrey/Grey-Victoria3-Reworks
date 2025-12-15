@@ -1,11 +1,12 @@
 ﻿# Technically we don't need these anymore, but I'm keeping them here in case I want to use them for flavour content in the future.
 
-sino={												# Names from EINI
+REPLACE_OR_CREATE:sino={										# Names from EINI
 	color= hsv{ 0 0 90 }
 	religion = mahayana
 	heritage = heritage_japanese
 	language = language_japanese
 	traditions = { tradition_sinosphere } # Don't give Japan additional heritage acceptance, just Sinosphere.
+	name_format = last_first
 	
 	obsessions = {
 		fruit
@@ -322,12 +323,13 @@ sino={												# Names from EINI
 	graphics = east_asian
 }
 
-yamatos={											# Names from JNI
+REPLACE_OR_CREATE:yamatos={									# Names from JNI
 	color= hsv{ 0.31 0.37 0.48 }
 	religion = mahayana
 	heritage = heritage_vietnamese
 	language = language_vietic
 	traditions = { tradition_yamato }	# Don't give Vietnam additional heritage acceptance, just Yamato if Japan is "accepted" into the "Sinosphere".
+	name_format = last_first
 	
 	obsessions = {
 		fruit
