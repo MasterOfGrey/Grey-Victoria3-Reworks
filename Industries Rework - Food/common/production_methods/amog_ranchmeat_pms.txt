@@ -1,4 +1,4 @@
-﻿pm_open_air_stockyards = {
+﻿TRY_REPLACE:pm_open_air_stockyards = {
 	texture = "gfx/interface/icons/production_method_icons/open_air_stockyards.dds"		
 	building_modifiers = {
 		workforce_scaled = {
@@ -12,7 +12,7 @@
 	}
 }		
 
-pm_butchering_tools = {
+TRY_REPLACE:pm_butchering_tools = {
 	texture = "gfx/interface/icons/production_method_icons/butchering_tools.dds"			
 	building_modifiers = {				
 		workforce_scaled = {
@@ -27,7 +27,7 @@ pm_butchering_tools = {
 	}							
 }
 
-pm_slaughterhouses = {
+TRY_REPLACE:pm_slaughterhouses = {
 	texture = "gfx/interface/icons/production_method_icons/slaughterhouses.dds"	
 	
 	state_modifiers = {
@@ -53,7 +53,7 @@ pm_slaughterhouses = {
 	}
 }
 
-pm_mechanized_slaughtering = {
+TRY_REPLACE:pm_mechanized_slaughtering = {
 	texture = "gfx/interface/icons/production_method_icons/mechanized_slaughtering.dds"	
 	
 	state_modifiers = {

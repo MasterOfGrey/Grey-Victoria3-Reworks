@@ -1,6 +1,6 @@
 ﻿# Updated to new pm's:
 
-has_distillery = {
+REPLACE_OR_CREATE:has_distillery = {
 	any_scope_building = {
 		OR = {
 			# Vanilla
@@ -16,7 +16,7 @@ has_distillery = {
 	}
 }
 
-is_distillery = {
+REPLACE_OR_CREATE:is_distillery = {
 	OR = {
 			# Vanilla
 			# has_active_production_method = pm_pot_stills

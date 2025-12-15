@@ -1,6 +1,6 @@
 ﻿# Base PM
 # Base fruit consumption for fluid line represents juices, chutneys, etc.
-pm_disabled_distillery = {
+REPLACE_OR_CREATE:pm_disabled_distillery = {
 	texture = "gfx/interface/icons/production_method_icons/no_distillery.dds"
 	
 	building_modifiers = {
@@ -16,7 +16,7 @@ pm_disabled_distillery = {
 
 # Default Upgrade
 # Unlocked by Sweeteners
-pm_simmer_pots = {
+REPLACE_OR_CREATE:pm_simmer_pots = {
 	texture = "gfx/interface/icons/production_method_icons/simmer_pots.dds"
 	
 	unlocking_production_methods = {
@@ -44,7 +44,7 @@ pm_simmer_pots = {
 }
 
 # Pot Stills
-pm_pot_stills_grain = {
+REPLACE_OR_CREATE:pm_pot_stills_grain = {
 	texture = "gfx/interface/icons/production_method_icons/pot_stills.dds"
 
 	unlocking_technologies = {
@@ -78,7 +78,7 @@ pm_pot_stills_grain = {
 	}
 }
 
-pm_pot_stills_fruit = {
+REPLACE_OR_CREATE:pm_pot_stills_fruit = {
 	texture = "gfx/interface/icons/production_method_icons/pot_stills.dds"
 
 	unlocking_technologies = {
@@ -111,7 +111,7 @@ pm_pot_stills_fruit = {
 	}
 }
 
-pm_pot_stills_sugar = {
+REPLACE_OR_CREATE:pm_pot_stills_sugar = {
 	texture = "gfx/interface/icons/production_method_icons/pot_stills.dds"
 
 	unlocking_technologies = {
@@ -145,7 +145,7 @@ pm_pot_stills_sugar = {
 }
 
 # Patent Stills
-pm_patent_stills_grain = {
+REPLACE_OR_CREATE:pm_patent_stills_grain = {
 	texture = "gfx/interface/icons/production_method_icons/patent_stills.dds"
 
 	unlocking_technologies = {
@@ -174,7 +174,7 @@ pm_patent_stills_grain = {
 	}
 }
 
-pm_patent_stills_fruit = {
+REPLACE_OR_CREATE:pm_patent_stills_fruit = {
 	texture = "gfx/interface/icons/production_method_icons/patent_stills.dds"
 
 	unlocking_technologies = {
@@ -202,7 +202,7 @@ pm_patent_stills_fruit = {
 	}
 }
 
-pm_patent_stills_sugar = {
+REPLACE_OR_CREATE:pm_patent_stills_sugar = {
 	texture = "gfx/interface/icons/production_method_icons/patent_stills.dds"
 
 	unlocking_technologies = {

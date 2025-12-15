@@ -1,5 +1,5 @@
 ﻿# Basic
-pm_cloth_pkg = {
+REPLACE_OR_CREATE:pm_cloth_pkg = {
 	texture = "gfx/interface/icons/production_method_icons/cloth.dds"
 	
 	unlocking_production_methods = {
@@ -14,7 +14,7 @@ pm_cloth_pkg = {
 	}
 }
 
-pm_paper_pkg = {
+REPLACE_OR_CREATE:pm_paper_pkg = {
 	texture = "gfx/interface/icons/production_method_icons/paper.dds"
 	
 	unlocking_production_methods = {
@@ -30,7 +30,7 @@ pm_paper_pkg = {
 }
 
 # Unlock Group 1
-pm_wax_paper = {
+REPLACE_OR_CREATE:pm_wax_paper = {
 	texture = "gfx/interface/icons/production_method_icons/wax_paper.dds"
 	
 	unlocking_production_methods = {
@@ -48,7 +48,7 @@ pm_wax_paper = {
 }
 
 # Unlock Group 2
-pm_sealed_jars = {
+REPLACE_OR_CREATE:pm_sealed_jars = {
 	texture = "gfx/interface/icons/production_method_icons/canneries.dds"
 	
 	unlocking_technologies = {
@@ -79,7 +79,7 @@ pm_sealed_jars = {
 	}
 }
 
-pm_cannery = {
+REPLACE_OR_CREATE:pm_cannery = {
 	texture = "gfx/interface/icons/production_method_icons/canneries.dds"
 	
 	unlocking_technologies = {
@@ -110,7 +110,7 @@ pm_cannery = {
 }
 
 # Unlock Group 3
-pm_vacuum_canning = {
+REPLACE_OR_CREATE:pm_vacuum_canning = {
 	texture = "gfx/interface/icons/production_method_icons/vaccum_canning.dds"
 	replacement_if_valid = pm_vacuum_canning_principle_3
 	
@@ -144,7 +144,7 @@ pm_vacuum_canning = {
 	}
 }
 
-pm_vacuum_canning_principle_3 = {
+REPLACE_OR_CREATE:pm_vacuum_canning_principle_3 = {
 	texture = "gfx/interface/icons/production_method_icons/vaccum_canning.dds"
 	is_hidden_when_unavailable = yes
 

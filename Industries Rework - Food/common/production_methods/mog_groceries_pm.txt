@@ -4,7 +4,7 @@
 # post-dynamite: pm_explosive_shells - pm_vacuum_evaporation (electricity)pm_brine_electrolysis
 # texture = "gfx/interface/icons/production_method_icons/steel_tools.dds"
 
-pm_bakery = {
+REPLACE_OR_CREATE:pm_bakery = {
 	texture = "gfx/interface/icons/production_method_icons/bakeries.dds"
 	
 	building_modifiers = {
@@ -24,7 +24,7 @@ pm_bakery = {
 	}
 }		
 
-pm_sweeteners = {
+REPLACE_OR_CREATE:pm_sweeteners = {
 	texture = "gfx/interface/icons/production_method_icons/sweeteners.dds"
 	
 	unlocking_technologies = {
@@ -50,7 +50,7 @@ pm_sweeteners = {
 	}
 }
 
-pm_baking_powder = {
+REPLACE_OR_CREATE:pm_baking_powder = {
 	texture = "gfx/interface/icons/production_method_icons/baking_powder.dds"
 	
 	unlocking_technologies = {
@@ -77,7 +77,7 @@ pm_baking_powder = {
 	}
 }
 
-pm_automated_bakery = {
+REPLACE_OR_CREATE:pm_automated_bakery = {
 	texture = "gfx/interface/icons/production_method_icons/automated_bakery.dds"
 	
 	disallowing_laws = {
@@ -111,15 +111,15 @@ pm_automated_bakery = {
 
 # Compatibility PM's to preserve save files.
 
-pm_cannery_fish = {
+TRY_REPLACE:pm_cannery_fish = {
 	texture = "gfx/interface/icons/production_method_icons/canneries.dds"
 }
 
-pm_pot_stills = {
+TRY_REPLACE:pm_pot_stills = {
 	texture = "gfx/interface/icons/production_method_icons/pot_stills.dds"
 }
 
-pm_patent_stills = {
+TRY_REPLACE:pm_patent_stills = {
 	texture = "gfx/interface/icons/production_method_icons/patent_stills.dds"
 }
 

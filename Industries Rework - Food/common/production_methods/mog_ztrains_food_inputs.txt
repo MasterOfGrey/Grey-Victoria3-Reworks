@@ -1,7 +1,7 @@
 ﻿### Local Food buildings with protein outputs improve local food industry efficiencies after refrigerated transportation becomes available.
 
 # Everyone
-pm_unrefrigerated = {
+TRY_REPLACE:pm_unrefrigerated = {
 	texture = "gfx/interface/icons/production_method_icons/no_refrigeration.dds"
 	
 	state_modifiers = {
@@ -12,7 +12,7 @@ pm_unrefrigerated = {
 }
 
 # Ranches
-pm_refrigerated_storage_building_livestock_ranch = {
+TRY_REPLACE:pm_refrigerated_storage_building_livestock_ranch = {
 	texture = "gfx/interface/icons/production_method_icons/refrigerated_storage.dds"
 	
 	unlocking_technologies = {
@@ -37,7 +37,7 @@ pm_refrigerated_storage_building_livestock_ranch = {
 	required_input_goods = electricity
 }
 
-pm_refrigerated_rail_cars_building_livestock_ranch = {
+TRY_REPLACE:pm_refrigerated_rail_cars_building_livestock_ranch = {
 	texture = "gfx/interface/icons/production_method_icons/refrigerated_rail_cars.dds"
 	
 	unlocking_technologies = {
@@ -64,7 +64,7 @@ pm_refrigerated_rail_cars_building_livestock_ranch = {
 }
 
 # Fishing
-pm_refrigerated_storage_building_fishing_wharf = {
+TRY_REPLACE:pm_refrigerated_storage_building_fishing_wharf = {
 	texture = "gfx/interface/icons/production_method_icons/refrigerated_storage.dds"
 	
 	unlocking_technologies = {
@@ -91,7 +91,7 @@ pm_refrigerated_storage_building_fishing_wharf = {
 	required_input_goods = electricity
 }
 
-pm_refrigerated_rail_cars_building_fishing_wharf = {
+TRY_REPLACE:pm_refrigerated_rail_cars_building_fishing_wharf = {
 	texture = "gfx/interface/icons/production_method_icons/refrigerated_rail_cars.dds"
 	
 	unlocking_technologies = {
@@ -119,7 +119,7 @@ pm_refrigerated_rail_cars_building_fishing_wharf = {
 	required_input_goods = electricity
 }
 
-pm_flash_freezing_building_fishing_wharf = {
+TRY_REPLACE:pm_flash_freezing_building_fishing_wharf = {
 	texture = "gfx/interface/icons/production_method_icons/flash_refrigerated.dds"
 	
 	unlocking_technologies = {
@@ -148,7 +148,7 @@ pm_flash_freezing_building_fishing_wharf = {
 }
 
 # Whaling
-pm_refrigerated_storage_building_whaling_station = {
+TRY_REPLACE:pm_refrigerated_storage_building_whaling_station = {
 	texture = "gfx/interface/icons/production_method_icons/refrigerated_storage.dds"
 	
 	unlocking_technologies = {
@@ -175,7 +175,7 @@ pm_refrigerated_storage_building_whaling_station = {
 	required_input_goods = electricity
 }
 
-pm_refrigerated_rail_cars_building_whaling_station = {
+TRY_REPLACE:pm_refrigerated_rail_cars_building_whaling_station = {
 	texture = "gfx/interface/icons/production_method_icons/refrigerated_rail_cars.dds"
 	
 	unlocking_technologies = {
@@ -203,7 +203,7 @@ pm_refrigerated_rail_cars_building_whaling_station = {
 	required_input_goods = electricity
 }
 
-pm_flash_freezing_building_whaling_station = {
+TRY_REPLACE:pm_flash_freezing_building_whaling_station = {
 	texture = "gfx/interface/icons/production_method_icons/flash_refrigerated.dds"
 	
 	unlocking_technologies = {

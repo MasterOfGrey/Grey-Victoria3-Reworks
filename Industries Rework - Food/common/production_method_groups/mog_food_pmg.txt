@@ -1,4 +1,4 @@
-﻿pmg_base_building_food_industry = {
+﻿REPLACE_OR_CREATE:pmg_base_building_food_industry = {
 	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
 	production_methods = {
 		pm_bakery
@@ -8,7 +8,7 @@
 	}
 }
 
-pmg_canning = {
+REPLACE_OR_CREATE:pmg_canning = {
 	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
 	production_methods = {
 		pm_cloth_pkg
@@ -21,7 +21,7 @@ pmg_canning = {
 	}
 }
 
-pmg_preservation = {
+REPLACE_OR_CREATE:pmg_preservation = {
 	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
 	production_methods = {
 		pm_disabled_canning
@@ -41,7 +41,7 @@ pmg_preservation = {
 	}
 }
 
-pmg_distillery = {
+REPLACE_OR_CREATE:pmg_distillery = {
 	texture = "gfx/interface/icons/generic_icons/mixed_icon_refining.dds"
 	production_methods = {
 		pm_disabled_distillery

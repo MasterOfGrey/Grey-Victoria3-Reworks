@@ -1,5 +1,5 @@
 ﻿# Group 0
-pm_disabled_canning = {
+REPLACE_OR_CREATE:pm_disabled_canning = {
 	texture = "gfx/interface/icons/production_method_icons/no_canning.dds"
 #	is_hidden_when_unavailable = yes
 	
@@ -11,7 +11,7 @@ pm_disabled_canning = {
 
 # Group 1
 # Unlocked by Sweeteners + (Default) Wax Paper 
-pm_dried_fruit = {
+REPLACE_OR_CREATE:pm_dried_fruit = {
 	texture = "gfx/interface/icons/production_method_icons/fruit.dds"
 	is_hidden_when_unavailable = yes
 	
@@ -28,7 +28,7 @@ pm_dried_fruit = {
 	}
 }
 
-pm_cured_meat = {
+REPLACE_OR_CREATE:pm_cured_meat = {
 	texture = "gfx/interface/icons/production_method_icons/meat.dds"
 	is_hidden_when_unavailable = yes
 	
@@ -45,7 +45,7 @@ pm_cured_meat = {
 	}
 }
 
-pm_salted_fish = {
+REPLACE_OR_CREATE:pm_salted_fish = {
 	texture = "gfx/interface/icons/production_method_icons/fish.dds"
 	is_hidden_when_unavailable = yes
 	
@@ -64,7 +64,7 @@ pm_salted_fish = {
 
 # Group 2
 # Unlocked by Sealed Jars/Canning (requires Sweeteners)
-pm_sweet_vinegars = {
+REPLACE_OR_CREATE:pm_sweet_vinegars = {
 	texture = "gfx/interface/icons/production_method_icons/vacuum_fruit.dds"
 	is_hidden_when_unavailable = yes
 	
@@ -83,7 +83,7 @@ pm_sweet_vinegars = {
 	}
 }
 
-pm_meat_broths = {
+REPLACE_OR_CREATE:pm_meat_broths = {
 	texture = "gfx/interface/icons/production_method_icons/vacuum_meat.dds"
 	is_hidden_when_unavailable = yes
 	
@@ -101,7 +101,7 @@ pm_meat_broths = {
 	}
 }
 
-pm_brine_vinegars = {
+REPLACE_OR_CREATE:pm_brine_vinegars = {
 	texture = "gfx/interface/icons/production_method_icons/vacuum_fruit.dds"
 	is_hidden_when_unavailable = yes
 	
@@ -120,7 +120,7 @@ pm_brine_vinegars = {
 	}
 }
 
-pm_fish_brines = {
+REPLACE_OR_CREATE:pm_fish_brines = {
 	texture = "gfx/interface/icons/production_method_icons/vacuum_fish.dds"
 	is_hidden_when_unavailable = yes
 	
@@ -140,7 +140,7 @@ pm_fish_brines = {
 
 # Group 3
 # Unlocked by Vacuum Canning or better
-pm_syrups_sauces = {
+REPLACE_OR_CREATE:pm_syrups_sauces = {
 	texture = "gfx/interface/icons/production_method_icons/vacuum_fruit.dds"
 	is_hidden_when_unavailable = yes
 	
@@ -160,7 +160,7 @@ pm_syrups_sauces = {
 	}
 }
 
-pm_boiling_sauces = {
+REPLACE_OR_CREATE:pm_boiling_sauces = {
 	texture = "gfx/interface/icons/production_method_icons/vacuum_meat.dds"
 	is_hidden_when_unavailable = yes
 	
@@ -179,7 +179,7 @@ pm_boiling_sauces = {
 	}
 }
 
-pm_oils_sauces = {
+REPLACE_OR_CREATE:pm_oils_sauces = {
 	texture = "gfx/interface/icons/production_method_icons/vacuum_fish.dds"
 	is_hidden_when_unavailable = yes
 	
@@ -198,7 +198,7 @@ pm_oils_sauces = {
 	}
 }
 
-pm_broths_brines = {
+REPLACE_OR_CREATE:pm_broths_brines = {
 	texture = "gfx/interface/icons/production_method_icons/vacuum_meat.dds"
 	is_hidden_when_unavailable = yes
 	
@@ -217,7 +217,7 @@ pm_broths_brines = {
 	}
 }
 
-pm_gravies_broths = {
+REPLACE_OR_CREATE:pm_gravies_broths = {
 	texture = "gfx/interface/icons/production_method_icons/vacuum_meat.dds"
 	is_hidden_when_unavailable = yes
 	
@@ -235,7 +235,7 @@ pm_gravies_broths = {
 	}
 }
 
-pm_brines_oils = {
+REPLACE_OR_CREATE:pm_brines_oils = {
 	texture = "gfx/interface/icons/production_method_icons/vacuum_fish.dds"
 	is_hidden_when_unavailable = yes
 	
