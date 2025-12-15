@@ -1,6 +1,6 @@
-﻿
-building_livestock_ranch = {
-	building_group = bg_livestock_ranches
+﻿# You would only use this if you wanted to have ranches...
+REPLACE_OR_CREATE:building_livestock_ranch = {
+	building_group = bg_ranching
 	
 	icon = "gfx/interface/icons/building_icons/cattle_ranch.dds"
 	

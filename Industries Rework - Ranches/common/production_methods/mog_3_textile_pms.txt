@@ -1,4 +1,4 @@
-﻿pm_beasts_of_burden = {
+﻿REPLACE_OR_CREATE:pm_beasts_of_burden = {
 	texture = "gfx/interface/icons/production_method_icons/beasts_of_burden.dds"
 
 	building_modifiers = {
@@ -16,7 +16,7 @@
 	}
 }
 
-pm_simple_ranch = {
+REPLACE_OR_CREATE:pm_simple_ranch = {
 	texture = "gfx/interface/icons/production_method_icons/leather_animals.dds"
 
 	building_modifiers = {
@@ -32,7 +32,7 @@ pm_simple_ranch = {
 	}
 }
 
-pm_sheep_farms = {
+REPLACE_OR_CREATE:pm_sheep_farms = {
 	texture = "gfx/interface/icons/production_method_icons/large_sheep_ranch.dds"
 	
 	unlocking_technologies = {
@@ -60,7 +60,7 @@ pm_sheep_farms = {
 	}
 }
 
-pm_intensive_diet_control = {
+REPLACE_OR_CREATE:pm_intensive_diet_control = {
 	texture = "gfx/interface/icons/production_method_icons/sheep_control.dds"
 
 	unlocking_technologies = {

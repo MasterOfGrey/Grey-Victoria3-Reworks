@@ -1,5 +1,5 @@
 ﻿# Grocery expands to include ranches:
-company_basic_food = {
+TRY_REPLACE:company_basic_food = {
 	icon = "gfx/interface/icons/company_icons/basic_food.dds"
 	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufacturing_light.dds"
 	
@@ -67,7 +67,7 @@ company_basic_food = {
 	}
 }
 
-# Somali combined food chain Syndicate:
+# ADDED (as an easter egg): Somali combined food chain Syndicate:
 company_somali_food_chain = {
 	icon = "gfx/interface/icons/company_icons/basic_food.dds"
 	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufacturing_light.dds"

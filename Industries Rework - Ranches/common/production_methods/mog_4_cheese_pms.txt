@@ -1,9 +1,9 @@
 ﻿# Group 0
-pm_no_cheese = {
+REPLACE_OR_CREATE:pm_no_cheese = {
 	texture = "gfx/interface/icons/production_method_icons/no_processing.dds"
 }
 
-pm_artisanal_cheese = {
+REPLACE_OR_CREATE:pm_artisanal_cheese = {
 	texture = "gfx/interface/icons/production_method_icons/cheese.dds"
 	
 	building_modifiers = {
@@ -20,7 +20,7 @@ pm_artisanal_cheese = {
 	}
 }
 
-pm_industrial_preserves = {
+REPLACE_OR_CREATE:pm_industrial_preserves = {
 	texture = "gfx/interface/icons/production_method_icons/cheese_extra.dds"
 	
 	unlocking_technologies = {
@@ -52,7 +52,7 @@ pm_industrial_preserves = {
 	}
 }
 
-pm_ranch_milk_production = {
+REPLACE_OR_CREATE:pm_ranch_milk_production = {
 	texture = "gfx/interface/icons/production_method_icons/dairy_milk.dds"
 	
 	unlocking_technologies = {
@@ -87,7 +87,7 @@ pm_ranch_milk_production = {
 }
 
 
-pm_full_eggs_dairy = {
+REPLACE_OR_CREATE:pm_full_eggs_dairy = {
 	texture = "gfx/interface/icons/production_method_icons/chicken_coop.dds"
 	
 	unlocking_technologies = {

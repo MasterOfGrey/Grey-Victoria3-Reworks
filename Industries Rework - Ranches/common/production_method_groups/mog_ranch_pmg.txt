@@ -1,4 +1,4 @@
-﻿pmg_base_building_livestock_ranch = {
+﻿REPLACE_OR_CREATE:pmg_base_building_livestock_ranch = {
 	texture = "gfx/interface/icons/generic_icons/mixed_icon_refining.dds"
 	production_methods = {
 		pm_open_air_stockyards
@@ -7,7 +7,7 @@
 	}
 }
 
-pmg_automation_ranch = {
+REPLACE_OR_CREATE:pmg_automation_ranch = {
 	texture = "gfx/interface/icons/generic_icons/mixed_icon_refining.dds"
 	production_methods = {
 		pm_homemade_tools
@@ -18,7 +18,7 @@ pmg_automation_ranch = {
 	}
 }
 
-pmg_sheep_ranch = {
+REPLACE_OR_CREATE:pmg_sheep_ranch = {
 	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
 	production_methods = {
 		pm_beasts_of_burden
@@ -28,7 +28,7 @@ pmg_sheep_ranch = {
 	}
 }
 
-pmg_dairy_products = {
+REPLACE_OR_CREATE:pmg_dairy_products = {
 	texture = "gfx/interface/icons/generic_icons/mixed_icon_refining.dds"
 	production_methods = {
 		pm_no_cheese
@@ -39,7 +39,7 @@ pmg_dairy_products = {
 	}
 }
 
-pmg_fencing = {
+REPLACE_OR_CREATE:pmg_fencing = {
 	texture = "gfx/interface/icons/generic_icons/mixed_icon_automation.dds"
 	production_methods = {
 		pm_standard_fences
@@ -48,7 +48,7 @@ pmg_fencing = {
 	}
 }
 
-pmg_refrigeration_building_livestock_ranch = {
+REPLACE_OR_CREATE:pmg_refrigeration_building_livestock_ranch = {
 	texture = "gfx/interface/icons/generic_icons/mixed_icon_automation.dds"
 	production_methods = {
 		pm_unrefrigerated_ranch

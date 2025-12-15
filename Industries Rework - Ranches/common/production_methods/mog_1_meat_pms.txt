@@ -1,4 +1,4 @@
-﻿pm_open_air_stockyards = {
+﻿REPLACE_OR_CREATE:pm_open_air_stockyards = {
 	texture = "gfx/interface/icons/production_method_icons/m1_open_air_stockyards.dds"		
 	building_modifiers = {
 		workforce_scaled = {
@@ -12,7 +12,7 @@
 	}
 }		
 
-pm_intensive_grazing_ranch = {
+REPLACE_OR_CREATE:pm_intensive_grazing_ranch = {
 	texture = "gfx/interface/icons/production_method_icons/m1_intense_grazing.dds"
 	
 	unlocking_technologies = {
@@ -39,7 +39,7 @@ pm_intensive_grazing_ranch = {
 	}
 }
 
-pm_battery_farming = {
+REPLACE_OR_CREATE:pm_battery_farming = {
 	texture = "gfx/interface/icons/production_method_icons/m1_battery_farming.dds"
 	
 	unlocking_technologies = {

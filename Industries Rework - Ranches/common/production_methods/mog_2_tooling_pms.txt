@@ -1,8 +1,8 @@
-﻿pm_homemade_tools = {
+﻿REPLACE_OR_CREATE:pm_homemade_tools = {
 	texture = "gfx/interface/icons/production_method_icons/rpr_homemade_tools.dds"						
 }
 
-pm_butchering_tools = {
+REPLACE_OR_CREATE:pm_butchering_tools = {
 	texture = "gfx/interface/icons/production_method_icons/rpr_butchering_tools.dds"			
 	building_modifiers = {				
 		workforce_scaled = {
@@ -17,7 +17,7 @@ pm_butchering_tools = {
 	}							
 }
 
-pm_slaughterhouses = {
+REPLACE_OR_CREATE:pm_slaughterhouses = {
 	texture = "gfx/interface/icons/production_method_icons/rpr_slaughterhouses.dds"	
 	
 	state_modifiers = {
@@ -43,7 +43,7 @@ pm_slaughterhouses = {
 	}
 }
 
-pm_mechanized_slaughtering = {
+REPLACE_OR_CREATE:pm_mechanized_slaughtering = {
 	texture = "gfx/interface/icons/production_method_icons/rpr_mechanized_slaughtering.dds"	
 	
 	state_modifiers = {
@@ -70,7 +70,7 @@ pm_mechanized_slaughtering = {
 	}
 }
 
-pm_refrigerated_workspaces = {
+REPLACE_OR_CREATE:pm_refrigerated_workspaces = {
 	texture = "gfx/interface/icons/production_method_icons/rpr_fridge_cow.dds"	
 	
 	state_modifiers = {

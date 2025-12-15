@@ -1,10 +1,10 @@
 ﻿# Vanilla fencing PM's are trash.
 
-pm_standard_fences = {
+REPLACE_OR_CREATE:pm_standard_fences = {
 	texture = "gfx/interface/icons/production_method_icons/standard_fences.dds"
 }
 
-pm_barbed_wire_fences = {
+REPLACE_OR_CREATE:pm_barbed_wire_fences = {
 	texture = "gfx/interface/icons/production_method_icons/barbed_wire_fencing.dds"
 	unlocking_technologies = {
 		field_works	
@@ -20,7 +20,7 @@ pm_barbed_wire_fences = {
 	}
 }		
 
-pm_electric_fencing = {
+REPLACE_OR_CREATE:pm_electric_fencing = {
 	texture = "gfx/interface/icons/production_method_icons/electric_fencing.dds"	
 	unlocking_technologies = {
 		electrical_generation	

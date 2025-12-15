@@ -1,7 +1,7 @@
 ﻿### Local Food buildings with protein outputs improve local food industry efficiencies after refrigerated transportation becomes available.
 
 # Ranches
-pm_unrefrigerated_ranch = {
+REPLACE_OR_CREATE:pm_unrefrigerated_ranch = {
 	texture = "gfx/interface/icons/production_method_icons/no_refrigeration.dds"
 	
 	state_modifiers = {
@@ -17,7 +17,7 @@ pm_unrefrigerated_ranch = {
 	}
 }
 
-pm_refrigerated_storage_building_livestock_ranch = {
+REPLACE_OR_CREATE:pm_refrigerated_storage_building_livestock_ranch = {
 	texture = "gfx/interface/icons/production_method_icons/meat_fridge.dds"
 	ai_value = 500
 	
@@ -44,7 +44,7 @@ pm_refrigerated_storage_building_livestock_ranch = {
 	required_input_goods = electricity
 }
 
-pm_refrigerated_rail_cars_building_livestock_ranch = {
+REPLACE_OR_CREATE:pm_refrigerated_rail_cars_building_livestock_ranch = {
 	texture = "gfx/interface/icons/production_method_icons/refrigerated_rail_cars.dds"
 	ai_value = 500
 	

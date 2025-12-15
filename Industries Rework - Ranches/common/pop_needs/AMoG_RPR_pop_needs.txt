@@ -1,0 +1,51 @@
+﻿########################
+#   Vanilla baseline   #
+########################
+
+# If someone did something super funky in a crappy overwrite mod at the top level, reset to baseline if applicable.
+TRY_REPLACE:popneed_basic_food = {
+	default = grain
+
+	entry = {
+		# Grain is generally very plentiful, slightly reduced weight helps ensure
+		# lower supply goods don't get pushed out even with low prices
+		goods = grain
+		
+		weight = 0.85
+		max_supply_share = 0.9
+		min_supply_share = 0.0
+	}
+	
+	entry = {
+		goods = fish
+		
+		weight = 1
+		max_supply_share = 0.9
+		min_supply_share = 0.0
+	}
+
+	entry = {
+		goods = meat
+		
+		weight = 1
+		max_supply_share = 0.9
+		min_supply_share = 0.0
+	}
+	
+	entry = {
+		goods = fruit
+		
+		weight = 1
+		max_supply_share = 0.9
+		min_supply_share = 0.0
+	}
+
+	entry = {
+		# Increased weight for convenience of pre-processed foods
+		goods = groceries
+		
+		weight = 1.15
+		max_supply_share = 0.9
+		min_supply_share = 0.0
+	}
+}

@@ -9,56 +9,13 @@
 # very poor pops, who don't have the wealth to afford shortage goods.
 # Goods get roughly even weights as pops should favour not starving over
 # purchasing a particular good.
-popneed_basic_food = {
-	default = grain
 
-	entry = {
-		# Grain is generally very plentiful, slightly reduced weight helps ensure
-		# lower supply goods don't get pushed out even with low prices
-		goods = grain
-		
-		weight = 0.85
-		max_supply_share = 0.9
-		min_supply_share = 0.0
-	}
-	
-	entry = {
-		goods = fish
-		
-		weight = 1
-		max_supply_share = 0.9
-		min_supply_share = 0.0
-	}
-
-	entry = {
-		goods = meat
-		
-		weight = 1
-		max_supply_share = 0.9
-		min_supply_share = 0.0
-	}
-	
-	entry = {
-		goods = fruit
-		
-		weight = 1
-		max_supply_share = 0.9
-		min_supply_share = 0.0
-	}
-
-	entry = {
-		# Increased weight for convenience of pre-processed foods
-		goods = groceries
-		
-		weight = 1.15
-		max_supply_share = 0.9
-		min_supply_share = 0.0
-	}
-
+# Add to intended balance if applicable.
+TRY_INJECT:popneed_basic_food = {
 	entry = {
 		## RPR - Added
 		# Sugar is food and deserves to be in this category, but
-		# gets low weight, low max supply as it's not nutriative
+		# gets low weight, low max supply as it's not nutritive
 		# enough to fill a significant portion of food needs
 		# Slight reduction in weight and max supply from PDT,
 		# since sugar is also consumed as a stimulant as of 1.10
@@ -68,7 +25,9 @@ popneed_basic_food = {
 		max_supply_share = 0.2 # 0.25
 		min_supply_share = 0.0
 	}
-	
+}
+
+TRY_INJECT:popneed_basic_food = {
 	entry = {
 		## RPR - Added
 		# Represents street vendors, restaurants, etc.
@@ -84,7 +43,9 @@ popneed_basic_food = {
 # Pops wealthy enough to be purchasing luxury food have the budget
 # to afford small amounts of max price goods without becoming
 # impoverished. Additionally, variety is a luxury of it's own.
-popneed_luxury_food = {
+
+# Overwritten because we change the default and to avoid subtractive complications.
+TRY_REPLACE:popneed_luxury_food = {
 	default = groceries # meat - RPR: groceries push industrialization better
 	
 	entry = {
