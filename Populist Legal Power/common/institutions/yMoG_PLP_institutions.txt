@@ -1,11 +1,11 @@
 ﻿# New:
-institution_border_control = {
+REPLACE_OR_CREATE:institution_border_control = {
 	icon = "gfx/interface/icons/institution_icons/borders.dds"
     background_texture = "gfx/interface/illustrations/institutions/police.dds"
 }
 
 # Vanilla Overwritten:
-institution_police = {
+REPLACE_OR_CREATE:institution_police = {
 	icon = "gfx/interface/icons/institution_icons/police.dds"
     background_texture = "gfx/interface/illustrations/institutions/police.dds"
 	modifier = {

@@ -1,4 +1,4 @@
-﻿add_plp_spa_border_control_tweak = {
+﻿REPLACE_OR_CREATE:add_plp_spa_border_control_tweak = {
 	if = {
 		limit = {
 			Grey_SPA_is_active = yes

@@ -1,6 +1,6 @@
 ﻿### Border Control Institution
 
-country_institution_border_control_max_investment_add={
+REPLACE_OR_CREATE:country_institution_border_control_max_investment_add={
 	decimals=0
 	color=good
 	game_data={
@@ -8,7 +8,7 @@ country_institution_border_control_max_investment_add={
 	}
 }
 
-country_institution_cost_institution_border_control_mult={
+REPLACE_OR_CREATE:country_institution_cost_institution_border_control_mult={
 	decimals=0
 	color=bad
 	percent=yes
@@ -17,7 +17,7 @@ country_institution_cost_institution_border_control_mult={
 	}
 }
 
-country_institution_size_change_speed_institution_border_control_mult={
+REPLACE_OR_CREATE:country_institution_size_change_speed_institution_border_control_mult={
 	decimals=0
 	color=good
 	percent=yes

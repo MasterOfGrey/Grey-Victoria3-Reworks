@@ -1,11 +1,11 @@
-﻿refresh_LA_modifiers = {
+﻿REPLACE_OR_CREATE:refresh_LA_modifiers = {
 	refresh_LA_home_affairs_modifier = yes
 	refresh_LA_police_modifier = yes
 	refresh_LA_workplace_safety_modifier = yes
 	refresh_LA_social_security_modifier	= yes
 }
 
-refresh_LA_home_affairs_modifier = {
+REPLACE_OR_CREATE:refresh_LA_home_affairs_modifier = {
 	owner.institution:institution_home_affairs ?= {
 		if = {
 			limit = { has_modifier = LA_Home_Affairs }
@@ -18,7 +18,7 @@ refresh_LA_home_affairs_modifier = {
 	}
 }
 
-refresh_LA_police_modifier = {
+REPLACE_OR_CREATE:refresh_LA_police_modifier = {
 	owner.institution:institution_police ?= {
 		if = {
 			limit = { has_modifier = LA_Law_Enforcement }
@@ -31,7 +31,7 @@ refresh_LA_police_modifier = {
 	}
 }
 
-refresh_LA_workplace_safety_modifier = {
+REPLACE_OR_CREATE:refresh_LA_workplace_safety_modifier = {
 	owner.institution:institution_workplace_safety ?= {
 		if = {
 			limit = { has_modifier = LA_Workplace_Safety }
@@ -44,7 +44,7 @@ refresh_LA_workplace_safety_modifier = {
 	}
 }
 
-refresh_LA_social_security_modifier = {
+REPLACE_OR_CREATE:refresh_LA_social_security_modifier = {
 	owner.institution:institution_social_security ?= {
 		if = {
 			limit = { has_modifier = LA_Social_Security }

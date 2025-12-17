@@ -1,4 +1,4 @@
-﻿movement_anti_slavery = {
+﻿REPLACE_OR_CREATE:movement_anti_slavery = {
 	category = movement_category_ideological
 	can_have_slave_supporters = yes
 
@@ -641,7 +641,7 @@
 	}
 }
 
-movement_pro_slavery = {
+REPLACE_OR_CREATE:movement_pro_slavery = {
 	category = movement_category_ideological
 
 	ideology = ideology_pro_slavery_movement
@@ -1099,7 +1099,7 @@ movement_pro_slavery = {
 				owner = {
 					every_scope_building = {
 						limit = {
-							is_building_type = building_barracks
+							is_building_type = building_barrack
 							state = { is_slave_state = yes }
 						}
 						add = this.level
@@ -1187,7 +1187,7 @@ movement_pro_slavery = {
 	}
 }
 
-movement_royalist_absolutist = {
+REPLACE_OR_CREATE:movement_royalist_absolutist = {
 	category = movement_category_ideological
 
 	ideology = ideology_absolutist_movement
@@ -1614,7 +1614,7 @@ movement_royalist_absolutist = {
 	}
 }
 
-movement_royalist_constitutional = {
+REPLACE_OR_CREATE:movement_royalist_constitutional = {
 	category = movement_category_ideological
 
 	ideology = ideology_royalist_movement
@@ -2006,7 +2006,7 @@ movement_royalist_constitutional = {
 	}
 }
 
-movement_labor = { # Explicitly non-socialist labour movement
+REPLACE_OR_CREATE:movement_labor = { # Explicitly non-socialist labour movement
 	category = movement_category_ideological
 
 	ideology = ideology_proletarian_movement
@@ -2414,7 +2414,7 @@ movement_labor = { # Explicitly non-socialist labour movement
 	}
 }
 
-movement_socialist = {
+REPLACE_OR_CREATE:movement_socialist = {
 	category = movement_category_ideological
 
 	ideology = ideology_socialist_movement
@@ -2851,7 +2851,7 @@ movement_socialist = {
 	}
 }
 
-movement_communist = {
+REPLACE_OR_CREATE:movement_communist = {
 	category = movement_category_ideological
 
 	ideology = ideology_communist_movement
@@ -3185,7 +3185,7 @@ movement_communist = {
 	}
 }
 
-movement_fascist = {
+REPLACE_OR_CREATE:movement_fascist = {
 	category = movement_category_ideological
 
 	# Fascists care about a lot of law groups, so the impact of each should be lesser
@@ -3611,7 +3611,7 @@ movement_fascist = {
 	}
 }
 
-movement_corporatist = {
+REPLACE_OR_CREATE:movement_corporatist = {
 	category = movement_category_ideological
 
 	ideology = ideology_corporatist_movement
@@ -4012,7 +4012,7 @@ movement_corporatist = {
 	}
 }
 
-movement_liberal = {
+REPLACE_OR_CREATE:movement_liberal = {
 	category = movement_category_ideological
 
 	ideology = ideology_liberal_movement
@@ -4423,7 +4423,7 @@ movement_liberal = {
 	}
 }
 
-movement_radical = {
+REPLACE_OR_CREATE:movement_radical = {
 	category = movement_category_ideological
 
 	ideology = ideology_radical_movement
@@ -4893,7 +4893,7 @@ movement_radical = {
 	}
 }
 
-movement_positivist = {
+REPLACE_OR_CREATE:movement_positivist = {
 	category = movement_category_ideological
 
 	ideology = ideology_positivist_movement
@@ -5308,7 +5308,7 @@ movement_positivist = {
 	}
 }
 
-movement_reactionary = {
+REPLACE_OR_CREATE:movement_reactionary = {
 	category = movement_category_ideological
 
 	ideology = ideology_reactionary_movement
@@ -5705,7 +5705,7 @@ movement_reactionary = {
 	}
 }
 
-movement_modernizer = {
+REPLACE_OR_CREATE:movement_modernizer = {
 	category = movement_category_ideological
 
 	ideology = ideology_modernizer_movement
@@ -5719,31 +5719,10 @@ movement_modernizer = {
 
 	creation_trigger = {
 		has_technology_researched = academia
-		OR = {
-			AND = {
-				OR = {
-					country_is_in_south_america = yes
-					country_is_in_central_america = yes
-				}
-				country_rank <= rank_value:major_power
-			}
-			is_country_type = colonial
-			is_country_type = unrecognized
+		ig:ig_intelligentsia ?= {
+			ig_counts_as_marginal = no
 		}
-		NAND = {
-			has_law_or_variant = law_type:law_protectionism
-			has_law_or_variant = law_type:law_compulsory_primary_school
-			has_law_or_variant = law_type:law_public_schools
-			OR = {
-				has_law_or_variant = law_type:law_interventionism
-				has_law_or_variant = law_type:law_command_economy
-				has_law_or_variant = law_type:law_laissez_faire
-			}
-			OR = {
-				has_law_or_variant = law_type:law_graduated_taxation
-				has_law_or_variant = law_type:law_proportional_taxation
-			}
-		}
+		country_has_laws_in_need_of_critical_modernization = yes
 	}
 	creation_weight = {
 		value = 100

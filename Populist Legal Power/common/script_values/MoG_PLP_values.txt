@@ -1,5 +1,5 @@
 ﻿### Building level history increment (added because 
-mog_ga_building_history_increment = {
+REPLACE_OR_CREATE:mog_ga_building_history_increment = {
 	value = 1
 	b:building_government_administration ?= {
 		add = level
@@ -8,4 +8,4 @@ mog_ga_building_history_increment = {
 
 # Called from country scope.
 
-spa_mig_control_target_threshold = 70	# Not used atm
+REPLACE_OR_CREATE:spa_mig_control_target_threshold = { value = 70 }	# Not used atm

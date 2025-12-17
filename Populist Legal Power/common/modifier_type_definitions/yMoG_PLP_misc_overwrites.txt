@@ -1,4 +1,4 @@
-﻿state_food_security_add={
+﻿REPLACE_OR_CREATE:state_food_security_add={
 	decimals=1						# 0 previously
 	color=good
 	percent=yes
@@ -7,7 +7,7 @@
 	}
 }
 
-state_working_adult_ratio_add={
+REPLACE_OR_CREATE:state_working_adult_ratio_add={
 	decimals=1						# 0 previously
 	color=good
 	percent=yes
@@ -16,7 +16,7 @@ state_working_adult_ratio_add={
 	}
 }
 
-state_import_advantage_mult={
+REPLACE_OR_CREATE:state_import_advantage_mult={
 	decimals=1	# 0
 	color=good
 	percent=yes
@@ -25,7 +25,7 @@ state_import_advantage_mult={
 	}
 }
 
-state_export_advantage_mult={
+REPLACE_OR_CREATE:state_export_advantage_mult={
 	decimals=1	# 0
 	color=good
 	percent=yes
@@ -34,7 +34,7 @@ state_export_advantage_mult={
 	}
 }
 
-state_trade_advantage_from_capacity_add={
+REPLACE_OR_CREATE:state_trade_advantage_from_capacity_add={
 	decimals=2	# 1
 	color=good
 	percent=yes
@@ -43,7 +43,7 @@ state_trade_advantage_from_capacity_add={
 	}
 }
 
-state_max_trade_advantage_from_capacity_add={
+REPLACE_OR_CREATE:state_max_trade_advantage_from_capacity_add={
 	decimals=0
 	color=good
 	percent=yes
@@ -52,7 +52,7 @@ state_max_trade_advantage_from_capacity_add={
 	}
 }
 
-country_authority_mult={
+REPLACE_OR_CREATE:country_authority_mult={
 	decimals=1	# 0
 	color=good
 	percent=yes

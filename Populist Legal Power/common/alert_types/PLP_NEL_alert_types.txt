@@ -1,6 +1,6 @@
 ﻿# Reminder to work on your laws
 
-not_enacting_laws = {
+REPLACE_OR_CREATE:not_enacting_laws = {
 	texture = "gfx/interface/icons/alert_icons/reform_government.dds"
 	script_context = player_country
 

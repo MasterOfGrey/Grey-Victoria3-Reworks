@@ -12,7 +12,7 @@
 # acceptance_status_4 = 70 # 60
 # acceptance_status_5 = 95 # 80
 
-mog_plp_nat_sup_culture_minority_trigger = {
+REPLACE_OR_CREATE:mog_plp_nat_sup_culture_minority_trigger = {
 	AND = {
 		shares_heritage_trait_with_any_primary_culture = root.owner
 		shares_language_trait_with_any_primary_culture = root.owner
@@ -20,14 +20,14 @@ mog_plp_nat_sup_culture_minority_trigger = {
 	}
 }
 
-mog_plp_rac_seg_culture_minority_trigger = {
+REPLACE_OR_CREATE:mog_plp_rac_seg_culture_minority_trigger = {
 	AND = {
 		shares_heritage_trait_group_with_any_primary_culture = root.owner
 		NOT = { shares_tradition_trait_with_any_primary_culture = root.owner }
 	}
 }
 
-mog_plp_cul_exc_culture_minority_trigger = {
+REPLACE_OR_CREATE:mog_plp_cul_exc_culture_minority_trigger = {
 	OR = {
 		AND = {
 			shares_heritage_trait_with_any_primary_culture = root.owner

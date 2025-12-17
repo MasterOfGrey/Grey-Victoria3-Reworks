@@ -1,4 +1,4 @@
-﻿country_has_voting_franchise = {
+﻿REPLACE_OR_CREATE:country_has_voting_franchise = {
 	custom_tooltip = {
 		text = is_democratic_tt
 		OR = {

@@ -1,5 +1,5 @@
 ﻿## This was sitting in my local deconfliction folder for a long while. Seems best to include in PLP here.
-capitulate_to_revolution = {
+REPLACE_OR_CREATE:capitulate_to_revolution = {
 	scope:ongoing_revolution_movement = { #Can't trigger if they want governance reforms anyway.
 		this.most_desired_law ?= {
 			save_scope_as = revolutionaries_law

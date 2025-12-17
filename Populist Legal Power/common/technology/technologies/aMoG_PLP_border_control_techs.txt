@@ -1,40 +1,11 @@
-﻿tech_bureaucracy = {
-	# Unlocks Government Administration building
-	# Unlocks Isolationism - Economic System Law
-	# Unlocks Road Maintenance Decree
-	era = era_1
-	texture = "gfx/interface/icons/invention_icons/bureaucracy.dds"
-	category = society
-	
+﻿TRY_INJECT:tech_bureaucracy = {
 	modifier = {
-		country_institution_police_max_investment_add = 2
 		country_institution_size_change_speed_institution_border_control_mult = 1		# Added
-	}
-	
-	unlocking_technologies = {
-		urbanization
-	}
-	
-	ai_weight = {
-		value = 3 # Very important in general
 	}
 }
 
-international_relations = {
-	# Unlocks Defensive Pact and Rivalry
-	era = era_1
-	texture = "gfx/interface/icons/invention_icons/international_diplomacy.dds"
-	category = society
-	
+TRY_INJECT:international_relations = {
 	modifier = {
 		country_institution_size_change_speed_institution_border_control_mult = 1		# Added
-	}
-	
-	unlocking_technologies = {
-		tech_bureaucracy
-	}
-	
-	ai_weight = {
-		value = 1.5 # Important in general
 	}
 }

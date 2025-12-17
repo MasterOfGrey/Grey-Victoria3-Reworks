@@ -1,4 +1,4 @@
-﻿movement_orleanist = {
+﻿REPLACE_OR_CREATE:movement_orleanist = {
 	category = movement_category_ideological
 
 	ideology = ideology_orleanist_movement
@@ -322,7 +322,7 @@
 	}
 }
 
-movement_bonapartist = {
+REPLACE_OR_CREATE:movement_bonapartist = {
 	category = movement_category_ideological
 
 	ideology = ideology_bonapartist_movement
@@ -660,7 +660,7 @@ movement_bonapartist = {
 	}
 }
 
-movement_legitimist = {
+REPLACE_OR_CREATE:movement_legitimist = {
 	category = movement_category_ideological
 
 	ideology = ideology_legitimist_movement

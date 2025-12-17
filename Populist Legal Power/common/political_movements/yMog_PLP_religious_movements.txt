@@ -1,4 +1,4 @@
-﻿movement_religious_majority = {
+﻿REPLACE_OR_CREATE:movement_religious_majority = {
 	category = movement_category_religious
 
 	ideology = ideology_traditionalist_movement
@@ -380,7 +380,7 @@
 	}
 }
 
-movement_religious_minority = {
+REPLACE_OR_CREATE:movement_religious_minority = {
 	category = movement_category_religious
 
 	ideology = ideology_traditionalist_minoritarian_movement
