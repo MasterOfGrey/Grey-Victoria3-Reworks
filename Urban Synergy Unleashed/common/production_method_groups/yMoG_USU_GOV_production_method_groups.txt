@@ -1,7 +1,5 @@
 ﻿# Government Admin Overwrites
-
-
-pmg_base_building_government_administration = {
+REPLACE_OR_CREATE:pmg_base_building_government_administration = {
 	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
 	ai_selection = most_productive
 
@@ -13,7 +11,7 @@ pmg_base_building_government_administration = {
 	}
 }
 
-usu_pmg_government_administration_emergency_services = {
+REPLACE_OR_CREATE:usu_pmg_government_administration_emergency_services = {
 	texture = "gfx/interface/icons/generic_icons/mixed_icon_ownership.dds"
 	ai_selection = most_productive
 
@@ -25,7 +23,7 @@ usu_pmg_government_administration_emergency_services = {
 	}
 }
 
-usu_pmg_government_administration_law_enforcement = {
+REPLACE_OR_CREATE:usu_pmg_government_administration_law_enforcement = {
 	texture = "gfx/interface/icons/generic_icons/mixed_icon_ownership.dds"
 	ai_selection = most_productive
 
@@ -37,7 +35,7 @@ usu_pmg_government_administration_law_enforcement = {
 	}
 }
 
-pmg_government_administration_bureaucrat_professionalism = {
+REPLACE_OR_CREATE:pmg_government_administration_bureaucrat_professionalism = {
 	texture = "gfx/interface/icons/generic_icons/mixed_icon_ownership.dds"
 	ai_selection = most_productive
 
@@ -47,7 +45,7 @@ pmg_government_administration_bureaucrat_professionalism = {
 	}
 }
 
-pmg_government_administration_religious_administration = {
+REPLACE_OR_CREATE:pmg_government_administration_religious_administration = {
 	texture = "gfx/interface/icons/generic_icons/mixed_icon_ownership.dds"
 	ai_selection = most_productive
 
@@ -59,12 +57,13 @@ pmg_government_administration_religious_administration = {
 
 
 #MORGENRÖTE
-#pmg_sports_facilities = {
-#	texture = "gfx/interface/icons/production_method_icons/vikelas_sports_facilities.dds"
+#pmg_panum_hospital = {
+#	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
 #	ai_selection = most_productive
 #
 #	production_methods = {
-#		pm_vikelas_no_sports_facilities
-#		pm_vikelas_sports_facilities
+#		pm_panum_no_clinic
+#		pm_panum_clinic
+#		pm_panum_hospital
 #	}
 #}

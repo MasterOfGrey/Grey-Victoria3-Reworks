@@ -1,6 +1,6 @@
 ﻿#### POWER PLANTS ####
 ## Generation machinery
-hp_pm_hydro_plant_1 = {
+REPLACE_OR_CREATE:hp_pm_hydro_plant_1 = {
 	texture = "gfx/interface/icons/production_method_icons/hp_hydro_power_1.dds"
 	
 	state_modifiers = {
@@ -24,7 +24,7 @@ hp_pm_hydro_plant_1 = {
 	}
 }
 
-hp_pm_hydro_plant_2 = {
+REPLACE_OR_CREATE:hp_pm_hydro_plant_2 = {
 	texture = "gfx/interface/icons/production_method_icons/hp_hydro_power_2.dds"
 	
 	state_modifiers = {
@@ -52,7 +52,7 @@ hp_pm_hydro_plant_2 = {
 	}
 }
 
-hp_pm_hydro_plant_3 = {
+REPLACE_OR_CREATE:hp_pm_hydro_plant_3 = {
 	texture = "gfx/interface/icons/production_method_icons/hp_hydro_power_3.dds"
 	
 	state_modifiers = {
@@ -81,7 +81,7 @@ hp_pm_hydro_plant_3 = {
 }
 
 ## Turbine Quality
-hp_pm_turbine_1 = {
+REPLACE_OR_CREATE:hp_pm_turbine_1 = {
 	texture = "gfx/interface/icons/production_method_icons/hp_turbine_1.dds"
 	
 	unlocking_production_methods = {
@@ -108,7 +108,7 @@ hp_pm_turbine_1 = {
 	}
 }
 
-hp_pm_turbine_2 = {
+REPLACE_OR_CREATE:hp_pm_turbine_2 = {
 	texture = "gfx/interface/icons/production_method_icons/hp_turbine_2.dds"
 	
 	unlocking_technologies = {
@@ -141,7 +141,7 @@ hp_pm_turbine_2 = {
 	}
 }
 
-hp_pm_turbine_3 = {
+REPLACE_OR_CREATE:hp_pm_turbine_3 = {
 	texture = "gfx/interface/icons/production_method_icons/hp_turbine_3.dds"
 
 	unlocking_technologies = {
@@ -177,7 +177,7 @@ hp_pm_turbine_3 = {
 
 ## HV generation
 # Hydro-based
-PPP_pm_t1_local_power = {
+REPLACE_OR_CREATE:PPP_pm_t1_local_power = {
 	texture = "gfx/interface/icons/production_method_icons/PPP_local_power.dds"
 	is_hidden_when_unavailable = yes
 	replacement_if_valid = PPP_pm_t1_hybrid_power
@@ -187,7 +187,7 @@ PPP_pm_t1_local_power = {
 	}
 }
 
-PPP_pm_t1_hybrid_power = {
+REPLACE_OR_CREATE:PPP_pm_t1_hybrid_power = {
 	texture = "gfx/interface/icons/production_method_icons/PPP_hybrid_power.dds"
 	is_hidden_when_unavailable = yes
 	
@@ -207,7 +207,7 @@ PPP_pm_t1_hybrid_power = {
 	}
 }
 
-PPP_pm_t1_grid_power = {
+REPLACE_OR_CREATE:PPP_pm_t1_grid_power = {
 	texture = "gfx/interface/icons/production_method_icons/PPP_grid_power.dds"
 	is_hidden_when_unavailable = yes
 	ai_value = 200		# Just nudge it
@@ -229,7 +229,7 @@ PPP_pm_t1_grid_power = {
 }
 
 # Steam Engine-based
-PPP_pm_t2_local_power = {
+REPLACE_OR_CREATE:PPP_pm_t2_local_power = {
 	texture = "gfx/interface/icons/production_method_icons/PPP_local_power.dds"
 	is_hidden_when_unavailable = yes
 	replacement_if_valid = PPP_pm_t2_hybrid_power
@@ -239,7 +239,7 @@ PPP_pm_t2_local_power = {
 	}
 }
 
-PPP_pm_t2_hybrid_power = {
+REPLACE_OR_CREATE:PPP_pm_t2_hybrid_power = {
 	texture = "gfx/interface/icons/production_method_icons/PPP_hybrid_power.dds"
 	is_hidden_when_unavailable = yes
 	
@@ -259,7 +259,7 @@ PPP_pm_t2_hybrid_power = {
 	}
 }
 
-PPP_pm_t2_grid_power = {
+REPLACE_OR_CREATE:PPP_pm_t2_grid_power = {
 	texture = "gfx/interface/icons/production_method_icons/PPP_grid_power.dds"
 	is_hidden_when_unavailable = yes
 	ai_value = 200		# Just nudge it
@@ -281,7 +281,7 @@ PPP_pm_t2_grid_power = {
 }
 
 # Steam Turbine-based
-PPP_pm_t3_local_power = {
+REPLACE_OR_CREATE:PPP_pm_t3_local_power = {
 	texture = "gfx/interface/icons/production_method_icons/PPP_local_power.dds"
 	is_hidden_when_unavailable = yes
 	replacement_if_valid = PPP_pm_t3_hybrid_power
@@ -291,7 +291,7 @@ PPP_pm_t3_local_power = {
 	}
 }
 
-PPP_pm_t3_hybrid_power = {
+REPLACE_OR_CREATE:PPP_pm_t3_hybrid_power = {
 	texture = "gfx/interface/icons/production_method_icons/PPP_hybrid_power.dds"
 	is_hidden_when_unavailable = yes
 	
@@ -311,7 +311,7 @@ PPP_pm_t3_hybrid_power = {
 	}
 }
 
-PPP_pm_t3_grid_power = {
+REPLACE_OR_CREATE:PPP_pm_t3_grid_power = {
 	texture = "gfx/interface/icons/production_method_icons/PPP_grid_power.dds"
 	is_hidden_when_unavailable = yes
 	ai_value = 200		# Just nudge it

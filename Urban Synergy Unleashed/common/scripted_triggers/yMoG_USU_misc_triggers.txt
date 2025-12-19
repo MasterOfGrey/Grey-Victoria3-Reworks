@@ -1,5 +1,5 @@
 ﻿# scope = state
-has_world_market_access_history = {
+REPLACE_OR_CREATE:has_world_market_access_history = {
 	NOT = { owner = { has_law_or_variant = law_type:law_isolationism } } # Not true for Western Guangdong, but oh well.
 	OR = {
 		owner = { 

@@ -1,6 +1,6 @@
 ﻿### Defaults - Slightly cheaper than seaports, don't provide MAPI but provide more infrastructure.
 
-pm_rp_anchorage = {
+REPLACE_OR_CREATE:pm_rp_anchorage = {
 	texture = "gfx/interface/icons/production_method_icons/anchorage.dds"
 	ai_value = 2000
 	low_pop_method = yes # AI will activate this method for states with low population
@@ -37,7 +37,7 @@ pm_rp_anchorage = {
 	}
 }
 
-pm_rp_small_port = {
+REPLACE_OR_CREATE:pm_rp_small_port = {
 	texture = "gfx/interface/icons/production_method_icons/basic_port.dds"
 	ai_value = 2000
 	building_modifiers = {
@@ -76,7 +76,7 @@ pm_rp_small_port = {
 	}
 }
 
-pm_rp_industrial_port = {
+REPLACE_OR_CREATE:pm_rp_industrial_port = {
 	texture = "gfx/interface/icons/production_method_icons/industrial_port.dds"
 	ai_value = 4000
 	unlocking_technologies = {
@@ -121,7 +121,7 @@ pm_rp_industrial_port = {
 	}
 }
 
-pm_rp_modern_port = {
+REPLACE_OR_CREATE:pm_rp_modern_port = {
 	texture = "gfx/interface/icons/production_method_icons/modern_port.dds"
 	ai_value = 5000
 	unlocking_technologies = {

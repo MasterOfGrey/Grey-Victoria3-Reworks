@@ -1,6 +1,6 @@
 ﻿### Sea Ports - Overwrites & New
 
-pmg_base_building_port = {
+REPLACE_OR_CREATE:pmg_base_building_port = {
 	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
 	ai_selection = most_productive
 
@@ -12,7 +12,7 @@ pmg_base_building_port = {
 	}
 }
 
-pmg_logistics_services_port_coastal = {
+REPLACE_OR_CREATE:pmg_logistics_services_port_coastal = {
 	texture = "gfx/interface/icons/generic_icons/mixed_icon_refining.dds"
 	production_methods = {
 		usu_pm_port_c_logistics_0
@@ -24,7 +24,7 @@ pmg_logistics_services_port_coastal = {
 
 ### River Ports - All New (naturally)
 
-pmg_base_building_river_port = {
+REPLACE_OR_CREATE:pmg_base_building_river_port = {
 	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
 	production_methods = {
 		pm_rp_anchorage
@@ -34,7 +34,7 @@ pmg_base_building_river_port = {
 	}
 }
 
-pmg_logistics_services_port_river = {
+REPLACE_OR_CREATE:pmg_logistics_services_port_river = {
 	texture = "gfx/interface/icons/generic_icons/mixed_icon_refining.dds"
 	production_methods = {
 		usu_pm_port_r_logistics_0
@@ -46,7 +46,7 @@ pmg_logistics_services_port_river = {
 
 ### Shared - All New
 
-pmg_automation_port = {
+REPLACE_OR_CREATE:pmg_automation_port = {
 	texture = "gfx/interface/icons/generic_icons/mixed_icon_automation.dds"
 	production_methods = {
 		pm_auto_disabled_building_railway

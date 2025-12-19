@@ -1,6 +1,6 @@
 ﻿### Defaults - Just rebalanced for urban construction.
 
-pm_market_stalls = {
+REPLACE_OR_CREATE:pm_market_stalls = {
 	texture = "gfx/interface/icons/production_method_icons/market_stalls.dds"
 	ai_value = 500
 	country_modifiers = {
@@ -42,15 +42,15 @@ pm_market_stalls = {
 		workforce_scaled = {
 			state_construction_mult = -0.0005					# The more people are utilising the urban spaces though, the more this benefit is negated by all the people and businesses in the way.
 			building_food_industry_throughput_add = 0.005
-			building_textile_mills_throughput_add = 0.005
-			building_furniture_manufacturies_throughput_add = 0.005
+			building_textile_mill_throughput_add = 0.005
+			building_furniture_manufactory_throughput_add = 0.005
 			usu_building_public_green_throughput_add = 0.01
 			# state_migration_pull_add = 0.02			# Throughput bonuses can get high so this needs to start low.
 		}	
 	}
 }
 
-pm_market_squares = {
+REPLACE_OR_CREATE:pm_market_squares = {
 	texture = "gfx/interface/icons/production_method_icons/market_squares.dds"
 	ai_value = 1000
 	unlocking_technologies = { urban_planning }
@@ -99,15 +99,15 @@ pm_market_squares = {
 		workforce_scaled = {
 			state_construction_mult = -0.0008 # -0.001		# Better urban centres = penalty grows slower
 			building_food_industry_throughput_add = 0.005
-			building_textile_mills_throughput_add = 0.005
-			building_furniture_manufacturies_throughput_add = 0.005
+			building_textile_mill_throughput_add = 0.005
+			building_furniture_manufactory_throughput_add = 0.005
 			usu_building_public_green_throughput_add = 0.013
 			# state_migration_pull_add = 0.02			# Throughput bonuses can get high so this needs to start low.
 		}	
 	}
 }
 
-pm_covered_markets = {
+REPLACE_OR_CREATE:pm_covered_markets = {
 	texture = "gfx/interface/icons/production_method_icons/covered_markets.dds"
 	ai_value = 1500
 	unlocking_technologies = { steel_frame_buildings }
@@ -155,15 +155,15 @@ pm_covered_markets = {
 		workforce_scaled = {
 			state_construction_mult = -0.001 # -0.0015
 			building_food_industry_throughput_add = 0.005
-			building_textile_mills_throughput_add = 0.005
-			building_furniture_manufacturies_throughput_add = 0.005
+			building_textile_mill_throughput_add = 0.005
+			building_furniture_manufactory_throughput_add = 0.005
 			usu_building_public_green_throughput_add = 0.016
 			# state_migration_pull_add = 0.02			# Throughput bonuses can get high so this needs to start low.
 		}	
 	}
 }
 
-pm_arcades = {
+REPLACE_OR_CREATE:pm_arcades = {
 	texture = "gfx/interface/icons/production_method_icons/arcades.dds"
 	replacement_if_valid = usu_pm_hv_arcades
 	ai_value = 2000
@@ -213,8 +213,8 @@ pm_arcades = {
 		workforce_scaled = {
 			state_construction_mult = -0.0011 # -0.002
 			building_food_industry_throughput_add = 0.005
-			building_textile_mills_throughput_add = 0.005
-			building_furniture_manufacturies_throughput_add = 0.005
+			building_textile_mill_throughput_add = 0.005
+			building_furniture_manufactory_throughput_add = 0.005
 			ppp_building_power_grid_throughput_add = 0.01
 			usu_building_public_green_throughput_add = 0.019
 			# state_migration_pull_add = 0.02			# Throughput bonuses can get high so this needs to start low.
@@ -224,7 +224,7 @@ pm_arcades = {
 	required_input_goods = electricity
 }
 
-usu_pm_hv_arcades = {
+REPLACE_OR_CREATE:usu_pm_hv_arcades = {
 	texture = "gfx/interface/icons/production_method_icons/arcades.dds"
 	is_hidden_when_unavailable = yes
 	ai_value = 50000
@@ -280,8 +280,8 @@ usu_pm_hv_arcades = {
 		workforce_scaled = {
 			state_construction_mult = -0.0011 # -0.002
 			building_food_industry_throughput_add = 0.005
-			building_textile_mills_throughput_add = 0.005
-			building_furniture_manufacturies_throughput_add = 0.005
+			building_textile_mill_throughput_add = 0.005
+			building_furniture_manufactory_throughput_add = 0.005
 			ppp_building_power_grid_throughput_add = 0.01
 			usu_building_public_green_throughput_add = 0.02				# Very slight advantage for high voltage arcades
 			# state_migration_pull_add = 0.02			# Throughput bonuses can get high so this needs to start low.

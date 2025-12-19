@@ -41,7 +41,7 @@
 
 ## Manor Houses (4 PM's in 2 PMG's, reduced to total 50 people/level employed, 30/20 split)
 ### Standard Ratio: 30 Upper, 15 Middle, 5 Lower (300/15/0) - Divine Economics: 25U, 25M, 5L (250/75/0)
-pm_manor_house_privately_owned = {
+REPLACE_OR_CREATE:pm_manor_house_privately_owned = {
 	texture = "gfx/interface/icons/production_method_icons/ownership_aristocrats.dds"
 	replacement_if_valid = pm_manor_house_principle_divine_economics_2
 
@@ -61,7 +61,7 @@ pm_manor_house_privately_owned = {
 	}
 }
 
-pm_manor_house_principle_divine_economics_2 = {
+REPLACE_OR_CREATE:pm_manor_house_principle_divine_economics_2 = {
 	texture = "gfx/interface/icons/production_method_icons/privately_owned.dds"
 	is_hidden_when_unavailable = yes
 	
@@ -89,7 +89,7 @@ pm_manor_house_principle_divine_economics_2 = {
 	}
 }
 
-pm_manor_house_bureaucrat_ownership = {
+REPLACE_OR_CREATE:pm_manor_house_bureaucrat_ownership = {
 	texture = "gfx/interface/icons/production_method_icons/ownership_bureacrats.dds"
 
 	unlocking_laws = {
@@ -107,7 +107,7 @@ pm_manor_house_bureaucrat_ownership = {
 	}	
 }
 
-pm_manor_house_clergy_ownership = {
+REPLACE_OR_CREATE:pm_manor_house_clergy_ownership = {
 	texture = "gfx/interface/icons/production_method_icons/ownership_clergy.dds"
 
 	disallowing_laws = {
@@ -127,7 +127,7 @@ pm_manor_house_clergy_ownership = {
 
 ## Financial Districts (3 PM's in 1 PMG, reduced to total 50 people/level employed)
 ### Standard Ratio: 25 Upper, 15 Middle, 10 Lower (250/15/0) - Divine Economics: 20U, 20M, 10L (200/40/0)
-pm_financial_district_privately_owned = {
+REPLACE_OR_CREATE:pm_financial_district_privately_owned = {
 	texture = "gfx/interface/icons/production_method_icons/privately_owned.dds"
 	replacement_if_valid = pm_financial_district_principle_divine_economics_2
 	
@@ -144,7 +144,7 @@ pm_financial_district_privately_owned = {
 	}
 }
 
-pm_financial_district_publicly_traded = {
+REPLACE_OR_CREATE:pm_financial_district_publicly_traded = {
 	texture = "gfx/interface/icons/production_method_icons/publicly_traded.dds"
 	
 	unlocking_technologies = { mutual_funds }
@@ -162,7 +162,7 @@ pm_financial_district_publicly_traded = {
 	}	
 }
 
-pm_financial_district_principle_divine_economics_2 = {
+REPLACE_OR_CREATE:pm_financial_district_principle_divine_economics_2 = {
 	texture = "gfx/interface/icons/production_method_icons/privately_owned.dds"
 	is_hidden_when_unavailable = yes
 	
@@ -186,7 +186,7 @@ pm_financial_district_principle_divine_economics_2 = {
 
 ## Company Headquarters (reduced to total 50 people/level employed)
 ### Standard Ratio: 25 Upper, 15 Middle, 10 Lower (250/15/0)
-pm_company_headquarter_privately_owned = {
+REPLACE_OR_CREATE:pm_company_headquarter_privately_owned = {
 	texture = "gfx/interface/icons/production_method_icons/privately_owned.dds"
 	is_hidden_when_unavailable = yes
 	
@@ -212,7 +212,7 @@ pm_company_headquarter_privately_owned = {
 	}
 }
 
-pm_company_headquarter_privately_owned_aristocrats = {
+REPLACE_OR_CREATE:pm_company_headquarter_privately_owned_aristocrats = {
 	texture = "gfx/interface/icons/production_method_icons/privately_owned.dds"
 	is_hidden_when_unavailable = yes
 	
@@ -242,7 +242,7 @@ pm_company_headquarter_privately_owned_aristocrats = {
 	}
 }
 
-pm_company_headquarter_privately_owned_aristocrats_commercial_agriculture = {
+REPLACE_OR_CREATE:pm_company_headquarter_privately_owned_aristocrats_commercial_agriculture = {
 	texture = "gfx/interface/icons/production_method_icons/privately_owned.dds"
 	is_hidden_when_unavailable = yes
 	
@@ -279,7 +279,7 @@ pm_company_headquarter_privately_owned_aristocrats_commercial_agriculture = {
 # Capitalist target 3.7% each or less = 37%
 # Middle Class target ~1% or less = 30%
 # Remainder min 33% to be distributed
-pm_company_headquarter_privately_owned_shopkeepers = {
+REPLACE_OR_CREATE:pm_company_headquarter_privately_owned_shopkeepers = {
 	texture = "gfx/interface/icons/production_method_icons/privately_owned.dds"
 	is_hidden_when_unavailable = yes
 	
@@ -306,7 +306,7 @@ pm_company_headquarter_privately_owned_shopkeepers = {
 	}
 }
 
-pm_company_headquarter_privately_owned_bureaucrats = {
+REPLACE_OR_CREATE:pm_company_headquarter_privately_owned_bureaucrats = {
 	texture = "gfx/interface/icons/production_method_icons/privately_owned.dds"
 	is_hidden_when_unavailable = yes
 	
@@ -333,7 +333,7 @@ pm_company_headquarter_privately_owned_bureaucrats = {
 	}
 }
 
-pm_company_headquarter_privately_owned_academics = {
+REPLACE_OR_CREATE:pm_company_headquarter_privately_owned_academics = {
 	texture = "gfx/interface/icons/production_method_icons/privately_owned.dds"
 	is_hidden_when_unavailable = yes
 	
@@ -360,7 +360,7 @@ pm_company_headquarter_privately_owned_academics = {
 	}
 }
 
-pm_company_headquarter_principle_divine_economics_2 = {
+REPLACE_OR_CREATE:pm_company_headquarter_principle_divine_economics_2 = {
 	texture = "gfx/interface/icons/production_method_icons/privately_owned.dds"
 	is_hidden_when_unavailable = yes
 	
@@ -391,7 +391,7 @@ pm_company_headquarter_principle_divine_economics_2 = {
 	}
 }
 
-pm_company_headquarter_principle_divine_economics_2_aristocrats = {
+REPLACE_OR_CREATE:pm_company_headquarter_principle_divine_economics_2_aristocrats = {
 	texture = "gfx/interface/icons/production_method_icons/privately_owned.dds"
 	is_hidden_when_unavailable = yes
 
@@ -419,14 +419,14 @@ pm_company_headquarter_principle_divine_economics_2_aristocrats = {
 			building_employment_clerks_add      = 10 # 0
 		}
 		unscaled = {
-			building_capitalists_shares_add = 4 # 10	# 20 pops share 83.3% (4.2% ea) instead of 25 sharing 95% (3.8% ea)
-			building_aristocrats_shares_add = 6 # 10
+			building_capitalists_shares_add = 10	# 20 pops share 83.3% (4.2% ea) instead of 25 sharing 95% (3.8% ea)
+			building_aristocrats_shares_add = 10
 			building_clergymen_shares_add   = 2			# x20 total pops = 16.7% of profits (0.84%ea up from 0.37%ea)		- Church doesn't win quite as much here
 		}
 	}
 }
 
-pm_company_headquarter_principle_divine_economics_2_aristocrats_commercial_agriculture = {
+REPLACE_OR_CREATE:pm_company_headquarter_principle_divine_economics_2_aristocrats_commercial_agriculture = {
 	texture = "gfx/interface/icons/production_method_icons/privately_owned.dds"
 	is_hidden_when_unavailable = yes
 
@@ -457,14 +457,14 @@ pm_company_headquarter_principle_divine_economics_2_aristocrats_commercial_agric
 			building_employment_clerks_add      = 10 # 0
 		}
 		unscaled = {
-			building_capitalists_shares_add = 4 # 10	# 20 pops share 83.3% (4.2% ea) instead of 25 sharing 95% (3.8% ea)
-			building_aristocrats_shares_add = 6 # 10
+			building_capitalists_shares_add = 10	# 20 pops share 83.3% (4.2% ea) instead of 25 sharing 95% (3.8% ea)
+			building_aristocrats_shares_add = 10
 			building_clergymen_shares_add   = 2			# x20 total pops = 16.7% of profits (0.84%ea up from 0.37%ea)		- Church doesn't win quite as much here
 		}
 	}
 }
 
-pm_company_headquarter_principle_divine_economics_2_shopkeepers = {
+REPLACE_OR_CREATE:pm_company_headquarter_principle_divine_economics_2_shopkeepers = {
 	texture = "gfx/interface/icons/production_method_icons/privately_owned.dds"
 	is_hidden_when_unavailable = yes
 
@@ -498,7 +498,7 @@ pm_company_headquarter_principle_divine_economics_2_shopkeepers = {
 	}
 }
 
-pm_company_headquarter_principle_divine_economics_2_bureaucrats = {
+REPLACE_OR_CREATE:pm_company_headquarter_principle_divine_economics_2_bureaucrats = {
 	texture = "gfx/interface/icons/production_method_icons/privately_owned.dds"
 	is_hidden_when_unavailable = yes
 
@@ -532,7 +532,7 @@ pm_company_headquarter_principle_divine_economics_2_bureaucrats = {
 	}
 }
 
-pm_company_headquarter_principle_divine_economics_2_academics = {
+REPLACE_OR_CREATE:pm_company_headquarter_principle_divine_economics_2_academics = {
 	texture = "gfx/interface/icons/production_method_icons/privately_owned.dds"
 	is_hidden_when_unavailable = yes
 
@@ -570,7 +570,7 @@ pm_company_headquarter_principle_divine_economics_2_academics = {
 # Capitalist target 3.7% each or less = 37%
 # Middle Class target ~1% or less = 30%
 # Remainder min 33% to be distributed
-pm_company_headquarter_government_run = {
+REPLACE_OR_CREATE:pm_company_headquarter_government_run = {
 	texture = "gfx/interface/icons/production_method_icons/government_run.dds"
 
 	unlocking_laws = {
@@ -591,7 +591,7 @@ pm_company_headquarter_government_run = {
 }
 
 ### Redistributive Owners: Standard Ratio: 30 Middle, 20 Lower (0/2820/180 - 3000 total)
-pm_company_headquarter_worker_cooperative = {
+REPLACE_OR_CREATE:pm_company_headquarter_worker_cooperative = {
 	texture = "gfx/interface/icons/production_method_icons/worker_cooperative.dds"
 	replacement_if_valid = pm_company_headquarter_coop_collective_agriculture
 
@@ -612,7 +612,7 @@ pm_company_headquarter_worker_cooperative = {
 	}
 }
 
-pm_company_headquarter_coop_collective_agriculture = {
+REPLACE_OR_CREATE:pm_company_headquarter_coop_collective_agriculture = {
 	texture = "gfx/interface/icons/production_method_icons/worker_cooperative.dds"
 	is_hidden_when_unavailable = yes
 
@@ -654,7 +654,7 @@ pm_company_headquarter_coop_collective_agriculture = {
 	}
 }
 
-pm_company_headquarter_only_collective_agriculture = {
+REPLACE_OR_CREATE:pm_company_headquarter_only_collective_agriculture = {
 	texture = "gfx/interface/icons/production_method_icons/worker_cooperative.dds"
 	is_hidden_when_unavailable = yes
 	ai_value = 200000					# Should be forced on if the laws are right, but just in case.

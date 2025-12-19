@@ -1,0 +1,22 @@
+﻿l_simp_chinese:
+ mr_airport_can_construct_tt: "一个州可支持的[Concept('concept_curtiss_airport','$concept_curtiss_airports$')] 最高级别等于 1 加 1，每 10 个#G #! [GetBuildingType('building_urban_center').GetName] 。" #deepl:1884813676
+ 
+ # PMGs
+ pmg_tourism_airport: "进口与旅游"
+ pmg_mendelejew_automation_oil: "自动化"
+ pmg_mendelejew_automation_rubber: "自动化"
+ 
+ # PMs
+ pm_luxury_requisitions: "奢侈品需求"
+ pm_travel_agencies: "旅行社"
+ 
+ pm_mendelejew_automation_disabled: "手动操作"
+ pm_pneumatic_transfer_system: "气动传输系统"
+ pm_continuous_process_systems_hydrogenation: "连续加氢"
+ pm_continuous_process_systems_polymerisation: "连续聚合"
+ 
+ # Modifier Types
+ building_mendelejew_hydrogenation_plants_throughput_add: "$building_mendelejew_hydrogenation_plants$ 建筑 [concept_throughput]"
+ building_mendelejew_hydrogenation_plants_throughput_add_desc: "对$building_mendelejew_hydrogenation_plants$的输入和输出都有奖励或惩罚"
+ building_mendelejew_synthetic_rubber_factory_throughput_add: "$building_mendelejew_synthetic_rubber_factory$ 建筑 [concept_throughput]"
+ building_mendelejew_synthetic_rubber_factory_throughput_add_desc: "对$building_mendelejew_synthetic_rubber_factory$的输入和输出都有奖励或惩罚"

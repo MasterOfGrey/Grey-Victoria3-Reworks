@@ -1,0 +1,22 @@
+﻿l_korean:
+ mr_airport_can_construct_tt: "주에서 지원할 수 있는 최대 레벨 [Concept('concept_curtiss_airport','$concept_curtiss_airports$')] 은 #G 10레벨#! 의 [GetBuildingType('building_urban_center').GetName] 에 1을 더한 값과 같습니다." #deepl:1884813676
+ 
+ # PMGs
+ pmg_tourism_airport: "수입 및 관광"
+ pmg_mendelejew_automation_oil: "오토메이션"
+ pmg_mendelejew_automation_rubber: "오토메이션"
+ 
+ # PMs
+ pm_luxury_requisitions: "사치품 징수"
+ pm_travel_agencies: "여행사"
+ 
+ pm_mendelejew_automation_disabled: "수동 작업"
+ pm_pneumatic_transfer_system: "공압 전달 시스템"
+ pm_continuous_process_systems_hydrogenation: "연속 수소화"
+ pm_continuous_process_systems_polymerisation: "연속 중합"
+ 
+ # Modifier Types
+ building_mendelejew_hydrogenation_plants_throughput_add: "$building_mendelejew_hydrogenation_plants$ 건물 [concept_throughput]"
+ building_mendelejew_hydrogenation_plants_throughput_add_desc: "$building_mendelejew_hydrogenation_plants$의 입력과 출력 모두에 대한 보너스 또는 페널티"
+ building_mendelejew_synthetic_rubber_factory_throughput_add: "$building_mendelejew_synthetic_rubber_factory$ 건물 [concept_throughput]"
+ building_mendelejew_synthetic_rubber_factory_throughput_add_desc: "$building_mendelejew_synthetic_rubber_factory$의 입력과 출력 모두에 대한 보너스 또는 페널티"

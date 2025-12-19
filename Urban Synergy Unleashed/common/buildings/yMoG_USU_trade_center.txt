@@ -1,4 +1,4 @@
-﻿building_trade_center = {
+﻿REPLACE_OR_CREATE:building_trade_center = {
 	building_group = bg_trade
 	city_type = city
 	levels_per_mesh = 50

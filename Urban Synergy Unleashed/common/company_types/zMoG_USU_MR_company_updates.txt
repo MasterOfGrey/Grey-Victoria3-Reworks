@@ -1,0 +1,5 @@
+﻿TRY_INJECT:company_basic_community = {
+	building_types = {
+		building_elgar_opera		# Morgenrote
+	}
+}

@@ -3,14 +3,14 @@
 # and include police (total 250 extra) and emergency services!
 
 # Emergency Services
-usu_pm_no_emergency_services = {
+REPLACE_OR_CREATE:usu_pm_no_emergency_services = {
 	texture = "gfx/interface/icons/production_method_icons/no_police.dds"
 	is_default = yes
 	
 	ai_value = 0
 }
 
-usu_pm_basic_fire_brigade = {
+REPLACE_OR_CREATE:usu_pm_basic_fire_brigade = {
 	texture = "gfx/interface/icons/production_method_icons/ses_basic_fire.dds"
 	
 	unlocking_technologies = {
@@ -39,7 +39,7 @@ usu_pm_basic_fire_brigade = {
 	ai_value = 1000
 }
 
-usu_pm_response_planning = {
+REPLACE_OR_CREATE:usu_pm_response_planning = {
 	texture = "gfx/interface/icons/production_method_icons/ses_response_planning.dds"
 	
 	unlocking_technologies = {
@@ -69,7 +69,7 @@ usu_pm_response_planning = {
 	ai_value = 2000
 }
 
-usu_pm_modern_emergency_services = {
+REPLACE_OR_CREATE:usu_pm_modern_emergency_services = {
 	texture = "gfx/interface/icons/production_method_icons/ses_modern.dds"
 	
 	unlocking_technologies = {
@@ -108,7 +108,7 @@ usu_pm_modern_emergency_services = {
 }
 
 # Law Enforcement:
-usu_pm_no_police = {
+REPLACE_OR_CREATE:usu_pm_no_police = {
 	texture = "gfx/interface/icons/production_method_icons/no_police.dds"
 	
 	disallowing_laws = {
@@ -129,7 +129,7 @@ usu_pm_no_police = {
 	}
 }
 
-usu_pm_local_police = {
+REPLACE_OR_CREATE:usu_pm_local_police = {
 	texture = "gfx/interface/icons/production_method_icons/loc_police.dds"
 	
 	disallowing_laws = {
@@ -151,7 +151,7 @@ usu_pm_local_police = {
 	}
 }
 
-usu_pm_dedicated_police = {
+REPLACE_OR_CREATE:usu_pm_dedicated_police = {
 	texture = "gfx/interface/icons/production_method_icons/ded_police.dds"
 	
 	disallowing_laws = {
@@ -173,7 +173,7 @@ usu_pm_dedicated_police = {
 	}
 }
 
-usu_pm_militarized_police = {
+REPLACE_OR_CREATE:usu_pm_militarized_police = {
 	texture = "gfx/interface/icons/production_method_icons/mil_police.dds"
 	
 	disallowing_laws = {
@@ -196,7 +196,7 @@ usu_pm_militarized_police = {
 }
 
 # Aristocratic Influence:
-pm_hereditary_bureaucrats = {
+REPLACE_OR_CREATE:pm_hereditary_bureaucrats = {
 	texture = "gfx/interface/icons/production_method_icons/ownership_aristocrats.dds"
 	
 	unlocking_laws = {
@@ -212,7 +212,7 @@ pm_hereditary_bureaucrats = {
 	}
 }
 
-pm_professional_bureaucrats = {
+REPLACE_OR_CREATE:pm_professional_bureaucrats = {
 	texture = "gfx/interface/icons/production_method_icons/professional_bureaucrats.dds"
 	
 	disallowing_laws = {
@@ -228,7 +228,7 @@ pm_professional_bureaucrats = {
 }
 
 # Religious Influence:
-pm_secular_bureaucrats = {
+REPLACE_OR_CREATE:pm_secular_bureaucrats = {
 	texture = "gfx/interface/icons/production_method_icons/ownership_bureacrats.dds"
 	
 	disallowing_laws = {
@@ -242,7 +242,7 @@ pm_secular_bureaucrats = {
 	}
 }
 
-pm_religious_bureaucrats = {
+REPLACE_OR_CREATE:pm_religious_bureaucrats = {
 	texture = "gfx/interface/icons/production_method_icons/ownership_clergy.dds"
 	
 	disallowing_laws = {

@@ -1,19 +1,6 @@
 ﻿# Initial public green max level.
-urbanization = {
-	# Unlocks Urban Centers building
-	era = era_1
-	texture = "gfx/interface/icons/invention_icons/urbanization.dds"
-	category = society
-
+TRY_INJECT:urbanization = {
 	modifier = {
-		state_infrastructure_from_population_add = 2
-		state_infrastructure_from_population_max_add = 40
-		state_building_construction_sector_max_level_add = 10
-		country_max_weekly_construction_progress_add = 10
 		state_usu_building_public_green_max_level_add = 3		# New
-	}
-
-	ai_weight = {
-		value = 3 # Very important in general
 	}
 }

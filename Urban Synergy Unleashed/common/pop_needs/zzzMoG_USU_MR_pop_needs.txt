@@ -1,0 +1,13 @@
+﻿######################
+#   USU(+PDT) + MR   #
+######################
+
+TRY_INJECT:popneed_leisure = {
+	entry = {
+		goods = elgar_music
+		
+		weight = 0.5
+		max_supply_share = 0.2 # New from me with Morgenrote, pairs well with wine and art
+		min_supply_share = 0.0
+	}
+}

@@ -1,6 +1,6 @@
 ﻿### Defaults - Extra ones for Transport Principle come later.
 
-pm_early_trains = {
+REPLACE_OR_CREATE:pm_early_trains = {
 	texture = "gfx/interface/icons/production_method_icons/experimental_trains.dds"
 	
 	building_modifiers = {
@@ -36,7 +36,7 @@ pm_early_trains = {
 #	}
 }
 
-pm_steam_trains = {
+REPLACE_OR_CREATE:pm_steam_trains = {
 	texture = "gfx/interface/icons/production_method_icons/trains_steam.dds"
 	replacement_if_valid = pm_steam_trains_principle_transport_3
 	
@@ -78,7 +78,7 @@ pm_steam_trains = {
 #	}
 }
 
-pm_electric_trains = {
+REPLACE_OR_CREATE:pm_electric_trains = {
 	texture = "gfx/interface/icons/production_method_icons/trains_electric.dds"
 	replacement_if_valid = pm_electric_trains_principle_transport_3
 	
@@ -121,7 +121,7 @@ pm_electric_trains = {
 	required_input_goods = electricity
 }
 
-pm_diesel_trains = {
+REPLACE_OR_CREATE:pm_diesel_trains = {
 	texture = "gfx/interface/icons/production_method_icons/trains_diesel.dds"	
 	replacement_if_valid = pm_diesel_trains_principle_transport_3
 	
@@ -163,7 +163,7 @@ pm_diesel_trains = {
 #	}
 }
 
-pm_ac_electric_trains = {
+REPLACE_OR_CREATE:pm_ac_electric_trains = {
 	texture = "gfx/interface/icons/production_method_icons/trains_electric_ac.dds"
 	replacement_if_valid = pm_ac_electric_trains_principle_transport_3
 	
@@ -208,7 +208,7 @@ pm_ac_electric_trains = {
 
 ##### Transport Principle Alternatives
 
-pm_steam_trains_principle_transport_3 = {
+REPLACE_OR_CREATE:pm_steam_trains_principle_transport_3 = {
 	texture = "gfx/interface/icons/production_method_icons/trains_steam.dds"
 	is_hidden_when_unavailable = yes
 	
@@ -253,7 +253,7 @@ pm_steam_trains_principle_transport_3 = {
 #	}
 }
 
-pm_electric_trains_principle_transport_3 = {
+REPLACE_OR_CREATE:pm_electric_trains_principle_transport_3 = {
 	texture = "gfx/interface/icons/production_method_icons/trains_electric.dds"
 	is_hidden_when_unavailable = yes
 	
@@ -300,7 +300,7 @@ pm_electric_trains_principle_transport_3 = {
 	required_input_goods = electricity
 }
 
-pm_diesel_trains_principle_transport_3 = {
+REPLACE_OR_CREATE:pm_diesel_trains_principle_transport_3 = {
 	texture = "gfx/interface/icons/production_method_icons/trains_diesel.dds"	
 	is_hidden_when_unavailable = yes
 	
@@ -346,7 +346,7 @@ pm_diesel_trains_principle_transport_3 = {
 #	}
 }
 
-pm_ac_electric_trains_principle_transport_3 = {
+REPLACE_OR_CREATE:pm_ac_electric_trains_principle_transport_3 = {
 	texture = "gfx/interface/icons/production_method_icons/trains_electric_ac.dds"
 	is_hidden_when_unavailable = yes
 	

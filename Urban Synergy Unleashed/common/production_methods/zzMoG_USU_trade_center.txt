@@ -1,5 +1,5 @@
 ﻿## Base PM's
-pm_trade_center = {
+REPLACE_OR_CREATE:pm_trade_center = {
 	texture = "gfx/interface/icons/production_method_icons/trade_center.dds"
 	replacement_if_valid = pm_trade_center_principle_external_trade_2
 	is_hidden_when_unavailable = yes
@@ -30,7 +30,7 @@ pm_trade_center = {
 	}
 }
 
-pm_trade_center_principle_external_trade_2 = {
+REPLACE_OR_CREATE:pm_trade_center_principle_external_trade_2 = {
 	texture = "gfx/interface/icons/production_method_icons/trade_center.dds"
 	is_hidden_when_unavailable = yes
 	
@@ -71,7 +71,7 @@ pm_trade_center_principle_external_trade_2 = {
 }
 
 ## Port Status
-pm_trade_center_inland = {
+REPLACE_OR_CREATE:pm_trade_center_inland = {
 	texture = "gfx/interface/icons/production_method_icons/land_trade.dds"
 	is_hidden_when_unavailable = yes
 	unlocking_production_methods = {
@@ -85,7 +85,7 @@ pm_trade_center_inland = {
 	}
 }
 
-pm_trade_center_port = {
+REPLACE_OR_CREATE:pm_trade_center_port = {
 	texture = "gfx/interface/icons/production_method_icons/anchorage.dds"
 	is_hidden_when_unavailable = yes
 	unlocking_production_methods = {
@@ -117,7 +117,7 @@ pm_trade_center_port = {
 	#}
 #}
 
-pm_trade_center_trade_quantity_limited = {
+REPLACE_OR_CREATE:pm_trade_center_trade_quantity_limited = {
 	texture = "gfx/interface/icons/production_method_icons/trade_quantity_1.dds"
 	low_pop_method = yes # AI will activate this method for states with low population
 	
@@ -146,7 +146,7 @@ pm_trade_center_trade_quantity_limited = {
 	#}
 #}
 
-pm_trade_center_trade_quantity_normal = {
+REPLACE_OR_CREATE:pm_trade_center_trade_quantity_normal = {
 	texture = "gfx/interface/icons/production_method_icons/trade_quantity_2.dds"
 	is_default = yes
 	
@@ -177,7 +177,7 @@ pm_trade_center_trade_quantity_normal = {
 	#}
 #}
 
-pm_trade_center_trade_quantity_high = {
+REPLACE_OR_CREATE:pm_trade_center_trade_quantity_high = {
 	texture = "gfx/interface/icons/production_method_icons/trade_quantity_3.dds"
 	
 	unlocking_technologies = { hydraulic_cranes }
@@ -214,7 +214,7 @@ pm_trade_center_trade_quantity_high = {
 	#}
 #}
 
-pm_trade_center_trade_quantity_very_high = {
+REPLACE_OR_CREATE:pm_trade_center_trade_quantity_very_high = {
 	texture = "gfx/interface/icons/production_method_icons/trade_quantity_4.dds"
 	
 	unlocking_technologies = { floating_harbor }

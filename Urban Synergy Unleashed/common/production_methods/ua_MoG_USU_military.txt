@@ -1,318 +1,100 @@
-﻿pm_no_organization = {
-	texture = "gfx/interface/icons/production_method_icons/no_specialists.dds"
-	is_default = yes
-
-	profession_ratio = {
-		soldiers = 97
-		officers = 3
-	}
-
+﻿INJECT:pm_no_organization = {
 	building_modifiers = {
 		workforce_scaled = {
 			goods_input_usu_logistics_add = 0.5
 		}
-		unscaled = {
-			building_training_rate_add = 50
-		}
-
-		level_scaled = {
-			building_training_rate_add = 8
-		}
 	}
 }
 
-pm_general_training = {
-	texture = "gfx/interface/icons/production_method_icons/cavalry.dds"
-	is_default = yes
-
-	profession_ratio = {
-		soldiers = 95
-		officers = 5
-	}
-
-	unlocking_technologies = {
-		general_staff
-	}
+INJECT:pm_general_training = {
 	building_modifiers = {
 		workforce_scaled = {
 			goods_input_usu_logistics_add = 1
 		}
-		unscaled = {
-			building_training_rate_add = 50
-		}
-
-		level_scaled = {
-			building_training_rate_add = 15
-		}
 	}
 }
 
-pm_advanced_tactics_training = {
-	texture = "gfx/interface/icons/production_method_icons/squad_infantry.dds"
-
-	profession_ratio = {
-		soldiers = 90
-		officers = 10
-	}
-
-	unlocking_technologies = {
-		military_statistics
-	}
+INJECT:pm_advanced_tactics_training = {
 	building_modifiers = {
 		workforce_scaled = {
 			goods_input_usu_logistics_add = 1.5
 		}
-		unscaled = {
-			building_training_rate_add = 50
-		}
-
-		level_scaled = {
-			building_training_rate_add = 17
-		}
 	}
 }
 
-pm_training_streamlining = {
-	texture = "gfx/interface/icons/production_method_icons/skirmish_infantry.dds"
-
-	profession_ratio = {
-		soldiers = 85
-		officers = 15
-	}
-
-	unlocking_technologies = {
-		wargaming
-	}
+INJECT:pm_training_streamlining = {
 	building_modifiers = {
 		workforce_scaled = {
 			goods_input_usu_logistics_add = 2
 		}
-		unscaled = {
-			building_training_rate_add = 50
-		}
-
-		level_scaled = {
-			building_training_rate_add = 19
-		}
 	}
 }
 
-pm_nco_incorporation = {
-	texture = "gfx/interface/icons/production_method_icons/nco_incorporation.dds"
-
-	profession_ratio = {
-		soldiers = 80
-		officers = 20
-	}
-
-	unlocking_technologies = {
-		nco_training
-	}
+INJECT:pm_nco_incorporation = {
 	building_modifiers = {
 		workforce_scaled = {
 			goods_input_usu_logistics_add = 2.5
 		}
-		unscaled = {
-			building_training_rate_add = 50
-		}
-
-		level_scaled = {
-			building_training_rate_add = 22
-		}
 	}
 }
 
-pm_mobile_warfare_tactics = {
-	texture = "gfx/interface/icons/production_method_icons/motorised_logistics.dds"
-
-	profession_ratio = {
-		soldiers = 75
-		officers = 25
-	}
-
-	unlocking_technologies = {
-		mobile_armor
-	}
+INJECT:pm_mobile_warfare_tactics = {
 	building_modifiers = {
 		workforce_scaled = {
 			goods_input_usu_logistics_add = 3
 		}
-		unscaled = {
-			building_training_rate_add = 50
-		}
-
-		level_scaled = {
-			building_training_rate_add = 24
-		}
 	}
 }
 
-pm_no_organization_conscription = {
-	texture = "gfx/interface/icons/production_method_icons/no_specialists.dds"
-	is_default = yes
-
-	profession_ratio = {
-		soldiers = 97
-		officers = 3
-	}
-
+INJECT:pm_no_organization_conscription = {
 	building_modifiers = {
 		workforce_scaled = {
 			goods_input_usu_logistics_add = 0.5
 		}
-		unscaled = {
-			building_training_rate_add = 50
-		}
-
-		level_scaled = {
-			building_training_rate_add = 10
-		}
 	}
 }
 
-pm_general_training_conscription = {
-	texture = "gfx/interface/icons/production_method_icons/cavalry.dds"
-	is_default = yes
-
-	profession_ratio = {
-		soldiers = 95
-		officers = 5
-	}
-
-	unlocking_technologies = {
-		general_staff
-	}
+INJECT:pm_general_training_conscription = {
 	building_modifiers = {
 		workforce_scaled = {
 			goods_input_usu_logistics_add = 1
 		}
-		unscaled = {
-			building_training_rate_add = 50
-		}
-
-		level_scaled = {
-			building_training_rate_add = 18
-		}
 	}
 }
 
-pm_advanced_tactics_training_conscription = {
-	texture = "gfx/interface/icons/production_method_icons/squad_infantry.dds"
-
-	profession_ratio = {
-		soldiers = 90
-		officers = 10
-	}
-
-	unlocking_technologies = {
-		military_statistics
-	}
-	disallowing_laws = {
-		law_peasant_levies
-	}
+INJECT:pm_advanced_tactics_training_conscription = {
 	building_modifiers = {
 		workforce_scaled = {
 			goods_input_usu_logistics_add = 1.5
 		}
-		unscaled = {
-			building_training_rate_add = 50
-		}
-
-		level_scaled = {
-			building_training_rate_add = 21
-		}
 	}
 }
 
-pm_training_streamlining_conscription = {
-	texture = "gfx/interface/icons/production_method_icons/skirmish_infantry.dds"
-
-	profession_ratio = {
-		soldiers = 85
-		officers = 15
-	}
-
-	unlocking_technologies = {
-		wargaming
-	}
-	disallowing_laws = {
-		law_peasant_levies
-	}
+INJECT:pm_training_streamlining_conscription = {
 	building_modifiers = {
 		workforce_scaled = {
 			goods_input_usu_logistics_add = 2
 		}
-		unscaled = {
-			building_training_rate_add = 50
-		}
-
-		level_scaled = {
-			building_training_rate_add = 24
-		}
 	}
 }
 
-pm_nco_incorporation_conscription = {
-	texture = "gfx/interface/icons/production_method_icons/nco_incorporation.dds"
-
-	profession_ratio = {
-		soldiers = 80
-		officers = 20
-	}
-
-	unlocking_technologies = {
-		nco_training
-	}
-	disallowing_laws = {
-		law_peasant_levies
-	}
+INJECT:pm_nco_incorporation_conscription = {
 	building_modifiers = {
 		workforce_scaled = {
 			goods_input_usu_logistics_add = 2.5
 		}
-		unscaled = {
-			building_training_rate_add = 50
-		}
-
-		level_scaled = {
-			building_training_rate_add = 27
-		}
 	}
 }
 
-pm_mobile_warfare_tactics_conscription = {
-	texture = "gfx/interface/icons/production_method_icons/motorised_logistics.dds"
-
-	profession_ratio = {
-		soldiers = 75
-		officers = 25
-	}
-
-	unlocking_technologies = {
-		mobile_armor
-	}
+INJECT:pm_mobile_warfare_tactics_conscription = {
 	building_modifiers = {
 		workforce_scaled = {
 			goods_input_usu_logistics_add = 3
 		}
-		unscaled = {
-			building_training_rate_add = 50
-		}
-
-		level_scaled = {
-			building_training_rate_add = 30
-		}
 	}
 }
 
-pm_no_naval_theory = {
-	texture = "gfx/interface/icons/production_method_icons/no_naval_theory.dds"
-	ai_value = 0
-
-	profession_ratio = {
-		soldiers = 90
-		officers = 10
-	}
+INJECT:pm_no_naval_theory = {
 	building_modifiers = {
 		workforce_scaled = {
 			goods_input_usu_logistics_add = 2
@@ -320,28 +102,13 @@ pm_no_naval_theory = {
 			goods_input_clothes_add = 0.9
 			goods_input_luxury_clothes_add = 0.1
 		}
-		level_scaled = {
-			building_training_rate_add = 4
-		}
-		
-		unscaled = {
-			building_training_rate_add = 10
-		}
 	}
 }
 
-pm_power_of_the_purse = {
-	texture = "gfx/interface/icons/production_method_icons/power_of_the_purse.dds"
-
-	profession_ratio = {
-		soldiers = 875
-		officers = 125
-	}
-
-	unlocking_technologies = {
-		power_of_the_purse
-	}
+INJECT:pm_power_of_the_purse = {
 	ai_value = 200000
+}
+INJECT:pm_power_of_the_purse = {
 	building_modifiers = {
 		workforce_scaled = {	
 			goods_input_usu_logistics_add = 4
@@ -349,30 +116,13 @@ pm_power_of_the_purse = {
 			goods_input_clothes_add = 0.85
 			goods_input_luxury_clothes_add = 0.15
 		}
-		level_scaled = {
-			building_training_rate_add = 5.5
-		}
-		
-		unscaled = {
-			unit_morale_loss_mult = -0.05
-			unit_morale_damage_mult = 0.1
-			building_training_rate_add = 10
-		}
 	}
 }
 
-pm_jeune_ecole = {
-	texture = "gfx/interface/icons/production_method_icons/jeune_ecole.dds"
-
-	profession_ratio = {
-		soldiers = 85
-		officers = 15
-	}
-
-	unlocking_technologies = {
-		jeune_ecole
-	}
+INJECT:pm_jeune_ecole = {
 	ai_value = 300000
+}
+INJECT:pm_jeune_ecole = {
 	building_modifiers = {
 		workforce_scaled = {	
 			goods_input_usu_logistics_add = 6
@@ -380,29 +130,13 @@ pm_jeune_ecole = {
 			goods_input_clothes_add = 0.8
 			goods_input_luxury_clothes_add = 0.2
 		}
-		level_scaled = {
-			building_training_rate_add = 6
-		}
-		
-		unscaled = {
-			unit_morale_loss_mult = -0.1
-			unit_morale_damage_mult = 0.2
-			building_training_rate_add = 10
-		}
 	}
 }
 
-pm_sea_lane_strategies = {
-	texture = "gfx/interface/icons/production_method_icons/mahanian_thought.dds"
-
-	profession_ratio = {
-		soldiers = 825
-		officers = 175
-	}
-
-	unlocking_technologies = {
-		sea_lane_strategies
-	}
+INJECT:pm_sea_lane_strategies = {
+	ai_value = 400000
+}
+INJECT:pm_sea_lane_strategies = {
 	ai_value = 400000
 	building_modifiers = {
 		workforce_scaled = {	
@@ -411,45 +145,19 @@ pm_sea_lane_strategies = {
 			goods_input_clothes_add = 0.75
 			goods_input_luxury_clothes_add = 0.25
 		}
-		level_scaled = {
-			building_training_rate_add = 6.5
-		}
-		
-		unscaled = {
-			unit_morale_loss_mult = -0.15
-			unit_morale_damage_mult = 0.3
-			building_training_rate_add = 10
-		}
 	}
 }
 
-pm_battlefleet_tactics = {
-	texture = "gfx/interface/icons/production_method_icons/battlefleet_tactics.dds"
-
-	profession_ratio = {
-		soldiers = 80
-		officers = 20
-	}
-
-	unlocking_technologies = {
-		battlefleet_tactics
-	}
+INJECT:pm_battlefleet_tactics = {
 	ai_value = 500000
+}
+INJECT:pm_battlefleet_tactics = {
 	building_modifiers = {
 		workforce_scaled = {	
 			goods_input_usu_logistics_add = 10
 			goods_input_groceries_add = 3
 			goods_input_clothes_add = 0.7
 			goods_input_luxury_clothes_add = 0.3
-		}
-		level_scaled = {
-			building_training_rate_add = 7
-		}
-		
-		unscaled = {
-			unit_morale_loss_mult = -0.2
-			unit_morale_damage_mult = 0.4
-			building_training_rate_add = 10
 		}
 	}
 }

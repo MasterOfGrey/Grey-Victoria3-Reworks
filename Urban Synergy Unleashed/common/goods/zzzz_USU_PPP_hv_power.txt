@@ -1,4 +1,4 @@
-﻿ppp_hv_power = {
+﻿REPLACE_OR_CREATE:ppp_hv_power = {
     texture = "gfx/interface/icons/goods_icons/electricity_old.dds"
     cost = 80
     category = industrial

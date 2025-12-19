@@ -1,0 +1,70 @@
+﻿# Respecified purely so that the auto-expand rules are properly managed.
+
+TRY_REPLACE:building_airport = {
+	building_group = bg_private_infrastructure	
+	icon = "gfx/interface/icons/building_icons/airport.dds"
+	
+	unlocking_technologies = {
+		curtiss_modern_aviation_tech
+	}
+	
+	production_method_groups = {
+		pmg_base_building_airport
+		pmg_cargo_airport
+		pmg_tourism_airport
+	}
+	
+	can_build_government = {
+		custom_tooltip = {
+			text = mr_airport_can_construct_tt
+			NOT = {
+				b:building_airport ?= {
+					level_after_queued_constructions >= {
+						value = 1							# Ensures always 1 level is buildable
+						add = {
+							state.b:building_urban_center ?= {
+								add = level
+							}
+							divide = 10						# 1 additional level per 10 urban centres
+							floor = yes						# Otherwise this rounds UP for all decimals
+							# Whatever curtiss flight route variable you would like:
+							# add = var:curtiss_local_aviation_enthusiasm
+						}
+					}
+				}
+			}
+		}
+	}
+	
+	can_build_private = {
+		custom_tooltip = {
+			text = mr_airport_can_construct_tt
+			NOT = {
+				b:building_airport ?= {
+					level_after_queued_constructions >= {
+						value = 1							# Ensures always 1 level is buildable
+						add = {
+							state.b:building_urban_center ?= {
+								add = level
+							}
+							divide = 10						# 1 additional level per 10 urban centres
+							floor = yes						# Otherwise this rounds UP for all decimals
+							# Whatever curtiss flight route variable you would like:
+							# add = var:curtiss_local_aviation_enthusiasm
+						}
+					}
+				}
+			}
+		}
+	}
+	
+	# should_auto_expand = {} # USU reworked auto-expand triggers should handle this
+	
+	required_construction = construction_cost_high
+	
+	ownership_type = self
+	
+	ai_value = 1000 # Airports are less important than railroads
+	
+	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_railways.dds"
+}

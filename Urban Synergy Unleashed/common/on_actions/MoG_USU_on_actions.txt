@@ -10,7 +10,7 @@ on_game_started_after_lobby = {
 mog_urban_setup_action = {
 	effect = {
 		every_country = {
-			trigger_event = USU_secret_ev.1		# Call event to update mog_urbanization modifiers.
+			trigger_event = usu_secret_ev.1		# Call event to update mog_urbanization modifiers.
 		}
 	}
 }
@@ -36,7 +36,7 @@ on_country_released_as_independent = { on_actions = { mog_urban_on_action } }
 
 mog_urban_on_action = {
 	events = {				# Call event to update mog_urbanization modifiers.
-		USU_secret_ev.1		# Needs to be an event, not scripted effect, to be re-triggered from error-handler.
+		usu_secret_ev.1		# Needs to be an event, not scripted effect, to be re-triggered from error-handler.
 	}
 }
 

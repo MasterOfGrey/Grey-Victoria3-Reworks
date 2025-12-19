@@ -1,4 +1,4 @@
-﻿pm_steam_rail_transport = {
+﻿TRY_REPLACE:pm_steam_rail_transport = {
 	texture = "gfx/interface/icons/production_method_icons/rail_transport.dds"
 	
 	unlocking_technologies = {

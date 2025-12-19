@@ -1,0 +1,93 @@
+﻿## These will exist but just not be used unless the relevant building exists.
+REPLACE_OR_CREATE:pm_mendelejew_automation_disabled = {
+	texture = "gfx/interface/icons/production_method_icons/no_automation.dds"
+}
+
+REPLACE_OR_CREATE:pm_pneumatic_transfer_system = {
+	texture = "gfx/interface/icons/production_method_icons/automatic_power_looms.dds"
+	
+	unlocking_technologies = {
+		pneumatic_tools
+	}
+	
+	building_modifiers = {
+		workforce_scaled = {
+			# input goods
+			goods_input_tools_add = 2
+			goods_input_fabric_add = 2
+			goods_input_electricity_add = 4
+		}
+	
+		level_scaled = {
+			building_employment_laborers_add = -1500
+		}
+	}
+	
+	required_input_goods = electricity
+}
+
+REPLACE_OR_CREATE:pm_continuous_process_systems_hydrogenation = {
+	texture = "gfx/interface/icons/production_method_icons/automated_bottle_blowers.dds"
+	
+	unlocking_technologies = {
+		dough_rollers
+	}
+	
+	state_modifiers = {
+		workforce_scaled = {
+			state_pollution_generation_add = 10
+		}
+	}
+	
+	building_modifiers = {
+		workforce_scaled = {
+			# input goods
+			goods_input_tools_add = 4
+			goods_input_fabric_add = 2
+			goods_input_electricity_add = 8
+			# output goods
+			goods_output_oil_add = 10
+		}
+		
+		level_scaled = {
+			building_employment_laborers_add = -1500
+			building_employment_machinists_add = -500
+			building_employment_engineers_add = -500
+		}
+	}
+	
+	required_input_goods = electricity
+}
+
+REPLACE_OR_CREATE:pm_continuous_process_systems_polymerisation = {
+	texture = "gfx/interface/icons/production_method_icons/automated_bottle_blowers.dds"
+	
+	unlocking_technologies = {
+		dough_rollers
+	}
+	
+	state_modifiers = {
+		workforce_scaled = {
+			state_pollution_generation_add = 10
+		}
+	}
+	
+	building_modifiers = {
+		workforce_scaled = {
+			# input goods
+			goods_input_tools_add = 4
+			goods_input_fabric_add = 2
+			goods_input_electricity_add = 10
+			# output goods
+			goods_output_rubber_add = 14
+		}
+		
+		level_scaled = {
+			building_employment_laborers_add = -1500
+			building_employment_machinists_add = -500
+			building_employment_engineers_add = -500
+		}
+	}
+	
+	required_input_goods = electricity
+}

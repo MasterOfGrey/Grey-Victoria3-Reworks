@@ -1,6 +1,6 @@
 ﻿### Sea Ports
 
-usu_pm_port_c_logistics_0 = {
+REPLACE_OR_CREATE:usu_pm_port_c_logistics_0 = {
 	texture = "gfx/interface/icons/production_method_icons/log_0.dds"
 	state_modifiers = {
 		unscaled = {
@@ -9,7 +9,7 @@ usu_pm_port_c_logistics_0 = {
 	}
 }
 
-usu_pm_port_c_logistics_1 = {
+REPLACE_OR_CREATE:usu_pm_port_c_logistics_1 = {
 	texture = "gfx/interface/icons/production_method_icons/log_1.dds"
 	unlocking_technologies = {
 		logistics
@@ -32,7 +32,7 @@ usu_pm_port_c_logistics_1 = {
 	}
 }
 
-usu_pm_port_c_logistics_2 = {
+REPLACE_OR_CREATE:usu_pm_port_c_logistics_2 = {
 	texture = "gfx/interface/icons/production_method_icons/log_2.dds"
 	unlocking_technologies = {
 		electric_telegraph
@@ -55,7 +55,7 @@ usu_pm_port_c_logistics_2 = {
 	}
 }
 
-usu_pm_port_c_logistics_3 = {
+REPLACE_OR_CREATE:usu_pm_port_c_logistics_3 = {
 	texture = "gfx/interface/icons/production_method_icons/log_3.dds"
 	unlocking_production_methods = {
 		usu_pm_port_c_logistics_2
@@ -84,7 +84,7 @@ usu_pm_port_c_logistics_3 = {
 
 ### River Ports
 
-usu_pm_port_r_logistics_0 = {
+REPLACE_OR_CREATE:usu_pm_port_r_logistics_0 = {
 	texture = "gfx/interface/icons/production_method_icons/log_0.dds"
 	state_modifiers = {
 		unscaled = {
@@ -93,7 +93,7 @@ usu_pm_port_r_logistics_0 = {
 	}
 }
 
-usu_pm_port_r_logistics_1 = {
+REPLACE_OR_CREATE:usu_pm_port_r_logistics_1 = {
 	texture = "gfx/interface/icons/production_method_icons/log_1.dds"
 	unlocking_technologies = {
 		logistics
@@ -113,7 +113,7 @@ usu_pm_port_r_logistics_1 = {
 	}
 }
 
-usu_pm_port_r_logistics_2 = {
+REPLACE_OR_CREATE:usu_pm_port_r_logistics_2 = {
 	texture = "gfx/interface/icons/production_method_icons/log_2.dds"
 	unlocking_technologies = {
 		electric_telegraph
@@ -133,7 +133,7 @@ usu_pm_port_r_logistics_2 = {
 	}
 }
 
-usu_pm_port_r_logistics_3 = {
+REPLACE_OR_CREATE:usu_pm_port_r_logistics_3 = {
 	texture = "gfx/interface/icons/production_method_icons/log_3.dds"
 	unlocking_production_methods = {
 		usu_pm_port_r_logistics_2

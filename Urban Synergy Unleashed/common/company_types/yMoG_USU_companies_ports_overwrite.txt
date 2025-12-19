@@ -7,7 +7,7 @@
 
 ## Canada (Americas)
 # Hudson Bay Company
-company_hbc = {
+TRY_REPLACE:company_hbc = {
 	icon = "gfx/interface/icons/company_icons/historical_company_icons/hbc.dds"
 	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufacturing_light.dds"
 
@@ -62,7 +62,7 @@ company_hbc = {
 
 	prosperity_modifier = {
 		state_colony_growth_creation_factor = 0.1
-		building_textile_mills_throughput_add = 0.05
+		building_textile_mill_throughput_add = 0.05
 	}
 
 	ai_will_do = {
@@ -88,7 +88,7 @@ company_hbc = {
 
 ## Asia
 # Imperial Arsenal
-company_imperial_arsenal = {
+TRY_REPLACE:company_imperial_arsenal = {
 	icon = "gfx/interface/icons/company_icons/historical_company_icons/imperial_arsenal.dds"
 	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_harbor_shipbuilding.dds"
 
@@ -98,13 +98,13 @@ company_imperial_arsenal = {
 	
 	preferred_headquarters = { STATE_EASTERN_THRACE }
 	
-	building_types = {  
-		building_military_shipyards
+	building_types = {
+		building_military_shipyard
 		building_port
 	}
 	
 	extension_building_types = {
-		building_shipyards
+		building_shipyard
 		building_river_port
 	}
 	
@@ -125,7 +125,7 @@ company_imperial_arsenal = {
 			state_region = s:STATE_EASTERN_THRACE
 			is_incorporated = yes
 			any_scope_building = {
-				is_building_type = building_military_shipyards
+				is_building_type = building_military_shipyard
 				level >= 3
 			}
 		}
@@ -145,7 +145,7 @@ company_imperial_arsenal = {
 	}
 	
 	ai_construction_targets = {
-		building_military_shipyards = {
+		building_military_shipyard = {
 			level = 5
 			state_trigger = {
 				state_region = s:STATE_EASTERN_THRACE
@@ -163,7 +163,7 @@ company_imperial_arsenal = {
 
 ## China
 # Foochow Arsenal
-company_foochow_arsenal = {
+TRY_REPLACE:company_foochow_arsenal = {
 	icon = "gfx/interface/icons/company_icons/historical_company_icons/chinese_foochow_arsenal.dds"
 	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_harbor_shipbuilding.dds"
 
@@ -174,13 +174,13 @@ company_foochow_arsenal = {
 	preferred_headquarters = { STATE_FUJIAN }
 	
 	building_types = { 
-		building_shipyards
-		building_military_shipyards
+		building_shipyard
+		building_military_shipyard
 		building_port
 	}
 	
 	extension_building_types = {
-		building_steel_mills
+		building_steel_mill
 		building_logging_camp
 		building_river_port
 	}
@@ -202,7 +202,7 @@ company_foochow_arsenal = {
 			state_region = s:STATE_FUJIAN
 			is_incorporated = yes
 			any_scope_building = {
-				is_building_type = building_military_shipyards
+				is_building_type = building_military_shipyard
 				level >= 3
 			}
 		}
@@ -225,7 +225,7 @@ company_foochow_arsenal = {
 	}
 	
 	ai_construction_targets = {
-		building_military_shipyards = {
+		building_military_shipyard = {
 			level = 5
 			state_trigger = {
 				state_region = s:STATE_FUJIAN
@@ -240,7 +240,7 @@ company_foochow_arsenal = {
 
 ## Colossus of the South (cots) (More Latin Americas)
 # Estaleiro Mauá
-company_estaleiro_maua = {
+TRY_REPLACE:company_estaleiro_maua = {
 	icon = "gfx/interface/icons/company_icons/historical_company_icons/brazil_estaleiro_maua.dds"
 	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_harbor_shipbuilding.dds"
 	
@@ -249,8 +249,8 @@ company_estaleiro_maua = {
 	preferred_headquarters = { STATE_RIO_DE_JANEIRO }
 	
 	building_types = {  
-		building_shipyards
-		building_military_shipyards
+		building_shipyard
+		building_military_shipyard
 		building_port
 	}
 	
@@ -278,8 +278,8 @@ company_estaleiro_maua = {
 			is_incorporated = yes
 			any_scope_building = {
 				OR = {
-					is_building_type = building_shipyards
-					is_building_type = building_military_shipyards
+					is_building_type = building_shipyard
+					is_building_type = building_military_shipyard
 				}
 				level >= 3
 			}
@@ -288,7 +288,7 @@ company_estaleiro_maua = {
 	
 	prosperity_modifier = {
 		country_convoys_capacity_mult = 0.1
-		building_steel_mills_throughput_add = 0.1
+		building_steel_mill_throughput_add = 0.1
 	}
 	
 	ai_will_do = {
@@ -299,13 +299,13 @@ company_estaleiro_maua = {
 	}
 	
 	ai_construction_targets = {
-		building_shipyards = {
+		building_shipyard = {
 			level = 5
 			state_trigger = {
 				state_region = s:STATE_RIO_DE_JANEIRO
 			}
 		}
-		building_military_shipyards = {
+		building_military_shipyard = {
 			level = 5
 			state_trigger = {
 				state_region = s:STATE_RIO_DE_JANEIRO
@@ -319,7 +319,7 @@ company_estaleiro_maua = {
 }
 
 # Compañía Sudamericana de Vapores
-company_sudamericana_de_vapores = {
+TRY_REPLACE:company_sudamericana_de_vapores = {
 	icon = "gfx/interface/icons/company_icons/historical_company_icons/chile_csav.dds"
 	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_harbor_shipbuilding.dds"
 	
@@ -328,7 +328,7 @@ company_sudamericana_de_vapores = {
 	preferred_headquarters = { STATE_SANTIAGO }
 	
 	building_types = {  
-		building_shipyards
+		building_shipyard
 		building_port
 	}
 	
@@ -355,7 +355,7 @@ company_sudamericana_de_vapores = {
 			state_region = s:STATE_SANTIAGO
 			is_incorporated = yes
 			any_scope_building = {
-				is_building_type = building_shipyards
+				is_building_type = building_shipyard
 				level >= 2
 			}
 		}
@@ -376,7 +376,7 @@ company_sudamericana_de_vapores = {
 	}
 	
 	ai_construction_targets = {
-		building_shipyards = {
+		building_shipyard = {
 			level = 5
 			state_trigger = {
 				state_region = s:STATE_SANTIAGO
@@ -391,7 +391,7 @@ company_sudamericana_de_vapores = {
 
 ## Europe
 # Basileiades
-company_basileiades = {
+TRY_REPLACE:company_basileiades = {
 	icon = "gfx/interface/icons/company_icons/historical_company_icons/basileiades.dds"
 	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufacturing_heavy.dds"
 	
@@ -401,14 +401,14 @@ company_basileiades = {
 	
 	building_types = {  
 		building_motor_industry
-		building_shipyards
+		building_shipyard
 		building_port
 	}
 	
 	extension_building_types = {
 		building_railway
 		building_river_port
-		building_military_shipyards
+		building_military_shipyard
 	}
 	
 	potential = {
@@ -430,7 +430,7 @@ company_basileiades = {
 			any_scope_building = {
 				OR = {
 					is_building_type = building_motor_industry
-					is_building_type = building_shipyards
+					is_building_type = building_shipyard
 				}
 				level >= 3
 			}
@@ -458,7 +458,7 @@ company_basileiades = {
 				state_region = s:STATE_ATTICA
 			}
 		}
-		building_shipyards = {
+		building_shipyard = {
 			level = 5
 			state_trigger = {
 				state_region = s:STATE_ATTICA
@@ -472,7 +472,7 @@ company_basileiades = {
 }
 
 # Götaverken
-company_gotaverken = {
+TRY_REPLACE:company_gotaverken = {
 	icon = "gfx/interface/icons/company_icons/historical_company_icons/götaverken.dds"
 	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_harbor_shipbuilding.dds"
 	
@@ -481,8 +481,8 @@ company_gotaverken = {
 	preferred_headquarters = { STATE_GOTALAND }
 	
 	building_types = {  
-		building_shipyards
-		building_military_shipyards
+		building_shipyard
+		building_military_shipyard
 		building_motor_industry
 	}
 	
@@ -510,8 +510,8 @@ company_gotaverken = {
 			is_incorporated = yes
 			any_scope_building = {
 				OR = {
-					is_building_type = building_shipyards
-					is_building_type = building_military_shipyards
+					is_building_type = building_shipyard
+					is_building_type = building_military_shipyard
 				}
 				level >= 3
 			}
@@ -533,13 +533,13 @@ company_gotaverken = {
 	}
 	
 	ai_construction_targets = {
-		building_shipyards = {
+		building_shipyard = {
 			level = 5
 			state_trigger = {
 				state_region = s:STATE_GOTALAND
 			}
 		}
-		building_military_shipyards = {
+		building_military_shipyard = {
 			level = 5
 			state_trigger = {
 				state_region = s:STATE_GOTALAND
@@ -553,7 +553,7 @@ company_gotaverken = {
 }
 
 # Aker Mek
-company_aker_mek = {
+TRY_REPLACE:company_aker_mek = {
 	icon = "gfx/interface/icons/company_icons/historical_company_icons/aker_mek.dds"
 	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_harbor_shipbuilding.dds"
 	
@@ -562,13 +562,13 @@ company_aker_mek = {
 	preferred_headquarters = { STATE_EASTERN_NORWAY }
 	
 	building_types = {  
-		building_shipyards
+		building_shipyard
 		building_motor_industry
 		building_port
 	}
 	
 	extension_building_types = {
-		building_military_shipyards
+		building_military_shipyard
 		building_river_port
 	}
 
@@ -589,7 +589,7 @@ company_aker_mek = {
 			state_region = s:STATE_EASTERN_NORWAY
 			is_incorporated = yes
 			any_scope_building = {
-				is_building_type = building_shipyards
+				is_building_type = building_shipyard
 				level >= 3
 			}
 		}
@@ -610,7 +610,7 @@ company_aker_mek = {
 	}
 	
 	ai_construction_targets = {
-		building_shipyards = {
+		building_shipyard = {
 			level = 5
 			state_trigger = {
 				state_region = s:STATE_EASTERN_NORWAY
@@ -624,7 +624,7 @@ company_aker_mek = {
 }
 
 # A.P. Møller (later Mærsk)
-company_ap_moller = {
+TRY_REPLACE:company_ap_moller = {
 	icon = "gfx/interface/icons/company_icons/historical_company_icons/ap_moller.dds"
 	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_harbor_shipbuilding.dds"
 	
@@ -636,7 +636,7 @@ company_ap_moller = {
 	}
 	
 	extension_building_types = {
-		building_shipyards
+		building_shipyard
 		building_logging_camp
 	}
 
@@ -657,7 +657,7 @@ company_ap_moller = {
 			state_region = s:STATE_ZEALAND
 			is_incorporated = yes
 			any_scope_building = {
-				is_building_type = building_shipyards
+				is_building_type = building_shipyard
 				level >= 3
 			}
 		}
@@ -676,7 +676,7 @@ company_ap_moller = {
 	}
 	
 	ai_construction_targets = {
-		building_shipyards = {
+		building_shipyard = {
 			level = 5
 			state_trigger = {
 				state_region = s:STATE_ZEALAND
@@ -691,7 +691,7 @@ company_ap_moller = {
 
 ## France
 # Société Nouvelle des Forges et Chantiers de la Méditerranée
-company_fcm = {
+TRY_REPLACE:company_fcm = {
 	icon = "gfx/interface/icons/company_icons/historical_company_icons/france_forges_et_chantiers_de_la_méditerranée.dds"
 	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_harbor_shipbuilding.dds"
 
@@ -700,14 +700,14 @@ company_fcm = {
 	preferred_headquarters = { STATE_PROVENCE }
 
 	building_types = {  
-		building_shipyards
+		building_shipyard
 		building_port
-		building_military_shipyards
+		building_military_shipyard
 		building_automotive_industry # Produced the Char 2C
 	}
 	
 	extension_building_types = {
-		building_steel_mills
+		building_steel_mill
 		building_river_port
 	}
 
@@ -729,8 +729,8 @@ company_fcm = {
 			is_incorporated = yes
 			any_scope_building = {
 				OR = {
-					is_building_type = building_shipyards
-					is_building_type = building_military_shipyards
+					is_building_type = building_shipyard
+					is_building_type = building_military_shipyard
 				}
 				level >= 3
 			}
@@ -752,13 +752,13 @@ company_fcm = {
 	}
 	
 	ai_construction_targets = {
-		building_shipyards = {
+		building_shipyard = {
 			level = 5
 			state_trigger = {
 				state_region = s:STATE_PROVENCE
 			}
 		}
-		building_military_shipyards = {
+		building_military_shipyard = {
 			level = 5
 			state_trigger = {
 				state_region = s:STATE_PROVENCE
@@ -773,7 +773,7 @@ company_fcm = {
 
 ## Germany
 # F. Schichau, Maschinen- und Lokomotivfabrik, Schiffswerft und Eisengießerei GmbH
-company_schichau = {
+TRY_REPLACE:company_schichau = {
 	icon = "gfx/interface/icons/company_icons/historical_company_icons/german_schichau.dds"
 	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufacturing_heavy.dds"
 	
@@ -783,8 +783,8 @@ company_schichau = {
 	
 	building_types = {  
 		building_motor_industry
-		building_military_shipyards
-		building_shipyards
+		building_military_shipyard
+		building_shipyard
 		building_port
 	}
 	
@@ -794,7 +794,7 @@ company_schichau = {
 	
 	extension_building_types = {
 		building_railway
-		building_steel_mills
+		building_steel_mill
 		building_river_port
 	}
 	
@@ -851,7 +851,7 @@ company_schichau = {
 
 ## Great Britain
 # Sir W G Armstrong Whitworth & Co Ltd
-company_armstrong_whitworth = {
+TRY_REPLACE:company_armstrong_whitworth = {
 	icon = "gfx/interface/icons/company_icons/historical_company_icons/gb_armstrong_whitworth.dds"
 	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufacturing_heavy.dds"
 
@@ -860,9 +860,9 @@ company_armstrong_whitworth = {
 	preferred_headquarters = { STATE_YORKSHIRE }
 
 	building_types = {
-		building_military_shipyards
+		building_military_shipyard
 		building_motor_industry
-		building_munition_plants
+		building_munition_plant
 	}
 
 	possible_prestige_goods = {
@@ -893,7 +893,7 @@ company_armstrong_whitworth = {
 			state_region = s:STATE_YORKSHIRE
 			is_incorporated = yes
 			any_scope_building = {
-				is_building_type = building_military_shipyards
+				is_building_type = building_military_shipyard
 				level >= 5
 			}
 		}
@@ -914,7 +914,7 @@ company_armstrong_whitworth = {
 	}
 
 	ai_construction_targets = {
-		building_military_shipyards = {
+		building_military_shipyard = {
 			level = 5
 			state_trigger = {
 				state_region = s:STATE_YORKSHIRE
@@ -928,7 +928,7 @@ company_armstrong_whitworth = {
 }
 
 # John Brown & Company
-company_john_brown = {
+TRY_REPLACE:company_john_brown = {
 	icon = "gfx/interface/icons/company_icons/historical_company_icons/gb_jb_co.dds"
 	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_harbor_shipbuilding.dds"
 	
@@ -937,9 +937,9 @@ company_john_brown = {
 	preferred_headquarters = { STATE_LOWLANDS }
 	
 	building_types = {  
-		building_military_shipyards
-		building_shipyards
-		building_steel_mills
+		building_military_shipyard
+		building_shipyard
+		building_steel_mill
 		building_port
 
 	}
@@ -970,7 +970,7 @@ company_john_brown = {
 			state_region = s:STATE_LOWLANDS
 			is_incorporated = yes
 			any_scope_building = {
-				is_building_type = building_shipyards
+				is_building_type = building_shipyard
 				level >= 3
 			}
 		}
@@ -993,7 +993,7 @@ company_john_brown = {
 	}
 	
 	ai_construction_targets = {
-		building_shipyards = {
+		building_shipyard = {
 			level = 5
 			state_trigger = {
 				state_region = s:STATE_LOWLANDS
@@ -1008,7 +1008,7 @@ company_john_brown = {
 
 ## Pivot of Empire? (ip2)
 # Wadia Shipbuilders / Bombay Dockyard
-company_wadia_shipbuilders = {
+TRY_REPLACE:company_wadia_shipbuilders = {
 	icon = "gfx/interface/icons/company_icons/historical_company_icons/ip2_wadia_shipbuilders.dds"
 	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_harbor_shipbuilding.dds"
 	
@@ -1017,8 +1017,8 @@ company_wadia_shipbuilders = {
 	preferred_headquarters = { STATE_BOMBAY }
 	
 	building_types = {  
-		building_shipyards
-		building_military_shipyards
+		building_shipyard
+		building_military_shipyard
 		building_port
 		building_river_port
 	}
@@ -1046,8 +1046,8 @@ company_wadia_shipbuilders = {
 			is_incorporated = yes
 			any_scope_building = {
 				OR = {
-					is_building_type = building_shipyards
-					is_building_type = building_military_shipyards
+					is_building_type = building_shipyard
+					is_building_type = building_military_shipyard
 				}
 				level >= 4
 			}
@@ -1072,13 +1072,13 @@ company_wadia_shipbuilders = {
 	}
 
 	ai_construction_targets = {
-		building_shipyards = {
+		building_shipyard = {
 			level = 5
 			state_trigger = {
 				state_region = s:STATE_BOMBAY
 			}
 		}
-		building_military_shipyards = {
+		building_military_shipyard = {
 			level = 5
 			state_trigger = {
 				state_region = s:STATE_BOMBAY
@@ -1093,7 +1093,7 @@ company_wadia_shipbuilders = {
 
 ## Italy
 # Stabilimento Tecnico Triestino
-company_stt = {
+TRY_REPLACE:company_stt = {
 	icon = "gfx/interface/icons/company_icons/historical_company_icons/stt.dds"
 	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_harbor_shipbuilding.dds"
 	
@@ -1102,15 +1102,15 @@ company_stt = {
 	preferred_headquarters = { STATE_ISTRIA }
 	
 	building_types = {
-		building_shipyards
-		building_military_shipyards
+		building_shipyard
+		building_military_shipyard
 		building_port
 		building_river_port
 	}
 
 	extension_building_types = {
 		building_motor_industry
-		building_steel_mills
+		building_steel_mill
 	}
 	
 	potential = {
@@ -1131,8 +1131,8 @@ company_stt = {
 			is_incorporated = yes
 			any_scope_building = {
 				OR = {
-					is_building_type = building_shipyards
-					is_building_type = building_military_shipyards
+					is_building_type = building_shipyard
+					is_building_type = building_military_shipyard
 				}
 				level >= 3
 			}
@@ -1154,13 +1154,13 @@ company_stt = {
 	}
 	
 	ai_construction_targets = {
-		building_shipyards = {
+		building_shipyard = {
 			level = 5
 			state_trigger = {
 				state_region = s:STATE_ISTRIA
 			}
 		}
-		building_military_shipyards = {
+		building_military_shipyard = {
 			level = 5
 			state_trigger = {
 				state_region = s:STATE_ISTRIA
@@ -1175,7 +1175,7 @@ company_stt = {
 
 ## Japan
 # Mitsubishi
-company_mitsubishi = {
+TRY_REPLACE:company_mitsubishi = {
 	icon = "gfx/interface/icons/company_icons/historical_company_icons/japanese_mitsubishi.dds"
 	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufacturing_heavy.dds"
 	
@@ -1184,15 +1184,15 @@ company_mitsubishi = {
 	preferred_headquarters = { STATE_CHUGOKU }
 	
 	building_types = {  
-		building_military_shipyards
+		building_military_shipyard
 		building_coal_mine
-		building_paper_mills
+		building_paper_mill
 		building_automotive_industry
 		building_port
 	}
 	
 	extension_building_types = {
-		building_shipyards
+		building_shipyard
 		building_motor_industry
 		building_river_port
 		building_iron_mine
@@ -1217,8 +1217,8 @@ company_mitsubishi = {
 			is_incorporated = yes
 			any_scope_building = {
 				OR = {
-					is_building_type = building_paper_mills
-					is_building_type = building_military_shipyards
+					is_building_type = building_paper_mill
+					is_building_type = building_military_shipyard
 				}
 				level >= 5
 			}
@@ -1243,13 +1243,13 @@ company_mitsubishi = {
 	}
 	
 	ai_construction_targets = {
-		building_paper_mills = {
+		building_paper_mill = {
 			level = 5
 			state_trigger = {
 				state_region = s:STATE_CHUGOKU
 			}
 		}
-		building_military_shipyards = {
+		building_military_shipyard = {
 			level = 5
 			state_trigger = {
 				state_region = s:STATE_CHUGOKU
@@ -1264,7 +1264,7 @@ company_mitsubishi = {
 
 ## Charters of Commerce (mp1)
 # Russian-American Company Under the High Patronage of His Imperial Majesty
-company_russian_american_company = {
+TRY_REPLACE:company_russian_american_company = {
 	icon = "gfx/interface/icons/company_icons/historical_company_icons/company_russian_american_company.dds"
 	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_harbor_shipbuilding.dds"
 
@@ -1338,7 +1338,7 @@ company_russian_american_company = {
 	prosperity_modifier = {
 		state_colony_growth_speed_mult = 0.1
 		state_conversion_mult = 0.05
-		building_textile_mills_throughput_add = 0.05
+		building_textile_mill_throughput_add = 0.05
 	}
 
 	ai_will_do = {
@@ -1385,7 +1385,7 @@ company_russian_american_company = {
 }
 
 # John Holt and Company
-company_john_holt = {
+TRY_REPLACE:company_john_holt = {
 	icon = "gfx/interface/icons/company_icons/historical_company_icons/company_john_holt.dds"
 	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_plantation.dds"
 
@@ -1399,7 +1399,7 @@ company_john_holt = {
 	}
 
 	extension_building_types = {
-		building_shipyards
+		building_shipyard
 	}
 
 	potential = {
@@ -1447,7 +1447,7 @@ company_john_holt = {
 }
 
 # Lanfang Kongsi
-company_lanfang_kongsi = {
+TRY_REPLACE:company_lanfang_kongsi = {
 	icon = "gfx/interface/icons/company_icons/historical_company_icons/company_lanfang_kongsi.dds"
 	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_mining.dds"
 
@@ -1534,7 +1534,7 @@ company_lanfang_kongsi = {
 
 ## Russia
 # Society of Putilov Factories
-company_putilov_company = {
+TRY_REPLACE:company_putilov_company = {
 	icon = "gfx/interface/icons/company_icons/historical_company_icons/russian_putilov.dds"
 	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufacturing_heavy.dds"
 	
@@ -1544,13 +1544,13 @@ company_putilov_company = {
 	
 	building_types = {  
 		building_motor_industry
-		building_military_shipyards
-		building_artillery_foundries
+		building_military_shipyard
+		building_artillery_foundry
 		building_river_port
 	}
 	
 	extension_building_types = {
-		building_munition_plants
+		building_munition_plant
 	}
 	
 	possible_prestige_goods = {
@@ -1583,8 +1583,8 @@ company_putilov_company = {
 			any_scope_building = {
 				OR = {
 					is_building_type = building_motor_industry
-					is_building_type = building_military_shipyards
-					is_building_type = building_artillery_foundries
+					is_building_type = building_military_shipyard
+					is_building_type = building_artillery_foundry
 				}
 				level >= 3
 			}
@@ -1606,13 +1606,13 @@ company_putilov_company = {
 	}
 	
 	ai_construction_targets = {
-		building_military_shipyards = {
+		building_military_shipyard = {
 			level = 5
 			state_trigger = {
 				state_region = s:STATE_INGRIA
 			}
 		}
-		building_artillery_foundries = {
+		building_artillery_foundry = {
 			level = 5
 			state_trigger = {
 				state_region = s:STATE_INGRIA
@@ -1636,7 +1636,7 @@ company_putilov_company = {
 
 ## USA
 # William Cramp & Sons
-company_william_cramp = {
+TRY_REPLACE:company_william_cramp = {
 	icon = "gfx/interface/icons/company_icons/historical_company_icons/american_william_and_sons.dds"
 	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_harbor_shipbuilding.dds"
 	
@@ -1645,14 +1645,14 @@ company_william_cramp = {
 	preferred_headquarters = { STATE_NEW_JERSEY STATE_DELAWARE STATE_MARYLAND }
 	
 	building_types = {  
-		building_military_shipyards
-		building_shipyards
+		building_military_shipyard
+		building_shipyard
 		building_motor_industry
 		building_port
 	}
 	
 	extension_building_types = {
-		building_artillery_foundries
+		building_artillery_foundry
 		building_river_port
 	}
 	
@@ -1682,8 +1682,8 @@ company_william_cramp = {
 			is_incorporated = yes
 			any_scope_building = {
 				OR = {
-					is_building_type = building_military_shipyards
-					is_building_type = building_shipyards
+					is_building_type = building_military_shipyard
+					is_building_type = building_shipyard
 				}
 				level >= 3
 			}
@@ -1709,7 +1709,7 @@ company_william_cramp = {
 	}
 	
 	ai_construction_targets = {
-		building_shipyards = {
+		building_shipyard = {
 			level = 5
 			state_trigger = {
 				OR = {
@@ -1720,7 +1720,7 @@ company_william_cramp = {
 				is_incorporated = yes
 			}
 		}
-		building_military_shipyards = {
+		building_military_shipyard = {
 			level = 5
 			state_trigger = {
 				OR = {

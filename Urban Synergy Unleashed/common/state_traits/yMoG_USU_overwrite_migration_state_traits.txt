@@ -1,6 +1,6 @@
 ﻿# Reducing -50% penalties to -30%
 
-state_trait_siberian_terrain = {
+TRY_REPLACE:state_trait_siberian_terrain = {
     icon = "gfx/interface/icons/state_trait_icons/cold_climate.dds"
 
 	modifier = {
@@ -11,7 +11,7 @@ state_trait_siberian_terrain = {
 	}
 }
 
-state_trait_northern_canadian_terrain = {
+TRY_REPLACE:state_trait_northern_canadian_terrain = {
 	icon = "gfx/interface/icons/state_trait_icons/cold_climate.dds"
 
 	modifier = {

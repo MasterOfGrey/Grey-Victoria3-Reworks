@@ -1,0 +1,22 @@
+﻿l_turkish:
+ mr_airport_can_construct_tt: "Bir devletin destekleyebileceği maksimum [Concept('concept_curtiss_airport','$concept_curtiss_airports$')] seviyesi, [GetBuildingType('building_urban_center').GetName]'un her #G 10 seviyesi#! için 1 artı 1'e eşittir." #deepl:1884813676
+ 
+ # PMGs
+ pmg_tourism_airport: "İthalat ve Turizm"
+ pmg_mendelejew_automation_oil: "Otomasyon"
+ pmg_mendelejew_automation_rubber: "Otomasyon"
+ 
+ # PMs
+ pm_luxury_requisitions: "Lüks Talepler"
+ pm_travel_agencies: "Seyahat Acenteleri"
+ 
+ pm_mendelejew_automation_disabled: "Manuel İşlemler"
+ pm_pneumatic_transfer_system: "Pnömatik Transfer Sistemleri"
+ pm_continuous_process_systems_hydrogenation: "Sürekli Hidrojenasyon"
+ pm_continuous_process_systems_polymerisation: "Sürekli Polimerizasyon"
+ 
+ # Modifier Types
+ building_mendelejew_hydrogenation_plants_throughput_add: "$building_mendelejew_hydrogenation_plants$ bina [concept_throughput]"
+ building_mendelejew_hydrogenation_plants_throughput_add_desc: "$building_mendelejew_hydrogenation_plants$'ın hem girişine hem de çıkışına bir bonus veya ceza"
+ building_mendelejew_synthetic_rubber_factory_throughput_add: "$building_mendelejew_synthetic_rubber_factory$ bina [concept_throughput]"
+ building_mendelejew_synthetic_rubber_factory_throughput_add_desc: "$building_mendelejew_synthetic_rubber_factory$'ın hem girişine hem de çıkışına bir bonus veya ceza"

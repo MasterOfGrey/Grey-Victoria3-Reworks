@@ -1,55 +1,57 @@
-﻿pmg_serfdom_building_subsistence_farms = {
-	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
-	production_methods = {
-		pm_serfdom_no
-		pm_serfdom
-		pm_corvee_labor
-		pm_slavery	# Laws +
-		pm_homesteading_building_subsistence
-	}
-}
-
-pmg_serfdom_building_subsistence_orchards = {
-	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
-	production_methods = {
-		pm_serfdom_no
-		pm_corvee_labor
-		pm_serfdom_building_subsistence_orchards
-		pm_slavery_building_subsistence_orchards	# Laws +
-		pm_homesteading_building_subsistence
-	}
-}
-
-pmg_serfdom_building_subsistence_pastures = {
-	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
-	production_methods = {
-		pm_serfdom_no
-		pm_corvee_labor
-		pm_serfdom_building_subsistence_pastures
-		pm_slavery_building_subsistence_pastures	# Laws +
-		pm_homesteading_building_subsistence
-	}
-}
-
-pmg_serfdom_building_subsistence_fishing_villages = {
-	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
-	production_methods = {
-		pm_serfdom_no
-		pm_corvee_labor
-		pm_serfdom_building_subsistence_fishing_villages
-		pm_slavery_building_subsistence_fishing_villages	# Laws +
-		pm_homesteading_building_subsistence
-	}
-}
-
-
-pmg_serfdom_building_subsistence_rice_paddies = {
-	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
-	production_methods = {
-		pm_serfdom_no
-		pm_corvee_labor
-		pm_serfdom_building_subsistence_rice_paddies
-		pm_slavery_building_subsistence_rice_paddies	# Laws +
-		pm_homesteading_building_subsistence
-	}
-}
+﻿# If Laws+ does it's job right then this isn't needed anymore.
+#pmg_serfdom_building_subsistence_farm = {
+#	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+#	production_methods = {
+#		pm_serfdom_no
+#		pm_serfdom
+#		pm_corvee_labor
+#		pm_slavery	# Laws +
+#		pm_homesteading_building_subsistence
+#	}
+#}
+#
+#pmg_serfdom_building_subsistence_orchard = {
+#	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+#	production_methods = {
+#		pm_serfdom_no
+#		pm_corvee_labor
+#		pm_serfdom_building_subsistence_orchards
+#		pm_slavery_building_subsistence_orchards	# Laws +
+#		pm_homesteading_building_subsistence
+#	}
+#}
+#
+#pmg_serfdom_building_subsistence_pasture = {
+#	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+#	production_methods = {
+#		pm_serfdom_no
+#		pm_corvee_labor
+#		pm_serfdom_building_subsistence_pastures
+#		pm_slavery_building_subsistence_pastures	# Laws +
+#		pm_homesteading_building_subsistence
+#	}
+#}
+#
+#pmg_serfdom_building_subsistence_fishing_village = {
+#	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+#	production_methods = {
+#		pm_serfdom_no
+#		pm_corvee_labor
+#		pm_serfdom_building_subsistence_fishing_villages
+#		pm_slavery_building_subsistence_fishing_villages	# Laws +
+#		pm_homesteading_building_subsistence
+#	}
+#}
+#
+#
+#pmg_serfdom_building_subsistence_rice_paddie = {
+#	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+#	production_methods = {
+#		pm_serfdom_no
+#		pm_corvee_labor
+#		pm_serfdom_building_subsistence_rice_paddies
+#		pm_slavery_building_subsistence_rice_paddies	# Laws +
+#		pm_homesteading_building_subsistence
+#	}
+#}
+#

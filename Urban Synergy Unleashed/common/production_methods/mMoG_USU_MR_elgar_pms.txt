@@ -1,0 +1,171 @@
+﻿############################
+# ELGAR PRODUCTION METHODS #
+############################
+
+#Orchestra
+
+TRY_REPLACE:pm_elgar_classical_orchestra = {
+	texture = "gfx/interface/icons/production_method_icons/elgar_classical_orchestra_pm.dds"
+	
+	building_modifiers = {
+		workforce_scaled = { #Profit 200 £
+			goods_input_elgar_instruments_add = 15 #600 £
+			goods_output_elgar_music_add = 10 #800 £
+		}
+
+		level_scaled = {
+			building_employment_clerks_add = 300 # 200
+		}
+	}
+}
+
+TRY_REPLACE:pm_elgar_early_romantic_orchestra = {
+	texture = "gfx/interface/icons/production_method_icons/elgar_early_romantic_orchestra_pm.dds"
+
+	unlocking_technologies = {
+		romanticism
+	}
+
+	building_modifiers = {		
+	
+		workforce_scaled = { #Profit: 400 £
+			goods_input_elgar_instruments_add = 30 #1200 £
+			goods_output_elgar_music_add = 20 #1600 £
+		}	
+
+		level_scaled = {
+			building_employment_clerks_add = 300 # 200
+		}			
+	}
+
+}
+
+TRY_REPLACE:pm_elgar_mid_romantic_orchestra = {
+	texture = "gfx/interface/icons/production_method_icons/elgar_mid_romantic_orchestra_pm.dds"
+
+	unlocking_technologies = {
+		elgar_irrationalism_tech
+	}
+	
+	building_modifiers = {		
+	
+		workforce_scaled = { #Profit: 600 £
+			goods_input_elgar_instruments_add = 45 #1800 £
+			goods_output_elgar_music_add = 30 #2400 £
+		}	
+
+		level_scaled = {
+			building_employment_clerks_add = 300 # 200
+		}				
+	}
+
+}
+
+TRY_REPLACE:pm_elgar_late_romantic_orchestra = {
+	texture = "gfx/interface/icons/production_method_icons/elgar_late_romantic_orchestra_pm.dds"
+
+	unlocking_technologies = {
+		elgar_neoclassicism_tech
+	}
+
+	building_modifiers = {		
+	
+		workforce_scaled = { #Profit: 800 £
+			goods_input_elgar_instruments_add = 60 #2400 £
+			goods_output_elgar_music_add = 40 #3200 £
+		}
+
+		level_scaled = {
+			building_employment_clerks_add = 300
+		}
+	}
+
+}
+
+#Instruments
+
+TRY_REPLACE:pm_elgar_artisan_instruments = {
+	texture = "gfx/interface/icons/production_method_icons/elgar_artisan_instruments_pm.dds"
+
+	unlocking_technologies = {
+		elgar_classicism_tech
+	}			
+	
+	building_modifiers = {
+		workforce_scaled = {
+			# input goods
+			goods_input_wood_add = 10
+			
+			# output goods
+			goods_output_elgar_instruments_add = 20 # 15
+		}
+
+		level_scaled = {
+			building_employment_laborers_add = 1500
+			building_employment_machinists_add = 500
+		}
+	}
+}
+
+TRY_REPLACE:pm_elgar_industrial_instruments = {
+	texture = "gfx/interface/icons/production_method_icons/elgar_industrial_instruments_pm.dds"
+	
+	unlocking_technologies = {
+		mechanical_tools
+	}
+	
+	building_modifiers = {
+		workforce_scaled = {
+			# input goods
+			goods_input_wood_add = 10
+			goods_input_tools_add = 5
+			
+			# output goods
+			goods_output_elgar_instruments_add = 35 # 30
+		}
+
+		level_scaled = {
+			building_employment_laborers_add = 1000
+			building_employment_machinists_add = 1000
+		}
+	}
+
+	state_modifiers = {
+		workforce_scaled = {
+			state_pollution_generation_add = 3
+		}
+	}
+}
+
+TRY_REPLACE:pm_elgar_electronic_instruments = { # For the Telharmonium or Theremin
+	texture = "gfx/interface/icons/production_method_icons/elgar_electronic_instruments_pm.dds"
+	
+	unlocking_technologies = {
+		electrical_capacitors		# For Telharmonium, Alt. consider radio or custom era 5 tech for Theremin
+	}
+	
+	building_modifiers = {
+		workforce_scaled = {
+			# input goods
+			goods_input_wood_add = 10
+			goods_input_tools_add = 5
+			goods_input_lead_add = 2
+			goods_input_electricity_add = 4
+			
+			# output goods
+			goods_output_elgar_instruments_add = 55 # 45
+		}
+		
+		level_scaled = {
+			building_employment_laborers_add = 500
+			building_employment_machinists_add = 1450
+			building_employment_engineers_add = 50			
+		}
+	}
+	
+	state_modifiers = {
+		workforce_scaled = {
+			state_pollution_generation_add = 3
+		}
+	}
+}

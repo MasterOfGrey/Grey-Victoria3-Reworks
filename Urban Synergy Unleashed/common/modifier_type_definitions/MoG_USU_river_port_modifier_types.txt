@@ -1,4 +1,4 @@
-﻿state_building_river_port_max_level_add = {
+﻿REPLACE_OR_CREATE:state_building_river_port_max_level_add = {
 	decimals=0
 	color=good
 	game_data={

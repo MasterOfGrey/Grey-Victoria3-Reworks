@@ -50,7 +50,7 @@
 
 # Need to reduce power plant employment somewhat in line with 1.9 still.
 
-pm_coal-fired_plant = {
+REPLACE_OR_CREATE:pm_coal-fired_plant = {
 	texture = "gfx/interface/icons/production_method_icons/coal_fired_plant.dds"
 	
 	unlocking_technologies = {
@@ -78,7 +78,7 @@ pm_coal-fired_plant = {
 	}
 }
 
-pm_oil-fired_plant = {
+REPLACE_OR_CREATE:pm_oil-fired_plant = {
 	texture = "gfx/interface/icons/production_method_icons/oil_fired_plant.dds"
 	# ai_value = mog_power_gas_pm_value # Does not accept script values - on_action nudge instead
 	

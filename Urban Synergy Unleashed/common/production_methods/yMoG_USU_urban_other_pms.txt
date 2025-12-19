@@ -1,8 +1,8 @@
-﻿pm_no_public_transport = {
+﻿REPLACE_OR_CREATE:pm_no_public_transport = {
 	texture = "gfx/interface/icons/production_method_icons/no_public_transport.dds"
 }
 
-pm_public_omnibus = {
+REPLACE_OR_CREATE:pm_public_omnibus = {
 	texture = "gfx/interface/icons/production_method_icons/passenger_trains.dds"
 	
 	unlocking_technologies = {
@@ -22,7 +22,7 @@ pm_public_omnibus = {
 	}
 }
 
-pm_public_trams = {
+REPLACE_OR_CREATE:pm_public_trams = {
 	texture = "gfx/interface/icons/production_method_icons/passenger_carriages.dds"
 	
 	unlocking_technologies = {
@@ -45,7 +45,7 @@ pm_public_trams = {
 	}
 }
 
-pm_public_steam_metro = {
+REPLACE_OR_CREATE:pm_public_steam_metro = {
 	texture = "gfx/interface/icons/production_method_icons/passenger_carriages.dds"
 	
 	unlocking_technologies = {
@@ -68,7 +68,7 @@ pm_public_steam_metro = {
 	}
 }
 
-pm_public_electric_metro = {
+REPLACE_OR_CREATE:pm_public_electric_metro = {
 	texture = "gfx/interface/icons/production_method_icons/public_trams.dds"
 	
 	unlocking_technologies = {
@@ -92,7 +92,7 @@ pm_public_electric_metro = {
 	required_input_goods = electricity
 }
 
-pm_public_motor_carriages = {
+REPLACE_OR_CREATE:pm_public_motor_carriages = {
 	texture = "gfx/interface/icons/production_method_icons/public_motor_carriages.dds"
 	
 	unlocking_technologies = {
@@ -115,7 +115,7 @@ pm_public_motor_carriages = {
 	}
 }
 
-pm_horses = {
+REPLACE_OR_CREATE:pm_horses = {
 	texture = "gfx/interface/icons/production_method_icons/no_automation.dds"
 	ai_value = 10000
 	
@@ -132,7 +132,7 @@ pm_horses = {
 	}
 }
 
-pm_stagecoaches_and_wagons = {
+REPLACE_OR_CREATE:pm_stagecoaches_and_wagons = {
 	texture = "gfx/interface/icons/production_method_icons/horse_vehicles.dds"
 	ai_value = 30000
 	
@@ -153,7 +153,7 @@ pm_stagecoaches_and_wagons = {
 	}
 }
 
-pm_motor_vehicles = {
+REPLACE_OR_CREATE:pm_motor_vehicles = {
 	texture = "gfx/interface/icons/production_method_icons/motor_vehicles.dds"
 	ai_value = 50000
 	
@@ -178,7 +178,7 @@ pm_motor_vehicles = {
 	}
 }
 
-pm_no_street_lighting = {
+REPLACE_OR_CREATE:pm_no_street_lighting = {
 	texture = "gfx/interface/icons/production_method_icons/no_street_lighting.dds"
 	
 	city_lights_color_index = 0	# Needs to match city_graphics_data.settings color array
@@ -190,7 +190,7 @@ pm_no_street_lighting = {
 	}
 }
 
-pm_gas_streetlights = {
+REPLACE_OR_CREATE:pm_gas_streetlights = {
 	texture = "gfx/interface/icons/production_method_icons/gas_streetlights.dds"
 	ai_value = 10000
 	city_lights_color_index = 1	# Needs to match city_graphics_data.settings color array
@@ -218,7 +218,7 @@ pm_gas_streetlights = {
 
 # This uses the Urban Center Electricity Generation mod production method, but removes the infrastructure bonus to align with Nahan's Transportation Overhaul.
 
-pm_electric_streetlights = {
+REPLACE_OR_CREATE:pm_electric_streetlights = {
 	texture = "gfx/interface/icons/production_method_icons/moonlight_towers.dds"
 	ai_value = 30000
 	city_lights_color_index = 2	# Needs to match city_graphics_data.settings color array
@@ -248,7 +248,7 @@ pm_electric_streetlights = {
 	}
 }
 
-usu_pm_grid_streetlights = {
+REPLACE_OR_CREATE:usu_pm_grid_streetlights = {
 	texture = "gfx/interface/icons/production_method_icons/electric_streetlights.dds"
 	ai_value = 50000
 	city_lights_color_index = 2	# Needs to match city_graphics_data.settings color array

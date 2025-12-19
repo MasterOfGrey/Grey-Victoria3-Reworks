@@ -1,4 +1,4 @@
-﻿building_railway = {
+﻿REPLACE_OR_CREATE:building_railway = {
 	building_group = bg_private_infrastructure
 	icon = "gfx/interface/icons/building_icons/building_railway.dds"
 	
@@ -26,13 +26,6 @@
 				owner = {
 					has_journal_entry = je_trans_siberian_railway
 				}
-				NOR = {
-					has_building = building_railway
-					any_scope_building = {
-						is_building_type = building_railway
-						is_under_construction = yes
-					}
-				}
 				OR = {
 					state_region = s:STATE_MOSCOW
 					state_region = s:STATE_YAROSLAVL
@@ -52,6 +45,13 @@
 					state_region = s:STATE_OKHOTSK
 					state_region = s:STATE_AMUR
 					state_region = s:STATE_OUTER_MANCHURIA
+				}
+				NOR = {
+					has_building = building_railway
+					any_scope_building = {
+						is_building_type = building_railway
+						is_under_construction = yes
+					}
 				}
 			}
 			add = 10000
@@ -117,6 +117,38 @@
 			}
 			add = 10000
 		}
+		else_if = { # AI Metternich wants railways
+			limit = {
+				owner ?= {
+					c:AUS ?= this
+					has_journal_entry = je_metternich
+				}
+				is_incorporated = yes
+				NOR = {
+					has_building = building_railway
+					any_scope_building = {
+						is_building_type = building_railway
+						is_under_construction = yes
+					}
+				}
+			}
+            add = 10000
+		}
+		else_if = { # Portugal - Regeneration
+			limit = {
+				owner = {
+					has_journal_entry = je_portugal_regeneration_public_works
+				}
+				is_incorporated = yes
+				NOR = {
+					has_building = building_railway
+					any_scope_building = {
+						is_building_type = building_railway
+						is_under_construction = yes
+					}
+				}
+			}
+		}
 		
 		if = { # Manchurian Railway
 			limit = {
@@ -172,4 +204,11 @@
 	ownership_type = self
 	
 	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_railways.dds"
+}
+
+# Done within morgenrote - needs to be re-done because this overwrites morgenrote.
+TRY_INJECT:building_railway = {
+	production_method_groups = {
+		pmg_gaudi_communication #MORGENRÖTE
+	}
 }

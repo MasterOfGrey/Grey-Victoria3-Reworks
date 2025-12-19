@@ -1,5 +1,5 @@
 ﻿### Vanilla OVERWRITE: ###
-default_auto_expand_rule = { 
+REPLACE_OR_CREATE:default_auto_expand_rule = { 
 	mog_b_basics_ok = yes
 	OR = {
 		mog_construct_private_infrastructure_allow = yes
@@ -121,16 +121,16 @@ mog_normal_building_confirm = {
 	custom_tooltip = {
 		text = is_industrial_building
 		nor = {
-			is_building_type = building_subsistence_farms
-			is_building_type = building_subsistence_orchards
-			is_building_type = building_subsistence_pastures
-			is_building_type = building_subsistence_fishing_villages
-			is_building_type = building_subsistence_rice_paddies
+			is_building_type = building_subsistence_farm
+			is_building_type = building_subsistence_orchard
+			is_building_type = building_subsistence_pasture
+			is_building_type = building_subsistence_fishing_village
+			is_building_type = building_subsistence_rice_farm
 			is_building_type = building_urban_center
 			is_building_type = building_trade_center
 			is_building_type = building_manor_house
 			is_building_type = building_financial_district
-			is_building_type = building_gold_fields
+			is_building_type = building_gold_field
 			
 			is_building_type = building_government_administration
 			is_building_type = building_university

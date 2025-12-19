@@ -1,69 +1,69 @@
 ﻿# New Goods
-goods_input_usu_logistics_add = {
+REPLACE_OR_CREATE:goods_input_usu_logistics_add = {
 	color = bad
 	percent = no
 }
 
-goods_output_usu_logistics_add = {
+REPLACE_OR_CREATE:goods_output_usu_logistics_add = {
 	color = good
 	percent = no
 }
 
-goods_input_usu_logistics_mult = {
+REPLACE_OR_CREATE:goods_input_usu_logistics_mult = {
 	color = bad
 	percent = yes
     decimals = 1
 }
 
-goods_output_usu_logistics_mult = {
+REPLACE_OR_CREATE:goods_output_usu_logistics_mult = {
 	color = good
 	percent = yes
     decimals = 1
 }
 
 # Missing Vanilla Goods
-goods_input_luxury_clothes_add = {
+REPLACE_OR_CREATE:goods_input_luxury_clothes_add = {
 	color = bad
 	percent = no
 }
 
-goods_input_services_add = {
+REPLACE_OR_CREATE:goods_input_services_add = {
 	color = bad
 	percent = no
 }
 
-goods_output_services_mult={
+REPLACE_OR_CREATE:goods_output_services_mult={
 	color=good
 	percent=yes
 	decimals=1
 }
 
-goods_input_transportation_mult = {
+REPLACE_OR_CREATE:goods_input_transportation_mult = {
 	color = bad
 	percent = yes
     decimals = 1
 }
 
-goods_output_transportation_mult = {
+REPLACE_OR_CREATE:goods_output_transportation_mult = {
 	color = good
 	percent = yes
     decimals = 1
 }
 
-goods_input_merchant_marine_mult = {
+REPLACE_OR_CREATE:goods_input_merchant_marine_mult = {
 	color = bad
 	percent = yes
     decimals = 1
 }
 
-goods_output_merchant_marine_mult = {
+REPLACE_OR_CREATE:goods_output_merchant_marine_mult = {
 	color = good
 	percent = yes
     decimals = 1
 }
 
 # New Building Modifiers:
-usu_building_public_green_throughput_add={
+REPLACE_OR_CREATE:usu_building_public_green_throughput_add={
 	decimals=0
 	color=good
 	percent=yes
@@ -72,13 +72,13 @@ usu_building_public_green_throughput_add={
 	}
 }
 
-state_usu_building_public_green_max_level_add={
+REPLACE_OR_CREATE:state_usu_building_public_green_max_level_add={
 	decimals = 1
 	color = good
 	percent = no
 }
 
-ppp_building_power_grid_throughput_add={
+REPLACE_OR_CREATE:ppp_building_power_grid_throughput_add={
 	decimals=0
 	color=good
 	percent=yes
@@ -87,7 +87,7 @@ ppp_building_power_grid_throughput_add={
 	}
 }
 
-usu_building_hydro_power_plant_throughput_add={
+REPLACE_OR_CREATE:usu_building_hydro_power_plant_throughput_add={
 	decimals=0
 	color=good
 	percent=yes
@@ -96,7 +96,7 @@ usu_building_hydro_power_plant_throughput_add={
 	}
 }
 
-building_river_port_throughput_add={
+REPLACE_OR_CREATE:building_river_port_throughput_add={
 	decimals=0
 	color=good
 	percent=yes
@@ -106,7 +106,7 @@ building_river_port_throughput_add={
 }
 
 # Encourage the AI please to be sensible (vanilla overwrites):
-state_market_access_price_impact={
+REPLACE_OR_CREATE:state_market_access_price_impact={
 	decimals=1
 	color=neutral
 	percent=yes
@@ -115,7 +115,7 @@ state_market_access_price_impact={
 	}
 }
 
-state_migration_pull_add={
+REPLACE_OR_CREATE:state_migration_pull_add={
 	decimals=0
 	color=good
 	game_data={
@@ -123,7 +123,7 @@ state_migration_pull_add={
 	}
 }
 
-country_weekly_innovation_max_add={
+REPLACE_OR_CREATE:country_weekly_innovation_max_add={
 	decimals=1
 	color=good
 	game_data={
@@ -132,7 +132,7 @@ country_weekly_innovation_max_add={
 }
 
 # Show better information (vanilla overwrites):
-state_infrastructure_from_population_add={
+REPLACE_OR_CREATE:state_infrastructure_from_population_add={
 	decimals=1
 	color=good
 	game_data={

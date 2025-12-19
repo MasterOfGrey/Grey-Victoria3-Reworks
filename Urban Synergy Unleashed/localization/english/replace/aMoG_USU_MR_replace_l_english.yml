@@ -1,0 +1,23 @@
+﻿l_english:
+ # Tooltips 
+ mr_airport_can_construct_tt: "The maximum level of [Concept('concept_curtiss_airport','$concept_curtiss_airports$')] that a state can support is equal to 1 plus 1 for every #G 10 levels#! of [GetBuildingType('building_urban_center').GetName]."
+ 
+ # PMGs
+ pmg_tourism_airport: "Imports & Tourism"
+ pmg_mendelejew_automation_oil: "Automation"
+ pmg_mendelejew_automation_rubber: "Automation"
+ 
+ # PMs
+ pm_luxury_requisitions: "Luxury Requisitions"
+ pm_travel_agencies: "Travel Agencies"
+ 
+ pm_mendelejew_automation_disabled: "Manual Operations"
+ pm_pneumatic_transfer_system: "Pneumatic Transfer Systems"
+ pm_continuous_process_systems_hydrogenation: "Continuous Hydrogenation"
+ pm_continuous_process_systems_polymerisation: "Continuous Polymerisation"
+ 
+ # Modifier Types
+ building_mendelejew_hydrogenation_plants_throughput_add: "$building_mendelejew_hydrogenation_plants$ building [concept_throughput]"
+ building_mendelejew_hydrogenation_plants_throughput_add_desc: "A bonus or penalty to both input and output of $building_mendelejew_hydrogenation_plants$"
+ building_mendelejew_synthetic_rubber_factory_throughput_add: "$building_mendelejew_synthetic_rubber_factory$ building [concept_throughput]"
+ building_mendelejew_synthetic_rubber_factory_throughput_add_desc: "A bonus or penalty to both input and output of $building_mendelejew_synthetic_rubber_factory$"

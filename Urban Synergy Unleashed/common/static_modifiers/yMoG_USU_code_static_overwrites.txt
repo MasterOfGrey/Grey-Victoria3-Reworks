@@ -1,6 +1,6 @@
 ﻿## VANILLA OVERWRITES
 
-insufficient_convoys = {
+TRY_REPLACE:insufficient_convoys = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_gear_negative.dds
 	## USU
 	# Insufficient convoys put's direct financial strain on gov finances
@@ -8,7 +8,7 @@ insufficient_convoys = {
 	goods_input_usu_logistics_mult = 2
 }
 
-unincorporated_state = {
+TRY_REPLACE:unincorporated_state = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_gear_negative.dds
 	state_infrastructure_mult = -0.25
 	state_conscription_rate_mult = -0.5
@@ -33,7 +33,7 @@ unincorporated_state = {
 
 # Scales with pollution impact, reduced by state_pollution_reduction_health_mult
 # Effect = state_region_pollution_health * impact
-state_region_pollution_health = {
+TRY_REPLACE:state_region_pollution_health = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_gear_negative.dds
 	state_mortality_mult = 0.5
 	state_standard_of_living_add = -3
@@ -41,7 +41,7 @@ state_region_pollution_health = {
 }
 
 # Effect = state_region_pollution_health * impact
-state_region_pollution_general = {
+TRY_REPLACE:state_region_pollution_general = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_gear_negative.dds
 	state_migration_pull_mult = -0.6 # -0.25	# This part not reduced by healthcare institution.
 	state_harvest_condition_drought_impact_mult = 0.5

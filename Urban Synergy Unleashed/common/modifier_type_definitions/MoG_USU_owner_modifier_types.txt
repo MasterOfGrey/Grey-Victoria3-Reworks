@@ -1,5 +1,5 @@
 ﻿# So farmers can have shares under collectivized agriculture
-building_farmers_shares_add={
+REPLACE_OR_CREATE:building_farmers_shares_add={
 	decimals=0
 	color=neutral
 	game_data={

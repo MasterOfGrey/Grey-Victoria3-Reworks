@@ -1,6 +1,6 @@
 ﻿
 # Panama And Suez Canal Company
-company_panama_suez_company = {
+REPLACE_OR_CREATE:company_panama_suez_company = {
 	icon = "gfx/interface/icons/company_icons/historical_company_icons/panama_suez_company.dds"
 	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_harbor_shipbuilding.dds"
 	
@@ -19,8 +19,8 @@ company_panama_suez_company = {
 	}
 	
 	extension_building_types = {
-		building_shipyards
-		building_military_shipyards
+		building_shipyard
+		building_military_shipyard
 	}
 	
 	possible_prestige_goods = {
@@ -67,7 +67,7 @@ company_panama_suez_company = {
 	
 	prosperity_modifier = {
 		state_trade_capacity_mult = 0.50
-		unit_convoy_requirements_mult = -0.50
+		# unit_convoy_requirements_mult = -0.50		# Unsupported in 1.12
 		state_market_access_price_impact = 0.10
 		country_minting_add = 50000
 		country_minting_mult = 0.25
@@ -120,7 +120,7 @@ company_panama_suez_company = {
 }
 
 # Panama Canal Company
-company_panama_company = {
+TRY_REPLACE:company_panama_company = {
 	icon = "gfx/interface/icons/company_icons/historical_company_icons/panama_company.dds"
 	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_harbor_shipbuilding.dds"
 	
@@ -138,8 +138,8 @@ company_panama_company = {
 	}
 	
 	extension_building_types = {
-		building_shipyards
-		building_military_shipyards
+		building_shipyard
+		building_military_shipyard
 	}
 	
 	possible_prestige_goods = {
@@ -180,7 +180,7 @@ company_panama_company = {
 	
 	prosperity_modifier = {
 		state_trade_capacity_mult = 0.25
-		unit_convoy_requirements_mult = -0.20
+		# unit_convoy_requirements_mult = -0.20
 		state_market_access_price_impact = 0.05
 		country_minting_add = 20000
 		country_minting_mult = 0.10
@@ -217,7 +217,7 @@ company_panama_company = {
 }
 
 # Suez Canal Company
-company_suez_company = {
+TRY_REPLACE:company_suez_company = {
 	icon = "gfx/interface/icons/company_icons/historical_company_icons/suez_company.dds"
 	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_harbor_shipbuilding.dds"
 	
@@ -235,8 +235,8 @@ company_suez_company = {
 	}
 	
 	extension_building_types = {
-		building_shipyards
-		building_military_shipyards
+		building_shipyard
+		building_military_shipyard
 	}
 	
 	possible_prestige_goods = {
@@ -276,7 +276,7 @@ company_suez_company = {
 	
 	prosperity_modifier = {
 		state_trade_capacity_mult = 0.25
-		unit_convoy_requirements_mult = -0.30
+		# unit_convoy_requirements_mult = -0.30
 		state_market_access_price_impact = 0.05
 		country_minting_add = 30000
 		country_minting_mult = 0.15

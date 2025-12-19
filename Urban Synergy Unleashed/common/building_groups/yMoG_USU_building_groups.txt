@@ -13,17 +13,17 @@ usu_bg_public_greens = {
 
 #### Overwrite/replacement groups with new urbanization values and autoexpand rules (if applicable):
 ## Private Infrastructure - i.e. Railways (and related modded buildings)
-bg_private_infrastructure = {
+REPLACE_OR_CREATE:bg_private_infrastructure = {
 	parent_group = bg_infrastructure
 	
 	is_government_funded = no
-	subsidized = no
+	subsidized = no	# yes					# This line may not actually do anything...
 	
 	economy_of_scale = yes					# Allows economy of scale to apply
 	
 	cash_reserves_max = 25000
 	
-	economy_of_scale_ai_factor = 0.5			# Stops the AI from deciding to overbuild a local good just because economy of scale applies
+	economy_of_scale_ai_factor = 0.5		# Stops the AI from deciding to overbuild a local good just because economy of scale applies
 	
 	should_auto_expand = { 
 		default_auto_expand_rule = yes		# This is new vs Vanilla - redefined in: common\scripted_triggers\MoG_USU_autoexpand_triggers.txt
@@ -49,7 +49,7 @@ usu_bg_river_port_infrastructure = {
 }
 
 ## Canals													# Change these over to private infrastructure of some sort!!!
-bg_canals = {
+REPLACE_OR_CREATE:bg_canals = {
 	parent_group = bg_private_infrastructure
 	lens = special
 	inheritable_construction = yes
@@ -58,7 +58,7 @@ bg_canals = {
 }
 
 ## Power Plants AND Power Grids
-bg_power = {
+REPLACE_OR_CREATE:bg_power = {
 	category = development
 	
 	lens = development	
@@ -108,7 +108,7 @@ usu_bg_power_grid = {
 }
 
 ## Government Admins & Universities
-bg_government = {
+REPLACE_OR_CREATE:bg_government = {
 	category = development
 
 	always_possible = yes
@@ -128,14 +128,17 @@ bg_government = {
 }
 
 ## Financial Districts & Company Headquarters
+INJECT:bg_owner_buildings = {
+	ignores_productivity_when_hiring = no
+}
 # Enabling some urbanization lets them contribute to generating the services they then consume.
-bg_financial_districts = {
+REPLACE_OR_CREATE:bg_financial_districts = {
 	parent_group = bg_owner_buildings
 	
 	urbanization = 2 # 0 (Vanilla now = 5)
 }
 
-bg_company_headquarter = {
+REPLACE_OR_CREATE:bg_company_headquarter = {
 	parent_group = bg_owner_buildings
 	
 	company_headquarter = yes
@@ -143,8 +146,16 @@ bg_company_headquarter = {
 	urbanization = 2 # 3 # 0 (Vanilla now = 5)	# These have a bigger impact on service consumption # but they seriously blow out the urbanization levels.
 }
 
+REPLACE_OR_CREATE:bg_company_regional_headquarter = {
+	parent_group = bg_owner_buildings
+
+	regional_company_headquarter = yes
+
+	urbanization = 2 # 3 # 0 (Vanilla now = 5)	# These have a bigger impact on service consumption # but they seriously blow out the urbanization levels.
+}
+
 ## Construction
-bg_construction = {
+REPLACE_OR_CREATE:bg_construction = {
 	parent_group = bg_public_infrastructure
 	
 	infrastructure_usage_per_level = 0.8
@@ -163,7 +174,7 @@ bg_construction = {
 ## Trade Centers
 # Thanks to logistics services they have a reduced contribution to urbanization now use a teeny tiny bit more infrastructure.
 # This is not critical so if some other mod overwrites it, meh.
-bg_trade = {
+REPLACE_OR_CREATE:bg_trade = {
 	parent_group = bg_private_infrastructure	# bg_urban_facilities
 	
 	stateregion_max_level = no

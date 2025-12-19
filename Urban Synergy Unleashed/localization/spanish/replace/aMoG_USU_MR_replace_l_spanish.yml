@@ -1,0 +1,22 @@
+﻿l_spanish:
+ mr_airport_can_construct_tt: "El nivel máximo de [Concept('concept_curtiss_airport','$concept_curtiss_airports$')] que puede soportar un estado es igual a 1 más 1 por cada #G 10 niveles#! de [GetBuildingType('building_urban_center').GetName]." #deepl:1884813676
+ 
+ # PMGs
+ pmg_tourism_airport: "Importaciones y turismo"
+ pmg_mendelejew_automation_oil: "Automatización"
+ pmg_mendelejew_automation_rubber: "Automatización"
+ 
+ # PMs
+ pm_luxury_requisitions: "Requisiciones de lujo"
+ pm_travel_agencies: "Agencias de viajes"
+ 
+ pm_mendelejew_automation_disabled: "Operaciones manuales"
+ pm_pneumatic_transfer_system: "Sistemas de transferencia neumática"
+ pm_continuous_process_systems_hydrogenation: "Hidrogenación continua"
+ pm_continuous_process_systems_polymerisation: "Polimerización continua"
+ 
+ # Modifier Types
+ building_mendelejew_hydrogenation_plants_throughput_add: "$building_mendelejew_hydrogenation_plants$ edificio [concept_throughput]"
+ building_mendelejew_hydrogenation_plants_throughput_add_desc: "Una bonificación o penalización tanto a la entrada como a la salida de $building_mendelejew_hydrogenation_plants$"
+ building_mendelejew_synthetic_rubber_factory_throughput_add: "$building_mendelejew_synthetic_rubber_factory$ edificio [concept_throughput]"
+ building_mendelejew_synthetic_rubber_factory_throughput_add_desc: "Una bonificación o penalización tanto a la entrada como a la salida de $building_mendelejew_synthetic_rubber_factory$"

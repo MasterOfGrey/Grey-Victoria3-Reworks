@@ -216,7 +216,7 @@
 				activate_production_methods={ "pm_rp_small_port" }
 			}
 			create_building={
-				building="building_shipyards"
+				building="building_shipyard"
 				level=4
 				reserves=1
 				activate_production_methods={ "pm_basic_shipbuilding" }

@@ -4,110 +4,33 @@
 # navigation = {
 # }
 
-drydocks = {
-	# Increases Port max level by 1
-	era = era_1
-	texture = "gfx/interface/icons/invention_icons/drydock.dds"
-	category = military
-	
+TRY_INJECT:drydocks = {
 	modifier = {
-		building_port_throughput_add = 0.05
-	}
-	
-	unlocking_technologies = {	
-		navigation
-	}
-	
-	ai_weight = {
-		value = 1
-		
-		# Important for anyone with a navy
-		if = {
-			limit = { navy_size >= 5 }
-			add = 0.5
-		}		
+		building_port_throughput_add = 0.04
 	}
 }
 
-hydraulic_cranes = {
-	# Increases Port max level by 2
-	era = era_2
-	texture = "gfx/interface/icons/invention_icons/hydraulic_cranes.dds"
-	category = military
-	
+TRY_INJECT:hydraulic_cranes = {
 	modifier = {
-		building_port_throughput_add = 0.1
-	}
-	
-	unlocking_technologies = {	
-		drydocks
-	}
-	
-	ai_weight = {
-		value = 1
-		
-		# Important for anyone with a navy
-		if = {
-			limit = { navy_size >= 5 }
-			add = 0.5
-		}
+		building_port_throughput_add = 0.04
 	}
 }
 
-# Don't mess with Gantry Cranes - unnecessary & compatibility risk.
-# gantry_cranes = {
-# }
-
-floating_harbor = {
-	# Unlocks Industrial Port PM in Ports
-	# Increases Port Level by 2
-	era = era_3
-	texture = "gfx/interface/icons/invention_icons/floating_harbor.dds"
-	category = military
-	
+TRY_INJECT:gantry_cranes = {
 	modifier = {
-		building_port_throughput_add = 0.1
-	}
-	
-	unlocking_technologies = {	
-		gantry_cranes
-	}
-	
-	ai_weight = {
-		value = 1
-		
-		# Important for anyone with a navy
-		if = {
-			limit = { navy_size >= 5 }
-			add = 0.5
-		}		
+		building_port_throughput_add = 0.04
 	}
 }
 
-concrete_dockyards = {
-	# Unlocks Modern Port PM in Ports
-	# Allows port upgrade
-	# Increases Max Port Level by 2
-	era = era_4
-	texture = "gfx/interface/icons/invention_icons/concrete_dockyards.dds"
-	category = military
-	
+TRY_INJECT:floating_harbor = {
 	modifier = {
-		building_port_throughput_add = 0.1
+		building_port_throughput_add = 0.04
 	}
-	
-	unlocking_technologies = {	
-		floating_harbor
-	}
-	
-	ai_weight = {
-		value = 1
-		
-		# Important for anyone with a navy
-		if = {
-			limit = { navy_size >= 5 }
-			add = 0.5
-		}		
+}
+
+TRY_INJECT:concrete_dockyards = {
+	modifier = {
+		building_port_throughput_add = 0.04
 	}
 }
 

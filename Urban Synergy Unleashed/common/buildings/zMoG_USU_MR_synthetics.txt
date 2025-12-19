@@ -1,0 +1,17 @@
+﻿#########################
+# MENDELEJEW BUILDINGS  #
+#########################
+
+#Hydrogenation Plants
+TRY_INJECT:building_mendelejew_hydrogenation_plants = {
+	production_method_groups = {
+		pmg_mendelejew_automation_oil
+	}
+}
+
+#Synthetic Rubber Factory
+TRY_INJECT:building_mendelejew_synthetic_rubber_factory = {
+	production_method_groups = {
+		pmg_mendelejew_automation_rubber
+	}
+}

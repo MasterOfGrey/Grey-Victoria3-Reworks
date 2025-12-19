@@ -1,0 +1,22 @@
+﻿l_russian:
+ mr_airport_can_construct_tt: "Максимальный уровень [Concept('concept_curtiss_airport','$concept_curtiss_airports$')], который может поддерживать государство, равен 1 плюс 1 за каждые #G 10 уровней#! [GetBuildingType('building_urban_center').GetName] ." #deepl:1884813676
+ 
+ # PMGs
+ pmg_tourism_airport: "Импорт и туризм"
+ pmg_mendelejew_automation_oil: "Автоматизация"
+ pmg_mendelejew_automation_rubber: "Автоматизация"
+ 
+ # PMs
+ pm_luxury_requisitions: "Роскошные реквизиции"
+ pm_travel_agencies: "Туристические агентства"
+ 
+ pm_mendelejew_automation_disabled: "Ручные операции"
+ pm_pneumatic_transfer_system: "Пневматические транспортные системы"
+ pm_continuous_process_systems_hydrogenation: "Непрерывная гидрогенизация"
+ pm_continuous_process_systems_polymerisation: "Непрерывная полимеризация"
+ 
+ # Modifier Types
+ building_mendelejew_hydrogenation_plants_throughput_add: "$building_mendelejew_hydrogenation_plants$ здание [concept_throughput]"
+ building_mendelejew_hydrogenation_plants_throughput_add_desc: "Бонус или штраф как к входу, так и к выходу $building_mendelejew_hydrogenation_plants$"
+ building_mendelejew_synthetic_rubber_factory_throughput_add: "$building_mendelejew_synthetic_rubber_factory$ здание [concept_throughput]"
+ building_mendelejew_synthetic_rubber_factory_throughput_add_desc: "Бонус или штраф как к входу, так и к выходу $building_mendelejew_synthetic_rubber_factory$"

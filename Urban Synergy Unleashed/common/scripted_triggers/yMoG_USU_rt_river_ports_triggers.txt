@@ -1,4 +1,4 @@
-﻿rt_on_river = { #Same as vanilla on_river except with lakes added
+﻿REPLACE_OR_CREATE:rt_on_river = { #Same as vanilla on_river except with lakes added
 	OR = {
 		on_river = yes
 		has_state_trait = state_trait_great_lakes

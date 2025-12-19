@@ -1,4 +1,4 @@
-﻿building_power_plant = {
+﻿REPLACE_OR_CREATE:building_power_plant = {
 	building_group = bg_power
 	icon = "gfx/interface/icons/building_icons/power_plant.dds"
 	levels_per_mesh = 50
@@ -89,7 +89,7 @@
 }
 
 # Adapted with permission from "Hydropower Forever!" by Grimhat
-usu_building_hydro_power_plant = {
+REPLACE_OR_CREATE:usu_building_hydro_power_plant = {
 	building_group = usu_bg_hydro_power
 	icon = "gfx/interface/icons/building_icons/USU_hydro_power_plant.dds"
 	# levels_per_mesh = 5

@@ -1,0 +1,24 @@
+﻿## BASIC
+# - Injecting triggers doesn't work, and I don't want to maintain a compatch *just* for this single trigger
+#TRY_INJECT:company_basic_oil = {
+#	possible = { 
+#		any_scope_state = {
+#			any_scope_building = {
+#				OR = {
+#					is_building_type = building_oil_rig
+#					is_building_type = building_mendelejew_hydrogenation_plants
+#				}
+#				level >= 3
+#			}
+#		}
+#	}
+#}
+
+### FLAVOURED
+## Austria-Hungary
+# Galizisch-Karpathische Petroleum AG
+TRY_INJECT:company_galician_carpathian_oil = {
+	building_types = {
+		building_mendelejew_hydrogenation_plants
+	}
+}

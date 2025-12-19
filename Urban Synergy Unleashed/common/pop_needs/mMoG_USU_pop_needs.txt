@@ -1,5 +1,5 @@
 ﻿# If this gets overwritten it's ok, but... it doesn't hurt. Makes underdeveloped countries consume MM
-popneed_leisure = {
+REPLACE:popneed_leisure = {
 	default = services		# PDT's use of services is superior to the use of fine_art.
 		
 	obsession_demand_min = 0.5

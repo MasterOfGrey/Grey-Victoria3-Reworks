@@ -1,0 +1,22 @@
+﻿l_japanese:
+ mr_airport_can_construct_tt: "州がサポートできる[Concept('concept_curtiss_airport','$concept_curtiss_airports$')] の最大レベルは、#G の10レベル#! ごとに1に1を加えたものに等しい[GetBuildingType('building_urban_center').GetName] 。" #deepl:1884813676
+ 
+ # PMGs
+ pmg_tourism_airport: "輸入と観光"
+ pmg_mendelejew_automation_oil: "オートメーション"
+ pmg_mendelejew_automation_rubber: "オートメーション"
+ 
+ # PMs
+ pm_luxury_requisitions: "贅沢品の要求"
+ pm_travel_agencies: "旅行代理店"
+ 
+ pm_mendelejew_automation_disabled: "手動操作"
+ pm_pneumatic_transfer_system: "空気圧搬送システム"
+ pm_continuous_process_systems_hydrogenation: "連続水素化"
+ pm_continuous_process_systems_polymerisation: "連続重合"
+ 
+ # Modifier Types
+ building_mendelejew_hydrogenation_plants_throughput_add: "$building_mendelejew_hydrogenation_plants$ 建物 [concept_throughput]"
+ building_mendelejew_hydrogenation_plants_throughput_add_desc: "$building_mendelejew_hydrogenation_plants$の入力と出力の両方に対するボーナスまたはペナルティ"
+ building_mendelejew_synthetic_rubber_factory_throughput_add: "$building_mendelejew_synthetic_rubber_factory$ 建物 [concept_throughput]"
+ building_mendelejew_synthetic_rubber_factory_throughput_add_desc: "$building_mendelejew_synthetic_rubber_factory$の入力と出力の両方に対するボーナスまたはペナルティ"

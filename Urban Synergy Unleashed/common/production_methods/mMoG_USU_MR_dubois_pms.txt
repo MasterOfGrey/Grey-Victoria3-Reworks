@@ -1,0 +1,70 @@
+﻿#############################
+# DUBOIS PRODUCTION METHODS #
+#############################
+
+# Modified for USU
+
+##############################
+
+###Nature Reserve###
+TRY_REPLACE:pm_nr_royal_reserve = {
+	texture = "gfx/interface/icons/production_method_icons/dubois_nr_royal_reserve_pm.dds"
+	is_default = yes
+	ai_value = 500000
+	
+	disallowing_laws = {
+		law_presidential_republic
+		law_parliamentary_republic
+		law_council_republic
+	}
+	
+	building_modifiers = {
+		workforce_scaled = {
+			goods_input_small_arms_add = 2
+			goods_output_services_add = 20
+		}
+		level_scaled = {
+			building_employment_soldiers_add = 100
+		}
+	}
+	
+	country_modifiers = {
+	}
+	state_modifiers = {
+		unscaled = {
+			state_upper_strata_standard_of_living_add = 0.2
+		}
+		level_scaled = {
+			state_pollution_generation_add = -100
+		}
+	}
+}
+
+TRY_REPLACE:pm_nr_national_park = {
+	texture = "gfx/interface/icons/production_method_icons/dubois_nr_national_park_pm.dds"
+	
+	building_modifiers = {
+		workforce_scaled = {
+			goods_input_paper_add = 2
+			goods_input_tools_add = 2
+			goods_output_services_add = 50
+		}
+		level_scaled = {
+			building_employment_laborers_add = 50
+			building_employment_officers_add = 50
+			building_employment_clerks_add = 50
+			building_employment_academics_add = 50
+		}
+	}
+	
+	country_modifiers = {
+		unscaled = {
+			country_society_tech_research_speed_mult = 0.01
+		}
+	}
+	state_modifiers = {
+		level_scaled = {
+			state_pollution_generation_add = -100
+		}
+	}
+}

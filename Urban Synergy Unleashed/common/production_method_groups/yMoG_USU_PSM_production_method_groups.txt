@@ -1,4 +1,4 @@
-﻿usu_pmg_public_space_management = {
+﻿REPLACE_OR_CREATE:usu_pmg_public_space_management = {
 	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
 	
 	production_methods = {
@@ -8,7 +8,7 @@
 	}
 }
 
-usu_pmg_public_parklands = {
+REPLACE_OR_CREATE:usu_pmg_public_parklands = {
 	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
 	
 	production_methods = {

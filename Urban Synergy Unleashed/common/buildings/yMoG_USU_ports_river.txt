@@ -1,5 +1,5 @@
 ﻿## RIVER PORTS
-building_river_port = {
+REPLACE_OR_CREATE:building_river_port = {
 	building_group = usu_bg_river_port_infrastructure
 	icon = "gfx/interface/icons/building_icons/building_port.dds"
 	

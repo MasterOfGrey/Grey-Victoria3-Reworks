@@ -2,6 +2,6 @@
 #   GREY - MOD COMPATIBILITY SCRIPTED TRIGGERS   #
 ##################################################
 
-Grey_USU_is_active = { # Urban Synergy Unleashed
+REPLACE_OR_CREATE:Grey_USU_is_active = { # Urban Synergy Unleashed
 	always = yes
 }

@@ -13,9 +13,10 @@ GLOBAL = {
 	s:STATE_CALABRIA = { add_state_trait = state_trait_hydro_potential_1 }
 	s:STATE_EMILIA = { add_state_trait = state_trait_hydro_potential_1 }
 	s:STATE_SICILY = { add_state_trait = state_trait_hydro_potential_1 }
-	s:STATE_ANDALUSIA = { add_state_trait = state_trait_hydro_potential_1 }
-	s:STATE_GRANADA = { add_state_trait = state_trait_hydro_potential_1 }
-	s:STATE_BADAJOZ = { add_state_trait = state_trait_hydro_potential_1 }
+	s:STATE_LOWER_ANDALUSIA = { add_state_trait = state_trait_hydro_potential_1 }
+	s:STATE_UPPER_ANDALUSIA = { add_state_trait = state_trait_hydro_potential_1 }
+	s:STATE_NEW_CASTILE = { add_state_trait = state_trait_hydro_potential_1 }
+	s:STATE_EXTREMADURA = { add_state_trait = state_trait_hydro_potential_1 }
 	s:STATE_NORTHERN_THRACE = { add_state_trait = state_trait_hydro_potential_1 }
 	s:STATE_BULGARIA = { add_state_trait = state_trait_hydro_potential_1 }
 	s:STATE_ATTICA = { add_state_trait = state_trait_hydro_potential_1 }
@@ -43,13 +44,13 @@ GLOBAL = {
 	
 	### SUBSAHARAN AFRICA ###
 	s:STATE_IVORY_COAST = { add_state_trait = state_trait_hydro_potential_1 }
-	s:STATE_SENEGAL = { add_state_trait = state_trait_hydro_potential_1 }
-	s:STATE_GAMBIA = { add_state_trait = state_trait_hydro_potential_1 }
+	# s:STATE_SENEGAL = { add_state_trait = state_trait_hydro_potential_1 }
+	# s:STATE_GAMBIA = { add_state_trait = state_trait_hydro_potential_1 }
 	s:STATE_SIERRA_LEONE = { add_state_trait = state_trait_hydro_potential_1 }
 	s:STATE_HAUSALAND = { add_state_trait = state_trait_hydro_potential_1 }
 	s:STATE_BENIN = { add_state_trait = state_trait_hydro_potential_1 }
 	s:STATE_NIGERIA = { add_state_trait = state_trait_hydro_potential_1 }
-	s:STATE_GUINEA = { add_state_trait = state_trait_hydro_potential_1 }
+	# s:STATE_GUINEA = { add_state_trait = state_trait_hydro_potential_1 }
 	s:STATE_SOUTH_CAMEROON = { add_state_trait = state_trait_hydro_potential_1 }
 	s:STATE_UBANGI_SHARI = { add_state_trait = state_trait_hydro_potential_1 }
 	s:STATE_CONGO = { add_state_trait = state_trait_hydro_potential_1 }
@@ -181,9 +182,13 @@ GLOBAL = {
 	s:STATE_TUSCANY = { add_state_trait = state_trait_hydro_potential_2 }
 	s:STATE_GALICIA = { add_state_trait = state_trait_hydro_potential_2 }
 	s:STATE_ASTURIAS = { add_state_trait = state_trait_hydro_potential_2 }
-	s:STATE_CASTILE = { add_state_trait = state_trait_hydro_potential_2 }
-	s:STATE_NAVARRA = { add_state_trait = state_trait_hydro_potential_2 }
-	s:STATE_BEIRA = { add_state_trait = state_trait_hydro_potential_2 }
+	# s:STATE_CASTILE = { add_state_trait = state_trait_hydro_potential_2 }
+	s:STATE_OLD_CASTILE = { add_state_trait = state_trait_hydro_potential_2 }
+	s:STATE_LEON = { add_state_trait = state_trait_hydro_potential_2 }
+	# s:STATE_NAVARRA = { add_state_trait = state_trait_hydro_potential_2 }
+	s:STATE_BASQUE_COUNTRY = { add_state_trait = state_trait_hydro_potential_2 }
+	# s:STATE_BEIRA = { add_state_trait = state_trait_hydro_potential_2 }
+	s:STATE_ENTRE_DOURO_E_MINHO = { add_state_trait = state_trait_hydro_potential_2 }
 	s:STATE_ALBANIA = { add_state_trait = state_trait_hydro_potential_2 }
 	s:STATE_SLOVENIA = { add_state_trait = state_trait_hydro_potential_2 }
 	s:STATE_CROATIA = { add_state_trait = state_trait_hydro_potential_2 }
@@ -202,6 +207,10 @@ GLOBAL = {
 	s:STATE_BUKOVINA = { add_state_trait = state_trait_hydro_potential_2 }
 	s:STATE_MOLDAVIA = { add_state_trait = state_trait_hydro_potential_2 }
 	s:STATE_WALLACHIA = { add_state_trait = state_trait_hydro_potential_2 }
+	
+	### SUBSAHARAN AFRICA ###
+	s:STATE_SENEGAL = { add_state_trait = state_trait_hydro_potential_2 }	# Since GAMBIA is gone, upgraded
+	s:STATE_GUINEA = { add_state_trait = state_trait_hydro_potential_2 }	# the two it was divided between
 	
 	### NORTH AFRICA ### = { add_state_trait = state_trait_hydro_potential_2 }
 	s:STATE_LOWER_EGYPT = { add_state_trait = state_trait_hydro_potential_2 }

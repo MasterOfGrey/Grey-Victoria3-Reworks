@@ -1,0 +1,45 @@
+﻿#Nature Reserve
+
+TRY_REPLACE:building_dubois_national_park = {
+	building_group = bg_dubois_national_park
+	ai_value = 50000
+	
+	expandable = no
+	downsizeable = no
+	buildable = yes
+
+	unlocking_technologies = {
+		dubois_nature_protection_tech
+	}
+
+	production_method_groups = {
+		pmg_dubois_reserve_type
+	}
+
+	icon = "gfx/interface/icons/building_icons/building_dubois_national_park.dds"
+
+	required_construction = construction_cost_low
+
+	can_build_government = {
+		always = yes
+	}
+
+	can_build_private = {
+		always = no
+	}
+
+	ai_value = {
+		value = 50000
+		if = {
+			limit = {
+				OR = {
+					has_modifier = dubois_habitat_endangered_modifier
+					has_modifier = dubois_habitat_endangered_timer_modifier
+				}
+			}
+			multiply = 10
+		}
+	}
+
+	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_monuments.dds"
+}

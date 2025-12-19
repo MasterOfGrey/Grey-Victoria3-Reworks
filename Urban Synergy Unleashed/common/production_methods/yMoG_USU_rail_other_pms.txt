@@ -1,6 +1,6 @@
 ﻿### Logistics Services
 
-usu_pm_rail_logistics_0 = {
+REPLACE_OR_CREATE:usu_pm_rail_logistics_0 = {
 	texture = "gfx/interface/icons/production_method_icons/log_0.dds"
 	building_modifiers = {
 		workforce_scaled = {	
@@ -9,7 +9,7 @@ usu_pm_rail_logistics_0 = {
 	}
 }
 
-usu_pm_rail_logistics_1 = {
+REPLACE_OR_CREATE:usu_pm_rail_logistics_1 = {
 	texture = "gfx/interface/icons/production_method_icons/log_1.dds"
 	unlocking_technologies = {
 		logistics
@@ -32,7 +32,7 @@ usu_pm_rail_logistics_1 = {
 	ai_value = 1000
 }
 
-usu_pm_rail_logistics_2 = {
+REPLACE_OR_CREATE:usu_pm_rail_logistics_2 = {
 	texture = "gfx/interface/icons/production_method_icons/log_2.dds"
 	unlocking_technologies = {
 		electric_telegraph
@@ -55,7 +55,7 @@ usu_pm_rail_logistics_2 = {
 	ai_value = 2000
 }
 
-usu_pm_rail_logistics_3 = {
+REPLACE_OR_CREATE:usu_pm_rail_logistics_3 = {
 	texture = "gfx/interface/icons/production_method_icons/log_3.dds"
 	unlocking_production_methods = {
 		usu_pm_rail_logistics_2
@@ -84,11 +84,11 @@ usu_pm_rail_logistics_3 = {
 
 ### Passenger Carriages
 
-pm_no_passenger_trains = {
+REPLACE_OR_CREATE:pm_no_passenger_trains = {
 	texture = "gfx/interface/icons/production_method_icons/no_passenger_trains.dds"
 }
 
-pm_wooden_passenger_carriages = {
+REPLACE_OR_CREATE:pm_wooden_passenger_carriages = {
 	texture = "gfx/interface/icons/production_method_icons/passenger_trains.dds"
 
 	building_modifiers = {
@@ -110,7 +110,7 @@ pm_wooden_passenger_carriages = {
 	}
 }
 
-pm_steel_passenger_carriages = {
+REPLACE_OR_CREATE:pm_steel_passenger_carriages = {
 	texture = "gfx/interface/icons/production_method_icons/passenger_carriages.dds"
 
 	unlocking_technologies = {
@@ -136,7 +136,7 @@ pm_steel_passenger_carriages = {
 	}
 }
 
-pm_electric_passenger_carriages = {
+REPLACE_OR_CREATE:pm_electric_passenger_carriages = {
 	texture = "gfx/interface/icons/production_method_icons/electric_carriages.dds"
 
 	unlocking_technologies = {
@@ -165,11 +165,11 @@ pm_electric_passenger_carriages = {
 
 ### Automation
 
-pm_auto_disabled_building_railway = {
+REPLACE_OR_CREATE:pm_auto_disabled_building_railway = {
 	texture = "gfx/interface/icons/production_method_icons/no_automation.dds"
 }
 
-pm_steam_crane_building_railway = {
+REPLACE_OR_CREATE:pm_steam_crane_building_railway = {
 	texture = "gfx/interface/icons/production_method_icons/rail_crane.dds"
 	
 	unlocking_technologies = {		# Maps against Early Engines
@@ -198,7 +198,7 @@ pm_steam_crane_building_railway = {
 	}
 }
 
-pm_watertube_boiler_building_railway = {
+REPLACE_OR_CREATE:pm_watertube_boiler_building_railway = {
 	texture = "gfx/interface/icons/production_method_icons/watertube_boiler.dds"
 	
 	unlocking_technologies = {		# Maps against Early Engines
@@ -227,7 +227,7 @@ pm_watertube_boiler_building_railway = {
 	}
 }
 
-pm_rotary_valve_engine_building_railway = {
+REPLACE_OR_CREATE:pm_rotary_valve_engine_building_railway = {
 	texture = "gfx/interface/icons/production_method_icons/rotary_valve_engine.dds"
 	
 	unlocking_technologies = {		# Maps against Steam Trains
@@ -268,7 +268,7 @@ pm_rotary_valve_engine_building_railway = {
 	}
 }
 
-pm_steam_donkey_building_railway = {
+REPLACE_OR_CREATE:pm_steam_donkey_building_railway = {
 	texture = "gfx/interface/icons/production_method_icons/steam_donkey.dds"
 	
 	unlocking_technologies = {

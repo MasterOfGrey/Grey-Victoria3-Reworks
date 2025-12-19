@@ -1,6 +1,6 @@
 ﻿# Railway Overwrites
 
-pmg_base_building_railway = {
+REPLACE_OR_CREATE:pmg_base_building_railway = {
 	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
 	ai_selection = most_productive
 
@@ -17,7 +17,7 @@ pmg_base_building_railway = {
 	}
 }
 
-pmg_passenger_trains = {
+REPLACE_OR_CREATE:pmg_passenger_trains = {
 	texture = "gfx/interface/icons/generic_icons/mixed_icon_refining.dds"
 	ai_selection = most_productive
 
@@ -29,7 +29,7 @@ pmg_passenger_trains = {
 	}
 }
 
-pmg_logistics_services_railway = {
+REPLACE_OR_CREATE:pmg_logistics_services_railway = {
 	texture = "gfx/interface/icons/generic_icons/mixed_icon_refining.dds"
 	production_methods = {
 		usu_pm_rail_logistics_0
@@ -39,7 +39,7 @@ pmg_logistics_services_railway = {
 	}
 }
 
-pmg_automation_building_railway = {
+REPLACE_OR_CREATE:pmg_automation_building_railway = {
 	texture = "gfx/interface/icons/generic_icons/mixed_icon_automation.dds"
 	production_methods = {
 		pm_auto_disabled_building_railway

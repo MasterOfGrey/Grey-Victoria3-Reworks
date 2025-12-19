@@ -1,6 +1,6 @@
 ﻿### Defaults - Ports are important for MAPI and also consume food - staffing levels slightly increased to leave room for automation PM
 
-pm_anchorage = {
+REPLACE_OR_CREATE:pm_anchorage = {
 	texture = "gfx/interface/icons/production_method_icons/anchorage.dds"
 	ai_value = 2000
 	low_pop_method = yes # AI will activate this method for states with low population
@@ -40,7 +40,7 @@ pm_anchorage = {
 	}
 }
 
-pm_basic_port = {
+REPLACE_OR_CREATE:pm_basic_port = {
 	texture = "gfx/interface/icons/production_method_icons/basic_port.dds"
 	ai_value = 2000
 	building_modifiers = {
@@ -79,7 +79,7 @@ pm_basic_port = {
 	}
 }
 
-pm_industrial_port = {
+REPLACE_OR_CREATE:pm_industrial_port = {
 	texture = "gfx/interface/icons/production_method_icons/industrial_port.dds"
 	ai_value = 4000
 	unlocking_technologies = {
@@ -124,7 +124,7 @@ pm_industrial_port = {
 	}
 }
 
-pm_modern_port = {
+REPLACE_OR_CREATE:pm_modern_port = {
 	texture = "gfx/interface/icons/production_method_icons/modern_port.dds"
 	ai_value = 5000
 	unlocking_technologies = {

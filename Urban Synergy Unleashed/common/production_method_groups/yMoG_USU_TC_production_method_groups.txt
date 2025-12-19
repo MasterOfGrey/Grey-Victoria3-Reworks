@@ -1,6 +1,6 @@
 ﻿# Trade Center Overwrites
 
-pmg_base_building_trade_center = {
+REPLACE_OR_CREATE:pmg_base_building_trade_center = {
 	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
 	ai_selection = most_productive
 
@@ -10,7 +10,7 @@ pmg_base_building_trade_center = {
 	}
 }
 
-pmg_trade_quantity_trade_center = {
+REPLACE_OR_CREATE:pmg_trade_quantity_trade_center = {
 	texture = "gfx/interface/icons/generic_icons/mixed_icon_automation.dds"
 	ai_selection = most_productive
 
@@ -26,7 +26,7 @@ pmg_trade_quantity_trade_center = {
 	}
 }
 
-pmg_trade_center_port_status = {
+REPLACE_OR_CREATE:pmg_trade_center_port_status = {
 	texture = "gfx/interface/icons/production_method_icons/mixed_trade.dds"
 	ai_selection = most_productive
 

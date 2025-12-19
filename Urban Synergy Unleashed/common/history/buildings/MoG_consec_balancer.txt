@@ -5,7 +5,7 @@
 			limit = {
 				is_incorporated = yes
 				is_treaty_port = no
-				has_potential_resource = bg_iron_mining
+				has_potential_resource = building_iron_mine
 				owner ?= { NOT = { is_country_type = decentralized } }
 			}
 			create_building={

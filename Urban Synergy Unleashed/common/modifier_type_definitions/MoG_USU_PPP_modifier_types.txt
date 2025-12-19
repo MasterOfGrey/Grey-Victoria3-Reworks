@@ -1,27 +1,27 @@
 ﻿# New Types
-goods_input_ppp_hv_power_add = {
+REPLACE_OR_CREATE:goods_input_ppp_hv_power_add = {
 	color = bad
 	percent = no
 }
 
-goods_output_ppp_hv_power_add = {
+REPLACE_OR_CREATE:goods_output_ppp_hv_power_add = {
 	color = good
 	percent = no
 }
 
-goods_input_ppp_hv_power_mult = {
+REPLACE_OR_CREATE:goods_input_ppp_hv_power_mult = {
 	color = bad
 	percent = yes
     decimals = 1
 }
 
-goods_output_ppp_hv_power_mult = {
+REPLACE_OR_CREATE:goods_output_ppp_hv_power_mult = {
 	color = good
 	percent = yes
     decimals = 1
 }
 
-state_usu_building_hydro_power_plant_max_level_add = {
+REPLACE_OR_CREATE:state_usu_building_hydro_power_plant_max_level_add = {
 	color=good
 	#num_decimals = 0
 	game_data={
@@ -30,19 +30,19 @@ state_usu_building_hydro_power_plant_max_level_add = {
 }
 
 # Forgotten Vanilla Types
-goods_input_steel_mult = {
+REPLACE_OR_CREATE:goods_input_steel_mult = {
 	color = bad
 	percent = yes
     decimals = 1
 }
 
-goods_input_tools_mult = {
+REPLACE_OR_CREATE:goods_input_tools_mult = {
 	color = bad
 	percent = yes
     decimals = 1
 }
 
-goods_output_electricity_mult = {
+REPLACE_OR_CREATE:goods_output_electricity_mult = {
 	color=good
 	percent = yes
 	decimals = 1

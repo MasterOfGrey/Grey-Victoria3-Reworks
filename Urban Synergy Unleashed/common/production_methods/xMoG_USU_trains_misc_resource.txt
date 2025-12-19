@@ -1,5 +1,6 @@
-﻿# Logging Camps
-pm_rail_transport_building_logging_camp = {
+﻿## Overwritten to remove pollution which is handled by the transport providers directly.
+# Logging Camps
+TRY_REPLACE:pm_rail_transport_building_logging_camp = {
 	texture = "gfx/interface/icons/production_method_icons/rail_transport.dds"
 	
 	unlocking_technologies = {
@@ -15,7 +16,7 @@ pm_rail_transport_building_logging_camp = {
 	}
 }
 
-pm_log_carts = {
+TRY_REPLACE:pm_log_carts = {
 	texture = "gfx/interface/icons/production_method_icons/log_carts.dds"
 	
 	unlocking_technologies = {
@@ -35,7 +36,7 @@ pm_log_carts = {
 # n/a
 
 # Everyone
-pm_unrefrigerated = {
+TRY_REPLACE:pm_unrefrigerated = {
 	texture = "gfx/interface/icons/production_method_icons/no_refrigeration.dds"
 	
 	state_modifiers = {
@@ -53,7 +54,7 @@ pm_unrefrigerated = {
 }
 
 # Fishing Wharfs
-pm_refrigerated_storage_building_fishing_wharf = {
+TRY_REPLACE:pm_refrigerated_storage_building_fishing_wharf = {
 	texture = "gfx/interface/icons/production_method_icons/refrigerated_storage.dds"
 	
 	unlocking_technologies = {
@@ -81,7 +82,7 @@ pm_refrigerated_storage_building_fishing_wharf = {
 	required_input_goods = electricity
 }
 
-pm_refrigerated_rail_cars_building_fishing_wharf = {
+TRY_REPLACE:pm_refrigerated_rail_cars_building_fishing_wharf = {
 	texture = "gfx/interface/icons/production_method_icons/refrigerated_rail_cars.dds"
 	
 	unlocking_technologies = {
@@ -109,7 +110,7 @@ pm_refrigerated_rail_cars_building_fishing_wharf = {
 	required_input_goods = electricity
 }
 
-pm_flash_freezing_building_fishing_wharf = {
+TRY_REPLACE:pm_flash_freezing_building_fishing_wharf = {
 	texture = "gfx/interface/icons/production_method_icons/flash_refrigerated.dds"
 	
 	unlocking_technologies = {
@@ -138,7 +139,7 @@ pm_flash_freezing_building_fishing_wharf = {
 }
 
 # Whaling Stations
-pm_refrigerated_storage_building_whaling_station = {
+TRY_REPLACE:pm_refrigerated_storage_building_whaling_station = {
 	texture = "gfx/interface/icons/production_method_icons/refrigerated_storage.dds"
 	
 	unlocking_technologies = {
@@ -165,7 +166,7 @@ pm_refrigerated_storage_building_whaling_station = {
 	required_input_goods = electricity
 }
 
-pm_refrigerated_rail_cars_building_whaling_station = {
+TRY_REPLACE:pm_refrigerated_rail_cars_building_whaling_station = {
 	texture = "gfx/interface/icons/production_method_icons/refrigerated_rail_cars.dds"
 	
 	unlocking_technologies = {
@@ -193,7 +194,7 @@ pm_refrigerated_rail_cars_building_whaling_station = {
 	required_input_goods = electricity
 }
 
-pm_flash_freezing_building_whaling_station = {
+TRY_REPLACE:pm_flash_freezing_building_whaling_station = {
 	texture = "gfx/interface/icons/production_method_icons/flash_refrigerated.dds"
 	
 	unlocking_technologies = {
@@ -222,7 +223,7 @@ pm_flash_freezing_building_whaling_station = {
 }
 
 # Oil Rigs
-pm_rail_transport_building_oil_rig = {
+TRY_REPLACE:pm_rail_transport_building_oil_rig = {
 	texture = "gfx/interface/icons/production_method_icons/rail_transport.dds"
 	
 	unlocking_technologies = {
@@ -239,7 +240,7 @@ pm_rail_transport_building_oil_rig = {
 	}
 }
 
-pm_tanker_cars = {
+TRY_REPLACE:pm_tanker_cars = {
 	texture = "gfx/interface/icons/production_method_icons/tanker_cars.dds"
 	
 	unlocking_technologies = {

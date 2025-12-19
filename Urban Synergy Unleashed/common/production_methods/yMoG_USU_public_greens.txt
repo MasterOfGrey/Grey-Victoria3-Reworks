@@ -1,5 +1,5 @@
 ﻿# Public Space Management
-usu_pm_community_orgs = {
+REPLACE_OR_CREATE:usu_pm_community_orgs = {
 	texture = "gfx/interface/icons/production_method_icons/subsistence_farming.dds"
 	
 	building_modifiers = {
@@ -20,7 +20,7 @@ usu_pm_community_orgs = {
 	}
 }
 
-usu_pm_private_firms = {
+REPLACE_OR_CREATE:usu_pm_private_firms = {
 	texture = "gfx/interface/icons/production_method_icons/privately_owned.dds"
 	
 	unlocking_technologies = {
@@ -47,7 +47,7 @@ usu_pm_private_firms = {
 	}
 }
 
-usu_pm_pub_priv_partners = {
+REPLACE_OR_CREATE:usu_pm_pub_priv_partners = {
 	texture = "gfx/interface/icons/production_method_icons/p_p_partners.dds"
 	
 	unlocking_technologies = {
@@ -77,7 +77,7 @@ usu_pm_pub_priv_partners = {
 }
 
 # Land Usage
-usu_pm_village_stables = {
+REPLACE_OR_CREATE:usu_pm_village_stables = {
 	texture = "gfx/interface/icons/production_method_icons/public_stables.dds"
 	
 	building_modifiers = {
@@ -92,7 +92,7 @@ usu_pm_village_stables = {
 	}
 }
 
-usu_pm_contained_wilderness = {
+REPLACE_OR_CREATE:usu_pm_contained_wilderness = {
 	texture = "gfx/interface/icons/production_method_icons/public_parks.dds"
 	
 	building_modifiers = {
@@ -107,7 +107,7 @@ usu_pm_contained_wilderness = {
 	}
 }
 
-usu_pm_seasonal_fairgrounds = {
+REPLACE_OR_CREATE:usu_pm_seasonal_fairgrounds = {
 	texture = "gfx/interface/icons/production_method_icons/public_fairgrounds.dds"
 	
 	unlocking_technologies = {

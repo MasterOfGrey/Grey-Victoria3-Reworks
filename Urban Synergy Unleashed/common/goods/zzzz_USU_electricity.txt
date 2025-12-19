@@ -1,4 +1,4 @@
-﻿electricity = {
+﻿REPLACE_OR_CREATE:electricity = {
 	texture = "gfx/interface/icons/goods_icons/electricity.dds"
 	cost = 30
 	category = industrial

@@ -4,7 +4,7 @@
 
 ## Latin Americas
 # Compañía Mexicana de Petróleo El Águila SA
-company_el_aguila = {
+TRY_REPLACE:company_el_aguila = {
 	icon = "gfx/interface/icons/company_icons/historical_company_icons/el_aguila.dds"
 	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_oil_drills.dds"
 
@@ -55,7 +55,7 @@ company_el_aguila = {
 			region = sr:region_mexico
 			is_incorporated = yes
 			is_coastal = yes
-			has_potential_resource = bg_oil_extraction
+			has_potential_resource = building_oil_rig
 		}
 	}
 
@@ -76,7 +76,7 @@ company_el_aguila = {
 }
 
 # Caribbean Petroleum Company
-company_caribbean_petroleum = {
+TRY_REPLACE:company_caribbean_petroleum = {
 	icon = "gfx/interface/icons/company_icons/historical_company_icons/venezuela_caribbean_petroleum_company.dds"
 	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_oil_drills.dds"
 
@@ -164,7 +164,7 @@ company_caribbean_petroleum = {
 
 ## Austria-Hungary
 # Galizisch-Karpathische Petroleum AG
-company_galician_carpathian_oil = {
+TRY_REPLACE:company_galician_carpathian_oil = {
 	icon = "gfx/interface/icons/company_icons/historical_company_icons/galician_carpathian_oil.dds"
 	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_oil_drills.dds"
 
@@ -214,7 +214,7 @@ company_galician_carpathian_oil = {
 
 	prosperity_modifier = {
 		building_railway_throughput_add = 0.05
-		building_tooling_workshops_throughput_add = 0.1
+		building_tooling_workshop_throughput_add = 0.1
 	}
 
 	ai_will_do = {
@@ -229,7 +229,7 @@ company_galician_carpathian_oil = {
 	}
 
 	ai_construction_targets = {
-		building_steel_mills = {
+		building_steel_mill = {
 			level = 5
 			state_trigger = {
 				OR = {
@@ -251,7 +251,7 @@ company_galician_carpathian_oil = {
 
 ## Colossus of the South (cots) (More Latin Americas)
 # C.A. La Electricidad de Caracas
-company_electricidad_de_caracas = {
+TRY_REPLACE:company_electricidad_de_caracas = {
 	icon = "gfx/interface/icons/company_icons/historical_company_icons/venezuela_c_a_la_electricidad_de_caracas.dds"
 	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufacturing_light.dds"
 
@@ -323,7 +323,7 @@ company_electricidad_de_caracas = {
 }
 
 # Empresas Eléctricas Asociadas
-company_eea = {
+TRY_REPLACE:company_eea = {
 	icon = "gfx/interface/icons/company_icons/historical_company_icons/peru_empresas_electricas_asociadas.dds"
 	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufacturing_light.dds"
 
@@ -396,7 +396,7 @@ company_eea = {
 
 ## Europe
 # Koninklijke Nederlandse Petroleum Maatschappij
-company_nederlandse_petroleum = {
+TRY_REPLACE:company_nederlandse_petroleum = {
 	icon = "gfx/interface/icons/company_icons/historical_company_icons/maatschappij.dds"
 	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_oil_drills.dds"
 
@@ -436,7 +436,7 @@ company_nederlandse_petroleum = {
 		any_scope_state = {
 			region = sr:region_indonesia
 			is_incorporated = yes
-			has_potential_resource = bg_oil_extraction
+			has_potential_resource = building_oil_rig
 		}
 	}
 
@@ -456,7 +456,7 @@ company_nederlandse_petroleum = {
 }
 
 # Steaua Română
-company_romanian_star = {
+TRY_REPLACE:company_romanian_star = {
 	icon = "gfx/interface/icons/company_icons/historical_company_icons/romania_steaua_romana.dds"
 	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_oil_drills.dds"
 
@@ -534,7 +534,7 @@ company_romanian_star = {
 
 ## Pivot of Empire? (ip2)
 # Calcutta Electric Supply Corporation Limited
-company_calcutta_electric = {
+TRY_REPLACE:company_calcutta_electric = {
 	icon = "gfx/interface/icons/company_icons/historical_company_icons/ip2_calcutta_electric.dds"
 	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufacturing_light.dds"
 
@@ -611,7 +611,7 @@ company_calcutta_electric = {
 
 ## Charters of Commerce (mp1)
 # Norsk Hydroelektrisk Kvælstofaktieselskap
-company_norsk_hydro = {
+TRY_REPLACE:company_norsk_hydro = {
 	icon = "gfx/interface/icons/company_icons/historical_company_icons/company_norsk_hydro.dds"
 	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufacturing_light.dds"
 
@@ -620,7 +620,7 @@ company_norsk_hydro = {
 	preferred_headquarters = { STATE_WESTERN_NORWAY }
 
 	building_types = {
-		building_chemical_plants
+		building_chemical_plant
 		usu_building_hydro_power_plant
 		ppp_building_power_grid
 	}
@@ -643,7 +643,7 @@ company_norsk_hydro = {
 			state_region = s:STATE_WESTERN_NORWAY
 			is_incorporated = yes
 			any_scope_building = {
-				is_building_type = building_chemical_plants
+				is_building_type = building_chemical_plant
 				level >= 5
 			}
 			any_scope_building = {
@@ -666,7 +666,7 @@ company_norsk_hydro = {
 	}
 
 	ai_construction_targets = {
-		building_chemical_plants = {
+		building_chemical_plant = {
 			level = 5
 			state_trigger = {
 				state_region = s:STATE_WESTERN_NORWAY
@@ -687,7 +687,7 @@ company_norsk_hydro = {
 
 ## Russia
 # The Petroleum Production Company Nobel Brothers, Limited
-company_branobel = {
+TRY_REPLACE:company_branobel = {
 	icon = "gfx/interface/icons/company_icons/historical_company_icons/russian_branobel.dds"
 	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_oil_drills.dds"
 
@@ -759,7 +759,7 @@ company_branobel = {
 
 ## Sphere of Influence (soi)
 # West Ural Petroleum Company, Limited
-company_west_ural_petroleum = {
+TRY_REPLACE:company_west_ural_petroleum = {
 	icon = "gfx/interface/icons/company_icons/historical_company_icons/historical_west_ural_petroleum_company_limited.dds"
 	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_oil_drills.dds"
 
@@ -830,7 +830,7 @@ company_west_ural_petroleum = {
 }
 
 # Hanseong Jeongi Hoesa
-company_hanseong_jeongi_hoesa = {
+TRY_REPLACE:company_hanseong_jeongi_hoesa = {
 	icon = "gfx/interface/icons/company_icons/historical_company_icons/hanseong_jeongi_hoesa.dds"
 	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufacturing_heavy.dds"
 
@@ -877,7 +877,7 @@ company_hanseong_jeongi_hoesa = {
 	}
 
 	prosperity_modifier = {
-		building_arts_academy_throughput_add = 0.05
+		building_art_academy_throughput_add = 0.05
 		building_railway_throughput_add = 0.05
 	}
 
@@ -904,7 +904,7 @@ company_hanseong_jeongi_hoesa = {
 }
 
 # Turkish Petroleum Company
-company_turkish_petroleum = {
+TRY_REPLACE:company_turkish_petroleum = {
 	icon = "gfx/interface/icons/company_icons/historical_company_icons/turkish_petroleum_company.dds"
 	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_oil_drills.dds"
 
@@ -990,7 +990,7 @@ company_turkish_petroleum = {
 }
 
 # Anglo-Persian Oil Company
-company_anglo_persian_oil = {
+TRY_REPLACE:company_anglo_persian_oil = {
 	icon = "gfx/interface/icons/company_icons/historical_company_icons/anglo_persian_oil_company.dds"
 	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_oil_drills.dds"
 
@@ -1084,7 +1084,7 @@ company_anglo_persian_oil = {
 }
 
 # National Iranian Oil Company
-company_national_iranian_oil = {
+TRY_REPLACE:company_national_iranian_oil = {
 	icon = "gfx/interface/icons/company_icons/historical_company_icons/national_iranian_oil_company.dds"
 	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_oil_drills.dds"
 
@@ -1179,7 +1179,7 @@ company_national_iranian_oil = {
 
 ## USA
 # General Electric
-company_general_electric = {
+TRY_REPLACE:company_general_electric = {
 	icon = "gfx/interface/icons/company_icons/historical_company_icons/american_general_electric.dds"
 	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufacturing_heavy.dds"
 
@@ -1268,20 +1268,20 @@ company_general_electric = {
 
 ## ip3
 # Getzner, Mutter & Cie
-company_getzner_mutter = {
+TRY_REPLACE:company_getzner_mutter = {
 	icon = "gfx/interface/icons/company_icons/historical_company_icons/company_getzner_mutter.dds"
 	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufacturing_light.dds"
 
 	flavored_company = yes
 
 	building_types = {
-		building_textile_mills
+		building_textile_mill
 		usu_building_hydro_power_plant
 		ppp_building_power_grid
 	}
 
 	extension_building_types = {
-		building_synthetics_plants
+		building_synthetics_plant
 		building_power_plant
 	}
 
@@ -1302,7 +1302,7 @@ company_getzner_mutter = {
 			state_region = s:STATE_TYROL
 			is_incorporated = yes
 			any_scope_building = {
-				is_building_type = building_textile_mills
+				is_building_type = building_textile_mill
 				level >= 5
 			}
 			any_scope_building = {
@@ -1312,7 +1312,7 @@ company_getzner_mutter = {
 	}
 
 	prosperity_modifier = {
-		building_synthetics_plants_throughput_add = 0.1
+		building_synthetics_plant_throughput_add = 0.1
 		interest_group_ig_petty_bourgeoisie_approval_add = 2
 	}
 

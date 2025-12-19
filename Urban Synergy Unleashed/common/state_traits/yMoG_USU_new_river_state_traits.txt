@@ -1,4 +1,4 @@
-﻿state_trait_hudson_river = {
+﻿REPLACE_OR_CREATE:state_trait_hudson_river = {
 	icon = "gfx/interface/icons/state_trait_icons/river.dds"
 	modifier = {
 		state_building_river_port_max_level_add = 2

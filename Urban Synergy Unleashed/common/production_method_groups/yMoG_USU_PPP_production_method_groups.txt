@@ -1,5 +1,5 @@
 ﻿# Thermal Power Plants
-pmg_base_building_power_plant = {
+REPLACE_OR_CREATE:pmg_base_building_power_plant = {
 	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
 	
 	production_methods = {
@@ -10,7 +10,7 @@ pmg_base_building_power_plant = {
 	}
 }
 
-PPP_pmg_generation_machinery = {
+REPLACE_OR_CREATE:PPP_pmg_generation_machinery = {
 	texture = "gfx/interface/icons/generic_icons/mixed_icon_refining.dds"
 	ai_selection = most_productive
 	
@@ -22,7 +22,7 @@ PPP_pmg_generation_machinery = {
 	}
 }
 
-PPP_pmg_HV_generation = {
+REPLACE_OR_CREATE:PPP_pmg_HV_generation = {
 	texture = "gfx/interface/icons/generic_icons/mixed_icon_refining.dds"
 	
 	production_methods = {
@@ -43,7 +43,7 @@ PPP_pmg_HV_generation = {
 }
 
 # Grid Distribution Networks
-PPP_pmg_power_grid = {
+REPLACE_OR_CREATE:PPP_pmg_power_grid = {
 	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
 	
 	production_methods = {
@@ -51,7 +51,7 @@ PPP_pmg_power_grid = {
 	}
 }
 
-PPP_pmg_power_grid_scaler = {
+REPLACE_OR_CREATE:PPP_pmg_power_grid_scaler = {
 	texture = "gfx/interface/icons/generic_icons/mixed_icon_refining.dds"
 	ai_selection = most_productive
 	
@@ -64,7 +64,7 @@ PPP_pmg_power_grid_scaler = {
 }
 
 # Hydro Power Plants
-hp_pmg_hydro_power_plant = {
+REPLACE_OR_CREATE:hp_pmg_hydro_power_plant = {
 	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
 	production_methods = {
 		hp_pm_hydro_plant_1
@@ -73,7 +73,7 @@ hp_pmg_hydro_power_plant = {
 	}
 }
 
-hp_pmg_turbines = {
+REPLACE_OR_CREATE:hp_pmg_turbines = {
 	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
 	production_methods = {
 		hp_pm_turbine_1
@@ -82,7 +82,7 @@ hp_pmg_turbines = {
 	}
 }
 
-hp_pmg_HV_generation = {
+REPLACE_OR_CREATE:hp_pmg_HV_generation = {
 	texture = "gfx/interface/icons/generic_icons/mixed_icon_refining.dds"
 	
 	production_methods = {

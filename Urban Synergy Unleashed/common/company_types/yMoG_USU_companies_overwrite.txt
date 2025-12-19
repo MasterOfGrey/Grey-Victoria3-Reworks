@@ -1,5 +1,5 @@
 ﻿### DEFAULT COMPANIES
-company_basic_fishing = {
+TRY_REPLACE:company_basic_fishing = {
 	icon = "gfx/interface/icons/company_icons/basic_fishing.dds"
 	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_farm_corn.dds"
 
@@ -23,7 +23,7 @@ company_basic_fishing = {
 	}
 
 	extension_building_types = {
-		building_shipyards
+		building_shipyard
 		building_port
 		building_river_port
 	}
@@ -53,7 +53,7 @@ company_basic_fishing = {
 
 	prosperity_modifier = {
 		country_convoys_capacity_mult = 0.1
-		building_shipyards_throughput_add = 0.05
+		building_shipyard_throughput_add = 0.05
 	}
 
 	ai_will_do = {
@@ -69,8 +69,8 @@ company_basic_fishing = {
 	}
 }
 
-company_basic_shipyards = {
-	icon = "gfx/interface/icons/company_icons/basic_shipyards.dds"
+TRY_REPLACE:company_basic_shipyards = {
+	icon = "gfx/interface/icons/company_icons/basic_shipyard.dds"
 	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_harbor_shipbuilding.dds"
 	
 	flavored_company = no
@@ -87,8 +87,8 @@ company_basic_shipyards = {
 	}
 	
 	building_types = {
-		building_shipyards
-		building_military_shipyards
+		building_shipyard
+		building_military_shipyard
 	}
 	
 	extension_building_types = {
@@ -104,8 +104,8 @@ company_basic_shipyards = {
 			is_incorporated = yes
 			any_scope_building = {
 				OR = {
-					is_building_type = building_shipyards
-					is_building_type = building_military_shipyards
+					is_building_type = building_shipyard
+					is_building_type = building_military_shipyard
 				}
 				level >= 3
 			}
@@ -121,8 +121,8 @@ company_basic_shipyards = {
 			is_incorporated = yes
 			any_scope_building = {
 				OR = {
-					is_building_type = building_shipyards
-					is_building_type = building_military_shipyards
+					is_building_type = building_shipyard
+					is_building_type = building_military_shipyard
 				}
 				level >= 5
 			}
@@ -130,7 +130,7 @@ company_basic_shipyards = {
 	}
 }
 
-company_basic_motors = {
+TRY_REPLACE:company_basic_motors = {
 	icon = "gfx/interface/icons/company_icons/basic_motors.dds"
 	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufacturing_heavy.dds"
 
@@ -153,7 +153,7 @@ company_basic_motors = {
 	}
 
 	extension_building_types = {
-		building_steel_mills
+		building_steel_mill
 		building_railway
 	}
 

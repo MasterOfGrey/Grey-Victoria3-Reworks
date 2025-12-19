@@ -1,6 +1,6 @@
 ﻿## Base PM
 
-pm_canal = {
+REPLACE_OR_CREATE:pm_canal = {
 	texture = "gfx/interface/icons/production_method_icons/canals_coal.dds"
 	
 	country_modifiers = {
@@ -39,7 +39,7 @@ pm_canal = {
 	}
 }
 
-pm_canals_electric = {
+REPLACE_OR_CREATE:pm_canals_electric = {
 	texture = "gfx/interface/icons/production_method_icons/canals_electric.dds"
 	
 	country_modifiers = {
@@ -77,7 +77,8 @@ pm_canals_electric = {
 		}
 	}
 }
-pm_canals_oil = {
+
+REPLACE_OR_CREATE:pm_canals_oil = {
 	texture = "gfx/interface/icons/production_method_icons/canals_oil.dds"
 	
 	country_modifiers = {
@@ -118,11 +119,11 @@ pm_canals_oil = {
 
 ## Canal Tugboats
 
-pm_no_tugs_building_canals = {
+REPLACE_OR_CREATE:pm_no_tugs_building_canals = {
 	texture = "gfx/interface/icons/production_method_icons/canals.dds"
 }
 
-pm_tugging_building_canals = {
+REPLACE_OR_CREATE:pm_tugging_building_canals = {
 	texture = "gfx/interface/icons/production_method_icons/reinforced_steam_ships.dds"
 	
 	unlocking_technologies = {
@@ -146,11 +147,11 @@ pm_tugging_building_canals = {
 
 ## Canal Logistics
 
-pm_no_canal_logistics = {
+REPLACE_OR_CREATE:pm_no_canal_logistics = {
 	texture = "gfx/interface/icons/production_method_icons/log_0.dds"
 }
 
-pm_minor_canal_logistics = {
+REPLACE_OR_CREATE:pm_minor_canal_logistics = {
 	texture = "gfx/interface/icons/production_method_icons/canals_sail.dds"
 	
 	unlocking_technologies = {
@@ -165,7 +166,7 @@ pm_minor_canal_logistics = {
 	}
 }
 
-pm_major_canal_logistics = {
+REPLACE_OR_CREATE:pm_major_canal_logistics = {
 	texture = "gfx/interface/icons/production_method_icons/canals_steam.dds"
 	
 	unlocking_technologies = {
