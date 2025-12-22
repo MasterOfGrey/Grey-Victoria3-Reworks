@@ -128,9 +128,9 @@ REPLACE_OR_CREATE:bg_government = {
 }
 
 ## Financial Districts & Company Headquarters
-INJECT:bg_owner_buildings = {
-	ignores_productivity_when_hiring = no
-}
+#INJECT:bg_owner_buildings = {
+#	ignores_productivity_when_hiring = no		# DO NOT DO THIS - buildings with no actual outputs fail
+#}
 # Enabling some urbanization lets them contribute to generating the services they then consume.
 REPLACE_OR_CREATE:bg_financial_districts = {
 	parent_group = bg_owner_buildings
