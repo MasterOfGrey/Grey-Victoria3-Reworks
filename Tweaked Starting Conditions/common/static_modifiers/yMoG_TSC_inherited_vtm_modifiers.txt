@@ -1,4 +1,4 @@
-﻿weakened_by_internal_war = {
+﻿REPLACE_OR_CREATE:weakened_by_internal_war = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_fire_negative.dds
 	interest_group_pol_str_mult = -0.5
 }

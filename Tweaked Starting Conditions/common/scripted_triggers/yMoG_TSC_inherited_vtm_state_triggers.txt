@@ -1,4 +1,4 @@
-﻿is_cold_water_port = {
+﻿REPLACE_OR_CREATE:is_cold_water_port = {
 	OR = {
 		# RUS
 		state_region = s:STATE_EAST_KARELIA
@@ -21,7 +21,7 @@
 	}
 }
 
-is_difficult_terrain = {
+REPLACE_OR_CREATE:is_difficult_terrain = {
 	OR = {
 		# Europe
 		has_state_trait = state_trait_scottish_highlands
@@ -43,7 +43,7 @@ is_difficult_terrain = {
 	}
 }
 
-is_very_difficult_terrain = {
+REPLACE_OR_CREATE:is_very_difficult_terrain = {
 	OR = {
 		# Europe
 		has_state_trait = state_trait_alps_mountains

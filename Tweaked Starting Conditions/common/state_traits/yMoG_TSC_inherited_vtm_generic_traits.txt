@@ -1,4 +1,4 @@
-﻿state_trait_cold_water_port = {
+﻿REPLACE_OR_CREATE:state_trait_cold_water_port = {
 	icon = "gfx/interface/icons/state_trait_icons/cold_water_port.dds"
 
 	modifier = {
@@ -9,7 +9,7 @@
 	}
 }
 
-state_trait_difficult_terrain = {
+REPLACE_OR_CREATE:state_trait_difficult_terrain = {
 	icon = "gfx/interface/icons/state_trait_icons/difficult_terrain.dds"
 
 	disabling_technologies = { "nitroglycerin" }
@@ -19,7 +19,7 @@ state_trait_difficult_terrain = {
 	}
 }
 
-state_trait_very_difficult_terrain = {
+REPLACE_OR_CREATE:state_trait_very_difficult_terrain = {
 	icon = "gfx/interface/icons/state_trait_icons/very_difficult_terrain.dds"
 
 	disabling_technologies = { "dynamite" }
