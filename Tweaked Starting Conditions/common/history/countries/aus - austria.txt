@@ -23,18 +23,26 @@
 		activate_law = law_type:law_public_schools
 		activate_law = law_type:law_censorship
 		activate_law = law_type:law_land_based_taxation
+		#activate_law = law_type:law_secret_police # TSC - removed
 		activate_law = law_type:law_guild_system # Heavily restricted, but still extant until 1859
+
+		active_law:lawgroup_distribution_of_power ?= { # Autocracy
+			add_amendment = {
+				type = amendment_geheime_staatskonferenz
+				sponsor = PREV.ig:ig_landowners # Franz was a Landowner, I suppose
+			}
+		}
 
 		set_institution_investment_level = {
 			institution = institution_schools
 			level = 1
 		}
 		
-		set_institution_investment_level = {
-			institution = institution_police
-			level = 2
-		}
-		
+		#set_institution_investment_level = { # TSC - removed
+		#	institution = institution_police
+		#	level = 2
+		#}	
+
 		set_institution_investment_level = {
 			institution = institution_home_affairs
 			level = 1
@@ -43,7 +51,7 @@
 		# Geheime Staatskonferenz
 		ig:ig_landowners ?= {
 			add_ruling_interest_group = yes
-			add_ideology = ideology_austrian_hegemony
+			add_ideology = ideology_austrian_hegemony # TSC - new
 			set_interest_group_name = austrian_aristocracy
 		}
 		ig:ig_armed_forces ?= {
@@ -56,8 +64,6 @@
 		add_journal_entry = {
 			type = je_matter_of_hungary
 		}
-
-		add_modifier = { name = modifier_geheime_staatskonferenz }
 
 		start_national_awakening = {
 			culture = cu:czech

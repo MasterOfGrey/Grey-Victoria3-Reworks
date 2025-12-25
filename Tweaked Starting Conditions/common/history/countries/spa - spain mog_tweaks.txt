@@ -1,0 +1,19 @@
+﻿COUNTRIES = {
+	c:SPA ?= {
+		ig:ig_landowners ?= {
+			add_modifier = {
+				name = weakened_by_internal_war
+				years = 10
+				is_decaying = yes
+			}
+		}
+		
+		ig:ig_devout ?= {
+			add_modifier = {
+				name = weakened_by_internal_war
+				years = 10
+				is_decaying = yes
+			}
+		}
+	}
+}

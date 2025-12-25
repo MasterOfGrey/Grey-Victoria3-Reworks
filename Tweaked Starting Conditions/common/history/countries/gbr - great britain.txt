@@ -104,5 +104,13 @@
 			set_company_state_region = s:STATE_HOME_COUNTIES
 			add_owned_country = c:BIC #links the country to this company
 		}
+				
+		set_variable = free_elections_var
+		active_law:lawgroup_distribution_of_power ?= { # Wealth Voting - Reform Act
+			add_amendment = {
+				type = amendment_tradition_of_free_elections
+				sponsor = PREV.ig:ig_intelligentsia
+			}
+		}
 	}
 }
