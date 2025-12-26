@@ -36,6 +36,13 @@
 		activate_law = law_type:law_combination_acts # Legacy of the Napoleonic Code and 1791 Le Chapelier Law
 		activate_law = law_type:law_colonial_slavery # Slavery in French colonies was only abolished in 1848
 
+		active_law:lawgroup_distribution_of_power ?= { # Wealth Voting
+			add_amendment = {
+				type = amendment_200_franc_suffrage
+				sponsor = PREV.ig:ig_industrialists
+				cooldown = 48
+			}
+		}
 
 		set_institution_investment_level = {
 			institution = institution_schools
@@ -52,7 +59,7 @@
 			level = 1
 		}
 
-		ig:ig_landowners ?= { # Victor de Broglie was Prime Minister until February 22, 1836
+		ig:ig_intelligentsia ?= { # Victor de Broglie was Prime Minister until February 22, 1836
 			add_ruling_interest_group = yes
 		}
 
@@ -89,6 +96,14 @@
 		company:company_dmc = {
 			set_company_establishment_date = 1746.1.1
 			set_company_state_region = s:STATE_ALSACE_LORRAINE
+		}
+
+		set_variable = free_elections_var
+		active_law:lawgroup_distribution_of_power ?= { # Wealth Voting - the July Monarchy couldn't properly rig an election to save their lives
+			add_amendment = {
+				type = amendment_tradition_of_free_elections
+				sponsor = PREV.ig:ig_intelligentsia
+			}
 		}
 	}
 }
