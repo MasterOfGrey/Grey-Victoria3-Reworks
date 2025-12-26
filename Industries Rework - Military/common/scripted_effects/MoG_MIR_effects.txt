@@ -1,0 +1,71 @@
+﻿# The AI will quickly change PM if they're in an odd situation where mobilisation is very unprofitable, but they're very slow to mobilise when they should be because profit change is smaller at war start and this affects their bottom line badly.
+mog_mir_mobilise_ai_industries = {
+	if = {
+		limit = { is_player = no }
+		every_scope_state = {
+			if = {
+				limit = { has_building = building_arms_industry }
+				mog_mir_set_arms_mobilised = yes
+			}
+			if = {
+				limit = { has_building = building_artillery_foundry }
+				mog_mir_set_arty_mobilised = yes
+			}
+			if = {
+				limit = { has_building = building_munition_plant }
+				mog_mir_set_ammo_mobilised = yes
+			}
+		}
+	}
+}
+
+mog_mir_set_arms_mobilised = {
+	if = {
+		limit = {
+			NOT = {
+				is_production_method_active = {
+					building_type = building_arms_industry
+					production_method = pm_no_tools_a
+				}
+			}
+		}
+		activate_production_method = {
+			building_type     = building_arms_industry
+			production_method = pm_no_tools_a
+		}
+	}
+}
+
+mog_mir_set_arty_mobilised = {
+	if = {
+		limit = {
+			NOT = {
+				is_production_method_active = {
+					building_type = building_artillery_foundry
+					production_method = pm_no_tools_a
+				}
+			}
+		}
+		activate_production_method = {
+			building_type     = building_artillery_foundry
+			production_method = pm_no_tools_a
+		}
+	}
+}
+
+mog_mir_set_ammo_mobilised = {
+	if = {
+		limit = {
+			NOT = {
+				is_production_method_active = {
+					building_type = building_munition_plant
+					production_method = pm_no_self_explosives
+				}
+			}
+		}
+		activate_production_method = {
+			building_type     = building_munition_plant
+			production_method = pm_no_self_explosives
+		}
+	}
+}

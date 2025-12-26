@@ -5,7 +5,7 @@
 # texture = "gfx/interface/icons/production_method_icons/steel_tools.dds"
 
 ## Percussion Caps (Le Blanc & Ammonium Soda)
-pm_percussion_caps = {
+REPLACE_OR_CREATE:pm_percussion_caps = {
 	texture = "gfx/interface/icons/production_method_icons/percussion_caps.dds"
 	
 	state_modifiers = {
@@ -33,7 +33,7 @@ pm_percussion_caps = {
 	}
 }
 
-pm_extensive_ammo_le = {
+REPLACE_OR_CREATE:pm_extensive_ammo_le = {
 	texture = "gfx/interface/icons/production_method_icons/leblanc_process.dds"
 	is_hidden_when_unavailable = yes
 	
@@ -47,16 +47,16 @@ pm_extensive_ammo_le = {
 			goods_input_lead_add = -10
 			goods_input_sulfur_add = 10
 			goods_input_fertilizer_add = 10
-			goods_input_explosives_add = -38 # -20
+			goods_input_explosives_add = -19 # -38 # -20	# Negating the inputs in place of the outputs actually screws with the broader market, so keep the proportionally appropriate inputs
 			
 			# output goods
 			goods_output_ammunition_add = -40 # -25
-			goods_output_explosives_add = 6 # 5
+			goods_output_explosives_add = 20	# 80% efficient
 		}
 	}
 }
 
-pm_moderate_ammo_le = {
+REPLACE_OR_CREATE:pm_moderate_ammo_le = {
 	texture = "gfx/interface/icons/production_method_icons/leblanc_process.dds"
 	is_hidden_when_unavailable = yes
 	
@@ -70,15 +70,16 @@ pm_moderate_ammo_le = {
 			goods_input_lead_add = -6
 			goods_input_sulfur_add = 6
 			goods_input_fertilizer_add = 6
-			goods_input_explosives_add = -27 # -15
+			goods_input_explosives_add = -11.4 # -27 # -15
 			
 			# output goods
 			goods_output_ammunition_add = -24 # -15
+			goods_output_explosives_add = 12.5	# 80% efficient
 		}
 	}
 }
 
-pm_limited_ammo_le = {
+REPLACE_OR_CREATE:pm_limited_ammo_le = {
 	texture = "gfx/interface/icons/production_method_icons/leblanc_process.dds"
 	is_hidden_when_unavailable = yes
 	
@@ -92,15 +93,16 @@ pm_limited_ammo_le = {
 			goods_input_lead_add = -2
 			goods_input_sulfur_add = 2
 			goods_input_fertilizer_add = 2
-			goods_input_explosives_add = -9 # -5
+			goods_input_explosives_add = -3.8 # -9 # -5
 			
 			# output goods
 			goods_output_ammunition_add = -8 # -5
+			goods_output_explosives_add = 4	# 80% efficient
 		}
 	}
 }
 
-pm_extensive_ammo_ni = {
+REPLACE_OR_CREATE:pm_extensive_ammo_ni = {
 	texture = "gfx/interface/icons/production_method_icons/ammonia_soda_process.dds"
 	is_hidden_when_unavailable = yes
 	
@@ -119,16 +121,16 @@ pm_extensive_ammo_ni = {
 			goods_input_sulfur_add = 15
 			goods_input_fertilizer_add = 15
 			goods_input_paper_add = 5 # 0
-			goods_input_explosives_add = -38 # -20
+			goods_input_explosives_add = -19 # -38 # -20
 			
 			# output goods
 			goods_output_ammunition_add = -40 # -25
-			goods_output_explosives_add = 21 # 20
+			goods_output_explosives_add = 32	# 85% efficient
 		}
 	}
 }
 
-pm_moderate_ammo_ni = {
+REPLACE_OR_CREATE:pm_moderate_ammo_ni = {
 	texture = "gfx/interface/icons/production_method_icons/ammonia_soda_process.dds"
 	is_hidden_when_unavailable = yes
 	
@@ -147,16 +149,16 @@ pm_moderate_ammo_ni = {
 			goods_input_sulfur_add = 9
 			goods_input_fertilizer_add = 9
 			goods_input_paper_add = 3 # 0
-			goods_input_explosives_add = -36 # -20
+			goods_input_explosives_add = -11.4 # -36 # -20
 			
 			# output goods
 			goods_output_ammunition_add = -24 # -15
-			# goods_output_explosives_add = 0 # 4
+			goods_output_explosives_add = 20.4	# 85% efficient
 		}
 	}
 }
 
-pm_limited_ammo_ni = {
+REPLACE_OR_CREATE:pm_limited_ammo_ni = {
 	texture = "gfx/interface/icons/production_method_icons/ammonia_soda_process.dds"
 	is_hidden_when_unavailable = yes
 	
@@ -175,16 +177,17 @@ pm_limited_ammo_ni = {
 			goods_input_sulfur_add = 3
 			goods_input_fertilizer_add = 3
 			goods_input_paper_add = 1 # 0
-			goods_input_explosives_add = -12 # -8
+			goods_input_explosives_add = -3.8 # -12 # -8
 			
 			# output goods
 			goods_output_ammunition_add = -8 # -5
+			goods_output_explosives_add = 6.8	# 85% efficient
 		}
 	}
 }
 
 ## Explosive Shells (Vacuum Evaporation & Brine Electrolysis)
-pm_explosive_shells = {
+REPLACE_OR_CREATE:pm_explosive_shells = {
 	texture = "gfx/interface/icons/production_method_icons/explosive_shells.dds"
 	
 	unlocking_technologies = {
@@ -216,7 +219,7 @@ pm_explosive_shells = {
 	}
 }
 
-pm_extensive_ammo_dy = {
+REPLACE_OR_CREATE:pm_extensive_ammo_dy = {
 	texture = "gfx/interface/icons/production_method_icons/vaccum_evaporation.dds"
 	is_hidden_when_unavailable = yes
 	
@@ -231,16 +234,16 @@ pm_extensive_ammo_dy = {
 			goods_input_sulfur_add = 20
 			goods_input_fertilizer_add = 20
 			goods_input_paper_add = 10 # 15
-			goods_input_explosives_add = -68 # -40
+			goods_input_explosives_add = -34 # -68 # -40
 			
 			# output goods
 			goods_output_ammunition_add = -75 # -45
-			goods_output_explosives_add = 21 # 15
+			goods_output_explosives_add = 49.5			# 90% efficient
 		}
 	}
 }
 
-pm_moderate_ammo_dy = {
+REPLACE_OR_CREATE:pm_moderate_ammo_dy = {
 	texture = "gfx/interface/icons/production_method_icons/vaccum_evaporation.dds"
 	is_hidden_when_unavailable = yes
 	
@@ -255,15 +258,16 @@ pm_moderate_ammo_dy = {
 			goods_input_sulfur_add = 12
 			goods_input_fertilizer_add = 12
 			goods_input_paper_add = 6 # 9
-			goods_input_explosives_add = -54 # -33
+			goods_input_explosives_add = -20.4 # -54 # -33
 			
 			# output goods
 			goods_output_ammunition_add = -45 # -27
+			goods_output_explosives_add = 29.7			# 90% efficient
 		}
 	}
 }
 
-pm_limited_ammo_dy = {
+REPLACE_OR_CREATE:pm_limited_ammo_dy = {
 	texture = "gfx/interface/icons/production_method_icons/vaccum_evaporation.dds"
 	is_hidden_when_unavailable = yes
 	
@@ -278,15 +282,16 @@ pm_limited_ammo_dy = {
 			goods_input_sulfur_add = 4
 			goods_input_fertilizer_add = 4
 			goods_input_paper_add = 2 # 3
-			goods_input_explosives_add = -18 # -11
+			goods_input_explosives_add = -6.8 # -18 # -11
 			
 			# output goods
 			goods_output_ammunition_add = -15 # -9
+			goods_output_explosives_add = 9.9			# 90% efficient
 		}
 	}
 }
 
-pm_extensive_ammo_br = {
+REPLACE_OR_CREATE:pm_extensive_ammo_br = {
 	texture = "gfx/interface/icons/production_method_icons/vaccum_brine_electrolysis.dds"
 	is_hidden_when_unavailable = yes
 	
@@ -307,16 +312,16 @@ pm_extensive_ammo_br = {
 			goods_input_fertilizer_add = 25
 			goods_input_paper_add = 15
 			goods_input_electricity_add = 10
-			goods_input_explosives_add = -68 # -40
+			goods_input_explosives_add = -34 # -68 # -40
 			
 			# output goods
 			goods_output_ammunition_add = -75 # -45
-			goods_output_explosives_add = 41 # 35
+			goods_output_explosives_add = 71.25			# 95% efficient
 		}
 	}
 }
 
-pm_moderate_ammo_br = {
+REPLACE_OR_CREATE:pm_moderate_ammo_br = {
 	texture = "gfx/interface/icons/production_method_icons/vaccum_brine_electrolysis.dds"
 	is_hidden_when_unavailable = yes
 	
@@ -337,16 +342,16 @@ pm_moderate_ammo_br = {
 			goods_input_fertilizer_add = 15
 			goods_input_paper_add = 9
 			goods_input_electricity_add = 6
-			goods_input_explosives_add = -66 # -40
+			goods_input_explosives_add = -20.4 # -66 # -40
 			
 			# output goods
 			goods_output_ammunition_add = -45 # -27
-			# goods_output_explosives_add = 0 # 5
+			goods_output_explosives_add = 42.75			# 95% efficient
 		}
 	}
 }
 
-pm_limited_ammo_br = {
+REPLACE_OR_CREATE:pm_limited_ammo_br = {
 	texture = "gfx/interface/icons/production_method_icons/vaccum_brine_electrolysis.dds"
 	is_hidden_when_unavailable = yes
 	
@@ -367,20 +372,21 @@ pm_limited_ammo_br = {
 			goods_input_fertilizer_add = 5
 			goods_input_paper_add = 3
 			goods_input_electricity_add = 2
-			goods_input_explosives_add = -22 # -15
+			goods_input_explosives_add = -6.8 # -22 # -15
 			
 			# output goods
 			goods_output_ammunition_add = -15 # -9
+			goods_output_explosives_add = 14.25			# 95% efficient
 		}
 	}
 }
 
-pm_no_self_explosives = {
+REPLACE_OR_CREATE:pm_no_self_explosives = {
 	texture = "gfx/interface/icons/production_method_icons/no_demobilisation.dds"
 }
 
 ### Automation Replacements ###
-pm_rotary_valve_engine_building_munition_plants = {
+REPLACE_OR_CREATE:pm_rotary_valve_engine_building_munition_plants = {
 	texture = "gfx/interface/icons/production_method_icons/rotary_valve_engine.dds"
 	
 	state_modifiers = {
@@ -404,7 +410,7 @@ pm_rotary_valve_engine_building_munition_plants = {
 	}
 }
 
-pm_assembly_lines_building_munition_plants = {
+REPLACE_OR_CREATE:pm_assembly_lines_building_munition_plants = {
 	texture = "gfx/interface/icons/production_method_icons/assembly_lines.dds"
 	
 	state_modifiers = {

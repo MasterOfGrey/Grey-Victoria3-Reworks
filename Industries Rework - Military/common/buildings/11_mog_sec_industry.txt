@@ -1,6 +1,6 @@
 ﻿# This file is secondary industries with related PM's for either consistency or to deal with industries touched by other balance changes
 
-building_electrics_industry = {
+TRY_REPLACE:building_electrics_industry = {
 	building_group = bg_heavy_industry
 	icon = "gfx/interface/icons/building_icons/electrics_industry.dds"
 	city_type = city
@@ -33,7 +33,7 @@ building_electrics_industry = {
 	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_heavy_industry.dds"
 }
 
-building_motor_industry = {
+TRY_REPLACE:building_motor_industry = {
 	building_group = bg_heavy_industry
 	icon = "gfx/interface/icons/building_icons/motor_industry.dds"
 	city_type = city
@@ -65,7 +65,7 @@ building_motor_industry = {
 	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_heavy_industry.dds"
 }
 
-building_explosives_factory = {
+TRY_REPLACE:building_explosives_factory = {
 	building_group = bg_heavy_industry
 	icon = "gfx/interface/icons/building_icons/explosives_factory.dds"
 

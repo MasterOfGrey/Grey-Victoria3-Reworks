@@ -1,4 +1,4 @@
-﻿pm_mechanical_mixers_building_explosives_factory = {
+﻿REPLACE_OR_CREATE:pm_mechanical_mixers_building_explosives_factory = {
 	texture = "gfx/interface/icons/production_method_icons/mechanized_looms.dds"
 	
 	unlocking_technologies = {
@@ -16,7 +16,7 @@
 	}
 }
 
-pm_rotary_valve_engine_building_explosives_factory = {
+REPLACE_OR_CREATE:pm_rotary_valve_engine_building_explosives_factory = {
 	texture = "gfx/interface/icons/production_method_icons/rotary_valve_engine.dds"
 	
 	state_modifiers = {
@@ -41,7 +41,7 @@ pm_rotary_valve_engine_building_explosives_factory = {
 	}
 }
 
-pm_assembly_lines_building_explosives_factory = {
+REPLACE_OR_CREATE:pm_assembly_lines_building_explosives_factory = {
 	texture = "gfx/interface/icons/production_method_icons/assembly_lines.dds"
 	
 	state_modifiers = {
@@ -69,7 +69,7 @@ pm_assembly_lines_building_explosives_factory = {
 	required_input_goods = electricity
 }
 
-pm_full_process_automation_building_explosives_factory = {
+REPLACE_OR_CREATE:pm_full_process_automation_building_explosives_factory = {
 	texture = "gfx/interface/icons/production_method_icons/automated_bottle_blowers.dds"
 	
 	unlocking_technologies = {

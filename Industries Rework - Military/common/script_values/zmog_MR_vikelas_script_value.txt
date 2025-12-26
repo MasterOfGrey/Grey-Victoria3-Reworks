@@ -5,7 +5,7 @@
 #Morgenrote compatibility with MIR
 
 #This value counts the total level of automobile factories of the country
-vikelas_automobile_industry_score = {
+TRY_REPLACE:vikelas_automobile_industry_score = {
 	value = 0
 	every_scope_building = {
 		limit = {

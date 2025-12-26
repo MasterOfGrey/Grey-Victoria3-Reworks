@@ -1,6 +1,6 @@
 ﻿## Vanilla PM's
 
-pm_tractors = {
+TRY_REPLACE:pm_tractors = {
 	texture = "gfx/interface/icons/production_method_icons/tractors.dds"
 	
 	state_modifiers = {
@@ -25,7 +25,7 @@ pm_tractors = {
 	}
 }
 
-pm_compression_ignition_tractors = {
+TRY_REPLACE:pm_compression_ignition_tractors = {
 	texture = "gfx/interface/icons/production_method_icons/compression_ignition_tractors.dds"
 	
 	state_modifiers = {
@@ -50,7 +50,7 @@ pm_compression_ignition_tractors = {
 	}
 }
 
-pm_cropdusting = {
+TRY_REPLACE:pm_cropdusting = {
 	texture = "gfx/interface/icons/production_method_icons/cropdusting.dds"
 	
 	state_modifiers = {
@@ -86,7 +86,7 @@ pm_cropdusting = {
 	}
 }
 
-pm_cropdusting_rice = {
+TRY_REPLACE:pm_cropdusting_rice = {
 	texture = "gfx/interface/icons/production_method_icons/cropdusting.dds"
 	
 	state_modifiers = {

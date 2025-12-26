@@ -8,7 +8,7 @@
 ## And importantly - that Mod & Ext tooling result in a *lower* overall profitability than tooling factories at the corresponding production method.
 
 ## Muskets (Iron)
-pm_muskets = {
+REPLACE_OR_CREATE:pm_muskets = {
 	texture = "gfx/interface/icons/production_method_icons/muskets.dds"
 	
 	building_modifiers = {
@@ -30,7 +30,7 @@ pm_muskets = {
 	}
 }
 
-pm_extensive_tools_a_i = {
+REPLACE_OR_CREATE:pm_extensive_tools_a_i = {
 	texture = "gfx/interface/icons/production_method_icons/pig_iron_tools_plus.dds"
 	is_hidden_when_unavailable = yes
 	
@@ -45,18 +45,18 @@ pm_extensive_tools_a_i = {
 	building_modifiers = {
 		workforce_scaled = {
 			# input goods
-			goods_input_iron_add = 5
+			goods_input_iron_add = 4
 			goods_input_hardwood_add = -5
-			goods_input_wood_add = 15
+			goods_input_wood_add = 12
 			
 			# output goods
-			goods_output_small_arms_add = -15
-			goods_output_tools_add = 30
+			goods_output_small_arms_add = -15	# -50%
+			goods_output_tools_add = 24
 		}
 	}
 }
 
-pm_moderate_tools_a_i = {
+REPLACE_OR_CREATE:pm_moderate_tools_a_i = {
 	texture = "gfx/interface/icons/production_method_icons/pig_iron_tools.dds"
 	is_hidden_when_unavailable = yes
 	
@@ -71,18 +71,18 @@ pm_moderate_tools_a_i = {
 	building_modifiers = {
 		workforce_scaled = {
 			# input goods
-			goods_input_iron_add = 3
+			goods_input_iron_add = 2.5
 			goods_input_hardwood_add = -3
-			goods_input_wood_add = 9
+			goods_input_wood_add = 7.5
 			
 			# output goods
-			goods_output_small_arms_add = -9
-			goods_output_tools_add = 18
+			goods_output_small_arms_add = -9	# -30%
+			goods_output_tools_add = 14.5
 		}
 	}
 }
 
-pm_limited_tools_a_i = {
+REPLACE_OR_CREATE:pm_limited_tools_a_i = {
 	texture = "gfx/interface/icons/production_method_icons/military_priority.dds"
 	is_hidden_when_unavailable = yes
 	
@@ -102,14 +102,14 @@ pm_limited_tools_a_i = {
 			goods_input_wood_add = 3
 			
 			# output goods
-			goods_output_small_arms_add = -3
-			goods_output_tools_add = 6
+			goods_output_small_arms_add = -3	# -10%
+			goods_output_tools_add = 5
 		}
 	}
 }
 
 ## Rifles & Repeaters (Steel)
-pm_rifles = {
+REPLACE_OR_CREATE:pm_rifles = {
 	texture = "gfx/interface/icons/production_method_icons/rifles.dds"
 	
 	unlocking_technologies = {
@@ -137,7 +137,7 @@ pm_rifles = {
 	}
 }
 
-pm_repeaters = {
+REPLACE_OR_CREATE:pm_repeaters = {
 	texture = "gfx/interface/icons/production_method_icons/repeaters.dds"
 	
 	unlocking_technologies = {
@@ -165,7 +165,7 @@ pm_repeaters = {
 	}
 }
 
-pm_extensive_tools_a_s = {
+REPLACE_OR_CREATE:pm_extensive_tools_a_s = {
 	texture = "gfx/interface/icons/production_method_icons/steel_tools_plus.dds"
 	is_hidden_when_unavailable = yes
 	
@@ -178,18 +178,19 @@ pm_extensive_tools_a_s = {
 	building_modifiers = {
 		workforce_scaled = {
 			# input goods
-			goods_input_wood_add = 15
-			goods_input_hardwood_add = -4 # -5
-			goods_input_tools_add = -5
+			goods_input_steel_add = 2
+			goods_input_wood_add = 12
+			goods_input_hardwood_add = -4
+			# goods_input_tools_add = -5	# This actually depresses the demand for tools and discourages mobilisation
 			
 			# output goods
-			goods_output_small_arms_add = -27 # -35
-			goods_output_tools_add = 35
+			goods_output_small_arms_add = -27
+			goods_output_tools_add = 36
 		}
 	}
 }
 
-pm_moderate_tools_a_s = {
+REPLACE_OR_CREATE:pm_moderate_tools_a_s = {
 	texture = "gfx/interface/icons/production_method_icons/steel_tools.dds"
 	is_hidden_when_unavailable = yes
 	
@@ -202,18 +203,19 @@ pm_moderate_tools_a_s = {
 	building_modifiers = {
 		workforce_scaled = {
 			# input goods
-			goods_input_wood_add = 10
+			goods_input_steel_add = 1
+			goods_input_wood_add = 7.5
 			goods_input_hardwood_add = -2.5
-			goods_input_tools_add = -5
+			# goods_input_tools_add = -5	# This actually depresses the demand for tools and discourages mobilisation
 			
 			# output goods
-			goods_output_small_arms_add = -16 # -21
-			goods_output_tools_add = 19
+			goods_output_small_arms_add = -16
+			goods_output_tools_add = 21.6
 		}
 	}
 }
 
-pm_limited_tools_a_s = {
+REPLACE_OR_CREATE:pm_limited_tools_a_s = {
 	texture = "gfx/interface/icons/production_method_icons/military_priority.dds"
 	is_hidden_when_unavailable = yes
 	
@@ -226,19 +228,19 @@ pm_limited_tools_a_s = {
 	building_modifiers = {
 		workforce_scaled = {
 			# input goods
-			goods_input_wood_add = 5
+			goods_input_wood_add = 3
 			goods_input_hardwood_add = -1
-			goods_input_tools_add = -5
+			# goods_input_tools_add = -5	# This actually depresses the demand for tools and discourages mobilisation
 			
 			# output goods
-			goods_output_small_arms_add = -6 # -7
-			goods_output_tools_add = 3
+			goods_output_small_arms_add = -6
+			goods_output_tools_add = 7.2
 		}
 	}
 }
 
 ## Bolt Actions (Rubber)
-pm_bolt_action_rifles = {
+REPLACE_OR_CREATE:pm_bolt_action_rifles = {
 	texture = "gfx/interface/icons/production_method_icons/bolt_action_rifles.dds"
 	
 	unlocking_technologies = {
@@ -267,7 +269,7 @@ pm_bolt_action_rifles = {
 	}
 }
 
-pm_extensive_tools_a_r = {
+REPLACE_OR_CREATE:pm_extensive_tools_a_r = {
 	texture = "gfx/interface/icons/production_method_icons/steel_tools_plus.dds"
 	is_hidden_when_unavailable = yes
 	
@@ -284,17 +286,17 @@ pm_extensive_tools_a_r = {
 			goods_input_steel_add = 5
 			goods_input_rubber_add = 5
 			goods_input_hardwood_add = -5
-			goods_input_tools_add = -12 # -20
+			# goods_input_tools_add = -12	# This actually depresses the demand for tools and discourages mobilisation
 			goods_input_oil_add = -5
 			
 			# output goods
-			goods_output_small_arms_add = -40 # -50
-			goods_output_tools_add = 47 # 35
+			goods_output_small_arms_add = -40
+			goods_output_tools_add = 55
 		}
 	}
 }
 
-pm_moderate_tools_a_r = {
+REPLACE_OR_CREATE:pm_moderate_tools_a_r = {
 	texture = "gfx/interface/icons/production_method_icons/steel_tools.dds"
 	is_hidden_when_unavailable = yes
 	
@@ -308,20 +310,20 @@ pm_moderate_tools_a_r = {
 	building_modifiers = {
 		workforce_scaled = {
 			# input goods
-			goods_input_steel_add = 4
+			goods_input_steel_add = 3
 			goods_input_rubber_add = 3
 			goods_input_hardwood_add = -3
-			goods_input_tools_add = -12 # -20
+			# goods_input_tools_add = -12	# This actually depresses the demand for tools and discourages mobilisation
 			goods_input_oil_add = -3
 			
 			# output goods
-			goods_output_small_arms_add = -24 # -30
-			goods_output_tools_add = 25 # 13
+			goods_output_small_arms_add = -24
+			goods_output_tools_add = 33
 		}
 	}
 }
 
-pm_limited_tools_a_r = {
+REPLACE_OR_CREATE:pm_limited_tools_a_r = {
 	texture = "gfx/interface/icons/production_method_icons/military_priority.dds"
 	is_hidden_when_unavailable = yes
 	
@@ -338,20 +340,21 @@ pm_limited_tools_a_r = {
 			goods_input_steel_add = 1
 			goods_input_rubber_add = 1
 			goods_input_hardwood_add = -1
-			goods_input_tools_add = -11
+			# goods_input_tools_add = -11	# This actually depresses the demand for tools and discourages mobilisation
 			goods_input_oil_add = -1
 			
 			# output goods
-			goods_output_small_arms_add = -8 # -10
+			goods_output_small_arms_add = -8
+			goods_output_tools_add = 11
 		}
 	}
 }
 
-pm_no_tools_a = {
+REPLACE_OR_CREATE:pm_no_tools_a = {
 	texture = "gfx/interface/icons/production_method_icons/no_demobilisation.dds"
 }
 
-pm_ui_safety_a = {
+REPLACE_OR_CREATE:pm_ui_safety_a = {
 	texture = "gfx/interface/icons/production_method_icons/no_arms_manufacturing.dds"
 	unlocking_laws = {
 		law_chiefdom
@@ -359,7 +362,7 @@ pm_ui_safety_a = {
 }
 
 ### Automation Replacements ###
-pm_rotary_valve_engine_building_arms_industry = {
+REPLACE_OR_CREATE:pm_rotary_valve_engine_building_arms_industry = {
 	texture = "gfx/interface/icons/production_method_icons/rotary_valve_engine.dds"
 	replacement_if_valid = pm_rotary_valve_engine_building_arti_foundry
 	
@@ -384,7 +387,7 @@ pm_rotary_valve_engine_building_arms_industry = {
 	}
 }
 
-pm_assembly_lines_building_arms_industry = {
+REPLACE_OR_CREATE:pm_assembly_lines_building_arms_industry = {
 	texture = "gfx/interface/icons/production_method_icons/assembly_lines.dds"
 	replacement_if_valid = pm_assembly_lines_building_arti_foundry
 	

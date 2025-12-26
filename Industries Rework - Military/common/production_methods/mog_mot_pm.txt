@@ -1,5 +1,5 @@
 ﻿## Base PM
-pm_steam_engines = {
+REPLACE_OR_CREATE:pm_steam_engines = {
 	texture = "gfx/interface/icons/production_method_icons/steamworks.dds"
 	
 	state_modifiers = {
@@ -24,7 +24,7 @@ pm_steam_engines = {
 	}
 }
 
-pm_electric_engines = {
+REPLACE_OR_CREATE:pm_electric_engines = {
 	texture = "gfx/interface/icons/production_method_icons/electric_engines.dds"
 	
 	state_modifiers = {
@@ -58,7 +58,7 @@ pm_electric_engines = {
 	required_input_goods = electricity
 }
 
-pm_diesel_engines = {
+REPLACE_OR_CREATE:pm_diesel_engines = {
 	texture = "gfx/interface/icons/production_method_icons/diesel_engines.dds"
 	
 	state_modifiers = {

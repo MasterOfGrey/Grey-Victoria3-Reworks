@@ -3,7 +3,7 @@
 # Base PM's
 
 #tiger-ignore(key=duplicate-item) # Overwritten by TTS
-pm_military_shipbuilding_wooden = {
+TRY_REPLACE:pm_military_shipbuilding_wooden = {
 	texture = "gfx/interface/icons/production_method_icons/military_shipbuilding_wooden.dds"
 	
 	building_modifiers = {
@@ -28,7 +28,7 @@ pm_military_shipbuilding_wooden = {
 }
 
 #tiger-ignore(key=duplicate-item) # Overwritten by TTS
-pm_military_shipbuilding_wooden_2 = {
+TRY_REPLACE:pm_military_shipbuilding_wooden_2 = {
 	texture = "gfx/interface/icons/production_method_icons/military_shipbuilding_wooden_2.dds"
 	
 	unlocking_technologies = {
@@ -56,7 +56,7 @@ pm_military_shipbuilding_wooden_2 = {
 	}
 }
 
-pm_military_shipbuilding_steam = {
+TRY_REPLACE:pm_military_shipbuilding_steam = {
 	texture = "gfx/interface/icons/production_method_icons/military_shipbuilding_steam.dds"
 	
 	unlocking_technologies = {
@@ -84,7 +84,7 @@ pm_military_shipbuilding_steam = {
 	}
 }
 
-pm_military_shipbuilding_steam_2 = {
+TRY_REPLACE:pm_military_shipbuilding_steam_2 = {
 	texture = "gfx/interface/icons/production_method_icons/military_shipbuilding_steam_2.dds"
 	
 	unlocking_technologies = {

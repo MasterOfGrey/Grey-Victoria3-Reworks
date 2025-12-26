@@ -1,7 +1,7 @@
 ﻿# This file is secondary industries with related PM's for either consistency or to deal with industries touched by other balance changes
 
 ## Rice:
-pmg_harvesting_process_building_rice_farm = {
+TRY_REPLACE:pmg_harvesting_process_building_rice_farm = {
 	texture = "gfx/interface/icons/generic_icons/mixed_icon_automation.dds"
 	production_methods = {
 		pm_tools_disabled
@@ -12,7 +12,7 @@ pmg_harvesting_process_building_rice_farm = {
 }
 
 ## Everything Else:
-pmg_harvesting_process_building_rye_farm = {
+TRY_REPLACE:pmg_harvesting_process_building_rye_farm = {
 	texture = "gfx/interface/icons/generic_icons/mixed_icon_automation.dds"
 	production_methods = {
 		pm_tools_disabled
@@ -24,7 +24,7 @@ pmg_harvesting_process_building_rye_farm = {
 	}
 }
 
-pmg_harvesting_process_building_wheat_farm = {
+TRY_REPLACE:pmg_harvesting_process_building_wheat_farm = {
 	texture = "gfx/interface/icons/generic_icons/mixed_icon_automation.dds"
 	production_methods = {
 		pm_tools_disabled
@@ -36,7 +36,7 @@ pmg_harvesting_process_building_wheat_farm = {
 	}
 }
 
-pmg_harvesting_process_building_maize_farm = {
+TRY_REPLACE:pmg_harvesting_process_building_maize_farm = {
 	texture = "gfx/interface/icons/generic_icons/mixed_icon_automation.dds"
 	production_methods = {
 		pm_tools_disabled
@@ -48,7 +48,7 @@ pmg_harvesting_process_building_maize_farm = {
 	}
 }
 
-pmg_harvesting_process_building_millet_farm = {
+TRY_REPLACE:pmg_harvesting_process_building_millet_farm = {
 	texture = "gfx/interface/icons/generic_icons/mixed_icon_automation.dds"
 	production_methods = {
 		pm_tools_disabled

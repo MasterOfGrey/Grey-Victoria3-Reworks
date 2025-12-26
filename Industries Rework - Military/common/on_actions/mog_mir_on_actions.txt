@@ -1,0 +1,25 @@
+﻿# Nudge the AI to benefit itself.
+on_diplo_play_war_start = {
+	on_actions = {
+		mog_mir_ai_mobilisation_nudge
+	}
+}
+# Root = Diplomatic Play
+mog_mir_ai_mobilisation_nudge = {
+	effect = {
+		root = {
+			target ?= {
+				mog_mir_mobilise_ai_industries = yes
+			}
+			initiator ?= {
+				mog_mir_mobilise_ai_industries = yes
+			}
+			every_scope_target_ally ?= {
+				mog_mir_mobilise_ai_industries = yes						
+			}
+			every_scope_initiator_ally ?= {
+				mog_mir_mobilise_ai_industries = yes								
+			}
+		}
+	}
+}

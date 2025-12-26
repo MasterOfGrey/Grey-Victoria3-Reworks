@@ -1,6 +1,6 @@
 ﻿# Overwrites for tech-based MAPI
 
-pneumatic_tyres = {
+REPLACE_OR_CREATE:pneumatic_tyres = {
 	era = era_4
 	texture = "gfx/interface/icons/invention_icons/tech_pneumatic_tyres.dds"
 	category = production	

@@ -1,4 +1,4 @@
-﻿pm_gear_transmissions = {
+﻿REPLACE_OR_CREATE:pm_gear_transmissions = {
 	texture = "gfx/interface/icons/production_method_icons/gear_transmissions.dds"
 	ai_value = 0		# The AI should move off of this as soon as it has the opportunity to do so.
 	
@@ -21,7 +21,7 @@
 	}
 }
 
-pm_automobiles = {
+REPLACE_OR_CREATE:pm_automobiles = {
 	texture = "gfx/interface/icons/production_method_icons/automobiles_primary.dds"
 	ai_value = 50000
 	
@@ -46,7 +46,7 @@ pm_automobiles = {
 	}
 }
 
-pm_pneumatic_tyres = {
+REPLACE_OR_CREATE:pm_pneumatic_tyres = {
 	texture = "gfx/interface/icons/production_method_icons/pneumatic_tyres.dds"
 	ai_value = 50000
 	
@@ -72,11 +72,11 @@ pm_pneumatic_tyres = {
 	}
 }
 
-pm_single_shift_days = {
+REPLACE_OR_CREATE:pm_single_shift_days = {
 	texture = "gfx/interface/icons/production_method_icons/shift_1.dds"
 }
 
-pm_automotive_double_shifts = {
+REPLACE_OR_CREATE:pm_automotive_double_shifts = {
 	texture = "gfx/interface/icons/production_method_icons/shift_2.dds"
 	replacement_if_valid = pm_automotive_double_shifts_pneumatic
 	
@@ -105,7 +105,7 @@ pm_automotive_double_shifts = {
 	}
 }
 
-pm_automotive_double_shifts_pneumatic = {
+REPLACE_OR_CREATE:pm_automotive_double_shifts_pneumatic = {
 	texture = "gfx/interface/icons/production_method_icons/shift_2.dds"
 	is_hidden_when_unavailable = yes
 	
@@ -137,7 +137,7 @@ pm_automotive_double_shifts_pneumatic = {
 	required_input_goods = electricity
 }
 
-pm_automotive_triple_shifts = {
+REPLACE_OR_CREATE:pm_automotive_triple_shifts = {
 	texture = "gfx/interface/icons/production_method_icons/shift_3.dds"
 	replacement_if_valid = pm_automotive_triple_shifts_pneumatic
 	
@@ -169,7 +169,7 @@ pm_automotive_triple_shifts = {
 	required_input_goods = electricity
 }
 
-pm_automotive_triple_shifts_pneumatic = {
+REPLACE_OR_CREATE:pm_automotive_triple_shifts_pneumatic = {
 	texture = "gfx/interface/icons/production_method_icons/shift_3.dds"
 	is_hidden_when_unavailable = yes
 	
@@ -201,11 +201,11 @@ pm_automotive_triple_shifts_pneumatic = {
 	required_input_goods = electricity
 }
 
-pm_no_aeroplane_production = {
+REPLACE_OR_CREATE:pm_no_aeroplane_production = {
 	texture = "gfx/interface/icons/production_method_icons/no_aeroplanes.dds"
 }
 
-pm_limited_aeroplanes = {
+REPLACE_OR_CREATE:pm_limited_aeroplanes = {
 	texture = "gfx/interface/icons/production_method_icons/aeroplanes_secondary.dds"
 	replacement_if_valid = pm_limited_aeroplanes_double
 	is_hidden_when_unavailable = yes
@@ -234,7 +234,7 @@ pm_limited_aeroplanes = {
 	}
 }
 
-pm_limited_aeroplanes_double = {
+REPLACE_OR_CREATE:pm_limited_aeroplanes_double = {
 	texture = "gfx/interface/icons/production_method_icons/aeroplanes_secondary.dds"
 	replacement_if_valid = pm_limited_aeroplanes_triple
 	is_hidden_when_unavailable = yes
@@ -265,7 +265,7 @@ pm_limited_aeroplanes_double = {
 }
 
 
-pm_limited_aeroplanes_triple = {
+REPLACE_OR_CREATE:pm_limited_aeroplanes_triple = {
 	texture = "gfx/interface/icons/production_method_icons/aeroplanes_secondary.dds"
 	is_hidden_when_unavailable = yes
 	
@@ -292,7 +292,7 @@ pm_limited_aeroplanes_triple = {
 	}
 }
 
-pm_extensive_aeroplanes = {
+REPLACE_OR_CREATE:pm_extensive_aeroplanes = {
 	texture = "gfx/interface/icons/production_method_icons/aeroplanes_plus.dds"
 	replacement_if_valid = pm_extensive_aeroplanes_triple
 	is_hidden_when_unavailable = yes
@@ -321,7 +321,7 @@ pm_extensive_aeroplanes = {
 	}
 }
 
-pm_extensive_aeroplanes_triple = {
+REPLACE_OR_CREATE:pm_extensive_aeroplanes_triple = {
 	texture = "gfx/interface/icons/production_method_icons/aeroplanes_plus.dds"
 	is_hidden_when_unavailable = yes
 	
@@ -347,7 +347,7 @@ pm_extensive_aeroplanes_triple = {
 	}
 }
 
-pm_overtime_aeroplanes = {
+REPLACE_OR_CREATE:pm_overtime_aeroplanes = {
 	texture = "gfx/interface/icons/production_method_icons/aeroplanes_overtime.dds"
 	is_hidden_when_unavailable = yes
 	
@@ -373,18 +373,18 @@ pm_overtime_aeroplanes = {
 	}
 }
 
-pm_ui_safety_c = {
+REPLACE_OR_CREATE:pm_ui_safety_c = {
 	texture = "gfx/interface/icons/production_method_icons/no_aeroplanes.dds"
 	unlocking_laws = {
 		law_chiefdom
 	}
 }
 
-pm_no_tank_production = {
+REPLACE_OR_CREATE:pm_no_tank_production = {
 	texture = "gfx/interface/icons/production_method_icons/no_tanks_secondary.dds"
 }
 
-pm_limited_tanks = {
+REPLACE_OR_CREATE:pm_limited_tanks = {
 	texture = "gfx/interface/icons/production_method_icons/tanks_secondary.dds"
 	replacement_if_valid = pm_limited_tanks_double
 	is_hidden_when_unavailable = yes
@@ -410,7 +410,7 @@ pm_limited_tanks = {
 	}
 }
 
-pm_limited_tanks_double = {
+REPLACE_OR_CREATE:pm_limited_tanks_double = {
 	texture = "gfx/interface/icons/production_method_icons/tanks_secondary.dds"
 	replacement_if_valid = pm_limited_tanks_triple
 	is_hidden_when_unavailable = yes
@@ -437,7 +437,7 @@ pm_limited_tanks_double = {
 	}
 }
 
-pm_limited_tanks_triple = {
+REPLACE_OR_CREATE:pm_limited_tanks_triple = {
 	texture = "gfx/interface/icons/production_method_icons/tanks_secondary.dds"
 	is_hidden_when_unavailable = yes
 	
@@ -461,7 +461,7 @@ pm_limited_tanks_triple = {
 	}
 }
 
-pm_extensive_tanks = {
+REPLACE_OR_CREATE:pm_extensive_tanks = {
 	texture = "gfx/interface/icons/production_method_icons/tanks_plus.dds"
 	replacement_if_valid = pm_extensive_tanks_triple
 	is_hidden_when_unavailable = yes
@@ -488,7 +488,7 @@ pm_extensive_tanks = {
 	}
 }
 
-pm_extensive_tanks_triple = {
+REPLACE_OR_CREATE:pm_extensive_tanks_triple = {
 	texture = "gfx/interface/icons/production_method_icons/tanks_plus.dds"
 	is_hidden_when_unavailable = yes
 	
@@ -512,7 +512,7 @@ pm_extensive_tanks_triple = {
 	}
 }
 
-pm_overtime_tanks = {
+REPLACE_OR_CREATE:pm_overtime_tanks = {
 	texture = "gfx/interface/icons/production_method_icons/tanks_plus.dds"
 	is_hidden_when_unavailable = yes
 	
@@ -536,7 +536,7 @@ pm_overtime_tanks = {
 	}
 }
 
-pm_ui_safety_d = {
+REPLACE_OR_CREATE:pm_ui_safety_d = {
 	texture = "gfx/interface/icons/production_method_icons/no_tanks_secondary.dds"
 	unlocking_laws = {
 		law_chiefdom

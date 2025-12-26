@@ -1,7 +1,7 @@
 ﻿## TTS Shipbuilding Compatibility:
 
 # Base PM's
-pm_military_shipbuilding_ironclad = {
+TRY_REPLACE:pm_military_shipbuilding_ironclad = {
 	texture = "gfx/interface/icons/production_method_icons/ironclad_production.dds"
 	
 	unlocking_technologies = {
@@ -32,7 +32,7 @@ pm_military_shipbuilding_ironclad = {
 	}
 }
 
-pm_military_shipbuilding_steel = {
+TRY_REPLACE:pm_military_shipbuilding_steel = {
 	texture = "gfx/interface/icons/production_method_icons/steel_military_shipbuilding.dds"
 	
 	unlocking_technologies = {
@@ -62,7 +62,7 @@ pm_military_shipbuilding_steel = {
 	}
 }
 
-pm_military_shipbuilding_turbine = {
+TRY_REPLACE:pm_military_shipbuilding_turbine = {
 	texture = "gfx/interface/icons/production_method_icons/turbine_military_shipbuilding.dds"
 	
 	unlocking_technologies = {
@@ -93,7 +93,7 @@ pm_military_shipbuilding_turbine = {
 	}
 }
 
-pm_military_shipbuilding_arc_welding = {
+TRY_REPLACE:pm_military_shipbuilding_arc_welding = {
 	texture = "gfx/interface/icons/production_method_icons/arcwelded_military_shipbuilding.dds"
 	
 	unlocking_technologies = {

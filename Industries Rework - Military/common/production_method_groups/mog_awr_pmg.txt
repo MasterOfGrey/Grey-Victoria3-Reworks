@@ -1,7 +1,7 @@
 ﻿# This file is the automotive industry with tank and plane demobilisation PM's
 # Credit to indexo4
 
-pmg_base_building_automotive_industry = {										# Modded PMG
+REPLACE_OR_CREATE:pmg_base_building_automotive_industry = {										# Modded PMG
 	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
 	production_methods = {
 		pm_gear_transmissions
@@ -10,7 +10,7 @@ pmg_base_building_automotive_industry = {										# Modded PMG
 	}
 }
 
-pmg_automotive_shiftwork = {													# Modded PMG
+REPLACE_OR_CREATE:pmg_automotive_shiftwork = {													# Modded PMG
 	texture = "gfx/interface/icons/generic_icons/mixed_icon_automation.dds"
 	production_methods = {
 		pm_single_shift_days
@@ -21,7 +21,7 @@ pmg_automotive_shiftwork = {													# Modded PMG
 	}
 }
 
-pmg_automotive_aeroplanes = {													# Modded PMG
+REPLACE_OR_CREATE:pmg_automotive_aeroplanes = {													# Modded PMG
 	texture = "gfx/interface/icons/generic_icons/mixed_icon_refining.dds"
 	production_methods = {
 		pm_no_aeroplane_production
@@ -35,7 +35,7 @@ pmg_automotive_aeroplanes = {													# Modded PMG
 	}
 }
 
-pmg_automotive_tanks = {														# Modded PMG
+REPLACE_OR_CREATE:pmg_automotive_tanks = {														# Modded PMG
 	texture = "gfx/interface/icons/generic_icons/mixed_icon_refining.dds"
 	production_methods = {
 		pm_no_tank_production

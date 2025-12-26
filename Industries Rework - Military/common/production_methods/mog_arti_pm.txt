@@ -8,7 +8,7 @@
 ## And importantly - that Mod & Ext tooling result in a *lower* overall profitability than tooling factories at the corresponding production method.
 
 ## Cannons & Smoothbores (Iron)
-pm_cannons = {
+REPLACE_OR_CREATE:pm_cannons = {
 	texture = "gfx/interface/icons/production_method_icons/artillery_production.dds"
 	
 	unlocking_technologies = {
@@ -33,7 +33,7 @@ pm_cannons = {
 	}
 }
 
-pm_smoothbores = {
+REPLACE_OR_CREATE:pm_smoothbores = {
 	texture = "gfx/interface/icons/production_method_icons/smoothbores.dds"
 	
 	unlocking_technologies = {
@@ -59,7 +59,7 @@ pm_smoothbores = {
 	}
 }
 
-pm_extensive_tools_t_i = {
+REPLACE_OR_CREATE:pm_extensive_tools_t_i = {
 	texture = "gfx/interface/icons/production_method_icons/pig_iron_tools_plus.dds"
 	is_hidden_when_unavailable = yes
 	
@@ -86,7 +86,7 @@ pm_extensive_tools_t_i = {
 	}
 }
 
-pm_moderate_tools_t_i = {
+REPLACE_OR_CREATE:pm_moderate_tools_t_i = {
 	texture = "gfx/interface/icons/production_method_icons/pig_iron_tools.dds"
 	is_hidden_when_unavailable = yes
 	
@@ -113,7 +113,7 @@ pm_moderate_tools_t_i = {
 	}
 }
 
-pm_limited_tools_t_i = {
+REPLACE_OR_CREATE:pm_limited_tools_t_i = {
 	texture = "gfx/interface/icons/production_method_icons/military_priority.dds"
 	is_hidden_when_unavailable = yes
 	
@@ -141,7 +141,7 @@ pm_limited_tools_t_i = {
 }
 
 ## Breech Loaders (steel)
-pm_breech_loaders = {
+REPLACE_OR_CREATE:pm_breech_loaders = {
 	texture = "gfx/interface/icons/production_method_icons/breech_loading_artillery_production.dds"
 	
 	unlocking_technologies = {
@@ -168,7 +168,7 @@ pm_breech_loaders = {
 	}
 }
 
-pm_extensive_tools_t_s = {
+REPLACE_OR_CREATE:pm_extensive_tools_t_s = {
 	texture = "gfx/interface/icons/production_method_icons/steel_tools_plus.dds"
 	is_hidden_when_unavailable = yes
 	
@@ -183,16 +183,16 @@ pm_extensive_tools_t_s = {
 			# goods_input_steel_add = 0 # 3
 			goods_input_wood_add = 15
 			goods_input_hardwood_add = -8
-			goods_input_tools_add = -6 # -10
+			# goods_input_tools_add = -6 # -10
 			
 			# output goods
 			goods_output_artillery_add = -24 # -32
-			goods_output_tools_add = 34 # 30
+			goods_output_tools_add = 40 # 34 # 30
 		}
 	}
 }
 
-pm_moderate_tools_t_s = {
+REPLACE_OR_CREATE:pm_moderate_tools_t_s = {
 	texture = "gfx/interface/icons/production_method_icons/steel_tools.dds"
 	is_hidden_when_unavailable = yes
 	
@@ -207,16 +207,16 @@ pm_moderate_tools_t_s = {
 			# goods_input_steel_add = 0 # 2
 			goods_input_wood_add = 10
 			goods_input_hardwood_add = -5
-			goods_input_tools_add = -6 # -10
+			# goods_input_tools_add = -6 # -10
 			
 			# output goods
 			goods_output_artillery_add = -14 # -21
-			goods_output_tools_add = 18 # 14
+			goods_output_tools_add = 24 # 18 # 14
 		}
 	}
 }
 
-pm_limited_tools_t_s = {
+REPLACE_OR_CREATE:pm_limited_tools_t_s = {
 	texture = "gfx/interface/icons/production_method_icons/military_priority.dds"
 	is_hidden_when_unavailable = yes
 	
@@ -231,17 +231,17 @@ pm_limited_tools_t_s = {
 			# goods_input_steel_add = 0 # 1
 			goods_input_wood_add = 5
 			goods_input_hardwood_add = -2
-			goods_input_tools_add = -6 # -8
+			# goods_input_tools_add = -6 # -8
 			
 			# output goods
 			goods_output_artillery_add = -7
-			goods_output_tools_add = 2 # 0
+			goods_output_tools_add = 8 # 2 # 0
 		}
 	}
 }
 
 ## Recoiled (rubber)
-pm_recoiled_barrels = {
+REPLACE_OR_CREATE:pm_recoiled_barrels = {
 	texture = "gfx/interface/icons/production_method_icons/recoil_mechanism_artillery_production.dds"
 	
 	unlocking_technologies = {
@@ -268,7 +268,7 @@ pm_recoiled_barrels = {
 	}
 }
 
-pm_extensive_tools_t_r = {
+REPLACE_OR_CREATE:pm_extensive_tools_t_r = {
 	texture = "gfx/interface/icons/production_method_icons/steel_tools_plus.dds"
 	is_hidden_when_unavailable = yes
 	
@@ -285,16 +285,16 @@ pm_extensive_tools_t_r = {
 			# goods_input_steel_add = 0 # -5
 			goods_input_oil_add = -3 # -5
 			goods_input_rubber_add = 5
-			goods_input_tools_add = -12 # -20
+			# goods_input_tools_add = -12 # -20
 			
 			# output goods
 			goods_output_artillery_add = -35 # -45
-			goods_output_tools_add = 47 # 35
+			goods_output_tools_add = 55
 		}
 	}
 }
 
-pm_moderate_tools_t_r = {
+REPLACE_OR_CREATE:pm_moderate_tools_t_r = {
 	texture = "gfx/interface/icons/production_method_icons/steel_tools.dds"
 	is_hidden_when_unavailable = yes
 	
@@ -311,16 +311,16 @@ pm_moderate_tools_t_r = {
 			# goods_input_steel_add = 0 # -3
 			goods_input_oil_add = -2 # -3
 			goods_input_rubber_add = 3
-			goods_input_tools_add = -12 # -20
+			# goods_input_tools_add = -12 # -20
 			
 			# output goods
 			goods_output_artillery_add = -21 # -27
-			goods_output_tools_add = 25 # 13
+			goods_output_tools_add = 33
 		}
 	}
 }
 
-pm_limited_tools_t_r = {
+REPLACE_OR_CREATE:pm_limited_tools_t_r = {
 	texture = "gfx/interface/icons/production_method_icons/military_priority.dds"
 	is_hidden_when_unavailable = yes
 	
@@ -337,19 +337,20 @@ pm_limited_tools_t_r = {
 			# goods_input_steel_add = 0 # -1
 			goods_input_oil_add = -1
 			goods_input_rubber_add = 1
-			goods_input_tools_add = -11
+			# goods_input_tools_add = -11
 			
 			# output goods
 			goods_output_artillery_add = -7 # -9
+			goods_input_tools_add = 11
 		}
 	}
 }
 
-pm_no_tools_t = {
+REPLACE_OR_CREATE:pm_no_tools_t = {
 	texture = "gfx/interface/icons/production_method_icons/no_demobilisation.dds"
 }
 
-pm_ui_safety_b = {
+REPLACE_OR_CREATE:pm_ui_safety_b = {
 	texture = "gfx/interface/icons/production_method_icons/no_munitions_plants.dds"
 	unlocking_laws = {
 		law_chiefdom
@@ -357,7 +358,7 @@ pm_ui_safety_b = {
 }
 
 ### Automation Replacements ###
-pm_rotary_valve_engine_building_arti_foundry = {
+REPLACE_OR_CREATE:pm_rotary_valve_engine_building_arti_foundry = {
 	texture = "gfx/interface/icons/production_method_icons/rotary_valve_engine.dds"
 	is_hidden_when_unavailable = yes
 	
@@ -389,7 +390,7 @@ pm_rotary_valve_engine_building_arti_foundry = {
 	}
 }
 
-pm_assembly_lines_building_arti_foundry = {
+REPLACE_OR_CREATE:pm_assembly_lines_building_arti_foundry = {
 	texture = "gfx/interface/icons/production_method_icons/assembly_lines.dds"
 	is_hidden_when_unavailable = yes
 	

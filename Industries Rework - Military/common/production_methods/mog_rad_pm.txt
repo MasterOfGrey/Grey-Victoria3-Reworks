@@ -1,9 +1,9 @@
 ﻿# Radios
-pm_no_radios = {
+REPLACE_OR_CREATE:pm_no_radios = {
 	texture = "gfx/interface/icons/production_method_icons/no_radios.dds"
 }
 
-pm_limited_radios = {
+REPLACE_OR_CREATE:pm_limited_radios = {
 	texture = "gfx/interface/icons/production_method_icons/radios.dds"
 	unlocking_technologies = {
 		radio
@@ -23,7 +23,7 @@ pm_limited_radios = {
 	required_input_goods = electricity
 }
 
-pm_moderate_radios = {
+REPLACE_OR_CREATE:pm_moderate_radios = {
 	texture = "gfx/interface/icons/production_method_icons/radios.dds"
 	unlocking_technologies = {
 		radio
@@ -43,7 +43,7 @@ pm_moderate_radios = {
 	required_input_goods = electricity
 }
 
-pm_extensive_radios = {
+REPLACE_OR_CREATE:pm_extensive_radios = {
 	texture = "gfx/interface/icons/production_method_icons/radios.dds"
 	unlocking_technologies = {
 		radio
@@ -64,7 +64,7 @@ pm_extensive_radios = {
 }
 
 # Automation
-pm_assembly_lines_building_electronics = {
+REPLACE_OR_CREATE:pm_assembly_lines_building_electronics = {
 	texture = "gfx/interface/icons/production_method_icons/assembly_lines.dds"
 	
 	state_modifiers = {
@@ -92,7 +92,7 @@ pm_assembly_lines_building_electronics = {
 	required_input_goods = electricity
 }
 
-pm_full_process_automation_building_electronics = {
+REPLACE_OR_CREATE:pm_full_process_automation_building_electronics = {
 	texture = "gfx/interface/icons/production_method_icons/automated_bottle_blowers.dds"
 	
 	unlocking_technologies = {

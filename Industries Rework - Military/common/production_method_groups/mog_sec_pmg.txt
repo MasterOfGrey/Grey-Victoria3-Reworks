@@ -1,14 +1,14 @@
 ﻿# This file is secondary industries with related PM's for either consistency or to deal with industries touched by other balance changes
 
 ## Electronics Industry:
-pmg_telephones_category = {														# Vanilla PMG re-specified
+REPLACE_OR_CREATE:pmg_telephones_category = {														# Vanilla PMG re-specified
 	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
 	production_methods = {
 		pm_telephones
 	}
 }
 
-pmg_radios_category = {															# Modded PMG
+REPLACE_OR_CREATE:pmg_radios_category = {															# Modded PMG
 	texture = "gfx/interface/icons/generic_icons/mixed_icon_refining.dds"
 	production_methods = {
 		pm_no_radios
@@ -18,7 +18,7 @@ pmg_radios_category = {															# Modded PMG
 	}
 }
 
-pmg_automation_building_electronics = {									# Modded PMG
+REPLACE_OR_CREATE:pmg_automation_building_electronics = {									# Modded PMG
 	texture = "gfx/interface/icons/generic_icons/mixed_icon_automation.dds"
 	production_methods = {
 		pm_automation_disabled
@@ -28,7 +28,7 @@ pmg_automation_building_electronics = {									# Modded PMG
 }
 
 ## Locomotive Factories:
-pmg_base_building_motor_industry = {											# Vanilla PMG re-specified
+REPLACE_OR_CREATE:pmg_base_building_motor_industry = {											# Vanilla PMG re-specified
 	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
 	production_methods = {
 		pm_steam_engines
@@ -37,7 +37,7 @@ pmg_base_building_motor_industry = {											# Vanilla PMG re-specified
 	}
 }
 
-pmg_automation_building_motor_industry = {										# Vanilla PMG re-specified
+REPLACE_OR_CREATE:pmg_automation_building_motor_industry = {										# Vanilla PMG re-specified
 	texture = "gfx/interface/icons/generic_icons/mixed_icon_automation.dds"
 	production_methods = {
 		pm_automation_disabled
@@ -48,7 +48,7 @@ pmg_automation_building_motor_industry = {										# Vanilla PMG re-specified
 }
 
 ## Explosives Factory:
-pmg_explosives_building_chemical_plants = {										# Vanilla PMG re-specified
+REPLACE_OR_CREATE:pmg_explosives_building_chemical_plants = {										# Vanilla PMG re-specified
 	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
 	production_methods = {
 		pm_leblanc_process
@@ -58,7 +58,7 @@ pmg_explosives_building_chemical_plants = {										# Vanilla PMG re-specified
 	}
 }
 
-pmg_automation_building_explosives_factory = {									# Modded PMG
+REPLACE_OR_CREATE:pmg_automation_building_explosives_factory = {									# Modded PMG
 	texture = "gfx/interface/icons/generic_icons/mixed_icon_automation.dds"
 	production_methods = {
 		pm_automation_disabled

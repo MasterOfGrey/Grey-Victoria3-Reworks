@@ -2,6 +2,6 @@
 #   GREY - MOD COMPATIBILITY SCRIPTED TRIGGERS   #
 ##################################################
 
-Grey_MIR_is_active = { # Military Industry Rework
+REPLACE_OR_CREATE:Grey_MIR_is_active = { # Military Industry Rework
 	always = yes
 }
