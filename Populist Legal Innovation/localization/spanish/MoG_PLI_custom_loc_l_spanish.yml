@@ -7,6 +7,12 @@
  mog_pli_corruption_tracking_bar_title: "Corrupción sistémica" #deepl:3949053749
  mog_pli_corruption_tracking_bar_desc: "#header $mog_pli_corruption_tracking_bar_title$:#! #v [JournalEntry.GetCurrentBarProgress(ScriptedProgressBar.Self)|%1]#!" #deepl:2916165588
  mog_pli_corruption_increment_desc: "[Country.MakeScope.GetScriptValueDesc('mog_pli_corruption_increment')]" #deepl:1826878765
+ mog_pli_fight_corruption_button: "Purgar la corrupción" #deepl:3243920748
+ mog_pli_fight_corruption_button_desc: "Desarraigar a los proveedores de corrupción y expulsarlos de la burocracia." #deepl:1840372736
+ mog_pli_fight_corruption_button_tt: "La corrupción cambia #n [ROOT.GetCountry.MakeScope.ScriptValue('mog_pli_fought_corruption_tt_val')|=-]#!" #deepl:2699109925
+ mog_pli_curry_favour_button: "Curry Favor" #deepl:1217933398
+ mog_pli_curry_favour_button_desc: "Satisfacer los deseos de quienes tienen influencia para reforzar el apoyo al gobierno." #deepl:2680760523
+ mog_pli_curry_favour_button_tt: "La corrupción cambia #n [ROOT.GetCountry.MakeScope.ScriptValue('mog_pli_curried_favour_tt_val')|=-]#!" #deepl:2570271461
  
  mog_pli_investorconfidence_exp: "Representa la disposición neta a invertir de todas las personas con acceso a fondos discrecionales. Se moverá hacia un valor potencial de #yellow #! que mejora con impuestos más bajos, acceso a mano de obra barata, fuertes oportunidades de inversión y leyes que; otorgan el derecho de voto a más población (pluralismo político), crean igualdad ante la ley (estado de derecho) y garantizan la propiedad de los beneficios (derechos de propiedad seguros). La velocidad con la que cambia la confianza de los inversores se basa en su [Concept('concept_institution','$concept_institutions$')].#indent_newline:2 \n#red Nota:#! Acontecimientos como una declaración de guerra o una repentina pérdida de cosechas pueden provocar un cambio repentino en el nivel actual de confianza de los inversores...#! \n\nEl #yellow máximo de confianza del inversor#! está limitado por el tamaño del [concept_investment_pool] comparado con [Concept('concept_gdp','$concept_gdp_short$')] ya que demasiado dinero en el fondo de inversión representa oportunidades de inversión débiles. El tamaño máximo del fondo siempre será inferior a la mitad del PIB de un país.#indent_newline:3 \n\n #i Los efectos actuales de esto son:#! #indent_newline:3 \n#b Confianza potencial del inversor:#! #v [Country.MakeScope.ScriptValue('mog_pli_resting_target_loc_value')|%1]#! \n#b Confianza máxima del inversor:#! #v [Country.MakeScope.ScriptValue('mog_pli_max_investment_willingness_from_ip')|%1]#! \n#b Contribuciones del fondo de inversión:#! #v [Country.GetModifier.GetValueFor('state_aristocrats_investment_pool_contribution_mult')|%1]#!#!#!" #deepl:987620402
  mog_pli_systemiccorruption_exp: "Esto representa la interacción de diferentes leyes que permiten a los individuos engrasarse las manos en el curso de los negocios normales. Se moverá hacia un potencial #yellow #! valor que mejora sobre todo con una burocracia bien financiada, instituciones policiales fuertes y leyes que aumentan la transparencia y la responsabilidad. La velocidad con la que cambia la corrupción depende de su [Concept('concept_institution','$concept_institutions$')], pero la corrupción es lenta de cambiar.#indent_newline:3 \n\n #i Los efectos actuales de esto son:#! #indent_newline:3 \n#b Corrupción sistémica potencial:#! #v [Country.MakeScope.ScriptValue('mog_pli_corruption_target_loc_value')|%1]#! \n#b All Pops Eficiencia inversora:#! #v -[Country.MakeScope.ScriptValue('mog_pli_corruption_multiplier')|%1]#! #! #! [AddTextIf(Not(GetPlayer.MakeScope.Var('mog_pli_corruption_disabled').IsSet),'\n\n#instruction Corruption Game Rule is:#! #L Active#!')][AddTextIf(GetPlayer.MakeScope.Var('mog_pli_corruption_disabled').IsSet,'\n\n#instruction Corruption Game Rule is:#! #L Disabled#!')]" #deepl:1532604169
@@ -29,12 +35,19 @@
  je_mog_pli_laborers_investment_modifier: "$laborers$ Confianza de los inversores" #deepl:4934552
  je_mog_pli_liberal_reaction: "PLI: Agitación liberal" #deepl:3883787876
  je_mog_pli_redistributive_reaction: "PLI: Agitación populista" #deepl:1884117642
+ mog_pli_fought_corruption_modifier: "Influencias corruptas purgadas" #deepl:605458558
+ mog_pli_curried_favour_modifier: "Curry Favor with Powerbrokers" #deepl:3980467289
+ PLI_BASE_CORRUPTION: "Tendencia natural hacia #yellow Potencial#!" #deepl:76454067
  PLI_POLICE_INSTITUTION: "Nivel de la institución policial" #deepl:3695223093
  PLI_SCHOOL_INSTITUTION: "Educación Nivel de la institución" #deepl:119565117
  PLI_HEALTH_INSTITUTION: "Sistema sanitario Nivel institucional" #deepl:1631231090
  PLI_SOCSEC_INSTITUTION: "Seguridad Social Nivel Institucional" #deepl:40582289
  PLI_OHS_INSTITUTION: "Seguridad en el Trabajo Nivel Institucional" #deepl:2305349007
  PLI_HAFFAIRS_INSTITUTION: "Asuntos de Interior Nivel Institucional" #deepl:1435635816
+ PLI_2DECIMAL_SCRIPT_VALUE_FORMAT: "$KEY$: $VALOR|=2+$" #deepl:3216225099
+ PLI_2DECIMAL_SCRIPT_VALUE_INVERT_FORMAT: "$KEY$: $VALOR|=2-$" #deepl:3125476191
+ PLI_3DECIMAL_SCRIPT_VALUE_FORMAT: "$KEY$: $VALOR|=3+$" #deepl:635900380
+ PLI_3DECIMAL_SCRIPT_VALUE_INVERT_FORMAT: "$KEY$: $VALOR|=3-$" #deepl:538859976
  
  state_aristocrats_investment_pool_contribution_mult: "$aristocrats$ [concept_investment_pool] contribución entusiasmo" #deepl:3643715859
  state_capitalists_investment_pool_contribution_mult: "$capitalists$ [concept_investment_pool] contribución entusiasmo" #deepl:418366632

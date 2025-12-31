@@ -7,6 +7,12 @@
  mog_pli_corruption_tracking_bar_title: "システムの腐敗" #deepl:3949053749
  mog_pli_corruption_tracking_bar_desc: "#header $mog_pli_corruption_tracking_bar_title$#! #v [JournalEntry.GetCurrentBarProgress(ScriptedProgressBar.Self)|%1]#!" #deepl:2916165588
  mog_pli_corruption_increment_desc: "[Country.MakeScope.GetScriptValueDesc('mog_pli_corruption_increment')]" #deepl:1826878765
+ mog_pli_fight_corruption_button: "汚職を粛清せよ" #deepl:3243920748
+ mog_pli_fight_corruption_button_desc: "腐敗の元凶を根絶し、官僚機構から追放する。" #deepl:1840372736
+ mog_pli_fight_corruption_button_tt: "汚職は次のように変化する。#n [ROOT.GetCountry.MakeScope.ScriptValue('mog_pli_fought_corruption_tt_val')|=-]#!" #deepl:2699109925
+ mog_pli_curry_favour_button: "カレーの寵児" #deepl:1217933398
+ mog_pli_curry_favour_button_desc: "政府への支持を強化するために影響力を持つ人々の欲求を満たす。" #deepl:2680760523
+ mog_pli_curry_favour_button_tt: "汚職は次のように変化する。#n [ROOT.GetCountry.MakeScope.ScriptValue('mog_pli_curried_favour_tt_val')|=-]#!" #deepl:2570271461
  
  mog_pli_investorconfidence_exp: "これは、裁量資金を利用できるすべての人々の純投資意欲を表している。これは、より低い税金、安価な労働力へのアクセス、強力な投資機会、そして、より多くの国民に権利を与え（政治的多元主義）、法の下の平等を実現し（法の支配）、利益の所有権を確保する（確実な財産権）法律によって改善される、#yellow 潜在的な#! 価値へと向かうだろう。投資家信頼感が変化するスピードは、あなたの[Concept('concept_institution','$concept_institutions$')].#indent_newline:2 \n#red 注：#! 宣戦布告や突然の収穫失敗などの出来事が、投資家信頼感の現在のレベルを急変させることがある。#! \n\n #yellow 投資家信頼度の最大値 は、 に比べて の大きさによって制限される。投資プールの資金が多すぎることは、投資機会が弱いことを意味するからである。投資プールの最大規模は、常にその国のGDPの半分以下となる。#indent_newline:3 現在の効果は以下の通り：#indent_newline:3 潜在的な投資家の信頼： 最大投資家信頼度 投資プールへの拠出：#! [Concept('concept_gdp','$concept_gdp_short$')] [concept_investment_pool] \n\n#i #! \n#b #! #v [Country.MakeScope.ScriptValue('mog_pli_resting_target_loc_value')|%1]#! \n#b #! #v [Country.MakeScope.ScriptValue('mog_pli_max_investment_willingness_from_ip')|%1]#! \n#b #! #v [Country.GetModifier.GetValueFor('state_aristocrats_investment_pool_contribution_mult')|%1]#!#!#!" #deepl:987620402
  mog_pli_systemiccorruption_exp: "これは、通常のビジネスの過程で個人が自らの手に油を差すことを可能にする、さまざまな法律の相互作用を表している。それは、#yellow 潜在的な#! の値へと向かうだろう。この値は、資金が潤沢にある官僚機構、強力な警察制度、透明性と説明責任を高める法律によって改善されることがほとんどである。汚職が変化するスピードは、あなたの[Concept('concept_institution','$concept_institutions$')] によって決まるが、汚職が変化するのは遅い。#indent_newline:3 \n\n #i 現在の効果はこうだ：#! #indent_newline:3 \n#b 潜在的なシステム腐敗：#! #v [Country.MakeScope.ScriptValue('mog_pli_corruption_target_loc_value')|%1]#! \n#b オール・ポップス 投資効率：#! #v -[Country.MakeScope.ScriptValue('mog_pli_corruption_multiplier')|%1]#! #! #! [AddTextIf(Not(GetPlayer.MakeScope.Var('mog_pli_corruption_disabled').IsSet),'\n\n#instruction Corruption Game Rule is:#! #L Active#!')][AddTextIf(GetPlayer.MakeScope.Var('mog_pli_corruption_disabled').IsSet,'\n\n#instruction Corruption Game Rule is:#! #L Disabled#!')]" #deepl:1532604169
@@ -29,12 +35,19 @@
  je_mog_pli_laborers_investment_modifier: "$laborers$ 投資家の信頼" #deepl:4934552
  je_mog_pli_liberal_reaction: "PLI：リベラル・アジテーション" #deepl:3883787876
  je_mog_pli_redistributive_reaction: "PLI：ポピュリストの扇動" #deepl:1884117642
+ mog_pli_fought_corruption_modifier: "腐敗した影響力を一掃" #deepl:605458558
+ mog_pli_curried_favour_modifier: "権力者との好意のカレー" #deepl:3980467289
+ PLI_BASE_CORRUPTION: "#yellow ポテンシャル#!" #deepl:76454067
  PLI_POLICE_INSTITUTION: "警察機関レベル" #deepl:3695223093
  PLI_SCHOOL_INSTITUTION: "教育機関レベル" #deepl:119565117
  PLI_HEALTH_INSTITUTION: "医療システム 機関レベル" #deepl:1631231090
  PLI_SOCSEC_INSTITUTION: "社会保障機関レベル" #deepl:40582289
  PLI_OHS_INSTITUTION: "労働安全機関レベル" #deepl:2305349007
  PLI_HAFFAIRS_INSTITUTION: "内務機関レベル" #deepl:1435635816
+ PLI_2DECIMAL_SCRIPT_VALUE_FORMAT: "$KEY$:$VALUE|=2+$。" #deepl:3216225099
+ PLI_2DECIMAL_SCRIPT_VALUE_INVERT_FORMAT: "$KEY$: $VALUE|=2-$." #deepl:3125476191
+ PLI_3DECIMAL_SCRIPT_VALUE_FORMAT: "$KEY$:$VALUE|=3+$。" #deepl:635900380
+ PLI_3DECIMAL_SCRIPT_VALUE_INVERT_FORMAT: "$KEY$: $VALUE|=3-$." #deepl:538859976
  
  state_aristocrats_investment_pool_contribution_mult: "$aristocrats$ [concept_investment_pool] 貢献熱意" #deepl:3643715859
  state_capitalists_investment_pool_contribution_mult: "$capitalists$ [concept_investment_pool] 貢献熱意" #deepl:418366632

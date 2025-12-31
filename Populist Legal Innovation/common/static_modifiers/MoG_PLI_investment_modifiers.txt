@@ -114,3 +114,14 @@ je_mog_pli_redistributive_reaction = {
 	state_pop_support_movement_socialist_mult = 1
 	state_pop_support_movement_positivist_mult = 1
 }
+
+# Button Modifiers
+mog_pli_fought_corruption_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+	country_legitimacy_base_add = -15
+}
+
+mog_pli_curried_favour_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+	country_legitimacy_base_add = 25
+}

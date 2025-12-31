@@ -1,0 +1,158 @@
+﻿## Tools related to Corruption
+
+# Trade legitimacy to fight corruption
+mog_pli_fight_corruption_button = {
+	name = "mog_pli_fight_corruption_button"
+	desc = "mog_pli_fight_corruption_button_desc"
+	
+	visible = {
+		always = yes
+	}
+	
+	possible = {
+		NOT = { has_modifier = mog_pli_fought_corruption_modifier }
+		NOT = { has_modifier = mog_pli_curried_favour_modifier }
+		government_legitimacy > 50
+	}
+	
+	effect = {
+		custom_tooltip = {
+			text = mog_pli_fight_corruption_button_tt
+			je:je_mog_pli_investment = {
+				set_bar_progress = {
+					value = mog_pli_fought_corruption_val
+					name = mog_pli_corruption_tracking_bar
+				}
+			}
+		}
+		add_modifier = {
+			name = mog_pli_fought_corruption_modifier
+			days = short_modifier_time				 # 2.5 years
+			is_decaying = yes
+		}
+		set_variable = {	# Reset progress level variable after changing progress bar.
+			name = mog_pli_corruption_current_value
+			value = "je:je_mog_pli_investment.scripted_bar_progress(mog_pli_corruption_tracking_bar)"
+		}
+	}
+	
+	ai_chance = {
+		value = 0
+		if = {
+			limit = { is_at_war = yes }
+			add = -100
+		}
+		else_if = {
+			limit = {
+				ig:ig_landowners ?= { is_in_government = yes }
+			}
+			add = -20
+		}
+		
+		if = {
+			limit = { government_legitimacy >= 90 }
+			add = 55
+		}
+		else_if = {
+			limit = { government_legitimacy >= 75 }
+			add = 30
+		}
+		else_if = {
+			limit = { government_legitimacy <= 65 }
+			add = -55
+		}
+		
+		if = {
+			limit = { "je:je_mog_pli_investment.scripted_bar_progress(mog_pli_corruption_tracking_bar)" >= 80 }
+			add = 55
+		}
+		else_if = {
+			limit = { "je:je_mog_pli_investment.scripted_bar_progress(mog_pli_corruption_tracking_bar)" >= 60 }
+			add = 30
+		}
+		else = {
+			add = 15
+		}
+	}
+}
+
+# Engage in corruption to gain legitimacy
+mog_pli_curry_favour_button = {
+	name = "mog_pli_curry_favour_button"
+	desc = "mog_pli_curry_favour_button_desc"
+	
+	visible = {
+		always = yes
+	}
+	
+	possible = {
+		NOT = { has_modifier = mog_pli_fought_corruption_modifier }
+		NOT = { has_modifier = mog_pli_curried_favour_modifier }
+		government_legitimacy < 90
+	}
+	
+	effect = {
+		custom_tooltip = {
+			text = mog_pli_curry_favour_button_tt
+			je:je_mog_pli_investment = {
+				set_bar_progress = {
+					value = mog_pli_curried_favour_val
+					name = mog_pli_corruption_tracking_bar
+				}
+			}
+		}
+		
+		add_modifier = {
+			name = mog_pli_curried_favour_modifier
+			days = short_modifier_time				 # 2.5 years
+			is_decaying = yes
+		}
+		set_variable = {	# Reset progress level variable after changing progress bar.
+			name = mog_pli_corruption_current_value
+			value = "je:je_mog_pli_investment.scripted_bar_progress(mog_pli_corruption_tracking_bar)"
+		}
+	}
+	
+	ai_chance = {
+		value = 0
+		if = {
+			limit = { in_default = yes }
+			add = -100
+		}
+		else_if = {
+			limit = {
+				NOR = {
+					ig:ig_landowners ?= { is_in_government = yes }
+					ig:ig_industrialists ?= { is_in_government = yes }
+				}
+			}
+			add = -20
+		}
+		
+		if = {
+			limit = { "je:je_mog_pli_investment.scripted_bar_progress(mog_pli_corruption_tracking_bar)" <= 40 }
+			add = 55
+		}
+		else_if = {
+			limit = { "je:je_mog_pli_investment.scripted_bar_progress(mog_pli_corruption_tracking_bar)" <= 60 }
+			add = 15
+		}
+		else_if = {
+			limit = { "je:je_mog_pli_investment.scripted_bar_progress(mog_pli_corruption_tracking_bar)" >= 75 }
+			add = -55
+		}
+		
+		if = {
+			limit = { government_legitimacy <= 25 }
+			add = 55
+		}
+		else_if = {
+			limit = { government_legitimacy <= 50 }
+			add = 15
+		}
+		else_if = {
+			limit = { government_legitimacy >= 75 }
+			add = -55
+		}
+	}
+}

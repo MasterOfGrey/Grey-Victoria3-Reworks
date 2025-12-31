@@ -7,6 +7,12 @@
  mog_pli_corruption_tracking_bar_title: "Системная коррупция" #deepl:3949053749
  mog_pli_corruption_tracking_bar_desc: "#header $mog_pli_corruption_tracking_bar_title$:#! #v [JournalEntry.GetCurrentBarProgress(ScriptedProgressBar.Self)|%1]#!" #deepl:2916165588
  mog_pli_corruption_increment_desc: "[Country.MakeScope.GetScriptValueDesc('mog_pli_corruption_increment')]" #deepl:1826878765
+ mog_pli_fight_corruption_button: "Очистить коррупцию" #deepl:3243920748
+ mog_pli_fight_corruption_button_desc: "Искореняйте коррупционеров и изгоняйте их из бюрократического аппарата." #deepl:1840372736
+ mog_pli_fight_corruption_button_tt: "Коррупция изменяется благодаря #n [ROOT.GetCountry.MakeScope.ScriptValue('mog_pli_fought_corruption_tt_val')|=-]#!" #deepl:2699109925
+ mog_pli_curry_favour_button: "Карри Фавор" #deepl:1217933398
+ mog_pli_curry_favour_button_desc: "Удовлетворение желаний тех, кто имеет влияние, чтобы укрепить поддержку правительства." #deepl:2680760523
+ mog_pli_curry_favour_button_tt: "Коррупция изменяется благодаря #n [ROOT.GetCountry.MakeScope.ScriptValue('mog_pli_curried_favour_tt_val')|=-]#!" #deepl:2570271461
  
  mog_pli_investorconfidence_exp: "Она представляет собой чистую готовность к инвестированию для всех людей, имеющих доступ к свободным средствам. Он будет двигаться в направлении #yellow потенциального#! значения, которое повышается благодаря снижению налогов, доступу к дешевой рабочей силе, широким инвестиционным возможностям и законам, обеспечивающим права большей части населения (политический плюрализм), равенство перед законом (верховенство права) и владение прибылью (гарантированные права собственности). Скорость изменения доверия инвесторов зависит от [Concept('concept_institution','$concept_institutions$')].#indent_newline:2 \n#red Примечание:#! Такие события, как объявление войны или внезапный неурожай, могут вызвать резкое изменение текущего уровня доверия инвесторов...#! \n\nМаксимальный уровень доверия инвесторов #yellow #! ограничен размером пула [concept_investment_pool] по сравнению с [Concept('concept_gdp','$concept_gdp_short$')], так как слишком большое количество денег в инвестиционном пуле представляет собой слабые инвестиционные возможности. Максимальный размер пула всегда будет меньше половины ВВП страны.#indent_newline:3 \n\n #i В настоящее время это приводит к следующим последствиям:#! #indent_newline:3 \n#b Потенциальная уверенность инвестора:#! #v [Country.MakeScope.ScriptValue('mog_pli_resting_target_loc_value')|%1]#! \n#b Максимальное доверие инвесторов:#! #v [Country.MakeScope.ScriptValue('mog_pli_max_investment_willingness_from_ip')|%1]#! \n#b Вклады в инвестиционный пул:#! #v [Country.GetModifier.GetValueFor('state_aristocrats_investment_pool_contribution_mult')|%1]#!#!#!" #deepl:987620402
  mog_pli_systemiccorruption_exp: "Она представляет собой взаимодействие различных законов, которые позволяют людям мазать свои руки в ходе обычного бизнеса. Она будет двигаться в направлении #yellow потенциального#! значения, которое в основном улучшается благодаря хорошо финансируемой бюрократии, сильным полицейским институтам, а также законам, повышающим прозрачность и подотчетность. Скорость изменения коррупции зависит от вашего [Concept('concept_institution','$concept_institutions$')], но коррупция меняется медленно.#indent_newline:3 \n\n #i Текущие последствия этого:#! #indent_newline:3 \n#b Потенциальная системная коррупция:#! #v [Country.MakeScope.ScriptValue('mog_pli_corruption_target_loc_value')|%1]#! \n#b Эффективность инвестиций:#! #v -[Country.MakeScope.ScriptValue('mog_pli_corruption_multiplier')|%1]#! #! #! [AddTextIf(Not(GetPlayer.MakeScope.Var('mog_pli_corruption_disabled').IsSet),'\n\n#instruction Corruption Game Rule is:#! #L Active#!')][AddTextIf(GetPlayer.MakeScope.Var('mog_pli_corruption_disabled').IsSet,'\n\n#instruction Corruption Game Rule is:#! #L Disabled#!')]" #deepl:1532604169
@@ -29,12 +35,19 @@
  je_mog_pli_laborers_investment_modifier: "$laborers$ Доверие инвесторов" #deepl:4934552
  je_mog_pli_liberal_reaction: "PLI: Либеральная агитация" #deepl:3883787876
  je_mog_pli_redistributive_reaction: "PLI: Популистская агитация" #deepl:1884117642
+ mog_pli_fought_corruption_modifier: "Очистка от коррупционного влияния" #deepl:605458558
+ mog_pli_curried_favour_modifier: "Забота о влиятельных людях" #deepl:3980467289
+ PLI_BASE_CORRUPTION: "Естественная тенденция #yellow Потенциал#!" #deepl:76454067
  PLI_POLICE_INSTITUTION: "Уровень полицейского учреждения" #deepl:3695223093
  PLI_SCHOOL_INSTITUTION: "Уровень учебного заведения" #deepl:119565117
  PLI_HEALTH_INSTITUTION: "Уровень учреждения системы здравоохранения" #deepl:1631231090
  PLI_SOCSEC_INSTITUTION: "Уровень учреждения социального обеспечения" #deepl:40582289
  PLI_OHS_INSTITUTION: "Безопасность на рабочем месте Уровень учреждения" #deepl:2305349007
  PLI_HAFFAIRS_INSTITUTION: "Внутренние дела Уровень учреждения" #deepl:1435635816
+ PLI_2DECIMAL_SCRIPT_VALUE_FORMAT: "$KEY$: $VALUE|=2+$" #deepl:3216225099
+ PLI_2DECIMAL_SCRIPT_VALUE_INVERT_FORMAT: "$KEY$: $VALUE|=2-$" #deepl:3125476191
+ PLI_3DECIMAL_SCRIPT_VALUE_FORMAT: "$KEY$: $VALUE|=3+$" #deepl:635900380
+ PLI_3DECIMAL_SCRIPT_VALUE_INVERT_FORMAT: "$KEY$: $VALUE|=3-$" #deepl:538859976
  
  state_aristocrats_investment_pool_contribution_mult: "$aristocrats$ [concept_investment_pool] энтузиазм" #deepl:3643715859
  state_capitalists_investment_pool_contribution_mult: "$capitalists$ [concept_investment_pool] энтузиазм" #deepl:418366632

@@ -7,6 +7,12 @@
  mog_pli_corruption_tracking_bar_title: "Sistemik Yolsuzluk" #deepl:3949053749
  mog_pli_corruption_tracking_bar_desc: "#header $mog_pli_corruption_tracking_bar_title$:#! #v [JournalEntry.GetCurrentBarProgress(ScriptedProgressBar.Self)|%1]#!" #deepl:2916165588
  mog_pli_corruption_increment_desc: "[Country.MakeScope.GetScriptValueDesc('mog_pli_corruption_increment')]" #deepl:1826878765
+ mog_pli_fight_corruption_button: "Yolsuzluğu Temizle" #deepl:3243920748
+ mog_pli_fight_corruption_button_desc: "Yolsuzluk yapanların kökünü kazıyın ve onları bürokrasiden uzaklaştırın." #deepl:1840372736
+ mog_pli_fight_corruption_button_tt: "Yolsuzluk şu şekilde değiştirilir #n [ROOT.GetCountry.MakeScope.ScriptValue('mog_pli_fought_corruption_tt_val')|=-]#!" #deepl:2699109925
+ mog_pli_curry_favour_button: "Köri Favor" #deepl:1217933398
+ mog_pli_curry_favour_button_desc: "Hükümete desteği artırmak için nüfuz sahibi kişilerin arzularını tatmin etmek." #deepl:2680760523
+ mog_pli_curry_favour_button_tt: "Yolsuzluk şu şekilde değiştirilir #n [ROOT.GetCountry.MakeScope.ScriptValue('mog_pli_curried_favour_tt_val')|=-]#!" #deepl:2570271461
  
  mog_pli_investorconfidence_exp: "Bu, isteğe bağlı fonlara erişimi olan tüm insanlar için net yatırım yapma isteğini temsil eder. Daha düşük vergiler, ucuz işgücüne erişim, güçlü yatırım fırsatları ve daha fazla nüfusa hak tanıyan (siyasi çoğulculuk), kanun önünde eşitlik sağlayan (hukukun üstünlüğü) ve karların sahiplenilmesini sağlayan (güvenli mülkiyet hakları) yasalarla iyileştirilen bir #yellow potansiyel#! değerine doğru hareket edecektir. Yatırımcı güveninin değişme hızı [Concept('concept_institution','$concept_institutions$')].#indent_newline:2 \n#red Not:#! Savaş ilanı veya ani bir hasat başarısızlığı gibi olaylar yatırımcı güveninin mevcut seviyesinde ani bir değişikliğe neden olabilir...#! \n\n #yellow maksimum yatırımcı güveni#!, yatırım havuzundaki çok fazla para zayıf yatırım fırsatlarını temsil ettiğinden [concept_investment_pool] ile karşılaştırıldığında [Concept('concept_gdp','$concept_gdp_short$')] büyüklüğü ile sınırlıdır. Havuzun maksimum büyüklüğü her zaman bir Ülkenin GSYİH'sinin yarısından az olacaktır.#indent_newline:3 \n\n #i Bunun mevcut etkileri şunlardır:#! #indent_newline:3 \n#b Potansiyel Yatırımcı Güveni:#! #v [Country.MakeScope.ScriptValue('mog_pli_resting_target_loc_value')|%1]#! \n#b Maksimum Yatırımcı Güveni:#! #v [Country.MakeScope.ScriptValue('mog_pli_max_investment_willingness_from_ip')|%1]#! \n#b Yatırım Havuzu Katkıları:#! #v [Country.GetModifier.GetValueFor('state_aristocrats_investment_pool_contribution_mult')|%1]#!#!#!" #deepl:987620402
  mog_pli_systemiccorruption_exp: "Bu, bireylerin normal iş akışında kendi ellerini yağlamalarını sağlayan farklı yasaların etkileşimini temsil eder. Çoğunlukla iyi finanse edilen bir bürokrasi, güçlü polis kurumları ve şeffaflık ve hesap verebilirliği artıran yasalarla iyileştirilen bir #yellow potansiyel#! değerine doğru ilerleyecektir. Yolsuzluğun değişme hızı [Concept('concept_institution','$concept_institutions$')]'unuza bağlıdır, ancak yolsuzluğun değişmesi yavaştır.#indent_newline:3 \n\n #i Bunun mevcut etkileri şunlardır:#! #indent_newline:3 \n#b Potansiyel Sistemik Yolsuzluk:#! #v [Country.MakeScope.ScriptValue('mog_pli_corruption_target_loc_value')|%1]#! \n#b Tüm Pops Yatırım Verimliliği:#! #v -[Country.MakeScope.ScriptValue('mog_pli_corruption_multiplier')|%1]#! #! #! [AddTextIf(Not(GetPlayer.MakeScope.Var('mog_pli_corruption_disabled').IsSet),'\n\n#instruction Corruption Game Rule is:#! #L Active#!')][AddTextIf(GetPlayer.MakeScope.Var('mog_pli_corruption_disabled').IsSet,'\n\n#instruction Corruption Game Rule is:#! #L Disabled#!')]" #deepl:1532604169
@@ -29,12 +35,19 @@
  je_mog_pli_laborers_investment_modifier: "$laborers$ Yatırımcı Güveni" #deepl:4934552
  je_mog_pli_liberal_reaction: "PLI: Liberal Ajitasyon" #deepl:3883787876
  je_mog_pli_redistributive_reaction: "PLI: Popülist Ajitasyon" #deepl:1884117642
+ mog_pli_fought_corruption_modifier: "Yozlaşmış Etkilerden Arındırıldı" #deepl:605458558
+ mog_pli_curried_favour_modifier: "Powerbrokers ile Körili İyilik" #deepl:3980467289
+ PLI_BASE_CORRUPTION: "Doğal eğilim #yellow Potansiyel#!" #deepl:76454067
  PLI_POLICE_INSTITUTION: "Polis Kurumu Seviyesi" #deepl:3695223093
  PLI_SCHOOL_INSTITUTION: "Eğitim Kurumu Seviyesi" #deepl:119565117
  PLI_HEALTH_INSTITUTION: "Sağlık Sistemi Kurum Seviyesi" #deepl:1631231090
  PLI_SOCSEC_INSTITUTION: "Sosyal Güvenlik Kurumu Düzeyi" #deepl:40582289
  PLI_OHS_INSTITUTION: "İşyeri Güvenliği Kurum Seviyesi" #deepl:2305349007
  PLI_HAFFAIRS_INSTITUTION: "İç İşleri Kurum Seviyesi" #deepl:1435635816
+ PLI_2DECIMAL_SCRIPT_VALUE_FORMAT: "$KEY$: $DEĞER|=2+$" #deepl:3216225099
+ PLI_2DECIMAL_SCRIPT_VALUE_INVERT_FORMAT: "$KEY$: $DEĞER|=2-$" #deepl:3125476191
+ PLI_3DECIMAL_SCRIPT_VALUE_FORMAT: "$KEY$: $DEĞER|=3+$" #deepl:635900380
+ PLI_3DECIMAL_SCRIPT_VALUE_INVERT_FORMAT: "$KEY$: $VALUE|=3-$" #deepl:538859976
  
  state_aristocrats_investment_pool_contribution_mult: "$aristocrats$ [concept_investment_pool] katkı coşkusu" #deepl:3643715859
  state_capitalists_investment_pool_contribution_mult: "$capitalists$ [concept_investment_pool] katkı coşkusu" #deepl:418366632

@@ -7,6 +7,12 @@
  mog_pli_corruption_tracking_bar_title: "系统性腐败" #deepl:3949053749
  mog_pli_corruption_tracking_bar_desc: "#header $mog_pli_corruption_tracking_bar_title$:#! #v [JournalEntry.GetCurrentBarProgress(ScriptedProgressBar.Self)|%1]#!" #deepl:2916165588
  mog_pli_corruption_increment_desc: "[Country.MakeScope.GetScriptValueDesc('mog_pli_corruption_increment')]" #deepl:1826878765
+ mog_pli_fight_corruption_button: "清除腐败" #deepl:3243920748
+ mog_pli_fight_corruption_button_desc: "铲除腐败分子，将他们逐出官僚机构。" #deepl:1840372736
+ mog_pli_fight_corruption_button_tt: "改变腐败的方式有#n [ROOT.GetCountry.MakeScope.ScriptValue('mog_pli_fought_corruption_tt_val')|=-]#!" #deepl:2699109925
+ mog_pli_curry_favour_button: "咖喱青睐" #deepl:1217933398
+ mog_pli_curry_favour_button_desc: "满足有影响力者的愿望，以加强对政府的支持。" #deepl:2680760523
+ mog_pli_curry_favour_button_tt: "改变腐败的方式有#n [ROOT.GetCountry.MakeScope.ScriptValue('mog_pli_curried_favour_tt_val')|=-]#!" #deepl:2570271461
  
  mog_pli_investorconfidence_exp: "这代表了所有可自由支配资金的人的净投资意愿。它将朝着#yellow 潜在#! 值的方向发展，并通过降低税率、提供廉价劳动力、提供大量投资机会以及制定相关法律来提高该值；这些法律可赋予更多人口权利（政治多元化），在法律面前实现平等（法治），并确保利润所有权（产权安全）。投资者信心变化的速度取决于您的[Concept('concept_institution','$concept_institutions$')].#indent_newline:2 \n#red 注：#! 宣战或突然歉收等事件都可能导致当前投资者信心水平的突然变化...#! \n\n #yellow 投资者信心最大值 与 相比，受到 规模的限制，因为投资池中资金过多代表投资机会薄弱。投资池的最大规模总是小于一个国家国内生产总值的一半。#indent_newline:3 目前的影响是：#indent_newline:3 潜在投资者信心： 最大投资者信心： 投资池捐款：#! [Concept('concept_gdp','$concept_gdp_short$')] [concept_investment_pool] \n\n#i #! \n#b #! #v [Country.MakeScope.ScriptValue('mog_pli_resting_target_loc_value')|%1]#! \n#b #! #v [Country.MakeScope.ScriptValue('mog_pli_max_investment_willingness_from_ip')|%1]#! \n#b #! #v [Country.GetModifier.GetValueFor('state_aristocrats_investment_pool_contribution_mult')|%1]#!#!#!" #deepl:987620402
  mog_pli_systemiccorruption_exp: "这代表着不同法律之间的相互作用，使个人在正常的商业活动中能够肆意妄为。它将朝着#yellow 的潜在#! 值发展，而资金充足的官僚机构、强大的警察机构以及提高透明度和问责制的法律大多会改善这一状况。腐败的变化速度取决于您的[Concept('concept_institution','$concept_institutions$')] ，但腐败的变化速度很慢。#indent_newline:3 \n\n #i 目前的影响是：#! #indent_newline:3 \n#b 潜在的系统性腐败：#! #v [Country.MakeScope.ScriptValue('mog_pli_corruption_target_loc_value')|%1]#! \n#b All Pops 投资效率：#! #v -[Country.MakeScope.ScriptValue('mog_pli_corruption_multiplier')|%1]#! #! #! [AddTextIf(Not(GetPlayer.MakeScope.Var('mog_pli_corruption_disabled').IsSet),'\n\n#instruction Corruption Game Rule is:#! #L Active#!')][AddTextIf(GetPlayer.MakeScope.Var('mog_pli_corruption_disabled').IsSet,'\n\n#instruction Corruption Game Rule is:#! #L Disabled#!')]" #deepl:1532604169
@@ -29,12 +35,19 @@
  je_mog_pli_laborers_investment_modifier: "$laborers$ 投资者信心" #deepl:4934552
  je_mog_pli_liberal_reaction: "PLI：自由煽动" #deepl:3883787876
  je_mog_pli_redistributive_reaction: "PLI：民粹主义煽动" #deepl:1884117642
+ mog_pli_fought_corruption_modifier: "清除腐败影响" #deepl:605458558
+ mog_pli_curried_favour_modifier: "掮客的青睐" #deepl:3980467289
+ PLI_BASE_CORRUPTION: "#yellow 潜力的自然趋势#!" #deepl:76454067
  PLI_POLICE_INSTITUTION: "警察机构级别" #deepl:3695223093
  PLI_SCHOOL_INSTITUTION: "教育机构级别" #deepl:119565117
  PLI_HEALTH_INSTITUTION: "卫生系统机构层面" #deepl:1631231090
  PLI_SOCSEC_INSTITUTION: "社会保障机构级别" #deepl:40582289
  PLI_OHS_INSTITUTION: "工作场所安全机构级别" #deepl:2305349007
  PLI_HAFFAIRS_INSTITUTION: "民政机构层面" #deepl:1435635816
+ PLI_2DECIMAL_SCRIPT_VALUE_FORMAT: "$KEY$: $VALUE|=2+$" #deepl:3216225099
+ PLI_2DECIMAL_SCRIPT_VALUE_INVERT_FORMAT: "$KEY$: $VALUE|=2-$" #deepl:3125476191
+ PLI_3DECIMAL_SCRIPT_VALUE_FORMAT: "$KEY$: $VALUE|=3+$" #deepl:635900380
+ PLI_3DECIMAL_SCRIPT_VALUE_INVERT_FORMAT: "$KEY$: $VALUE|=3-$" #deepl:538859976
  
  state_aristocrats_investment_pool_contribution_mult: "$aristocrats$ [concept_investment_pool] 贡献热情" #deepl:3643715859
  state_capitalists_investment_pool_contribution_mult: "$capitalists$ [concept_investment_pool] 贡献热情" #deepl:418366632

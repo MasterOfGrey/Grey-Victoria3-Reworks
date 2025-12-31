@@ -1,5 +1,8 @@
 ﻿## Calculation values used exclusively in maths for effect setting.
 
+####################
+#### INVESTMENT ####
+####################
 # Investment je modifier multipliers
 mog_pli_dummy_contribution_multiplier = {
 	value = {
@@ -171,40 +174,42 @@ je_mog_pli_reaction_multiplier = {	# Value of 1 will result in 100%
 	}
 }
 
-# Innovation je modifier multipliers
-mog_pli_innovation_multiplier = {
-	value = {
-		add = {								# We need to multiply by inverse of the investment % from the JE.
-			add = 100											# innovation_current_value is actually the limiting proportion
-			subtract = var:mog_pli_innovation_current_value		# 100-current gets the proportion for the negative penalty
-			divide = 100										# Convert to %
-		}
+# Investment je button vals
+mog_pli_fought_corruption_val = {
+	add = root.var:mog_pli_corruption_current_value
+	add = {
+		value = root.var:mog_pli_corruption_current_value
+		divide = 80			# Divide by 80, not 100, so that mid-range corruption doesn't feel so bad to fight
+		multiply = -20		# Remove up to 20 corruption scaled based on current corruption
+	}
+	min = 0
+}
+
+mog_pli_fought_corruption_tt_val = {	# Mimic the calc above
+	add = {
+		value = var:mog_pli_corruption_current_value
+		divide = 80
+		multiply = -20
 	}
 }
 
-mog_pli_proliferation_multiplier = {
-	value = {
-		add = {								# This one does not need inverting.
-			add = var:mog_pli_proliferation_current_value		# gets the proliferation value for the bonus
-			divide = 100										# Convert to %
-		}
+mog_pli_curried_favour_val = {
+	add = root.var:mog_pli_corruption_current_value
+	add = {
+		value = 100
+		subtract = root.var:mog_pli_corruption_current_value
+		divide = 80			# Divide by 80, not 100, so there are diminishing impacts at the top end
+		multiply = 20		# Add up to 20 corruption inversely scaled based on current corruption
 	}
+	max = 100
 }
 
-mog_pli_proliferation_multiplier_loc = {
-	value = {
-		add = mog_pli_proliferation_multiplier	
-		multiply = 4							# From the default value for je_mog_pli_proliferation_modifier
-	}
-}
-
-mog_pli_max_innovation_base_sv = {
-	value = {													# Calculate what the default modifier value would be right now - 
-		add = {														# - i.e. the total unadjusted modifier based on previous month:
-			add = var:mog_pli_max_innovation_adjustment					# Cross multiply [ investment_current_prev/100 = adjustment/total ]
-			multiply = 100												# Solve for total -> [ = (adjustment*100)/investment_current_prev ]
-			divide = var:mog_pli_innovation_current_prev
-		}
+mog_pli_curried_favour_tt_val = {		# Mimic the calc above
+	add = {
+		value = 100
+		subtract = var:mog_pli_corruption_current_value
+		divide = 80
+		multiply = 20
 	}
 }
 
@@ -238,6 +243,46 @@ mog_pli_war_confidence_target_hit_val = {
 		min = {
 			value = local_var:je_var
 			divide = 2
+		}
+	}
+}
+
+####################
+#### INNOVATION ####
+####################
+# Innovation je modifier multipliers
+mog_pli_innovation_multiplier = {
+	value = {
+		add = {								# We need to multiply by inverse of the investment % from the JE.
+			add = 100											# innovation_current_value is actually the limiting proportion
+			subtract = var:mog_pli_innovation_current_value		# 100-current gets the proportion for the negative penalty
+			divide = 100										# Convert to %
+		}
+	}
+}
+
+mog_pli_proliferation_multiplier = {
+	value = {
+		add = {								# This one does not need inverting.
+			add = var:mog_pli_proliferation_current_value		# gets the proliferation value for the bonus
+			divide = 100										# Convert to %
+		}
+	}
+}
+
+mog_pli_proliferation_multiplier_loc = {
+	value = {
+		add = mog_pli_proliferation_multiplier	
+		multiply = 4							# From the default value for je_mog_pli_proliferation_modifier
+	}
+}
+
+mog_pli_max_innovation_base_sv = {
+	value = {													# Calculate what the default modifier value would be right now - 
+		add = {														# - i.e. the total unadjusted modifier based on previous month:
+			add = var:mog_pli_max_innovation_adjustment					# Cross multiply [ investment_current_prev/100 = adjustment/total ]
+			multiply = 100												# Solve for total -> [ = (adjustment*100)/investment_current_prev ]
+			divide = var:mog_pli_innovation_current_prev
 		}
 	}
 }

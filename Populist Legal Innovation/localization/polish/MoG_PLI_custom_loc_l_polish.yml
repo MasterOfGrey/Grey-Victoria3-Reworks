@@ -7,6 +7,12 @@
  mog_pli_corruption_tracking_bar_title: "Korupcja systemowa" #deepl:3949053749
  mog_pli_corruption_tracking_bar_desc: "#header $mog_pli_corruption_tracking_bar_title$:#! #v [JournalEntry.GetCurrentBarProgress(ScriptedProgressBar.Self)|%1]#!" #deepl:2916165588
  mog_pli_corruption_increment_desc: "[Country.MakeScope.GetScriptValueDesc('mog_pli_corruption_increment')]" #deepl:1826878765
+ mog_pli_fight_corruption_button: "Oczyść korupcję" #deepl:3243920748
+ mog_pli_fight_corruption_button_desc: "Wykorzenienie nosicieli korupcji i usunięcie ich z biurokracji." #deepl:1840372736
+ mog_pli_fight_corruption_button_tt: "Korupcja jest zmieniana przez #n [ROOT.GetCountry.MakeScope.ScriptValue('mog_pli_fought_corruption_tt_val')|=-]#!" #deepl:2699109925
+ mog_pli_curry_favour_button: "Curry Favor" #deepl:1217933398
+ mog_pli_curry_favour_button_desc: "Zaspokajanie pragnień wpływowych osób w celu zwiększenia poparcia dla rządu." #deepl:2680760523
+ mog_pli_curry_favour_button_tt: "Korupcja jest zmieniana przez #n [ROOT.GetCountry.MakeScope.ScriptValue('mog_pli_curried_favour_tt_val')|=-]#!" #deepl:2570271461
  
  mog_pli_investorconfidence_exp: "Reprezentuje to gotowość netto do inwestowania dla wszystkich osób z dostępem do funduszy uznaniowych. Będzie ona zmierzać w kierunku #yellow potencjalnej#! wartości, która jest poprawiana przez niższe podatki, dostęp do taniej siły roboczej, duże możliwości inwestycyjne i prawa, które uwłaszczają większą część populacji (pluralizm polityczny), tworzą równość wobec prawa (rządy prawa) i zapewniają własność zysków (bezpieczne prawa własności). Szybkość, z jaką zmienia się zaufanie inwestorów, zależy od [Concept('concept_institution','$concept_institutions$')].#indent_newline:2 \n#red Uwaga:#! Wydarzenia takie jak wypowiedzenie wojny lub nagły nieurodzaj mogą spowodować nagłą zmianę obecnego poziomu zaufania inwestorów....#! \n\nMaksymalny poziom zaufania inwestorów #yellow #! jest ograniczony wielkością puli [concept_investment_pool] w porównaniu do [Concept('concept_gdp','$concept_gdp_short$')], ponieważ zbyt duża ilość pieniędzy w puli inwestycyjnej oznacza słabe możliwości inwestycyjne. Maksymalna wielkość puli zawsze będzie mniejsza niż połowa PKB danego kraju. #indent_newline:3 \n\n #i Obecne skutki tego są następujące:#! #indent_newline:3 \n#b Potencjalne zaufanie inwestorów:#! #v [Country.MakeScope.ScriptValue('mog_pli_resting_target_loc_value')|%1]#! \n#b Maksymalne zaufanie inwestorów:#! #v [Country.MakeScope.ScriptValue('mog_pli_max_investment_willingness_from_ip')|%1]#! \n#b Składki do puli inwestycyjnej:#! #v [Country.GetModifier.GetValueFor('state_aristocrats_investment_pool_contribution_mult')|%1]#!#!#!" #deepl:987620402
  mog_pli_systemiccorruption_exp: "Reprezentuje to interakcję różnych praw, które umożliwiają jednostkom smarowanie własnych rąk w trakcie normalnej działalności. Będzie ona zmierzać w kierunku #yellow potencjalnej#! wartości, która jest głównie poprawiana przez dobrze finansowaną biurokrację, silne instytucje policyjne i prawa, które zwiększają przejrzystość i odpowiedzialność. Szybkość, z jaką korupcja się zmienia, zależy od twojego [Concept('concept_institution','$concept_institutions$')], ale korupcja zmienia się powoli.#indent_newline:3 \n\n #i Obecne skutki tego są następujące:#! #indent_newline:3 \n#b Potencjalna korupcja systemowa:#! #v [Country.MakeScope.ScriptValue('mog_pli_corruption_target_loc_value')|%1]#! \n#b All Pops Efektywność inwestycji:#! #v -[Country.MakeScope.ScriptValue('mog_pli_corruption_multiplier')|%1]#! #! #! [AddTextIf(Not(GetPlayer.MakeScope.Var('mog_pli_corruption_disabled').IsSet),'\n\n#instruction Corruption Game Rule is:#! #L Active#!')][AddTextIf(GetPlayer.MakeScope.Var('mog_pli_corruption_disabled').IsSet,'\n\n#instruction Corruption Game Rule is:#! #L Disabled#!')]" #deepl:1532604169
@@ -29,12 +35,19 @@
  je_mog_pli_laborers_investment_modifier: "$laborers$ Zaufanie inwestorów" #deepl:4934552
  je_mog_pli_liberal_reaction: "PLI: Liberalna agitacja" #deepl:3883787876
  je_mog_pli_redistributive_reaction: "PLI: Agitacja populistyczna" #deepl:1884117642
+ mog_pli_fought_corruption_modifier: "Usunięte skorumpowane wpływy" #deepl:605458558
+ mog_pli_curried_favour_modifier: "Podkręcona przychylność Powerbrokerów" #deepl:3980467289
+ PLI_BASE_CORRUPTION: "Naturalny trend w kierunku #yellow Potencjał#!" #deepl:76454067
  PLI_POLICE_INSTITUTION: "Poziom instytucji policyjnej" #deepl:3695223093
  PLI_SCHOOL_INSTITUTION: "Poziom instytucji edukacyjnej" #deepl:119565117
  PLI_HEALTH_INSTITUTION: "Poziom instytucji systemu opieki zdrowotnej" #deepl:1631231090
  PLI_SOCSEC_INSTITUTION: "Poziom instytucji zabezpieczenia społecznego" #deepl:40582289
  PLI_OHS_INSTITUTION: "Bezpieczeństwo w miejscu pracy Poziom instytucji" #deepl:2305349007
  PLI_HAFFAIRS_INSTITUTION: "Sprawy wewnętrzne Poziom instytucji" #deepl:1435635816
+ PLI_2DECIMAL_SCRIPT_VALUE_FORMAT: "$KEY$$VALUE|=2+$" #deepl:3216225099
+ PLI_2DECIMAL_SCRIPT_VALUE_INVERT_FORMAT: "$KEY$$VALUE|=2-$" #deepl:3125476191
+ PLI_3DECIMAL_SCRIPT_VALUE_FORMAT: "$KEY$$VALUE|=3+$" #deepl:635900380
+ PLI_3DECIMAL_SCRIPT_VALUE_INVERT_FORMAT: "$KEY$$VALUE|=3-$" #deepl:538859976
  
  state_aristocrats_investment_pool_contribution_mult: "$aristocrats$ [concept_investment_pool] entuzjazm wkładu" #deepl:3643715859
  state_capitalists_investment_pool_contribution_mult: "$capitalists$ [concept_investment_pool] entuzjazm wkładu" #deepl:418366632

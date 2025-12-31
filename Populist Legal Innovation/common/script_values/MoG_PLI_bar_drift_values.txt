@@ -124,6 +124,7 @@ mog_pli_corruption_tracking_bar_weekly_drift = {
 		add = var:mog_pli_corruption_current_value
 		divide = 100
 	}
+	format = DECIMAL_SCRIPT_VALUE_FORMAT_INVERT
 }
 
 mog_pli_innovation_tracking_bar_weekly_drift = {

@@ -6,6 +6,9 @@
 	weight = 9000
 	is_shown_when_inactive = { NOT = { is_country_type = decentralized } }
 	possible = { is_revolutionary = no }
+		
+	scripted_button = mog_pli_fight_corruption_button
+	scripted_button = mog_pli_curry_favour_button
 	
 	scripted_progress_bar = mog_pli_investment_tracking_bar
 	scripted_progress_bar = mog_pli_corruption_tracking_bar

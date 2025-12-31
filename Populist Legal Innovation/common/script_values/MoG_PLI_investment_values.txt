@@ -56,6 +56,7 @@ mog_pli_investment_increment = {
 			multiply = investment
 		}
 		desc = PLI_POLICE_INSTITUTION		# Max = 0.5
+		format = PLI_2DECIMAL_SCRIPT_VALUE_FORMAT
 	}
 	add = {
 		owner.institution:institution_schools ?= {
@@ -63,6 +64,7 @@ mog_pli_investment_increment = {
 			multiply = investment
 		}
 		desc = PLI_SCHOOL_INSTITUTION		# Max = 0.2
+		format = PLI_2DECIMAL_SCRIPT_VALUE_FORMAT
 	}
 	add = {
 		owner.institution:institution_health_system ?= {
@@ -70,6 +72,7 @@ mog_pli_investment_increment = {
 			multiply = investment
 		}
 		desc = PLI_HEALTH_INSTITUTION		# Max = 0.2
+		format = PLI_2DECIMAL_SCRIPT_VALUE_FORMAT
 	}
 	add = {
 		owner.institution:institution_social_security ?= {
@@ -77,6 +80,7 @@ mog_pli_investment_increment = {
 			multiply = investment
 		}
 		desc = PLI_SOCSEC_INSTITUTION		# Max = 0.5
+		format = PLI_2DECIMAL_SCRIPT_VALUE_FORMAT
 	}
 	# Decelerators
 	add = {		# New Investment has higher overheads
@@ -85,6 +89,7 @@ mog_pli_investment_increment = {
 			multiply = investment
 		}
 		desc = PLI_OHS_INSTITUTION			# Max = -0.5
+		format = PLI_2DECIMAL_SCRIPT_VALUE_FORMAT
 	}
 	add = {		# New Investment has either sovereign risk or more noise to filter
 		owner.institution:institution_home_affairs ?= {
@@ -92,6 +97,7 @@ mog_pli_investment_increment = {
 			multiply = investment
 		}
 		desc = PLI_HAFFAIRS_INSTITUTION		# Max = -0.2
+		format = PLI_2DECIMAL_SCRIPT_VALUE_FORMAT
 	}
 	min = 0.1
 }
@@ -433,35 +439,69 @@ mog_pli_corruption_target_loc_value = {
 
 mog_pli_corruption_increment = {
 	value = 0
-	# Accelerators/Decelerators
-	add = {
-		owner.institution:institution_police ?= {
-			add = 0.01
-			multiply = investment
+	if = {
+		limit = { mog_pli_corruption_target > var:mog_pli_corruption_current_value } # Target below current state.
+		add = { 
+			add = 0.275
+			multiply = {
+				add = var:mog_pli_corruption_current_value
+				divide = mog_pli_corruption_target
+			}
+			desc = PLI_BASE_CORRUPTION
+			format = PLI_3DECIMAL_SCRIPT_VALUE_INVERT_FORMAT
 		}
-		desc = PLI_POLICE_INSTITUTION		# Max = 0.05
 	}
 	add = {
-		owner.institution:institution_schools ?= {
-			add = 0.01
-			multiply = investment
+		# Accelerators/Decelerators
+		add = {
+			owner.institution:institution_police ?= {
+				add = 0.01
+				multiply = investment
+			}
+			if = {
+				limit = { mog_pli_corruption_target > var:mog_pli_corruption_current_value }
+				multiply = -1	# Slow the rise instead of speeding the decline.
+			}
+			desc = PLI_POLICE_INSTITUTION		# Max = 0.05
+			format = PLI_3DECIMAL_SCRIPT_VALUE_INVERT_FORMAT
 		}
-		desc = PLI_SCHOOL_INSTITUTION		# Max = 0.05
-	}
-	add = {
-		owner.institution:institution_workplace_safety ?= {
-			add = 0.01
-			multiply = investment
+		add = {
+			owner.institution:institution_schools ?= {
+				add = 0.01
+				multiply = investment
+			}
+			if = {
+				limit = { mog_pli_corruption_target > var:mog_pli_corruption_current_value }
+				multiply = -1	# Slow the rise instead of speeding the decline.
+			}
+			desc = PLI_SCHOOL_INSTITUTION		# Max = 0.05
+			format = PLI_3DECIMAL_SCRIPT_VALUE_INVERT_FORMAT
 		}
-		desc = PLI_OHS_INSTITUTION			# Max = 0.05
-	}
-	add = {		# Depends on the nature of the institution
-		owner.institution:institution_home_affairs ?= {
-			add = owner.mog_pli_cor_internal_security
-			divide = 400	# 10 becomes 0.025
-			multiply = investment
+		add = {
+			owner.institution:institution_workplace_safety ?= {
+				add = 0.01
+				multiply = investment
+			}
+			if = {
+				limit = { mog_pli_corruption_target > var:mog_pli_corruption_current_value }
+				multiply = -1	# Slow the rise instead of speeding the decline.
+			}
+			desc = PLI_OHS_INSTITUTION			# Max = 0.05
+			format = PLI_3DECIMAL_SCRIPT_VALUE_INVERT_FORMAT
 		}
-		desc = PLI_HAFFAIRS_INSTITUTION		# Max = 0.125
+		add = {		# Depends on the nature of the institution
+			owner.institution:institution_home_affairs ?= {
+				add = owner.mog_pli_cor_internal_security
+				divide = 400	# 10 becomes 0.025
+				multiply = investment
+			}
+			if = {
+				limit = { mog_pli_corruption_target > var:mog_pli_corruption_current_value }
+				multiply = -1	# Slow the rise instead of speeding the decline.
+			}
+			desc = PLI_HAFFAIRS_INSTITUTION		# Max = 0.125
+			format = PLI_3DECIMAL_SCRIPT_VALUE_INVERT_FORMAT
+		}
 	}
 }
 

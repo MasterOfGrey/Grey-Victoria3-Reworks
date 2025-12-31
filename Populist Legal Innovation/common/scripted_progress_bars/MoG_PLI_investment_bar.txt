@@ -9,74 +9,70 @@
 	default = yes	# High number = good
 
 	weekly_progress = {
-		add = {
-			# desc = "mog_pli_investment_tracking_bar_drift"
-			# desc = "mog_pli_investment_increment_desc"
+		if = {
+			limit = { has_variable = mog_pli_investment_current_value }
 			if = {
-				limit = { has_variable = mog_pli_investment_current_value }
+				limit = { mog_pli_investment_target < var:mog_pli_investment_current_value } # Target below current state.
 				if = {
-					limit = { mog_pli_investment_target < var:mog_pli_investment_current_value } # Target below current state.
-					if = {
-						limit = {
-							mog_pli_investment_increment < {	# If increment is less than the gap, use the increment, else use the gap.
-								value = mog_pli_investment_target
-								subtract = var:mog_pli_investment_current_value
-								multiply = -1
-								multiply = je_mog_pli_falling_confidence_mult
-							}
+					limit = {
+						mog_pli_investment_increment < {	# If increment is less than the gap, use the increment, else use the gap.
+							value = mog_pli_investment_target
+							subtract = var:mog_pli_investment_current_value
+							multiply = -1
+							multiply = je_mog_pli_falling_confidence_mult
 						}
+					}
+					add = {
 						add = {
-							add = {
-								value = mog_pli_investment_increment
-								multiply = -1							# Move towards lower target.
-								multiply = je_mog_pli_falling_confidence_mult
-							}
-						#	desc = "mog_pli_investment_increment_desc"
+							value = mog_pli_investment_increment
+							multiply = -1							# Move towards lower target.
+							multiply = je_mog_pli_falling_confidence_mult
 						}
-					}
-					else = {
-						add = { 
-							add = { 
-								value = mog_pli_investment_increment
-								multiply = -1							# Move towards lower target.
-								multiply = je_mog_pli_falling_confidence_mult
-								min = {
-									value = mog_pli_investment_target
-									subtract = var:mog_pli_investment_current_value		# Current value slightly bigger here, so result is -ve and result = target.
-								}
-							}
-						#	desc = "mog_pli_investment_increment_desc"
-						}
+					#	desc = "mog_pli_investment_increment_desc"
 					}
 				}
-				else = { # Target above current state.
-					if = {
-						limit = {
-							mog_pli_investment_increment < {	# If increment is less than the gap, use the increment, else use the gap.
+				else = {
+					add = { 
+						add = { 
+							value = mog_pli_investment_increment
+							multiply = -1							# Move towards lower target.
+							multiply = je_mog_pli_falling_confidence_mult
+							min = {
 								value = mog_pli_investment_target
-								subtract = var:mog_pli_investment_current_value
+								subtract = var:mog_pli_investment_current_value		# Current value slightly bigger here, so result is -ve and result = target.
 							}
 						}
-						add = { 
-							value = mog_pli_investment_increment	# Move towards higher target.
-						#	desc = "mog_pli_investment_increment_desc"
-						}
-					}
-					else = {
-						add = { 
-							value = mog_pli_investment_increment	# Move towards higher target.
-							max =  {
-								value = var:mog_pli_investment_current_value
-								subtract = mog_pli_investment_target		# Current value slightly lower here, so result is +ve and result = target.
-							}
-						#	desc = "mog_pli_investment_increment_desc"
-						}
+					#	desc = "mog_pli_investment_increment_desc"
 					}
 				}
 			}
-			else = {
-				add = 0
+			else = { # Target above current state.
+				if = {
+					limit = {
+						mog_pli_investment_increment < {	# If increment is less than the gap, use the increment, else use the gap.
+							value = mog_pli_investment_target
+							subtract = var:mog_pli_investment_current_value
+						}
+					}
+					add = { 
+						value = mog_pli_investment_increment	# Move towards higher target.
+					#	desc = "mog_pli_investment_increment_desc"
+					}
+				}
+				else = {
+					add = { 
+						value = mog_pli_investment_increment	# Move towards higher target.
+						max =  {
+							value = var:mog_pli_investment_current_value
+							subtract = mog_pli_investment_target		# Current value slightly lower here, so result is +ve and result = target.
+						}
+					#	desc = "mog_pli_investment_increment_desc"
+					}
+				}
 			}
+		}
+		else = {
+			add = 0
 		}
 	}
 }
@@ -84,6 +80,7 @@
 mog_pli_corruption_tracking_bar = {
 	name = "mog_pli_corruption_tracking_bar_title"
 	desc = "mog_pli_corruption_tracking_bar_desc"
+	is_inverted = yes
 
 	start_value = 0
 	min_value = 0
