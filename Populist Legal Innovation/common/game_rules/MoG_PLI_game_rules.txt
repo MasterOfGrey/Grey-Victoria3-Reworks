@@ -11,3 +11,12 @@ mog_pli_proliferation_tracking = {
 	pli_proliferation_tracking_enabled = {}
 	pli_proliferation_tracking_disabled = {}
 }
+
+mog_pli_min_confidence = {
+	default = pli_no_min_confidence
+	
+	pli_no_min_confidence = {}
+	pli_20_min_confidence_all = {}
+	pli_20_min_confidence_just_ai = {}
+	pli_20_min_confidence_player = {}
+}

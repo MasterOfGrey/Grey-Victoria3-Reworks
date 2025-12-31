@@ -89,6 +89,16 @@
  setting_pli_proliferation_tracking_enabled_desc: "The proliferation mechanic is enabled.\nNote: disable this if you want a more vanilla experience or have another mod with proliferation mechanics."
  setting_pli_proliferation_tracking_disabled: "Disabled"
  setting_pli_proliferation_tracking_disabled_desc: "The proliferation mechanic is disabled.\nNote: the proliferation bar will still appear in the journal entry but the value should stay at 0."
+
+ rule_mog_pli_min_confidence: "PLI Minimum Investor Confidence"
+ setting_pli_no_min_confidence: "Default"
+ setting_pli_no_min_confidence_desc: "Everyone has the default minimum: 1"
+ setting_pli_20_min_confidence_all: "All Countries (20)"
+ setting_pli_20_min_confidence_all_desc: "Everyone has minimum: 20"
+ setting_pli_20_min_confidence_just_ai: "AI Countries (20)"
+ setting_pli_20_min_confidence_just_ai_desc: "Just AI countries have minimum: 20"
+ setting_pli_20_min_confidence_player: "Player Countries (20)"
+ setting_pli_20_min_confidence_player_desc: "Just Player countries have minimum: 20"
  
  je_mog_pli_innovation: "The Innovation Space"
  je_mog_pli_innovation_reason: "More than the existence of universities, or what any single law may encourage enable, the drive for innovation is dynamically affected by the interaction of different laws and economic conditions. \n$PLI_JOURNAL_DELIMITER$\n#header $mog_pli_innovation_tracking_bar_title$#!\n$mog_pli_innovationincentive_exp$\n$PLI_JOURNAL_DELIMITER$\n#header $mog_pli_proliferation_tracking_bar_title$#!\n$mog_pli_techproliferation_exp$"

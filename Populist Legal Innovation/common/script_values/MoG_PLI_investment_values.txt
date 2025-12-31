@@ -35,11 +35,35 @@ mog_pli_investment_target = {	# This represents the conditions which support inv
 	add = mog_pli_inv_rights_of_women		# Max 15
 	add = mog_pli_inv_slavery				# Max 15
 	add = mog_pli_combo_wombo				# Max 20
-	min = 1												# Max total intentionally > 100 (140)
+	min = mog_pli_min_investment				# Max total intentionally > 100 (140)
 	max = {									# This can actually take it down to 0, but this is the only thing that should be able to do so.
 		value = 100
 		multiply = mog_pli_max_investment_willingness_from_ip
 	}
+}
+
+mog_pli_min_investment = {
+	if = {
+		limit = {
+			pli_20_min_confidence_all_trigger = yes
+		}
+		value = 20
+	}
+	else_if = {
+		limit = {
+			pli_20_min_confidence_just_ai_trigger = yes
+			owner = { is_player = no }
+		}
+		value = 20
+	}
+	else_if = {
+		limit = {
+			pli_20_min_confidence_player_trigger = yes
+			owner = { is_player = yes }
+		}
+		value = 20
+	}
+	else = { value = 1 }
 }
 
 mog_pli_resting_target_loc_value = {

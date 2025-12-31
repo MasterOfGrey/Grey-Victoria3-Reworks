@@ -88,6 +88,10 @@ mog_pli_hc_confidence = {
 				name = je_var
 				value = var:mog_pli_investment_current_value
 			}
+			set_local_variable = {
+				name = total_state_count
+				value = root.num_states
+			}
 			if = {
 				limit = {
 					scope:state.state_region = { harvest_condition_good = yes}
@@ -100,6 +104,10 @@ mog_pli_hc_confidence = {
 								add = 5
 								multiply = {
 									add = scope:intensity
+								}
+								multiply = {
+									add = scope:num_states
+									divide = local_var:total_state_count
 								}
 							}
 							max = 100
@@ -127,6 +135,10 @@ mog_pli_hc_confidence = {
 								}
 								multiply = {
 									add = scope:intensity
+								}
+								multiply = {
+									add = scope:num_states
+									divide = local_var:total_state_count
 								}
 							}
 							min = 0

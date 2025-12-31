@@ -89,6 +89,16 @@
  setting_pli_proliferation_tracking_enabled_desc: "Çoğalma mekaniği etkinleştirildi.\nNot: Daha vanilya bir deneyim istiyorsanız veya çoğalma mekaniğine sahip başka bir modunuz varsa bunu devre dışı bırakın." #deepl:2295810607
  setting_pli_proliferation_tracking_disabled: "Engelli" #deepl:1603118088
  setting_pli_proliferation_tracking_disabled_desc: "Çoğalma mekaniği devre dışı bırakılmıştır.\nNot: Çoğalma çubuğu günlük girişinde görünmeye devam edecektir ancak değer 0'da kalmalıdır." #deepl:2935226836
+
+ rule_mog_pli_min_confidence: "PLI Minimum Yatırımcı Güveni" #deepl:159641692
+ setting_pli_no_min_confidence: "Varsayılan" #deepl:3660771961
+ setting_pli_no_min_confidence_desc: "Herkesin varsayılan minimum değeri vardır: 1" #deepl:2561838894
+ setting_pli_20_min_confidence_all: "Tüm Ülkeler (20)" #deepl:3420125983
+ setting_pli_20_min_confidence_all_desc: "Herkesin en az 20" #deepl:4172208425
+ setting_pli_20_min_confidence_just_ai: "Yapay Zeka Ülkeleri (20)" #deepl:4134499219
+ setting_pli_20_min_confidence_just_ai_desc: "Sadece yapay zeka ülkelerinde minimum: 20" #deepl:1803201218
+ setting_pli_20_min_confidence_player: "Oyuncu Ülkeleri (20)" #deepl:4139871934
+ setting_pli_20_min_confidence_player_desc: "Sadece Oyuncu ülkeleri minimuma sahiptir: 20" #deepl:900366664
  
  je_mog_pli_innovation: "İnovasyon Alanı" #deepl:3288668083
  je_mog_pli_innovation_reason: "İnovasyon dürtüsü, üniversitelerin varlığından veya herhangi bir yasanın teşvik edebileceğinden çok daha fazla, farklı yasaların ve ekonomik koşulların etkileşiminden dinamik olarak etkilenmektedir. \n$PLI_JOURNAL_DELIMITER$\n#header $mog_pli_innovation_tracking_bar_title$#!\n$mog_pli_innovationincentive_exp$\n$PLI_JOURNAL_DELIMITER$\n#header $mog_pli_proliferation_tracking_bar_title$#!\n$mog_pli_techproliferation_exp$" #deepl:2193131716

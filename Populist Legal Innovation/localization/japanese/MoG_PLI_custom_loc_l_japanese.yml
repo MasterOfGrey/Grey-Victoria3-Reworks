@@ -89,6 +89,16 @@
  setting_pli_proliferation_tracking_enabled_desc: "\n注意: よりバニラ的な体験がしたい場合や、増殖メカニズムを持つ他のMODを持っている場合は無効にしてください。" #deepl:2295810607
  setting_pli_proliferation_tracking_disabled: "無効" #deepl:1603118088
  setting_pli_proliferation_tracking_disabled_desc: "\n注：増殖バーはジャーナルエントリーに表示されるが、値は 0 のままであるべきである。" #deepl:2935226836
+
+ rule_mog_pli_min_confidence: "PLI 最低限の投資家の信頼" #deepl:159641692
+ setting_pli_no_min_confidence: "デフォルト" #deepl:3660771961
+ setting_pli_no_min_confidence_desc: "誰もがデフォルトの最低ラインを持っている：1" #deepl:2561838894
+ setting_pli_20_min_confidence_all: "すべての国 (20)" #deepl:3420125983
+ setting_pli_20_min_confidence_all_desc: "誰もが最低限は持っている：20" #deepl:4172208425
+ setting_pli_20_min_confidence_just_ai: "AI諸国 (20)" #deepl:4134499219
+ setting_pli_20_min_confidence_just_ai_desc: "ただ、AI諸国は最低ラインを持っている：20" #deepl:1803201218
+ setting_pli_20_min_confidence_player: "プレーヤーの国 (20)" #deepl:4139871934
+ setting_pli_20_min_confidence_player_desc: "選手だけの国が最低ライン20" #deepl:900366664
  
  je_mog_pli_innovation: "イノベーション・スペース" #deepl:3288668083
  je_mog_pli_innovation_reason: "大学が存在すること以上に、あるいは法律が何を奨励するか以上に、イノベーションの推進力は、さまざまな法律や経済状況の相互作用によってダイナミックに影響される。\n$PLI_JOURNAL_DELIMITER$\n#header $mog_pli_innovation_tracking_bar_title$#!\n$mog_pli_innovationincentive_exp$\n$PLI_JOURNAL_DELIMITER$\n#header $mog_pli_proliferation_tracking_bar_title$#!\n$mog_pli_techproliferation_exp$" #deepl:2193131716

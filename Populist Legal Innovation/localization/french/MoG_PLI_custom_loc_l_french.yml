@@ -89,6 +89,16 @@
  setting_pli_proliferation_tracking_enabled_desc: "Le mécanisme de prolifération est activé.\nNote: désactivez ceci si vous voulez une expérience plus vanille ou si vous avez un autre mod avec des mécanismes de prolifération." #deepl:2295810607
  setting_pli_proliferation_tracking_disabled: "Handicapés" #deepl:1603118088
  setting_pli_proliferation_tracking_disabled_desc: "Le mécanisme de prolifération est désactivé.\nNote: la barre de prolifération apparaîtra toujours dans l'entrée du journal, mais la valeur doit rester à 0." #deepl:2935226836
+
+ rule_mog_pli_min_confidence: "PLI Confiance minimale des investisseurs" #deepl:159641692
+ setting_pli_no_min_confidence: "Défaut" #deepl:3660771961
+ setting_pli_no_min_confidence_desc: "Tout le monde a le minimum par défaut : 1" #deepl:2561838894
+ setting_pli_20_min_confidence_all: "Tous les pays (20)" #deepl:3420125983
+ setting_pli_20_min_confidence_all_desc: "Tout le monde a un minimum : 20" #deepl:4172208425
+ setting_pli_20_min_confidence_just_ai: "Pays de l'IA (20)" #deepl:4134499219
+ setting_pli_20_min_confidence_just_ai_desc: "Seuls les pays de l'IA ont un minimum : 20" #deepl:1803201218
+ setting_pli_20_min_confidence_player: "Pays des joueurs (20)" #deepl:4139871934
+ setting_pli_20_min_confidence_player_desc: "Les pays qui ne sont que des joueurs ont un minimum : 20" #deepl:900366664
  
  je_mog_pli_innovation: "L'espace innovation" #deepl:3288668083
  je_mog_pli_innovation_reason: "Plus que l'existence d'universités ou ce qu'une loi peut encourager, l'impulsion de l'innovation est dynamiquement affectée par l'interaction de différentes lois et conditions économiques. \n$PLI_JOURNAL_DELIMITER$\n#header $mog_pli_innovation_tracking_bar_title$#!\n$mog_pli_innovationincentive_exp$\n$PLI_JOURNAL_DELIMITER$\n#header $mog_pli_proliferation_tracking_bar_title$#!\n$mog_pli_techproliferation_exp$" #deepl:2193131716

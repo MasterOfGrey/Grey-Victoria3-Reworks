@@ -89,6 +89,16 @@
  setting_pli_proliferation_tracking_enabled_desc: "Механика распространения включена.\nПримечание: отключите это, если вы хотите получить более ванильный опыт или у вас есть другой мод с механикой распространения." #deepl:2295810607
  setting_pli_proliferation_tracking_disabled: "Инвалид" #deepl:1603118088
  setting_pli_proliferation_tracking_disabled_desc: "Механика распространения отключена.\nПримечание: полоса распространения по-прежнему будет отображаться в записи журнала, но ее значение должно оставаться равным 0." #deepl:2935226836
+
+ rule_mog_pli_min_confidence: "PLI Минимальное доверие инвесторов" #deepl:159641692
+ setting_pli_no_min_confidence: "По умолчанию" #deepl:3660771961
+ setting_pli_no_min_confidence_desc: "У всех есть минимальное значение по умолчанию: 1" #deepl:2561838894
+ setting_pli_20_min_confidence_all: "Все страны (20)" #deepl:3420125983
+ setting_pli_20_min_confidence_all_desc: "У каждого есть минимум: 20" #deepl:4172208425
+ setting_pli_20_min_confidence_just_ai: "Страны ИИ (20)" #deepl:4134499219
+ setting_pli_20_min_confidence_just_ai_desc: "Только в странах AI есть минимум: 20" #deepl:1803201218
+ setting_pli_20_min_confidence_player: "Страны игроков (20)" #deepl:4139871934
+ setting_pli_20_min_confidence_player_desc: "Только в странах "Игрока" есть минимум: 20" #deepl:900366664
  
  je_mog_pli_innovation: "Инновационное пространство" #deepl:3288668083
  je_mog_pli_innovation_reason: "В большей степени, чем существование университетов или то, что может стимулировать какой-либо отдельный закон, стремление к инновациям динамично зависит от взаимодействия различных законов и экономических условий. \n$PLI_JOURNAL_DELIMITER$\n#header $mog_pli_innovation_tracking_bar_title$#!\n$mog_pli_innovationincentive_exp$\n$PLI_JOURNAL_DELIMITER$\n#header $mog_pli_proliferation_tracking_bar_title$#!\n$mog_pli_techproliferation_exp$" #deepl:2193131716

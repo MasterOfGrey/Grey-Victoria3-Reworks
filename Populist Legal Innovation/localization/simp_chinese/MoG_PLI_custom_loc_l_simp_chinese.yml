@@ -89,6 +89,16 @@
  setting_pli_proliferation_tracking_enabled_desc: "增殖机制已启用。\n注意：如果您想要更纯粹的体验，或使用其他具有增殖机制的 MOD，请禁用此功能。" #deepl:2295810607
  setting_pli_proliferation_tracking_disabled: "残疾" #deepl:1603118088
  setting_pli_proliferation_tracking_disabled_desc: "\n注意：增殖条仍会出现在日志条目中，但数值应保持为 0。" #deepl:2935226836
+
+ rule_mog_pli_min_confidence: "PLI 投资者最低信心" #deepl:159641692
+ setting_pli_no_min_confidence: "默认值" #deepl:3660771961
+ setting_pli_no_min_confidence_desc: "每个人都有最低默认值：1" #deepl:2561838894
+ setting_pli_20_min_confidence_all: "所有国家 (20)" #deepl:3420125983
+ setting_pli_20_min_confidence_all_desc: "每个人都有最低20" #deepl:4172208425
+ setting_pli_20_min_confidence_just_ai: "人工智能国家 (20)" #deepl:4134499219
+ setting_pli_20_min_confidence_just_ai_desc: "只有人工智能国家至少有20" #deepl:1803201218
+ setting_pli_20_min_confidence_player: "玩家国家 (20)" #deepl:4139871934
+ setting_pli_20_min_confidence_player_desc: "只有玩家国家最低：20" #deepl:900366664
  
  je_mog_pli_innovation: "创新空间" #deepl:3288668083
  je_mog_pli_innovation_reason: "与大学的存在或任何单一法律的鼓励作用相比，创新的动力受到不同法律和经济条件相互作用的动态影响。\n$PLI_JOURNAL_DELIMITER$\n#header $mog_pli_innovation_tracking_bar_title$#!\n$mog_pli_innovationincentive_exp$\n$PLI_JOURNAL_DELIMITER$\n#header $mog_pli_proliferation_tracking_bar_title$#!\n$mog_pli_techproliferation_exp$" #deepl:2193131716

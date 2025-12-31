@@ -89,6 +89,16 @@
  setting_pli_proliferation_tracking_enabled_desc: "증식 메커니즘이 활성화되어 있습니다.\n참고: 더 바닐라한 경험을 원하거나 증식 메커니즘이 있는 다른 모드를 사용하는 경우 이 기능을 비활성화하세요." #deepl:2295810607
  setting_pli_proliferation_tracking_disabled: "장애인" #deepl:1603118088
  setting_pli_proliferation_tracking_disabled_desc: "\n참고: 증식 막대는 여전히 저널 항목에 표시되지만 값은 0으로 유지되어야 합니다." #deepl:2935226836
+
+ rule_mog_pli_min_confidence: "PLI 최소 투자자 신뢰도" #deepl:159641692
+ setting_pli_no_min_confidence: "기본값" #deepl:3660771961
+ setting_pli_no_min_confidence_desc: "누구나 기본 최소값을 가지고 있습니다: 1" #deepl:2561838894
+ setting_pli_20_min_confidence_all: "모든 국가 (20)" #deepl:3420125983
+ setting_pli_20_min_confidence_all_desc: "누구나 최소: 20" #deepl:4172208425
+ setting_pli_20_min_confidence_just_ai: "AI 국가 (20)" #deepl:4134499219
+ setting_pli_20_min_confidence_just_ai_desc: "AI 국가만 최소: 20" #deepl:1803201218
+ setting_pli_20_min_confidence_player: "플레이어 국가 (20)" #deepl:4139871934
+ setting_pli_20_min_confidence_player_desc: "저스트 플레이어 국가는 최소 20" #deepl:900366664
  
  je_mog_pli_innovation: "혁신 공간" #deepl:3288668083
  je_mog_pli_innovation_reason: "혁신의 추진력은 대학의 존재나 단일 법률에 의해 촉진되는 것 이상으로 다양한 법률과 경제 상황의 상호작용에 의해 역동적으로 영향을 받습니다. \n$PLI_JOURNAL_DELIMITER$\n#header $mog_pli_innovation_tracking_bar_title$#!\n$mog_pli_innovationincentive_exp$\n$PLI_JOURNAL_DELIMITER$\n#header $mog_pli_proliferation_tracking_bar_title$#!\n$mog_pli_techproliferation_exp$" #deepl:2193131716

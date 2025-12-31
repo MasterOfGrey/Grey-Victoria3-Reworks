@@ -7,6 +7,18 @@ pli_proliferation_tracking_trigger = {
 	has_game_rule = pli_proliferation_tracking_enabled
 }
 
+pli_20_min_confidence_all_trigger = {
+	has_game_rule = pli_20_min_confidence_all
+}
+
+pli_20_min_confidence_just_ai_trigger = {
+	has_game_rule = pli_20_min_confidence_just_ai
+}
+
+pli_20_min_confidence_player_trigger = {
+	has_game_rule = pli_20_min_confidence_player
+}
+
 # Conditional Triggers
 harvest_condition_good = {
 	OR = {
