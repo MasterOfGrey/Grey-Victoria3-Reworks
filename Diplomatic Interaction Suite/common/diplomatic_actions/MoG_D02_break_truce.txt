@@ -1,0 +1,36 @@
+﻿# Adopted from Kate the Sibyl's "Break Truce" mod [ABANDONED]
+break_truce = {
+	groups = {
+		general
+	}
+	show_confirmation_box = yes
+
+	potential = {
+		is_diplomatic_play_committed_participant = no
+		is_revolutionary = no
+		has_truce_with = scope:target_country
+		aggressive_diplomatic_plays_permitted = yes		
+	}
+	
+	accept_effect = {
+		hidden_effect = {
+			end_truce = scope:target_country
+		}
+		custom_tooltip = {
+			text = break_truce_custom_tooltip
+			subject = scope:target_country
+		}
+		root = {
+			create_incident = {
+				country = scope:target_country
+				value = break_truce_cost
+			}
+		}
+	}
+
+	ai = {
+		will_propose = { always = no }
+	}
+
+	is_hostile = yes
+}
