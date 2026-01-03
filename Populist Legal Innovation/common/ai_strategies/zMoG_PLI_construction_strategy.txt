@@ -1,0 +1,93 @@
+﻿# REASON #
+# Because the AI wants less construction if less money enters the investment pool, this mixes badly with the investment pool contributions shrinking with reduced investment confidence (even if the pool is large).
+# This adds a counter desire for more construction based on the size of the pool to balance that out.
+# Instead of trying to add to the default strategy, which may be overwritten or have issues since the wanted_construction_output block is already there, we instead add this to all the admin strategies (which don't have this block) because they are combined additively and this will minimise compatibility conflicts.
+
+#INJECT:ai_strategy_default = {
+#	# Actual changes
+#	# How much construction output should the AI aim for
+#	# Using this value in other strategies will function additively
+#	wanted_construction_output = {
+#		add = {
+#			value = investment_pool
+#			divide = 2000000
+#			multiply = 8				# This equates to 120 points at a pool size of 30 mil
+#		}
+#	}
+#}
+
+# Basic
+INJECT:ai_strategy_agricultural_expansion = {
+	wanted_construction_output = {
+		add = {
+			value = investment_pool	# pool size
+			divide = 2000000
+			multiply = 8
+		}
+	}
+}
+
+INJECT:ai_strategy_plantation_economy
+	wanted_construction_output = {
+		add = {
+			value = investment_pool	# pool size
+			divide = 2000000
+			multiply = 8
+		}
+	}
+}
+
+INJECT:ai_strategy_resource_expansion
+	wanted_construction_output = {
+		add = {
+			value = investment_pool	# pool size
+			divide = 2000000
+			multiply = 8
+		}
+	}
+}
+
+INJECT:ai_strategy_industrial_expansion
+	wanted_construction_output = {
+		add = {
+			value = investment_pool	# pool size
+			divide = 2000000
+			multiply = 8
+		}
+	}
+}
+
+# Subjects
+INJECT:ai_strategy_placate_population
+	wanted_construction_output = {
+		add = {
+			value = investment_pool	# pool size
+			divide = 2000000
+			multiply = 8
+		}
+	}
+}
+
+INJECT:ai_strategy_colonial_extraction
+	wanted_construction_output = {
+		add = {
+			value = investment_pool	# pool size
+			divide = 2000000
+			multiply = 8
+		}
+	}
+}
+
+# Unique
+INJECT:ai_strategy_montenegro_admin
+	wanted_construction_output = {
+		add = {
+			value = investment_pool	# pool size
+			divide = 2000000
+			multiply = 8
+		}
+	}
+}
+
+# Mod Compatibility
+# TRY_INJECT: TBD
