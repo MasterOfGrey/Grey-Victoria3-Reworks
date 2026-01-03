@@ -37,13 +37,14 @@
  je_mog_pli_redistributive_reaction: "PLI：民粹主义煽动" #deepl:1884117642
  mog_pli_fought_corruption_modifier: "清除腐败影响" #deepl:605458558
  mog_pli_curried_favour_modifier: "掮客的青睐" #deepl:3980467289
- PLI_BASE_CORRUPTION: "#yellow 潜力的自然趋势#!" #deepl:76454067
+ PLI_BASE_TREND: "#yellow 潜力的自然趋势#!" #deepl:76454067
  PLI_POLICE_INSTITUTION: "警察机构级别" #deepl:3695223093
  PLI_SCHOOL_INSTITUTION: "教育机构级别" #deepl:119565117
  PLI_HEALTH_INSTITUTION: "卫生系统机构层面" #deepl:1631231090
  PLI_SOCSEC_INSTITUTION: "社会保障机构级别" #deepl:40582289
  PLI_OHS_INSTITUTION: "工作场所安全机构级别" #deepl:2305349007
  PLI_HAFFAIRS_INSTITUTION: "民政机构层面" #deepl:1435635816
+ PLI_LITERACY_RATE_MOD: "识字率" #deepl:812351491
  PLI_2DECIMAL_SCRIPT_VALUE_FORMAT: "$KEY$: $VALUE|=2+$" #deepl:3216225099
  PLI_2DECIMAL_SCRIPT_VALUE_INVERT_FORMAT: "$KEY$: $VALUE|=2-$" #deepl:3125476191
  PLI_3DECIMAL_SCRIPT_VALUE_FORMAT: "$KEY$: $VALUE|=3+$" #deepl:635900380

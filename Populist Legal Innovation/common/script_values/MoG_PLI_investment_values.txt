@@ -71,8 +71,26 @@ mog_pli_resting_target_loc_value = {
 	divide = 100
 }
 
+mog_pli_investment_target_trend_buffer = {
+	value = mog_pli_investment_target
+	multiply = 0.6		# Subtract 40% of target value - investor confidence is less elastic
+}
+
 mog_pli_investment_increment = {
 	value = 0
+	if = {
+		limit = { mog_pli_investment_target_trend_buffer > var:mog_pli_investment_current_value } # Target below current state.
+		add = {
+			add = -1.5		# -ve because then multiplied by -ve from inverse %
+			multiply = {
+				add = var:mog_pli_investment_current_value			# (current/target)-1 = bigger absolute
+				divide = mog_pli_investment_target_trend_buffer		# value when further from the target
+				add = -1
+			}
+			desc = PLI_BASE_TREND
+			format = PLI_3DECIMAL_SCRIPT_VALUE_FORMAT
+		}
+	}
 	# Accelerators/Decelerators
 	add = {
 		owner.institution:institution_police ?= {
@@ -461,17 +479,44 @@ mog_pli_corruption_target_loc_value = {
 	divide = 100
 }
 
+mog_pli_corruption_base_institution_magnitude = {	# Internal affairs excluded (max 0.025
+	add = {
+		owner.institution:institution_police ?= {
+			add = 0.01
+			multiply = investment
+		}
+	}
+	add = {
+		owner.institution:institution_schools ?= {
+			add = 0.01
+			multiply = investment
+		}
+	}
+	add = {
+		owner.institution:institution_workplace_safety ?= {
+			add = 0.01
+			multiply = investment
+		}
+	}
+}
+
 mog_pli_corruption_increment = {
 	value = 0
 	if = {
 		limit = { mog_pli_corruption_target > var:mog_pli_corruption_current_value } # Target below current state.
 		add = { 
-			add = 0.275
-			multiply = {
-				add = var:mog_pli_corruption_current_value
-				divide = mog_pli_corruption_target
+			add = {		# At 0 corruption, growth = institution resistance + base rate
+				add = mog_pli_corruption_base_institution_magnitude
+				multiply = -1	# -ve because then multiplied by -ve from inverse %
 			}
-			desc = PLI_BASE_CORRUPTION
+			multiply = {
+				add = var:mog_pli_corruption_current_value	# (current/target)-1 = bigger absolute
+				divide = mog_pli_corruption_target			# value when further from the target
+				add = -1
+			}
+			add = 0.125		# Base rate = 0.125 + institution magnitude; as corr approaches target -> min possible rate
+			add = mog_pli_corruption_base_institution_magnitude		# approaches 0 depending on internal security laws
+			desc = PLI_BASE_TREND
 			format = PLI_3DECIMAL_SCRIPT_VALUE_INVERT_FORMAT
 		}
 	}

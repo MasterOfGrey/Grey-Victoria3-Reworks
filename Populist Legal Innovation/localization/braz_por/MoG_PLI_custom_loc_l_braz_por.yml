@@ -37,13 +37,14 @@
  je_mog_pli_redistributive_reaction: "PLI: Agitação Populista" #deepl:1884117642
  mog_pli_fought_corruption_modifier: "Eliminação de influências corruptas" #deepl:605458558
  mog_pli_curried_favour_modifier: "Favorecimento de Powerbrokers com curry" #deepl:3980467289
- PLI_BASE_CORRUPTION: "Tendência natural para #yellow Potencial#!" #deepl:76454067
+ PLI_BASE_TREND: "Tendência natural para #yellow Potencial#!" #deepl:76454067
  PLI_POLICE_INSTITUTION: "Nível da instituição policial" #deepl:3695223093
  PLI_SCHOOL_INSTITUTION: "Nível da instituição de ensino" #deepl:119565117
  PLI_HEALTH_INSTITUTION: "Sistema de saúde Nível da instituição" #deepl:1631231090
  PLI_SOCSEC_INSTITUTION: "Nível da instituição de seguridade social" #deepl:40582289
  PLI_OHS_INSTITUTION: "Segurança no local de trabalho Nível da instituição" #deepl:2305349007
  PLI_HAFFAIRS_INSTITUTION: "Assuntos internos Nível da instituição" #deepl:1435635816
+ PLI_LITERACY_RATE_MOD: "Taxa de alfabetização" #deepl:812351491
  PLI_2DECIMAL_SCRIPT_VALUE_FORMAT: "$KEY$: $VALUE|=2+$" #deepl:3216225099
  PLI_2DECIMAL_SCRIPT_VALUE_INVERT_FORMAT: "$KEY$: $VALUE|=2-$" #deepl:3125476191
  PLI_3DECIMAL_SCRIPT_VALUE_FORMAT: "$KEY$: $VALUE|=3+$" #deepl:635900380
