@@ -207,8 +207,8 @@
 }
 
 # Done within morgenrote - needs to be re-done because this overwrites morgenrote.
-TRY_INJECT:building_railway = {
-	production_method_groups = {
-		pmg_gaudi_communication #MORGENRÖTE
-	}
-}
+#TRY_INJECT:building_railway = {
+#	production_method_groups = {
+#		pmg_gaudi_communication #MORGENRÖTE
+#	}
+#}
