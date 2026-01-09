@@ -86,15 +86,15 @@ REPLACE_OR_CREATE:hp_pmg_HV_generation = {
 	texture = "gfx/interface/icons/generic_icons/mixed_icon_refining.dds"
 	
 	production_methods = {
+		PPP_pm_t1_grid_power
 		PPP_pm_t1_local_power
 		PPP_pm_t1_hybrid_power
-		PPP_pm_t1_grid_power
+		PPP_pm_t2_grid_power
 		PPP_pm_t2_local_power
 		PPP_pm_t2_hybrid_power
-		PPP_pm_t2_grid_power
+		PPP_pm_t3_grid_power
 		PPP_pm_t3_local_power
 		PPP_pm_t3_hybrid_power
-		PPP_pm_t3_grid_power
 		PPP_pm_emergency_local_power
 	}
 }
