@@ -42,13 +42,13 @@ mog_mir_set_arty_mobilised = {
 			NOT = {
 				is_production_method_active = {
 					building_type = building_artillery_foundry
-					production_method = pm_no_tools_a
+					production_method = pm_no_tools_t
 				}
 			}
 		}
 		activate_production_method = {
 			building_type     = building_artillery_foundry
-			production_method = pm_no_tools_a
+			production_method = pm_no_tools_t
 		}
 	}
 }

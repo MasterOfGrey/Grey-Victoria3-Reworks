@@ -87,17 +87,17 @@ MIR_war_demob_arty = {
 	valid = {
 		is_at_war = yes
 		any_scope_building = {
-			is_building_type = building_artillery_foundries
+			is_building_type = building_artillery_foundry
 			level > 0
 		}
 		any_scope_state = {
 			OR = {
-				is_production_method_active = { building_type = building_artillery_foundries production_method = pm_extensive_tools_t_i }
-				is_production_method_active = { building_type = building_artillery_foundries production_method = pm_moderate_tools_t_i }
-				is_production_method_active = { building_type = building_artillery_foundries production_method = pm_extensive_tools_t_s }
-				is_production_method_active = { building_type = building_artillery_foundries production_method = pm_moderate_tools_t_s }
-				is_production_method_active = { building_type = building_artillery_foundries production_method = pm_extensive_tools_t_r }
-				is_production_method_active = { building_type = building_artillery_foundries production_method = pm_moderate_tools_t_r }
+				is_production_method_active = { building_type = building_artillery_foundry production_method = pm_extensive_tools_t_i }
+				is_production_method_active = { building_type = building_artillery_foundry production_method = pm_moderate_tools_t_i }
+				is_production_method_active = { building_type = building_artillery_foundry production_method = pm_extensive_tools_t_s }
+				is_production_method_active = { building_type = building_artillery_foundry production_method = pm_moderate_tools_t_s }
+				is_production_method_active = { building_type = building_artillery_foundry production_method = pm_extensive_tools_t_r }
+				is_production_method_active = { building_type = building_artillery_foundry production_method = pm_moderate_tools_t_r }
 			}
 		}
 	}
@@ -114,16 +114,16 @@ MIR_peace_mob_arty = {
 	valid = {
 		is_at_war = no
 		any_scope_building = {
-			is_building_type = building_artillery_foundries
+			is_building_type = building_artillery_foundry
 			level > 0
 		}
 		any_scope_state = {
 			OR = {
-				is_production_method_active = { building_type = building_artillery_foundries production_method = pm_ui_safety_b }
-				is_production_method_active = { building_type = building_artillery_foundries production_method = pm_no_tools_t }
-				is_production_method_active = { building_type = building_artillery_foundries production_method = pm_limited_tools_t_i }
-				is_production_method_active = { building_type = building_artillery_foundries production_method = pm_limited_tools_t_s }
-				is_production_method_active = { building_type = building_artillery_foundries production_method = pm_limited_tools_t_r }
+				is_production_method_active = { building_type = building_artillery_foundry production_method = pm_ui_safety_b }
+				is_production_method_active = { building_type = building_artillery_foundry production_method = pm_no_tools_t }
+				is_production_method_active = { building_type = building_artillery_foundry production_method = pm_limited_tools_t_i }
+				is_production_method_active = { building_type = building_artillery_foundry production_method = pm_limited_tools_t_s }
+				is_production_method_active = { building_type = building_artillery_foundry production_method = pm_limited_tools_t_r }
 			}
 		}
 	}
@@ -141,19 +141,19 @@ MIR_war_demob_ammo = {
 	valid = {
 		is_at_war = yes
 		any_scope_building = {
-			is_building_type = building_munition_plants
+			is_building_type = building_munition_plant
 			level > 0
 		}
 		any_scope_state = {
 			OR = {
-				is_production_method_active = { building_type = building_munition_plants production_method = pm_extensive_ammo_le }
-				is_production_method_active = { building_type = building_munition_plants production_method = pm_moderate_ammo_le }
-				is_production_method_active = { building_type = building_munition_plants production_method = pm_extensive_ammo_ni }
-				is_production_method_active = { building_type = building_munition_plants production_method = pm_moderate_ammo_ni }
-				is_production_method_active = { building_type = building_munition_plants production_method = pm_extensive_ammo_dy }
-				is_production_method_active = { building_type = building_munition_plants production_method = pm_moderate_ammo_dy }
-				is_production_method_active = { building_type = building_munition_plants production_method = pm_extensive_ammo_br }
-				is_production_method_active = { building_type = building_munition_plants production_method = pm_moderate_ammo_br }
+				is_production_method_active = { building_type = building_munition_plant production_method = pm_extensive_ammo_le }
+				is_production_method_active = { building_type = building_munition_plant production_method = pm_moderate_ammo_le }
+				is_production_method_active = { building_type = building_munition_plant production_method = pm_extensive_ammo_ni }
+				is_production_method_active = { building_type = building_munition_plant production_method = pm_moderate_ammo_ni }
+				is_production_method_active = { building_type = building_munition_plant production_method = pm_extensive_ammo_dy }
+				is_production_method_active = { building_type = building_munition_plant production_method = pm_moderate_ammo_dy }
+				is_production_method_active = { building_type = building_munition_plant production_method = pm_extensive_ammo_br }
+				is_production_method_active = { building_type = building_munition_plant production_method = pm_moderate_ammo_br }
 			}
 		}
 	}
@@ -170,17 +170,17 @@ MIR_peace_mob_ammo = {
 	valid = {
 		is_at_war = no
 		any_scope_building = {
-			is_building_type = building_munition_plants
+			is_building_type = building_munition_plant
 			level > 0
 		}
 		any_scope_state = {
 			OR = {
-				is_production_method_active = { building_type = building_munition_plants production_method = pm_ui_safety_b }
-				is_production_method_active = { building_type = building_munition_plants production_method = pm_no_self_explosives }
-				is_production_method_active = { building_type = building_munition_plants production_method = pm_limited_ammo_le }
-				is_production_method_active = { building_type = building_munition_plants production_method = pm_limited_ammo_ni }
-				is_production_method_active = { building_type = building_munition_plants production_method = pm_limited_ammo_dy }
-				is_production_method_active = { building_type = building_munition_plants production_method = pm_limited_ammo_br }
+				is_production_method_active = { building_type = building_munition_plant production_method = pm_ui_safety_b }
+				is_production_method_active = { building_type = building_munition_plant production_method = pm_no_self_explosives }
+				is_production_method_active = { building_type = building_munition_plant production_method = pm_limited_ammo_le }
+				is_production_method_active = { building_type = building_munition_plant production_method = pm_limited_ammo_ni }
+				is_production_method_active = { building_type = building_munition_plant production_method = pm_limited_ammo_dy }
+				is_production_method_active = { building_type = building_munition_plant production_method = pm_limited_ammo_br }
 			}
 		}
 	}

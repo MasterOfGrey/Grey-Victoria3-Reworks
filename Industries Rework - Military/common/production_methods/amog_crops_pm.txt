@@ -50,7 +50,7 @@ TRY_REPLACE:pm_compression_ignition_tractors = {
 	}
 }
 
-TRY_REPLACE:pm_cropdusting = {
+REPLACE_OR_CREATE:pm_cropdusting = {
 	texture = "gfx/interface/icons/production_method_icons/cropdusting.dds"
 	
 	state_modifiers = {
@@ -86,7 +86,7 @@ TRY_REPLACE:pm_cropdusting = {
 	}
 }
 
-TRY_REPLACE:pm_cropdusting_rice = {
+REPLACE_OR_CREATE:pm_cropdusting_rice = {
 	texture = "gfx/interface/icons/production_method_icons/cropdusting.dds"
 	
 	state_modifiers = {

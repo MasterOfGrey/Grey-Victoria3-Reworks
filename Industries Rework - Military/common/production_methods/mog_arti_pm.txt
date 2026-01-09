@@ -341,7 +341,7 @@ REPLACE_OR_CREATE:pm_limited_tools_t_r = {
 			
 			# output goods
 			goods_output_artillery_add = -7 # -9
-			goods_input_tools_add = 11
+			goods_output_tools_add = 11
 		}
 	}
 }
