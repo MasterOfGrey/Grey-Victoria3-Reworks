@@ -1,0 +1,6 @@
+﻿l_english:
+ DIPLOMATIC_ACCEPTANCE_VS_RELEVANT_ARMY_STRENGTH: "from [SCOPE.sCountry('target_country').GetAdjective] [concept_military_relevance] compared to [SCOPE.sCountry('opposing_warleader').GetName]"
+ sovereignty_violation: "Violation"
+ concept_military_relevance: "Military Relevance"
+ concept_military_relevance_short: "Relevance"
+ concept_military_relevance_desc: "The degree to which a [Concept('concept_country','$concept_country_possessive$')] [concept_army_power_projection] is expected to make a meaningful difference to the outcome of an ongoing [concept_war]. It affects how willing a [concept_country] is to consider extroardinary demands to participate in a conflict such as [GetDiplomaticActionType('violate_sovereignty').GetName]."

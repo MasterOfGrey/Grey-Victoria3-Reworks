@@ -1,0 +1,71 @@
+﻿# Hybridised from Ferrous' "Violate Sovereignty Fixed" & Ghost_Warrior's "Advanced AI"
+REPLACE:violate_sovereignty_war_check = {
+	save_temporary_scope_as = relevant_war
+
+	OR = {
+		scope:target_country = {	# Modded: Improvement borrowed from Advanced AI
+			any_scope_theater = {
+				is_land_theater = yes
+
+				save_temporary_scope_as = target_theater
+
+				scope:relevant_war = {
+					any_war_participant = {
+						is_in_war_together = scope:relevant_war.attacker_warleader
+						any_scope_theater = {
+							is_land_theater = yes
+
+							check_area = {
+								mode = adjacent
+								target = scope:target_theater
+							}
+						}
+					}
+				}
+
+				scope:relevant_war = {
+					any_war_participant = {
+						is_in_war_together = scope:relevant_war.defender_warleader
+						any_scope_theater = {
+							is_land_theater = yes
+
+							check_area = {
+								mode = adjacent
+								target = scope:target_theater
+							}
+						}
+					}
+				}
+			}
+		}
+		AND = {		# Modded: Directly bordering both warleaders = always fair game even if the above check somehow fails
+			scope:relevant_war.attacker_warleader = {
+				OR = {
+					has_strategic_land_adjacency = scope:target_country
+				}
+			}
+			scope:relevant_war.defender_warleader = {
+				OR = {
+					has_strategic_land_adjacency = scope:target_country
+				}
+			}
+		}
+	}
+# Previous:
+#	attacker_warleader = {
+#		OR = {
+#			has_strategic_land_adjacency = scope:target_country
+#			any_scope_ally = {				
+#				has_strategic_land_adjacency = scope:target_country
+#			}
+#		}
+#	}
+#	defender_warleader = {
+#		OR = {
+#			has_strategic_land_adjacency = scope:target_country
+#			any_scope_ally = {				
+#				has_strategic_land_adjacency = scope:target_country
+#			}
+#		}
+#	}
+}
