@@ -1,4 +1,4 @@
-﻿state_transfer = {
+﻿TRY_REPLACE:state_transfer = {
 	kind = directed
 	cost = 0
 
@@ -53,7 +53,7 @@
 			is_under_colonization = no
 			OR = {
 				scope:other_country = { is_adjacent_to_state = prev }
-				scope:other_country = { any_subject_or_below = { is_adjacent_to_state = scope:input } }
+				scope:other_country = { any_subject_or_below = { is_adjacent_to_state = scope:input } }	# Modded
 				AND = {
 					is_coastal = yes
 					scope:other_country = { has_port = yes }
@@ -126,26 +126,33 @@
 			change_relations = {
 				country = scope:non_withdrawing_country
 				value = {
-					add = -10
-					multiply = {
-						value = scope:treaty_options.remaining_binding_period
-						min = 365
-						divide = 365
+					value = -50
+					add = {
+						value = -50
+						multiply = {
+							value = scope:treaty_options.remaining_binding_period
+							min = 365
+							divide = 365
+						}
 					}
-					max = -10
-					min = -50
+					max = -50
+					min = -100
 				}
 			}
 			change_infamy = {
 				value = {
-					add = 3
-					multiply = {
-						value = scope:treaty_options.remaining_binding_period
-						min = 365
-						divide = 365
+					value = 25
+					add = {
+						value = 25
+						multiply = {
+							value = scope:treaty_options.remaining_binding_period
+							min = 365
+							divide = 365
+							divide = 25
+						}
 					}
+					min = 25
 					max = 50
-					min = 10
 				}
 			}
 		}
@@ -185,11 +192,26 @@
 					scope:article.input_state.ai_state_value:root > 0
 				}
 				subtract = {
-					value = scope:article.input_state.ai_state_value:root
-					min = 200
 					desc = "DIPLOMATIC_ACCEPTANCE_TRADE_STATE_SOURCE"
+					value = scope:article.input_state.ai_state_value:root
+					min = 100
 
 					if = {
+						limit = {
+							scope:article.input_state = {
+								any_neighbouring_state = {
+									owner = scope:source_country
+									OR = {
+										is_incorporated = yes
+										ai_can_incorporate_state = yes
+									}
+								}
+							}
+						}
+						min = 200
+					}
+
+					if = {	# Modded
 						limit = {				
 							scope:article.input_state = { 
 								is_split_state = yes
@@ -199,7 +221,7 @@
 						multiply = 0.8
 					}
 					
-					if = {
+					if = {	# Modded
 						limit = {
 							scope:article.input_state = {
 								NOT = { is_homeland_of_country_cultures = scope:source_country }
@@ -239,13 +261,14 @@
 				limit = {
 					exists = scope:article.input_state
 					scope:target_country ?= this
+					NOT = { exists = scope:is_treaty_active }
 					scope:article.input_state.ai_state_value:root > 0
 				}
 				add = {
 					value = scope:article.input_state.ai_state_value:root
 					desc = "DIPLOMATIC_ACCEPTANCE_TRADE_STATE_TARGET"
 					
-					if = {
+					if = {	# Modded
 						limit = {
 							scope:article.input_state = {
 								is_homeland_of_country_cultures = scope:target_country
@@ -255,7 +278,7 @@
 						multiply = 1.5
 					}
 					
-					if = {
+					if = {	# Modded
 						limit = {
 							scope:article.input_state = {
 								is_coastal = yes
@@ -265,7 +288,7 @@
 						multiply = 1.2
 					}
 					
-					if = {
+					if = {	# Modded
 						limit = {				
 							scope:article.input_state = { 
 								is_split_state = yes
@@ -283,14 +306,15 @@
 					
 				}
 			}
-			else = {
+			else_if = {
+				limit = { NOT = { exists = scope:is_treaty_active } }
 				add = {
 					desc = "DIPLOMATIC_ACCEPTANCE_TRADE_STATE_REJECT"
 					value = -300
 				}
 			}
 			
-			if = {
+			if = {	# Modded
 				limit = {
 					exists = scope:article.input_state
 					scope:target_country ?= this
@@ -314,7 +338,7 @@
 			}
 		}
 
-		contextual_accept_score = {
+		contextual_accept_score = {	# Modded (because I don't like how they did gifting)
 			value = 0
 
 			if = {

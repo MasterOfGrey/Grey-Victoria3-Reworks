@@ -1,0 +1,11 @@
+# Adopted from Kate the Sibyl's "Break Truce" mod [ABANDONED]
+break_truce_cost = {
+	add = scope:target_country.total_population
+	divide = 1000000
+	min = 5
+	max = infamy_threshold:infamous
+	multiply = {
+		add = 1
+		add = modifier:country_infamy_generation_mult
+	}
+}

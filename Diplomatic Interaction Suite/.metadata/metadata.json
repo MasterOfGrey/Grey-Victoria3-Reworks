@@ -1,0 +1,19 @@
+{
+  "name" : "Grey's Diplomatic Interaction Suite",
+  "id" : "",
+  "version" : "",
+  "supported_game_version" : "",
+  "short_description" : "",
+  "tags" : [
+        "Balance",
+        "Diplomacy",
+        "Expansion",
+        "Gameplay",
+        "Warefare",
+        "1.12"
+    ],
+  "relationships" : [],
+  "game_custom_data" : {
+    "multiplayer_synchronized" : true
+  }
+}

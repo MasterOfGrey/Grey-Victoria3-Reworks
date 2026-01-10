@@ -2,7 +2,7 @@
 # This was arguably a bad decision since then gifts get rolled into diplomatic stance via static modifiers.
 # I have brought this back to have finer control over some things...
 
-is_giftable_treaty_article = {
+REPLACE_OR_CREATE:is_giftable_treaty_article = {
 	OR = {
 		has_type = guarantee_independence
 		has_type = support_independence

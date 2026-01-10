@@ -1,5 +1,5 @@
 ﻿# Adopted from Kate the Sibyl's "Break Truce" mod [ABANDONED]
-break_truce = {
+REPLACE_OR_CREATE:break_truce = {
 	groups = {
 		general
 	}
