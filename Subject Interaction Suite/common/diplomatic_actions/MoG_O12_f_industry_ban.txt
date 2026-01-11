@@ -5,17 +5,17 @@ REPLACE_OR_CREATE:forced_industry_ban = {
 		overlord
 	}
 	
-    requires_approval = no
+	requires_approval = no
 	show_confirmation_box = yes
 	
 	potential = {
-		NOR = { 
+		NOR = {
 			has_game_rule = sis_force_laws_disabled
 			has_game_rule = sis_force_laws_only_slavery
-		 }
+		}
 		NOT = { is_country_type = decentralized }
 		scope:target_country = {
-			NOT = { 
+			NOT = {
 				is_country_type = decentralized
 				is_diplomatic_play_enemy_of = root
 				has_law_or_variant = law_type:law_industry_banned
@@ -23,7 +23,7 @@ REPLACE_OR_CREATE:forced_industry_ban = {
 			is_subject_of = root
 		}
 	}
-
+	
 	possible = {
 		has_technology_researched = romanticism
 		scope:target_country = {
@@ -34,9 +34,9 @@ REPLACE_OR_CREATE:forced_industry_ban = {
 		}
 		is_player = yes
 	}
-
+	
 	accept_effect = {
-		scope:target_country = { 
+		scope:target_country = {
 			activate_law = law_type:law_industry_banned
 			add_radicals = { value = large_radicals }
 			add_liberty_desire = 10
@@ -55,7 +55,7 @@ REPLACE_OR_CREATE:forced_industry_ban = {
 			}
 		}
 		else_if = {
-			limit = { 
+			limit = {
 				scope:target_country = {
 					is_subject_type = subject_type_dominion
 				}
@@ -101,7 +101,7 @@ REPLACE_OR_CREATE:forced_industry_ban = {
 									OR = {
 										has_ideology = ideology:ideology_protectionist
 										has_ideology = ideology:ideology_market_liberal
-									}			
+									}
 								}
 							}
 						}
@@ -127,6 +127,257 @@ REPLACE_OR_CREATE:forced_industry_ban = {
 						value = 60
 					}
 				}
+			}
+		}
+		
+		scope:target_country = {
+			if = {
+				limit = {
+					NOT = {
+						any_political_lobby ?= {
+							is_political_lobby_type = lobby_anti_overlord
+						}
+					}
+				}
+				random_interest_group = {
+					limit = {
+						is_marginal = no
+						NOT = { leader = { has_ideology = ideology:ideology_luddite } }
+					}
+					save_scope_as = relevant_ig
+				}
+				create_political_lobby = {
+					type = lobby_anti_overlord
+					target = overlord
+					add_interest_group = scope:relevant_ig
+					lobby_formation_reason = diplomacy
+				}
+			}
+			random_political_lobby = {
+				limit = {
+					is_political_lobby_type = lobby_anti_overlord
+				}
+				save_scope_as = relevant_lobby
+			}
+			every_interest_group = {
+				limit = {
+					NAND = {		# Landowners and Luddites in low-literacy countries don't get added.
+						scope:target_country = { literacy_rate < 0.4 }
+						OR = {
+							is_interest_group_type = ig_landowners
+							leader = { has_ideology = ideology:ideology_luddite }
+						}
+					}
+					is_marginal = no
+				}
+				scope:relevant_lobby = {
+					add_lobby_member = prev
+				}
+			}
+		}
+	}
+}
+
+REPLACE_OR_CREATE:sis_forced_extraction = {
+	groups= {
+		overlord
+	}
+	
+	requires_approval = no
+	show_confirmation_box = yes
+	
+	potential = {
+		NOR = {
+			has_game_rule = sis_force_laws_disabled
+			has_game_rule = sis_force_laws_only_slavery
+		}
+		NOT = { is_country_type = decentralized }
+		scope:target_country = {
+			NOT = {
+				is_country_type = decentralized
+				is_diplomatic_play_enemy_of = root
+				has_law_or_variant = law_type:law_extraction_economy
+			}
+			is_direct_subject_of = root
+		}
+	}
+	
+	possible = {
+		has_technology_researched = civilizing_mission
+		scope:target_country = {
+			liberty_desire < 50
+			NOT = {
+				is_subject_type = subject_type_tributary
+			}
+		}
+		OR = {
+			is_player = yes
+			OR = {
+				has_law_or_variant = law_type:law_traditionalism
+				has_law_or_variant = law_type:law_industry_banned
+				has_law_or_variant = law_type:law_extraction_economy
+			}
+		}
+	}
+	
+	accept_effect = {
+		scope:target_country = { 
+			activate_law = law_type:law_extraction_economy
+			add_radicals = { value = large_radicals }
+			add_liberty_desire = 10
+		}
+		
+		if = {
+			limit = { 
+				scope:target_country = {
+					is_subject_type = subject_type_protectorate
+				}
+			}
+			scope:target_country = { add_liberty_desire = 50 }
+			change_relations = {
+				country = scope:target_country
+				value = -50
+			}
+		}
+		else_if = {
+			limit = {
+				scope:target_country = {
+					is_subject_type = subject_type_dominion
+				}
+			}
+			scope:target_country = { add_liberty_desire = 40 }
+			change_relations = {
+				country = scope:target_country
+				value = -40
+			}
+		}
+		else = {
+			scope:target_country = { add_liberty_desire = 30 }
+			change_relations = {
+				country = scope:target_country
+				value = -30
+			}
+		}
+		
+		scope:target_country = {
+			custom_tooltip = {
+				text = "forced_industry_ban_liberty_desire_custom_tooltip"
+				
+				if = {
+					limit = {
+						OR = {
+							has_law_or_variant = law_type:law_laissez_faire
+							has_law_or_variant = law_type:law_cooperative_ownership
+							has_law_or_variant = law_type:law_command_economy
+						}
+					}
+					add_liberty_desire = 10
+				}
+				
+				if = {
+					limit = {
+						OR = {
+							ig:ig_industrialists ?= {
+								is_in_government = yes
+							}
+							any_interest_group = {
+								is_in_government = yes
+								leader = {
+									OR = {
+										has_ideology = ideology:ideology_protectionist
+										has_ideology = ideology:ideology_market_liberal
+									}
+								}
+							}
+						}
+					}
+					change_relations = {
+						country = scope:target_country
+						value = -50
+					}
+				}
+				
+				if = {
+					limit = {
+						any_interest_group = {
+							is_in_government = yes
+							leader = {
+								has_ideology = ideology:ideology_luddite
+							}
+						}
+					}
+					add_liberty_desire = -10
+					change_relations = {
+						country = scope:target_country
+						value = 60
+					}
+				}
+			}
+		}
+		
+		scope:target_country = {
+			if = {
+				limit = {
+					NOT = {
+						any_political_lobby ?= {
+							is_political_lobby_type = lobby_anti_overlord
+						}
+					}
+				}
+				random_interest_group = {
+					limit = { is_marginal = no }
+					save_scope_as = relevant_ig
+				}
+				create_political_lobby = {
+					type = lobby_anti_overlord
+					target = overlord
+					add_interest_group = scope:relevant_ig
+					lobby_formation_reason = diplomacy
+				}
+			}
+			random_political_lobby = {
+				limit = {
+					is_political_lobby_type = lobby_anti_overlord
+				}
+				save_scope_as = relevant_lobby
+			}
+			every_interest_group = {
+				limit = {
+					NAND = {		# Landowners in low-literacy countries don't get added.
+						scope:target_country = { literacy_rate < 0.4 }
+						is_interest_group_type = ig_landowners
+					}
+					is_marginal = no
+				}
+				scope:relevant_lobby = {
+					add_lobby_member = prev
+				}
+			}
+		}
+	}
+	
+	ai = {
+		evaluation_chance = {
+			value = 0.25
+		}
+		
+		propose_score = {
+			value = 10
+		}
+		
+		will_propose = {
+			exists = scope:target_country
+			scope:target_country = { liberty_desire <= 25 }
+			AND = {
+				OR = {
+					is_subject = yes
+					scope:target_country = { literacy_rate < 0.4 }
+				}
+				OR = {
+					ig:ig_landowners ?= { is_in_government = yes }
+					ig:ig_industrialists ?= { is_in_government = yes }
+				}
+				NOT = { c:CHI ?= THIS }
 			}
 		}
 	}

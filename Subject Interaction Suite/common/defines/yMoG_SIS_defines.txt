@@ -1,0 +1,5 @@
+﻿NPolitics = {
+	# An interest group cannot be part of more than this number of political lobbies of the same category
+	# If an IG wants to join a lobby but is at the limit, it may leave one of its current lobby if the new lobby scores higher on IG attraction
+	MAX_NUM_POLITICAL_LOBBIES_OF_SAME_CATEGORY_PER_IG = 2 # 1	# - changed so that IG's can be both anti-overlord and anti-country
+}
