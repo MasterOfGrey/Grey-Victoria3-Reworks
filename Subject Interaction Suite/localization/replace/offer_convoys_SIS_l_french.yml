@@ -12,8 +12,13 @@
  
  TRIGGER_COUNTRY_EXCESS_CONVOY_SURPLUS_PERCENT_GREATER_THAN: "L'excédent [concept_convoys] après augmentation est #b pas#! supérieur à #BOLD 0%#! (actuellement : [ROOT.GetCountry.MakeScope.ScriptValue('excess_convoy_surplus_percent')|v%])" #deepl:3808472463
  TRIGGER_COUNTRY_CONVOY_CONTRIBUTION_LESS_THAN_MAX: "Total @convoys![Nbsp] [concept_convoys] La contribution à [concept_market_owner] après augmentation ne doit pas #b #! être supérieure ou égale à #BOLD 95%#! (actuellement : [ROOT.GetCountry.GetModifier.GetValueFor('country_convoy_contribution_to_market_owner_add')|v%0] + #v 30%#! = [ROOT.GetCountry.MakeScope.ScriptValue('after_increase_contribution_percent')|v%0])" #deepl:3830302215
+ TRIGGER_COUNTRY_CONVOY_CONTRIBUTION_DISABLED: "[concept_market_owner] n'a pas mis hors d'état de nuire l'augmentation des contributions des convois." #deepl:94566905
 
- occ_offer_convoys_decision: "[ROOT.GetCountry.GetCustom('occ_offer_convoys_decision_dynamic_name')]" #deepl:502504601
- occ_offer_convoys_decision_desc: "[ROOT.GetCountry.GetCustom('occ_offer_convoys_decision_dynamic_name')]" #deepl:502504601
+ occ_offer_convoys_decision: "$occ_disable_convoys$" #deepl:3736329178
+ occ_offer_convoys_decision_desc: "Empêchez [Concept('concept_subject','$concept_subjects$')] d'augmenter le nombre de convois qu'il vous fournit." #deepl:1429516021
+ occ_offer_convoys_decision_undo: "$occ_enable_convoys$" #deepl:1539169771
+ occ_offer_convoys_decision_undo_desc: "Permettre à [Concept('concept_subject','$concept_subjects$')] d'augmenter le nombre de convois qu'ils vous fournissent." #deepl:1941840626
  occ_enable_convoys: "Activer l'offre d'action de convoi" #deepl:3419686017
  occ_disable_convoys: "Désactiver l'action de convoi d'offres" #deepl:399902713
+ occ_enable_convoys_tt: "Permet aux sujets d'augmenter à nouveau les contributions aux convois." #deepl:3321391531
+ occ_disable_convoys_tt: "Stoppe les sujets qui augmentent les contributions aux convois. (N'annule pas les accords existants.)" #deepl:2812631558

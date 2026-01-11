@@ -12,8 +12,13 @@
  
  TRIGGER_COUNTRY_EXCESS_CONVOY_SURPLUS_PERCENT_GREATER_THAN: "Избыток [concept_convoys] после увеличения #b не#! больше, чем #BOLD 0%#! (в настоящее время: [ROOT.GetCountry.MakeScope.ScriptValue('excess_convoy_surplus_percent')|v%])" #deepl:3808472463
  TRIGGER_COUNTRY_CONVOY_CONTRIBUTION_LESS_THAN_MAX: "Итого @convoys![Nbsp] [concept_convoys] Вклад в [concept_market_owner] после увеличения должен #b не#! быть больше или равен #BOLD 95%#! (в настоящее время: [ROOT.GetCountry.GetModifier.GetValueFor('country_convoy_contribution_to_market_owner_add')|v%0] + #v 30%#! = [ROOT.GetCountry.MakeScope.ScriptValue('after_increase_contribution_percent')|v%0])" #deepl:3830302215
+ TRIGGER_COUNTRY_CONVOY_CONTRIBUTION_DISABLED: "[concept_market_owner] не отключил увеличение конвойных взносов." #deepl:94566905
 
- occ_offer_convoys_decision: "[ROOT.GetCountry.GetCustom('occ_offer_convoys_decision_dynamic_name')]" #deepl:502504601
- occ_offer_convoys_decision_desc: "[ROOT.GetCountry.GetCustom('occ_offer_convoys_decision_dynamic_name')]" #deepl:502504601
+ occ_offer_convoys_decision: "$occ_disable_convoys$" #deepl:3736329178
+ occ_offer_convoys_decision_desc: "Запретите [Concept('concept_subject','$concept_subjects$')] увеличивать количество конвоев, которые они вам предоставляют." #deepl:1429516021
+ occ_offer_convoys_decision_undo: "$occ_enable_convoys$" #deepl:1539169771
+ occ_offer_convoys_decision_undo_desc: "Позвольте [Concept('concept_subject','$concept_subjects$')] увеличить количество конвоев, которые они вам предоставляют." #deepl:1941840626
  occ_enable_convoys: "Включить действие Предложить конвой" #deepl:3419686017
  occ_disable_convoys: "Отключить действие Предложить конвой" #deepl:399902713
+ occ_enable_convoys_tt: "Позволяет предметам снова увеличить взносы за конвой." #deepl:3321391531
+ occ_disable_convoys_tt: "Останавливает субъектов, увеличивающих взносы за конвои. (Не отменяет существующие соглашения)." #deepl:2812631558

@@ -12,8 +12,13 @@
  
  TRIGGER_COUNTRY_EXCESS_CONVOY_SURPLUS_PERCENT_GREATER_THAN: "增加后的盈余[concept_convoys] #b  不#! 大于#BOLD 0%#! （目前：[ROOT.GetCountry.MakeScope.ScriptValue('excess_convoy_surplus_percent')|v%])" #deepl:3808472463
  TRIGGER_COUNTRY_CONVOY_CONTRIBUTION_LESS_THAN_MAX: "总计@convoys![Nbsp] [concept_convoys] 增加后对[concept_market_owner] 的捐款#b 不得#! 大于或等于#BOLD 95%#! （目前：[ROOT.GetCountry.GetModifier.GetValueFor('country_convoy_contribution_to_market_owner_add')|v%0] +#v 30%#! =[ROOT.GetCountry.MakeScope.ScriptValue('after_increase_contribution_percent')|v%0])" #deepl:3830302215
+ TRIGGER_COUNTRY_CONVOY_CONTRIBUTION_DISABLED: "[concept_market_owner] 没有增加车队派遣。" #deepl:94566905
 
- occ_offer_convoys_decision: "[ROOT.GetCountry.GetCustom('occ_offer_convoys_decision_dynamic_name')]" #deepl:502504601
- occ_offer_convoys_decision_desc: "[ROOT.GetCountry.GetCustom('occ_offer_convoys_decision_dynamic_name')]" #deepl:502504601
+ occ_offer_convoys_decision: "$occ_disable_convoys$" #deepl:3736329178
+ occ_offer_convoys_decision_desc: "阻止[Concept('concept_subject','$concept_subjects$')] 增加为您提供的车队数量。" #deepl:1429516021
+ occ_offer_convoys_decision_undo: "$occ_enable_convoys$" #deepl:1539169771
+ occ_offer_convoys_decision_undo_desc: "允许[Concept('concept_subject','$concept_subjects$')] 增加为您提供的护航船队数量。" #deepl:1941840626
  occ_enable_convoys: "启用提供车队行动" #deepl:3419686017
  occ_disable_convoys: "禁用优惠车队行动" #deepl:399902713
+ occ_enable_convoys_tt: "允许受试者再次增加车队贡献。" #deepl:3321391531
+ occ_disable_convoys_tt: "停止主体增加车队派遣。(不取消现有协议）。" #deepl:2812631558

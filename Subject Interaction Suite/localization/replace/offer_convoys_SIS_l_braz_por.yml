@@ -12,8 +12,13 @@
  
  TRIGGER_COUNTRY_EXCESS_CONVOY_SURPLUS_PERCENT_GREATER_THAN: "O excedente [concept_convoys] após o aumento é #b não#! maior que #BOLD 0%#! (atualmente: [ROOT.GetCountry.MakeScope.ScriptValue('excess_convoy_surplus_percent')|v%])" #deepl:3808472463
  TRIGGER_COUNTRY_CONVOY_CONTRIBUTION_LESS_THAN_MAX: "Total @convoys![Nbsp] [concept_convoys] A contribuição para [concept_market_owner] após o aumento deve #b não#! ser maior ou igual a #BOLD 95%#! (atualmente: [ROOT.GetCountry.GetModifier.GetValueFor('country_convoy_contribution_to_market_owner_add')|v%0] + #v 30%#! = [ROOT.GetCountry.MakeScope.ScriptValue('after_increase_contribution_percent')|v%0])" #deepl:3830302215
+ TRIGGER_COUNTRY_CONVOY_CONTRIBUTION_DISABLED: "[concept_market_owner] não desativou o aumento das contribuições dos comboios." #deepl:94566905
 
- occ_offer_convoys_decision: "[ROOT.GetCountry.GetCustom('occ_offer_convoys_decision_dynamic_name')]" #deepl:502504601
- occ_offer_convoys_decision_desc: "[ROOT.GetCountry.GetCustom('occ_offer_convoys_decision_dynamic_name')]" #deepl:502504601
+ occ_offer_convoys_decision: "$occ_disable_convoys$" #deepl:3736329178
+ occ_offer_convoys_decision_desc: "Impeça que o site [Concept('concept_subject','$concept_subjects$')] aumente o número de comboios que fornece a você." #deepl:1429516021
+ occ_offer_convoys_decision_undo: "$occ_enable_convoys$" #deepl:1539169771
+ occ_offer_convoys_decision_undo_desc: "Permita que o site [Concept('concept_subject','$concept_subjects$')] aumente o número de comboios que fornece a você." #deepl:1941840626
  occ_enable_convoys: "Habilitar ação de comboio de ofertas" #deepl:3419686017
  occ_disable_convoys: "Desativar a ação de comboio de ofertas" #deepl:399902713
+ occ_enable_convoys_tt: "Permite que os participantes aumentem novamente as contribuições do comboio." #deepl:3321391531
+ occ_disable_convoys_tt: "Impede que os sujeitos aumentem as contribuições do comboio. (Não cancela os acordos existentes)." #deepl:2812631558

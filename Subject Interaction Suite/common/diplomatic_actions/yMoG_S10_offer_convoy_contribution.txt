@@ -24,8 +24,11 @@
 			text = "TRIGGER_COUNTRY_CONVOY_CONTRIBUTION_LESS_THAN_MAX"
 			modifier:country_convoy_contribution_to_market_owner_add < 0.65
 		}
-		hidden_trigger = {
-			NOT = { has_global_variable = offer_convoys_disabled }
+		custom_tooltip = {
+			text = "TRIGGER_COUNTRY_CONVOY_CONTRIBUTION_DISABLED"
+			scope:target_country = {
+				NOT = { has_variable = offer_convoys_disabled }
+			}
 		}
 	}
 
@@ -69,8 +72,8 @@
 		}
 		
 		#requirement_to_maintain = {
-		#	hidden_trigger = {
-		#		NOT = { has_global_variable = offer_convoys_disabled }
+		#	scope:target_country = {
+		#		NOT = { has_variable = offer_convoys_disabled }
 		#	}
 		#}
 		#manual_break_effect = {}

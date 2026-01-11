@@ -4,6 +4,7 @@
 			type = occ_offer_convoys
 			value > 0
 		}
+		NOT = { has_variable = offer_convoys_disabled }
 	}
 	
 	possible = {
@@ -11,13 +12,28 @@
 	}
 
 	when_taken = {
-		if = {
-			limit = { has_global_variable = offer_convoys_disabled }
-			remove_global_variable = offer_convoys_disabled
+		custom_tooltip = {
+			text = occ_disable_convoys_tt
+			set_variable = offer_convoys_disabled
 		}
-		else = {
-			set_global_variable = offer_convoys_disabled
-		}
+	}
+	
+	ai_chance = {
+		value = 0
+	}
+}
+
+occ_offer_convoys_decision_undo = {
+	is_shown = {
+		has_variable = offer_convoys_disabled
+	}
+	
+	possible = {
+		always = yes
+	}
+
+	when_taken = {
+		remove_variable = offer_convoys_disabled
 	}
 	
 	ai_chance = {

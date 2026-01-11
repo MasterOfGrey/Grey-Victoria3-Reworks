@@ -12,8 +12,13 @@
  
  TRIGGER_COUNTRY_EXCESS_CONVOY_SURPLUS_PERCENT_GREATER_THAN: "増加後の剰余金[concept_convoys] は#b #! を上回らない#BOLD 0%#! （現在：[ROOT.GetCountry.MakeScope.ScriptValue('excess_convoy_surplus_percent')|v%] ）。" #deepl:3808472463
  TRIGGER_COUNTRY_CONVOY_CONTRIBUTION_LESS_THAN_MAX: "合計@convoys![Nbsp] [concept_convoys] 増額後の[concept_market_owner] への寄与率は#b 以上#! 以下でなければならない#BOLD 95%#! （現在：[ROOT.GetCountry.GetModifier.GetValueFor('country_convoy_contribution_to_market_owner_add')|v%0] +#v 30%#! =[ROOT.GetCountry.MakeScope.ScriptValue('after_increase_contribution_percent')|v%0] ）。" #deepl:3830302215
+ TRIGGER_COUNTRY_CONVOY_CONTRIBUTION_DISABLED: "[concept_market_owner] は護衛艦の増派を無効にしていない。" #deepl:94566905
 
- occ_offer_convoys_decision: "[ROOT.GetCountry.GetCustom('occ_offer_convoys_decision_dynamic_name')]" #deepl:502504601
- occ_offer_convoys_decision_desc: "[ROOT.GetCountry.GetCustom('occ_offer_convoys_decision_dynamic_name')]" #deepl:502504601
+ occ_offer_convoys_decision: "$occ_disable_convoys$" #deepl:3736329178
+ occ_offer_convoys_decision_desc: "[Concept('concept_subject','$concept_subjects$')] 、コンボイの数を増やすのを阻止せよ。" #deepl:1429516021
+ occ_offer_convoys_decision_undo: "$occ_enable_convoys$" #deepl:1539169771
+ occ_offer_convoys_decision_undo_desc: "[Concept('concept_subject','$concept_subjects$')] 、輸送船団の数を増やせるようにする。" #deepl:1941840626
  occ_enable_convoys: "オファー・コンボイ・アクションを有効にする" #deepl:3419686017
  occ_disable_convoys: "オファーコンボイ動作を無効にする" #deepl:399902713
+ occ_enable_convoys_tt: "臣民が再び輸送船団の貢献度を上げることができるようにする。" #deepl:3321391531
+ occ_disable_convoys_tt: "護送船団貢献の増加科目を停止する。(既存の協定は取り消さない）" #deepl:2812631558

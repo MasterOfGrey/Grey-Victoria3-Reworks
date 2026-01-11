@@ -12,8 +12,13 @@
  
  TRIGGER_COUNTRY_EXCESS_CONVOY_SURPLUS_PERCENT_GREATER_THAN: "Surplus [concept_convoys] after increase is #b not#! greater than #BOLD 0%#! (currently: [ROOT.GetCountry.MakeScope.ScriptValue('excess_convoy_surplus_percent')|v%])"
  TRIGGER_COUNTRY_CONVOY_CONTRIBUTION_LESS_THAN_MAX: "Total @convoys![Nbsp][concept_convoys] Contribution to [concept_market_owner] after increase must #b not#! be greater than or equal to #BOLD 95%#! (currently: [ROOT.GetCountry.GetModifier.GetValueFor('country_convoy_contribution_to_market_owner_add')|v%0] + #v 30%#! = [ROOT.GetCountry.MakeScope.ScriptValue('after_increase_contribution_percent')|v%0])"
+ TRIGGER_COUNTRY_CONVOY_CONTRIBUTION_DISABLED: "[concept_market_owner] has not disabled increased convoy contributions."
 
- occ_offer_convoys_decision: "[ROOT.GetCountry.GetCustom('occ_offer_convoys_decision_dynamic_name')]"
- occ_offer_convoys_decision_desc: "[ROOT.GetCountry.GetCustom('occ_offer_convoys_decision_dynamic_name')]"
+ occ_offer_convoys_decision: "$occ_disable_convoys$"
+ occ_offer_convoys_decision_desc: "Stop [Concept('concept_subject','$concept_subjects$')] from increasing the number of convoys they provide to you."
+ occ_offer_convoys_decision_undo: "$occ_enable_convoys$"
+ occ_offer_convoys_decision_undo_desc: "Allow [Concept('concept_subject','$concept_subjects$')] to increase the number of convoys they provide to you."
  occ_enable_convoys: "Enable Offer Convoy Action"
  occ_disable_convoys: "Disable Offer Convoy Action"
+ occ_enable_convoys_tt: "Allows subjects to increase convoy contributions again."
+ occ_disable_convoys_tt: "Stops subjects increasing convoy contributions. (Does not cancel existing agreements.)"

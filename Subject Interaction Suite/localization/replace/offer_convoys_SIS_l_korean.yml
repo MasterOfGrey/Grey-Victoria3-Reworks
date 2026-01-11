@@ -12,8 +12,13 @@
  
  TRIGGER_COUNTRY_EXCESS_CONVOY_SURPLUS_PERCENT_GREATER_THAN: "인상 후 잉여금 [concept_convoys] 은 #b 이#! 보다 크지 않음 #BOLD 0%#! (현재: [ROOT.GetCountry.MakeScope.ScriptValue('excess_convoy_surplus_percent')|v%])" #deepl:3808472463
  TRIGGER_COUNTRY_CONVOY_CONTRIBUTION_LESS_THAN_MAX: "합계 @convoys![Nbsp] [concept_convoys] 인상 후 [concept_market_owner] 에 대한 기여도 #b 가#! 보다 크지 않아야 함 #BOLD 95%#! (현재: [ROOT.GetCountry.GetModifier.GetValueFor('country_convoy_contribution_to_market_owner_add')|v%0] + #v 30%#! = [ROOT.GetCountry.MakeScope.ScriptValue('after_increase_contribution_percent')|v%0])" #deepl:3830302215
+ TRIGGER_COUNTRY_CONVOY_CONTRIBUTION_DISABLED: "[concept_market_owner] 호송대 기부금 증가를 비활성화하지 않았습니다." #deepl:94566905
 
- occ_offer_convoys_decision: "[ROOT.GetCountry.GetCustom('occ_offer_convoys_decision_dynamic_name')]" #deepl:502504601
- occ_offer_convoys_decision_desc: "[ROOT.GetCountry.GetCustom('occ_offer_convoys_decision_dynamic_name')]" #deepl:502504601
+ occ_offer_convoys_decision: "$occ_disable_convoys$" #deepl:3736329178
+ occ_offer_convoys_decision_desc: "[Concept('concept_subject','$concept_subjects$')] 에서 제공하는 호송 횟수를 늘리지 못하도록 합니다." #deepl:1429516021
+ occ_offer_convoys_decision_undo: "$occ_enable_convoys$" #deepl:1539169771
+ occ_offer_convoys_decision_undo_desc: "[Concept('concept_subject','$concept_subjects$')] 에서 제공하는 호송 횟수를 늘리도록 허용합니다." #deepl:1941840626
  occ_enable_convoys: "오퍼 호송 작업 활성화" #deepl:3419686017
  occ_disable_convoys: "오퍼 호송 작업 비활성화" #deepl:399902713
+ occ_enable_convoys_tt: "피험자가 호송대 기여도를 다시 높일 수 있습니다." #deepl:3321391531
+ occ_disable_convoys_tt: "피험자가 호송대 기부금을 늘리는 것을 중지합니다. (기존 계약은 취소하지 않습니다.)" #deepl:2812631558

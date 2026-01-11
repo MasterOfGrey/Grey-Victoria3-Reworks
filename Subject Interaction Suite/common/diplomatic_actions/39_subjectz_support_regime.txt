@@ -28,7 +28,7 @@
 	
 	pact = {
 		cost = 50
-		# recipient_pays_maintenance = no	# Unneeded since 1.9.3?
+		maintenance_paid_by = first_country
 		forced_duration = 12
 		
 		first_modifier = {
@@ -259,7 +259,7 @@
 	}
 }
 
-da_request_support_regime = {
+REPLACE_OR_CREATE:da_request_support_regime = {
 	groups= {
 		subject
 	}
