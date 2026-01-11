@@ -27,7 +27,7 @@ INJECT:ai_strategy_agricultural_expansion = {
 	}
 }
 
-INJECT:ai_strategy_plantation_economy
+INJECT:ai_strategy_plantation_economy = {
 	wanted_construction_output = {
 		add = {
 			value = investment_pool	# pool size
@@ -37,7 +37,7 @@ INJECT:ai_strategy_plantation_economy
 	}
 }
 
-INJECT:ai_strategy_resource_expansion
+INJECT:ai_strategy_resource_expansion = {
 	wanted_construction_output = {
 		add = {
 			value = investment_pool	# pool size
@@ -47,7 +47,7 @@ INJECT:ai_strategy_resource_expansion
 	}
 }
 
-INJECT:ai_strategy_industrial_expansion
+INJECT:ai_strategy_industrial_expansion = {
 	wanted_construction_output = {
 		add = {
 			value = investment_pool	# pool size
@@ -58,7 +58,7 @@ INJECT:ai_strategy_industrial_expansion
 }
 
 # Subjects
-INJECT:ai_strategy_placate_population
+INJECT:ai_strategy_placate_population = {
 	wanted_construction_output = {
 		add = {
 			value = investment_pool	# pool size
@@ -68,7 +68,7 @@ INJECT:ai_strategy_placate_population
 	}
 }
 
-INJECT:ai_strategy_colonial_extraction
+INJECT:ai_strategy_colonial_extraction = {
 	wanted_construction_output = {
 		add = {
 			value = investment_pool	# pool size
@@ -79,7 +79,7 @@ INJECT:ai_strategy_colonial_extraction
 }
 
 # Unique
-INJECT:ai_strategy_montenegro_admin
+INJECT:ai_strategy_montenegro_admin = {
 	wanted_construction_output = {
 		add = {
 			value = investment_pool	# pool size
