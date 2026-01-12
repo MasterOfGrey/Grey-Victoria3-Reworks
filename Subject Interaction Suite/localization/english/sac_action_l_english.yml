@@ -1,0 +1,2 @@
+﻿l_english:
+ common_border1: "Has a common border with the [Concept('concept_power_bloc_leader','$concept_power_bloc_leader_short$')] or its [concept_puppet] or [concept_colony_subject]"

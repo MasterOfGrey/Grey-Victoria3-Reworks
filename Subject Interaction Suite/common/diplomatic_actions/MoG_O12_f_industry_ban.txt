@@ -198,6 +198,11 @@ REPLACE_OR_CREATE:sis_forced_extraction = {
 				is_diplomatic_play_enemy_of = root
 				has_law_or_variant = law_type:law_extraction_economy
 			}
+			OR = {
+				has_law_or_variant = law_type:law_industry_banned
+				has_law_or_variant = law_type:law_agrarianism
+				has_law_or_variant = law_type:law_traditionalism
+			}
 			is_direct_subject_of = root
 		}
 	}

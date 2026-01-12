@@ -17,6 +17,12 @@
  
  forced_industry_ban_liberty_desire_custom_tooltip: "[SCOPE.sCountry('target_country').GetAdjectiveNoFormatting] funcionarios responderán a [SCOPE.GetRootScope.GetCountry.GetName] una prohibición de la industria en [SCOPE.sCountry('target_country').GetName]. Esto [concept_subject]'s [concept_liberty_desire] y [concept_attitude] cambiarán."
  
+ sis_forced_extraction: "Economía de extracción forzosa" #deepl:4103283580
+ sis_forced_extraction_desc: "Un [concept_instant_diplomatic_action] que fuerza un cambio en el [GetLawGroup('lawgroup_economic_system').GetName] [concept_law] del objetivo [concept_subject] al [GetLawType('law_extraction_economy').GetName]. Daña [concept_relations] con el objetivo [concept_subject] y parte del [concept_subject] [concept_pop] se convierte en [concept_radical]." #deepl:594036816
+ sis_forced_extraction_action_name: "Economía de extracción forzosa" #deepl:4103283580
+ sis_forced_extraction_action_notification_name: "[INITIATOR_COUNTRY.GetName] nos obligó a una economía extractiva" #deepl:2454389896
+ sis_forced_extraction_action_notification_desc: "Nuestro [concept_overlord] [INITIATOR_COUNTRY.GetName] obligó a nuestro [GetLawGroup('lawgroup_economic_system').GetName] [concept_law] a [GetLawType('law_extraction_economy').GetName]. Su [concept_attitude] hacia nosotros es #tooltippable #tooltip:[INITIATOR_COUNTRY.GetTooltipTag],COUNTRY_ATTITUDE_TOOLTIP [INITIATOR_COUNTRY.GetAttitudeTowards(GetPlayer).GetName]#! #! ." #deepl:288902134
+ 
  forced_slavery_ban: "Prohibición de esclavitud forzada"
  forced_slavery_ban_desc: "Un [concept_instant_diplomatic_action] que obliga a un cambio en el [GetLawGroup('lawgroup_slavery').GetName] [concept_law] del objetivo [concept_subject] al [GetLawType('law_slavery_banned').GetName]. Daños [concept_relations] con el objetivo [concept_subject] y algunos de los [concept_subject] [concept_pop] se convierten en [concept_radical]."
  forced_slavery_ban_action_name: "Prohibición de la industria forzada"
@@ -27,10 +33,10 @@
  forced_slave_trade_action_name: "Comercio de esclavos forzados"
  forced_slave_trade_action_notification_name: "[INITIATOR_COUNTRY.GetName] nos obligó a intercambiar esclavos"
  forced_slave_trade_action_notification_desc: "Nuestro [concept_overlord] [INITIATOR_COUNTRY.GetName] forzó nuestro [GetLawGroup('lawgroup_slavery').GetName] [concept_law] a [GetLawType('law_slave_trade').GetName]. Su [concept_attitude] hacia nosotros es #tooltippable #tooltip:[INITIATOR_COUNTRY.GetTooltipTag],COUNTRY_ATTITUDE_TOOLTIP [INITIATOR_COUNTRY.GetAttitudeTowards(GetPlayer).GetName]#!#!."
-
+ 
  rule_sis_force_law_actions: "Leyes de fuerza" #deepl:2426188440
  setting_sis_force_laws_enabled: "Activado" #deepl:3001197554
- setting_sis_force_laws_enabled_desc: "Los siguientes [Concept('concept_law', '$concept_laws$')] pueden forzarse en [Concept('concept_subject', '$concept_subjects$')] a través de [concept_overlord_action]: [GetLawType('law_no_migration_controls').GetName], [GetLawType('law_closed_borders').GetName], [GetLawType('law_industry_banned').GetName], [GetLawType('law_slavery_banned').GetName], [GetLawType('law_slave_trade').GetName]." #deepl:3536795465
+ setting_sis_force_laws_enabled_desc: "Los siguientes [Concept('concept_law', '$concept_laws$')] pueden forzarse en [Concept('concept_subject', '$concept_subjects$')] a través de [concept_overlord_action]: [GetLawType('law_no_migration_controls').GetName], [GetLawType('law_closed_borders').GetName], [GetLawType('law_industry_banned').GetName], [GetLawType('law_extraction_economy').GetName], [GetLawType('law_slavery_banned').GetName], [GetLawType('law_slave_trade').GetName]." #deepl:1543168975
  setting_sis_force_laws_only_slavery: "Sólo esclavitud" #deepl:932556609
  setting_sis_force_laws_only_slavery_desc: "Los siguientes [Concept('concept_law', '$concept_laws$')] pueden forzarse en [Concept('concept_subject', '$concept_subjects$')] a través de [concept_overlord_action]: [GetLawType('law_slavery_banned').GetName], [GetLawType('law_slave_trade').GetName]." #deepl:2975591629
  setting_sis_force_laws_disabled: "Discapacitados" #deepl:1603118088

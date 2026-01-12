@@ -17,6 +17,12 @@
  
  forced_industry_ban_liberty_desire_custom_tooltip: "[SCOPE.sCountry('target_country').GetAdjectiveNoFormatting] urzędnicy odpowiedzą na [SCOPE.GetRootScope.GetCountry.GetName] zakaz przemysłu w [SCOPE.sCountry('target_country').GetName]. To [concept_subject] [concept_liberty_desire] i [concept_attitude] ulegnie zmianie."
  
+ sis_forced_extraction: "Ekonomia wymuszonego wydobycia" #deepl:4103283580
+ sis_forced_extraction_desc: "[concept_instant_diplomatic_action], który wymusza zmianę [GetLawGroup('lawgroup_economic_system').GetName] [concept_law] docelowego [concept_subject] na [GetLawType('law_extraction_economy').GetName]. Uszkadza [concept_relations] z docelowym [concept_subject], a część [concept_subject] [concept_pop] staje się [concept_radical]." #deepl:594036816
+ sis_forced_extraction_action_name: "Ekonomia wymuszonego wydobycia" #deepl:4103283580
+ sis_forced_extraction_action_notification_name: "[INITIATOR_COUNTRY.GetName] zmusiły nas do gospodarki wydobywczej" #deepl:2454389896
+ sis_forced_extraction_action_notification_desc: "Nasz [concept_overlord] [INITIATOR_COUNTRY.GetName] zmusił nasz [GetLawGroup('lawgroup_economic_system').GetName] [concept_law] do [GetLawType('law_extraction_economy').GetName]. Ich [concept_attitude] wobec nas jest #tooltippable #tooltip:[INITIATOR_COUNTRY.GetTooltipTag],COUNTRY_ATTITUDE_TOOLTIP [INITIATOR_COUNTRY.GetAttitudeTowards(GetPlayer).GetName]#! #! ." #deepl:288902134
+ 
  forced_slavery_ban: "Zakaz wymuszonego niewolnictwa"
  forced_slavery_ban_desc: "[concept_instant_diplomatic_action], który wymusza zmianę [GetLawGroup('lawgroup_slavery').GetName] [concept_law] do celu [concept_subject] na [GetLawType('law_slavery_banned').GetName]. Uszkodzenia [concept_relations] z celem [concept_subject] i niektóre [concept_subject] [concept_pop] stają się [concept_radical]."
  forced_slavery_ban_action_name: "Wymuszony zakaz branży"
@@ -27,10 +33,10 @@
  forced_slave_trade_action_name: "Wymuszony handel niewolnikami"
  forced_slave_trade_action_notification_name: "[INITIATOR_COUNTRY.GetName] zmusił nas do handlu niewolnikami"
  forced_slave_trade_action_notification_desc: "Nasz [concept_overlord] [INITIATOR_COUNTRY.GetName] zmusił nasz [GetLawGroup('lawgroup_slavery').GetName] [concept_law] do [GetLawType('law_slave_trade').GetName]. Ich [concept_attitude] wobec nas to #tooltippable #tooltip:[INITIATOR_COUNTRY.GetTooltipTag],COUNTRY_ATTITUDE_TOOLTIP [INITIATOR_COUNTRY.GetAttitudeTowards(GetPlayer).GetName]#!#!."
-
+ 
  rule_sis_force_law_actions: "Prawa siły" #deepl:2426188440
  setting_sis_force_laws_enabled: "Włączone" #deepl:3001197554
- setting_sis_force_laws_enabled_desc: "Następujące [Concept('concept_law', '$concept_laws$')] można wymusić na [Concept('concept_subject', '$concept_subjects$')] poprzez [concept_overlord_action]: [GetLawType('law_no_migration_controls').GetName], [GetLawType('law_closed_borders').GetName], [GetLawType('law_industry_banned').GetName], [GetLawType('law_slavery_banned').GetName], [GetLawType('law_slave_trade').GetName]." #deepl:3536795465
+ setting_sis_force_laws_enabled_desc: "Następujące [Concept('concept_law', '$concept_laws$')] można wymusić na [Concept('concept_subject', '$concept_subjects$')] poprzez [concept_overlord_action]: [GetLawType('law_no_migration_controls').GetName], [GetLawType('law_closed_borders').GetName], [GetLawType('law_industry_banned').GetName], [GetLawType('law_extraction_economy').GetName], [GetLawType('law_slavery_banned').GetName], [GetLawType('law_slave_trade').GetName]." #deepl:1543168975
  setting_sis_force_laws_only_slavery: "Tylko niewolnictwo" #deepl:932556609
  setting_sis_force_laws_only_slavery_desc: "Następujące [Concept('concept_law', '$concept_laws$')] można wymusić na [Concept('concept_subject', '$concept_subjects$')] poprzez [concept_overlord_action]: [GetLawType('law_slavery_banned').GetName], [GetLawType('law_slave_trade').GetName]." #deepl:2975591629
  setting_sis_force_laws_disabled: "Wyłączony" #deepl:1603118088

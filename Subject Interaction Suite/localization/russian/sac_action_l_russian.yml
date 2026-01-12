@@ -1,0 +1,2 @@
+﻿l_russian:
+ common_border1: "Имеет общую границу с [Concept('concept_power_bloc_leader','$concept_power_bloc_leader_short$')] или его [concept_puppet] или [concept_colony_subject]" #deepl:2869216009

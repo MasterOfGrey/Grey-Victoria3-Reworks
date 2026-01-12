@@ -70,7 +70,10 @@ REPLACE_OR_CREATE:subject_can_be_consolidation_target = {
 		AND = {
 			custom_tooltip = {
 				text = consolidate_subject_dominion_type_tt
-				is_subject_type = subject_type_dominion
+				OR = {
+					is_subject_type = subject_type_dominion
+					is_subject_type = subject_type_colony
+				}
 			}
 			custom_tooltip = {
 				text = consolidate_subject_dominion_type_laws_tt

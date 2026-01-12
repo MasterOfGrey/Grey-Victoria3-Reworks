@@ -1,0 +1,2 @@
+﻿l_polish:
+ common_border1: "Ma wspólną granicę ze stroną [Concept('concept_power_bloc_leader','$concept_power_bloc_leader_short$')] lub [concept_puppet] lub [concept_colony_subject]" #deepl:2869216009

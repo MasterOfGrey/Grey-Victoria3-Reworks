@@ -13,6 +13,13 @@ ib_events.04 = {
 		any_scope_state = {
 			is_incorporated = no
 			is_treaty_port = no
+			OR = {
+				is_split_state = no
+				any_scope_culture = {
+					has_homeland = prev
+					shares_heritage_trait_group_with_any_primary_culture = root
+				}
+			}
 		}
 	}
 	
@@ -22,6 +29,13 @@ ib_events.04 = {
 			limit = {
 				is_incorporated = no
 				is_treaty_port = no
+				OR = {
+					is_split_state = no
+					any_scope_culture = {
+						has_homeland = prev
+						shares_heritage_trait_group_with_any_primary_culture = root
+					}
+				}
 			}
 			set_state_type = incorporated
 		}

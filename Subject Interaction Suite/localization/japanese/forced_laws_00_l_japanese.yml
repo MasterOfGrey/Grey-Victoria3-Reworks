@@ -17,6 +17,12 @@
  
  forced_industry_ban_liberty_desire_custom_tooltip: "[SCOPE.sCountry('target_country').GetAdjectiveNoFormatting] 当局は [SCOPE.GetRootScope.GetCountry.GetName] に [SCOPE.sCountry('target_country').GetName] の産業禁止措置で対応します。これにより [concept_subject] の [concept_liberty_desire] と [concept_attitude] が変更されます。"
  
+ sis_forced_extraction: "強制抽出経済" #deepl:4103283580
+ sis_forced_extraction_desc: "[GetLawGroup('lawgroup_economic_system').GetName] [concept_law] を強制的に変更する[concept_instant_diplomatic_action] 対象の[concept_subject] を[GetLawType('law_extraction_economy').GetName] に変更する。[concept_relations] を対象[concept_subject] で損傷し、[concept_subject] [concept_pop] の一部が[concept_radical] になる。" #deepl:594036816
+ sis_forced_extraction_action_name: "強制抽出経済" #deepl:4103283580
+ sis_forced_extraction_action_notification_name: "[INITIATOR_COUNTRY.GetName] 採掘経済への強制" #deepl:2454389896
+ sis_forced_extraction_action_notification_desc: "我々の[concept_overlord] [INITIATOR_COUNTRY.GetName] は、我々の[GetLawGroup('lawgroup_economic_system').GetName] [concept_law] を[GetLawType('law_extraction_economy').GetName] に強制した。 我々に対する彼らの[concept_attitude] は#tooltippable #tooltip:[INITIATOR_COUNTRY.GetTooltipTag],COUNTRY_ATTITUDE_TOOLTIP[INITIATOR_COUNTRY.GetAttitudeTowards(GetPlayer).GetName]#! #! ." #deepl:288902134
+ 
  forced_slavery_ban: "強制奴隷制の禁止"
  forced_slavery_ban_desc: "ターゲット[concept_subject]の[GetLawGroup('lawgroup_slavery').GetName][concept_law]の変化を[GetLawType('law_slavery_banned').GetName]に強制する[concept_instant_diplomatic_action]。ターゲット[concept_subject]との損傷[concept_subject]および[concept_subject][concept_pop]の一部は[concept_radical]になります。"
  forced_slavery_ban_action_name: "強制産業禁止"
@@ -27,10 +33,10 @@
  forced_slave_trade_action_name: "強制奴隷貿易"
  forced_slave_trade_action_notification_name: "[INITIATOR_COUNTRY.GetName]は私たちに奴隷を交換することを余儀なくされました"
  forced_slave_trade_action_notification_desc: "私たちの[concept_overlord][INITIATOR_COUNTRY.GetName]は、[GetLawGroup('lawgroup_slavery').GetName][concept_law]を[GetLawType('law_slave_trade').GetName]に強制しました。私たちに向かっている彼らの[concept_attitude]は#tooltippable #tooltip:[INITIATOR_COUNTRY.GetTooltipTag],COUNTRY_ATTITUDE_TOOLTIP[INITIATOR_COUNTRY.GetAttitudeTowards(GetPlayer).GetName] #!#! .です"
-
+ 
  rule_sis_force_law_actions: "力の法則" #deepl:2426188440
  setting_sis_force_laws_enabled: "有効" #deepl:3001197554
- setting_sis_force_laws_enabled_desc: "以下の[Concept('concept_law', '$concept_laws$')] は、[concept_overlord_action] を介して、[Concept('concept_subject', '$concept_subjects$')] に強制することができる：[GetLawType('law_no_migration_controls').GetName] [GetLawType('law_closed_borders').GetName],[GetLawType('law_industry_banned').GetName],[GetLawType('law_slavery_banned').GetName],[GetLawType('law_slave_trade').GetName]." #deepl:3536795465
+ setting_sis_force_laws_enabled_desc: "以下の[Concept('concept_law', '$concept_laws$')] は、[concept_overlord_action] を介して、[Concept('concept_subject', '$concept_subjects$')] に強制することができる：[GetLawType('law_no_migration_controls').GetName] [GetLawType('law_closed_borders').GetName],[GetLawType('law_industry_banned').GetName],[GetLawType('law_extraction_economy').GetName],[GetLawType('law_slavery_banned').GetName],[GetLawType('law_slave_trade').GetName]." #deepl:1543168975
  setting_sis_force_laws_only_slavery: "奴隷制のみ" #deepl:932556609
  setting_sis_force_laws_only_slavery_desc: "以下の[Concept('concept_law', '$concept_laws$')] は、[concept_overlord_action] を経由して、[Concept('concept_subject', '$concept_subjects$')] に強制することができる：[GetLawType('law_slavery_banned').GetName] [GetLawType('law_slave_trade').GetName] 。" #deepl:2975591629
  setting_sis_force_laws_disabled: "無効" #deepl:1603118088

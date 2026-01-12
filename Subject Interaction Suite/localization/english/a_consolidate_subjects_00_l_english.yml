@@ -13,7 +13,7 @@
  consolidate_subject_country_tier_kingdom_overlord_research_tt: "[SCOPE.GetRootScope.GetCountry.GetName] has researched one of: [GetTechnology('pan-nationalism').GetName], [GetTechnology('civilizing_mission').GetName], or [GetTechnology('corporatism').GetName]"
  consolidate_subject_either_tt: "Either:"
  consolidate_subject_vassal_type_tt: "$TAB$[SCOPE.sCountry('target_country').GetName] is a [GetSubjectType('subject_type_vassal').GetName] or [GetSubjectType('subject_type_puppet').GetName]"
- consolidate_subject_dominion_type_tt: "[SCOPE.sCountry('target_country').GetName] is a [GetSubjectType('subject_type_dominion').GetName] and one of:"
+ consolidate_subject_dominion_type_tt: "[SCOPE.sCountry('target_country').GetName] is a [GetSubjectType('subject_type_dominion').GetName] or [GetSubjectType('subject_type_colony').GetName] and one of:"
  consolidate_subject_dominion_type_laws_tt: "[GetLawType('law_parliamentary_republic').GetName], [GetLawType('law_presidential_republic').GetName], or [GetLawType('law_council_republic').GetName]"
  consolidate_subject_union_type_tt: "[SCOPE.sCountry('target_country').GetName] is a [GetSubjectType('subject_type_personal_union').GetName] and:"
  consolidate_subject_primary_culture_tt: "Are one of the Target Subject's [concept_primary_cultures]: [SCOPE.sCountry('target_country').GetPrimaryCulturesDesc]"

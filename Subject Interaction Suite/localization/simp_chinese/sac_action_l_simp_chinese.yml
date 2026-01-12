@@ -1,0 +1,2 @@
+﻿l_simp_chinese:
+ common_border1: "与[Concept('concept_power_bloc_leader','$concept_power_bloc_leader_short$')] 或其[concept_puppet] 有共同边界，或[concept_colony_subject]" #deepl:2869216009

@@ -17,6 +17,12 @@
  
  forced_industry_ban_liberty_desire_custom_tooltip: "[SCOPE.sCountry('target_country').GetAdjectiveNoFormatting] 공무원이 [SCOPE.GetRootScope.GetCountry.GetName] 산업 금지에 대응할 것입니다. [SCOPE.sCountry('target_country').GetName]. 이 [concept_subject]의 [concept_liberty_desire]와 [concept_attitude]가 변경될 것입니다."
  
+ sis_forced_extraction: "강제 추출 경제" #deepl:4103283580
+ sis_forced_extraction_desc: "대상 [concept_subject] 의 [GetLawGroup('lawgroup_economic_system').GetName] [concept_law] 을 [GetLawType('law_extraction_economy').GetName] 로 강제 변경하는 [concept_instant_diplomatic_action]. 대상 [concept_subject] 을 [concept_relations] 손상시키고 [concept_subject] [concept_pop] 중 일부를 [concept_radical] 로 변경합니다." #deepl:594036816
+ sis_forced_extraction_action_name: "강제 추출 경제" #deepl:4103283580
+ sis_forced_extraction_action_notification_name: "[INITIATOR_COUNTRY.GetName] 우리를 수탈 경제로 몰아넣었습니다." #deepl:2454389896
+ sis_forced_extraction_action_notification_desc: "우리의 [concept_overlord] [INITIATOR_COUNTRY.GetName] 강제로 [GetLawGroup('lawgroup_economic_system').GetName] [concept_law] [GetLawType('law_extraction_economy').GetName] . 우리를 향한 그들의 [concept_attitude] 는 #tooltippable #툴팁 :[INITIATOR_COUNTRY.GetTooltipTag],COUNTRY_ATTITUDE_TOOLTIP [INITIATOR_COUNTRY.GetAttitudeTowards(GetPlayer).GetName]#! #! ." #deepl:288902134
+ 
  forced_slavery_ban: "강제 노예제 금지"
  forced_slavery_ban_desc: "대상의 [GetLawGroup('lawgroup_slavery').GetName] [concept_law]의 변화를 강요하는 ces_3. 대상 [concept_subject]의 손상 [concept_relations] 및 일부 [concept_subject] [concept_pop]은 [concept_radical]가됩니다."
  forced_slavery_ban_action_name: "강제 산업 금지"
@@ -27,10 +33,10 @@
  forced_slave_trade_action_name: "강제 노예 무역"
  forced_slave_trade_action_notification_name: "[INITIATOR_COUNTRY.GetName]은 우리에게 노예를 거래하도록 강요했습니다"
  forced_slave_trade_action_notification_desc: "우리의 [concept_overlord] 0_1은 우리의 [GetLawGroup('lawgroup_slavery').GetName] [concept_law]을 [GetLawType('law_slave_trade').GetName]로 강요했습니다. 우리를 향한 그들의 is_5는 #tooltippable #tooltip:[INITIATOR_COUNTRY.GetTooltipTag],COUNTRY_ATTITUDE_TOOLTIP [INITIATOR_COUNTRY.GetAttitudeTowards(GetPlayer).GetName]#!#!.입니다"
-
+ 
  rule_sis_force_law_actions: "힘의 법칙" #deepl:2426188440
  setting_sis_force_laws_enabled: "활성화됨" #deepl:3001197554
- setting_sis_force_laws_enabled_desc: "다음 [Concept('concept_law', '$concept_laws$')] 은 [concept_overlord_action] 을 통해 [Concept('concept_subject', '$concept_subjects$')] 에 강제 적용될 수 있습니다: [GetLawType('law_no_migration_controls').GetName], [GetLawType('law_closed_borders').GetName], [GetLawType('law_industry_banned').GetName], [GetLawType('law_slavery_banned').GetName], [GetLawType('law_slave_trade').GetName]." #deepl:3536795465
+ setting_sis_force_laws_enabled_desc: "다음 [Concept('concept_law', '$concept_laws$')] 은 [concept_overlord_action] 을 통해 [Concept('concept_subject', '$concept_subjects$')] 으로 강제 전송할 수 있습니다: [GetLawType('law_no_migration_controls').GetName], [GetLawType('law_closed_borders').GetName], [GetLawType('law_industry_banned').GetName], [GetLawType('law_extraction_economy').GetName], [GetLawType('law_slavery_banned').GetName], [GetLawType('law_slave_trade').GetName]." #deepl:1543168975
  setting_sis_force_laws_only_slavery: "노예 전용" #deepl:932556609
  setting_sis_force_laws_only_slavery_desc: "다음 [Concept('concept_law', '$concept_laws$')] 은 [concept_overlord_action] 을 통해 [Concept('concept_subject', '$concept_subjects$')] 으로 강제 전송할 수 있습니다: [GetLawType('law_slavery_banned').GetName], [GetLawType('law_slave_trade').GetName]." #deepl:2975591629
  setting_sis_force_laws_disabled: "장애인" #deepl:1603118088
