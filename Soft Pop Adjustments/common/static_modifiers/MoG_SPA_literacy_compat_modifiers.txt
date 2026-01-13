@@ -1,0 +1,92 @@
+﻿#### Populist Legal Power #### 
+# Just the institution changes from SPA
+
+# Institution Modifiers (comments are SPA & PLP relative to vanilla for reference)
+# Note: PLP doesn't touch childrens_rights laws
+
+mog_spa_plp_diff_religious_schools_literacy = {
+	icon = gfx/interface/icons/generic_icons/literacy.dds
+	state_education_access_add = -0.025				# Replace this part in PLP (SPA has other sources)
+	# state_education_access_add = -0.036 # 0.1		# Desired institution has 0.064 access, Vanilla has 0.1. Difference = -0.036
+	# state_slaves_education_access_add = -0.064	# Slaves don't get to go to school
+	# state_education_access_wealth_add = 0.0005
+}
+
+mog_spa_plp_diff_private_schools_literacy = {
+	icon = gfx/interface/icons/generic_icons/literacy.dds
+	state_education_access_add = -0.025				# Replace this part in PLP (SPA has other sources)
+	# state_education_access_wealth_add = -0.0018	# Desired institution has 0.0032 access, Vanilla has 0.005. Difference = -0.0018
+}
+
+mog_spa_plp_diff_public_schools_literacy = {
+	icon = gfx/interface/icons/generic_icons/literacy.dds
+	state_education_access_add = -0.03				# Replace this part in PLP (SPA has other sources)
+	# state_education_access_add = -0.045			# Desired institution has 0.08 access, Vanilla has 0.125. Difference = -0.045
+	# state_slaves_education_access_add = -0.08		# Slaves don't get to go to school
+}
+
+#### Ultra Historical Research & Education #### 
+# Differential Literacy Effects for UHRE compatibility.
+# -> because SPA reworks qualifications, these are designed to achieve UHRE base education access levels but SPA equivalent education from wealth levels at 25 wealth
+
+# Institution Modifiers
+
+mog_spa_uhre_diff_religious_schools_literacy = {	# UHRE full law is loaded
+	icon = gfx/interface/icons/generic_icons/literacy.dds
+	# state_education_access_add = 0.05				# Base UHRE is 0.05 (which is < 0.64)
+	state_slaves_education_access_add = -0.05		# Slaves don't get to go to school
+	state_education_access_wealth_add = 0.0005		# Net 31.25% @ wealth 25 <SPA but slightly >UHRE
+}
+
+mog_spa_uhre_diff_private_schools_literacy = {		# UHRE INJECT on vanilla
+	icon = gfx/interface/icons/generic_icons/literacy.dds
+	# state_education_access_add = 0.02				# This is UHRE base amount.
+	state_slaves_education_access_add = -0.02		# Slaves don't get to go to school
+	state_education_access_wealth_add = -0.0006		# Reduces net 47.5% @ wealth 25 to net 40% = SPA
+}
+
+mog_spa_uhre_diff_public_schools_literacy = {		# UHRE INJECT on vanilla 
+	icon = gfx/interface/icons/generic_icons/literacy.dds
+	# state_education_access_add = 0.08				# This is UHRE base -> to total 52.5% @ wealth 25
+	state_education_access_add = -0.01				# UHRE over buffs public by adding the wealth access
+	state_slaves_education_access_add = -0.07		# Slaves don't get to go to school
+	# state_education_access_wealth_add = 0.001		# This is UHRE wealth amount.
+	state_education_access_wealth_add = -0.0002		# Reduce to 0.0008 = +10% @ wealth 25, Total = 45%
+}
+
+mog_spa_uhre_diff_restricted_child_labor_literacy = {
+	icon = gfx/interface/icons/generic_icons/literacy.dds
+	state_education_access_add = -0.015
+	state_slaves_education_access_add = -0.025
+}
+
+mog_spa_uhre_diff_compulsory_school_literacy = {
+	icon = gfx/interface/icons/generic_icons/literacy.dds
+	state_education_access_add = -0.03
+	state_slaves_education_access_add = -0.05
+}
+
+# Flat Law Modifiers - UHRE uses default flat modifiers
+
+#### Ultra Historical Research & Education PLUS Populist Legal Power #### 
+
+# Institution Modifiers
+
+mog_spa_plp_uhre_diff_religious_schools_literacy = {	# PLP full law is loaded
+	icon = gfx/interface/icons/generic_icons/literacy.dds
+	state_education_access_add = -0.039 			# -0.025 + -0.014	# Achieve SPA & UHRE parity
+	state_conversion_mult = -0.125					# Reach UHRE value of 0.075
+	interest_group_ig_devout_pol_str_mult = -0.05	# Reach UHRE value of 0.05
+}
+
+mog_spa_plp_uhre_diff_private_schools_literacy = {
+	icon = gfx/interface/icons/generic_icons/literacy.dds
+	state_education_access_add = -0.025				# Replace this part in PLP (SPA has other sources)
+}
+
+mog_spa_plp_uhre_diff_public_schools_literacy = {
+	icon = gfx/interface/icons/generic_icons/literacy.dds
+	state_education_access_add = -0.04				# -0.03 + -0.01		# Achieve SPA & UHRE parity
+	state_education_access_wealth_add = 0.0008		# 0 + 0.0008		# Achieve SPA & UHRE parity
+	state_assimilation_mult = -0.025				# Reach UHRE value of 0.1
+}

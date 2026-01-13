@@ -1,0 +1,3227 @@
+﻿#Mods with excessive migration attraction buffs.
+
+# More Unique/Wonder buildings
+TRY_REPLACE:pm_default_building_banca_nationala_romaniei = {
+	texture = "gfx/interface/icons/production_method_icons/wonders.dds"
+
+	state_modifiers = {
+		workforce_scaled = {
+			building_group_bg_mining_throughput_add = 0.2
+			state_tax_capacity_mult = 0.05
+			# state_migration_pull_add = 20
+			state_radicals_and_loyalists_from_sol_change_mult = 0.05
+			building_nationalization_investment_return_add = 0.05
+			state_shopkeepers_investment_pool_efficiency_mult = 0.05
+			state_aristocrats_investment_pool_efficiency_mult = 0.05
+			state_capitalists_investment_pool_efficiency_mult = 0.05
+			state_farmers_investment_pool_efficiency_mult = 0.05
+			state_clergymen_investment_pool_efficiency_mult = 0.05
+		}
+		unscaled = {
+			state_migration_pull_add = 2
+		}
+	}
+
+	building_modifiers = {
+		level_scaled = {
+			building_employment_shopkeepers_add = 500
+			building_employment_aristocrats_add = 500
+			building_employment_capitalists_add = 500
+			building_employment_farmers_add = 500
+			building_employment_clergymen_add = 500
+		}
+	}
+}
+
+TRY_REPLACE:pm_default_building_csob = {
+	texture = "gfx/interface/icons/production_method_icons/wonders.dds"
+
+	state_modifiers = {
+		workforce_scaled = {
+			building_automotive_industry_throughput_add = 0.2
+			state_tax_capacity_mult = 0.05
+			# state_migration_pull_add = 20
+			state_radicals_and_loyalists_from_sol_change_mult = 0.05
+			building_nationalization_investment_return_add = 0.05
+			state_shopkeepers_investment_pool_efficiency_mult = 0.05
+			state_aristocrats_investment_pool_efficiency_mult = 0.05
+			state_capitalists_investment_pool_efficiency_mult = 0.05
+			state_farmers_investment_pool_efficiency_mult = 0.05
+			state_clergymen_investment_pool_efficiency_mult = 0.05
+		}
+		unscaled = {
+			state_migration_pull_add = 2
+		}
+	}
+
+	building_modifiers = {
+		level_scaled = {
+			building_employment_shopkeepers_add = 500
+			building_employment_aristocrats_add = 500
+			building_employment_capitalists_add = 500
+			building_employment_farmers_add = 500
+			building_employment_clergymen_add = 500
+		}
+	}
+}
+
+TRY_REPLACE:pm_default_building_narodowy_bank_polski = {
+	texture = "gfx/interface/icons/production_method_icons/wonders.dds"
+
+	state_modifiers = {
+		workforce_scaled = {
+			building_food_industry_throughput_add = 0.2
+			state_tax_capacity_mult = 0.05
+			# state_migration_pull_add = 20
+			state_radicals_and_loyalists_from_sol_change_mult = 0.05
+			building_nationalization_investment_return_add = 0.05
+			state_shopkeepers_investment_pool_efficiency_mult = 0.05
+			state_aristocrats_investment_pool_efficiency_mult = 0.05
+			state_capitalists_investment_pool_efficiency_mult = 0.05
+			state_farmers_investment_pool_efficiency_mult = 0.05
+			state_clergymen_investment_pool_efficiency_mult = 0.05
+		}
+		unscaled = {
+			state_migration_pull_add = 2
+		}
+	}
+
+	building_modifiers = {
+		level_scaled = {
+			building_employment_shopkeepers_add = 500
+			building_employment_aristocrats_add = 500
+			building_employment_capitalists_add = 500
+			building_employment_farmers_add = 500
+			building_employment_clergymen_add = 500
+		}
+	}
+}
+
+TRY_REPLACE:pm_default_building_suomen_pankki = {
+	texture = "gfx/interface/icons/production_method_icons/wonders.dds"
+
+	state_modifiers = {
+		workforce_scaled = {
+			building_furniture_manufactory_throughput_add = 0.2
+			state_tax_capacity_mult = 0.05
+			# state_migration_pull_add = 20
+			state_radicals_and_loyalists_from_sol_change_mult = 0.05
+			building_nationalization_investment_return_add = 0.05
+			state_shopkeepers_investment_pool_efficiency_mult = 0.05
+			state_aristocrats_investment_pool_efficiency_mult = 0.05
+			state_capitalists_investment_pool_efficiency_mult = 0.05
+			state_farmers_investment_pool_efficiency_mult = 0.05
+			state_clergymen_investment_pool_efficiency_mult = 0.05
+		}
+		unscaled = {
+			state_migration_pull_add = 2
+		}
+	}
+
+	building_modifiers = {
+		level_scaled = {
+			building_employment_shopkeepers_add = 500
+			building_employment_aristocrats_add = 500
+			building_employment_capitalists_add = 500
+			building_employment_farmers_add = 500
+			building_employment_clergymen_add = 500
+		}
+	}
+}
+
+TRY_REPLACE:pm_default_building_danske_bank = {
+	texture = "gfx/interface/icons/production_method_icons/wonders.dds"
+
+	state_modifiers = {
+		workforce_scaled = {
+			building_shipyard_throughput_add = 0.2
+			state_tax_capacity_mult = 0.05
+			# state_migration_pull_add = 20
+			state_radicals_and_loyalists_from_sol_change_mult = 0.05
+			building_nationalization_investment_return_add = 0.05
+			state_shopkeepers_investment_pool_efficiency_mult = 0.05
+			state_aristocrats_investment_pool_efficiency_mult = 0.05
+			state_capitalists_investment_pool_efficiency_mult = 0.05
+			state_farmers_investment_pool_efficiency_mult = 0.05
+			state_clergymen_investment_pool_efficiency_mult = 0.05
+		}
+		unscaled = {
+			state_migration_pull_add = 2
+		}
+	}
+
+	building_modifiers = {
+		level_scaled = {
+			building_employment_shopkeepers_add = 500
+			building_employment_aristocrats_add = 500
+			building_employment_capitalists_add = 500
+			building_employment_farmers_add = 500
+			building_employment_clergymen_add = 500
+		}
+	}
+}
+
+TRY_REPLACE:pm_default_building_dnb_asa = {
+	texture = "gfx/interface/icons/production_method_icons/wonders.dds"
+
+	state_modifiers = {
+		workforce_scaled = {
+			building_automotive_industry_throughput_add = 0.2
+			state_tax_capacity_mult = 0.05
+			# state_migration_pull_add = 20
+			state_radicals_and_loyalists_from_sol_change_mult = 0.05
+			building_nationalization_investment_return_add = 0.05
+			state_shopkeepers_investment_pool_efficiency_mult = 0.05
+			state_aristocrats_investment_pool_efficiency_mult = 0.05
+			state_capitalists_investment_pool_efficiency_mult = 0.05
+			state_farmers_investment_pool_efficiency_mult = 0.05
+			state_clergymen_investment_pool_efficiency_mult = 0.05
+		}
+		unscaled = {
+			state_migration_pull_add = 2
+		}
+	}
+
+	building_modifiers = {
+		level_scaled = {
+			building_employment_shopkeepers_add = 500
+			building_employment_aristocrats_add = 500
+			building_employment_capitalists_add = 500
+			building_employment_farmers_add = 500
+			building_employment_clergymen_add = 500
+		}
+	}
+}
+
+TRY_REPLACE:pm_default_building_sveriges_riksbank = {
+	texture = "gfx/interface/icons/production_method_icons/wonders.dds"
+
+	state_modifiers = {
+		workforce_scaled = {
+			building_group_bg_mining_throughput_add = 0.2
+			state_tax_capacity_mult = 0.05
+			# state_migration_pull_add = 20
+			state_radicals_and_loyalists_from_sol_change_mult = 0.05
+			building_nationalization_investment_return_add = 0.05
+			state_shopkeepers_investment_pool_efficiency_mult = 0.05
+			state_aristocrats_investment_pool_efficiency_mult = 0.05
+			state_capitalists_investment_pool_efficiency_mult = 0.05
+			state_farmers_investment_pool_efficiency_mult = 0.05
+			state_clergymen_investment_pool_efficiency_mult = 0.05
+		}
+		unscaled = {
+			state_migration_pull_add = 2
+		}
+	}
+
+	building_modifiers = {
+		level_scaled = {
+			building_employment_shopkeepers_add = 500
+			building_employment_aristocrats_add = 500
+			building_employment_capitalists_add = 500
+			building_employment_farmers_add = 500
+			building_employment_clergymen_add = 500
+		}
+	}
+}
+
+TRY_REPLACE:pm_default_building_bank_of_korea = {
+	texture = "gfx/interface/icons/production_method_icons/wonders.dds"
+
+	state_modifiers = {
+		workforce_scaled = {
+			building_tooling_workshop_throughput_add = 0.2
+			state_tax_capacity_mult = 0.05
+			# state_migration_pull_add = 20
+			state_radicals_and_loyalists_from_sol_change_mult = 0.05
+			building_nationalization_investment_return_add = 0.05
+			state_shopkeepers_investment_pool_efficiency_mult = 0.05
+			state_aristocrats_investment_pool_efficiency_mult = 0.05
+			state_capitalists_investment_pool_efficiency_mult = 0.05
+			state_farmers_investment_pool_efficiency_mult = 0.05
+			state_clergymen_investment_pool_efficiency_mult = 0.05
+		}
+		unscaled = {
+			state_migration_pull_add = 2
+		}
+	}
+
+	building_modifiers = {
+		level_scaled = {
+			building_employment_shopkeepers_add = 500
+			building_employment_aristocrats_add = 500
+			building_employment_capitalists_add = 500
+			building_employment_farmers_add = 500
+			building_employment_clergymen_add = 500
+		}
+	}
+}
+
+TRY_REPLACE:pm_default_building_indochina_bank = {
+	texture = "gfx/interface/icons/production_method_icons/wonders.dds"
+
+	state_modifiers = {
+		workforce_scaled = {
+			building_construction_sector_throughput_add = 0.2
+			state_tax_capacity_mult = 0.05
+			# state_migration_pull_add = 20
+			state_radicals_and_loyalists_from_sol_change_mult = 0.05
+			building_nationalization_investment_return_add = 0.05
+			state_shopkeepers_investment_pool_efficiency_mult = 0.05
+			state_aristocrats_investment_pool_efficiency_mult = 0.05
+			state_capitalists_investment_pool_efficiency_mult = 0.05
+			state_farmers_investment_pool_efficiency_mult = 0.05
+			state_clergymen_investment_pool_efficiency_mult = 0.05
+		}
+		unscaled = {
+			state_migration_pull_add = 2
+		}
+	}
+
+	building_modifiers = {
+		level_scaled = {
+			building_employment_shopkeepers_add = 500
+			building_employment_aristocrats_add = 500
+			building_employment_capitalists_add = 500
+			building_employment_farmers_add = 500
+			building_employment_clergymen_add = 500
+		}
+	}
+}
+
+TRY_REPLACE:pm_default_building_state_bank_india = {
+	texture = "gfx/interface/icons/production_method_icons/wonders.dds"
+
+	state_modifiers = {
+		workforce_scaled = {
+			building_glassworks_throughput_add = 0.2
+			state_tax_capacity_mult = 0.05
+			# state_migration_pull_add = 20
+			state_radicals_and_loyalists_from_sol_change_mult = 0.05
+			building_nationalization_investment_return_add = 0.05
+			state_shopkeepers_investment_pool_efficiency_mult = 0.05
+			state_aristocrats_investment_pool_efficiency_mult = 0.05
+			state_capitalists_investment_pool_efficiency_mult = 0.05
+			state_farmers_investment_pool_efficiency_mult = 0.05
+			state_clergymen_investment_pool_efficiency_mult = 0.05
+		}
+		unscaled = {
+			state_migration_pull_add = 2
+		}
+	}
+
+	building_modifiers = {
+		level_scaled = {
+			building_employment_shopkeepers_add = 500
+			building_employment_aristocrats_add = 500
+			building_employment_capitalists_add = 500
+			building_employment_farmers_add = 500
+			building_employment_clergymen_add = 500
+		}
+	}
+}
+
+TRY_REPLACE:pm_default_building_arab_bank = {
+	texture = "gfx/interface/icons/production_method_icons/wonders.dds"
+
+	state_modifiers = {
+		workforce_scaled = {
+			building_group_bg_oil_extraction_throughput_add = 0.2
+			state_tax_capacity_mult = 0.05
+			# state_migration_pull_add = 20
+			state_radicals_and_loyalists_from_sol_change_mult = 0.05
+			building_nationalization_investment_return_add = 0.05
+			state_shopkeepers_investment_pool_efficiency_mult = 0.05
+			state_aristocrats_investment_pool_efficiency_mult = 0.05
+			state_capitalists_investment_pool_efficiency_mult = 0.05
+			state_farmers_investment_pool_efficiency_mult = 0.05
+			state_clergymen_investment_pool_efficiency_mult = 0.05
+		}
+		unscaled = {
+			state_migration_pull_add = 2
+		}
+	}
+
+	building_modifiers = {
+		level_scaled = {
+			building_employment_shopkeepers_add = 500
+			building_employment_aristocrats_add = 500
+			building_employment_capitalists_add = 500
+			building_employment_farmers_add = 500
+			building_employment_clergymen_add = 500
+		}
+	}
+}
+
+TRY_REPLACE:pm_default_building_national_bank_egypt = {
+	texture = "gfx/interface/icons/production_method_icons/wonders.dds"
+
+	state_modifiers = {
+		workforce_scaled = {
+			building_paper_mill_throughput_add = 0.2
+			state_tax_capacity_mult = 0.05
+			# state_migration_pull_add = 20
+			state_radicals_and_loyalists_from_sol_change_mult = 0.05
+			building_nationalization_investment_return_add = 0.05
+			state_shopkeepers_investment_pool_efficiency_mult = 0.05
+			state_aristocrats_investment_pool_efficiency_mult = 0.05
+			state_capitalists_investment_pool_efficiency_mult = 0.05
+			state_farmers_investment_pool_efficiency_mult = 0.05
+			state_clergymen_investment_pool_efficiency_mult = 0.05
+		}
+		unscaled = {
+			state_migration_pull_add = 2
+		}
+	}
+
+	building_modifiers = {
+		level_scaled = {
+			building_employment_shopkeepers_add = 500
+			building_employment_aristocrats_add = 500
+			building_employment_capitalists_add = 500
+			building_employment_farmers_add = 500
+			building_employment_clergymen_add = 500
+		}
+	}
+}
+
+TRY_REPLACE:pm_default_building_bank_melli_iran = {
+	texture = "gfx/interface/icons/production_method_icons/wonders.dds"
+
+	state_modifiers = {
+		workforce_scaled = {
+			building_group_bg_plantations_throughput_add = 0.2
+			state_tax_capacity_mult = 0.05
+			# state_migration_pull_add = 20
+			state_radicals_and_loyalists_from_sol_change_mult = 0.05
+			building_nationalization_investment_return_add = 0.05
+			state_shopkeepers_investment_pool_efficiency_mult = 0.05
+			state_aristocrats_investment_pool_efficiency_mult = 0.05
+			state_capitalists_investment_pool_efficiency_mult = 0.05
+			state_farmers_investment_pool_efficiency_mult = 0.05
+			state_clergymen_investment_pool_efficiency_mult = 0.05
+		}
+		unscaled = {
+			state_migration_pull_add = 2
+		}
+	}
+
+	building_modifiers = {
+		level_scaled = {
+			building_employment_shopkeepers_add = 500
+			building_employment_aristocrats_add = 500
+			building_employment_capitalists_add = 500
+			building_employment_farmers_add = 500
+			building_employment_clergymen_add = 500
+		}
+	}
+}
+
+TRY_REPLACE:pm_default_building_imperial_ottoman_bank = {
+	texture = "gfx/interface/icons/production_method_icons/wonders.dds"
+
+	state_modifiers = {
+		workforce_scaled = {
+			building_group_bg_plantations_throughput_add = 0.2
+			state_tax_capacity_mult = 0.05
+			# state_migration_pull_add = 20
+			state_radicals_and_loyalists_from_sol_change_mult = 0.05
+			building_nationalization_investment_return_add = 0.05
+			state_shopkeepers_investment_pool_efficiency_mult = 0.05
+			state_aristocrats_investment_pool_efficiency_mult = 0.05
+			state_capitalists_investment_pool_efficiency_mult = 0.05
+			state_farmers_investment_pool_efficiency_mult = 0.05
+			state_clergymen_investment_pool_efficiency_mult = 0.05
+		}
+		unscaled = {
+			state_migration_pull_add = 2
+		}
+	}
+
+	building_modifiers = {
+		level_scaled = {
+			building_employment_shopkeepers_add = 500
+			building_employment_aristocrats_add = 500
+			building_employment_capitalists_add = 500
+			building_employment_farmers_add = 500
+			building_employment_clergymen_add = 500
+		}
+	}
+}
+
+TRY_REPLACE:pm_default_building_national_bank_greece = {
+	texture = "gfx/interface/icons/production_method_icons/wonders.dds"
+
+	state_modifiers = {
+		workforce_scaled = {
+			building_group_bg_mining_throughput_add = 0.2
+			state_tax_capacity_mult = 0.05
+			# state_migration_pull_add = 20
+			state_radicals_and_loyalists_from_sol_change_mult = 0.05
+			building_nationalization_investment_return_add = 0.05
+			state_shopkeepers_investment_pool_efficiency_mult = 0.05
+			state_aristocrats_investment_pool_efficiency_mult = 0.05
+			state_capitalists_investment_pool_efficiency_mult = 0.05
+			state_farmers_investment_pool_efficiency_mult = 0.05
+			state_clergymen_investment_pool_efficiency_mult = 0.05
+		}
+		unscaled = {
+			state_migration_pull_add = 2
+		}
+	}
+
+	building_modifiers = {
+		level_scaled = {
+			building_employment_shopkeepers_add = 500
+			building_employment_aristocrats_add = 500
+			building_employment_capitalists_add = 500
+			building_employment_farmers_add = 500
+			building_employment_clergymen_add = 500
+		}
+	}
+}
+
+TRY_REPLACE:pm_default_building_magyar_nemzeti_bank = {
+	texture = "gfx/interface/icons/production_method_icons/wonders.dds"
+
+	state_modifiers = {
+		workforce_scaled = {
+			building_motor_industry_throughput_add = 0.2
+			state_tax_capacity_mult = 0.05
+			# state_migration_pull_add = 20
+			state_radicals_and_loyalists_from_sol_change_mult = 0.05
+			building_nationalization_investment_return_add = 0.05
+			state_shopkeepers_investment_pool_efficiency_mult = 0.05
+			state_aristocrats_investment_pool_efficiency_mult = 0.05
+			state_capitalists_investment_pool_efficiency_mult = 0.05
+			state_farmers_investment_pool_efficiency_mult = 0.05
+			state_clergymen_investment_pool_efficiency_mult = 0.05
+		}
+		unscaled = {
+			state_migration_pull_add = 2
+		}
+	}
+
+	building_modifiers = {
+		level_scaled = {
+			building_employment_shopkeepers_add = 500
+			building_employment_aristocrats_add = 500
+			building_employment_capitalists_add = 500
+			building_employment_farmers_add = 500
+			building_employment_clergymen_add = 500
+		}
+	}
+}
+
+TRY_REPLACE:pm_default_building_oesterreichische_nationalbank = {
+	texture = "gfx/interface/icons/production_method_icons/wonders.dds"
+
+	state_modifiers = {
+		workforce_scaled = {
+			building_paper_mill_throughput_add = 0.2
+			state_tax_capacity_mult = 0.05
+			# state_migration_pull_add = 20
+			state_radicals_and_loyalists_from_sol_change_mult = 0.05
+			building_nationalization_investment_return_add = 0.05
+			state_shopkeepers_investment_pool_efficiency_mult = 0.05
+			state_aristocrats_investment_pool_efficiency_mult = 0.05
+			state_capitalists_investment_pool_efficiency_mult = 0.05
+			state_farmers_investment_pool_efficiency_mult = 0.05
+			state_clergymen_investment_pool_efficiency_mult = 0.05
+		}
+		unscaled = {
+			state_migration_pull_add = 2
+		}
+	}
+
+	building_modifiers = {
+		level_scaled = {
+			building_employment_shopkeepers_add = 500
+			building_employment_aristocrats_add = 500
+			building_employment_capitalists_add = 500
+			building_employment_farmers_add = 500
+			building_employment_clergymen_add = 500
+		}
+	}
+}
+
+TRY_REPLACE:pm_default_building_bnl = {
+	texture = "gfx/interface/icons/production_method_icons/wonders.dds"
+
+	state_modifiers = {
+		workforce_scaled = {
+			building_group_bg_plantations_throughput_add = 0.2
+			state_tax_capacity_mult = 0.05
+			# state_migration_pull_add = 20
+			state_radicals_and_loyalists_from_sol_change_mult = 0.05
+			building_nationalization_investment_return_add = 0.05
+			state_shopkeepers_investment_pool_efficiency_mult = 0.05
+			state_aristocrats_investment_pool_efficiency_mult = 0.05
+			state_capitalists_investment_pool_efficiency_mult = 0.05
+			state_farmers_investment_pool_efficiency_mult = 0.05
+			state_clergymen_investment_pool_efficiency_mult = 0.05
+		}
+		unscaled = {
+			state_migration_pull_add = 2
+		}
+	}
+
+	building_modifiers = {
+		level_scaled = {
+			building_employment_shopkeepers_add = 500
+			building_employment_aristocrats_add = 500
+			building_employment_capitalists_add = 500
+			building_employment_farmers_add = 500
+			building_employment_clergymen_add = 500
+		}
+	}
+}
+
+TRY_REPLACE:pm_default_building_bbva = {
+	texture = "gfx/interface/icons/production_method_icons/wonders.dds"
+
+	state_modifiers = {
+		workforce_scaled = {
+			building_group_bg_plantations_throughput_add = 0.2
+			state_tax_capacity_mult = 0.05
+			# state_migration_pull_add = 20
+			state_radicals_and_loyalists_from_sol_change_mult = 0.05
+			building_nationalization_investment_return_add = 0.05
+			state_shopkeepers_investment_pool_efficiency_mult = 0.05
+			state_aristocrats_investment_pool_efficiency_mult = 0.05
+			state_capitalists_investment_pool_efficiency_mult = 0.05
+			state_farmers_investment_pool_efficiency_mult = 0.05
+			state_clergymen_investment_pool_efficiency_mult = 0.05
+		}
+		unscaled = {
+			state_migration_pull_add = 2
+		}
+	}
+
+	building_modifiers = {
+		level_scaled = {
+			building_employment_shopkeepers_add = 500
+			building_employment_aristocrats_add = 500
+			building_employment_capitalists_add = 500
+			building_employment_farmers_add = 500
+			building_employment_clergymen_add = 500
+		}
+	}
+}
+
+TRY_REPLACE:pm_default_building_banco_nacional_portugal = {
+	texture = "gfx/interface/icons/production_method_icons/wonders.dds"
+
+	state_modifiers = {
+		workforce_scaled = {
+			building_construction_sector_throughput_add = 0.2
+			state_tax_capacity_mult = 0.05
+			# state_migration_pull_add = 20
+			state_radicals_and_loyalists_from_sol_change_mult = 0.05
+			building_nationalization_investment_return_add = 0.05
+			state_shopkeepers_investment_pool_efficiency_mult = 0.05
+			state_aristocrats_investment_pool_efficiency_mult = 0.05
+			state_capitalists_investment_pool_efficiency_mult = 0.05
+			state_farmers_investment_pool_efficiency_mult = 0.05
+			state_clergymen_investment_pool_efficiency_mult = 0.05
+		}
+		unscaled = {
+			state_migration_pull_add = 2
+		}
+	}
+
+	building_modifiers = {
+		level_scaled = {
+			building_employment_shopkeepers_add = 500
+			building_employment_aristocrats_add = 500
+			building_employment_capitalists_add = 500
+			building_employment_farmers_add = 500
+			building_employment_clergymen_add = 500
+		}
+	}
+}
+
+TRY_REPLACE:pm_default_building_societe_generale = {
+	texture = "gfx/interface/icons/production_method_icons/wonders.dds"
+
+	state_modifiers = {
+		workforce_scaled = {
+			building_tooling_workshop_throughput_add = 0.2
+			state_tax_capacity_mult = 0.05
+			# state_migration_pull_add = 20
+			state_radicals_and_loyalists_from_sol_change_mult = 0.05
+			building_nationalization_investment_return_add = 0.05
+			state_shopkeepers_investment_pool_efficiency_mult = 0.05
+			state_aristocrats_investment_pool_efficiency_mult = 0.05
+			state_capitalists_investment_pool_efficiency_mult = 0.05
+			state_farmers_investment_pool_efficiency_mult = 0.05
+			state_clergymen_investment_pool_efficiency_mult = 0.05
+		}
+		unscaled = {
+			state_migration_pull_add = 2
+		}
+	}
+
+	building_modifiers = {
+		level_scaled = {
+			building_employment_shopkeepers_add = 500
+			building_employment_aristocrats_add = 500
+			building_employment_capitalists_add = 500
+			building_employment_farmers_add = 500
+			building_employment_clergymen_add = 500
+		}
+	}
+}
+
+TRY_REPLACE:pm_default_building_london_provincial_bank = {
+	texture = "gfx/interface/icons/production_method_icons/wonders.dds"
+
+	state_modifiers = {
+		workforce_scaled = {
+			building_textile_mill_throughput_add = 0.2
+			state_tax_capacity_mult = 0.05
+			# state_migration_pull_add = 20
+			state_radicals_and_loyalists_from_sol_change_mult = 0.05
+			building_nationalization_investment_return_add = 0.05
+			state_shopkeepers_investment_pool_efficiency_mult = 0.05
+			state_aristocrats_investment_pool_efficiency_mult = 0.05
+			state_capitalists_investment_pool_efficiency_mult = 0.05
+			state_farmers_investment_pool_efficiency_mult = 0.05
+			state_clergymen_investment_pool_efficiency_mult = 0.05
+		}
+		unscaled = {
+			state_migration_pull_add = 2
+		}
+	}
+
+	building_modifiers = {
+		level_scaled = {
+			building_employment_shopkeepers_add = 500
+			building_employment_aristocrats_add = 500
+			building_employment_capitalists_add = 500
+			building_employment_farmers_add = 500
+			building_employment_clergymen_add = 500
+		}
+	}
+}
+
+TRY_REPLACE:pm_default_building_swiss_national_bank = {
+	texture = "gfx/interface/icons/production_method_icons/wonders.dds"
+
+	state_modifiers = {
+		workforce_scaled = {
+			building_textile_mill_throughput_add = 0.2
+			state_tax_capacity_mult = 0.05
+			# state_migration_pull_add = 20
+			state_radicals_and_loyalists_from_sol_change_mult = 0.05
+			building_nationalization_investment_return_add = 0.05
+			state_shopkeepers_investment_pool_efficiency_mult = 0.05
+			state_aristocrats_investment_pool_efficiency_mult = 0.05
+			state_capitalists_investment_pool_efficiency_mult = 0.05
+			state_farmers_investment_pool_efficiency_mult = 0.05
+			state_clergymen_investment_pool_efficiency_mult = 0.05
+		}
+		unscaled = {
+			state_migration_pull_add = 2
+		}
+	}
+
+	building_modifiers = {
+		level_scaled = {
+			building_employment_shopkeepers_add = 500
+			building_employment_aristocrats_add = 500
+			building_employment_capitalists_add = 500
+			building_employment_farmers_add = 500
+			building_employment_clergymen_add = 500
+		}
+	}
+}
+
+TRY_REPLACE:pm_default_building_banque_nationale_belgique = {
+	texture = "gfx/interface/icons/production_method_icons/wonders.dds"
+
+	state_modifiers = {
+		workforce_scaled = {
+			building_glassworks_throughput_add = 0.2
+			state_tax_capacity_mult = 0.05
+			# state_migration_pull_add = 20
+			state_radicals_and_loyalists_from_sol_change_mult = 0.05
+			building_nationalization_investment_return_add = 0.05
+			state_shopkeepers_investment_pool_efficiency_mult = 0.05
+			state_aristocrats_investment_pool_efficiency_mult = 0.05
+			state_capitalists_investment_pool_efficiency_mult = 0.05
+			state_farmers_investment_pool_efficiency_mult = 0.05
+			state_clergymen_investment_pool_efficiency_mult = 0.05
+		}
+		unscaled = {
+			state_migration_pull_add = 2
+		}
+	}
+
+	building_modifiers = {
+		level_scaled = {
+			building_employment_shopkeepers_add = 500
+			building_employment_aristocrats_add = 500
+			building_employment_capitalists_add = 500
+			building_employment_farmers_add = 500
+			building_employment_clergymen_add = 500
+		}
+	}
+}
+
+TRY_REPLACE:pm_default_building_banco_comercial_sao_paulo = {
+	texture = "gfx/interface/icons/production_method_icons/wonders.dds"
+
+	state_modifiers = {
+		workforce_scaled = {
+			building_group_bg_plantations_throughput_add = 0.2
+			state_tax_capacity_mult = 0.05
+			# state_migration_pull_add = 20
+			state_radicals_and_loyalists_from_sol_change_mult = 0.05
+			building_nationalization_investment_return_add = 0.05
+			state_shopkeepers_investment_pool_efficiency_mult = 0.05
+			state_aristocrats_investment_pool_efficiency_mult = 0.05
+			state_capitalists_investment_pool_efficiency_mult = 0.05
+			state_farmers_investment_pool_efficiency_mult = 0.05
+			state_clergymen_investment_pool_efficiency_mult = 0.05
+		}
+		unscaled = {
+			state_migration_pull_add = 2
+		}
+	}
+
+	building_modifiers = {
+		level_scaled = {
+			building_employment_shopkeepers_add = 500
+			building_employment_aristocrats_add = 500
+			building_employment_capitalists_add = 500
+			building_employment_farmers_add = 500
+			building_employment_clergymen_add = 500
+		}
+	}
+}
+
+TRY_REPLACE:pm_default_building_banco_republica_uruguay = {
+	texture = "gfx/interface/icons/production_method_icons/wonders.dds"
+
+	state_modifiers = {
+		workforce_scaled = {
+			building_group_bg_plantations_throughput_add = 0.2
+			state_tax_capacity_mult = 0.05
+			# state_migration_pull_add = 20
+			state_radicals_and_loyalists_from_sol_change_mult = 0.05
+			building_nationalization_investment_return_add = 0.05
+			state_shopkeepers_investment_pool_efficiency_mult = 0.05
+			state_aristocrats_investment_pool_efficiency_mult = 0.05
+			state_capitalists_investment_pool_efficiency_mult = 0.05
+			state_farmers_investment_pool_efficiency_mult = 0.05
+			state_clergymen_investment_pool_efficiency_mult = 0.05
+		}
+		unscaled = {
+			state_migration_pull_add = 2
+		}
+	}
+
+	building_modifiers = {
+		level_scaled = {
+			building_employment_shopkeepers_add = 500
+			building_employment_aristocrats_add = 500
+			building_employment_capitalists_add = 500
+			building_employment_farmers_add = 500
+			building_employment_clergymen_add = 500
+		}
+	}
+}
+
+TRY_REPLACE:pm_default_building_banco_de_chile = {
+	texture = "gfx/interface/icons/production_method_icons/wonders.dds"
+
+	state_modifiers = {
+		workforce_scaled = {
+			building_group_bg_mining_throughput_add = 0.2
+			state_tax_capacity_mult = 0.05
+			# state_migration_pull_add = 20
+			state_radicals_and_loyalists_from_sol_change_mult = 0.05
+			building_nationalization_investment_return_add = 0.05
+			state_shopkeepers_investment_pool_efficiency_mult = 0.05
+			state_aristocrats_investment_pool_efficiency_mult = 0.05
+			state_capitalists_investment_pool_efficiency_mult = 0.05
+			state_farmers_investment_pool_efficiency_mult = 0.05
+			state_clergymen_investment_pool_efficiency_mult = 0.05
+		}
+		unscaled = {
+			state_migration_pull_add = 2
+		}
+	}
+
+	building_modifiers = {
+		level_scaled = {
+			building_employment_shopkeepers_add = 500
+			building_employment_aristocrats_add = 500
+			building_employment_capitalists_add = 500
+			building_employment_farmers_add = 500
+			building_employment_clergymen_add = 500
+		}
+	}
+}
+
+TRY_REPLACE:pm_default_building_bank_of_japan = {
+	texture = "gfx/interface/icons/production_method_icons/wonders.dds"
+
+	state_modifiers = {
+		workforce_scaled = {
+			building_automotive_industry_throughput_add = 0.2
+			state_tax_capacity_mult = 0.05
+			# state_migration_pull_add = 20
+			state_radicals_and_loyalists_from_sol_change_mult = 0.05
+			building_nationalization_investment_return_add = 0.05
+			state_shopkeepers_investment_pool_efficiency_mult = 0.05
+			state_aristocrats_investment_pool_efficiency_mult = 0.05
+			state_capitalists_investment_pool_efficiency_mult = 0.05
+			state_farmers_investment_pool_efficiency_mult = 0.05
+			state_clergymen_investment_pool_efficiency_mult = 0.05
+		}
+		unscaled = {
+			state_migration_pull_add = 2
+		}
+	}
+
+	building_modifiers = {
+		level_scaled = {
+			building_employment_shopkeepers_add = 500
+			building_employment_aristocrats_add = 500
+			building_employment_capitalists_add = 500
+			building_employment_farmers_add = 500
+			building_employment_clergymen_add = 500
+		}
+	}
+}
+
+TRY_REPLACE:pm_default_building_banco_inversiones_panama = {
+	texture = "gfx/interface/icons/production_method_icons/wonders.dds"
+
+	state_modifiers = {
+		workforce_scaled = {
+			building_group_bg_plantations_throughput_add = 0.2
+			state_tax_capacity_mult = 0.05
+			# state_migration_pull_add = 20
+			state_radicals_and_loyalists_from_sol_change_mult = 0.05
+			building_nationalization_investment_return_add = 0.05
+			state_shopkeepers_investment_pool_efficiency_mult = 0.05
+			state_aristocrats_investment_pool_efficiency_mult = 0.05
+			state_capitalists_investment_pool_efficiency_mult = 0.05
+			state_farmers_investment_pool_efficiency_mult = 0.05
+			state_clergymen_investment_pool_efficiency_mult = 0.05
+		}
+		unscaled = {
+			state_migration_pull_add = 2
+		}
+	}
+
+	building_modifiers = {
+		level_scaled = {
+			building_employment_shopkeepers_add = 500
+			building_employment_aristocrats_add = 500
+			building_employment_capitalists_add = 500
+			building_employment_farmers_add = 500
+			building_employment_clergymen_add = 500
+		}
+	}
+}
+
+TRY_REPLACE:pm_default_building_banco_nacion_argentina = {
+	texture = "gfx/interface/icons/production_method_icons/wonders.dds"
+
+	state_modifiers = {
+		workforce_scaled = {
+			building_group_bg_plantations_throughput_add = 0.2
+			state_tax_capacity_mult = 0.05
+			# state_migration_pull_add = 20
+			state_radicals_and_loyalists_from_sol_change_mult = 0.05
+			building_nationalization_investment_return_add = 0.05
+			state_shopkeepers_investment_pool_efficiency_mult = 0.05
+			state_aristocrats_investment_pool_efficiency_mult = 0.05
+			state_capitalists_investment_pool_efficiency_mult = 0.05
+			state_farmers_investment_pool_efficiency_mult = 0.05
+			state_clergymen_investment_pool_efficiency_mult = 0.05
+		}
+		unscaled = {
+			state_migration_pull_add = 2
+		}
+	}
+
+	building_modifiers = {
+		level_scaled = {
+			building_employment_shopkeepers_add = 500
+			building_employment_aristocrats_add = 500
+			building_employment_capitalists_add = 500
+			building_employment_farmers_add = 500
+			building_employment_clergymen_add = 500
+		}
+	}
+}
+
+TRY_REPLACE:pm_default_building_banco_comercial_costa_rica = {
+	texture = "gfx/interface/icons/production_method_icons/wonders.dds"
+
+	state_modifiers = {
+		workforce_scaled = {
+			building_group_bg_plantations_throughput_add = 0.2
+			state_tax_capacity_mult = 0.05
+			# state_migration_pull_add = 20
+			state_radicals_and_loyalists_from_sol_change_mult = 0.05
+			building_nationalization_investment_return_add = 0.05
+			state_shopkeepers_investment_pool_efficiency_mult = 0.05
+			state_aristocrats_investment_pool_efficiency_mult = 0.05
+			state_capitalists_investment_pool_efficiency_mult = 0.05
+			state_farmers_investment_pool_efficiency_mult = 0.05
+			state_clergymen_investment_pool_efficiency_mult = 0.05
+		}
+		unscaled = {
+			state_migration_pull_add = 2
+		}
+	}
+
+	building_modifiers = {
+		level_scaled = {
+			building_employment_shopkeepers_add = 500
+			building_employment_aristocrats_add = 500
+			building_employment_capitalists_add = 500
+			building_employment_farmers_add = 500
+			building_employment_clergymen_add = 500
+		}
+	}
+}
+
+TRY_REPLACE:pm_default_building_national_bank_guatemala = {
+	texture = "gfx/interface/icons/production_method_icons/wonders.dds"
+
+	state_modifiers = {
+		workforce_scaled = {
+			building_group_bg_plantations_throughput_add = 0.2
+			state_tax_capacity_mult = 0.05
+			# state_migration_pull_add = 20
+			state_radicals_and_loyalists_from_sol_change_mult = 0.05
+			building_nationalization_investment_return_add = 0.05
+			state_shopkeepers_investment_pool_efficiency_mult = 0.05
+			state_aristocrats_investment_pool_efficiency_mult = 0.05
+			state_capitalists_investment_pool_efficiency_mult = 0.05
+			state_farmers_investment_pool_efficiency_mult = 0.05
+			state_clergymen_investment_pool_efficiency_mult = 0.05
+		}
+		unscaled = {
+			state_migration_pull_add = 2
+		}
+	}
+
+	building_modifiers = {
+		level_scaled = {
+			building_employment_shopkeepers_add = 500
+			building_employment_aristocrats_add = 500
+			building_employment_capitalists_add = 500
+			building_employment_farmers_add = 500
+			building_employment_clergymen_add = 500
+		}
+	}
+}
+
+TRY_REPLACE:pm_default_building_national_bank_mexico = {
+	texture = "gfx/interface/icons/production_method_icons/wonders.dds"
+
+	state_modifiers = {
+		workforce_scaled = {
+			building_textile_mill_throughput_add = 0.2
+			state_tax_capacity_mult = 0.05
+			# state_migration_pull_add = 20
+			state_radicals_and_loyalists_from_sol_change_mult = 0.05
+			building_nationalization_investment_return_add = 0.05
+			state_shopkeepers_investment_pool_efficiency_mult = 0.05
+			state_aristocrats_investment_pool_efficiency_mult = 0.05
+			state_capitalists_investment_pool_efficiency_mult = 0.05
+			state_farmers_investment_pool_efficiency_mult = 0.05
+			state_clergymen_investment_pool_efficiency_mult = 0.05
+		}
+		unscaled = {
+			state_migration_pull_add = 2
+		}
+	}
+
+	building_modifiers = {
+		level_scaled = {
+			building_employment_shopkeepers_add = 500
+			building_employment_aristocrats_add = 500
+			building_employment_capitalists_add = 500
+			building_employment_farmers_add = 500
+			building_employment_clergymen_add = 500
+		}
+	}
+}
+
+TRY_REPLACE:pm_default_building_toronto_dominion_bank = {
+	texture = "gfx/interface/icons/production_method_icons/wonders.dds"
+
+	state_modifiers = {
+		workforce_scaled = {
+			building_automotive_industry_throughput_add = 0.2
+			state_tax_capacity_mult = 0.05
+			# state_migration_pull_add = 20
+			state_radicals_and_loyalists_from_sol_change_mult = 0.05
+			building_nationalization_investment_return_add = 0.05
+			state_shopkeepers_investment_pool_efficiency_mult = 0.05
+			state_aristocrats_investment_pool_efficiency_mult = 0.05
+			state_capitalists_investment_pool_efficiency_mult = 0.05
+			state_farmers_investment_pool_efficiency_mult = 0.05
+			state_clergymen_investment_pool_efficiency_mult = 0.05
+		}
+		unscaled = {
+			state_migration_pull_add = 2
+		}
+	}
+
+	building_modifiers = {
+		level_scaled = {
+			building_employment_shopkeepers_add = 500
+			building_employment_aristocrats_add = 500
+			building_employment_capitalists_add = 500
+			building_employment_farmers_add = 500
+			building_employment_clergymen_add = 500
+		}
+	}
+}
+
+TRY_REPLACE:pm_default_building_national_bank_philadelphia = {
+	texture = "gfx/interface/icons/production_method_icons/wonders.dds"
+
+	state_modifiers = {
+		workforce_scaled = {
+			building_automotive_industry_throughput_add = 0.2
+			state_tax_capacity_mult = 0.05
+			# state_migration_pull_add = 20
+			state_radicals_and_loyalists_from_sol_change_mult = 0.05
+			building_nationalization_investment_return_add = 0.05
+			state_shopkeepers_investment_pool_efficiency_mult = 0.05
+			state_aristocrats_investment_pool_efficiency_mult = 0.05
+			state_capitalists_investment_pool_efficiency_mult = 0.05
+			state_farmers_investment_pool_efficiency_mult = 0.05
+			state_clergymen_investment_pool_efficiency_mult = 0.05
+		}
+		unscaled = {
+			state_migration_pull_add = 2
+		}
+	}
+
+	building_modifiers = {
+		level_scaled = {
+			building_employment_shopkeepers_add = 500
+			building_employment_aristocrats_add = 500
+			building_employment_capitalists_add = 500
+			building_employment_farmers_add = 500
+			building_employment_clergymen_add = 500
+		}
+	}
+}
+
+TRY_REPLACE:pm_default_building_national_bank_philadelphia = {
+	texture = "gfx/interface/icons/production_method_icons/wonders.dds"
+
+	state_modifiers = {
+		workforce_scaled = {
+			building_automotive_industry_throughput_add = 0.2
+			state_tax_capacity_mult = 0.05
+			# state_migration_pull_add = 20
+			state_radicals_and_loyalists_from_sol_change_mult = 0.05
+			building_nationalization_investment_return_add = 0.05
+			state_shopkeepers_investment_pool_efficiency_mult = 0.05
+			state_aristocrats_investment_pool_efficiency_mult = 0.05
+			state_capitalists_investment_pool_efficiency_mult = 0.05
+			state_farmers_investment_pool_efficiency_mult = 0.05
+			state_clergymen_investment_pool_efficiency_mult = 0.05
+		}
+		unscaled = {
+			state_migration_pull_add = 2
+		}
+	}
+
+	building_modifiers = {
+		level_scaled = {
+			building_employment_shopkeepers_add = 500
+			building_employment_aristocrats_add = 500
+			building_employment_capitalists_add = 500
+			building_employment_farmers_add = 500
+			building_employment_clergymen_add = 500
+		}
+	}
+}
+
+TRY_REPLACE:pm_default_building_deutsche_bank = {
+	texture = "gfx/interface/icons/production_method_icons/wonders.dds"
+
+	state_modifiers = {
+		workforce_scaled = {
+			building_automotive_industry_throughput_add = 0.2
+			state_tax_capacity_mult = 0.05
+			# state_migration_pull_add = 20
+			state_radicals_and_loyalists_from_sol_change_mult = 0.05
+			building_nationalization_investment_return_add = 0.05
+			state_shopkeepers_investment_pool_efficiency_mult = 0.05
+			state_aristocrats_investment_pool_efficiency_mult = 0.05
+			state_capitalists_investment_pool_efficiency_mult = 0.05
+			state_farmers_investment_pool_efficiency_mult = 0.05
+			state_clergymen_investment_pool_efficiency_mult = 0.05
+		}
+		unscaled = {
+			state_migration_pull_add = 2
+		}
+	}
+
+	building_modifiers = {
+		level_scaled = {
+			building_employment_shopkeepers_add = 500
+			building_employment_aristocrats_add = 500
+			building_employment_capitalists_add = 500
+			building_employment_farmers_add = 500
+			building_employment_clergymen_add = 500
+		}
+	}
+}
+
+TRY_REPLACE:pm_default_building_russian_empire_bank = {
+	texture = "gfx/interface/icons/production_method_icons/wonders.dds"
+
+	state_modifiers = {
+		workforce_scaled = {
+			building_automotive_industry_throughput_add = 0.2
+			state_tax_capacity_mult = 0.05
+			# state_migration_pull_add = 20
+			state_radicals_and_loyalists_from_sol_change_mult = 0.05
+			building_nationalization_investment_return_add = 0.05
+			state_shopkeepers_investment_pool_efficiency_mult = 0.05
+			state_aristocrats_investment_pool_efficiency_mult = 0.05
+			state_capitalists_investment_pool_efficiency_mult = 0.05
+			state_farmers_investment_pool_efficiency_mult = 0.05
+			state_clergymen_investment_pool_efficiency_mult = 0.05
+		}
+		unscaled = {
+			state_migration_pull_add = 2
+		}
+	}
+
+	building_modifiers = {
+		level_scaled = {
+			building_employment_shopkeepers_add = 500
+			building_employment_aristocrats_add = 500
+			building_employment_capitalists_add = 500
+			building_employment_farmers_add = 500
+			building_employment_clergymen_add = 500
+		}
+	}
+}
+
+TRY_REPLACE:pm_default_building_erasmus_rotterdam_university = {
+	texture = "gfx/interface/icons/production_method_icons/wonders.dds"
+
+	state_modifiers = {
+		workforce_scaled = {
+			building_textile_mill_throughput_add = 0.2
+			state_education_access_wealth_add = 0.005
+			building_university_throughput_add = 0.20
+			# state_migration_pull_mult = 0.2
+		}
+		unscaled = {
+			state_migration_pull_mult = 0.1
+		}
+	}
+
+	building_modifiers = {
+		level_scaled = {
+			building_employment_engineers_add = 3000
+			building_employment_clerks_add = 1000
+		}
+	}
+}
+
+TRY_REPLACE:pm_default_building_tilburg_university = {
+	texture = "gfx/interface/icons/production_method_icons/wonders.dds"
+
+	state_modifiers = {
+		workforce_scaled = {
+			building_furniture_manufactory_throughput_add = 0.2
+			state_education_access_wealth_add = 0.005
+			building_university_throughput_add = 0.20
+			# state_migration_pull_mult = 0.2
+		}
+		unscaled = {
+			state_migration_pull_mult = 0.1
+		}
+	}
+
+	building_modifiers = {
+		level_scaled = {
+			building_employment_engineers_add = 3000
+			building_employment_clerks_add = 1000
+		}
+	}
+}
+
+TRY_REPLACE:pm_default_building_indochina_university = {
+	texture = "gfx/interface/icons/production_method_icons/wonders.dds"
+
+	state_modifiers = {
+		workforce_scaled = {
+			state_radicals_and_loyalists_from_sol_change_mult = 0.1
+			state_education_access_wealth_add = 0.005
+			building_university_throughput_add = 0.20  # Tăng năng suất của hệ thống đại học
+			# state_migration_pull_mult = 0.2
+		}
+		unscaled = {
+			state_migration_pull_mult = 0.1
+		}
+	}
+
+	building_modifiers = {
+		level_scaled = {
+			building_employment_academics_add = 2500  # Thêm 2500 nhà giáo và học giả
+			building_employment_clerks_add = 800  # Thêm 800 nhân viên hành chính
+		}
+	}
+}
+
+TRY_REPLACE:pm_default_building_st_petersburg_polytechnic_university = {
+	texture = "gfx/interface/icons/production_method_icons/wonders.dds"
+
+	state_modifiers = {
+		workforce_scaled = {
+			building_urban_center_throughput_add = 0.2
+			state_education_access_wealth_add = 0.005
+			building_university_throughput_add = 0.20  # Tăng năng suất của hệ thống đại học
+			# state_migration_pull_mult = 0.2
+		}
+		unscaled = {
+			state_migration_pull_mult = 0.1
+		}
+	}
+
+	building_modifiers = {
+		level_scaled = {
+			building_employment_engineers_add = 3000  # Thêm 3000 kỹ sư và nhà nghiên cứu kỹ thuật
+			building_employment_clerks_add = 1000  # Thêm 1000 nhân viên hành chính
+		}
+	}
+}
+
+TRY_REPLACE:pm_default_building_moscow_institute_of_technology = {
+	texture = "gfx/interface/icons/production_method_icons/wonders.dds"
+
+	state_modifiers = {
+		workforce_scaled = {
+			building_steel_mill_throughput_add = 0.2
+			state_education_access_wealth_add = 0.005
+			building_university_throughput_add = 0.20  # Tăng năng suất của hệ thống đại học
+			# state_migration_pull_mult = 0.2
+		}
+		unscaled = {
+			state_migration_pull_mult = 0.1
+		}
+	}
+
+	building_modifiers = {
+		level_scaled = {
+			building_employment_engineers_add = 3000  # Thêm 3000 kỹ sư và nhà nghiên cứu kỹ thuật
+			building_employment_clerks_add = 1000  # Thêm 1000 nhân viên hành chính
+		}
+	}
+}
+
+TRY_REPLACE:pm_default_building_helsinki_university_of_technology = {
+	texture = "gfx/interface/icons/production_method_icons/wonders.dds"
+
+	state_modifiers = {
+		workforce_scaled = {
+			building_construction_sector_throughput_add = 0.1
+			state_education_access_wealth_add = 0.005
+			building_university_throughput_add = 0.20  # Tăng năng suất của hệ thống đại học
+			# state_migration_pull_mult = 0.2
+		}
+		unscaled = {
+			state_migration_pull_mult = 0.1
+		}
+	}
+
+	building_modifiers = {
+		level_scaled = {
+			building_employment_engineers_add = 2500  # Thêm 2500 kỹ sư và nhà công nghệ
+			building_employment_clerks_add = 500  # Thêm 500 nhân viên hành chính
+		}
+	}
+}
+
+TRY_REPLACE:pm_default_building_aarhus_university = {
+	texture = "gfx/interface/icons/production_method_icons/wonders.dds"
+
+	state_modifiers = {
+		workforce_scaled = {
+			building_group_bg_ranching_throughput_add = 0.2
+			state_education_access_wealth_add = 0.005
+			building_university_throughput_add = 0.20  # Tăng năng suất của hệ thống đại học
+			# state_migration_pull_mult = 0.2
+		}
+		unscaled = {
+			state_migration_pull_mult = 0.1
+		}
+	}
+
+	building_modifiers = {
+		level_scaled = {
+			building_employment_academics_add = 2000  # Thêm 2000 nhà giáo và học giả
+			building_employment_clerks_add = 600  # Thêm 600 nhân viên hành chính
+		}
+	}
+}
+
+TRY_REPLACE:pm_default_building_norwegian_university_of_technology = {
+	texture = "gfx/interface/icons/production_method_icons/wonders.dds"
+
+	state_modifiers = {
+		workforce_scaled = {
+			building_fishing_wharf_throughput_add = 0.3
+			state_education_access_wealth_add = 0.005
+			building_university_throughput_add = 0.20  # Tăng năng suất của hệ thống đại học
+			# state_migration_pull_mult = 0.2
+		}
+		unscaled = {
+			state_migration_pull_mult = 0.1
+		}
+	}
+
+	building_modifiers = {
+		level_scaled = {
+			building_employment_academics_add = 2500  # Thêm 2500 nhà giáo và học giả
+			building_employment_clerks_add = 700  # Thêm 700 nhân viên hành chính
+		}
+	}
+}
+
+TRY_REPLACE:pm_default_building_university_of_gothenburg = {
+	texture = "gfx/interface/icons/production_method_icons/wonders.dds"
+
+	state_modifiers = {
+		workforce_scaled = {
+			building_iron_mine_throughput_add = 0.2
+			state_education_access_wealth_add = 0.005
+			building_university_throughput_add = 0.20  # Tăng năng suất của hệ thống đại học
+			# state_migration_pull_mult = 0.2
+		}
+		unscaled = {
+			state_migration_pull_mult = 0.1
+		}
+	}
+
+	building_modifiers = {
+		level_scaled = {
+			building_employment_academics_add = 2000  # Thêm 2000 nhà giáo và học giả
+			building_employment_clerks_add = 600  # Thêm 600 nhân viên hành chính
+		}
+	}
+}
+
+TRY_REPLACE:pm_default_building_university_of_stockholm = {
+	texture = "gfx/interface/icons/production_method_icons/wonders.dds"
+
+	state_modifiers = {
+		workforce_scaled = {
+			building_group_bg_logging_throughput_add = 0.2
+			state_education_access_wealth_add = 0.005
+			building_university_throughput_add = 0.20  # Tăng năng suất của hệ thống đại học
+			# state_migration_pull_mult = 0.2
+		}
+		unscaled = {
+			state_migration_pull_mult = 0.1
+		}
+	}
+
+	building_modifiers = {
+		level_scaled = {
+			building_employment_academics_add = 2500  # Thêm 2500 nhà giáo và học giả
+			building_employment_clerks_add = 700  # Thêm 700 nhân viên hành chính
+		}
+	}
+}
+
+TRY_REPLACE:pm_default_building_complutense_university_of_madrid = {
+	texture = "gfx/interface/icons/production_method_icons/wonders.dds"
+
+	state_modifiers = {
+		workforce_scaled = {
+			building_government_administration_throughput_add = 0.25
+			state_education_access_wealth_add = 0.005
+			building_university_throughput_add = 0.20  # Tăng năng suất của hệ thống đại học
+			# state_migration_pull_mult = 0.2
+		}
+		unscaled = {
+			state_migration_pull_mult = 0.1
+		}
+	}
+
+	building_modifiers = {
+		level_scaled = {
+			building_employment_academics_add = 2500
+			building_employment_clerks_add = 700
+		}
+	}
+}
+
+TRY_REPLACE:pm_default_building_university_of_lisbon = {
+	texture = "gfx/interface/icons/production_method_icons/wonders.dds"
+
+	state_modifiers = {
+		workforce_scaled = {
+			building_shipyard_throughput_add = 0.2
+			state_education_access_wealth_add = 0.005
+			building_university_throughput_add = 0.20  # Tăng năng suất của hệ thống đại học
+			# state_migration_pull_mult = 0.2
+		}
+		unscaled = {
+			state_migration_pull_mult = 0.1
+		}
+	}
+
+	building_modifiers = {
+		level_scaled = {
+			building_employment_academics_add = 2500  # Thêm 2500 nhà giáo và học giả
+			building_employment_clerks_add = 700  # Thêm 700 nhân viên hành chính
+		}
+	}
+}
+
+TRY_REPLACE:pm_default_building_vienna_university_of_economics_and_business = {
+	texture = "gfx/interface/icons/production_method_icons/wonders.dds"
+
+	state_modifiers = {
+		workforce_scaled = {
+			building_art_academy_throughput_add = 0.2
+			state_education_access_wealth_add = 0.005
+			building_university_throughput_add = 0.20  # Tăng năng suất của hệ thống đại học
+			# state_migration_pull_mult = 0.2
+		}
+		unscaled = {
+			state_migration_pull_mult = 0.1
+		}
+	}
+
+	building_modifiers = {
+		level_scaled = {
+			building_employment_academics_add = 2000  # Thêm 2000 nhà giáo và học giả
+			building_employment_clerks_add = 700  # Thêm 700 nhân viên hành chính
+		}
+	}
+}
+
+TRY_REPLACE:pm_default_building_bocconi_university = {
+	texture = "gfx/interface/icons/production_method_icons/wonders.dds"
+
+	state_modifiers = {
+		workforce_scaled = {
+			building_textile_mill_throughput_add = 0.2
+			state_education_access_wealth_add = 0.005
+			building_university_throughput_add = 0.20  # Tăng năng suất của hệ thống đại học
+			# state_migration_pull_mult = 0.2
+		}
+		unscaled = {
+			state_migration_pull_mult = 0.1
+		}
+	}
+
+	building_modifiers = {
+		level_scaled = {
+			building_employment_academics_add = 2000  # Thêm 2000 nhà giáo và học giả
+			building_employment_clerks_add = 700  # Thêm 700 nhân viên hành chính
+		}
+	}
+}
+
+TRY_REPLACE:pm_default_building_saint_joseph_university = {
+	texture = "gfx/interface/icons/production_method_icons/wonders.dds"
+
+	state_modifiers = {
+		workforce_scaled = {
+			state_birth_rate_mult = 0.03
+			state_education_access_wealth_add = 0.005
+			building_university_throughput_add = 0.20  # Tăng năng suất của hệ thống đại học
+			# state_migration_pull_mult = 0.2
+		}
+		unscaled = {
+			state_migration_pull_mult = 0.1
+		}
+	}
+
+	building_modifiers = {
+		level_scaled = {
+			building_employment_academics_add = 2500  # Thêm 2500 nhà giáo và học giả
+			building_employment_clerks_add = 800  # Thêm 800 nhân viên hành chính
+		}
+	}
+}
+
+TRY_REPLACE:pm_default_building_cairo_university = {
+	texture = "gfx/interface/icons/production_method_icons/wonders.dds"
+
+	state_modifiers = {
+		workforce_scaled = {
+			building_electrics_industry_throughput_add = 0.2
+			state_education_access_wealth_add = 0.005
+			building_university_throughput_add = 0.20  # Tăng năng suất của hệ thống đại học
+			# state_migration_pull_mult = 0.2
+		}
+		unscaled = {
+			state_migration_pull_mult = 0.1
+		}
+	}
+
+	building_modifiers = {
+		level_scaled = {
+			building_employment_academics_add = 2500  # Thêm 2500 nhà giáo và học giả
+			building_employment_clerks_add = 800  # Thêm 800 nhân viên hành chính
+		}
+	}
+}
+
+TRY_REPLACE:pm_default_building_yonsei_university = {
+	texture = "gfx/interface/icons/production_method_icons/wonders.dds"
+
+	state_modifiers = {
+		workforce_scaled = {
+			building_coal_mine_throughput_add = 0.2
+			state_education_access_wealth_add = 0.005
+			building_university_throughput_add = 0.20  # Tăng năng suất của hệ thống đại học
+			# state_migration_pull_mult = 0.2
+		}
+		unscaled = {
+			state_migration_pull_mult = 0.1
+		}
+	}
+
+	building_modifiers = {
+		level_scaled = {
+			building_employment_academics_add = 2500  # Thêm 2500 nhà giáo và học giả
+			building_employment_clerks_add = 800  # Thêm 800 nhân viên hành chính
+		}
+	}
+}
+
+TRY_REPLACE:pm_default_building_shanghai_jiaotong_university = {
+	texture = "gfx/interface/icons/production_method_icons/wonders.dds"
+
+	state_modifiers = {
+		workforce_scaled = {
+			building_paper_mill_throughput_add = 0.2
+			state_education_access_wealth_add = 0.005
+			building_university_throughput_add = 0.20  # Tăng năng suất của hệ thống đại học
+			# state_migration_pull_mult = 0.2
+		}
+		unscaled = {
+			state_migration_pull_mult = 0.1
+		}
+	}
+
+	building_modifiers = {
+		level_scaled = {
+			building_employment_academics_add = 2500  # Thêm 2500 nhà giáo và học giả
+			building_employment_clerks_add = 800  # Thêm 800 nhân viên hành chính
+		}
+	}
+}
+
+TRY_REPLACE:pm_default_building_tohoku_university = {
+	texture = "gfx/interface/icons/production_method_icons/wonders.dds"
+
+	state_modifiers = {
+		workforce_scaled = {
+			building_group_bg_logging_throughput_add = 0.2
+			state_education_access_wealth_add = 0.005
+			building_university_throughput_add = 0.20  # Tăng năng suất của hệ thống đại học
+			# state_migration_pull_mult = 0.2
+		}
+		unscaled = {
+			state_migration_pull_mult = 0.1
+		}
+	}
+
+	building_modifiers = {
+		level_scaled = {
+			building_employment_academics_add = 2500  # Thêm 2500 nhà giáo và học giả
+			building_employment_clerks_add = 800  # Thêm 800 nhân viên hành chính
+		}
+	}
+}
+
+TRY_REPLACE:pm_default_building_kyoto_university = {
+	texture = "gfx/interface/icons/production_method_icons/wonders.dds"
+
+	state_modifiers = {
+		workforce_scaled = {
+			building_textile_mill_throughput_add = 0.2
+			state_education_access_wealth_add = 0.005
+			building_university_throughput_add = 0.20  # Tăng năng suất của hệ thống đại học
+			# state_migration_pull_mult = 0.2
+		}
+		unscaled = {
+			state_migration_pull_mult = 0.1
+		}
+	}
+
+	building_modifiers = {
+		level_scaled = {
+			building_employment_academics_add = 2500  # Thêm 2500 nhà giáo và học giả
+			building_employment_clerks_add = 800  # Thêm 800 nhân viên hành chính
+		}
+	}
+}
+
+
+TRY_REPLACE:pm_default_building_tsinghua_university = {
+	texture = "gfx/interface/icons/production_method_icons/wonders.dds"
+
+	state_modifiers = {
+		workforce_scaled = {
+			building_tooling_workshop_throughput_add = 0.2
+			state_education_access_wealth_add = 0.005
+			building_university_throughput_add = 0.20  # Tăng năng suất của hệ thống đại học
+			# state_migration_pull_mult = 0.2
+		}
+		unscaled = {
+			state_migration_pull_mult = 0.1
+		}
+	}
+
+	building_modifiers = {
+		level_scaled = {
+			building_employment_academics_add = 2500  # Thêm 2500 nhà giáo và học giả
+			building_employment_clerks_add = 800  # Thêm 800 nhân viên hành chính
+		}
+	}
+}
+
+TRY_REPLACE:pm_default_building_university_of_british_columbia = {
+	texture = "gfx/interface/icons/production_method_icons/wonders.dds"
+
+	state_modifiers = {
+		workforce_scaled = {
+			building_whaling_station_throughput_add = 0.5
+			state_education_access_wealth_add = 0.005
+			building_university_throughput_add = 0.20  # Tăng năng suất của hệ thống đại học
+			# state_migration_pull_mult = 0.2
+		}
+		unscaled = {
+			state_migration_pull_mult = 0.1
+		}
+	}
+
+	building_modifiers = {
+		level_scaled = {
+			building_employment_academics_add = 2500  # Thêm 2500 nhà giáo và học giả
+			building_employment_clerks_add = 800  # Thêm 800 nhân viên hành chính
+		}
+	}
+}
+
+TRY_REPLACE:pm_default_building_queens_university = {
+	texture = "gfx/interface/icons/production_method_icons/wonders.dds"
+
+	state_modifiers = {
+		workforce_scaled = {
+			building_group_bg_agriculture_throughput_add = 0.3
+			state_education_access_wealth_add = 0.005
+			building_university_throughput_add = 0.20  # Tăng năng suất của hệ thống đại học
+			# state_migration_pull_mult = 0.2
+		}
+		unscaled = {
+			state_migration_pull_mult = 0.1
+		}
+	}
+
+	building_modifiers = {
+		level_scaled = {
+			building_employment_academics_add = 2500  # Thêm 2500 nhà giáo và học giả
+			building_employment_clerks_add = 800  # Thêm 800 nhân viên hành chính
+		}
+	}
+}
+
+TRY_REPLACE:pm_default_building_university_of_ottawa = {
+	texture = "gfx/interface/icons/production_method_icons/wonders.dds"
+
+	state_modifiers = {
+		workforce_scaled = {
+			building_sulfur_mine_throughput_add = 0.3
+			state_education_access_wealth_add = 0.005
+			building_university_throughput_add = 0.20  # Tăng năng suất của hệ thống đại học
+			# state_migration_pull_mult = 0.2
+		}
+		unscaled = {
+			state_migration_pull_mult = 0.1
+		}
+	}
+
+	building_modifiers = {
+		level_scaled = {
+			building_employment_academics_add = 2500  # Thêm 2500 nhà giáo và học giả
+			building_employment_clerks_add = 800  # Thêm 800 nhân viên hành chính
+		}
+	}
+}
+
+
+TRY_REPLACE:pm_default_building_carnegie_mellon_university = {
+	texture = "gfx/interface/icons/production_method_icons/wonders.dds"
+
+	state_modifiers = {
+		workforce_scaled = {
+			building_steel_mill_throughput_add = 0.2
+			state_education_access_wealth_add = 0.005
+			building_university_throughput_add = 0.20  # Tăng năng suất của hệ thống đại học
+			# state_migration_pull_mult = 0.2
+		}
+		unscaled = {
+			state_migration_pull_mult = 0.1
+		}
+	}
+
+	building_modifiers = {
+		level_scaled = {
+			building_employment_academics_add = 3000  # Thêm 3000 nhà giáo và học giả
+			building_employment_clerks_add = 1000  # Thêm 1000 nhân viên hành chính
+		}
+	}
+}
+
+TRY_REPLACE:pm_default_building_universidade_de_sao_paulo = {
+	texture = "gfx/interface/icons/production_method_icons/wonders.dds"
+
+	state_modifiers = {
+		workforce_scaled = {
+			building_rubber_plantation_throughput_add = 0.3
+			state_education_access_wealth_add = 0.005
+			building_university_throughput_add = 0.20  # Tăng năng suất của hệ thống đại học
+			# state_migration_pull_mult = 0.2
+		}
+		unscaled = {
+			state_migration_pull_mult = 0.1
+		}
+	}
+
+	building_modifiers = {
+		level_scaled = {
+			building_employment_academics_add = 3000  # Thêm 3000 nhà giáo và học giả
+			building_employment_clerks_add = 1000  # Thêm 1000 nhân viên hành chính
+		}
+	}
+}
+
+TRY_REPLACE:pm_default_building_zhejiang_university = {
+	texture = "gfx/interface/icons/production_method_icons/wonders.dds"
+
+	state_modifiers = {
+		workforce_scaled = {
+			building_textile_mill_throughput_add = 0.2
+			state_education_access_wealth_add = 0.005
+			building_university_throughput_add = 0.20  # Tăng năng suất của hệ thống đại học
+			# state_migration_pull_mult = 0.2
+		}
+		unscaled = {
+			state_migration_pull_mult = 0.1
+		}
+	}
+
+	building_modifiers = {
+		level_scaled = {
+			building_employment_academics_add = 2500  # Thêm 2500 nhà giáo và học giả
+			building_employment_clerks_add = 800  # Thêm 800 nhân viên hành chính
+		}
+	}
+}
+
+TRY_REPLACE:pm_default_building_sun_yat_sen_university = {
+	texture = "gfx/interface/icons/production_method_icons/wonders.dds"
+
+	state_modifiers = {
+		workforce_scaled = {
+			building_shipyard_throughput_add = 0.2
+			state_education_access_wealth_add = 0.005
+			building_university_throughput_add = 0.20  # Tăng năng suất của hệ thống đại học
+			# state_migration_pull_mult = 0.2
+		}
+		unscaled = {
+			state_migration_pull_mult = 0.1
+		}
+	}
+
+	building_modifiers = {
+		level_scaled = {
+			building_employment_academics_add = 2500  # Thêm 2500 nhà giáo và học giả
+			building_employment_clerks_add = 800  # Thêm 800 nhân viên hành chính
+		}
+	}
+}
+
+TRY_REPLACE:pm_default_building_wuhan_university = {
+	texture = "gfx/interface/icons/production_method_icons/wonders.dds"
+
+	state_modifiers = {
+		workforce_scaled = {
+			building_furniture_manufactory_throughput_add = 0.2
+			state_education_access_wealth_add = 0.005
+			building_university_throughput_add = 0.20  # Tăng năng suất của hệ thống đại học
+			# state_migration_pull_mult = 0.2
+		}
+		unscaled = {
+			state_migration_pull_mult = 0.1
+		}
+	}
+
+	building_modifiers = {
+		level_scaled = {
+			building_employment_academics_add = 2500  # Thêm 2500 nhà giáo và học giả
+			building_employment_clerks_add = 800  # Thêm 800 nhân viên hành chính
+		}
+	}
+}
+
+TRY_REPLACE:pm_default_building_nanjing_university = {
+	texture = "gfx/interface/icons/production_method_icons/wonders.dds"
+
+	state_modifiers = {
+		workforce_scaled = {
+			building_government_administration_throughput_add = 0.25
+			state_education_access_wealth_add = 0.005
+			building_university_throughput_add = 0.20  # Tăng năng suất của hệ thống đại học
+			# state_migration_pull_mult = 0.2
+		}
+		unscaled = {
+			state_migration_pull_mult = 0.1
+		}
+	}
+
+	building_modifiers = {
+		level_scaled = {
+			building_employment_academics_add = 2500  # Thêm 2500 nhà giáo và học giả
+			building_employment_clerks_add = 800  # Thêm 800 nhân viên hành chính
+		}
+	}
+}
+
+TRY_REPLACE:pm_default_building_johns_hopkins_university = {
+	texture = "gfx/interface/icons/production_method_icons/wonders.dds"
+
+	state_modifiers = {
+		workforce_scaled = {
+			building_trade_center_throughput_add = 0.25
+			state_education_access_wealth_add = 0.005
+			building_university_throughput_add = 0.20  # Tăng năng suất của hệ thống đại học
+			# state_migration_pull_mult = 0.2
+		}
+		unscaled = {
+			state_migration_pull_mult = 0.1
+		}
+	}
+
+	building_modifiers = {
+		level_scaled = {
+			building_employment_academics_add = 3000  # Thêm 3000 nhà giáo và học giả
+			building_employment_clerks_add = 1000  # Thêm 1000 nhân viên hành chính
+		}
+	}
+}
+
+TRY_REPLACE:pm_default_building_ephe_paris = {
+	texture = "gfx/interface/icons/production_method_icons/wonders.dds"
+
+	state_modifiers = {
+		workforce_scaled = {
+			building_government_administration_throughput_add = 0.2
+			state_education_access_wealth_add = 0.005
+			building_university_throughput_add = 0.20  # Tăng năng suất của hệ thống đại học
+			# state_migration_pull_mult = 0.2
+		}
+		unscaled = {
+			state_migration_pull_mult = 0.1
+		}
+	}
+
+	building_modifiers = {
+		level_scaled = {
+			building_employment_academics_add = 3000  # Thêm 3000 nhà giáo và học giả
+			building_employment_clerks_add = 1000  # Thêm 1000 nhân viên hành chính
+		}
+	}
+}
+
+TRY_REPLACE:pm_default_building_ulb_brussels = {
+	texture = "gfx/interface/icons/production_method_icons/wonders.dds"
+
+	state_modifiers = {
+		workforce_scaled = {
+			building_food_industry_throughput_add = 0.2
+			state_education_access_wealth_add = 0.005
+			building_university_throughput_add = 0.20  # Tăng năng suất của hệ thống đại học
+			# state_migration_pull_mult = 0.2
+		}
+		unscaled = {
+			state_migration_pull_mult = 0.1
+		}
+	}
+
+	building_modifiers = {
+		level_scaled = {
+			building_employment_academics_add = 3000  # Thêm 4000 nhà giáo và học giả
+			building_employment_clerks_add = 1000  # Thêm 1500 nhân viên hành chính
+		}
+	}
+}
+
+TRY_REPLACE:pm_default_building_eth_zurich = {
+	texture = "gfx/interface/icons/production_method_icons/wonders.dds"
+
+	state_modifiers = {
+		workforce_scaled = {
+			state_education_access_wealth_add = 0.005
+			building_university_throughput_add = 0.20  # Tăng năng suất của hệ thống đại học
+			# state_migration_pull_mult = 0.2
+		}
+		unscaled = {
+			state_migration_pull_mult = 0.1
+		}
+	}
+
+	country_modifiers = {
+		workforce_scaled = {
+			country_weekly_innovation_add = 50
+		}
+	}
+
+	building_modifiers = {
+		level_scaled = {
+			building_employment_academics_add = 3000  # Thêm 4000 nhà giáo và học giả
+			building_employment_clerks_add = 1000  # Thêm 1500 nhân viên hành chính
+		}
+	}
+}
+
+TRY_REPLACE:pm_default_building_technical_university_berlin = {
+	texture = "gfx/interface/icons/production_method_icons/wonders.dds"
+
+	state_modifiers = {
+		workforce_scaled = {
+			building_construction_sector_throughput_add = 0.1
+			state_education_access_wealth_add = 0.005
+			building_university_throughput_add = 0.20  # Tăng năng suất của hệ thống đại học
+			# state_migration_pull_mult = 0.2  # Tăng sức hút di cư do sự nổi tiếng của Đại học London
+		}
+		unscaled = {
+			state_migration_pull_mult = 0.1
+		}
+	}
+
+	building_modifiers = {
+		level_scaled = {
+			building_employment_academics_add = 3000  # Thêm 3000 nhà giáo và học giả
+			building_employment_clerks_add = 1000  # Thêm 1000 nhân viên hành chính
+		}
+	}
+}
+
+TRY_REPLACE:pm_default_building_london_university = {
+	texture = "gfx/interface/icons/production_method_icons/wonders.dds"
+
+	state_modifiers = {
+		workforce_scaled = {
+			state_education_access_add = 0.03
+			state_education_access_wealth_add = 0.005
+			building_university_throughput_add = 0.25  # Tăng năng suất của hệ thống đại học
+			# state_migration_pull_mult = 0.2  # Tăng sức hút di cư do sự nổi tiếng của Đại học London
+		}
+		unscaled = {
+			state_migration_pull_mult = 0.1
+		}
+	}
+
+	building_modifiers = {
+		level_scaled = {
+			building_employment_academics_add = 3000  # Thêm 3000 nhà giáo và học giả
+			building_employment_clerks_add = 1000  # Thêm 1000 nhân viên hành chính
+		}
+	}
+}
+
+TRY_REPLACE:pm_default_building_peak_district_national_park = {
+	texture = "gfx/interface/icons/production_method_icons/wonders.dds"
+
+	state_modifiers = {
+		workforce_scaled = {
+			state_pollution_reduction_health_mult = -0.20  # Giảm ô nhiễm, tăng sức khỏe cộng đồng
+			state_pollution_generation_add = -100  # Giảm lượng ô nhiễm do công viên tạo ra
+			# state_migration_pull_add = 20
+		}
+		unscaled = {
+			state_migration_pull_add = 2
+		}
+	}
+	building_modifiers = {
+		level_scaled = {
+			building_employment_laborers_add = 1000  # Tạo thêm 1000 việc làm cho công nhân bảo trì và quản lý công viên
+			building_employment_clerks_add = 500  # Thêm 500 việc làm cho nhân viên quản lý
+		}
+	}
+}
+
+TRY_REPLACE:pm_default_building_cairngorms_national_park = {
+	texture = "gfx/interface/icons/production_method_icons/wonders.dds"
+
+	state_modifiers = {
+		workforce_scaled = {
+			state_pollution_reduction_health_mult = -0.20
+			state_pollution_generation_add = -100
+			# state_migration_pull_add = 20
+		}
+		unscaled = {
+			state_migration_pull_add = 2
+		}
+	}
+	building_modifiers = {
+		level_scaled = {
+			building_employment_laborers_add = 1000
+			building_employment_clerks_add = 500
+		}
+	}
+}
+
+TRY_REPLACE:pm_default_building_dartmoor_national_park = {
+	texture = "gfx/interface/icons/production_method_icons/wonders.dds"
+
+	state_modifiers = {
+		workforce_scaled = {
+			state_pollution_reduction_health_mult = -0.20
+			state_pollution_generation_add = -100
+			# state_migration_pull_add = 20
+		}
+		unscaled = {
+			state_migration_pull_add = 2
+		}
+	}
+	building_modifiers = {
+		level_scaled = {
+			building_employment_laborers_add = 1000
+			building_employment_clerks_add = 500
+		}
+	}
+}
+
+TRY_REPLACE:pm_default_building_vanoise_national_park = {
+	texture = "gfx/interface/icons/production_method_icons/wonders.dds"
+
+	state_modifiers = {
+		workforce_scaled = {
+			state_pollution_reduction_health_mult = -0.20  # Giảm ô nhiễm, tăng sức khỏe cộng đồng
+			state_pollution_generation_add = -100  # Giảm lượng ô nhiễm do công viên tạo ra
+			# state_migration_pull_add = 20
+		}
+		unscaled = {
+			state_migration_pull_add = 2
+		}
+	}
+	building_modifiers = {
+		level_scaled = {
+			building_employment_laborers_add = 1000  # Tạo thêm 1000 việc làm cho công nhân bảo trì và quản lý công viên
+			building_employment_clerks_add = 500  # Thêm 500 việc làm cho nhân viên quản lý
+		}
+	}
+}
+
+TRY_REPLACE:pm_default_building_sarek_national_park = {
+	texture = "gfx/interface/icons/production_method_icons/wonders.dds"
+
+	state_modifiers = {
+		workforce_scaled = {
+			state_pollution_reduction_health_mult = -0.20  # Giảm ô nhiễm, tăng sức khỏe cộng đồng
+			state_pollution_generation_add = -100  # Giảm lượng ô nhiễm do công viên tạo ra
+			# state_migration_pull_add = 20
+		}
+		unscaled = {
+			state_migration_pull_add = 2
+		}
+	}
+	building_modifiers = {
+		level_scaled = {
+			building_employment_laborers_add = 1000  # Tạo thêm 1000 việc làm cho công nhân bảo trì và quản lý công viên
+			building_employment_clerks_add = 500  # Thêm 500 việc làm cho nhân viên quản lý
+		}
+	}
+}
+
+TRY_REPLACE:pm_default_building_abisko_national_park = {
+	texture = "gfx/interface/icons/production_method_icons/wonders.dds"
+
+	state_modifiers = {
+		workforce_scaled = {
+			state_pollution_reduction_health_mult = -0.20  # Giảm ô nhiễm, tăng sức khỏe cộng đồng
+			state_pollution_generation_add = -100  # Giảm lượng ô nhiễm do công viên tạo ra
+			# state_migration_pull_add = 20
+		}
+		unscaled = {
+			state_migration_pull_add = 2
+		}
+	}
+	building_modifiers = {
+		level_scaled = {
+			building_employment_laborers_add = 1000  # Tạo thêm 1000 việc làm cho công nhân bảo trì và quản lý công viên
+			building_employment_clerks_add = 500  # Thêm 500 việc làm cho nhân viên quản lý
+		}
+	}
+}
+
+TRY_REPLACE:pm_default_building_bayerischer_wald_national_park = {
+	texture = "gfx/interface/icons/production_method_icons/wonders.dds"
+
+	state_modifiers = {
+		workforce_scaled = {
+			state_pollution_reduction_health_mult = -0.20  # Giảm ô nhiễm, tăng sức khỏe cộng đồng
+			state_pollution_generation_add = -100  # Giảm lượng ô nhiễm do công viên tạo ra
+			# state_migration_pull_add = 20  # Tăng thêm lượng di cư vào bang
+		}
+		unscaled = {
+			state_migration_pull_add = 2
+		}
+	}
+	building_modifiers = {
+		level_scaled = {
+			building_employment_laborers_add = 1000  # Tạo thêm 1000 việc làm cho công nhân bảo trì và quản lý công viên
+			building_employment_clerks_add = 500  # Thêm 500 việc làm cho nhân viên quản lý
+		}
+	}
+}
+
+TRY_REPLACE:pm_default_building_gran_paradiso_national_park = {
+	texture = "gfx/interface/icons/production_method_icons/wonders.dds"
+
+	state_modifiers = {
+		workforce_scaled = {
+			state_pollution_reduction_health_mult = -0.20  # Giảm ô nhiễm, tăng sức khỏe cộng đồng
+			state_pollution_generation_add = -100  # Giảm lượng ô nhiễm do công viên tạo ra
+			# state_migration_pull_add = 20
+		}
+		unscaled = {
+			state_migration_pull_add = 2
+		}
+	}
+	building_modifiers = {
+		level_scaled = {
+			building_employment_laborers_add = 1000  # Tạo thêm 1000 việc làm cho công nhân bảo trì và quản lý công viên
+			building_employment_clerks_add = 500  # Thêm 500 việc làm cho nhân viên quản lý
+		}
+	}
+}
+
+# pm_default_building_zhongshan_park = {
+#	texture = "gfx/interface/icons/production_method_icons/wonders.dds"
+#
+#	state_modifiers = {
+#		workforce_scaled = {
+#			state_pollution_reduction_health_mult = -0.15  # Giảm ô nhiễm, tăng sức khỏe cộng đồng
+#			state_pollution_generation_add = -200  # Giảm lượng ô nhiễm do công viên tạo ra
+#			state_migration_pull_mult = 0.2  # Tăng sức hút di cư do vai trò văn hóa và giải trí của công viên
+#		}
+#	}
+#	building_modifiers = {
+#		level_scaled = {
+#			building_employment_laborers_add = 1000  # Tạo thêm 1000 việc làm cho công nhân bảo trì và quản lý công viên
+#			building_employment_clerks_add = 500  # Thêm 500 việc làm cho nhân viên quản lý
+#		}
+#	}
+# }
+
+TRY_REPLACE:pm_default_building_lodi_gardens = {
+	texture = "gfx/interface/icons/production_method_icons/wonders.dds"
+
+	state_modifiers = {
+		workforce_scaled = {
+			state_pollution_reduction_health_mult = -0.15
+			state_pollution_generation_add = -200
+			# state_migration_pull_mult = 0.2  # Tăng sức hút di cư do vai trò văn hóa và giải trí của công viên
+		}
+		unscaled = {
+			state_migration_pull_mult = 0.1
+		}
+	}
+	building_modifiers = {
+		level_scaled = {
+			building_employment_laborers_add = 1000  # Tạo thêm 1000 việc làm cho công nhân bảo trì và quản lý công viên
+			building_employment_clerks_add = 500  # Thêm 500 việc làm cho nhân viên quản lý
+		}
+	}
+}
+
+TRY_REPLACE:pm_default_building_mysore_palace = {
+	texture = "gfx/interface/icons/production_method_icons/wonders.dds"
+
+	state_modifiers = {
+		workforce_scaled = {
+			state_pollution_reduction_health_mult = -0.2
+			# state_migration_pull_mult = 0.20  # Tăng sức hút di cư do vai trò thu hút du khách của khách sạn
+		}
+		unscaled = {
+			state_migration_pull_mult = 0.1
+		}
+	}
+
+	country_modifiers = {
+		workforce_scaled = {
+			country_prestige_add = 50
+		}
+	}
+
+	building_modifiers = {
+		level_scaled = {
+			building_employment_clerks_add = 1500  # Thêm 1500 nhân viên làm việc tại khách sạn
+			building_employment_bureaucrats_add = 500  # Thêm 500 nhân viên quản lý tại khách sạn
+		}
+	}
+}
+
+TRY_REPLACE:pm_default_building_ponce_de_leon_hotel = {
+	texture = "gfx/interface/icons/production_method_icons/wonders.dds"
+
+	state_modifiers = {
+		workforce_scaled = {
+			state_pollution_reduction_health_mult = -0.2
+			# state_migration_pull_mult = 0.20  # Tăng sức hút di cư do vai trò thu hút du khách của khách sạn
+		}
+		unscaled = {
+			state_migration_pull_mult = 0.1
+		}
+	}
+
+	building_modifiers = {
+		level_scaled = {
+			building_employment_clerks_add = 1500  # Thêm 1500 nhân viên làm việc tại khách sạn
+			building_employment_bureaucrats_add = 500  # Thêm 500 nhân viên quản lý tại khách sạn
+		}
+	}
+}
+
+TRY_REPLACE:pm_default_building_stockholm_city_hall = {
+	texture = "gfx/interface/icons/production_method_icons/wonders.dds"
+
+	state_modifiers = {
+		workforce_scaled = {
+			building_throughput_add = 0.1
+			# state_migration_pull_mult = 0.20  # Tăng sức hút di cư do vai trò hành chính quan trọng của Tòa thị chính
+		}
+		unscaled = {
+			state_migration_pull_mult = 0.1
+		}
+	}
+
+	building_modifiers = {
+		level_scaled = {
+			building_employment_clerks_add = 1500  # Thêm 1500 nhân viên hành chính
+			building_employment_bureaucrats_add = 500  # Thêm 500 quan chức làm việc tại tòa thị chính
+		}
+	}
+}
+
+TRY_REPLACE:pm_default_building_masjed_soleyman_oil_field = {
+	texture = "gfx/interface/icons/production_method_icons/wonders.dds"
+
+	state_modifiers = {
+		workforce_scaled = {
+			building_group_bg_oil_extraction_throughput_add = 0.30  # Tăng thông lượng cho ngành khai thác dầu do vai trò quan trọng của mỏ dầu
+			# state_migration_pull_mult = 0.25
+		}
+		unscaled = {
+			state_migration_pull_mult = 0.12
+		}
+	}
+
+	building_modifiers = {
+		level_scaled = {
+			building_employment_laborers_add = 2000  # Thêm 2000 việc làm cho công nhân tại mỏ dầu
+			building_employment_engineers_add = 500  # Thêm 500 kỹ sư làm việc tại mỏ dầu
+		}
+	}
+}
+
+TRY_REPLACE:pm_default_building_sutter_mill = {
+	texture = "gfx/interface/icons/production_method_icons/wonders.dds"
+
+	state_modifiers = {
+		workforce_scaled = {
+			# state_migration_pull_mult = 0.2  # Tăng sức hút di cư do nhu cầu lao động tại Cối xay Sutter
+			building_gold_mine_throughput_add = 0.2
+			state_birth_rate_mult = 0.03
+		}
+		unscaled = {
+			state_migration_pull_mult = 0.1
+		}
+	}
+
+	country_modifiers = {
+		workforce_scaled = {
+			country_minting_mult = 0.03  # Tăng năng lực thu thuế của bang nhờ hoạt động công nghiệp
+		}
+	}
+
+	building_modifiers = {
+		level_scaled = {
+			building_employment_laborers_add = 2000  # Thêm 1000 việc làm cho công nhân
+			building_employment_shopkeepers_add = 1000
+			building_employment_engineers_add = 500  # Thêm 300 kỹ sư tham gia vào hoạt động của Cối xay Sutter
+		}
+	}
+}
+
+TRY_REPLACE:pm_default_building_hsbc_building = {
+	texture = "gfx/interface/icons/production_method_icons/wonders.dds"
+
+	state_modifiers = {
+		workforce_scaled = {
+			building_trade_center_throughput_add = 0.2
+			state_tax_capacity_mult = 0.05
+			# state_migration_pull_add = 20
+			state_radicals_and_loyalists_from_sol_change_mult = 0.05
+			building_nationalization_investment_return_add = 0.05
+			state_shopkeepers_investment_pool_efficiency_mult = 0.05
+			state_aristocrats_investment_pool_efficiency_mult = 0.05
+			state_capitalists_investment_pool_efficiency_mult = 0.05
+			state_farmers_investment_pool_efficiency_mult = 0.05
+			state_clergymen_investment_pool_efficiency_mult = 0.05
+		}
+		unscaled = {
+			state_migration_pull_add = 2
+		}
+	}
+
+	building_modifiers = {
+		level_scaled = {
+			building_employment_shopkeepers_add = 500
+			building_employment_aristocrats_add = 500
+			building_employment_capitalists_add = 500
+			building_employment_farmers_add = 500
+			building_employment_clergymen_add = 500
+		}
+	}
+}
+
+TRY_REPLACE:pm_default_building_yosemite_national_park = {
+	texture = "gfx/interface/icons/production_method_icons/wonders.dds"
+
+	state_modifiers = {
+		workforce_scaled = {
+			state_pollution_reduction_health_mult = -0.1
+			state_pollution_generation_add = -100  # Tăng lòng trung thành của người dân do giá trị bảo tồn thiên nhiên
+			# state_migration_pull_mult = 0.2  # Tăng sức hút di cư do tính hấp dẫn của Yosemite
+		}
+		unscaled = {
+			state_migration_pull_mult = 0.1
+		}
+	}
+		building_modifiers = {
+		level_scaled = {
+			building_employment_laborers_add = 1000  # Tạo thêm 1000 việc làm cho công nhân bảo trì và quản lý công viên
+			building_employment_clerks_add = 500  # Thêm 500 việc làm cho nhân viên quản lý
+		}
+	}
+}
+
+TRY_REPLACE:pm_default_building_gyeongbokgung_palace = {
+	texture = "gfx/interface/icons/production_method_icons/wonders.dds"
+
+	country_modifiers = {
+		workforce_scaled = {
+			country_prestige_add = 50  # Tăng uy tín quốc gia vì Cung điện Gyeongbokgung là biểu tượng hoàng gia quan trọng
+		}
+	}
+	state_modifiers = {
+		workforce_scaled = {
+			building_government_administration_throughput_add = 0.2  # Tăng thông lượng hành chính do vai trò của cung điện trong hệ thống chính quyền
+			# Tăng lòng trung thành của người dân
+			# state_migration_pull_mult = 0.1  # Tăng sức hút di cư vì tính biểu tượng của công trình
+		}
+		unscaled = {
+			state_migration_pull_mult = 0.05
+		}
+	}
+	building_modifiers = {
+		level_scaled = {
+			building_employment_laborers_add = 1000  # Thêm số lượng lao động phù hợp với quy mô lớn hơn của Cung điện Gyeongbokgung
+		}
+	}
+}
+
+TRY_REPLACE:pm_default_building_himeji_castle = {
+	texture = "gfx/interface/icons/production_method_icons/wonders.dds"
+
+	country_modifiers = {
+		workforce_scaled = {
+			country_prestige_add = 40  # Giảm uy tín so với Vạn Lý Trường Thành nhưng vẫn cao vì là công trình lịch sử quan trọng
+		}
+	}
+	state_modifiers = {
+		workforce_scaled = {
+			# Tăng lòng trung thành của người dân
+			# state_migration_pull_mult = 0.2  # Tăng sức hút di cư vì tính biểu tượng của công trình
+			building_government_administration_throughput_add = 0.1
+		}
+		unscaled = {
+			state_migration_pull_mult = 0.1
+		}
+	}
+	building_modifiers = {
+		level_scaled = {
+			building_employment_laborers_add = 800  # Giảm số lượng lao động vì quy mô của Lâu đài Himeji nhỏ hơn
+		}
+	}
+}
+
+TRY_REPLACE:pm_default_building_great_wall = {
+	texture = "gfx/interface/icons/production_method_icons/wonders.dds"
+
+	country_modifiers = {
+		workforce_scaled = {
+			country_prestige_add = 50
+		}
+	}
+	state_modifiers = {
+		workforce_scaled = {
+			state_migration_pull_mult = 0.1	
+			building_group_bg_mining_throughput_add = 0.05
+		}
+		unscaled = {
+			state_migration_pull_mult = 0.05
+		}
+	}
+	building_modifiers = {
+		level_scaled = {
+			
+			building_employment_laborers_add = 1000
+		}
+	}
+}
+
+TRY_REPLACE:pm_default_building_phong_nha_ke_bang = {
+	texture = "gfx/interface/icons/production_method_icons/wonders.dds"
+
+	country_modifiers = {
+		workforce_scaled = {
+			country_prestige_add = 50
+			country_influence_add = 200
+		}
+	}
+	state_modifiers = {
+			workforce_scaled = {
+			building_group_bg_mining_throughput_add = 0.2
+			# state_migration_pull_add = 20
+		}
+		unscaled = {
+			state_migration_pull_add = 2
+		}
+	}
+	building_modifiers = {
+		level_scaled = {
+			building_employment_shopkeepers_add = 1000
+			building_employment_laborers_add = 1000
+
+		}
+	}
+}
+
+TRY_REPLACE:pm_default_building_ha_long_bay = {
+	texture = "gfx/interface/icons/production_method_icons/wonders.dds"
+
+	country_modifiers = {
+		workforce_scaled = {
+			country_prestige_add = 50
+		}
+	}
+	state_modifiers = {
+		workforce_scaled = {
+		 	state_infrastructure_add = 25
+			# state_migration_pull_mult = 0.25
+		}
+		unscaled = {
+			state_migration_pull_mult = 0.12
+		}
+	}
+
+	building_modifiers = {
+		level_scaled = {
+			building_employment_laborers_add = 1000
+		}
+	}
+}
+
+TRY_REPLACE:pm_default_building_leaning_tower_of_pisa = {
+	texture = "gfx/interface/icons/production_method_icons/wonders.dds"
+
+	country_modifiers = {
+		workforce_scaled = {
+			country_prestige_add = 50  # Tăng uy tín quốc gia do vai trò biểu tượng của Tháp nghiêng Pisa
+		}
+	}
+	state_modifiers = {
+		workforce_scaled = {
+			# state_loyalists_from_sol_change_accepted_religion_mult = 0.05  # Tăng số lượng người trung thành thuộc tôn giáo chính
+			# state_migration_pull_mult = 0.2
+		}
+		unscaled = {
+			state_migration_pull_mult = 0.1
+		}
+	}
+
+	country_modifiers = {
+		workforce_scaled = {
+			interest_group_ig_devout_pol_str_mult = 0.05  # Tăng ảnh hưởng chính trị của nhóm tôn giáo
+		}
+	}
+
+	building_modifiers = {
+		level_scaled = {
+			building_employment_laborers_add = 1000  # Thêm 800 công nhân
+		}
+	}
+}
+
+TRY_REPLACE:pm_default_building_sacramento_port = {
+	texture = "gfx/interface/icons/production_method_icons/wonders.dds"
+
+	state_modifiers = {
+		workforce_scaled = {
+			# state_migration_pull_add = 20
+			# state_migration_pull_mult = 0.2  # Tăng sức hút di cư do vị trí giao thông quan trọng của cảng
+		}
+		unscaled = {
+			state_migration_pull_add = 2
+			state_migration_pull_mult = 0.1
+		}
+	}
+	country_modifiers = {
+		workforce_scaled = {
+			country_prestige_add = 100  # Tăng uy tín quốc gia do vai trò quan trọng của Cảng Sacramento
+			state_trade_advantage_mult = 0.1  # Tăng thông lượng giao thông đường thủy cho các tuyến đường thương mại
+			country_convoys_capacity_mult = 0.1  # Tăng khả năng vận chuyển bằng tàu						 
+		}
+	}
+
+	building_modifiers = {
+		level_scaled = {
+			building_employment_laborers_add = 3500  # Thêm 3500 công nhân làm việc tại cảng
+			building_employment_engineers_add = 1500  # Thêm 1200 kỹ sư để duy trì và quản lý cảng
+		}
+	}
+}
+
+TRY_REPLACE:pm_default_building_north_sea_canal = {
+	texture = "gfx/interface/icons/production_method_icons/wonders.dds"
+
+	state_modifiers = {
+		workforce_scaled = {
+			# state_migration_pull_add = 20
+			# state_migration_pull_mult = 0.25  # Tăng sức hút di cư do vai trò giao thông quan trọng của kênh đào
+		}
+		unscaled = {
+			state_migration_pull_add = 2
+			state_migration_pull_mult = 0.1
+		}
+	}
+	country_modifiers = {
+		workforce_scaled = {
+			country_prestige_add = 100  # Tăng uy tín quốc gia do vai trò quan trọng của Kênh đào Biển Bắc
+			state_trade_advantage_mult = 0.1  # Tăng thông lượng giao thông đường thủy
+			country_bureaucracy_mult = 0.1
+		}
+	}
+
+	building_modifiers = {
+		level_scaled = {
+			building_employment_laborers_add = 4000  # Thêm 4000 công nhân làm việc tại kênh đào
+			building_employment_engineers_add = 1500  # Thêm 1500 kỹ sư để quản lý và duy trì kênh đào
+		}
+	}
+}
+
+TRY_REPLACE:pm_default_building_Broadway = {
+	texture = "gfx/interface/icons/production_method_icons/wonders.dds"
+	state_modifiers = {
+		workforce_scaled = {
+			# state_migration_pull_mult = 0.15
+		}
+		unscaled = {
+			state_migration_pull_mult = 0.7
+		}
+	}
+	country_modifiers = {
+		workforce_scaled = {
+			country_prestige_add = 60
+
+		}
+	}
+
+	building_modifiers = {
+		level_scaled = {
+			building_employment_shopkeepers_add = 1000
+			building_employment_capitalists_add = 100
+		}
+	}
+}
+
+TRY_REPLACE:pm_default_building_amsterdam_central_station = {
+	texture = "gfx/interface/icons/production_method_icons/wonders.dds"
+
+	state_modifiers = {
+		workforce_scaled = {
+			state_infrastructure_add = 100  # Tăng cơ sở hạ tầng giao thông của bang
+			# state_migration_pull_mult = 0.2  # Tăng sức hút di cư do vị trí giao thông quan trọng
+			building_railway_throughput_add = 0.2  # Tăng thông lượng đường sắt
+		}
+		unscaled = {
+			state_migration_pull_mult = 0.1
+		}
+	}
+
+	building_modifiers = {
+		level_scaled = {
+			building_employment_laborers_add = 3000  # Thêm 3000 công nhân
+			building_employment_engineers_add = 2000  # Thêm 1000 kỹ sư
+		}
+	}
+}
+
+TRY_REPLACE:pm_default_building_tokyo_station = {
+	texture = "gfx/interface/icons/production_method_icons/wonders.dds"
+
+	state_modifiers = {
+		workforce_scaled = {
+			state_market_access_price_impact = 0.05  # Tăng uy tín quốc gia do vai trò quan trọng của Nhà ga Tokyo
+			# state_migration_pull_mult = 0.2  # Tăng sức hút di cư do vị trí giao thông quan trọng	
+			building_railway_throughput_add = 0.2
+		}
+		unscaled = {
+			state_migration_pull_mult = 0.1
+		}
+	}
+
+	building_modifiers = {
+		level_scaled = {
+			building_employment_laborers_add = 3000  # Thêm 3000 công nhân
+			building_employment_engineers_add = 1000  # Thêm 1000 kỹ sư
+		}
+	}
+}
+
+TRY_REPLACE:pm_default_building_seoul_national_university_hospital = {
+	texture = "gfx/interface/icons/production_method_icons/wonders.dds"
+
+	state_modifiers = {
+		workforce_scaled = {
+			state_birth_rate_mult = 0.03
+			building_university_throughput_add = 0.1  # Tăng năng suất của hệ thống đại học
+			# state_migration_pull_mult = 0.25  # Tăng sức hút di cư do sự nổi tiếng của Đại học Tokyo
+		}
+		unscaled = {
+			state_migration_pull_mult = 0.12
+		}
+	}
+	country_modifiers = {
+		workforce_scaled = {
+			country_weekly_innovation_max_add = 20
+			country_weekly_innovation_add = 50  # Tăng khả năng sáng tạo hàng tuần của quốc gia
+		}
+	}
+	building_modifiers = {
+		level_scaled = {
+			building_employment_academics_add = 2000  # Thêm 1500
+		}
+	}
+}
+
+TRY_REPLACE:pm_default_building_stanford_university = {
+	texture = "gfx/interface/icons/production_method_icons/wonders.dds"
+
+	state_modifiers = {
+		workforce_scaled = {
+			building_electrics_industry_throughput_add = 0.2
+			building_university_throughput_add = 0.2  # Tăng năng suất của hệ thống đại học
+			# state_migration_pull_mult = 0.22  # Tăng sức hút di cư do sự nổi tiếng của Trường Đại học Stanford
+		}
+		unscaled = {
+			state_migration_pull_mult = 0.11
+		}
+	}
+	country_modifiers = {
+		workforce_scaled = {
+			country_weekly_innovation_add = 30  # Tăng khả năng sáng tạo hàng tuần của quốc gia
+			country_weekly_innovation_max_add = 20
+		}
+	}
+
+	building_modifiers = {
+		level_scaled = {
+			building_employment_academics_add = 2500  # Thêm 2500 nhà giáo và học giả
+			building_employment_clerks_add = 500  # Thêm 500 nhân viên hành chính
+		}
+	}
+}
+
+TRY_REPLACE:pm_default_building_tokyo_university = {
+	texture = "gfx/interface/icons/production_method_icons/wonders.dds"
+
+	state_modifiers = {
+		workforce_scaled = {
+			building_university_throughput_add = 0.1  # Tăng năng suất của hệ thống đại học
+			# state_migration_pull_mult = 0.25  # Tăng sức hút di cư do sự nổi tiếng của Đại học Tokyo
+		}
+		unscaled = {
+			state_migration_pull_mult = 0.12
+		}
+	}
+	country_modifiers = {
+		workforce_scaled = {
+			country_weekly_innovation_add = 50  # Tăng khả năng sáng tạo hàng tuần của quốc gia
+			country_weekly_innovation_max_add = 20
+		}
+	}
+	building_modifiers = {
+		level_scaled = {
+			building_employment_academics_add = 2500  # Thêm 2000 nhà giáo và học giả
+			building_employment_clerks_add = 500  # Thêm 500 nhân viên hành chính
+		}
+	}
+}
+
+TRY_REPLACE:pm_default_building_peking_university = {
+	texture = "gfx/interface/icons/production_method_icons/wonders.dds"
+
+	state_modifiers = {
+		workforce_scaled = {
+			building_construction_sector_throughput_add = 0.2
+			building_university_throughput_add = 0.25
+			# state_migration_pull_mult = 0.2  # Tăng sức hút di cư do sự nổi tiếng của Đại học Bắc Kinh
+		}
+		unscaled = {
+			state_migration_pull_mult = 0.1
+		}
+	}
+	country_modifiers = {
+		workforce_scaled = {
+			country_weekly_innovation_add = 30  # Tăng khả năng sáng tạo hàng tuần của quốc gia
+			country_weekly_innovation_max_add = 20
+		}
+	}
+
+	building_modifiers = {
+		level_scaled = {
+			building_employment_academics_add = 2000  # Thêm 2000 nhà giáo và học giả
+			building_employment_clerks_add = 500  # Thêm 500 nhân viên hành chính
+		}
+	}
+}
+
+TRY_REPLACE:pm_default_building_shanghai_bund = {
+	texture = "gfx/interface/icons/production_method_icons/wonders.dds"
+
+	state_modifiers = {
+		workforce_scaled = {
+			state_market_access_price_impact = 0.05  # Tăng cường tiếp cận thị trường
+			# state_migration_pull_mult = 0.25
+		}
+		unscaled = {
+			state_migration_pull_mult = 0.12
+		}
+	}
+	country_modifiers = {
+		workforce_scaled = {
+			country_prestige_add = 100  # Tăng uy tín quốc gia do vai trò quan trọng của Kênh đào Biển Bắc
+			state_trade_advantage_mult = 0.1  # Tăng thông lượng giao thông đường thủy
+			country_bureaucracy_mult = 0.1
+		}
+	}
+	building_modifiers = {
+		level_scaled = {
+			building_employment_laborers_add = 1500  # Thêm 1500 lao động
+			building_employment_capitalists_add = 1000  # Thêm 1000 nhà tư bản vì tính chất thương mại của Bến Thượng Hải
+		}
+	}
+}
+
+TRY_REPLACE:pm_default_building_hoover_dam = {
+	texture = "gfx/interface/icons/production_method_icons/wonders.dds"
+
+	state_modifiers = {
+		workforce_scaled = {
+			# state_migration_pull_add = 20
+			state_tax_capacity_mult = 0.05
+			building_electrics_industry_throughput_add = 0.2
+			# state_migration_pull_mult = 0.2
+		}
+		unscaled = {
+			state_migration_pull_add = 2
+			state_migration_pull_mult = 0.1
+		}
+	}
+
+	building_modifiers = {
+		level_scaled = {
+			building_employment_laborers_add = 2000  # Thêm số lượng lao động phù hợp với quy mô của Đập Hoover
+			building_employment_capitalists_add = 400  # Số lượng nhà tư bản tham gia
+			goods_output_electricity_add = 1000
+		}
+	}
+}
+
+TRY_REPLACE:pm_default_building_three_gorges_dam = {
+	texture = "gfx/interface/icons/production_method_icons/wonders.dds"
+
+	state_modifiers = {
+		workforce_scaled = {
+			# state_migration_pull_add = 20
+			state_tax_capacity_mult = 0.05  # Năng lực thu thuế của bang sẽ tăng lên
+			building_electrics_industry_throughput_add = 0.2
+			# state_migration_pull_add = 20
+		}
+		unscaled = {
+			state_migration_pull_add = 2
+		}
+	}
+
+	building_modifiers = {
+		level_scaled = {
+			building_employment_laborers_add = 2500
+			building_employment_capitalists_add = 500
+			goods_output_electricity_add = 1000
+		}
+	}
+}
+
+TRY_REPLACE:pm_default_building_ben_thanh_market = {
+	texture = "gfx/interface/icons/production_method_icons/wonders.dds"  
+
+	state_modifiers = {
+		workforce_scaled = {
+			# state_migration_pull_add = 20
+			state_tax_capacity_mult = 0.05
+			state_market_access_price_impact = 0.05
+			# state_migration_pull_mult = 0.2
+		}
+		unscaled = {
+			state_migration_pull_add = 2
+			state_migration_pull_mult = 0.1
+		}
+	}
+
+	building_modifiers = {
+		level_scaled = {
+			building_employment_laborers_add = 1500
+			building_employment_capitalists_add = 1000
+		}
+	}
+}
+
+TRY_REPLACE:pm_default_building_golden_gate_bridge = {
+	texture = "gfx/interface/icons/production_method_icons/wonders.dds"
+
+	state_modifiers = {
+		workforce_scaled = {
+			# state_migration_pull_add = 20
+			state_infrastructure_add = 100  # Tăng cường cơ sở hạ tầng do vai trò nổi bật của cầu
+			state_market_access_price_impact = 0.05  # Tăng tác động của tiếp cận thị trường nhờ tính chất giao thông quan trọng
+			# state_migration_pull_mult = 0.2
+		}
+		unscaled = {
+			state_migration_pull_add = 2
+			state_migration_pull_mult = 0.1
+		}
+	}
+
+	building_modifiers = {
+		level_scaled = {
+			building_employment_laborers_add = 2000  # Thêm số lượng lao động phù hợp với quy mô lớn hơn
+			building_employment_machinists_add = 1000  # Tăng số lượng thợ máy do kỹ thuật phức tạp của cầu
+			building_employment_capitalists_add = 500  # Tăng số lượng nhà tư bản do đầu tư lớn cho công trình
+		}
+	}
+}
+
+TRY_REPLACE:pm_default_building_brooklyn_bridge = {
+	texture = "gfx/interface/icons/production_method_icons/wonders.dds"
+
+	state_modifiers = {
+		workforce_scaled = {
+			# state_migration_pull_add = 20
+			state_infrastructure_add = 100  # Tăng cơ sở hạ tầng do vai trò lớn của cầu Brooklyn
+			building_railway_throughput_add = 0.2  # Tăng tác động của tiếp cận thị trường do tính chất giao thông quan trọng
+		}
+		unscaled = {
+			state_migration_pull_add = 2
+		}
+	}
+
+	building_modifiers = {
+		level_scaled = {
+			building_employment_laborers_add = 1800  # Thêm số lượng lao động phù hợp với quy mô lớn hơn
+			building_employment_machinists_add = 500  # Tăng số lượng thợ máy do kỹ thuật phức tạp của cầu
+			building_employment_capitalists_add = 200  # Tăng số lượng nhà tư bản do đầu tư lớn cho công trình
+		}
+	}
+}
+
+TRY_REPLACE:pm_default_building_long_bien_bridge = {
+	texture = "gfx/interface/icons/production_method_icons/wonders.dds"
+
+	state_modifiers = {
+		workforce_scaled = {
+			# state_migration_pull_add = 20
+			state_infrastructure_add = 50
+			state_market_access_price_impact = 0.05
+		}
+		unscaled = {
+			state_migration_pull_add = 2
+		}
+	}
+
+	building_modifiers = {
+		level_scaled = {
+			building_employment_laborers_add = 1500
+			building_employment_machinists_add = 400
+			building_employment_capitalists_add = 100
+		}
+	}
+}
+
+TRY_REPLACE:pm_default_building_notre_dame_saigon = {
+	texture = "gfx/interface/icons/production_method_icons/wonders.dds"
+
+	state_modifiers = {
+		workforce_scaled = {
+			# state_migration_pull_add = 20  # Tăng 50 uy tín quốc gia do tầm quan trọng lịch sử của Nhà thờ Đức Bà
+			# Tăng sự trung thành của người dân trong tiểu bang
+			# state_migration_pull_mult = 0.2  # Tăng sức hút di cư
+		}
+		unscaled = {
+			state_migration_pull_add = 2
+			state_migration_pull_mult = 0.1
+		}
+	}
+
+	country_modifiers = {
+		workforce_scaled = {
+			interest_group_ig_devout_pol_str_mult = 0.1
+		}
+	}
+
+	building_modifiers = {
+		level_scaled = {
+			building_employment_clergymen_add = 1000  # Thêm 1000 giáo sĩ cho Nhà thờ Đức Bà
+		}
+	}
+}
+
+TRY_REPLACE:pm_default_building_Notre_Dame = {
+	texture = "gfx/interface/icons/production_method_icons/wonders.dds"
+
+	state_modifiers = {
+		workforce_scaled = {
+			# state_migration_pull_add = 20
+			# state_migration_pull_mult = 0.2
+		}
+		unscaled = {
+			state_migration_pull_add = 2
+			state_migration_pull_mult = 0.1
+		}
+	}
+
+	country_modifiers = {
+		workforce_scaled = {
+			interest_group_ig_devout_pol_str_mult = 0.1
+		}
+	}
+
+	building_modifiers = {
+		level_scaled = {
+			building_employment_clergymen_add = 1000
+		}
+	}
+}
+
+TRY_REPLACE:pm_default_building_Hollywood = {
+	texture = "gfx/interface/icons/production_method_icons/wonders.dds"
+
+	state_modifiers = {
+		workforce_scaled = {
+			# state_migration_pull_mult = 0.4
+			building_art_academy_throughput_add = 0.2
+		}
+		unscaled = {
+			state_migration_pull_mult = 0.15
+		}
+	}
+	country_modifiers = {
+		workforce_scaled = {
+			country_prestige_add = 100
+			country_influence_add = 200
+		}
+	}
+
+	building_modifiers = {
+		level_scaled = {
+			building_employment_clerks_add = 1000
+			building_employment_capitalists_add = 1000
+		}
+	}
+}
+
+TRY_REPLACE:pm_default_building_Uffizi = {
+	texture = "gfx/interface/icons/production_method_icons/wonders.dds"
+
+	state_modifiers = {
+		workforce_scaled = {
+			state_pop_qualifications_mult = 0.2
+			# state_migration_pull_mult = 0.2
+		}
+		unscaled = {
+			state_migration_pull_mult = 0.1
+		}
+	}
+
+	building_modifiers = {
+		level_scaled = {
+			building_employment_aristocrats_add = 100
+			building_employment_bureaucrats_add = 100
+		}
+	}
+}
+
+
+TRY_REPLACE:pm_default_building_Jameh_mosque = {
+	texture = "gfx/interface/icons/production_method_icons/wonders.dds"
+
+	state_modifiers = {
+		workforce_scaled = {
+			# state_migration_pull_add = 20
+			# state_migration_pull_mult = 0.2
+		}
+		unscaled = {
+			state_migration_pull_add = 2
+			state_migration_pull_mult = 0.1
+		}
+	}
+	country_modifiers = {
+		workforce_scaled = {
+			interest_group_ig_devout_pol_str_mult = 0.1
+		}
+	}
+	building_modifiers = {
+		level_scaled = {
+			building_employment_clergymen_add = 1000
+		}
+	}
+}
+
+TRY_REPLACE:pm_default_building_Notre_Dame_Afrique = {
+	texture = "gfx/interface/icons/production_method_icons/wonders.dds"
+
+	is_hidden_when_unavailable = yes
+
+	state_modifiers = {
+		workforce_scaled = {
+			# state_migration_pull_add = 20
+			# state_migration_pull_mult = 0.2
+		}
+		unscaled = {
+			state_migration_pull_add = 2
+			state_migration_pull_mult = 0.1
+		}
+	}
+	country_modifiers = {
+		workforce_scaled = {
+			interest_group_ig_devout_pol_str_mult = 0.1
+		}
+	}
+	building_modifiers = {
+		level_scaled = {
+			building_employment_clergymen_add = 1000
+		}
+	}
+}
+
+TRY_REPLACE:pm_default_building_university_of_Cape_Town = {
+	texture = "gfx/interface/icons/production_method_icons/wonders.dds"
+
+	is_hidden_when_unavailable = yes
+
+	state_modifiers = {
+		workforce_scaled = {
+			building_art_academy_throughput_add = 0.2
+			state_education_access_wealth_add = 0.005
+			building_university_throughput_add = 0.20
+			# state_migration_pull_mult = 0.2
+		}
+		unscaled = {
+			state_migration_pull_mult = 0.1
+		}
+	}
+
+	building_modifiers = {
+		level_scaled = {
+			building_employment_academics_add = 2500
+			building_employment_clerks_add = 800
+		}
+	}
+}
+
+TRY_REPLACE:pm_default_building_Church_of_Saint_George = {
+	texture = "gfx/interface/icons/production_method_icons/wonders.dds"
+
+	is_hidden_when_unavailable = yes
+
+	state_modifiers = {
+		workforce_scaled = {
+			# state_migration_pull_add = 20
+			# state_migration_pull_mult = 0.2
+		}
+		unscaled = {
+			state_migration_pull_add = 2
+			state_migration_pull_mult = 0.1
+		}
+	}
+	country_modifiers = {
+		workforce_scaled = {
+			interest_group_ig_devout_pol_str_mult = 0.1
+		}
+	}
+	building_modifiers = {
+		level_scaled = {
+			building_employment_clergymen_add = 1000
+		}
+	}
+}
+
+TRY_REPLACE:pm_default_building_cape_coast_castle = {
+	texture = "gfx/interface/icons/production_method_icons/wonders.dds"
+
+	is_hidden_when_unavailable = yes
+
+	state_modifiers = {
+		workforce_scaled = {
+			building_throughput_add = 0.05
+			state_market_access_price_impact = 0.05
+			# state_migration_pull_add = -40
+		}
+		unscaled = {
+			state_migration_pull_add = -4
+		}
+	}
+	building_modifiers = {
+		level_scaled = {
+			building_employment_laborers_add = 2000
+			building_employment_bureaucrats_add = 100
+		}
+	}
+}

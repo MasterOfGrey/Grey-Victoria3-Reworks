@@ -23,38 +23,44 @@ on_law_activated = {
 
 MoG_SPA_literacy_law_enact = {
 	effect = {
-		owner = {
-			# Clean up old modifiers
-			if = {
-				limit = { has_modifier = mog_spa_child_labor_allowed_literacy }
-				remove_modifier = mog_spa_child_labor_allowed_literacy
+		#if = {
+		#	limit = { Ultra_RE_is_active_trigger = yes }		# UHRE uses default flat modifiers
+		#	trigger_event = { on_action = MoG_SPA_UHRE_literacy_law_enact }
+		#}
+		#else = {
+			owner = {
+				# Clean up old modifiers
+				if = {
+					limit = { has_modifier = mog_spa_child_labor_allowed_literacy }
+					remove_modifier = mog_spa_child_labor_allowed_literacy
+				}
+				if = {
+					limit = { has_modifier = mog_spa_restricted_child_labor_literacy }
+					remove_modifier = mog_spa_restricted_child_labor_literacy
+				}
+				if = {
+					limit = { has_modifier = mog_spa_compulsory_primary_school_literacy }
+					remove_modifier = mog_spa_compulsory_primary_school_literacy
+				}
+				
+				# Reapply modifiers
+				
+				if = {
+					limit = { has_law = law_type:law_compulsory_primary_school }
+					add_modifier = mog_spa_compulsory_primary_school_literacy
+				}
+				else_if = {
+					limit = { has_law = law_type:law_restricted_child_labor }
+					add_modifier = mog_spa_restricted_child_labor_literacy
+				}
+				else_if = {
+					limit = { has_law = law_type:law_child_labor_allowed }
+					add_modifier = mog_spa_child_labor_allowed_literacy
+				}
+				
+				refresh_institution_schools_modifier = yes
 			}
-			if = {
-				limit = { has_modifier = mog_spa_restricted_child_labor_literacy }
-				remove_modifier = mog_spa_restricted_child_labor_literacy
-			}
-			if = {
-				limit = { has_modifier = mog_spa_compulsory_primary_school_literacy }
-				remove_modifier = mog_spa_compulsory_primary_school_literacy
-			}
-			
-			# Reapply modifiers
-			
-			if = {
-				limit = { has_law = law_type:law_compulsory_primary_school }
-				add_modifier = mog_spa_compulsory_primary_school_literacy
-			}
-			else_if = {
-				limit = { has_law = law_type:law_restricted_child_labor }
-				add_modifier = mog_spa_restricted_child_labor_literacy
-			}
-			else_if = {
-				limit = { has_law = law_type:law_child_labor_allowed }
-				add_modifier = mog_spa_child_labor_allowed_literacy
-			}
-			
-			refresh_institution_schools_modifier = yes
-		}
+		#}
 	}
 }
 
@@ -90,6 +96,13 @@ on_country_no_longer_default = {
 MoG_SPA_literacy_no_longer_default = {
 	effect = {
 		refresh_institution_schools_modifier = yes
+	}
+}
+
+# To refresh after rebalancing or addition/removal of any affecting mods.
+on_yearly_pulse_country = {
+	on_actions = {
+		MoG_SPA_literacy_no_longer_default
 	}
 }
 

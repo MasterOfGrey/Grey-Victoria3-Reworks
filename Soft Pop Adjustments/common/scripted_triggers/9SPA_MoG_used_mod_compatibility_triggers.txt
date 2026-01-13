@@ -1,0 +1,7 @@
+﻿##################################################
+#   GREY - MOD COMPATIBILITY SCRIPTED TRIGGERS   #
+##################################################
+
+Grey_PLP_is_active = { # Populist Legal Power
+	always = no
+}

@@ -42,7 +42,7 @@ NPops = {
 	ALLOW_ASSIMILATION_IN_HOMELANDS = no		# Can pops assimilate when living in their homelands?
 	# ALLOW_ASSIMILATION_ACROSS_HERITAGES = yes 	# Can pops assimilate into pops of a different heritage?
 	ALLOW_ASSIMILATION_REQUIRE_HERITAGE_GROUP = yes # no	# Can pops assimilate into pops of a different heritage group (weaker condition)
-	ALLOW_ASSIMILATION_REQUIRE_HERITAGE_TRAIT = no			# Can pops assimilate into pops of a different heritage trait (stronger condition)
+	# ALLOW_ASSIMILATION_REQUIRE_HERITAGE_TRAIT = no			# Can pops assimilate into pops of a different heritage trait (stronger condition)
 	#in case if both are allowed, heritage trait requirement takes precedence
 	
 	CULTURAL_FERVOR_ASSIMILATIOM_EFFECT = 0.008 # 0.01		# The effect cultural fervor has on assimilation, it makes it this much harder to assimilate with higher fervor

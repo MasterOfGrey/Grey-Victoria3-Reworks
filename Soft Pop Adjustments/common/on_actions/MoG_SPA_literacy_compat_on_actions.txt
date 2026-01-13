@@ -1,0 +1,39 @@
+﻿## UHRE - we could have needed this, but didn't.
+# I'm keeping it so I don't have to work out how to do it again from scratch for some future mod compat
+#MoG_SPA_UHRE_literacy_law_enact = {
+#	effect = {
+#		owner = {
+#			# Clean up old modifiers
+#			if = {
+#				limit = { has_modifier = mog_spa_uhre_child_labor_allowed_literacy }
+#				remove_modifier = mog_spa_uhre_child_labor_allowed_literacy
+#			}
+#			if = {
+#				limit = { has_modifier = mog_spa_uhre_restricted_child_labor_literacy }
+#				remove_modifier = mog_spa_uhre_restricted_child_labor_literacy
+#			}
+#			if = {
+#				limit = { has_modifier = mog_spa_uhre_compulsory_primary_school_literacy }
+#				remove_modifier = mog_spa_uhre_compulsory_primary_school_literacy
+#			}
+#			
+#			# Reapply modifiers
+#			
+#			if = {
+#				limit = { has_law = law_type:law_compulsory_primary_school }
+#				add_modifier = mog_spa_uhre_compulsory_primary_school_literacy
+#			}
+#			else_if = {
+#				limit = { has_law = law_type:law_restricted_child_labor }
+#				add_modifier = mog_spa_uhre_restricted_child_labor_literacy
+#			}
+#			else_if = {
+#				limit = { has_law = law_type:law_child_labor_allowed }
+#				add_modifier = mog_spa_uhre_child_labor_allowed_literacy
+#			}
+#			
+#			refresh_institution_schools_modifier = yes
+#		}
+#	}
+#}
+#

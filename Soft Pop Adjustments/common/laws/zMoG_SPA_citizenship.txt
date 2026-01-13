@@ -427,7 +427,7 @@ TRY_REPLACE:law_racial_segregation = {
 		#country_acceptance_culture_base_add = 20 # 10
 		
 		#If primary culture, only apply this value
-		country_acceptance_primary_culture_add = 100
+		country_acceptance_primary_culture_add = 150 # 100
 
 		#Heritage
 		#From this block, we only apply the highest value a Pop qualifies for
@@ -572,7 +572,7 @@ TRY_REPLACE:law_cultural_exclusion = {
 		#country_acceptance_culture_base_add = 40 # 20
 
 		#If primary culture, only apply this value
-		country_acceptance_primary_culture_add = 100
+		country_acceptance_primary_culture_add = 150 # 100
 
 		#Heritage
 		#From this block, we only apply the highest value a Pop qualifies for
@@ -723,7 +723,7 @@ TRY_REPLACE:law_multicultural = {
 		state_assimilation_mult = -0.25
 		
 		#If primary culture, only apply this value
-		country_acceptance_primary_culture_add = 100
+		country_acceptance_primary_culture_add = 150 # 100
 		
 		#Heritage
 		#From this block, we only apply the highest value a Pop qualifies for

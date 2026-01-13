@@ -1,5 +1,60 @@
-﻿refresh_institution_schools_modifier = {
+﻿# Default
+refresh_institution_schools_modifier = {
+	refresh_institution_schools_modifier_universal_cleanup = yes
+	if = {												# Order mod checks by overwrite order.
+		limit = { Ultra_RE_is_active_trigger = yes }
+		refresh_institution_schools_uhre_modifier = yes
+	}
+	else_if = {
+		limit = { Grey_PLP_is_active = yes }			# Every other mod should handle the case of having
+		refresh_institution_schools_plp_modifier = yes	# both PLP and itself loaded in its own effects.
+	}
+	else = {
+		owner.institution:institution_schools ?= {
+			if = {
+				limit = {
+					owner = { has_law_or_variant = law_type:law_religious_schools }
+				}
+				add_modifier_hack = {
+					name = mog_spa_diff_religious_schools_literacy
+					multiplier = investment
+				}
+			}
+			else_if = {
+				limit = {
+					owner = { has_law_or_variant = law_type:law_private_schools }
+				}
+				add_modifier_hack = {
+					name = mog_spa_diff_private_schools_literacy
+					multiplier = investment
+				}
+			}
+			else_if = {
+				limit = {
+					owner = { has_law_or_variant = law_type:law_public_schools }
+				}
+				add_modifier_hack = {
+					name = mog_spa_diff_public_schools_literacy
+					multiplier = investment
+				}
+			}
+			
+			if = {
+				limit = {
+					owner = { has_law_or_variant = law_type:law_compulsory_primary_school }
+				}
+				add_modifier_hack = {
+					name = mog_spa_diff_compulsory_school_literacy
+					multiplier = investment
+				}
+			}
+		}
+	}
+}
+
+refresh_institution_schools_modifier_universal_cleanup = {
 	owner.institution:institution_schools ?= {
+		# Default
 		if = {
 			limit = {
 				has_modifier = mog_spa_diff_religious_schools_literacy
@@ -24,43 +79,80 @@
 			}
 			remove_modifier = mog_spa_diff_compulsory_school_literacy
 		}
-		
+		# Ultra Historical Research & Education
 		if = {
 			limit = {
-				owner = { has_law = law_type:law_religious_schools }
+				has_modifier = mog_spa_uhre_diff_religious_schools_literacy
 			}
-			add_modifier_hack = {
-				name = mog_spa_diff_religious_schools_literacy
-				multiplier = investment
-			}
+			remove_modifier = mog_spa_uhre_diff_religious_schools_literacy
 		}
-		else_if = {
-			limit = {
-				owner = { has_law = law_type:law_private_schools }
-			}
-			add_modifier_hack = {
-				name = mog_spa_diff_private_schools_literacy
-				multiplier = investment
-			}
-		}
-		else_if = {
-			limit = {
-				owner = { has_law = law_type:law_public_schools }
-			}
-			add_modifier_hack = {
-				name = mog_spa_diff_public_schools_literacy
-				multiplier = investment
-			}
-		}
-		
 		if = {
 			limit = {
-				owner = { has_law = law_type:law_compulsory_primary_school }
+				has_modifier = mog_spa_uhre_diff_private_schools_literacy
 			}
-			add_modifier_hack = {
-				name = mog_spa_diff_compulsory_school_literacy
-				multiplier = investment
-			}
+			remove_modifier = mog_spa_uhre_diff_private_schools_literacy
 		}
+		if = {
+			limit = {
+				has_modifier = mog_spa_uhre_diff_public_schools_literacy
+			}
+			remove_modifier = mog_spa_uhre_diff_public_schools_literacy
+		}
+		if = {
+			limit = {
+				has_modifier = mog_spa_uhre_diff_restricted_child_labor_literacy
+			}
+			remove_modifier = mog_spa_uhre_diff_restricted_child_labor_literacy
+		}
+		if = {
+			limit = {
+				has_modifier = mog_spa_uhre_diff_compulsory_school_literacy
+			}
+			remove_modifier = mog_spa_uhre_diff_compulsory_school_literacy
+		}
+		# PLP + Ultra Historical Research & Education
+		if = {
+			limit = {
+				has_modifier = mog_spa_plp_uhre_diff_religious_schools_literacy
+			}
+			remove_modifier = mog_spa_plp_uhre_diff_religious_schools_literacy
+		}
+		if = {
+			limit = {
+				has_modifier = mog_spa_plp_uhre_diff_private_schools_literacy
+			}
+			remove_modifier = mog_spa_plp_uhre_diff_private_schools_literacy
+		}
+		if = {
+			limit = {
+				has_modifier = mog_spa_plp_uhre_diff_public_schools_literacy
+			}
+			remove_modifier = mog_spa_plp_uhre_diff_public_schools_literacy
+		}
+		# Populist Legal Power
+		if = {
+			limit = {
+				has_modifier = mog_spa_plp_diff_religious_schools_literacy
+			}
+			remove_modifier = mog_spa_plp_diff_religious_schools_literacy
+		}
+		if = {
+			limit = {
+				has_modifier = mog_spa_plp_diff_private_schools_literacy
+			}
+			remove_modifier = mog_spa_plp_diff_private_schools_literacy
+		}
+		if = {
+			limit = {
+				has_modifier = mog_spa_plp_diff_public_schools_literacy
+			}
+			remove_modifier = mog_spa_plp_diff_public_schools_literacy
+		}
+		#if = {		# No current PLP modifier for childrens_rights
+		#	limit = {
+		#		has_modifier = mog_spa_plp_diff_compulsory_school_literacy
+		#	}
+		#	remove_modifier = mog_spa_plp_diff_compulsory_school_literacy
+		#}
 	}
 }

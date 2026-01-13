@@ -1,0 +1,125 @@
+﻿# Ultra Historical Research & Education
+refresh_institution_schools_uhre_modifier = {
+	owner.institution:institution_schools ?= {
+		if = {
+			limit = { Grey_PLP_is_active = yes }	# PLP overwrites UHRE education laws
+			if = {
+				limit = {
+					owner = { has_law_or_variant = law_type:law_religious_schools }
+				}
+				add_modifier_hack = {
+					name = mog_spa_plp_uhre_diff_religious_schools_literacy
+					multiplier = investment
+				}
+			}
+			else_if = {
+				limit = {
+					owner = { has_law_or_variant = law_type:law_private_schools }
+				}
+				add_modifier_hack = {
+					name = mog_spa_plp_uhre_diff_private_schools_literacy
+					multiplier = investment
+				}
+			}
+			else_if = {
+				limit = {
+					owner = { has_law_or_variant = law_type:law_public_schools }
+				}
+				add_modifier_hack = {
+					name = mog_spa_plp_uhre_diff_public_schools_literacy
+					multiplier = investment
+				}
+			}
+		}
+		else = {		# Assumes only SPA + UHRE are relevant relative to Vanilla
+			if = {
+				limit = {
+					owner = { has_law_or_variant = law_type:law_religious_schools }
+				}
+				add_modifier_hack = {
+					name = mog_spa_uhre_diff_religious_schools_literacy
+					multiplier = investment
+				}
+			}
+			else_if = {
+				limit = {
+					owner = { has_law_or_variant = law_type:law_private_schools }
+				}
+				add_modifier_hack = {
+					name = mog_spa_uhre_diff_private_schools_literacy
+					multiplier = investment
+				}
+			}
+			else_if = {
+				limit = {
+					owner = { has_law_or_variant = law_type:law_public_schools }
+				}
+				add_modifier_hack = {
+					name = mog_spa_uhre_diff_public_schools_literacy
+					multiplier = investment
+				}
+			}
+		}
+		
+		if = {		# PLP doesn't touch childrens_rights laws so just UHRE either way.
+			limit = {
+				owner = { has_law_or_variant = law_type:law_restricted_child_labor }
+			}
+			add_modifier_hack = {
+				name = mog_spa_uhre_diff_restricted_child_labor_literacy
+				multiplier = investment
+			}
+		}
+		if = {
+			limit = {
+				owner = { has_law_or_variant = law_type:law_compulsory_primary_school }
+			}
+			add_modifier_hack = {
+				name = mog_spa_uhre_diff_compulsory_school_literacy
+				multiplier = investment
+			}
+		}
+	}
+}
+
+refresh_institution_schools_plp_modifier = {
+	owner.institution:institution_schools ?= {
+		if = {
+			limit = {
+				owner = { has_law_or_variant = law_type:law_religious_schools }
+			}
+			add_modifier_hack = {
+				name = mog_spa_plp_diff_religious_schools_literacy
+				multiplier = investment
+			}
+		}
+		else_if = {
+			limit = {
+				owner = { has_law_or_variant = law_type:law_private_schools }
+			}
+			add_modifier_hack = {
+				name = mog_spa_plp_diff_private_schools_literacy
+				multiplier = investment
+			}
+		}
+		else_if = {
+			limit = {
+				owner = { has_law_or_variant = law_type:law_public_schools }
+			}
+			add_modifier_hack = {
+				name = mog_spa_plp_diff_public_schools_literacy
+				multiplier = investment
+			}
+		}
+		
+		if = {
+			limit = {
+				owner = { has_law_or_variant = law_type:law_compulsory_primary_school }
+			}
+			add_modifier_hack = {
+				name = mog_spa_diff_compulsory_school_literacy	# Default modifier
+				multiplier = investment
+			}
+		}
+	}
+}

@@ -1,0 +1,16 @@
+﻿l_english:
+ # Populist Legal Power
+ mog_spa_plp_diff_religious_schools_literacy: "SPA: Literacy Change (Religious Schools)"
+ mog_spa_plp_diff_private_schools_literacy: "SPA: Literacy Change (Private Schools)"
+ mog_spa_plp_diff_public_schools_literacy: "SPA: Literacy Change (Public Schools)"
+ 
+ # Ultra Historical Research & Education
+ mog_spa_uhre_diff_religious_schools_literacy: "SPA+UHRE: Literacy Change (Religious Schools)"
+ mog_spa_uhre_diff_private_schools_literacy: "SPA+UHRE: Literacy Change (Private Schools)"
+ mog_spa_uhre_diff_public_schools_literacy: "SPA+UHRE: Literacy Change (Public Schools)"
+ mog_spa_uhre_diff_restricted_child_labor_literacy: "SPA+UHRE: Literacy Change (Restricted Child Labor)"
+ mog_spa_uhre_diff_compulsory_school_literacy: "SPA+UHRE: Literacy Change (Compulsory Primary School)"
+ 
+ mog_spa_plp_uhre_diff_religious_schools_literacy: "SPA+PLP+UHRE: Literacy Change (Religious Schools)"
+ mog_spa_plp_uhre_diff_private_schools_literacy: "SPA+PLP+UHRE: Literacy Change (Private Schools)"
+ mog_spa_plp_uhre_diff_public_schools_literacy: "SPA+PLP+UHRE: Literacy Change (Public Schools)"

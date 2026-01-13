@@ -1,0 +1,4 @@
+﻿# Ultra Historical Research & Education
+#Ultra_RE_is_active_trigger = {
+#	always = no
+#}	# Disabled cause UHRE trigger doesn't use keyword
