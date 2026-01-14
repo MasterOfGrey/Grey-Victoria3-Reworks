@@ -3,6 +3,6 @@
 ##################################################
 
 # Expect this to be used later.
-REPLACE_OR_CREATE:Grey_SPA_is_active = { # Soft Pop Adjustments
+Grey_SPA_is_active = { # Soft Pop Adjustments
 	always = no
 }

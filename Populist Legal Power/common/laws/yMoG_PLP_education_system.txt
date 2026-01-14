@@ -1,31 +1,31 @@
-﻿REPLACE_OR_CREATE:law_no_schools = {
+﻿REPLACE:law_no_schools = {
 	group = lawgroup_education_system
-	
+
 	icon = "gfx/interface/icons/law_icons/no_schools.dds"
-	
-	progressiveness = 0
-	
+
+	progressiveness = 0 # -25
+
 	disallowing_laws = {
 		law_compulsory_primary_school
 	}
-	
+
 	modifier = {}
-	
+
 	can_enact = {
 		custom_tooltip = {
 			modifier:country_disallow_law_no_schools_bool = no
 			text = disallow_law_no_schools_tt
 		}
 	}
-	
+
 	# AI will never abolish institutions entirely
 	ai_will_do = {
 		always = no
 	}
-	
+
 	ai_enact_weight_modifier = { #Petitions
 		value = 0
-		
+
 		if = {
 			limit = { ai_has_enact_weight_modifier_journal_entries = yes }
 			add = 750
@@ -33,34 +33,37 @@
 	}
 }
 
-REPLACE_OR_CREATE:law_religious_schools = {
+REPLACE:law_religious_schools = {
 	group = lawgroup_education_system
-	
+
 	icon = "gfx/interface/icons/law_icons/religious_schools.dds"
-	
-	progressiveness = 25
-	
+
+	progressiveness = 25 # 0
+
 	unlocking_technologies = {
 		rationalism
 	}
-	
+
 	disallowing_laws = {
 		law_total_separation
 		law_state_atheism
 		law_serfdom
 	}
-	
+
 	modifier = {
 		country_institution_cost_institution_schools_mult = -0.2
 	}
-	
-	institution = institution_schools
+
+	institution = institution_schools					# Total Education Access = 38.25% + 12.5%
 	institution_modifier = {
 		state_conversion_mult = 0.2
-		state_education_access_add = 0.1
+		state_education_access_add = 0.025				# PLP - SPA replaces this with other sources
+		state_education_access_add = 0.064 # 0.1		# PLP # Max institution = 32
+		state_slaves_education_access_add = -0.064		# PLP # Slaves don't get to go to school
+		state_education_access_wealth_add = 0.0005		# PLP # Max institution = 6.25 @ Wealth 25
 		interest_group_ig_devout_pol_str_mult = 0.1
 	}
-	
+
 	can_impose = {
 		OR = {
 			AND = {
@@ -73,36 +76,37 @@ REPLACE_OR_CREATE:law_religious_schools = {
 			can_impose_law_default = yes
 		}
 	}
-	
+
 	ai_enact_weight_modifier = { #Petitions
 		value = 0
-		
+
 		if = {
 			limit = { ai_has_enact_weight_modifier_journal_entries = yes }
 			add = 750
 		}
-		
+
 		if = {
 			limit = {
 				has_law_or_variant = law_type:law_no_schools
 			}
 			add = 500
-			
+
 			if = {
 				limit = {
 					OR = {
 						has_journal_entry = je_sick_man_education
 						has_journal_entry = je_terakoya
+						has_journal_entry = je_portugal_regeneration_institutions
 					}
 				}
 				add = 500
 			}
 		}
 	}
-	
+
 	ai_impose_chance = {
 		value = 0
-		
+
 		if = {
 			limit = {
 				has_law = law_type:law_religious_schools
@@ -110,7 +114,7 @@ REPLACE_OR_CREATE:law_religious_schools = {
 			}
 			add = base_impose_law_weight
 		}
-		
+
 		if = {
 			limit = {
 				has_law = law_type:law_religious_schools
@@ -121,7 +125,7 @@ REPLACE_OR_CREATE:law_religious_schools = {
 			}
 			add = 10
 		}
-		
+
 		if = {
 			limit = {
 				scope:target_country = {
@@ -138,27 +142,32 @@ REPLACE_OR_CREATE:law_religious_schools = {
 	}
 }
 
-REPLACE_OR_CREATE:law_private_schools = {
+REPLACE:law_private_schools = {
 	group = lawgroup_education_system
-	
+
 	icon = "gfx/interface/icons/law_icons/private_schools.dds"
-	
+
 	progressiveness = 25
-	
+
 	unlocking_technologies = {
 		academia
 	}
-	
+
+	# disallowing_laws = {	# Deliberately no
+	#	law_state_religion
+	# }
+
 	modifier = {
 		country_institution_cost_institution_schools_mult = -0.4
 	}
-	
-	institution = institution_schools
+
+	institution = institution_schools					# Total Education Access = 40% + 12.5%
 	institution_modifier = {
-		state_education_access_wealth_add = 0.005
+		state_education_access_add = 0.025					# PLP - SPA replaces this with other sources
+		state_education_access_wealth_add = 0.0032 # 0.005	# PLP # Max institution = 40 @ Wealth 25
 		interest_group_ig_intelligentsia_pol_str_mult = 0.1
 	}
-	
+
 	can_impose = {
 		OR = {
 			AND = {
@@ -171,36 +180,37 @@ REPLACE_OR_CREATE:law_private_schools = {
 			can_impose_law_default = yes
 		}
 	}
-	
+
 	ai_enact_weight_modifier = { #Petitions
 		value = 0
-		
+
 		if = {
 			limit = { ai_has_enact_weight_modifier_journal_entries = yes }
 			add = 750
 		}
-		
+
 		if = {
 			limit = {
 				has_law_or_variant = law_type:law_no_schools
 			}
 			add = 500
-			
+
 			if = {
 				limit = {
 					OR = {
 						has_journal_entry = je_sick_man_education
 						has_journal_entry = je_terakoya
+						has_journal_entry = je_portugal_regeneration_institutions
 					}
 				}
 				add = 500
 			}
 		}
 	}
-	
+
 	ai_impose_chance = {
 		value = 0
-		
+
 		if = {
 			limit = {
 				has_law = law_type:law_private_schools
@@ -208,7 +218,7 @@ REPLACE_OR_CREATE:law_private_schools = {
 			}
 			add = base_impose_law_weight
 		}
-		
+
 		if = {
 			limit = {
 				has_law = law_type:law_private_schools
@@ -219,7 +229,7 @@ REPLACE_OR_CREATE:law_private_schools = {
 			}
 			add = 10
 		}
-		
+
 		if = {
 			limit = {
 				scope:target_country = {
@@ -236,29 +246,31 @@ REPLACE_OR_CREATE:law_private_schools = {
 	}
 }
 
-REPLACE_OR_CREATE:law_public_schools = {
+REPLACE:law_public_schools = {
 	group = lawgroup_education_system
-	
+
 	icon = "gfx/interface/icons/law_icons/public_schools.dds"
-	
+
 	progressiveness = 50
-	
+
 	unlocking_technologies = {
 		empiricism
 	}
-	
+
 	disallowing_laws = {
 		law_state_religion
 		law_serfdom
 	}
-	
-	institution = institution_schools
+
+	institution = institution_schools					# Total Education Access = 40% + 15%
 	institution_modifier = {
 		state_assimilation_mult = 0.125
-		state_education_access_add = 0.1
+		state_education_access_add = 0.03				# PLP - SPA replaces this with other sources
+		state_education_access_add = 0.08 # 0.125		# PLP # Max institution = 40
+		state_slaves_education_access_add = -0.08		# PLP # Slaves don't get to go to school
 		country_education_fervor_add = 5
 	}
-	
+
 	can_impose = {
 		OR = {
 			AND = {
@@ -271,36 +283,37 @@ REPLACE_OR_CREATE:law_public_schools = {
 			can_impose_law_default = yes
 		}
 	}
-	
+
 	ai_enact_weight_modifier = { #Petitions
 		value = 0
-		
+
 		if = {
 			limit = { ai_has_enact_weight_modifier_journal_entries = yes }
 			add = 750
 		}
-		
+
 		if = {
 			limit = {
 				has_law_or_variant = law_type:law_no_schools
 			}
 			add = 500
-			
+
 			if = {
 				limit = {
 					OR = {
 						has_journal_entry = je_sick_man_education
 						has_journal_entry = je_terakoya
+						has_journal_entry = je_portugal_regeneration_institutions
 					}
 				}
 				add = 500
 			}
 		}
 	}
-	
+
 	ai_impose_chance = {
 		value = 0
-		
+
 		if = {
 			limit = {
 				has_law = law_type:law_public_schools
@@ -308,7 +321,7 @@ REPLACE_OR_CREATE:law_public_schools = {
 			}
 			add = base_impose_law_weight
 		}
-		
+
 		if = {
 			limit = {
 				has_law = law_type:law_public_schools
@@ -319,7 +332,7 @@ REPLACE_OR_CREATE:law_public_schools = {
 			}
 			add = 10
 		}
-		
+
 		if = {
 			limit = {
 				scope:target_country = {

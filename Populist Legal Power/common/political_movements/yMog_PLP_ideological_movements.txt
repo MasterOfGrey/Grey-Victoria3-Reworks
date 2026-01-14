@@ -400,11 +400,24 @@
 				value = 2.0
 			}
 		}
+
+		if = {
+			limit = {
+				state = {
+					is_slave_state = no
+				}
+			}
+			multiply = {
+				value = 1
+				add = owner.modifier:state_free_state_pop_support_movement_anti_slavery_mult
+				desc = "state_free_state_pop_support_movement_anti_slavery_mult"
+			}
+		}
 	}
 
 	revolution = {
 		possible = {
-			political_movement_support >= 0.1 # 0.05
+			political_movement_support >= com_movement_anti_slavery_revolution_possible_political_movement_support #vanilla value: 0.05
 		}
 
 		weight = {
@@ -463,7 +476,7 @@
 
 	secession = {
 		possible = {
-			political_movement_support >= 0.1 # 0.05
+			political_movement_support >= com_movement_anti_slavery_secession_possible_political_movement_support #vanilla value: 0.05
 			OR = {
 				scope:clout <= 0
 				owner = {
@@ -893,7 +906,7 @@ REPLACE_OR_CREATE:movement_pro_slavery = {
 
 	revolution = {
 		possible = {
-			political_movement_support >= 0.1 # 0.05
+			political_movement_support >= com_movement_pro_slavery_revolution_possible_political_movement_support #vanilla value: 0.05
 		}
 
 		weight = {
@@ -952,7 +965,7 @@ REPLACE_OR_CREATE:movement_pro_slavery = {
 
 	secession = {
 		possible = {
-			political_movement_support >= 0.1 # 0.05
+			political_movement_support >= com_movement_pro_slavery_secession_possible_political_movement_support #vanilla value: 0.05
 			OR = {
 				scope:clout <= 0
 				owner = {
@@ -1205,6 +1218,12 @@ REPLACE_OR_CREATE:movement_royalist_absolutist = {
 				country_has_voting_franchise = yes
 			}
 			has_variable = monarchy_stamped_out_var
+			any_political_movement = {
+				OR = {
+					is_political_movement_type = movement_carlist
+					is_political_movement_type = movement_miguelist
+				}
+			}
 		}
 	}
 	on_disbanded = {
@@ -1229,11 +1248,19 @@ REPLACE_OR_CREATE:movement_royalist_absolutist = {
 	}
 
 	creation_trigger = {
-		has_law_or_variant = law_type:law_monarchy
+		has_law = law_type:law_monarchy
 		country_has_voting_franchise = no
 		NOT = {
 			any_political_movement = {
 				is_political_movement_type = movement_royalist_constitutional
+			}
+		}
+		NOT = {
+			any_political_movement = {
+				OR = {
+					is_political_movement_type = movement_carlist
+					is_political_movement_type = movement_miguelist
+				}
 			}
 		}
 		NOT = { c:FRA ?= this }
@@ -1418,11 +1445,20 @@ REPLACE_OR_CREATE:movement_royalist_absolutist = {
 				desc = "POP_OFFICERS"
 			}
 		}
+		else_if = {
+			limit = {
+				is_pop_type = soldiers
+			}
+			add = {
+				value = 10
+				desc = "POP_SOLDIERS"
+			}
+		}
 
 		if = {
 			limit = {
 				owner ?= {
-					has_law_or_variant = law_type:law_monarchy
+					has_law = law_type:law_monarchy
 				}
 				owner.ruler ?= {
 					NOT = { has_trait = trait_child }
@@ -1444,7 +1480,7 @@ REPLACE_OR_CREATE:movement_royalist_absolutist = {
 		else_if = {
 			limit = {
 				owner ?= {
-					has_law_or_variant = law_type:law_monarchy
+					has_law = law_type:law_monarchy
 				}
 				owner.ruler ?= {
 					has_trait = trait_child
@@ -1462,7 +1498,7 @@ REPLACE_OR_CREATE:movement_royalist_absolutist = {
 		else_if = {
 			limit = {
 				owner ?= {
-					has_law_or_variant = law_type:law_monarchy
+					has_law = law_type:law_monarchy
 				}
 				owner.ruler ?= {
 					law_stance = {
@@ -1503,7 +1539,7 @@ REPLACE_OR_CREATE:movement_royalist_absolutist = {
 			if = {
 				limit = { is_capital = yes }
 				if = {
-					limit = { owner ?= { has_law_or_variant = law_type:law_monarchy } }
+					limit = { owner ?= { has_law = law_type:law_monarchy } }
 					multiply = 10.0
 				}
 				else = {
@@ -1535,7 +1571,7 @@ REPLACE_OR_CREATE:movement_royalist_absolutist = {
 			if = {
 				limit = { is_capital = yes }
 				if = {
-					limit = { owner ?= { has_law_or_variant = law_type:law_monarchy } }
+					limit = { owner ?= { has_law = law_type:law_monarchy } }
 					multiply = 10.0
 				}
 				else = {
@@ -1562,7 +1598,7 @@ REPLACE_OR_CREATE:movement_royalist_absolutist = {
 		owner ?= {
 			if = {
 				limit = {
-					has_law_or_variant = law_type:law_monarchy
+					has_law = law_type:law_monarchy
 				}
 
 				if = {
@@ -1628,7 +1664,7 @@ REPLACE_OR_CREATE:movement_royalist_constitutional = {
 	}
 
 	creation_trigger = {
-		has_law_or_variant = law_type:law_monarchy
+		has_law = law_type:law_monarchy
 		country_has_voting_franchise = yes
 		NOT = {
 			any_political_movement = {
@@ -1810,6 +1846,15 @@ REPLACE_OR_CREATE:movement_royalist_constitutional = {
 		}
 		else_if = {
 			limit = {
+				is_pop_type = soldiers
+			}
+			add = {
+				value = 10
+				desc = "POP_SOLDIERS"
+			}
+		}
+		else_if = {
+			limit = {
 				is_pop_type = shopkeepers
 			}
 			add = {
@@ -1830,7 +1875,7 @@ REPLACE_OR_CREATE:movement_royalist_constitutional = {
 		if = {
 			limit = {
 				owner ?= {
-					has_law_or_variant = law_type:law_monarchy
+					has_law = law_type:law_monarchy
 				}
 				owner.ruler ?= {
 					NOT = { has_trait = trait_child }
@@ -1848,7 +1893,7 @@ REPLACE_OR_CREATE:movement_royalist_constitutional = {
 		else_if = {
 			limit = {
 				owner ?= {
-					has_law_or_variant = law_type:law_monarchy
+					has_law = law_type:law_monarchy
 				}
 				owner.ruler ?= {
 					has_trait = trait_child
@@ -1892,7 +1937,7 @@ REPLACE_OR_CREATE:movement_royalist_constitutional = {
 			if = {
 				limit = { is_capital = yes }
 				if = {
-					limit = { owner ?= { has_law_or_variant = law_type:law_monarchy } }
+					limit = { owner ?= { has_law = law_type:law_monarchy } }
 					multiply = 10.0
 				}
 				else = {
@@ -1927,7 +1972,7 @@ REPLACE_OR_CREATE:movement_royalist_constitutional = {
 			if = {
 				limit = { is_capital = yes }
 				if = {
-					limit = { owner ?= { has_law_or_variant = law_type:law_monarchy } }
+					limit = { owner ?= { has_law = law_type:law_monarchy } }
 					multiply = 10.0
 				}
 				else = {
@@ -1954,7 +1999,7 @@ REPLACE_OR_CREATE:movement_royalist_constitutional = {
 		owner ?= {
 			if = {
 				limit = {
-					has_law_or_variant = law_type:law_monarchy
+					has_law = law_type:law_monarchy
 				}
 
 				if = {
@@ -2019,6 +2064,7 @@ REPLACE_OR_CREATE:movement_labor = { # Explicitly non-socialist labour movement
 
 	creation_trigger = {
 		has_technology_researched = labor_movement
+		# Intentionally not modernisation-gated, if someone manages to proletarianise without modernising this should have consequences
 	}
 	creation_weight = {
 		value = 100
@@ -2427,6 +2473,7 @@ REPLACE_OR_CREATE:movement_socialist = {
 
 	creation_trigger = {
 		has_technology_researched = socialism
+		country_should_exclusively_focus_on_modernization = no
 	}
 	creation_weight = {
 		value = 100
@@ -2827,6 +2874,23 @@ REPLACE_OR_CREATE:movement_socialist = {
 				multiply = 0.03
 				min = 0
 			}
+
+			if = {
+				limit = {
+					has_law_or_variant = law_type:law_factory_councils
+				}
+
+				if = {
+					limit = {
+						country_is_abolishing_factory_councils = yes
+					}
+
+					add = {
+						value = 0.25
+						desc = "FACTORY_COUNCILS_BEING_ABOLISHED"
+					}
+				}
+			}
 		}
 		
 		if = {
@@ -2851,6 +2915,444 @@ REPLACE_OR_CREATE:movement_socialist = {
 	}
 }
 
+REPLACE_OR_CREATE:movement_anarchist = {
+	category = movement_category_ideological
+
+	active_law_radicalism_multiplier = 0.75
+
+	ideology = ideology_anarchist_movement
+	character_ideologies = {
+		ideology_anarchist
+	}
+
+	creation_trigger = {
+		has_technology_researched = anarchism
+		country_should_exclusively_focus_on_modernization = no
+	}
+	creation_weight = {
+		value = 100
+		if = {
+			limit = {
+				owner ?= { # If a movement of this type exists in a neighbouring country, make it more likely to spawn here as well
+					any_neighbouring_state = {
+						owner = {
+							prestige > ROOT.owner.prestige
+							any_political_movement = {
+								is_political_movement_type = movement_anarchist
+							}
+						}
+					}
+				}
+			}
+			multiply = {
+				value = 2
+			}
+		}
+		if = { # To make this more visible
+			limit = {
+				country_has_primary_culture = cu:spanish
+			}
+			multiply = {
+				value = 5
+			}
+		}
+	}
+	on_created = {
+		add_movement_enthusiasm_modifier = yes
+	}
+
+	character_support_trigger = {
+		OR = {
+			has_ideology = ideology:ideology_anarchist
+			has_ideology = ideology:ideology_utopian
+			AND = {
+				is_interest_group_type = ig_trade_unions
+				has_ideology = ideology:ideology_humanitarian
+			}
+		}
+	}
+	character_support_weight = {
+		value = 200
+		if = {
+			limit = {
+				has_ideology = ideology:ideology_anarchist
+			}
+			multiply = {
+				value = 5
+			}
+		}
+	}
+
+	pop_support_trigger = {
+		NOR = {
+			is_pop_type = capitalists
+			is_pop_type = aristocrats
+			is_pop_type = slaves
+		}
+	}
+
+	pop_support_factors = {
+		movement_support_low_urbanization
+		movement_support_high_literacy
+		movement_support_below_expected_sol
+		movement_support_radicalization
+		movement_support_laborers
+		movement_support_machinists
+		movement_support_tenant_farmers_law
+		movement_support_rural
+		movement_support_soldiers_conscripts
+	}
+
+	pop_support_weight = {
+		if = {
+			limit = {
+				exists = scope:political_movement
+				scope:political_movement ?= {
+						OR = {
+							is_being_suppressed = yes
+							is_being_bolstered = yes
+						}
+					}
+				}
+			if = {
+				limit = {
+					scope:political_movement = {
+						is_being_suppressed = yes
+					}
+				}
+				add = {
+					value = suppression_base_value
+					multiply = {
+						value = -0.5
+						add = owner.modifier:country_suppression_attraction_factor
+					}
+					desc = "concept_suppressed"
+				}
+			}
+			else = {
+				add = {
+					value = bolstering_base_value
+					multiply = {
+						value = 0.5
+						add = owner.modifier:country_bolster_attraction_factor
+					}
+					desc = "concept_bolstered"
+				}
+			}
+		}
+
+		if = {
+			limit = {
+				strata = middle
+			}
+			if = {
+				limit = {
+					is_pop_type = academics
+				}
+				add = {
+					value = 3
+					desc = "POP_ACADEMICS"
+				}
+			}
+			else_if = {
+				limit = {
+					is_pop_type = shopkeepers # Surprisingly common
+					standard_of_living < state.average_expected_sol
+				}
+				add = {
+					value = 3
+					desc = "POP_SHOPKEEPERS"
+				}
+			}
+			else = {
+				multiply = {
+					value = 0.10
+					desc = "MIDDLE_NO_ICON"
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				strata = lower
+			}
+			if = {
+				limit = {
+					is_pop_type = laborers
+				}
+				add = {
+					value = 12
+					desc = "POP_LABORERS"
+				}
+			}
+			else_if = {
+				limit = {
+					is_pop_type = machinists
+				}
+				add = {
+					value = 8
+					desc = "POP_MACHINISTS"
+				}
+			}
+			else_if = {
+				limit = {
+					is_pop_type = peasants
+					owner = {
+						has_law_or_variant = law_type:law_tenant_farmers
+					}
+				}
+				add = {
+					value = 10
+					desc = "POP_PEASANTS_TENANT_FARMERS"
+				}
+			}
+			else = {
+				add = {
+					value = 6
+					desc = "LOWER_NO_ICON"
+				}
+			}
+			if = {
+				limit = {
+					OR = {
+						pop_employment_building_group = bg_agriculture
+						pop_employment_building_group = bg_ranching
+						pop_employment_building_group = bg_plantations
+						pop_employment_building_group = bg_logging
+						pop_employment_building_group = bg_fishing
+						pop_employment_building_group = bg_whaling
+						pop_employment_building_group = bg_manor_houses
+					}
+				}
+				multiply = {
+					value = 1.25
+					desc = "RURAL_POP"
+				}
+			}
+
+			if = {
+				limit = {
+					AND = {
+						is_pop_type = soldiers
+						pop_employment_building = building_conscription_center
+					}
+				}
+				multiply = {
+					value = 1.15
+					desc = "CONSCRIPTS"
+				}
+			}
+		}
+
+		if = {
+			limit = {
+				standard_of_living < state.average_expected_sol
+				strata = lower # Impoverished middle class pops will support fascists instead
+			}
+			add = { # Increases likelihood of support if impoverished
+				desc = "IS_BELOW_EXPECTED_SOL"
+				value = state.average_expected_sol
+				subtract = standard_of_living
+				max = 15
+			}
+
+			if = {
+				limit = {
+					owner = {
+						NOR = {
+							has_law_or_variant = law_type:law_homesteading
+							has_law_or_variant = law_type:law_collectivized_agriculture
+						}
+					}
+				}
+				multiply = 1.5
+			}
+			if = {
+				limit = {
+					owner = {
+						NOR = {
+							has_law_or_variant = law_type:law_anarchy
+							has_law_or_variant = law_type:law_universal_suffrage
+						}
+					}
+				}
+				multiply = 1.5
+			}
+		}
+		else_if = {
+			limit = {
+				standard_of_living > state.average_expected_sol
+				strata = lower
+			}
+			add = { # Decreases likelihood of support if well-off
+				desc = "IS_ABOVE_EXPECTED_SOL"
+				value = state.average_expected_sol
+				subtract = standard_of_living
+			}
+		}
+
+		multiply = { # Illiterate pops participate at 1/10 the rate of fully literate pops
+			desc = "POP_LITERACY"
+			value = literacy_rate
+			add = 0.10
+		}
+
+		multiply = { # Multiplied by 2x max
+			desc = "POP_RADICALS"
+			value = pop_radical_fraction
+			add = 1
+		}
+
+		if = {
+			limit = {
+				NOT = {
+					owner = {
+						has_law = law_type:law_council_republic
+					}
+				}
+			}
+			multiply = { # Multiplied by 2x max
+				desc = "POP_LOYALISTS"
+				value = 1
+				subtract = pop_loyalist_fraction
+			}
+		}
+	}
+
+	revolution = {
+		possible = {
+			political_movement_support >= 0.05
+		}
+
+		weight = {
+			value = 100
+		}
+
+		state_weight = {
+			value = 1
+			
+			# Grey_PLP
+			multiply = {
+				value = mog_plp_movement_all_general_state_weight_mult
+			}
+		}
+	}
+
+	secession = {
+		possible = {
+			political_movement_support >= 0.05
+			OR = {
+				scope:clout <= 0
+				trigger_if = {
+					NOT = {
+						owner = {
+							has_journal_entry = je_spanish_anarchism # So the Spanish anarchists will always launch a revolution if possible
+						}
+					}
+					AND = {
+						scope:clout > 0
+						scope:clout <= 0.15
+						owner ?= {
+							NOR = {
+								has_law_or_variant = law_type:law_council_republic
+								is_enacting_law = law_type:law_council_republic
+								is_enacting_law = law_type:law_anarchy
+								any_interest_group = {
+									is_in_government = yes
+									leader ?= {
+										has_ideology = ideology:ideology_anarchist
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+
+		weight = {
+			value = 1000
+		}
+
+		state_weight = {
+			value = 1
+			
+			# Grey_PLP
+			multiply = {
+				value = mog_plp_movement_all_general_state_weight_mult
+			}
+		}
+	}
+
+	additional_radicalism_factors = {
+		owner = {
+			add = {
+				desc = "IS_BELOW_15_SOL"
+				value = 15
+				subtract = average_sol
+				multiply = 0.015
+				min = 0
+			}
+
+			if = {
+				limit = {
+					has_law_or_variant = law_type:law_factory_councils
+				}
+
+				if = {
+					limit = {
+						country_is_abolishing_factory_councils = yes
+					}
+
+					add = {
+						value = 0.25
+						desc = "FACTORY_COUNCILS_BEING_ABOLISHED"
+					}
+				}
+			}
+		}
+
+		if = {
+			limit = {
+				owner = {
+					any_neighbouring_state = {
+						owner = {
+							NOT = { THIS = ROOT.owner }
+							any_political_movement = {
+								is_political_movement_type = movement_anarchist
+								is_insurrectionary = yes
+							}
+						}
+					}
+				}
+			}
+			add = {
+				desc = "NEIGHBOURING_COUNTRY_WITH_REVOLUTION"
+				value = 0.15
+			}
+		}
+
+		if = { # Support translates 2:1 to Activism
+			limit = {
+				owner = {
+					NAND = {
+						has_law = law_type:law_council_republic
+						has_law = law_type:law_factory_councils
+					}
+					any_political_movement = {
+						is_political_movement_type = movement_anarchist
+					}
+				}
+			}
+			add = {
+				desc = "ANARCHIST_MOVEMENT_REVOLUTIONARISM"
+				value = this.political_movement_support
+				divide = 2
+				max = 0.25
+			}
+		}
+	}
+}
+
 REPLACE_OR_CREATE:movement_communist = {
 	category = movement_category_ideological
 
@@ -2862,6 +3364,7 @@ REPLACE_OR_CREATE:movement_communist = {
 
 	creation_trigger = {
 		has_technology_researched = socialism
+		country_should_exclusively_focus_on_modernization = no
 	}
 	creation_weight = {
 		value = 100
@@ -3116,6 +3619,21 @@ REPLACE_OR_CREATE:movement_communist = {
 			add = 1
 		}
 
+		if = {
+			limit = {
+				NOT = {
+					owner = {
+						has_law = law_type:law_council_republic
+					}
+				}
+			}
+			multiply = { # Multiplied by 2x max
+				desc = "POP_LOYALISTS"
+				value = 1
+				subtract = pop_loyalist_fraction
+			}
+		}
+
 		# Grey_PLP
 		multiply = {
 			value = mog_plp_movement_mainland_general_pop_support_weight_incorporation_percent_mult
@@ -3130,6 +3648,15 @@ REPLACE_OR_CREATE:movement_communist = {
 		weight = {
 			value = 100
 		}
+
+		state_weight = {
+			value = 1
+			
+			# Grey_PLP
+			multiply = {
+				value = mog_plp_movement_all_general_state_weight_mult
+			}
+		}
 	}
 
 	secession = {
@@ -3140,6 +3667,15 @@ REPLACE_OR_CREATE:movement_communist = {
 
 		weight = {
 			value = 1000
+		}
+
+		state_weight = {
+			value = 1
+			
+			# Grey_PLP
+			multiply = {
+				value = mog_plp_movement_all_general_state_weight_mult
+			}
 		}
 	}
 
@@ -3159,6 +3695,23 @@ REPLACE_OR_CREATE:movement_communist = {
 				add = {
 					value = 0.1
 					desc = "NO_INSTITUTION_workplace_safety"
+				}
+			}
+
+			if = {
+				limit = {
+					has_law_or_variant = law_type:law_factory_councils
+				}
+
+				if = {
+					limit = {
+						country_is_abolishing_factory_councils = yes
+					}
+
+					add = {
+						value = 0.25
+						desc = "FACTORY_COUNCILS_BEING_ABOLISHED"
+					}
 				}
 			}
 		}
@@ -3182,6 +3735,26 @@ REPLACE_OR_CREATE:movement_communist = {
 				value = 0.15
 			}
 		}
+
+		if = { # Support translates 2:1 to Activism
+			limit = {
+				owner = {
+					NAND = {
+						has_law = law_type:law_council_republic
+						has_law = law_type:law_factory_councils
+					}
+					any_political_movement = {
+						is_political_movement_type = movement_communist
+					}
+				}
+			}
+			add = {
+				desc = "COMMUNIST_MOVEMENT_REVOLUTIONARISM"
+				value = this.political_movement_support
+				divide = 2
+				max = 0.25
+			}
+		}
 	}
 }
 
@@ -3200,6 +3773,7 @@ REPLACE_OR_CREATE:movement_fascist = {
 
 	creation_trigger = {
 		has_technology_researched = political_agitation
+		country_should_exclusively_focus_on_modernization = no
 	}
 	creation_weight = {
 		value = 100
@@ -3223,17 +3797,15 @@ REPLACE_OR_CREATE:movement_fascist = {
 	}
 	on_created = {
 		add_movement_enthusiasm_modifier = yes
-		owner ?= {
-			if = {
-				limit = {
+		if = {
+			limit = {
+				owner ?= {
 					any_primary_culture = {
 						has_discrimination_trait = language_lusophone
 					}
 				}
-				prev = {
-					set_core_ideology = ideology_integralist_movement
-				}
 			}
+			set_core_ideology = ideology_integralist_movement
 		}
 	}
 
@@ -3345,7 +3917,7 @@ REPLACE_OR_CREATE:movement_fascist = {
 					is_pop_type = capitalists
 				}
 				add = {
-					value = 7
+					value = 12
 					desc = "POP_CAPITALISTS"
 				}
 			}
@@ -3354,13 +3926,13 @@ REPLACE_OR_CREATE:movement_fascist = {
 					is_pop_type = aristocrats
 				}
 				add = {
-					value = 2
+					value = 5
 					desc = "POP_ARISTOCRATS" # Fascism is too populist
 				}
 			}
 			else = {
 				add = {
-					value = 4
+					value = 5
 					desc = "UPPER_NO_ICON"
 				}
 			}
@@ -3373,14 +3945,47 @@ REPLACE_OR_CREATE:movement_fascist = {
 								is_political_movement_type = movement_socialist
 								is_political_movement_type = movement_anarchist
 								is_political_movement_type = movement_communist
+								is_political_movement_type = movement_labor
+								is_political_movement_type = movement_nihilist
 							}
 							political_movement_support >= 0.10 # (chuckles) im in danger
 						}
 					}
 				}
 				multiply = {
-					value = 1.5
 					desc = "STRONG_SOCIALIST_MOVEMENT"
+					value = 1.5
+					owner ?= {
+						every_political_movement = {
+							limit = {
+								OR = {
+									is_political_movement_type = movement_socialist
+									is_political_movement_type = movement_anarchist
+									is_political_movement_type = movement_communist
+									is_political_movement_type = movement_labor
+									is_political_movement_type = movement_nihilist
+								}
+							}
+							add = this.political_movement_radicalism
+						}
+					}
+				}
+			}
+			if = {
+				limit = {
+					owner = {
+						number_of_claims > 0
+					}
+				}
+
+				add = {
+					value = culture.culture_current_fervor # Add a base value for having claims at all
+					divide = 100 # Culture is 1-100
+					multiply = {
+						value = owner.number_of_claims
+					}
+					max = 10
+					desc = "NUMBER_OF_CLAIMS"
 				}
 			}
 		}
@@ -3399,10 +4004,19 @@ REPLACE_OR_CREATE:movement_fascist = {
 			}
 			else_if = {
 				limit = {
+					is_pop_type = bureaucrats
+				}
+				add = {
+					value = 8
+					desc = "POP_BUREAUCRATS"
+				}
+			}
+			else_if = {
+				limit = {
 					is_pop_type = officers
 				}
 				add = {
-					value = 10
+					value = 8
 					desc = "POP_OFFICERS"
 				}
 			}
@@ -3411,13 +4025,13 @@ REPLACE_OR_CREATE:movement_fascist = {
 					is_pop_type = farmers
 				}
 				add = {
-					value = 10
+					value = 5
 					desc = "POP_FARMERS"
 				}
 			}
 			else = {
 				add = {
-					value = 7
+					value = 4
 					desc = "MIDDLE_NO_ICON"
 				}
 			}
@@ -3430,14 +4044,46 @@ REPLACE_OR_CREATE:movement_fascist = {
 								is_political_movement_type = movement_socialist
 								is_political_movement_type = movement_anarchist
 								is_political_movement_type = movement_communist
+								is_political_movement_type = movement_labor
+								is_political_movement_type = movement_nihilist
 							}
 							political_movement_support >= 0.10
 						}
 					}
 				}
 				multiply = {
-					value = 1.25
 					desc = "STRONG_SOCIALIST_MOVEMENT"
+					value = 1
+					owner ?= {
+						every_political_movement = {
+							limit = {
+								OR = {
+									is_political_movement_type = movement_socialist
+									is_political_movement_type = movement_anarchist
+									is_political_movement_type = movement_communist
+									is_political_movement_type = movement_labor
+									is_political_movement_type = movement_nihilist
+								}
+							}
+							add = this.political_movement_radicalism
+						}
+					}
+				}
+			}
+			if = {
+				limit = {
+					owner = {
+						number_of_claims > 0
+					}
+				}
+				add = {
+					value = culture.culture_current_fervor # Add a base value for having claims at all
+					divide = 100 # Culture is 1-100
+					multiply = {
+						value = owner.number_of_claims
+					}
+					max = 10
+					desc = "NUMBER_OF_CLAIMS"
 				}
 			}
 		}
@@ -3450,7 +4096,7 @@ REPLACE_OR_CREATE:movement_fascist = {
 					is_pop_type = clerks
 				}
 				add = {
-					value = 9
+					value = 5
 					desc = "POP_CLERKS"
 				}
 			}
@@ -3459,31 +4105,33 @@ REPLACE_OR_CREATE:movement_fascist = {
 					is_pop_type = soldiers
 				}
 				add = {
-					value = 6
+					value = 3
 					desc = "POP_SOLDIERS"
 				}
 			}
 			else = {
 				add = {
-					value = 3
+					value = 2
 					desc = "LOWER_NO_ICON"
 				}
 			}
-		}
-
-		owner = {
 			if = {
 				limit = {
-					number_of_claims > 0
-				}
-
-				add = {
-					value = 5 # Add a base value for having claims at all
-					add = {
-						value = number_of_claims
-						multiply = 5
+					OR = {
+						is_pop_type = clerks
+						is_pop_type = soldiers
 					}
-					max = 25
+					owner = {
+						number_of_claims > 0
+					}
+				}
+				add = {
+					value = culture.culture_current_fervor # Add a base value for having claims at all
+					divide = 125 # Culture is 1-100
+					multiply = {
+						value = owner.number_of_claims
+					}
+					max = 5
 					desc = "NUMBER_OF_CLAIMS"
 				}
 			}
@@ -3492,7 +4140,10 @@ REPLACE_OR_CREATE:movement_fascist = {
 		if = {
 			limit = {
 				standard_of_living < state.average_expected_sol
-				strata = middle
+				OR = {
+					strata = middle
+					strata = upper
+				}
 			}
 			add = { # Increases likelihood of support if impoverished
 				desc = "IS_BELOW_EXPECTED_SOL"
@@ -3504,7 +4155,10 @@ REPLACE_OR_CREATE:movement_fascist = {
 		else_if = {
 			limit = {
 				standard_of_living > state.average_expected_sol
-				strata = middle
+				OR = {
+					strata = middle
+					strata = upper
+				}
 			}
 			add = { # Decreases likelihood of support if well-off
 				desc = "IS_ABOVE_EXPECTED_SOL"
@@ -3531,9 +4185,33 @@ REPLACE_OR_CREATE:movement_fascist = {
 		}
 
 		multiply = {
-			value = 0.012
+			value = 0.011
 			multiply = pop_acceptance
 			desc = "ACCEPTANCE"
+		}
+
+		if = {
+			limit = {
+				OR = {
+					strata = upper
+					strata = middle
+					is_pop_type = clerks
+				}
+			}
+			multiply = { # Multiplied by 2x max
+				desc = "POP_RADICALS"
+				value = pop_radical_fraction
+				multiply = 2
+				add = 1
+			}
+		}
+		else = {
+			multiply = { # Multiplied by 1.5x max
+				desc = "POP_RADICALS"
+				value = pop_radical_fraction
+				divide = 2
+				add = 1
+			}
 		}
 
 		# Grey_PLP
@@ -3569,6 +4247,15 @@ REPLACE_OR_CREATE:movement_fascist = {
 
 		weight = {
 			value = 1000
+		}
+
+		state_weight = {
+			value = 1
+			
+			# Grey_PLP
+			multiply = {
+				value = mog_plp_movement_all_general_state_weight_mult
+			}
 		}
 	}
 
@@ -3608,6 +4295,24 @@ REPLACE_OR_CREATE:movement_fascist = {
 				value = 0.15
 			}
 		}
+
+		if = { # Support translates 1:1 to Activism
+			limit = {
+				owner = {
+					NAND = {
+						has_law = law_type:law_single_party_state
+						ruler.interest_group.party ?= {
+							is_party_type = fascist_party
+						}
+					}
+				}
+			}
+			add = {
+				desc = "FASCIST_MOVEMENT_WILL_TO_POWER"
+				add = this.political_movement_support
+				max = 0.5
+			}
+		}
 	}
 }
 
@@ -3621,6 +4326,7 @@ REPLACE_OR_CREATE:movement_corporatist = {
 
 	creation_trigger = {
 		has_technology_researched = corporatism
+		country_should_exclusively_focus_on_modernization = no
 	}
 	creation_weight = {
 		value = 100
@@ -3968,6 +4674,15 @@ REPLACE_OR_CREATE:movement_corporatist = {
 		weight = {
 			value = 1000
 		}
+
+		state_weight = {
+			value = 1
+			
+			# Grey_PLP
+			multiply = {
+				value = mog_plp_movement_all_general_state_weight_mult
+			}
+		}
 	}
 
 	additional_radicalism_factors = {
@@ -4026,12 +4741,13 @@ REPLACE_OR_CREATE:movement_liberal = {
 
 	creation_trigger = {
 		has_technology_researched = democracy
+		country_should_exclusively_focus_on_modernization = no
 	}
 	creation_weight = {
 		value = 100
 		if = {
 			limit = {
-				has_law_or_variant = law_type:law_monarchy
+				has_law = law_type:law_monarchy
 				country_has_voting_franchise = no
 			}
 			multiply = {
@@ -4400,6 +5116,34 @@ REPLACE_OR_CREATE:movement_liberal = {
 				}
 			}
 		}
+		if = {
+			limit = {
+				owner ?= { has_journal_entry = je_devorismo }
+			}
+			add = {
+				value = 0.2
+				desc = "je_devorismo"
+			}
+		}
+
+		if = {
+			limit = {
+				owner ?= {
+					country_has_voting_franchise = yes
+					electoral_confidence < 0.9
+				}
+			}
+			add = {
+				value = 1
+				subtract = owner.electoral_confidence
+				divide = 5
+				multiply = {
+					value = 1
+					add = owner.modifier:country_electoral_confidence_impact_mult
+				}
+				desc = "low_electoral_confidence"
+			}
+		}
 		
 		if = {
 			limit = {
@@ -4474,7 +5218,7 @@ REPLACE_OR_CREATE:movement_radical = {
 		value = 100
 		if = {
 			limit = {
-				has_law_or_variant = law_type:law_monarchy
+				has_law = law_type:law_monarchy
 				country_has_voting_franchise = no
 			}
 			multiply = {
@@ -4870,7 +5614,22 @@ REPLACE_OR_CREATE:movement_radical = {
 				}
 			}
 		}
-		
+
+		if = {
+			limit = {
+				owner ?= {
+					country_has_voting_franchise = yes
+					electoral_confidence < 0.9
+				}
+			}
+			add = {
+				value = 1
+				subtract = owner.electoral_confidence
+				divide = 5
+				desc = "low_electoral_confidence"
+			}
+		}
+
 		if = {
 			limit = {
 				owner = {
@@ -4888,6 +5647,277 @@ REPLACE_OR_CREATE:movement_radical = {
 			add = {
 				desc = "NEIGHBOURING_COUNTRY_WITH_REVOLUTION"
 				value = 0.15
+			}
+		}
+	}
+}
+
+REPLACE_OR_CREATE:movement_nihilist = {
+	category = movement_category_ideological
+
+	# Nihilists pretty much only care about their atheist thing
+	law_enactment_radicalism_multiplier = 1.5
+
+	ideology = ideology_nihilist_movement
+	character_ideologies = {
+		ideology_nihilist
+	}
+
+	creation_trigger = {
+		has_technology_researched = realism
+		NAND = {
+			has_technology_researched = anarchism
+			has_technology_researched = socialism
+		}
+	}
+	creation_weight = {
+		value = 100
+		if = {
+			limit = {
+				owner ?= { # If a movement of this type exists in a neighbouring country, make it more likely to spawn here as well
+					any_neighbouring_state = {
+						owner = {
+							prestige > ROOT.owner.prestige
+							any_political_movement = {
+								is_political_movement_type = movement_nihilist
+							}
+						}
+					}
+				}
+			}
+			multiply = {
+				value = 2
+			}
+		}
+	}
+	on_created = {
+		add_movement_enthusiasm_modifier = yes
+	}
+	disband_trigger = {
+		AND = {
+			has_technology_researched = anarchism
+			has_technology_researched = socialism
+		}
+	}
+	on_disbanded = {
+		if = {
+			limit = {
+				owner ?= {
+					NOT = {
+						any_political_movement = {
+							is_political_movement_type = movement_socialist
+						}
+					}
+				}
+			}
+			owner ?= {
+				create_political_movement = { type = movement_socialist }
+			}
+		}
+	}
+
+	character_support_trigger = {
+		OR = {
+			has_ideology = ideology:ideology_nihilist
+			has_ideology = ideology:ideology_positivist
+			has_ideology = ideology:ideology_communist # If you somehow get communists and friends early
+			has_ideology = ideology:ideology_vanguardist
+			has_ideology = ideology:ideology_anarchist
+		}
+	}
+	character_support_weight = {
+		value = 200
+		if = {
+			limit = {
+				has_ideology = ideology:ideology_nihilist
+			}
+			multiply = {
+				value = 5
+			}
+		}
+	}
+
+	pop_support_trigger = {
+		NOR = {
+			is_pop_type = peasants
+			is_pop_type = aristocrats
+			is_pop_type = clergymen
+			is_pop_type = slaves
+		}
+	}
+
+	pop_support_factors = {
+		movement_support_high_urbanization
+		movement_support_high_literacy
+		movement_support_radicalization
+		movement_support_shopkeepers
+		movement_support_academics
+		movement_support_bureaucrats
+		movement_support_clerks
+		movement_support_machinists
+		movement_support_peasants
+	}
+
+	pop_support_weight = {
+		if = {
+			limit = {
+				exists = scope:political_movement
+				scope:political_movement ?= {
+						OR = {
+							is_being_suppressed = yes
+							is_being_bolstered = yes
+						}
+					}
+				}
+			if = {
+				limit = {
+					scope:political_movement = {
+						is_being_suppressed = yes
+					}
+				}
+				add = {
+					value = suppression_base_value
+					multiply = {
+						value = -0.5
+						add = owner.modifier:country_suppression_attraction_factor
+					}
+					desc = "concept_suppressed"
+				}
+			}
+			else = {
+				add = {
+					value = bolstering_base_value
+					multiply = {
+						value = 0.5
+						add = owner.modifier:country_bolster_attraction_factor
+					}
+					desc = "concept_bolstered"
+				}
+			}
+		}
+
+		add = {
+			desc = "URBAN_STATE"
+			value = 10
+			multiply = state.state_urbanization_rate
+		}
+
+		if = {
+			limit = {
+				strata = upper
+			}
+			multiply = {
+				value = 0.05
+				desc = "UPPER_NO_ICON"
+			}
+		}
+		else_if = {
+			limit = {
+				strata = middle
+			}
+			if = {
+				limit = {
+					is_pop_type = academics
+				}
+				add = {
+					value = 30
+					desc = "POP_ACADEMICS"
+				}
+			}
+			else_if = {
+				limit = {
+					is_pop_type = bureaucrats
+				}
+				add = {
+					value = 6
+					desc = "POP_BUREAUCRATS"
+				}
+			}
+			else = {
+				add = {
+					value = 3
+					desc = "MIDDLE_NO_ICON"
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				strata = lower
+			}
+			if = {
+				limit = {
+					is_pop_type = clerks
+				}
+				add = {
+					value = 10
+					desc = "POP_CLERKS"
+				}
+			}
+			else_if = {
+				limit = {
+					is_pop_type = machinists
+				}
+				add = {
+					value = 6
+					desc = "POP_MACHINISTS"
+				}
+			}
+			else = {
+				add = {
+					value = 3
+					desc = "LOWER_NO_ICON"
+				}
+			}
+		}
+
+		multiply = { # Illiterate pops participate at 1/10 the rate of fully literate pops
+			desc = "POP_LITERACY"
+			value = literacy_rate
+			add = 0.10
+		}
+
+		multiply = { # Multiplied by 2x max
+			desc = "POP_RADICALS"
+			value = pop_radical_fraction
+			add = 1
+		}
+	}
+
+	revolution = {
+		possible = {
+			political_movement_support >= 0.05
+		}
+
+		weight = {
+			value = 100
+		}
+
+		state_weight = {
+			value = state_urbanization_rate
+
+			# Grey_PLP
+			multiply = {
+				value = mog_plp_movement_all_general_state_weight_mult
+			}
+		}
+	}
+
+	secession = {
+		possible = {
+			political_movement_support >= 0.05
+			scope:clout <= 0
+		}
+
+		weight = {
+			value = 1000
+		}
+
+		state_weight = {
+			value = state_urbanization_rate
+
+			# Grey_PLP
+			multiply = {
+				value = mog_plp_movement_all_general_state_weight_mult
 			}
 		}
 	}
@@ -5283,6 +6313,15 @@ REPLACE_OR_CREATE:movement_positivist = {
 		weight = {
 			value = 1000
 		}
+
+		state_weight = {
+			value = 1
+			
+			# Grey_PLP
+			multiply = {
+				value = mog_plp_movement_all_general_state_weight_mult
+			}
+		}
 	}
 
 	additional_radicalism_factors = {
@@ -5294,6 +6333,627 @@ REPLACE_OR_CREATE:movement_positivist = {
 							NOT = { THIS = ROOT.owner }
 							any_political_movement = {
 								is_political_movement_type = movement_nihilist
+								is_insurrectionary = yes
+							}
+						}
+					}
+				}
+			}
+			add = {
+				desc = "NEIGHBOURING_COUNTRY_WITH_REVOLUTION"
+				value = 0.15
+			}
+		}
+	}
+}
+
+REPLACE_OR_CREATE:
+movement_land_reform = {
+	category = movement_category_ideological
+
+	# Pretty much a single issue movement
+	law_enactment_radicalism_multiplier = 1.5
+	active_law_radicalism_multiplier = 1.5
+
+	ideology = ideology_land_reformer_movement
+	character_ideologies = {
+		ideology_land_reformer
+		ideology_luddite
+	}
+
+	creation_trigger = {
+		has_technology_researched = enclosure
+		NOR = {
+			has_law_or_variant = law_type:law_homesteading
+			has_law_or_variant = law_type:law_collectivized_agriculture
+		}
+		pop_type_percent_country = {
+			pop_type = peasants
+			percent > 0.25
+		}
+	}
+	creation_weight = {
+		value = 100
+		if = {
+			limit = {
+				owner ?= { # If a movement of this type exists in a neighbouring country, make it more likely to spawn here as well
+					any_neighbouring_state = {
+						owner = {
+							prestige > ROOT.owner.prestige
+							any_political_movement = {
+								is_political_movement_type = movement_land_reform
+							}
+						}
+					}
+				}
+			}
+			multiply = {
+				value = 2
+			}
+		}
+	}
+	on_created = {
+		add_movement_enthusiasm_modifier = yes
+	}
+
+	character_support_trigger = {
+		OR = {
+			has_ideology = ideology:ideology_land_reformer
+			has_ideology = ideology:ideology_luddite
+			has_ideology = ideology:ideology_anarchist
+			has_ideology = ideology:ideology_communist
+			has_ideology = ideology:ideology_vanguardist
+			has_ideology = ideology:ideology_abolitionist
+			is_interest_group_type = ig_rural_folk
+		}
+	}
+	character_support_weight = {
+		value = 50
+		if = {
+			limit = {
+					has_ideology = ideology:ideology_land_reformer
+				}
+			multiply = {
+				value = 10
+			}
+		}
+		if = {
+			limit = {
+				has_ideology = ideology:ideology_luddite
+			}
+			multiply = {
+				value = 5
+			}
+		}
+		if = {
+			limit = {
+				scope:interest_group ?= {
+					is_interest_group_type = ig_rural_folk
+				}
+			}
+			multiply = {
+				value = 2
+			}
+		}
+	}
+
+	pop_support_trigger = {
+		NOR = {
+			is_pop_type = aristocrats
+			is_pop_type = slaves
+		}
+	}
+
+	pop_support_factors = {
+		movement_support_low_urbanization
+		movement_support_high_literacy
+		movement_support_below_expected_sol
+		movement_support_farmers
+		movement_support_laborers
+		movement_support_peasants
+	}
+
+	pop_support_weight = {
+		if = {
+			limit = {
+				exists = scope:political_movement
+				scope:political_movement ?= {
+						OR = {
+							is_being_suppressed = yes
+							is_being_bolstered = yes
+						}
+					}
+				}
+			if = {
+				limit = {
+					scope:political_movement = {
+						is_being_suppressed = yes
+					}
+				}
+				add = {
+					value = suppression_base_value
+					multiply = {
+						value = -0.5
+						add = owner.modifier:country_suppression_attraction_factor
+					}
+					desc = "concept_suppressed"
+				}
+			}
+			else = {
+				add = {
+					value = bolstering_base_value
+					multiply = {
+						value = 0.5
+						add = owner.modifier:country_bolster_attraction_factor
+					}
+					desc = "concept_bolstered"
+				}
+			}
+		}
+
+		if = {
+			limit = {
+				strata = middle
+			}
+			multiply = {
+				value = 0.5
+				desc = "MIDDLE_NO_ICON"
+			}
+			if = {
+				limit = {
+					is_pop_type = farmers
+				}
+				add = {
+					value = 6
+					desc = "POP_FARMERS"
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				strata = lower
+			}
+			if = {
+				limit = {
+					is_pop_type = laborers
+				}
+				add = {
+					value = 6
+					desc = "POP_LABORERS"
+				}
+			}
+			else_if = {
+				limit = {
+					is_pop_type = peasants
+				}
+				add = {
+					value = 25
+					desc = "POP_PEASANTS"
+				}
+			}
+			else = {
+				add = {
+					value = 6
+					desc = "LOWER_NO_ICON"
+				}
+			}
+			if = {
+				limit = {
+					NOT = { is_pop_type = peasants } # Peasants already count this
+					OR = {
+						pop_employment_building_group = bg_agriculture
+						pop_employment_building_group = bg_ranching
+						pop_employment_building_group = bg_plantations
+						pop_employment_building_group = bg_logging
+						pop_employment_building_group = bg_fishing
+						pop_employment_building_group = bg_whaling
+						pop_employment_building_group = bg_manor_houses
+					}
+				}
+				multiply = {
+					value = 1.25
+					desc = "RURAL_POP"
+				}
+			}
+		}
+
+		add = {
+			desc = "URBAN_STATE" # Increases support in rural states, decreases in urban
+			value = 0.5
+			subtract = state.state_urbanization_rate
+			multiply = 10
+		}
+
+		if = {
+			limit = {
+				standard_of_living < state.average_expected_sol
+			}
+			add = { # Increases likelihood of support if impoverished
+				desc = "IS_BELOW_EXPECTED_SOL"
+				value = state.average_expected_sol
+				subtract = standard_of_living
+				max = 10
+			}
+		}
+		else_if = {
+			limit = {
+				standard_of_living > state.average_expected_sol
+			}
+			add = { # Decreases likelihood of support if well-off
+				desc = "IS_ABOVE_EXPECTED_SOL"
+				value = state.average_expected_sol
+				subtract = standard_of_living
+				min = -5
+			}
+		}
+
+		multiply = { # Illiterate pops participate at 1/4 the rate of fully literate pops
+			desc = "POP_LITERACY"
+			value = literacy_rate
+			add = 0.25
+			max = 1.1 # Needs a less high literacy rate to get started, but caps out the same as other movements
+		}
+
+		multiply = { # Multiplied by 1.25x max
+			desc = "POP_RADICALS"
+			value = pop_radical_fraction
+			divide = 4
+			add = 1
+		}
+	}
+
+	revolution = {
+		possible = {
+			political_movement_support >= 0.05
+		}
+
+		weight = {
+			value = 100
+		}
+
+		state_weight = {
+			value = 1.5
+
+			subtract = state_urbanization_rate
+
+			# Grey_PLP
+			multiply = {
+				value = mog_plp_movement_all_general_state_weight_mult
+			}
+		}
+	}
+
+	secession = {
+		possible = {
+			political_movement_support >= 0.05
+			OR = {
+				scope:clout <= 0
+				AND = {
+					scope:clout > 0
+					scope:clout < 0.15
+					owner ?= {
+						country_has_voting_franchise = no
+						NOT = {
+							any_interest_group = {
+								is_in_government = yes
+								law_stance = {
+									law = law_type:law_homesteading
+									value > neutral
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+
+		weight = {
+			value = 1000
+		}
+
+		state_weight = {
+			value = 1.5
+
+			subtract = state_urbanization_rate
+
+			# Grey_PLP
+			multiply = {
+				value = mog_plp_movement_all_general_state_weight_mult
+			}
+		}
+	}
+
+	additional_radicalism_factors = {
+		if = {
+			limit = {
+				owner = {
+					any_neighbouring_state = {
+						owner = {
+							NOT = { THIS = ROOT.owner }
+							any_political_movement = {
+								is_political_movement_type = movement_land_reform
+								is_insurrectionary = yes
+							}
+						}
+					}
+				}
+			}
+			add = {
+				desc = "NEIGHBOURING_COUNTRY_WITH_REVOLUTION"
+				value = 0.15
+			}
+		}
+	}
+}
+
+REPLACE_OR_CREATE:movement_feminist = {
+	category = movement_category_ideological
+
+	# Pretty much a single issue movement
+	law_enactment_radicalism_multiplier = 1.5
+
+	ideology = ideology_feminist_movement
+	character_ideologies = {
+		ideology_feminist
+		ideology_humanitarian
+	}
+
+	creation_trigger = {
+		has_technology_researched = feminism
+	}
+	creation_weight = {
+		value = 100
+		if = {
+			limit = {
+				owner ?= { # If a movement of this type exists in a neighbouring country, make it more likely to spawn here as well
+					any_neighbouring_state = {
+						owner = {
+							prestige > ROOT.owner.prestige
+							any_political_movement = {
+								is_political_movement_type = movement_feminist
+							}
+						}
+					}
+				}
+			}
+			multiply = {
+				value = 2
+			}
+		}
+	}
+	on_created = {
+		add_movement_enthusiasm_modifier = yes
+	}
+
+	character_support_trigger = {
+			OR = {
+				has_ideology = ideology:ideology_feminist
+				has_ideology = ideology:ideology_humanitarian
+				has_ideology = ideology:ideology_humanitarian_royalist
+				has_ideology = ideology:ideology_reformer
+			scope:interest_group ?= {
+			OR = {
+						has_ideology = ideology:ideology_egalitarian_modern
+						has_ideology = ideology:ideology_liberal_modern
+					}
+				}
+			}
+		}
+	character_support_weight = {
+		value = 200
+		if = {
+			limit = {
+				OR = {
+					has_ideology = ideology:ideology_feminist
+					has_ideology = ideology:ideology_humanitarian
+					has_ideology = ideology:ideology_humanitarian_royalist
+				}
+			}
+			multiply = {
+				value = 5
+			}
+		}
+	}
+
+	pop_support_trigger = {
+		NOT = {
+			is_pop_type = slaves
+		}
+	}
+
+	pop_support_factors = {
+		movement_support_high_urbanization
+		movement_support_high_literacy
+		movement_support_shopkeepers
+		movement_support_academics
+		movement_support_clerks
+		movement_support_machinists
+		movement_support_peasants
+	}
+
+	pop_support_weight = {
+		if = {
+			limit = {
+				exists = scope:political_movement
+				scope:political_movement ?= {
+						OR = {
+							is_being_suppressed = yes
+							is_being_bolstered = yes
+						}
+					}
+				}
+			if = {
+				limit = {
+					scope:political_movement = {
+						is_being_suppressed = yes
+					}
+				}
+				add = {
+					value = suppression_base_value
+					multiply = {
+						value = -0.5
+						add = owner.modifier:country_suppression_attraction_factor
+					}
+					desc = "concept_suppressed"
+				}
+			}
+			else = {
+				add = {
+					value = bolstering_base_value
+					multiply = {
+						value = 0.5
+						add = owner.modifier:country_bolster_attraction_factor
+					}
+					desc = "concept_bolstered"
+				}
+			}
+		}
+
+		add = {
+			desc = "URBAN_STATE"
+			value = 10
+			multiply = state.state_urbanization_rate
+		}
+
+		if = {
+			limit = {
+				strata = upper
+			}
+			add = {
+				value = 6
+				desc = "UPPER_NO_ICON"
+			}
+		}
+		else_if = {
+			limit = {
+				strata = middle
+			}
+			if = {
+				limit = {
+					is_pop_type = shopkeepers
+				}
+				add = {
+					value = 9
+					desc = "POP_SHOPKEEPERS"
+				}
+			}
+			else_if = {
+				limit = {
+					is_pop_type = academics
+				}
+				add = {
+					value = 25
+					desc = "POP_ACADEMICS"
+				}
+			}
+			else = {
+				add = {
+					value = 6
+					desc = "MIDDLE_NO_ICON"
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				strata = lower
+			}
+			if = {
+				limit = {
+					is_pop_type = clerks
+				}
+				add = {
+					value = 3
+					desc = "POP_CLERKS"
+				}
+			}
+			else_if = {
+				limit = {
+					is_pop_type = machinists
+				}
+				add = {
+					value = 6
+					desc = "POP_MACHINISTS"
+				}
+			}
+			else_if = {
+				limit = {
+					is_pop_type = peasants
+				}
+				add = {
+					value = -3
+					desc = "POP_PEASANTS"
+				}
+			}
+			else = {
+				add = {
+					value = 6
+					desc = "LOWER_NO_ICON"
+				}
+			}
+		}
+
+		multiply = { # Illiterate pops participate at 1/10 the rate of fully literate pops
+			desc = "POP_LITERACY"
+			value = literacy_rate
+			add = 0.10
+		}
+
+		multiply = { # Multiplied by 1.25x max
+			desc = "POP_RADICALS"
+			value = pop_radical_fraction
+			divide = 4
+			add = 1
+		}
+	}
+
+	revolution = {
+		possible = {
+			political_movement_support >= 0.05
+		}
+
+		weight = {
+			value = 100
+		}
+
+		state_weight = {
+			value = 1
+			
+			# Grey_PLP
+			multiply = {
+				value = mog_plp_movement_all_general_state_weight_mult
+			}
+		}
+	}
+
+	secession = {
+		possible = {
+			political_movement_support >= 0.05
+			scope:clout <= 0
+		}
+
+		weight = {
+			value = 1000
+		}
+
+		state_weight = {
+			value = 1
+			
+			# Grey_PLP
+			multiply = {
+				value = mog_plp_movement_all_general_state_weight_mult
+			}
+		}
+	}
+
+	additional_radicalism_factors = {
+		if = {
+			limit = {
+				owner = {
+					any_neighbouring_state = {
+						owner = {
+							NOT = { THIS = ROOT.owner }
+							any_political_movement = {
+								is_political_movement_type = movement_feminist
 								is_insurrectionary = yes
 							}
 						}
@@ -5320,19 +6980,16 @@ REPLACE_OR_CREATE:movement_reactionary = {
 	}
 
 	creation_trigger = {
-		NOT = {
-			has_law_or_variant = law_type:law_traditionalism
-			has_law_or_variant = law_type:law_serfdom
-		}
+		country_should_exclusively_focus_on_modernization = no
 		has_law_or_variant = law_type:law_slavery_banned
 		country_has_voting_franchise = yes
 		NOT = { # Reactionary and Legitimist movements cannot co-exist
-			OR = {
-				c:FRA ?= this
-				civil_war_origin_country ?= c:FRA
-			}
 			any_political_movement = {
-				is_political_movement_type = movement_legitimist
+				OR = {
+					is_political_movement_type = movement_legitimist
+					is_political_movement_type = movement_carlist
+					is_political_movement_type = movement_miguelist
+				}
 			}
 		}
 	}
@@ -5672,6 +7329,15 @@ REPLACE_OR_CREATE:movement_reactionary = {
 		weight = {
 			value = 1000
 		}
+
+		state_weight = {
+			value = 1
+			
+			# Grey_PLP
+			multiply = {
+				value = mog_plp_movement_all_general_state_weight_mult
+			}
+		}
 	}
 
 	additional_radicalism_factors = {
@@ -5708,7 +7374,7 @@ REPLACE_OR_CREATE:movement_reactionary = {
 REPLACE_OR_CREATE:movement_modernizer = {
 	category = movement_category_ideological
 
-	ideology = ideology_modernizer_movement
+	ideology = ideology_modernizer_movement_1
 	character_ideologies = {
 		ideology_modernizer_leader
 		ideology_reformer
@@ -5746,17 +7412,21 @@ REPLACE_OR_CREATE:movement_modernizer = {
 	}
 	on_created = {
 		add_movement_enthusiasm_modifier = yes
-	}
-	disband_trigger = {
-		AND = {
-			has_law_or_variant = law_type:law_protectionism
-			OR = {
-				has_law_or_variant = law_type:law_interventionism
-				has_law_or_variant = law_type:law_command_economy
-				has_law_or_variant = law_type:law_laissez_faire
+		if = {
+			limit = {
+				owner = {
+					NAND = {
+						has_law_or_variant = law_type:law_peasant_levies
+						has_law_or_variant = law_type:law_guild_system
+					}
+				}
 			}
-			has_law_or_variant = law_type:law_compulsory_primary_school
+			set_core_ideology = ideology_modernizer_movement_2
 		}
+	}
+
+	disband_trigger = {
+		country_has_laws_in_need_of_modernization = no # The crisis is past
 	}
 
 	character_support_trigger = {
@@ -5811,6 +7481,7 @@ REPLACE_OR_CREATE:movement_modernizer = {
 			limit = {
 				scope:interest_group ?= {
 					OR = {
+						has_ideology = ideology:ideology_cartist
 						has_ideology = ideology:ideology_modernizer
 						has_ideology = ideology:ideology_liberal
 						has_ideology = ideology:ideology_liberal_modern
@@ -5845,6 +7516,8 @@ REPLACE_OR_CREATE:movement_modernizer = {
 		movement_support_engineers
 		movement_support_clerks
 		movement_support_soldiers
+		movement_support_lost_wars
+		movement_support_backwardsness
 	}
 
 	pop_support_weight = {
@@ -5938,6 +7611,17 @@ REPLACE_OR_CREATE:movement_modernizer = {
 					}
 				}
 			}
+			if = {
+				limit = {
+					owner = {
+						has_variable = wargoal_enforced_by_recognized_power
+					}
+				}
+				add = {
+					value = 15
+					desc = "wargoal_pressed_by_recognized_power_tt"
+				}
+			}
 		}
 		else_if = {
 			limit = {
@@ -5985,6 +7669,17 @@ REPLACE_OR_CREATE:movement_modernizer = {
 					desc = "MIDDLE_NO_ICON"
 				}
 			}
+			if = {
+				limit = {
+					owner = {
+						has_variable = wargoal_enforced_by_recognized_power
+					}
+				}
+				add = {
+					value = 10
+					desc = "wargoal_pressed_by_recognized_power_tt"
+				}
+			}
 		}
 		else_if = {
 			limit = {
@@ -6022,6 +7717,15 @@ REPLACE_OR_CREATE:movement_modernizer = {
 			add = 0.10
 		}
 
+		multiply = { # "What are you doing?" factor
+			desc = "BACKWARDSNESS"
+			value = 1
+			add = {
+				value = years_since_game_start
+				divide = 100
+			}
+		}
+
 		# Grey_PLP
 		multiply = {
 			value = mog_plp_movement_mainland_general_pop_support_weight_incorporation_percent_mult
@@ -6056,9 +7760,41 @@ REPLACE_OR_CREATE:movement_modernizer = {
 		weight = {
 			value = 1000
 		}
+
+		state_weight = {
+			value = 1
+			
+			# Grey_PLP
+			multiply = {
+				value = mog_plp_movement_all_general_state_weight_mult
+			}
+		}
 	}
 
 	additional_radicalism_factors = {
+		if = {
+			limit = {
+				owner = {
+					has_variable = wargoal_enforced_by_recognized_power
+				}
+			}
+			add = {
+				desc = "wargoal_pressed_by_recognized_power_tt"
+				value = 0.10
+			}
+		}
+		if = {
+			limit = {
+				owner = {
+					has_technology_researched = nationalism
+					is_country_type = unrecognized
+				}
+			}
+			add = {
+				desc = "unrecognized"
+				value = 0.10
+			}
+		}
 		if = {
 			limit = {
 				owner = {
