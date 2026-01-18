@@ -33,6 +33,7 @@ REPLACE_OR_CREATE:movement_cultural_majority = {
 			}
 		}
 	}
+
 	creation_weight = {
 		value = 100
 	}
@@ -46,6 +47,9 @@ REPLACE_OR_CREATE:movement_cultural_majority = {
 			has_ideology = ideology:ideology_fascist
 			has_ideology = ideology:ideology_jingoist_leader
 			has_ideology = ideology:ideology_ethno_nationalist
+		}
+		NOT = {
+			has_variable = anti_nationalist_var
 		}
 	}
 	character_support_weight = {
@@ -693,6 +697,9 @@ REPLACE_OR_CREATE:movement_cultural_minority = {
 			has_ideology = ideology:ideology_sovereignist_leader
 			has_ideology = ideology:ideology_reformer
 		}
+		NOT = {
+			has_variable = anti_nationalist_var # Please stop becoming a Polish nationalist, Rosa.
+		}
 	}
 	character_support_weight = {
 		value = 50
@@ -714,6 +721,14 @@ REPLACE_OR_CREATE:movement_cultural_minority = {
 			}
 			multiply = {
 				value = 5
+			}
+		}
+		else_if = {
+			limit = {
+				has_socialist_ideology = yes
+			}
+			multiply = {
+				value = 0.5
 			}
 		}
 	}
@@ -1145,7 +1160,7 @@ REPLACE_OR_CREATE:movement_cultural_minority = {
 			trigger_else_if = {
 				limit = {
 					owner = {
-						is_country_type = colonial
+						country_is_colonial_or_company = yes
 					}
 				}
 				NOT = {

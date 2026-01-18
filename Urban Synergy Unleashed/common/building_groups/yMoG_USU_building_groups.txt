@@ -79,6 +79,8 @@ REPLACE_OR_CREATE:bg_power = {
 	infrastructure_usage_per_level = 2
 	
 	urbanization = 20 # 10
+
+	self_investment_chance_modifier = yes
 }
 
 usu_bg_hydro_power = {

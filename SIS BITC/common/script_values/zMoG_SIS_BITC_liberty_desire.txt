@@ -9,7 +9,7 @@
 # root.second_country: second country in the pact. Subject.
 # root = { liberty_desire < 50 }: compare trigger for current Liberty Desire value root.
 # Must return a value which will be added to the current Liberty Desire in this pact.
-liberty_desire_weekly_change = {
+liberty_desire_weekly_change = { #AKA liberty_desire_weekly_progress
 #	add = {
 #		value = 0.1
 #		desc = "base_value"
@@ -82,9 +82,9 @@ liberty_desire_weekly_change = {
 						add = { root.second_country = { value = num_primary_cultures } }	# Use script value robustly.
 						min = 1
 					}
-					min = 0
-					max = 0.2		# Max is positive/higher *before* the multiplier
 					multiply = -1
+					max = 0
+					min = -0.2
 				}
 			}
 		}
@@ -114,9 +114,9 @@ liberty_desire_weekly_change = {
 							add = { root.second_country = { value = num_primary_cultures } }	# Use script value robustly.
 							min = 1
 						}
-						min = 0
-						max = 0.25		# Max is positive/higher *before* the multiplier
 						multiply = -1
+						max = 0
+						min = -0.25
 					}
 					#if = {
 					#	limit = {
@@ -1024,6 +1024,90 @@ liberty_desire_weekly_change = {
 		add = {
 			value = -0.2
 			desc = "pacify_the_steppe_modifier"
+		}
+	}
+	
+	#If there is a slave revolt movement, overlords' armies are useful. 
+	if = {
+		limit = {
+			root.second_country = {
+				any_political_movement = {
+					is_political_movement_type = movement_slave_revolt
+				}
+			}
+		}
+		add = {
+			desc = "LIBERTY_DESIRE_WEEKLY_CHANGE_SLAVE_REVOLT"
+			add = { #value will be negative, overlords help put down revolts
+				root.second_country = {
+					every_political_movement = {
+						limit = {
+							is_political_movement_type = movement_slave_revolt
+						}
+						add = this.political_movement_radicalism
+						multiply = 0.10
+						add = {
+							add = this.political_movement_support
+							multiply = 0.20
+						}
+					}
+				}
+			}
+			multiply = -1
+			min = -0.10 
+			if = { #special case in Cuban independence
+				limit = {
+					root.second_country = {
+						has_variable = slaves_work_with_independence_movement
+					}
+				}
+				multiply = -2 #turn value positive
+				max = 0.25
+			}
+		}
+	}
+
+	# Cuban Afro-Caribeno 
+	if = {
+		limit = { 
+			root.second_country = { 
+				c:CUB ?= this
+				has_variable = slaves_work_with_independence_movement
+			}
+		}
+		root.second_country = {
+			cu:afro_caribeno = {
+				add = culture_current_fervor
+				subtract = 25
+				divide = 150
+				multiply = -1
+				max = 0
+				min = -0.2
+			}
+		}
+	}
+
+	#Any Sovereignists in government 
+	if = {
+		limit = {
+			root.second_country = {
+				any_scope_character = {
+					has_ideology = ideology:ideology_sovereignist_leader
+					OR = {
+						is_ruler = yes
+						AND = {
+							has_role = politician
+							interest_group = {
+								is_in_government = yes
+							}
+						}
+					}
+				}
+			}
+		}
+		add = {				
+			add = 0.07
+			desc = "LIBERTY_DESIRE_WEEKLY_CHANGE_SOVEREIGNIST_IN_GOV"
 		}
 	}
 	

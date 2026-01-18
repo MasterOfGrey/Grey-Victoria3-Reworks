@@ -19,6 +19,7 @@ REPLACE_OR_CREATE:law_guaranteed_liberties = {
 		# state_radicals_from_sol_change_mult = -0.05
 		# state_loyalists_from_sol_change_mult = 0.05
 		state_radicals_and_loyalists_from_sol_change_mult = 0.05
+		country_coup_resistance_add = 0.5
 	}
 	
 	ai_enact_weight_modifier = { #Petitions

@@ -180,11 +180,6 @@ NEconomy = {
 #	COMPANY_MIN_LEVELS_OWNED = 2 # 5						# Min amount of ownerships that company can have, more can't be nationalized or privatized
 	BASE_REGIONAL_HQS = 1								# Base level of regional HQs available to a company after granted investment charter
 	LEVELS_PER_REGIONAL_HQ = 50							# How many levels company needs to aquire to get a new regional HQ
-
-	
-	## GDP reinvestment scaling
-	REINVESTMENT_EFFICIENCY_MAX = 2.0 # 3.0					# Maximum conversion of reinvestment to investment pool
-	REINVESTMENT_BASE_EFFICIENCY_THRESHOLD = 20000000 # 50000000	# Below this amount of GDP, increase reinvestment multiplier on a linear scale up to REINVESTMENT_EFFICIENCY_MAX at 0
 }
 
 NAI = {
