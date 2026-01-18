@@ -1737,3 +1737,17 @@ TRY_REPLACE:company_william_cramp = {
 		value = 3 # Higher base value for flavored companies
 	}
 }
+
+# Ynchausti y Compañía
+TRY_INJECT:company_ynchausti_y_compania = {
+	building_types = {
+		building_river_port
+	}
+}
+
+# Companhia União Fabril
+TRY_INJECT:company_uniao_fabril = {
+	extension_building_types = {
+		building_river_port
+	}
+}

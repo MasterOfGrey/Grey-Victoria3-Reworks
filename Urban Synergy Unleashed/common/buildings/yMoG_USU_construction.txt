@@ -8,7 +8,7 @@ REPLACE_OR_CREATE:building_construction_sector = {
 	
 	has_max_level = yes
 	
-	required_construction = construction_cost_consec
+	required_construction = construction_cost_construction_sector
 	unlocking_technologies = {
 		urbanization
 	}

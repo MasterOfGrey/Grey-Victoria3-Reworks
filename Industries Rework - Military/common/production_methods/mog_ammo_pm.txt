@@ -386,7 +386,7 @@ REPLACE_OR_CREATE:pm_no_self_explosives = {
 }
 
 ### Automation Replacements ###
-REPLACE_OR_CREATE:pm_rotary_valve_engine_building_munition_plants = {
+REPLACE_OR_CREATE:pm_rotary_valve_engine_building_munition_plant = {
 	texture = "gfx/interface/icons/production_method_icons/rotary_valve_engine.dds"
 	
 	state_modifiers = {
@@ -410,7 +410,7 @@ REPLACE_OR_CREATE:pm_rotary_valve_engine_building_munition_plants = {
 	}
 }
 
-REPLACE_OR_CREATE:pm_assembly_lines_building_munition_plants = {
+REPLACE_OR_CREATE:pm_assembly_lines_building_munition_plant = {
 	texture = "gfx/interface/icons/production_method_icons/assembly_lines.dds"
 	
 	state_modifiers = {

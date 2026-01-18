@@ -118,6 +118,21 @@
 			}
 			add = 10000
 		}
+		else_if = { # Portugal - Regeneration
+			limit = {
+				owner = {
+					has_journal_entry = je_portugal_regeneration_public_works
+				}
+				is_incorporated = yes
+				NOR = {
+					has_building = building_railway
+					any_scope_building = {
+						is_building_type = building_railway
+						is_under_construction = yes
+					}
+				}
+			}
+		}
 		
 		if = { # Manchurian Railway
 			limit = {

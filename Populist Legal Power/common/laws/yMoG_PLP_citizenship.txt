@@ -19,10 +19,24 @@ REPLACE_OR_CREATE:law_subjecthood = {
 		}
 	}
 
+	can_impose = {
+		OR = {
+			AND = {
+				is_in_same_power_bloc = scope:target_country
+				AND = {
+					modifier:country_can_impose_same_lawgroup_citizenship_in_power_bloc_bool = yes
+					has_law = scope:law
+				}
+			}
+			can_impose_law_default = yes
+		}
+	}
+
 	unlocking_laws = {
 		law_monarchy
 		law_theocracy
 		law_chiefdom
+		law_colonial_administration
 	}
 
 	modifier = {
@@ -121,6 +135,19 @@ REPLACE_OR_CREATE:law_ethnostate = {
 				is_subject = yes
 			}
 			custom_tooltip = fervor_effects_ld_tt
+		}
+	}
+
+	can_impose = {
+		OR = {
+			AND = {
+				is_in_same_power_bloc = scope:target_country
+				AND = {
+					modifier:country_can_impose_same_lawgroup_citizenship_in_power_bloc_bool = yes
+					has_law = scope:law
+				}
+			}
+			can_impose_law_default = yes
 		}
 	}
 	
@@ -260,6 +287,19 @@ REPLACE_OR_CREATE:law_national_supremacy = {
 				is_subject = yes
 			}
 			custom_tooltip = fervor_effects_ld_tt
+		}
+	}
+
+	can_impose = {
+		OR = {
+			AND = {
+				is_in_same_power_bloc = scope:target_country
+				AND = {
+					modifier:country_can_impose_same_lawgroup_citizenship_in_power_bloc_bool = yes
+					has_law = scope:law
+				}
+			}
+			can_impose_law_default = yes
 		}
 	}
 	
@@ -405,6 +445,19 @@ REPLACE_OR_CREATE:law_racial_segregation = {
 		}
 	}
 	
+	can_impose = {
+		OR = {
+			AND = {
+				is_in_same_power_bloc = scope:target_country
+				AND = {
+					modifier:country_can_impose_same_lawgroup_citizenship_in_power_bloc_bool = yes
+					has_law = scope:law
+				}
+			}
+			can_impose_law_default = yes
+		}
+	}
+
 	modifier = {
 		country_authority_add = 100
 		
@@ -546,6 +599,19 @@ REPLACE_OR_CREATE:law_cultural_exclusion = {
 				has_modifier = modifier_polish_organic_statute
 			}
 			remove_modifier = modifier_polish_organic_statute
+		}
+	}
+
+	can_impose = {
+		OR = {
+			AND = {
+				is_in_same_power_bloc = scope:target_country
+				AND = {
+					modifier:country_can_impose_same_lawgroup_citizenship_in_power_bloc_bool = yes
+					has_law = scope:law
+				}
+			}
+			can_impose_law_default = yes
 		}
 	}
 	
@@ -692,6 +758,19 @@ REPLACE_OR_CREATE:law_multicultural = {
 				has_modifier = modifier_polish_organic_statute
 			}
 			remove_modifier = modifier_polish_organic_statute
+		}
+	}
+
+	can_impose = {
+		OR = {
+			AND = {
+				is_in_same_power_bloc = scope:target_country
+				AND = {
+					modifier:country_can_impose_same_lawgroup_citizenship_in_power_bloc_bool = yes
+					has_law = scope:law
+				}
+			}
+			can_impose_law_default = yes
 		}
 	}
 	

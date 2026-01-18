@@ -3761,8 +3761,7 @@ REPLACE_OR_CREATE:movement_communist = {
 REPLACE_OR_CREATE:movement_fascist = {
 	category = movement_category_ideological
 
-	# Fascists care about a lot of law groups, so the impact of each should be lesser
-	active_law_radicalism_multiplier = 0.5
+	active_law_radicalism_multiplier = 1
 
 	ideology = ideology_fascist_movement
 	character_ideologies = {
@@ -3948,7 +3947,7 @@ REPLACE_OR_CREATE:movement_fascist = {
 								is_political_movement_type = movement_labor
 								is_political_movement_type = movement_nihilist
 							}
-							political_movement_support >= 0.10 # (chuckles) im in danger
+							political_movement_support >= 0.05
 						}
 					}
 				}
@@ -4047,7 +4046,7 @@ REPLACE_OR_CREATE:movement_fascist = {
 								is_political_movement_type = movement_labor
 								is_political_movement_type = movement_nihilist
 							}
-							political_movement_support >= 0.10
+							political_movement_support >= 0.05
 						}
 					}
 				}
@@ -7018,12 +7017,12 @@ REPLACE_OR_CREATE:movement_reactionary = {
 	}
 
 	disband_trigger = {
-		OR = {
-			c:FRA ?= this
-			civil_war_origin_country ?= c:FRA
-		}
 		any_political_movement = {
+		OR = {
 			is_political_movement_type = movement_legitimist
+				is_political_movement_type = movement_carlist
+				is_political_movement_type = movement_miguelist
+			}
 		}
 	}
 
@@ -7390,6 +7389,7 @@ REPLACE_OR_CREATE:movement_modernizer = {
 		}
 		country_has_laws_in_need_of_critical_modernization = yes
 	}
+
 	creation_weight = {
 		value = 100
 		if = {
@@ -7410,6 +7410,7 @@ REPLACE_OR_CREATE:movement_modernizer = {
 			}
 		}
 	}
+
 	on_created = {
 		add_movement_enthusiasm_modifier = yes
 		if = {
@@ -7441,6 +7442,7 @@ REPLACE_OR_CREATE:movement_modernizer = {
 			has_ideology = ideology:ideology_modernizer_leader
 			scope:interest_group ?= {
 				OR = {
+					has_ideology = ideology:ideology_cartist
 					has_ideology = ideology:ideology_modernizer
 					has_ideology = ideology:ideology_liberal
 					has_ideology = ideology:ideology_liberal_modern
@@ -7449,6 +7451,7 @@ REPLACE_OR_CREATE:movement_modernizer = {
 			}
 		}
 	}
+
 	character_support_weight = {
 		value = 200
 		if = {

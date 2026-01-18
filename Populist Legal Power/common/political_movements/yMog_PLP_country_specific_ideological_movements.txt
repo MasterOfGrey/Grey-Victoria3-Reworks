@@ -287,7 +287,7 @@
 		if = {
 			limit = {
 				owner ?= {
-					has_law_or_variant = law_type:law_monarchy
+					has_law = law_type:law_monarchy
 					ruler ?= {
 						NOT = {
 							has_ideology = ideology:ideology_orleanist
@@ -625,7 +625,7 @@ REPLACE_OR_CREATE:movement_bonapartist = {
 		if = {
 			limit = {
 				owner ?= {
-					has_law_or_variant = law_type:law_monarchy
+					has_law = law_type:law_monarchy
 					ruler ?= {
 						NOT = {
 							has_ideology = ideology:ideology_bonapartist
@@ -917,7 +917,7 @@ REPLACE_OR_CREATE:movement_legitimist = {
 		if = {
 			limit = {
 				owner ?= {
-					has_law_or_variant = law_type:law_monarchy
+					has_law = law_type:law_monarchy
 					ruler ?= {
 						NOT = {
 							has_ideology = ideology:ideology_legitimist
@@ -947,6 +947,461 @@ REPLACE_OR_CREATE:movement_legitimist = {
 			add = {
 				desc = "NEIGHBOURING_COUNTRY_WITH_REVOLUTION"
 				value = 0.15
+			}
+		}
+	}
+}
+
+REPLACE_OR_CREATE:movement_carlist = {
+	category = movement_category_ideological
+
+	ideology = ideology_carlist_movement
+	character_ideologies = {
+		ideology_carlist
+	}
+
+	creation_trigger = {
+		OR = {
+			country_has_primary_culture = cu:spanish
+			country_has_primary_culture = cu:catalan
+			country_has_primary_culture = cu:basque
+		}
+		NOT = {
+			has_variable = monarchy_stamped_out_var
+		}
+		capital = {
+			is_in_geographic_region = geographic_region_iberia
+		}
+	}
+	creation_weight = {
+		value = 100
+	}
+	on_created = {
+		add_movement_enthusiasm_modifier = yes
+	}
+
+	disband_trigger = {
+		OR = {
+			has_variable = monarchy_stamped_out_var
+			NOT = {
+				capital = {
+					is_in_geographic_region = geographic_region_iberia
+				}
+			}
+		}
+	}
+
+	character_support_trigger = {
+		OR = {
+			has_ideology = ideology:ideology_carlist
+			has_ideology = ideology:ideology_traditionalist
+			has_ideology = ideology:ideology_royalist
+			has_ideology = ideology:ideology_integralist
+			has_ideology = ideology:ideology_theocrat
+			AND = {
+				law_stance = {
+					law = law_type:law_monarchy
+					value > neutral
+				}
+				law_stance = {
+					law = law_type:law_state_religion
+					value > neutral
+				}
+			}
+		}
+	}
+	character_support_weight = {
+		value = 200
+		if = {
+			limit = {
+				has_ideology = ideology:ideology_carlist
+			}
+			multiply = {
+				value = 5
+			}
+		}
+	}
+
+	pop_support_trigger = {
+		NOT = {
+			is_pop_type = slaves
+		}
+		religion = rel:catholic
+	}
+
+	pop_support_factors = {
+		movement_support_low_urbanization
+		movement_support_high_literacy
+		movement_support_aristocrats
+		movement_support_farmers
+		movement_support_peasants
+		movement_support_clergymen
+		movement_support_officers
+	}
+
+	pop_support_weight = {
+		add = {
+			desc = "URBAN_STATE" # Increases support in rural states, decreases in urban
+			value = 0.5
+			subtract = state.state_urbanization_rate
+			multiply = 10
+		}
+
+		add = {
+			value = 5
+			desc = "POP_BASE_SUPPORT"
+		}
+
+		if = {
+			limit = {
+				is_pop_type = aristocrats
+			}
+			add = {
+				value = 25
+				desc = "POP_ARISTOCRATS"
+			}
+		}
+		else_if = {
+			limit = {
+				is_pop_type = farmers
+			}
+			add = {
+				value = 15
+				desc = "POP_FARMERS"
+			}
+		}
+		else_if = {
+			limit = {
+				is_pop_type = peasants
+			}
+			add = {
+				value = 15
+				desc = "POP_PEASANTS"
+			}
+		}
+		else_if = {
+			limit = {
+				is_pop_type = clergymen
+			}
+			add = {
+				value = 15
+				desc = "POP_CLERGYMEN"
+			}
+		}
+		else_if = {
+			limit = {
+				is_pop_type = officers
+			}
+			add = {
+				value = 15
+				desc = "POP_OFFICERS"
+			}
+		}
+		else_if = {
+			limit = {
+				is_pop_type = soldiers
+			}
+			add = {
+				value = 5
+				desc = "POP_SERVICEMEN"
+			}
+		}
+
+		if = {
+			limit = { # Only Catholics can support this anyway
+				culture = {
+					NOT = {
+						cu:spanish ?= this
+					}
+					has_discrimination_trait_group = heritage_group_european
+				}
+			}
+			multiply = { # Less accepted pops like Basques and Catalans tend to like this movement
+				desc = "POP_LOW_ACCEPTANCE"
+				value = 100
+				subtract = pop_acceptance
+				divide = 25
+			}
+		}
+
+		if = {
+			limit = {
+				owner ?= {
+					OR = {
+						c:SPC ?= this
+						has_variable = is_carlist_spain
+					}
+				}
+				culture ?= cu:spanish
+			}
+			multiply = { # Carlists love Carlism
+				desc = "SPC"
+				value = 2
+			}
+		}
+
+		multiply = { # Illiterate pops participate at 1/10 the rate of fully literate pops
+			desc = "POP_LITERACY"
+			value = literacy_rate
+			add = 0.2
+			max = 0.7 # Starts more powerful but caps out early
+		}
+	}
+
+	revolution = {
+		possible = {
+			political_movement_support >= 0.05
+		}
+
+		forced_tags = {
+			SPC = {
+				trigger = {
+					owner ?= { country_has_primary_culture = cu:spanish }
+				}
+				weight = 1000
+			}
+		}
+
+		weight = {
+			value = 100
+		}
+	}
+
+	secession = {
+		possible = {
+			political_movement_support >= 0.05
+			scope:clout <= 0
+		}
+
+		weight = {
+			value = 1000
+		}
+	}
+
+	additional_radicalism_factors = {
+		if = {
+			limit = {
+				owner ?= {
+					has_law = law_type:law_monarchy
+					ruler ?= {
+						NOT = {
+							has_ideology = ideology:ideology_carlist
+						}
+					}
+				}
+			}
+			add = {
+				value = 0.25
+				desc = "NON_CARLIST_MONARCH"
+			}
+		}
+	}
+}
+
+movement_miguelist = {
+	category = movement_category_ideological
+
+	ideology = ideology_miguelist_movement
+	character_ideologies = {
+		ideology_miguelist
+	}
+
+	creation_trigger = {
+		country_has_primary_culture = cu:portuguese
+		NOT = {
+			has_variable = monarchy_stamped_out_var
+		}
+		capital = {
+			is_in_geographic_region = geographic_region_iberia
+		}
+	}
+	creation_weight = {
+		value = 100
+	}
+	on_created = {
+		add_movement_enthusiasm_modifier = yes
+	}
+
+	disband_trigger = {
+		OR = {
+			has_variable = monarchy_stamped_out_var
+			NOT = {
+				capital = {
+					is_in_geographic_region = geographic_region_iberia
+				}
+			}
+		}
+	}
+
+	character_support_trigger = {
+		OR = {
+			has_ideology = ideology:ideology_miguelist
+			has_ideology = ideology:ideology_traditionalist
+			has_ideology = ideology:ideology_royalist
+			has_ideology = ideology:ideology_integralist
+			has_ideology = ideology:ideology_theocrat
+			AND = {
+				law_stance = {
+					law = law_type:law_monarchy
+					value > neutral
+				}
+				law_stance = {
+					law = law_type:law_state_religion
+					value > neutral
+				}
+			}
+		}
+	}
+	character_support_weight = {
+		value = 200
+		if = {
+			limit = {
+				has_ideology = ideology:ideology_miguelist
+			}
+			multiply = {
+				value = 5
+			}
+		}
+	}
+
+	pop_support_trigger = {
+		NOT = {
+			is_pop_type = slaves
+		}
+		religion = rel:catholic
+		# PLP - Colonized pops don't care about mainland politics
+		NOT = {
+			AND = {
+				state = { incorporation_progress = 0 }
+				pop_has_primary_culture = no
+			}
+		}
+	}
+
+	pop_support_factors = {
+		movement_support_low_urbanization
+		movement_support_high_literacy
+		movement_support_aristocrats
+		movement_support_farmers
+		movement_support_peasants
+		movement_support_clergymen
+		movement_support_officers
+	}
+
+	pop_support_weight = {
+		add = {
+			desc = "URBAN_STATE" # Increases support in rural states, decreases in urban
+			value = 0.5
+			subtract = state.state_urbanization_rate
+			multiply = 10
+		}
+
+		add = {
+			value = 5
+			desc = "POP_BASE_SUPPORT"
+		}
+
+		if = {
+			limit = {
+				is_pop_type = aristocrats
+			}
+			add = {
+				value = 25
+				desc = "POP_ARISTOCRATS"
+			}
+		}
+		else_if = {
+			limit = {
+				is_pop_type = farmers
+			}
+			add = {
+				value = 15
+				desc = "POP_FARMERS"
+			}
+		}
+		else_if = {
+			limit = {
+				is_pop_type = peasants
+			}
+			add = {
+				value = 15
+				desc = "POP_PEASANTS"
+			}
+		}
+		else_if = {
+			limit = {
+				is_pop_type = clergymen
+			}
+			add = {
+				value = 15
+				desc = "POP_CLERGYMEN"
+			}
+		}
+		else_if = {
+			limit = {
+				is_pop_type = officers
+			}
+			add = {
+				value = 15
+				desc = "POP_OFFICERS"
+			}
+		}
+
+		multiply = { # Illiterate pops participate at 1/10 the rate of fully literate pops
+			desc = "POP_LITERACY"
+			value = literacy_rate
+			add = 0.2
+			max = 0.7 # Starts more powerful but caps out early
+		}
+
+		# PLP - Colonized pops care about mainland politics to the extent it affects them
+		if = {
+			limit = {
+				state = { is_incorporated = no }
+				pop_has_primary_culture = no
+			}
+			state = {
+				multiply = incorporation_progress
+			}
+		}
+	}
+
+	revolution = {
+		possible = {
+			political_movement_support >= 0.05
+		}
+
+		weight = {
+			value = 100
+		}
+	}
+
+	secession = {
+		possible = {
+			political_movement_support >= 0.05
+			scope:clout <= 0
+		}
+
+		weight = {
+			value = 1000
+		}
+	}
+
+	additional_radicalism_factors = {
+		if = {
+			limit = {
+				owner ?= {
+					has_law = law_type:law_monarchy
+					ruler ?= {
+						NOT = {
+							has_ideology = ideology:ideology_miguelist
+						}
+					}
+				}
+			}
+			add = {
+				value = 0.25
+				desc = "NON_MIGUELIST_MONARCH"
 			}
 		}
 	}

@@ -1,5 +1,5 @@
 ﻿### Subsistence Production
-TRY_INJECT:default_building_subsistence_farms = {
+TRY_INJECT:default_building_subsistence_farm = {
 	state_modifiers = {							# This is inherited from USU, and is not strictly in scope for this mod - but I've seen that it works and people should have access to this feature without USU if they want it.
 		workforce_scaled = {
 			state_birth_rate_mult = -0.0045		# For some reason this one gets modifiers but the other doesn't, and the goal is to cancel out when fully employed.
@@ -10,7 +10,7 @@ TRY_INJECT:default_building_subsistence_farms = {
 	}
 }
 
-TRY_INJECT:default_building_subsistence_orchards = {
+TRY_INJECT:default_building_subsistence_orchard = {
 	state_modifiers = {
 		workforce_scaled = {
 			state_birth_rate_mult = -0.0045
@@ -21,7 +21,7 @@ TRY_INJECT:default_building_subsistence_orchards = {
 	}
 }
 
-TRY_INJECT:default_building_subsistence_pastures = {
+TRY_INJECT:default_building_subsistence_pasture = {
 	state_modifiers = {
 		workforce_scaled = {
 			state_birth_rate_mult = -0.0045
@@ -32,7 +32,7 @@ TRY_INJECT:default_building_subsistence_pastures = {
 	}
 }
 
-TRY_INJECT:default_building_subsistence_fishing_villages = {
+TRY_INJECT:default_building_subsistence_fishing_village = {
 	state_modifiers = {
 		workforce_scaled = {
 			state_birth_rate_mult = -0.0045
@@ -43,7 +43,7 @@ TRY_INJECT:default_building_subsistence_fishing_villages = {
 	}
 }
 
-TRY_INJECT:default_building_subsistence_rice_paddies = {
+TRY_INJECT:default_building_subsistence_rice_farm = {
 	state_modifiers = {
 		workforce_scaled = {
 			state_birth_rate_mult = -0.0045

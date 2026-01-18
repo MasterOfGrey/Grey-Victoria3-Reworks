@@ -8,8 +8,8 @@
 			remove_building = building_fishing_wharf
 			remove_building = building_wheat_farm
 			remove_building = building_livestock_ranch
-			remove_building = building_shipyards
-			remove_building = building_military_shipyards
+			remove_building = building_shipyard
+			remove_building = building_military_shipyard
 			remove_building = building_port
 			if = {
 				limit = {
@@ -93,7 +93,7 @@
 				activate_production_methods={ "pm_open_air_stockyards" "pm_simple_ranch" "pm_standard_fences" "pm_unrefrigerated"  }
 			}
 			create_building={
-				building="building_shipyards"
+				building="building_shipyard"
 				add_ownership={
 					building={
 						type="building_financial_district"
@@ -106,7 +106,7 @@
 				activate_production_methods={ "pm_basic_shipbuilding"  }
 			}
 			create_building={
-				building="building_military_shipyards"
+				building="building_military_shipyard"
 				add_ownership={
 					country={
 						country="c:POR"

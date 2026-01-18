@@ -53,7 +53,7 @@ REPLACE_OR_CREATE:pmg_automation_building_arms_industry = {
 }
 # Ref production_methods = { pm_automation_disabled pm_rotary_valve_engine_building_arms_industry pm_assembly_lines_building_arms_industry }
 
-# pmg_base_building_munition_plants = {													# Vanilla PMG untouched
+# pmg_base_building_munition_plant = {													# Vanilla PMG untouched
 # Ref production_methods = { pm_percussion_caps pm_explosive_shells }
 
 REPLACE_OR_CREATE:pmg_munitions_explosives_demob = {														# Modded PMG
@@ -79,5 +79,5 @@ REPLACE_OR_CREATE:pmg_munitions_explosives_demob = {														# Modded PMG
 	}
 }
 
-# pmg_automation_building_munition_plants = {											# Vanilla PMG untouched
-# Ref production_methods = { pm_automation_disabled pm_rotary_valve_engine_building_munition_plants pm_assembly_lines_building_munition_plants }
+# pmg_automation_building_munition_plant = {											# Vanilla PMG untouched
+# Ref production_methods = { pm_automation_disabled pm_rotary_valve_engine_building_munition_plant pm_assembly_lines_building_munition_plant }

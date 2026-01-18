@@ -15,8 +15,8 @@
 #	production_methods = {
 #		pm_serfdom_no
 #		pm_corvee_labor
-#		pm_serfdom_building_subsistence_orchards
-#		pm_slavery_building_subsistence_orchards	# Laws +
+#		pm_serfdom_building_subsistence_orchard
+#		pm_slavery_building_subsistence_orchard	# Laws +
 #		pm_homesteading_building_subsistence
 #	}
 #}
@@ -26,8 +26,8 @@
 #	production_methods = {
 #		pm_serfdom_no
 #		pm_corvee_labor
-#		pm_serfdom_building_subsistence_pastures
-#		pm_slavery_building_subsistence_pastures	# Laws +
+#		pm_serfdom_building_subsistence_pasture
+#		pm_slavery_building_subsistence_pasture	# Laws +
 #		pm_homesteading_building_subsistence
 #	}
 #}
@@ -37,8 +37,8 @@
 #	production_methods = {
 #		pm_serfdom_no
 #		pm_corvee_labor
-#		pm_serfdom_building_subsistence_fishing_villages
-#		pm_slavery_building_subsistence_fishing_villages	# Laws +
+#		pm_serfdom_building_subsistence_fishing_village
+#		pm_slavery_building_subsistence_fishing_village	# Laws +
 #		pm_homesteading_building_subsistence
 #	}
 #}
@@ -49,8 +49,8 @@
 #	production_methods = {
 #		pm_serfdom_no
 #		pm_corvee_labor
-#		pm_serfdom_building_subsistence_rice_paddies
-#		pm_slavery_building_subsistence_rice_paddies	# Laws +
+#		pm_serfdom_building_subsistence_rice_farm
+#		pm_slavery_building_subsistence_rice_farm	# Laws +
 #		pm_homesteading_building_subsistence
 #	}
 #}

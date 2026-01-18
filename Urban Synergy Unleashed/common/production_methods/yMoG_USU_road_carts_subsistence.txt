@@ -193,6 +193,9 @@ TRY_REPLACE:pm_serfdom_no = {
 	unlocking_laws = {
 		law_tenant_farmers
 		law_commercialized_agriculture
+		law_collectivized_agriculture
+		law_latifundias
+		law_expanded_latifundias
 	}
 	
 	building_modifiers = {
@@ -226,7 +229,8 @@ TRY_REPLACE:pm_corvee_labor = {
 
 	state_modifiers = {
 		workforce_scaled = {
-			state_construction_mult = 0.001
+			building_group_bg_agriculture_construction_efficiency_add = 0.001
+			building_group_bg_plantations_construction_efficiency_add = 0.001
 			state_tax_capacity_add = 0.8
 		}
 	}
@@ -254,7 +258,7 @@ TRY_REPLACE:pm_serfdom = {
 	}
 }
 
-TRY_REPLACE:pm_serfdom_building_subsistence_orchards = {
+TRY_REPLACE:pm_serfdom_building_subsistence_orchard = {
 	texture = "gfx/interface/icons/production_method_icons/serfdom.dds"
 	unlocking_laws = {
 		law_serfdom
@@ -276,7 +280,7 @@ TRY_REPLACE:pm_serfdom_building_subsistence_orchards = {
 	}
 }
 
-TRY_REPLACE:pm_serfdom_building_subsistence_pastures = {
+TRY_REPLACE:pm_serfdom_building_subsistence_pasture = {
 	texture = "gfx/interface/icons/production_method_icons/serfdom.dds"
 	unlocking_laws = {
 		law_serfdom
@@ -298,7 +302,7 @@ TRY_REPLACE:pm_serfdom_building_subsistence_pastures = {
 	}
 }
 
-TRY_REPLACE:pm_serfdom_building_subsistence_fishing_villages = {
+TRY_REPLACE:pm_serfdom_building_subsistence_fishing_village = {
 	texture = "gfx/interface/icons/production_method_icons/serfdom.dds"
 	unlocking_laws = {
 		law_serfdom
@@ -320,7 +324,7 @@ TRY_REPLACE:pm_serfdom_building_subsistence_fishing_villages = {
 	}
 }
 
-TRY_REPLACE:pm_serfdom_building_subsistence_rice_paddies = {
+TRY_REPLACE:pm_serfdom_building_subsistence_rice_farm = {
 	texture = "gfx/interface/icons/production_method_icons/serfdom.dds"
 	unlocking_laws = {
 		law_serfdom
@@ -366,7 +370,7 @@ TRY_REPLACE:pm_slavery = {
 	}
 }
 
-TRY_REPLACE:pm_slavery_building_subsistence_orchards = {
+TRY_REPLACE:pm_slavery_building_subsistence_orchard = {
 	texture = "gfx/interface/icons/production_method_icons/unused/slavery.dds"
 	is_hidden_when_unavailable = yes
 	unlocking_laws = {
@@ -389,7 +393,7 @@ TRY_REPLACE:pm_slavery_building_subsistence_orchards = {
 	}
 }
 
-TRY_REPLACE:pm_slavery_building_subsistence_pastures = {
+TRY_REPLACE:pm_slavery_building_subsistence_pasture = {
 	texture = "gfx/interface/icons/production_method_icons/unused/slavery.dds"
 	is_hidden_when_unavailable = yes
 	unlocking_laws = {
@@ -412,7 +416,7 @@ TRY_REPLACE:pm_slavery_building_subsistence_pastures = {
 	}
 }
 
-TRY_REPLACE:pm_slavery_building_subsistence_fishing_villages = {
+TRY_REPLACE:pm_slavery_building_subsistence_fishing_village = {
 	texture = "gfx/interface/icons/production_method_icons/unused/slavery.dds"
 	is_hidden_when_unavailable = yes
 	unlocking_laws = {
@@ -435,7 +439,7 @@ TRY_REPLACE:pm_slavery_building_subsistence_fishing_villages = {
 	}
 }
 
-TRY_REPLACE:pm_slavery_building_subsistence_rice_paddies = {
+TRY_REPLACE:pm_slavery_building_subsistence_rice_farm = {
 	texture = "gfx/interface/icons/production_method_icons/unused/slavery.dds"
 	is_hidden_when_unavailable = yes
 	unlocking_laws = {
