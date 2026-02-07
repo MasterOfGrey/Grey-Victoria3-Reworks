@@ -1,0 +1,39 @@
+﻿# Water vessels
+# none
+
+# Water traffic
+#LLWA_pm_no_ferries = {
+#	texture = "gfx/interface/icons/production_method_icons/LLWA_no_ferries.dds"
+#}
+
+INJECT:LLWA_pm_riverboats = {
+    building_modifiers = {
+        workforce_scaled = {
+            goods_output_usu_logistics_add = 2
+        }
+    }
+}
+
+INJECT:LLWA_pm_packet_ships = {
+    building_modifiers = {
+        workforce_scaled = {
+            goods_output_usu_logistics_add = 2
+        }
+    }
+}
+
+INJECT:LLWA_pm_steam_ferries = {
+    building_modifiers = {
+        workforce_scaled = {
+            goods_output_usu_logistics_add = 3
+        }
+    }
+}
+
+INJECT:LLWA_pm_motor_ferries = {
+    building_modifiers = {
+        workforce_scaled = {
+            goods_output_usu_logistics_add = 3
+        }
+    }
+}
