@@ -9,6 +9,15 @@
 		democracy
 	}
 	
+	can_enact = {
+		trigger_if ={
+			limit = {
+				is_subject = no
+			}
+			NOT = { has_government_type = gov_chartered_company }
+		}
+	}
+
 	can_impose = {
 		OR = {
 			AND = {
@@ -26,7 +35,7 @@
 		country_legitimacy_headofstate_add = 10
 		country_legitimacy_govt_total_votes_add = 10
 		country_legitimacy_ideological_incoherence_mult = 0.2
-		country_authority_add = 50
+		country_authority_add = 50 # 100
 	}
 
 	on_activate = {
@@ -63,6 +72,15 @@
 			}
 			deactivate_law = law_type:law_neo_absolutism
 			activate_law = law_type:law_autocracy
+		}
+		if = {
+			limit = {
+				c:POR ?= this
+				ruler ?= {
+					has_template = POR_manuel_ii_de_braganca_template
+				}
+			}
+			trigger_event = { id = portuguese_monarchs.3 }
 		}
 	}
 	
@@ -159,6 +177,15 @@ REPLACE_OR_CREATE:law_corporate_state = {
 		corporatism
 	}
 	
+	can_enact = {
+		trigger_if ={
+			limit = {
+				is_subject = no
+			}
+			NOT = { has_government_type = gov_chartered_company }
+		}
+	}
+
 	on_activate = {
 		if = {
 			limit = {
@@ -174,24 +201,6 @@ REPLACE_OR_CREATE:law_corporate_state = {
 				add_ideology = ideology_republican
 			}
 		}	
-		if = {
-			limit = {
-				var:corporatist_nominating_body_var ?= 1
-			}
-			add_modifier = { name = modifier_corporate_state_trade_unions_bias }
-		}
-		if = {
-			limit = {
-				var:corporatist_nominating_body_var ?= 2
-			}
-			add_modifier = { name = modifier_corporate_state_industrialists_bias }
-		}
-		if = {
-			limit = {
-				var:corporatist_nominating_body_var ?= 3
-			}
-			add_modifier = { name = modifier_corporate_state_intelligentsia_bias }
-		}
 		crown_land_republic_effect = yes
 		if = {
 			limit = {
@@ -200,27 +209,19 @@ REPLACE_OR_CREATE:law_corporate_state = {
 			deactivate_law = law_type:law_neo_absolutism
 			activate_law = law_type:law_autocracy
 		}
-	}		
+		if = {
+			limit = {
+				c:POR ?= this
+				ruler ?= {
+					has_template = POR_manuel_ii_de_braganca_template
+				}
+			}
+			trigger_event = { id = portuguese_monarchs.3 }
+		}
+	}
 
 	on_enact = {
-		if = {
-			limit = {
-				var:corporatist_nominating_body_var ?= 1
-			}
-			custom_tooltip = corporate_state_trade_unions_bias_tt
-		}
-		if = {
-			limit = {
-				var:corporatist_nominating_body_var ?= 2
-			}
-			custom_tooltip = corporate_state_industrialists_bias_tt
-		}
-		if = {
-			limit = {
-				var:corporatist_nominating_body_var ?= 3
-			}
-			custom_tooltip = corporate_state_intelligentsia_bias_tt
-		}
+
 	}
 
 	on_deactivate = {
@@ -265,7 +266,6 @@ REPLACE_OR_CREATE:law_corporate_state = {
 		country_max_companies_add = 1
 		country_free_charters_add = 1
 		building_group_bg_manufacturing_allowed_collectivization_add = -0.5
-		building_group_bg_mining_allowed_collectivization_add = -0.5
 		building_group_bg_extraction_allowed_collectivization_add = -0.5
 		building_group_bg_power_allowed_collectivization_add = -0.5
 		building_group_bg_private_infrastructure_allowed_collectivization_add = -0.5

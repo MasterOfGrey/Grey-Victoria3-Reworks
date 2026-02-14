@@ -189,7 +189,7 @@ TRY_REPLACE:decree_promote_national_values = {
 		}
 		else_if = {
 			limit = {
-				state_population < 300000
+				state_population > 300000
 			}
 			multiply = 2.0
 		}
@@ -223,6 +223,16 @@ TRY_REPLACE:decree_promote_national_values = {
 				}
 			}
 			add = 500
+		}
+		if = {
+			limit = {
+				scope:country = {
+					has_journal_entry = je_vernacular_policy
+					has_variable = chose_assimilation_var
+				}
+				is_homeland_of_country_cultures = scope:country
+			}
+			add = 1000
 		}
 
 		if = {

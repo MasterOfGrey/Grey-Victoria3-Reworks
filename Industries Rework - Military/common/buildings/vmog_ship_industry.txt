@@ -1,8 +1,8 @@
 ﻿# We use the TTS named PMG with the vanilla pms in it, so that we can overwrite the building using a vanilla PMG that has the TTS name.
 # This file must SUPERSEDE "tts_buildings.txt" for the purposes of the military shipyards
 #
-#building_military_shipyards = {
-#	building_group = bg_military_shipyards
+#building_military_shipyard = {
+#	building_group = bg_military_industry
 #	icon = "gfx/interface/icons/building_icons/building_naval_yards.dds"
 #	city_type = port
 #	

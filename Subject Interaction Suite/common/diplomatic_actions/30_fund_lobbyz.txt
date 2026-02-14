@@ -94,6 +94,7 @@
 				value = 0.25
 				
 				if = {
+					# SIS - Added
 					limit = {
 						OR = {
 							has_law_or_variant = law_type:law_technocracy
@@ -204,9 +205,7 @@
 				custom_tooltip = {
 					text = "EQUAL_OR_BETTER_RANK_THAN_TARGET"
 					country_rank >= scope:target_country.country_rank
-				}	
-
-				
+				}
 			}
 		}
 
@@ -231,6 +230,16 @@
 	
 		propose_score = {
 			value = 10
+
+			if = {
+				limit = {
+					has_journal_entry = je_hawaiian_interest
+					c:HAW ?= {
+						this = scope:target_country
+					}
+				}
+				add = 100
+			}
 		}
 	
 		will_propose = { 
@@ -272,47 +281,47 @@
 				AND = {
 					income >= 50000
 					net_fixed_income >= 4000
-					scope:target_country.income <= 10000
+					scope:target_country.fixed_income <= 10000
 				}
 				AND = {
 					income >= 75000
 					net_fixed_income >= 6000
-					scope:target_country.income <= 15000
+					scope:target_country.fixed_income <= 15000
 				}				
 				AND = {
 					income >= 100000
 					net_fixed_income >= 8000
-					scope:target_country.income <= 20000
+					scope:target_country.fixed_income <= 20000
 				}
 				AND = {
 					income >= 125000
 					net_fixed_income >= 10000
-					scope:target_country.income <= 25000
+					scope:target_country.fixed_income <= 25000
 				}
 				AND = {
 					income >= 150000
 					net_fixed_income >= 12000
-					scope:target_country.income <= 30000
+					scope:target_country.fixed_income <= 30000
 				}	
 				AND = {
 					income >= 175000
 					net_fixed_income >= 14000
-					scope:target_country.income <= 35000
+					scope:target_country.fixed_income <= 35000
 				}
 				AND = {
 					income >= 200000
 					net_fixed_income >= 16000
-					scope:target_country.income <= 40000
+					scope:target_country.fixed_income <= 40000
 				}
 				AND = {
 					income >= 225000
 					net_fixed_income >= 18000
-					scope:target_country.income <= 45000
+					scope:target_country.fixed_income <= 45000
 				}	
 				AND = {
 					income >= 250000
 					net_fixed_income >= 20000
-					scope:target_country.income <= 50000
+					scope:target_country.fixed_income <= 50000
 				}					
 			}			
 		}
@@ -367,47 +376,46 @@
 				NOR = {
 					AND = {
 						income >= 40000
-						scope:target_country.income <= 12500
+						scope:target_country.fixed_income <= 12500
 					}				
 					AND = {
 						income >= 50000
-						scope:target_country.income <= 15000
+						scope:target_country.fixed_income <= 15000
 					}
 					AND = {
 						income >= 75000
-						scope:target_country.income <= 20000
+						scope:target_country.fixed_income <= 20000
 					}				
 					AND = {
 						income >= 100000
-						scope:target_country.income <= 25000
+						scope:target_country.fixed_income <= 25000
 					}
 					AND = {
 						income >= 125000
-						scope:target_country.income <= 30000
+						scope:target_country.fixed_income <= 30000
 					}
 					AND = {
 						income >= 150000
-						scope:target_country.income <= 35000
+						scope:target_country.fixed_income <= 35000
 					}	
 					AND = {
 						income >= 175000
-						scope:target_country.income <= 40000
+						scope:target_country.fixed_income <= 40000
 					}
 					AND = {
 						income >= 200000
-						scope:target_country.income <= 45000
+						scope:target_country.fixed_income <= 45000
 					}
 					AND = {
 						income >= 225000
-						scope:target_country.income <= 50000
+						scope:target_country.fixed_income <= 50000
 					}
 					AND = {
 						income >= 250000
-						scope:target_country.income <= 55000
+						scope:target_country.fixed_income <= 55000
 					}					
 				}						
 			}
 		}			
 	}
 }
-

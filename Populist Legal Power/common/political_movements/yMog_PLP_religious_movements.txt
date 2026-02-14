@@ -16,6 +16,22 @@
 	}
 	creation_weight = {
 		value = 100
+		if = {
+			limit = {
+				owner ?= {
+					any_political_movement = {
+						OR = {
+							is_political_movement_type = movement_legitimist
+							is_political_movement_type = movement_carlist
+							is_political_movement_type = movement_miguelist
+						}
+					}
+				}
+			}
+			multiply = {
+				value = 0.05
+			}
+		}
 	}
 	on_created = {}
 
@@ -210,12 +226,16 @@
 			limit = {
 				owner ?= {
 					any_political_movement = {
-						is_political_movement_type = movement_legitimist
+						OR = {
+							is_political_movement_type = movement_legitimist
+							is_political_movement_type = movement_carlist
+							is_political_movement_type = movement_miguelist
+						}
 					}
 				}
 			}
 			multiply = {
-				value = 0.25
+				value = 0.05
 			}
 		}
 	}

@@ -193,7 +193,7 @@ REPLACE_OR_CREATE:ai_strategy_territorial_expansion = {
 				exists = c:FRA
 				c:FRA = this
 				ruler = {
-					has_variable = bonapartist_leader
+					has_variable = house_bonaparte
 				}
 			}
 			add = 5
