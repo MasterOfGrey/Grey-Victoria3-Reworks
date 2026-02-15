@@ -2,9 +2,9 @@
 	s:STATE_PROVENCE={
 		region_state:FRA={
 			# Clean things out to avoid duplication.
-			remove_building = building_textile_mills
+			remove_building = building_textile_mill
 			create_building={
-				building="building_textile_mills"
+				building="building_textile_mill"
 				add_ownership={
 					company={
 						type=company_maison_worth	# We swapped the ownership
@@ -19,12 +19,12 @@
 	}
 	s:STATE_NORMANDY={
 		region_state:FRA={
-			remove_building = building_textile_mills
+			remove_building = building_textile_mill
 			create_building={
-				building="building_textile_mills"
+				building="building_textile_mill"
 				add_ownership={
 					building={
-						type="building_textile_mills"
+						type="building_textile_mill"
 						country="c:FRA"
 						levels=4
 						region="STATE_NORMANDY"
