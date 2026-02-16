@@ -81,7 +81,8 @@ NPops = {
 	JOB_SATISFACTION_FROM_CANNOT_AFFORD_EXPENSES = -500 # -1000(old) # -100				# Job satisfaction gained from not being able to afford your buy package (and taxes)
 	JOB_SATISFACTION_PER_PERCENT_HIGHER_SOL_QUALIFICATION = -0.8 # -1 	# Job satisfaction gained per percent of workforce qualified for a job with a higher base standard of living. Note that qualifications are assumed to overlap and the largest qualification is used in this calculation
 	# Qualification max -ve must slightly exceed JOB_SATISFACTION_FROM_EMPLOYMENT ( 80 > 70 -> ok )
-	JOB_SATISFACTION_FROM_EMPLOYMENT = 70 # 100						# Job satisfaction gained from having a job
+	# REMOVED 1.12 # JOB_SATISFACTION_FROM_EMPLOYMENT = 70 # 100		# Job satisfaction gained from having a job
+	JOB_SATISFACTION_FROM_JOB_ATTRACTIVENESS = 70 # 100					# Job satisfaction when employed, multiplied by job attractiveness
 	# Difference between JOB_SATISFACTION_BASE & JOB_SATISFACTION_FROM_EMPLOYMENT is default migration desire. JOB_SATISFACTION_BASE is bigger than most difficult base_migration_desire so unemployed migrate for better opportunities even if they have welfare.
 	JOB_SATISFACTION_DIVIDENDS_MAX_MULT = 5						# Max multiplier from the ratio between pop dividends and wages
 	JOB_SATISFACTION_DIVIDENDS_BASE = 10 # 50					# Base value to be multiplied by the ratio between dividends and wages

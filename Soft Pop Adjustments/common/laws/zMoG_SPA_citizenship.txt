@@ -21,10 +21,24 @@ TRY_REPLACE:law_subjecthood = {
 		}
 	}
 
+	can_impose = {
+		OR = {
+			AND = {
+				is_in_same_power_bloc = scope:target_country
+				AND = {
+					modifier:country_can_impose_same_lawgroup_citizenship_in_power_bloc_bool = yes
+					has_law = scope:law
+				}
+			}
+			can_impose_law_default = yes
+		}
+	}
+
 	unlocking_laws = {
 		law_monarchy
 		law_theocracy
 		law_chiefdom
+		law_colonial_administration
 	}
 
 	modifier = {
@@ -137,7 +151,20 @@ TRY_REPLACE:law_ethnostate = {
 	unlocking_technologies = {
 		nationalism
 	}
-	
+
+	can_impose = {
+		OR = {
+			AND = {
+				is_in_same_power_bloc = scope:target_country
+				AND = {
+					modifier:country_can_impose_same_lawgroup_citizenship_in_power_bloc_bool = yes
+					has_law = scope:law
+				}
+			}
+			can_impose_law_default = yes
+		}
+	}
+
 	modifier = {
 		country_authority_add = 200
 		
@@ -272,7 +299,20 @@ TRY_REPLACE:law_national_supremacy = {
 			custom_tooltip = fervor_effects_ld_tt
 		}
 	}
-	
+
+	can_impose = {
+		OR = {
+			AND = {
+				is_in_same_power_bloc = scope:target_country
+				AND = {
+					modifier:country_can_impose_same_lawgroup_citizenship_in_power_bloc_bool = yes
+					has_law = scope:law
+				}
+			}
+			can_impose_law_default = yes
+		}
+	}
+
 	modifier = {
 		country_authority_add = 150
 		
@@ -414,7 +454,20 @@ TRY_REPLACE:law_racial_segregation = {
 			remove_modifier = modifier_polish_organic_statute
 		}
 	}
-	
+
+	can_impose = {
+		OR = {
+			AND = {
+				is_in_same_power_bloc = scope:target_country
+				AND = {
+					modifier:country_can_impose_same_lawgroup_citizenship_in_power_bloc_bool = yes
+					has_law = scope:law
+				}
+			}
+			can_impose_law_default = yes
+		}
+	}
+
 	modifier = {
 		country_authority_add = 100
 		
@@ -559,7 +612,20 @@ TRY_REPLACE:law_cultural_exclusion = {
 			remove_modifier = modifier_polish_organic_statute
 		}
 	}
-	
+
+	can_impose = {
+		OR = {
+			AND = {
+				is_in_same_power_bloc = scope:target_country
+				AND = {
+					modifier:country_can_impose_same_lawgroup_citizenship_in_power_bloc_bool = yes
+					has_law = scope:law
+				}
+			}
+			can_impose_law_default = yes
+		}
+	}
+
 	modifier = {
 		country_authority_add = 100
 		
@@ -690,7 +756,20 @@ TRY_REPLACE:law_multicultural = {
 	unlocking_technologies = {
 		human_rights
 	}
-	
+
+	can_impose = {
+		OR = {
+			AND = {
+				is_in_same_power_bloc = scope:target_country
+				AND = {
+					modifier:country_can_impose_same_lawgroup_citizenship_in_power_bloc_bool = yes
+					has_law = scope:law
+				}
+			}
+			can_impose_law_default = yes
+		}
+	}
+
 	on_enact = {
 		recalculate_pop_ig_support = yes
 		if = {
