@@ -477,7 +477,7 @@ TRY_REPLACE:law_racial_segregation = {
 		country_allow_voting_second_rate_citizen_bool = yes
 		country_allow_voting_full_acceptance_bool = yes
 		
-		# country_allow_assimilation_violent_hostility_bool = no	# Included for clarity.
+		country_allow_assimilation_violent_hostility_bool = yes # no	# Included for clarity.
 		country_allow_assimilation_cultural_erasure_bool = yes
 		country_allow_assimilation_open_prejudice_bool = yes
 		country_allow_assimilation_second_rate_citizen_bool = yes
@@ -615,7 +615,7 @@ TRY_REPLACE:law_cultural_exclusion = {
 		country_loyalism_increases_second_rate_citizen_mult = -0.025
 		country_loyalism_increases_full_acceptance_mult     =  0.025
 		
-		# country_allow_assimilation_violent_hostility_bool = no	# Included for clarity.
+		country_allow_assimilation_violent_hostility_bool = yes	# no	# Included for clarity.
 		country_allow_assimilation_cultural_erasure_bool = yes
 		country_allow_assimilation_open_prejudice_bool = yes
 		country_allow_assimilation_second_rate_citizen_bool = yes
@@ -769,7 +769,7 @@ TRY_REPLACE:law_multicultural = {
 		country_allow_voting_second_rate_citizen_bool = yes
 		country_allow_voting_full_acceptance_bool = yes
 		
-		# country_allow_assimilation_violent_hostility_bool = no	# Included for clarity.
+		country_allow_assimilation_violent_hostility_bool = yes	# no	# Included for clarity.
 		country_allow_assimilation_cultural_erasure_bool = yes
 		country_allow_assimilation_open_prejudice_bool = yes
 		country_allow_assimilation_second_rate_citizen_bool = yes
