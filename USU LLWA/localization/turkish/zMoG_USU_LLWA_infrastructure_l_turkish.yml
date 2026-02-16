@@ -1,0 +1,9 @@
+﻿l_turkish:
+ # Logistics
+ pmg_logistics_services_canal: "$pmg_logistics_services_port_river$" #deepl:3831872017
+ pmg_logistics_services_road: "Karayolu Lojistiği" #deepl:3050054774
+ 
+ usu_pm_llwa_logistics_0: "$usu_pm_rail_logistics_0$" #deepl:159421952
+ usu_pm_llwa_logistics_1: "$usu_pm_rail_logistics_1$" #deepl:2435320071
+ usu_pm_llwa_logistics_2: "$usu_pm_rail_logistics_2$" #deepl:2480188685
+ usu_pm_llwa_logistics_3: "$usu_pm_rail_logistics_3$" #deepl:192688650

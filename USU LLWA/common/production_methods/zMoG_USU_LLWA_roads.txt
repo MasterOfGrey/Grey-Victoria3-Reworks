@@ -1,0 +1,47 @@
+﻿# Road vehicles
+# none
+
+# Road traffic
+#LLWA_pm_no_buses = {
+#	texture = "gfx/interface/icons/production_method_icons/LLWA_no_buses.dds"
+#}
+
+INJECT:LLWA_pm_rickshaws = {
+    building_modifiers = {
+        workforce_scaled = {
+            goods_output_usu_logistics_add = 2
+        }
+    }
+}
+
+INJECT:LLWA_pm_stagecoaches = {
+    building_modifiers = {
+        workforce_scaled = {
+            goods_output_usu_logistics_add = 2
+        }
+    }
+}
+
+INJECT:LLWA_pm_steam_buses = {
+    building_modifiers = {
+        workforce_scaled = {
+            goods_output_usu_logistics_add = 3
+        }
+    }
+}
+
+INJECT:LLWA_pm_electric_buses = {
+    building_modifiers = {
+        workforce_scaled = {
+            goods_output_usu_logistics_add = 3
+        }
+    }
+}
+
+INJECT:LLWA_pm_motor_buses = {
+    building_modifiers = {
+        workforce_scaled = {
+            goods_output_usu_logistics_add = 3
+        }
+    }
+}

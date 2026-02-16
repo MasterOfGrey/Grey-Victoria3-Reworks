@@ -18,8 +18,8 @@ STATE_SOUTH_MADAGASCAR = {
         building_whaling_station = 4
         building_fishing_wharf = 8
     }
-	resource = {
-	    type = "building_gold_field"
+    resource = {
+        type = "bg_gold_field"
         depleted_type = "building_gold_mine"
         undiscovered_amount = 1
     }
@@ -47,8 +47,8 @@ STATE_NORTH_MADAGASCAR = {
         building_whaling_station = 6
         building_fishing_wharf = 10
     }
-	resource = {
-	type = "building_gold_field"
+    resource = {
+        type = "bg_gold_field"
         depleted_type = "building_gold_mine"
         undiscovered_amount = 3
     }

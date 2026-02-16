@@ -1,0 +1,37 @@
+﻿COUNTRIES = {	# Integrated with permission from DFW Kerser's "Historical Laws: Lan Fang"
+	c:LAN ?= {
+		set_next_election_date = 1838.6.15 # the year Gu Liubo became president
+		
+		effect_starting_technology_tier_4_tech = yes
+		effect_starting_politics_traditional = yes
+		
+		add_technology_researched = academia
+		add_technology_researched = empiricism
+		add_technology_researched = currency_standards
+		add_technology_researched = stock_exchange
+		add_technology_researched = mandatory_service
+		activate_law = law_type:law_presidential_republic
+		activate_law = law_type:law_census_voting
+		activate_law = law_type:law_freedom_of_conscience
+		activate_law = law_type:law_cultural_exclusion
+		activate_law = law_type:law_mercantilism
+		activate_law = law_type:law_per_capita_based_taxation
+		activate_law = law_type:law_national_militia
+		activate_law = law_type:law_migration_controls
+		activate_law = law_type:law_homesteading
+		activate_law = law_type:law_interventionism
+		activate_law = law_type:law_appointed_bureaucrats
+		activate_law = law_type:law_debt_slavery
+		activate_law = law_type:law_censorship
+
+		ig:ig_petty_bourgeoisie ?= {
+			add_ruling_interest_group = yes
+		}
+		ig:ig_armed_forces ?= {
+			add_ruling_interest_group = yes
+		}
+		ig:ig_trade_unions ?= {
+			add_ruling_interest_group = yes
+		}
+	}
+}

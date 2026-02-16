@@ -3023,7 +3023,7 @@ TRY_REPLACE:pm_default_building_notre_dame_saigon = {
 	}
 }
 
-TRY_REPLACE:pm_default_building_Notre_Dame = {
+TRY_REPLACE:pm_default_building_notre_dame = {
 	texture = "gfx/interface/icons/production_method_icons/wonders.dds"
 
 	state_modifiers = {
@@ -3050,7 +3050,7 @@ TRY_REPLACE:pm_default_building_Notre_Dame = {
 	}
 }
 
-TRY_REPLACE:pm_default_building_Hollywood = {
+TRY_REPLACE:pm_default_building_hollywood = {
 	texture = "gfx/interface/icons/production_method_icons/wonders.dds"
 
 	state_modifiers = {
@@ -3077,7 +3077,7 @@ TRY_REPLACE:pm_default_building_Hollywood = {
 	}
 }
 
-TRY_REPLACE:pm_default_building_Uffizi = {
+TRY_REPLACE:pm_default_building_uffizi = {
 	texture = "gfx/interface/icons/production_method_icons/wonders.dds"
 
 	state_modifiers = {
@@ -3099,7 +3099,7 @@ TRY_REPLACE:pm_default_building_Uffizi = {
 }
 
 
-TRY_REPLACE:pm_default_building_Jameh_mosque = {
+TRY_REPLACE:pm_default_building_jameh_mosque = {
 	texture = "gfx/interface/icons/production_method_icons/wonders.dds"
 
 	state_modifiers = {
@@ -3124,7 +3124,7 @@ TRY_REPLACE:pm_default_building_Jameh_mosque = {
 	}
 }
 
-TRY_REPLACE:pm_default_building_Notre_Dame_Afrique = {
+TRY_REPLACE:pm_default_building_notre_dame_afrique = {
 	texture = "gfx/interface/icons/production_method_icons/wonders.dds"
 
 	is_hidden_when_unavailable = yes
@@ -3151,7 +3151,7 @@ TRY_REPLACE:pm_default_building_Notre_Dame_Afrique = {
 	}
 }
 
-TRY_REPLACE:pm_default_building_university_of_Cape_Town = {
+TRY_REPLACE:pm_default_building_university_of_cape_town = {
 	texture = "gfx/interface/icons/production_method_icons/wonders.dds"
 
 	is_hidden_when_unavailable = yes
@@ -3176,7 +3176,7 @@ TRY_REPLACE:pm_default_building_university_of_Cape_Town = {
 	}
 }
 
-TRY_REPLACE:pm_default_building_Church_of_Saint_George = {
+TRY_REPLACE:pm_default_building_church_of_saint_george = {
 	texture = "gfx/interface/icons/production_method_icons/wonders.dds"
 
 	is_hidden_when_unavailable = yes
@@ -3199,29 +3199,6 @@ TRY_REPLACE:pm_default_building_Church_of_Saint_George = {
 	building_modifiers = {
 		level_scaled = {
 			building_employment_clergymen_add = 1000
-		}
-	}
-}
-
-TRY_REPLACE:pm_default_building_cape_coast_castle = {
-	texture = "gfx/interface/icons/production_method_icons/wonders.dds"
-
-	is_hidden_when_unavailable = yes
-
-	state_modifiers = {
-		workforce_scaled = {
-			building_throughput_add = 0.05
-			state_market_access_price_impact = 0.05
-			# state_migration_pull_add = -40
-		}
-		unscaled = {
-			state_migration_pull_add = -4
-		}
-	}
-	building_modifiers = {
-		level_scaled = {
-			building_employment_laborers_add = 2000
-			building_employment_bureaucrats_add = 100
 		}
 	}
 }

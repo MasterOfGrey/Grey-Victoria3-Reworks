@@ -1,0 +1,9 @@
+﻿l_english:
+ # Logistics
+ pmg_logistics_services_canal: "$pmg_logistics_services_port_river$"
+ pmg_logistics_services_road: "Road Logistics"
+ 
+ usu_pm_llwa_logistics_0: "$usu_pm_rail_logistics_0$"
+ usu_pm_llwa_logistics_1: "$usu_pm_rail_logistics_1$"
+ usu_pm_llwa_logistics_2: "$usu_pm_rail_logistics_2$"
+ usu_pm_llwa_logistics_3: "$usu_pm_rail_logistics_3$"
