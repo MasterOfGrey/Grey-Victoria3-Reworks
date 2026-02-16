@@ -1,0 +1,16 @@
+﻿l_polish:
+ # Populist Legal Power
+ mog_spa_plp_diff_religious_schools_literacy: "SPA: Zmiana umiejętności czytania i pisania (szkoły religijne)" #deepl:1440751240
+ mog_spa_plp_diff_private_schools_literacy: "SPA: Zmiana umiejętności czytania i pisania (szkoły prywatne)" #deepl:3610556517
+ mog_spa_plp_diff_public_schools_literacy: "SPA: Zmiana umiejętności czytania i pisania (szkoły publiczne)" #deepl:4080575972
+ 
+ # Ultra Historical Research & Education
+ mog_spa_uhre_diff_religious_schools_literacy: "SPA+UHRE: Zmiana umiejętności czytania i pisania (szkoły wyznaniowe)" #deepl:150827555
+ mog_spa_uhre_diff_private_schools_literacy: "SPA+UHRE: Zmiana umiejętności czytania i pisania (szkoły prywatne)" #deepl:366655228
+ mog_spa_uhre_diff_public_schools_literacy: "SPA+UHRE: Zmiana umiejętności czytania i pisania (szkoły publiczne)" #deepl:2009908556
+ mog_spa_uhre_diff_restricted_child_labor_literacy: "SPA+UHRE: Zmiana umiejętności czytania i pisania (ograniczona praca dzieci)" #deepl:850507583
+ mog_spa_uhre_diff_compulsory_school_literacy: "SPA+UHRE: Zmiana umiejętności czytania i pisania (obowiązkowa szkoła podstawowa)" #deepl:2102849950
+ 
+ mog_spa_plp_uhre_diff_religious_schools_literacy: "SPA+PLP+UHRE: Zmiana umiejętności czytania i pisania (szkoły wyznaniowe)" #deepl:3401975594
+ mog_spa_plp_uhre_diff_private_schools_literacy: "SPA+PLP+UHRE: Zmiana umiejętności czytania i pisania (szkoły prywatne)" #deepl:904518722
+ mog_spa_plp_uhre_diff_public_schools_literacy: "SPA+PLP+UHRE: Zmiana umiejętności czytania i pisania (szkoły publiczne)" #deepl:829533185

@@ -1,0 +1,16 @@
+﻿l_german:
+ # Populist Legal Power
+ mog_spa_plp_diff_religious_schools_literacy: "SPA: Alphabetisierung ändern (Religionsschulen)" #deepl:1440751240
+ mog_spa_plp_diff_private_schools_literacy: "SPA: Alphabetisierung ändern (Privatschulen)" #deepl:3610556517
+ mog_spa_plp_diff_public_schools_literacy: "SPA: Veränderung der Alphabetisierung (öffentliche Schulen)" #deepl:4080575972
+ 
+ # Ultra Historical Research & Education
+ mog_spa_uhre_diff_religious_schools_literacy: "SPA+UHRE: Alphabetisierung ändern (Religionsschulen)" #deepl:150827555
+ mog_spa_uhre_diff_private_schools_literacy: "SPA+UHRE: Alphabetisierung ändern (Privatschulen)" #deepl:366655228
+ mog_spa_uhre_diff_public_schools_literacy: "SPA+UHRE: Alphabetisierung ändern (öffentliche Schulen)" #deepl:2009908556
+ mog_spa_uhre_diff_restricted_child_labor_literacy: "SPA+UHRE: Alphabetisierung ändern (eingeschränkte Kinderarbeit)" #deepl:850507583
+ mog_spa_uhre_diff_compulsory_school_literacy: "SPA+UHRE: Änderung der Alphabetisierung (obligatorische Primarschule)" #deepl:2102849950
+ 
+ mog_spa_plp_uhre_diff_religious_schools_literacy: "SPA+PLP+UHRE: Alphabetisierung (religiöse Schulen)" #deepl:3401975594
+ mog_spa_plp_uhre_diff_private_schools_literacy: "SPA+PLP+UHRE: Alphabetisierung ändern (Privatschulen)" #deepl:904518722
+ mog_spa_plp_uhre_diff_public_schools_literacy: "SPA+PLP+UHRE: Veränderung der Alphabetisierung (öffentliche Schulen)" #deepl:829533185

@@ -1,0 +1,16 @@
+﻿l_japanese:
+ # Populist Legal Power
+ mog_spa_plp_diff_religious_schools_literacy: "SPAリテラシー・チェンジ（宗教学校）" #deepl:1440751240
+ mog_spa_plp_diff_private_schools_literacy: "SPAリテラシーの変化（私立学校）" #deepl:3610556517
+ mog_spa_plp_diff_public_schools_literacy: "SPAリテラシーの変化（公立学校）" #deepl:4080575972
+ 
+ # Ultra Historical Research & Education
+ mog_spa_uhre_diff_religious_schools_literacy: "SPA+UHRE：リテラシー・チェンジ（宗教学校）" #deepl:150827555
+ mog_spa_uhre_diff_private_schools_literacy: "SPA+UHRE：リテラシーの変化（私立学校）" #deepl:366655228
+ mog_spa_uhre_diff_public_schools_literacy: "SPA+UHRE：リテラシー・チェンジ（公立学校）" #deepl:2009908556
+ mog_spa_uhre_diff_restricted_child_labor_literacy: "SPA+UHRE：リテラシーの変化（児童労働の制限）" #deepl:850507583
+ mog_spa_uhre_diff_compulsory_school_literacy: "SPA+UHRE：識字率の変化（義務教育の小学校）" #deepl:2102849950
+ 
+ mog_spa_plp_uhre_diff_religious_schools_literacy: "SPA+PLP+UHRE：リテラシー・チェンジ（宗教学校）" #deepl:3401975594
+ mog_spa_plp_uhre_diff_private_schools_literacy: "SPA+PLP+UHRE：リテラシーの変化（私立学校）" #deepl:904518722
+ mog_spa_plp_uhre_diff_public_schools_literacy: "SPA+PLP+UHRE：リテラシー・チェンジ（公立学校）" #deepl:829533185

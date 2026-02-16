@@ -1,0 +1,16 @@
+﻿l_spanish:
+ # Populist Legal Power
+ mog_spa_plp_diff_religious_schools_literacy: "SPA: Alfabetización Cambio (Escuelas Religiosas)" #deepl:1440751240
+ mog_spa_plp_diff_private_schools_literacy: "SPA: Alfabetización Cambio (Escuelas Privadas)" #deepl:3610556517
+ mog_spa_plp_diff_public_schools_literacy: "SPA: Alfabetización Cambio (Escuelas Públicas)" #deepl:4080575972
+ 
+ # Ultra Historical Research & Education
+ mog_spa_uhre_diff_religious_schools_literacy: "SPA+UHRE: Alfabetización Cambio (Escuelas Religiosas)" #deepl:150827555
+ mog_spa_uhre_diff_private_schools_literacy: "SPA+UHRE: Alfabetización Cambio (Escuelas Privadas)" #deepl:366655228
+ mog_spa_uhre_diff_public_schools_literacy: "SPA+UHRE: Alfabetización Cambio (Escuelas Públicas)" #deepl:2009908556
+ mog_spa_uhre_diff_restricted_child_labor_literacy: "SPA+UHRE: Alfabetización Cambio (Trabajo Infantil Restringido)" #deepl:850507583
+ mog_spa_uhre_diff_compulsory_school_literacy: "SPA+UHRE: Cambio en la alfabetización (enseñanza primaria obligatoria)" #deepl:2102849950
+ 
+ mog_spa_plp_uhre_diff_religious_schools_literacy: "SPA+PLP+UHRE: Alfabetización Cambio (Escuelas Religiosas)" #deepl:3401975594
+ mog_spa_plp_uhre_diff_private_schools_literacy: "SPA+PLP+UHRE: Cambio en la alfabetización (escuelas privadas)" #deepl:904518722
+ mog_spa_plp_uhre_diff_public_schools_literacy: "SPA+PLP+UHRE: Alfabetización Cambio (Escuelas Públicas)" #deepl:829533185
