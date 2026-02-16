@@ -11,7 +11,7 @@ STATE_SOUTH_MADAGASCAR = {
     mine = "x5F8C33"
     wood = "x47F3A1"
     arable_land = 80
-    arable_resources = { "building_millet_farm" "building_rice_farms" "building_livestock_ranch" "building_coffee_plantation" "building_dye_plantation" "building_tea_plantation" "building_tobacco_plantation" "building_sugar_plantation" "building_banana_plantation" }
+    arable_resources = { "building_millet_farm" "building_rice_farm" "building_livestock_ranch" "building_coffee_plantation" "building_dye_plantation" "building_tea_plantation" "building_tobacco_plantation" "building_sugar_plantation" "building_banana_plantation" }
     capped_resources = {
         building_coal_mine = 80
         building_logging_camp = 23
@@ -19,7 +19,7 @@ STATE_SOUTH_MADAGASCAR = {
         building_fishing_wharf = 8
     }
     resource = {
-        type = "bg_gold_field"
+        type = "building_gold_field"
         depleted_type = "building_gold_mine"
         undiscovered_amount = 1
     }
@@ -48,7 +48,7 @@ STATE_NORTH_MADAGASCAR = {
         building_fishing_wharf = 10
     }
     resource = {
-        type = "bg_gold_field"
+        type = "building_gold_field"
         depleted_type = "building_gold_mine"
         undiscovered_amount = 3
     }
