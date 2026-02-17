@@ -77,7 +77,7 @@ TRY_REPLACE:building_explosives_factory = {
 	levels_per_mesh = 50
 
 	production_method_groups = {
-		pmg_explosives_building_chemical_plants
+		pmg_explosives_building_chemical_plant
 		pmg_automation_building_explosives_factory
 	}
 

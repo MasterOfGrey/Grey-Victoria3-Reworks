@@ -12,7 +12,7 @@ REPLACE_OR_CREATE:recognize = {
 		country_rank >= rank_value:great_power
 		OR = { 
 			is_country_type = recognized
-			is_country_type = colonial
+			country_is_colonial_or_company = yes
 		}
 		scope:target_country = {
 			is_country_type = unrecognized

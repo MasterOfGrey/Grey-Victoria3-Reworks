@@ -289,6 +289,12 @@ TRY_REPLACE:mongol= {
 	religion = gelugpa
 	heritage = heritage_mongolian
 	language = language_mongolian
+	name_format = last_first
+
+	obsessions = {
+		meat
+	}
+
 	traditions = { }
 	male_common_first_names = {
 		Badamdorj
@@ -416,8 +422,8 @@ TRY_REPLACE:kalmyk= {
 	religion = gelugpa
 	heritage = heritage_mongolian
 	language = language_mongolian
-	traditions = { tradition_russosphere }
 	name_format = last_first
+	traditions = { tradition_russosphere }
 	male_common_first_names = {
 		Badamdorj
 		Batbayar

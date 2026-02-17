@@ -44,7 +44,7 @@ mog_atp_start_cleanout_action = {
 #					#			owner = ROOT
 #					#			is_incorporated = yes
 #					#			any_scope_building = {
-#					#				is_building_type = building_chemical_plants
+#					#				is_building_type = building_chemical_plant
 #					#				level = 1
 #					#			}
 #					#			OR = {
@@ -53,9 +53,9 @@ mog_atp_start_cleanout_action = {
 #					#				region = sr:region_south_germany
 #					#			}
 #					#		}
-#					#		remove_building = building_chemical_plants
+#					#		remove_building = building_chemical_plant
 #					#		create_building={
-#					#			building="building_chemical_plants"
+#					#			building="building_chemical_plant"
 #					#			add_ownership={
 #					#				company={
 #					#					type=company_IG_Farben

@@ -165,10 +165,10 @@
 #	
 #	state_modifiers = {
 #		unscaled = {
-#			building_military_shipyards_throughput_add = 0.1
+#			building_military_shipyard_throughput_add = 0.1
 #		}
 #		level_scaled = {
-#			building_military_shipyards_throughput_add = 0.02
+#			building_military_shipyard_throughput_add = 0.02
 #		}
 #	}
 #}
@@ -211,10 +211,10 @@
 #	
 #	state_modifiers = {
 #		unscaled = {
-#			building_military_shipyards_throughput_add = 0.1
+#			building_military_shipyard_throughput_add = 0.1
 #		}
 #		level_scaled = {
-#			building_military_shipyards_throughput_add = 0.02
+#			building_military_shipyard_throughput_add = 0.02
 #		}
 #	}
 #}
@@ -256,10 +256,10 @@
 #	
 #	state_modifiers = {
 #		unscaled = {
-#			building_military_shipyards_throughput_add = 0.1
+#			building_military_shipyard_throughput_add = 0.1
 #		}
 #		level_scaled = {
-#			building_military_shipyards_throughput_add = 0.02
+#			building_military_shipyard_throughput_add = 0.02
 #		}
 #	}
 #}
@@ -299,10 +299,10 @@
 #	
 #	state_modifiers = {
 #		unscaled = {
-#			building_military_shipyards_throughput_add = 0.1
+#			building_military_shipyard_throughput_add = 0.1
 #		}
 #		level_scaled = {
-#			building_military_shipyards_throughput_add = 0.02
+#			building_military_shipyard_throughput_add = 0.02
 #		}
 #	}
 #}
@@ -346,10 +346,10 @@
 #	
 #	state_modifiers = {
 #		unscaled = {
-#			building_military_shipyards_throughput_add = 0.2
+#			building_military_shipyard_throughput_add = 0.2
 #		}
 #		level_scaled = {
-#			building_military_shipyards_throughput_add = 0.04
+#			building_military_shipyard_throughput_add = 0.04
 #		}
 #	}
 #	
@@ -393,10 +393,10 @@
 #	
 #	state_modifiers = {
 #		unscaled = {
-#			building_military_shipyards_throughput_add = 0.2
+#			building_military_shipyard_throughput_add = 0.2
 #		}
 #		level_scaled = {
-#			building_military_shipyards_throughput_add = 0.04
+#			building_military_shipyard_throughput_add = 0.04
 #		}
 #	}
 #	
@@ -438,10 +438,10 @@
 #	
 #	state_modifiers = {
 #		unscaled = {
-#			building_military_shipyards_throughput_add = 0.2
+#			building_military_shipyard_throughput_add = 0.2
 #		}
 #		level_scaled = {
-#			building_military_shipyards_throughput_add = 0.04
+#			building_military_shipyard_throughput_add = 0.04
 #		}
 #	}
 #	
