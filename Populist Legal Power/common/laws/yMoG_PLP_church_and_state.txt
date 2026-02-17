@@ -19,7 +19,7 @@ REPLACE_OR_CREATE:law_state_religion = {
 	on_activate = {
 		if = {
 			limit = {
-				#has_law_or_variant = law_type:law_state_atheism
+				# has_law_or_variant = law_type:law_state_atheism
 				country_has_state_religion = rel:atheist
 			}
 			set_state_religion = root.country_definition.religion
@@ -142,7 +142,7 @@ REPLACE_OR_CREATE:law_millet_system = { # Ottoman Empire
 	on_activate = {
 		if = {
 			limit = {
-				#has_law_or_variant = law_type:law_state_atheism
+				# has_law_or_variant = law_type:law_state_atheism
 				country_has_state_religion = rel:atheist
 			}
 			set_state_religion = root.country_definition.religion
@@ -245,17 +245,10 @@ REPLACE_OR_CREATE:law_people_of_the_book = { # Other Muslim states
 		law_chiefdom
 	}
 
-	is_visible = {
-		country_is_islamic = yes
-		NOT = {
-			c:TUR ?= this # For the Ottoman Empire and its subjects
-		}
-	}
-
 	on_activate = {
 		if = {
 			limit = {
-				#has_law_or_variant = law_type:law_state_atheism
+				# has_law_or_variant = law_type:law_state_atheism
 				country_has_state_religion = rel:atheist
 			}
 			set_state_religion = root.country_definition.religion
@@ -266,9 +259,8 @@ REPLACE_OR_CREATE:law_people_of_the_book = { # Other Muslim states
 			}
 			remove_modifier = antireligious_policies
 		}
-
 		recalculate_pop_ig_support = yes
-	}
+}
 
 	modifier = {
 		interest_group_ig_devout_pol_str_mult = 0.3
@@ -456,6 +448,12 @@ REPLACE_OR_CREATE:law_total_separation = {
 		# 	limit = {
 		# 		has_law_or_variant = law_type:law_state_atheism
 		# 	}
+	on_enact = {	# PLP - Only remove modifiers if self-enacted
+		## PLP - Total separation doesn't reset the state religion
+		# if = {
+		# 	limit = {
+		# 		has_law_or_variant = law_type:law_state_atheism
+		# 	}
 		# 	set_state_religion = root.country_definition.religion
 		# }
 		if = {
@@ -464,6 +462,9 @@ REPLACE_OR_CREATE:law_total_separation = {
 			}
 			remove_modifier = antireligious_policies
 		}
+	}
+
+	on_activate = {	# PLP - Always recalculate support
 		recalculate_pop_ig_support = yes
 	}
 	

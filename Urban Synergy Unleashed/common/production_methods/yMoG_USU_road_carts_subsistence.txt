@@ -169,7 +169,7 @@ TRY_REPLACE:pm_homesteading_building_subsistence = {	# Included fix from UHM
 	texture = "gfx/interface/icons/production_method_icons/homesteading.dds"
 	unlocking_laws = {
 		law_homesteading
-		law_collectivized_agriculture
+		law_collectivized_agriculture	 # USU
 	}
 	
 	building_modifiers = {
@@ -193,7 +193,7 @@ TRY_REPLACE:pm_serfdom_no = {
 	unlocking_laws = {
 		law_tenant_farmers
 		law_commercialized_agriculture
-		law_collectivized_agriculture
+		# law_collectivized_agriculture	 # USU
 		law_latifundias
 		law_expanded_latifundias
 	}
