@@ -77,6 +77,7 @@ REPLACE_OR_CREATE:consolidate_subject = {
 							any_primary_culture = {
 								count = all
 								OR = {
+									shares_heritage_trait_group_with_any_primary_culture = scope:target_country
 									shares_language_trait_group_with_any_primary_culture = scope:recipient_subject
 									shares_tradition_trait_with_any_primary_culture = scope:recipient_subject
 								} # prev: shares_trait_with_any_primary_culture = scope:recipient_subject
