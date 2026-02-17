@@ -1,18 +1,21 @@
 ﻿## Land Reform - Borrowed from Doodlez
-REPLACE_OR_CREATE:land_redistribution_modifier = {
+# REPLACE_OR_CREATE:
+land_redistribution_modifier = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_documents_negative.dds
 	building_group_bg_agriculture_throughput_add = -0.10
 	building_group_bg_ranching_throughput_add = -0.10
 	country_bureaucracy_mult = -0.1
 }
 
-REPLACE_OR_CREATE:land_redistribution_compensation_modifier = {
+# REPLACE_OR_CREATE:
+land_redistribution_compensation_modifier = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_documents_negative.dds	
 	country_expenses_add = 1
 }
 
 ## Migration Restrictiveness compatibility with SPA
-REPLACE_OR_CREATE:mog_spa_migration_restrictiveness_add = {
+# REPLACE_OR_CREATE:
+mog_spa_migration_restrictiveness_add = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_authority_positive.dds
 	country_migration_restrictiveness_add = 10
 }

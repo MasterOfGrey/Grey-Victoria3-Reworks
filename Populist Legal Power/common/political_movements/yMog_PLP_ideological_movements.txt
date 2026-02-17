@@ -3243,9 +3243,11 @@ REPLACE_OR_CREATE:movement_anarchist = {
 			OR = {
 				scope:clout <= 0
 				trigger_if = {
-					NOT = {
-						owner = {
-							has_journal_entry = je_spanish_anarchism # So the Spanish anarchists will always launch a revolution if possible
+					limit = {
+						NOT = {
+							owner = {
+								has_journal_entry = je_spanish_anarchism # So the Spanish anarchists will always launch a revolution if possible
+							}
 						}
 					}
 					AND = {
@@ -6346,8 +6348,7 @@ REPLACE_OR_CREATE:movement_positivist = {
 	}
 }
 
-REPLACE_OR_CREATE:
-movement_land_reform = {
+REPLACE_OR_CREATE:movement_land_reform = {
 	category = movement_category_ideological
 
 	# Pretty much a single issue movement

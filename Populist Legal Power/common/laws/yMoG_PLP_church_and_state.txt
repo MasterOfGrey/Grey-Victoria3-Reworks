@@ -260,7 +260,7 @@ REPLACE_OR_CREATE:law_people_of_the_book = { # Other Muslim states
 			remove_modifier = antireligious_policies
 		}
 		recalculate_pop_ig_support = yes
-}
+	}
 
 	modifier = {
 		interest_group_ig_devout_pol_str_mult = 0.3
@@ -442,12 +442,6 @@ REPLACE_OR_CREATE:law_total_separation = {
 		}
 	}
 	
-	on_activate = {
-		## PLP - Total separation doesn't reset the state religion
-		# if = {
-		# 	limit = {
-		# 		has_law_or_variant = law_type:law_state_atheism
-		# 	}
 	on_enact = {	# PLP - Only remove modifiers if self-enacted
 		## PLP - Total separation doesn't reset the state religion
 		# if = {

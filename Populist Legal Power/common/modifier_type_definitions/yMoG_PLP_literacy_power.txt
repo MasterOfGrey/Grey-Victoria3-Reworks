@@ -1,4 +1,14 @@
-﻿#state_political_strength_from_literacy_mult={
+﻿REPLACE_OR_CREATE:state_slaves_education_access_add={
+	decimals=0
+	color=good
+	percent=yes
+	game_data={
+		ai_value=0
+	}
+}
+
+# Not used
+#state_political_strength_from_literacy_mult={
 #	decimals=0
 #	color=neutral
 #	percent=yes
@@ -6,15 +16,7 @@
 #		ai_value=0
 #	}
 #}
-# Not used
-#state_slaves_education_access_add={
-#	decimals=0
-#	color=good
-#	percent=yes
-#	game_data={
-#		ai_value=0
-#	}
-#}
+#
 #country_pol_str_from_literacy_add={
 #	decimals=0
 #	color=neutral

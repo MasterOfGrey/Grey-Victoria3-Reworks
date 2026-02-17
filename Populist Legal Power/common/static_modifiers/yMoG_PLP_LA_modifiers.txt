@@ -1,16 +1,20 @@
-﻿REPLACE_OR_CREATE:LA_Home_Affairs = {
+﻿# REPLACE_OR_CREATE:
+LA_Home_Affairs = {
 	icon = gfx/interface/icons/topbar/authority_icon.dds
 	country_authority_add = 30
 }
-REPLACE_OR_CREATE:LA_Law_Enforcement = {
+# REPLACE_OR_CREATE:
+LA_Law_Enforcement = {
 	icon = gfx/interface/icons/topbar/authority_icon.dds
 	country_authority_add = 30
 }
-REPLACE_OR_CREATE:LA_Workplace_Safety = {
+# REPLACE_OR_CREATE:
+LA_Workplace_Safety = {
 	icon = gfx/interface/icons/topbar/authority_icon.dds
 	country_authority_add = 20
 }
-REPLACE_OR_CREATE:LA_Social_Security = {
+# REPLACE_OR_CREATE:
+LA_Social_Security = {
 	icon = gfx/interface/icons/topbar/authority_icon.dds
 	country_authority_add = 10
 }
