@@ -3,7 +3,7 @@
 #Morgenrote compatibility with MIR
 
 #MR_AUTORACING_FOUND_TEAM_BUTTON
-mr_autoracing_found_team_button_sgui = {
+TRY_REPLACE:mr_autoracing_found_team_button_sgui = {
 	scope = country
 	is_shown = {
 		NOT = {
