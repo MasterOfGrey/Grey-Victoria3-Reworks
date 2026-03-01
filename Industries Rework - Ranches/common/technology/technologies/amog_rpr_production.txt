@@ -1,16 +1,7 @@
 ﻿### ERA 1
 
-enclosure = {
-	# Unlocks construction of Farms and Plantations
-	era = era_1
-	texture = "gfx/interface/icons/invention_icons/enclosure.dds"
-	category = production
-	
+TRY_INJECT:enclosure = {
 	modifier = {
 		country_max_companies_add = 1
-	}
-	
-	ai_weight = {
-		value = 3 # Very important tech in general
 	}
 }

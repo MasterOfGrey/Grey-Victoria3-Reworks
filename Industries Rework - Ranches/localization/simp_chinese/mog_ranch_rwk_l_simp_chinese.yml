@@ -1,9 +1,9 @@
 ﻿l_simp_chinese:
-  # Missing Modifier Types 
- goods_output_grain_mult: "建造@grain！粮食产量"
- goods_output_grain_mult_desc: "对@grain! 数量的奖励或惩罚建筑物生产的粮食"
- goods_output_meat_mult: "建造@meat！肉类产量"
- goods_output_meat_mult_desc: "对@肉的数量有奖励或惩罚！建筑物生产的肉"
-  
-  # Flavour Easter Eggs 
- company_somali_food_chain: "卡多食物链集团"
+ # Missing Modifier Types
+ goods_output_grain_mult: "建筑@grain! 谷物产量" #deepl:3907536723
+ goods_output_grain_mult_desc: "建筑物生产的@grain! 谷物数量的奖励或惩罚" #deepl:653363902
+ goods_output_meat_mult: "建筑@meat! 肉类产出" #deepl:1213351897
+ goods_output_meat_mult_desc: "@meat! 建筑物生产的肉类数量的奖励或惩罚" #deepl:4278174590
+ 
+ # Flavour Easter Eggs
+ company_somali_food_chain: "Qardho 食物链辛迪加" #deepl:2343691508

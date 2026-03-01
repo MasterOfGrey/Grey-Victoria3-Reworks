@@ -1,49 +1,49 @@
 ﻿l_korean:
-  # More accurate fabric terms for how the game uses them 
- fabric: "기본 직물" #NT!
- silk: "실크 천" #NT!
-  
- goods_output_fabric_add: "@fabric! 섬유 출력" #NT!
- goods_output_fabric_add_desc: "건물에서 생산되는 @fabric! 섬유의 양" #NT!
- goods_output_fabric_mult: "@fabric을 구축! 섬유 출력" #NT!
- goods_output_fabric_mult_desc: "@fabric의 양에 대한 보너스 또는 페널티! 건물에서 생산되는 섬유" #NT!
- goods_output_silk_add: "@silk! 실크 천 출력" #NT!
- goods_output_silk_add_desc: "건물에서 생산되는 @silk! Silken Cloth의 양" #NT!
- goods_output_silk_mult: "@silk!실크 천 출력 빌드" #NT!
- goods_output_silk_mult_desc: "건물에서 생산되는 @silk! Silken Cloth의 양에 대한 보너스 또는 패널티" #NT!
-  
-  #Ranches 
- pmg_base_building_livestock_ranch: "$pm_base$"
- pm_open_air_stockyards: "옥외 사육장"
- pm_intensive_grazing_ranch: "집중 방목 주기" #NT!
- pm_battery_farming: "배터리 농업" #NT!
-  
- pmg_automation_ranch: "압형" #NT!
- pm_homemade_tools: "수제 도구" #NT!
- pm_butchering_tools: "도살 공구"
- pm_slaughterhouses: "도축장"
- pm_mechanized_slaughtering: "기계화 도축장"
- pm_refrigerated_workspaces: "냉장 작업 공간" #NT!
-  
- pmg_sheep_ranch: "모직 생산"
- pm_simple_ranch: "울 애니멀 랜치" #NT!
- pm_beasts_of_burden: "짐의 짐승" #NT!
- pm_sheep_farms: "모직 채취량 증가"
- pm_intensive_diet_control: "집중적인 식단 조절" #NT!
-  
- pmg_dairy_products: "정제된 제품" #NT!
- pm_no_cheese: "정제 없음" #NT!
- pm_artisanal_cheese: "장인 치즈" #NT!
- pm_industrial_preserves: "산업용 보존 식품" #NT!
- pm_ranch_milk_production: "저온살균 우유" #NT!
- pm_full_eggs_dairy: "계란과 유제품" #NT!
-  
- pmg_fencing: "울타리"
- pm_standard_fences: "기본 울타리"
- pm_barbed_wire_fences: "철조망"
- pm_electric_fencing: "전기 울타리"
-  
- pmg_refrigeration_building_livestock_ranch: "냉장 보관"
- pm_unrefrigerated_ranch: "냉장되지 않음" #NT!
- pm_refrigerated_storage_building_livestock_ranch: "냉장창고"
- pm_refrigerated_rail_cars_building_livestock_ranch: "냉장 열차"
+ # More accurate fabric terms for how the game uses them
+ fabric: "기본 텍스타일" #deepl:650451556
+ silk: "실크 천" #deepl:2615879523
+ 
+ goods_output_fabric_add: "@fabric! 텍스타일 출력" #deepl:1458022263
+ goods_output_fabric_add_desc: "건물에서 생산되는 @fabric! 섬유의 양" #deepl:3707553755
+ goods_output_fabric_mult: "건물 @fabric! 섬유 출력" #deepl:3471692276
+ goods_output_fabric_mult_desc: "건물에서 생산되는 @fabric! 섬유의 양에 대한 보너스 또는 페널티" #deepl:2950063491
+ goods_output_silk_add: "@silk! 실크 천 출력" #deepl:1383353171
+ goods_output_silk_add_desc: "건물에서 생산되는 @silk! 실크 천의 양" #deepl:1648106320
+ goods_output_silk_mult: "건물 @silk! 실크 천 출력" #deepl:309817432
+ goods_output_silk_mult_desc: "건물에서 생산되는 @silk! 비단 천의 양에 보너스 또는 페널티가 적용됩니다." #deepl:1101901388
+ 
+ #Ranches
+ pmg_base_building_livestock_ranch: "$pm_base$" #deepl:1387170213
+ pm_open_air_stockyards: "야외 창고" #deepl:3768799761
+ pm_intensive_grazing_ranch: "집중 방목 주기" #deepl:4078155880
+ pm_battery_farming: "배터리 파밍" #deepl:2364280533
+ 
+ pmg_automation_ranch: "툴링" #deepl:681807416
+ pm_homemade_tools: "홈메이드 도구" #deepl:3178308234
+ pm_butchering_tools: "도살 도구" #deepl:3802910522
+ pm_slaughterhouses: "도축장" #deepl:1222344050
+ pm_mechanized_slaughtering: "기계화 도축장" #deepl:2393823879
+ pm_refrigerated_workspaces: "냉장 작업 공간" #deepl:2212983772
+ 
+ pmg_sheep_ranch: "양모 생산" #deepl:3222990642
+ pm_beasts_of_burden: "짐승의 부담" #deepl:481098943
+ pm_simple_ranch: "양모 동물 목장" #deepl:3799682051
+ pm_sheep_farms: "양모 채집 증가" #deepl:1876138327
+ pm_intensive_diet_control: "집중 식단 관리" #deepl:2297694983
+ 
+ pmg_dairy_products: "세련된 제품" #deepl:2504040104
+ pm_no_cheese: "개선 없음" #deepl:2988977882
+ pm_artisanal_cheese: "장인 치즈" #deepl:2150437028
+ pm_industrial_preserves: "산업 보존 식품" #deepl:1627547361
+ pm_ranch_milk_production: "저온 살균 우유" #deepl:591250297
+ pm_full_eggs_dairy: "완전 계란 및 유제품" #deepl:3755171097
+ 
+ pmg_fencing: "펜싱" #deepl:931508196
+ pm_standard_fences: "표준 울타리" #deepl:222454144
+ pm_barbed_wire_fences: "철조망 울타리" #deepl:3235797227
+ pm_electric_fencing: "전기 울타리" #deepl:1995269278
+ 
+ pmg_refrigeration_building_livestock_ranch: "냉장 보관" #deepl:1924488602
+ pm_unrefrigerated_ranch: "비냉장" #deepl:2855338934
+ pm_refrigerated_storage_building_livestock_ranch: "냉장 보관" #deepl:442876486
+ pm_refrigerated_rail_cars_building_livestock_ranch: "냉장 철도 차량" #deepl:725952362

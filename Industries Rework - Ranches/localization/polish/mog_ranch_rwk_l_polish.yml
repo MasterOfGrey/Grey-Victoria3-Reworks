@@ -1,9 +1,9 @@
 ﻿l_polish:
-  # Missing Modifier Types 
+ # Missing Modifier Types
  goods_output_grain_mult: "Budowanie @grain! Produkcja ziarna"
  goods_output_grain_mult_desc: "Bonus lub kara do kwoty @grain! Grain produkowane przez budynki"
- goods_output_meat_mult: "Budowanie @mięsa! Produkcja mięsa"
+ goods_output_meat_mult: "Budowanie @meat! Produkcja mięsa"
  goods_output_meat_mult_desc: "Bonus lub kara do ilości @meat! Mięso produkowane przez budynki"
-  
-  # Flavour Easter Eggs 
+ 
+ # Flavour Easter Eggs
  company_somali_food_chain: "Syndykat łańcucha żywnościowego Qardho"

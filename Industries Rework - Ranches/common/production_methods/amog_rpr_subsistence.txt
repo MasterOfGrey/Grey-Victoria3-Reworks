@@ -1,55 +1,58 @@
-﻿### Subsistence Production
-TRY_INJECT:default_building_subsistence_farm = {
-	state_modifiers = {							# This is inherited from USU, and is not strictly in scope for this mod - but I've seen that it works and people should have access to this feature without USU if they want it.
-		workforce_scaled = {
-			state_birth_rate_mult = -0.0045		# For some reason this one gets modifiers but the other doesn't, and the goal is to cancel out when fully employed.
-		}
-		level_scaled = {
-			state_birth_rate_mult = 0.005
-		}
-	}
-}
-
-TRY_INJECT:default_building_subsistence_orchard = {
-	state_modifiers = {
-		workforce_scaled = {
-			state_birth_rate_mult = -0.0045
-		}
-		level_scaled = {
-			state_birth_rate_mult = 0.005
-		}
-	}
-}
-
-TRY_INJECT:default_building_subsistence_pasture = {
-	state_modifiers = {
-		workforce_scaled = {
-			state_birth_rate_mult = -0.0045
-		}
-		level_scaled = {
-			state_birth_rate_mult = 0.005
-		}
-	}
-}
-
-TRY_INJECT:default_building_subsistence_fishing_village = {
-	state_modifiers = {
-		workforce_scaled = {
-			state_birth_rate_mult = -0.0045
-		}
-		level_scaled = {
-			state_birth_rate_mult = 0.005
-		}
-	}
-}
-
-TRY_INJECT:default_building_subsistence_rice_farm = {
-	state_modifiers = {
-		workforce_scaled = {
-			state_birth_rate_mult = -0.0045
-		}
-		level_scaled = {
-			state_birth_rate_mult = 0.005
-		}
-	}
-}
+﻿## Removing this mechanic from RPR intentionally - file left her in case someone wants to reactivate it for themselves.
+#
+#### Subsistence Production
+#TRY_INJECT:default_building_subsistence_farm = {
+#	state_modifiers = {							# This is inherited from USU, and is not strictly in scope for this mod - but I've seen that it works and people should have access to this feature without USU if they want it.
+#		workforce_scaled = {
+#			state_birth_rate_mult = -0.0045		# For some reason this one gets modifiers but the other doesn't, and the goal is to cancel out when fully employed.
+#		}
+#		level_scaled = {
+#			state_birth_rate_mult = 0.005
+#		}
+#	}
+#}
+#
+#TRY_INJECT:default_building_subsistence_orchard = {
+#	state_modifiers = {
+#		workforce_scaled = {
+#			state_birth_rate_mult = -0.0045
+#		}
+#		level_scaled = {
+#			state_birth_rate_mult = 0.005
+#		}
+#	}
+#}
+#
+#TRY_INJECT:default_building_subsistence_pasture = {
+#	state_modifiers = {
+#		workforce_scaled = {
+#			state_birth_rate_mult = -0.0045
+#		}
+#		level_scaled = {
+#			state_birth_rate_mult = 0.005
+#		}
+#	}
+#}
+#
+#TRY_INJECT:default_building_subsistence_fishing_village = {
+#	state_modifiers = {
+#		workforce_scaled = {
+#			state_birth_rate_mult = -0.0045
+#		}
+#		level_scaled = {
+#			state_birth_rate_mult = 0.005
+#		}
+#	}
+#}
+#
+#TRY_INJECT:default_building_subsistence_rice_farm = {
+#	state_modifiers = {
+#		workforce_scaled = {
+#			state_birth_rate_mult = -0.0045
+#		}
+#		level_scaled = {
+#			state_birth_rate_mult = 0.005
+#		}
+#	}
+#}
+#
