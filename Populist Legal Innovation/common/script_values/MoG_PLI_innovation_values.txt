@@ -1,4 +1,15 @@
-﻿### Innovation Limitations
+﻿### Innovation Baseline Rebalance
+mog_pli_base_innovation_adjustment = { # Used to scale base innovation so that the defines don't result in broken gameplay outcomes from modifying innovation cap.
+	value = 0
+	add = {
+		add = 1							# 1 - National literacy_rate = size of penalty
+		subtract = root.literacy_rate	# National literacy_rate -> low literacy = high penalty
+	}
+	multiply = 25						# Convert % into adjustment to base modifier (base 50 -> 25 at 0% literacy)
+	max = 25							# Clamp it to be safe.
+}
+
+### Innovation Limitations
 mog_pli_max_innovation_potential_from_citizenship = {	# We use this for Loc and to apply a ceiling to any/all innovation incentive calculations.
 	value = 1
 	multiply = var:pli_innovation_citizenship_percent

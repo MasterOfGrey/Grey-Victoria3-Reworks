@@ -13,6 +13,39 @@
  mog_pli_curry_favour_button: "Curry Favor" #deepl:1217933398
  mog_pli_curry_favour_button_desc: "Satisfacer los deseos de quienes tienen influencia para reforzar el apoyo al gobierno." #deepl:2680760523
  mog_pli_curry_favour_button_tt: "La corrupción cambia #n [ROOT.GetCountry.MakeScope.ScriptValue('mog_pli_curried_favour_tt_val')|=-]#!" #deepl:2570271461
+ mog_pli_local_intervention_button: "Intervenir localmente" #deepl:3167143371
+ mog_pli_local_intervention_button_desc: "Concéntrese en un estado y despeje el camino para que la construcción avance rápidamente." #deepl:1423603147
+ mog_pli_local_intervention_button_tt: "Tiene [concept_turmoil] bajo Y al menos 1 nivel de [GetBuildingType('building_government_administration').GetName]." #deepl:2820689446
+ mog_pli_local_intervention_button_summary: "Elegirá un estado para recibir un modificador que elimine las penalizaciones a la construcción pero aumente el coste burocrático de la población." #deepl:2003445093
+ PLI_corruption_button_ev.1.t: "Intervención local contra la corrupción" #deepl:605094782
+ PLI_corruption_button_ev.1.d: "Seleccione un [concept_state] válido para mejorar los resultados de la construcción en." #deepl:1115791796
+ PLI_corruption_button_ev.1.f: "Los estados deben estar constituidos en sociedad, tener un bajo nivel de agitación, contar con una administración de gobierno local y tener una construcción en curso para poder optar a ellos." #deepl:434486560
+ local_intervention1: "[SCOPE.sState('local_intervention1').GetName]" #deepl:3995787814
+ local_intervention2: "[SCOPE.sState('local_intervention2').GetName]" #deepl:1591681848
+ local_intervention3: "[SCOPE.sState('local_intervention3').GetName]" #deepl:829660210
+ local_intervention4: "[SCOPE.sState('local_intervention4').GetName]" #deepl:2486281223
+ local_intervention5: "[SCOPE.sState('local_intervention5').GetName]" #deepl:4221377293
+ local_intervention6: "[SCOPE.sState('local_intervention6').GetName]" #deepl:1265162771
+ local_intervention7: "[SCOPE.sState('local_intervention7').GetName]" #deepl:616850713
+ local_intervention8: "[SCOPE.sState('local_intervention8').GetName]" #deepl:2867441530
+ local_intervention9: "[SCOPE.sState('local_intervention9').GetName]" #deepl:3309637744
+ local_intervention10: "[SCOPE.sState('local_intervention10').GetName]" #deepl:1612491876
+ mog_pli_exploit_turmoil_button: "Explotar la confusión" #deepl:2721871152
+ mog_pli_exploit_turmoil_button_desc: "El caos puede ser tanto una carga como una escalera. Explotaremos a los actores locales para lograr nuestros objetivos." #deepl:956432978
+ mog_pli_exploit_turmoil_button_summary: "Elegirás un estado para recibir un modificador que reduce las penalizaciones a la construcción por agitación a costa de un pequeño aumento de la corrupción." #deepl:352172430
+ PLI_corruption_button_ev.2.t: "Explotación de la agitación local " #deepl:1955105989
+ PLI_corruption_button_ev.2.d: "Seleccione un [concept_state] válido para mejorar los resultados de la construcción en." #deepl:1115791796
+ PLI_corruption_button_ev.2.f: "Los Estados deben tener agitación, contar con una administración local y tener obras en curso para poder optar a la ayuda." #deepl:1865123280
+ turmoil_exploitation1: "[SCOPE.sState('turmoil_exploitation1').GetName]" #deepl:3227050247
+ turmoil_exploitation2: "[SCOPE.sState('turmoil_exploitation2').GetName]" #deepl:1890394137
+ turmoil_exploitation3: "[SCOPE.sState('turmoil_exploitation3').GetName]" #deepl:520199955
+ turmoil_exploitation4: "[SCOPE.sState('turmoil_exploitation4').GetName]" #deepl:3124995878
+ turmoil_exploitation5: "[SCOPE.sState('turmoil_exploitation5').GetName]" #deepl:3589216300
+ turmoil_exploitation6: "[SCOPE.sState('turmoil_exploitation6').GetName]" #deepl:1696258354
+ turmoil_exploitation7: "[SCOPE.sState('turmoil_exploitation7').GetName]" #deepl:179725880
+ turmoil_exploitation8: "[SCOPE.sState('turmoil_exploitation8').GetName]" #deepl:2224794715
+ turmoil_exploitation9: "[SCOPE.sState('turmoil_exploitation9').GetName]" #deepl:3946255185
+ turmoil_exploitation10: "[SCOPE.sState('turmoil_exploitation10').GetName]" #deepl:1938537732
  
  mog_pli_investorconfidence_exp: "Representa la disposición neta a invertir de todas las personas con acceso a fondos discrecionales. Se moverá hacia un valor potencial de #yellow #! que mejora con impuestos más bajos, acceso a mano de obra barata, fuertes oportunidades de inversión y leyes que; otorgan el derecho de voto a más población (pluralismo político), crean igualdad ante la ley (estado de derecho) y garantizan la propiedad de los beneficios (derechos de propiedad seguros). La velocidad con la que cambia la confianza de los inversores se basa en su [Concept('concept_institution','$concept_institutions$')].#indent_newline:2 \n#red Nota:#! Acontecimientos como una declaración de guerra o una repentina pérdida de cosechas pueden provocar un cambio repentino en el nivel actual de confianza de los inversores...#! \n\nEl #yellow máximo de confianza del inversor#! está limitado por el tamaño del [concept_investment_pool] comparado con [Concept('concept_gdp','$concept_gdp_short$')] ya que demasiado dinero en el fondo de inversión representa oportunidades de inversión débiles. El tamaño máximo del fondo siempre será inferior a la mitad del PIB de un país.#indent_newline:3 \n\n #i Los efectos actuales de esto son:#! #indent_newline:3 \n#b Confianza potencial del inversor:#! #v [Country.MakeScope.ScriptValue('mog_pli_resting_target_loc_value')|%1]#! \n#b Confianza máxima del inversor:#! #v [Country.MakeScope.ScriptValue('mog_pli_max_investment_willingness_from_ip')|%1]#! \n#b Contribuciones del fondo de inversión:#! #v [Country.GetModifier.GetValueFor('state_aristocrats_investment_pool_contribution_mult')|%1]#!#!#!" #deepl:987620402
  mog_pli_systemiccorruption_exp: "Esto representa la interacción de diferentes leyes que permiten a los individuos engrasarse las manos en el curso de los negocios normales. Se moverá hacia un potencial #yellow #! valor que mejora sobre todo con una burocracia bien financiada, instituciones policiales fuertes y leyes que aumentan la transparencia y la responsabilidad. La velocidad con la que cambia la corrupción depende de su [Concept('concept_institution','$concept_institutions$')], pero la corrupción es lenta de cambiar.#indent_newline:3 \n\n #i Los efectos actuales de esto son:#! #indent_newline:3 \n#b Corrupción sistémica potencial:#! #v [Country.MakeScope.ScriptValue('mog_pli_corruption_target_loc_value')|%1]#! \n#b All Pops Eficiencia inversora:#! #v -[Country.MakeScope.ScriptValue('mog_pli_corruption_multiplier')|%1]#! #! #! [AddTextIf(Not(GetPlayer.MakeScope.Var('mog_pli_corruption_disabled').IsSet),'\n\n#instruction Corruption Game Rule is:#! #L Active#!')][AddTextIf(GetPlayer.MakeScope.Var('mog_pli_corruption_disabled').IsSet,'\n\n#instruction Corruption Game Rule is:#! #L Disabled#!')]" #deepl:1532604169
@@ -37,6 +70,9 @@
  je_mog_pli_redistributive_reaction: "PLI: Agitación populista" #deepl:1884117642
  mog_pli_fought_corruption_modifier: "Influencias corruptas purgadas" #deepl:605458558
  mog_pli_curried_favour_modifier: "Curry Favor with Powerbrokers" #deepl:3980467289
+ mog_pli_local_intervention_modifier: "Intervención local contra la corrupción" #deepl:605094782
+ mog_pli_turmoil_exploitation_modifier: "Explotación de la agitación local" #deepl:148123858
+ mog_pli_turmoil_exploited_modifier: "Explotación de la agitación local" #deepl:4065022985
  PLI_BASE_TREND: "Tendencia natural hacia #yellow Potencial#!" #deepl:76454067
  PLI_POLICE_INSTITUTION: "Nivel de la institución policial" #deepl:3695223093
  PLI_SCHOOL_INSTITUTION: "Educación Nivel de la institución" #deepl:119565117
@@ -45,10 +81,10 @@
  PLI_OHS_INSTITUTION: "Seguridad en el Trabajo Nivel Institucional" #deepl:2305349007
  PLI_HAFFAIRS_INSTITUTION: "Asuntos de Interior Nivel Institucional" #deepl:1435635816
  PLI_LITERACY_RATE_MOD: "Tasa de alfabetización" #deepl:812351491
- PLI_2DECIMAL_SCRIPT_VALUE_FORMAT: "$KEY$: $VALOR|=2+$" #deepl:3216225099
- PLI_2DECIMAL_SCRIPT_VALUE_INVERT_FORMAT: "$KEY$: $VALOR|=2-$" #deepl:3125476191
- PLI_3DECIMAL_SCRIPT_VALUE_FORMAT: "$KEY$: $VALOR|=3+$" #deepl:635900380
- PLI_3DECIMAL_SCRIPT_VALUE_INVERT_FORMAT: "$KEY$: $VALOR|=3-$" #deepl:538859976
+ PLI_2DECIMAL_SCRIPT_VALUE_FORMAT: "$KEY$: $VALUE|=2+$"
+ PLI_2DECIMAL_SCRIPT_VALUE_INVERT_FORMAT: "$KEY$: $VALUE|=2-$"
+ PLI_3DECIMAL_SCRIPT_VALUE_FORMAT: "$KEY$: $VALUE|=3+$"
+ PLI_3DECIMAL_SCRIPT_VALUE_INVERT_FORMAT: "$KEY$: $VALUE|=3-$"
  
  state_aristocrats_investment_pool_contribution_mult: "$aristocrats$ [concept_investment_pool] contribución entusiasmo" #deepl:3643715859
  state_capitalists_investment_pool_contribution_mult: "$capitalists$ [concept_investment_pool] contribución entusiasmo" #deepl:418366632
@@ -113,6 +149,7 @@
  mog_pli_innovationincentive_exp: "Esto representa el incentivo a nivel de población para encontrar soluciones innovadoras a los problemas que afectan a sus vidas. Esto se ve reducido por las barreras que impiden a las personas tomar la iniciativa. (Considere la vieja pregunta: ¿qué pasaría si la cura para el cáncer estuviera atrapada en la mente de alguien que no pudiera permitirse una educación?)\nSe moverá hacia un potencial #yellow #! valor que se ve mejorado por el pluralismo político, la aplicación imparcial de la ley, las reformas agrarias productivas y las leyes que apoyan ampliamente a las personas a asumir riesgos mejorando; el acceso a la educación, la libertad de expresión y la seguridad contra la pobreza. La velocidad con la que cambian los incentivos a la innovación se basa en su [Concept('concept_institution','$concept_institutions$')].#indent_newline:2 \n#red Nota:#! Las situaciones en curso, como la guerra, la hambruna y la falta de confianza de los inversores, pueden reducir los incentivos a la innovación...#! \n\n¡El #yellow incentivo máximo a la innovación#! está limitado por la proporción de la población en [Concept('concept_incorporated_state','$concept_incorporated$')] estados que tienen al menos @acceptance_status_4! $second_rate_citizen$ [Concept('concept_acceptance_status','$concept_acceptance_status_short$')].#indent_newline:3 \n\n #i Los efectos actuales de esto son:#! #indent_newline:3 \n#b Incentivo potencial a la innovación:#! #v [Country.MakeScope.ScriptValue('mog_pli_innovation_target_loc_value')|%1]#! \n#b Incentivo máximo a la innovación:#! #v [Country.MakeScope.ScriptValue('mog_pli_max_innovation_potential_from_citizenship')|%1]#! \n#b Reducción máxima actual de la innovación:#! #v [Country.GetModifier.GetValueFor('country_weekly_innovation_max_mult')|%1]#!#!#!" #deepl:2658091887
  mog_pli_techproliferation_exp: "Esto representa la capacidad de los gobiernos para importar innovaciones de otras partes del mundo, lo que también se conoce como crecimiento bajo instituciones extractivas. Avanzará hacia un valor #yellow potencial#! que mejora sobre todo gracias a una gobernanza representativa, una burocracia bien financiada, derechos sólidos para los niños y leyes que aumentan la participación de la mano de obra y la seguridad dentro de estructuras de extracción de riqueza regulada. La velocidad con la que cambia la proliferación se basa en su [Concept('concept_institution','$concept_institutions$')] y su [concept_literacy]. \n\nLa #yellow proliferación máxima#! está limitada por la media de su tasa nacional de alfabetización y la alfabetización en su [Concept('concept_capital_state','$concept_capital_state_short$')] y por lo atrasado que esté en relación con el líder tecnológico mundial.#indent_newline:3 \n\n #i Los efectos actuales de esto son:#! #indent_newline:3 \n#b Proliferación Potencial:#! #v [Country.MakeScope.ScriptValue('mog_pli_proliferation_target_loc_value')|%1]#! \n#b Proliferación Máxima:#! #v [Country.MakeScope.ScriptValue('mog_pli_proliferation_max_loc_value')|%1]#! \n#b Bonificación por difusión tecnológica:#! #v [Country.MakeScope.ScriptValue('mog_pli_proliferation_multiplier_loc')|%1] #! #! #! [AddTextIf(Not(GetPlayer.MakeScope.Var('mog_pli_proliferation_disabled').IsSet),'\n\n#instruction Proliferation Game Rule is:#! #L Active#!')][AddTextIf(GetPlayer.MakeScope.Var('mog_pli_proliferation_disabled').IsSet,'\n\n#instruction Proliferation Game Rule is:#! #L Disabled#!')]" #deepl:2317885270
  
+ mog_pli_base_innovation_adjustment_modifier: "PLI: Ajuste del saldo inicial" #deepl:2087465741
  je_mog_pli_innovation_modifier: "Innovation Incentive Effect" # We'll swap back to this one if these modifier types ever work in the future. 
  je_mog_pli_dummy_innovation_modifier: "$je_mog_pli_innovation_modifier$#! \n$pli_disclaimer_2$" #deepl:3807825725
  je_mog_pli_proliferation_modifier: "Efecto de proliferación tecnológica" #deepl:357267381

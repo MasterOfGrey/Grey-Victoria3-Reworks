@@ -1,0 +1,318 @@
+﻿namespace = PLI_corruption_button_ev
+
+PLI_corruption_button_ev.1 = {
+	type = country_event
+	placement = ROOT
+
+    title = PLI_corruption_button_ev.1.t
+    desc = PLI_corruption_button_ev.1.d
+    flavor = PLI_corruption_button_ev.1.f
+
+	event_image = {
+		video = "gfx/event_pictures/unspecific_signed_contract.bk2"
+	}
+
+	immediate = {
+		if = {
+			limit = {
+				has_variable = pli_next_page
+			}
+			remove_variable = pli_next_page
+		}
+		else = {
+			set_variable = {		# Only set this at the start on the first page.
+				name = mog_pli_state_option_count
+				value = mog_pli_state_option_count_val
+			}
+		}
+		set_local_variable = {
+			name = mog_pli_local_corruption_multiplier
+			value = mog_pli_corruption_multiplier
+		}
+		ordered_scope_state = {
+			limit = {
+				has_variable = PLI_potential_local_intervention
+			}
+			order_by = { add = modifier:state_construction_mult multiply = -1 }
+			check_range_bounds = no
+			if = {
+				limit = { not = { root = { has_variable = local_intervention1 } } }
+				this = {
+					remove_variable = PLI_potential_local_intervention
+					save_scope_as = local_intervention1
+				}
+				root = { set_variable = local_intervention1 }
+			}
+			else_if = { limit = { not = { root = { has_variable = local_intervention2 } } } this = { remove_variable = PLI_potential_local_intervention save_scope_as = local_intervention2 } root = { set_variable = local_intervention2 } }
+			else_if = { limit = { not = { root = { has_variable = local_intervention3 } } } this = { remove_variable = PLI_potential_local_intervention save_scope_as = local_intervention3 } root = { set_variable = local_intervention3 } }
+			else_if = { limit = { not = { root = { has_variable = local_intervention4 } } } this = { remove_variable = PLI_potential_local_intervention save_scope_as = local_intervention4 } root = { set_variable = local_intervention4 } }
+			else_if = { limit = { not = { root = { has_variable = local_intervention5 } } } this = { remove_variable = PLI_potential_local_intervention save_scope_as = local_intervention5 } root = { set_variable = local_intervention5 } }
+			else_if = { limit = { not = { root = { has_variable = local_intervention6 } } } this = { remove_variable = PLI_potential_local_intervention save_scope_as = local_intervention6 } root = { set_variable = local_intervention6 } }
+			else_if = { limit = { not = { root = { has_variable = local_intervention7 } } } this = { remove_variable = PLI_potential_local_intervention save_scope_as = local_intervention7 } root = { set_variable = local_intervention7 } }
+			else_if = { limit = { not = { root = { has_variable = local_intervention8 } } } this = { remove_variable = PLI_potential_local_intervention save_scope_as = local_intervention8 } root = { set_variable = local_intervention8 } }
+			else_if = { limit = { not = { root = { has_variable = local_intervention9 } } } this = { remove_variable = PLI_potential_local_intervention save_scope_as = local_intervention9 } root = { set_variable = local_intervention9 } }
+			else_if = { limit = { not = { root = { has_variable = local_intervention10 } } } this = { remove_variable = PLI_potential_local_intervention save_scope_as = local_intervention10 } root = { set_variable = local_intervention10 } }
+		}
+	}
+
+	option = {
+		name = CANCEL
+		default_option = yes
+		every_scope_state = {
+			limit = {
+				has_variable = PLI_potential_local_intervention
+			}
+			remove_variable = PLI_potential_local_intervention
+		}
+		root = {
+			remove_variable = local_intervention1
+			remove_variable = local_intervention2
+			remove_variable = local_intervention3
+			remove_variable = local_intervention4
+			remove_variable = local_intervention5
+			remove_variable = local_intervention6
+			remove_variable = local_intervention7
+			remove_variable = local_intervention8
+			remove_variable = local_intervention9
+			remove_variable = local_intervention10
+		}
+		every_scope_state = {
+			clear_saved_scope = local_intervention1
+			clear_saved_scope = local_intervention2
+			clear_saved_scope = local_intervention3
+			clear_saved_scope = local_intervention4
+			clear_saved_scope = local_intervention5
+			clear_saved_scope = local_intervention6
+			clear_saved_scope = local_intervention7
+			clear_saved_scope = local_intervention8
+			clear_saved_scope = local_intervention9
+			clear_saved_scope = local_intervention10
+		}
+		remove_variable = mog_pli_state_option_count
+	}
+	
+	# gen code in expanded form only for option 1
+	option = {
+		name = local_intervention1
+		trigger = {
+			var:mog_pli_state_option_count >= 1		# We use this to hide repeat options on the next page.
+			exists = scope:local_intervention1
+		}
+		scope:local_intervention1 = {
+			add_modifier = {
+				name = mog_pli_local_intervention_modifier
+				multiplier = local_var:mog_pli_local_corruption_multiplier	# Counteract national corruption penalty in one state
+				days = short_modifier_time				 	# 2.5 years
+				is_decaying = yes
+			}
+		}
+		remove_variable = mog_pli_state_option_count
+	}
+	option = { name = local_intervention2 trigger = { var:mog_pli_state_option_count >= 2 exists = scope:local_intervention2 } scope:local_intervention2 = { add_modifier = { name = mog_pli_local_intervention_modifier multiplier = local_var:mog_pli_local_corruption_multiplier days = short_modifier_time is_decaying = yes } } remove_variable = mog_pli_state_option_count }
+	option = { name = local_intervention3 trigger = { var:mog_pli_state_option_count >= 3 exists = scope:local_intervention3 } scope:local_intervention3 = { add_modifier = { name = mog_pli_local_intervention_modifier multiplier = local_var:mog_pli_local_corruption_multiplier days = short_modifier_time is_decaying = yes } } remove_variable = mog_pli_state_option_count }
+	option = { name = local_intervention4 trigger = { var:mog_pli_state_option_count >= 4 exists = scope:local_intervention4 } scope:local_intervention4 = { add_modifier = { name = mog_pli_local_intervention_modifier multiplier = local_var:mog_pli_local_corruption_multiplier days = short_modifier_time is_decaying = yes } } remove_variable = mog_pli_state_option_count }
+	option = { name = local_intervention5 trigger = { var:mog_pli_state_option_count >= 5 exists = scope:local_intervention5 } scope:local_intervention5 = { add_modifier = { name = mog_pli_local_intervention_modifier multiplier = local_var:mog_pli_local_corruption_multiplier days = short_modifier_time is_decaying = yes } } remove_variable = mog_pli_state_option_count }
+	option = { name = local_intervention6 trigger = { var:mog_pli_state_option_count >= 6 exists = scope:local_intervention6 } scope:local_intervention6 = { add_modifier = { name = mog_pli_local_intervention_modifier multiplier = local_var:mog_pli_local_corruption_multiplier days = short_modifier_time is_decaying = yes } } remove_variable = mog_pli_state_option_count }
+	option = { name = local_intervention7 trigger = { var:mog_pli_state_option_count >= 7 exists = scope:local_intervention7 } scope:local_intervention7 = { add_modifier = { name = mog_pli_local_intervention_modifier multiplier = local_var:mog_pli_local_corruption_multiplier days = short_modifier_time is_decaying = yes } } remove_variable = mog_pli_state_option_count }
+	option = { name = local_intervention8 trigger = { var:mog_pli_state_option_count >= 8 exists = scope:local_intervention8 } scope:local_intervention8 = { add_modifier = { name = mog_pli_local_intervention_modifier multiplier = local_var:mog_pli_local_corruption_multiplier days = short_modifier_time is_decaying = yes } } remove_variable = mog_pli_state_option_count }
+	option = { name = local_intervention9 trigger = { var:mog_pli_state_option_count >= 9 exists = scope:local_intervention9 } scope:local_intervention9 = { add_modifier = { name = mog_pli_local_intervention_modifier multiplier = local_var:mog_pli_local_corruption_multiplier days = short_modifier_time is_decaying = yes } } remove_variable = mog_pli_state_option_count }
+	option = { name = local_intervention10 trigger = { var:mog_pli_state_option_count >= 10 exists = scope:local_intervention10 } scope:local_intervention10 = { add_modifier = { name = mog_pli_local_intervention_modifier multiplier = local_var:mog_pli_local_corruption_multiplier days = short_modifier_time is_decaying = yes } } remove_variable = mog_pli_state_option_count }
+	option = {
+		name = ENCYCLOPEDIAGE_NEXT_PAGE
+		trigger = {
+			any_scope_state = { has_variable = PLI_potential_local_intervention }
+		}
+		set_variable = {		# Reset for next page.
+			name = mog_pli_state_option_count
+			value = mog_pli_state_option_count_val
+		}
+		set_variable = pli_next_page
+		root = {
+			remove_variable = local_intervention1
+			remove_variable = local_intervention2
+			remove_variable = local_intervention3
+			remove_variable = local_intervention4
+			remove_variable = local_intervention5
+			remove_variable = local_intervention6
+			remove_variable = local_intervention7
+			remove_variable = local_intervention8
+			remove_variable = local_intervention9
+			remove_variable = local_intervention10
+		}
+		every_state = {
+			clear_saved_scope = local_intervention1
+			clear_saved_scope = local_intervention2
+			clear_saved_scope = local_intervention3
+			clear_saved_scope = local_intervention4
+			clear_saved_scope = local_intervention5
+			clear_saved_scope = local_intervention6
+			clear_saved_scope = local_intervention7
+			clear_saved_scope = local_intervention8
+			clear_saved_scope = local_intervention9
+			clear_saved_scope = local_intervention10
+		}
+		trigger_event = {
+			id = PLI_corruption_button_ev.1
+			days = 0
+			popup = yes
+		}
+	}
+	
+	after = {
+		# Block not used for any variable clearing etc, even though it would seem sensible, because it doesn't behave cleanly for progressing the list of subjects through a dynamic number of pages.
+		# Dynamic pagination fails relying on this, so variables and scopes are cleared on Cancel, Next Page, or immediately on Choice selection event.
+	}
+}
+
+PLI_corruption_button_ev.2 = {
+	type = country_event
+	placement = ROOT
+
+    title = PLI_corruption_button_ev.2.t
+    desc = PLI_corruption_button_ev.2.d
+    flavor = PLI_corruption_button_ev.2.f
+
+	event_image = {
+		video = "gfx/event_pictures/europenorthamerica_political_extremism.bk2"
+	}
+
+	immediate = {
+		if = {
+			limit = {
+				has_variable = pli_next_page
+			}
+			remove_variable = pli_next_page
+		}
+		else = {
+			set_variable = {		# Only set this at the start on the first page.
+				name = mog_pli_state_option_count
+				value = mog_pli_state_option_count_val
+			}
+		}
+		ordered_scope_state = {
+			limit = { has_variable = PLI_potential_turmoil_exploitation }
+			order_by = turmoil # { add = turmoil multiply = -1 }
+			check_range_bounds = no
+			if = {
+				limit = { not = { root = { has_variable = turmoil_exploitation1 } } }
+				this = {
+					remove_variable = PLI_potential_turmoil_exploitation
+					save_scope_as = turmoil_exploitation1
+				}
+				root = { set_variable = turmoil_exploitation1 }
+			}
+			else_if = { limit = { not = { root = { has_variable = turmoil_exploitation2 } } } this = { remove_variable = PLI_potential_turmoil_exploitation save_scope_as = turmoil_exploitation2 } root = { set_variable = turmoil_exploitation2 } }
+			else_if = { limit = { not = { root = { has_variable = turmoil_exploitation3 } } } this = { remove_variable = PLI_potential_turmoil_exploitation save_scope_as = turmoil_exploitation3 } root = { set_variable = turmoil_exploitation3 } }
+			else_if = { limit = { not = { root = { has_variable = turmoil_exploitation4 } } } this = { remove_variable = PLI_potential_turmoil_exploitation save_scope_as = turmoil_exploitation4 } root = { set_variable = turmoil_exploitation4 } }
+			else_if = { limit = { not = { root = { has_variable = turmoil_exploitation5 } } } this = { remove_variable = PLI_potential_turmoil_exploitation save_scope_as = turmoil_exploitation5 } root = { set_variable = turmoil_exploitation5 } }
+			else_if = { limit = { not = { root = { has_variable = turmoil_exploitation6 } } } this = { remove_variable = PLI_potential_turmoil_exploitation save_scope_as = turmoil_exploitation6 } root = { set_variable = turmoil_exploitation6 } }
+			else_if = { limit = { not = { root = { has_variable = turmoil_exploitation7 } } } this = { remove_variable = PLI_potential_turmoil_exploitation save_scope_as = turmoil_exploitation7 } root = { set_variable = turmoil_exploitation7 } }
+			else_if = { limit = { not = { root = { has_variable = turmoil_exploitation8 } } } this = { remove_variable = PLI_potential_turmoil_exploitation save_scope_as = turmoil_exploitation8 } root = { set_variable = turmoil_exploitation8 } }
+			else_if = { limit = { not = { root = { has_variable = turmoil_exploitation9 } } } this = { remove_variable = PLI_potential_turmoil_exploitation save_scope_as = turmoil_exploitation9 } root = { set_variable = turmoil_exploitation9 } }
+			else_if = { limit = { not = { root = { has_variable = turmoil_exploitation10 } } } this = { remove_variable = PLI_potential_turmoil_exploitation save_scope_as = turmoil_exploitation10 } root = { set_variable = turmoil_exploitation10 } }
+		}
+	}
+
+	option = {
+		name = CANCEL
+		default_option = yes
+		every_scope_state = {
+			limit = {
+				has_variable = PLI_potential_turmoil_exploitation
+			}
+			remove_variable = PLI_potential_turmoil_exploitation
+		}
+		root = {
+			remove_variable = turmoil_exploitation1
+			remove_variable = turmoil_exploitation2
+			remove_variable = turmoil_exploitation3
+			remove_variable = turmoil_exploitation4
+			remove_variable = turmoil_exploitation5
+			remove_variable = turmoil_exploitation6
+			remove_variable = turmoil_exploitation7
+			remove_variable = turmoil_exploitation8
+			remove_variable = turmoil_exploitation9
+			remove_variable = turmoil_exploitation10
+		}
+		every_scope_state = {
+			clear_saved_scope = turmoil_exploitation1
+			clear_saved_scope = turmoil_exploitation2
+			clear_saved_scope = turmoil_exploitation3
+			clear_saved_scope = turmoil_exploitation4
+			clear_saved_scope = turmoil_exploitation5
+			clear_saved_scope = turmoil_exploitation6
+			clear_saved_scope = turmoil_exploitation7
+			clear_saved_scope = turmoil_exploitation8
+			clear_saved_scope = turmoil_exploitation9
+			clear_saved_scope = turmoil_exploitation10
+		}
+		remove_variable = mog_pli_state_option_count
+	}
+	
+	# gen code in expanded form only for option 1
+	option = {
+		name = turmoil_exploitation1
+		trigger = {
+			var:mog_pli_state_option_count >= 1		# We use this to hide repeat options on the next page.
+			exists = scope:turmoil_exploitation1
+		}
+		scope:turmoil_exploitation1 = {
+			add_modifier = {
+				name = mog_pli_turmoil_exploitation_modifier
+				multiplier = scope:turmoil_exploitation1.mog_pli_turmoil_penalty_val	# Counteract turmoil penalty in one state
+				days = short_modifier_time				 	# 2.5 years
+				is_decaying = yes
+			}
+		}
+		remove_variable = mog_pli_state_option_count
+	}
+	option = { name = turmoil_exploitation2 trigger = { var:mog_pli_state_option_count >= 2 exists = scope:turmoil_exploitation2 } scope:turmoil_exploitation2 = { add_modifier = { name = mog_pli_turmoil_exploitation_modifier multiplier = scope:turmoil_exploitation2.mog_pli_turmoil_penalty_val days = short_modifier_time is_decaying = yes } } remove_variable = mog_pli_state_option_count }
+	option = { name = turmoil_exploitation3 trigger = { var:mog_pli_state_option_count >= 3 exists = scope:turmoil_exploitation3 } scope:turmoil_exploitation3 = { add_modifier = { name = mog_pli_turmoil_exploitation_modifier multiplier = scope:turmoil_exploitation3.mog_pli_turmoil_penalty_val days = short_modifier_time is_decaying = yes } } remove_variable = mog_pli_state_option_count }
+	option = { name = turmoil_exploitation4 trigger = { var:mog_pli_state_option_count >= 4 exists = scope:turmoil_exploitation4 } scope:turmoil_exploitation4 = { add_modifier = { name = mog_pli_turmoil_exploitation_modifier multiplier = scope:turmoil_exploitation4.mog_pli_turmoil_penalty_val days = short_modifier_time is_decaying = yes } } remove_variable = mog_pli_state_option_count }
+	option = { name = turmoil_exploitation5 trigger = { var:mog_pli_state_option_count >= 5 exists = scope:turmoil_exploitation5 } scope:turmoil_exploitation5 = { add_modifier = { name = mog_pli_turmoil_exploitation_modifier multiplier = scope:turmoil_exploitation5.mog_pli_turmoil_penalty_val days = short_modifier_time is_decaying = yes } } remove_variable = mog_pli_state_option_count }
+	option = { name = turmoil_exploitation6 trigger = { var:mog_pli_state_option_count >= 6 exists = scope:turmoil_exploitation6 } scope:turmoil_exploitation6 = { add_modifier = { name = mog_pli_turmoil_exploitation_modifier multiplier = scope:turmoil_exploitation6.mog_pli_turmoil_penalty_val days = short_modifier_time is_decaying = yes } } remove_variable = mog_pli_state_option_count }
+	option = { name = turmoil_exploitation7 trigger = { var:mog_pli_state_option_count >= 7 exists = scope:turmoil_exploitation7 } scope:turmoil_exploitation7 = { add_modifier = { name = mog_pli_turmoil_exploitation_modifier multiplier = scope:turmoil_exploitation7.mog_pli_turmoil_penalty_val days = short_modifier_time is_decaying = yes } } remove_variable = mog_pli_state_option_count }
+	option = { name = turmoil_exploitation8 trigger = { var:mog_pli_state_option_count >= 8 exists = scope:turmoil_exploitation8 } scope:turmoil_exploitation8 = { add_modifier = { name = mog_pli_turmoil_exploitation_modifier multiplier = scope:turmoil_exploitation8.mog_pli_turmoil_penalty_val days = short_modifier_time is_decaying = yes } } remove_variable = mog_pli_state_option_count }
+	option = { name = turmoil_exploitation9 trigger = { var:mog_pli_state_option_count >= 9 exists = scope:turmoil_exploitation9 } scope:turmoil_exploitation9 = { add_modifier = { name = mog_pli_turmoil_exploitation_modifier multiplier = scope:turmoil_exploitation9.mog_pli_turmoil_penalty_val days = short_modifier_time is_decaying = yes } } remove_variable = mog_pli_state_option_count }
+	option = { name = turmoil_exploitation10 trigger = { var:mog_pli_state_option_count >= 10 exists = scope:turmoil_exploitation10 } scope:turmoil_exploitation10 = { add_modifier = { name = mog_pli_turmoil_exploitation_modifier multiplier = scope:turmoil_exploitation10.mog_pli_turmoil_penalty_val days = short_modifier_time is_decaying = yes } } remove_variable = mog_pli_state_option_count }
+	option = {
+		name = ENCYCLOPEDIAGE_NEXT_PAGE
+		trigger = {
+			any_scope_state = { has_variable = PLI_potential_turmoil_exploitation }
+		}
+		set_variable = {		# Reset for next page.
+			name = mog_pli_state_option_count
+			value = mog_pli_state_option_count_val
+		}
+		set_variable = pli_next_page
+		root = {
+			remove_variable = turmoil_exploitation1
+			remove_variable = turmoil_exploitation2
+			remove_variable = turmoil_exploitation3
+			remove_variable = turmoil_exploitation4
+			remove_variable = turmoil_exploitation5
+			remove_variable = turmoil_exploitation6
+			remove_variable = turmoil_exploitation7
+			remove_variable = turmoil_exploitation8
+			remove_variable = turmoil_exploitation9
+			remove_variable = turmoil_exploitation10
+		}
+		every_state = {
+			clear_saved_scope = turmoil_exploitation1
+			clear_saved_scope = turmoil_exploitation2
+			clear_saved_scope = turmoil_exploitation3
+			clear_saved_scope = turmoil_exploitation4
+			clear_saved_scope = turmoil_exploitation5
+			clear_saved_scope = turmoil_exploitation6
+			clear_saved_scope = turmoil_exploitation7
+			clear_saved_scope = turmoil_exploitation8
+			clear_saved_scope = turmoil_exploitation9
+			clear_saved_scope = turmoil_exploitation10
+		}
+		trigger_event = {
+			id = PLI_corruption_button_ev.2
+			days = 0
+			popup = yes
+		}
+	}
+}

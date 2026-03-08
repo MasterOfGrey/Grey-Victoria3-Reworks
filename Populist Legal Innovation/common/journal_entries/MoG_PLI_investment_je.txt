@@ -9,6 +9,8 @@
 		
 	scripted_button = mog_pli_fight_corruption_button
 	scripted_button = mog_pli_curry_favour_button
+	scripted_button = mog_pli_local_intervention_button
+	scripted_button = mog_pli_exploit_turmoil_button
 	
 	scripted_progress_bar = mog_pli_investment_tracking_bar
 	scripted_progress_bar = mog_pli_corruption_tracking_bar

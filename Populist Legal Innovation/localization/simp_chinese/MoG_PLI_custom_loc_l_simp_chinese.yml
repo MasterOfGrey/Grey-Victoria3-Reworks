@@ -13,6 +13,39 @@
  mog_pli_curry_favour_button: "咖喱青睐" #deepl:1217933398
  mog_pli_curry_favour_button_desc: "满足有影响力者的愿望，以加强对政府的支持。" #deepl:2680760523
  mog_pli_curry_favour_button_tt: "改变腐败的方式有#n [ROOT.GetCountry.MakeScope.ScriptValue('mog_pli_curried_favour_tt_val')|=-]#!" #deepl:2570271461
+ mog_pli_local_intervention_button: "当地干预" #deepl:3167143371
+ mog_pli_local_intervention_button_desc: "专注于一个州，为迅速开展施工扫清道路。" #deepl:1423603147
+ mog_pli_local_intervention_button_tt: "[concept_turmoil] 和至少一级[GetBuildingType('building_government_administration').GetName] 。" #deepl:2820689446
+ mog_pli_local_intervention_button_summary: "您将选择一个州接受修改器，该修改器可消除对建筑的惩罚，但会增加人口官僚主义成本。" #deepl:2003445093
+ PLI_corruption_button_ev.1.t: "地方反腐败干预措施" #deepl:605094782
+ PLI_corruption_button_ev.1.d: "选择有效的[concept_state] ，以改善建筑成果。" #deepl:1115791796
+ PLI_corruption_button_ev.1.f: "各州必须是法人州，动荡程度低，有地方政府管理，并正在进行建设，才符合资格。" #deepl:434486560
+ local_intervention1: "[SCOPE.sState('local_intervention1').GetName]" #deepl:3995787814
+ local_intervention2: "[SCOPE.sState('local_intervention2').GetName]" #deepl:1591681848
+ local_intervention3: "[SCOPE.sState('local_intervention3').GetName]" #deepl:829660210
+ local_intervention4: "[SCOPE.sState('local_intervention4').GetName]" #deepl:2486281223
+ local_intervention5: "[SCOPE.sState('local_intervention5').GetName]" #deepl:4221377293
+ local_intervention6: "[SCOPE.sState('local_intervention6').GetName]" #deepl:1265162771
+ local_intervention7: "[SCOPE.sState('local_intervention7').GetName]" #deepl:616850713
+ local_intervention8: "[SCOPE.sState('local_intervention8').GetName]" #deepl:2867441530
+ local_intervention9: "[SCOPE.sState('local_intervention9').GetName]" #deepl:3309637744
+ local_intervention10: "[SCOPE.sState('local_intervention10').GetName]" #deepl:1612491876
+ mog_pli_exploit_turmoil_button: "利用动荡" #deepl:2721871152
+ mog_pli_exploit_turmoil_button_desc: "混乱既是负担，也是阶梯。我们将利用当地的参与者来实现我们的目标。" #deepl:956432978
+ mog_pli_exploit_turmoil_button_summary: "您将选择一个州接受一个修改器，该修改器可以减少动乱对建筑的惩罚，但代价是腐败程度会略有增加。" #deepl:352172430
+ PLI_corruption_button_ev.2.t: "利用地方动荡 " #deepl:1955105989
+ PLI_corruption_button_ev.2.d: "选择有效的[concept_state] ，以改善建筑成果。" #deepl:1115791796
+ PLI_corruption_button_ev.2.f: "各州必须发生动乱、拥有地方政府行政机构并正在进行建设，才符合条件。" #deepl:1865123280
+ turmoil_exploitation1: "[SCOPE.sState('turmoil_exploitation1').GetName]" #deepl:3227050247
+ turmoil_exploitation2: "[SCOPE.sState('turmoil_exploitation2').GetName]" #deepl:1890394137
+ turmoil_exploitation3: "[SCOPE.sState('turmoil_exploitation3').GetName]" #deepl:520199955
+ turmoil_exploitation4: "[SCOPE.sState('turmoil_exploitation4').GetName]" #deepl:3124995878
+ turmoil_exploitation5: "[SCOPE.sState('turmoil_exploitation5').GetName]" #deepl:3589216300
+ turmoil_exploitation6: "[SCOPE.sState('turmoil_exploitation6').GetName]" #deepl:1696258354
+ turmoil_exploitation7: "[SCOPE.sState('turmoil_exploitation7').GetName]" #deepl:179725880
+ turmoil_exploitation8: "[SCOPE.sState('turmoil_exploitation8').GetName]" #deepl:2224794715
+ turmoil_exploitation9: "[SCOPE.sState('turmoil_exploitation9').GetName]" #deepl:3946255185
+ turmoil_exploitation10: "[SCOPE.sState('turmoil_exploitation10').GetName]" #deepl:1938537732
  
  mog_pli_investorconfidence_exp: "这代表了所有可自由支配资金的人的净投资意愿。它将朝着#yellow 潜在#! 值的方向发展，并通过降低税率、提供廉价劳动力、提供大量投资机会以及制定相关法律来提高该值；这些法律可赋予更多人口权利（政治多元化），在法律面前实现平等（法治），并确保利润所有权（产权安全）。投资者信心变化的速度取决于您的[Concept('concept_institution','$concept_institutions$')].#indent_newline:2 \n#red 注：#! 宣战或突然歉收等事件都可能导致当前投资者信心水平的突然变化...#! \n\n #yellow 投资者信心最大值 与 相比，受到 规模的限制，因为投资池中资金过多代表投资机会薄弱。投资池的最大规模总是小于一个国家国内生产总值的一半。#indent_newline:3 目前的影响是：#indent_newline:3 潜在投资者信心： 最大投资者信心： 投资池捐款：#! [Concept('concept_gdp','$concept_gdp_short$')] [concept_investment_pool] \n\n#i #! \n#b #! #v [Country.MakeScope.ScriptValue('mog_pli_resting_target_loc_value')|%1]#! \n#b #! #v [Country.MakeScope.ScriptValue('mog_pli_max_investment_willingness_from_ip')|%1]#! \n#b #! #v [Country.GetModifier.GetValueFor('state_aristocrats_investment_pool_contribution_mult')|%1]#!#!#!" #deepl:987620402
  mog_pli_systemiccorruption_exp: "这代表着不同法律之间的相互作用，使个人在正常的商业活动中能够肆意妄为。它将朝着#yellow 的潜在#! 值发展，而资金充足的官僚机构、强大的警察机构以及提高透明度和问责制的法律大多会改善这一状况。腐败的变化速度取决于您的[Concept('concept_institution','$concept_institutions$')] ，但腐败的变化速度很慢。#indent_newline:3 \n\n #i 目前的影响是：#! #indent_newline:3 \n#b 潜在的系统性腐败：#! #v [Country.MakeScope.ScriptValue('mog_pli_corruption_target_loc_value')|%1]#! \n#b All Pops 投资效率：#! #v -[Country.MakeScope.ScriptValue('mog_pli_corruption_multiplier')|%1]#! #! #! [AddTextIf(Not(GetPlayer.MakeScope.Var('mog_pli_corruption_disabled').IsSet),'\n\n#instruction Corruption Game Rule is:#! #L Active#!')][AddTextIf(GetPlayer.MakeScope.Var('mog_pli_corruption_disabled').IsSet,'\n\n#instruction Corruption Game Rule is:#! #L Disabled#!')]" #deepl:1532604169
@@ -37,6 +70,9 @@
  je_mog_pli_redistributive_reaction: "PLI：民粹主义煽动" #deepl:1884117642
  mog_pli_fought_corruption_modifier: "清除腐败影响" #deepl:605458558
  mog_pli_curried_favour_modifier: "掮客的青睐" #deepl:3980467289
+ mog_pli_local_intervention_modifier: "地方反腐败干预措施" #deepl:605094782
+ mog_pli_turmoil_exploitation_modifier: "利用地方动乱" #deepl:148123858
+ mog_pli_turmoil_exploited_modifier: "利用地方动荡" #deepl:4065022985
  PLI_BASE_TREND: "#yellow 潜力的自然趋势#!" #deepl:76454067
  PLI_POLICE_INSTITUTION: "警察机构级别" #deepl:3695223093
  PLI_SCHOOL_INSTITUTION: "教育机构级别" #deepl:119565117
@@ -113,6 +149,7 @@
  mog_pli_innovationincentive_exp: "这代表了民众为影响其生活的问题寻找创新解决方案的积极性。而阻碍人们发挥主观能动性的障碍则会削弱这种动力。(考虑一下这个古老的问题：如果癌症的治疗方法停留在一个没钱接受教育的人的头脑中，那会怎样？）\n它将朝着#yellow 的潜在#! 值发展，而政治多元化、公正执法、富有成效的土地改革，以及通过改善受教育机会、言论自由和脱贫保障来广泛支持人们承担风险的法律，都将改善这一潜在 值。创新激励机制的变化速度取决于您的[Concept('concept_institution','$concept_institutions$')].#indent_newline:2 \n#red 注：#! 战争、饥荒和投资者信心不足等持续状况都可能降低创新激励机制......#! \n\n #yellow 创新激励的最大值 受 各州至少 @acceptance_status_4! 的人口比例限制.#indent_newline:3 目前的影响是：#indent_newline:3 潜在创新激励： 最大创新激励： 当前最大创新减少量：#! [Concept('concept_incorporated_state','$concept_incorporated$')] $second_rate_citizen$ [Concept('concept_acceptance_status','$concept_acceptance_status_short$')] \n\n#i #! \n#b #! #v [Country.MakeScope.ScriptValue('mog_pli_innovation_target_loc_value')|%1]#! \n#b #! #v [Country.MakeScope.ScriptValue('mog_pli_max_innovation_potential_from_citizenship')|%1]#! \n#b #! #v [Country.GetModifier.GetValueFor('country_weekly_innovation_max_mult')|%1]#!#!#!" #deepl:2658091887
  mog_pli_techproliferation_exp: "这代表了政府从世界其他地方引进创新的能力，也就是所谓的榨取体制下的增长。它将朝着#yellow 的潜在#! 值发展，而代议制治理、资金充足的官僚机构、强有力的儿童权利，以及在受监管的财富榨取结构中提高劳动力参与度和安全性的法律，都会提高这一价值。扩散速度的变化取决于您的[Concept('concept_institution','$concept_institutions$')] 和您的[concept_literacy] 。\n\n #yellow 的最大扩散 受限于您的国民识字率和您的 的识字率的平均值，以及您相对于全球科技领导者的落后程度。#indent_newline:3  目前的影响是：#indent_newline:3 潜在扩散： 最大扩散： 技术扩散红利：   #! [Concept('concept_capital_state','$concept_capital_state_short$')] \n\n#i #! \n#b #! #v [Country.MakeScope.ScriptValue('mog_pli_proliferation_target_loc_value')|%1]#! \n#b #! #v [Country.MakeScope.ScriptValue('mog_pli_proliferation_max_loc_value')|%1]#! \n#b #! #v [Country.MakeScope.ScriptValue('mog_pli_proliferation_multiplier_loc')|%1]#!#!#! [AddTextIf(Not(GetPlayer.MakeScope.Var('mog_pli_proliferation_disabled').IsSet),'\n\n#instruction Proliferation Game Rule is:#! #L Active#!')][AddTextIf(GetPlayer.MakeScope.Var('mog_pli_proliferation_disabled').IsSet,'\n\n#instruction Proliferation Game Rule is:#! #L Disabled#!')]" #deepl:2317885270
  
+ mog_pli_base_innovation_adjustment_modifier: "PLI：基准余额调整" #deepl:2087465741
  je_mog_pli_innovation_modifier: "Innovation Incentive Effect" # We'll swap back to this one if these modifier types ever work in the future. 
  je_mog_pli_dummy_innovation_modifier: "$je_mog_pli_innovation_modifier$#! \n$pli_disclaimer_2$" #deepl:3807825725
  je_mog_pli_proliferation_modifier: "技术扩散效应" #deepl:357267381

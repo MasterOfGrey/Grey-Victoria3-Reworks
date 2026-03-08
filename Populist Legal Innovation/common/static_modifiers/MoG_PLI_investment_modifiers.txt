@@ -82,21 +82,22 @@ je_mog_pli_dummy_investment_modifier = {
 }
 
 # Corruption Modifiers
-je_mog_pli_corruption_modifier = {
+je_mog_pli_corruption_modifier = {		# Investment pool efficiency is more *appropriate*, but that can't simulate foreign investment effects properly.
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_coins_negative.dds
-	state_aristocrats_investment_pool_efficiency_mult = -1
-	state_bureaucrats_investment_pool_efficiency_mult = -1
-	state_capitalists_investment_pool_efficiency_mult = -1
-	state_engineers_investment_pool_efficiency_mult = -1
-	state_farmers_investment_pool_efficiency_mult = -1
-	state_clergymen_investment_pool_efficiency_mult = -1
-	state_laborers_investment_pool_efficiency_mult = -1
-	state_machinists_investment_pool_efficiency_mult = -1
-	state_officers_investment_pool_efficiency_mult = -1
-	state_soldiers_investment_pool_efficiency_mult = -1
-	state_shopkeepers_investment_pool_efficiency_mult = -1
-	state_clerks_investment_pool_efficiency_mult = -1
-	state_academics_investment_pool_efficiency_mult = -1
+	state_construction_mult = -1		# Construction efficiency penalty is the next best option for balance.
+#	state_aristocrats_investment_pool_efficiency_mult = -1
+#	state_bureaucrats_investment_pool_efficiency_mult = -1
+#	state_capitalists_investment_pool_efficiency_mult = -1
+#	state_engineers_investment_pool_efficiency_mult = -1
+#	state_farmers_investment_pool_efficiency_mult = -1
+#	state_clergymen_investment_pool_efficiency_mult = -1
+#	state_laborers_investment_pool_efficiency_mult = -1
+#	state_machinists_investment_pool_efficiency_mult = -1
+#	state_officers_investment_pool_efficiency_mult = -1
+#	state_soldiers_investment_pool_efficiency_mult = -1
+#	state_shopkeepers_investment_pool_efficiency_mult = -1
+#	state_clerks_investment_pool_efficiency_mult = -1
+#	state_academics_investment_pool_efficiency_mult = -1
 }
 
 # Responsiveness Modifiers
@@ -124,4 +125,20 @@ mog_pli_fought_corruption_modifier = {
 mog_pli_curried_favour_modifier = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
 	country_legitimacy_base_add = 25
+}
+
+mog_pli_local_intervention_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_documents_positive.dds
+	state_construction_mult = 1									# Benefit
+	state_bureaucracy_population_base_cost_factor_mult = 1		# Cost
+}
+
+mog_pli_turmoil_exploitation_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_fist_positive.dds
+	state_construction_mult = 1									# Benefit (cost is global)
+}
+
+mog_pli_turmoil_exploited_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_fist_negative.dds
+	country_legitimacy_base_add = -5									# Cost (cost is global)
 }

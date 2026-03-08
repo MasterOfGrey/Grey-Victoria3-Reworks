@@ -13,6 +13,39 @@
  mog_pli_curry_favour_button: "Köri Favor" #deepl:1217933398
  mog_pli_curry_favour_button_desc: "Hükümete desteği artırmak için nüfuz sahibi kişilerin arzularını tatmin etmek." #deepl:2680760523
  mog_pli_curry_favour_button_tt: "Yolsuzluk şu şekilde değiştirilir #n [ROOT.GetCountry.MakeScope.ScriptValue('mog_pli_curried_favour_tt_val')|=-]#!" #deepl:2570271461
+ mog_pli_local_intervention_button: "Yerel Olarak Müdahale Edin" #deepl:3167143371
+ mog_pli_local_intervention_button_desc: "Tek bir eyalete odaklanın ve inşaatın hızla ilerlemesinin önünü açın." #deepl:1423603147
+ mog_pli_local_intervention_button_tt: "Düşük [concept_turmoil] VE en az 1 [GetBuildingType('building_government_administration').GetName] seviyesine sahiptir." #deepl:2820689446
+ mog_pli_local_intervention_button_summary: "İnşaat cezalarını kaldıran ancak nüfus bürokrasi maliyetini artıran bir değiştirici almak için bir eyalet seçeceksiniz." #deepl:2003445093
+ PLI_corruption_button_ev.1.t: "Yerel Yolsuzlukla Mücadele Müdahalesi" #deepl:605094782
+ PLI_corruption_button_ev.1.d: "İnşaat sonuçlarını iyileştirmek için geçerli bir [concept_state] adresi seçin." #deepl:1115791796
+ PLI_corruption_button_ev.1.f: "Eyaletlerin bu niteliklere sahip olabilmesi için anonim olması, kargaşanın az olması, yerel yönetim idaresine sahip olması ve inşaatın devam ediyor olması gerekmektedir." #deepl:434486560
+ local_intervention1: "[SCOPE.sState('local_intervention1').GetName]" #deepl:3995787814
+ local_intervention2: "[SCOPE.sState('local_intervention2').GetName]" #deepl:1591681848
+ local_intervention3: "[SCOPE.sState('local_intervention3').GetName]" #deepl:829660210
+ local_intervention4: "[SCOPE.sState('local_intervention4').GetName]" #deepl:2486281223
+ local_intervention5: "[SCOPE.sState('local_intervention5').GetName]" #deepl:4221377293
+ local_intervention6: "[SCOPE.sState('local_intervention6').GetName]" #deepl:1265162771
+ local_intervention7: "[SCOPE.sState('local_intervention7').GetName]" #deepl:616850713
+ local_intervention8: "[SCOPE.sState('local_intervention8').GetName]" #deepl:2867441530
+ local_intervention9: "[SCOPE.sState('local_intervention9').GetName]" #deepl:3309637744
+ local_intervention10: "[SCOPE.sState('local_intervention10').GetName]" #deepl:1612491876
+ mog_pli_exploit_turmoil_button: "Kargaşadan Yararlanın" #deepl:2721871152
+ mog_pli_exploit_turmoil_button_desc: "Kaos hem bir yük hem de bir merdiven olabilir. Hedeflerimize ulaşmak için yerel aktörlerden faydalanacağız." #deepl:956432978
+ mog_pli_exploit_turmoil_button_summary: "Yolsuzlukta küçük bir artış pahasına kargaşadan kaynaklanan inşaat cezalarını azaltan bir değiştirici almak için bir eyalet seçeceksiniz." #deepl:352172430
+ PLI_corruption_button_ev.2.t: "Yerel Kargaşadan Yararlanma " #deepl:1955105989
+ PLI_corruption_button_ev.2.d: "İnşaat sonuçlarını iyileştirmek için geçerli bir [concept_state] adresi seçin." #deepl:1115791796
+ PLI_corruption_button_ev.2.f: "Eyaletlerde kargaşa olması, yerel yönetim idaresinin bulunması ve inşaatların devam etmesi gerekmektedir." #deepl:1865123280
+ turmoil_exploitation1: "[SCOPE.sState('turmoil_exploitation1').GetName]" #deepl:3227050247
+ turmoil_exploitation2: "[SCOPE.sState('turmoil_exploitation2').GetName]" #deepl:1890394137
+ turmoil_exploitation3: "[SCOPE.sState('turmoil_exploitation3').GetName]" #deepl:520199955
+ turmoil_exploitation4: "[SCOPE.sState('turmoil_exploitation4').GetName]" #deepl:3124995878
+ turmoil_exploitation5: "[SCOPE.sState('turmoil_exploitation5').GetName]" #deepl:3589216300
+ turmoil_exploitation6: "[SCOPE.sState('turmoil_exploitation6').GetName]" #deepl:1696258354
+ turmoil_exploitation7: "[SCOPE.sState('turmoil_exploitation7').GetName]" #deepl:179725880
+ turmoil_exploitation8: "[SCOPE.sState('turmoil_exploitation8').GetName]" #deepl:2224794715
+ turmoil_exploitation9: "[SCOPE.sState('turmoil_exploitation9').GetName]" #deepl:3946255185
+ turmoil_exploitation10: "[SCOPE.sState('turmoil_exploitation10').GetName]" #deepl:1938537732
  
  mog_pli_investorconfidence_exp: "Bu, isteğe bağlı fonlara erişimi olan tüm insanlar için net yatırım yapma isteğini temsil eder. Daha düşük vergiler, ucuz işgücüne erişim, güçlü yatırım fırsatları ve daha fazla nüfusa hak tanıyan (siyasi çoğulculuk), kanun önünde eşitlik sağlayan (hukukun üstünlüğü) ve karların sahiplenilmesini sağlayan (güvenli mülkiyet hakları) yasalarla iyileştirilen bir #yellow potansiyel#! değerine doğru hareket edecektir. Yatırımcı güveninin değişme hızı [Concept('concept_institution','$concept_institutions$')].#indent_newline:2 \n#red Not:#! Savaş ilanı veya ani bir hasat başarısızlığı gibi olaylar yatırımcı güveninin mevcut seviyesinde ani bir değişikliğe neden olabilir...#! \n\n #yellow maksimum yatırımcı güveni#!, yatırım havuzundaki çok fazla para zayıf yatırım fırsatlarını temsil ettiğinden [concept_investment_pool] ile karşılaştırıldığında [Concept('concept_gdp','$concept_gdp_short$')] büyüklüğü ile sınırlıdır. Havuzun maksimum büyüklüğü her zaman bir Ülkenin GSYİH'sinin yarısından az olacaktır.#indent_newline:3 \n\n #i Bunun mevcut etkileri şunlardır:#! #indent_newline:3 \n#b Potansiyel Yatırımcı Güveni:#! #v [Country.MakeScope.ScriptValue('mog_pli_resting_target_loc_value')|%1]#! \n#b Maksimum Yatırımcı Güveni:#! #v [Country.MakeScope.ScriptValue('mog_pli_max_investment_willingness_from_ip')|%1]#! \n#b Yatırım Havuzu Katkıları:#! #v [Country.GetModifier.GetValueFor('state_aristocrats_investment_pool_contribution_mult')|%1]#!#!#!" #deepl:987620402
  mog_pli_systemiccorruption_exp: "Bu, bireylerin normal iş akışında kendi ellerini yağlamalarını sağlayan farklı yasaların etkileşimini temsil eder. Çoğunlukla iyi finanse edilen bir bürokrasi, güçlü polis kurumları ve şeffaflık ve hesap verebilirliği artıran yasalarla iyileştirilen bir #yellow potansiyel#! değerine doğru ilerleyecektir. Yolsuzluğun değişme hızı [Concept('concept_institution','$concept_institutions$')]'unuza bağlıdır, ancak yolsuzluğun değişmesi yavaştır.#indent_newline:3 \n\n #i Bunun mevcut etkileri şunlardır:#! #indent_newline:3 \n#b Potansiyel Sistemik Yolsuzluk:#! #v [Country.MakeScope.ScriptValue('mog_pli_corruption_target_loc_value')|%1]#! \n#b Tüm Pops Yatırım Verimliliği:#! #v -[Country.MakeScope.ScriptValue('mog_pli_corruption_multiplier')|%1]#! #! #! [AddTextIf(Not(GetPlayer.MakeScope.Var('mog_pli_corruption_disabled').IsSet),'\n\n#instruction Corruption Game Rule is:#! #L Active#!')][AddTextIf(GetPlayer.MakeScope.Var('mog_pli_corruption_disabled').IsSet,'\n\n#instruction Corruption Game Rule is:#! #L Disabled#!')]" #deepl:1532604169
@@ -37,6 +70,9 @@
  je_mog_pli_redistributive_reaction: "PLI: Popülist Ajitasyon" #deepl:1884117642
  mog_pli_fought_corruption_modifier: "Yozlaşmış Etkilerden Arındırıldı" #deepl:605458558
  mog_pli_curried_favour_modifier: "Powerbrokers ile Körili İyilik" #deepl:3980467289
+ mog_pli_local_intervention_modifier: "Yerel Yolsuzlukla Mücadele Müdahalesi" #deepl:605094782
+ mog_pli_turmoil_exploitation_modifier: "Yerel Kargaşa Sömürüsü" #deepl:148123858
+ mog_pli_turmoil_exploited_modifier: "İstismar Edilen Yerel Kargaşa" #deepl:4065022985
  PLI_BASE_TREND: "Doğal eğilim #yellow Potansiyel#!" #deepl:76454067
  PLI_POLICE_INSTITUTION: "Polis Kurumu Seviyesi" #deepl:3695223093
  PLI_SCHOOL_INSTITUTION: "Eğitim Kurumu Seviyesi" #deepl:119565117
@@ -45,10 +81,10 @@
  PLI_OHS_INSTITUTION: "İşyeri Güvenliği Kurum Seviyesi" #deepl:2305349007
  PLI_HAFFAIRS_INSTITUTION: "İç İşleri Kurum Seviyesi" #deepl:1435635816
  PLI_LITERACY_RATE_MOD: "Okuryazarlık Oranı" #deepl:812351491
- PLI_2DECIMAL_SCRIPT_VALUE_FORMAT: "$KEY$: $DEĞER|=2+$" #deepl:3216225099
- PLI_2DECIMAL_SCRIPT_VALUE_INVERT_FORMAT: "$KEY$: $DEĞER|=2-$" #deepl:3125476191
- PLI_3DECIMAL_SCRIPT_VALUE_FORMAT: "$KEY$: $DEĞER|=3+$" #deepl:635900380
- PLI_3DECIMAL_SCRIPT_VALUE_INVERT_FORMAT: "$KEY$: $VALUE|=3-$" #deepl:538859976
+ PLI_2DECIMAL_SCRIPT_VALUE_FORMAT: "$KEY$: $VALUE|=2+$"
+ PLI_2DECIMAL_SCRIPT_VALUE_INVERT_FORMAT: "$KEY$: $VALUE|=2-$"
+ PLI_3DECIMAL_SCRIPT_VALUE_FORMAT: "$KEY$: $VALUE|=3+$"
+ PLI_3DECIMAL_SCRIPT_VALUE_INVERT_FORMAT: "$KEY$: $VALUE|=3-$"
  
  state_aristocrats_investment_pool_contribution_mult: "$aristocrats$ [concept_investment_pool] katkı coşkusu" #deepl:3643715859
  state_capitalists_investment_pool_contribution_mult: "$capitalists$ [concept_investment_pool] katkı coşkusu" #deepl:418366632
@@ -113,6 +149,7 @@
  mog_pli_innovationincentive_exp: "Bu, yaşamlarını etkileyen sorunlara yenilikçi çözümler bulmak için nüfus düzeyindeki teşviki temsil eder. Bu, insanların inisiyatif almasını engelleyen bariyerler tarafından azaltılır. (Asırlık soruyu düşünün: Ya kanserin tedavisi, eğitim almaya gücü yetmeyen birinin zihninde takılı kalsaydı?)\nSiyasi çoğulculuk, tarafsız kolluk kuvvetleri, verimli toprak reformları ve eğitime erişim, ifade özgürlüğü ve yoksulluğa karşı güvenliği geliştirerek insanların risk almasını genel olarak destekleyen yasalarla iyileştirilen #yellow potansiyel#! değerine doğru ilerleyecektir. İnovasyon teşviklerinin değişme hızı [Concept('concept_institution','$concept_institutions$')].#indent_newline:2 \n#red Not:#! Savaş, kıtlık ve yatırımcı güveninin olmaması gibi süregelen durumların hepsi inovasyon teşviklerini azaltabilir...#! \n\n #yellow maksimum inovasyon teşviki#!, [Concept('concept_incorporated_state','$concept_incorporated$')] eyaletlerindeki en az @acceptance_status_4! olan nüfus oranıyla sınırlıdır $second_rate_citizen$ [Concept('concept_acceptance_status','$concept_acceptance_status_short$')].#indent_newline:3 \n\n #i Bunun mevcut etkileri şunlardır:#! #indent_newline:3 \n#b Potansiyel İnovasyon Teşviki:#! #v [Country.MakeScope.ScriptValue('mog_pli_innovation_target_loc_value')|%1]#! \n#b Maksimum İnovasyon Teşviki:#! #v [Country.MakeScope.ScriptValue('mog_pli_max_innovation_potential_from_citizenship')|%1]#! \n#b Mevcut Maksimum İnovasyon Azaltımı:#! #v [Country.GetModifier.GetValueFor('country_weekly_innovation_max_mult')|%1]#!#!#!" #deepl:2658091887
  mog_pli_techproliferation_exp: "Bu, hükümetlerin dünyanın başka yerlerinden yenilikleri ithal etme kabiliyetini temsil eder, aksi takdirde çıkarıcı kurumlar altında büyüme olarak bilinir. Çoğunlukla temsili yönetişim, iyi finanse edilen bir bürokrasi, çocuklar için güçlü haklar ve düzenlenmiş servet çıkarma yapıları içinde işgücü katılımını ve güvenliğini artıran yasalarla iyileştirilen bir #yellow potansiyel#! değerine doğru hareket edecektir. Çoğalmanın değişme hızı [Concept('concept_institution','$concept_institutions$')] ve [concept_literacy] adreslerinize bağlıdır. \n\n #yellow maksimum yayılma#! ulusal okuryazarlık oranınızın ve [Concept('concept_capital_state','$concept_capital_state_short$')] okuryazarlık oranınızın ortalamasıyla ve küresel teknoloji liderine göre ne kadar geride olduğunuzla sınırlıdır.#indent_newline:3 \n\n #i Bunun mevcut etkileri şunlardır:#! #indent_newline:3 \n#b Potansiyel Yayılma:#! #v [Country.MakeScope.ScriptValue('mog_pli_proliferation_target_loc_value')|%1]#! \n#b Maksimum Yayılma:#! #v [Country.MakeScope.ScriptValue('mog_pli_proliferation_max_loc_value')|%1]#! \n#b Teknoloji Yayılımı Bonusu:#! #v [Country.MakeScope.ScriptValue('mog_pli_proliferation_multiplier_loc')|%1] #! #! #! [AddTextIf(Not(GetPlayer.MakeScope.Var('mog_pli_proliferation_disabled').IsSet),'\n\n#instruction Proliferation Game Rule is:#! #L Active#!')][AddTextIf(GetPlayer.MakeScope.Var('mog_pli_proliferation_disabled').IsSet,'\n\n#instruction Proliferation Game Rule is:#! #L Disabled#!')]" #deepl:2317885270
  
+ mog_pli_base_innovation_adjustment_modifier: "PLI: Temel Denge Düzeltmesi" #deepl:2087465741
  je_mog_pli_innovation_modifier: "Innovation Incentive Effect" # We'll swap back to this one if these modifier types ever work in the future. 
  je_mog_pli_dummy_innovation_modifier: "$je_mog_pli_innovation_modifier$#! \n$pli_disclaimer_2$" #deepl:3807825725
  je_mog_pli_proliferation_modifier: "Teknoloji Yayılma Etkisi" #deepl:357267381

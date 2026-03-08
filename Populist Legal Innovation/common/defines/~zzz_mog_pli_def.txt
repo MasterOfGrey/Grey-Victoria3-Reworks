@@ -14,4 +14,9 @@ NAI = {
 	# Every this number of months, the saved values for domestic/foreign investment are reset to 0
 	# This is to ensure that a prolonged period of domestic investment early game doesn't produce such high saved numbers that anything that comes after it doesn't matter
 	AUTONOMOUS_INVESTMENT_DOMESTIC_INVESTMENT_BIAS_RESET_TIME_IN_MONTHS = 120	# Vanilla = 60.0
+	
+	# Because we reduce innovation cap to rebalance things towards tech spread under different conditions, default caps are no good
+	MONEY_SPENDING_INNOVATION_CRITICAL_THRESHOLD = 1.0 # 0.75	# If innovation production compared to cap is worse than this, AI considers it very important to improve
+	MONEY_SPENDING_INNOVATION_DESIRED_THRESHOLD = 2.0 # 1.0		# If innovation production compared to cap is worse than this, AI considers it important to improve
+	MONEY_SPENDING_INNOVATION_EXCESSIVE_THRESHOLD = 4.0 # 1.25	# If innovation production compared to cap is at least this, AI considers it nice to have
 }

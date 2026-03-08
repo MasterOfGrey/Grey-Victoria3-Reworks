@@ -213,6 +213,56 @@ mog_pli_curried_favour_tt_val = {		# Mimic the calc above
 	}
 }
 
+mog_pli_state_option_count_val = {
+	value = 0
+	every_scope_state = {
+		if = {
+			limit = {
+				OR = {	# Ensure mutually exclusive conditions of existence
+					has_variable = PLI_potential_local_intervention
+					has_variable = PLI_potential_turmoil_exploitation
+				}
+			}
+			add = 1
+		}
+	}
+}
+
+mog_pli_effective_state_turmoil_val = {		# To compare if *effective* turmoil is below threshold after effects reduction.
+	add = define:NPolitics|TURMOIL_STATE_EFFECTS_THRESHOLD
+	add = {
+		add = turmoil
+		multiply = modifier:state_turmoil_effects_mult
+		multiply = -1
+	}
+}
+
+mog_pli_turmoil_penalty_val = {
+	value = 0
+	if = {
+		limit = { turmoil > define:NPolitics|TURMOIL_STATE_EXTREME_EFFECTS_THRESHOLD }
+		add = 0.75
+	}
+	else_if = {
+		limit = { turmoil > define:NPolitics|TURMOIL_STATE_HIGH_EFFECTS_THRESHOLD }
+		add = 0.5
+	}
+	else_if = {
+		limit = { turmoil > define:NPolitics|TURMOIL_STATE_EFFECTS_THRESHOLD }
+		add = 0.33
+	}
+}
+
+mog_pli_exploited_turmoil_val = {
+	value = mog_pli_curried_favour_val
+	divide = 4
+}
+
+mog_pli_exploited_turmoil_tt_val = {		# Mimic the calc above
+	value = mog_pli_curried_favour_tt_val
+	divide = 4
+}
+
 # On Action values
 mog_pli_war_confidence_hit_val = {
 	value = {

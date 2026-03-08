@@ -9,6 +9,11 @@ je_mog_pli_dummy_innovation_modifier = {
 	country_weekly_innovation_max_mult = -1
 }
 
+mog_pli_base_innovation_adjustment_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_lightbulb_neutral.dds
+	country_weekly_innovation_add = -1
+}
+
 #Proliferation Modifiers
 je_mog_pli_proliferation_modifier = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_lightbulb_positive.dds

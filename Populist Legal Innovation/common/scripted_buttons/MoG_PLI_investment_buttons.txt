@@ -1,12 +1,13 @@
-﻿## Tools related to Corruption
+﻿### Tools related to Corruption
 
+## Country-Level Effects:
 # Trade legitimacy to fight corruption
 mog_pli_fight_corruption_button = {
 	name = "mog_pli_fight_corruption_button"
 	desc = "mog_pli_fight_corruption_button_desc"
 	
 	visible = {
-		always = yes
+		pli_corruption_tracking_trigger = yes
 	}
 	
 	possible = {
@@ -82,7 +83,7 @@ mog_pli_curry_favour_button = {
 	desc = "mog_pli_curry_favour_button_desc"
 	
 	visible = {
-		always = yes
+		pli_corruption_tracking_trigger = yes
 	}
 	
 	possible = {
@@ -153,6 +154,247 @@ mog_pli_curry_favour_button = {
 		else_if = {
 			limit = { government_legitimacy >= 75 }
 			add = -55
+		}
+	}
+}
+
+## State-level Effects
+# Local Intervention
+mog_pli_local_intervention_button = {
+	name = "mog_pli_local_intervention_button"
+	desc = "mog_pli_local_intervention_button_desc"
+	
+	visible = {
+		pli_corruption_tracking_trigger = yes
+	}
+	
+	possible = {
+		NOT = { any_scope_state = { has_modifier = mog_pli_local_intervention_modifier } }
+		government_legitimacy > 25
+		any_scope_state = {
+			is_incorporated = yes
+			custom_tooltip = {
+				text = mog_pli_local_intervention_button_tt
+				turmoil < mog_pli_effective_state_turmoil_val	# If the *effective* turmoil is below the threshold, allow it.
+				state_has_building_type_levels = {
+					target = bt:building_government_administration
+					value >= 1
+				}
+			}
+			any_scope_building = { is_under_construction = yes }
+		}
+		hidden_trigger = {
+			NOT = { has_variable = mog_pli_state_option_count }
+		}
+	}
+	
+	effect = {
+		custom_tooltip = {
+			text = mog_pli_local_intervention_button_summary
+		}
+		if = {		# Let the player choose.
+			limit = { is_player = yes can_trigger_event = PLI_corruption_button_ev.1 }
+			every_scope_state = {
+				limit = {
+					is_incorporated = yes
+					turmoil < mog_pli_effective_state_turmoil_val	# If the *effective* turmoil is below the threshold, allow it.
+					state_has_building_type_levels = {
+						target = bt:building_government_administration
+						value >= 1
+					}
+					any_scope_building = { is_under_construction = yes }
+				}
+				set_variable = PLI_potential_local_intervention
+			}
+			trigger_event = {
+				id = PLI_corruption_button_ev.1
+				days = 0
+				popup = yes
+			}
+		}
+		else = {	# The AI will just pick a valid state currently being built in at random.
+			random_scope_state = {
+				limit = {
+					is_incorporated = yes
+					turmoil < define:NPolitics|TURMOIL_STATE_EFFECTS_THRESHOLD
+					state_has_building_type_levels = {
+						target = bt:building_government_administration
+						value >= 1
+					}
+					any_scope_building = { is_under_construction = yes }
+				}
+				add_modifier = {
+					name = mog_pli_local_intervention_modifier
+					multiplier = mog_pli_corruption_multiplier	# Counteract national corruption penalty in one state
+					days = short_modifier_time				 	# 2.5 years
+					is_decaying = yes
+				}
+			}
+		}
+	}
+	
+	ai_chance = {
+		value = 0
+		if = {
+			limit = { bureaucracy < 0 }
+			add = -100
+		}
+		add = "je:je_mog_pli_investment.scripted_bar_progress(mog_pli_corruption_tracking_bar)"
+		if = {
+			limit = { construction_queue_government_duration > 52 }
+			add = 100
+		}
+		else_if = {
+			limit = { construction_queue_government_duration > 26 }
+			add = 80
+		}
+		else_if = {
+			limit = { construction_queue_government_duration > 13 }
+			add = 50
+		}
+	}
+}
+
+# Exploit Turmoil
+mog_pli_exploit_turmoil_button = {
+	name = "mog_pli_exploit_turmoil_button"
+	desc = "mog_pli_exploit_turmoil_button_desc"
+	
+	visible = {
+		pli_corruption_tracking_trigger = yes
+	}
+	
+	possible = {
+		NOT = { any_scope_state = { has_modifier = mog_pli_turmoil_exploitation_modifier } }
+		government_legitimacy > 50
+		any_scope_state = {
+			turmoil > define:NPolitics|TURMOIL_STATE_EFFECTS_THRESHOLD
+			state_has_building_type_levels = {
+				target = bt:building_government_administration
+				value >= 1
+			}
+			any_scope_building = { is_under_construction = yes }
+		}
+		hidden_trigger = {
+			NOT = { has_variable = mog_pli_state_option_count }
+		}
+	}
+	
+	effect = {
+		custom_tooltip = {
+			text = mog_pli_exploit_turmoil_button_summary
+		}
+		if = {		# Let the player choose.
+			limit = { is_player = yes can_trigger_event = PLI_corruption_button_ev.2 }
+			every_scope_state = {
+				limit = {
+					turmoil > define:NPolitics|TURMOIL_STATE_EFFECTS_THRESHOLD
+					state_has_building_type_levels = {
+						target = bt:building_government_administration
+						value >= 1
+					}
+					any_scope_building = { is_under_construction = yes }
+				}
+				set_variable = PLI_potential_turmoil_exploitation
+			}
+			trigger_event = {
+				id = PLI_corruption_button_ev.2
+				days = 0
+				popup = yes
+			}
+		}
+		else = {	# The AI will just pick a valid state currently being built in at random.
+			random_scope_state = {
+				limit = {
+					turmoil > define:NPolitics|TURMOIL_STATE_EFFECTS_THRESHOLD
+					state_has_building_type_levels = {
+						target = bt:building_government_administration
+						value >= 1
+					}
+					any_scope_building = { is_under_construction = yes }
+				}
+				save_temporary_scope_as = pli_exploited_state
+				add_modifier = {
+					name = mog_pli_turmoil_exploitation_modifier
+					multiplier = scope:pli_exploited_state.mog_pli_turmoil_penalty_val
+					days = short_modifier_time				 	# 2.5 years
+					is_decaying = yes
+				}
+			}
+			custom_tooltip = {
+				text = mog_pli_curry_favour_button_tt
+				je:je_mog_pli_investment = {
+					set_bar_progress = {
+						value = mog_pli_exploited_turmoil_val
+						name = mog_pli_corruption_tracking_bar
+					}
+				}
+			}
+			add_modifier = {
+				name = mog_pli_turmoil_exploited_modifier
+				days = short_modifier_time				 # 2.5 years
+				is_decaying = yes
+			}
+			set_variable = {	# Reset progress level variable after changing progress bar.
+				name = mog_pli_corruption_current_value
+				value = "je:je_mog_pli_investment.scripted_bar_progress(mog_pli_corruption_tracking_bar)"
+			}
+		}
+	}
+	
+	ai_chance = {
+		value = 0
+		if = {
+			limit = { in_default = yes }
+			add = -100
+		}
+		else_if = {
+			limit = {
+				NOR = {
+					ig:ig_landowners ?= { is_in_government = yes }
+					ig:ig_industrialists ?= { is_in_government = yes }
+				}
+			}
+			add = -20
+		}
+		
+		if = {
+			limit = { "je:je_mog_pli_investment.scripted_bar_progress(mog_pli_corruption_tracking_bar)" <= 40 }
+			add = 55
+		}
+		else_if = {
+			limit = { "je:je_mog_pli_investment.scripted_bar_progress(mog_pli_corruption_tracking_bar)" <= 60 }
+			add = 15
+		}
+		else_if = {
+			limit = { "je:je_mog_pli_investment.scripted_bar_progress(mog_pli_corruption_tracking_bar)" >= 75 }
+			add = -55
+		}
+		
+		if = {
+			limit = { government_legitimacy >= 90 }
+			add = 55
+		}
+		else_if = {
+			limit = { government_legitimacy >= 80 }
+			add = 15
+		}
+		else_if = {
+			limit = { government_legitimacy <= 75 }
+			add = -55
+		}
+		
+		if = {
+			limit = { construction_queue_government_duration > 52 }
+			add = 100
+		}
+		else_if = {
+			limit = { construction_queue_government_duration > 26 }
+			add = 80
+		}
+		else_if = {
+			limit = { construction_queue_government_duration > 13 }
+			add = 50
 		}
 	}
 }

@@ -13,6 +13,39 @@
  mog_pli_curry_favour_button: "카레 호의" #deepl:1217933398
  mog_pli_curry_favour_button_desc: "영향력 있는 사람들의 욕구를 충족시켜 정부에 대한 지지를 강화하세요." #deepl:2680760523
  mog_pli_curry_favour_button_tt: "부패는 다음과 같이 변경됩니다. #n [ROOT.GetCountry.MakeScope.ScriptValue('mog_pli_curried_favour_tt_val')|=-]#!" #deepl:2570271461
+ mog_pli_local_intervention_button: "로컬에서 개입" #deepl:3167143371
+ mog_pli_local_intervention_button_desc: "한 가지 상태에 집중하여 신속하게 공사를 진행할 수 있는 길을 열어주세요." #deepl:1423603147
+ mog_pli_local_intervention_button_tt: "[concept_turmoil] 이 낮고 [GetBuildingType('building_government_administration').GetName] 수준이 1 수준 이상입니다." #deepl:2820689446
+ mog_pli_local_intervention_button_summary: "건설에 대한 불이익을 없애는 대신 인구 관료주의 비용이 증가하는 수식어를 받을 주를 하나 선택하게 됩니다." #deepl:2003445093
+ PLI_corruption_button_ev.1.t: "현지 부패 방지 개입" #deepl:605094782
+ PLI_corruption_button_ev.1.d: "건설 결과를 개선하려면 유효한 [concept_state] 을 선택하세요." #deepl:1115791796
+ PLI_corruption_button_ev.1.f: "자격을 갖추려면 국가가 통합되어 있고, 혼란이 적으며, 지방 정부 행정부가 있고, 건설이 진행 중이어야 합니다." #deepl:434486560
+ local_intervention1: "[SCOPE.sState('local_intervention1').GetName]" #deepl:3995787814
+ local_intervention2: "[SCOPE.sState('local_intervention2').GetName]" #deepl:1591681848
+ local_intervention3: "[SCOPE.sState('local_intervention3').GetName]" #deepl:829660210
+ local_intervention4: "[SCOPE.sState('local_intervention4').GetName]" #deepl:2486281223
+ local_intervention5: "[SCOPE.sState('local_intervention5').GetName]" #deepl:4221377293
+ local_intervention6: "[SCOPE.sState('local_intervention6').GetName]" #deepl:1265162771
+ local_intervention7: "[SCOPE.sState('local_intervention7').GetName]" #deepl:616850713
+ local_intervention8: "[SCOPE.sState('local_intervention8').GetName]" #deepl:2867441530
+ local_intervention9: "[SCOPE.sState('local_intervention9').GetName]" #deepl:3309637744
+ local_intervention10: "[SCOPE.sState('local_intervention10').GetName]" #deepl:1612491876
+ mog_pli_exploit_turmoil_button: "익스플로잇 혼란" #deepl:2721871152
+ mog_pli_exploit_turmoil_button_desc: "혼란은 부담이자 사다리가 될 수 있습니다. 우리는 목표를 달성하기 위해 지역 주체들을 활용할 것입니다." #deepl:956432978
+ mog_pli_exploit_turmoil_button_summary: "한 주를 선택하여 부패가 약간 증가하는 대신 혼란으로 인한 건설 불이익을 감소시키는 수정을 받습니다." #deepl:352172430
+ PLI_corruption_button_ev.2.t: "지역 혼란의 악용 " #deepl:1955105989
+ PLI_corruption_button_ev.2.d: "건설 결과를 개선하려면 유효한 [concept_state] 을 선택하세요." #deepl:1115791796
+ PLI_corruption_button_ev.2.f: "자격을 갖추려면 국가에 혼란이 있고, 지방 정부 행정부가 있으며, 공사가 진행 중이어야 합니다." #deepl:1865123280
+ turmoil_exploitation1: "[SCOPE.sState('turmoil_exploitation1').GetName]" #deepl:3227050247
+ turmoil_exploitation2: "[SCOPE.sState('turmoil_exploitation2').GetName]" #deepl:1890394137
+ turmoil_exploitation3: "[SCOPE.sState('turmoil_exploitation3').GetName]" #deepl:520199955
+ turmoil_exploitation4: "[SCOPE.sState('turmoil_exploitation4').GetName]" #deepl:3124995878
+ turmoil_exploitation5: "[SCOPE.sState('turmoil_exploitation5').GetName]" #deepl:3589216300
+ turmoil_exploitation6: "[SCOPE.sState('turmoil_exploitation6').GetName]" #deepl:1696258354
+ turmoil_exploitation7: "[SCOPE.sState('turmoil_exploitation7').GetName]" #deepl:179725880
+ turmoil_exploitation8: "[SCOPE.sState('turmoil_exploitation8').GetName]" #deepl:2224794715
+ turmoil_exploitation9: "[SCOPE.sState('turmoil_exploitation9').GetName]" #deepl:3946255185
+ turmoil_exploitation10: "[SCOPE.sState('turmoil_exploitation10').GetName]" #deepl:1938537732
  
  mog_pli_investorconfidence_exp: "이는 재량 자금에 접근할 수 있는 모든 사람들의 순 투자 의향을 나타냅니다. 이는 낮은 세금, 값싼 노동력, 강력한 투자 기회, 더 많은 인구에게 권리를 부여하고(정치적 다원주의), 법 앞에 평등을 실현하며(법치주의), 이익의 소유권을 보장하는(재산권 확보) 법률에 의해 개선되는 #yellow 잠재적#! 가치로 나아갈 것입니다. 투자자의 신뢰도가 변화하는 속도는 [Concept('concept_institution','$concept_institutions$')].#indent_newline:2 \n#red 참고:#! 선전포고나 갑작스러운 수확 실패와 같은 사건으로 인해 현재 투자자 신뢰도가 갑자기 바뀔 수 있습니다...#! \n\n #yellow 최대 투자자 신뢰도#! 는 [concept_investment_pool] 의 크기에 의해 제한되며, 투자 풀에 너무 많은 자금이 있으면 투자 기회가 약해지기 때문에 [Concept('concept_gdp','$concept_gdp_short$')] 에 비해 제한됩니다. 풀의 최대 규모는 항상 국가 GDP의 절반 미만입니다.#indent_newline:3 \n\n #i 이로 인한 현재 효과는 다음과 같습니다:#! #indent_newline:3 \n#b 잠재적 투자자 신뢰도:#! #v [Country.MakeScope.ScriptValue('mog_pli_resting_target_loc_value')|%1]#! \n#b 최대 투자자 신뢰도:#! #v [Country.MakeScope.ScriptValue('mog_pli_max_investment_willingness_from_ip')|%1]#! \n#b 투자 풀 기여:#! #v [Country.GetModifier.GetValueFor('state_aristocrats_investment_pool_contribution_mult')|%1]#!#!#!" #deepl:987620402
  mog_pli_systemiccorruption_exp: "이는 정상적인 비즈니스 과정에서 개인이 자신의 손에 기름칠을 할 수 있도록 하는 여러 법률의 상호 작용을 나타냅니다. 이는 #yellow 잠재적#! 가치로 나아갈 것이며, 이는 대부분 잘 갖춰진 관료제, 강력한 경찰 기관, 투명성과 책임성을 강화하는 법률에 의해 개선됩니다. 부패가 변화하는 속도는 [Concept('concept_institution','$concept_institutions$')] 에 따라 다르지만, 부패는 변화 속도가 느립니다.#indent_newline:3 \n\n #i 현재 그 효과는 다음과 같습니다:#! #indent_newline:3 \n#b 잠재적인 조직적 부패:#! #v [Country.MakeScope.ScriptValue('mog_pli_corruption_target_loc_value')|%1]#! \n#b 모든 팝 투자 효율성:#! #v -[Country.MakeScope.ScriptValue('mog_pli_corruption_multiplier')|%1]#! #! #! [AddTextIf(Not(GetPlayer.MakeScope.Var('mog_pli_corruption_disabled').IsSet),'\n\n#instruction Corruption Game Rule is:#! #L Active#!')][AddTextIf(GetPlayer.MakeScope.Var('mog_pli_corruption_disabled').IsSet,'\n\n#instruction Corruption Game Rule is:#! #L Disabled#!')]" #deepl:1532604169
@@ -37,6 +70,9 @@
  je_mog_pli_redistributive_reaction: "PLI: 포퓰리즘 선동" #deepl:1884117642
  mog_pli_fought_corruption_modifier: "부패한 영향력 제거" #deepl:605458558
  mog_pli_curried_favour_modifier: "파워브로커를 통한 카레 호의" #deepl:3980467289
+ mog_pli_local_intervention_modifier: "현지 부패 방지 개입" #deepl:605094782
+ mog_pli_turmoil_exploitation_modifier: "지역 혼란 착취" #deepl:148123858
+ mog_pli_turmoil_exploited_modifier: "악용된 지역 혼란" #deepl:4065022985
  PLI_BASE_TREND: "자연스러운 추세 #yellow 잠재력#!" #deepl:76454067
  PLI_POLICE_INSTITUTION: "경찰 기관 수준" #deepl:3695223093
  PLI_SCHOOL_INSTITUTION: "교육 기관 수준" #deepl:119565117
@@ -113,6 +149,7 @@
  mog_pli_innovationincentive_exp: "이는 삶에 영향을 미치는 문제에 대한 혁신적인 해결책을 찾으려는 인구 차원의 인센티브를 나타냅니다. 이는 사람들이 주도권을 갖지 못하게 하는 장벽으로 인해 감소합니다. (교육비를 감당할 수 없는 사람이 암을 치료할 수 없다면 어떻게 될까요?)\n정치적 다원주의, 공정한 법 집행, 생산적인 토지 개혁, 사람들이 위험을 감수하도록 폭넓게 지원하는 법률, 교육에 대한 접근성, 표현의 자유, 빈곤에 대한 보장 등을 통해 개선되는 #yellow 잠재적#! 가치로 나아갈 것입니다. 혁신 인센티브의 변화 속도는 [Concept('concept_institution','$concept_institutions$')].#indent_newline:2 \n#red 참고:#! 전쟁, 기근, 투자자 신뢰 부족과 같은 지속적인 상황은 모두 혁신 인센티브를 감소시킬 수 있습니다....#! \n\n #yellow 최대 혁신 인센티브#! 는 [Concept('concept_incorporated_state','$concept_incorporated$')] 주에서 @acceptance_status_4! 이상인 인구의 비율에 따라 제한됩니다 $second_rate_citizen$ [Concept('concept_acceptance_status','$concept_acceptance_status_short$')].#indent_newline:3 \n\n #i 이것의 현재 효과는 다음과 같습니다:#!.#indent_newline:3 \n#b 잠재적 혁신 인센티브:#! #v [Country.MakeScope.ScriptValue('mog_pli_innovation_target_loc_value')|%1]#! \n#b 최대 혁신 인센티브:#! #v [Country.MakeScope.ScriptValue('mog_pli_max_innovation_potential_from_citizenship')|%1]#! \n#b 현재 최대 혁신 감소:#! #v [Country.GetModifier.GetValueFor('country_weekly_innovation_max_mult')|%1]#!#!#!" #deepl:2658091887
  mog_pli_techproliferation_exp: "이는 정부가 세계 다른 곳에서 혁신을 도입할 수 있는 능력, 즉 추출적 제도 하에서의 성장을 의미합니다. 이는 대의적 거버넌스, 잘 갖춰진 관료제, 아동에 대한 강력한 권리, 규제된 부의 추출 구조 내에서 노동력 참여와 보안을 강화하는 법률에 의해 대부분 개선되는 #yellow 잠재적#! 가치로 나아갈 것입니다. 확산 속도는 [Concept('concept_institution','$concept_institutions$')] 와 [concept_literacy] 에 따라 달라집니다. \n\n #yellow 최대 확산#! 은 국가 문해율의 평균과 [Concept('concept_capital_state','$concept_capital_state_short$')] 의 문해력, 그리고 글로벌 기술 리더에 비해 얼마나 뒤처져 있는지에 따라 제한됩니다.#indent_newline:3 \n\n #i 현재 효과는 다음과 같습니다:#! #indent_newline:3 \n#b 잠재적 확산:#! #v [Country.MakeScope.ScriptValue('mog_pli_proliferation_target_loc_value')|%1]#! \n#b 최대 확산:#! #v [Country.MakeScope.ScriptValue('mog_pli_proliferation_max_loc_value')|%1]#! \n#b 기술 확산 보너스:#! #v [Country.MakeScope.ScriptValue('mog_pli_proliferation_multiplier_loc')|%1] #! #! #! [AddTextIf(Not(GetPlayer.MakeScope.Var('mog_pli_proliferation_disabled').IsSet),'\n\n#instruction Proliferation Game Rule is:#! #L Active#!')][AddTextIf(GetPlayer.MakeScope.Var('mog_pli_proliferation_disabled').IsSet,'\n\n#instruction Proliferation Game Rule is:#! #L Disabled#!')]" #deepl:2317885270
  
+ mog_pli_base_innovation_adjustment_modifier: "PLI: 기준 잔액 조정" #deepl:2087465741
  je_mog_pli_innovation_modifier: "Innovation Incentive Effect" # We'll swap back to this one if these modifier types ever work in the future. 
  je_mog_pli_dummy_innovation_modifier: "$je_mog_pli_innovation_modifier$#! \n$pli_disclaimer_2$" #deepl:3807825725
  je_mog_pli_proliferation_modifier: "기술 확산 효과" #deepl:357267381
