@@ -9,3 +9,6 @@
   
  pm_cropdusting: "Épandage de pesticides sur les cultures" #NT!
  pm_cropdusting_rice: "Épandage de pesticides sur les cultures" #NT!
+ 
+ # Compatibility
+ pm_chemical_fertilizer_rice_farm: "$pm_chemical_fertilizer$"

@@ -9,3 +9,6 @@
   
  pm_cropdusting: "Fumigación de cultivos" #NT!
  pm_cropdusting_rice: "Fumigación de cultivos" #NT!
+ 
+ # Compatibility
+ pm_chemical_fertilizer_rice_farm: "$pm_chemical_fertilizer$"

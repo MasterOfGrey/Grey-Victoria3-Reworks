@@ -9,3 +9,6 @@
   
  pm_cropdusting: "Опыливание урожая" #NT!
  pm_cropdusting_rice: "Опыливание урожая" #NT!
+ 
+ # Compatibility
+ pm_chemical_fertilizer_rice_farm: "$pm_chemical_fertilizer$"

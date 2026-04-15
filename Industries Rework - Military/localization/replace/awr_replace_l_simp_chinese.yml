@@ -9,3 +9,6 @@
   
  pm_cropdusting: "农作物喷洒" #NT!
  pm_cropdusting_rice: "农作物喷洒" #NT!
+ 
+ # Compatibility
+ pm_chemical_fertilizer_rice_farm: "$pm_chemical_fertilizer$"

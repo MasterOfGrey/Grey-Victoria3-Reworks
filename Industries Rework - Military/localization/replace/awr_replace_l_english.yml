@@ -9,3 +9,6 @@
  
  pm_cropdusting: "Cropdusting"
  pm_cropdusting_rice: "Cropdusting"
+ 
+ # Compatibility
+ pm_chemical_fertilizer_rice_farm: "$pm_chemical_fertilizer$"

@@ -9,3 +9,6 @@
   
  pm_cropdusting: "Schädlingsbekämpfung" #NT!
  pm_cropdusting_rice: "Schädlingsbekämpfung" #NT!
+ 
+ # Compatibility
+ pm_chemical_fertilizer_rice_farm: "$pm_chemical_fertilizer$"

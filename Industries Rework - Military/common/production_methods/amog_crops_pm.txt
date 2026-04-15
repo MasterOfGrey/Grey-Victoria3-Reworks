@@ -65,7 +65,6 @@ REPLACE_OR_CREATE:pm_cropdusting = {
 	
 	unlocking_production_methods = {
 		pm_chemical_fertilizer
-		pm_chemical_fertilizer_building_rice_farm
 	}
 	
 	building_modifiers = {
@@ -102,6 +101,7 @@ REPLACE_OR_CREATE:pm_cropdusting_rice = {
 	
 	unlocking_production_methods = {
 		pm_chemical_fertilizer_building_rice_farm
+		pm_chemical_fertilizer_rice_farm	# fpoat
 	}
 	
 	building_modifiers = {

@@ -9,3 +9,6 @@
   
  pm_cropdusting: "Ürün tozlama" #NT!
  pm_cropdusting_rice: "Ürün tozlama" #NT!
+ 
+ # Compatibility
+ pm_chemical_fertilizer_rice_farm: "$pm_chemical_fertilizer$"
