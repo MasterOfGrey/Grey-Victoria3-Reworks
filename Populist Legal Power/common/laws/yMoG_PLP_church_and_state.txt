@@ -245,6 +245,13 @@ REPLACE_OR_CREATE:law_people_of_the_book = { # Other Muslim states
 		law_chiefdom
 	}
 
+	is_visible = {
+		country_is_islamic = yes
+		NOT = {
+			c:TUR ?= this # For the Ottoman Empire and its subjects
+		}
+	}
+
 	on_activate = {
 		if = {
 			limit = {

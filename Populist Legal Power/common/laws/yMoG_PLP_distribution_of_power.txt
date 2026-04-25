@@ -11,8 +11,14 @@
 	}
 
 	is_visible = {
-		NOT = { # Replaced by Neo-Absolutism
-			has_law = law_type:law_neo_absolutism
+		OR = {
+			AND = {
+				com_law_autocracy_trigger = yes
+				NOT = {
+					has_law = law_type:law_neo_absolutism # Replaced by Neo-Absolutism
+				}
+			}
+			com_law_autocracy_alternative_trigger = yes
 		}
 	}
 	
@@ -304,9 +310,15 @@ REPLACE_OR_CREATE:law_oligarchy = {
 	progressiveness = -50
 
 	is_visible = {
-		NAND = {
-			country_has_primary_culture = cu:romanian
-			is_subject = yes
+		OR = {
+			AND = {
+				com_law_oligarchy_trigger = yes
+				NAND = {
+					country_has_primary_culture = cu:romanian
+					is_subject = yes
+				}
+			}
+			com_law_oligarchy_alternative_trigger = yes
 		}
 	}
 	

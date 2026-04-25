@@ -5,13 +5,19 @@
 	
 	progressiveness = -50
 	
-	is_visible = {
-		NOR = {
-			c:AUS ?= this # For the Austrian Empire and its subjects
+	is_visible = {	# With CMF function compatibility.
+		OR = {
 			AND = {
-				exists = c:AUS
-				is_subject_of = c:AUS
+				com_law_hereditary_bureaucrats_trigger = yes
+				NOR = {
+					c:AUS ?= this # For the Austrian Empire and its subjects
+					AND = {
+						exists = c:AUS
+						is_subject_of = c:AUS
+					}
+				}
 			}
+			com_law_hereditary_bureaucrats_alternative_trigger = yes
 		}
 	}
 	
