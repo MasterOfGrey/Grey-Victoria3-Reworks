@@ -33,7 +33,7 @@ usu_manage_urbanization_modifiers = {
 			remove_variable = USU_urban_adjustment
 		}
 		trigger_event = {			# Re-trigger event to update mog_urbanization modifiers properly at least 1 tick later
-			id   = USU_secret_ev.1
+			id   = usu_secret_ev.1
 			days = 1
 		}
 	}
@@ -87,7 +87,7 @@ usu_manage_urbanization_modifiers = {
 				multiplier = var:USU_urban_adjustment
 			}
 			trigger_event = {
-				id   = USU_secret_ev.1							# Re-trigger event to update mog_urbanization modifiers properly at least 1 tick later
+				id   = usu_secret_ev.1							# Re-trigger event to update mog_urbanization modifiers properly at least 1 tick later
 				days = 1
 			}
 		}
@@ -129,7 +129,7 @@ usu_manage_urbanization_modifiers = {
 			remove_variable = USU_urban_adjustment_mult
 		}
 		trigger_event = {			# Re-trigger event to update mog_urbanization modifiers properly at least 1 week later
-			id   = USU_secret_ev.1
+			id   = usu_secret_ev.1
 			days = 10
 		}
 	}

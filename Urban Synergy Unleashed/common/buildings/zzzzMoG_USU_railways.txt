@@ -148,6 +148,7 @@
 					}
 				}
 			}
+            add = 10000
 		}
 		
 		if = { # Manchurian Railway
