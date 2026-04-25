@@ -1,19 +1,19 @@
 ﻿l_japanese:
  # Production method groups 
- pmg_canning: "パッケージ" #NT!
- pmg_distillery: "流体製品" #NT!
+ pmg_canning: "包装"
+ pmg_distillery: "煮物と飲料"
   
  # Production methods # 
  # #Base 
- pm_bakery: "職人の技" #NT!
- pm_sweeteners: "甘味料"
- pm_baking_powder: "ベーキングパウダー"
- pm_automated_bakery: "自動ベーカリー"
+ pm_bakery: "伝統製法"
+ #pm_sweeteners:0 "Sweeteners"
+ #pm_baking_powder:0 "Baking Powder"
+ #pm_automated_bakery:0 "Automated Bakery"
  # #Packaging 
- pm_cannery: "金属缶詰" #NT!
- pm_vacuum_canning: "真空包装"
- pm_vacuum_canning_principle_3: "効率的な製缶方法"
+ pm_cannery: "金属缶詰"
+ #pm_vacuum_canning:1 "Vacuum Packaging"
+ #pm_vacuum_canning_principle_3: "Efficient Canning Practices"
  # #Preservation 
- pm_disabled_canning: "防腐剤不使用" #NT!
+ pm_disabled_canning: "防腐処理なし"
  # #Fluid Products 
- pm_disabled_distillery: "調味料のみ" #NT!
+ pm_disabled_distillery: "調味料のみ"

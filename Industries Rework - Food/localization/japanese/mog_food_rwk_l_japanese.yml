@@ -1,45 +1,45 @@
 ﻿l_japanese:
-  
- # Production method groups 
- # pmg_canning: "パッケージ" #NT!
- pmg_preservation: "保存スタイル" #NT!
- # pmg_distillery: "流体製品" #NT!
-  
- # Production methods # 
- # #Base 
- # pm_bakery: "職人の技" #NT!
- # pm_sweeteners: "甘味料" #NT!
- # pm_baking_powder: "ベーキングパウダー" #NT!
- # pm_automated_bakery: "自動ベーカリー" #NT!
- # #Packaging 
- pm_cloth_pkg: "布ラッピング" #NT!
- pm_paper_pkg: "紙包装" #NT!
- pm_wax_paper: "ワックスペーパー" #NT!
- pm_sealed_jars: "密封された瓶" #NT!
- # pm_cannery: "金属缶詰" #NT!
- # pm_vacuum_canning: "真空包装" #NT!
- # pm_vacuum_canning_principle_3: "効率的な缶詰製造方法" #NT!
- # #Preservation 
- # pm_disabled_canning: "防腐剤不使用" #NT!
- pm_dried_fruit: "果物の乾燥" #NT!
- pm_cured_meat: "肉の塩漬け" #NT!
- pm_salted_fish: "魚の塩漬け" #NT!
- pm_sweet_vinegars: "スイートビネガー" #NT!
- pm_meat_broths: "肉のスープ" #NT!
- pm_brine_vinegars: "塩酢" #NT!
- pm_fish_brines: "魚の塩水漬け" #NT!
- pm_syrups_sauces: "シロップとソース" #NT!
- pm_boiling_sauces: "煮物とソース" #NT!
- pm_oils_sauces: "オイル＆ソース" #NT!
- pm_broths_brines: "スープと塩水" #NT!
- pm_gravies_broths: "グレービーソースとスープ" #NT!
- pm_brines_oils: "塩水と油" #NT!
- # #Fluid Products 
- # pm_disabled_distillery: "調味料のみ" #NT!
- pm_simmer_pots: "煮込み鍋" #NT!
- pm_pot_stills_grain: "ポットスチル（穀物アルコール）" #NT!
- pm_pot_stills_fruit: "ポットスチル（フルーツリキュール）" #NT!
- pm_pot_stills_sugar: "ポットスチル（シュガースピリッツ）" #NT!
- pm_patent_stills_grain: "パテントスチル（穀物アルコール）" #NT!
- pm_patent_stills_fruit: "パテントスティル（フルーツリキュール）" #NT!
- pm_patent_stills_sugar: "パテントスティル（シュガースピリッツ）" #NT!
+
+# Production method groups
+# pmg_canning:0 "Packaging" # -> see replace file
+ pmg_preservation: "防腐処理"
+# pmg_distillery:0 "Fluid Products" # -> see replace file
+ 
+# Production methods #
+# #Base
+# pm_bakery:0 "Artisanal Methods" # -> see replace file
+# pm_sweeteners:0 "Sweeteners" # -> see replace file
+# pm_baking_powder:0 "Baking Powder" # -> see replace file
+# pm_automated_bakery:0 "Automated Bakery" # -> see replace file
+# #Packaging
+ pm_cloth_pkg: "布包装"
+ pm_paper_pkg: "紙包装"
+ pm_wax_paper: "パラフィン紙"
+ pm_sealed_jars: "瓶詰"
+# pm_cannery:0 "Metal Canning" # -> see replace file
+# pm_vacuum_canning:1 "Vacuum Packaging" # -> see replace file
+# pm_vacuum_canning_principle_3: "Efficient Canning Practices" # -> see replace file
+# #Preservation
+# pm_disabled_canning:0 "No Preservatives" # -> see replace file
+ pm_dried_fruit: "乾燥果実"
+ pm_cured_meat: "肉の塩漬け"
+ pm_salted_fish: "魚の塩漬け"
+ pm_sweet_vinegars: "甘酢"
+ pm_meat_broths: "肉のスープ"
+ pm_brine_vinegars: "塩酢"
+ pm_fish_brines: "魚の塩水漬け"
+ pm_syrups_sauces: "果蜜とソース"
+ pm_boiling_sauces: "煮物とソース"
+ pm_oils_sauces: "魚油とソース"
+ pm_broths_brines: "スープと塩水"
+ pm_gravies_broths: "グレービーソースとスープ"
+ pm_brines_oils: "塩水と魚油"
+# #Fluid Products
+# pm_disabled_distillery:0 "Only Condiments" # -> see replace file
+ pm_simmer_pots: "煮込み鍋"
+ pm_pot_stills_grain: "$pm_pot_stills$ (穀物酒)"
+ pm_pot_stills_fruit: "$pm_pot_stills$ (果実酒)"
+ pm_pot_stills_sugar: "$pm_pot_stills$ (ラム酒)"
+ pm_patent_stills_grain: "$pm_patent_stills$ (穀物酒)"
+ pm_patent_stills_fruit: "$pm_patent_stills$ (果実酒)"
+ pm_patent_stills_sugar: "$pm_patent_stills$ (ラム酒)"
