@@ -1,9 +1,9 @@
 ﻿l_japanese:
  # Missing Modifier Types
- goods_output_grain_mult: "@grain! 穀物生産量" #deepl:3907536723
- goods_output_grain_mult_desc: "建物から生み出される@grain! グレインの量にボーナスまたはペナルティを与える。" #deepl:653363902
- goods_output_meat_mult: "@meat! 肉の生産量" #deepl:1213351897
- goods_output_meat_mult_desc: "建物から生み出される@meat! 肉の量にボーナスまたはペナルティを与える。" #deepl:4278174590
+ goods_output_grain_mult: "施設補正 : @grain!$grain$"
+ goods_output_grain_mult_desc: "施設で生産される@grain!$grain$に対するボーナスあるいはペナルティです"
+ goods_output_meat_mult: "施設補正 : @meat!$meat$"
+ goods_output_meat_mult_desc: "施設で生産される@meat!$meat$に対するボーナスあるいはペナルティです"
  
  # Flavour Easter Eggs
- company_somali_food_chain: "カルドー食物連鎖シンジケート" #deepl:2343691508
+ company_somali_food_chain: "$HUB_NAME_STATE_SOMALILAND_farm$食物連鎖企業連合" # イースターエッグ。精査勘弁
