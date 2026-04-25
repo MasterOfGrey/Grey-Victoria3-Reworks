@@ -206,6 +206,10 @@ mog_pli_local_intervention_button = {
 				}
 				set_variable = PLI_potential_local_intervention
 			}
+			set_variable = {	# Only set this at the start for the first page - must be done before trigger.
+				name = mog_pli_state_option_count
+				value = mog_pli_state_option_count_val
+			}
 			trigger_event = {
 				id = PLI_corruption_button_ev.1
 				days = 0
@@ -296,6 +300,10 @@ mog_pli_exploit_turmoil_button = {
 					any_scope_building = { is_under_construction = yes }
 				}
 				set_variable = PLI_potential_turmoil_exploitation
+			}
+			set_variable = {	# Only set this at the start for the first page - must be done before trigger.
+				name = mog_pli_state_option_count
+				value = mog_pli_state_option_count_val
 			}
 			trigger_event = {
 				id = PLI_corruption_button_ev.2

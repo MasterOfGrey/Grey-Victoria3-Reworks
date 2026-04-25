@@ -20,14 +20,10 @@ PLI_corruption_button_ev.1 = {
 			remove_variable = pli_next_page
 		}
 		else = {
-			set_variable = {		# Only set this at the start on the first page.
-				name = mog_pli_state_option_count
-				value = mog_pli_state_option_count_val
+			set_local_variable = {	# Only set this at the start on the first page.
+				name = mog_pli_local_corruption_multiplier
+				value = mog_pli_corruption_multiplier
 			}
-		}
-		set_local_variable = {
-			name = mog_pli_local_corruption_multiplier
-			value = mog_pli_corruption_multiplier
 		}
 		ordered_scope_state = {
 			limit = {
@@ -89,6 +85,7 @@ PLI_corruption_button_ev.1 = {
 			clear_saved_scope = local_intervention10
 		}
 		remove_variable = mog_pli_state_option_count
+		remove_variable = pli_next_page
 	}
 	
 	# gen code in expanded form only for option 1
@@ -107,16 +104,17 @@ PLI_corruption_button_ev.1 = {
 			}
 		}
 		remove_variable = mog_pli_state_option_count
+		remove_variable = pli_next_page
 	}
-	option = { name = local_intervention2 trigger = { var:mog_pli_state_option_count >= 2 exists = scope:local_intervention2 } scope:local_intervention2 = { add_modifier = { name = mog_pli_local_intervention_modifier multiplier = local_var:mog_pli_local_corruption_multiplier days = short_modifier_time is_decaying = yes } } remove_variable = mog_pli_state_option_count }
-	option = { name = local_intervention3 trigger = { var:mog_pli_state_option_count >= 3 exists = scope:local_intervention3 } scope:local_intervention3 = { add_modifier = { name = mog_pli_local_intervention_modifier multiplier = local_var:mog_pli_local_corruption_multiplier days = short_modifier_time is_decaying = yes } } remove_variable = mog_pli_state_option_count }
-	option = { name = local_intervention4 trigger = { var:mog_pli_state_option_count >= 4 exists = scope:local_intervention4 } scope:local_intervention4 = { add_modifier = { name = mog_pli_local_intervention_modifier multiplier = local_var:mog_pli_local_corruption_multiplier days = short_modifier_time is_decaying = yes } } remove_variable = mog_pli_state_option_count }
-	option = { name = local_intervention5 trigger = { var:mog_pli_state_option_count >= 5 exists = scope:local_intervention5 } scope:local_intervention5 = { add_modifier = { name = mog_pli_local_intervention_modifier multiplier = local_var:mog_pli_local_corruption_multiplier days = short_modifier_time is_decaying = yes } } remove_variable = mog_pli_state_option_count }
-	option = { name = local_intervention6 trigger = { var:mog_pli_state_option_count >= 6 exists = scope:local_intervention6 } scope:local_intervention6 = { add_modifier = { name = mog_pli_local_intervention_modifier multiplier = local_var:mog_pli_local_corruption_multiplier days = short_modifier_time is_decaying = yes } } remove_variable = mog_pli_state_option_count }
-	option = { name = local_intervention7 trigger = { var:mog_pli_state_option_count >= 7 exists = scope:local_intervention7 } scope:local_intervention7 = { add_modifier = { name = mog_pli_local_intervention_modifier multiplier = local_var:mog_pli_local_corruption_multiplier days = short_modifier_time is_decaying = yes } } remove_variable = mog_pli_state_option_count }
-	option = { name = local_intervention8 trigger = { var:mog_pli_state_option_count >= 8 exists = scope:local_intervention8 } scope:local_intervention8 = { add_modifier = { name = mog_pli_local_intervention_modifier multiplier = local_var:mog_pli_local_corruption_multiplier days = short_modifier_time is_decaying = yes } } remove_variable = mog_pli_state_option_count }
-	option = { name = local_intervention9 trigger = { var:mog_pli_state_option_count >= 9 exists = scope:local_intervention9 } scope:local_intervention9 = { add_modifier = { name = mog_pli_local_intervention_modifier multiplier = local_var:mog_pli_local_corruption_multiplier days = short_modifier_time is_decaying = yes } } remove_variable = mog_pli_state_option_count }
-	option = { name = local_intervention10 trigger = { var:mog_pli_state_option_count >= 10 exists = scope:local_intervention10 } scope:local_intervention10 = { add_modifier = { name = mog_pli_local_intervention_modifier multiplier = local_var:mog_pli_local_corruption_multiplier days = short_modifier_time is_decaying = yes } } remove_variable = mog_pli_state_option_count }
+	option = { name = local_intervention2 trigger = { var:mog_pli_state_option_count >= 2 exists = scope:local_intervention2 } scope:local_intervention2 = { add_modifier = { name = mog_pli_local_intervention_modifier multiplier = local_var:mog_pli_local_corruption_multiplier days = short_modifier_time is_decaying = yes } } remove_variable = mog_pli_state_option_count remove_variable = pli_next_page }
+	option = { name = local_intervention3 trigger = { var:mog_pli_state_option_count >= 3 exists = scope:local_intervention3 } scope:local_intervention3 = { add_modifier = { name = mog_pli_local_intervention_modifier multiplier = local_var:mog_pli_local_corruption_multiplier days = short_modifier_time is_decaying = yes } } remove_variable = mog_pli_state_option_count remove_variable = pli_next_page }
+	option = { name = local_intervention4 trigger = { var:mog_pli_state_option_count >= 4 exists = scope:local_intervention4 } scope:local_intervention4 = { add_modifier = { name = mog_pli_local_intervention_modifier multiplier = local_var:mog_pli_local_corruption_multiplier days = short_modifier_time is_decaying = yes } } remove_variable = mog_pli_state_option_count remove_variable = pli_next_page }
+	option = { name = local_intervention5 trigger = { var:mog_pli_state_option_count >= 5 exists = scope:local_intervention5 } scope:local_intervention5 = { add_modifier = { name = mog_pli_local_intervention_modifier multiplier = local_var:mog_pli_local_corruption_multiplier days = short_modifier_time is_decaying = yes } } remove_variable = mog_pli_state_option_count remove_variable = pli_next_page }
+	option = { name = local_intervention6 trigger = { var:mog_pli_state_option_count >= 6 exists = scope:local_intervention6 } scope:local_intervention6 = { add_modifier = { name = mog_pli_local_intervention_modifier multiplier = local_var:mog_pli_local_corruption_multiplier days = short_modifier_time is_decaying = yes } } remove_variable = mog_pli_state_option_count remove_variable = pli_next_page }
+	option = { name = local_intervention7 trigger = { var:mog_pli_state_option_count >= 7 exists = scope:local_intervention7 } scope:local_intervention7 = { add_modifier = { name = mog_pli_local_intervention_modifier multiplier = local_var:mog_pli_local_corruption_multiplier days = short_modifier_time is_decaying = yes } } remove_variable = mog_pli_state_option_count remove_variable = pli_next_page }
+	option = { name = local_intervention8 trigger = { var:mog_pli_state_option_count >= 8 exists = scope:local_intervention8 } scope:local_intervention8 = { add_modifier = { name = mog_pli_local_intervention_modifier multiplier = local_var:mog_pli_local_corruption_multiplier days = short_modifier_time is_decaying = yes } } remove_variable = mog_pli_state_option_count remove_variable = pli_next_page }
+	option = { name = local_intervention9 trigger = { var:mog_pli_state_option_count >= 9 exists = scope:local_intervention9 } scope:local_intervention9 = { add_modifier = { name = mog_pli_local_intervention_modifier multiplier = local_var:mog_pli_local_corruption_multiplier days = short_modifier_time is_decaying = yes } } remove_variable = mog_pli_state_option_count remove_variable = pli_next_page }
+	option = { name = local_intervention10 trigger = { var:mog_pli_state_option_count >= 10 exists = scope:local_intervention10 } scope:local_intervention10 = { add_modifier = { name = mog_pli_local_intervention_modifier multiplier = local_var:mog_pli_local_corruption_multiplier days = short_modifier_time is_decaying = yes } } remove_variable = mog_pli_state_option_count remove_variable = pli_next_page }
 	option = {
 		name = ENCYCLOPEDIAGE_NEXT_PAGE
 		trigger = {
@@ -183,12 +181,6 @@ PLI_corruption_button_ev.2 = {
 			}
 			remove_variable = pli_next_page
 		}
-		else = {
-			set_variable = {		# Only set this at the start on the first page.
-				name = mog_pli_state_option_count
-				value = mog_pli_state_option_count_val
-			}
-		}
 		ordered_scope_state = {
 			limit = { has_variable = PLI_potential_turmoil_exploitation }
 			order_by = turmoil # { add = turmoil multiply = -1 }
@@ -247,6 +239,7 @@ PLI_corruption_button_ev.2 = {
 			clear_saved_scope = turmoil_exploitation10
 		}
 		remove_variable = mog_pli_state_option_count
+		remove_variable = pli_next_page
 	}
 	
 	# gen code in expanded form only for option 1
@@ -264,23 +257,29 @@ PLI_corruption_button_ev.2 = {
 				is_decaying = yes
 			}
 		}
+		add_modifier = {
+			name = mog_pli_turmoil_exploited_modifier
+			days = short_modifier_time				 	# 2.5 years
+			is_decaying = yes
+		}
 		remove_variable = mog_pli_state_option_count
+		remove_variable = pli_next_page
 	}
-	option = { name = turmoil_exploitation2 trigger = { var:mog_pli_state_option_count >= 2 exists = scope:turmoil_exploitation2 } scope:turmoil_exploitation2 = { add_modifier = { name = mog_pli_turmoil_exploitation_modifier multiplier = scope:turmoil_exploitation2.mog_pli_turmoil_penalty_val days = short_modifier_time is_decaying = yes } } remove_variable = mog_pli_state_option_count }
-	option = { name = turmoil_exploitation3 trigger = { var:mog_pli_state_option_count >= 3 exists = scope:turmoil_exploitation3 } scope:turmoil_exploitation3 = { add_modifier = { name = mog_pli_turmoil_exploitation_modifier multiplier = scope:turmoil_exploitation3.mog_pli_turmoil_penalty_val days = short_modifier_time is_decaying = yes } } remove_variable = mog_pli_state_option_count }
-	option = { name = turmoil_exploitation4 trigger = { var:mog_pli_state_option_count >= 4 exists = scope:turmoil_exploitation4 } scope:turmoil_exploitation4 = { add_modifier = { name = mog_pli_turmoil_exploitation_modifier multiplier = scope:turmoil_exploitation4.mog_pli_turmoil_penalty_val days = short_modifier_time is_decaying = yes } } remove_variable = mog_pli_state_option_count }
-	option = { name = turmoil_exploitation5 trigger = { var:mog_pli_state_option_count >= 5 exists = scope:turmoil_exploitation5 } scope:turmoil_exploitation5 = { add_modifier = { name = mog_pli_turmoil_exploitation_modifier multiplier = scope:turmoil_exploitation5.mog_pli_turmoil_penalty_val days = short_modifier_time is_decaying = yes } } remove_variable = mog_pli_state_option_count }
-	option = { name = turmoil_exploitation6 trigger = { var:mog_pli_state_option_count >= 6 exists = scope:turmoil_exploitation6 } scope:turmoil_exploitation6 = { add_modifier = { name = mog_pli_turmoil_exploitation_modifier multiplier = scope:turmoil_exploitation6.mog_pli_turmoil_penalty_val days = short_modifier_time is_decaying = yes } } remove_variable = mog_pli_state_option_count }
-	option = { name = turmoil_exploitation7 trigger = { var:mog_pli_state_option_count >= 7 exists = scope:turmoil_exploitation7 } scope:turmoil_exploitation7 = { add_modifier = { name = mog_pli_turmoil_exploitation_modifier multiplier = scope:turmoil_exploitation7.mog_pli_turmoil_penalty_val days = short_modifier_time is_decaying = yes } } remove_variable = mog_pli_state_option_count }
-	option = { name = turmoil_exploitation8 trigger = { var:mog_pli_state_option_count >= 8 exists = scope:turmoil_exploitation8 } scope:turmoil_exploitation8 = { add_modifier = { name = mog_pli_turmoil_exploitation_modifier multiplier = scope:turmoil_exploitation8.mog_pli_turmoil_penalty_val days = short_modifier_time is_decaying = yes } } remove_variable = mog_pli_state_option_count }
-	option = { name = turmoil_exploitation9 trigger = { var:mog_pli_state_option_count >= 9 exists = scope:turmoil_exploitation9 } scope:turmoil_exploitation9 = { add_modifier = { name = mog_pli_turmoil_exploitation_modifier multiplier = scope:turmoil_exploitation9.mog_pli_turmoil_penalty_val days = short_modifier_time is_decaying = yes } } remove_variable = mog_pli_state_option_count }
-	option = { name = turmoil_exploitation10 trigger = { var:mog_pli_state_option_count >= 10 exists = scope:turmoil_exploitation10 } scope:turmoil_exploitation10 = { add_modifier = { name = mog_pli_turmoil_exploitation_modifier multiplier = scope:turmoil_exploitation10.mog_pli_turmoil_penalty_val days = short_modifier_time is_decaying = yes } } remove_variable = mog_pli_state_option_count }
+	option = { name = turmoil_exploitation2 trigger = { var:mog_pli_state_option_count >= 2 exists = scope:turmoil_exploitation2 } scope:turmoil_exploitation2 = { add_modifier = { name = mog_pli_turmoil_exploitation_modifier multiplier = scope:turmoil_exploitation2.mog_pli_turmoil_penalty_val days = short_modifier_time is_decaying = yes } } add_modifier = { name = mog_pli_turmoil_exploited_modifier days = short_modifier_time is_decaying = yes } remove_variable = mog_pli_state_option_count remove_variable = pli_next_page }
+	option = { name = turmoil_exploitation3 trigger = { var:mog_pli_state_option_count >= 3 exists = scope:turmoil_exploitation3 } scope:turmoil_exploitation3 = { add_modifier = { name = mog_pli_turmoil_exploitation_modifier multiplier = scope:turmoil_exploitation3.mog_pli_turmoil_penalty_val days = short_modifier_time is_decaying = yes } } add_modifier = { name = mog_pli_turmoil_exploited_modifier days = short_modifier_time is_decaying = yes } remove_variable = mog_pli_state_option_count remove_variable = pli_next_page }
+	option = { name = turmoil_exploitation4 trigger = { var:mog_pli_state_option_count >= 4 exists = scope:turmoil_exploitation4 } scope:turmoil_exploitation4 = { add_modifier = { name = mog_pli_turmoil_exploitation_modifier multiplier = scope:turmoil_exploitation4.mog_pli_turmoil_penalty_val days = short_modifier_time is_decaying = yes } } add_modifier = { name = mog_pli_turmoil_exploited_modifier days = short_modifier_time is_decaying = yes } remove_variable = mog_pli_state_option_count remove_variable = pli_next_page }
+	option = { name = turmoil_exploitation5 trigger = { var:mog_pli_state_option_count >= 5 exists = scope:turmoil_exploitation5 } scope:turmoil_exploitation5 = { add_modifier = { name = mog_pli_turmoil_exploitation_modifier multiplier = scope:turmoil_exploitation5.mog_pli_turmoil_penalty_val days = short_modifier_time is_decaying = yes } } add_modifier = { name = mog_pli_turmoil_exploited_modifier days = short_modifier_time is_decaying = yes } remove_variable = mog_pli_state_option_count remove_variable = pli_next_page }
+	option = { name = turmoil_exploitation6 trigger = { var:mog_pli_state_option_count >= 6 exists = scope:turmoil_exploitation6 } scope:turmoil_exploitation6 = { add_modifier = { name = mog_pli_turmoil_exploitation_modifier multiplier = scope:turmoil_exploitation6.mog_pli_turmoil_penalty_val days = short_modifier_time is_decaying = yes } } add_modifier = { name = mog_pli_turmoil_exploited_modifier days = short_modifier_time is_decaying = yes } remove_variable = mog_pli_state_option_count remove_variable = pli_next_page }
+	option = { name = turmoil_exploitation7 trigger = { var:mog_pli_state_option_count >= 7 exists = scope:turmoil_exploitation7 } scope:turmoil_exploitation7 = { add_modifier = { name = mog_pli_turmoil_exploitation_modifier multiplier = scope:turmoil_exploitation7.mog_pli_turmoil_penalty_val days = short_modifier_time is_decaying = yes } } add_modifier = { name = mog_pli_turmoil_exploited_modifier days = short_modifier_time is_decaying = yes } remove_variable = mog_pli_state_option_count remove_variable = pli_next_page }
+	option = { name = turmoil_exploitation8 trigger = { var:mog_pli_state_option_count >= 8 exists = scope:turmoil_exploitation8 } scope:turmoil_exploitation8 = { add_modifier = { name = mog_pli_turmoil_exploitation_modifier multiplier = scope:turmoil_exploitation8.mog_pli_turmoil_penalty_val days = short_modifier_time is_decaying = yes } } add_modifier = { name = mog_pli_turmoil_exploited_modifier days = short_modifier_time is_decaying = yes } remove_variable = mog_pli_state_option_count remove_variable = pli_next_page }
+	option = { name = turmoil_exploitation9 trigger = { var:mog_pli_state_option_count >= 9 exists = scope:turmoil_exploitation9 } scope:turmoil_exploitation9 = { add_modifier = { name = mog_pli_turmoil_exploitation_modifier multiplier = scope:turmoil_exploitation9.mog_pli_turmoil_penalty_val days = short_modifier_time is_decaying = yes } } add_modifier = { name = mog_pli_turmoil_exploited_modifier days = short_modifier_time is_decaying = yes } remove_variable = mog_pli_state_option_count remove_variable = pli_next_page }
+	option = { name = turmoil_exploitation10 trigger = { var:mog_pli_state_option_count >= 10 exists = scope:turmoil_exploitation10 } scope:turmoil_exploitation10 = { add_modifier = { name = mog_pli_turmoil_exploitation_modifier multiplier = scope:turmoil_exploitation10.mog_pli_turmoil_penalty_val days = short_modifier_time is_decaying = yes } } add_modifier = { name = mog_pli_turmoil_exploited_modifier days = short_modifier_time is_decaying = yes } remove_variable = mog_pli_state_option_count remove_variable = pli_next_page }
 	option = {
 		name = ENCYCLOPEDIAGE_NEXT_PAGE
 		trigger = {
 			any_scope_state = { has_variable = PLI_potential_turmoil_exploitation }
 		}
-		set_variable = {		# Reset for next page.
+		set_variable = {		# Reset for next page - very important that it is done here.
 			name = mog_pli_state_option_count
 			value = mog_pli_state_option_count_val
 		}
