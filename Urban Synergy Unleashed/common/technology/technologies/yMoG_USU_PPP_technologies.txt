@@ -16,6 +16,10 @@ PPP_tech_hv_power = {
 		# electric_railway
 	}
 	
+	modifier = {
+		country_max_companies_add = 1		# A company for transmission lines kinda matters
+	}
+	
 	ai_weight = {
 		value = 1.5 # Important in general
 	}
