@@ -2,7 +2,6 @@
 
 TRY_REPLACE:building_dubois_national_park = {
 	building_group = bg_dubois_national_park
-	ai_value = 50000
 	
 	expandable = no
 	downsizeable = no

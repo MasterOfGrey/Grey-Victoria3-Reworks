@@ -70,7 +70,7 @@ TRY_REPLACE:company_basic_fishing = {
 }
 
 TRY_REPLACE:company_basic_shipyards = {
-	icon = "gfx/interface/icons/company_icons/basic_shipyard.dds"
+	icon = "gfx/interface/icons/company_icons/basic_shipyards.dds"
 	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_harbor_shipbuilding.dds"
 	
 	flavored_company = no

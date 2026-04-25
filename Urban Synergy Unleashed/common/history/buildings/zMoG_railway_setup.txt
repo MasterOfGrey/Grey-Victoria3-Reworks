@@ -1,0 +1,79 @@
+﻿BUILDINGS = {
+	if = { # Add appropriate starting railway lines.
+		limit = { Grey_USU_is_active = yes }
+		every_state = {
+			if = {
+				limit = {
+					has_building = building_railway
+					state_has_building_type_levels = {
+						target = bt:building_railway
+						value = 1
+					}
+				}
+				remove_building = building_railway
+				create_building={
+					building="building_railway"
+					level=1
+				}
+				create_building={
+					building="building_usu_railway_line"
+					level=1
+				}
+			}
+			else_if = {
+				limit = {
+					has_building = building_railway
+					state_has_building_type_levels = {
+						target = bt:building_railway
+						value = 2
+					}
+				}
+				remove_building = building_railway
+				create_building={
+					building="building_railway"
+					level=1
+				}
+				create_building={
+					building="building_usu_railway_line"
+					level=2
+				}
+			}
+			else_if = {
+				limit = {
+					has_building = building_railway
+					state_has_building_type_levels = {
+						target = bt:building_railway
+						value = 3
+					}
+				}
+				remove_building = building_railway
+				create_building={
+					building="building_railway"
+					level=1
+				}
+				create_building={
+					building="building_usu_railway_line"
+					level=3
+				}
+			}
+			else_if = {
+				limit = {
+					has_building = building_railway
+					state_has_building_type_levels = {
+						target = bt:building_railway
+						value > 3
+					}
+				}
+				remove_building = building_railway
+				create_building={
+					building="building_railway"
+					level=2
+				}
+				create_building={
+					building="building_usu_railway_line"
+					level=4
+				}
+			}
+		}
+	}
+}

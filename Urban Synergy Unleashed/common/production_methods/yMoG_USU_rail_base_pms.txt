@@ -173,9 +173,9 @@ REPLACE_OR_CREATE:pm_ac_electric_trains = {
 	
 	building_modifiers = {
 		workforce_scaled = {
-			goods_input_engines_add = 5 # 120
+			goods_input_engines_add = 5 # 300
 			goods_input_electricity_add = 12 # 300
-			goods_output_transportation_add = 75 # 1800
+			goods_output_transportation_add = 75 # 2250
 		}
 		level_scaled = {
 			building_employment_laborers_add = 1400 # 400	# Was 1500
@@ -224,7 +224,7 @@ REPLACE_OR_CREATE:pm_steam_trains_principle_transport_3 = {
 		workforce_scaled = {
 			goods_input_engines_add = 4 # 90
 			goods_input_coal_add = 9 # 240
-			goods_output_transportation_add = 55 # 1500
+			goods_output_transportation_add = 55 # 1650
 		}
 		level_scaled = {
 			building_employment_laborers_add = 1500 # 500	# Was 2500
@@ -269,7 +269,7 @@ REPLACE_OR_CREATE:pm_electric_trains_principle_transport_3 = {
 		workforce_scaled = {
 			goods_input_engines_add = 5 # 300
 			goods_input_electricity_add = 12 # 300
-			goods_output_transportation_add = 70 # 1050
+			goods_output_transportation_add = 70 # 2100
 		}
 		level_scaled = {
 			building_employment_laborers_add = 1400 # 400	# Was 2000
@@ -316,7 +316,7 @@ REPLACE_OR_CREATE:pm_diesel_trains_principle_transport_3 = {
 		workforce_scaled = {
 			goods_input_engines_add = 6 # 300
 			goods_input_oil_add = 12 # 400
-			goods_output_transportation_add = 90 # 2250
+			goods_output_transportation_add = 90 # 2700
 		}
 		level_scaled = {
 			building_employment_laborers_add = 1400 # 400	# Was 1500
@@ -362,7 +362,7 @@ REPLACE_OR_CREATE:pm_ac_electric_trains_principle_transport_3 = {
 		workforce_scaled = {
 			goods_input_engines_add = 6 # 120
 			goods_input_electricity_add = 14 # 300
-			goods_output_transportation_add = 90 # 1800
+			goods_output_transportation_add = 90 # 2700
 		}
 		level_scaled = {
 			building_employment_laborers_add = 1400 # 400	# Was 1500

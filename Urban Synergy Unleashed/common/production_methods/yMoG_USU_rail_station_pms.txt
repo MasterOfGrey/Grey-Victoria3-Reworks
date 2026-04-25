@@ -1,0 +1,118 @@
+﻿### Base Train Paths
+
+REPLACE_OR_CREATE:pm_usu_stub_end_terminal = {	# Era 2
+	texture = "gfx/interface/icons/production_method_icons/unused/base1.dds"
+	building_modifiers = {
+		workforce_scaled = {
+			goods_input_paper_add = 4				#-120
+			goods_output_usu_train_paths_add = 3	#+600
+		}
+		level_scaled = {
+			building_employment_clerks_add = 300	# Gotta run the ticketing office
+			building_employment_soldiers_add = 100	# Security (day and night)
+			building_employment_officers_add = 100	# Folks actually running the show
+		}
+	}
+}
+
+REPLACE_OR_CREATE:pm_usu_pass_through_terminal = {	# Era 3
+	texture = "gfx/interface/icons/production_method_icons/unused/base2.dds"
+	unlocking_technologies = {
+		steel_frame_buildings
+	}
+	building_modifiers = {
+		workforce_scaled = {
+			goods_input_paper_add = 4				#-120
+			goods_output_usu_train_paths_add = 5	#+1000
+		}
+		level_scaled = {
+			building_employment_clerks_add = 300
+			building_employment_soldiers_add = 100
+			building_employment_officers_add = 100
+		}
+	}
+}
+
+### Logistics Services (will scale slower with stations than with old railways, review balance later)
+
+REPLACE_OR_CREATE:usu_pm_rail_logistics_0 = {
+	texture = "gfx/interface/icons/production_method_icons/log_0.dds"
+	building_modifiers = {
+		workforce_scaled = {	
+			goods_output_usu_logistics_add = 2			# 20 profit
+		}
+	}
+}
+
+REPLACE_OR_CREATE:usu_pm_rail_logistics_1 = {
+	texture = "gfx/interface/icons/production_method_icons/log_1.dds"
+	unlocking_technologies = {
+		logistics
+	}
+	building_modifiers = {
+		workforce_scaled = {	
+			goods_input_merchant_marine_add = 1	# 1:5 at base price 1:20 at extremity
+			goods_output_usu_logistics_add = 14 # 8		# 90 profit
+		}
+	}
+	state_modifiers = {
+		level_scaled = {		#It is important that these are level_scaled not workforce_scaled
+			building_port_throughput_add = 0.01
+			building_river_port_throughput_add = 0.01
+		}
+		unscaled = {
+			building_river_port_throughput_add = 0.1
+		}
+	}
+	ai_value = 1000
+}
+
+REPLACE_OR_CREATE:usu_pm_rail_logistics_2 = {
+	texture = "gfx/interface/icons/production_method_icons/log_2.dds"
+	unlocking_technologies = {
+		electric_telegraph
+	}
+	building_modifiers = {
+		workforce_scaled = {	
+			goods_input_merchant_marine_add = 2	# 1:5 at base price 1:20 at extremity
+			goods_output_usu_logistics_add = 28 # 16		# 180 profit
+		}
+	}
+	state_modifiers = {
+		level_scaled = {
+			building_port_throughput_add = 0.015 # 0.02
+			building_river_port_throughput_add = 0.015 # 0.04
+		}
+		unscaled = {
+			building_river_port_throughput_add = 0.2
+		}
+	}
+	ai_value = 2000
+}
+
+REPLACE_OR_CREATE:usu_pm_rail_logistics_3 = {
+	texture = "gfx/interface/icons/production_method_icons/log_3.dds"
+	unlocking_production_methods = {
+		usu_pm_rail_logistics_2
+		usu_pm_rail_logistics_3
+	}
+	unlocking_technologies = {
+		corporate_management
+	}
+	building_modifiers = {
+		workforce_scaled = {	
+			goods_input_merchant_marine_add = 3	# 1:5 at base price 1:20 at extremity
+			goods_output_usu_logistics_add = 42 # 24		# 270 profit
+		}
+	}
+	state_modifiers = {
+		level_scaled = {
+			building_port_throughput_add = 0.02 # 0.03
+			building_river_port_throughput_add = 0.02 # 0.06
+		}
+		unscaled = {
+			building_river_port_throughput_add = 0.3
+		}
+	}
+	ai_value = 3000
+}

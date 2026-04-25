@@ -4,8 +4,8 @@ REPLACE_OR_CREATE:usu_pm_community_orgs = {
 	
 	building_modifiers = {
 		workforce_scaled = {
-			goods_output_services_add = 10 # 16
-		}
+			goods_output_services_add = 10 # 16		#+300
+		}											#=300
 	
 		level_scaled = {
 			building_employment_laborers_add   = 350
@@ -29,10 +29,10 @@ REPLACE_OR_CREATE:usu_pm_private_firms = {
 	
 	building_modifiers = {
 		workforce_scaled = {
-			goods_input_fertilizer_add = 1
-			goods_input_paper_add = 2
-			goods_output_services_add = 24 # 30
-		}
+			goods_input_fertilizer_add = 1			# -30
+			goods_input_paper_add = 2				# -60
+			goods_output_services_add = 22 # 24#30	#+660
+		}											#=570
 	
 		level_scaled = {
 			building_employment_laborers_add   = 300
@@ -56,10 +56,10 @@ REPLACE_OR_CREATE:usu_pm_pub_priv_partners = {
 	
 	building_modifiers = {
 		workforce_scaled = {
-			goods_input_fertilizer_add = 2
-			goods_input_paper_add = 4
-			goods_output_services_add = 38 # 54
-		}
+			goods_input_fertilizer_add = 2			# -60
+			goods_input_paper_add = 4				#-120
+			goods_output_services_add = 33 # 38#54	#+990
+		}											#=810
 	
 		level_scaled = {
 			building_employment_laborers_add   = 300
@@ -82,7 +82,7 @@ REPLACE_OR_CREATE:usu_pm_village_stables = {
 	
 	building_modifiers = {
 		workforce_scaled = {
-			goods_output_transportation_add = 7
+			goods_output_transportation_add = 7		#+210
 		}
 	}
 	state_modifiers = {	
@@ -97,7 +97,7 @@ REPLACE_OR_CREATE:usu_pm_contained_wilderness = {
 	
 	building_modifiers = {
 		workforce_scaled = {
-			goods_output_services_add = 6
+			goods_output_services_add = 6			#+180
 		}
 	}
 	state_modifiers = {	
@@ -116,10 +116,10 @@ REPLACE_OR_CREATE:usu_pm_seasonal_fairgrounds = {
 	
 	building_modifiers = {
 		workforce_scaled = {
-			goods_input_groceries_add = 2
-			goods_input_fertilizer_add = 1
-			goods_output_services_add = 21 # 28
-		}
+			goods_input_groceries_add = 2			# -60
+			goods_input_fertilizer_add = 1			# -30
+			goods_output_services_add = 20 # 28		#+600
+		}											#=510
 	}
 	state_modifiers = {	
 		level_scaled = {

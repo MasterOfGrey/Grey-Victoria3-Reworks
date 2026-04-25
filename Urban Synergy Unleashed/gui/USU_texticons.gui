@@ -17,3 +17,13 @@ texticon = {
 		fontsize = 18
 	}
 }
+
+texticon = {
+	icon = usu_train_paths
+	iconsize = {
+		texture = "gfx/interface/icons/goods_icons/train_paths.dds"
+		size = { 25 25 }
+		offset = { 0 7 }
+		fontsize = 18
+	}
+}

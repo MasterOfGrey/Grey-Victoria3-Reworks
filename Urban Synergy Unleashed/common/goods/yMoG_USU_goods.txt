@@ -13,13 +13,22 @@ TRY_INJECT:wood = {
 	category = industrial
 }
 
-TRY_INJECT:transportation = {
-	category = industrial
-}
-
 TRY_INJECT:merchant_marine = {
 	category = industrial
 }
+
+TRY_INJECT:transportation = {	# Compatibility with non-local transport mods may actually be acceptable? TBD
+	category = industrial
+}
+
+#REPLACE:transportation = {
+#	texture = "gfx/interface/icons/goods_icons/transportation.dds"
+#	cost = 30
+#	category = industrial
+#	local = yes
+#
+#	consumption_tax_cost = 200
+#}
 
 ##############
 # INDUSTRIAL #
@@ -47,4 +56,11 @@ REPLACE_OR_CREATE:usu_logistics = {
 	
 	traded_quantity = 20 # 200 - Matches merchant marine trade value
 	convoy_cost_multiplier = 3 # 0 # Discourage trading via sea.
+}
+
+REPLACE_OR_CREATE:usu_train_paths = {
+	texture = "gfx/interface/icons/goods_icons/train_paths.dds"
+	cost = 200
+	category = industrial
+	local = yes
 }

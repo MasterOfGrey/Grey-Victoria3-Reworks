@@ -1,4 +1,12 @@
 ﻿l_english:
+ # Concepts
+ concept_usu_railway_station: "Railway Terminal" #This is the actual id of the concept
+ concept_usu_railway_stations: "Railway Terminals" #You can use this for plural: [Concept('concept_usu_railway_station','$concept_usu_railway_stations$')]
+ concept_usu_railway_station_desc: "A #b Railway Terminal#! is a building that serves as a hub of your logisitics network. It is a purely civilian building and provides [GetGoods('usu_train_paths').GetName] and [GetGoods('usu_logistics').GetName] but consumes a variety of goods starting from [GetGoods('tools').GetName], [GetGoods('paper').GetName], [GetGoods('aeroplanes').GetName] and [GetGoods('oil').GetName]. Later it needs [GetGoods('electricity').GetName], [GetGoods('telephones').GetName] and [GetGoods('radios').GetName] as well.\nIf you have enough #b Airports#! an [concept_curtiss_airline] will be founded and with your growing #b Airports#!, the #b Airline#! will grow as well and offer more bonuses."
+
+ # Tooltips 
+ usu_railway_station_can_construct_tt: "The maximum level of [Concept('concept_curtiss_airport','$concept_curtiss_airports$')] that a state can support is equal to 1 plus 1 for every #G 10 levels#! of [GetBuildingType('building_urban_center').GetName]."
+
  # Railways
  pm_ac_electric_trains: "AC Electric Trains"
  pm_ac_electric_trains_principle_transport_3: "Joint AC Electric Trains"
@@ -11,6 +19,10 @@
  pm_watertube_boiler_building_railway: "Fire-tube Boiler"
  pm_rotary_valve_engine_building_railway: "Uniflow Rotary Valvegear"
  pm_steam_donkey_building_railway: "Geared Steam Drivetrain"
+ 
+ pmg_base_building_rail_terminal: "Terminal Infrastructure"
+ pm_usu_stub_end_terminal: "Stub-ended Terminal"
+ pm_usu_pass_through_terminal: "Passthrough Terminal"
  
  # Ports
  pmg_automation_port: "Facility Automation"
