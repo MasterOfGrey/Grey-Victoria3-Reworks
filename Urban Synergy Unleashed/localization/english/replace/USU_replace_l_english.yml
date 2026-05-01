@@ -1,0 +1,30 @@
+﻿l_english:
+ # WCA
+ alert_wasted_construction_name: "Has unused [concept_construction]"
+ alert_wasted_construction_hint: "Has unused [concept_construction]"
+ alert_wasted_construction_action: "Construction Panel"
+ wasted_construction_setting_name: "Unused Construction"
+ 
+ # USU Infrastructure
+ pm_electric_trains: "DC Electric Trains"
+ pm_electric_trains_principle_transport_3: "Joint DC Electric Trains"
+ pm_electric_streetlights: "Moonlight Towers"
+ 
+ pm_canal: "Steam Powered Locks"
+ company_panama_suez_company: "Panama-Suez Canal Company"
+ 
+ pm_no_public_transport: "No Public Transportation"
+ pm_public_trams: "Horse-drawn Trams"
+ pm_public_motor_carriages: "City Busses"
+ 
+ bg_power: "Thermal Power Stations"
+ building_power_plant: "Thermal Power Plant"
+ building_railway: "Railway Terminal"
+ 
+ # Misc. Vanilla that were missing but now aren't?
+ goods_output_electricity_mult: "Building @electricity![Nbsp]$electricity$ output"
+ goods_output_electricity_mult_desc: "A bonus or penalty to the amount of @electricity![Nbsp]$electricity$ produced by buildings"
+ goods_input_luxury_clothes_add: "@luxury_clothes![Nbsp]$luxury_clothes$ input"
+ goods_input_luxury_clothes_add_desc: "The amount of @luxury_clothes![Nbsp]$luxury_clothes$ consumed by buildings"
+ goods_input_services_add: "@services![Nbsp]$services$ input"
+ goods_input_services_add_desc: "The amount of @services![Nbsp]$services$ consumed by buildings"

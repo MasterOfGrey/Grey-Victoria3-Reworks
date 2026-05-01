@@ -20,11 +20,11 @@ REPLACE_OR_CREATE:pm_rp_anchorage = {
 		}
 	}
 	
-	country_modifiers = {
-		workforce_scaled = {
-			country_convoys_capacity_add = 25 # Uses ~10 logistics
-		}
-	}
+	#country_modifiers = {
+	#	workforce_scaled = {
+	#		country_convoys_capacity_add = 25 # Uses ~10 logistics
+	#	}
+	#}
 	
 	state_modifiers = {
 		unscaled = {
@@ -55,11 +55,11 @@ REPLACE_OR_CREATE:pm_rp_small_port = {
 		}
 	}
 	
-	country_modifiers = {
-		workforce_scaled = {
-			country_convoys_capacity_add = 100 # 400
-		}
-	}
+	#country_modifiers = {
+	#	workforce_scaled = {
+	#		country_convoys_capacity_add = 100 # 400
+	#	}
+	#}
 	
 	state_modifiers = {
 		unscaled = {
@@ -100,11 +100,11 @@ REPLACE_OR_CREATE:pm_rp_industrial_port = {
 		}
 	}
 	
-	country_modifiers = {
-		workforce_scaled = {
-			country_convoys_capacity_add = 150 # 700
-		}
-	}
+	#country_modifiers = {
+	#	workforce_scaled = {
+	#		country_convoys_capacity_add = 150 # 700
+	#	}
+	#}
 	
 	state_modifiers = {
 		unscaled = {
@@ -146,11 +146,11 @@ REPLACE_OR_CREATE:pm_rp_modern_port = {
 		}
 	}
 	
-	country_modifiers = {
-		workforce_scaled = {
-			country_convoys_capacity_add = 200 # 1100
-		}
-	}
+	#country_modifiers = {
+	#	workforce_scaled = {
+	#		country_convoys_capacity_add = 200 # 1100
+	#	}
+	#}
 	
 	state_modifiers = {
 		unscaled = {

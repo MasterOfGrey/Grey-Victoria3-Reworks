@@ -19,7 +19,7 @@
 						value = 0
 						if = {
 							limit = {
-								has_port = yes
+								has_port_state = yes
 							}
 							add = 1
 						}

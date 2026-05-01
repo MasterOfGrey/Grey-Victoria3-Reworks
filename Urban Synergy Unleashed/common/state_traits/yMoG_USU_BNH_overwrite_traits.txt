@@ -4,10 +4,9 @@ TRY_REPLACE:state_trait_natural_harbors = {
 	icon = "gfx/interface/icons/state_trait_icons/natural_harbors.dds"
 	modifier = {
 		building_shipyard_throughput_add = 0.1
-		building_military_shipyard_throughput_add = 0.1
 		building_port_throughput_add = 0.2
 		state_trade_capacity_mult = 0.2
-		state_building_naval_base_max_level_add = 10
+		#state_building_naval_administration_max_level_add = 10
 		state_market_access_price_impact = 0.05
 	}
 }
@@ -16,17 +15,16 @@ TRY_REPLACE:state_trait_oresund = {
 	modifier = {
 		building_port_throughput_add = 0.20
 		state_trade_capacity_mult = 0.15
-		state_building_naval_base_max_level_add = 20
+		#state_building_naval_administration_max_level_add = 20
 	}
 }
 TRY_REPLACE:state_trait_odensefjorden = {
 	icon = "gfx/interface/icons/state_trait_icons/fjords.dds"
 	modifier = {
 		building_shipyard_throughput_add = 0.15
-		building_military_shipyard_throughput_add = 0.15
 		building_port_throughput_add = 0.15
 		state_trade_capacity_mult = 0.30
-		state_building_naval_base_max_level_add = 15
+		#state_building_naval_administration_max_level_add = 15
 		state_market_access_price_impact = 0.05
 	}
 }
@@ -34,10 +32,9 @@ TRY_REPLACE:state_trait_trondhjemsfjorden = {
 	icon = "gfx/interface/icons/state_trait_icons/fjords.dds"
 	modifier = {
 		building_shipyard_throughput_add = 0.15
-		building_military_shipyard_throughput_add = 0.15
 		building_port_throughput_add = 0.15
 		state_trade_capacity_mult = 0.30
-		state_building_naval_base_max_level_add = 15
+		#state_building_naval_administration_max_level_add = 15
 		goods_output_electricity_mult = 0.2
 		goods_output_ppp_hv_power_mult = 0.2
 		state_market_access_price_impact = 0.05
@@ -47,10 +44,9 @@ TRY_REPLACE:state_trait_hardangerfjorden = {
 	icon = "gfx/interface/icons/state_trait_icons/fjords.dds"
 	modifier = {
 		building_shipyard_throughput_add = 0.15
-		building_military_shipyard_throughput_add = 0.15
 		building_port_throughput_add = 0.15
 		state_trade_capacity_mult = 0.30
-		state_building_naval_base_max_level_add = 15
+		#state_building_naval_administration_max_level_add = 15
 		goods_output_electricity_mult = 0.2
 		goods_output_ppp_hv_power_mult = 0.2
 		state_market_access_price_impact = 0.05
@@ -60,10 +56,9 @@ TRY_REPLACE:state_trait_christianiafjorden = {
 	icon = "gfx/interface/icons/state_trait_icons/fjords.dds"
 	modifier = {
 		building_shipyard_throughput_add = 0.15
-		building_military_shipyard_throughput_add = 0.15
 		building_port_throughput_add = 0.1
 		state_trade_capacity_mult = 0.2
-		state_building_naval_base_max_level_add = 10
+		#state_building_naval_administration_max_level_add = 10
 		state_market_access_price_impact = 0.05
 	}
 }
@@ -71,10 +66,9 @@ TRY_REPLACE:state_trait_london_docklands = {
 	icon = "gfx/interface/icons/state_trait_icons/natural_harbors.dds"
 	modifier = {
 		building_shipyard_throughput_add = 0.20
-		building_military_shipyard_throughput_add = 0.20
 		building_port_throughput_add = 0.40
 		state_trade_capacity_mult = 0.4
-		state_building_naval_base_max_level_add = 20
+		#state_building_naval_administration_max_level_add = 20
 		state_market_access_price_impact = 0.05
 	}
 }
@@ -82,10 +76,9 @@ TRY_REPLACE:state_trait_halifax_harbor = {
 	icon = "gfx/interface/icons/state_trait_icons/natural_harbors.dds"
 	modifier = {
 		building_shipyard_throughput_add = 0.1
-		building_military_shipyard_throughput_add = 0.1
 		building_port_throughput_add = 0.20
 		state_trade_capacity_mult = 0.2
-		state_building_naval_base_max_level_add = 10
+		#state_building_naval_administration_max_level_add = 10
 		state_market_access_price_impact = 0.05
 	}
 }
@@ -93,10 +86,9 @@ TRY_REPLACE:state_trait_new_york_harbor = {
 	icon = "gfx/interface/icons/state_trait_icons/natural_harbors.dds"
 	modifier = {
 		building_shipyard_throughput_add = 0.1
-		building_military_shipyard_throughput_add = 0.1
 		building_port_throughput_add = 0.40
 		state_trade_capacity_mult = 0.30
-		state_building_naval_base_max_level_add = 15
+		#state_building_naval_administration_max_level_add = 15
 		state_market_access_price_impact = 0.05
 	}
 }
@@ -104,10 +96,9 @@ TRY_REPLACE:state_trait_newark_harbor = {
 	icon = "gfx/interface/icons/state_trait_icons/natural_harbors.dds"
 	modifier = {
 		building_shipyard_throughput_add = 0.1
-		building_military_shipyard_throughput_add = 0.1
 		building_port_throughput_add = 0.40
 		state_trade_capacity_mult = 0.2
-		state_building_naval_base_max_level_add = 10
+		#state_building_naval_administration_max_level_add = 10
 		state_market_access_price_impact = 0.05
 	}
 }
@@ -116,10 +107,9 @@ TRY_REPLACE:state_trait_cordillera_de_la_costa = { # Santiago, Tarapaca, and Los
 	
 	modifier = {
 		building_shipyard_throughput_add = 0.15
-		building_military_shipyard_throughput_add = 0.15
 		building_port_throughput_add = 0.15
 		state_trade_capacity_mult = 0.30
-		state_building_naval_base_max_level_add = 15
+		#state_building_naval_administration_max_level_add = 15
 		state_market_access_price_impact = 0.05
 	}
 }
@@ -128,10 +118,9 @@ TRY_REPLACE:state_trait_canales_patagonicos = { # araucania
 	modifier = {
 		goods_output_hardwood_mult = 0.15
 		building_shipyard_throughput_add = 0.5
-		building_military_shipyard_throughput_add = 0.5
 		building_port_throughput_add = 0.15
 		state_trade_capacity_mult = 0.30
-		state_building_naval_base_max_level_add = 15
+		#state_building_naval_administration_max_level_add = 15
 		state_market_access_price_impact = 0.05
 	}
 }
@@ -139,10 +128,9 @@ TRY_REPLACE:state_trait_hamburger_hafen = {
 	icon = "gfx/interface/icons/state_trait_icons/natural_harbors.dds"
 	modifier = {
 		building_shipyard_throughput_add = 0.1
-		building_military_shipyard_throughput_add = 0.1
 		building_port_throughput_add = 0.40
 		state_trade_capacity_mult = 0.2
-		state_building_naval_base_max_level_add = 10
+		#state_building_naval_administration_max_level_add = 10
 		state_market_access_price_impact = 0.05
 	}
 }
@@ -151,10 +139,9 @@ TRY_REPLACE:state_trait_venetian_lagoon = {
 
 	modifier = {
 		building_shipyard_throughput_add = 0.15
-		building_military_shipyard_throughput_add = 0.15
 		building_port_throughput_add = 0.2
 		state_trade_capacity_mult = 0.2
-		state_building_naval_base_max_level_add = 10
+		#state_building_naval_administration_max_level_add = 10
 		state_market_access_price_impact = 0.05
 	}
 }
@@ -163,10 +150,9 @@ TRY_REPLACE:state_trait_sevastopol_bay = {
 	icon = "gfx/interface/icons/state_trait_icons/natural_harbors.dds"
 	modifier= {
 		building_shipyard_throughput_add = 0.1
-		building_military_shipyard_throughput_add = 0.1
 		building_port_throughput_add = 0.20
 		state_trade_capacity_mult = 0.30
-		state_building_naval_base_max_level_add = 15
+		#state_building_naval_administration_max_level_add = 15
 		state_market_access_price_impact = 0.05
 	}
 }
@@ -174,10 +160,9 @@ TRY_REPLACE:state_trait_hermoupolis = {
 	icon = "gfx/interface/icons/state_trait_icons/natural_harbors.dds"
 	modifier = {
 		building_shipyard_throughput_add = 0.2
-		building_military_shipyard_throughput_add = 0.2
 		building_port_throughput_add = 0.2
 		state_trade_capacity_mult = 0.4
-		state_building_naval_base_max_level_add = 20
+		#state_building_naval_administration_max_level_add = 20
 		state_market_access_price_impact = 0.05
 	}
 }
@@ -185,10 +170,9 @@ TRY_REPLACE:state_trait_saronic_gulf = {
 	icon = "gfx/interface/icons/state_trait_icons/natural_harbors.dds"
 	modifier = {
 		building_shipyard_throughput_add = 0.1
-		building_military_shipyard_throughput_add = 0.1
 		building_port_throughput_add = 0.2
 		state_trade_capacity_mult = 0.2
-		state_building_naval_base_max_level_add = 10
+		#state_building_naval_administration_max_level_add = 10
 		state_market_access_price_impact = 0.05
 	}
 }
@@ -197,21 +181,19 @@ TRY_REPLACE:state_trait_gulf_of_trieste = {
 
 	modifier = {
 		building_shipyard_throughput_add = 0.1
-		building_military_shipyard_throughput_add = 0.1
 		building_port_throughput_add = 0.20
-		state_building_naval_base_max_level_add = 10
+		#state_building_naval_administration_max_level_add = 10
 		state_market_access_price_impact = 0.05
 	}
 }
 TRY_REPLACE:state_trait_cap_vert = {
 	icon = "gfx/interface/icons/state_trait_icons/natural_harbors.dds"
 	modifier = {
-		state_building_naval_base_max_level_add = 15
+		#state_building_naval_administration_max_level_add = 15
 		building_shipyard_throughput_add = 0.15
-		building_military_shipyard_throughput_add = 0.15
 		building_port_throughput_add = 0.15
 		state_trade_capacity_mult = 0.30
-		state_building_naval_base_max_level_add = 15
+		#state_building_naval_administration_max_level_add = 15
 		state_market_access_price_impact = 0.05
 	}
 }
@@ -219,10 +201,9 @@ TRY_REPLACE:state_trait_galle_harbor = {
 	icon = "gfx/interface/icons/state_trait_icons/natural_harbors.dds"
 	modifier= {
 		building_shipyard_throughput_add = 0.15
-		building_military_shipyard_throughput_add = 0.15
 		building_port_throughput_add = 0.15
 		state_trade_capacity_mult = 0.30
-		state_building_naval_base_max_level_add = 15
+		#state_building_naval_administration_max_level_add = 15
 		state_market_access_price_impact = 0.05
 	}
 }
@@ -230,10 +211,9 @@ TRY_REPLACE:state_trait_manila_bay = {
 	icon = "gfx/interface/icons/state_trait_icons/natural_harbors.dds"
 	modifier = {
 		building_shipyard_throughput_add = 0.1
-		building_military_shipyard_throughput_add = 0.1
 		building_port_throughput_add = 0.2
 		state_trade_capacity_mult = 0.2
-		state_building_naval_base_max_level_add = 10
+		#state_building_naval_administration_max_level_add = 10
 		state_market_access_price_impact = 0.05
 	}
 }
@@ -241,10 +221,9 @@ TRY_REPLACE:state_trait_seto_inland_sea = {
 	icon = "gfx/interface/icons/state_trait_icons/natural_harbors.dds"
 	modifier = {
 		building_shipyard_throughput_add = 0.2
-		building_military_shipyard_throughput_add = 0.2
 		building_port_throughput_add = 0.4
 		state_trade_capacity_mult = 0.2
-		state_building_naval_base_max_level_add = 10
+		#state_building_naval_administration_max_level_add = 10
 		state_market_access_price_impact = 0.05
 	}
 }
@@ -253,10 +232,9 @@ TRY_REPLACE:state_trait_edo_bay = {
 	icon = "gfx/interface/icons/state_trait_icons/natural_harbors.dds"
 	modifier = {
 		building_shipyard_throughput_add = 0.1
-		building_military_shipyard_throughput_add = 0.1
 		building_port_throughput_add = 0.20
 		state_trade_capacity_mult = 0.2
-		state_building_naval_base_max_level_add = 10
+		#state_building_naval_administration_max_level_add = 10
 		state_market_access_price_impact = 0.05
 	}
 }
@@ -264,10 +242,9 @@ TRY_REPLACE:state_trait_golden_horn_bay = {
 	icon = "gfx/interface/icons/state_trait_icons/natural_harbors.dds"
 	modifier = {
 		building_shipyard_throughput_add = 0.1
-		building_military_shipyard_throughput_add = 0.1
 		building_port_throughput_add = 0.20
 		state_trade_capacity_mult = 0.2
-		state_building_naval_base_max_level_add = 10
+		#state_building_naval_administration_max_level_add = 10
 		state_market_access_price_impact = 0.05
 	}
 }
@@ -275,10 +252,9 @@ TRY_REPLACE:state_trait_dalian_bay = {
 	icon = "gfx/interface/icons/state_trait_icons/natural_harbors.dds"
 	modifier = {
 		building_shipyard_throughput_add = 0.1
-		building_military_shipyard_throughput_add = 0.1
 		building_port_throughput_add = 0.20
 		state_trade_capacity_mult = 0.2
-		state_building_naval_base_max_level_add = 10
+		#state_building_naval_administration_max_level_add = 10
 		state_market_access_price_impact = 0.05
 	}
 }
@@ -287,10 +263,9 @@ TRY_REPLACE:state_trait_nagasaki_bay = {
 	icon = "gfx/interface/icons/state_trait_icons/natural_harbors.dds"
 	modifier = {
 		building_shipyard_throughput_add = 0.1
-		building_military_shipyard_throughput_add = 0.1
 		building_port_throughput_add = 0.20
 		state_trade_capacity_mult = 0.2
-		state_building_naval_base_max_level_add = 10
+		#state_building_naval_administration_max_level_add = 10
 		state_market_access_price_impact = 0.05
 	}
 }
@@ -300,17 +275,16 @@ TRY_REPLACE:state_trait_tihamah = {
 		building_group_bg_agriculture_throughput_add = -0.1
 		building_group_bg_plantations_throughput_add = -0.1
 		building_port_throughput_add = -0.20
-		state_building_naval_base_max_level_add = -20
+		#state_building_naval_administration_max_level_add = -20
 	}
 }
 TRY_REPLACE:state_trait_killybegs_harbor = {
 	icon = "gfx/interface/icons/state_trait_icons/killybegs_harbor.dds"
 	modifier = {
 		building_shipyard_throughput_add = 0.1
-		building_military_shipyard_throughput_add = 0.1
 		building_port_throughput_add = 0.2
 		state_trade_capacity_mult = 0.2
-		state_building_naval_base_max_level_add = 10
+		#state_building_naval_administration_max_level_add = 10
 		state_market_access_price_impact = 0.05
 	}
 }
@@ -318,10 +292,9 @@ TRY_REPLACE:state_trait_tagus_estuary = {
 	icon = "gfx/interface/icons/state_trait_icons/natural_harbors.dds"
 	modifier = {
 		building_shipyard_throughput_add = 0.1
-		building_military_shipyard_throughput_add = 0.1
 		building_port_throughput_add = 0.2
 		state_trade_capacity_mult = 0.2
-		state_building_naval_base_max_level_add = 10
+		#state_building_naval_administration_max_level_add = 10
 		state_market_access_price_impact = 0.05	
 	}
 }
@@ -329,10 +302,9 @@ TRY_REPLACE:state_trait_lagos_bay = {
 	icon = "gfx/interface/icons/state_trait_icons/lagos_harbor.dds"
 	modifier = {
 		building_shipyard_throughput_add = 0.1
-		building_military_shipyard_throughput_add = 0.1
 		building_port_throughput_add = 0.2
 		state_trade_capacity_mult = 0.2
-		state_building_naval_base_max_level_add = 10
+		#state_building_naval_administration_max_level_add = 10
 		state_market_access_price_impact = 0.05
 	}
 }
@@ -340,10 +312,9 @@ TRY_REPLACE:state_trait_pearl_harbor = {
 	icon = "gfx/interface/icons/state_trait_icons/pearl_harbor.dds"
 	modifier = {
 		building_shipyard_throughput_add = 0.1
-		building_military_shipyard_throughput_add = 0.1
 		building_port_throughput_add = 0.2
 		state_trade_capacity_mult = 0.2
-		state_building_naval_base_max_level_add = 10
+		#state_building_naval_administration_max_level_add = 10
 		state_market_access_price_impact = 0.05
 	}
 }
@@ -351,10 +322,9 @@ TRY_REPLACE:state_trait_San_Francisco_Port = {
 	icon = "gfx/interface/icons/state_trait_icons/harbor.dds"
 	modifier = {
 		building_shipyard_throughput_add = 0.15
-		building_military_shipyard_throughput_add = 0.15
 		building_port_throughput_add = 0.3
 		state_trade_capacity_mult = 0.30
-		state_building_naval_base_max_level_add = 15
+		#state_building_naval_administration_max_level_add = 15
 		state_market_access_price_impact = 0.05
 	}
 }
@@ -362,10 +332,9 @@ TRY_REPLACE:state_trait_carribean_harbors = {
 	icon = "gfx/interface/icons/state_trait_icons/carribean_harbors.dds"
 	modifier = {
 		building_shipyard_throughput_add = 0.1
-		building_military_shipyard_throughput_add = 0.1
 		building_port_throughput_add = 0.2
 		state_trade_capacity_mult = 0.2
-		state_building_naval_base_max_level_add = 10
+		#state_building_naval_administration_max_level_add = 10
 		state_market_access_price_impact = 0.05
 	}
 }
@@ -373,10 +342,9 @@ TRY_REPLACE:state_trait_waitemata_harbor = {
 	icon = "gfx/interface/icons/state_trait_icons/waitemata_harbor.dds"
 	modifier = {
 		building_shipyard_throughput_add = 0.1
-		building_military_shipyard_throughput_add = 0.1
 		building_port_throughput_add = 0.2
 		state_trade_capacity_mult = 0.2
-		state_building_naval_base_max_level_add = 10
+		#state_building_naval_administration_max_level_add = 10
 		state_market_access_price_impact = 0.05
 	}
 }
@@ -384,10 +352,9 @@ TRY_REPLACE:state_trait_rio_de_janeiro_harbor = {
 	icon = "gfx/interface/icons/state_trait_icons/rio_de_janeiro_harbor.dds"
 	modifier = {
 		building_shipyard_throughput_add = 0.15
-		building_military_shipyard_throughput_add = 0.15
 		building_port_throughput_add = 0.3
 		state_trade_capacity_mult = 0.30
-		state_building_naval_base_max_level_add = 15
+		#state_building_naval_administration_max_level_add = 15
 		state_market_access_price_impact = 0.05
 	}
 }
@@ -395,10 +362,9 @@ TRY_REPLACE:state_trait_keppel_harbor = {
 	icon = "gfx/interface/icons/state_trait_icons/keppel_harbor.dds"
 	modifier = {
 		building_shipyard_throughput_add = 0.1
-		building_military_shipyard_throughput_add = 0.1
 		building_port_throughput_add = 0.2
 		state_trade_capacity_mult = 0.2
-		state_building_naval_base_max_level_add = 10
+		#state_building_naval_administration_max_level_add = 10
 		state_market_access_price_impact = 0.05
 	}
 }
@@ -406,10 +372,9 @@ TRY_REPLACE:state_trait_tanjung_perak_harbor = {
 	icon = "gfx/interface/icons/state_trait_icons/tanjung_perak_harbor.dds"
 	modifier = {
 		building_shipyard_throughput_add = 0.1
-		building_military_shipyard_throughput_add = 0.1
 		building_port_throughput_add = 0.2
 		state_trade_capacity_mult = 0.2
-		state_building_naval_base_max_level_add = 10
+		#state_building_naval_administration_max_level_add = 10
 		state_market_access_price_impact = 0.05
 	}
 }
@@ -417,10 +382,9 @@ TRY_REPLACE:state_trait_pago_pago_harbor = {
 	icon = "gfx/interface/icons/state_trait_icons/pagopago.dds"
 	modifier = {
 		building_shipyard_throughput_add = 0.1
-		building_military_shipyard_throughput_add = 0.1
 		building_port_throughput_add = 0.2
 		state_trade_capacity_mult = 0.2
-		state_building_naval_base_max_level_add = 10
+		#state_building_naval_administration_max_level_add = 10
 		state_market_access_price_impact = 0.05
 	}
 }
@@ -428,10 +392,9 @@ TRY_REPLACE:state_trait_shanghai_Port = {
 	icon = "gfx/interface/icons/state_trait_icons/natural_harbors.dds"
 	modifier = {
 		building_shipyard_throughput_add = 0.15
-		building_military_shipyard_throughput_add = 0.15
 		building_port_throughput_add = 0.3
 		state_trade_capacity_mult = 0.30
-		state_building_naval_base_max_level_add = 15
+		#state_building_naval_administration_max_level_add = 15
 		state_market_access_price_impact = 0.05	
 	}
 }
@@ -439,10 +402,9 @@ TRY_REPLACE:state_trait_guangzhou_port = {
 	icon = "gfx/interface/icons/state_trait_icons/natural_harbors.dds"
 	modifier = {
 		building_shipyard_throughput_add = 0.15
-		building_military_shipyard_throughput_add = 0.15
 		building_port_throughput_add = 0.3
 		state_trade_capacity_mult = 0.30
-		state_building_naval_base_max_level_add = 15
+		#state_building_naval_administration_max_level_add = 15
 		state_market_access_price_impact = 0.05	
 	}
 }
@@ -450,10 +412,9 @@ TRY_REPLACE:state_trait_Busan_port = {
 	icon = "gfx/interface/icons/state_trait_icons/natural_harbors.dds"
 	modifier = {
 		building_shipyard_throughput_add = 0.1
-		building_military_shipyard_throughput_add = 0.1
 		building_port_throughput_add = 0.2
 		state_trade_capacity_mult = 0.2
-		state_building_naval_base_max_level_add = 10
+		#state_building_naval_administration_max_level_add = 10
 		state_market_access_price_impact = 0.05
 	}
 }
@@ -461,10 +422,9 @@ TRY_REPLACE:state_trait_sydney_harbor = {
 	icon = "gfx/interface/icons/state_trait_icons/sydney_harbor.dds"
 	modifier = {
 		building_shipyard_throughput_add = 0.15
-		building_military_shipyard_throughput_add = 0.15
 		building_port_throughput_add = 0.3
 		state_trade_capacity_mult = 0.30
-		state_building_naval_base_max_level_add = 15
+		#state_building_naval_administration_max_level_add = 15
 		state_market_access_price_impact = 0.05
 	}
 }
@@ -473,10 +433,9 @@ TRY_REPLACE:state_trait_bosporus = {
 
 	modifier = {
 		building_shipyard_throughput_add = 0.1
-		building_military_shipyard_throughput_add = 0.1
 		building_port_throughput_add = 0.2
 		state_trade_capacity_mult = 0.15
-		state_building_naval_base_max_level_add = 10
+		#state_building_naval_administration_max_level_add = 10
 		state_market_access_price_impact = 0.05
 	}
 }
@@ -485,10 +444,9 @@ TRY_REPLACE:state_trait_rotterdam  = { #would need to add to holland
 	icon = "gfx/interface/icons/state_trait_icons/natural_harbors.dds"
 	modifier = {
 		building_shipyard_throughput_add = 0.1
-		building_military_shipyard_throughput_add = 0.1
 		building_port_throughput_add = 0.40
 		state_trade_capacity_mult = 0.2
-		state_building_naval_base_max_level_add = 10
+		#state_building_naval_administration_max_level_add = 10
 		state_market_access_price_impact = 0.05
 	}
 }

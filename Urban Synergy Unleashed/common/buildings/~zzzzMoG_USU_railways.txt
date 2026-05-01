@@ -191,20 +191,33 @@ REPLACE:building_railway = {	# Now the Railway Station - re-using this gets arou
 			}
             add = 10000
 		}
-		
+
 		if = { # Manchurian Railway
 			limit = {
 				exists = c:RUS
 				c:RUS ?= owner
-				# OR = {
-					region = sr:region_manchuria
-				# }
+				is_in_geographic_region = geographic_region_manchuria_old
 				any_scope_building = {
 					is_building_type = building_railway
-					levels_owned_by_country = {  
-						target = c:RUS  
+					levels_owned_by_country = {
+						target = c:RUS
 						value  < 1
 					}
+				}
+			}
+			add = 10000
+		}
+
+		if = { # Colonisation of Korea
+			limit = {
+				owner ?= {
+					c:JAP ?= this
+					has_journal_entry = je_colonize_korea
+				}
+				is_in_geographic_region = geographic_region_korea
+				any_scope_building = {
+					is_building_type = building_railway
+					level < 10
 				}
 			}
 			add = 10000
@@ -367,20 +380,33 @@ building_usu_railway_line = {
 			}
             add = 10000
 		}
-		
+
 		if = { # Manchurian Railway
 			limit = {
 				exists = c:RUS
 				c:RUS ?= owner
-				# OR = {
-					region = sr:region_manchuria
-				# }
+				is_in_geographic_region = geographic_region_manchuria_old
 				any_scope_building = {
-					is_building_type = building_usu_railway_line
-					levels_owned_by_country = {  
-						target = c:RUS  
+					is_building_type = building_railway
+					levels_owned_by_country = {
+						target = c:RUS
 						value  < 1
 					}
+				}
+			}
+			add = 10000
+		}
+
+		if = { # Colonisation of Korea
+			limit = {
+				owner ?= {
+					c:JAP ?= this
+					has_journal_entry = je_colonize_korea
+				}
+				is_in_geographic_region = geographic_region_korea
+				any_scope_building = {
+					is_building_type = building_railway
+					level < 10
 				}
 			}
 			add = 10000

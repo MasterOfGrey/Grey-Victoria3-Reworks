@@ -133,19 +133,19 @@ bureaucracy_percent = {
 }
 
 ### CONVOY CHECK
-convoy_ratio = {
-	if = {
-		limit = {
-			num_convoys_available = 0
-		}
-		value = -1
-	}
-	else = {
-		value = num_convoys_available
-		subtract = num_convoys_required
-		divide = num_convoys_available
-	}
-}
+#convoy_ratio = {
+#	if = {
+#		limit = {
+#			num_convoys_available = 0
+#		}
+#		value = -1
+#	}
+#	else = {
+#		value = num_convoys_available
+#		subtract = num_convoys_required
+#		divide = num_convoys_available
+#	}
+#}
 
 ### Building level history increment
 mog_ga_building_history_increment = {

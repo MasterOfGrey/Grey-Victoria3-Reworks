@@ -20,7 +20,6 @@ REPLACE_OR_CREATE:company_panama_suez_company = {
 	
 	extension_building_types = {
 		building_shipyard
-		building_military_shipyard
 	}
 	
 	possible_prestige_goods = {
@@ -69,9 +68,8 @@ REPLACE_OR_CREATE:company_panama_suez_company = {
 		state_trade_capacity_mult = 0.50
 		# unit_convoy_requirements_mult = -0.50		# Unsupported in 1.12
 		state_market_access_price_impact = 0.10
-		country_minting_add = 50000
-		country_minting_mult = 0.25
-		military_formation_movement_speed_mult = 0.20
+		country_tax_income_add = 50000
+		country_free_charters_add = 1
 	}
 	
 	ai_will_do = {
@@ -88,25 +86,13 @@ REPLACE_OR_CREATE:company_panama_suez_company = {
 
 	ai_construction_targets = {
 		building_trade_center = {
-			level = 5
-			state_trigger = {
-				state_region = s:STATE_PANAMA
-			}
-		}
-		building_port = {
-			level = 5
+			level = 4
 			state_trigger = {
 				state_region = s:STATE_PANAMA
 			}
 		}
 		building_trade_center = {
-			level = 5
-			state_trigger = {
-				state_region = s:STATE_SINAI
-			}
-		}
-		building_port = {
-			level = 5
+			level = 4
 			state_trigger = {
 				state_region = s:STATE_SINAI
 			}
@@ -139,7 +125,6 @@ TRY_REPLACE:company_panama_company = {
 	
 	extension_building_types = {
 		building_shipyard
-		building_military_shipyard
 	}
 	
 	possible_prestige_goods = {
@@ -182,9 +167,8 @@ TRY_REPLACE:company_panama_company = {
 		state_trade_capacity_mult = 0.25
 		# unit_convoy_requirements_mult = -0.20
 		state_market_access_price_impact = 0.05
-		country_minting_add = 20000
-		country_minting_mult = 0.10
-		military_formation_movement_speed_mult = 0.10
+		country_tax_income_add = 30000
+		country_free_charters_add = 1
 	}
 	
 	ai_will_do = {
@@ -198,13 +182,7 @@ TRY_REPLACE:company_panama_company = {
 	
 	ai_construction_targets = {
 		building_trade_center = {
-			level = 5
-			state_trigger = {
-				state_region = s:STATE_PANAMA
-			}
-		}
-		building_port = {
-			level = 5
+			level = 4
 			state_trigger = {
 				state_region = s:STATE_PANAMA
 			}
@@ -236,7 +214,6 @@ TRY_REPLACE:company_suez_company = {
 	
 	extension_building_types = {
 		building_shipyard
-		building_military_shipyard
 	}
 	
 	possible_prestige_goods = {
@@ -278,9 +255,8 @@ TRY_REPLACE:company_suez_company = {
 		state_trade_capacity_mult = 0.25
 		# unit_convoy_requirements_mult = -0.30
 		state_market_access_price_impact = 0.05
-		country_minting_add = 30000
-		country_minting_mult = 0.15
-		military_formation_movement_speed_mult = 0.10
+		country_tax_income_add = 30000
+		country_free_charters_add = 1
 	}
 	
 	ai_will_do = {
@@ -294,13 +270,7 @@ TRY_REPLACE:company_suez_company = {
 
 	ai_construction_targets = {
 		building_trade_center = {
-			level = 5
-			state_trigger = {
-				state_region = s:STATE_SINAI
-			}
-		}
-		building_port = {
-			level = 5
+			level = 4
 			state_trigger = {
 				state_region = s:STATE_SINAI
 			}

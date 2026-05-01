@@ -107,12 +107,13 @@ mog_construct_convoy_allow = {
 				is_building_type = building_river_port
 			}
 		}
-		custom_tooltip = {
-			text = convoy_ratio
-			owner = {
-				convoy_ratio < 0.05 # Aligns with TRADE_ROUTE_REQUIRED_CONVOY_BUFFER
-			}
-		}
+		#custom_tooltip = {
+		#	text = convoy_ratio
+		#	owner = {
+		#		convoy_ratio < 0.05 # Aligns with TRADE_ROUTE_REQUIRED_CONVOY_BUFFER
+		#	}
+		#}
+		always = yes
 	}
 }
 

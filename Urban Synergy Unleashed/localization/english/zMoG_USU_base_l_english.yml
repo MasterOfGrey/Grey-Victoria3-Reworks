@@ -59,17 +59,13 @@
  building_river_port_throughput_add_desc: "A bonus or penalty to both input and output of $building_river_port$"
  usu_building_hydro_power_plant_throughput_add: "$usu_building_hydro_power_plant$ building [concept_throughput]"
  usu_building_hydro_power_plant_throughput_add_desc: "A bonus or penalty to both input and output of $usu_building_hydro_power_plant$"
+ building_usu_railway_line_throughput_add: "$building_usu_railway_line$ building [concept_throughput]"
+ building_usu_railway_line_throughput_add_desc: "A bonus or penalty to both input and output of $building_usu_railway_line$"
  
  state_usu_building_public_green_max_level_add: "$usu_building_public_green$ Max Level"
  state_usu_building_public_green_max_level_add_desc: "A bonus or penalty to the maximum level of $usu_building_public_green$ buildings."
  
  # Vanilla Modifier types
- 
- goods_input_luxury_clothes_add: "@luxury_clothes![Nbsp]$luxury_clothes$ input"
- goods_input_luxury_clothes_add_desc: "The amount of @luxury_clothes![Nbsp]$luxury_clothes$ consumed by buildings"
- goods_input_services_add: "@services![Nbsp]$services$ input"
- goods_input_services_add_desc: "The amount of @services![Nbsp]$services$ consumed by buildings"
- 
  goods_input_tools_mult: "Building @tools![Nbsp]$tools$ input"
  goods_input_tools_mult_desc: "The amount of @tools![Nbsp]$tools$ consumed by buildings"
  goods_input_steel_mult: "Building @steel![Nbsp]$steel$ input"
@@ -79,8 +75,6 @@
  goods_input_transportation_mult_desc: "A bonus or penalty to the amount of @transportation![Nbsp]$transportation$ consumed by buildings"
  goods_output_transportation_mult: "Building @transportation![Nbsp]$transportation$ output"
  goods_output_transportation_mult_desc: "A bonus or penalty to the amount of @transportation![Nbsp]$transportation$ produced by buildings"
- goods_output_electricity_mult: "Building @electricity![Nbsp]$electricity$ output"
- goods_output_electricity_mult_desc: "A bonus or penalty to the amount of @electricity![Nbsp]$electricity$ produced by buildings"
  goods_input_merchant_marine_mult: "Building @merchant_marine![Nbsp]$merchant_marine$ input"
  goods_input_merchant_marine_mult_desc: "A bonus or penalty to the amount of @merchant_marine![Nbsp]$merchant_marine$ consumed by buildings"
  goods_output_merchant_marine_mult: "Building @merchant_marine![Nbsp]$merchant_marine$ output"

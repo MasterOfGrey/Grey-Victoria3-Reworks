@@ -13,7 +13,7 @@ REPLACE_OR_CREATE:has_world_market_access_history = {
 		market = {
 			any_scope_country = {
 				any_scope_state = {
-					has_port = yes # non functional in building history
+					has_port_state = yes # non functional in building history
 				}
 			}
 		}

@@ -1,7 +1,7 @@
 ﻿TRY_REPLACE:building_suez_canal = {
 	building_group = bg_canals
 	icon = "gfx/interface/icons/building_icons/suez_canal.dds"
-	canal = canal_suez
+	strait = canal_suez
 	expandable = no
 	downsizeable = no
 	unique = yes
@@ -55,7 +55,7 @@
 TRY_REPLACE:building_panama_canal = {
 	building_group = bg_canals
 	icon = "gfx/interface/icons/building_icons/panama_canal.dds"
-	canal = canal_panama
+	strait = canal_panama
 	expandable = no
 	downsizeable = no
 	unique = yes
