@@ -11,6 +11,7 @@ TRY_REPLACE:company_egyptian_rail = {
 
 	building_types = {
 		building_railway
+		building_usu_railway_line
 		building_river_port
 	}
 
@@ -50,7 +51,7 @@ TRY_REPLACE:company_egyptian_rail = {
 	}
 
 	ai_construction_targets = {
-		building_railway = {
+		building_usu_railway_line = {
 			level = 5
 			state_trigger = {
 				region = sr:region_nile_basin
@@ -65,33 +66,49 @@ TRY_REPLACE:company_egyptian_rail = {
 }
 
 ## Latin Americas
+# Fundidora de Fierro y Acero de Monterrey, S.A.
+TRY_INSERT:company_fundidora_monterrey = {
+	prosperity_modifier = {
+		building_railway_throughput_add = -0.05
+		building_usu_railway_line_throughput_add = 0.05
+	}
+}
+
 # Compañía de Salitres y Ferrocarril de Antofagasta
-TRY_REPLACE:company_csfa = {
-	icon = "gfx/interface/icons/company_icons/historical_company_icons/bolivia_csfa.dds"
+TRY_INSERT:company_csfa = {
+	building_types = {
+		building_usu_railway_line
+	}
+}
+
+# São Paulo Railway Co. Ltd.
+company_sao_paulo_railway = {
+	icon = "gfx/interface/icons/company_icons/historical_company_icons/brazil_sao_paulo_railway.dds"
 	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_railways.dds"
 
 	flavored_company = yes
 
-	preferred_headquarters = { STATE_ANTOFAGASTA }
+	preferred_headquarters = { STATE_SAO_PAULO }
 
 	building_types = {
-		building_sulfur_mine
 		building_railway
+		building_usu_railway_line
 	}
 
 	extension_building_types = {
-		building_iron_mine
+		building_logging_camp
 		building_motor_industry
 	}
 
 	potential = {
-		has_interest_marker_in_region = region_andes
+		has_dlc_feature = rp1_content
+		has_interest_marker_in_region = sr:region_brazil
 	}
 
 	attainable = {
 		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
 			any_scope_state = {
-				state_region = s:STATE_ANTOFAGASTA
+				state_region = s:STATE_SAO_PAULO
 			}
 		}
 	}
@@ -99,33 +116,127 @@ TRY_REPLACE:company_csfa = {
 	possible = {
 		has_technology_researched = railways
 		any_scope_state = {
-			state_region = s:STATE_ANTOFAGASTA
+			state_region = s:STATE_SAO_PAULO
 			is_incorporated = yes
+			has_building = building_railway
 			any_scope_building = {
-				is_building_type = building_sulfur_mine
+				is_building_type = building_coffee_plantation
 				level >= 5
 			}
+		}
+		any_scope_state = {
+			region = sr:region_brazil
+			is_incorporated = yes
+			any_scope_building = {
+				is_building_type = building_usu_railway_line
+				level >= 5
+			}
+			count >= 2
 		}
 	}
 
 	prosperity_modifier = {
-		state_infrastructure_mult = 0.05
-		interest_group_ig_industrialists_approval_add = 3
+		building_coffee_plantation_throughput_add = 0.15
+		state_trade_capacity_mult = 0.1
 	}
 
 	ai_will_do = {
 		has_technology_researched = railways
 		any_scope_state = {
-			state_region = s:STATE_ANTOFAGASTA
+			state_region = s:STATE_SAO_PAULO
 			is_incorporated = yes
 		}
 	}
 
 	ai_construction_targets = {
-		building_sulfur_mine = {
+		building_coffee_plantation = {
 			level = 5
 			state_trigger = {
-				state_region = s:STATE_ANTOFAGASTA
+				state_region = s:STATE_SAO_PAULO
+			}
+		}
+		building_usu_railway_line = {
+			level = 5
+			state_trigger = {
+				region = sr:region_brazil
+				is_incorporated = yes
+			}
+		}
+	}
+
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}
+}
+# Córdoba Central Railway
+company_cordoba_railway = {
+	icon = "gfx/interface/icons/company_icons/historical_company_icons/argentina_cordoba_cenral_railway.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_railways.dds"
+
+	flavored_company = yes
+
+	preferred_headquarters = { STATE_LA_PAMPA }
+
+	building_types = {
+		building_railway
+		building_usu_railway_line
+	}
+
+	extension_building_types = {
+		building_coal_mine
+		building_motor_industry
+	}
+
+	potential = {
+		has_dlc_feature = rp1_content
+		has_interest_marker_in_region = sr:region_la_plata
+	}
+
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_LA_PAMPA
+			}
+		}
+	}
+
+	possible = {
+		has_technology_researched = railways
+		any_scope_state = {
+			state_region = s:STATE_LA_PAMPA
+			is_incorporated = yes
+			has_building = building_railway
+		}
+		any_scope_state = {
+			has_state_trait = state_trait_pampas
+			is_incorporated = yes
+			any_scope_building = {
+				is_building_type = building_usu_railway_line
+				level >= 5
+			}
+			count >= 2
+		}
+	}
+
+	prosperity_modifier = {
+		building_wheat_farm_throughput_add = 0.1
+		building_livestock_ranch_throughput_add = 0.05
+	}
+
+	ai_will_do = {
+		has_technology_researched = railways
+		any_scope_state = {
+			state_region = s:STATE_LA_PAMPA
+			is_incorporated = yes
+		}
+	}
+
+	ai_construction_targets = {
+		building_usu_railway_line = {
+			level = 5
+			state_trigger = {
+				has_state_trait = state_trait_pampas
+				is_incorporated = yes
 			}
 		}
 	}
@@ -136,175 +247,6 @@ TRY_REPLACE:company_csfa = {
 }
 
 ## Canada (Americas)
-# nil
-
-## Asia
-# Chemins de fer Orientaux
-TRY_REPLACE:company_orient_express = {
-	icon = "gfx/interface/icons/company_icons/historical_company_icons/chemins_de_fer_orientaux.dds"
-	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_railways.dds"
-
-	category = bureaucrat_owned
-
-	flavored_company = yes
-
-	preferred_headquarters = { STATE_EASTERN_THRACE }
-
-	building_types = {
-		building_railway
-	}
-
-	extension_building_types = {
-		building_motor_industry
-		building_iron_mine
-		building_river_port
-	}
-
-	potential = {
-		OR = {
-			has_interest_marker_in_region = region_anatolia
-			has_interest_marker_in_region = region_balkans
-		}
-	}
-
-	attainable = {
-		owns_entire_state_region = STATE_EASTERN_THRACE
-	}
-
-	possible = {
-		NOR = {
-			has_modifier = sick_man_of_europe
-			is_country_type = unrecognized
-		}
-		any_scope_state = {
-			region = sr:region_balkans
-			is_incorporated = yes
-			any_scope_building = {
-				is_building_type = building_railway
-				level >= 5
-			}
-			count >= 3
-		}
-	}
-
-	prosperity_modifier = {
-		country_prestige_mult = 0.1
-	}
-
-	ai_will_do = {
-		NOR = {
-			has_modifier = sick_man_of_europe
-			is_country_type = unrecognized
-		}
-		any_scope_state = {
-			region = sr:region_balkans
-			is_incorporated = yes
-		}
-	}
-
-	ai_construction_targets = {
-		building_railway = {
-			level = 5
-			state_trigger = {
-				region = sr:region_balkans
-				is_incorporated = yes
-			}
-		}
-	}
-
-	ai_weight = {
-		value = 3 # Higher base value for flavored companies
-	}
-}
-
-# Great Indian Peninsula Railway
-TRY_REPLACE:company_great_indian_railway = {
-	icon = "gfx/interface/icons/company_icons/historical_company_icons/india_great_indian_peninsula_railway.dds"
-	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_railways.dds"
-	
-	category = bureaucrat_owned
-	
-	flavored_company = yes
-	
-	building_types = {  
-		building_railway
-	}
-	
-	extension_building_types = {
-		building_iron_mine
-		building_motor_industry
-		building_river_port
-	}
-	
-	potential = {
-		OR = {
-			has_interest_marker_in_region = region_madras
-			has_interest_marker_in_region = region_bombay
-			has_interest_marker_in_region = region_bengal
-			has_interest_marker_in_region = region_central_india
-			has_interest_marker_in_region = region_punjab
-		}
-	}
-	
-	attainable = {
-		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
-			any_scope_state = {
-				OR = {
-					region = sr:region_madras
-					region = sr:region_bombay
-					region = sr:region_bengal
-					region = sr:region_central_india
-					region = sr:region_punjab
-				}
-			}
-		}
-	}			
-	
-	possible = {
-		any_scope_state = {
-			OR = {
-				region = sr:region_madras
-				region = sr:region_bombay
-				region = sr:region_bengal
-				region = sr:region_central_india
-				region = sr:region_punjab
-			}
-			is_incorporated = yes
-			any_scope_building = {
-				is_building_type = building_railway
-				level >= 5
-			}
-			count >= 3
-		}
-	}
-	
-	prosperity_modifier = {
-		state_infrastructure_from_population_add = 2		# 0.5 <- what the heck weak crap was this???
-		state_infrastructure_from_population_max_add = 40	# 40  <- actually be better than a default company please
-	}	
-
-	ai_construction_targets = {
-		building_railway = {
-			level = 5
-			state_trigger = {
-				OR = {
-					region = sr:region_madras
-					region = sr:region_bombay
-					region = sr:region_bengal
-					region = sr:region_central_india
-					region = sr:region_punjab
-				}
-				is_incorporated = yes
-			}
-		}
-	}
-	
-	ai_weight = {
-		value = 3 # Higher base value for flavored companies
-	}
-}
-
-## Austria-Hungary
 # nil
 
 ## China
@@ -320,6 +262,7 @@ TRY_REPLACE:company_kaiping_mining = {
 	building_types = {
 		building_coal_mine
 		building_railway
+		building_usu_railway_line
 	}
 
 	extension_building_types = {
@@ -393,53 +336,47 @@ TRY_REPLACE:company_kaiping_mining = {
 	}
 }
 
-## Colossus of the South (cots) (More Latin Americas)
-# São Paulo Railway Co. Ltd.
-TRY_REPLACE:company_sao_paulo_railway = {
-	icon = "gfx/interface/icons/company_icons/historical_company_icons/brazil_sao_paulo_railway.dds"
+## Japan
+# South Manchuria Railway
+TRY_REPLACE:company_mantetsu = {
+	icon = "gfx/interface/icons/company_icons/historical_company_icons/japanese_mantetsu.dds"
 	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_railways.dds"
+
+	category = bureaucrat_owned
 
 	flavored_company = yes
 
-	preferred_headquarters = { STATE_SAO_PAULO }
+	preferred_headquarters = { STATE_SHENGJING }
 
 	building_types = {
 		building_railway
-		building_river_port
+		building_usu_railway_line
+		building_coal_mine
+		building_glassworks
 	}
 
 	extension_building_types = {
-		building_logging_camp
-		building_motor_industry
+		building_food_industry
+		building_chemical_plant
+		building_river_port
 	}
 
 	potential = {
-		has_dlc_feature = rp1_content
-		has_interest_marker_in_region = region_brazil
-	}
-
-	attainable = {
-		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
-			any_scope_state = {
-				state_region = s:STATE_SAO_PAULO
-			}
-		}
+		country_has_primary_culture = cu:japanese
 	}
 
 	possible = {
+		country_or_subject_owns_entire_state_region = STATE_SHENGJING
 		has_technology_researched = railways
-		any_scope_state = {
-			state_region = s:STATE_SAO_PAULO
-			is_incorporated = yes
-			has_building = building_railway
-			any_scope_building = {
-				is_building_type = building_coffee_plantation
-				level >= 5
-			}
+		custom_tooltip = {
+			text = is_meiji_japan
+			has_variable = meiji_restoration_complete
 		}
 		any_scope_state = {
-			region = sr:region_brazil
-			is_incorporated = yes
+			OR = {
+				region = sr:region_manchuria
+				region = sr:region_north_china
+			}
 			any_scope_building = {
 				is_building_type = building_railway
 				level >= 5
@@ -449,29 +386,126 @@ TRY_REPLACE:company_sao_paulo_railway = {
 	}
 
 	prosperity_modifier = {
-		building_coffee_plantation_throughput_add = 0.15
-		state_trade_capacity_mult = 0.1
+		state_non_homeland_colony_growth_speed_mult = 0.1
+		building_wheat_farm_throughput_add = 0.15
 	}
 
 	ai_will_do = {
+		country_or_subject_owns_entire_state_region = STATE_SHENGJING
 		has_technology_researched = railways
+		custom_tooltip = {
+			text = is_meiji_japan
+			has_variable = meiji_restoration_complete
+		}
 		any_scope_state = {
-			state_region = s:STATE_SAO_PAULO
+			OR = {
+				region = sr:region_manchuria
+				region = sr:region_north_china
+			}
+		}
+	}
+
+	ai_construction_targets = {
+		building_usu_railway_line = {
+			level = 5
+			state_trigger = {
+				OR = {
+					region = sr:region_manchuria
+					region = sr:region_north_china
+				}
+			}
+		}
+	}
+
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}
+}
+
+# Yasuda
+TRY_INSERT:company_yasuda = {
+	building_types = {
+		building_usu_railway_line
+	}
+}
+
+# Tokyo Electric Light Company, Ltd.
+TRY_INSERT:company_tokyo_electric_light_company = {
+	extension_building_types = {
+		building_usu_railway_line
+	}
+}
+
+## Asia
+# Chemins de fer Orientaux
+TRY_REPLACE:company_orient_express = {
+	icon = "gfx/interface/icons/company_icons/historical_company_icons/chemins_de_fer_orientaux.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_railways.dds"
+
+	category = bureaucrat_owned
+
+	flavored_company = yes
+
+	preferred_headquarters = { STATE_EASTERN_THRACE }
+
+	building_types = {
+		building_railway
+		building_usu_railway_line
+	}
+
+	extension_building_types = {
+		building_motor_industry
+		building_iron_mine
+		building_river_port
+	}
+
+	potential = {
+		OR = {
+			has_interest_marker_in_region = region_anatolia
+			has_interest_marker_in_region = region_balkans
+		}
+	}
+
+	attainable = {
+		owns_entire_state_region = STATE_EASTERN_THRACE
+	}
+
+	possible = {
+		NOR = {
+			has_modifier = sick_man_of_europe
+			is_country_type = unrecognized
+		}
+		any_scope_state = {
+			region = sr:region_balkans
+			is_incorporated = yes
+			any_scope_building = {
+				is_building_type = building_usu_railway_line
+				level >= 5
+			}
+			count >= 3
+		}
+	}
+
+	prosperity_modifier = {
+		country_prestige_mult = 0.1
+	}
+
+	ai_will_do = {
+		NOR = {
+			has_modifier = sick_man_of_europe
+			is_country_type = unrecognized
+		}
+		any_scope_state = {
+			region = sr:region_balkans
 			is_incorporated = yes
 		}
 	}
 
 	ai_construction_targets = {
-		building_coffee_plantation = {
+		building_usu_railway_line = {
 			level = 5
 			state_trigger = {
-				state_region = s:STATE_SAO_PAULO
-			}
-		}
-		building_railway = {
-			level = 5
-			state_trigger = {
-				region = sr:region_brazil
+				region = sr:region_balkans
 				is_incorporated = yes
 			}
 		}
@@ -482,81 +516,130 @@ TRY_REPLACE:company_sao_paulo_railway = {
 	}
 }
 
-# Córdoba Central Railway
-TRY_REPLACE:company_cordoba_railway = {
-	icon = "gfx/interface/icons/company_icons/historical_company_icons/argentina_cordoba_cenral_railway.dds"
+# Great Indian Peninsula Railway
+TRY_REPLACE:company_great_indian_railway = {
+	icon = "gfx/interface/icons/company_icons/historical_company_icons/india_great_indian_peninsula_railway.dds"
 	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_railways.dds"
-
+	
+	category = bureaucrat_owned
+	
 	flavored_company = yes
-
-	preferred_headquarters = { STATE_LA_PAMPA }
-
+	
 	building_types = {
 		building_railway
+		building_usu_railway_line
+	}
+	
+	extension_building_types = {
+		building_iron_mine
+		building_motor_industry
 		building_river_port
 	}
-
-	extension_building_types = {
-		building_coal_mine
-		building_motor_industry
-	}
-
+	
 	potential = {
-		has_dlc_feature = rp1_content
-		has_interest_marker_in_region = region_la_plata
+		OR = {
+			has_interest_marker_in_region = region_madras
+			has_interest_marker_in_region = region_bombay
+			has_interest_marker_in_region = region_bengal
+			has_interest_marker_in_region = region_central_india
+			has_interest_marker_in_region = region_punjab
+		}
 	}
-
+	
 	attainable = {
 		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
 			any_scope_state = {
-				state_region = s:STATE_LA_PAMPA
+				OR = {
+					region = sr:region_madras
+					region = sr:region_bombay
+					region = sr:region_bengal
+					region = sr:region_central_india
+					region = sr:region_punjab
+				}
 			}
 		}
-	}
-
+	}			
+	
 	possible = {
-		has_technology_researched = railways
 		any_scope_state = {
-			state_region = s:STATE_LA_PAMPA
-			is_incorporated = yes
-			has_building = building_railway
-		}
-		any_scope_state = {
-			has_state_trait = state_trait_pampas
+			OR = {
+				region = sr:region_madras
+				region = sr:region_bombay
+				region = sr:region_bengal
+				region = sr:region_central_india
+				region = sr:region_punjab
+			}
 			is_incorporated = yes
 			any_scope_building = {
-				is_building_type = building_railway
+				is_building_type = building_usu_railway_line
 				level >= 5
 			}
-			count >= 2
+			count >= 3
 		}
 	}
-
+	
 	prosperity_modifier = {
-		building_wheat_farm_throughput_add = 0.1
-		building_livestock_ranch_throughput_add = 0.05
-	}
-
-	ai_will_do = {
-		has_technology_researched = railways
-		any_scope_state = {
-			state_region = s:STATE_LA_PAMPA
-			is_incorporated = yes
-		}
-	}
+		state_infrastructure_from_population_add = 2		# 0.5 <- what the heck weak crap was this???
+		state_infrastructure_from_population_max_add = 40	# 40  <- actually be better than a default company please
+	}	
 
 	ai_construction_targets = {
-		building_railway = {
+		building_usu_railway_line = {
 			level = 5
 			state_trigger = {
-				has_state_trait = state_trait_pampas
+				OR = {
+					region = sr:region_madras
+					region = sr:region_bombay
+					region = sr:region_bengal
+					region = sr:region_central_india
+					region = sr:region_punjab
+				}
 				is_incorporated = yes
 			}
 		}
 	}
-
+	
 	ai_weight = {
 		value = 3 # Higher base value for flavored companies
+	}
+}
+
+# William Sandford Limited
+TRY_INSERT:company_william_sandford = {
+	prosperity_modifier = {
+		building_railway_throughput_add = -0.15
+		building_usu_railway_line_throughput_add = 0.15
+	}
+}
+
+# Société française des charbonnages du Tonkin
+TRY_INSERT:company_societe_francaise_charbonnages_du_tonkin = {
+	extension_building_types = {
+		building_usu_railway_line
+	}
+}
+
+# Siam Electricity Company Limited
+TRY_INSERT:company_siam_electrical_company_limited = {
+	extension_building_types = {
+		building_usu_railway_line
+	}
+}
+
+## Austria-Hungary
+# Magyar Királyi Államvasutak Gépgyára
+TRY_INSERT:company_mav = {
+	prosperity_modifier = {
+		building_railway_throughput_add = -0.1
+		building_usu_railway_line_throughput_add = 0.1
+	}
+}
+
+# Galizisch-Karpathische Petroleum AG
+TRY_INSERT:company_galician_carpathian_oil = {
+	prosperity_modifier = {
+		building_railway_throughput_add = -0.05
+		building_usu_railway_line_throughput_add = 0.05
 	}
 }
 
@@ -573,6 +656,7 @@ TRY_REPLACE:company_franco_belge = {
 	building_types = {
 		building_motor_industry
 		building_railway
+		building_usu_railway_line
 	}
 
 	extension_building_types = {
@@ -654,6 +738,7 @@ TRY_REPLACE:company_cfr = {
 	
 	building_types = {  
 		building_railway
+		building_usu_railway_line
 		building_river_port
 	}
 	
@@ -692,7 +777,7 @@ TRY_REPLACE:company_cfr = {
 	}
 	
 	ai_construction_targets = {
-		building_railway = {
+		building_usu_railway_line = {
 			level = 5
 			state_trigger = {
 				state_region = {
@@ -707,6 +792,15 @@ TRY_REPLACE:company_cfr = {
 		value = 3 # Higher base value for flavored companies
 	}
 }
+
+# Maschinenfabrik Oerlikon
+TRY_INSERT:company_maschinenfabrik_oerlikon = {
+	prosperity_modifier = {
+		building_railway_throughput_add = -0.1
+		building_usu_railway_line_throughput_add = 0.1
+	}
+}
+
 
 ## France
 # nil
@@ -723,6 +817,7 @@ TRY_REPLACE:company_prussian_state_railways = {
 
 	building_types = {
 		building_railway
+		building_usu_railway_line
 		building_river_port
 	}
 
@@ -773,7 +868,7 @@ TRY_REPLACE:company_prussian_state_railways = {
 	}
 
 	ai_construction_targets = {
-		building_railway = {
+		building_usu_railway_line = {
 			level = 5
 			state_trigger = {
 				OR = {
@@ -802,6 +897,7 @@ TRY_REPLACE:company_gwr = {
 
 	building_types = {
 		building_railway
+		building_usu_railway_line
 	}
 
 	extension_building_types = {
@@ -849,7 +945,7 @@ TRY_REPLACE:company_gwr = {
 	}
 
 	ai_construction_targets = {
-		building_railway = {
+		building_usu_railway_line = {
 			level = 5
 			state_trigger = {
 				region = sr:region_england
@@ -869,91 +965,6 @@ TRY_REPLACE:company_gwr = {
 ## Italy
 # nil
 
-## Japan
-# South Manchuria Railway
-TRY_REPLACE:company_mantetsu = {
-	icon = "gfx/interface/icons/company_icons/historical_company_icons/japanese_mantetsu.dds"
-	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_railways.dds"
-
-	category = bureaucrat_owned
-
-	flavored_company = yes
-
-	preferred_headquarters = { STATE_SHENGJING }
-
-	building_types = {
-		building_railway
-		building_coal_mine
-		building_glassworks
-	}
-
-	extension_building_types = {
-		building_food_industry
-		building_chemical_plant
-		building_river_port
-	}
-
-	potential = {
-		country_has_primary_culture = cu:japanese
-	}
-
-	possible = {
-		country_or_subject_owns_entire_state_region = STATE_SHENGJING
-		has_technology_researched = railways
-		custom_tooltip = {
-			text = is_meiji_japan
-			has_variable = meiji_restoration_complete
-		}
-		any_scope_state = {
-			OR = {
-				region = sr:region_manchuria
-				region = sr:region_north_china
-			}
-			any_scope_building = {
-				is_building_type = building_railway
-				level >= 5
-			}
-			count >= 2
-		}
-	}
-
-	prosperity_modifier = {
-		state_non_homeland_colony_growth_speed_mult = 0.1
-		building_wheat_farm_throughput_add = 0.15
-	}
-
-	ai_will_do = {
-		country_or_subject_owns_entire_state_region = STATE_SHENGJING
-		has_technology_researched = railways
-		custom_tooltip = {
-			text = is_meiji_japan
-			has_variable = meiji_restoration_complete
-		}
-		any_scope_state = {
-			OR = {
-				region = sr:region_manchuria
-				region = sr:region_north_china
-			}
-		}
-	}
-
-	ai_construction_targets = {
-		building_railway = {
-			level = 5
-			state_trigger = {
-				OR = {
-					region = sr:region_manchuria
-					region = sr:region_north_china
-				}
-			}
-		}
-	}
-
-	ai_weight = {
-		value = 3 # Higher base value for flavored companies
-	}
-}
-
 ## Charters of Commerce (mp1)
 # Imperial Ethiopian Railway Company
 TRY_REPLACE:company_imperial_ethiopian_railways = {
@@ -964,6 +975,7 @@ TRY_REPLACE:company_imperial_ethiopian_railways = {
 
 	building_types = {
 		building_railway
+		building_usu_railway_line
 		building_river_port
 	}
 
@@ -1017,7 +1029,7 @@ TRY_REPLACE:company_imperial_ethiopian_railways = {
 				region = sr:region_ethiopia
 			}
 		}
-		building_railway = {
+		building_usu_railway_line = {
 			level = 5
 			state_trigger = {
 				region = sr:region_ethiopia
@@ -1047,6 +1059,7 @@ TRY_REPLACE:company_iranian_state_railway = {
 
 	building_types = {
 		building_railway
+		building_usu_railway_line
 	}
 
 	extension_building_types = {
@@ -1096,7 +1109,7 @@ TRY_REPLACE:company_iranian_state_railway = {
 	}
 
 	ai_construction_targets = {
-		building_railway = {
+		building_usu_railway_line = {
 			level = 5
 			state_trigger = {
 				region = sr:region_persia
@@ -1123,6 +1136,7 @@ TRY_REPLACE:company_tashkent_railroad = {
 
 	building_types = {
 		building_railway
+		building_usu_railway_line
 		building_river_port
 	}
 
@@ -1178,7 +1192,7 @@ TRY_REPLACE:company_tashkent_railroad = {
 	}
 
 	ai_construction_targets = {
-		building_railway = {
+		building_usu_railway_line = {
 			level = 5
 			state_trigger = {
 				region = sr:region_central_asia
@@ -1202,6 +1216,7 @@ TRY_REPLACE:company_standard_oil = {
 	building_types = {
 		building_oil_rig
 		building_railway
+		building_usu_railway_line
 	}
 
 	extension_building_types = {
@@ -1235,6 +1250,7 @@ TRY_REPLACE:company_standard_oil = {
 
 	prosperity_modifier = {
 		building_railway_throughput_add = 0.2
+		building_usu_railway_line_throughput_add = 0.2
 	}
 
 	ai_will_do = {
@@ -1276,6 +1292,7 @@ TRY_REPLACE:company_oesterreichisch_alpine_montangesellschaft = {
 
 	extension_building_types = {
 		building_railway
+		building_usu_railway_line
 		building_river_port
 	}
 
@@ -1303,6 +1320,7 @@ TRY_REPLACE:company_oesterreichisch_alpine_montangesellschaft = {
 	prosperity_modifier = {
 		building_coal_mine_throughput_add = 0.1
 		building_railway_throughput_add = 0.05
+		building_usu_railway_line_throughput_add = 0.05
 	}
 
 	ai_weight = {

@@ -214,6 +214,7 @@ TRY_REPLACE:company_galician_carpathian_oil = {
 
 	prosperity_modifier = {
 		building_railway_throughput_add = 0.05
+		building_usu_railway_line_throughput_add = 0.05
 		building_tooling_workshop_throughput_add = 0.1
 	}
 
@@ -510,7 +511,7 @@ TRY_REPLACE:company_romanian_star = {
 	}
 
 	ai_construction_targets = {
-		building_railway = {
+		building_usu_railway_line = {
 			level = 5
 			state_trigger = {
 				state_region = s:STATE_WALLACHIA
@@ -734,6 +735,7 @@ TRY_REPLACE:company_branobel = {
 	prosperity_modifier = {
 		state_migration_pull_mult = 0.1
 		building_railway_throughput_add = 0.05
+		building_usu_railway_line_throughput_add = 0.05
 	}
 
 	ai_will_do = {
@@ -775,6 +777,7 @@ TRY_REPLACE:company_west_ural_petroleum = {
 	extension_building_types = {
 		building_power_plant
 		building_railway
+		building_usu_railway_line
 	}
 
 	potential = {
@@ -848,6 +851,7 @@ TRY_REPLACE:company_hanseong_jeongi_hoesa = {
 
 	extension_building_types = {
 		building_railway
+		building_usu_railway_line
 		building_coal_mine
 	}
 
@@ -879,6 +883,7 @@ TRY_REPLACE:company_hanseong_jeongi_hoesa = {
 	prosperity_modifier = {
 		building_art_academy_throughput_add = 0.05
 		building_railway_throughput_add = 0.05
+		building_usu_railway_line_throughput_add = 0.05
 	}
 
 	ai_will_do = {
@@ -956,6 +961,7 @@ TRY_REPLACE:company_turkish_petroleum = {
 	prosperity_modifier = {
 		state_trade_capacity_mult = 0.05
 		building_railway_throughput_add = 0.05
+		building_usu_railway_line_throughput_add = 0.05
 	}
 
 	ai_will_do = {

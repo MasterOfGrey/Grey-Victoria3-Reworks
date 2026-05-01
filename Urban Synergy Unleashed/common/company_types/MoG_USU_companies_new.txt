@@ -103,6 +103,7 @@ REPLACE_OR_CREATE:company_basic_infrastructure = {
 	
 	building_types = {
 		building_railway
+		building_usu_railway_line
 		building_river_port
 	}
 	
@@ -199,6 +200,7 @@ REPLACE_OR_CREATE:company_basic_community = {
 	prosperity_modifier = {
 		building_urban_center_throughput_add = 0.1
 		building_railway_throughput_add = 0.05
+		building_usu_railway_line_throughput_add = 0.05
 		building_river_port_throughput_add = 0.05
 		state_migration_pull_mult = 0.05
 	}

@@ -21,6 +21,28 @@ REPLACE_OR_CREATE:goods_output_usu_logistics_mult = {
     decimals = 1
 }
 
+REPLACE_OR_CREATE:goods_input_usu_train_paths_add = {
+	color = bad
+	percent = no
+}
+
+REPLACE_OR_CREATE:goods_output_usu_train_paths_add = {
+	color = good
+	percent = no
+}
+
+REPLACE_OR_CREATE:goods_input_usu_train_paths_mult = {
+	color = bad
+	percent = yes
+    decimals = 1
+}
+
+REPLACE_OR_CREATE:goods_output_usu_train_paths_mult = {
+	color = good
+	percent = yes
+    decimals = 1
+}
+
 # Missing Vanilla Goods
 REPLACE_OR_CREATE:goods_input_luxury_clothes_add = {
 	color = bad
@@ -97,6 +119,15 @@ REPLACE_OR_CREATE:usu_building_hydro_power_plant_throughput_add={
 }
 
 REPLACE_OR_CREATE:building_river_port_throughput_add={
+	decimals=0
+	color=good
+	percent=yes
+	game_data={
+		ai_value=0
+	}
+}
+
+REPLACE_OR_CREATE:building_usu_railway_line_throughput_add={
 	decimals=0
 	color=good
 	percent=yes

@@ -1,0 +1,130 @@
+﻿###
+### Keep "unit tiers" per group in ascending order; the system will determine the default unit type for a country
+### by the last defined unit type that it can build
+###
+
+### ARMY
+
+### Infantry
+
+TRY_INJECT:combat_unit_type_irregular_infantry = {
+    upkeep_modifier = {
+		goods_input_usu_logistics_add = 0.5
+    }
+}
+
+TRY_INJECT:combat_unit_type_line_infantry = {
+	upkeep_modifier = {
+		goods_input_usu_logistics_add = 1
+	}
+}
+
+TRY_INJECT:combat_unit_type_skirmish_infantry = {
+	upkeep_modifier = {
+		goods_input_usu_logistics_add = 1.5
+    }
+}
+
+TRY_INJECT:combat_unit_type_trench_infantry = {
+	upkeep_modifier = {
+		goods_input_usu_logistics_add = 2
+    }
+
+}
+
+TRY_INJECT:combat_unit_type_squad_infantry = {
+	upkeep_modifier = {
+		goods_input_usu_logistics_add = 2.5
+    }
+}
+
+TRY_INJECT:combat_unit_type_mechanized_infantry = {
+	upkeep_modifier = {
+		goods_input_usu_logistics_add = 3
+    }
+}
+
+### Artillery
+
+TRY_INJECT:combat_unit_type_cannon_artillery = {
+	upkeep_modifier = {
+		goods_input_usu_logistics_add = 1
+    }
+}
+
+TRY_INJECT:combat_unit_type_mobile_artillery = {
+	upkeep_modifier = {
+		goods_input_usu_logistics_add = 2
+    }
+}
+
+TRY_INJECT:combat_unit_type_shrapnel_artillery = {
+	upkeep_modifier = {
+		goods_input_usu_logistics_add = 3
+    }
+}
+
+TRY_INJECT:combat_unit_type_siege_artillery = {
+	upkeep_modifier = {
+		goods_input_usu_logistics_add = 4
+    }
+}
+
+TRY_INJECT:combat_unit_type_heavy_tank = {
+	upkeep_modifier = {
+		goods_input_usu_logistics_add = 5
+    }
+}
+
+### Cavalry
+
+TRY_INJECT:combat_unit_type_hussars = {
+	upkeep_modifier = {
+		goods_input_usu_logistics_add = 1
+    }
+}
+
+TRY_INJECT:combat_unit_type_dragoons = {
+	upkeep_modifier = {
+		goods_input_usu_logistics_add = 1.5
+	}
+}
+
+TRY_INJECT:combat_unit_type_cuirassiers = {
+	upkeep_modifier = {
+		goods_input_usu_logistics_add = 2
+	}
+}
+
+TRY_INJECT:combat_unit_type_lancers = {
+	upkeep_modifier = {
+		goods_input_usu_logistics_add = 2.5
+    }
+}
+
+TRY_INJECT:combat_unit_type_light_tanks = {
+	upkeep_modifier = {
+		goods_input_usu_logistics_add = 4
+    }
+}
+
+### marines
+
+TRY_INJECT:combat_unit_type_low_tier_marines = {
+	upkeep_modifier = {
+		goods_input_usu_logistics_add = 2
+    }
+}
+
+TRY_INJECT:combat_unit_type_mid_tier_marines = {
+	upkeep_modifier = {
+		goods_input_usu_logistics_add = 3
+    }
+}
+
+TRY_INJECT:combat_unit_type_high_tier_marines = {
+	upkeep_modifier = {
+		goods_input_usu_logistics_add = 4
+    }
+}
+

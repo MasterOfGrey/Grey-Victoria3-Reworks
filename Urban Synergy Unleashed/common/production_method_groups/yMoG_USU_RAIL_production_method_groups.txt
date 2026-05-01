@@ -1,4 +1,4 @@
-﻿# Railway Overwrites
+﻿# Railway Overwrites (on railway lines)
 
 REPLACE_OR_CREATE:pmg_base_building_railway = {
 	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
@@ -29,16 +29,6 @@ REPLACE_OR_CREATE:pmg_passenger_trains = {
 	}
 }
 
-REPLACE_OR_CREATE:pmg_logistics_services_railway = {
-	texture = "gfx/interface/icons/generic_icons/mixed_icon_refining.dds"
-	production_methods = {
-		usu_pm_rail_logistics_0
-		usu_pm_rail_logistics_1
-		usu_pm_rail_logistics_2
-		usu_pm_rail_logistics_3
-	}
-}
-
 REPLACE_OR_CREATE:pmg_automation_building_railway = {
 	texture = "gfx/interface/icons/generic_icons/mixed_icon_automation.dds"
 	production_methods = {
@@ -48,4 +38,25 @@ REPLACE_OR_CREATE:pmg_automation_building_railway = {
 		pm_rotary_valve_engine_building_railway
 		pm_steam_donkey_building_railway
 	}
+}
+
+# Railway Stations
+REPLACE_OR_CREATE:pmg_base_building_rail_terminal = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	ai_selection = most_productive
+
+	production_methods = {
+		pm_usu_stub_end_terminal
+		pm_usu_pass_through_terminal
+	}
+}
+
+REPLACE_OR_CREATE:pmg_logistics_services_railway = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_refining.dds"
+	production_methods = {
+		usu_pm_rail_logistics_0
+		usu_pm_rail_logistics_1
+		usu_pm_rail_logistics_2
+		usu_pm_rail_logistics_3
+	}	
 }

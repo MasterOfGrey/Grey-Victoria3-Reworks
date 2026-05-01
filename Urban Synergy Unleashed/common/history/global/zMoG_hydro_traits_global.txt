@@ -435,7 +435,9 @@ GLOBAL = {
 	s:STATE_LAOS = { add_state_trait = state_trait_hydro_potential_3 }
 	s:STATE_KACHIN = { add_state_trait = state_trait_hydro_potential_3 }
 	s:STATE_SHAN_STATES = { add_state_trait = state_trait_hydro_potential_3 }
-	s:STATE_CHUBU = { add_state_trait = state_trait_hydro_potential_3 }
+	#s:STATE_CHUBU = { add_state_trait = state_trait_hydro_potential_3 }	# Split into Tokai and Hoku..
+	s:STATE_TOKAI = { add_state_trait = state_trait_hydro_potential_3 }
+	s:STATE_HOKUSHINETSU = { add_state_trait = state_trait_hydro_potential_3 }
 	
 	### INDONESIA 	
 	s:STATE_NORTH_BORNEO = { add_state_trait = state_trait_hydro_potential_3 }

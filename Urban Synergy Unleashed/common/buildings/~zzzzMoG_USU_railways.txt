@@ -1,0 +1,432 @@
+﻿## THIS FILE MUST BE LOADED **LAST**
+## ANY MOD THAT ADDS THINGS TO RAILWAYS AFTER THIS FILE LOADS **WILL** BREAK THINGS VERY BADLY
+## (unless it's an intentionally designed compatibility patch)
+
+REPLACE:building_railway = {	# Now the Railway Station - re-using this gets around AI subsidy problems
+	building_group = bg_private_infrastructure
+	icon = "gfx/interface/icons/building_icons/USU_building_railway_terminus.dds"
+	
+	ai_nationalization_desire = 0.5 # AI is reluctant to privatize railways since they are likely to need subsidies anyway
+	
+	unlocking_technologies = {
+		railways
+	}
+	
+	production_method_groups = {
+		pmg_base_building_rail_terminal
+		pmg_logistics_services_railway
+	}
+	
+	can_build_government = {
+		custom_tooltip = {
+			text = usu_railway_station_can_construct_tt
+			NOT = {
+				b:building_railway ?= {
+					level_after_queued_constructions >= {
+						value = 1							# Ensures always 1 level is buildable
+						add = {
+							state.b:building_urban_center ?= {
+								add = level
+							}
+							divide = 5						# 1 additional level per 5 urban centres
+							floor = yes						# Otherwise this rounds UP for all decimals
+						}
+					}
+				}
+			}
+		}
+	}
+	
+	can_build_private = {
+		custom_tooltip = {
+			text = usu_railway_station_can_construct_tt
+			NOT = {
+				b:building_railway ?= {
+					level_after_queued_constructions >= {
+						value = 1							# Ensures always 1 level is buildable
+						add = {
+							state.b:building_urban_center ?= {
+								add = level
+							}
+							divide = 5						# 1 additional level per 5 urban centres
+							floor = yes						# Otherwise this rounds UP for all decimals
+						}
+					}
+				}
+			}
+		}
+	}
+	
+	required_construction = construction_cost_low
+	
+	ai_value = {
+		value = 2000 # Railways are important - everything after here should be the same as vanilla railways
+		
+		if = { # Trans-Siberian Railway
+			limit = {
+				owner = {
+					has_journal_entry = je_trans_siberian_railway
+				}
+				OR = {
+					state_region = s:STATE_MOSCOW
+					state_region = s:STATE_YAROSLAVL
+					state_region = s:STATE_NIZHNY_NOVGOROD
+					state_region = s:STATE_CHUVASHIA
+					state_region = s:STATE_KAZAN
+					state_region = s:STATE_UFA
+					state_region = s:STATE_CHELYABINSK
+					state_region = s:STATE_URAL
+					state_region = s:STATE_TOBOLSK
+					state_region = s:STATE_TOMSK
+					state_region = s:STATE_KRASNOYARSK
+					state_region = s:STATE_IRKUTSK
+					state_region = s:STATE_BURYATIA
+					state_region = s:STATE_TRANS_BAIKAL
+					state_region = s:STATE_YAKUTSK
+					state_region = s:STATE_OKHOTSK
+					state_region = s:STATE_AMUR
+					state_region = s:STATE_OUTER_MANCHURIA
+				}
+				NOR = {
+					has_building = building_railway
+					any_scope_building = {
+						is_building_type = building_railway
+						is_under_construction = yes
+					}
+				}
+			}
+			add = 10000
+		}
+		else_if = { # Shinkansen, my beloved
+			limit = {
+				owner = {
+					has_journal_entry = je_meiji_economy
+				}
+				is_incorporated = yes # Japan proper
+				NOR = {
+					has_building = building_railway
+					any_scope_building = {
+						is_building_type = building_railway
+						is_under_construction = yes
+					}
+				}
+			}
+			add = 10000
+		}
+		else_if = { # Trans-Continental Railways
+			limit = {
+				owner = {
+					has_journal_entry = je_trans_continental_railway
+				}
+				OR = {
+					state_region = s:STATE_NEBRASKA
+					state_region = s:STATE_WYOMING
+					state_region = s:STATE_UTAH
+					state_region = s:STATE_NEVADA
+					state_region = s:STATE_CALIFORNIA
+				}
+				NOR = {
+					has_building = building_railway
+					any_scope_building = {
+						is_building_type = building_railway
+						is_under_construction = yes
+					}
+				}
+			}
+			add = 10000
+		}
+		else_if = { # Canadian Pacific Highway
+			limit = {
+				owner = {
+					has_journal_entry = je_canada_pacific_railway
+				}
+				OR = {
+					state_region = s:STATE_QUEBEC
+					state_region = s:STATE_BRITISH_COLUMBIA
+					state_region = s:STATE_ONTARIO
+					state_region = s:STATE_ALBERTA
+					state_region = s:STATE_SASKATCHEWAN
+					state_region = s:STATE_MANITOBA
+				}
+				NOR = {
+					has_building = building_railway
+					any_scope_building = {
+						is_building_type = building_railway
+						is_under_construction = yes
+					}
+				}
+			}
+			add = 10000
+		}
+		else_if = { # AI Metternich wants railways
+			limit = {
+				owner ?= {
+					c:AUS ?= this
+					has_journal_entry = je_metternich
+				}
+				is_incorporated = yes
+				NOR = {
+					has_building = building_railway
+					any_scope_building = {
+						is_building_type = building_railway
+						is_under_construction = yes
+					}
+				}
+			}
+            add = 10000
+		}
+		else_if = { # Portugal - Regeneration
+			limit = {
+				owner = {
+					has_journal_entry = je_portugal_regeneration_public_works
+				}
+				is_incorporated = yes
+				NOR = {
+					has_building = building_railway
+					any_scope_building = {
+						is_building_type = building_railway
+						is_under_construction = yes
+					}
+				}
+			}
+            add = 10000
+		}
+		
+		if = { # Manchurian Railway
+			limit = {
+				exists = c:RUS
+				c:RUS ?= owner
+				# OR = {
+					region = sr:region_manchuria
+				# }
+				any_scope_building = {
+					is_building_type = building_railway
+					levels_owned_by_country = {  
+						target = c:RUS  
+						value  < 1
+					}
+				}
+			}
+			add = 10000
+		}
+	}
+	
+	ownership_type = self
+	
+	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_railways.dds"
+}
+
+building_usu_railway_line = {
+	building_group = bg_usu_railway_line
+	icon = "gfx/interface/icons/building_icons/building_railway.dds"
+	
+	ai_nationalization_desire = 0.5 # AI is reluctant to privatize railways since they are likely to need subsidies anyway
+	
+	unlocking_technologies = {
+		railways
+	}
+	
+	production_method_groups = {
+		pmg_base_building_railway
+		pmg_passenger_trains
+		pmg_automation_building_railway
+		# pmg_gaudi_communication #MORGENRÖTE
+	}
+	
+	required_construction = construction_cost_very_high
+	
+	ai_value = {
+		value = 2000 # Railways are important
+		
+		if = { # Trans-Siberian Railway
+			limit = {
+				owner = {
+					has_journal_entry = je_trans_siberian_railway
+				}
+				OR = {
+					state_region = s:STATE_MOSCOW
+					state_region = s:STATE_YAROSLAVL
+					state_region = s:STATE_NIZHNY_NOVGOROD
+					state_region = s:STATE_CHUVASHIA
+					state_region = s:STATE_KAZAN
+					state_region = s:STATE_UFA
+					state_region = s:STATE_CHELYABINSK
+					state_region = s:STATE_URAL
+					state_region = s:STATE_TOBOLSK
+					state_region = s:STATE_TOMSK
+					state_region = s:STATE_KRASNOYARSK
+					state_region = s:STATE_IRKUTSK
+					state_region = s:STATE_BURYATIA
+					state_region = s:STATE_TRANS_BAIKAL
+					state_region = s:STATE_YAKUTSK
+					state_region = s:STATE_OKHOTSK
+					state_region = s:STATE_AMUR
+					state_region = s:STATE_OUTER_MANCHURIA
+				}
+				NOR = {
+					has_building = building_usu_railway_line
+					any_scope_building = {
+						is_building_type = building_usu_railway_line
+						is_under_construction = yes
+					}
+				}
+			}
+			add = 10000
+		}
+		else_if = { # Shinkansen, my beloved
+			limit = {
+				owner = {
+					has_journal_entry = je_meiji_economy
+				}
+				is_incorporated = yes # Japan proper
+				NOR = {
+					has_building = building_usu_railway_line
+					any_scope_building = {
+						is_building_type = building_usu_railway_line
+						is_under_construction = yes
+					}
+				}
+			}
+			add = 10000
+		}
+		else_if = { # Trans-Continental Railways
+			limit = {
+				owner = {
+					has_journal_entry = je_trans_continental_railway
+				}
+				OR = {
+					state_region = s:STATE_NEBRASKA
+					state_region = s:STATE_WYOMING
+					state_region = s:STATE_UTAH
+					state_region = s:STATE_NEVADA
+					state_region = s:STATE_CALIFORNIA
+				}
+				NOR = {
+					has_building = building_usu_railway_line
+					any_scope_building = {
+						is_building_type = building_usu_railway_line
+						is_under_construction = yes
+					}
+				}
+			}
+			add = 10000
+		}
+		else_if = { # Canadian Pacific Highway
+			limit = {
+				owner = {
+					has_journal_entry = je_canada_pacific_railway
+				}
+				OR = {
+					state_region = s:STATE_QUEBEC
+					state_region = s:STATE_BRITISH_COLUMBIA
+					state_region = s:STATE_ONTARIO
+					state_region = s:STATE_ALBERTA
+					state_region = s:STATE_SASKATCHEWAN
+					state_region = s:STATE_MANITOBA
+				}
+				NOR = {
+					has_building = building_usu_railway_line
+					any_scope_building = {
+						is_building_type = building_usu_railway_line
+						is_under_construction = yes
+					}
+				}
+			}
+			add = 10000
+		}
+		else_if = { # AI Metternich wants railways
+			limit = {
+				owner ?= {
+					c:AUS ?= this
+					has_journal_entry = je_metternich
+				}
+				is_incorporated = yes
+				NOR = {
+					has_building = building_usu_railway_line
+					any_scope_building = {
+						is_building_type = building_usu_railway_line
+						is_under_construction = yes
+					}
+				}
+			}
+            add = 10000
+		}
+		else_if = { # Portugal - Regeneration
+			limit = {
+				owner = {
+					has_journal_entry = je_portugal_regeneration_public_works
+				}
+				is_incorporated = yes
+				NOR = {
+					has_building = building_usu_railway_line
+					any_scope_building = {
+						is_building_type = building_usu_railway_line
+						is_under_construction = yes
+					}
+				}
+			}
+            add = 10000
+		}
+		
+		if = { # Manchurian Railway
+			limit = {
+				exists = c:RUS
+				c:RUS ?= owner
+				# OR = {
+					region = sr:region_manchuria
+				# }
+				any_scope_building = {
+					is_building_type = building_usu_railway_line
+					levels_owned_by_country = {  
+						target = c:RUS  
+						value  < 1
+					}
+				}
+			}
+			add = 10000
+		}
+		
+		if = { # Get them started at least...
+			limit = {
+				NOT = { exists = b:building_usu_railway_line }
+			}
+			add = 2000
+		}
+		
+		if = {
+			limit = {
+				relative_infrastructure < 1.1
+			}
+			multiply = 2
+		}
+		if = {
+			limit = {
+				relative_infrastructure < 1
+			}
+			multiply = 2
+		}
+		
+		if = {
+			limit = {
+				usu_calculate_building_good_ai_value_profit_adjustment = {
+					building = building_usu_railway_line
+					good = transportation
+				#	employees_per_level = 1000 # DO NOT PASS UNUSED VALUES
+					fallback_production = 115
+				}
+			}
+			subtract = scope:result
+		}
+	}
+	
+	ownership_type = self
+	
+	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_railways.dds"
+}
+
+# Done for regular railways within morgenrote - needs to be re-done here because this reworks railways.
+TRY_INJECT:building_usu_railway_line = {
+	production_method_groups = {
+		pmg_gaudi_communication #MORGENRÖTE
+	}
+}

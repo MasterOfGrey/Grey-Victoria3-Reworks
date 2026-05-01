@@ -16,12 +16,16 @@
  building_river_port: "River Docks"
  usu_building_public_green: "Public Green"
  
+ bg_usu_railway_line: "Railways"
+ building_usu_railway_line: "Railway"
+ 
  # Technologies
  
  # Goods
  usu_logistics: "Logistics Services"
  trade_route_import_lens_option_usu_logistics_tooltip: "Establish an $usu_logistics$ import trade route"
  trade_route_export_lens_option_usu_logistics_tooltip: "Establish an $usu_logistics$ export trade route"
+ usu_train_paths: "Train Paths"
  
  # Modifier types
  state_building_river_port_max_level_add: "River Port Max Level"
@@ -29,13 +33,23 @@
  
  goods_input_usu_logistics_add:   "@usu_logistics![Nbsp]$usu_logistics$ input"
  goods_output_usu_logistics_add:  "@usu_logistics![Nbsp]$usu_logistics$ output"
- goods_input_usu_logistics_mult:  "Building @usu_logistics![Nbsp]$usu_logistics$ input"
- goods_output_usu_logistics_mult: "Building @usu_logistics![Nbsp]$usu_logistics$ output"
+ goods_input_usu_logistics_mult:  "@usu_logistics![Nbsp]$usu_logistics$ input"
+ goods_output_usu_logistics_mult: "@usu_logistics![Nbsp]$usu_logistics$ output"
  
  goods_input_usu_logistics_add_desc:   "The amount of @usu_logistics![Nbsp]$usu_logistics$ consumed by buildings"
  goods_output_usu_logistics_add_desc:  "The amount of @usu_logistics![Nbsp]$usu_logistics$ produced by buildings"
  goods_input_usu_logistics_mult_desc:  "A bonus or penalty to the amount of @usu_logistics![Nbsp]$usu_logistics$ consumed by buildings"
  goods_output_usu_logistics_mult_desc: "A bonus or penalty to the amount of @usu_logistics![Nbsp]$usu_logistics$ produced by buildings"
+ 
+ goods_input_usu_train_paths_add:   "@usu_train_paths![Nbsp]$usu_train_paths$ input"
+ goods_output_usu_train_paths_add:  "@usu_train_paths![Nbsp]$usu_train_paths$ output"
+ goods_input_usu_train_paths_mult:  "@usu_train_paths![Nbsp]$usu_train_paths$ input"
+ goods_output_usu_train_paths_mult: "@usu_train_paths![Nbsp]$usu_train_paths$ output"
+ 
+ goods_input_usu_train_paths_add_desc:   "The amount of @usu_train_paths![Nbsp]$usu_train_paths$ consumed by buildings"
+ goods_output_usu_train_paths_add_desc:  "The amount of @usu_train_paths![Nbsp]$usu_train_paths$ produced by buildings"
+ goods_input_usu_train_paths_mult_desc:  "A bonus or penalty to the amount of @usu_train_paths![Nbsp]$usu_train_paths$ consumed by buildings"
+ goods_output_usu_train_paths_mult_desc: "A bonus or penalty to the amount of @usu_train_paths![Nbsp]$usu_train_paths$ produced by buildings"
  
  usu_building_public_green_throughput_add: "$usu_building_public_green$ building [concept_throughput]"
  usu_building_public_green_throughput_add_desc: "A bonus or penalty to both input and output of $usu_building_public_green$"
