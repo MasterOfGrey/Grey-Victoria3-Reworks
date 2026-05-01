@@ -138,6 +138,7 @@ mog_normal_building_confirm = {
 			is_building_type = building_construction_sector
 			
 			is_building_type = building_railway
+			is_building_type = building_usu_railway_line
 			is_building_type = building_port
 			is_building_type = building_river_port
 			is_building_type = building_power_plant

@@ -127,6 +127,15 @@ REPLACE_OR_CREATE:building_river_port_throughput_add={
 	}
 }
 
+REPLACE_OR_CREATE:building_usu_railway_line_throughput_add={
+	decimals=0
+	color=good
+	percent=yes
+	game_data={
+		ai_value=0
+	}
+}
+
 # Encourage the AI please to be sensible (vanilla overwrites):
 REPLACE_OR_CREATE:state_market_access_price_impact={
 	decimals=1

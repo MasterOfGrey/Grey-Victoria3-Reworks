@@ -13,7 +13,7 @@
 		region_state:USA={
 			create_building={
 				building="building_river_port"
-				level=4
+				level=1
 				activate_production_methods={ "pm_rp_small_port" }
 			}		
 		}
@@ -23,7 +23,7 @@
 		region_state:USA={
 			create_building={
 				building="building_river_port"
-				level=4
+				level=1
 				activate_production_methods={ "pm_rp_small_port" }
 			}		
 		}
@@ -43,7 +43,7 @@
 		region_state:USA={
 			create_building={
 				building="building_river_port"
-				level=4
+				level=1
 				activate_production_methods={ "pm_rp_small_port" }
 			}		
 		}
@@ -72,7 +72,7 @@
 		region_state:USA={
 			create_building={
 				building="building_river_port"
-				level=4
+				level=1
 				activate_production_methods={ "pm_rp_small_port" }
 			}		
 		}

@@ -407,6 +407,7 @@ TRY_REPLACE:company_basileiades = {
 	
 	extension_building_types = {
 		building_railway
+		building_usu_railway_line
 		building_river_port
 		building_military_shipyard
 	}
@@ -794,6 +795,7 @@ TRY_REPLACE:company_schichau = {
 	
 	extension_building_types = {
 		building_railway
+		building_usu_railway_line
 		building_steel_mill
 		building_river_port
 	}
@@ -1593,7 +1595,8 @@ TRY_REPLACE:company_putilov_company = {
 	}
 	
 	prosperity_modifier = {
-		building_railway_throughput_add = 0.1
+		building_railway_throughput_add = 0.05
+		building_usu_railway_line_throughput_add = 0.1
 		state_infrastructure_mult = 0.05
 	}	
 	

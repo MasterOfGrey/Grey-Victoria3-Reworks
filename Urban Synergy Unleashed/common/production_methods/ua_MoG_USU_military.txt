@@ -1,98 +1,100 @@
-﻿INJECT:pm_no_organization = {
-	building_modifiers = {
-		workforce_scaled = {
-			goods_input_usu_logistics_add = 0.5
-		}
-	}
-}
-
-INJECT:pm_general_training = {
-	building_modifiers = {
-		workforce_scaled = {
-			goods_input_usu_logistics_add = 1
-		}
-	}
-}
-
-INJECT:pm_advanced_tactics_training = {
-	building_modifiers = {
-		workforce_scaled = {
-			goods_input_usu_logistics_add = 1.5
-		}
-	}
-}
-
-INJECT:pm_training_streamlining = {
-	building_modifiers = {
-		workforce_scaled = {
-			goods_input_usu_logistics_add = 2
-		}
-	}
-}
-
-INJECT:pm_nco_incorporation = {
-	building_modifiers = {
-		workforce_scaled = {
-			goods_input_usu_logistics_add = 2.5
-		}
-	}
-}
-
-INJECT:pm_mobile_warfare_tactics = {
-	building_modifiers = {
-		workforce_scaled = {
-			goods_input_usu_logistics_add = 3
-		}
-	}
-}
-
-INJECT:pm_no_organization_conscription = {
-	building_modifiers = {
-		workforce_scaled = {
-			goods_input_usu_logistics_add = 0.5
-		}
-	}
-}
-
-INJECT:pm_general_training_conscription = {
-	building_modifiers = {
-		workforce_scaled = {
-			goods_input_usu_logistics_add = 1
-		}
-	}
-}
-
-INJECT:pm_advanced_tactics_training_conscription = {
-	building_modifiers = {
-		workforce_scaled = {
-			goods_input_usu_logistics_add = 1.5
-		}
-	}
-}
-
-INJECT:pm_training_streamlining_conscription = {
-	building_modifiers = {
-		workforce_scaled = {
-			goods_input_usu_logistics_add = 2
-		}
-	}
-}
-
-INJECT:pm_nco_incorporation_conscription = {
-	building_modifiers = {
-		workforce_scaled = {
-			goods_input_usu_logistics_add = 2.5
-		}
-	}
-}
-
-INJECT:pm_mobile_warfare_tactics_conscription = {
-	building_modifiers = {
-		workforce_scaled = {
-			goods_input_usu_logistics_add = 3
-		}
-	}
-}
+﻿### File has Army First, and Navy Second. ###
+## Army Logistics consumption moved to unit upkeep modifiers now. 
+#INJECT:pm_no_organization = {
+#	building_modifiers = {
+#		workforce_scaled = {
+#			goods_input_usu_logistics_add = 0.5
+#		}
+#	}
+#}
+#
+#INJECT:pm_general_training = {
+#	building_modifiers = {
+#		workforce_scaled = {
+#			goods_input_usu_logistics_add = 1
+#		}
+#	}
+#}
+#
+#INJECT:pm_advanced_tactics_training = {
+#	building_modifiers = {
+#		workforce_scaled = {
+#			goods_input_usu_logistics_add = 1.5
+#		}
+#	}
+#}
+#
+#INJECT:pm_training_streamlining = {
+#	building_modifiers = {
+#		workforce_scaled = {
+#			goods_input_usu_logistics_add = 2
+#		}
+#	}
+#}
+#
+#INJECT:pm_nco_incorporation = {
+#	building_modifiers = {
+#		workforce_scaled = {
+#			goods_input_usu_logistics_add = 2.5
+#		}
+#	}
+#}
+#
+#INJECT:pm_mobile_warfare_tactics = {
+#	building_modifiers = {
+#		workforce_scaled = {
+#			goods_input_usu_logistics_add = 3
+#		}
+#	}
+#}
+#
+#INJECT:pm_no_organization_conscription = {
+#	building_modifiers = {
+#		workforce_scaled = {
+#			goods_input_usu_logistics_add = 0.5
+#		}
+#	}
+#}
+#
+#INJECT:pm_general_training_conscription = {
+#	building_modifiers = {
+#		workforce_scaled = {
+#			goods_input_usu_logistics_add = 1
+#		}
+#	}
+#}
+#
+#INJECT:pm_advanced_tactics_training_conscription = {
+#	building_modifiers = {
+#		workforce_scaled = {
+#			goods_input_usu_logistics_add = 1.5
+#		}
+#	}
+#}
+#
+#INJECT:pm_training_streamlining_conscription = {
+#	building_modifiers = {
+#		workforce_scaled = {
+#			goods_input_usu_logistics_add = 2
+#		}
+#	}
+#}
+#
+#INJECT:pm_nco_incorporation_conscription = {
+#	building_modifiers = {
+#		workforce_scaled = {
+#			goods_input_usu_logistics_add = 2.5
+#		}
+#	}
+#}
+#
+#INJECT:pm_mobile_warfare_tactics_conscription = {
+#	building_modifiers = {
+#		workforce_scaled = {
+#			goods_input_usu_logistics_add = 3
+#		}
+#	}
+#}
 
 INJECT:pm_no_naval_theory = {
 	building_modifiers = {

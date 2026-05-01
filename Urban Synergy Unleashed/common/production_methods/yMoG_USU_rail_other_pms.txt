@@ -6,6 +6,7 @@ REPLACE_OR_CREATE:pm_no_passenger_trains = {
 		workforce_scaled = {
 			goods_input_usu_train_paths_add = 1		#-200	# Putting here should keep the AI behaviour clean.
 			goods_output_transportation_add = 6		#+180	# Full utilisation of train paths should be limiting.
+			goods_output_usu_logistics_add = 6		#+60	# No passengers frees up capacity early-game when logistics is expensive AF.
 		}
 	}
 }
@@ -17,8 +18,8 @@ REPLACE_OR_CREATE:pm_wooden_passenger_carriages = {
 		workforce_scaled = {
 			goods_input_usu_train_paths_add = 1		#-200	# Putting here should keep the AI behaviour clean.
 			goods_output_transportation_add = 6		#+180	# Full utilisation of train paths should be limiting.
-			goods_input_wood_add = 6
-			goods_output_transportation_add = 10
+			goods_input_wood_add = 6				#-120
+			goods_output_transportation_add = 10	#+300
 		}
 		level_scaled = {
 		#	building_employment_clerks_add = 250

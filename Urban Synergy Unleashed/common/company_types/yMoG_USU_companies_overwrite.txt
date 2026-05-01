@@ -155,6 +155,7 @@ TRY_REPLACE:company_basic_motors = {
 	extension_building_types = {
 		building_steel_mill
 		building_railway
+		building_usu_railway_line
 	}
 
 	possible = {

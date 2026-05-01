@@ -33,8 +33,8 @@
  
  goods_input_usu_logistics_add:   "@usu_logistics![Nbsp]$usu_logistics$ input"
  goods_output_usu_logistics_add:  "@usu_logistics![Nbsp]$usu_logistics$ output"
- goods_input_usu_logistics_mult:  "Building @usu_logistics![Nbsp]$usu_logistics$ input"
- goods_output_usu_logistics_mult: "Building @usu_logistics![Nbsp]$usu_logistics$ output"
+ goods_input_usu_logistics_mult:  "@usu_logistics![Nbsp]$usu_logistics$ input"
+ goods_output_usu_logistics_mult: "@usu_logistics![Nbsp]$usu_logistics$ output"
  
  goods_input_usu_logistics_add_desc:   "The amount of @usu_logistics![Nbsp]$usu_logistics$ consumed by buildings"
  goods_output_usu_logistics_add_desc:  "The amount of @usu_logistics![Nbsp]$usu_logistics$ produced by buildings"
@@ -43,8 +43,8 @@
  
  goods_input_usu_train_paths_add:   "@usu_train_paths![Nbsp]$usu_train_paths$ input"
  goods_output_usu_train_paths_add:  "@usu_train_paths![Nbsp]$usu_train_paths$ output"
- goods_input_usu_train_paths_mult:  "Building @usu_train_paths![Nbsp]$usu_train_paths$ input"
- goods_output_usu_train_paths_mult: "Building @usu_train_paths![Nbsp]$usu_train_paths$ output"
+ goods_input_usu_train_paths_mult:  "@usu_train_paths![Nbsp]$usu_train_paths$ input"
+ goods_output_usu_train_paths_mult: "@usu_train_paths![Nbsp]$usu_train_paths$ output"
  
  goods_input_usu_train_paths_add_desc:   "The amount of @usu_train_paths![Nbsp]$usu_train_paths$ consumed by buildings"
  goods_output_usu_train_paths_add_desc:  "The amount of @usu_train_paths![Nbsp]$usu_train_paths$ produced by buildings"

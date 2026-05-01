@@ -23,11 +23,11 @@ REPLACE_OR_CREATE:pm_anchorage = {
 		}
 	}
 	
-	country_modifiers = {
-		workforce_scaled = {
-			country_convoys_capacity_add = 25 # Uses ~10 logistics
-		}
-	}
+	#country_modifiers = {
+	#	workforce_scaled = {
+	#		country_convoys_capacity_add = 25 # Uses ~10 logistics
+	#	}
+	#}
 	
 	state_modifiers = {
 		unscaled = {
@@ -58,11 +58,11 @@ REPLACE_OR_CREATE:pm_basic_port = {
 		}
 	}
 	
-	country_modifiers = {
-		workforce_scaled = {
-			country_convoys_capacity_add = 100 # 400
-		}
-	}
+	#country_modifiers = {
+	#	workforce_scaled = {
+	#		country_convoys_capacity_add = 100 # 400
+	#	}
+	#}
 	
 	state_modifiers = {
 		unscaled = {
@@ -71,7 +71,7 @@ REPLACE_OR_CREATE:pm_basic_port = {
 		}
 		workforce_scaled = {
 			state_infrastructure_add = 5 # 3	# (Was 10 after 1.9.5)
-			building_railway_throughput_add = 0.01
+			building_usu_railway_line_throughput_add = 0.01
 		}
 		level_scaled = {
 			state_infrastructure_add = 10
@@ -103,11 +103,11 @@ REPLACE_OR_CREATE:pm_industrial_port = {
 		}
 	}
 	
-	country_modifiers = {
-		workforce_scaled = {
-			country_convoys_capacity_add = 150 # 700
-		}
-	}
+	#country_modifiers = {
+	#	workforce_scaled = {
+	#		country_convoys_capacity_add = 150 # 700
+	#	}
+	#}
 	
 	state_modifiers = {
 		unscaled = {
@@ -116,7 +116,7 @@ REPLACE_OR_CREATE:pm_industrial_port = {
 		}
 		workforce_scaled = {
 			state_infrastructure_add = 10 # 4	# (Was 25 after 1.9.5)
-			building_railway_throughput_add = 0.01
+			building_usu_railway_line_throughput_add = 0.01
 		}
 		level_scaled = {
 			state_infrastructure_add = 15
@@ -149,11 +149,11 @@ REPLACE_OR_CREATE:pm_modern_port = {
 		}
 	}
 
-	country_modifiers = {
-		workforce_scaled = {
-			country_convoys_capacity_add = 200 # 1100
-		}
-	}
+	#country_modifiers = {
+	#	workforce_scaled = {
+	#		country_convoys_capacity_add = 200 # 1100
+	#	}
+	#}
 	
 	state_modifiers = {
 		unscaled = {
@@ -162,7 +162,7 @@ REPLACE_OR_CREATE:pm_modern_port = {
 		}
 		workforce_scaled = {
 			state_infrastructure_add = 15 # 5	# (Was 40 after 1.9.5)
-			building_railway_throughput_add = 0.01
+			building_usu_railway_line_throughput_add = 0.01
 		}
 		level_scaled = {
 			state_infrastructure_add = 20

@@ -34,12 +34,13 @@ REPLACE_OR_CREATE:pm_usu_pass_through_terminal = {	# Era 3
 }
 
 ### Logistics Services (will scale slower with stations than with old railways, review balance later)
+# Logistics for Rail was originally = 4x Port Logi + 2
 
 REPLACE_OR_CREATE:usu_pm_rail_logistics_0 = {
 	texture = "gfx/interface/icons/production_method_icons/log_0.dds"
 	building_modifiers = {
 		workforce_scaled = {	
-			goods_output_usu_logistics_add = 2			# 20 profit
+			goods_output_usu_logistics_add = 6 # 3x original rail amount: 2	# 20 profit
 		}
 	}
 }
@@ -52,7 +53,7 @@ REPLACE_OR_CREATE:usu_pm_rail_logistics_1 = {
 	building_modifiers = {
 		workforce_scaled = {	
 			goods_input_merchant_marine_add = 1	# 1:5 at base price 1:20 at extremity
-			goods_output_usu_logistics_add = 14 # 8		# 90 profit
+			goods_output_usu_logistics_add = 42 # 3x original rail amount: 14 # 90 profit
 		}
 	}
 	state_modifiers = {
@@ -75,7 +76,7 @@ REPLACE_OR_CREATE:usu_pm_rail_logistics_2 = {
 	building_modifiers = {
 		workforce_scaled = {	
 			goods_input_merchant_marine_add = 2	# 1:5 at base price 1:20 at extremity
-			goods_output_usu_logistics_add = 28 # 16		# 180 profit
+			goods_output_usu_logistics_add = 84 # 3x original rail amount: 28 # 180 profit
 		}
 	}
 	state_modifiers = {
@@ -102,7 +103,7 @@ REPLACE_OR_CREATE:usu_pm_rail_logistics_3 = {
 	building_modifiers = {
 		workforce_scaled = {	
 			goods_input_merchant_marine_add = 3	# 1:5 at base price 1:20 at extremity
-			goods_output_usu_logistics_add = 42 # 24		# 270 profit
+			goods_output_usu_logistics_add = 126 # 3x original rail amount: 42 # 270 profit
 		}
 	}
 	state_modifiers = {
