@@ -1,4 +1,12 @@
 ﻿l_simp_chinese:
+ # Concepts
+ concept_usu_railway_station: "Railway Terminal" #This is the actual id of the concept
+ concept_usu_railway_stations: "Railway Terminals" #You can use this for plural: [Concept('concept_usu_railway_station','$concept_usu_railway_stations$')]
+ concept_usu_railway_station_desc: "#b 火车站#! 是一座作为物流网络枢纽的建筑。它是一座纯民用建筑，提供[GetGoods('usu_train_paths').GetName] 和[GetGoods('usu_logistics').GetName] ，但也消耗各种货物，包括[GetGoods('tools').GetName],[GetGoods('paper').GetName],[GetGoods('aeroplanes').GetName] 和[GetGoods('oil').GetName] 。[GetGoods('electricity').GetName] [GetGoods('telephones').GetName] [GetGoods('radios').GetName]\n如果您有足够多的 Airports ， 就会成立，随着您的 Airports 的增长， Airline 也会增长，并提供更多奖励。#b #! [concept_curtiss_airline] #b #! #b #! " #deepl:775810903
+
+ # Tooltips 
+ usu_railway_station_can_construct_tt: "一个州可支持的[Concept('concept_curtiss_airport','$concept_curtiss_airports$')] 最高级别等于 1 加 1，每 10 个#G #! [GetBuildingType('building_urban_center').GetName] 。" #deepl:1884813676
+
  # Railways
  pm_ac_electric_trains: "交流电动火车"
  pm_ac_electric_trains_principle_transport_3: "联合交流电动火车"
@@ -11,6 +19,10 @@
  pm_watertube_boiler_building_railway: "水管锅炉"
  pm_rotary_valve_engine_building_railway: "旋转阀发动机"
  pm_steam_donkey_building_railway: "辅助蒸汽机"
+ 
+ pmg_base_building_rail_terminal: "航站楼基础设施" #deepl:3593176856
+ pm_usu_stub_end_terminal: "短端接线端子" #deepl:1656920068
+ pm_usu_pass_through_terminal: "直通终端" #deepl:3737399705
  
  # Ports
  pmg_automation_port: "设备自动化" #deepl:2147123001

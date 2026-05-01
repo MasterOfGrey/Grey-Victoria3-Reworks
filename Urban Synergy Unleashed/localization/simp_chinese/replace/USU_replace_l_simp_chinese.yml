@@ -5,6 +5,7 @@
  alert_wasted_construction_action: "建造面板"
  wasted_construction_setting_name: "未使用的建造力"
  
+ # USU Infrastructure
  pm_electric_trains: "直流电动火车"
  pm_electric_trains_principle_transport_3: "连接DC电动火车"
  pm_electric_streetlights: "月光塔"
@@ -16,4 +17,14 @@
  pm_public_trams: "马拉电车"
  pm_public_motor_carriages: "城市公交车"
  
+ bg_power: "热电站" #deepl:1853276522
  building_power_plant: "热电厂" #deepl:3279637597
+ building_railway: "铁路客运站" #deepl:1768381803
+ 
+ # Misc. Vanilla that were missing but now aren't?
+ goods_output_electricity_mult: "建筑@electricity![Nbsp] $electricity$ 输出" #deepl:320784986
+ goods_output_electricity_mult_desc: "对建筑物产生的@electricity![Nbsp] $electricity$ 量的奖励或惩罚" #deepl:145655897
+ goods_input_luxury_clothes_add: "@luxury_clothes![Nbsp]$luxury_clothes$ 输入" #deepl:3302038186
+ goods_input_luxury_clothes_add_desc: "建筑物消耗的@luxury_clothes![Nbsp] $luxury_clothes$ " #deepl:3477511040
+ goods_input_services_add: "@services![Nbsp]$services$ 输入" #deepl:2678123429
+ goods_input_services_add_desc: "建筑物消耗的@services![Nbsp] $services$ " #deepl:1408821948

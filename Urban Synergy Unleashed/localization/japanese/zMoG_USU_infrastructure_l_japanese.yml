@@ -1,4 +1,12 @@
 ﻿l_japanese:
+ # Concepts
+ concept_usu_railway_station: "Railway Terminal" #This is the actual id of the concept
+ concept_usu_railway_stations: "Railway Terminals" #You can use this for plural: [Concept('concept_usu_railway_station','$concept_usu_railway_stations$')]
+ concept_usu_railway_station_desc: "#b 鉄道ターミナル#! はあなたの物流ネットワークのハブとして機能する建物です。これは純粋な民間建物で、[GetGoods('usu_train_paths').GetName] と[GetGoods('usu_logistics').GetName] を供給しますが、[GetGoods('tools').GetName] 、[GetGoods('paper').GetName] 、[GetGoods('aeroplanes').GetName] 、[GetGoods('oil').GetName] から始まる様々な物資を消費します。後に[GetGoods('electricity').GetName],[GetGoods('telephones').GetName],[GetGoods('radios').GetName] も必要となります。\n #b  空港#! が十分にあれば[concept_curtiss_airline] が設立され、#b 空港#! の成長とともに#b 航空会社#! も成長し、より多くのボーナスを提供します。" #deepl:775810903
+
+ # Tooltips 
+ usu_railway_station_can_construct_tt: "州がサポートできる[Concept('concept_curtiss_airport','$concept_curtiss_airports$')] の最大レベルは、#G の10レベル#! ごとに1に1を加えたものに等しい[GetBuildingType('building_urban_center').GetName] 。" #deepl:1884813676
+
  # Railways
  pm_ac_electric_trains: "交流電気機関車"
  pm_ac_electric_trains_principle_transport_3: "ジョイントAC電気列車"
@@ -11,6 +19,10 @@
  pm_watertube_boiler_building_railway: "火管ボイラー"
  pm_rotary_valve_engine_building_railway: "ユニフローロータリーバルブギア"
  pm_steam_donkey_building_railway: "ギア付き蒸気駆動装置"
+ 
+ pmg_base_building_rail_terminal: "ターミナルインフラ" #deepl:3593176856
+ pm_usu_stub_end_terminal: "スタブエンド端子" #deepl:1656920068
+ pm_usu_pass_through_terminal: "パススルー端子" #deepl:3737399705
  
  # Ports
  pmg_automation_port: "設備オートメーション" #deepl:2147123001

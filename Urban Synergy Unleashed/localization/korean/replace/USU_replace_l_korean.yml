@@ -5,6 +5,7 @@
  alert_wasted_construction_action: "건설 패널"
  wasted_construction_setting_name: "미사용 건설"
  
+ # USU Infrastructure
  pm_electric_trains: "DC 전기 기차"
  pm_electric_trains_principle_transport_3: "조인트 DC 전기 열차"
  pm_electric_streetlights: "문라이트 타워"
@@ -16,4 +17,14 @@
  pm_public_trams: "말이 끄는 전차"
  pm_public_motor_carriages: "시내버스"
  
+ bg_power: "화력 발전소" #deepl:1853276522
  building_power_plant: "화력발전소" #deepl:3279637597
+ building_railway: "철도 터미널" #deepl:1768381803
+ 
+ # Misc. Vanilla that were missing but now aren't?
+ goods_output_electricity_mult: "건물 @electricity![Nbsp] $electricity$ 출력" #deepl:320784986
+ goods_output_electricity_mult_desc: "건물에서 생산되는 @electricity![Nbsp] $electricity$ 금액에 대한 보너스 또는 페널티" #deepl:145655897
+ goods_input_luxury_clothes_add: "@luxury_clothes![Nbsp]$luxury_clothes$ 입력" #deepl:3302038186
+ goods_input_luxury_clothes_add_desc: "건물에서 소비하는 @luxury_clothes![Nbsp] $luxury_clothes$ 의 양" #deepl:3477511040
+ goods_input_services_add: "@services![Nbsp]$services$ 입력" #deepl:2678123429
+ goods_input_services_add_desc: "건물에서 소비하는 @services![Nbsp] $services$ 의 양" #deepl:1408821948

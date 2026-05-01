@@ -1,4 +1,5 @@
 ﻿l_braz_por:
+ # Tooltips 
  mr_airport_can_construct_tt: "O nível máximo de [Concept('concept_curtiss_airport','$concept_curtiss_airports$')] que um estado pode suportar é igual a 1 mais 1 para cada #G 10 níveis#! de [GetBuildingType('building_urban_center').GetName]." #deepl:1884813676
  
  # PMGs

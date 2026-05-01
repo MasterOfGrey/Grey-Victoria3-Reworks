@@ -5,6 +5,7 @@
  alert_wasted_construction_action: "建設パネル"
  wasted_construction_setting_name: "未使用の資材"
  
+ # USU Infrastructure
  pm_electric_trains: "直流電気機関車"
  pm_electric_trains_principle_transport_3: "ジョイントDC電車"
  pm_electric_streetlights: "ムーンライトタワー"
@@ -16,4 +17,14 @@
  pm_public_trams: "馬車"
  pm_public_motor_carriages: "市バス"
  
+ bg_power: "火力発電所" #deepl:1853276522
  building_power_plant: "火力発電所" #deepl:3279637597
+ building_railway: "鉄道ターミナル" #deepl:1768381803
+ 
+ # Misc. Vanilla that were missing but now aren't?
+ goods_output_electricity_mult: "建物@electricity![Nbsp] $electricity$ 出力" #deepl:320784986
+ goods_output_electricity_mult_desc: "建物から発生する@electricity![Nbsp] $electricity$ の量にボーナスまたはペナルティを与える。" #deepl:145655897
+ goods_input_luxury_clothes_add: "@luxury_clothes![Nbsp]$luxury_clothes$ 入力" #deepl:3302038186
+ goods_input_luxury_clothes_add_desc: "@luxury_clothes![Nbsp] $luxury_clothes$ 建物が消費する量" #deepl:3477511040
+ goods_input_services_add: "@services![Nbsp]$services$ 入力" #deepl:2678123429
+ goods_input_services_add_desc: "@services![Nbsp] $services$ 建物が消費する量" #deepl:1408821948

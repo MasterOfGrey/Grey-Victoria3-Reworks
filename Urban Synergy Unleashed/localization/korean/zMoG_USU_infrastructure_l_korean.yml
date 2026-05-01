@@ -1,4 +1,12 @@
 ﻿l_korean:
+ # Concepts
+ concept_usu_railway_station: "Railway Terminal" #This is the actual id of the concept
+ concept_usu_railway_stations: "Railway Terminals" #You can use this for plural: [Concept('concept_usu_railway_station','$concept_usu_railway_stations$')]
+ concept_usu_railway_station_desc: "#b 철도 터미널#! 은 물류 네트워크의 허브 역할을 하는 건물입니다. 순수 민간 건물로 [GetGoods('usu_train_paths').GetName] 와 [GetGoods('usu_logistics').GetName] 을 제공하지만 [GetGoods('tools').GetName], [GetGoods('paper').GetName], [GetGoods('aeroplanes').GetName], [GetGoods('oil').GetName] 에서 시작되는 다양한 상품을 소비합니다. 나중에 [GetGoods('electricity').GetName], [GetGoods('telephones').GetName], [GetGoods('radios').GetName] 도 필요합니다.\n #b  공항#! 이 충분하면 [concept_curtiss_airline] 이 설립되고 #b 공항#! 이 성장하면 #b 항공사#! 도 성장하고 더 많은 보너스를 제공합니다." #deepl:775810903
+
+ # Tooltips 
+ usu_railway_station_can_construct_tt: "주에서 지원할 수 있는 최대 레벨 [Concept('concept_curtiss_airport','$concept_curtiss_airports$')] 은 #G 10레벨#! 의 [GetBuildingType('building_urban_center').GetName] 에 1을 더한 값과 같습니다." #deepl:1884813676
+
  # Railways
  pm_ac_electric_trains: "AC 전기 기차"
  pm_ac_electric_trains_principle_transport_3: "조인트 AC 전기 열차"
@@ -11,6 +19,10 @@
  pm_watertube_boiler_building_railway: "화관 보일러"
  pm_rotary_valve_engine_building_railway: "유니플로우 로터리 밸브기어"
  pm_steam_donkey_building_railway: "기어드 스팀 드라이브트레인"
+ 
+ pmg_base_building_rail_terminal: "터미널 인프라" #deepl:3593176856
+ pm_usu_stub_end_terminal: "스텁 엔드 터미널" #deepl:1656920068
+ pm_usu_pass_through_terminal: "패스스루 터미널" #deepl:3737399705
  
  # Ports
  pmg_automation_port: "시설 자동화" #deepl:2147123001

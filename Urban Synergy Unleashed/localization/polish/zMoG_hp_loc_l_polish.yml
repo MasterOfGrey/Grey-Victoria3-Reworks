@@ -10,7 +10,7 @@
  # building_power_plant: "Thermal Power Plant" # moved to replace file
  usu_building_hydro_power_plant: "Elektrownia wodna" #deepl:3124269973
  
- bg_power: "Elektrownie cieplne" #deepl:1853276522
+ # bg_power: "Thermal Power Stations" # moved to replace file
  usu_bg_hydro_power: "Elektrownie wodne" #deepl:3011532326
  
  hp_pmg_hydro_power_plant: "Generacja Dynamo" #deepl:3018806291

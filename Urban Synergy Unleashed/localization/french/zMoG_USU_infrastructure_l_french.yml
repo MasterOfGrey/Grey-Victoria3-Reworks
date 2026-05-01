@@ -1,4 +1,12 @@
 ﻿l_french:
+ # Concepts
+ concept_usu_railway_station: "Railway Terminal" #This is the actual id of the concept
+ concept_usu_railway_stations: "Railway Terminals" #You can use this for plural: [Concept('concept_usu_railway_station','$concept_usu_railway_stations$')]
+ concept_usu_railway_station_desc: "Un terminal ferroviaire #b #! est un bâtiment qui sert de plaque tournante à votre réseau logistique. Il s'agit d'un bâtiment purement civil qui fournit [GetGoods('usu_train_paths').GetName] et [GetGoods('usu_logistics').GetName] mais consomme une variété de marchandises à partir de [GetGoods('tools').GetName], [GetGoods('paper').GetName], [GetGoods('aeroplanes').GetName] et [GetGoods('oil').GetName]. Plus tard, il aura besoin de [GetGoods('electricity').GetName], [GetGoods('telephones').GetName] et [GetGoods('radios').GetName].\nSi vous avez suffisamment d'aéroports #b #! et [concept_curtiss_airline] seront fondés et avec vos aéroports #b #! , la compagnie aérienne #b #! se développera également et offrira plus de bonus." #deepl:775810903
+
+ # Tooltips 
+ usu_railway_station_can_construct_tt: "Le niveau maximum de [Concept('concept_curtiss_airport','$concept_curtiss_airports$')] qu'un État peut supporter est égal à 1 plus 1 pour chaque #G 10 niveaux#! de [GetBuildingType('building_urban_center').GetName]." #deepl:1884813676
+
  # Railways
  pm_ac_electric_trains: "Trains électriques à courant alternatif"
  pm_ac_electric_trains_principle_transport_3: "Trains électriques à courant alternatif communs"
@@ -11,6 +19,10 @@
  pm_watertube_boiler_building_railway: "Chaudière à tubes de fumée"
  pm_rotary_valve_engine_building_railway: "Distribution rotative Uniflow"
  pm_steam_donkey_building_railway: "Transmission vapeur à engrenages"
+ 
+ pmg_base_building_rail_terminal: "Infrastructure des terminaux" #deepl:3593176856
+ pm_usu_stub_end_terminal: "Terminal à embout" #deepl:1656920068
+ pm_usu_pass_through_terminal: "Terminal de passage" #deepl:3737399705
  
  # Ports
  pmg_automation_port: "Automatisation des installations"

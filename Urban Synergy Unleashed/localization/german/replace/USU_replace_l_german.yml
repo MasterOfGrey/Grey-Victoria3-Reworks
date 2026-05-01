@@ -5,6 +5,7 @@
  alert_wasted_construction_action: "Bau-Tafel"
  wasted_construction_setting_name: "Ungenutzten Bau"
  
+ # USU Infrastructure
  pm_electric_trains: "Gleichstrom-Elektrozüge"
  pm_electric_trains_principle_transport_3: "Gemeinsame Gleichstrom-Elektrozüge"
  pm_electric_streetlights: "Mondscheintürme"
@@ -16,4 +17,14 @@
  pm_public_trams: "Pferdestraßenbahnen"
  pm_public_motor_carriages: "Stadtbusse"
  
+ bg_power: "Thermische Kraftwerke" #deepl:1853276522
  building_power_plant: "Wärmekraftwerk" #deepl:3279637597
+ building_railway: "Eisenbahnterminal" #deepl:1768381803
+ 
+ # Misc. Vanilla that were missing but now aren't?
+ goods_output_electricity_mult: "Gebäude @electricity![Nbsp] $electricity$ Ausgabe" #deepl:320784986
+ goods_output_electricity_mult_desc: "Ein Bonus oder Malus auf die Menge von @electricity![Nbsp] $electricity$ , die von Gebäuden erzeugt wird." #deepl:145655897
+ goods_input_luxury_clothes_add: "@luxury_clothes![Nbsp]$luxury_clothes$ Eingabe" #deepl:3302038186
+ goods_input_luxury_clothes_add_desc: "Die von Gebäuden verbrauchte Menge an @luxury_clothes![Nbsp] $luxury_clothes$ " #deepl:3477511040
+ goods_input_services_add: "@services![Nbsp]$services$ Eingabe" #deepl:2678123429
+ goods_input_services_add_desc: "Die von Gebäuden verbrauchte Menge an @services![Nbsp] $services$ " #deepl:1408821948

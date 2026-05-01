@@ -5,6 +5,7 @@
  alert_wasted_construction_action: "İnşaat Paneli"
  wasted_construction_setting_name: "Kullanılmamış İnşaat"
  
+ # USU Infrastructure
  pm_electric_trains: "DC Elektrikli Trenler"
  pm_electric_trains_principle_transport_3: "Ortak DC Elektrikli Trenler"
  pm_electric_streetlights: "Ay Işığı Kuleleri"
@@ -16,4 +17,14 @@
  pm_public_trams: "Atlı tramvaylar"
  pm_public_motor_carriages: "Şehir Otobüsleri"
  
+ bg_power: "Termik Güç İstasyonları" #deepl:1853276522
  building_power_plant: "Termik Santral" #deepl:3279637597
+ building_railway: "Demiryolu Terminali" #deepl:1768381803
+ 
+ # Misc. Vanilla that were missing but now aren't?
+ goods_output_electricity_mult: "Bina @electricity![Nbsp] $electricity$ çıktı" #deepl:320784986
+ goods_output_electricity_mult_desc: "Binalar tarafından üretilen @electricity![Nbsp] $electricity$ miktarına bonus veya ceza" #deepl:145655897
+ goods_input_luxury_clothes_add: "@luxury_clothes![Nbsp]$luxury_clothes$ giriş" #deepl:3302038186
+ goods_input_luxury_clothes_add_desc: "Binalar tarafından tüketilen @luxury_clothes![Nbsp] $luxury_clothes$ miktarı" #deepl:3477511040
+ goods_input_services_add: "@services![Nbsp]$services$ giriş" #deepl:2678123429
+ goods_input_services_add_desc: "Binalar tarafından tüketilen @services![Nbsp] $services$ miktarı" #deepl:1408821948

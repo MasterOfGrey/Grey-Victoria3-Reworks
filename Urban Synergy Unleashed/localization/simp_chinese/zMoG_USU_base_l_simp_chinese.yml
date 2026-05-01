@@ -1,6 +1,7 @@
 ﻿l_simp_chinese:
  # Modifiers
  mog_urbanization: "城市协同城市化"
+ mog_urbanization_start: "$mog_urbanization$" #deepl:3750669678
  mog_urbanization_mult: "城市协同城市化"
  mog_construction_max_level_adjustment: "城市协同建设"
  mog_logistics_land_trade: "进口物流服务的陆路贸易能力"
@@ -15,12 +16,16 @@
  building_river_port: "河码头"
  usu_building_public_green: "公共绿地"
  
+ bg_usu_railway_line: "铁路" #deepl:4225024860
+ building_usu_railway_line: "铁路" #deepl:2245543813
+ 
  # Technologies
  
  # Goods
  usu_logistics: "物流服务"
  trade_route_import_lens_option_usu_logistics_tooltip: "建立$usu_logistics$ 进口贸易路线" #deepl:29640115
  trade_route_export_lens_option_usu_logistics_tooltip: "建立$usu_logistics$ 出口贸易路线" #deepl:1994327992
+ usu_train_paths: "列车路径" #deepl:4226319768
  
  # Modifier types
  state_building_river_port_max_level_add: "河港最高等级"
@@ -28,13 +33,23 @@
  
  goods_input_usu_logistics_add: "@usu_logistics![Nbsp]$usu_logistics$ 输入"
  goods_output_usu_logistics_add: "@usu_logistics![Nbsp]$usu_logistics$ 输出"
- goods_input_usu_logistics_mult: "建设 @usu_logistics![Nbsp]$usu_logistics$ 输入" #deepl:3595168342
+ goods_input_usu_logistics_mult: "@usu_logistics![Nbsp]$usu_logistics$ 输入" #deepl:391097685
  goods_output_usu_logistics_mult: "构建 @usu_logistics![Nbsp]$usu_logistics$输出"
  
  goods_input_usu_logistics_add_desc: "建筑物消耗的 @usu_logistics![Nbsp]$usu_logistics$ 的数量"
  goods_output_usu_logistics_add_desc: "建筑物产生的 @usu_logistics![Nbsp]$usu_logistics$ 的数量"
  goods_input_usu_logistics_mult_desc: "对建筑物消耗的 @usu_logistics![Nbsp]$usu_logistics$ 数量的奖励或惩罚"
  goods_output_usu_logistics_mult_desc: "对建筑物生产的 @usu_logistics![Nbsp]$usu_logistics$ 数量的奖励或惩罚"
+ 
+ goods_input_usu_train_paths_add: "@usu_train_paths![Nbsp]$usu_train_paths$ 输入" #deepl:2263828233
+ goods_output_usu_train_paths_add: "@usu_train_paths![Nbsp]$usu_train_paths$ 产量" #deepl:1650211266
+ goods_input_usu_train_paths_mult: "@usu_train_paths![Nbsp]$usu_train_paths$ 输入" #deepl:2263828233
+ goods_output_usu_train_paths_mult: "@usu_train_paths![Nbsp]$usu_train_paths$ 产量" #deepl:1650211266
+ 
+ goods_input_usu_train_paths_add_desc: "建筑物消耗的@usu_train_paths![Nbsp] $usu_train_paths$ " #deepl:3269221933
+ goods_output_usu_train_paths_add_desc: "建筑物产生的@usu_train_paths![Nbsp] $usu_train_paths$ " #deepl:400272594
+ goods_input_usu_train_paths_mult_desc: "建筑物消耗的@usu_train_paths![Nbsp] $usu_train_paths$ 数量的奖励或惩罚" #deepl:173276281
+ goods_output_usu_train_paths_mult_desc: "对建筑物产生的@usu_train_paths![Nbsp] $usu_train_paths$ 量的奖励或惩罚" #deepl:3746827910
  
  usu_building_public_green_throughput_add: "$usu_building_public_green$ 建筑物[concept_throughput]" #deepl:1617626189
  usu_building_public_green_throughput_add_desc: "输入和输出的奖励或惩罚$usu_building_public_green$" #deepl:3185140157
@@ -44,17 +59,13 @@
  building_river_port_throughput_add_desc: "输入和输出的奖励或惩罚$building_river_port$" #deepl:3708668278
  usu_building_hydro_power_plant_throughput_add: "$usu_building_hydro_power_plant$ 建筑物[concept_throughput]" #deepl:2682676248
  usu_building_hydro_power_plant_throughput_add_desc: "输入和输出的奖励或惩罚$usu_building_hydro_power_plant$" #deepl:1139273118
+ building_usu_railway_line_throughput_add: "$building_usu_railway_line$ 建筑物[concept_throughput]" #deepl:642019898
+ building_usu_railway_line_throughput_add_desc: "输入和输出的奖励或惩罚$building_usu_railway_line$" #deepl:1934252044
  
  state_usu_building_public_green_max_level_add: "$usu_building_public_green$ 最大水平" #deepl:4158133370
  state_usu_building_public_green_max_level_add_desc: "$usu_building_public_green$ 建筑最高等级的奖励或惩罚。" #deepl:3207423598
  
  # Vanilla Modifier types
- 
- goods_input_luxury_clothes_add: "@luxury_clothes![Nbsp]$luxury_clothes$ input" #deepl:3302038186
- goods_input_luxury_clothes_add_desc: "建筑物消耗的 @luxury_clothes![Nbsp]$luxury_clothes$ 数量" #deepl:3477511040
- goods_input_services_add: "@services![Nbsp]$services$ input" #deepl:2678123429
- goods_input_services_add_desc: "建筑物消耗的 @services![Nbsp]$services$ 量" #deepl:1408821948
- 
  goods_input_tools_mult: "构建 @tools![Nbsp]$tools$ 输入" #deepl:1055261592
  goods_input_tools_mult_desc: "建筑物消耗的 @tools![Nbsp]$tools$ 量" #deepl:1892978715
  goods_input_steel_mult: "建设 @steel![Nbsp]$steel$ 输入" #deepl:3508900889
@@ -64,8 +75,6 @@
  goods_input_transportation_mult_desc: "建筑物消耗的 @transportation![Nbsp]$transportation$ 量的奖励或惩罚" #deepl:3299014953
  goods_output_transportation_mult: "建设 @transportation![Nbsp]$transportation$ 输出" #deepl:171588735
  goods_output_transportation_mult_desc: "建筑物产生的 @transportation![Nbsp]$transportation$ 量的奖励或惩罚" #deepl:296029142
- goods_output_electricity_mult: "建设 @electricity![Nbsp]$electricity$ 输出" #deepl:320784986
- goods_output_electricity_mult_desc: "建筑物产生的 @electricity![Nbsp]$electricity$ 的奖励或惩罚" #deepl:145655897
  goods_input_merchant_marine_mult: "构建 @merchant_marine![Nbsp]$merchant_marine$ 输入" #deepl:25966241
  goods_input_merchant_marine_mult_desc: "建筑消耗的 @merchant_marine![Nbsp]$merchant_marine$ 量的奖励或惩罚" #deepl:3075274957
  goods_output_merchant_marine_mult: "构建 @merchant_marine![Nbsp]$merchant_marine$ 输出" #deepl:2695995466

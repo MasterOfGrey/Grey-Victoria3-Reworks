@@ -1,6 +1,7 @@
 ﻿l_braz_por:
  # Modifiers
  mog_urbanization: "Sinergia Urbana Urbanismo"
+ mog_urbanization_start: "$mog_urbanization$" #deepl:3750669678
  mog_urbanization_mult: "Sinergia Urbana Urbanismo"
  mog_construction_max_level_adjustment: "Construção Sinergia Urbana"
  mog_logistics_land_trade: "Capacidade de Comércio Terrestre a Partir de Serviços Logísticos Importados"
@@ -15,12 +16,16 @@
  building_river_port: "Docas fluviais"
  usu_building_public_green: "Verde Público"
  
+ bg_usu_railway_line: "Ferrovias" #deepl:4225024860
+ building_usu_railway_line: "Ferrovia" #deepl:2245543813
+ 
  # Technologies
  
  # Goods
  usu_logistics: "Serviços de Logística"
  trade_route_import_lens_option_usu_logistics_tooltip: "Estabelecer uma rota comercial de importação $usu_logistics$ " #deepl:29640115
  trade_route_export_lens_option_usu_logistics_tooltip: "Estabelecer uma rota comercial de exportação $usu_logistics$ " #deepl:1994327992
+ usu_train_paths: "Trilhos de trem" #deepl:4226319768
  
  # Modifier types
  state_building_river_port_max_level_add: "Nível máximo do porto fluvial"
@@ -28,13 +33,23 @@
  
  goods_input_usu_logistics_add: "@usu_logistics![Nbsp]$usu_logistics$ entrada"
  goods_output_usu_logistics_add: "@usu_logistics![Nbsp]$usu_logistics$ saída"
- goods_input_usu_logistics_mult: "Construindo a @usu_logistics![Nbsp]$usu_logistics$ input" #deepl:3595168342
+ goods_input_usu_logistics_mult: "@usu_logistics![Nbsp]$usu_logistics$ entrada" #deepl:391097685
  goods_output_usu_logistics_mult: "Construindo @usu_logistics![Nbsp]$usu_logistics$ saída"
  
  goods_input_usu_logistics_add_desc: "A quantidade de @usu_logistics![Nbsp]$usu_logistics$ consumida pelos edifícios"
  goods_output_usu_logistics_add_desc: "A quantidade de @usu_logistics![Nbsp]$usu_logistics$ produzida pelos edifícios"
  goods_input_usu_logistics_mult_desc: "Um bônus ou penalidade na quantidade de @usu_logistics![Nbsp]$usu_logistics$ consumido pelos edifícios"
  goods_output_usu_logistics_mult_desc: "Um bônus ou penalidade na quantidade de @usu_logistics![Nbsp]$usu_logistics$ produzido por edifícios"
+ 
+ goods_input_usu_train_paths_add: "@usu_train_paths![Nbsp]$usu_train_paths$ entrada" #deepl:2263828233
+ goods_output_usu_train_paths_add: "@usu_train_paths![Nbsp]$usu_train_paths$ saída" #deepl:1650211266
+ goods_input_usu_train_paths_mult: "@usu_train_paths![Nbsp]$usu_train_paths$ entrada" #deepl:2263828233
+ goods_output_usu_train_paths_mult: "@usu_train_paths![Nbsp]$usu_train_paths$ saída" #deepl:1650211266
+ 
+ goods_input_usu_train_paths_add_desc: "A quantidade de @usu_train_paths![Nbsp] $usu_train_paths$ consumida pelos edifícios" #deepl:3269221933
+ goods_output_usu_train_paths_add_desc: "A quantidade de @usu_train_paths![Nbsp] $usu_train_paths$ produzida pelos edifícios" #deepl:400272594
+ goods_input_usu_train_paths_mult_desc: "Um bônus ou penalidade para a quantidade de @usu_train_paths![Nbsp] $usu_train_paths$ consumida pelos edifícios" #deepl:173276281
+ goods_output_usu_train_paths_mult_desc: "Um bônus ou penalidade para a quantidade de @usu_train_paths![Nbsp] $usu_train_paths$ produzida pelos edifícios" #deepl:3746827910
  
  usu_building_public_green_throughput_add: "$usu_building_public_green$ construção [concept_throughput]" #deepl:1617626189
  usu_building_public_green_throughput_add_desc: "Um bônus ou penalidade tanto para a entrada quanto para a saída de $usu_building_public_green$" #deepl:3185140157
@@ -44,17 +59,13 @@
  building_river_port_throughput_add_desc: "Um bônus ou penalidade tanto para a entrada quanto para a saída de $building_river_port$" #deepl:3708668278
  usu_building_hydro_power_plant_throughput_add: "$usu_building_hydro_power_plant$ construção [concept_throughput]" #deepl:2682676248
  usu_building_hydro_power_plant_throughput_add_desc: "Um bônus ou penalidade tanto para a entrada quanto para a saída de $usu_building_hydro_power_plant$" #deepl:1139273118
+ building_usu_railway_line_throughput_add: "$building_usu_railway_line$ construção [concept_throughput]" #deepl:642019898
+ building_usu_railway_line_throughput_add_desc: "Um bônus ou penalidade tanto para a entrada quanto para a saída de $building_usu_railway_line$" #deepl:1934252044
  
  state_usu_building_public_green_max_level_add: "$usu_building_public_green$ Nível máximo" #deepl:4158133370
  state_usu_building_public_green_max_level_add_desc: "Um bônus ou penalidade para o nível máximo dos edifícios $usu_building_public_green$." #deepl:3207423598
  
  # Vanilla Modifier types
- 
- goods_input_luxury_clothes_add: "@luxury_clothes![Nbsp]$luxury_clothes$ input" #deepl:3302038186
- goods_input_luxury_clothes_add_desc: "A quantidade de @luxury_clothes![Nbsp]$luxury_clothes$ consumida pelos edifícios" #deepl:3477511040
- goods_input_services_add: "@services![Nbsp]$services$ input" #deepl:2678123429
- goods_input_services_add_desc: "A quantidade de @services![Nbsp]$services$ consumida pelos edifícios" #deepl:1408821948
- 
  goods_input_tools_mult: "Criando @tools![Nbsp]$tools$ input" #deepl:1055261592
  goods_input_tools_mult_desc: "A quantidade de @tools![Nbsp]$tools$ consumida pelos edifícios" #deepl:1892978715
  goods_input_steel_mult: "Construindo @steel![Nbsp]$steel$ input" #deepl:3508900889
@@ -64,8 +75,6 @@
  goods_input_transportation_mult_desc: "Um bônus ou penalidade para a quantidade de @transportation![Nbsp]$transportation$ consumida pelos edifícios" #deepl:3299014953
  goods_output_transportation_mult: "Construindo o @transportation![Nbsp]$transportation$ output" #deepl:171588735
  goods_output_transportation_mult_desc: "Um bônus ou penalidade para a quantidade de @transportation![Nbsp]$transportation$ produzida por edifícios" #deepl:296029142
- goods_output_electricity_mult: "Construindo @electricity![Nbsp]$electricity$ output" #deepl:320784986
- goods_output_electricity_mult_desc: "Um bônus ou penalidade para a quantidade de @electricity![Nbsp]$electricity$ produzida pelos edifícios" #deepl:145655897
  goods_input_merchant_marine_mult: "Construindo o @merchant_marine![Nbsp]$merchant_marine$ input" #deepl:25966241
  goods_input_merchant_marine_mult_desc: "Um bônus ou penalidade para a quantidade de @merchant_marine![Nbsp]$merchant_marine$ consumida pelos edifícios" #deepl:3075274957
  goods_output_merchant_marine_mult: "Construindo o @merchant_marine![Nbsp]$merchant_marine$ output" #deepl:2695995466

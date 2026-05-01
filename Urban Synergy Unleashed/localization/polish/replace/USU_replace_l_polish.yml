@@ -5,6 +5,7 @@
  alert_wasted_construction_action: "Panel Budowa"
  wasted_construction_setting_name: "Niewykorzystane Budowa"
  
+ # USU Infrastructure
  pm_electric_trains: "Pociągi elektryczne DC"
  pm_electric_trains_principle_transport_3: "Wspólne pociągi elektryczne DC"
  pm_electric_streetlights: "Wieże Księżycowego Światła"
@@ -16,4 +17,14 @@
  pm_public_trams: "Tramwaje konne"
  pm_public_motor_carriages: "Autobusy miejskie"
  
+ bg_power: "Elektrownie cieplne" #deepl:1853276522
  building_power_plant: "Elektrownia cieplna" #deepl:3279637597
+ building_railway: "Terminal kolejowy" #deepl:1768381803
+ 
+ # Misc. Vanilla that were missing but now aren't?
+ goods_output_electricity_mult: "Budowanie @electricity![Nbsp] $electricity$ wyjście" #deepl:320784986
+ goods_output_electricity_mult_desc: "Premia lub kara do ilości @electricity![Nbsp] $electricity$ wytwarzanych przez budynki." #deepl:145655897
+ goods_input_luxury_clothes_add: "@luxury_clothes![Nbsp]$luxury_clothes$ wkład" #deepl:3302038186
+ goods_input_luxury_clothes_add_desc: "Ilość @luxury_clothes![Nbsp] $luxury_clothes$ zużywana przez budynki" #deepl:3477511040
+ goods_input_services_add: "@services![Nbsp]$services$ wkład" #deepl:2678123429
+ goods_input_services_add_desc: "Ilość @services![Nbsp] $services$ zużywana przez budynki" #deepl:1408821948

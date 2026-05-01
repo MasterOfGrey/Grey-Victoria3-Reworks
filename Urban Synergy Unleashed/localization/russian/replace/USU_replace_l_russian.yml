@@ -5,6 +5,7 @@
  alert_wasted_construction_action: "Панель строительства"
  wasted_construction_setting_name: "Незадействованное Строительство"
  
+ # USU Infrastructure
  pm_electric_trains: "Электропоезда постоянного тока"
  pm_electric_trains_principle_transport_3: "Совместные электропоезда постоянного тока"
  pm_electric_streetlights: "Башни Лунного Света"
@@ -16,4 +17,14 @@
  pm_public_trams: "Конки"
  pm_public_motor_carriages: "Городские Автобусы"
  
+ bg_power: "Тепловые электростанции" #deepl:1853276522
  building_power_plant: "Тепловая электростанция" #deepl:3279637597
+ building_railway: "Железнодорожный терминал" #deepl:1768381803
+ 
+ # Misc. Vanilla that were missing but now aren't?
+ goods_output_electricity_mult: "Здание @electricity![Nbsp] $electricity$ выход" #deepl:320784986
+ goods_output_electricity_mult_desc: "Бонус или штраф к количеству @electricity![Nbsp] $electricity$ , производимому зданиями." #deepl:145655897
+ goods_input_luxury_clothes_add: "@luxury_clothes![Nbsp]$luxury_clothes$ вход" #deepl:3302038186
+ goods_input_luxury_clothes_add_desc: "Количество @luxury_clothes![Nbsp] $luxury_clothes$ , потребляемое зданиями" #deepl:3477511040
+ goods_input_services_add: "@services![Nbsp]$services$ вход" #deepl:2678123429
+ goods_input_services_add_desc: "Количество @services![Nbsp] $services$ , потребляемое зданиями" #deepl:1408821948

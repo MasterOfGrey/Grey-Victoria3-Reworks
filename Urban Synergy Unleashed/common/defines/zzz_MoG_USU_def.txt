@@ -18,13 +18,13 @@ NAI = {
 }
 
 # Because this leads to a surplus of convoys in major powers, we can afford to make it cost more to ship big armies around.
-NMilitary = {
-	BASE_BATTALION_CONVOY_COST = 16 # 10				# Cost in convoys per Battalion for shipping lanes
-}
-NEconomy = {
-	SHIPPING_LANE_CONVOY_COST_SCALING = 0.2 # 0.1				# The cost for a shipping lane for each node beyond the first. So at 0.1 it goes 1.0, 1.1, 1.2 and so on.
-	OVERSEAS_INFRASTRUCTURE_CONVOY_COST_MULTIPLIER = 1.5 # 2	# Convoy cost for each infrastructure usage in overseas state for port connection shipping lanes
-	
+#NMilitary = {		# Superfluous as of vanilla 1.13?
+#	BASE_BATTALION_CONVOY_COST = 16 # 10				# Cost in convoys per Battalion for shipping lanes
+#}
+#NEconomy = {		# Superfluous as of vanilla 1.13?
+#	SHIPPING_LANE_CONVOY_COST_SCALING = 0.2 # 0.1				# The cost for a shipping lane for each node beyond the first. So at 0.1 it goes 1.0, 1.1, 1.2 and so on.
+#	OVERSEAS_INFRASTRUCTURE_CONVOY_COST_MULTIPLIER = 1.5 # 2	# Convoy cost for each infrastructure usage in overseas state for port connection shipping lanes
+#	
 	## These are related but don't appear to need changing - avoid overwriting to minimise compatibility profile surface area:
 	# GOODS_DEFAULT_CONVOY_COST_MULTIPLIER = 1				# The convoy cost of shipping a single unit of goods (can be overriden in defines)
-}
+#}

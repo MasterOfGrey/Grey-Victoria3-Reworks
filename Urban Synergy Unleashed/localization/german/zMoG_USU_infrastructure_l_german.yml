@@ -1,4 +1,12 @@
 ﻿l_german:
+ # Concepts
+ concept_usu_railway_station: "Railway Terminal" #This is the actual id of the concept
+ concept_usu_railway_stations: "Railway Terminals" #You can use this for plural: [Concept('concept_usu_railway_station','$concept_usu_railway_stations$')]
+ concept_usu_railway_station_desc: "Ein #b Eisenbahnterminal#! ist ein Gebäude, das als Knotenpunkt Ihres Logistiknetzes dient. Es ist ein rein ziviles Gebäude und stellt [GetGoods('usu_train_paths').GetName] und [GetGoods('usu_logistics').GetName] zur Verfügung, verbraucht aber eine Vielzahl von Waren, angefangen bei [GetGoods('tools').GetName], [GetGoods('paper').GetName], [GetGoods('aeroplanes').GetName] und [GetGoods('oil').GetName]. Später benötigt es auch [GetGoods('electricity').GetName], [GetGoods('telephones').GetName] und [GetGoods('radios').GetName].\nWenn Sie genügend #b Flughäfen haben, werden#! und [concept_curtiss_airline] gegründet und mit Ihren wachsenden #b Flughäfen#! wird auch die #b Fluglinie#! wachsen und mehr Boni bieten." #deepl:775810903
+
+ # Tooltips 
+ usu_railway_station_can_construct_tt: "Die maximale Stufe von [Concept('concept_curtiss_airport','$concept_curtiss_airports$')], die ein Staat unterstützen kann, entspricht 1 plus 1 für jede #G 10 Stufen#! von [GetBuildingType('building_urban_center').GetName]." #deepl:1884813676
+
  # Railways
  pm_ac_electric_trains: "Wechselstrom-Elektrozüge"
  pm_ac_electric_trains_principle_transport_3: "Gemeinsame Wechselstrom-Elektrozüge"
@@ -11,6 +19,10 @@
  pm_watertube_boiler_building_railway: "Rauchrohrkessel"
  pm_rotary_valve_engine_building_railway: "Uniflow-Drehschieberventile"
  pm_steam_donkey_building_railway: "Getriebedampf-Antriebsstrang"
+ 
+ pmg_base_building_rail_terminal: "Terminal-Infrastruktur" #deepl:3593176856
+ pm_usu_stub_end_terminal: "Stumpfes Endstück" #deepl:1656920068
+ pm_usu_pass_through_terminal: "Passthrough-Terminal" #deepl:3737399705
  
  # Ports
  pmg_automation_port: "Automatisierung von Anlagen" #deepl:2147123001

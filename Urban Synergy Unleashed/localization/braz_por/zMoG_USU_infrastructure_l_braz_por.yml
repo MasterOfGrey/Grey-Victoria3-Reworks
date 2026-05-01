@@ -1,4 +1,12 @@
 ﻿l_braz_por:
+ # Concepts
+ concept_usu_railway_station: "Railway Terminal" #This is the actual id of the concept
+ concept_usu_railway_stations: "Railway Terminals" #You can use this for plural: [Concept('concept_usu_railway_station','$concept_usu_railway_stations$')]
+ concept_usu_railway_station_desc: "#! O Terminal Ferroviário #b é um edifício que funciona como um centro da sua rede logística. É um edifício puramente civil e fornece [GetGoods('usu_train_paths').GetName] e [GetGoods('usu_logistics').GetName], mas consome uma variedade de mercadorias a partir de [GetGoods('tools').GetName], [GetGoods('paper').GetName], [GetGoods('aeroplanes').GetName] e [GetGoods('oil').GetName]. Mais tarde, ele também precisará de [GetGoods('electricity').GetName], [GetGoods('telephones').GetName] e [GetGoods('radios').GetName].\nSe você tiver Aeroportos #b suficientes,#! e [concept_curtiss_airline] serão fundados e, com o crescimento dos Aeroportos #b #! , a Linha Aérea #b #! também crescerá e oferecerá mais bônus." #deepl:775810903
+
+ # Tooltips 
+ usu_railway_station_can_construct_tt: "O nível máximo de [Concept('concept_curtiss_airport','$concept_curtiss_airports$')] que um estado pode suportar é igual a 1 mais 1 para cada #G 10 níveis#! de [GetBuildingType('building_urban_center').GetName]." #deepl:1884813676
+
  # Railways
  pm_ac_electric_trains: "Trens elétricos CA"
  pm_ac_electric_trains_principle_transport_3: "Trens elétricos AC conjuntos"
@@ -11,6 +19,10 @@
  pm_watertube_boiler_building_railway: "Caldeira de tubos de fogo"
  pm_rotary_valve_engine_building_railway: "Válvula rotativa Uniflow"
  pm_steam_donkey_building_railway: "Transmissão a vapor com engrenagens"
+ 
+ pmg_base_building_rail_terminal: "Infraestrutura do terminal" #deepl:3593176856
+ pm_usu_stub_end_terminal: "Terminal de ponta" #deepl:1656920068
+ pm_usu_pass_through_terminal: "Terminal de passagem" #deepl:3737399705
  
  # Ports
  pmg_automation_port: "Automação de instalações" #deepl:2147123001

@@ -10,7 +10,7 @@
  # building_power_plant: "Thermal Power Plant" # moved to replace file
  usu_building_hydro_power_plant: "水电站" #deepl:3124269973
  
- bg_power: "热电站" #deepl:1853276522
+ # bg_power: "Thermal Power Stations" # moved to replace file
  usu_bg_hydro_power: "水电站" #deepl:3011532326
  
  hp_pmg_hydro_power_plant: "发电机组" #deepl:3018806291

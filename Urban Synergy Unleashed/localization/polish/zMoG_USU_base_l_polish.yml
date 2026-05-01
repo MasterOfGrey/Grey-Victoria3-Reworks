@@ -1,6 +1,7 @@
 ﻿l_polish:
  # Modifiers
  mog_urbanization: "Synergia miejska Urbanizm"
+ mog_urbanization_start: "$mog_urbanization$" #deepl:3750669678
  mog_urbanization_mult: "Synergia miejska Urbanizm"
  mog_construction_max_level_adjustment: "Budowa Synergii Miejskiej"
  mog_logistics_land_trade: "Pojemność handlu lądowego z importowanych usług logistycznych"
@@ -15,12 +16,16 @@
  building_river_port: "Doki rzeczne"
  usu_building_public_green: "Publiczna zieleń"
  
+ bg_usu_railway_line: "Koleje" #deepl:4225024860
+ building_usu_railway_line: "Kolej" #deepl:2245543813
+ 
  # Technologies
  
  # Goods
  usu_logistics: "Usługi logistyczne"
  trade_route_import_lens_option_usu_logistics_tooltip: "Ustanowienie szlaku handlu importowego $usu_logistics$ " #deepl:29640115
  trade_route_export_lens_option_usu_logistics_tooltip: "Ustanowienie szlaku handlu eksportowego $usu_logistics$ " #deepl:1994327992
+ usu_train_paths: "Ścieżki pociągu" #deepl:4226319768
  
  # Modifier types
  state_building_river_port_max_level_add: "Maksymalny poziom portu rzecznego"
@@ -28,13 +33,23 @@
  
  goods_input_usu_logistics_add: "@usu_logistics![Nbsp]$usu_logistics$ wejście"
  goods_output_usu_logistics_add: "@usu_logistics![Nbsp]$usu_logistics$ wynik"
- goods_input_usu_logistics_mult: "Budowanie @usu_logistics![Nbsp]$usu_logistics$ wejście" #deepl:3595168342
+ goods_input_usu_logistics_mult: "@usu_logistics![Nbsp]$usu_logistics$ wkład" #deepl:391097685
  goods_output_usu_logistics_mult: "Budowanie @usu_logistics![Nbsp]$usu_logistics$ wyjście"
  
  goods_input_usu_logistics_add_desc: "Ilość @usu_logistics![Nbsp]$usu_logistics$ zużyta przez budynki"
  goods_output_usu_logistics_add_desc: "Ilość @usu_logistics![Nbsp]$usu_logistics$ wyprodukowana przez budynki"
  goods_input_usu_logistics_mult_desc: "Premia lub kara do kwoty @usu_logistics![Nbsp]$usu_logistics$ zużytej przez budynki"
  goods_output_usu_logistics_mult_desc: "Premia lub kara do kwoty @usu_logistics![Nbsp]$usu_logistics$ wyprodukowanej przez budynki"
+ 
+ goods_input_usu_train_paths_add: "@usu_train_paths![Nbsp]$usu_train_paths$ wkład" #deepl:2263828233
+ goods_output_usu_train_paths_add: "@usu_train_paths![Nbsp]$usu_train_paths$ wyjście" #deepl:1650211266
+ goods_input_usu_train_paths_mult: "@usu_train_paths![Nbsp]$usu_train_paths$ wkład" #deepl:2263828233
+ goods_output_usu_train_paths_mult: "@usu_train_paths![Nbsp]$usu_train_paths$ wyjście" #deepl:1650211266
+ 
+ goods_input_usu_train_paths_add_desc: "Ilość @usu_train_paths![Nbsp] $usu_train_paths$ zużywana przez budynki" #deepl:3269221933
+ goods_output_usu_train_paths_add_desc: "Ilość @usu_train_paths![Nbsp] $usu_train_paths$ wytwarzana przez budynki" #deepl:400272594
+ goods_input_usu_train_paths_mult_desc: "Premia lub kara do ilości @usu_train_paths![Nbsp] $usu_train_paths$ zużywanej przez budynki." #deepl:173276281
+ goods_output_usu_train_paths_mult_desc: "Premia lub kara do ilości @usu_train_paths![Nbsp] $usu_train_paths$ wytwarzanych przez budynki." #deepl:3746827910
  
  usu_building_public_green_throughput_add: "$usu_building_public_green$ budynek [concept_throughput]" #deepl:1617626189
  usu_building_public_green_throughput_add_desc: "Premia lub kara zarówno dla wejścia, jak i wyjścia $usu_building_public_green$" #deepl:3185140157
@@ -44,17 +59,13 @@
  building_river_port_throughput_add_desc: "Premia lub kara zarówno dla wejścia, jak i wyjścia $building_river_port$" #deepl:3708668278
  usu_building_hydro_power_plant_throughput_add: "$usu_building_hydro_power_plant$ budynek [concept_throughput]" #deepl:2682676248
  usu_building_hydro_power_plant_throughput_add_desc: "Premia lub kara zarówno dla wejścia, jak i wyjścia $usu_building_hydro_power_plant$" #deepl:1139273118
+ building_usu_railway_line_throughput_add: "$building_usu_railway_line$ budynek [concept_throughput]" #deepl:642019898
+ building_usu_railway_line_throughput_add_desc: "Premia lub kara zarówno dla wejścia, jak i wyjścia $building_usu_railway_line$" #deepl:1934252044
  
  state_usu_building_public_green_max_level_add: "$usu_building_public_green$ Maksymalny poziom" #deepl:4158133370
  state_usu_building_public_green_max_level_add_desc: "Premia lub kara do maksymalnego poziomu budynków $usu_building_public_green$." #deepl:3207423598
  
  # Vanilla Modifier types
- 
- goods_input_luxury_clothes_add: "@luxury_clothes![Nbsp]$luxury_clothes$ wejście" #deepl:3302038186
- goods_input_luxury_clothes_add_desc: "Ilość @luxury_clothes![Nbsp]$luxury_clothes$ zużyta przez budynki" #deepl:3477511040
- goods_input_services_add: "@services![Nbsp]$services$ input" #deepl:2678123429
- goods_input_services_add_desc: "Ilość @services![Nbsp]$services$ zużywana przez budynki" #deepl:1408821948
- 
  goods_input_tools_mult: "Tworzenie @tools![Nbsp]$tools$ input" #deepl:1055261592
  goods_input_tools_mult_desc: "Ilość @tools![Nbsp]$tools$ zużywana przez budynki" #deepl:1892978715
  goods_input_steel_mult: "Budowanie @steel![Nbsp]$steel$ wejście" #deepl:3508900889
@@ -64,8 +75,6 @@
  goods_input_transportation_mult_desc: "Premia lub kara do ilości @transportation![Nbsp]$transportation$ zużywanego przez budynki." #deepl:3299014953
  goods_output_transportation_mult: "Budowanie @transportation![Nbsp]$transportation$ wyjście" #deepl:171588735
  goods_output_transportation_mult_desc: "Premia lub kara do ilości @transportation![Nbsp]$transportation$ produkowanego przez budynki." #deepl:296029142
- goods_output_electricity_mult: "Budowanie @electricity![Nbsp]$electricity$ wyjście" #deepl:320784986
- goods_output_electricity_mult_desc: "Premia lub kara do ilości @electricity![Nbsp]$electricity$ produkowanej przez budynki." #deepl:145655897
  goods_input_merchant_marine_mult: "Budowanie @merchant_marine![Nbsp]$merchant_marine$ wejście" #deepl:25966241
  goods_input_merchant_marine_mult_desc: "Premia lub kara do ilości @merchant_marine![Nbsp]$merchant_marine$ zużywanej przez budynki." #deepl:3075274957
  goods_output_merchant_marine_mult: "Budowanie @merchant_marine![Nbsp]$merchant_marine$ wyjście" #deepl:2695995466

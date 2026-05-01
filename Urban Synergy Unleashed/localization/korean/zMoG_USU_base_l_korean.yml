@@ -1,6 +1,7 @@
 ﻿l_korean:
  # Modifiers
  mog_urbanization: "도시 시너지 도시주의"
+ mog_urbanization_start: "$mog_urbanization$" #deepl:3750669678
  mog_urbanization_mult: "도시 시너지 도시주의"
  mog_construction_max_level_adjustment: "어반 시너지 건설"
  mog_logistics_land_trade: "수입 물류 서비스로부터의 육상 무역 용량"
@@ -15,12 +16,16 @@
  building_river_port: "강 부두"
  usu_building_public_green: "공공 녹지"
  
+ bg_usu_railway_line: "철도" #deepl:4225024860
+ building_usu_railway_line: "철도" #deepl:2245543813
+ 
  # Technologies
  
  # Goods
  usu_logistics: "물류 서비스"
  trade_route_import_lens_option_usu_logistics_tooltip: "$usu_logistics$ 수입 거래 경로 설정" #deepl:29640115
  trade_route_export_lens_option_usu_logistics_tooltip: "$usu_logistics$ 수출 거래 경로 설정" #deepl:1994327992
+ usu_train_paths: "기차 경로" #deepl:4226319768
  
  # Modifier types
  state_building_river_port_max_level_add: "강 항구 최대 수위"
@@ -28,13 +33,23 @@
  
  goods_input_usu_logistics_add: "@usu_logistics![Nbsp]$usu_logistics$ 입력"
  goods_output_usu_logistics_add: "@usu_logistics![Nbsp]$usu_logistics$ 출력"
- goods_input_usu_logistics_mult: "건물 @usu_logistics![Nbsp]$usu_logistics$ 입력" #deepl:3595168342
+ goods_input_usu_logistics_mult: "@usu_logistics![Nbsp]$usu_logistics$ 입력" #deepl:391097685
  goods_output_usu_logistics_mult: "@usu_logistics![Nbsp]$usu_logistics$ 출력 빌드 중"
  
  goods_input_usu_logistics_add_desc: "건물에서 소모한 @usu_logistics![Nbsp]$usu_logistics$의 양"
  goods_output_usu_logistics_add_desc: "건물에서 생산되는 @usu_logistics![Nbsp]$usu_logistics$의 양"
  goods_input_usu_logistics_mult_desc: "건물에서 소모하는 @usu_logistics![Nbsp]$usu_logistics$ 양에 대한 보너스 또는 패널티"
  goods_output_usu_logistics_mult_desc: "건물에서 생산되는 @usu_logistics![Nbsp]$usu_logistics$의 양에 대한 보너스 또는 패널티"
+ 
+ goods_input_usu_train_paths_add: "@usu_train_paths![Nbsp]$usu_train_paths$ 입력" #deepl:2263828233
+ goods_output_usu_train_paths_add: "@usu_train_paths![Nbsp]$usu_train_paths$ 출력" #deepl:1650211266
+ goods_input_usu_train_paths_mult: "@usu_train_paths![Nbsp]$usu_train_paths$ 입력" #deepl:2263828233
+ goods_output_usu_train_paths_mult: "@usu_train_paths![Nbsp]$usu_train_paths$ 출력" #deepl:1650211266
+ 
+ goods_input_usu_train_paths_add_desc: "건물에서 소비하는 @usu_train_paths![Nbsp] $usu_train_paths$ 의 양" #deepl:3269221933
+ goods_output_usu_train_paths_add_desc: "건물에서 생산되는 @usu_train_paths![Nbsp] $usu_train_paths$ 양" #deepl:400272594
+ goods_input_usu_train_paths_mult_desc: "건물에서 소비하는 @usu_train_paths![Nbsp] $usu_train_paths$ 금액에 대한 보너스 또는 페널티" #deepl:173276281
+ goods_output_usu_train_paths_mult_desc: "건물에서 생산되는 @usu_train_paths![Nbsp] $usu_train_paths$ 금액에 대한 보너스 또는 페널티" #deepl:3746827910
  
  usu_building_public_green_throughput_add: "$usu_building_public_green$ 건물 [concept_throughput]" #deepl:1617626189
  usu_building_public_green_throughput_add_desc: "입력과 출력 모두에 보너스 또는 페널티를 적용합니다. $usu_building_public_green$" #deepl:3185140157
@@ -44,17 +59,13 @@
  building_river_port_throughput_add_desc: "입력과 출력 모두에 보너스 또는 페널티를 적용합니다. $building_river_port$" #deepl:3708668278
  usu_building_hydro_power_plant_throughput_add: "$usu_building_hydro_power_plant$ 건물 [concept_throughput]" #deepl:2682676248
  usu_building_hydro_power_plant_throughput_add_desc: "입력과 출력 모두에 보너스 또는 페널티를 적용합니다. $usu_building_hydro_power_plant$" #deepl:1139273118
+ building_usu_railway_line_throughput_add: "$building_usu_railway_line$ 건물 [concept_throughput]" #deepl:642019898
+ building_usu_railway_line_throughput_add_desc: "입력과 출력 모두에 보너스 또는 페널티를 적용합니다. $building_usu_railway_line$" #deepl:1934252044
  
  state_usu_building_public_green_max_level_add: "$usu_building_public_green$ 최대 레벨" #deepl:4158133370
  state_usu_building_public_green_max_level_add_desc: "$usu_building_public_green$ 건물의 최대 레벨에 보너스 또는 페널티가 적용됩니다." #deepl:3207423598
  
  # Vanilla Modifier types
- 
- goods_input_luxury_clothes_add: "@luxury_clothes![Nbsp]$luxury_clothes$ 입력" #deepl:3302038186
- goods_input_luxury_clothes_add_desc: "건물에서 소비하는 @luxury_clothes![Nbsp]$luxury_clothes$ " #deepl:3477511040
- goods_input_services_add: "@services![Nbsp]$services$ 입력" #deepl:2678123429
- goods_input_services_add_desc: "건물에서 소비하는 @services![Nbsp]$services$ " #deepl:1408821948
- 
  goods_input_tools_mult: "@tools![Nbsp]$tools$ 입력" #deepl:1055261592
  goods_input_tools_mult_desc: "건물에서 소비하는 @tools![Nbsp]$tools$ 양" #deepl:1892978715
  goods_input_steel_mult: "@steel![Nbsp]$steel$ 입력" #deepl:3508900889
@@ -64,8 +75,6 @@
  goods_input_transportation_mult_desc: "교통량에 대한 보너스 또는 페널티 @transportation![Nbsp]$transportation$ 건물에서 소비하는 교통량" #deepl:3299014953
  goods_output_transportation_mult: "교통 구축@transportation![Nbsp]$transportation$ 출력" #deepl:171588735
  goods_output_transportation_mult_desc: "교통량에 대한 보너스 또는 페널티@transportation![Nbsp]$transportation$ 건물에서 생산되는 교통량" #deepl:296029142
- goods_output_electricity_mult: "건물 전기@electricity![Nbsp]$electricity$ 출력" #deepl:320784986
- goods_output_electricity_mult_desc: "전기량에 대한 보너스 또는 페널티@electricity![Nbsp]$electricity$ 건물에서 생산되는 전기량" #deepl:145655897
  goods_input_merchant_marine_mult: "merchant_marine 구축![Nbsp]$merchant_marine$ 입력" #deepl:25966241
  goods_input_merchant_marine_mult_desc: "건물에서 소비하는 의 양에 보너스 또는 페널티@merchant_marine![Nbsp]$merchant_marine$ " #deepl:3075274957
  goods_output_merchant_marine_mult: "merchant_marine 구축![Nbsp]$merchant_marine$ 출력" #deepl:2695995466
