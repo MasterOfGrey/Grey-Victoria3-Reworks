@@ -291,7 +291,7 @@ TRY_REPLACE:company_mantetsu = {	# Mod: possible and construction targets change
 		has_technology_researched = railways
 		custom_tooltip = {
 			text = is_meiji_japan
-			has_variable = meiji_restoration_complete
+			has_variable = japan_restoration_complete
 		}
 		any_scope_state = {
 			OR = {
@@ -340,6 +340,17 @@ TRY_REPLACE:company_mantetsu = {	# Mod: possible and construction targets change
 
 	ai_weight = {
 		value = 3 # Higher base value for flavored companies
+		if = {
+			limit = {
+				has_journal_entry = je_colonize_korea
+				NOT = {
+					any_company = {
+						is_company_type = company_type:company_oriental_development_company # Only one needed
+					}
+				}
+			}
+			add = 6
+		}
 	}
 }
 
