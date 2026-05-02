@@ -1,0 +1,65 @@
+﻿## Update building_railway to building_usu_railway_line # building_railway
+##
+TRY_REPLACE:japan_display_add_meiji_reforms = {
+	if = {
+		limit = {
+			NAND = {
+				in_default = no
+				any_scope_state = {
+					filter = {
+						is_incorporated = yes
+					}
+					any_scope_building = {
+						is_building_type = building_urban_center
+						level >= 5
+					}
+					has_building = building_railway
+					percent > 0.7
+				}
+			}
+		}
+		add_journal_entry = {
+			type = je_meiji_economy
+		}
+	}
+	if = {
+		limit = {
+			NAND = {
+				NOT = { has_law_or_variant = law_type:law_serfdom }
+				ig:ig_armed_forces ?= {
+					is_powerful = no
+					is_in_government = no
+				}
+				has_technology_researched = napoleonic_warfare
+				NOT = {
+					any_scope_building = {
+						is_building_type = building_barrack
+						OR = {
+							has_active_production_method = pm_no_organization
+							# has_active_production_method = pm_no_artillery
+							# has_active_production_method = pm_cannon_artillery
+						}
+					}
+				}
+			}
+		}
+		add_journal_entry = {
+			type = je_meiji_army
+		}
+	}
+	if = {
+		limit = {
+			NOT = {
+				has_dlc_feature = ep2_content
+			}
+			NAND = {
+				NOT = { has_variable = completed_je_meiji_diplomacy }
+				NOT = { is_country_type = unrecognized }
+				NOT = { has_law_or_variant = law_type:law_isolationism }
+			}
+		}
+		add_journal_entry = {
+			type = je_meiji_diplomacy
+		}
+	}
+}

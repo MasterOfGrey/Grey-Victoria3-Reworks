@@ -1,0 +1,73 @@
+﻿## Update building_railway to building_usu_railway_line # building_railway
+##
+TRY_REPLACE:je_modernization_program = {
+	icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
+
+	group = je_group_internal_affairs
+
+	immediate = {
+		random_interest_group = {
+			limit = {
+				has_variable = og_fascist_ig
+			}
+			save_scope_as = fascist_ig
+			leader = {
+				save_scope_as = fascist_leader
+			}
+		}
+	}
+
+	complete = {
+		NOT = { has_law_or_variant = law_type:law_free_trade }
+		custom_tooltip = {
+			text = je_modernization_program_tt
+			capital = {
+				infrastructure >= 150
+			}
+		}
+		any_scope_state = {
+			filter = {
+				is_incorporated = yes
+			}
+			any_scope_building = {
+				is_building_type = building_usu_railway_line # building_railway
+				level >= 2
+			}
+			percent = 1
+		}
+		any_scope_state = {
+			is_incorporated = yes
+			has_building = building_port
+			count >= 2
+		}
+	}
+
+	on_complete = {
+		trigger_event = { id = fascism_events.5 }
+	}
+
+	on_monthly_pulse = {
+	}
+
+	invalid = {
+		NOT = {
+			any_interest_group = {
+				custom_tooltip = {
+					text = fascism_1_tt
+					leader = {
+						OR = {
+							has_ideology = ideology:ideology_fascist
+							has_ideology = ideology:ideology_integralist
+						}
+					}
+				}
+				is_in_government = yes
+			}
+		}
+	}
+
+	weight = 10000
+	can_deactivate = no
+		
+	should_be_pinned_by_default_uninvolved_or_context = yes
+}

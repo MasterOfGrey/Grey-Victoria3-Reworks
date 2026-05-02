@@ -1,0 +1,8 @@
+﻿## Update building_railway to building_usu_railway_line # building_railway
+##
+
+# TRY_REPLACE:je_trans_siberian_railway # <- only needs 1 level (fine)
+
+# TRY_REPLACE:je_trans_continental_railway # <- only needs 1 level (fine)
+
+# TRY_REPLACE:je_canada_pacific_railway # <- only needs 1 level (fine)

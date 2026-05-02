@@ -1,0 +1,20 @@
+﻿l_japanese:
+ ## UI
+ alert_low_market_access_alert_hint: "[SCOPE.GetRootScope.GetState.GetName] の[concept_market_access] を改善するには、その[concept_infrastructure] を増やす（これは[GetBuildingType('building_port').GetName] や[GetBuildingType('building_usu_railway_line').GetName] を構築することで可能）か、[GetDecreeType('decree_road_maintenance').GetName] のように[Concept('concept_decree', '$concept_decrees$')] を増やすか、[concept_market] に[SCOPE.GetRootScope.GetState.GetName] を海外[concept_market_capital] に接続できるだけの[GetGoods('merchant_marine').GetName] を確保する。" #deepl:1827145687
+ ## Journal Texts
+ #ip2_02
+ je_indian_famines_button_relief_kitchens_desc: "\n\n しかし、そのような経費は、財政部の善良な人々には好感を持たれそうにない。また、救援活動の効果は、国家の能力や地域のインフラがネックとなるだろう。\n\n #bold  鉄道#!\n [concept_famine] -被災地[Concept('concept_state','$concept_states$')] に[GetBuildingType('building_usu_railway_line').GetName] が存在すれば、この措置の効果は倍増する。" #deepl:795676007
+ every_state_suffers_following_modifier: "[concept_famine] に苦しむすべての[concept_state] は以下の修正を受ける：\n （[GetBuildingType('building_usu_railway_line').GetName] を持つことで改善される）：" #deepl:588325104
+ je_indian_famines_button_work_camps_desc: "私たちは、政府からの俸給で生活する扶養家族を作らない。\n\n #bold  鉄道#!\n [concept_famine] - 被災地[Concept('concept_state','$concept_states$')] に[GetBuildingType('building_usu_railway_line').GetName] があれば、この措置の効果は倍増する。" #deepl:3023810712
+ je_indian_famines_button_epidemic_control_desc: "飢餓と栄養不良が根本的な原因であることに変わりはないが、ペストやコレラのような病気によって、貧困にあえぐ人々の多くが命を落とすことになる。\n\n 集団予防接種と厳重な隔離システムを導入することで、死亡率の最悪の増加をある程度相殺することができる。\n\n #bold  鉄道#!\n [concept_famine] -被災地[Concept('concept_state','$concept_states$')] に[GetBuildingType('building_usu_railway_line').GetName] が存在すれば、この対策の効果は倍増する。" #deepl:1668531692
+ #ip2_03
+ je_india_railway_status: "インドを結ぶ壮大な$building_usu_railway_line$ 。" #deepl:1726200589
+ delhi_calcutta_line_complete_tt: "#tooltippable #tooltip:indian_railway_delhi_calcutta_tt#bold デリー-カルカッタ線#! #! #! のすべての[Concept('concept_state_region','$concept_state_regions$')] には、以下のものがある。$building_usu_railway_line$" #deepl:1868200958
+ allahabad_bombay_line_complete_tt: "#tooltippable #tooltip:indian_railway_allahabad_bombay_tt#bold アラハバード-ボンベイ線#! #! #! のすべての[Concept('concept_state_region','$concept_state_regions$')] には、以下のものがある。$building_usu_railway_line$" #deepl:620255607
+ bombay_madras_line_complete_tt: "#tooltippable #tooltip:indian_railway_bombay_madras_tt#bold ボンベイ-マドラス線#! #! #! のすべての[Concept('concept_state_region','$concept_state_regions$')] には、以下のものがある。$building_usu_railway_line$" #deepl:338194597
+ gujarat_bombay_line_complete_tt: "#tooltippable #tooltip:indian_railway_gujarat_bombay_tt#bold グジャラート-ボンベイ線#! #! #! のすべての[Concept('concept_state_region','$concept_state_regions$')] には、以下のものがある。$building_usu_railway_line$" #deepl:1296169623
+ # victoria_terminus_possible_tt: "[ROOT.GetCountry.GetNameNoFormatting] の[Concept('concept_state_region','$concept_state_region$')] に$STATE_BOMBAY$ の$building_usu_railway_line$ がある。" #deepl:1641956204
+ #ip3_02
+ grunderzeit_possible_tt: "#v 全体の 75%#! 以上#bold ドイツ#! [Concept('concept_country', '$concept_countries$')] #bold  ヨーロッパ#! で、[GetTechnology('mutual_funds').GetName] を調査し、[GetBuildingType('building_usu_railway_line').GetName] (現在[GetGlobalVariable('grunderzeit_countries_percent').GetValue|v%0])の少なくとも1つのレベルを持っている。" #deepl:3945384129
+ #ip4_03
+ atocha_railway_possible_tt: "[ROOT.GetCountry.GetNameNoFormatting] $building_usu_railway_line$ の[Concept('concept_state_region','$concept_state_region$')] 。$STATE_NEW_CASTILE$" #deepl:1000673829

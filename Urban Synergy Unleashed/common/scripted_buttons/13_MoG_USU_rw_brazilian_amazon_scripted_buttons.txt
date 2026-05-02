@@ -1,0 +1,124 @@
+﻿## Update building_railway to building_usu_railway_line # building_railway
+##
+# Upgrade Amazonic Modifier
+TRY_REPLACE:upgrade_amazon_button_2 = {
+	name = "upgrade_amazon_button_2"
+	desc = "upgrade_amazon_button_2_desc"
+
+	visible = { always = yes }
+
+	cooldown = { days = 365 }
+
+	possible = {
+		any_scope_state = {
+			has_state_trait = state_trait_amazon_rainforest_level_1
+			NOT = { has_modifier = amazon_development_cooldown_modifier }
+			any_scope_building = {
+				is_building_type = building_urban_center
+				level >= 4
+			}
+			any_scope_building = {
+				is_building_type = building_rubber_plantation
+				level >= 15
+			}
+			any_scope_building = {
+				is_building_type = building_usu_railway_line # building_railway
+			}
+		}
+	}
+
+	ai_chance = {
+		value = 20
+		if = {
+			limit = {
+				OR = {
+					is_at_war = yes
+					in_default = yes
+				}
+			}
+			add = -100
+		}
+	}
+
+	effect = {
+		random_scope_state = {
+			limit = {
+				has_state_trait = state_trait_amazon_rainforest_level_1
+				NOT = { has_modifier = amazon_development_cooldown_modifier }
+				any_scope_building = {
+					is_building_type = building_urban_center
+					level >= 4
+				}
+				any_scope_building = {
+					is_building_type = building_rubber_plantation
+					level >= 15
+				}
+				any_scope_building = {
+					is_building_type = building_usu_railway_line # building_railway
+				}
+			}
+			show_as_tooltip = {
+				state_region = {
+					add_state_trait = state_trait_amazon_rainforest_level_2
+				}
+				add_modifier = {
+					name = amazon_development_cooldown_modifier
+					days = short_modifier_time
+				}
+			}
+			if = {
+				limit = {
+					this.state_region = s:STATE_AMAZONAS
+					root = {
+						OR = {
+							c:BRZ ?= this
+							c:PRA ?= this
+						}
+					}
+				}
+				root = { trigger_event = { id = amazonas.5 popup = yes } } # Manaus, the Paris of the Tropics
+			}
+			else = {
+				root = { trigger_event = { id = amazonas.7 popup = yes } } # Jewels in the Rough
+			}
+		}
+		if = {
+			# The conditions to press the button are the opposite of the conditions of this effect, so these effects should never actually happen.
+			# This section is here solely to show what modifiers will be applied if the button _can_ be pressed.
+			limit = {
+				NOT = {
+					any_scope_state = {
+						has_state_trait = state_trait_amazon_rainforest_level_1
+						NOT = { has_modifier = amazon_development_cooldown_modifier }
+						any_scope_building = {
+							is_building_type = building_urban_center
+							level >= 4
+						}
+						any_scope_building = {
+							is_building_type = building_rubber_plantation
+							level >= 15
+						}
+						any_scope_building = {
+							is_building_type = building_usu_railway_line # building_railway
+						}
+					}
+				}
+			}
+			random_scope_state = {
+				limit = {
+					has_state_trait = state_trait_amazon_rainforest
+					NOT = { has_state_trait = state_trait_amazon_rainforest_level_2 }
+				}
+				show_as_tooltip = {
+					state_region = {
+						add_state_trait = state_trait_amazon_rainforest_level_2
+					}
+					add_modifier = {
+						name = amazon_development_cooldown_modifier
+						days = short_modifier_time
+					}
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,279 @@
+﻿## Update building_railway to building_usu_railway_line # building_railway
+##
+TRY_REPLACE:je_colonize_korea = {
+	should_be_pinned_by_default_uninvolved_or_context = yes
+	icon = "gfx/interface/icons/event_icons/event_map.dds"
+
+	group = je_group_historical_content
+
+	modifiers_while_active = {
+
+	}
+
+	is_shown_when_inactive = {
+		has_dlc_feature = ep2_content
+		c:JAP ?= this
+		NOT = {
+			has_law_or_variant = law_type:law_isolationism
+		}
+	}
+
+	possible = {
+		institution_investment_level = {
+			institution = institution_colonial_affairs
+			value >= 1
+		}
+		NOT = { has_law = law_type:law_no_colonial_affairs }
+		AND = {
+			owns_entire_state_region = STATE_SEOUL
+			owns_entire_state_region = STATE_BUSAN
+			owns_entire_state_region = STATE_YANGHO
+			owns_entire_state_region = STATE_SARIWON
+			owns_entire_state_region = STATE_PYONGYANG
+		}
+	}
+
+	immediate = {
+		every_state_in_korea = {
+			root = {
+				add_to_variable_list = {
+					name = colonize_korea_states_states
+					target = prev
+				}
+			}
+		}
+
+		cu:korean = {
+			save_scope_as = korean_scope
+		}
+		cu:japanese = {
+			save_scope_as = japanese_scope
+		}
+ 		s:STATE_SEOUL ?= {
+ 			save_scope_as = seoul_state_scope
+ 		}
+		s:STATE_BUSAN ?= {
+			save_scope_as = busan_state_scope
+		}
+ 		s:STATE_YANGHO ?= {
+ 			save_scope_as = yangho_state_scope
+ 		}
+ 		s:STATE_SARIWON ?= {
+ 			save_scope_as = sariwon_state_scope
+		}
+ 		s:STATE_PYONGYANG ?= {
+ 			save_scope_as = pyongyang_state_scope
+		}
+
+		add_fervor_target_modifier = { # changes target
+			culture = cu:korean
+			days = normal_modifier_time
+			multiplier = 5
+		}
+	}
+
+	on_weekly_pulse = {
+		effect = {
+			clear_variable_list = colonize_korea_states_states
+			every_state_in_korea = {
+				limit = {
+					NAND = {
+						c:JAP ?= owner
+						is_incorporated = yes
+						turmoil < je_colonize_korea_state_turmoil_max
+						culture_percent_state = {
+							target = cu:japanese
+							value >= je_colonize_korea_state_japanese_culture_min # set in event_values
+						}
+					}
+				}
+				root = {
+					add_to_variable_list = {
+						name = colonize_korea_states_states
+						target = prev
+					}
+				}
+			}
+		}
+	}
+
+	# Japan owns Korea directly
+	complete = {
+		institution_investment_level = {
+			institution = institution_colonial_affairs
+			value >= 3
+		}
+		bureaucracy >= 0
+		approaching_bureaucracy_shortage = no
+		OR = {
+			any_company = {
+				OR = {
+					is_company_type = company_type:company_mantetsu
+					is_company_type = company_type:company_oriental_development_company
+				}
+				company_prosperity >= 75
+			}
+			AND = { # second option to account for je_zaibatsu
+				any_company = {
+	                company_is_prosperous = yes
+	                count >= 2
+	            }
+				any_scope_state = {
+					is_in_geographic_region = geographic_region_korea
+					count >= 3
+	                OR = {
+	                    state_has_building_group_levels = {
+	                        type = bg_plantations
+	                        value >= 35
+	                    }
+	                    state_has_building_group_levels = {
+	                        type = bg_mining
+	                        value >= 35
+	                    }
+	                    state_has_building_type_levels = {
+	                        target = bt:building_usu_railway_line # building_railway
+	                        value >= 10
+	                    }
+	                }
+				}
+			}
+		}
+		any_state_in_korea = {
+			count = all
+			custom_tooltip = {
+                text = "JE_COLONIZE_KOREA_STATES_TT"
+				c:JAP ?= owner
+				is_incorporated = yes
+				turmoil < je_colonize_korea_state_turmoil_max
+				culture_percent_state = {
+					target = cu:japanese
+					value >= je_colonize_korea_state_japanese_culture_min # set in event_values
+				}
+			}
+		}
+	}
+
+	on_complete = {
+		clear_variable_list = colonize_korea_states_states
+		trigger_event = {
+			id = korea_colonization.2
+			days = 1
+		}
+	}
+
+	event_outcome_completed_effect_desc = {
+		header = korea_colonization.2.a
+        effect = {
+	    	add_modifier = {
+				name = modifier_peninsula_control_prestige_authority
+				days = moderately_long_modifier_time
+				is_decaying = yes
+			}
+			every_scope_state = {
+				limit = {
+					OR = {
+						state_region = s:STATE_SEOUL
+						state_region = s:STATE_BUSAN
+						state_region = s:STATE_YANGHO
+						state_region = s:STATE_SARIWON
+						state_region = s:STATE_PYONGYANG
+					}
+				}
+				add_modifier = {
+					name = modifier_peninsula_control_assimilation_migration
+					days = moderately_long_modifier_time
+					is_decaying = yes
+				}
+			}
+        }
+	}
+
+	event_outcome_completed_effect_desc = {
+		header = korea_colonization.2.b
+		effect = {
+			custom_tooltip = {
+				text = korea_colinzation_2b_executive_tt
+			}
+			custom_tooltip = {
+				text = korea_colinzation_2b_company_tt
+			}
+		}
+	}
+
+	# Korea broke free from Japan control
+	fail = {
+		custom_tooltip = {
+			text = je_colonize_korea_fail_tt
+			OR = {
+				AND = {
+					NOT = {
+						any_scope_state = {
+							is_in_geographic_region = geographic_region_korea
+							count >= 5
+						}
+					}
+					c:KOR ?= {
+						NOT = {
+							is_subject_of = root
+						}
+					}
+				}
+				AND = {
+					exists = c:KOR
+					c:KOR ?= {
+						NOT = {
+							is_subject_of = root
+						}
+					}
+				}
+				any_state_in_korea = {
+					count = all
+					NOT = {
+						owner = ROOT
+					}
+				}
+			}
+		}
+	}
+
+	on_fail = {
+		clear_variable_list = colonize_korea_states_states
+		trigger_event = {
+			id = korea_colonization.3
+			days = 1
+		}
+	}
+
+	event_outcome_failed_effect_desc = {
+        header = korea_colonization.3.a
+        effect = {
+			add_modifier = {
+				name = modifier_peninsula_control_prestige_loss
+				days = moderately_long_modifier_time
+				is_decaying = yes
+			}
+        }
+    }
+
+	event_outcome_failed_effect_desc = {
+		header = korea_colinzation_3b_tt
+        effect = {
+			custom_tooltip = {
+				text = korea_colinzation_3b_ig_leader_tt
+			}
+			custom_tooltip = {
+				text = korea_colinzation_3b_ig_tt
+			}
+        }
+    }
+
+    invalid = {
+    	has_law = law_type:law_no_colonial_affairs
+    }
+
+	on_invalid = {
+		clear_variable_list = colonize_korea_states_states
+	}
+
+	weight = 1000
+}

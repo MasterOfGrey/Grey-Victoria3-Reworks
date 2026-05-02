@@ -28,3 +28,7 @@ NAI = {
 	## These are related but don't appear to need changing - avoid overwriting to minimise compatibility profile surface area:
 	# GOODS_DEFAULT_CONVOY_COST_MULTIPLIER = 1				# The convoy cost of shipping a single unit of goods (can be overriden in defines)
 #}
+
+NCountry = {
+	RAILWAY_BUILDING = "building_railway"	# We are very deliberately keeping this, because misdirecting the AI is the intended outcome for the purpose of making it behave better with our rework.
+}

@@ -1,0 +1,2927 @@
+﻿### BUILDINGS | СООРУЖЕНИЯ ###
+## GENITIVE | РОДИТЕЛЬНЫЙ ##
+## Update building_railway to building_usu_railway_line # building_railway
+##
+RU_BL_RP = {
+	type = building
+	log_loc_errors = no
+	text = {
+		trigger = {
+			is_building_type = building_angkor_wat
+		}
+		localization_key = RU_BL_RP_building_angkor_wat
+	}
+	text = {
+		trigger = {
+			is_building_type = building_arms_industry
+		}
+		localization_key = RU_BL_RP_building_arms_industry
+	}
+	text = {
+		trigger = {
+			is_building_type = building_art_academy
+		}
+		localization_key = RU_BL_RP_building_art_academy
+	}
+	text = {
+		trigger = {
+			is_building_type = building_artillery_foundry
+		}
+		localization_key = RU_BL_RP_building_artillery_foundry
+	}
+	text = {
+		trigger = {
+			is_building_type = building_automotive_industry
+		}
+		localization_key = RU_BL_RP_building_automotive_industry
+	}
+	text = {
+		trigger = {
+			is_building_type = building_banana_plantation
+		}
+		localization_key = RU_BL_RP_building_banana_plantation
+	}
+	text = {
+		trigger = {
+			is_building_type = building_barrack
+		}
+		localization_key = RU_BL_RP_building_barrack
+	}
+	text = {
+		trigger = {
+			is_building_type = building_big_ben
+		}
+		localization_key = RU_BL_RP_building_big_ben
+	}
+	text = {
+		trigger = {
+			is_building_type = building_chemical_plant
+		}
+		localization_key = RU_BL_RP_building_chemical_plant
+	}
+	text = {
+		trigger = {
+			is_building_type = building_coffee_plantation
+		}
+		localization_key = RU_BL_RP_building_coffee_plantation
+	}
+	text = {
+		trigger = {
+			is_building_type = building_company_headquarter
+		}
+		localization_key = RU_BL_RP_building_company_headquarter
+	}
+	text = {
+		trigger = {
+			is_building_type = building_company_regional_headquarter
+		}
+		localization_key = RU_BL_RP_building_company_regional_headquarter
+	}
+	text = {
+		trigger = {
+			is_building_type = building_conscription_center
+		}
+		localization_key = RU_BL_RP_building_conscription_center
+	}
+	text = {
+		trigger = {
+			is_building_type = building_construction_sector
+		}
+		localization_key = RU_BL_RP_building_construction_sector
+	}
+	text = {
+		trigger = {
+			is_building_type = building_cotton_plantation
+		}
+		localization_key = RU_BL_RP_building_cotton_plantation
+	}
+	text = {
+		trigger = {
+			is_building_type = building_cristo_redentor
+		}
+		localization_key = RU_BL_RP_building_cristo_redentor
+	}
+	text = {
+		trigger = {
+			is_building_type = building_dye_plantation
+		}
+		localization_key = RU_BL_RP_building_dye_plantation
+	}
+	text = {
+		trigger = {
+			is_building_type = building_electrics_industry
+		}
+		localization_key = RU_BL_RP_building_electrics_industry
+	}
+	text = {
+		trigger = {
+			is_building_type = building_explosives_factory
+		}
+		localization_key = RU_BL_RP_building_explosives_factory
+	}
+	text = {
+		trigger = {
+			is_building_type = building_financial_district
+		}
+		localization_key = RU_BL_RP_building_financial_district
+	}
+	text = {
+		trigger = {
+			is_building_type = building_fishing_wharf
+		}
+		localization_key = RU_BL_RP_building_fishing_wharf
+	}
+	text = {
+		trigger = {
+			is_building_type = building_food_industry
+		}
+		localization_key = RU_BL_RP_building_food_industry
+	}
+	text = {
+		trigger = {
+			is_building_type = building_forbidden_city
+		}
+		localization_key = RU_BL_RP_building_forbidden_city
+	}
+	text = {
+		trigger = {
+			is_building_type = building_furniture_manufactory
+		}
+		localization_key = RU_BL_RP_building_furniture_manufactory
+	}
+	text = {
+		trigger = {
+			is_building_type = building_glassworks
+		}
+		localization_key = RU_BL_RP_building_glassworks
+	}
+	text = {
+		trigger = {
+			is_building_type = building_gold_field
+		}
+		localization_key = RU_BL_RP_building_gold_field
+	}
+	text = {
+		trigger = {
+			is_building_type = building_gold_mine
+		}
+		localization_key = RU_BL_RP_building_gold_mine
+	}
+	text = {
+		trigger = {
+			is_building_type = building_government_administration
+		}
+		localization_key = RU_BL_RP_building_government_administration
+	}
+	text = {
+		trigger = {
+			is_building_type = building_hagia_sophia
+		}
+		localization_key = RU_BL_RP_building_hagia_sophia
+	}
+	text = {
+		trigger = {
+			is_building_type = building_iron_mine
+		}
+		localization_key = RU_BL_RP_building_iron_mine
+	}
+	text = {
+		trigger = {
+			is_building_type = building_lead_mine
+		}
+		localization_key = RU_BL_RP_building_lead_mine
+	}
+	text = {
+		trigger = {
+			is_building_type = building_livestock_ranch
+		}
+		localization_key = RU_BL_RP_building_livestock_ranch
+	}
+	text = {
+		trigger = {
+			is_building_type = building_maize_farm
+		}
+		localization_key = RU_BL_RP_building_maize_farm
+	}
+	text = {
+		trigger = {
+			is_building_type = building_manor_house
+		}
+		localization_key = RU_BL_RP_building_manor_house
+	}
+	text = {
+		trigger = {
+			is_building_type = building_millet_farm
+		}
+		localization_key = RU_BL_RP_building_millet_farm
+	}
+	text = {
+		trigger = {
+			is_building_type = building_mosque_of_djenne
+		}
+		localization_key = RU_BL_RP_building_mosque_of_djenne
+	}
+	text = {
+		trigger = {
+			is_building_type = building_motor_industry
+		}
+		localization_key = RU_BL_RP_building_motor_industry
+	}
+	text = {
+		trigger = {
+			is_building_type = building_munition_plant
+		}
+		localization_key = RU_BL_RP_building_munition_plant
+	}
+	text = {
+		trigger = {
+			is_building_type = building_oil_rig
+		}
+		localization_key = RU_BL_RP_building_oil_rig
+	}
+	text = {
+		trigger = {
+			is_building_type = building_opium_plantation
+		}
+		localization_key = RU_BL_RP_building_opium_plantation
+	}
+	text = {
+		trigger = {
+			is_building_type = building_panama_canal
+		}
+		localization_key = RU_BL_RP_building_panama_canal
+	}
+	text = {
+		trigger = {
+			is_building_type = building_paper_mill
+		}
+		localization_key = RU_BL_RP_building_paper_mill
+	}
+	text = {
+		trigger = {
+			is_building_type = building_port
+		}
+		localization_key = RU_BL_RP_building_port
+	}
+	text = {
+		trigger = {
+			is_building_type = building_power_bloc_statue
+		}
+		localization_key = RU_BL_RP_building_power_bloc_statue
+	}
+	text = {
+		trigger = {
+			is_building_type = building_power_plant
+		}
+		localization_key = RU_BL_RP_building_power_plant
+	}
+	text = {
+		trigger = {
+			is_building_type = building_usu_railway_line
+		}
+		localization_key = RU_BL_RP_building_railway
+	}
+	text = {
+		trigger = {
+			is_building_type = building_rice_farm
+		}
+		localization_key = RU_BL_RP_building_rice_farm
+	}
+	text = {
+		trigger = {
+			is_building_type = building_rubber_plantation
+		}
+		localization_key = RU_BL_RP_building_rubber_plantation
+	}
+	text = {
+		trigger = {
+			is_building_type = building_rye_farm
+		}
+		localization_key = RU_BL_RP_building_rye_farm
+	}
+	text = {
+		trigger = {
+			is_building_type = building_saint_basils_cathedral
+		}
+		localization_key = RU_BL_RP_building_saint_basils_cathedral
+	}
+	text = {
+		trigger = {
+			is_building_type = building_shipyard
+		}
+		localization_key = RU_BL_RP_building_shipyard
+	}
+	text = {
+		trigger = {
+			is_building_type = building_silk_plantation
+		}
+		localization_key = RU_BL_RP_building_silk_plantation
+	}
+	text = {
+		trigger = {
+			is_building_type = building_skyscraper
+		}
+		localization_key = RU_BL_RP_building_skyscraper
+	}
+	text = {
+		trigger = {
+			is_building_type = building_statue_of_liberty
+		}
+		localization_key = RU_BL_RP_building_statue_of_liberty
+	}
+	text = {
+		trigger = {
+			is_building_type = building_steel_mill
+		}
+		localization_key = RU_BL_RP_building_steel_mill
+	}
+	text = {
+		trigger = {
+			is_building_type = building_subsistence_farm
+		}
+		localization_key = RU_BL_RP_building_subsistence_farm
+	}
+	text = {
+		trigger = {
+			is_building_type = building_subsistence_fishing_village
+		}
+		localization_key = RU_BL_RP_building_subsistence_fishing_village
+	}
+	text = {
+		trigger = {
+			is_building_type = building_subsistence_orchard
+		}
+		localization_key = RU_BL_RP_building_subsistence_orchard
+	}
+	text = {
+		trigger = {
+			is_building_type = building_subsistence_pasture
+		}
+		localization_key = RU_BL_RP_building_subsistence_pasture
+	}
+	text = {
+		trigger = {
+			is_building_type = building_subsistence_rice_farm
+		}
+		localization_key = RU_BL_RP_building_subsistence_rice_farm
+	}
+	text = {
+		trigger = {
+			is_building_type = building_sugar_plantation
+		}
+		localization_key = RU_BL_RP_building_sugar_plantation
+	}
+	text = {
+		trigger = {
+			is_building_type = building_sulfur_mine
+		}
+		localization_key = RU_BL_RP_building_sulfur_mine
+	}
+	text = {
+		trigger = {
+			is_building_type = building_synthetics_plant
+		}
+		localization_key = RU_BL_RP_building_synthetics_plant
+	}
+	text = {
+		trigger = {
+			is_building_type = building_taj_mahal
+		}
+		localization_key = RU_BL_RP_building_taj_mahal
+	}
+	text = {
+		trigger = {
+			is_building_type = building_tea_plantation
+		}
+		localization_key = RU_BL_RP_building_tea_plantation
+	}
+	text = {
+		trigger = {
+			is_building_type = building_textile_mill
+		}
+		localization_key = RU_BL_RP_building_textile_mill
+	}
+	text = {
+		trigger = {
+			is_building_type = building_tobacco_plantation
+		}
+		localization_key = RU_BL_RP_building_tobacco_plantation
+	}
+	text = {
+		trigger = {
+			is_building_type = building_tooling_workshop
+		}
+		localization_key = RU_BL_RP_building_tooling_workshop
+	}
+	text = {
+		trigger = {
+			is_building_type = building_trade_center
+		}
+		localization_key = RU_BL_RP_building_trade_center
+	}
+	text = {
+		trigger = {
+			is_building_type = building_university
+		}
+		localization_key = RU_BL_RP_building_university
+	}
+	text = {
+		trigger = {
+			is_building_type = building_urban_center
+		}
+		localization_key = RU_BL_RP_building_urban_center
+	}
+	text = {
+		trigger = {
+			is_building_type = building_vatican_city
+		}
+		localization_key = RU_BL_RP_building_vatican_city
+	}
+	text = {
+		trigger = {
+			is_building_type = building_victoria_terminus
+		}
+		localization_key = RU_BL_RP_building_victoria_terminus
+	}
+	text = {
+		trigger = {
+			is_building_type = building_vineyard
+		}
+		localization_key = RU_BL_RP_building_vineyard
+	}
+	text = {
+		trigger = {
+			is_building_type = building_whaling_station
+		}
+		localization_key = RU_BL_RP_building_whaling_station
+	}
+	text = {
+		trigger = {
+			is_building_type = building_wheat_farm
+		}
+		localization_key = RU_BL_RP_building_wheat_farm
+	}
+	text = {
+		trigger = {
+			is_building_type = building_white_house
+		}
+		localization_key = RU_BL_RP_building_white_house
+	}
+	text = {
+		trigger = {
+			is_building_type = building_estacion_de_madrid_atocha
+		}
+		localization_key = RU_BL_RP_building_estacion_de_madrid_atocha
+	}
+	text = {
+		trigger = {
+			is_building_type = building_gran_teatro_de_la_habana
+		}
+		localization_key = RU_BL_RP_building_gran_teatro_de_la_habana
+	}
+	text = {
+		trigger = {
+			is_building_type = building_halloween_castledracula
+		}
+		localization_key = RU_BL_RP_building_halloween_castledracula
+	}
+	text = {
+		trigger = {
+			is_building_type = building_kaiserforum_1
+		}
+		localization_key = RU_BL_RP_building_kaiserforum_1
+	}
+	text = {
+		trigger = {
+			is_building_type = building_kaiserforum_2
+		}
+		localization_key = RU_BL_RP_building_kaiserforum_2
+	}
+	text = {
+		trigger = {
+			is_building_type = building_kaiserforum_3
+		}
+		localization_key = RU_BL_RP_building_kaiserforum_3
+	}
+	text = {
+		trigger = {
+			is_building_type = building_kaiserforum_4
+		}
+		localization_key = RU_BL_RP_building_kaiserforum_4
+	}
+	text = {
+		trigger = {
+			is_building_type = building_land_logistics_center
+		}
+		localization_key = RU_BL_RP_building_land_logistics_center
+	}
+	text = {
+		trigger = {
+			is_building_type = building_manila_cathedral_monument
+		}
+		localization_key = RU_BL_RP_building_manila_cathedral_monument
+	}
+	text = {
+		trigger = {
+			is_building_type = building_manila_cathedral_original
+		}
+		localization_key = RU_BL_RP_building_manila_cathedral_original
+	}
+	text = {
+		trigger = {
+			is_building_type = building_manila_cathedral_ruins
+		}
+		localization_key = RU_BL_RP_building_manila_cathedral_ruins
+	}
+	text = {
+		trigger = {
+			is_building_type = building_naval_administration
+		}
+		localization_key = RU_BL_RP_building_naval_administration
+	}
+	text = {
+		trigger = {
+			is_building_type = building_naval_fortification
+		}
+		localization_key = RU_BL_RP_building_naval_fortification
+	}
+	text = {
+		trigger = {
+			is_building_type = building_naval_logistics_center
+		}
+		localization_key = RU_BL_RP_building_naval_logistics_center
+	}
+	text = {
+		trigger = {
+			is_building_type = building_pena_convent
+		}
+		localization_key = RU_BL_RP_building_pena_convent
+	}
+	text = {
+		trigger = {
+			is_building_type = building_pena_palace
+		}
+		localization_key = RU_BL_RP_building_pena_palace
+	}
+	text = {
+		trigger = {
+			is_building_type = building_sagrada_familia_cathedral_1
+		}
+		localization_key = RU_BL_RP_building_sagrada_familia_cathedral_1
+	}
+	text = {
+		trigger = {
+			is_building_type = building_sagrada_familia_cathedral_2
+		}
+		localization_key = RU_BL_RP_building_sagrada_familia_cathedral_2
+	}
+	text = {
+		trigger = {
+			is_building_type = building_sagrada_familia_cathedral_3
+		}
+		localization_key = RU_BL_RP_building_sagrada_familia_cathedral_3
+	}
+	text = {
+		localization_key = RU_BL_RP_DEFAULT
+	}
+}
+
+## DATIVE | ДАТЕЛЬНЫЙ ##
+RU_BL_DP = {
+	type = building
+	log_loc_errors = no
+	text = {
+		trigger = {
+			is_building_type = building_angkor_wat
+		}
+		localization_key = RU_BL_DP_building_angkor_wat
+	}
+	text = {
+		trigger = {
+			is_building_type = building_arms_industry
+		}
+		localization_key = RU_BL_DP_building_arms_industry
+	}
+	text = {
+		trigger = {
+			is_building_type = building_art_academy
+		}
+		localization_key = RU_BL_DP_building_art_academy
+	}
+	text = {
+		trigger = {
+			is_building_type = building_artillery_foundry
+		}
+		localization_key = RU_BL_DP_building_artillery_foundry
+	}
+	text = {
+		trigger = {
+			is_building_type = building_automotive_industry
+		}
+		localization_key = RU_BL_DP_building_automotive_industry
+	}
+	text = {
+		trigger = {
+			is_building_type = building_banana_plantation
+		}
+		localization_key = RU_BL_DP_building_banana_plantation
+	}
+	text = {
+		trigger = {
+			is_building_type = building_barrack
+		}
+		localization_key = RU_BL_DP_building_barrack
+	}
+	text = {
+		trigger = {
+			is_building_type = building_big_ben
+		}
+		localization_key = RU_BL_DP_building_big_ben
+	}
+	text = {
+		trigger = {
+			is_building_type = building_chemical_plant
+		}
+		localization_key = RU_BL_DP_building_chemical_plant
+	}
+	text = {
+		trigger = {
+			is_building_type = building_coffee_plantation
+		}
+		localization_key = RU_BL_DP_building_coffee_plantation
+	}
+	text = {
+		trigger = {
+			is_building_type = building_company_headquarter
+		}
+		localization_key = RU_BL_DP_building_company_headquarter
+	}
+	text = {
+		trigger = {
+			is_building_type = building_company_regional_headquarter
+		}
+		localization_key = RU_BL_DP_building_company_regional_headquarter
+	}
+	text = {
+		trigger = {
+			is_building_type = building_conscription_center
+		}
+		localization_key = RU_BL_DP_building_conscription_center
+	}
+	text = {
+		trigger = {
+			is_building_type = building_construction_sector
+		}
+		localization_key = RU_BL_DP_building_construction_sector
+	}
+	text = {
+		trigger = {
+			is_building_type = building_cotton_plantation
+		}
+		localization_key = RU_BL_DP_building_cotton_plantation
+	}
+	text = {
+		trigger = {
+			is_building_type = building_cristo_redentor
+		}
+		localization_key = RU_BL_DP_building_cristo_redentor
+	}
+	text = {
+		trigger = {
+			is_building_type = building_dye_plantation
+		}
+		localization_key = RU_BL_DP_building_dye_plantation
+	}
+	text = {
+		trigger = {
+			is_building_type = building_electrics_industry
+		}
+		localization_key = RU_BL_DP_building_electrics_industry
+	}
+	text = {
+		trigger = {
+			is_building_type = building_explosives_factory
+		}
+		localization_key = RU_BL_DP_building_explosives_factory
+	}
+	text = {
+		trigger = {
+			is_building_type = building_financial_district
+		}
+		localization_key = RU_BL_DP_building_financial_district
+	}
+	text = {
+		trigger = {
+			is_building_type = building_fishing_wharf
+		}
+		localization_key = RU_BL_DP_building_fishing_wharf
+	}
+	text = {
+		trigger = {
+			is_building_type = building_food_industry
+		}
+		localization_key = RU_BL_DP_building_food_industry
+	}
+	text = {
+		trigger = {
+			is_building_type = building_forbidden_city
+		}
+		localization_key = RU_BL_DP_building_forbidden_city
+	}
+	text = {
+		trigger = {
+			is_building_type = building_furniture_manufactory
+		}
+		localization_key = RU_BL_DP_building_furniture_manufactory
+	}
+	text = {
+		trigger = {
+			is_building_type = building_glassworks
+		}
+		localization_key = RU_BL_DP_building_glassworks
+	}
+	text = {
+		trigger = {
+			is_building_type = building_gold_field
+		}
+		localization_key = RU_BL_DP_building_gold_field
+	}
+	text = {
+		trigger = {
+			is_building_type = building_gold_mine
+		}
+		localization_key = RU_BL_DP_building_gold_mine
+	}
+	text = {
+		trigger = {
+			is_building_type = building_government_administration
+		}
+		localization_key = RU_BL_DP_building_government_administration
+	}
+	text = {
+		trigger = {
+			is_building_type = building_hagia_sophia
+		}
+		localization_key = RU_BL_DP_building_hagia_sophia
+	}
+	text = {
+		trigger = {
+			is_building_type = building_iron_mine
+		}
+		localization_key = RU_BL_DP_building_iron_mine
+	}
+	text = {
+		trigger = {
+			is_building_type = building_lead_mine
+		}
+		localization_key = RU_BL_DP_building_lead_mine
+	}
+	text = {
+		trigger = {
+			is_building_type = building_livestock_ranch
+		}
+		localization_key = RU_BL_DP_building_livestock_ranch
+	}
+	text = {
+		trigger = {
+			is_building_type = building_maize_farm
+		}
+		localization_key = RU_BL_DP_building_maize_farm
+	}
+	text = {
+		trigger = {
+			is_building_type = building_manor_house
+		}
+		localization_key = RU_BL_DP_building_manor_house
+	}
+	text = {
+		trigger = {
+			is_building_type = building_millet_farm
+		}
+		localization_key = RU_BL_DP_building_millet_farm
+	}
+	text = {
+		trigger = {
+			is_building_type = building_mosque_of_djenne
+		}
+		localization_key = RU_BL_DP_building_mosque_of_djenne
+	}
+	text = {
+		trigger = {
+			is_building_type = building_motor_industry
+		}
+		localization_key = RU_BL_DP_building_motor_industry
+	}
+	text = {
+		trigger = {
+			is_building_type = building_munition_plant
+		}
+		localization_key = RU_BL_DP_building_munition_plant
+	}
+	text = {
+		trigger = {
+			is_building_type = building_oil_rig
+		}
+		localization_key = RU_BL_DP_building_oil_rig
+	}
+	text = {
+		trigger = {
+			is_building_type = building_opium_plantation
+		}
+		localization_key = RU_BL_DP_building_opium_plantation
+	}
+	text = {
+		trigger = {
+			is_building_type = building_panama_canal
+		}
+		localization_key = RU_BL_DP_building_panama_canal
+	}
+	text = {
+		trigger = {
+			is_building_type = building_paper_mill
+		}
+		localization_key = RU_BL_DP_building_paper_mill
+	}
+	text = {
+		trigger = {
+			is_building_type = building_port
+		}
+		localization_key = RU_BL_DP_building_port
+	}
+	text = {
+		trigger = {
+			is_building_type = building_power_bloc_statue
+		}
+		localization_key = RU_BL_DP_building_power_bloc_statue
+	}
+	text = {
+		trigger = {
+			is_building_type = building_power_plant
+		}
+		localization_key = RU_BL_DP_building_power_plant
+	}
+	text = {
+		trigger = {
+			is_building_type = building_usu_railway_line
+		}
+		localization_key = RU_BL_DP_building_railway
+	}
+	text = {
+		trigger = {
+			is_building_type = building_rice_farm
+		}
+		localization_key = RU_BL_DP_building_rice_farm
+	}
+	text = {
+		trigger = {
+			is_building_type = building_rubber_plantation
+		}
+		localization_key = RU_BL_DP_building_rubber_plantation
+	}
+	text = {
+		trigger = {
+			is_building_type = building_rye_farm
+		}
+		localization_key = RU_BL_DP_building_rye_farm
+	}
+	text = {
+		trigger = {
+			is_building_type = building_saint_basils_cathedral
+		}
+		localization_key = RU_BL_DP_building_saint_basils_cathedral
+	}
+	text = {
+		trigger = {
+			is_building_type = building_shipyard
+		}
+		localization_key = RU_BL_DP_building_shipyard
+	}
+	text = {
+		trigger = {
+			is_building_type = building_silk_plantation
+		}
+		localization_key = RU_BL_DP_building_silk_plantation
+	}
+	text = {
+		trigger = {
+			is_building_type = building_skyscraper
+		}
+		localization_key = RU_BL_DP_building_skyscraper
+	}
+	text = {
+		trigger = {
+			is_building_type = building_statue_of_liberty
+		}
+		localization_key = RU_BL_DP_building_statue_of_liberty
+	}
+	text = {
+		trigger = {
+			is_building_type = building_steel_mill
+		}
+		localization_key = RU_BL_DP_building_steel_mill
+	}
+	text = {
+		trigger = {
+			is_building_type = building_subsistence_farm
+		}
+		localization_key = RU_BL_DP_building_subsistence_farm
+	}
+	text = {
+		trigger = {
+			is_building_type = building_subsistence_fishing_village
+		}
+		localization_key = RU_BL_DP_building_subsistence_fishing_village
+	}
+	text = {
+		trigger = {
+			is_building_type = building_subsistence_orchard
+		}
+		localization_key = RU_BL_DP_building_subsistence_orchard
+	}
+	text = {
+		trigger = {
+			is_building_type = building_subsistence_pasture
+		}
+		localization_key = RU_BL_DP_building_subsistence_pasture
+	}
+	text = {
+		trigger = {
+			is_building_type = building_subsistence_rice_farm
+		}
+		localization_key = RU_BL_DP_building_subsistence_rice_farm
+	}
+	text = {
+		trigger = {
+			is_building_type = building_sugar_plantation
+		}
+		localization_key = RU_BL_DP_building_sugar_plantation
+	}
+	text = {
+		trigger = {
+			is_building_type = building_sulfur_mine
+		}
+		localization_key = RU_BL_DP_building_sulfur_mine
+	}
+	text = {
+		trigger = {
+			is_building_type = building_synthetics_plant
+		}
+		localization_key = RU_BL_DP_building_synthetics_plant
+	}
+	text = {
+		trigger = {
+			is_building_type = building_taj_mahal
+		}
+		localization_key = RU_BL_DP_building_taj_mahal
+	}
+	text = {
+		trigger = {
+			is_building_type = building_tea_plantation
+		}
+		localization_key = RU_BL_DP_building_tea_plantation
+	}
+	text = {
+		trigger = {
+			is_building_type = building_textile_mill
+		}
+		localization_key = RU_BL_DP_building_textile_mill
+	}
+	text = {
+		trigger = {
+			is_building_type = building_tobacco_plantation
+		}
+		localization_key = RU_BL_DP_building_tobacco_plantation
+	}
+	text = {
+		trigger = {
+			is_building_type = building_tooling_workshop
+		}
+		localization_key = RU_BL_DP_building_tooling_workshop
+	}
+	text = {
+		trigger = {
+			is_building_type = building_trade_center
+		}
+		localization_key = RU_BL_DP_building_trade_center
+	}
+	text = {
+		trigger = {
+			is_building_type = building_university
+		}
+		localization_key = RU_BL_DP_building_university
+	}
+	text = {
+		trigger = {
+			is_building_type = building_urban_center
+		}
+		localization_key = RU_BL_DP_building_urban_center
+	}
+	text = {
+		trigger = {
+			is_building_type = building_vatican_city
+		}
+		localization_key = RU_BL_DP_building_vatican_city
+	}
+	text = {
+		trigger = {
+			is_building_type = building_victoria_terminus
+		}
+		localization_key = RU_BL_DP_building_victoria_terminus
+	}
+	text = {
+		trigger = {
+			is_building_type = building_vineyard
+		}
+		localization_key = RU_BL_DP_building_vineyard
+	}
+	text = {
+		trigger = {
+			is_building_type = building_whaling_station
+		}
+		localization_key = RU_BL_DP_building_whaling_station
+	}
+	text = {
+		trigger = {
+			is_building_type = building_wheat_farm
+		}
+		localization_key = RU_BL_DP_building_wheat_farm
+	}
+	text = {
+		trigger = {
+			is_building_type = building_white_house
+		}
+		localization_key = RU_BL_DP_building_white_house
+	}
+	text = {
+		trigger = {
+			is_building_type = building_estacion_de_madrid_atocha
+		}
+		localization_key = RU_BL_DP_building_estacion_de_madrid_atocha
+	}
+	text = {
+		trigger = {
+			is_building_type = building_gran_teatro_de_la_habana
+		}
+		localization_key = RU_BL_DP_building_gran_teatro_de_la_habana
+	}
+	text = {
+		trigger = {
+			is_building_type = building_halloween_castledracula
+		}
+		localization_key = RU_BL_DP_building_halloween_castledracula
+	}
+	text = {
+		trigger = {
+			is_building_type = building_kaiserforum_1
+		}
+		localization_key = RU_BL_DP_building_kaiserforum_1
+	}
+	text = {
+		trigger = {
+			is_building_type = building_kaiserforum_2
+		}
+		localization_key = RU_BL_DP_building_kaiserforum_2
+	}
+	text = {
+		trigger = {
+			is_building_type = building_kaiserforum_3
+		}
+		localization_key = RU_BL_DP_building_kaiserforum_3
+	}
+	text = {
+		trigger = {
+			is_building_type = building_kaiserforum_4
+		}
+		localization_key = RU_BL_DP_building_kaiserforum_4
+	}
+	text = {
+		trigger = {
+			is_building_type = building_land_logistics_center
+		}
+		localization_key = RU_BL_DP_building_land_logistics_center
+	}
+	text = {
+		trigger = {
+			is_building_type = building_manila_cathedral_monument
+		}
+		localization_key = RU_BL_DP_building_manila_cathedral_monument
+	}
+	text = {
+		trigger = {
+			is_building_type = building_manila_cathedral_original
+		}
+		localization_key = RU_BL_DP_building_manila_cathedral_original
+	}
+	text = {
+		trigger = {
+			is_building_type = building_manila_cathedral_ruins
+		}
+		localization_key = RU_BL_DP_building_manila_cathedral_ruins
+	}
+	text = {
+		trigger = {
+			is_building_type = building_naval_administration
+		}
+		localization_key = RU_BL_DP_building_naval_administration
+	}
+	text = {
+		trigger = {
+			is_building_type = building_naval_fortification
+		}
+		localization_key = RU_BL_DP_building_naval_fortification
+	}
+	text = {
+		trigger = {
+			is_building_type = building_naval_logistics_center
+		}
+		localization_key = RU_BL_DP_building_naval_logistics_center
+	}
+	text = {
+		trigger = {
+			is_building_type = building_pena_convent
+		}
+		localization_key = RU_BL_DP_building_pena_convent
+	}
+	text = {
+		trigger = {
+			is_building_type = building_pena_palace
+		}
+		localization_key = RU_BL_DP_building_pena_palace
+	}
+	text = {
+		trigger = {
+			is_building_type = building_sagrada_familia_cathedral_1
+		}
+		localization_key = RU_BL_DP_building_sagrada_familia_cathedral_1
+	}
+	text = {
+		trigger = {
+			is_building_type = building_sagrada_familia_cathedral_2
+		}
+		localization_key = RU_BL_DP_building_sagrada_familia_cathedral_2
+	}
+	text = {
+		trigger = {
+			is_building_type = building_sagrada_familia_cathedral_3
+		}
+		localization_key = RU_BL_DP_building_sagrada_familia_cathedral_3
+	}
+	text = {
+		localization_key = RU_BL_DP_DEFAULT
+	}
+}
+
+## ACCUSATIVE | ВИНИТЕЛЬНЫЙ ##
+RU_BL_VP = {
+	type = building
+	log_loc_errors = no
+	text = {
+		trigger = {
+			is_building_type = building_angkor_wat
+		}
+		localization_key = RU_BL_VP_building_angkor_wat
+	}
+	text = {
+		trigger = {
+			is_building_type = building_arms_industry
+		}
+		localization_key = RU_BL_VP_building_arms_industry
+	}
+	text = {
+		trigger = {
+			is_building_type = building_art_academy
+		}
+		localization_key = RU_BL_VP_building_art_academy
+	}
+	text = {
+		trigger = {
+			is_building_type = building_artillery_foundry
+		}
+		localization_key = RU_BL_VP_building_artillery_foundry
+	}
+	text = {
+		trigger = {
+			is_building_type = building_automotive_industry
+		}
+		localization_key = RU_BL_VP_building_automotive_industry
+	}
+	text = {
+		trigger = {
+			is_building_type = building_banana_plantation
+		}
+		localization_key = RU_BL_VP_building_banana_plantation
+	}
+	text = {
+		trigger = {
+			is_building_type = building_barrack
+		}
+		localization_key = RU_BL_VP_building_barrack
+	}
+	text = {
+		trigger = {
+			is_building_type = building_big_ben
+		}
+		localization_key = RU_BL_VP_building_big_ben
+	}
+	text = {
+		trigger = {
+			is_building_type = building_chemical_plant
+		}
+		localization_key = RU_BL_VP_building_chemical_plant
+	}
+	text = {
+		trigger = {
+			is_building_type = building_coffee_plantation
+		}
+		localization_key = RU_BL_VP_building_coffee_plantation
+	}
+	text = {
+		trigger = {
+			is_building_type = building_company_headquarter
+		}
+		localization_key = RU_BL_VP_building_company_headquarter
+	}
+	text = {
+		trigger = {
+			is_building_type = building_company_regional_headquarter
+		}
+		localization_key = RU_BL_VP_building_company_regional_headquarter
+	}
+	text = {
+		trigger = {
+			is_building_type = building_conscription_center
+		}
+		localization_key = RU_BL_VP_building_conscription_center
+	}
+	text = {
+		trigger = {
+			is_building_type = building_construction_sector
+		}
+		localization_key = RU_BL_VP_building_construction_sector
+	}
+	text = {
+		trigger = {
+			is_building_type = building_cotton_plantation
+		}
+		localization_key = RU_BL_VP_building_cotton_plantation
+	}
+	text = {
+		trigger = {
+			is_building_type = building_cristo_redentor
+		}
+		localization_key = RU_BL_VP_building_cristo_redentor
+	}
+	text = {
+		trigger = {
+			is_building_type = building_dye_plantation
+		}
+		localization_key = RU_BL_VP_building_dye_plantation
+	}
+	text = {
+		trigger = {
+			is_building_type = building_electrics_industry
+		}
+		localization_key = RU_BL_VP_building_electrics_industry
+	}
+	text = {
+		trigger = {
+			is_building_type = building_explosives_factory
+		}
+		localization_key = RU_BL_VP_building_explosives_factory
+	}
+	text = {
+		trigger = {
+			is_building_type = building_financial_district
+		}
+		localization_key = RU_BL_VP_building_financial_district
+	}
+	text = {
+		trigger = {
+			is_building_type = building_fishing_wharf
+		}
+		localization_key = RU_BL_VP_building_fishing_wharf
+	}
+	text = {
+		trigger = {
+			is_building_type = building_food_industry
+		}
+		localization_key = RU_BL_VP_building_food_industry
+	}
+	text = {
+		trigger = {
+			is_building_type = building_forbidden_city
+		}
+		localization_key = RU_BL_VP_building_forbidden_city
+	}
+	text = {
+		trigger = {
+			is_building_type = building_furniture_manufactory
+		}
+		localization_key = RU_BL_VP_building_furniture_manufactory
+	}
+	text = {
+		trigger = {
+			is_building_type = building_glassworks
+		}
+		localization_key = RU_BL_VP_building_glassworks
+	}
+	text = {
+		trigger = {
+			is_building_type = building_gold_field
+		}
+		localization_key = RU_BL_VP_building_gold_field
+	}
+	text = {
+		trigger = {
+			is_building_type = building_gold_mine
+		}
+		localization_key = RU_BL_VP_building_gold_mine
+	}
+	text = {
+		trigger = {
+			is_building_type = building_government_administration
+		}
+		localization_key = RU_BL_VP_building_government_administration
+	}
+	text = {
+		trigger = {
+			is_building_type = building_hagia_sophia
+		}
+		localization_key = RU_BL_VP_building_hagia_sophia
+	}
+	text = {
+		trigger = {
+			is_building_type = building_iron_mine
+		}
+		localization_key = RU_BL_VP_building_iron_mine
+	}
+	text = {
+		trigger = {
+			is_building_type = building_lead_mine
+		}
+		localization_key = RU_BL_VP_building_lead_mine
+	}
+	text = {
+		trigger = {
+			is_building_type = building_livestock_ranch
+		}
+		localization_key = RU_BL_VP_building_livestock_ranch
+	}
+	text = {
+		trigger = {
+			is_building_type = building_maize_farm
+		}
+		localization_key = RU_BL_VP_building_maize_farm
+	}
+	text = {
+		trigger = {
+			is_building_type = building_manor_house
+		}
+		localization_key = RU_BL_VP_building_manor_house
+	}
+	text = {
+		trigger = {
+			is_building_type = building_millet_farm
+		}
+		localization_key = RU_BL_VP_building_millet_farm
+	}
+	text = {
+		trigger = {
+			is_building_type = building_mosque_of_djenne
+		}
+		localization_key = RU_BL_VP_building_mosque_of_djenne
+	}
+	text = {
+		trigger = {
+			is_building_type = building_motor_industry
+		}
+		localization_key = RU_BL_VP_building_motor_industry
+	}
+	text = {
+		trigger = {
+			is_building_type = building_munition_plant
+		}
+		localization_key = RU_BL_VP_building_munition_plant
+	}
+	text = {
+		trigger = {
+			is_building_type = building_oil_rig
+		}
+		localization_key = RU_BL_VP_building_oil_rig
+	}
+	text = {
+		trigger = {
+			is_building_type = building_opium_plantation
+		}
+		localization_key = RU_BL_VP_building_opium_plantation
+	}
+	text = {
+		trigger = {
+			is_building_type = building_panama_canal
+		}
+		localization_key = RU_BL_VP_building_panama_canal
+	}
+	text = {
+		trigger = {
+			is_building_type = building_paper_mill
+		}
+		localization_key = RU_BL_VP_building_paper_mill
+	}
+	text = {
+		trigger = {
+			is_building_type = building_port
+		}
+		localization_key = RU_BL_VP_building_port
+	}
+	text = {
+		trigger = {
+			is_building_type = building_power_bloc_statue
+		}
+		localization_key = RU_BL_VP_building_power_bloc_statue
+	}
+	text = {
+		trigger = {
+			is_building_type = building_power_plant
+		}
+		localization_key = RU_BL_VP_building_power_plant
+	}
+	text = {
+		trigger = {
+			is_building_type = building_usu_railway_line
+		}
+		localization_key = RU_BL_VP_building_railway
+	}
+	text = {
+		trigger = {
+			is_building_type = building_rice_farm
+		}
+		localization_key = RU_BL_VP_building_rice_farm
+	}
+	text = {
+		trigger = {
+			is_building_type = building_rubber_plantation
+		}
+		localization_key = RU_BL_VP_building_rubber_plantation
+	}
+	text = {
+		trigger = {
+			is_building_type = building_rye_farm
+		}
+		localization_key = RU_BL_VP_building_rye_farm
+	}
+	text = {
+		trigger = {
+			is_building_type = building_saint_basils_cathedral
+		}
+		localization_key = RU_BL_VP_building_saint_basils_cathedral
+	}
+	text = {
+		trigger = {
+			is_building_type = building_shipyard
+		}
+		localization_key = RU_BL_VP_building_shipyard
+	}
+	text = {
+		trigger = {
+			is_building_type = building_silk_plantation
+		}
+		localization_key = RU_BL_VP_building_silk_plantation
+	}
+	text = {
+		trigger = {
+			is_building_type = building_skyscraper
+		}
+		localization_key = RU_BL_VP_building_skyscraper
+	}
+	text = {
+		trigger = {
+			is_building_type = building_statue_of_liberty
+		}
+		localization_key = RU_BL_VP_building_statue_of_liberty
+	}
+	text = {
+		trigger = {
+			is_building_type = building_steel_mill
+		}
+		localization_key = RU_BL_VP_building_steel_mill
+	}
+	text = {
+		trigger = {
+			is_building_type = building_subsistence_farm
+		}
+		localization_key = RU_BL_VP_building_subsistence_farm
+	}
+	text = {
+		trigger = {
+			is_building_type = building_subsistence_fishing_village
+		}
+		localization_key = RU_BL_VP_building_subsistence_fishing_village
+	}
+	text = {
+		trigger = {
+			is_building_type = building_subsistence_orchard
+		}
+		localization_key = RU_BL_VP_building_subsistence_orchard
+	}
+	text = {
+		trigger = {
+			is_building_type = building_subsistence_pasture
+		}
+		localization_key = RU_BL_VP_building_subsistence_pasture
+	}
+	text = {
+		trigger = {
+			is_building_type = building_subsistence_rice_farm
+		}
+		localization_key = RU_BL_VP_building_subsistence_rice_farm
+	}
+	text = {
+		trigger = {
+			is_building_type = building_sugar_plantation
+		}
+		localization_key = RU_BL_VP_building_sugar_plantation
+	}
+	text = {
+		trigger = {
+			is_building_type = building_sulfur_mine
+		}
+		localization_key = RU_BL_VP_building_sulfur_mine
+	}
+	text = {
+		trigger = {
+			is_building_type = building_synthetics_plant
+		}
+		localization_key = RU_BL_VP_building_synthetics_plant
+	}
+	text = {
+		trigger = {
+			is_building_type = building_taj_mahal
+		}
+		localization_key = RU_BL_VP_building_taj_mahal
+	}
+	text = {
+		trigger = {
+			is_building_type = building_tea_plantation
+		}
+		localization_key = RU_BL_VP_building_tea_plantation
+	}
+	text = {
+		trigger = {
+			is_building_type = building_textile_mill
+		}
+		localization_key = RU_BL_VP_building_textile_mill
+	}
+	text = {
+		trigger = {
+			is_building_type = building_tobacco_plantation
+		}
+		localization_key = RU_BL_VP_building_tobacco_plantation
+	}
+	text = {
+		trigger = {
+			is_building_type = building_tooling_workshop
+		}
+		localization_key = RU_BL_VP_building_tooling_workshop
+	}
+	text = {
+		trigger = {
+			is_building_type = building_trade_center
+		}
+		localization_key = RU_BL_VP_building_trade_center
+	}
+	text = {
+		trigger = {
+			is_building_type = building_university
+		}
+		localization_key = RU_BL_VP_building_university
+	}
+	text = {
+		trigger = {
+			is_building_type = building_urban_center
+		}
+		localization_key = RU_BL_VP_building_urban_center
+	}
+	text = {
+		trigger = {
+			is_building_type = building_vatican_city
+		}
+		localization_key = RU_BL_VP_building_vatican_city
+	}
+	text = {
+		trigger = {
+			is_building_type = building_victoria_terminus
+		}
+		localization_key = RU_BL_VP_building_victoria_terminus
+	}
+	text = {
+		trigger = {
+			is_building_type = building_vineyard
+		}
+		localization_key = RU_BL_VP_building_vineyard
+	}
+	text = {
+		trigger = {
+			is_building_type = building_whaling_station
+		}
+		localization_key = RU_BL_VP_building_whaling_station
+	}
+	text = {
+		trigger = {
+			is_building_type = building_wheat_farm
+		}
+		localization_key = RU_BL_VP_building_wheat_farm
+	}
+	text = {
+		trigger = {
+			is_building_type = building_white_house
+		}
+		localization_key = RU_BL_VP_building_white_house
+	}
+	text = {
+		trigger = {
+			is_building_type = building_estacion_de_madrid_atocha
+		}
+		localization_key = RU_BL_VP_building_estacion_de_madrid_atocha
+	}
+	text = {
+		trigger = {
+			is_building_type = building_gran_teatro_de_la_habana
+		}
+		localization_key = RU_BL_VP_building_gran_teatro_de_la_habana
+	}
+	text = {
+		trigger = {
+			is_building_type = building_halloween_castledracula
+		}
+		localization_key = RU_BL_VP_building_halloween_castledracula
+	}
+	text = {
+		trigger = {
+			is_building_type = building_kaiserforum_1
+		}
+		localization_key = RU_BL_VP_building_kaiserforum_1
+	}
+	text = {
+		trigger = {
+			is_building_type = building_kaiserforum_2
+		}
+		localization_key = RU_BL_VP_building_kaiserforum_2
+	}
+	text = {
+		trigger = {
+			is_building_type = building_kaiserforum_3
+		}
+		localization_key = RU_BL_VP_building_kaiserforum_3
+	}
+	text = {
+		trigger = {
+			is_building_type = building_kaiserforum_4
+		}
+		localization_key = RU_BL_VP_building_kaiserforum_4
+	}
+	text = {
+		trigger = {
+			is_building_type = building_land_logistics_center
+		}
+		localization_key = RU_BL_VP_building_land_logistics_center
+	}
+	text = {
+		trigger = {
+			is_building_type = building_manila_cathedral_monument
+		}
+		localization_key = RU_BL_VP_building_manila_cathedral_monument
+	}
+	text = {
+		trigger = {
+			is_building_type = building_manila_cathedral_original
+		}
+		localization_key = RU_BL_VP_building_manila_cathedral_original
+	}
+	text = {
+		trigger = {
+			is_building_type = building_manila_cathedral_ruins
+		}
+		localization_key = RU_BL_VP_building_manila_cathedral_ruins
+	}
+	text = {
+		trigger = {
+			is_building_type = building_naval_administration
+		}
+		localization_key = RU_BL_VP_building_naval_administration
+	}
+	text = {
+		trigger = {
+			is_building_type = building_naval_fortification
+		}
+		localization_key = RU_BL_VP_building_naval_fortification
+	}
+	text = {
+		trigger = {
+			is_building_type = building_naval_logistics_center
+		}
+		localization_key = RU_BL_VP_building_naval_logistics_center
+	}
+	text = {
+		trigger = {
+			is_building_type = building_pena_convent
+		}
+		localization_key = RU_BL_VP_building_pena_convent
+	}
+	text = {
+		trigger = {
+			is_building_type = building_pena_palace
+		}
+		localization_key = RU_BL_VP_building_pena_palace
+	}
+	text = {
+		trigger = {
+			is_building_type = building_sagrada_familia_cathedral_1
+		}
+		localization_key = RU_BL_VP_building_sagrada_familia_cathedral_1
+	}
+	text = {
+		trigger = {
+			is_building_type = building_sagrada_familia_cathedral_2
+		}
+		localization_key = RU_BL_VP_building_sagrada_familia_cathedral_2
+	}
+	text = {
+		trigger = {
+			is_building_type = building_sagrada_familia_cathedral_3
+		}
+		localization_key = RU_BL_VP_building_sagrada_familia_cathedral_3
+	}
+	text = {
+		localization_key = RU_BL_VP_DEFAULT
+	}
+}
+
+## INSTRUMENTAL | ТВОРИТЕЛЬНЫЙ ##
+RU_BL_TP = {
+	type = building
+	log_loc_errors = no
+	text = {
+		trigger = {
+			is_building_type = building_angkor_wat
+		}
+		localization_key = RU_BL_TP_building_angkor_wat
+	}
+	text = {
+		trigger = {
+			is_building_type = building_arms_industry
+		}
+		localization_key = RU_BL_TP_building_arms_industry
+	}
+	text = {
+		trigger = {
+			is_building_type = building_art_academy
+		}
+		localization_key = RU_BL_TP_building_art_academy
+	}
+	text = {
+		trigger = {
+			is_building_type = building_artillery_foundry
+		}
+		localization_key = RU_BL_TP_building_artillery_foundry
+	}
+	text = {
+		trigger = {
+			is_building_type = building_automotive_industry
+		}
+		localization_key = RU_BL_TP_building_automotive_industry
+	}
+	text = {
+		trigger = {
+			is_building_type = building_banana_plantation
+		}
+		localization_key = RU_BL_TP_building_banana_plantation
+	}
+	text = {
+		trigger = {
+			is_building_type = building_barrack
+		}
+		localization_key = RU_BL_TP_building_barrack
+	}
+	text = {
+		trigger = {
+			is_building_type = building_big_ben
+		}
+		localization_key = RU_BL_TP_building_big_ben
+	}
+	text = {
+		trigger = {
+			is_building_type = building_chemical_plant
+		}
+		localization_key = RU_BL_TP_building_chemical_plant
+	}
+	text = {
+		trigger = {
+			is_building_type = building_coffee_plantation
+		}
+		localization_key = RU_BL_TP_building_coffee_plantation
+	}
+	text = {
+		trigger = {
+			is_building_type = building_company_headquarter
+		}
+		localization_key = RU_BL_TP_building_company_headquarter
+	}
+	text = {
+		trigger = {
+			is_building_type = building_company_regional_headquarter
+		}
+		localization_key = RU_BL_TP_building_company_regional_headquarter
+	}
+	text = {
+		trigger = {
+			is_building_type = building_conscription_center
+		}
+		localization_key = RU_BL_TP_building_conscription_center
+	}
+	text = {
+		trigger = {
+			is_building_type = building_construction_sector
+		}
+		localization_key = RU_BL_TP_building_construction_sector
+	}
+	text = {
+		trigger = {
+			is_building_type = building_cotton_plantation
+		}
+		localization_key = RU_BL_TP_building_cotton_plantation
+	}
+	text = {
+		trigger = {
+			is_building_type = building_cristo_redentor
+		}
+		localization_key = RU_BL_TP_building_cristo_redentor
+	}
+	text = {
+		trigger = {
+			is_building_type = building_dye_plantation
+		}
+		localization_key = RU_BL_TP_building_dye_plantation
+	}
+	text = {
+		trigger = {
+			is_building_type = building_electrics_industry
+		}
+		localization_key = RU_BL_TP_building_electrics_industry
+	}
+	text = {
+		trigger = {
+			is_building_type = building_explosives_factory
+		}
+		localization_key = RU_BL_TP_building_explosives_factory
+	}
+	text = {
+		trigger = {
+			is_building_type = building_financial_district
+		}
+		localization_key = RU_BL_TP_building_financial_district
+	}
+	text = {
+		trigger = {
+			is_building_type = building_fishing_wharf
+		}
+		localization_key = RU_BL_TP_building_fishing_wharf
+	}
+	text = {
+		trigger = {
+			is_building_type = building_food_industry
+		}
+		localization_key = RU_BL_TP_building_food_industry
+	}
+	text = {
+		trigger = {
+			is_building_type = building_forbidden_city
+		}
+		localization_key = RU_BL_TP_building_forbidden_city
+	}
+	text = {
+		trigger = {
+			is_building_type = building_furniture_manufactory
+		}
+		localization_key = RU_BL_TP_building_furniture_manufactory
+	}
+	text = {
+		trigger = {
+			is_building_type = building_glassworks
+		}
+		localization_key = RU_BL_TP_building_glassworks
+	}
+	text = {
+		trigger = {
+			is_building_type = building_gold_field
+		}
+		localization_key = RU_BL_TP_building_gold_field
+	}
+	text = {
+		trigger = {
+			is_building_type = building_gold_mine
+		}
+		localization_key = RU_BL_TP_building_gold_mine
+	}
+	text = {
+		trigger = {
+			is_building_type = building_government_administration
+		}
+		localization_key = RU_BL_TP_building_government_administration
+	}
+	text = {
+		trigger = {
+			is_building_type = building_hagia_sophia
+		}
+		localization_key = RU_BL_TP_building_hagia_sophia
+	}
+	text = {
+		trigger = {
+			is_building_type = building_iron_mine
+		}
+		localization_key = RU_BL_TP_building_iron_mine
+	}
+	text = {
+		trigger = {
+			is_building_type = building_lead_mine
+		}
+		localization_key = RU_BL_TP_building_lead_mine
+	}
+	text = {
+		trigger = {
+			is_building_type = building_livestock_ranch
+		}
+		localization_key = RU_BL_TP_building_livestock_ranch
+	}
+	text = {
+		trigger = {
+			is_building_type = building_maize_farm
+		}
+		localization_key = RU_BL_TP_building_maize_farm
+	}
+	text = {
+		trigger = {
+			is_building_type = building_manor_house
+		}
+		localization_key = RU_BL_TP_building_manor_house
+	}
+	text = {
+		trigger = {
+			is_building_type = building_millet_farm
+		}
+		localization_key = RU_BL_TP_building_millet_farm
+	}
+	text = {
+		trigger = {
+			is_building_type = building_mosque_of_djenne
+		}
+		localization_key = RU_BL_TP_building_mosque_of_djenne
+	}
+	text = {
+		trigger = {
+			is_building_type = building_motor_industry
+		}
+		localization_key = RU_BL_TP_building_motor_industry
+	}
+	text = {
+		trigger = {
+			is_building_type = building_munition_plant
+		}
+		localization_key = RU_BL_TP_building_munition_plant
+	}
+	text = {
+		trigger = {
+			is_building_type = building_oil_rig
+		}
+		localization_key = RU_BL_TP_building_oil_rig
+	}
+	text = {
+		trigger = {
+			is_building_type = building_opium_plantation
+		}
+		localization_key = RU_BL_TP_building_opium_plantation
+	}
+	text = {
+		trigger = {
+			is_building_type = building_panama_canal
+		}
+		localization_key = RU_BL_TP_building_panama_canal
+	}
+	text = {
+		trigger = {
+			is_building_type = building_paper_mill
+		}
+		localization_key = RU_BL_TP_building_paper_mill
+	}
+	text = {
+		trigger = {
+			is_building_type = building_port
+		}
+		localization_key = RU_BL_TP_building_port
+	}
+	text = {
+		trigger = {
+			is_building_type = building_power_bloc_statue
+		}
+		localization_key = RU_BL_TP_building_power_bloc_statue
+	}
+	text = {
+		trigger = {
+			is_building_type = building_power_plant
+		}
+		localization_key = RU_BL_TP_building_power_plant
+	}
+	text = {
+		trigger = {
+			is_building_type = building_usu_railway_line
+		}
+		localization_key = RU_BL_TP_building_railway
+	}
+	text = {
+		trigger = {
+			is_building_type = building_rice_farm
+		}
+		localization_key = RU_BL_TP_building_rice_farm
+	}
+	text = {
+		trigger = {
+			is_building_type = building_rubber_plantation
+		}
+		localization_key = RU_BL_TP_building_rubber_plantation
+	}
+	text = {
+		trigger = {
+			is_building_type = building_rye_farm
+		}
+		localization_key = RU_BL_TP_building_rye_farm
+	}
+	text = {
+		trigger = {
+			is_building_type = building_saint_basils_cathedral
+		}
+		localization_key = RU_BL_TP_building_saint_basils_cathedral
+	}
+	text = {
+		trigger = {
+			is_building_type = building_shipyard
+		}
+		localization_key = RU_BL_TP_building_shipyard
+	}
+	text = {
+		trigger = {
+			is_building_type = building_silk_plantation
+		}
+		localization_key = RU_BL_TP_building_silk_plantation
+	}
+	text = {
+		trigger = {
+			is_building_type = building_skyscraper
+		}
+		localization_key = RU_BL_TP_building_skyscraper
+	}
+	text = {
+		trigger = {
+			is_building_type = building_statue_of_liberty
+		}
+		localization_key = RU_BL_TP_building_statue_of_liberty
+	}
+	text = {
+		trigger = {
+			is_building_type = building_steel_mill
+		}
+		localization_key = RU_BL_TP_building_steel_mill
+	}
+	text = {
+		trigger = {
+			is_building_type = building_subsistence_farm
+		}
+		localization_key = RU_BL_TP_building_subsistence_farm
+	}
+	text = {
+		trigger = {
+			is_building_type = building_subsistence_fishing_village
+		}
+		localization_key = RU_BL_TP_building_subsistence_fishing_village
+	}
+	text = {
+		trigger = {
+			is_building_type = building_subsistence_orchard
+		}
+		localization_key = RU_BL_TP_building_subsistence_orchard
+	}
+	text = {
+		trigger = {
+			is_building_type = building_subsistence_pasture
+		}
+		localization_key = RU_BL_TP_building_subsistence_pasture
+	}
+	text = {
+		trigger = {
+			is_building_type = building_subsistence_rice_farm
+		}
+		localization_key = RU_BL_TP_building_subsistence_rice_farm
+	}
+	text = {
+		trigger = {
+			is_building_type = building_sugar_plantation
+		}
+		localization_key = RU_BL_TP_building_sugar_plantation
+	}
+	text = {
+		trigger = {
+			is_building_type = building_sulfur_mine
+		}
+		localization_key = RU_BL_TP_building_sulfur_mine
+	}
+	text = {
+		trigger = {
+			is_building_type = building_synthetics_plant
+		}
+		localization_key = RU_BL_TP_building_synthetics_plant
+	}
+	text = {
+		trigger = {
+			is_building_type = building_taj_mahal
+		}
+		localization_key = RU_BL_TP_building_taj_mahal
+	}
+	text = {
+		trigger = {
+			is_building_type = building_tea_plantation
+		}
+		localization_key = RU_BL_TP_building_tea_plantation
+	}
+	text = {
+		trigger = {
+			is_building_type = building_textile_mill
+		}
+		localization_key = RU_BL_TP_building_textile_mill
+	}
+	text = {
+		trigger = {
+			is_building_type = building_tobacco_plantation
+		}
+		localization_key = RU_BL_TP_building_tobacco_plantation
+	}
+	text = {
+		trigger = {
+			is_building_type = building_tooling_workshop
+		}
+		localization_key = RU_BL_TP_building_tooling_workshop
+	}
+	text = {
+		trigger = {
+			is_building_type = building_trade_center
+		}
+		localization_key = RU_BL_TP_building_trade_center
+	}
+	text = {
+		trigger = {
+			is_building_type = building_university
+		}
+		localization_key = RU_BL_TP_building_university
+	}
+	text = {
+		trigger = {
+			is_building_type = building_urban_center
+		}
+		localization_key = RU_BL_TP_building_urban_center
+	}
+	text = {
+		trigger = {
+			is_building_type = building_vatican_city
+		}
+		localization_key = RU_BL_TP_building_vatican_city
+	}
+	text = {
+		trigger = {
+			is_building_type = building_victoria_terminus
+		}
+		localization_key = RU_BL_TP_building_victoria_terminus
+	}
+	text = {
+		trigger = {
+			is_building_type = building_vineyard
+		}
+		localization_key = RU_BL_TP_building_vineyard
+	}
+	text = {
+		trigger = {
+			is_building_type = building_whaling_station
+		}
+		localization_key = RU_BL_TP_building_whaling_station
+	}
+	text = {
+		trigger = {
+			is_building_type = building_wheat_farm
+		}
+		localization_key = RU_BL_TP_building_wheat_farm
+	}
+	text = {
+		trigger = {
+			is_building_type = building_white_house
+		}
+		localization_key = RU_BL_TP_building_white_house
+	}
+	text = {
+		trigger = {
+			is_building_type = building_estacion_de_madrid_atocha
+		}
+		localization_key = RU_BL_TP_building_estacion_de_madrid_atocha
+	}
+	text = {
+		trigger = {
+			is_building_type = building_gran_teatro_de_la_habana
+		}
+		localization_key = RU_BL_TP_building_gran_teatro_de_la_habana
+	}
+	text = {
+		trigger = {
+			is_building_type = building_halloween_castledracula
+		}
+		localization_key = RU_BL_TP_building_halloween_castledracula
+	}
+	text = {
+		trigger = {
+			is_building_type = building_kaiserforum_1
+		}
+		localization_key = RU_BL_TP_building_kaiserforum_1
+	}
+	text = {
+		trigger = {
+			is_building_type = building_kaiserforum_2
+		}
+		localization_key = RU_BL_TP_building_kaiserforum_2
+	}
+	text = {
+		trigger = {
+			is_building_type = building_kaiserforum_3
+		}
+		localization_key = RU_BL_TP_building_kaiserforum_3
+	}
+	text = {
+		trigger = {
+			is_building_type = building_kaiserforum_4
+		}
+		localization_key = RU_BL_TP_building_kaiserforum_4
+	}
+	text = {
+		trigger = {
+			is_building_type = building_land_logistics_center
+		}
+		localization_key = RU_BL_TP_building_land_logistics_center
+	}
+	text = {
+		trigger = {
+			is_building_type = building_manila_cathedral_monument
+		}
+		localization_key = RU_BL_TP_building_manila_cathedral_monument
+	}
+	text = {
+		trigger = {
+			is_building_type = building_manila_cathedral_original
+		}
+		localization_key = RU_BL_TP_building_manila_cathedral_original
+	}
+	text = {
+		trigger = {
+			is_building_type = building_manila_cathedral_ruins
+		}
+		localization_key = RU_BL_TP_building_manila_cathedral_ruins
+	}
+	text = {
+		trigger = {
+			is_building_type = building_naval_administration
+		}
+		localization_key = RU_BL_TP_building_naval_administration
+	}
+	text = {
+		trigger = {
+			is_building_type = building_naval_fortification
+		}
+		localization_key = RU_BL_TP_building_naval_fortification
+	}
+	text = {
+		trigger = {
+			is_building_type = building_naval_logistics_center
+		}
+		localization_key = RU_BL_TP_building_naval_logistics_center
+	}
+	text = {
+		trigger = {
+			is_building_type = building_pena_convent
+		}
+		localization_key = RU_BL_TP_building_pena_convent
+	}
+	text = {
+		trigger = {
+			is_building_type = building_pena_palace
+		}
+		localization_key = RU_BL_TP_building_pena_palace
+	}
+	text = {
+		trigger = {
+			is_building_type = building_sagrada_familia_cathedral_1
+		}
+		localization_key = RU_BL_TP_building_sagrada_familia_cathedral_1
+	}
+	text = {
+		trigger = {
+			is_building_type = building_sagrada_familia_cathedral_2
+		}
+		localization_key = RU_BL_TP_building_sagrada_familia_cathedral_2
+	}
+	text = {
+		trigger = {
+			is_building_type = building_sagrada_familia_cathedral_3
+		}
+		localization_key = RU_BL_TP_building_sagrada_familia_cathedral_3
+	}
+	text = {
+		localization_key = RU_BL_TP_DEFAULT
+	}
+}
+
+## PREPOSITIONAL | ПРЕДЛОЖНЫЙ ##
+RU_BL_PP = {
+	type = building
+	log_loc_errors = no
+	text = {
+		trigger = {
+			is_building_type = building_angkor_wat
+		}
+		localization_key = RU_BL_PP_building_angkor_wat
+	}
+	text = {
+		trigger = {
+			is_building_type = building_arms_industry
+		}
+		localization_key = RU_BL_PP_building_arms_industry
+	}
+	text = {
+		trigger = {
+			is_building_type = building_art_academy
+		}
+		localization_key = RU_BL_PP_building_art_academy
+	}
+	text = {
+		trigger = {
+			is_building_type = building_artillery_foundry
+		}
+		localization_key = RU_BL_PP_building_artillery_foundry
+	}
+	text = {
+		trigger = {
+			is_building_type = building_automotive_industry
+		}
+		localization_key = RU_BL_PP_building_automotive_industry
+	}
+	text = {
+		trigger = {
+			is_building_type = building_banana_plantation
+		}
+		localization_key = RU_BL_PP_building_banana_plantation
+	}
+	text = {
+		trigger = {
+			is_building_type = building_barrack
+		}
+		localization_key = RU_BL_PP_building_barrack
+	}
+	text = {
+		trigger = {
+			is_building_type = building_big_ben
+		}
+		localization_key = RU_BL_PP_building_big_ben
+	}
+	text = {
+		trigger = {
+			is_building_type = building_chemical_plant
+		}
+		localization_key = RU_BL_PP_building_chemical_plant
+	}
+	text = {
+		trigger = {
+			is_building_type = building_coffee_plantation
+		}
+		localization_key = RU_BL_PP_building_coffee_plantation
+	}
+	text = {
+		trigger = {
+			is_building_type = building_company_headquarter
+		}
+		localization_key = RU_BL_PP_building_company_headquarter
+	}
+	text = {
+		trigger = {
+			is_building_type = building_company_regional_headquarter
+		}
+		localization_key = RU_BL_PP_building_company_regional_headquarter
+	}
+	text = {
+		trigger = {
+			is_building_type = building_conscription_center
+		}
+		localization_key = RU_BL_PP_building_conscription_center
+	}
+	text = {
+		trigger = {
+			is_building_type = building_construction_sector
+		}
+		localization_key = RU_BL_PP_building_construction_sector
+	}
+	text = {
+		trigger = {
+			is_building_type = building_cotton_plantation
+		}
+		localization_key = RU_BL_PP_building_cotton_plantation
+	}
+	text = {
+		trigger = {
+			is_building_type = building_cristo_redentor
+		}
+		localization_key = RU_BL_PP_building_cristo_redentor
+	}
+	text = {
+		trigger = {
+			is_building_type = building_dye_plantation
+		}
+		localization_key = RU_BL_PP_building_dye_plantation
+	}
+	text = {
+		trigger = {
+			is_building_type = building_electrics_industry
+		}
+		localization_key = RU_BL_PP_building_electrics_industry
+	}
+	text = {
+		trigger = {
+			is_building_type = building_explosives_factory
+		}
+		localization_key = RU_BL_PP_building_explosives_factory
+	}
+	text = {
+		trigger = {
+			is_building_type = building_financial_district
+		}
+		localization_key = RU_BL_PP_building_financial_district
+	}
+	text = {
+		trigger = {
+			is_building_type = building_fishing_wharf
+		}
+		localization_key = RU_BL_PP_building_fishing_wharf
+	}
+	text = {
+		trigger = {
+			is_building_type = building_food_industry
+		}
+		localization_key = RU_BL_PP_building_food_industry
+	}
+	text = {
+		trigger = {
+			is_building_type = building_forbidden_city
+		}
+		localization_key = RU_BL_PP_building_forbidden_city
+	}
+	text = {
+		trigger = {
+			is_building_type = building_furniture_manufactory
+		}
+		localization_key = RU_BL_PP_building_furniture_manufactory
+	}
+	text = {
+		trigger = {
+			is_building_type = building_glassworks
+		}
+		localization_key = RU_BL_PP_building_glassworks
+	}
+	text = {
+		trigger = {
+			is_building_type = building_gold_field
+		}
+		localization_key = RU_BL_PP_building_gold_field
+	}
+	text = {
+		trigger = {
+			is_building_type = building_gold_mine
+		}
+		localization_key = RU_BL_PP_building_gold_mine
+	}
+	text = {
+		trigger = {
+			is_building_type = building_government_administration
+		}
+		localization_key = RU_BL_PP_building_government_administration
+	}
+	text = {
+		trigger = {
+			is_building_type = building_hagia_sophia
+		}
+		localization_key = RU_BL_PP_building_hagia_sophia
+	}
+	text = {
+		trigger = {
+			is_building_type = building_iron_mine
+		}
+		localization_key = RU_BL_PP_building_iron_mine
+	}
+	text = {
+		trigger = {
+			is_building_type = building_lead_mine
+		}
+		localization_key = RU_BL_PP_building_lead_mine
+	}
+	text = {
+		trigger = {
+			is_building_type = building_livestock_ranch
+		}
+		localization_key = RU_BL_PP_building_livestock_ranch
+	}
+	text = {
+		trigger = {
+			is_building_type = building_maize_farm
+		}
+		localization_key = RU_BL_PP_building_maize_farm
+	}
+	text = {
+		trigger = {
+			is_building_type = building_manor_house
+		}
+		localization_key = RU_BL_PP_building_manor_house
+	}
+	text = {
+		trigger = {
+			is_building_type = building_millet_farm
+		}
+		localization_key = RU_BL_PP_building_millet_farm
+	}
+	text = {
+		trigger = {
+			is_building_type = building_mosque_of_djenne
+		}
+		localization_key = RU_BL_PP_building_mosque_of_djenne
+	}
+	text = {
+		trigger = {
+			is_building_type = building_motor_industry
+		}
+		localization_key = RU_BL_PP_building_motor_industry
+	}
+	text = {
+		trigger = {
+			is_building_type = building_munition_plant
+		}
+		localization_key = RU_BL_PP_building_munition_plant
+	}
+	text = {
+		trigger = {
+			is_building_type = building_oil_rig
+		}
+		localization_key = RU_BL_PP_building_oil_rig
+	}
+	text = {
+		trigger = {
+			is_building_type = building_opium_plantation
+		}
+		localization_key = RU_BL_PP_building_opium_plantation
+	}
+	text = {
+		trigger = {
+			is_building_type = building_panama_canal
+		}
+		localization_key = RU_BL_PP_building_panama_canal
+	}
+	text = {
+		trigger = {
+			is_building_type = building_paper_mill
+		}
+		localization_key = RU_BL_PP_building_paper_mill
+	}
+	text = {
+		trigger = {
+			is_building_type = building_port
+		}
+		localization_key = RU_BL_PP_building_port
+	}
+	text = {
+		trigger = {
+			is_building_type = building_power_bloc_statue
+		}
+		localization_key = RU_BL_PP_building_power_bloc_statue
+	}
+	text = {
+		trigger = {
+			is_building_type = building_power_plant
+		}
+		localization_key = RU_BL_PP_building_power_plant
+	}
+	text = {
+		trigger = {
+			is_building_type = building_usu_railway_line
+		}
+		localization_key = RU_BL_PP_building_railway
+	}
+	text = {
+		trigger = {
+			is_building_type = building_rice_farm
+		}
+		localization_key = RU_BL_PP_building_rice_farm
+	}
+	text = {
+		trigger = {
+			is_building_type = building_rubber_plantation
+		}
+		localization_key = RU_BL_PP_building_rubber_plantation
+	}
+	text = {
+		trigger = {
+			is_building_type = building_rye_farm
+		}
+		localization_key = RU_BL_PP_building_rye_farm
+	}
+	text = {
+		trigger = {
+			is_building_type = building_saint_basils_cathedral
+		}
+		localization_key = RU_BL_PP_building_saint_basils_cathedral
+	}
+	text = {
+		trigger = {
+			is_building_type = building_shipyard
+		}
+		localization_key = RU_BL_PP_building_shipyard
+	}
+	text = {
+		trigger = {
+			is_building_type = building_silk_plantation
+		}
+		localization_key = RU_BL_PP_building_silk_plantation
+	}
+	text = {
+		trigger = {
+			is_building_type = building_skyscraper
+		}
+		localization_key = RU_BL_PP_building_skyscraper
+	}
+	text = {
+		trigger = {
+			is_building_type = building_statue_of_liberty
+		}
+		localization_key = RU_BL_PP_building_statue_of_liberty
+	}
+	text = {
+		trigger = {
+			is_building_type = building_steel_mill
+		}
+		localization_key = RU_BL_PP_building_steel_mill
+	}
+	text = {
+		trigger = {
+			is_building_type = building_subsistence_farm
+		}
+		localization_key = RU_BL_PP_building_subsistence_farm
+	}
+	text = {
+		trigger = {
+			is_building_type = building_subsistence_fishing_village
+		}
+		localization_key = RU_BL_PP_building_subsistence_fishing_village
+	}
+	text = {
+		trigger = {
+			is_building_type = building_subsistence_orchard
+		}
+		localization_key = RU_BL_PP_building_subsistence_orchard
+	}
+	text = {
+		trigger = {
+			is_building_type = building_subsistence_pasture
+		}
+		localization_key = RU_BL_PP_building_subsistence_pasture
+	}
+	text = {
+		trigger = {
+			is_building_type = building_subsistence_rice_farm
+		}
+		localization_key = RU_BL_PP_building_subsistence_rice_farm
+	}
+	text = {
+		trigger = {
+			is_building_type = building_sugar_plantation
+		}
+		localization_key = RU_BL_PP_building_sugar_plantation
+	}
+	text = {
+		trigger = {
+			is_building_type = building_sulfur_mine
+		}
+		localization_key = RU_BL_PP_building_sulfur_mine
+	}
+	text = {
+		trigger = {
+			is_building_type = building_synthetics_plant
+		}
+		localization_key = RU_BL_PP_building_synthetics_plant
+	}
+	text = {
+		trigger = {
+			is_building_type = building_taj_mahal
+		}
+		localization_key = RU_BL_PP_building_taj_mahal
+	}
+	text = {
+		trigger = {
+			is_building_type = building_tea_plantation
+		}
+		localization_key = RU_BL_PP_building_tea_plantation
+	}
+	text = {
+		trigger = {
+			is_building_type = building_textile_mill
+		}
+		localization_key = RU_BL_PP_building_textile_mill
+	}
+	text = {
+		trigger = {
+			is_building_type = building_tobacco_plantation
+		}
+		localization_key = RU_BL_PP_building_tobacco_plantation
+	}
+	text = {
+		trigger = {
+			is_building_type = building_tooling_workshop
+		}
+		localization_key = RU_BL_PP_building_tooling_workshop
+	}
+	text = {
+		trigger = {
+			is_building_type = building_trade_center
+		}
+		localization_key = RU_BL_PP_building_trade_center
+	}
+	text = {
+		trigger = {
+			is_building_type = building_university
+		}
+		localization_key = RU_BL_PP_building_university
+	}
+	text = {
+		trigger = {
+			is_building_type = building_urban_center
+		}
+		localization_key = RU_BL_PP_building_urban_center
+	}
+	text = {
+		trigger = {
+			is_building_type = building_vatican_city
+		}
+		localization_key = RU_BL_PP_building_vatican_city
+	}
+	text = {
+		trigger = {
+			is_building_type = building_victoria_terminus
+		}
+		localization_key = RU_BL_PP_building_victoria_terminus
+	}
+	text = {
+		trigger = {
+			is_building_type = building_vineyard
+		}
+		localization_key = RU_BL_PP_building_vineyard
+	}
+	text = {
+		trigger = {
+			is_building_type = building_whaling_station
+		}
+		localization_key = RU_BL_PP_building_whaling_station
+	}
+	text = {
+		trigger = {
+			is_building_type = building_wheat_farm
+		}
+		localization_key = RU_BL_PP_building_wheat_farm
+	}
+	text = {
+		trigger = {
+			is_building_type = building_white_house
+		}
+		localization_key = RU_BL_PP_building_white_house
+	}
+	text = {
+		trigger = {
+			is_building_type = building_estacion_de_madrid_atocha
+		}
+		localization_key = RU_BL_PP_building_estacion_de_madrid_atocha
+	}
+	text = {
+		trigger = {
+			is_building_type = building_gran_teatro_de_la_habana
+		}
+		localization_key = RU_BL_PP_building_gran_teatro_de_la_habana
+	}
+	text = {
+		trigger = {
+			is_building_type = building_halloween_castledracula
+		}
+		localization_key = RU_BL_PP_building_halloween_castledracula
+	}
+	text = {
+		trigger = {
+			is_building_type = building_kaiserforum_1
+		}
+		localization_key = RU_BL_PP_building_kaiserforum_1
+	}
+	text = {
+		trigger = {
+			is_building_type = building_kaiserforum_2
+		}
+		localization_key = RU_BL_PP_building_kaiserforum_2
+	}
+	text = {
+		trigger = {
+			is_building_type = building_kaiserforum_3
+		}
+		localization_key = RU_BL_PP_building_kaiserforum_3
+	}
+	text = {
+		trigger = {
+			is_building_type = building_kaiserforum_4
+		}
+		localization_key = RU_BL_PP_building_kaiserforum_4
+	}
+	text = {
+		trigger = {
+			is_building_type = building_land_logistics_center
+		}
+		localization_key = RU_BL_PP_building_land_logistics_center
+	}
+	text = {
+		trigger = {
+			is_building_type = building_manila_cathedral_monument
+		}
+		localization_key = RU_BL_PP_building_manila_cathedral_monument
+	}
+	text = {
+		trigger = {
+			is_building_type = building_manila_cathedral_original
+		}
+		localization_key = RU_BL_PP_building_manila_cathedral_original
+	}
+	text = {
+		trigger = {
+			is_building_type = building_manila_cathedral_ruins
+		}
+		localization_key = RU_BL_PP_building_manila_cathedral_ruins
+	}
+	text = {
+		trigger = {
+			is_building_type = building_naval_administration
+		}
+		localization_key = RU_BL_PP_building_naval_administration
+	}
+	text = {
+		trigger = {
+			is_building_type = building_naval_fortification
+		}
+		localization_key = RU_BL_PP_building_naval_fortification
+	}
+	text = {
+		trigger = {
+			is_building_type = building_naval_logistics_center
+		}
+		localization_key = RU_BL_PP_building_naval_logistics_center
+	}
+	text = {
+		trigger = {
+			is_building_type = building_pena_convent
+		}
+		localization_key = RU_BL_PP_building_pena_convent
+	}
+	text = {
+		trigger = {
+			is_building_type = building_pena_palace
+		}
+		localization_key = RU_BL_PP_building_pena_palace
+	}
+	text = {
+		trigger = {
+			is_building_type = building_sagrada_familia_cathedral_1
+		}
+		localization_key = RU_BL_PP_building_sagrada_familia_cathedral_1
+	}
+	text = {
+		trigger = {
+			is_building_type = building_sagrada_familia_cathedral_2
+		}
+		localization_key = RU_BL_PP_building_sagrada_familia_cathedral_2
+	}
+	text = {
+		trigger = {
+			is_building_type = building_sagrada_familia_cathedral_3
+		}
+		localization_key = RU_BL_PP_building_sagrada_familia_cathedral_3
+	}
+	text = {
+		localization_key = RU_BL_PP_DEFAULT
+	}
+}

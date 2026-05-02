@@ -1,0 +1,59 @@
+﻿## Update building_railway to building_usu_railway_line # building_railway
+##
+TRY_REPLACE:je_portugal_regeneration_public_works = { # <- tech. only needs 1 level (fine) but too noticeably easier
+	icon = "gfx/interface/icons/invention_icons/railways.dds"
+
+	group = je_group_historical_content
+
+	complete = {
+		has_technology_researched = electric_telegraph
+		any_scope_state = {
+			filter = {
+				is_incorporated = yes
+			}
+			has_building = building_usu_railway_line # building_railway
+			percent = 1
+		}
+		any_scope_building = {
+			filter = {
+				is_building_type = building_urban_center
+				state = { is_incorporated = yes }
+			}
+			has_active_production_method = pm_public_trams
+			percent >= 0.75
+		}
+		NOT = {
+			any_scope_state = {
+				market_access < 1
+			}
+		}
+	}
+
+	on_complete = {
+		set_variable = je_portugal_regeneration_public_works
+		trigger_event = { id = portugal_regeneration.5 }
+	}
+
+	event_outcome_completed_desc = {
+		first_valid = {
+			triggered_desc = {
+				desc = event_effects_portugal_regeneration.5_tt
+			}
+		}
+	}
+
+    fail = {
+		OR = {
+			custom_tooltip = {
+				text = no_coups_tt
+				has_variable = recent_coup_or_revolution_var
+			}
+			in_default = yes
+		}
+    }
+
+	weight = 6000
+
+    	
+	should_be_pinned_by_default_uninvolved_or_context = yes
+}

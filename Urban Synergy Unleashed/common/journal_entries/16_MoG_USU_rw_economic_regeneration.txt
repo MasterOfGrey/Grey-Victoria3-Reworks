@@ -1,0 +1,114 @@
+﻿## Update building_railway to building_usu_railway_line # building_railway
+##
+TRY_REPLACE:je_spa_economic_regeneration_railways = {
+    icon = "gfx/interface/icons/invention_icons/railways.dds"
+
+    group = je_group_spa_economic_regeneration
+
+    scripted_button = je_spa_economic_regeneration_cheat_button
+
+    possible = {
+    }
+
+    immediate = {
+    }
+
+    on_monthly_pulse = {
+
+    }
+
+    complete = {
+        trigger_if = {
+            limit = {
+                scope:journal_entry = {
+                    NOT = {
+                        has_variable = je_spa_economic_regeneration_creative_accounting_var
+                    }
+                }
+            }
+            any_scope_state = {
+                is_in_geographic_region = geographic_region_iberia_old
+                any_scope_building = {
+                    is_building_type = building_usu_railway_line # building_railway
+                    level >= 3
+                }
+                count >= 12
+            }
+        }
+        trigger_else_if = {
+            limit = {
+                scope:journal_entry = {
+                    has_variable = je_spa_economic_regeneration_creative_accounting_var
+                }
+            }
+            any_scope_state = {
+                is_in_geographic_region = geographic_region_iberia_old
+                any_scope_building = {
+                    is_building_type = building_usu_railway_line # building_railway
+                    level >= 1
+                }
+                count >= 12
+            }
+        }
+    }
+    on_complete = {
+        change_variable = {
+            name = spa_economic_regeneration_var
+            add = 1
+        }
+        if = {
+            limit = {
+                scope:journal_entry = {
+                    NOT = {
+                        has_variable = je_spa_economic_regeneration_creative_accounting_var
+                    }
+                }
+            }
+            add_modifier = {
+                name = modifier_arteries_of_the_nation
+                days = very_long_modifier_time
+            }
+            add_modifier = {
+                name = modifier_railway_magnates
+                days = very_long_modifier_time
+            }
+        }
+        else_if = {
+            limit = {
+                scope:journal_entry = {
+                    has_variable = je_spa_economic_regeneration_creative_accounting_var
+                }
+            }
+            add_modifier = {
+                name = modifier_arteries_of_the_nation
+                days = long_modifier_time
+                multiplier = 0.5
+            }
+            add_modifier = {
+                name = modifier_railway_magnates
+                days = long_modifier_time
+                multiplier = 0.5
+            }
+        }
+    }
+
+    fail = {
+        OR = {
+            NOT = {
+                has_journal_entry = je_spa_economic_regeneration_master
+            }
+        }
+    }
+
+    on_fail = {
+        add_modifier = {
+            name = modifier_entrenchment_of_local_power
+            days = normal_modifier_time
+        }
+    }
+
+    weight = 100
+
+    	
+	should_be_pinned_by_default_uninvolved_or_context = yes
+}

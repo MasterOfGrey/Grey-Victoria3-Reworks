@@ -1,0 +1,170 @@
+﻿namespace = ep2_meiji
+## Update building_railway to building_usu_railway_line # building_railway
+##
+ep2_meiji.9 = { # Restoration - Kogi Yoron Ending
+	type = country_event
+	placement = root
+
+	duration = 3
+
+	title = ep2_meiji.9.t
+	desc = ep2_meiji.9.d
+	flavor = ep2_meiji.9.f
+
+    gui_window = event_window_1char_tabloid
+
+	left_icon = scope:taikun_scope
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/misc/1Character_Banner"
+
+	icon = "gfx/interface/icons/event_icons/event_scales.dds"
+
+	cooldown = { days = long_modifier_time }
+
+	cancellation_trigger = {
+
+	}
+
+	immediate = {
+		ruler = {
+			save_scope_as = emperor_scope
+		}
+		random_scope_character = {
+			limit = {
+				has_variable = former_shogun_var
+			}
+			save_scope_as = taikun_scope
+		}
+		add_journal_entry = {
+			type = je_meiji_main
+		}
+	}
+
+	option = {
+		name = ep2_meiji.9.a
+		default_option = yes
+		add_modifier = {
+			name = modifier_continuity_and_enlightenment
+			days = very_long_modifier_time
+			is_decaying = yes
+		}
+	}
+
+	option = {
+		name = ep2_meiji.9.b
+		add_modifier = {
+			name = modifier_taikun_monarchy
+			days = very_long_modifier_time
+			is_decaying = yes
+		}
+		every_scope_character = {
+			limit = {
+				has_variable = house_tokugawa
+			}
+			add_modifier = {
+				name = modifier_taikun_monarchy_character
+				days = stupidly_long_modifier_time
+			}
+		}
+	}
+
+	after = {
+		if = {
+			limit = {
+				NOT = {
+					any_political_movement = {
+						is_political_movement_type = movement_modernizer
+					}
+				}
+			}
+			create_political_movement = { type = movement_modernizer }
+		}
+		if = {
+			limit = {
+				NOT = { has_variable = completed_je_meiji_economy }
+				in_default = no
+				any_scope_state = {
+					filter = {
+						is_incorporated = yes
+					}
+					any_scope_building = {
+						is_building_type = building_urban_center
+						level >= 5
+					}
+					has_building = building_usu_railway_line # building_railway
+					percent > 0.7
+				}
+			}
+			change_variable = {
+				name = meiji_var
+				add = 1
+			}
+			set_variable = completed_je_meiji_economy # If the player manages to skip je_meiji_economy we still need to set the variable
+		}
+		else = {
+			add_journal_entry = {
+				type = je_meiji_economy
+			}
+		}
+		if = {
+			limit = {
+				NOT = { has_law_or_variant = law_type:law_serfdom }
+				ig:ig_armed_forces ?= {
+					is_powerful = no
+					is_in_government = no
+				}
+				has_technology_researched = napoleonic_warfare
+				NOT = {
+					any_scope_building = {
+						is_building_type = building_barrack
+						OR = {
+							has_active_production_method = pm_no_organization
+							# has_active_production_method = pm_no_artillery
+							# has_active_production_method = pm_cannon_artillery
+						}
+					}
+				}
+			}
+			change_variable = {
+				name = meiji_var
+				add = 1
+			}
+			trigger_event = {
+				id = meiji.3
+			}
+		}
+		else = {
+			add_journal_entry = {
+				type = je_meiji_army
+			}
+		}
+		if = {
+			limit = {
+				NOT = { has_dlc_feature = ep2_content }
+				NOT = { has_variable = completed_je_meiji_diplomacy }
+				NOT = { is_country_type = unrecognized }
+				NOT = { has_law_or_variant = law_type:law_isolationism }
+			}
+			change_variable = {
+				name = meiji_var
+				add = 1
+			}
+			set_variable = completed_je_meiji_diplomacy # If the player manages to skip je_meiji_diplomacy we still need to set the variable
+		}
+		else_if = {
+			limit = {
+				NOT = { has_dlc_feature = ep2_content }
+				OR = {
+					has_law_or_variant = law_type:law_isolationism
+					has_law_or_variant = law_type:law_traditionalism
+					has_law_or_variant = law_type:law_closed_borders
+					is_subject = yes
+				}
+			}
+			add_journal_entry = {
+				type = je_meiji_diplomacy
+			}
+		}
+	}
+}

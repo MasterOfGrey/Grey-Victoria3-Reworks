@@ -1,0 +1,70 @@
+﻿## Update building_railway to building_usu_railway_line # building_railway
+##
+TRY_REPLACE:je_specialized_inputs = {
+		
+	should_be_pinned_by_default_uninvolved_or_context = yes
+	icon = "gfx/interface/icons/objectives/economic_dominance.dds"
+
+	group = je_group_objectives
+
+	immediate = {
+	}
+
+	complete = {
+		OR = {
+			any_scope_building = {
+				filter = {
+					OR = {
+						is_building_type = building_rye_farm
+						is_building_type = building_wheat_farm
+						is_building_type = building_maize_farm
+						is_building_type = building_millet_farm
+					}
+				}
+				percent >= 0.75
+				OR = {
+					has_active_production_method = pm_tractors
+					has_active_production_method = pm_compression_ignition_tractors
+				}
+				weekly_profit > 0
+				occupancy >= 0.5
+				is_subsidized = no
+			}
+			any_scope_building = {
+				filter = {
+					OR = {
+						is_building_type = building_coal_mine
+						is_building_type = building_iron_mine
+						is_building_type = building_lead_mine
+						is_building_type = building_sulfur_mine
+					}
+				}
+				percent >= 0.75
+				OR = {
+					has_active_production_method = pm_steam_donkey_building_coal_mine
+					has_active_production_method = pm_steam_donkey_mine
+				}
+				weekly_profit > 0
+				occupancy >= 0.5
+				is_subsidized = no
+			}
+			any_scope_building = {
+				is_building_type = building_usu_railway_line # building_railway
+				or = {
+					level >= 5
+				}
+			}
+		}
+	}
+
+	on_complete = {
+		set_variable = player_obj_home_focus
+	}
+
+	invalid = {
+		has_variable = player_obj_export_focus
+	}
+
+	weight = 1002
+	transferable = yes
+}

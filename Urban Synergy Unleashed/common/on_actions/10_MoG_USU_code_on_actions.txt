@@ -1,0 +1,334 @@
+﻿# For on_actions launched by the code itself.
+## Update building_railway to building_usu_railway_line # building_railway
+##
+
+# No root scope set
+### Having to overwrite this sucks but it is literally only the change from above.
+### When vanilla updates just take vanilla effect block wholesale and re-do the railway replace.
+on_monthly_pulse = {
+	#on_actions = {
+	#	exile_pool_culling_on_action	# Don't run this twice, we're only overwriting the effect block.
+	#}
+	effect = {
+		every_character_in_jail = { # Music too loud? Right to jail. Right away. Driving too fast? Jail. Slow? Jail. You undercook fish? Believe it or not, jail.
+			save_scope_as = prisoner_scope
+			change_variable = { name = prison_time_var subtract = 1 }
+			if = {
+				limit = {
+					NOT = {
+						exists = var:prison_country
+					}
+				}
+				kill_character = yes
+			}
+			else_if = {
+				limit = {
+					exists = var:prison_country
+					var:prison_time_var <= 0
+				}
+				free_character_from_void = yes
+				owner ?= {
+					post_notification = prisoner_out_of_jail
+				}
+				remove_variable = prison_country
+				remove_variable = prison_time_var
+			}
+		}
+
+		if = {
+			limit = {
+				year < 1930
+				NOT = { has_global_variable = germany_formed }
+				c:GER ?= { is_country_alive = yes }
+			}
+			set_global_variable = germany_formed
+		}
+
+		# USA gets a positive/negative modifier depending on whether their capital is in Washington DC
+		c:USA ?= {
+			if = {
+				limit = {
+					NOT = { capital.state_region = s:STATE_DISTRICT_OF_COLUMBIA }
+					NOT = { has_modifier = usa_capital_relocated }
+				}
+
+				add_modifier = usa_capital_relocated
+				remove_modifier = usa_capital_intact
+			}
+			else_if = {
+				limit = {
+					capital.state_region = s:STATE_DISTRICT_OF_COLUMBIA
+					NOT = { has_modifier = usa_capital_intact }
+				}
+
+				remove_modifier = usa_capital_relocated
+				add_modifier = usa_capital_intact
+			}
+		}
+
+		### Scripted country lists
+
+		# Used to keep track of Council Republics for the purpose of the Red Scare.
+		# Our thanks to Brute for reporting this.
+		clear_global_variable_list = aes_country_list
+		every_country = {
+			limit = {
+				has_law_or_variant = law_type:law_council_republic
+				country_rank > rank_value:minor_power
+			}
+			add_to_global_variable_list = {
+				name = aes_country_list
+				target = THIS
+			}
+		}
+
+		# Countries in the German Confederation
+		clear_global_variable_list = german_confederation_country_list
+		every_country_in_german_confederation = {
+			limit = {
+				OR = {
+					country_has_primary_culture = cu:south_german
+					country_has_primary_culture = cu:north_german
+				}
+			}
+			add_to_global_variable_list = {
+				name = german_confederation_country_list
+				target = THIS
+			}
+		}
+
+		# Great Powers
+		clear_global_variable_list = great_power_country_list
+		every_country = {
+			limit = {
+				country_rank >= rank_value:great_power
+			}
+			add_to_global_variable_list = {
+				name = great_power_country_list
+				target = THIS
+			}
+		}
+
+		### Potato Famine
+		if = {
+			limit = {
+				NOT = { has_global_variable = hungry_forties_happened }
+				any_state_in_europe = {
+					state_region = {
+						has_harvest_condition = disease_outbreak
+					}
+					count >= 15
+				}
+			}
+			set_global_variable = hungry_forties_happened
+			set_global_variable = { name = hungry_forties_var days = 1095 }
+		}
+
+		# Gründerzeit JE - has to happen here in order to not kill performance
+		if = {
+			limit = {
+				has_dlc_feature = ip3_content
+				has_global_variable_list = german_confederation_country_list
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_global_variable = grunderzeit_possible_global_var
+					}
+					any_in_global_list = {
+						variable = german_confederation_country_list
+						has_technology_researched = mutual_funds
+						any_scope_building = {
+							is_building_type = building_usu_railway_line # building_railway
+						}
+						percent >= 0.75
+					}
+				}
+				set_global_variable = grunderzeit_possible_global_var
+			}
+			else_if = { # If the Gründerzeit has not begun, calculate the percent of German countries which meet its requirements
+				limit = {
+					NOT = {
+						has_global_variable = grunderzeit_possible_global_var
+					}
+				}
+				set_global_variable = { name = grunderzeit_german_countries value = 0 }
+				set_global_variable = { name = grunderzeit_countries_percent value = 0 }
+					every_in_global_list = {
+						variable = german_confederation_country_list
+					change_global_variable = { name = grunderzeit_german_countries add = 1 }
+					if = {
+						limit = {
+							has_technology_researched = mutual_funds
+							any_scope_building = {
+								is_building_type = building_usu_railway_line # building_railway
+							}
+						}
+						change_global_variable = { name = grunderzeit_countries_percent add = 1 }
+					}
+				}
+				if = {
+					limit = {
+						global_var:grunderzeit_german_countries != 0
+					}
+					change_global_variable = {
+						name = grunderzeit_countries_percent
+						divide = global_var:grunderzeit_german_countries
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					OR = { # If the Gründerzeit is either ongoing or over, clear these variables.
+						has_global_variable = grunderzeit_ongoing_global_var
+						has_global_variable = grunderzeit_happened_global_var
+					}
+					has_global_variable = grunderzeit_countries_percent
+					has_global_variable = grunderzeit_german_countries
+				}
+				remove_global_variable = grunderzeit_countries_percent
+				remove_global_variable = grunderzeit_german_countries
+			}
+		}
+
+		if = {
+			limit = {
+				exists = global_var:krakatoa_temperature_drop
+				exists = global_var:krakatoa_temperature_recovery_rate
+			}
+			change_global_variable = {
+				name = krakatoa_temperature_drop
+				subtract = {
+					value = global_var:krakatoa_temperature_recovery_rate
+				}
+			}
+		}
+
+		if = {
+			limit = {
+				NAND = {
+					exists = c:MON
+					has_global_variable = montenegro_defeat_var #do only once
+				}
+			}
+			c:TUR ?= {
+				every_scope_state = {
+					limit = {
+						has_modifier = raid_target
+					}
+					remove_modifier = raid_target
+				}
+			}
+			set_global_variable = montenegro_defeat_var
+		}
+
+		### Checking for the Portugal is Not a Small Country achievement conditions
+		if = {
+			limit = {
+				exists = c:POR
+				c:POR ?= {
+					is_player = yes
+				}
+			}
+			### States portion
+			if = {
+				limit = {
+					any_state_in_africa = {
+						OR = {
+							c:POR ?= owner
+							owner ?={
+								is_subject_of = c:POR
+							}
+						}
+						count >= 12
+					}
+				}
+				c:POR ?= {
+					set_variable = achievement_portugal_is_not_a_small_country_states
+				}
+			}
+			else = {
+				if = {
+					limit = {
+						c:POR ?= {
+							has_variable = achievement_portugal_is_not_a_small_country_states
+						}
+					}
+					c:POR ?= {
+						remove_variable = achievement_portugal_is_not_a_small_country_states
+					}
+				}
+			}
+			### Angola and Mozambique portion
+			if = {
+				limit = {
+					any_state_in_mozambique = {
+						OR = {
+							c:POR ?= owner
+							owner ?={
+								is_subject_of = c:POR
+							}
+						}
+						count = all
+					}
+					any_state_in_angola = {
+						OR = {
+							c:POR ?= owner
+							owner ?={
+								is_subject_of = c:POR
+							}
+						}
+						count = all
+					}
+				}
+				c:POR ?= {
+					set_variable = achievement_portugal_is_not_a_small_country_angola_and_mozambique
+				}
+			}
+			else = {
+				if = {
+					limit = {
+						c:POR ?= {
+							has_variable = achievement_portugal_is_not_a_small_country_angola_and_mozambique
+						}
+					}
+					c:POR ?= {
+						remove_variable = achievement_portugal_is_not_a_small_country_angola_and_mozambique
+					}
+				}
+			}
+			### Land Connection Portion
+			if = {
+				limit = { # Do not evaluate this unless this country or its subjects own all of Zambezia and East Angola
+					c:POR ?= {
+						OR = {
+							owns_entire_state_region = STATE_ZAMBEZIA
+							any_subject_or_below = {
+								owns_entire_state_region = STATE_ZAMBEZIA
+							}
+						}
+						OR = {
+							owns_entire_state_region = STATE_EAST_ANGOLA
+							any_subject_or_below = {
+								owns_entire_state_region = STATE_EAST_ANGOLA
+							}
+						}
+					}
+				}
+				evaluate_portuguese_pink_map_connection = yes
+			}
+			else = {
+				if = {
+					limit = {
+						c:POR ?= {
+							has_variable = achievement_portugal_is_not_a_small_country_connection
+						}
+					}
+					c:POR ?= {
+						remove_variable = achievement_portugal_is_not_a_small_country_connection
+					}
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,20 @@
+﻿l_korean:
+ ## UI
+ alert_low_market_access_alert_hint: "[concept_market_access] [SCOPE.GetRootScope.GetState.GetName] 의 ( 또는 )을 늘리거나, 처럼 을 늘리거나, 에 을 충분히 확보하여 를 해외의 에 연결할 수 있도록 하면 을 개선할 수 있습니다. [concept_infrastructure] [GetBuildingType('building_port').GetName] [GetBuildingType('building_usu_railway_line').GetName] [GetDecreeType('decree_road_maintenance').GetName] [Concept('concept_decree', '$concept_decrees$')] [concept_market] [GetGoods('merchant_marine').GetName] [SCOPE.GetRootScope.GetState.GetName] [concept_market_capital] " #deepl:1827145687
+ ## Journal Texts
+ #ip2_02
+ je_indian_famines_button_relief_kitchens_desc: "비용이 많이 들지만, 기근을 퇴치하는 논리적이고 가장 효과적인 방법은 굶주리는 사람들에게 단순히 먹이를 주는 것입니다.\n\n 그러나 그러한 비용은 재무부의 선량한 사람들에게 사랑받을 수 없을 것이며 구호 활동의 효과는 국가 역량과 지역 인프라에 의해 병목 현상이 발생할 것입니다.\n\n #bold  철도#!\n [GetBuildingType('building_usu_railway_line').GetName] [concept_famine] 에 [Concept('concept_state','$concept_states$')], 이 조치의 효과를 배가시킬 수 있습니다." #deepl:795676007
+ every_state_suffers_following_modifier: "[concept_famine] 에 해당하는 모든 [concept_state] 에는\n( [GetBuildingType('building_usu_railway_line').GetName] 로 개선됨)라는 수정자가 추가됩니다:" #deepl:588325104
+ je_indian_famines_button_work_camps_desc: "정부 보조금으로 생활하는 부양가족 계층을 만들지 않겠습니다. 빈곤층이 생활 임금을 받을 수 있는 작업 캠프를 설치하여 스스로 식량을 구입할 수 있도록 하겠습니다.\n\n #bold  철도#!\n [concept_famine] -강타당한 [Concept('concept_state','$concept_states$')] 에 [GetBuildingType('building_usu_railway_line').GetName] 이 존재하면 이 조치의 효과가 배가될 것입니다." #deepl:3023810712
+ je_indian_famines_button_epidemic_control_desc: "기아와 영양실조가 여전히 근본 원인이지만, 대부분의 빈곤층이 목숨을 잃는 것은 전염병과 콜레라와 같은 질병 때문입니다.\n\n 대량 예방 접종과 엄격한 격리 시스템을 도입함으로써 최악의 사망률 증가를 상쇄할 수 있습니다.\n\n #bold  철도#!\n [GetBuildingType('building_usu_railway_line').GetName] [concept_famine] 에 [Concept('concept_state','$concept_states$')], 이 조치의 효과를 배가시킬 수 있습니다." #deepl:1668531692
+ #ip2_03
+ je_india_railway_status: "인도를 연결하는 거대한 $building_usu_railway_line$ 네트워크를 구축하세요." #deepl:1726200589
+ delhi_calcutta_line_complete_tt: "모두 [Concept('concept_state_region','$concept_state_regions$')] #tooltippable  #tooltip:인도_철도_델리_캘커타_tt #bold 델리-캘커타 노선#! #! #! 에 있습니다. $building_usu_railway_line$" #deepl:1868200958
+ allahabad_bombay_line_complete_tt: "모두 [Concept('concept_state_region','$concept_state_regions$')] #tooltippable  #tooltip:인도_철도_알라하바드_봄베이_tt #bold 알라하바드-봄베이 노선#! #! #! 있습니다. $building_usu_railway_line$" #deepl:620255607
+ bombay_madras_line_complete_tt: "모두 [Concept('concept_state_region','$concept_state_regions$')] #tooltippable  #tooltip:인도_철도_봄베이_마드라스_tt #bold 봄베이-마드라스 노선#! #! #! 있습니다. $building_usu_railway_line$" #deepl:338194597
+ gujarat_bombay_line_complete_tt: "모두 [Concept('concept_state_region','$concept_state_regions$')] #tooltippable  #tooltip:인도_철도_구자라트_봄베이_tt #bold 구자라트-봄베이 노선#! #! #! 있습니다. $building_usu_railway_line$" #deepl:1296169623
+ # victoria_terminus_possible_tt: "[ROOT.GetCountry.GetNameNoFormatting] $STATE_BOMBAY$ 의 [Concept('concept_state_region','$concept_state_region$')] 에 $building_usu_railway_line$ 이 있습니다." #deepl:1641956204
+ #ip3_02
+ grunderzeit_possible_tt: "#v #! 전체 #bold 독일인 중 75% 이상#! [Concept('concept_country', '$concept_countries$')] #bold  유럽#! 에서 [GetTechnology('mutual_funds').GetName] 을 조사하고 최소 1개 레벨 [GetBuildingType('building_usu_railway_line').GetName] (현재 [GetGlobalVariable('grunderzeit_countries_percent').GetValue|v%0])을 보유하고 있습니다." #deepl:3945384129
+ #ip4_03
+ atocha_railway_possible_tt: "[ROOT.GetCountry.GetNameNoFormatting] 의 [Concept('concept_state_region','$concept_state_region$')] 에 $building_usu_railway_line$ 이 있습니다. $STATE_NEW_CASTILE$" #deepl:1000673829

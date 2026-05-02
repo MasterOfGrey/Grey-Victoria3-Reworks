@@ -1,0 +1,20 @@
+﻿l_simp_chinese:
+ ## UI
+ alert_low_market_access_alert_hint: "您可以通过增加[SCOPE.GetRootScope.GetState.GetName] 的[concept_infrastructure] （可以通过建立[GetBuildingType('building_port').GetName] 或[GetBuildingType('building_usu_railway_line').GetName] 来实现）、[Concept('concept_decree', '$concept_decrees$')] （如[GetDecreeType('decree_road_maintenance').GetName] ）或确保[concept_market] 上有足够的[GetGoods('merchant_marine').GetName] 来将[SCOPE.GetRootScope.GetState.GetName] 连接到其海外的[concept_market_capital] 来改进[concept_market_access] 。" #deepl:1827145687
+ ## Journal Texts
+ #ip2_02
+ je_indian_famines_button_relief_kitchens_desc: "\n\n 不过，这样的开支不太可能让财政部的好心人对我们产生好感，而且任何救济工作的效果都将受到国家能力和当地基础设施的制约。\n\n #bold  铁路#!\n [GetBuildingType('building_usu_railway_line').GetName] 在[concept_famine] 受灾地区[Concept('concept_state','$concept_states$')] ，这项措施的效果将加倍。" #deepl:795676007
+ every_state_suffers_following_modifier: "每个患有[concept_famine] 的[concept_state] 都会获得以下修改器：\n （通过拥有[GetBuildingType('building_usu_railway_line').GetName] 得到改善）：" #deepl:588325104
+ je_indian_famines_button_work_camps_desc: "我们不会建立一个依靠政府救济金生活的阶级。设立工作营，让赤贫者可以在那里赚取生活费，从而能够购买自己的食物。\n\n #bold  铁路#!\n 在[concept_famine]-stricken[Concept('concept_state','$concept_states$')] 中设立一个[GetBuildingType('building_usu_railway_line').GetName] ，将使这一措施的效果加倍。" #deepl:3023810712
+ je_indian_famines_button_epidemic_control_desc: "虽然饥饿和营养不良仍是罪魁祸首，但瘟疫和霍乱等疾病才是导致大多数穷人丧生的罪魁祸首。\n\n 通过建立大规模疫苗接种和严格检疫制度，我们可以抵消一些最严重的死亡率增长。\n\n #bold  铁路#!\n [GetBuildingType('building_usu_railway_line').GetName] [concept_famine] [Concept('concept_state','$concept_states$')] ，这一措施的效果将加倍。" #deepl:1668531692
+ #ip2_03
+ je_india_railway_status: "建设连接印度的大型$building_usu_railway_line$ 网络。" #deepl:1726200589
+ delhi_calcutta_line_complete_tt: "#tooltippable #tooltip:indian_railway_delhi_calcutta_tt#bold Delhi-Calcutta 线的所有[Concept('concept_state_region','$concept_state_regions$')]#! #! #! 都有一个$building_usu_railway_line$" #deepl:1868200958
+ allahabad_bombay_line_complete_tt: "#tooltippable #tooltip:indian_railway_allahabad_bombay_tt#bold Allahabad-Bombay 线的所有[Concept('concept_state_region','$concept_state_regions$')]#! #! #! 都有一个$building_usu_railway_line$" #deepl:620255607
+ bombay_madras_line_complete_tt: "#tooltippable #tooltip:indian_railway_bombay_madras_tt#bold 孟买-马德拉斯线的所有[Concept('concept_state_region','$concept_state_regions$')]#! #! #! 都有一个$building_usu_railway_line$" #deepl:338194597
+ gujarat_bombay_line_complete_tt: "#tooltippable #tooltip:indian_railway_gujarat_bombay_tt#bold 古吉拉特邦-孟买线的所有[Concept('concept_state_region','$concept_state_regions$')]#! #! #! 都有一个$building_usu_railway_line$" #deepl:1296169623
+ # victoria_terminus_possible_tt: "[ROOT.GetCountry.GetNameNoFormatting] $STATE_BOMBAY$ 的 中有一个 。[Concept('concept_state_region','$concept_state_region$')] $building_usu_railway_line$ " #deepl:1641956204
+ #ip3_02
+ grunderzeit_possible_tt: "#v 75%#! 或更多的#bold 德国#! [Concept('concept_country', '$concept_countries$')] 在#bold 欧洲#! 研究过[GetTechnology('mutual_funds').GetName] 并拥有至少一个级别的[GetBuildingType('building_usu_railway_line').GetName] （目前为[GetGlobalVariable('grunderzeit_countries_percent').GetValue|v%0])" #deepl:3945384129
+ #ip4_03
+ atocha_railway_possible_tt: "[ROOT.GetCountry.GetNameNoFormatting] $building_usu_railway_line$ 中有一个[Concept('concept_state_region','$concept_state_region$')] $STATE_NEW_CASTILE$" #deepl:1000673829

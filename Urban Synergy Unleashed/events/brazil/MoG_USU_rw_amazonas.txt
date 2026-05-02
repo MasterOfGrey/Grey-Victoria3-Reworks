@@ -1,0 +1,97 @@
+﻿namespace = amazonas
+## Update building_railway to building_usu_railway_line # building_railway
+##
+# Jewels in the Rough
+amazonas.7 = {
+	type = country_event
+	placement = scope:amazon_development_level_two_state_scope
+
+	duration = 3
+
+	title = amazonas.7.t
+	desc = amazonas.7.d
+	flavor = amazonas.7.f
+
+	event_image = {
+		video = "rp1_brazilian_city"
+	}
+
+	icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+
+	cooldown = { years = 1 }
+
+	trigger = {
+		# triggered by upgrade_amazon_button_2
+	}
+
+	immediate = {
+		random_scope_state = {
+			limit = {
+				has_state_trait = state_trait_amazon_rainforest_level_1
+				NOT = { has_modifier = amazon_development_cooldown_modifier }
+				any_scope_building = {
+					is_building_type = building_urban_center
+					level >= 4
+				}
+				any_scope_building = {
+					is_building_type = building_rubber_plantation
+					level >= 15
+				}
+				any_scope_building = {
+					is_building_type = building_usu_railway_line # building_railway
+				}
+			}
+			save_scope_as = amazon_development_level_two_state_scope
+		}
+		g:rubber = {
+			save_scope_as = rubber_scope
+		}
+	}
+
+	option = {
+		name = amazonas.7.a
+		default_option = yes
+		scope:amazon_development_level_two_state_scope = {
+			add_modifier = {
+				name = amazon_development_cooldown_modifier
+				days = short_modifier_time
+			}
+			add_modifier = {
+				name = amazon_migration
+				days = normal_modifier_time
+			}
+			add_modifier = {
+				name = harbingers_of_order_modifier
+				days = normal_modifier_time
+			}
+		}
+		scope:amazon_development_level_two_state_scope.state_region = {
+			remove_state_trait = state_trait_amazon_rainforest_level_1
+			add_state_trait = state_trait_amazon_rainforest_level_2
+		}
+	}
+
+	option = {
+		name = amazonas.7.b
+		default_option = yes
+		scope:amazon_development_level_two_state_scope = {
+			add_modifier = {
+				name = amazon_development_cooldown_modifier
+				days = short_modifier_time
+			}
+			add_modifier = {
+				name = amazon_migration
+				days = normal_modifier_time
+				multiplier = 0.5
+			}
+			add_modifier = {
+				name = heralds_of_progress_modifier
+				days = normal_modifier_time
+			}
+		}
+		scope:amazon_development_level_two_state_scope.state_region = {
+			remove_state_trait = state_trait_amazon_rainforest_level_1
+			add_state_trait = state_trait_amazon_rainforest_level_2
+		}
+	}
+}

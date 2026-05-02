@@ -1,0 +1,49 @@
+﻿## Update building_railway to building_usu_railway_line # building_railway
+##
+TRY_REPLACE:je_meiji_economy = { # <- tech. only needs 1 level (fine) but too noticeably easier
+	icon = "gfx/interface/icons/event_icons/event_industry.dds"
+
+	group = je_group_meiji_restoration
+
+	is_shown_in_lobby = {
+		c:JAP = THIS
+	}
+
+
+	complete = {
+		in_default = no
+		any_scope_state = {
+			filter = {
+				is_incorporated = yes
+			}
+			any_scope_building = {
+				is_building_type = building_urban_center
+				level >= 5
+			}
+			has_building = building_usu_railway_line # building_railway
+			percent > 0.7
+		}
+	}
+
+	on_complete = {
+		change_variable = {
+			name = meiji_var
+			add = 1
+		}
+		set_variable = completed_je_meiji_economy
+	}
+
+	on_yearly_pulse = {
+		random_events = {
+			20 = 0
+			10 = meiji.7
+			10 = meiji.8
+		}
+	}
+
+	transferable = no
+
+	should_be_pinned_by_default_uninvolved_or_context = yes
+
+	weight = 5000
+}

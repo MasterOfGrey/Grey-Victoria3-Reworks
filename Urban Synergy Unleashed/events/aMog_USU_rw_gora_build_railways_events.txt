@@ -1,0 +1,315 @@
+﻿namespace = build_railways_events
+
+# ═══════════════════════════════════════════════════════════════
+# Altyapı Açığı Demiryolu İnşaat Event'i
+# ═══════════════════════════════════════════════════════════════
+# Amaç: Altyapı açığını kapatmak için demiryolu inşaat emri verir.
+# Not: Ulaşım açığı ayrı bir buton/event (Event 2) ile yönetilir.
+# ═══════════════════════════════════════════════════════════════
+## Update building_railway to building_usu_railway_line # building_railway
+##
+build_railways_events.1 = {
+    type = country_event
+    hidden = yes
+    trigger = { always = yes }
+
+    immediate = {
+        # ── Ülke Geneli Kuyruk Sayacı ──
+        set_variable = { name = total_queued value = 0 }
+
+        every_scope_state = {
+            # ── Sadece entegre edilmiş eyaletleri tara (performans) ──
+            limit = { is_incorporated = yes }
+
+            if = {
+                limit = {
+                    # ── Altyapı Açığı Kontrolü ──
+                    state_infrastructure_balance < 0
+
+                    # Motor kıtlığı yoksa devam et
+                    sg:engines = { state_goods_has_local_goods_shortage = no }
+
+                    # Mevcut demiryolu doluluk kontrolü
+                    OR = {
+                        any_scope_building = {
+                            is_building_type = building_usu_railway_line # building_railway
+                            occupancy > 0.80
+                        }
+                        NOT = {
+                            any_scope_building = {
+                                is_building_type = building_usu_railway_line # building_railway
+                            }
+                        }
+                    }
+                }
+
+                # ────────────────────────────────────────
+                # Üretim Yöntemi Tespiti (Ülke Teknolojisi)
+                # ────────────────────────────────────────
+                set_variable = {
+                    name = infra_per_level
+                    value = {
+                        value = 20
+                        if = {
+                            limit = { owner = { has_technology_researched = compression_ignition } }
+                            add = 20
+                        }
+                        else_if = {
+                            limit = { owner = { has_technology_researched = electric_railway } }
+                            add = 10
+                        }
+                        else_if = {
+                            limit = { owner = { has_technology_researched = steel_railway_cars } }
+                            add = 5
+                        }
+                    }
+                }
+
+                # ────────────────────────────────────────
+                # İhtiyaç Hesaplama (Ceiling Formülü)
+                # ────────────────────────────────────────
+                # ⌈a / b⌉ = (a + b - 1) / b
+
+                set_variable = {
+                    name = levels_to_build
+                    value = {
+                        value = state_infrastructure_balance
+                        multiply = -1
+                        add = var:infra_per_level
+                        subtract = 1
+                        divide = var:infra_per_level
+                    }
+                }
+
+                # ── Minimum 1 seviye garanti ──
+                if = {
+                    limit = { var:levels_to_build < 1 }
+                    set_variable = { name = levels_to_build value = 1 }
+                }
+
+                # ── Eyalet Sınırı: Maks 5 ──
+                if = {
+                    limit = { var:levels_to_build > 5 }
+                    set_variable = { name = levels_to_build value = 5 }
+                }
+
+                # ── Ülke Sınırı: Maks 15 ──
+                if = {
+                    limit = {
+                        var:levels_to_build > 0
+                        owner.var:total_queued < 15
+                    }
+
+                    set_variable = {
+                        name = remaining_quota
+                        value = {
+                            value = 15
+                            subtract = owner.var:total_queued
+                        }
+                    }
+
+                    if = {
+                        limit = { var:levels_to_build > var:remaining_quota }
+                        set_variable = { name = levels_to_build value = var:remaining_quota }
+                    }
+
+                    # ── İnşaat ──
+                    while = {
+                        count = var:levels_to_build
+                        start_building_construction = building_usu_railway_line # building_railway
+                    }
+
+                    # ── Ülke Sayacını Güncelle ──
+                    owner = {
+                        change_variable = {
+                            name = total_queued
+                            add = prev.var:levels_to_build
+                        }
+                    }
+                }
+
+                # ── Eyalet Değişkenlerini Temizle ──
+                remove_variable = infra_per_level
+                remove_variable = levels_to_build
+                remove_variable = remaining_quota
+            }
+        }
+
+        # ── Ülke Değişkenini Temizle ──
+        remove_variable = total_queued
+    }
+}
+
+# ═══════════════════════════════════════════════════════════════
+# Ulaşım Açığı Demiryolu İnşaat Event'i (Optimize Edilmiş)
+# ═══════════════════════════════════════════════════════════════
+# Değişiklikler (Eski versiyona göre):
+#   1. create_building/remove_building hilesi kaldırıldı
+#   2. has_unlocked_production_method ile teknoloji tespiti
+#   3. is_incorporated filtresi eklendi (performans)
+#   4. Ülke sınırı eklendi (maks 15)
+#   5. Eyalet sınırı eklendi (maks 5)
+#   6. Kullanılmayan neg_transportation_per_train kaldırıldı
+#   7. Değişken temizleme eklendi
+#   8. Doğru ceiling formülü: (a + b - 1) / b
+# ═══════════════════════════════════════════════════════════════
+
+build_railways_events.2 = {
+    type = country_event
+    hidden = yes
+    trigger = { always = yes }
+
+    immediate = {
+        # ── Ülke Geneli Kuyruk Sayacı ──
+        set_variable = { name = total_queued value = 0 }
+
+        every_scope_state = {
+            # ── Sadece entegre edilmiş eyaletleri tara (performans) ──
+            limit = { is_incorporated = yes }
+
+            if = {
+                limit = {
+                    # ── Ulaşım Açığı Kontrolü ──
+                    sg:transportation = { state_goods_delta < 0 }
+                    sg:transportation = { state_goods_pricier > 0.25 }
+
+                    # Motor kıtlığı yoksa devam et
+                    sg:engines = { state_goods_has_local_goods_shortage = no }
+
+                    # Mevcut demiryolu doluluk kontrolü
+                    OR = {
+                        any_scope_building = {
+                            is_building_type = building_usu_railway_line # building_railway
+                            occupancy > 0.90
+                        }
+                        NOT = {
+                            any_scope_building = {
+                                is_building_type = building_usu_railway_line # building_railway
+                            }
+                        }
+                    }
+
+                    # Kârlılık kontrolü
+                    OR = {
+                        any_scope_building = {
+                            is_building_type = building_usu_railway_line # building_railway
+                            weekly_profit >= 0
+                        }
+                        any_scope_building = {
+                            is_building_type = building_usu_railway_line # building_railway
+                            is_subsidized = yes
+                        }
+                        NOT = {
+                            any_scope_building = {
+                                is_building_type = building_usu_railway_line # building_railway
+                            }
+                        }
+                    }
+                }
+
+                # ────────────────────────────────────────
+                # Üretim Yöntemi Tespiti (Ülke Teknolojisi)
+                # ────────────────────────────────────────
+                set_variable = {
+                    name = transport_per_level
+                    value = {
+                        value = 20
+                        # Tren Teknolojisi
+                        if = {
+                            limit = { owner = { has_technology_researched = compression_ignition } }
+                            add = 20
+                        }
+                        else_if = {
+                            limit = { owner = { has_technology_researched = electric_railway } }
+                            add = 15
+                        }
+                        else_if = {
+                            limit = { owner = { has_technology_researched = steel_railway_cars } }
+                            add = 5
+                        }
+                        # Vagon Teknolojisi (tren bonusundan bağımsız)
+                        if = {
+                            limit = { owner = { has_technology_researched = steel_railway_cars } }
+                            add = 15
+                        }
+                        else = {
+                            # Ahşap yolcu vagonları teknoloji gerektirmez, her zaman mevcut
+                            add = 10
+                        }
+                    }
+                }
+
+                # ────────────────────────────────────────
+                # İhtiyaç Hesaplama (Ceiling Formülü)
+                # ────────────────────────────────────────
+                # ⌈a / b⌉ = (a + b - 1) / b (integer division)
+
+                set_variable = {
+                    name = levels_to_build
+                    value = {
+                        value = sg:transportation.state_goods_delta
+                        multiply = -1
+                        add = var:transport_per_level
+                        subtract = 1
+                        divide = var:transport_per_level
+                    }
+                }
+
+                # ── Minimum 1 seviye garanti ──
+                if = {
+                    limit = { var:levels_to_build < 1 }
+                    set_variable = { name = levels_to_build value = 1 }
+                }
+
+                # ── Eyalet Sınırı: Maks 5 ──
+                if = {
+                    limit = { var:levels_to_build > 5 }
+                    set_variable = { name = levels_to_build value = 5 }
+                }
+
+                # ── Ülke Sınırı: Maks 15 ──
+                if = {
+                    limit = {
+                        var:levels_to_build > 0
+                        owner.var:total_queued < 15
+                    }
+
+                    set_variable = {
+                        name = remaining_quota
+                        value = {
+                            value = 15
+                            subtract = owner.var:total_queued
+                        }
+                    }
+
+                    if = {
+                        limit = { var:levels_to_build > var:remaining_quota }
+                        set_variable = { name = levels_to_build value = var:remaining_quota }
+                    }
+
+                    # ── İnşaat ──
+                    while = {
+                        count = var:levels_to_build
+                        start_building_construction = building_usu_railway_line # building_railway
+                    }
+
+                    # ── Ülke Sayacını Güncelle ──
+                    owner = {
+                        change_variable = {
+                            name = total_queued
+                            add = prev.var:levels_to_build
+                        }
+                    }
+                }
+
+                # ── Eyalet Değişkenlerini Temizle ──
+                remove_variable = transport_per_level
+                remove_variable = levels_to_build
+                remove_variable = remaining_quota
+            }
+        }
+
+        # ── Ülke Değişkenini Temizle ──
+        remove_variable = total_queued
+    }
+}
