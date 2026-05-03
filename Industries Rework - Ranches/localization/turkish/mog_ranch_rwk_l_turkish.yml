@@ -1,9 +1,3 @@
-﻿l_turkish:
- # Missing Modifier Types
- goods_output_grain_mult: "Bina @grain! Tahıl çıktısı" #deepl:3907536723
- goods_output_grain_mult_desc: "Binalar tarafından üretilen @grain! Tahıl miktarına bonus veya ceza" #deepl:653363902
- goods_output_meat_mult: "Bina @meat! Et çıktısı" #deepl:1213351897
- goods_output_meat_mult_desc: "Binalar tarafından üretilen @meat! Et miktarına bonus veya ceza" #deepl:4278174590
- 
+﻿l_turkish: 
  # Flavour Easter Eggs
  company_somali_food_chain: "Qardho Gıda Zinciri Sendikası" #deepl:2343691508

@@ -12,7 +12,13 @@
  goods_output_silk_mult: "건물 @silk! 실크 천 출력" #deepl:309817432
  goods_output_silk_mult_desc: "건물에서 생산되는 @silk! 비단 천의 양에 보너스 또는 페널티가 적용됩니다." #deepl:1101901388
  
- #Ranches
+ # Missing Modifier Types (moved here because duplicates with Morgenrote)
+ goods_output_grain_mult: "건물 @grain! 곡물 출력" #deepl:3907536723
+ goods_output_grain_mult_desc: "건물이 생산하는 @grain! 곡물 양에 대한 보너스 또는 페널티" #deepl:653363902
+ goods_output_meat_mult: "건물 @meat! 고기 출력" #deepl:1213351897
+ goods_output_meat_mult_desc: "건물에서 생산되는 @meat! 고기 양에 대한 보너스 또는 페널티" #deepl:4278174590
+ 
+ # Ranches
  pmg_base_building_livestock_ranch: "$pm_base$" #deepl:1387170213
  pm_open_air_stockyards: "야외 창고" #deepl:3768799761
  pm_intensive_grazing_ranch: "집중 방목 주기" #deepl:4078155880

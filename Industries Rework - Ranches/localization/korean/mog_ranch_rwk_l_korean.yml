@@ -1,9 +1,3 @@
-﻿l_korean:
- # Missing Modifier Types
- goods_output_grain_mult: "건물 @grain! 곡물 출력" #deepl:3907536723
- goods_output_grain_mult_desc: "건물이 생산하는 @grain! 곡물 양에 대한 보너스 또는 페널티" #deepl:653363902
- goods_output_meat_mult: "건물 @meat! 고기 출력" #deepl:1213351897
- goods_output_meat_mult_desc: "건물에서 생산되는 @meat! 고기 양에 대한 보너스 또는 페널티" #deepl:4278174590
- 
+﻿l_korean: 
  # Flavour Easter Eggs
  company_somali_food_chain: "카르도 먹이사슬 신디케이트" #deepl:2343691508

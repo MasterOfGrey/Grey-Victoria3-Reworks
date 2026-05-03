@@ -12,7 +12,13 @@
  goods_output_silk_mult: "建设@silk! 蚕丝被产量" #deepl:309817432
  goods_output_silk_mult_desc: "建筑生产的@silk! 丝绸布料数量的奖励或惩罚" #deepl:1101901388
  
- #Ranches
+ # Missing Modifier Types (moved here because duplicates with Morgenrote)
+ goods_output_grain_mult: "建筑@grain! 谷物产量" #deepl:3907536723
+ goods_output_grain_mult_desc: "建筑物生产的@grain! 谷物数量的奖励或惩罚" #deepl:653363902
+ goods_output_meat_mult: "建筑@meat! 肉类产出" #deepl:1213351897
+ goods_output_meat_mult_desc: "@meat! 建筑物生产的肉类数量的奖励或惩罚" #deepl:4278174590
+ 
+ # Ranches
  pmg_base_building_livestock_ranch: "$pm_base$" #deepl:1387170213
  pm_open_air_stockyards: "露天畜牧场" #deepl:3768799761
  pm_intensive_grazing_ranch: "密集放牧周期" #deepl:4078155880

@@ -1,9 +1,3 @@
-﻿l_spanish:
- # Missing Modifier Types
- goods_output_grain_mult: "¡Construyendo @grain! Producción de granos"
- goods_output_grain_mult_desc: "¡Una bonificación o penalización a la cantidad de @grain! Granos producidos por los edificios"
- goods_output_meat_mult: "¡Construyendo @meat! Producción de carne"
- goods_output_meat_mult_desc: "¡Una bonificación o penalización a la cantidad de @meat! Carne producida por los edificios"
- 
+﻿l_spanish: 
  # Flavour Easter Eggs
  company_somali_food_chain: "Sindicato de la cadena alimentaria Qardho"

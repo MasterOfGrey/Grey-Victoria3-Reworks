@@ -12,7 +12,13 @@
  goods_output_silk_mult: "Erstellen von @silk! Silken Cloth-Ausgabe"
  goods_output_silk_mult_desc: "Ein Bonus oder eine Strafe für die Menge an @silk! Seidenstoff, der von Gebäuden produziert wird"
  
- #Ranches
+ # Missing Modifier Types (moved here because duplicates with Morgenrote)
+ goods_output_grain_mult: "Gebäude @grain! Getreideproduktion" #deepl:3907536723
+ goods_output_grain_mult_desc: "Ein Bonus oder ein Malus auf die von Gebäuden produzierte Menge an @grain! Grain" #deepl:653363902
+ goods_output_meat_mult: "Gebäude @meat! Fleischerzeugung" #deepl:1213351897
+ goods_output_meat_mult_desc: "Ein Bonus oder Malus auf die von Gebäuden produzierte Menge an @meat! Fleisch" #deepl:4278174590
+ 
+ # Ranches
  pmg_base_building_livestock_ranch: "$pm_base$"
  pm_open_air_stockyards: "Freiluftschlachtungen"
  pm_intensive_grazing_ranch: "Intensive Weidezyklen"

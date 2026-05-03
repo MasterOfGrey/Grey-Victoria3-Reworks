@@ -12,23 +12,29 @@
  goods_output_silk_mult: "施設補正 : @silk!$silk$"
  goods_output_silk_mult_desc: "施設で生産される@silk!$silk$に対するボーナスあるいはペナルティです"
  
- #Ranches
+ # Missing Modifier Types (moved here because duplicates with Morgenrote)
+ goods_output_grain_mult: "施設補正 : @grain!$grain$"
+ goods_output_grain_mult_desc: "施設で生産される@grain!$grain$に対するボーナスあるいはペナルティです"
+ goods_output_meat_mult: "施設補正 : @meat!$meat$"
+ goods_output_meat_mult_desc: "施設で生産される@meat!$meat$に対するボーナスあるいはペナルティです"
+ 
+ # Ranches
  pmg_base_building_livestock_ranch: "$pm_base$"
- #pm_open_air_stockyards: "Open Air Stockyards"
+ pm_open_air_stockyards: "露天家畜場"
  pm_intensive_grazing_ranch: "集約的な放牧サイクル"
  pm_battery_farming: "バトリー式畜産"
  
  pmg_automation_ranch: "解体道具"
  pm_homemade_tools: "自家製道具"
- #pm_butchering_tools: "Butchering Tools"
- #pm_slaughterhouses: "Slaughterhouses"
- #pm_mechanized_slaughtering: "Mechanized Slaughterhouses"
+ pm_butchering_tools: "屠畜道具"
+ pm_slaughterhouses: "屠畜場"
+ pm_mechanized_slaughtering: "機械化屠畜場"
  pm_refrigerated_workspaces: "冷凍解体作業所"
  
  pmg_sheep_ranch: "羊毛生産"
  pm_beasts_of_burden: "駄畜"
  pm_simple_ranch: "羊毛牧場"
- #pm_sheep_farms: "Increased Wool Gathering"
+ pm_sheep_farms: "羊毛の収集量の増加"
  pm_intensive_diet_control: "集約的な食事管理" #deepl:2297694983
  
  pmg_dairy_products: "精製食品"
@@ -38,12 +44,12 @@
  pm_ranch_milk_production: "低温殺菌牛乳"
  pm_full_eggs_dairy: "卵と乳製品"
  
- #pmg_fencing: "Fencing"
- #pm_standard_fences: "Standard Fences"
- #pm_barbed_wire_fences: "Barbed Wire Fences"
- #pm_electric_fencing: "Electric Fences"
+ pmg_fencing: "柵"
+ pm_standard_fences: "標準柵"
+ pm_barbed_wire_fences: "有刺鉄線"
+ pm_electric_fencing: "電気柵"
  
- #pmg_refrigeration_building_livestock_ranch: "Refrigeration"
+ pmg_refrigeration_building_livestock_ranch: "冷凍"
  pm_unrefrigerated_ranch: "$pm_unrefrigerated$"
- #pm_refrigerated_storage_building_livestock_ranch: "Refrigerated Storage"
- #pm_refrigerated_rail_cars_building_livestock_ranch: "Refrigerated Rail Cars"
+ pm_refrigerated_storage_building_livestock_ranch: "冷凍保管庫"
+ pm_refrigerated_rail_cars_building_livestock_ranch: "冷凍庫付き列車"

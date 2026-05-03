@@ -12,7 +12,13 @@
  goods_output_silk_mult: "Bâtiment @silk! Production de tissus en soie"
  goods_output_silk_mult_desc: "Un bonus ou une pénalité sur la quantité de @silk! Tissu de soie produit par les bâtiments"
  
- #Ranches
+ # Missing Modifier Types (moved here because duplicates with Morgenrote)
+ goods_output_grain_mult: "Bâtiment @grain! Production de céréales" #deepl:3907536723
+ goods_output_grain_mult_desc: "Un bonus ou une pénalité sur la quantité de céréales @grain! produites par les bâtiments." #deepl:653363902
+ goods_output_meat_mult: "Bâtiment @meat! Production de viande" #deepl:1213351897
+ goods_output_meat_mult_desc: "Un bonus ou une pénalité sur la quantité de viande @meat! produite par les bâtiments." #deepl:4278174590
+ 
+ # Ranches
  pmg_base_building_livestock_ranch: "$pm_base$"
  pm_open_air_stockyards: "Parcs à bétail à ciel ouvert"
  pm_intensive_grazing_ranch: "Cycles de pâturage intensif"
