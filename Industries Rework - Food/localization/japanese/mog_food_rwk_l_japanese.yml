@@ -1,26 +1,25 @@
 ﻿l_japanese:
-
 # Production method groups
-# pmg_canning:0 "Packaging" # -> see replace file
+# pmg_canning: "Packaging" # -> see replace file
  pmg_preservation: "防腐処理"
-# pmg_distillery:0 "Fluid Products" # -> see replace file
+# pmg_distillery: "Fluid Products" # -> see replace file
  
 # Production methods #
 # #Base
-# pm_bakery:0 "Artisanal Methods" # -> see replace file
-# pm_sweeteners:0 "Sweeteners" # -> see replace file
-# pm_baking_powder:0 "Baking Powder" # -> see replace file
-# pm_automated_bakery:0 "Automated Bakery" # -> see replace file
+# pm_bakery: "Artisanal Methods" # -> see replace file
+# pm_sweeteners: "Sweeteners" # -> see replace file
+# pm_baking_powder: "Baking Powder" # -> see replace file
+# pm_automated_bakery: "Automated Bakery" # -> see replace file
 # #Packaging
  pm_cloth_pkg: "布包装"
  pm_paper_pkg: "紙包装"
  pm_wax_paper: "パラフィン紙"
  pm_sealed_jars: "瓶詰"
-# pm_cannery:0 "Metal Canning" # -> see replace file
+# pm_cannery: "Metal Canning" # -> see replace file
 # pm_vacuum_canning:1 "Vacuum Packaging" # -> see replace file
 # pm_vacuum_canning_principle_3: "Efficient Canning Practices" # -> see replace file
 # #Preservation
-# pm_disabled_canning:0 "No Preservatives" # -> see replace file
+# pm_disabled_canning: "No Preservatives" # -> see replace file
  pm_dried_fruit: "乾燥果実"
  pm_cured_meat: "肉の塩漬け"
  pm_salted_fish: "魚の塩漬け"
@@ -35,7 +34,7 @@
  pm_gravies_broths: "グレービーソースとスープ"
  pm_brines_oils: "塩水と魚油"
 # #Fluid Products
-# pm_disabled_distillery:0 "Only Condiments" # -> see replace file
+# pm_disabled_distillery: "Only Condiments" # -> see replace file
  pm_simmer_pots: "煮込み鍋"
  pm_pot_stills_grain: "$pm_pot_stills$ (穀物酒)"
  pm_pot_stills_fruit: "$pm_pot_stills$ (果実酒)"
