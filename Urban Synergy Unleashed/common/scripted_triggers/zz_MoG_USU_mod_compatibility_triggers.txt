@@ -5,3 +5,12 @@
 REPLACE_OR_CREATE:Grey_USU_is_active = { # Urban Synergy Unleashed
 	always = yes
 }
+
+
+##################################################
+#   MORGENROTE COMPATIBILITY SCRIPTED TRIGGERS   #
+##################################################
+
+TRY_REPLACE:tesla_building_is_railway_building = {
+	is_building_type = building_usu_railway_line
+}
