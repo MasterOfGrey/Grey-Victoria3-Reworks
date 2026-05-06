@@ -1,0 +1,9 @@
+﻿COUNTRIES = {
+	c:BIC ?= {
+		add_modifier = {
+			name = eic_bureaucracy_balance
+			years = 10
+			is_decaying = yes
+		}
+	}
+}

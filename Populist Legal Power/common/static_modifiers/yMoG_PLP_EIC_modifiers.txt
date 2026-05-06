@@ -1,0 +1,4 @@
+﻿eic_bureaucracy_balance = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_documents_positive.dds
+	country_bureaucracy_add = 2500
+}
