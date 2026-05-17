@@ -4,7 +4,7 @@
 
 # Applied if state is above 'in turmoil' threshold
 # TRY_REPLACE:
-state_turmoil = {
+REPLACE:state_turmoil = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_coins_negative.dds
 	state_tax_waste_add = 0.25
 	state_migration_pull_mult = -0.15
@@ -16,7 +16,7 @@ state_turmoil = {
 
 # Applied if state is above 'high turmoil' threshold
 # TRY_REPLACE:
-state_turmoil_high = {
+REPLACE:state_turmoil_high = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_coins_negative.dds
 	state_tax_waste_add = 0.5
 	state_migration_pull_mult = -0.25
@@ -28,7 +28,7 @@ state_turmoil_high = {
 
 # Applied if state is above 'extreme turmoil' threshold
 # TRY_REPLACE:
-state_turmoil_extreme = {
+REPLACE:state_turmoil_extreme = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_coins_negative.dds
 	state_tax_waste_add = 0.75
 	state_migration_pull_mult = -0.5
