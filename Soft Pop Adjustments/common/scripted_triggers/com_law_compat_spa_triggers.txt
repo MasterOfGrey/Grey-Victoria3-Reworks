@@ -1,0 +1,62 @@
+﻿## This file will intentionally loads *just* after the CMF triggers in "com_law_blocker_triggers.txt" so that it doesn't produce errors but doesn't change the behaviour for other mods overwriting these triggers intentionally.
+
+####----------- Citizenship Laws ----------####
+# Subjecthood
+REPLACE_OR_CREATE:com_law_subjecthood_trigger = {
+	NOT = {
+		has_variable = com_hide_law_subjecthood
+	}
+}
+REPLACE_OR_CREATE:com_law_subjecthood_alternative_trigger = {
+	always = no
+}
+
+# Ethnostate
+REPLACE_OR_CREATE:com_law_ethnostate_trigger = {
+	NOT = {
+		has_variable = com_hide_law_ethnostate
+	}
+}
+REPLACE_OR_CREATE:com_law_ethnostate_alternative_trigger = {
+	always = no
+}
+
+# National Supremacy
+REPLACE_OR_CREATE:com_law_national_supremacy_trigger = {
+	NOT = {
+		has_variable = com_hide_law_national_supremacy
+	}
+}
+REPLACE_OR_CREATE:com_law_national_supremacy_alternative_trigger = {
+	always = no
+}
+
+# Racial Segregation
+REPLACE_OR_CREATE:com_law_racial_segregation_trigger = {
+	NOT = {
+		has_variable = com_hide_law_racial_segregation
+	}
+}
+REPLACE_OR_CREATE:com_law_racial_segregation_alternative_trigger = {
+	always = no
+}
+
+# Cultural Exclusion
+REPLACE_OR_CREATE:com_law_cultural_exclusion_trigger = {
+	NOT = {
+		has_variable = com_hide_law_cultural_exclusion
+	}
+}
+REPLACE_OR_CREATE:com_law_cultural_exclusion_alternative_trigger = {
+	always = no
+}
+
+# Multiculturalism
+REPLACE_OR_CREATE:com_law_multicultural_trigger = {
+	NOT = {
+		has_variable = com_hide_law_multicultural
+	}
+}
+REPLACE_OR_CREATE:com_law_multicultural_alternative_trigger = {
+	always = no
+}

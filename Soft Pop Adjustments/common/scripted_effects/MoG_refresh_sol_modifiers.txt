@@ -14,7 +14,7 @@ refresh_expected_sol_modifier = {
 			value = {
 				value = 0.15
 				add = {
-					value = 0.45
+					value = 0.35 # 0.45
 					multiply = literacy_rate
 				}
 			}
