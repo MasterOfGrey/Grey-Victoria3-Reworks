@@ -171,6 +171,14 @@ REPLACE_OR_CREATE:law_appointed_bureaucrats = {
 			}
 			add = 1000
 		}
+
+		if = {
+			limit = { 
+				has_journal_entry = je_tenpo_crisis
+				has_variable = ai_tenpo_reform_agenda
+			}
+			add = 1000
+		}
 	}
 }
 
@@ -214,6 +222,14 @@ REPLACE_OR_CREATE:law_elected_bureaucrats = {
 		if = {
 			limit = { ai_has_enact_weight_modifier_journal_entries = yes }
 			add = 750
+		}
+
+		if = {
+			limit = { 
+				has_journal_entry = je_tenpo_crisis
+				has_variable = ai_tenpo_reform_agenda
+			}
+			add = 1000
 		}
 	}
 }
