@@ -25,6 +25,15 @@ mog_sis_add_topbar_elements = {
 	}
 }
 
+mog_sis_suppress_topbar_errors = {
+	every_country = {
+		set_variable = {
+			name = mog_topbar_value_all_subject_pp
+			value = -1
+		}
+	}
+}
+
 mog_sis_topbar_calculate_all_subject_pp = {
 	set_variable = {
 		name = mog_topbar_value_all_subject_pp

@@ -5,6 +5,7 @@
 mog_sis_topbar_activate = {
 	effect = {
 		mog_sis_add_topbar_elements = yes
+		mog_sis_suppress_topbar_errors = yes
 	}
 }
 
