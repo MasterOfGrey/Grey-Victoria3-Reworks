@@ -17,6 +17,7 @@ mog_err_compat_events.1 = { # Error supression
 	}
 
 	immediate = {
+		fix_variable_error = { variable = mog_topbar_element_all_subject_pp }
 		fix_variable_error = { variable = mog_topbar_value_all_subject_pp }
 	}
 	

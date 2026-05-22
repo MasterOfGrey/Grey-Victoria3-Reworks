@@ -10,7 +10,7 @@
 
 ### Vanilla Overwrites: ###
 
-catalyst_became_subject = {
+REPLACE_OR_CREATE:catalyst_became_subject = {
 	category = cc_subject_status_change
 	
 	political_lobby_creation = {

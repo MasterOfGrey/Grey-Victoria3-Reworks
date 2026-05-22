@@ -1,10 +1,11 @@
-﻿# This is executed last among all history
-GLOBAL = {
-	every_country = {
-		limit = { is_subject = yes }
-		create_diplomatic_pact = {
-			country = top_overlord
-			type = occ_offer_convoys
-		}
-	}
-}
+﻿## This is executed last among all history
+#GLOBAL = {
+#	every_country = {
+#		limit = { is_subject = yes }
+#		create_diplomatic_pact = {
+#			country = top_overlord
+#			type = occ_offer_convoys
+#		}
+#	}
+#}
+#

@@ -26,12 +26,12 @@ liberty_desire_weekly_change_legal_friction = {
 						}
 						root.first_country = {
 							active_law:lawgroup_governance_principles = {
-								save_temporary_scope_as = first_law
+								save_temporary_scope_as = sis_first_law
 							}
 						}
 						root.second_country = {
 							NOT = {
-								active_law:lawgroup_governance_principles.type = scope:first_law.type
+								active_law:lawgroup_governance_principles.type = scope:sis_first_law.type
 							}
 						}
 					}
@@ -50,12 +50,12 @@ liberty_desire_weekly_change_legal_friction = {
 						}
 						root.first_country = {
 							active_law:lawgroup_governance_principles = {
-								save_temporary_scope_as = first_law
+								save_temporary_scope_as = sis_first_law
 							}
 						}
 						root.second_country = {
 							NOT = {
-								active_law:lawgroup_governance_principles.type = scope:first_law.type
+								active_law:lawgroup_governance_principles.type = scope:sis_first_law.type
 							}
 						}
 					}
@@ -74,12 +74,12 @@ liberty_desire_weekly_change_legal_friction = {
 						}
 						root.first_country = {
 							active_law:lawgroup_governance_principles = {
-								save_temporary_scope_as = first_law
+								save_temporary_scope_as = sis_first_law
 							}
 						}
 						root.second_country = {
 							NOT = {
-								active_law:lawgroup_governance_principles.type = scope:first_law.type
+								active_law:lawgroup_governance_principles.type = scope:sis_first_law.type
 							}
 						}
 					}
@@ -200,12 +200,12 @@ liberty_desire_weekly_change_legal_friction = {
 				}
 				root.first_country = {
 					active_law:lawgroup_church_and_state = {
-						save_temporary_scope_as = first_law
+						save_temporary_scope_as = sis_first_law
 					}
 				}
 				root.second_country = {
 					NOT = {
-						active_law:lawgroup_church_and_state.type = scope:first_law.type
+						active_law:lawgroup_church_and_state.type = scope:sis_first_law.type
 					}
 				}
 			}
@@ -270,12 +270,12 @@ liberty_desire_weekly_change_legal_friction = {
 				}
 				root.first_country = {
 					active_law:lawgroup_bureaucracy = {
-						save_temporary_scope_as = first_law
+						save_temporary_scope_as = sis_first_law
 					}
 				}
 				root.second_country = {
 					NOT = {
-						active_law:lawgroup_bureaucracy.type = scope:first_law.type
+						active_law:lawgroup_bureaucracy.type = scope:sis_first_law.type
 					}
 				}
 			}
@@ -311,12 +311,12 @@ liberty_desire_weekly_change_legal_friction = {
 						}
 						root.first_country = {
 							active_law:lawgroup_economic_system = {
-								save_temporary_scope_as = first_law
+								save_temporary_scope_as = sis_first_law
 							}
 						}
 						root.second_country = {
 							NOT = {
-								active_law:lawgroup_economic_system.type = scope:first_law.type
+								active_law:lawgroup_economic_system.type = scope:sis_first_law.type
 							}
 						}
 					}
@@ -336,12 +336,12 @@ liberty_desire_weekly_change_legal_friction = {
 						}
 						root.first_country = {
 							active_law:lawgroup_economic_system = {
-								save_temporary_scope_as = first_law
+								save_temporary_scope_as = sis_first_law
 							}
 						}
 						root.second_country = {
 							NOT = {
-								active_law:lawgroup_economic_system.type = scope:first_law.type
+								active_law:lawgroup_economic_system.type = scope:sis_first_law.type
 							}
 						}
 					}
@@ -361,12 +361,12 @@ liberty_desire_weekly_change_legal_friction = {
 						}
 						root.first_country = {
 							active_law:lawgroup_economic_system = {
-								save_temporary_scope_as = first_law
+								save_temporary_scope_as = sis_first_law
 							}
 						}
 						root.second_country = {
 							NOT = {
-								active_law:lawgroup_economic_system.type = scope:first_law.type
+								active_law:lawgroup_economic_system.type = scope:sis_first_law.type
 							}
 						}
 					}
@@ -386,12 +386,12 @@ liberty_desire_weekly_change_legal_friction = {
 						}
 						root.first_country = {
 							active_law:lawgroup_economic_system = {
-								save_temporary_scope_as = first_law
+								save_temporary_scope_as = sis_first_law
 							}
 						}
 						root.second_country = {
 							NOT = {
-								active_law:lawgroup_economic_system.type = scope:first_law.type
+								active_law:lawgroup_economic_system.type = scope:sis_first_law.type
 							}
 						}
 					}
@@ -484,7 +484,7 @@ liberty_desire_weekly_change_legal_friction = {
 					OR = {
 						has_law_or_variant = law_type:law_tenant_farmers
 						has_law_or_variant = law_type:law_commercialized_agriculture
-						has_law_or_variant = law_type:law_homesteading
+						has_law_or_variant = law_type:law_peasant_proprietorship
 						has_law_or_variant = law_type:law_collectivized_agriculture
 					}
 				}
@@ -492,18 +492,18 @@ liberty_desire_weekly_change_legal_friction = {
 					OR = {
 						has_law_or_variant = law_type:law_tenant_farmers
 						has_law_or_variant = law_type:law_commercialized_agriculture
-						has_law_or_variant = law_type:law_homesteading
+						has_law_or_variant = law_type:law_peasant_proprietorship
 						has_law_or_variant = law_type:law_collectivized_agriculture
 					}
 				}
 				root.first_country = {
 					active_law:lawgroup_land_reform = {
-						save_temporary_scope_as = first_law
+						save_temporary_scope_as = sis_first_law
 					}
 				}
 				root.second_country = {
 					NOT = {
-						active_law:lawgroup_land_reform.type = scope:first_law.type
+						active_law:lawgroup_land_reform.type = scope:sis_first_law.type
 					}
 				}
 			}
@@ -523,7 +523,7 @@ liberty_desire_weekly_change_legal_friction = {
 							OR = {
 								has_law_or_variant = law_type:law_tenant_farmers
 								has_law_or_variant = law_type:law_commercialized_agriculture
-								has_law_or_variant = law_type:law_homesteading
+								has_law_or_variant = law_type:law_peasant_proprietorship
 							}
 						}
 					}
@@ -532,7 +532,7 @@ liberty_desire_weekly_change_legal_friction = {
 							OR = {
 								has_law_or_variant = law_type:law_tenant_farmers
 								has_law_or_variant = law_type:law_commercialized_agriculture
-								has_law_or_variant = law_type:law_homesteading
+								has_law_or_variant = law_type:law_peasant_proprietorship
 							}
 						}
 						root.second_country = {
@@ -562,12 +562,12 @@ liberty_desire_weekly_change_legal_friction = {
 				}
 				root.first_country = {
 					active_law:lawgroup_land_reform = {
-						save_temporary_scope_as = first_law
+						save_temporary_scope_as = sis_first_law
 					}
 				}
 				root.second_country = {
 					NOT = {
-						active_law:lawgroup_land_reform.type = scope:first_law.type
+						active_law:lawgroup_land_reform.type = scope:sis_first_law.type
 					}
 				}
 			}
@@ -600,12 +600,12 @@ liberty_desire_weekly_change_legal_friction = {
 				}
 				root.first_country = {
 					active_law:lawgroup_trade_policy = {
-						save_temporary_scope_as = first_law
+						save_temporary_scope_as = sis_first_law
 					}
 				}
 				root.second_country = {
 					NOT = {
-						active_law:lawgroup_trade_policy.type = scope:first_law.type
+						active_law:lawgroup_trade_policy.type = scope:sis_first_law.type
 					}
 				}
 			}
@@ -656,12 +656,12 @@ liberty_desire_weekly_change_legal_friction = {
 				}
 				root.first_country = {
 					active_law:lawgroup_slavery = {
-						save_temporary_scope_as = first_law
+						save_temporary_scope_as = sis_first_law
 					}
 				}
 				root.second_country = {
 					NOT = {
-						active_law:lawgroup_slavery.type = scope:first_law.type
+						active_law:lawgroup_slavery.type = scope:sis_first_law.type
 					}
 				}
 			}
@@ -720,12 +720,12 @@ liberty_desire_weekly_change_legal_friction = {
 				}
 				root.first_country = {
 					active_law:lawgroup_rights_of_women = {
-						save_temporary_scope_as = first_law
+						save_temporary_scope_as = sis_first_law
 					}
 				}
 				root.second_country = {
 					NOT = {
-						active_law:lawgroup_rights_of_women.type = scope:first_law.type
+						active_law:lawgroup_rights_of_women.type = scope:sis_first_law.type
 					}
 				}
 			}
@@ -785,12 +785,12 @@ liberty_desire_weekly_change_legal_friction = {
 						}
 						root.first_country = {
 							active_law:lawgroup_free_speech = {
-								save_temporary_scope_as = first_law
+								save_temporary_scope_as = sis_first_law
 							}
 						}
 						root.second_country = {
 							NOT = {
-								active_law:lawgroup_free_speech.type = scope:first_law.type
+								active_law:lawgroup_free_speech.type = scope:sis_first_law.type
 							}
 						}
 					}
@@ -810,12 +810,12 @@ liberty_desire_weekly_change_legal_friction = {
 						}
 						root.first_country = {
 							active_law:lawgroup_free_speech = {
-								save_temporary_scope_as = first_law
+								save_temporary_scope_as = sis_first_law
 							}
 						}
 						root.second_country = {
 							NOT = {
-								active_law:lawgroup_free_speech.type = scope:first_law.type
+								active_law:lawgroup_free_speech.type = scope:sis_first_law.type
 							}
 						}
 					}
@@ -835,12 +835,12 @@ liberty_desire_weekly_change_legal_friction = {
 						}
 						root.first_country = {
 							active_law:lawgroup_free_speech = {
-								save_temporary_scope_as = first_law
+								save_temporary_scope_as = sis_first_law
 							}
 						}
 						root.second_country = {
 							NOT = {
-								active_law:lawgroup_free_speech.type = scope:first_law.type
+								active_law:lawgroup_free_speech.type = scope:sis_first_law.type
 							}
 						}
 					}
@@ -867,12 +867,12 @@ liberty_desire_weekly_change_legal_friction = {
 				}
 				root.first_country = {
 					active_law:lawgroup_free_speech = {
-						save_temporary_scope_as = first_law
+						save_temporary_scope_as = sis_first_law
 					}
 				}
 				root.second_country = {
 					NOT = {
-						active_law:lawgroup_free_speech.type = scope:first_law.type
+						active_law:lawgroup_free_speech.type = scope:sis_first_law.type
 					}
 				}
 			}
@@ -929,12 +929,12 @@ liberty_desire_weekly_change_legal_friction = {
 				}
 				root.first_country = {
 					active_law:lawgroup_labor_rights = {
-						save_temporary_scope_as = first_law
+						save_temporary_scope_as = sis_first_law
 					}
 				}
 				root.second_country = {
 					NOT = {
-						active_law:lawgroup_labor_rights.type = scope:first_law.type
+						active_law:lawgroup_labor_rights.type = scope:sis_first_law.type
 					}
 				}
 			}

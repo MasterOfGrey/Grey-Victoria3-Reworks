@@ -1,42 +1,42 @@
-﻿occ_offer_convoys_decision = {
-	is_shown = {
-		num_diplomatic_pacts = {	# If any subject has the agreement with you.
-			type = occ_offer_convoys
-			value > 0
-		}
-		NOT = { has_variable = offer_convoys_disabled }
-	}
-	
-	possible = {
-		always = yes
-	}
-
-	when_taken = {
-		custom_tooltip = {
-			text = occ_disable_convoys_tt
-			set_variable = offer_convoys_disabled
-		}
-	}
-	
-	ai_chance = {
-		value = 0
-	}
-}
-
-occ_offer_convoys_decision_undo = {
-	is_shown = {
-		has_variable = offer_convoys_disabled
-	}
-	
-	possible = {
-		always = yes
-	}
-
-	when_taken = {
-		remove_variable = offer_convoys_disabled
-	}
-	
-	ai_chance = {
-		value = 0
-	}
-}
+﻿#occ_offer_convoys_decision = {
+#	is_shown = {
+#		num_diplomatic_pacts = {	# If any subject has the agreement with you.
+#			type = occ_offer_convoys
+#			value > 0
+#		}
+#		NOT = { has_variable = offer_convoys_disabled }
+#	}
+#	
+#	possible = {
+#		always = yes
+#	}
+#
+#	when_taken = {
+#		custom_tooltip = {
+#			text = occ_disable_convoys_tt
+#			set_variable = offer_convoys_disabled
+#		}
+#	}
+#	
+#	ai_chance = {
+#		value = 0
+#	}
+#}
+#
+#occ_offer_convoys_decision_undo = {
+#	is_shown = {
+#		has_variable = offer_convoys_disabled
+#	}
+#	
+#	possible = {
+#		always = yes
+#	}
+#
+#	when_taken = {
+#		remove_variable = offer_convoys_disabled
+#	}
+#	
+#	ai_chance = {
+#		value = 0
+#	}
+#}

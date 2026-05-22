@@ -893,7 +893,7 @@ REPLACE_OR_CREATE:liberty_desire_weekly_change = { #AKA liberty_desire_weekly_pr
 			root.first_country.supply_network_strength < 1
 			root.second_country = {
 				any_scope_state = {	# Upset about any overseas states getting affected.
-					has_port = yes
+					has_port_state = yes
 					market_access = root.first_country.supply_network_strength
 					OR = {
 						is_incorporated = yes
@@ -1090,9 +1090,9 @@ REPLACE_OR_CREATE:liberty_desire_weekly_change = { #AKA liberty_desire_weekly_pr
 				any_scope_character = {
 					has_ideology = ideology:ideology_sovereignist_leader
 					OR = {
-						is_ruler = yes
+						has_role_of_type = ruler
 						AND = {
-							has_role = politician
+							has_role_of_type = politician
 							interest_group = {
 								is_in_government = yes
 							}

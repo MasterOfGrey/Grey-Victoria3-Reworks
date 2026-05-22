@@ -24,7 +24,7 @@
 			scope:country = { is_adjacent_to_state = root } # must either be adjacent to the initiating country, or
 			AND = {											# be a Homeland of its culture, with a port available for market connection
 				is_homeland_of_country_cultures = scope:country
-				has_port = yes
+				has_port_state = yes
 				scope:country = { has_port = yes }
 			}
 		}
