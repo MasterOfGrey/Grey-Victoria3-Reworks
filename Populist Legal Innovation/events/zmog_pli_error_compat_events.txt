@@ -1,0 +1,26 @@
+﻿# Error suppression for spurious variable errors that are used in Loc but not functions
+
+namespace = mog_err_compat_events # Error suppression
+
+mog_err_compat_events.2 = { # SIS = 1, PLI = 2
+    type = country_event
+    placement = root
+    hidden = yes
+
+	# DO NOT CALL THIS EVENT
+	trigger = {
+		always = no
+	}
+	
+	cancellation_trigger = {
+		always = yes
+	}
+
+	immediate = {
+		fix_variable_error = { variable = mog_pli_corruption_disabled }		# Not used except in Loc
+		fix_variable_error = { variable = mog_pli_proliferation_disabled }	# Used in Loc & MoG_PLI_innovation_oa.txt
+	}
+	
+	orphan = yes
+	
+}

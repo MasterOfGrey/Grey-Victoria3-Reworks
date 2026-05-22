@@ -229,7 +229,7 @@ mog_pli_ino_land_reform = {				# Max 15
 		add = 6
 	}
 	else_if = {
-		limit = { has_law_or_variant = law_type:law_homesteading }
+		limit = { has_law_or_variant = law_type:law_peasant_proprietorship }
 		add = 10
 	}
 	else_if = {
@@ -547,6 +547,7 @@ mog_pli_proliferation_target = {	# This represents the conditions which support 
 	add = mog_pli_pro_free_speech			# Max 5		- Best: Free Speech
 	add = mog_pli_pro_labor_rights			# Max 5		- Best: Worker Protections
 	add = mog_pli_pro_women					# Max 5		- Best: Women's Suffrage
+	multiply = mog_pli_pro_isolationism_mult			# Effectiveness of everything is nerfed by variants of isolationism
 	min = 0												# Min Bonus is 0%, Max Bonus is 100% - realistically getting either should be nearly impossible.
 	max = mog_pli_max_proliferation_from_literacy		# Already in 0-100 range
 	max = mog_pli_max_proliferation_from_position		# Already in 0-100 range
@@ -625,11 +626,11 @@ mog_pli_pro_governance = {				# Max 20	- Best: Parliamentary Republic
 				has_law_or_variant = law_type:law_theocracy
 			}
 		}
-		add = 2
+		add = 0
 	}
 	else_if = {		# Power to effect change both provided and constrained by the Cage of Norms
 		limit = { has_law_or_variant = law_type:law_monarchy }
-		add = 10
+		add = 8
 	}
 	else_if = {
 		limit = {	# The voice of ridicule is a limiting threat
@@ -810,14 +811,14 @@ mog_pli_pro_trade_policy_modded = 1			# Replace this value for modded laws compa
 mog_pli_pro_land_reform = {				# Max 5		- Best: Collectivised Ag
 	if = {
 		limit = { has_law_or_variant = law_type:law_serfdom }
-		add = 1
+		add = 0
 	}
 	else_if = {
 		limit = { has_law_or_variant = law_type:law_tenant_farmers }
-		add = 2
+		add = 1
 	}
 	else_if = {
-		limit = { has_law_or_variant = law_type:law_homesteading }
+		limit = { has_law_or_variant = law_type:law_peasant_proprietorship }
 		add = 3
 	}
 	else_if = {
@@ -1007,3 +1008,14 @@ mog_pli_pro_women = {					# Max 5		- Best: Women's Suffrage
 	}
 }
 mog_pli_pro_women_modded = 1	# Replace this value for modded laws compatibility
+
+mog_pli_pro_isolationism_mult = {
+	if = {
+		limit = { has_law = law_type:law_isolationism }
+		add = -0.5		# 50% reduction for full isolationism
+	}
+	else_if = {
+		limit = { has_law_or_variant = law_type:law_isolationism }
+		add = -0.2		# 20% reduction for partial isolationism
+	}
+}
