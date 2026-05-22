@@ -1,7 +1,8 @@
 texticon = {
 	icon = all_subject_pp
 	iconsize = {
-		texture = "gfx/interface/icons/commander_order_icons/unused/power_projection.dds"
+		# texture = "gfx/interface/icons/commander_order_icons/unused/power_projection.dds"
+		texture = "gfx/interface/icons/commander_order_icons/project_power.dds"	# Changed in 1.13
 		size = { 25 25 }
 		offset = { 0 7 }
 		fontsize = 18
