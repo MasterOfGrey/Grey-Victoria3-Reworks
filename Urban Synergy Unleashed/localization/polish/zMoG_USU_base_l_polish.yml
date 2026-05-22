@@ -7,6 +7,7 @@
  mog_logistics_land_trade: "Pojemność handlu lądowego z importowanych usług logistycznych"
  mog_mapi: "Synergia miejska MAPI"
  mog_subfarm_modifiers_occupancy_scaled: "Synergia miejska Wpływ na infrastrukturę" #deepl:1060897918
+ mog_subfarm_throughput_balancing: "USU: Modyfikator salda" #deepl:3634715654
  
  # Building
  usu_bg_port_infrastructure: "Porty" #deepl:687823806
@@ -64,6 +65,9 @@
  
  state_usu_building_public_green_max_level_add: "$usu_building_public_green$ Maksymalny poziom" #deepl:4158133370
  state_usu_building_public_green_max_level_add_desc: "Premia lub kara do maksymalnego poziomu budynków $usu_building_public_green$." #deepl:3207423598
+ 
+ building_through_tracking_add: "USU: Modyfikator śledzenia" #deepl:1889466230
+ building_through_tracking_add_desc: "Modyfikator używany do śledzenia wartości wyjścia matematycznego." #deepl:3412987945
  
  # Vanilla Modifier types
  goods_input_tools_mult: "Tworzenie @tools![Nbsp]$tools$ input" #deepl:1055261592

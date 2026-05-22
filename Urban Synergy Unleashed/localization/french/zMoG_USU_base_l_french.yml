@@ -7,6 +7,7 @@
  mog_logistics_land_trade: "Commerce terrestre via services logistiques importés"
  mog_mapi: "MAPI Synergie urbaine"
  mog_subfarm_modifiers_occupancy_scaled: "Synergie urbaine Subsistance Impact sur l'infrastructure" #deepl:1060897918
+ mog_subfarm_throughput_balancing: "USU : Modificateur de solde" #deepl:3634715654
  
  # Building
  usu_bg_port_infrastructure: "Ports"
@@ -64,6 +65,9 @@
  
  state_usu_building_public_green_max_level_add: "Niveau maximum de $usu_building_public_green$"
  state_usu_building_public_green_max_level_add_desc: "Un bonus ou un malus au niveau maximum des bâtiments $usu_building_public_green$."
+ 
+ building_through_tracking_add: "USU : Modificateur de suivi" #deepl:1889466230
+ building_through_tracking_add_desc: "Un modificateur utilisé pour suivre la valeur d'une sortie mathématique." #deepl:3412987945
  
  # Vanilla Modifier types
  goods_input_tools_mult: "Intrants @tools![Nbsp]$tools$ du bâtiment"

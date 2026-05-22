@@ -217,3 +217,12 @@ REPLACE_OR_CREATE:bg_trade = {
 	
 	urbanization = 2 # down from 10
 }
+
+## Subsistence
+INJECT:bg_subsistence_agriculture = {
+	economy_of_scale = no
+}
+
+INJECT:bg_subsistence_ranching = {
+	economy_of_scale = no
+}

@@ -30,6 +30,12 @@ mog_subfarm_modifiers_occupancy_scaled = {
 	state_infrastructure_from_population_max_add = -1
 }
 
+mog_subfarm_throughput_balancing = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_fire_positive.dds
+	building_throughput_add = -1
+	building_through_tracking_add = 1
+}
+
 ## STATIC MODIFIERS
 mog_mapi = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_documents_positive.dds

@@ -30,7 +30,8 @@ TRY_REPLACE:default_building_subsistence_farm = {
 	
 	state_modifiers = {
 		workforce_scaled = {
-			state_birth_rate_mult = -0.0045		# For some reason this one gets modifiers but the other doesn't, and the goal is to cancel out when fully employed.
+			state_birth_rate_mult = -0.005	# We now negate throughput effects so this matches exactly.
+			# -0.0045		# For some reason this one gets modifiers but the other doesn't, and the goal is to cancel out when fully employed.
 			#state_infrastructure_from_population_max_add = -1		# The existence of easily usable land allows people to use it trivially (infra from pop max), but actually having people using the land uses that up.
 		}
 		level_scaled = {
@@ -61,7 +62,8 @@ TRY_REPLACE:default_building_subsistence_orchard = {
 	
 	state_modifiers = {
 		workforce_scaled = {
-			state_birth_rate_mult = -0.0045
+			state_birth_rate_mult = -0.005	# We now negate throughput effects so this matches exactly.
+			# -0.0045
 			#state_infrastructure_from_population_max_add = -1		# The existence of easily usable land allows people to use it trivially (infra from pop max), but actually having people using the land uses that up.
 		}
 		level_scaled = {
@@ -92,7 +94,8 @@ TRY_REPLACE:default_building_subsistence_pasture = {
 	
 	state_modifiers = {
 		workforce_scaled = {
-			state_birth_rate_mult = -0.0045
+			state_birth_rate_mult = -0.005	# We now negate throughput effects so this matches exactly.
+			# -0.0045
 			#state_infrastructure_from_population_max_add = -1		# The existence of easily usable land allows people to use it trivially (infra from pop max), but actually having people using the land uses that up.
 		}
 		level_scaled = {
@@ -123,7 +126,8 @@ TRY_REPLACE:default_building_subsistence_fishing_village = {
 	
 	state_modifiers = {
 		workforce_scaled = {
-			state_birth_rate_mult = -0.0045
+			state_birth_rate_mult = -0.005	# We now negate throughput effects so this matches exactly.
+			# -0.0045
 			#state_infrastructure_from_population_max_add = -1		# The existence of easily usable land allows people to use it trivially (infra from pop max), but actually having people using the land uses that up.
 		}
 		level_scaled = {
@@ -153,7 +157,8 @@ TRY_REPLACE:default_building_subsistence_rice_farm = {
 	
 	state_modifiers = {
 		workforce_scaled = {
-			state_birth_rate_mult = -0.0045
+			state_birth_rate_mult = -0.005	# We now negate throughput effects so this matches exactly.
+			# -0.0045
 			#state_infrastructure_from_population_max_add = -1		# The existence of easily usable land allows people to use it trivially (infra from pop max), but actually having people using the land uses that up.
 		}
 		level_scaled = {

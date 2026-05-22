@@ -7,6 +7,7 @@
  mog_logistics_land_trade: "İthal Lojistik Hizmetlerinden Kara Ticareti Kapasitesi"
  mog_mapi: "Kentsel Sinerji MAPI"
  mog_subfarm_modifiers_occupancy_scaled: "Kentsel Sinerji Altyapı Üzerindeki Etkisi" #deepl:1060897918
+ mog_subfarm_throughput_balancing: "USU: Denge Değiştirici" #deepl:3634715654
  
  # Building
  usu_bg_port_infrastructure: "Limanlar" #deepl:687823806
@@ -64,6 +65,9 @@
  
  state_usu_building_public_green_max_level_add: "$usu_building_public_green$ Maksimum Seviye" #deepl:4158133370
  state_usu_building_public_green_max_level_add_desc: "$usu_building_public_green$ binalarının maksimum seviyesine bir bonus veya ceza." #deepl:3207423598
+ 
+ building_through_tracking_add: "USU: İzleme Değiştirici" #deepl:1889466230
+ building_through_tracking_add_desc: "Bir matematik çıktısının değerini izlemek için kullanılan bir değiştirici." #deepl:3412987945
  
  # Vanilla Modifier types
  goods_input_tools_mult: "Building @tools![Nbsp]$tools$ giriş" #deepl:1055261592

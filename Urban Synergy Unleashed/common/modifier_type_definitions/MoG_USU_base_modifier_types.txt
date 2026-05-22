@@ -170,3 +170,13 @@ REPLACE_OR_CREATE:state_infrastructure_from_population_add={
 		ai_value=0
 	}
 }
+
+# Dummy type for tracking
+building_through_tracking_add={
+	decimals=0
+	color=good
+	percent=yes
+	game_data={
+		ai_value=0
+	}
+}

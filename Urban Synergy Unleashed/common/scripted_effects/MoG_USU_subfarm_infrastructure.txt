@@ -25,3 +25,87 @@ mog_usu_subfarm_infrastructure_update = {
 		}
 	}
 }
+
+mog_usu_subfarm_throughput_update = {
+	if = {
+		limit = {
+			any_scope_building = { is_subsistence_building = yes }
+		}
+		random_scope_building = {
+			limit = {
+				is_subsistence_building = yes
+			}
+			save_scope_as = mog_usu_subsistence_building
+		}
+	}
+	scope:mog_usu_subsistence_building = {
+		set_local_variable = {
+			name = mog_usu_subfarm_tracking_var
+			value = modifier:building_through_tracking_add
+		}
+		set_local_variable = {
+			name = mog_usu_subfarm_calculation_var
+			value = 0
+		}
+		if = {		# Have to test each modifier type separately and then combine.
+			limit = {
+				OR = {
+					modifier:building_throughput_add > 0
+					modifier:building_throughput_add < 0
+				}
+			}
+			change_local_variable = {
+				name = mog_usu_subfarm_calculation_var
+				add = modifier:building_throughput_add
+			}
+		}
+		if = {
+			limit = { is_building_group = bg_subsistence_agriculture }
+			if = {
+				limit = {	
+					OR = {
+						modifier:building_group_bg_agriculture_throughput_add > 0
+						modifier:building_group_bg_agriculture_throughput_add < 0
+					}
+				}
+				change_local_variable = {
+					name = mog_usu_subfarm_calculation_var
+					add = modifier:building_group_bg_agriculture_throughput_add
+				}
+			}
+		}
+		if = {
+			limit = { is_building_group = bg_subsistence_ranching }
+			if = {
+				limit = {	
+					OR = {
+						modifier:building_group_bg_ranching_throughput_add > 0
+						modifier:building_group_bg_ranching_throughput_add < 0
+					}
+				}
+				change_local_variable = {
+					name = mog_usu_subfarm_calculation_var
+					add = modifier:building_group_bg_ranching_throughput_add
+				}
+			}
+		}
+		if = {
+			limit = {
+				has_modifier = mog_subfarm_throughput_balancing
+			}
+			remove_modifier = mog_subfarm_throughput_balancing
+		}
+		set_local_variable = {
+			name = mog_usu_subfarm_adjustment_var
+			value = {
+				value = 0
+				add = local_var:mog_usu_subfarm_calculation_var
+				add = local_var:mog_usu_subfarm_tracking_var
+			}
+		}
+		add_modifier = {
+			name = mog_subfarm_throughput_balancing
+			multiplier = local_var:mog_usu_subfarm_adjustment_var
+		}
+	}
+}

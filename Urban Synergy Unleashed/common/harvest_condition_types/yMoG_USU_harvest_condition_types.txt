@@ -1,0 +1,107 @@
+﻿# Negative
+TRY_INJECT:drought = {
+	modifier = {
+		#Counter Throughput Negation
+		state_peasants_consumption_multiplier_add = 0.05
+	}
+}
+
+TRY_INJECT:flood = {
+	modifier = {
+		#Counter Throughput Negation
+		state_peasants_consumption_multiplier_add = 0.05
+	}
+}
+
+TRY_INJECT:frost = {
+	modifier = {
+		#Counter Throughput Negation
+		state_peasants_consumption_multiplier_add = 0.05
+	}
+}
+
+TRY_INJECT:wildfire = {
+	modifier = {
+		#Counter Throughput Negation
+		state_peasants_consumption_multiplier_add = 0.05
+	}
+}
+
+TRY_INJECT:hailstorm = {
+	modifier = {
+		#Counter Throughput Negation
+		state_peasants_consumption_multiplier_add = 0.05
+	}
+}
+
+TRY_INJECT:locust_swarm = {
+	modifier = {
+		#Counter Throughput Negation
+		state_peasants_consumption_multiplier_add = 0.05
+	}
+}
+
+TRY_INJECT:heatwave = {
+	modifier = {
+		#Counter Throughput Negation
+		state_peasants_consumption_multiplier_add = 0.05
+	}
+}
+
+TRY_INJECT:disease_outbreak = {
+	modifier = {
+		#Counter Throughput Negation
+		state_peasants_consumption_multiplier_add = 0.05
+	}
+}
+
+TRY_INJECT:extreme_winds = {
+	modifier = {
+		#Counter Throughput Negation
+		state_peasants_consumption_multiplier_add = 0.05
+	}
+}
+
+TRY_INJECT:torrential_rains = {
+	modifier = {
+		#Counter Throughput Negation
+		state_peasants_consumption_multiplier_add = 0.05
+	}
+}
+
+# Positive
+TRY_INJECT:pollinator_surge = {
+	modifier = {
+		#Counter Throughput Negation
+		state_peasants_consumption_multiplier_add = -0.1
+	}
+}
+
+TRY_INJECT:optimal_sunlight = {
+	modifier = {
+		#Counter Throughput Negation
+		state_peasants_consumption_multiplier_add = -0.05
+	}
+}
+
+TRY_INJECT:moderate_rainfall = {
+	modifier = {
+		#Counter Throughput Negation
+		state_peasants_consumption_multiplier_add = -0.05
+	}
+}
+
+# Natural Disasters
+TRY_INJECT:tsunami = {
+	modifier = {
+		#Counter Throughput Negation
+		state_peasants_consumption_multiplier_add = 0.05
+	}
+}
+
+TRY_INJECT:earthquake = {
+	modifier = {
+		#Counter Throughput Negation
+		state_peasants_consumption_multiplier_add = 0.05
+	}
+}
