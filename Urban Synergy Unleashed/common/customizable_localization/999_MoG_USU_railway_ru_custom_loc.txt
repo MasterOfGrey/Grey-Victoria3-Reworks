@@ -2,7 +2,7 @@
 ## GENITIVE | РОДИТЕЛЬНЫЙ ##
 ## Update building_railway to building_usu_railway_line # building_railway
 ##
-RU_BL_RP = {
+REPLACE:RU_BL_RP = {
 	type = building
 	log_loc_errors = no
 	text = {
@@ -587,7 +587,7 @@ RU_BL_RP = {
 }
 
 ## DATIVE | ДАТЕЛЬНЫЙ ##
-RU_BL_DP = {
+REPLACE:RU_BL_DP = {
 	type = building
 	log_loc_errors = no
 	text = {
@@ -1172,7 +1172,7 @@ RU_BL_DP = {
 }
 
 ## ACCUSATIVE | ВИНИТЕЛЬНЫЙ ##
-RU_BL_VP = {
+REPLACE:RU_BL_VP = {
 	type = building
 	log_loc_errors = no
 	text = {
@@ -1757,7 +1757,7 @@ RU_BL_VP = {
 }
 
 ## INSTRUMENTAL | ТВОРИТЕЛЬНЫЙ ##
-RU_BL_TP = {
+REPLACE:RU_BL_TP = {
 	type = building
 	log_loc_errors = no
 	text = {
@@ -2342,7 +2342,7 @@ RU_BL_TP = {
 }
 
 ## PREPOSITIONAL | ПРЕДЛОЖНЫЙ ##
-RU_BL_PP = {
+REPLACE:RU_BL_PP = {
 	type = building
 	log_loc_errors = no
 	text = {
