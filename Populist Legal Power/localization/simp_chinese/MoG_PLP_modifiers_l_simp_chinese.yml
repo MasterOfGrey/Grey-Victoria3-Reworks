@@ -9,3 +9,5 @@
  LA_Social_Security: "PLP：社会保障机构的授权" #deepl:675340117
  # Compat Modifiers
  mog_spa_migration_restrictiveness_add: "SPA: 移民控制调整" #deepl:1726668639
+ # Balance Modifiers
+ eic_bureaucracy_balance: "PLP：潜在机构预期（平衡修正）" #deepl:56475920

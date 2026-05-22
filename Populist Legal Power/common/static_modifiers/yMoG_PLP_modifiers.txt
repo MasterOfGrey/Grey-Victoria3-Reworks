@@ -19,3 +19,10 @@ mog_spa_migration_restrictiveness_add = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_authority_positive.dds
 	country_migration_restrictiveness_add = 10
 }
+
+## Misc. Balancing
+eic_bureaucracy_balance = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_documents_positive.dds
+	state_bureaucracy_population_base_cost_factor_mult = -0.65
+	country_institution_cost_institution_border_control_mult = -0.65
+}

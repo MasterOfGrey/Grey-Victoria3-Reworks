@@ -1,0 +1,6 @@
+﻿l_russian:
+ # NEL
+ alert_not_enacting_laws_name: "Не является ли #bold  #! принятием закона." #deepl:3332296863
+ alert_not_enacting_laws_hint: "Не является ли #bold  #! принятием закона." #deepl:3332296863
+ alert_not_enacting_laws_action: "Политическая панель" #deepl:2776289793
+ not_enacting_laws_setting_name: "Не принимать закон" #deepl:3921182961

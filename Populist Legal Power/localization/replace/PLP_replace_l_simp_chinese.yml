@@ -1,0 +1,6 @@
+﻿l_simp_chinese:
+ # NEL
+ alert_not_enacting_laws_name: "#bold 不是#!制定法律吗？" #deepl:3332296863
+ alert_not_enacting_laws_hint: "#bold 不是#!制定法律吗？" #deepl:3332296863
+ alert_not_enacting_laws_action: "政治小组" #deepl:2776289793
+ not_enacting_laws_setting_name: "不颁布法律" #deepl:3921182961

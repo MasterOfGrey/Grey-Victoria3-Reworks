@@ -1,0 +1,6 @@
+﻿l_polish:
+ # NEL
+ alert_not_enacting_laws_name: "Czy #bold nie jest #!uchwalającym prawo?" #deepl:3332296863
+ alert_not_enacting_laws_hint: "Czy #bold nie jest #!uchwalającym prawo?" #deepl:3332296863
+ alert_not_enacting_laws_action: "Panel polityczny" #deepl:2776289793
+ not_enacting_laws_setting_name: "Nieustanowienie prawa" #deepl:3921182961

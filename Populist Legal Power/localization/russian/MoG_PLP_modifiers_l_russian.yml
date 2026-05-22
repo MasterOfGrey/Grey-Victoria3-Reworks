@@ -9,3 +9,5 @@
  LA_Social_Security: "PLP: Полномочия учреждения социального обеспечения" #deepl:675340117
  # Compat Modifiers
  mog_spa_migration_restrictiveness_add: "SPA: Регулировка миграционного контроля" #deepl:1726668639
+ # Balance Modifiers
+ eic_bureaucracy_balance: "PLP: Латентные институциональные ожидания (исправление баланса)" #deepl:56475920

@@ -9,3 +9,5 @@
  LA_Social_Security: "PLP: Autoridad de la Institución de la Seguridad Social" #deepl:675340117
  # Compat Modifiers
  mog_spa_migration_restrictiveness_add: "SPA: Ajuste de los controles de migración" #deepl:1726668639
+ # Balance Modifiers
+ eic_bureaucracy_balance: "PLP: Expectativas institucionales latentes (saldo fijo)" #deepl:56475920

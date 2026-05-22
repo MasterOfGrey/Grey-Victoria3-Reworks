@@ -9,3 +9,5 @@
  LA_Social_Security: "PLP: Organ z Zakładu Ubezpieczeń Społecznych" #deepl:675340117
  # Compat Modifiers
  mog_spa_migration_restrictiveness_add: "SPA: Dostosowanie kontroli migracji" #deepl:1726668639
+ # Balance Modifiers
+ eic_bureaucracy_balance: "PLP: ukryte oczekiwania instytucjonalne (poprawka bilansu)" #deepl:56475920

@@ -1,0 +1,6 @@
+﻿l_spanish:
+ # NEL
+ alert_not_enacting_laws_name: "¿Es #bold no #!promulgar una ley" #deepl:3332296863
+ alert_not_enacting_laws_hint: "¿Es #bold no #!promulgar una ley" #deepl:3332296863
+ alert_not_enacting_laws_action: "Panel político" #deepl:2776289793
+ not_enacting_laws_setting_name: "No promulgar una ley" #deepl:3921182961

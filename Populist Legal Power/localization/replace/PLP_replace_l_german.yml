@@ -1,0 +1,6 @@
+﻿l_german:
+ # NEL
+ alert_not_enacting_laws_name: "Ist #bold nicht #!Erlass eines Gesetzes" #deepl:3332296863
+ alert_not_enacting_laws_hint: "Ist #bold nicht #!Erlass eines Gesetzes" #deepl:3332296863
+ alert_not_enacting_laws_action: "Politik-Panel" #deepl:2776289793
+ not_enacting_laws_setting_name: "Kein Gesetz zu erlassen" #deepl:3921182961

@@ -9,3 +9,5 @@
  LA_Social_Security: "PLP: 사회 보장 기관의 권한" #deepl:675340117
  # Compat Modifiers
  mog_spa_migration_restrictiveness_add: "SPA: 마이그레이션 제어 조정" #deepl:1726668639
+ # Balance Modifiers
+ eic_bureaucracy_balance: "PLP: 잠재적 기관 기대치(잔액 수정)" #deepl:56475920

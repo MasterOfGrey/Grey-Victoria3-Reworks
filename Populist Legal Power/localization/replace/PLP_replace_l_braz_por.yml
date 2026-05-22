@@ -1,0 +1,6 @@
+﻿l_braz_por:
+ # NEL
+ alert_not_enacting_laws_name: "O site #bold não é #!que está promulgando uma lei" #deepl:3332296863
+ alert_not_enacting_laws_hint: "O site #bold não é #!que está promulgando uma lei" #deepl:3332296863
+ alert_not_enacting_laws_action: "Painel de Política" #deepl:2776289793
+ not_enacting_laws_setting_name: "Não promulgar uma lei" #deepl:3921182961

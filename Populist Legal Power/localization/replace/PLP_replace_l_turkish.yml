@@ -1,0 +1,6 @@
+﻿l_turkish:
+ # NEL
+ alert_not_enacting_laws_name: "#bold değil #!bir yasa çıkarıyor mu" #deepl:3332296863
+ alert_not_enacting_laws_hint: "#bold değil #!bir yasa çıkarıyor mu" #deepl:3332296863
+ alert_not_enacting_laws_action: "Siyaset Paneli" #deepl:2776289793
+ not_enacting_laws_setting_name: "Kanun Çıkarmamak" #deepl:3921182961

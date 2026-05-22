@@ -9,3 +9,5 @@
  LA_Social_Security: "PLP: Sosyal Güvenlik Kurumundan Yetki" #deepl:675340117
  # Compat Modifiers
  mog_spa_migration_restrictiveness_add: "SPA: Göç Kontrolleri Ayarlaması" #deepl:1726668639
+ # Balance Modifiers
+ eic_bureaucracy_balance: "PLP: Gizli Kurumsal Beklentiler (denge düzeltmesi)" #deepl:56475920

@@ -1,0 +1,6 @@
+﻿l_japanese:
+ # NEL
+ alert_not_enacting_laws_name: "#bold  #! 法律を制定しないのか？" #deepl:3332296863
+ alert_not_enacting_laws_hint: "#bold  #! 法律を制定しないのか？" #deepl:3332296863
+ alert_not_enacting_laws_action: "政治パネル" #deepl:2776289793
+ not_enacting_laws_setting_name: "法律を制定しない" #deepl:3921182961

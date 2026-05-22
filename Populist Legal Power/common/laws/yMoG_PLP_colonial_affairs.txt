@@ -100,7 +100,7 @@ REPLACE_OR_CREATE:law_frontier_colonization = {
 	is_visible = {
 		OR = {
 			AND = {
-				com_law_nfrontier_colonization_trigger = yes
+				com_law_frontier_colonization_trigger = yes
 				# Any vanilla conditions that have been added
 				always = yes
 			}

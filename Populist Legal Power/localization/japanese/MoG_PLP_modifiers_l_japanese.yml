@@ -9,3 +9,5 @@
  LA_Social_Security: "PLP：社会保障機関からの権限" #deepl:675340117
  # Compat Modifiers
  mog_spa_migration_restrictiveness_add: "SPA：マイグレーション・コントロールの調整" #deepl:1726668639
+ # Balance Modifiers
+ eic_bureaucracy_balance: "PLP：潜在的な制度的期待（バランス修正）" #deepl:56475920

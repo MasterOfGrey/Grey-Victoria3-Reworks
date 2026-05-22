@@ -1,0 +1,6 @@
+﻿l_french:
+ # NEL
+ alert_not_enacting_laws_name: "#bold n'est pas #!promulguer une loi" #deepl:3332296863
+ alert_not_enacting_laws_hint: "#bold n'est pas #!promulguer une loi" #deepl:3332296863
+ alert_not_enacting_laws_action: "Panel sur la politique" #deepl:2776289793
+ not_enacting_laws_setting_name: "Ne pas promulguer de loi" #deepl:3921182961

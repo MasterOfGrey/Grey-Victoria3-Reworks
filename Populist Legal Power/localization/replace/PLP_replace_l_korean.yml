@@ -1,0 +1,6 @@
+﻿l_korean:
+ # NEL
+ alert_not_enacting_laws_name: "#bold 아닌 #!법률 제정" #deepl:3332296863
+ alert_not_enacting_laws_hint: "#bold 아닌 #!법률 제정" #deepl:3332296863
+ alert_not_enacting_laws_action: "정치 패널" #deepl:2776289793
+ not_enacting_laws_setting_name: "법률 미제정" #deepl:3921182961

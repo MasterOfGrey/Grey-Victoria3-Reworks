@@ -9,3 +9,5 @@
  LA_Social_Security: "PLP: Authority from Social Security Institution"
  # Compat Modifiers
  mog_spa_migration_restrictiveness_add: "SPA: Migration Controls Adjustment"
+ # Balance Modifiers
+ eic_bureaucracy_balance: "PLP: Latent Institutional Expectations (balance fix)"
