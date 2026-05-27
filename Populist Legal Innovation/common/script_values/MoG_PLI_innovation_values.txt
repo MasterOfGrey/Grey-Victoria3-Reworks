@@ -1012,10 +1012,13 @@ mog_pli_pro_women_modded = 1	# Replace this value for modded laws compatibility
 mog_pli_pro_isolationism_mult = {
 	if = {
 		limit = { has_law = law_type:law_isolationism }
-		add = -0.5		# 50% reduction for full isolationism
+		value = 0.5		# 50% reduction for full isolationism
 	}
 	else_if = {
 		limit = { has_law_or_variant = law_type:law_isolationism }
-		add = -0.2		# 20% reduction for partial isolationism
+		value = 0.8		# 20% reduction for partial isolationism
+	}
+	else = {
+		value = 1
 	}
 }
