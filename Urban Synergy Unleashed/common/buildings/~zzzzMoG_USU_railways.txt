@@ -2,8 +2,8 @@
 ## ANY MOD THAT ADDS THINGS TO RAILWAYS AFTER THIS FILE LOADS **WILL** BREAK THINGS VERY BADLY
 ## (unless it's an intentionally designed compatibility patch)
 
-REPLACE:building_railway = {	# Now the Railway Station - re-using this gets around AI subsidy problems
-	building_group = bg_private_infrastructure
+REPLACE_OR_CREATE:building_railway = {	# Now the Railway Station - re-using this gets around AI subsidy problems
+	building_group = bg_usu_rail_infrastructure
 	icon = "gfx/interface/icons/building_icons/USU_building_railway_terminus.dds"
 	
 	ai_nationalization_desire = 0.5 # AI is reluctant to privatize railways since they are likely to need subsidies anyway
@@ -229,7 +229,7 @@ REPLACE:building_railway = {	# Now the Railway Station - re-using this gets arou
 	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_railways.dds"
 }
 
-building_usu_railway_line = {
+REPLACE_OR_CREATE:building_usu_railway_line = {
 	building_group = bg_usu_railway_line
 	icon = "gfx/interface/icons/building_icons/building_railway.dds"
 	
@@ -450,9 +450,10 @@ building_usu_railway_line = {
 	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_railways.dds"
 }
 
+####### RE-ACTIVATE WHEN PDX FIXES THE REPLACE/INJECT SEQUENCE PROBLEM #######
 # Done for regular railways within morgenrote - needs to be re-done here because this reworks railways.
-TRY_INJECT:building_usu_railway_line = {
-	production_method_groups = {
-		pmg_gaudi_communication #MORGENRÖTE
-	}
-}
+#TRY_INJECT:building_railway = {
+#	production_method_groups = {
+#		pmg_gaudi_communication #MORGENRÖTE
+#	}
+#}

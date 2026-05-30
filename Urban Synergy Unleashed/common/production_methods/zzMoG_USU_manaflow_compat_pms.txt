@@ -1,0 +1,112 @@
+﻿## Urban Centres
+TRY_INJECT:pm_gate_magic_streetlights = {
+	building_modifiers = {
+		workforce_scaled = {
+			goods_output_services_add = 2	# Total 7, so it's an upgrade on gas
+		}
+	}
+	state_modifiers = {
+		workforce_scaled = {
+			state_infrastructure_add = -1
+			state_migration_pull_add = -0.06	# Slowly counteracts the scaling bonus on the base PM - eventually, that's enough concrete jungle...
+		}
+	}
+}
+
+## Railways
+TRY_INJECT:pm_gate_early_mana_trains = {
+	building_modifiers = {
+		workforce_scaled = {
+			goods_input_gate_mana_core_add = -3	# (brings total down to 2)
+			goods_input_gate_mana_add = 2		# (brings total up to 4)
+			goods_output_transportation_add = 20 # 600	# to match total = 40
+		}
+		level_scaled = {
+			building_employment_laborers_add = -1300	# for total 1200
+			building_employment_machinists_add = -900	# for total 100
+			building_employment_clerks_add = -550		# for total 200
+		}												# +500 mages = 2000 total
+	}
+	state_modifiers = {
+		unscaled = {
+			state_market_access_price_impact = 0.02
+		}
+		workforce_scaled = {
+			state_infrastructure_add = -10		# (bring their 20 down to match)
+			state_pollution_generation_add = 5	# (reduced down from 25, magic is cleaner)
+		}
+		level_scaled = {
+			state_infrastructure_add = 10
+		}
+	}
+}
+
+TRY_INJECT:pm_gate_mana_trains = {
+	building_modifiers = {
+		workforce_scaled = {
+			goods_input_gate_mana_core_add = -3	# (brings total down to 2)
+			goods_input_gate_mana_add = 3		# (brings total up to 8)
+			goods_input_engines_add = 1			# to introduce hybrid tech+magic
+			goods_output_transportation_add = 25 # 750	# to match total = 50
+		}
+		level_scaled = {
+			building_employment_laborers_add = -600		# for total 900
+			building_employment_machinists_add = -1400	# for total 100
+			building_employment_clerks_add = -550		# for total 200
+		}												# +1000 mages = 2200 total
+	}
+	state_modifiers = {
+		unscaled = {
+			state_market_access_price_impact = 0.03
+		}
+		workforce_scaled = {
+			state_infrastructure_add = -15		# (bring their 25 down to match)
+			state_pollution_generation_add = 3	# (reduced down from 20, magic is cleaner)
+		}
+		level_scaled = {
+			state_infrastructure_add = 10
+		}
+	}
+}
+
+REPLACE_OR_CREATE:pm_gate_golem_trains = {
+	texture = "gfx/interface/icons/production_method_icons/trains_electric.dds"
+	is_hidden_when_unavailable = yes
+	
+	unlocking_technologies = {
+		gate_magic_golems
+	}
+	
+	unlocking_production_methods = {
+		pm_electric_passenger_carriages
+	}
+	
+	building_modifiers = {
+		workforce_scaled = {
+			goods_input_engines_add = 2			# 120
+			goods_input_gate_mana_core_add = 3	# 150
+			goods_input_gate_mana_add = 8		# 280
+			goods_input_gate_golem_add = 2		# 140
+			goods_output_transportation_add = 70 # 2100
+		}
+		level_scaled = {
+			building_employment_laborers_add = 800
+			building_employment_machinists_add = 100
+			building_employment_engineers_add = 50
+			building_employment_clerks_add = 200
+			building_employment_gate_mages_add = 450
+		}
+	}
+	
+	state_modifiers = {
+		unscaled = {
+			state_market_access_price_impact = 0.04
+		}
+		workforce_scaled = {
+			state_infrastructure_add = 10
+		}
+		level_scaled = {
+			state_infrastructure_add = 20
+		}
+	}
+}

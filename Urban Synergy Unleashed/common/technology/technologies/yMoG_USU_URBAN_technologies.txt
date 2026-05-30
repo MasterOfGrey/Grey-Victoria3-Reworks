@@ -4,3 +4,38 @@ TRY_INJECT:urbanization = {
 		state_usu_building_public_green_max_level_add = 3		# New
 	}
 }
+
+TRY_INJECT:centralization = {
+	modifier = {
+		state_tax_capacity_add = -25
+		country_bureaucracy_mult = 0.02
+	}
+}
+
+TRY_INJECT:central_archives = {
+	modifier = {
+		state_tax_capacity_add = -25
+		country_bureaucracy_mult = 0.02
+	}
+}
+
+TRY_INJECT:identification_documents = {
+	modifier = {
+		state_tax_capacity_add = -25
+		country_bureaucracy_mult = 0.02
+	}
+}
+
+TRY_INJECT:central_planning = {
+	modifier = {
+		state_tax_capacity_add = -25
+		country_bureaucracy_mult = 0.02
+	}
+}
+
+TRY_INJECT:mass_surveillance = {
+	modifier = {
+		state_tax_capacity_add = -25
+		country_bureaucracy_mult = 0.02
+	}
+}

@@ -26,8 +26,9 @@ mog_construction_max_level_adjustment = {
 }
 
 mog_subfarm_modifiers_occupancy_scaled = {
-	icon = gfx/interface/icons/state_status_icons/state_infrastructure.dds
-	state_infrastructure_from_population_max_add = -1
+	icon = gfx/interface/icons/generic_icons/arable_land_icon.dds
+	#state_infrastructure_from_population_max_add = -1
+	state_birth_rate_mult = -0.5
 }
 
 mog_subfarm_throughput_balancing = {

@@ -29,7 +29,6 @@ TRY_INJECT:combat_unit_type_trench_infantry = {
 	upkeep_modifier = {
 		goods_input_usu_logistics_add = 2
     }
-
 }
 
 TRY_INJECT:combat_unit_type_squad_infantry = {

@@ -6,7 +6,7 @@
  mog_construction_max_level_adjustment: "アーバンシナジー建設"
  mog_logistics_land_trade: "輸入物流サービスによる陸上貿易能力"
  mog_mapi: "アーバンシナジーMAPI"
- mog_subfarm_modifiers_occupancy_scaled: "都市の相乗効果 インフラへの影響" #deepl:1060897918
+ mog_subfarm_modifiers_occupancy_scaled: "USU補助入居率が出生率に与える影響" #deepl:3099429734
  mog_subfarm_throughput_balancing: "USUバランス・モディファイア" #deepl:3634715654
  
  # Building
@@ -17,6 +17,7 @@
  building_river_port: "リバードック"
  usu_building_public_green: "パブリックグリーン"
  
+ bg_usu_rail_infrastructure: "鉄道インフラ" #deepl:2785111170
  bg_usu_railway_line: "鉄道" #deepl:4225024860
  building_usu_railway_line: "鉄道" #deepl:2245543813
  
@@ -68,6 +69,9 @@
  
  building_through_tracking_add: "USUトラッキング・モディファイア" #deepl:1889466230
  building_through_tracking_add_desc: "数学出力の値を追跡するためのモディファイア。" #deepl:3412987945
+ 
+ building_group_bg_usu_rail_infrastructure_throughput_add: "$bg_usu_rail_infrastructure$ [concept_throughput]" #deepl:2772908627
+ building_group_bg_usu_rail_infrastructure_throughput_add_desc: "のインプットとアウトプットの両方にボーナスまたはペナルティを与える。$bg_usu_rail_infrastructure$" #deepl:4236011683
  
  # Vanilla Modifier types
  goods_input_tools_mult: "の構築tools![Nbsp]$tools$ 入力" #deepl:1055261592

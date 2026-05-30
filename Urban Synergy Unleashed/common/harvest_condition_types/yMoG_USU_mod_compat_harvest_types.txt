@@ -1,0 +1,30 @@
+﻿## More Natural Disasters
+# Negative
+TRY_INJECT:tornadoes = {
+	modifier = {
+		#Counter Throughput Negation
+		state_peasants_consumption_multiplier_add = 0.05
+	}
+}
+
+TRY_INJECT:volcanic_eruption = {
+	modifier = {
+		#Counter Throughput Negation
+		state_peasants_consumption_multiplier_add = 0.08
+	}
+}
+
+TRY_INJECT:tropical_storm = {
+	modifier = {
+		#Counter Throughput Negation
+		state_peasants_consumption_multiplier_add = 0.05
+	}
+}
+
+# Positive
+TRY_INJECT:fertile_grounds = {
+	modifier = {
+		#Counter Throughput Negation
+		state_peasants_consumption_multiplier_add = -0.1
+	}
+}

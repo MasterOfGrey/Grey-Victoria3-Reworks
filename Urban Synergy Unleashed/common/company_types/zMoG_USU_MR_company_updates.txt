@@ -1,5 +1,11 @@
-﻿TRY_INJECT:company_basic_community = {
+﻿### Morgenrote
+TRY_INJECT:company_basic_community = {
 	building_types = {
 		building_elgar_opera		# Morgenrote
+	}
+}
+TRY_INJECT:elgar_company_basic_instruments = {
+	extension_building_types = {  
+		building_vineyard
 	}
 }

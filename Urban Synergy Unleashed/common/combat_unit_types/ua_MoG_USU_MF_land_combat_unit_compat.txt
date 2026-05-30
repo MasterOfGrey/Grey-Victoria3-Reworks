@@ -1,0 +1,101 @@
+﻿###
+### Keep "unit tiers" per group in ascending order; the system will determine the default unit type for a country
+### by the last defined unit type that it can build
+###
+
+### ARMY
+
+### Infantry
+
+TRY_INJECT:combat_unit_type_gate_mage_infantry = {
+	upkeep_modifier = {
+		goods_input_usu_logistics_add = 1
+	}
+}
+
+TRY_INJECT:combat_unit_type_gate_arcane_vangard = {
+	upkeep_modifier = {
+		goods_input_usu_logistics_add = 1.5
+	}
+}
+
+TRY_INJECT:combat_unit_type_gate_mana_rifle_infantry = {
+	upkeep_modifier = {
+		goods_input_usu_logistics_add = 2
+	}
+}
+
+TRY_INJECT:combat_unit_type_gate_rune_guard_infantry = {
+	upkeep_modifier = {
+		goods_input_usu_logistics_add = 2.5
+	}
+	battle_modifier = {
+		unit_offense_add = 10	# Raise 25 -> 35
+	}
+}
+
+TRY_INJECT:combat_unit_type_gate_thaumaturgic_commandos = {
+	upkeep_modifier = {
+		goods_input_usu_logistics_add = 3
+	}
+}
+
+### Cavalry ??
+
+#TRY_INJECT:combat_unit_type_gate_wraithwalkers = {
+#	upkeep_modifier = {
+#		goods_input_usu_logistics_add = 3
+#	}
+	#upgrades = {
+	#	combat_unit_type_light_tanks	# (natively in MF)
+	#}
+#}
+
+TRY_REPLACE:combat_unit_type_gate_wraithwalkers = {
+	group = combat_unit_group_cavalry
+	max_manpower = 1000
+	supply_capacity = 18
+
+	upkeep_modifier = {
+		goods_input_small_arms_add = 2
+		goods_input_gate_mana_core_add = 2
+		goods_input_ammunition_add = 1
+		goods_input_usu_logistics_add = 3
+	}
+
+	battle_modifier = {
+		unit_offense_add = 40
+		unit_defense_add = 20
+		unit_morale_loss_add = 6
+		unit_kill_rate_add = 0.05
+		unit_occupation_mult = 0.3
+	}
+
+	unlocking_technologies = { gate_shadow_infiltration_tactics }
+
+	combat_unit_image = {
+		# fallback
+		texture = "gfx/unit_illustrations/gate_infantry_european_wraithwalkers.dds"
+	}
+
+	upgrades = {
+		combat_unit_type_light_tanks
+	}
+}
+
+### Artillery
+
+TRY_INJECT:combat_unit_type_gate_mage_artillery = {
+	upkeep_modifier = {
+		goods_input_usu_logistics_add = 1
+	}
+}
+
+TRY_INJECT:combat_unit_type_gate_mana_artillery = {
+	upkeep_modifier = {
+		goods_input_usu_logistics_add = 3
+	}
+	upgrades = {
+		combat_unit_type_heavy_tank
+	}
+}

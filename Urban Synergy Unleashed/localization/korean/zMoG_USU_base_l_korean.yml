@@ -6,7 +6,7 @@
  mog_construction_max_level_adjustment: "어반 시너지 건설"
  mog_logistics_land_trade: "수입 물류 서비스로부터의 육상 무역 용량"
  mog_mapi: "어반 시너지 MAPI"
- mog_subfarm_modifiers_occupancy_scaled: "도시 시너지가 인프라에 미치는 영향" #deepl:1060897918
+ mog_subfarm_modifiers_occupancy_scaled: "USU: 출생률에 대한 하위 지원 점유 영향" #deepl:3099429734
  mog_subfarm_throughput_balancing: "USU: 잔액 수정자" #deepl:3634715654
  
  # Building
@@ -17,6 +17,7 @@
  building_river_port: "강 부두"
  usu_building_public_green: "공공 녹지"
  
+ bg_usu_rail_infrastructure: "철도 인프라" #deepl:2785111170
  bg_usu_railway_line: "철도" #deepl:4225024860
  building_usu_railway_line: "철도" #deepl:2245543813
  
@@ -68,6 +69,9 @@
  
  building_through_tracking_add: "USU: 추적 수정자" #deepl:1889466230
  building_through_tracking_add_desc: "수학 출력값을 추적하는 데 사용되는 수정자입니다." #deepl:3412987945
+ 
+ building_group_bg_usu_rail_infrastructure_throughput_add: "$bg_usu_rail_infrastructure$ [concept_throughput]" #deepl:2772908627
+ building_group_bg_usu_rail_infrastructure_throughput_add_desc: "입력과 출력 모두에 보너스 또는 페널티를 적용합니다. $bg_usu_rail_infrastructure$" #deepl:4236011683
  
  # Vanilla Modifier types
  goods_input_tools_mult: "@tools![Nbsp]$tools$ 입력" #deepl:1055261592

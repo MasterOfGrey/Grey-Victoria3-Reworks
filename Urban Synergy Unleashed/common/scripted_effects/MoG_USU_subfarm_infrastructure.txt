@@ -1,32 +1,41 @@
 ﻿# state scope
-mog_usu_subfarm_infrastructure_update = {
+mog_usu_subfarm_infrastructure_update = {	# co-opt this for pop growth now infra sorted on-building
 	if = {
 		limit = {
 			has_modifier = mog_subfarm_modifiers_occupancy_scaled
 		}
 		remove_modifier = mog_subfarm_modifiers_occupancy_scaled
 	}
-	every_scope_building = {
+	if = {
 		limit = {
-			is_subsistence_building = yes
+			any_scope_building = { is_subsistence_building = yes }
 		}
-		set_local_variable = {
-			name = occupied_levels
-			value = {
-				value = occupancy
-				multiply = level
+		every_scope_building = {
+			limit = {
+				is_subsistence_building = yes
 			}
-		}
-		PREV = {
-			add_modifier = {
-				name = mog_subfarm_modifiers_occupancy_scaled
-				multiplier = local_var:occupied_levels
+			#set_local_variable = {
+			#	name = occupied_levels
+			#	value = {
+			#		value = occupancy
+			#		multiply = level
+			#	}
+			#}
+			set_local_variable = {
+				name = subfarm_occupancy
+				value = occupancy
+			}
+			PREV = {
+				add_modifier = {
+					name = mog_subfarm_modifiers_occupancy_scaled
+					multiplier = local_var:subfarm_occupancy
+				}
 			}
 		}
 	}
 }
 
-mog_usu_subfarm_throughput_update = {
+mog_usu_subfarm_throughput_update = {	# Killing throughput bonus lets infra effect be handled on-building
 	if = {
 		limit = {
 			any_scope_building = { is_subsistence_building = yes }

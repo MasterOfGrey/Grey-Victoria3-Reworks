@@ -6,6 +6,12 @@ TRY_INJECT:company_basic_fishing = {
 	}
 }
 
+TRY_INJECT:company_basic_forestry = {
+	extension_building_types = {
+		building_usu_railway_line
+	}
+}
+
 TRY_INJECT:company_basic_shipyards = {
 	extension_building_types = {
 		building_port

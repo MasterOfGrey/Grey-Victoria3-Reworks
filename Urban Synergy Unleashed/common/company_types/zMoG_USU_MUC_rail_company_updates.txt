@@ -1,0 +1,3624 @@
+﻿# Empresa do Caminho de Ferro de Benguela-E.P.
+TRY_REPLACE:company_EmpresaDoCaminho = {
+	icon = "gfx/interface/icons/company_icons/historical_company_icons/empresadocaminho.png"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_railways.dds"
+	
+	flavored_company = yes
+	
+	category = bureaucrat_owned
+	
+	preferred_headquarters = { STATE_SOUTH_ANGOLA }
+
+	possible_prestige_goods = {
+		#prestige_good_saint_etienne_rifles
+	}
+
+	
+	building_types = { #25
+		building_railway
+		building_usu_railway_line
+	}
+	
+	extension_building_types = {
+		building_lead_mine
+		building_iron_mine
+	}
+	
+	potential = {
+		has_interest_marker_in_region = sr:region_equatorial_africa
+	}
+	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_SOUTH_ANGOLA
+			}
+		}
+	}			
+	
+	possible = { 
+		any_scope_state = {
+			state_region = s:STATE_SOUTH_ANGOLA
+			is_incorporated = yes
+			any_scope_building = {
+				is_building_type = building_usu_railway_line
+				level >= 3
+			}
+		}
+		has_technology_researched = steel_railway_cars
+	}
+	
+	prosperity_modifier = {
+		military_formation_army_movement_speed_mult = 0.15 #15
+		state_infrastructure_mult = 0.05 #10
+	}	
+	
+
+	ai_will_do = {
+		has_technology_researched = steel_railway_cars
+		any_scope_state = {
+			state_region = s:STATE_SOUTH_ANGOLA
+			is_incorporated = yes
+		}
+	}
+
+	ai_construction_targets = {
+		building_usu_railway_line = {
+			level = 5
+			state_trigger = {
+				state_region = s:STATE_SOUTH_ANGOLA
+			}
+		}
+	}
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}
+}
+
+# Carlos Casado S.A.
+TRY_INJECT:company_EmpresaDoCaminho = {
+	extension_building_types = {
+		building_usu_railway_line
+	}
+}
+
+#Bank of New South Wales
+TRY_REPLACE:company_Bank_BNSW = {
+	icon = "gfx/interface/icons/company_icons/historical_company_icons/bankaustralia.png"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufacturing_light.dds"
+	
+	flavored_company = yes
+	preferred_headquarters = { STATE_NEW_SOUTH_WALES }
+	
+	category = bureaucrat_owned
+	
+	possible_prestige_goods = {
+		#prestige_good_generic_currency_paper
+	}
+	
+	building_types = {
+		building_paper_mill
+		building_livestock_ranch
+		building_food_industry
+		building_railway
+	}
+	
+	extension_building_types = {
+		building_gold_mine
+		building_arms_industry
+		building_fishing_wharf
+		building_usu_railway_line
+	}
+	
+	potential = {
+		has_game_rule = banks_enabled
+		has_interest_marker_in_region = sr:region_oceania
+	}
+	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_NEW_SOUTH_WALES
+			}
+		}
+	}	
+	
+	possible = {
+		any_scope_state = {
+			state_region = s:STATE_NEW_SOUTH_WALES
+			is_incorporated = yes
+			any_scope_building = {
+				is_building_type = building_financial_district
+				level >= 10
+			}
+		}
+		unique_companies_has_bank = no
+	}
+	
+	prosperity_modifier = {
+		state_trade_advantage_mult = 0.1
+		interest_group_ig_rural_folk_approval_add = 2
+		
+		country_loan_interest_rate_mult = -0.025
+		country_private_construction_allocation_mult = 0.1
+		
+		state_farmers_investment_pool_contribution_add = 0.04 #<-- cattle was used as a currency at first
+		state_shopkeepers_investment_pool_contribution_add = 0.015
+		state_clergymen_investment_pool_contribution_add = 0.04
+		state_aristocrats_investment_pool_contribution_add = 0.04
+		state_capitalists_investment_pool_contribution_add = 0.07 #<--
+		
+		building_nationalization_investment_return_add = 0.05
+		country_government_dividends_reinvestment_add = 0.05
+		country_government_dividends_efficiency_add = 0.05
+		
+		country_max_companies_add = 1
+	}
+	
+	
+	ai_will_do = {
+		unique_companies_has_bank = no
+		any_scope_state = {
+			state_region = s:STATE_NEW_SOUTH_WALES
+			is_incorporated = yes
+		}
+	}
+
+	ai_construction_targets = {
+		building_paper_mill = {
+			level = 5
+			state_trigger = {
+				state_region = s:STATE_NEW_SOUTH_WALES
+			}
+		}
+	}
+	ai_weight = {
+		value = 5 # Higher base value for flavored companies
+	}
+}
+
+# Ganz Works
+TRY_INJECT:company_GanzWorks = {
+	prosperity_modifier = {
+		building_railway_throughput_add = -0.11 #14
+		building_group_bg_usu_rail_infrastructure_throughput_add = 0.11
+	}
+}
+
+# Compagnie du Congo pour le Commerce et l'Industrie
+TRY_INJECT:company_ccci = {
+	extension_building_types = {
+		building_usu_railway_line
+	}
+}
+
+# Rába Járműipari Holding Nyrt.
+TRY_REPLACE:company_Raba = {
+	icon = "gfx/interface/icons/company_icons/historical_company_icons/raba.png"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufacturing_heavy.dds"
+	
+	flavored_company = yes
+	preferred_headquarters = { STATE_TRANSDANUBIA }
+	
+	possible_prestige_goods = {
+		#prestige_good_saint_etienne_rifles
+	}
+
+	building_types = { #17
+		building_automotive_industry
+		building_usu_railway_line
+	}
+	
+	extension_building_types = {
+		building_railway
+		building_motor_industry
+	}
+
+	potential = {
+		has_interest_marker_in_region = sr:region_balkans
+	}
+	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_TRANSDANUBIA
+			}
+		}
+	}			
+	
+	possible = { 
+		any_scope_state = {
+			state_region = s:STATE_TRANSDANUBIA
+			is_incorporated = yes
+			any_scope_building = {
+				OR = {
+					is_building_type = building_automotive_industry
+					is_building_type = building_usu_railway_line
+				}
+				level >= 3
+			}
+		}
+	}
+	
+	prosperity_modifier = {
+		state_trade_advantage_mult = 0.15 #10
+		unit_army_defense_mult = 0.04 #8
+	}	
+	
+
+	
+	ai_will_do = {
+		any_scope_state = {
+			state_region = s:STATE_TRANSDANUBIA
+			is_incorporated = yes
+		}
+	}
+
+	ai_construction_targets = {
+		building_automotive_industry = {
+			level = 5
+			state_trigger = {
+				state_region = s:STATE_TRANSDANUBIA
+			}
+		}
+	}
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}
+}
+
+#Creditanstalt
+TRY_INJECT:company_Bank_CA = {
+	building_types = {
+		building_usu_railway_line
+	}
+}
+
+# Kaiserlich-königliche österreichische Staatsbahnen
+TRY_REPLACE:company_Austrian_Railways = {
+	icon = "gfx/interface/icons/company_icons/historical_company_icons/austrian_railways.png"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_railways.dds"
+	
+	flavored_company = yes
+	preferred_headquarters = { STATE_AUSTRIA }
+	
+	category = bureaucrat_owned
+	
+	possible_prestige_goods = {
+		#prestige_good_saint_etienne_rifles
+	}
+
+	building_types = { #23
+		building_railway
+		building_usu_railway_line
+	}
+	
+	extension_building_types = {
+		building_motor_industry
+		building_steel_mill
+	}
+
+	potential = {
+		has_interest_marker_in_region = sr:region_central_europe
+		OR = {
+			c:AUS ?= this
+			was_formed_from = AUS
+		}
+	}
+	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_AUSTRIA
+			}
+		}
+	}			
+	
+	possible = { 
+		any_scope_state = {
+			state_region = s:STATE_AUSTRIA
+			is_incorporated = yes
+			any_scope_building = {
+				is_building_type = building_usu_railway_line
+				level >= 3
+			}
+		}
+		has_technology_researched = nationalism
+	}
+	
+	prosperity_modifier = {
+		military_formation_army_movement_speed_mult = 0.1 #10
+		country_authority_mult = 0.09 #9
+		country_bureaucracy_investment_cost_factor_mult = -0.02 #4
+	}
+	
+	ai_will_do = {
+		OR = {
+			c:AUS ?= this
+			was_formed_from = AUS
+		}
+		has_technology_researched = nationalism
+		any_scope_state = {
+			state_region = s:STATE_AUSTRIA
+			is_incorporated = yes
+		}
+	}
+
+	ai_construction_targets = {
+		building_usu_railway_line = {
+			level = 5
+			state_trigger = {
+				state_region = s:STATE_AUSTRIA
+			}
+		}
+	}
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}
+}
+
+# Société générale de Belgique(Bank)
+TRY_INJECT:company_SgdB = {
+	extension_building_types = {
+		building_usu_railway_line
+	}
+}
+
+# Ateliers de Constructions Electriques de Charleroi
+TRY_INJECT:company_AdCE = {
+	prosperity_modifier = {
+		building_railway_throughput_add = -0.08 #10
+		building_group_bg_usu_rail_infrastructure_throughput_add = 0.08
+	}
+}
+
+# Compagnie Internationale des Wagons-Lits
+TRY_REPLACE:company_internationale_wagon_lits = {	# Mod: possible and construction targets changed
+	icon = "gfx/interface/icons/company_icons/historical_company_icons/coches_camas.png" 
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_railways.dds"
+
+	flavored_company = yes
+	
+	category = aristocrat_owned
+	
+	possible_prestige_goods = {
+		prestige_good_generic_transportation
+	}
+	
+	building_types = { #23
+		building_railway
+		building_usu_railway_line
+	}
+
+	extension_building_types = {
+		building_food_industry
+		building_furniture_manufactory
+	}
+
+	potential = {
+		has_interest_marker_in_region = sr:region_western_europe
+	}
+	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+			   region = sr:region_western_europe
+			   is_incorporated = yes
+			}
+		}
+	}	
+	
+	possible = {
+		has_technology_researched = railways
+		any_scope_state = {
+			region = sr:region_western_europe
+			is_incorporated = yes
+			any_scope_building = {
+				is_building_type = building_usu_railway_line
+				level >= 5
+			}
+			count >= 2
+		}
+	}
+
+	prosperity_modifier = {
+		building_urban_center_throughput_add = 0.06 #8
+		state_political_strength_from_wealth_mult = 0.08 #8
+		country_prestige_mult = 0.08 #8
+	}
+
+	ai_will_do = {
+		any_scope_state = {
+			region = sr:region_western_europe
+			is_incorporated = yes
+			count >= 2
+		}
+	}
+
+	ai_construction_targets = {
+		building_usu_railway_line = {
+			level = 5
+			state_trigger = {
+				region = sr:region_western_europe
+				is_incorporated = yes
+			}
+		}
+	}
+
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}
+}
+
+# Light S.A. - not modified
+
+# Companhia Agrícola Fazenda Dumont
+TRY_INJECT:company_CAFD = {
+	building_types = {
+		building_usu_railway_line
+	}
+}
+
+# Grand Trunk Railway
+TRY_REPLACE:company_GTR = {
+	icon = "gfx/interface/icons/company_icons/historical_company_icons/gtrailway.png"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_railways.dds"
+	
+	flavored_company = yes
+	preferred_headquarters = { STATE_QUEBEC }
+	
+	possible_prestige_goods = {
+		#prestige_good_saint_etienne_rifles
+	}
+
+	building_types = {  #23
+		building_railway
+		building_usu_railway_line
+	}
+	
+	extension_building_types = {
+		building_steel_mill
+	}
+
+	potential = {
+		has_interest_marker_in_region = sr:region_canada
+	}
+	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_QUEBEC
+			}
+		}
+	}	
+	
+	possible = {
+		any_scope_state = {
+			state_region = s:STATE_QUEBEC
+			is_incorporated = yes
+			any_scope_building = {
+				is_building_type = building_usu_railway_line
+				level >= 3
+			}
+		}
+	}
+	
+	prosperity_modifier = {
+		state_infrastructure_from_population_max_add = 15 #10
+		state_migration_pull_mult = 0.09 #12
+	}
+
+
+	ai_will_do = {
+		any_scope_state = {
+			state_region = s:STATE_QUEBEC
+			is_incorporated = yes
+		}
+	}
+
+	ai_construction_targets = {
+		building_usu_railway_line = {
+			level = 5
+			state_trigger = {
+				state_region = s:STATE_QUEBEC
+			}
+		}
+	}
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}
+}
+
+# Locomotive and Machine Company of Montreal Limited
+TRY_INJECT:company_LaMCoML = {
+	prosperity_modifier = {
+		building_railway_throughput_add = -0.15 #20
+		building_group_bg_usu_rail_infrastructure_throughput_add = 0.15
+	}
+}
+
+# Bank of Montreal
+TRY_INJECT:company_Bank_of_Montreal = {
+	extension_building_types = {
+		building_usu_railway_line
+	}
+}
+
+# John Booth
+TRY_INJECT:company_John_Booth_lumber_mills = {
+	building_types = {
+		building_usu_railway_line
+	}
+}
+
+# Dominion Steel and Coal Corporation
+TRY_INJECT:company_DOSCO = {
+	extension_building_types = {
+		building_usu_railway_line
+	}
+	prosperity_modifier = {
+		building_railway_throughput_add = -0.08 #10
+		building_group_bg_usu_rail_infrastructure_throughput_add = 0.08
+	}
+}
+
+# R. Dunsmuir & Sons.
+TRY_INJECT:company_LaMCoML = {
+	prosperity_modifier = {
+		building_railway_throughput_add = -0.15 #20
+		building_usu_railway_line_throughput_add = 0.15
+	}
+}
+
+# Imperial Bank of India
+TRY_INJECT:company_Imperial_Bank_of_India = {
+	extension_building_types = {
+		building_usu_railway_line
+	}
+}
+
+# Thomas Clayhills and Son
+TRY_INJECT:company_Clayhills_and_Son = {
+	prosperity_modifier = {
+		building_railway_throughput_add = -0.1 #12
+		building_group_bg_usu_rail_infrastructure_throughput_add = 0.1
+	}
+}
+
+#National Bank of Ethiopia / Bank of Abyssinia
+TRY_INJECT:company_Bank_NBoE = {
+	extension_building_types = {
+		building_usu_railway_line
+	}
+}
+
+# Tangshan Locomotive and Rolling Stock Works
+TRY_REPLACE:company_Tangshan_LRSW = {
+	icon = "gfx/interface/icons/company_icons/historical_company_icons/tangshan.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufacturing_heavy.dds"
+
+	flavored_company = yes
+	preferred_headquarters = { STATE_BEIJING }
+	
+	category = bureaucrat_owned
+	
+	possible_prestige_goods = {
+		#prestige_good_saint_etienne_rifles
+	}
+
+	building_types = { #25
+		building_railway
+		building_usu_railway_line
+	}
+	
+	extension_building_types = {
+		building_steel_mill
+		building_motor_industry
+	}
+	
+	potential = {
+		has_interest_marker_in_region = sr:region_north_china
+	}
+
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_BEIJING
+			}
+		}
+	}
+
+	possible = { 
+		any_scope_state = {
+		state_region = s:STATE_BEIJING
+		is_incorporated = yes
+		any_scope_building = {
+			is_building_type = building_usu_railway_line
+			level >= 3
+			}
+		}
+		has_technology_researched = steel_railway_cars
+	}
+
+	prosperity_modifier = {
+		state_infrastructure_mult = 0.1 #20
+		state_trade_advantage_mult = 0.08 #5
+	}
+
+	ai_will_do = {
+		has_technology_researched = steel_railway_cars
+		any_scope_state = {
+			state_region = s:STATE_BEIJING
+			is_incorporated = yes
+		}
+	}
+
+	ai_construction_targets = {
+		building_usu_railway_line = {
+			level = 5
+			state_trigger = {
+				state_region = s:STATE_BEIJING
+			}
+		}
+	}
+	
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}
+}
+
+#Bank of Communications
+TRY_INJECT:company_Bank_BOCOM = {
+	extension_building_types = {
+		building_usu_railway_line
+	}
+	prosperity_modifier = {
+		building_railway_throughput_add = -0.05
+		building_group_bg_usu_rail_infrastructure_throughput_add = 0.05
+	}
+}
+
+#Da-Qing Bank / Bank of China
+TRY_INJECT:company_Da_Qing_Bank = {
+	extension_building_types = {
+		building_usu_railway_line
+	}
+}
+
+# Anheuser-BuschInBev Brewery Co. Ltd.
+TRY_INJECT:company_Harbin_Brewery = {
+	prosperity_modifier = {
+		building_railway_throughput_add = -0.11 #14
+		building_group_bg_usu_rail_infrastructure_throughput_add = 0.11
+	}
+}
+
+# Société nationale des chemins de fer du Congo
+TRY_REPLACE:company_CongoRailway = {
+	icon = "gfx/interface/icons/company_icons/historical_company_icons/congorailway.png"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_railways.dds"
+	
+	flavored_company = yes
+	preferred_headquarters = { STATE_BAS_CONGO }
+	
+	category = bureaucrat_owned
+	
+	possible_prestige_goods = {
+		#prestige_good_saint_etienne_rifles
+	}
+	
+	building_types = {  #23
+		building_railway
+		building_usu_railway_line
+		building_port
+	}
+	
+	extension_building_types = {
+		building_shipyard
+	}
+
+	potential = {
+		has_interest_marker_in_region = sr:region_equatorial_africa
+	}
+	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_BAS_CONGO
+			}
+		}
+	}	
+	
+	possible = {
+		any_scope_state = {
+			state_region = s:STATE_BAS_CONGO
+			is_incorporated = yes
+			any_scope_building = {
+				is_building_type = building_usu_railway_line
+				level >= 3
+			}
+		}
+	}
+	
+	prosperity_modifier = {
+		military_formation_army_movement_speed_mult = 0.1 #10
+		state_infrastructure_mult = 0.06 #12
+	}
+
+
+	ai_will_do = {
+		any_scope_state = {
+			state_region = s:STATE_BAS_CONGO
+			is_incorporated = yes
+		}
+	}
+
+	ai_construction_targets = {
+		building_usu_railway_line = {
+			level = 5
+			state_trigger = {
+				state_region = s:STATE_BAS_CONGO
+			}
+		}
+	}
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}	
+}
+
+# De danske Statsbaner / DSB
+TRY_REPLACE:company_Danish_Railway = {
+	icon = "gfx/interface/icons/company_icons/historical_company_icons/dsb.png" 
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_railways.dds"
+	
+	flavored_company = yes
+	preferred_headquarters = { STATE_JUTLAND }
+	
+	category = bureaucrat_owned
+
+	possible_prestige_goods = {
+		##
+	}
+	
+	building_types = {  #23
+		building_railway
+		building_usu_railway_line
+	}
+	
+	extension_building_types = {
+		building_motor_industry
+	}
+	
+	potential = {
+		has_interest_marker_in_region = sr:region_northern_europe
+	}
+	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_JUTLAND
+			}
+		}
+	}		
+	
+	possible = {
+		any_scope_state = {
+			state_region = s:STATE_JUTLAND
+			is_incorporated = yes
+			any_scope_building = {
+				is_building_type = building_usu_railway_line
+				level >= 3
+			}
+		}
+		has_technology_researched = railways
+	}
+	
+	prosperity_modifier = {
+		state_infrastructure_mult = 0.06 #12
+		country_bureaucracy_investment_cost_factor_mult = -0.05 #10
+	}	
+	
+
+	ai_will_do = {
+		has_technology_researched = railways
+		any_scope_state = {
+			state_region = s:STATE_JUTLAND
+			is_incorporated = yes
+		}
+	}
+
+	ai_construction_targets = {
+		building_usu_railway_line = {
+			level = 5
+			state_trigger = {
+				state_region = s:STATE_JUTLAND
+			}
+		}
+	}
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}
+}
+
+# Barid el-Maṣri / Egypt Post
+TRY_INJECT:company_EgyptPost = {
+	extension_building_types = {
+		building_usu_railway_line
+	}
+}
+
+# North Borneo Chartered Company
+TRY_INJECT:company_north_borneo_CC = {
+	extension_building_types = {
+		building_usu_railway_line
+	}
+}
+
+# Oy Tampella Ab
+TRY_INJECT:company_Tampella = {
+	prosperity_modifier = {
+		building_railway_throughput_add = -0.08 #10
+		building_group_bg_usu_rail_infrastructure_throughput_add = 0.08
+	}
+}
+
+# Suomen Pankki / Bank of Finland
+TRY_INJECT:company_Bank_of_Finland = {
+	extension_building_types = {
+		building_usu_railway_line
+	}
+}
+
+TRY_REPLACE:company_SocieteJF = {
+	icon = "gfx/interface/icons/company_icons/historical_company_icons/jfcail.png"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufacturing_heavy.dds"
+	
+	flavored_company = yes
+	preferred_headquarters = { STATE_FRENCH_LOW_COUNTRIES }
+	
+	possible_prestige_goods = {
+		prestige_good_generic_steel
+	}
+	
+	prestige_goods_trigger = {
+		custom_tooltip = {
+			text = je_prestige_goods_steel_complete_tt
+			has_variable = prestige_good_generic_steel_var
+		}
+	}
+	
+	building_types = {  #12
+		building_sugar_plantation
+		building_railway
+		building_usu_railway_line
+		building_steel_mill
+	}
+	
+	extension_building_types = {
+		building_wheat_farm
+	}
+
+	potential = {
+		has_interest_marker_in_region = sr:region_western_europe
+	}
+	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_FRENCH_LOW_COUNTRIES
+			}
+		}
+	}	
+	
+	possible = { 
+		any_scope_state = {
+			state_region = s:STATE_FRENCH_LOW_COUNTRIES
+			is_incorporated = yes
+			any_scope_building = {
+				OR = {
+					is_building_type = building_usu_railway_line
+					is_building_type = building_steel_mill
+				}
+				level >= 3
+			}
+		}
+	}
+	
+	prosperity_modifier = {
+		state_infrastructure_from_population_add = 1 #2
+		state_infrastructure_from_population_max_add = 15 #10
+	}
+
+
+	ai_will_do = {
+		any_scope_state = {
+			state_region = s:STATE_FRENCH_LOW_COUNTRIES
+			is_incorporated = yes
+		}
+	}
+
+	ai_construction_targets = {
+		building_steel_mill = {
+			level = 5
+			state_trigger = {
+				state_region = s:STATE_FRENCH_LOW_COUNTRIES
+			}
+		}
+	}
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}	
+}
+
+TRY_INJECT:company_bank_of_france = {
+	extension_building_types = {
+		building_usu_railway_line
+	}
+}
+
+TRY_INJECT:company_Bank_Credit_Lyonnais = {
+	extension_building_types = {
+		building_usu_railway_line
+	}
+}
+
+# Bugatti
+TRY_INJECT:company_Bugatti = {
+	extension_building_types = {
+		building_usu_railway_line
+	}
+}
+
+TRY_INJECT:company_Bank_of_England = {
+	extension_building_types = {
+		building_usu_railway_line
+	}
+}
+
+# Hannover Waggonfabrik
+TRY_REPLACE:company_HannoverWaggonfabrik = {
+	icon = "gfx/interface/icons/company_icons/historical_company_icons/hannoverwaggon.png"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufacturing_heavy.dds"
+	
+	flavored_company = yes
+	preferred_headquarters = { STATE_HANNOVER }
+	
+	possible_prestige_goods = {
+		#prestige_good_saint_etienne_rifles
+	}
+
+	
+	building_types = {  #21
+		building_railway
+		building_usu_railway_line
+		building_logging_camp
+	}
+	
+	extension_building_types = {
+		building_automotive_industry
+	}
+
+	potential = {
+		has_interest_marker_in_region = sr:region_central_europe
+	}
+	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_HANNOVER
+			}
+		}
+	}	
+	
+	possible = {
+		any_scope_state = {
+			state_region = s:STATE_HANNOVER
+			is_incorporated = yes
+			any_scope_building = {
+				OR = {
+					is_building_type = building_usu_railway_line
+					is_building_type = building_logging_camp
+				}
+				level >= 3
+			}
+		}
+	}
+	
+	prosperity_modifier = {
+		interest_group_ig_armed_forces_approval_add = 3 #12
+		unit_army_defense_mult = 0.04 #8
+	}
+
+
+	ai_will_do = {
+		any_scope_state = {
+			state_region = s:STATE_HANNOVER
+			is_incorporated = yes
+		}
+	}
+
+	ai_construction_targets = {
+		building_logging_camp = {
+			level = 5
+			state_trigger = {
+				state_region = s:STATE_HANNOVER
+			}
+		}
+	}
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}	
+}
+
+# Daimler-Motoren-Gesellschaft
+TRY_REPLACE:company_DaimlerMG = {
+	icon = "gfx/interface/icons/company_icons/historical_company_icons/daimler.png"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufacturing_heavy.dds"
+	
+	flavored_company = yes
+	preferred_headquarters = { STATE_WURTTEMBERG }
+	
+	possible_prestige_goods = {
+		prestige_good_german_cars
+	}
+	
+	building_types = {  #11
+		building_usu_railway_line
+		building_motor_industry
+		building_automotive_industry
+	}
+	
+	extension_building_types = {
+		building_steel_mill
+		building_railway
+	}
+
+	potential = {
+		has_interest_marker_in_region = sr:region_central_europe
+	}
+	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_WURTTEMBERG
+			}
+		}
+	}	
+	
+	possible = { 
+		any_scope_state = {
+			state_region = s:STATE_WURTTEMBERG
+			is_incorporated = yes
+			any_scope_building = {
+				is_building_type = building_usu_railway_line
+				level >= 3
+			}
+		}
+	}
+	
+	prosperity_modifier = {
+		country_production_tech_spread_mult = 0.11 #11
+	}	
+	
+
+	ai_will_do = {
+		any_scope_state = {
+			state_region = s:STATE_WURTTEMBERG
+			is_incorporated = yes
+		}
+	}
+
+	ai_construction_targets = {
+		building_usu_railway_line = {
+			level = 5
+			state_trigger = {
+				state_region = s:STATE_WURTTEMBERG
+			}
+		}
+	}
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}
+}
+
+# Hugo Stinnes GmbH
+TRY_INJECT:company_HugoS = {
+	extension_building_types = {
+		building_usu_railway_line
+	}
+}
+
+# Kraus-Maffei
+TRY_REPLACE:company_Kraus_Maffei = {
+	icon = "gfx/interface/icons/company_icons/historical_company_icons/krauss.png"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufacturing_heavy.dds"
+	
+	flavored_company = yes
+	preferred_headquarters = { STATE_BAVARIA }
+	
+	possible_prestige_goods = {
+		prestige_good_generic_machine_parts
+	}
+
+	building_types = {  #17
+		building_usu_railway_line
+		building_motor_industry
+	}
+	
+	extension_building_types = {
+		building_tooling_workshop
+		building_railway
+	}
+
+	potential = {
+		has_interest_marker_in_region = sr:region_central_europe
+	}
+	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_BAVARIA
+			}
+		}
+	}	
+	
+	possible = {
+		any_scope_state = {
+			state_region = s:STATE_BAVARIA
+			is_incorporated = yes
+			any_scope_building = {
+				is_building_type = building_usu_railway_line
+				level >= 3
+			}
+		}
+	}
+	
+	prosperity_modifier = {
+		building_urban_center_throughput_add = 0.04 #5
+		building_group_bg_usu_rail_infrastructure_throughput_add = 0.09 #12
+	}
+
+
+	ai_will_do = {
+		any_scope_state = {
+			state_region = s:STATE_BAVARIA
+			is_incorporated = yes
+		}
+	}
+
+	ai_construction_targets = {
+		building_usu_railway_line = {
+			level = 5
+			state_trigger = {
+				state_region = s:STATE_BAVARIA
+			}
+		}
+	}
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}	
+}
+
+TRY_INJECT:company_Rothschild_Bank_Europe = {
+	extension_building_types = {
+		building_usu_railway_line
+	}
+}
+
+TRY_INJECT:company_Deutsche_Bank = {
+	extension_building_types = {
+		building_usu_railway_line
+	}
+}
+
+# Waggonfabrik Görlitz Aktiengesellschaft
+TRY_INJECT:company_WaggonfabrikGoerlitz = {
+	extension_building_types = {
+		building_usu_railway_line
+	}
+	prosperity_modifier = {
+		building_railway_throughput_add = -0.15 #20
+		building_group_bg_usu_rail_infrastructure_throughput_add = 0.15
+	}
+}
+
+# Süddeutsche Eisenbahn-Gesellschaft AG
+TRY_REPLACE:company_sueddeutsche_eisenbahn = {
+	icon = "gfx/interface/icons/company_icons/historical_company_icons/sueddeutscheeisenbahn.png" 
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_railways.dds"
+
+	flavored_company = yes
+	
+	category = bureaucrat_owned
+	
+	preferred_headquarters = { STATE_HESSE }
+	
+	building_types = { #23
+		building_railway
+		building_usu_railway_line
+	}
+
+	extension_building_types = {
+		building_motor_industry
+		building_power_plant
+	}
+
+	potential = {
+		has_interest_marker_in_region = sr:region_central_europe
+	}
+	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				OR = {
+					state_region = s:STATE_HESSE
+					region = sr:region_central_europe
+				}
+			}
+		}
+	}
+
+	possible = {
+		any_scope_state = {
+			OR = {
+				state_region = s:STATE_HESSE
+				region = sr:region_central_europe
+			}
+			is_incorporated = yes
+			any_scope_building = {
+				is_building_type = building_usu_railway_line
+				level >= 5
+			}
+		}
+	}
+
+	prosperity_modifier = {
+		military_formation_army_movement_speed_mult = 0.1 #10
+		country_bureaucracy_mult = 0.08 #10
+		state_infrastructure_mult = 0.02 #4
+	}
+
+	ai_will_do = {
+		any_scope_state = {
+			OR = {
+				state_region = s:STATE_HESSE
+				region = sr:region_central_europe
+			}
+			is_incorporated = yes
+		}
+	}
+
+	ai_construction_targets = {
+		building_usu_railway_line = {
+			level = 5
+			state_trigger = {
+				state_region = s:STATE_HESSE
+			}
+		}
+		building_usu_railway_line = {
+			level = 5
+			state_trigger = {
+				region = sr:region_central_europe
+			}
+		}
+	}
+
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}
+}
+
+# Nürnberg-Fürther Straßenbahn-Gesellschaft
+TRY_REPLACE:company_nuernberg_bahn = {
+	icon = "gfx/interface/icons/company_icons/historical_company_icons/nürnberg_fürth.png" 
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_railways.dds"
+	
+	flavored_company = yes
+	preferred_headquarters = { STATE_FRANCONIA }
+	
+	possible_prestige_goods = {
+		##
+	}
+	
+	building_types = {  #23
+		building_livestock_ranch
+		building_railway
+		building_usu_railway_line
+	}
+	
+	extension_building_types = {
+		building_automotive_industry
+	}
+
+	potential = {
+		has_interest_marker_in_region = sr:region_central_europe
+	}
+	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_FRANCONIA
+			}
+		}
+	}	
+	
+	possible = {
+		any_scope_state = {
+			state_region = s:STATE_FRANCONIA
+			is_incorporated = yes
+			any_scope_building = {
+				OR = {
+					is_building_type = building_livestock_ranch
+					is_building_type = building_usu_railway_line
+				}
+				level >= 3
+			}
+		}
+		has_technology_researched = steel_railway_cars
+	}
+	
+	prosperity_modifier = {
+		building_urban_center_throughput_add = 0.06 #8
+		interest_group_in_government_attraction_mult = 0.1 #10
+		state_infrastructure_from_population_add = 3 #6
+	}
+
+
+	ai_will_do = {
+	    has_technology_researched = steel_railway_cars
+		any_scope_state = {
+			state_region = s:STATE_FRANCONIA
+			is_incorporated = yes
+		}
+	}
+
+	ai_construction_targets = {
+		building_livestock_ranch = {
+			level = 3
+			state_trigger = {
+				state_region = s:STATE_FRANCONIA
+			}
+		}
+		
+		building_usu_railway_line = {
+			level = 3
+			state_trigger = {
+				state_region = s:STATE_FRANCONIA
+			}
+		}
+	}
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}	
+}
+
+# Thurn-und-Taxis Post
+TRY_INJECT:company_ThurnTaxis = {
+	extension_building_types = {
+		building_usu_railway_line
+	}
+}
+
+# Großherzoglich Badische Staatseisenbahnen #Merged into Reichsbahn
+TRY_REPLACE:company_Baden_eisenbahn = {
+	icon = "gfx/interface/icons/company_icons/historical_company_icons/baden_bahn.png" 
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_railways.dds"
+
+	flavored_company = yes
+	
+	category = bureaucrat_owned
+	
+	preferred_headquarters = { STATE_BADEN }
+	
+	building_types = { #23
+		building_railway
+		building_usu_railway_line
+	}
+
+	extension_building_types = {
+		building_motor_industry
+		building_power_plant
+	}
+
+	potential = {
+		has_interest_marker_in_region = sr:region_central_europe
+		OR = {
+			c:BAD ?= this
+			was_formed_from = BAD
+		}
+		NOT = {
+			has_company = company_type:company_Deutsche_Reichsbahn
+		}
+	}
+	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_BADEN
+			}
+		}
+	}
+
+	possible = {
+		any_scope_state = {
+			state_region = s:STATE_BADEN
+			is_incorporated = yes
+			any_scope_building = {
+				is_building_type = building_usu_railway_line
+				level >= 5
+			}
+		}
+	}
+
+	prosperity_modifier = {
+		military_formation_army_movement_speed_mult = 0.1 #10
+		country_bureaucracy_mult = 0.08 #10
+		state_infrastructure_mult = 0.02 #4
+	}
+
+	ai_will_do = {
+		OR = {
+			c:BAD ?= this
+			was_formed_from = BAD
+		}
+		any_scope_state = {
+			state_region = s:STATE_BADEN
+			is_incorporated = yes
+		}
+	}
+
+	ai_construction_targets = {
+		building_usu_railway_line = {
+			level = 5
+			state_trigger = {
+				state_region = s:STATE_BADEN
+			}
+		}
+	}
+
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}
+}
+
+# Großherzoglich Mecklenburgische Friedrich-Franz-Eisenbahn #Merged into Reichsbahn
+TRY_REPLACE:company_Mecklenburg_eisenbahn = {
+	icon = "gfx/interface/icons/company_icons/historical_company_icons/mecklenburg_bahn.png" 
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_railways.dds"
+
+	flavored_company = yes
+	
+	category = bureaucrat_owned
+	
+	preferred_headquarters = { STATE_MECKLENBURG }
+	
+	building_types = { #23
+		building_railway
+		building_usu_railway_line
+	}
+
+	extension_building_types = {
+		building_motor_industry
+	}
+
+	potential = {
+		has_interest_marker_in_region = sr:region_central_europe
+		OR = {
+			c:MEC ?= this
+			was_formed_from = MEC
+			c:MST ?= this
+			was_formed_from = MST
+		}
+		NOT = {
+			has_company = company_type:company_Deutsche_Reichsbahn
+		}
+	}
+	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_MECKLENBURG
+			}
+		}
+	}
+
+	possible = {
+		any_scope_state = {
+			state_region = s:STATE_MECKLENBURG
+			is_incorporated = yes
+			any_scope_building = {
+				is_building_type = building_usu_railway_line
+				level >= 5
+			}
+		}
+	}
+
+	prosperity_modifier = {
+		military_formation_army_movement_speed_mult = 0.2 #20
+		state_infrastructure_mult = 0.02 #4
+	}
+
+	ai_will_do = {
+		any_scope_state = {
+			state_region = s:STATE_MECKLENBURG
+			is_incorporated = yes
+		}
+	}
+
+	ai_construction_targets = {
+		building_usu_railway_line = {
+			level = 5
+			state_trigger = {
+				state_region = s:STATE_MECKLENBURG
+			}
+		}
+	}
+
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}
+}
+
+# Großherzoglich Oldenburgische Staatseisenbahnen #Merged into Reichsbahn
+TRY_REPLACE:company_Oldenburg_eisenbahn = {
+	icon = "gfx/interface/icons/company_icons/historical_company_icons/oldenburg_bahn.png" 
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_railways.dds"
+
+	flavored_company = yes
+
+	preferred_headquarters = { STATE_HANNOVER }
+	
+	category = bureaucrat_owned
+	
+	building_types = { #23
+		building_railway
+		building_usu_railway_line
+	}
+
+	extension_building_types = {
+		building_motor_industry
+	}
+
+	potential = {
+		has_interest_marker_in_region = sr:region_central_europe
+		OR = {
+			c:OLD ?= this
+			was_formed_from = OLD
+			c:HAN ?= this
+			was_formed_from = HAN
+		}
+		NOT = {
+			has_company = company_type:company_Deutsche_Reichsbahn
+		}
+	}
+	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_HANNOVER
+			}
+		}
+	}
+
+	possible = {
+		any_scope_state = {
+			state_region = s:STATE_HANNOVER
+			is_incorporated = yes
+			any_scope_building = {
+				is_building_type = building_usu_railway_line
+				level >= 3
+			}
+		}
+	}
+
+	prosperity_modifier = {
+		military_formation_army_movement_speed_mult = 0.1 #10
+		ship_armor_mult = 0.035 #14
+	}
+
+	ai_will_do = {
+		OR = {
+			c:OLD ?= this
+			was_formed_from = OLD
+			c:HAN ?= this
+			was_formed_from = HAN
+		}
+		any_scope_state = {
+			state_region = s:STATE_HANNOVER
+			is_incorporated = yes
+		}
+	}
+
+	ai_construction_targets = {
+		building_usu_railway_line = {
+			level = 5
+			state_trigger = {
+				state_region = s:STATE_HANNOVER
+			}
+		}
+	}
+
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}
+}
+
+# Königlich Bayerische Staatseisenbahnen #Merged into Reichsbahn
+TRY_REPLACE:company_Bayern_eisenbahn = {
+	icon = "gfx/interface/icons/company_icons/historical_company_icons/bayern_bahn.png" 
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_railways.dds"
+
+	flavored_company = yes
+
+	preferred_headquarters = { STATE_BAVARIA }
+	
+	category = bureaucrat_owned
+	
+	building_types = { #23
+		building_railway
+		building_usu_railway_line
+	}
+
+	extension_building_types = {
+		building_motor_industry
+		building_power_plant
+	}
+
+	potential = {
+		has_interest_marker_in_region = sr:region_central_europe
+		OR = {
+			c:BAV ?= this
+			was_formed_from = BAV
+		}
+		NOT = {
+			has_company = company_type:company_Deutsche_Reichsbahn
+		}
+	}
+	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				OR = {
+					state_region = s:STATE_BAVARIA
+					state_region = s:STATE_FRANCONIA
+				}
+			}
+		}
+	}
+
+	possible = {
+		any_scope_state = {
+			OR = {
+				state_region = s:STATE_BAVARIA
+				state_region = s:STATE_FRANCONIA
+			}
+			is_incorporated = yes
+			any_scope_building = {
+				is_building_type = building_usu_railway_line
+				level >= 5
+			}
+		}
+	}
+
+	prosperity_modifier = {
+		military_formation_army_movement_speed_mult = 0.05 #5
+		state_construction_mult = 0.05 #18
+	}
+
+	ai_will_do = {
+		OR = {
+			c:BAV ?= this
+			was_formed_from = BAV
+		}
+		any_scope_state = {
+			state_region = s:STATE_BAVARIA
+			is_incorporated = yes
+		}
+	}
+
+	ai_construction_targets = {
+		building_usu_railway_line = {
+			level = 5
+			state_trigger = {
+				state_region = s:STATE_BAVARIA
+			}
+		}
+	}
+
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}
+}
+
+# Königlich Sächsische Staatseisenbahnen #Merged into Reichsbahn
+TRY_REPLACE:company_Sachsen_eisenbahn = {
+	icon = "gfx/interface/icons/company_icons/historical_company_icons/sachsen_bahn.png" 
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_railways.dds"
+
+	flavored_company = yes
+
+	preferred_headquarters = { STATE_SAXONY }
+	
+	category = bureaucrat_owned
+	
+	building_types = { #23
+		building_railway
+		building_usu_railway_line
+	}
+
+	extension_building_types = {
+		building_motor_industry
+	}
+
+	potential = {
+		has_interest_marker_in_region = sr:region_central_europe
+		OR = {
+			c:SAX ?= this
+			was_formed_from = SAX
+			c:WEI ?= this
+			was_formed_from = WEI
+			c:SCW ?= this
+			was_formed_from = SCW
+			c:COB ?= this
+			was_formed_from = COB
+			c:MEI ?= this
+			was_formed_from = MEI
+		}
+		NOT = {
+			has_company = company_type:company_Deutsche_Reichsbahn
+		}
+	}
+	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_SAXONY
+			}
+		}
+	}
+
+	possible = {
+		any_scope_state = {
+			state_region = s:STATE_SAXONY
+			is_incorporated = yes
+			any_scope_building = {
+				is_building_type = building_usu_railway_line
+				level >= 3
+			}
+		}
+	}
+
+	prosperity_modifier = {
+		military_formation_army_movement_speed_mult = 0.1 #10
+		country_influence_mult = 0.21 #14
+	}
+
+	ai_will_do = {
+		OR = {
+			c:SAX ?= this
+			was_formed_from = SAX
+			c:WEI ?= this
+			was_formed_from = WEI
+			c:SCW ?= this
+			was_formed_from = SCW
+			c:COB ?= this
+			was_formed_from = COB
+			c:MEI ?= this
+			was_formed_from = MEI
+		}
+		any_scope_state = {
+			state_region = s:STATE_SAXONY
+			is_incorporated = yes
+		}
+	}
+
+	ai_construction_targets = {
+		building_usu_railway_line = {
+			level = 5
+			state_trigger = {
+				state_region = s:STATE_SAXONY
+			}
+		}
+	}
+
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}
+}
+
+# Königlich Württembergische Staats-Eisenbahnen #Merged into Reichsbahn
+TRY_REPLACE:company_Wurttemberg_eisenbahn = {
+	icon = "gfx/interface/icons/company_icons/historical_company_icons/wurttemberg_bahn.png" 
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_railways.dds"
+
+	flavored_company = yes
+
+	preferred_headquarters = { STATE_WURTTEMBERG }
+	
+	category = bureaucrat_owned
+	
+	building_types = { #23
+		building_railway
+		building_usu_railway_line
+	}
+
+	extension_building_types = {
+		building_motor_industry
+	}
+
+	potential = {
+		has_interest_marker_in_region = sr:region_central_europe
+		OR = {
+			c:WUR ?= this
+			was_formed_from = WUR
+			c:HOH ?= this
+			was_formed_from = HOH
+		}
+		NOT = {
+			has_company = company_type:company_Deutsche_Reichsbahn
+		}
+	}
+	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_WURTTEMBERG
+			}
+		}
+	}
+
+	possible = {
+		any_scope_state = {
+			state_region = s:STATE_WURTTEMBERG
+			is_incorporated = yes
+			any_scope_building = {
+				is_building_type = building_usu_railway_line
+				level >= 3
+			}
+		}
+	}
+
+	prosperity_modifier = {
+		military_formation_army_movement_speed_mult = 0.1 #10
+		interest_group_ig_landowners_approval_add = 2 #8
+		state_infrastructure_mult = 0.03 #6
+	}
+
+	ai_will_do = {
+		OR = {
+			c:WUR ?= this
+			was_formed_from = WUR
+			c:HOH ?= this
+			was_formed_from = HOH
+		}
+		any_scope_state = {
+			state_region = s:STATE_WURTTEMBERG
+			is_incorporated = yes
+		}
+	}
+
+	ai_construction_targets = {
+		building_usu_railway_line = {
+			level = 5
+			state_trigger = {
+				state_region = s:STATE_WURTTEMBERG
+			}
+		}
+	}
+
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}
+}
+
+# Deutsche Reichsbahn (Merger company)
+TRY_REPLACE:company_Deutsche_Reichsbahn = {
+	icon = "gfx/interface/icons/company_icons/historical_company_icons/deutsche_reichsbahn.png"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_railways.dds"
+	
+	preferred_headquarters = { STATE_BRANDENBURG }
+	
+	flavored_company = yes
+
+	building_types = { #37 #+3 from 1 required company, +3 for germany JE
+		building_railway
+		building_usu_railway_line
+	}
+
+	extension_building_types = {
+		building_motor_industry
+		building_power_plant
+	}
+
+	potential = {
+		OR = {
+			c:GER ?= this
+			was_formed_from = GER
+		}
+		always = no
+	}
+	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				OR = {
+				   region = sr:region_central_europe
+				   region = sr:region_central_europe
+			    }
+				is_incorporated = yes
+			}
+		}
+	}
+
+	possible = {
+		has_technology_researched = electric_railway
+		has_technology_researched = pan-nationalism
+		NOT = {
+			has_law_or_variant = law_type:law_monarchy
+		}
+		any_scope_state = {
+			OR = {
+				region = sr:region_central_europe
+				region = sr:region_central_europe
+				region = sr:region_eastern_europe
+				region = sr:region_western_europe
+			}
+			is_incorporated = yes
+			any_scope_building = {
+				is_building_type = building_usu_railway_line
+				level >= 3
+			}
+			count >= 20 
+		}
+	}
+
+	prosperity_modifier = {
+		military_formation_army_movement_speed_mult = 0.1 #10
+		country_company_throughput_bonus_add = 0.05 #18
+		unit_recovery_rate_add = 0.05 #10
+	}
+
+	ai_will_do = {
+		has_technology_researched = electric_railway
+		has_technology_researched = pan-nationalism
+		any_scope_state = {
+			OR = {
+				region = sr:region_central_europe
+				region = sr:region_central_europe
+			}
+			is_incorporated = yes
+		}
+	}
+
+	ai_construction_targets = {
+		building_usu_railway_line = {
+			level = 5
+			state_trigger = {
+				OR = {
+					region = sr:region_central_europe
+					region = sr:region_central_europe
+				}
+				is_incorporated = yes
+			}
+		}
+	}
+
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}
+}
+
+# Karlsberg Brauerei / Bayerische Bierbrauerei zum Karlsberg
+TRY_INJECT:company_Karlsberg = {
+	extension_building_types = {
+		building_usu_railway_line
+	}
+}
+
+TRY_INJECT:company_Kajima = {
+	extension_building_types = {
+		building_usu_railway_line
+	}
+}
+
+# Kawasaki Jūkōgyō Kabushiki-gaisha
+TRY_INJECT:company_Kawasaki = {
+	extension_building_types = {
+		building_usu_railway_line
+	}
+}
+
+# Bank of Japan
+TRY_INJECT:company_bank_of_Japan = {
+	extension_building_types = {
+		building_usu_railway_line
+	}
+}
+
+# Tetsudō-shō (Ministry of Railways) / Naikaku Tetsudō-in
+TRY_REPLACE:company_Tetsudo_sho = {
+	icon = "gfx/interface/icons/company_icons/historical_company_icons/japaneseminofrailway.png" 
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_railways.dds"
+	
+	flavored_company = yes
+	preferred_headquarters = { STATE_KANTO }
+	
+	possible_prestige_goods = {
+		prestige_good_generic_transportation
+	}
+
+	building_types = { #27
+		building_railway
+		building_usu_railway_line
+		building_port
+	}
+	
+	extension_building_types = {
+		building_motor_industry
+	}
+
+	potential = {
+		has_interest_marker_in_region = sr:region_northeast_asia
+	}
+	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_KANTO	
+			}		
+		}
+	}		
+	
+	possible = { 
+		any_scope_state = {
+			state_region = s:STATE_KANTO	
+			is_incorporated = yes
+			any_scope_building = {
+				is_building_type = building_usu_railway_line
+				level >= 3
+		    }
+		}
+		has_technology_researched = steel_railway_cars
+		NOT = { has_law_or_variant = law_type:law_isolationism }
+	}
+	
+	prosperity_modifier = {
+		country_authority_mult = 0.1 #10
+		state_infrastructure_mult = 0.05 #10
+		state_aristocrats_investment_pool_contribution_add = 0.03 #6
+	}
+
+
+	ai_will_do = {
+		has_technology_researched = steel_railway_cars
+		NOT = { has_law_or_variant = law_type:law_isolationism }
+		any_scope_state = {
+			state_region = s:STATE_KANTO
+			is_incorporated = yes
+		}
+	}
+
+	ai_construction_targets = {
+		building_usu_railway_line = {
+			level = 5
+			state_trigger = {
+				state_region = s:STATE_KANTO
+			}
+		}
+	}
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}	
+}
+
+# Hanguk Cheoldo (Choseon government Railway, was also merged with the Manchuria Railway company)
+TRY_REPLACE:company_Hanguk = {
+	icon = "gfx/interface/icons/company_icons/historical_company_icons/hanguk.png"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_railways.dds"
+	
+	flavored_company = yes
+	preferred_headquarters = { STATE_SEOUL }
+	
+	possible_prestige_goods = {
+		#prestige_good_saint_etienne_rifles
+	}
+
+	building_types = { #23
+		building_railway
+		building_usu_railway_line
+	}
+	
+	extension_building_types = {
+		building_motor_industry
+	}
+
+	potential = {
+		has_interest_marker_in_region = sr:region_northeast_asia
+	}
+	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = { is_homeland = cu:korean }
+			}
+		}
+	}
+	
+	possible = { 
+		country_or_subject_owns_entire_state_region = STATE_SEOUL
+		any_scope_state = {
+			state_region = {
+				is_homeland = cu:korean
+			}
+			is_incorporated = yes
+			has_building = building_usu_railway_line
+			count >= 3
+		}
+		has_technology_researched = railways
+	}
+	
+	prosperity_modifier = {
+		military_formation_army_movement_speed_mult = 0.15 #15
+		interest_group_in_government_approval_add = 1 #8
+	}	
+	
+
+	ai_will_do = {
+		has_technology_researched = railways
+		any_scope_state = {
+			state_region = s:STATE_SEOUL
+			is_incorporated = yes
+		}
+	}
+
+	ai_construction_targets = {
+		building_usu_railway_line = {
+			level = 3
+			state_trigger = {
+				state_region = s:STATE_SEOUL
+			}
+		}
+		
+		building_usu_railway_line = {
+			level = 3
+			state_trigger = {
+				state_region = s:STATE_BUSAN
+			}
+		}
+		
+		building_usu_railway_line = {
+			level = 3
+			state_trigger = {
+				state_region = s:STATE_SARIWON
+			}
+		}
+	}
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}
+}
+
+# jusighoesa joheung-eunhaeng
+TRY_INJECT:company_Chohung_Bank = {
+	extension_building_types = {
+		building_usu_railway_line
+	}
+}
+
+# Russo-Baltic Wagon Factory #requirements are hard to set right
+TRY_INJECT:company_Russo_Baltic_Wagon = {
+	prosperity_modifier = {
+		building_railway_throughput_add = -0.15 #20
+		building_group_bg_usu_rail_infrastructure_throughput_add = 0.15
+	}
+}
+
+# Patiño_Mines
+TRY_INJECT:company_Patino_mines = {
+	extension_building_types = {
+		building_usu_railway_line
+	}
+}
+
+# Banco Italiano (Peru) later Banco de Crédito del Perú
+TRY_INJECT:company_bank_peru = {
+	extension_building_types = {
+		building_usu_railway_line
+	}
+}
+
+# La Brea y Pariñas / International Petroleum Company, Ltd. (combined)
+TRY_INJECT:company_oil_la_brea = {
+	extension_building_types = {
+		building_usu_railway_line
+	}
+}
+
+# AB Atlas
+TRY_INJECT:company_ABAtlas = {
+	prosperity_modifier = {
+		building_railway_throughput_add = -0.12 #16
+		building_group_bg_usu_rail_infrastructure_throughput_add = 0.12
+	}
+}
+
+# Nydqvist & Holm AB
+TRY_REPLACE:company_Nydq = {
+	icon = "gfx/interface/icons/company_icons/historical_company_icons/nohab.png"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufacturing_heavy.dds"
+	
+	flavored_company = yes
+	preferred_headquarters = { STATE_GOTALAND }
+
+	possible_prestige_goods = {
+		#prestige_good_saint_etienne_rifles
+	}
+
+	
+	building_types = { #15
+		building_usu_railway_line
+		building_motor_industry
+		building_automotive_industry
+	}
+	
+	extension_building_types = {
+		building_railway
+		building_steel_mill
+	}
+	
+	potential = {
+		has_interest_marker_in_region = sr:region_northern_europe
+	}
+	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_GOTALAND
+			}
+		}
+	}
+	
+	possible = {
+		any_scope_state = {
+			state_region = s:STATE_GOTALAND
+			is_incorporated = yes
+			any_scope_building = {
+				is_building_type = building_usu_railway_line
+				level >= 3
+			}
+		}
+	}
+	
+	prosperity_modifier = {
+		military_formation_army_movement_speed_mult = 0.1 #10
+		country_ship_group_supply_ships_construction_efficiency_add = 0.07 #5
+	}	
+	
+
+	ai_will_do = {
+		any_scope_state = {
+			state_region = s:STATE_GOTALAND
+			is_incorporated = yes
+		}
+	}
+
+	ai_construction_targets = {
+		building_usu_railway_line = {
+			level = 5
+			state_trigger = {
+				state_region = s:STATE_GOTALAND
+			}
+		}
+	}
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}
+}
+
+# Handelsbanken
+TRY_INJECT:company_HandelsBanken = {
+	extension_building_types = {
+		building_usu_railway_line
+	}
+}
+
+# Uddeholms AB
+TRY_INJECT:company_Uddeholms = {
+	prosperity_modifier = {
+		building_railway_throughput_add = -0.06 #8
+		building_group_bg_usu_rail_infrastructure_throughput_add = 0.06
+	}
+}
+
+# Bankenverein
+TRY_INJECT:company_Bankenverein = {
+	extension_building_types = {
+		building_usu_railway_line
+	}
+}
+
+# Compagnie des phosphates de Gafsa
+TRY_INJECT:company_phosphat_Gafsa = {
+	prosperity_modifier = {
+		building_railway_throughput_add = -0.15 #20
+		building_group_bg_usu_rail_infrastructure_throughput_add = 0.15
+	}
+}
+
+# Mexican Railway
+TRY_REPLACE:company_MexicanRailway = { #25
+	icon = "gfx/interface/icons/company_icons/historical_company_icons/mexicanrailway.png"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_railways.dds"
+	
+	flavored_company = yes
+	preferred_headquarters = { STATE_MEXICO }
+	
+	possible_prestige_goods = {
+		#prestige_good_saint_etienne_rifles
+	}
+
+	
+	building_types = {  
+		building_railway
+		building_usu_railway_line
+	}
+	
+	extension_building_types = {
+		building_motor_industry
+	}
+
+	potential = {
+		has_interest_marker_in_region = sr:region_central_america
+	}
+	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				region = sr:region_central_america
+			}
+		}
+	}
+	
+	possible = {
+		any_scope_state = {
+			region = sr:region_central_america
+			is_incorporated = yes
+			any_scope_building = {
+				is_building_type = building_usu_railway_line
+				level >= 3
+			}
+		}
+		has_technology_researched = steel_railway_cars
+	}
+	
+	prosperity_modifier = {
+		state_infrastructure_mult = 0.1 #20
+		state_trade_advantage_mult = 0.07 #5
+	}
+
+
+	ai_will_do = {
+		has_technology_researched = steel_railway_cars
+		any_scope_state = {
+			state_region = s:STATE_MEXICO
+			is_incorporated = yes
+		}
+	}
+
+	ai_construction_targets = {
+		building_usu_railway_line = {
+			level = 5
+			state_trigger = {
+				state_region = s:STATE_MEXICO
+			}
+		}
+	}
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}	
+}
+
+# Compagnie de Transports au Maroc
+TRY_REPLACE:company_Maroc = {
+	icon = "gfx/interface/icons/company_icons/historical_company_icons/maroc.png"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_railways.dds"
+	
+	flavored_company = yes
+	preferred_headquarters = { STATE_FEZ }
+	
+	possible_prestige_goods = {
+		prestige_good_generic_merchant_marine
+	}
+	
+	building_types = { #23
+		building_railway
+		building_usu_railway_line
+		building_port
+	}
+	
+	extension_building_types = {
+		building_automotive_industry
+	}
+
+	potential = {
+		has_interest_marker_in_region = sr:region_north_africa
+	}
+	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_FEZ
+			}
+		}
+	}
+	
+	possible = {
+		any_scope_state = {
+		    region = sr:region_north_africa
+			is_incorporated = yes
+			any_scope_building = {
+				is_building_type = building_usu_railway_line
+			}
+			count >= 4
+		}
+		has_technology_researched = steel_railway_cars
+	}
+	
+	prosperity_modifier = {
+        state_infrastructure_mult = 0.1 #20
+		state_assimilation_mult = 0.06 #3
+	}	
+	
+
+	ai_will_do = {
+		has_technology_researched = steel_railway_cars
+		any_scope_state = {
+			state_region = s:STATE_FEZ
+			is_incorporated = yes
+		}
+	}
+
+	ai_construction_targets = {
+		building_usu_railway_line = {
+			level = 3
+			state_trigger = {
+				state_region = s:STATE_FEZ
+			}
+		}
+		
+		building_port = {
+			level = 3
+			state_trigger = {
+				state_region = s:STATE_FEZ
+			}
+		}
+	}
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}
+}
+
+# Nederlandse Spoorwegen
+TRY_REPLACE:company_NeSp = {
+	icon = "gfx/interface/icons/company_icons/historical_company_icons/spoorwegen.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_railways.dds"
+	
+	flavored_company = yes
+	preferred_headquarters = { STATE_HOLLAND }
+	
+
+	possible_prestige_goods = {
+		#prestige_good_saint_etienne_rifles
+	}
+	
+	building_types = { #23
+		building_railway
+		building_usu_railway_line
+	}
+	
+	extension_building_types = {
+		building_port
+		building_motor_industry
+		building_steel_mill
+	}
+	
+	potential = {
+		has_interest_marker_in_region = sr:region_western_europe
+	}
+	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_HOLLAND
+			}
+		}
+	}
+	
+	possible = {
+		any_scope_state = {
+			state_region = s:STATE_HOLLAND
+			is_incorporated = yes
+			any_scope_building = {
+				is_building_type = building_usu_railway_line
+				level >= 3
+			}
+		}
+		has_technology_researched = electric_railway
+	}
+	
+	prosperity_modifier = {
+		military_formation_army_movement_speed_mult = 0.15 #15
+		state_trade_advantage_mult = 0.08 #8
+	}	
+	
+
+	ai_will_do = {
+		has_technology_researched = electric_railway
+		any_scope_state = {
+			state_region = s:STATE_HOLLAND
+			is_incorporated = yes
+		}
+	}
+
+	ai_construction_targets = {
+		building_usu_railway_line = {
+			level = 5
+			state_trigger = {
+				state_region = s:STATE_HOLLAND
+			}
+		}
+	}
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}
+}
+
+# Werkspoor
+TRY_INJECT:company_werkspoor = {
+	prosperity_modifier = {
+		building_railway_throughput_add = -0.05 #6
+		building_group_bg_usu_rail_infrastructure_throughput_add = 0.05
+	}
+}
+
+# Staatsmijnen
+TRY_REPLACE:company_staatsmijnen = {
+	icon = "gfx/interface/icons/company_icons/historical_company_icons/staatsmijnen.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_mining.dds"
+	
+	flavored_company = yes
+	preferred_headquarters = { STATE_HOLLAND STATE_GELRE }
+	
+	possible_prestige_goods = {
+		#prestige_good_saint_etienne_rifles
+	}
+
+	building_types = { #26
+		building_coal_mine
+		building_usu_railway_line
+	}
+	
+	extension_building_types = {
+		building_motor_industry
+		building_steel_mill
+	}
+
+	potential = {
+		country_has_primary_culture = cu:dutch
+	}
+	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_GELRE
+			}
+		}
+	}			
+	
+	possible = {
+		any_scope_state = {
+			state_region = s:STATE_GELRE
+			is_incorporated = yes
+			any_scope_building = {
+				is_building_type = building_coal_mine
+				level >= 3
+			}
+		}
+		has_technology_researched = pneumatic_tools
+	}
+	
+	prosperity_modifier = {
+		building_coal_mine_throughput_add = 0.1 #20
+		country_weekly_innovation_mult = 0.02 #6
+	}	
+	
+
+	ai_will_do = {
+		has_technology_researched = pneumatic_tools
+		any_scope_state = {
+			state_region = s:STATE_GELRE
+			is_incorporated = yes
+		}
+	}
+
+	ai_construction_targets = {
+		building_coal_mine = {
+			level = 5
+			state_trigger = {
+				state_region = s:STATE_GELRE
+			}
+		}
+	}
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}
+}
+
+# Staatsbedrijf der Posterijen, Telegrafie en Telefonie
+TRY_INJECT:company_PTT = {
+	extension_building_types = {
+		building_usu_railway_line
+	}
+}
+
+# Concesión Mares
+TRY_INJECT:company_Mares_Oil = {
+	extension_building_types = {
+		building_usu_railway_line
+	}
+}
+
+# Sulitjelma Mines
+TRY_INJECT:company_Sulit = {
+	extension_building_types = {
+		building_usu_railway_line
+	}
+}
+
+# Orkla
+TRY_REPLACE:company_Orkla = {
+	icon = "gfx/interface/icons/company_icons/basic_metalworks.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufacturing_heavy.dds"
+	
+	flavored_company = yes
+	preferred_headquarters = { STATE_EASTERN_NORWAY }
+	
+	possible_prestige_goods = {
+		prestige_good_generic_pyrite
+	}
+	
+	building_types = { #13
+		building_iron_mine
+		building_sulfur_mine
+		building_usu_railway_line
+	}
+	
+	extension_building_types = {
+		building_steel_mill
+		building_paper_mill
+	}
+
+	potential = {
+		has_interest_marker_in_region = sr:region_northern_europe
+	}
+	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				OR = {
+					state_region = s:STATE_EASTERN_NORWAY
+					state_region = s:STATE_NORTHERN_NORWAY
+				}
+			}
+		}
+	}
+	
+	possible = {
+		any_scope_state = {
+			OR = {
+				state_region = s:STATE_EASTERN_NORWAY
+				state_region = s:STATE_NORTHERN_NORWAY
+			}
+			is_incorporated = yes
+			any_scope_building = {
+				is_building_type = building_iron_mine 
+				level >= 3
+			}
+		}
+		has_technology_researched = open_hearth_process
+	}
+	
+	prosperity_modifier = {
+		building_steel_mill_throughput_add = 0.08 #12
+	}
+
+
+	ai_will_do = {
+		has_technology_researched = open_hearth_process
+		any_scope_state = {
+			state_region = s:STATE_EASTERN_NORWAY
+			is_incorporated = yes
+		}
+	}
+
+	ai_construction_targets = {
+		building_iron_mine = {
+			level = 5
+			state_trigger = {
+				state_region = s:STATE_EASTERN_NORWAY
+			}
+		}
+	}
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}	
+}
+
+# Istanbul Electric Tramway and Lighting Company
+TRY_REPLACE:company_IETT = {
+	icon = "gfx/interface/icons/company_icons/historical_company_icons/istanbul.png"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufacturing_heavy.dds"
+	
+	flavored_company = yes
+	preferred_headquarters = { STATE_EASTERN_THRACE }
+	
+
+	possible_prestige_goods = {
+		#prestige_good_saint_etienne_rifles
+	}
+
+	
+	building_types = { #21
+		building_power_plant
+		building_railway
+		building_usu_railway_line
+	}
+	
+	extension_building_types = {
+		building_coal_mine
+	}
+	
+	potential = {
+		has_interest_marker_in_region = sr:region_near_east
+	}
+	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_EASTERN_THRACE
+			}
+		}
+	}
+	
+	possible = {
+		any_scope_state = {
+			state_region = s:STATE_EASTERN_THRACE
+			is_incorporated = yes
+			any_scope_building = {
+				OR = {
+					is_building_type = building_usu_railway_line
+					is_building_type = building_power_plant
+				}
+				level >= 3
+			}
+		}
+		NOR = {
+			has_modifier = sick_man_of_europe
+			is_country_type = unrecognized
+		}
+		has_technology_researched = electrical_generation
+	}
+	
+	prosperity_modifier = {
+		building_urban_center_throughput_add = 0.1 #14
+		state_pollution_reduction_health_mult = -0.05 #6
+	}
+
+
+	ai_will_do = {
+		has_technology_researched = electrical_generation
+		any_scope_state = {
+			state_region = s:STATE_EASTERN_THRACE
+			is_incorporated = yes
+		}
+	}
+
+	ai_construction_targets = {
+		building_usu_railway_line = {
+			level = 3
+			state_trigger = {
+				state_region = s:STATE_EASTERN_THRACE
+			}
+		}
+		
+		building_power_plant = {
+			level = 3
+			state_trigger = {
+				state_region = s:STATE_EASTERN_THRACE
+			}
+		}
+	}
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}	
+}
+
+# Imperial Ottoman Bank
+TRY_INJECT:company_Bank_BIO = {
+	extension_building_types = {
+		building_usu_railway_line
+	}
+}
+
+# Imperial Bank of Persia
+TRY_INJECT:company_Bank_IBP = {
+	extension_building_types = {
+		building_usu_railway_line
+	}
+}
+
+# Manila Electric Railroad and Light Company (Meralco)
+TRY_INJECT:company_Meralco = {
+	building_types = {
+		building_usu_railway_line
+	}
+}
+
+# Bydgoszcz Rolling Stock Repair Shops
+TRY_REPLACE:company_Bydgoszcz_RSRS = {
+	icon = "gfx/interface/icons/company_icons/historical_company_icons/german_kpev.dds" 
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_railways.dds"
+	
+	flavored_company = yes
+	preferred_headquarters = { STATE_POSEN }
+
+	possible_prestige_goods = {
+		#prestige_good_saint_etienne_rifles
+	}
+
+	
+	building_types = { #23
+		building_railway
+		building_usu_railway_line
+	}
+	
+	extension_building_types = {
+		building_tooling_workshop
+	}
+	
+	potential = {
+		country_has_primary_culture = cu:polish
+	}
+	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_POSEN
+			}
+		}
+	}
+	
+	possible = {
+		any_scope_state = {
+			region = sr:region_eastern_europe
+			is_incorporated = yes
+			has_building = building_usu_railway_line
+			count >= 3
+		}
+	}
+	
+	prosperity_modifier = {
+		building_group_bg_usu_rail_infrastructure_throughput_add = 0.07 #9
+		unit_supply_consumption_mult = -0.05 #14
+	}	
+	
+
+	ai_will_do = {
+		any_scope_state = {
+			state_region = s:STATE_POSEN
+			is_incorporated = yes
+		}
+	}
+
+	ai_construction_targets = {
+		building_usu_railway_line = {
+			level = 5
+			state_trigger = {
+				state_region = s:STATE_POSEN
+			}
+		}
+	}
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}
+}
+
+# Johann Weitzer’sche Maschinen-Waggonfabrik (Arad Astra)
+TRY_INJECT:company_RLaWF = {
+	extension_building_types = {
+		building_usu_railway_line
+	}
+	prosperity_modifier = {
+		building_railway_throughput_add = -0.15 #20
+		building_group_bg_usu_rail_infrastructure_throughput_add = 0.15
+	}
+}
+
+# State Bank of the USSR
+TRY_INJECT:company_Gosbank = {
+	extension_building_types = {
+		building_usu_railway_line
+	}
+}
+
+# Kryukiv Railway Car Building Works
+TRY_REPLACE:company_kryukiv_railway = {
+	icon = "gfx/interface/icons/company_icons/historical_company_icons/kryukivrailway.png" 
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_railways.dds"
+	
+	flavored_company = yes
+	preferred_headquarters = { STATE_KHARKOV }
+	
+
+	possible_prestige_goods = {
+		##
+	}
+
+	
+	building_types = { #17
+		building_railway
+		building_usu_railway_line
+		building_tooling_workshop
+	}
+	
+	extension_building_types = {
+		building_automotive_industry
+		building_motor_industry
+	}
+	
+	potential = {
+		has_interest_marker_in_region = sr:region_russia
+	}
+	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_KHARKOV
+			}
+		}
+	}
+	
+	possible = {
+		any_scope_state = {
+			state_region = s:STATE_KHARKOV
+			is_incorporated = yes
+			any_scope_building = {
+				is_building_type = building_usu_railway_line
+				level >= 3
+			}
+		}
+		has_technology_researched = steel_railway_cars
+	}
+	
+	prosperity_modifier = {
+		unit_supply_consumption_mult = -0.03 #10
+		building_urban_center_throughput_add = 0.06 #8
+	}
+
+
+	ai_will_do = {
+		has_technology_researched = steel_railway_cars
+		any_scope_state = {
+			state_region = s:STATE_KHARKOV
+			is_incorporated = yes
+		}
+	}
+
+	ai_construction_targets = {
+		building_usu_railway_line = {
+			level = 3
+			state_trigger = {
+				state_region = s:STATE_KHARKOV
+			}
+		}
+		
+		building_tooling_workshop = {
+			level = 3
+			state_trigger = {
+				state_region = s:STATE_KHARKOV
+			}
+		}
+	}
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}	
+}
+
+# Serbian Railway
+TRY_REPLACE:company_SerbianRailway = {
+	icon = "gfx/interface/icons/company_icons/basic_metalworks.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_railways.dds"
+	
+	flavored_company = yes
+	preferred_headquarters = { STATE_WESTERN_SERBIA }
+	
+
+	possible_prestige_goods = {
+		#prestige_good_saint_etienne_rifles
+	}
+
+	
+	building_types = { #23
+		building_railway
+		building_usu_railway_line
+	}
+	
+	extension_building_types = {
+		building_power_plant
+	}
+	
+	potential = {
+		has_interest_marker_in_region = sr:region_balkans
+	}
+	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_WESTERN_SERBIA
+			}
+		}
+	}
+	
+	possible = {
+		any_scope_state = {
+			state_region = s:STATE_WESTERN_SERBIA
+			is_incorporated = yes
+			any_scope_building = {
+				is_building_type = building_usu_railway_line
+				level >= 3
+			}
+		}
+	}
+	
+	prosperity_modifier = {
+		state_infrastructure_mult = 0.1 #20
+		interest_group_ig_landowners_approval_add = 1 #4
+	}
+
+
+	ai_will_do = {
+		any_scope_state = {
+			state_region = s:STATE_WESTERN_SERBIA
+			is_incorporated = yes
+		}
+	}
+
+	ai_construction_targets = {
+		building_usu_railway_line = {
+			level = 5
+			state_trigger = {
+				state_region = s:STATE_WESTERN_SERBIA
+			}
+		}
+	}
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}	
+}
+
+# MIN
+TRY_INJECT:company_MIN = {
+	prosperity_modifier = {
+		building_railway_throughput_add = -0.06 #8
+		building_group_bg_usu_rail_infrastructure_throughput_add = 0.06
+	}
+}
+
+# Siam Commercial Bank
+TRY_INJECT:company_Siam_Commercial_Bank = {
+	extension_building_types = {
+		building_usu_railway_line
+	}
+}
+
+# Netherlands-South African Railway Company
+TRY_REPLACE:company_NRC = {
+	icon = "gfx/interface/icons/company_icons/historical_company_icons/nzasm.png"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_railways.dds"
+	
+	flavored_company = yes
+	preferred_headquarters = { STATE_CAPE_COLONY }
+	
+
+	possible_prestige_goods = {
+		#prestige_good_saint_etienne_rifles
+	}
+
+	
+	building_types = { #23
+		building_railway
+		building_usu_railway_line
+	}
+	
+	extension_building_types = {
+		building_power_plant
+	}
+	
+	potential = {
+		has_interest_marker_in_region = sr:region_southern_africa
+	}
+	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_CAPE_COLONY
+			}
+		}
+	}
+	
+	possible = {
+		any_scope_state = {
+			state_region = s:STATE_CAPE_COLONY
+			is_incorporated = yes
+			any_scope_building = {
+				is_building_type = building_usu_railway_line
+				level >= 3
+			}
+		}
+	}
+	
+	prosperity_modifier = {
+		state_migration_pull_mult = 0.04 #5
+		state_construction_mult = 0.05 #18
+	}
+
+	ai_will_do = {
+		any_scope_state = {
+			state_region = s:STATE_CAPE_COLONY
+			is_incorporated = yes
+		}
+	}
+
+	ai_construction_targets = {
+		building_usu_railway_line = {
+			level = 5
+			state_trigger = {
+				state_region = s:STATE_CAPE_COLONY
+			}
+		}
+	}
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}
+}
+
+# Imperial Cold Storage and Supply company
+TRY_INJECT:company_ImperialCC = {
+	extension_building_types = {
+		building_usu_railway_line
+	}
+}
+
+# Bechtel
+TRY_INJECT:company_Bechtel = {
+	prosperity_modifier = {
+		building_railway_throughput_add = -0.08 #10
+		building_group_bg_usu_rail_infrastructure_throughput_add = 0.08
+	}
+}
+
+# Bank JP Morgan
+TRY_INJECT:company_Bank_JP_Morgan = {
+	extension_building_types = {
+		building_usu_railway_line
+	}
+}
+
+# Lackawanna Iron and Coal Company
+TRY_INJECT:company_Lackawanna_IaCC = {
+	prosperity_modifier = {
+		building_railway_throughput_add = -0.05 #6
+		building_group_bg_usu_rail_infrastructure_throughput_add = 0.05
+	}
+}
+
+# Chase Bank
+TRY_INJECT:company_Chase_Bank = {
+	extension_building_types = {
+		building_usu_railway_line
+	}
+}
+
+# Bank Goldman Sachs
+TRY_INJECT:company_Bank_Goldman_Sachs = {
+	extension_building_types = {
+		building_usu_railway_line
+	}
+}
+
+# Bank Wells Fargo
+TRY_INJECT:company_Bank_Wells_Fargo = {
+	extension_building_types = {
+		building_usu_railway_line
+	}
+}
+
+# Bank American Express
+TRY_INJECT:company_Bank_American_Express = {
+	extension_building_types = {
+		building_usu_railway_line
+	}
+}
+
+# Great Northern Railway (U.S.)
+TRY_REPLACE:company_GN_railway = {
+	icon = "gfx/interface/icons/company_icons/historical_company_icons/greatnorthernrailway.png" 
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_railways.dds"
+	
+	flavored_company = yes
+	preferred_headquarters = { STATE_MINNESOTA }
+	
+
+	possible_prestige_goods = {
+		#prestige_good_saint_etienne_rifles
+	}
+
+	
+	building_types = { #25
+		building_railway
+		building_usu_railway_line
+	}
+	
+	extension_building_types = {
+		building_motor_industry
+		building_steel_mill
+	}
+	
+	potential = {
+		OR = {
+			has_interest_marker_in_region = sr:region_atlantic_coast
+			has_interest_marker_in_region = sr:region_great_plains
+			has_interest_marker_in_region = sr:region_pacific_coast
+			
+		}
+	}
+	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				OR = {
+					region = sr:region_atlantic_coast
+					region = sr:region_great_plains
+					region = sr:region_pacific_coast
+				}
+			}
+		}
+	}		
+	
+	possible = { 
+		any_scope_state = {
+			OR = {
+				region = sr:region_atlantic_coast
+				region = sr:region_great_plains
+				region = sr:region_pacific_coast
+			}
+			is_incorporated = yes
+			any_scope_building = {
+				is_building_type = building_usu_railway_line
+				level >= 5
+			}
+		}
+		has_technology_researched = steel_railway_cars
+		has_technology_researched = joint_stock_companies
+	}
+	
+	prosperity_modifier = {
+		building_iron_mine_throughput_add = 0.05 #6
+		state_migration_pull_mult = 0.05 #6
+		building_group_bg_agriculture_throughput_add = 0.03 #14
+	}
+	
+
+	ai_will_do = {
+		has_technology_researched = steel_railway_cars
+		has_technology_researched = joint_stock_companies
+		any_scope_state = {
+			state_region = s:STATE_MINNESOTA
+			is_incorporated = yes
+		}
+	}
+
+	ai_construction_targets = {
+		building_usu_railway_line = {
+			level = 5
+			state_trigger = {
+				state_region = s:STATE_MINNESOTA
+			}
+		}
+	}
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}
+}
+
+# Pfaltzgraff Co.
+TRY_INJECT:company_Pfaltzgraff = {
+	extension_building_types = {
+		building_usu_railway_line
+	}
+}
+
+# Standard Fruit Company
+TRY_INJECT:company_standard_fruit = {
+	building_types = {
+		building_usu_railway_line
+	}
+}
+
+# Pittsburgh Coal Company
+TRY_INJECT:company_Pittsburgh_Coal = {
+	extension_building_types = {
+		building_usu_railway_line
+	}
+}
+
+# United States Steel Corporation
+TRY_INJECT:company_us_steel_corp = {
+	extension_building_types = {
+		building_usu_railway_line
+	}
+}
+
+# Illinois Steel Company
+TRY_INJECT:company_federal_steel = {
+	extension_building_types = {
+		building_usu_railway_line
+	}
+	prosperity_modifier = {
+		building_railway_throughput_add = -0.11
+		building_group_bg_usu_rail_infrastructure_throughput_add = 0.11
+	}
+}
+
+# National Steel Company
+TRY_INJECT:company_national_steel = {
+	building_types = {
+		building_usu_railway_line
+	}
+}
+
+# Consolidated Lake Superior Company
+TRY_INJECT:company_consolidated_lake_superior = {
+	extension_building_types = {
+		building_usu_railway_line
+	}
+}
+
+# Vietnam Railways
+TRY_REPLACE:company_VRailways = {
+	icon = "gfx/interface/icons/company_icons/historical_company_icons/vietnamrailways.png"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_railways.dds"
+	
+	flavored_company = yes
+	preferred_headquarters = { STATE_TONKIN }
+	
+
+	possible_prestige_goods = {
+		# prestige_good_saint_etienne_rifles
+	}
+
+	
+	building_types = { #23
+		building_railway
+		building_usu_railway_line
+	}
+	
+	extension_building_types = {
+		building_steel_mill
+	}
+	
+	potential = {
+		has_interest_marker_in_region = sr:region_indochina
+	}
+	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_TONKIN
+			}
+		}
+	}
+	
+	possible = {
+		any_scope_state = {
+			state_region = s:STATE_TONKIN
+			is_incorporated = yes
+			any_scope_building = {
+				is_building_type = building_usu_railway_line
+				level >= 3
+			}
+		}
+	}
+	
+	prosperity_modifier = {
+		state_infrastructure_mult = 0.1 #20
+		state_assimilation_mult = 0.06 #3
+	}	
+	
+
+	ai_will_do = {
+		has_technology_researched = railways
+		any_scope_state = {
+			state_region = s:STATE_TONKIN
+			is_incorporated = yes
+		}
+	}
+
+	ai_construction_targets = {
+		building_usu_railway_line = {
+			level = 5
+			state_trigger = {
+				state_region = s:STATE_TONKIN
+			}
+		}
+	}
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}
+}
+
+# Société générale des tramways à vapeur de Cochinchine
+TRY_REPLACE:company_Railway_Cochin = {
+	icon = "gfx/interface/icons/company_icons/historical_company_icons/frenchindochinarailway.png" 
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_railways.dds"
+	
+	flavored_company = yes
+	preferred_headquarters = { STATE_MEKONG }
+	
+
+	possible_prestige_goods = {
+		# prestige_good_saint_etienne_rifles
+	}
+
+	
+	building_types = { #25
+		building_railway
+		building_usu_railway_line
+	}
+	
+	extension_building_types = {
+		building_port
+	}
+	
+	potential = {
+		has_interest_marker_in_region = sr:region_indochina
+	}
+	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_MEKONG
+			}
+		}
+	}
+	
+	possible = {
+		any_scope_state = {
+			state_region = s:STATE_MEKONG
+			is_incorporated = yes
+			any_scope_building = {
+				is_building_type = building_usu_railway_line
+				level >= 3
+			}
+		}
+		has_technology_researched = mutual_funds
+	}
+	
+	prosperity_modifier = {
+		state_capitalists_investment_pool_contribution_add = 0.03 #6
+		building_urban_center_throughput_add = 0.08 #10
+		state_infrastructure_from_population_max_add = 12 #8
+	}	
+	
+
+	ai_will_do = {
+		has_technology_researched = mutual_funds
+		any_scope_state = {
+			state_region = s:STATE_MEKONG
+			is_incorporated = yes
+		}
+	}
+
+	ai_construction_targets = {
+		building_usu_railway_line = {
+			level = 5
+			state_trigger = {
+				state_region = s:STATE_MEKONG
+			}
+		}
+	}
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}
+}
+
+# Compagnie française des chemins de fer de l'Indochine
+TRY_REPLACE:company_FrenchIndochinaRailway = {
+	icon = "gfx/interface/icons/company_icons/historical_company_icons/frenchindochinarailway2.png" 
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_railways.dds"
+	
+	flavored_company = yes
+	preferred_headquarters = { STATE_TONKIN }
+	
+
+	possible_prestige_goods = {
+		# prestige_good_saint_etienne_rifles
+	}
+
+	
+	building_types = { #25
+		building_railway
+		building_usu_railway_line
+	}
+	
+	extension_building_types = {
+		building_motor_industry
+	}
+	
+	potential = {
+		has_interest_marker_in_region = sr:region_indochina
+	}
+	
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_TONKIN
+			}
+		}
+	}
+	
+	possible = {
+		any_scope_state = {
+			state_region = s:STATE_TONKIN
+			is_incorporated = yes
+			any_scope_building = {
+				is_building_type = building_usu_railway_line
+				level >= 3
+			}
+		}
+		has_technology_researched = civilizing_mission
+	}
+	
+	prosperity_modifier = {
+		state_infrastructure_mult = 0.1 #20
+		military_formation_army_movement_speed_mult = 0.05 #5
+	}	
+	
+
+	ai_will_do = {
+		has_technology_researched = civilizing_mission
+		any_scope_state = {
+			state_region = s:STATE_TONKIN
+			is_incorporated = yes
+		}
+	}
+
+	ai_construction_targets = {
+		building_usu_railway_line = {
+			level = 5
+			state_trigger = {
+				state_region = s:STATE_TONKIN
+			}
+		}
+	}
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}
+}
+
+# Grindlays Bank / Stanbic Bank Uganda
+TRY_INJECT:company_Bank_Grindlays = {
+	extension_building_types = {
+		building_usu_railway_line
+	}
+}

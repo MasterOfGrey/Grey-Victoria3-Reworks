@@ -70,7 +70,7 @@ TRY_REPLACE:company_egyptian_rail = {	# Mod: possible and construction targets c
 TRY_INJECT:company_fundidora_monterrey = {
 	prosperity_modifier = {
 		building_railway_throughput_add = -0.05
-		building_usu_railway_line_throughput_add = 0.05
+		building_group_bg_usu_rail_infrastructure_throughput_add = 0.05
 	}
 }
 
@@ -528,7 +528,7 @@ TRY_REPLACE:company_great_indian_railway = {	# Mod: various edits to non-inserta
 TRY_INJECT:company_william_sandford = {
 	prosperity_modifier = {
 		building_railway_throughput_add = -0.15
-		building_usu_railway_line_throughput_add = 0.15
+		building_group_bg_usu_rail_infrastructure_throughput_add = 0.15
 	}
 }
 
@@ -551,7 +551,7 @@ TRY_INJECT:company_siam_electrical_company_limited = {
 TRY_INJECT:company_mav = {
 	prosperity_modifier = {
 		building_railway_throughput_add = -0.1
-		building_usu_railway_line_throughput_add = 0.1
+		building_group_bg_usu_rail_infrastructure_throughput_add = 0.1
 	}
 }
 
@@ -559,7 +559,15 @@ TRY_INJECT:company_mav = {
 TRY_INJECT:company_galician_carpathian_oil = {
 	prosperity_modifier = {
 		building_railway_throughput_add = -0.05
-		building_usu_railway_line_throughput_add = 0.05
+		building_group_bg_usu_rail_infrastructure_throughput_add = 0.05
+	}
+}
+
+# Oesterreichisch-Alpine Montangesellschaft
+TRY_INJECT:company_mav = {
+	prosperity_modifier = {
+		building_railway_throughput_add = -0.05
+		building_group_bg_usu_rail_infrastructure_throughput_add = 0.05
 	}
 }
 
@@ -572,6 +580,14 @@ TRY_INJECT:company_franco_belge = {
 	extension_building_types = {
 		building_steel_mill
 		building_river_port
+	}
+}
+
+# Société anonyme John Cockerill
+TRY_INJECT:company_john_cockerill = {
+	prosperity_modifier = {
+		building_railway_throughput_add = -0.1
+		building_group_bg_usu_rail_infrastructure_throughput_add = 0.1
 	}
 }
 
@@ -647,7 +663,7 @@ TRY_REPLACE:company_cfr = {	# Mod: possible and construction targets changed
 TRY_INJECT:company_maschinenfabrik_oerlikon = {
 	prosperity_modifier = {
 		building_railway_throughput_add = -0.1
-		building_usu_railway_line_throughput_add = 0.1
+		building_group_bg_usu_rail_infrastructure_throughput_add = 0.1
 	}
 }
 
@@ -1050,7 +1066,7 @@ TRY_INJECT:company_standard_oil = {
 		building_river_port
 	}
 	prosperity_modifier = {
-		building_usu_railway_line_throughput_add = 0.2
+		building_group_bg_usu_rail_infrastructure_throughput_add = 0.2
 	}
 }
 
@@ -1062,6 +1078,6 @@ TRY_INJECT:company_oesterreichisch_alpine_montangesellschaft = {
 		building_river_port
 	}
 	prosperity_modifier = {
-		building_usu_railway_line_throughput_add = 0.05
+		building_group_bg_usu_rail_infrastructure_throughput_add = 0.05
 	}
 }

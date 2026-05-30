@@ -60,3 +60,9 @@ REPLACE_OR_CREATE:pmg_logistics_services_railway = {
 		usu_pm_rail_logistics_3
 	}	
 }
+
+TRY_INJECT:pmg_base_building_railway = {
+	production_methods = {
+		pm_gate_golem_trains
+	}
+}

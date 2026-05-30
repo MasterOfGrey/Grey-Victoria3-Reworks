@@ -32,8 +32,12 @@ REPLACE_OR_CREATE:bg_private_infrastructure = {
 	urbanization = 10 # 5
 }
 
-bg_usu_railway_line = {
+bg_usu_rail_infrastructure = {
 	parent_group = bg_private_infrastructure
+}
+
+bg_usu_railway_line = {
+	parent_group = bg_usu_rail_infrastructure
 	
 	urbanization = 0
 }
