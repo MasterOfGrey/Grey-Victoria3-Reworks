@@ -110,3 +110,55 @@ REPLACE_OR_CREATE:pm_gate_golem_trains = {
 		}
 	}
 }
+
+############### OWNERSHIP BUILDINGS ###############
+TRY_REPLACE:pm_gate_basic_mage_tower = {
+	texture = "gfx/interface/icons/production_method_icons/gate_private_mages.dds"
+
+	disallowing_laws = {
+		law_cooperative_ownership
+	}
+
+	country_modifiers = {
+		workforce_scaled = {
+			country_gate_magical_innovation_add = 0.5
+		}
+	}
+
+	building_modifiers = {
+		level_scaled = {
+			building_employment_gate_mages_add = 30 # 50
+			building_employment_clerks_add = 20 # 100
+		}
+		unscaled = {
+			building_gate_mages_shares_add = 94 # 10		# x30 pops = 23.5% of profits (0.78%ea)
+			building_clerks_shares_add = 9 # 2				# x20 pops = 1.5% of profits (0.075%ea) - they're clerks 
+		}
+	}
+}
+
+TRY_REPLACE:pm_gate_cooperative_mage_tower = {
+	texture = "gfx/interface/icons/production_method_icons/worker_cooperative.dds"
+
+	unlocking_laws = {
+		law_cooperative_ownership
+	}
+
+	country_modifiers = {
+		workforce_scaled = {
+			country_gate_magical_innovation_add = 0.5
+		}
+	}
+
+	building_modifiers = {
+		level_scaled = {
+			building_employment_gate_mages_add = 20 # 40
+			building_employment_clerks_add = 30 # 120
+		}
+
+		unscaled = {
+			building_gate_mages_shares_add = 91 # 10		# x20 pops = 22.8% of profits (1.1%ea)
+			building_clerks_shares_add = 6 # 2				# x30 pops = 2.2% of profits (0.07%ea) - they're clerks 
+		}
+	}
+}
