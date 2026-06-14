@@ -1,0 +1,26 @@
+﻿STATE_RIFT_VALLEY = {
+    id = 227
+    subsistence_building = "building_subsistence_farm"
+    provinces = { "x04ADAD" "x0E632A" "x209F10" "x2DBD09" "x3CA803" "x3E97BF" "x52CFCA" "x5C88B8" "x63C8FD" "x667CE1" "x6BE070" "x73AB85" "x787130" "x7D6876" "x834B1E" "x848FA1" "x92CECB" "x935F28" "x9374F3" "xA09C0F" "xADF7C0" "xAE1D62" "xB5E965" "xC0F3D2" "xCF4C38" "xD3CE4A" "xE02111" "xF02E37" "xF03E07" "xF14E14" "xF27D1C" "xF2EBEC" "xF6B009" }
+    prime_land = { "x787130" "x935F28" }
+    traits = { "state_trait_malaria" "state_trait_lake_victoria" }
+    city = "xAE1D62"
+    farm = "x787130"
+    mine = "x63C8FD"
+    wood = "xF6B009"
+    arable_land = 70	#TMR #60
+    arable_resources = { "building_millet_farm" "building_livestock_ranch" "building_coffee_plantation" "building_cotton_plantation" "building_dye_plantation" "building_tea_plantation" "building_tobacco_plantation" "building_sugar_plantation" "building_banana_plantation" }
+    capped_resources = {
+        building_coal_mine = 48
+        building_logging_camp = 7
+    }
+    resource = {
+        type = "building_gold_field"			#TMR
+        depleted_type = "building_gold_mine"
+        undiscovered_amount = 7
+    }
+    resource = {
+        type = "building_rubber_plantation"
+        undiscovered_amount = 36				#TMR from ERWR #16
+    }
+}

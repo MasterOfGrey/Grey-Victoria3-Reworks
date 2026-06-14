@@ -1,0 +1,22 @@
+﻿STATE_SOMALILAND = {
+    id = 232
+    subsistence_building = "building_subsistence_orchard"
+    provinces = { "x0085FA" "x049442" "x089FE7" "x0C544E" "x0CE1C7" "x0F9944" "x1017C5" "x10CF18" "x12FDBA" "x132465" "x184064" "x1CE5E9" "x1D4152" "x1D4F93" "x20E090" "x212090" "x281ECB" "x284319" "x2C4BFE" "x2CA298" "x2D75F4" "x2F6BB1" "x2FB806" "x30521C" "x324717" "x326FD1" "x337D01" "x354629" "x3587B8" "x395C77" "x3BB51B" "x3D5BE3" "x3DE547" "x407408" "x42DA4F" "x45FEEC" "x46250C" "x469B34" "x48FFF1" "x4A6DFD" "x4BED76" "x508D8F" "x524E91" "x529552" "x560238" "x58307A" "x5B7C30" "x5BF703" "x5C2622" "x5DAE68" "x606011" "x60EAC8" "x625125" "x655F7E" "x678D0D" "x6BA02C" "x6D0680" "x6D66A6" "x6EFA28" "x72DC5E" "x73FE30" "x76595D" "x7D4764" "x7FBAFA" "x815D01" "x83A1A3" "x854A91" "x85FD85" "x894078" "x8AA210" "x992BFC" "x995FB2" "x9ACA9E" "x9DA796" "xA05C39" "xA0E090" "xA1A21B" "xA2A857" "xA6E128" "xAABDBD" "xAE76D1" "xAFF79D" "xB19FD2" "xB64D3E" "xB72AFB" "xB9F779" "xBC0D72" "xBF3A7A" "xBFE050" "xC6A5CB" "xCA0AFC" "xCB3B07" "xCCC39F" "xCEE8F8" "xD0BA96" "xD0FF66" "xD191E8" "xD3EE2E" "xD6084C" "xD85A85" "xD97AC4" "xDDAC33" "xDDF9DB" "xDEFB4F" "xDF6111" "xDF951C" "xE19C5A" "xE44897" "xE4636A" "xE585C3" "xE65D19" "xED2D92" "xEDC612" "xEF3903" "xF0C31D" "xF26F4C" "xF2A924" "xF30A4D" "xF4A328" "xF5E822" "xF70163" "xF9565C" "xFE3534" }
+    traits = { "state_trait_malaria" }
+    city = "x894078"
+    port = "x524E91"
+    farm = "x326FD1"
+    mine = "x58307A"
+    wood = "xDEFB4F"
+    arable_land = 104	#TMR from ERWR #80
+    arable_resources = { "building_millet_farm" "building_livestock_ranch" "building_coffee_plantation" "building_tea_plantation" "building_vineyard" }
+    capped_resources = {
+        building_fishing_wharf = 15
+    }
+    resource = {								#TMR from ERWR
+        type = "building_iron_mine"
+        undiscovered_amount = 21 # 16 #TMR
+        discovered_amount = 3
+    }
+    naval_exit_id = 3073
+}

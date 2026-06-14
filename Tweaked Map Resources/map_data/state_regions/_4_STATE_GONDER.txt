@@ -1,0 +1,29 @@
+﻿STATE_GONDER = {
+    id = 230
+    subsistence_building = "building_subsistence_farm"
+    provinces = { "x079D31" "x0DED25" "x1539E2" "x1A5869" "x251691" "x28FE62" "x2F3AE3" "x3BE1BE" "x3E9959" "x489309" "x4A8BE1" "x536ACF" "x57AA00" "x5A5824" "x5B5305" "x5CAB2B" "x5EF353" "x61A090" "x61A2A3" "x652B36" "x68239C" "x6BA88A" "x6F31A5" "x7152F3" "x793499" "x7A0E0D" "x7E83AE" "x81DDA7" "x82A9D3" "x931306" "x962CFC" "x9FA061" "xA2BCF9" "xA3CD68" "xA50EE3" "xAFF2F2" "xB1B90E" "xB87731" "xB93109" "xB969A7" "xBB012E" "xC00F88" "xC040E0" "xC19466" "xCA393F" "xD7E040" "xDA7922" "xDF15B2" "xDF2090" "xDF37BE" "xE06640" "xED4FE1" "xEFA8BC" "xF090A0" }
+    traits = { "state_trait_malaria" }
+    city = "xDF2090"
+    farm = "x68239C"
+    mine = "xC040E0"
+    wood = "x489309"
+    arable_land = 208	#TMR from ERWR #160
+    arable_resources = { "building_millet_farm" "building_livestock_ranch" "building_coffee_plantation" "building_cotton_plantation" "building_dye_plantation" "building_tea_plantation" "building_tobacco_plantation" "building_sugar_plantation" }
+    capped_resources = {
+        building_logging_camp = 23
+    }
+    resource = {								#TMR from ERWR
+        type = "building_iron_mine"
+        undiscovered_amount = 24
+        discovered_amount = 4
+    }
+    resource = {								#TMR from ERWR
+        type = "building_coal_mine"
+        undiscovered_amount = 15
+        discovered_amount = 5
+    }
+    resource = {
+        type = "building_rubber_plantation"
+        undiscovered_amount = 50				#TMR from ERWR #22
+    }
+}

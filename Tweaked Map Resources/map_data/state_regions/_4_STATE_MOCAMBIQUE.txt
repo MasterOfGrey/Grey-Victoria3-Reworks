@@ -1,0 +1,37 @@
+﻿STATE_MOCAMBIQUE = {
+    id = 237
+    subsistence_building = "building_subsistence_farm"
+    provinces = { "x005594" "x02EB92" "x05A72B" "x06621F" "x067381" "x091828" "x0EFBB3" "x11E090" "x17660D" "x1C0AF6" "x1C4AD1" "x1CC6C2" "x1D7D03" "x20E0B0" "x2B8AAC" "x2C40DE" "x2F77FB" "x30D07F" "x3406CB" "x34D030" "x3BC995" "x3D00BC" "x4225C4" "x42BDF4" "x46C5DE" "x496E3D" "x49AFAC" "x49E71A" "x4AFF5E" "x4C0097" "x4C7393" "x4E39F7" "x525F8A" "x59469D" "x5EC8C1" "x6396AA" "x6421B0" "x694CF9" "x6A057E" "x6CE05D" "x72177C" "x771C70" "x78B0B8" "x7C3CE7" "x7D1C19" "x7F5A99" "x876584" "x893622" "x8D3BFA" "x8EBD1B" "x9A37E8" "x9FE0B0" "xA061AF" "xA1CEEF" "xA32AAD" "xA5450D" "xA6DBA7" "xA8A6DE" "xB013D9" "xB230F4" "xB359EB" "xB66F1C" "xB88D2A" "xB8E488" "xBD46D0" "xBE355B" "xBF8A54" "xC139EB" "xC270F8" "xC60197" "xE412DB" "xF53770" "xF6EEBD" "xF7617F" "xFC41E9" "xFD8E92" "xFDAF31" "xFE0A11" }
+    traits = { "state_trait_malaria" }
+    city = "xA8A6DE"
+    port = "x005594"
+    farm = "x02EB92"
+    mine = "x694CF9"
+    wood = "xB66F1C"
+    arable_land = 160	#TMR from ERWR #80
+    arable_resources = { "building_millet_farm" "building_livestock_ranch" "building_coffee_plantation" "building_cotton_plantation" "building_dye_plantation" "building_tea_plantation" "building_tobacco_plantation" "building_sugar_plantation" "building_banana_plantation" }
+    capped_resources = {
+        building_logging_camp = 23
+        building_fishing_wharf = 8
+    }
+    resource = {								#TMR from ERWR
+        type = "building_coal_mine"
+        undiscovered_amount = 475
+        discovered_amount = 35
+    }
+    resource = {								#TMR from ERWR
+        type = "building_iron_mine"
+        undiscovered_amount = 20
+        discovered_amount = 5
+    }
+    resource = {
+        type = "building_rubber_plantation"
+        undiscovered_amount = 57				#TMR from ERWR (split difference) #28
+    }
+    resource = {
+        type = "building_gold_field"
+        depleted_type = "building_gold_mine"
+        undiscovered_amount = 2
+    }
+    naval_exit_id = 3107
+}

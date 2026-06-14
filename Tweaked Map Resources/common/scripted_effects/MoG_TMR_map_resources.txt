@@ -1,0 +1,334 @@
+﻿# NOTE: Undiscovered resources and depletable resources like gold fields require map_data replacements instead. -> but we do everything else in here to maximise compatibility.
+mog_tmr_edit_resource_deposits_effect = {
+
+	## Ethiopia ##
+	s:STATE_ERITREA = {
+		change_resource_potential = {
+        	type = building_fishing_wharf
+        	amount = 10
+    	}
+		add_resource_potential = building_logging_camp
+    	change_resource_potential = {
+        	type = building_logging_camp
+        	amount = 6
+    	}
+    	add_resource_potential = building_sulfur_mine
+    	change_resource_potential = {
+        	type = building_sulfur_mine
+        	amount = 31
+    	}
+	}
+	s:STATE_AMHARA = {
+    	change_resource_potential = {
+        	type = building_logging_camp
+        	amount = 40
+    	}
+		add_resource_potential = building_coal_mine
+    	change_resource_potential = {
+        	type = building_coal_mine
+        	amount = 22
+    	}
+    	add_resource_potential = building_sulfur_mine
+    	change_resource_potential = {
+        	type = building_sulfur_mine
+        	amount = 11
+    	}
+	}
+	s:STATE_GONDER = {
+    	change_resource_potential = {
+        	type = building_logging_camp
+        	amount = 46
+    	}
+		add_resource_potential = building_gold_mine
+    	change_resource_potential = {
+        	type = building_gold_mine
+        	amount = 2
+    	}
+	}
+	s:STATE_OROMIA = {	# Also adds undiscovered gold_fields in map_data
+    	change_resource_potential = {
+        	type = building_logging_camp
+        	amount = 22
+    	}
+    	add_resource_potential = building_sulfur_mine
+    	change_resource_potential = {
+        	type = building_sulfur_mine
+        	amount = 17
+    	}
+		add_resource_potential = building_gold_mine
+    	change_resource_potential = {
+        	type = building_gold_mine
+        	amount = 4
+    	}
+	}
+	s:STATE_SOMALILAND = {
+		change_resource_potential = {
+        	type = building_fishing_wharf
+        	amount = 30
+    	}
+    	add_resource_potential = building_sulfur_mine
+    	change_resource_potential = {
+        	type = building_sulfur_mine
+        	amount = 9
+    	}
+	}
+	s:STATE_KENYA = {
+    	change_resource_potential = {
+        	type = building_logging_camp
+        	amount = 12
+    	}
+		change_resource_potential = {
+        	type = building_fishing_wharf
+        	amount = 5
+    	}
+    	add_resource_potential = building_iron_mine
+    	change_resource_potential = {
+        	type = building_iron_mine
+        	amount = 24
+    	}
+    	add_resource_potential = building_sulfur_mine
+    	change_resource_potential = {
+        	type = building_sulfur_mine
+        	amount = 6
+    	}
+    	add_resource_potential = building_lead_mine
+    	change_resource_potential = {
+        	type = building_lead_mine
+        	amount = 21
+    	}
+	}
+
+	## East Africa ##
+	s:STATE_RIFT_VALLEY = {	# Also adds undiscovered gold_fields in map_data
+    	change_resource_potential = {
+        	type = building_logging_camp
+        	amount = 7
+    	}
+    	add_resource_potential = building_sulfur_mine
+    	change_resource_potential = {
+        	type = building_sulfur_mine
+        	amount = 22
+    	}
+	}
+	s:STATE_UGANDA = {	# Also adds undiscovered gold_fields in map_data
+    	add_resource_potential = building_iron_mine
+    	change_resource_potential = {
+        	type = building_iron_mine
+        	amount = 12
+    	}
+    	add_resource_potential = building_sulfur_mine
+    	change_resource_potential = {
+        	type = building_sulfur_mine
+        	amount = 18
+    	}
+    	add_resource_potential = building_lead_mine
+    	change_resource_potential = {
+        	type = building_lead_mine
+        	amount = 12
+    	}
+	}
+	s:STATE_LINDI = {
+    	change_resource_potential = {
+        	type = building_logging_camp
+        	amount = 12
+    	}
+    	add_resource_potential = building_sulfur_mine
+    	change_resource_potential = {
+        	type = building_sulfur_mine
+        	amount = 8
+    	}
+	}
+	s:STATE_MOCAMBIQUE = {
+    	change_resource_potential = {
+        	type = building_logging_camp
+        	amount = 46
+    	}
+		change_resource_potential = {
+        	type = building_fishing_wharf
+        	amount = 16
+    	}
+    	add_resource_potential = building_sulfur_mine
+    	change_resource_potential = {
+        	type = building_sulfur_mine
+        	amount = 28
+    	}
+	}
+
+	## Middle Africa ##
+	s:STATE_EQUATORIA = {	# Also adds undiscovered gold_fields in map_data
+    	change_resource_potential = {
+        	type = building_logging_camp
+        	amount = 26
+    	}
+    	add_resource_potential = building_iron_mine
+    	change_resource_potential = {
+        	type = building_iron_mine
+        	amount = 12
+    	}
+    	add_resource_potential = building_sulfur_mine
+    	change_resource_potential = {
+        	type = building_sulfur_mine
+        	amount = 8
+    	}
+	}
+	s:STATE_EAST_ANGOLA = {	# Also adds undiscovered resources in map_data
+    	change_resource_potential = {
+        	type = building_logging_camp
+        	amount = 22
+    	}
+    	change_resource_potential = {
+        	type = building_coal_mine
+        	amount = -70
+    	}
+	}
+	s:STATE_NORTH_ANGOLA = {	# Also adds undiscovered resources in map_data
+    	change_resource_potential = {
+        	type = building_logging_camp
+        	amount = 26
+    	}
+    	change_resource_potential = {
+        	type = building_fishing_wharf
+        	amount = 8
+    	}
+    	change_resource_potential = {
+        	type = building_whaling_station
+        	amount = 7
+    	}
+	}
+	s:STATE_SOUTH_ANGOLA = {	# Also adds undiscovered resources in map_data
+    	change_resource_potential = {
+        	type = building_logging_camp
+        	amount = 5
+    	}
+    	change_resource_potential = {
+        	type = building_fishing_wharf
+        	amount = 7
+    	}
+    	change_resource_potential = {
+        	type = building_whaling_station
+        	amount = 7
+    	}
+	}
+
+	## South Africa ##
+	s:STATE_NORTH_MADAGASCAR = {	# Also adds undiscovered resources in map_data
+    	change_resource_potential = {
+        	type = building_logging_camp
+        	amount = 40
+    	}
+    	change_resource_potential = {
+        	type = building_whaling_station
+        	amount = 36
+    	}
+    	change_resource_potential = {
+        	type = building_fishing_wharf
+        	amount = 20
+    	}
+	}
+	s:STATE_SOUTH_MADAGASCAR = {	# Also adds undiscovered resources in map_data
+    	add_resource_potential = building_rice_farm
+    	change_resource_potential = {
+        	type = building_logging_camp
+        	amount = 46
+    	}
+    	change_resource_potential = {
+        	type = building_whaling_station
+        	amount = 64
+    	}
+    	change_resource_potential = {
+        	type = building_fishing_wharf
+        	amount = 16
+    	}
+	}
+
+	## Indonesia ##
+	s:STATE_BOUGAINVILLE = {	# Also adds undiscovered resources in map_data
+		add_resource_potential = building_dye_plantation
+		add_resource_potential = building_tobacco_plantation
+		add_resource_potential = building_sugar_plantation
+    	change_resource_potential = {
+        	type = building_logging_camp
+        	amount = 4
+    	}
+    	change_resource_potential = {
+        	type = building_whaling_station
+        	amount = 2
+    	}
+    	change_resource_potential = {
+        	type = building_fishing_wharf
+        	amount = 4
+    	}
+    	add_resource_potential = building_sulfur_mine
+    	change_resource_potential = {
+        	type = building_sulfur_mine
+        	amount = 4
+    	}
+	}
+	s:STATE_CELEBES = {	# SULAWESI # Also adds undiscovered resources in map_data
+    	add_resource_potential = building_silk_plantation	# more plausible than you might think
+		add_resource_potential = building_sugar_plantation
+		add_resource_potential = building_cotton_plantation
+    	change_resource_potential = {
+        	type = building_logging_camp
+        	amount = 28
+    	}
+    	change_resource_potential = {
+        	type = building_fishing_wharf
+        	amount = 24
+    	}
+    	add_resource_potential = building_sulfur_mine
+    	change_resource_potential = {
+        	type = building_sulfur_mine
+        	amount = 4
+    	}
+	}
+	s:STATE_EASTERN_NEW_GUINEA = {	# Also adds undiscovered resources in map_data
+		add_resource_potential = building_tobacco_plantation
+		add_resource_potential = building_tea_plantation
+    	change_resource_potential = {
+        	type = building_logging_camp
+        	amount = 68
+    	}
+    	change_resource_potential = {
+        	type = building_fishing_wharf
+        	amount = 36
+    	}
+    	change_resource_potential = {
+        	type = building_whaling_station
+        	amount = 22
+    	}
+	}
+	s:STATE_MOLUCCAS = {	# Also adds undiscovered resources in map_data
+		add_resource_potential = building_sugar_plantation
+    	change_resource_potential = {
+        	type = building_logging_camp
+        	amount = 8
+    	}
+    	change_resource_potential = {
+        	type = building_fishing_wharf
+        	amount = 22
+    	}
+    	add_resource_potential = building_sulfur_mine
+    	change_resource_potential = {
+        	type = building_sulfur_mine
+        	amount = 8
+    	}
+	}
+	s:STATE_WESTERN_NEW_GUINEA = {	# Also adds undiscovered resources in map_data
+		add_resource_potential = building_cotton_plantation
+		add_resource_potential = building_tobacco_plantation
+		add_resource_potential = building_tea_plantation
+    	change_resource_potential = {
+        	type = building_logging_camp
+        	amount = 40
+    	}
+    	change_resource_potential = {
+        	type = building_fishing_wharf
+        	amount = 38
+    	}
+    	change_resource_potential = {
+        	type = building_whaling_station
+        	amount = 2
+    	}
+	}
+}

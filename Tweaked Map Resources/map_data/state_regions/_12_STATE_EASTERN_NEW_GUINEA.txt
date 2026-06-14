@@ -1,0 +1,52 @@
+﻿STATE_EASTERN_NEW_GUINEA = {
+    id = 550
+    subsistence_building = "building_subsistence_farm"
+    provinces = { "x071EFB" "x09E796" "x0BF948" "x104090" "x10C090" "x16403B" "x19E120" "x1E1C1E" "x203BC2" "x26A798" "x318B7B" "x34E353" "x36076B" "x37312C" "x3779A1" "x37A04B" "x3BBE48" "x3F9623" "x44454B" "x459277" "x45CE87" "x46CE7D" "x47A347" "x51173D" "x5475FF" "x565E21" "x56DA8C" "x5779B1" "x5CB0C9" "x5F7475" "x5FAB3F" "x61F645" "x64ED4C" "x686A28" "x6B52DF" "x6CE5CC" "x719040" "x75B70D" "x7CF0A5" "x7D3A30" "x80BAE9" "x84D755" "x854391" "x8641E9" "x8911A4" "x8AEFF9" "x8C0F91" "x8FFC12" "x904090" "x9ACD2A" "x9D11EA" "x9DCD67" "xA054CD" "xA28ED1" "xA3C163" "xA61876" "xA6DD0C" "xA95FFF" "xA9E11D" "xAABA77" "xAB408F" "xB3C1C3" "xB6A316" "xB6A59D" "xB9E7DF" "xC02D48" "xC0F58B" "xC1716D" "xC9167B" "xCD3B1A" "xCD473D" "xD2799B" "xD97577" "xDDB6D3" "xDE6B8C" "xDF122B" "xE341AE" "xE3D5C3" "xE8CE3B" "xEECD03" "xF5408C" "xF69700" "xF87B6B" "xF8C709" "xF8FBAC" }
+    traits = { "state_trait_severe_malaria" }
+    city = "xA95FFF"
+    port = "x686A28"
+    farm = "xAB408F"
+    mine = "x26A798"
+    wood = "x9ACD2A"
+    arable_land = 154	#TMR from ERWR (differential reduction) #30
+    arable_resources = { "building_rice_farm" "building_livestock_ranch" "building_coffee_plantation" "building_dye_plantation" "building_sugar_plantation" "building_banana_plantation" }
+    capped_resources = {
+        # building_iron_mine = 24
+        # building_sulfur_mine = 32
+        building_logging_camp = 16
+        building_fishing_wharf = 10
+        building_whaling_station = 2
+    }
+    resource = {								#TMR
+        type = "building_coal_mine"
+        undiscovered_amount = 8
+    }
+    resource = {								#TMR
+        type = "building_iron_mine"
+        discovered_amount = 5
+        undiscovered_amount = 13
+    }
+    resource = {								#TMR
+        type = "building_lead_mine"
+        undiscovered_amount = 14
+    }
+    resource = {								#TMR
+        type = "building_sulfur_mine"
+        discovered_amount = 7
+        undiscovered_amount = 25
+    }
+    resource = {								#TMR
+        type = "building_gold_field"
+        depleted_type = "building_gold_mine"
+        undiscovered_amount = 15
+    }
+    resource = {
+        type = "building_rubber_plantation"
+        undiscovered_amount = 64				#TMR from ERWR #12
+    }
+    resource = {
+        type = "building_oil_rig"
+        undiscovered_amount = 24 # 15			# TMR
+    }
+    naval_exit_id = 3129
+}

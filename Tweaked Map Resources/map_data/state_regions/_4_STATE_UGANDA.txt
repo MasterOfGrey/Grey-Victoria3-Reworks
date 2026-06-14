@@ -1,0 +1,25 @@
+﻿STATE_UGANDA = {
+    id = 235
+    subsistence_building = "building_subsistence_farm"
+    provinces = { "x00B0A9" "x05C5F1" "x0DF37F" "x17F11F" "x19F762" "x1D33CE" "x1D4C32" "x1DDAD8" "x206060" "x228B9A" "x357FAC" "x40D607" "x42EDCA" "x51AC81" "x542630" "x55FC3E" "x5C340A" "x6530A0" "x7183C4" "x7183F2" "x721418" "x7796E6" "x7ACC72" "x7CE297" "x9130A0" "xA09C30" "xA4C4FC" "xA9859E" "xC2D6DE" "xCD8D63" "xCE3CD0" "xD13A93" "xD13D78" "xE0A010" "xE1A791" "xE3B2A2" "xEA2372" "xEE81EC" "xF9C916" "xFB4215" }
+    prime_land = { x6530A0 x7183F2 x7183C4 xD13A93 xEA2372 xA9859E x42EDCA xFB4215 x55FC3E x17F11F xA09C30 x5C340A }
+    traits = { "state_trait_malaria" "state_trait_lake_victoria" }
+    city = "xA9859E"
+    farm = "x7183C4"
+    mine = "x7CE297"
+    wood = "xA09C30"
+    arable_land = 150	#TMR from ERWR (split difference) #100
+    arable_resources = { "building_millet_farm" "building_livestock_ranch" "building_coffee_plantation" "building_cotton_plantation" "building_dye_plantation" "building_tea_plantation" "building_tobacco_plantation" "building_sugar_plantation" "building_banana_plantation" "building_vineyard" }
+    capped_resources = {
+        building_logging_camp = 20
+    }
+    resource = {
+        type = "building_gold_field"			#TMR
+        depleted_type = "building_gold_mine"
+        undiscovered_amount = 4
+    }
+    resource = {
+        type = "building_rubber_plantation"
+        undiscovered_amount = 82				#TMR from ERWR (split difference) #28
+    }
+}

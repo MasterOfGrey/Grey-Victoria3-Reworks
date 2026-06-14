@@ -1,0 +1,25 @@
+﻿STATE_AMHARA = {
+    id = 229
+    subsistence_building = "building_subsistence_farm"
+    provinces = { "x0739DC" "x0FB7D1" "x10D446" "x19FA60" "x1D098B" "x1EA108" "x1F0F14" "x29C3A2" "x2AC215" "x2D40BF" "x2D8473" "x345DC3" "x3503EC" "x366C12" "x36A83C" "x378A0D" "x40BCE0" "x44DF06" "x45C93A" "x462918" "x4681AC" "x47D35E" "x507381" "x573362" "x5A8BBB" "x5D4889" "x5F19EC" "x62BE5B" "x67C506" "x69B4E9" "x6AEA5C" "x71415B" "x7A6C4F" "x7F617B" "x7F7614" "x7F9732" "x831523" "x848437" "x85562A" "x870056" "x8D694F" "x910805" "x92412C" "x963349" "x98BB15" "x9EFEE0" "xA6F2C6" "xAA7799" "xB0D911" "xB332F3" "xB789A5" "xB88334" "xBFDFCF" "xC060D0" "xC4CB68" "xCF36EB" "xD031CA" "xD27454" "xD769E6" "xD7A4AF" "xDFF064" "xE071B6" "xE57DDA" "xE77D4B" "xE8D092" "xEE8BD1" "xF53F6D" "xFE53F8" }
+    prime_land = { "xC4CB68" }
+    traits = { "state_trait_malaria" }
+    city = "xB332F3"
+    farm = "x10D446"
+    mine = "x5D4889"
+    wood = "xFE53F8"
+    arable_land = 182	#TMR from ERWR #140
+    arable_resources = { "building_millet_farm" "building_livestock_ranch" "building_coffee_plantation" "building_cotton_plantation" "building_dye_plantation" "building_tea_plantation" "building_tobacco_plantation" "building_sugar_plantation" }
+    capped_resources = {
+        building_logging_camp = 20
+    }
+    resource = {								#TMR from ERWR
+        type = "building_iron_mine"
+        undiscovered_amount = 32
+        discovered_amount = 6
+    }
+    resource = {
+        type = "building_rubber_plantation"
+        undiscovered_amount = 59				#TMR from ERWR #26
+    }
+}

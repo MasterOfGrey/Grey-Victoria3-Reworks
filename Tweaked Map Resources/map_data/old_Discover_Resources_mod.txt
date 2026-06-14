@@ -1,0 +1,146 @@
+# Investigate this from the old DR mod:
+STATE_SVEALAND logging=30 undiscovered_iron=70 undiscovered_lead=30
+STATE_NORRLAND logging=50
+STATE_WESTERN_NORWAY undiscovered_sulfur=35
+STATE_NORTHERN_NORWAY logging=18
+STATE_EASTERN_NORWAY undiscovered_iron=40
+STATE_ULSTER logging=18
+STATE_LEINSTER logging=16
+STATE_CONNAUGHT logging=20
+STATE_MUNSTER logging=12
+STATE_ALSACE_LORRAINE undiscovered_iron=100 undiscovered_coal=80
+STATE_CHAMPAGNE logging=24
+STATE_BURGUNDY logging=19
+STATE_GUYENNE logging=20
+STATE_AUVERGNE_LIMOUSIN logging=15
+STATE_BAVARIA logging=35
+STATE_WURTTEMBERG logging=24
+STATE_MECKLENBURG logging=14
+STATE_GELRE logging=16
+STATE_BOHEMIA logging=22
+STATE_MORAVIA logging=18
+STATE_OSTROBOTHNIA logging=44
+STATE_SOUTHERN_FINLAND logging=24
+STATE_WEST_KARELIA logging=16
+STATE_ESTONIA logging=20
+STATE_LITHUANIA logging=21
+STATE_LATVIA logging=25
+STATE_POSEN logging=14
+STATE_GREATER_POLAND logging=17
+STATE_MAZOVIA logging=12
+STATE_BULGARIA logging=25
+STATE_LUHANSK logging=20 undiscovered_iron=80
+STATE_KIEV logging=16
+STATE_LOWER_EGYPT undiscovered_sulfur=55
+STATE_GHANA logging=30
+STATE_IVORY_COAST logging=14
+STATE_WINDWARD_COAST logging=27
+STATE_GUINEA logging=23
+STATE_LIBERIA logging=21
+STATE_SIERRA_LEONE logging=15
+STATE_BENIN logging=20
+STATE_NIGER_DELTA logging=22
+STATE_NORTH_CAMEROON logging=26
+STATE_SOUTH_CAMEROON logging=24
+STATE_GABON logging=24
+STATE_BAS_CONGO logging=30
+STATE_EQUATEUR logging=40
+STATE_KASAI logging=32
+STATE_CONGO_ORIENTALE logging=42
+STATE_UGANDA logging=30
+STATE_TANGANYIKA logging=31
+STATE_SOUTH_MADAGASCAR logging=26
+STATE_NORTH_MADAGASCAR logging=27
+STATE_AMHARA undiscovered_iron=50
+STATE_GONDER undiscovered_lead=32 
+STATE_OROMIA undiscovered_sulfur=25
+STATE_ASSAM logging=38
+STATE_KASHMIR undiscovered_lead=52 undiscovered_iron=20 undiscovered_coal=90
+STATE_DELHI logging=36 undiscovered_iron=80
+STATE_PUNJAB undiscovered_iron=20
+STATE_CEYLON logging=30
+STATE_BOMBAY logging=32
+STATE_CIRCARS logging=24 undiscovered_iron=60
+STATE_HYDERABAD logging=18
+STATE_CENTRAL_INDIA undiscovered_iron=23
+STATE_TRAVANCORE logging=28
+STATE_HIMALAYAS logging=14 undiscovered_iron=53 undiscovered_coal=30 undiscovered_lead=11
+STATE_KACHIN logging=30
+STATE_BURMA logging=30
+STATE_PEGU logging=25
+STATE_MEKONG logging=40
+STATE_ANNAM logging=31
+STATE_TONKIN logging=22
+STATE_BANGKOK logging=29
+STATE_ACEH undiscovered_sulfur=70
+STATE_NORTH_BORNEO logging=30
+STATE_SOUTH_BORNEO logging=27
+STATE_EAST_BORNEO logging=29
+STATE_WEST_BORNEO logging=25
+STATE_WESTERN_AUSTRALIA undiscovered_iron=100 undiscovered_coal=100
+STATE_SOUTH_AUSTRALIA undiscovered_lead=90 undiscovered_sulfur=70
+STATE_QUEENSLAND undiscovered_iron=70 undiscovered_lead=90 
+STATE_NORTH_ISLAND logging=19
+STATE_SOUTH_ISLAND logging=25 undiscovered_iron=30
+STATE_WESTERN_NEW_GUINEA logging=35
+STATE_EASTERN_NEW_GUINEA logging=32
+STATE_YUNNAN logging=33 undiscovered_coal=80
+STATE_GUANGXI logging=24
+STATE_GUANGDONG logging=15
+STATE_FUJIAN logging=27 undiscovered_iron=72
+STATE_FORMOSA logging=30
+STATE_SICHUAN logging=32
+STATE_OUTER_MANCHURIA logging=42
+STATE_PYONGYANG logging=24
+STATE_SARIWON logging=15
+STATE_SEOUL logging=20
+STATE_HOKKAIDO logging=32
+STATE_TOHOKU logging=25
+STATE_KANSAI logging=21
+STATE_CHUBU logging=22
+STATE_KANTO logging=13
+STATE_SHAOZHOU logging=27
+STATE_BRITISH_COLUMBIA logging=22
+STATE_NORTHWEST_TERRITORIES logging=24
+STATE_NUNAVUT logging=13
+STATE_ALBERTA logging=30
+STATE_SASKATCHEWAN logging=21
+STATE_MANITOBA logging=28
+STATE_ONTARIO logging=42
+STATE_QUEBEC logging=44
+STATE_ALABAMA logging=25
+STATE_TENNESSEE logging=30
+STATE_MISSISSIPPI logging=20
+STATE_KENTUCKY logging=33
+STATE_VIRGINIA logging=21
+STATE_YUCATAN logging=44
+STATE_CHIAPAS logging=21
+STATE_VERACRUZ logging=13
+STATE_NORTH_CAROLINA logging=27
+STATE_SOUTH_CAROLINA logging=16
+STATE_GEORGIA logging=24
+STATE_GUATEMALA logging=21
+STATE_HONDURAS logging=23
+STATE_NICARAGUA logging=25
+STATE_PANAMA logging=14
+STATE_COSTA_RICA logging=13
+STATE_CUBA logging=22
+STATE_SANTO_DOMINGO logging=17
+STATE_GUAVIARE logging=50
+STATE_BOLIVAR logging=34
+STATE_AMAZONAS logging=100
+STATE_PARA logging=66
+STATE_MATO_GROSSO logging=81
+STATE_ACRE logging=22
+STATE_PASTAZA logging=35
+STATE_LA_PAZ logging=32
+STATE_MARANHAO logging=21
+STATE_SANTA_CRUZ logging=27
+STATE_GUAYANA logging=38
+STATE_URAL logging=40
+STATE_TOBOLSK logging=24
+STATE_OB logging=20
+STATE_UPPER_YENISEYSK logging=77
+STATE_TOMSK logging=29
+STATE_IRKUTSK logging=36
+STATE_YAKUTSK logging=46

@@ -1,0 +1,34 @@
+﻿STATE_MOLUCCAS = {
+    id = 549
+    subsistence_building = "building_subsistence_fishing_village"
+    provinces = { "x079110" "x0D5E42" "x22A870" "x3CEE2E" "x51EA06" "x7A7A6E" "x91B395" "xAF6607" "xB346EB" "xC1DDAE" "xD02FE9" "xD3A69B" "xD986F1" "xF0CE19" "xF88172" "xF94D86" }
+    city = "xAF6607"
+    port = "xB346EB"
+    farm = "xD3A69B"
+    mine = "xB346EB"
+    wood = "xD986F1"
+    arable_land = 36	#TMR from ERWR (split difference) #20
+    arable_resources = { "building_rice_farm" "building_livestock_ranch" "building_coffee_plantation" "building_dye_plantation" "building_tobacco_plantation" "building_banana_plantation" }	# TMR - tea removed
+    capped_resources = {
+        building_logging_camp = 4
+        building_fishing_wharf = 6
+    }
+    resource = {								#TMR
+        type = "building_lead_mine"
+        undiscovered_amount = 4
+    }
+    resource = {								#TMR
+        type = "building_gold_field"
+        depleted_type = "building_gold_mine"
+        undiscovered_amount = 1
+    }
+    resource = {
+        type = "building_rubber_plantation"
+        undiscovered_amount = 40				#TMR from ERWR #4
+    }
+    resource = {								#TMR
+        type = "building_oil_rig"
+        undiscovered_amount = 24
+    }
+    naval_exit_id = 3125
+}

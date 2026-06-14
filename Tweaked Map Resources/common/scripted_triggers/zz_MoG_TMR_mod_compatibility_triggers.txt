@@ -1,0 +1,7 @@
+﻿##################################################
+#   GREY - MOD COMPATIBILITY SCRIPTED TRIGGERS   #
+##################################################
+
+REPLACE_OR_CREATE:Grey_TMR_is_active = { # Tweaked Map Resources
+	always = yes
+}

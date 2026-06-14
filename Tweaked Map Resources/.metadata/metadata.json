@@ -1,0 +1,19 @@
+{
+  "name" : "Grey's Tweaked Map Resources",
+  "id" : "",
+  "version" : "",
+  "supported_game_version" : "",
+  "short_description" : "",
+  "tags" : [
+        "Balance",
+        "Fixes",
+        "Gameplay",
+        "Historical",
+        "Map",
+        "1.13"
+    ],
+  "relationships" : [],
+  "game_custom_data" : {
+    "multiplayer_synchronized" : true
+  }
+}

@@ -1,0 +1,30 @@
+﻿STATE_EAST_ANGOLA = {
+    id = 249
+    subsistence_building = "building_subsistence_farm"
+    provinces = { "x026C7C" "x038498" "x03B050" "x0BB61B" "x13337D" "x13D88A" "x14060C" "x162508" "x18F2DB" "x19017C" "x19E0EC" "x1BA1E9" "x1BFAF4" "x1E660F" "x2156A2" "x223B92" "x228781" "x240C96" "x26A913" "x26E40F" "x2A05BC" "x2C4958" "x2DA6B2" "x300F17" "x317712" "x328C62" "x32C7A1" "x35E7D8" "x38EF9A" "x394358" "x39697F" "x397ECF" "x3B96EC" "x3CC799" "x3EB02A" "x3FAA40" "x42066F" "x44D11A" "x4563FE" "x46904B" "x46D213" "x4751C5" "x4B8691" "x4D5307" "x5196FE" "x52FB3B" "x566AB9" "x5C5E88" "x5EAE5F" "x5EC8D3" "x5EF091" "x60145A" "x60BAFF" "x610700" "x61B712" "x683088" "x6DA2F8" "x6EF4BD" "x71242E" "x71F000" "x72404E" "x72E7AB" "x7482EB" "x75CE39" "x75CF43" "x762355" "x77427E" "x7C0874" "x7C5ED1" "x7E292B" "x7E5C6B" "x7F002D" "x7F4B2D" "x83904E" "x8502C4" "x864664" "x88222F" "x8BD90C" "x8CD684" "x8E5C2C" "x8FD34F" "x9127EF" "x91E34C" "x97A08F" "x987C51" "x9A6962" "x9A89E2" "x9B54A4" "x9BC612" "x9D299E" "x9E1832" "x9FF064" "xA4743F" "xA56219" "xA58230" "xA83686" "xAA8201" "xADB506" "xAE2519" "xAEDF8D" "xB3A1E9" "xB44BFF" "xB5F875" "xB92820" "xB9B44D" "xBA7076" "xBC2358" "xBC2F51" "xBD3AD2" "xBF7C79" "xBFE0EF" "xC0DF70" "xC16219" "xC5BC31" "xCB202F" "xCD7DCB" "xCE2E7B" "xD0957F" "xD13871" "xD442BF" "xD45955" "xD4E9E2" "xD7D12D" "xD8809C" "xD8ED0A" "xD964CA" "xD9E162" "xDA9B9B" "xDACDF2" "xE63D84" "xE96E66" "xEC44B5" "xECAEC9" "xEF87AC" "xEFBB62" "xF08800" "xF0B5C8" "xF0D700" "xF186BA" "xF27BBF" "xF62A21" "xF9B5FA" "xFACD1E" "xFE25B5" "xFE2EC3" "xFF9F41" }
+    traits = { "state_trait_severe_malaria" "state_trait_zambezi_river" }
+    city = "xB92820"
+    farm = "xCB202F"
+    mine = "xE96E66"
+    wood = "x7F002D"
+    arable_land = 150	#TMR from ERWR #60
+    arable_resources = { "building_millet_farm" "building_livestock_ranch" "building_coffee_plantation" "building_cotton_plantation" "building_tobacco_plantation" }
+    capped_resources = {
+        building_coal_mine = 80
+        building_lead_mine = 27
+        building_logging_camp = 11
+    }
+    resource = {								#TMR
+        type = "building_iron_mine"
+        undiscovered_amount = 4
+    }
+    resource = {								#TMR
+        type = "building_gold_field"
+        depleted_type = "building_gold_mine"
+        undiscovered_amount = 1
+    }
+    resource = {
+        type = "building_rubber_plantation"
+        undiscovered_amount = 36				#TMR from ERWR #16
+    }
+}

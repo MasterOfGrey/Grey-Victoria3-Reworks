@@ -1,0 +1,3 @@
+﻿TRY_INJECT:bg_mining = {
+	discoverable_resource = yes
+}

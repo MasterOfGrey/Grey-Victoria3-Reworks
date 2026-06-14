@@ -1,0 +1,25 @@
+﻿STATE_BOUGAINVILLE = {
+    id = 1005
+    subsistence_building = "building_subsistence_fishing_village"
+    provinces = { "x308254" "x97FBC3" "x9BC5AD" }
+    impassable = { "x9BC5AD" }
+    traits = { "state_trait_severe_malaria" }
+    city = "x97FBC3"
+    port = "x97FBC3"
+    farm = "x9BC5AD"
+    mine = "x9BC5AD"
+    wood = "x9BC5AD"
+    arable_land = 7	#TMR from ERWR #5
+    arable_resources = { "building_rice_farm" "building_coffee_plantation" "building_banana_plantation" }
+    capped_resources = {
+        building_logging_camp = 2
+        building_whaling_station = 2
+        building_fishing_wharf = 2
+    }
+    resource = {								#TMR
+        type = "building_gold_field"
+        depleted_type = "building_gold_mine"
+        undiscovered_amount = 4
+    }
+    naval_exit_id = 3129
+}

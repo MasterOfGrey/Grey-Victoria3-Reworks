@@ -1,0 +1,25 @@
+﻿STATE_EQUATORIA = {
+    id = 236
+    subsistence_building = "building_subsistence_farm"
+    provinces = { "x01C6DC" "x01E0D0" "x025267" "x052C31" "x06F011" "x07EC0A" "x0B3FB6" "x117111" "x13B0BB" "x169409" "x178C0B" "x19094A" "x191199" "x1D57FB" "x1DA390" "x1EDEEF" "x26B47D" "x281B17" "x287FA3" "x2B99DD" "x2F3E88" "x3173A5" "x3864B4" "x387C9A" "x3A7DC2" "x3EBCE9" "x405DD1" "x409D75" "x40A050" "x42AAF1" "x458A9A" "x49DC0E" "x4B02C7" "x4D69FC" "x4FFD57" "x512903" "x5556B9" "x5852E5" "x597CAA" "x5C007E" "x6512D9" "x65AAF8" "x6808DA" "x6875E7" "x68CEAC" "x6BC8A3" "x70B4C9" "x749BFD" "x76BED4" "x77E0D1" "x7E841A" "x806050" "x81EF4E" "x836E96" "x87F523" "x87F764" "x8D0D42" "x90C4B5" "x93FD41" "x95DC14" "x97BCA5" "x992042" "x997E00" "xA02111" "xA2D4A1" "xA3790C" "xA414BD" "xA479C2" "xAC2570" "xB0F9B2" "xB1C8B3" "xB39074" "xB5B4CA" "xBADB79" "xBE1B0B" "xBFB2D2" "xC10150" "xC3E885" "xC6CE6C" "xC890D8" "xC8E467" "xCAF1C3" "xCC55B4" "xD13168" "xD4BDA3" "xD57816" "xDC6D9E" "xE14193" "xE310D0" "xE39A37" "xE4BC4E" "xE53199" "xE63DDF" "xE8D379" "xE9B9DA" "xEA9F9F" "xEB0C25" "xECC166" "xF2A9C3" "xF39844" "xF73FA3" "xF9F832" "xFCECBC" "xFD9BB6" "xFF0E29" }
+    traits = { "state_trait_malaria" "state_trait_white_nile" }
+    prime_land = { "xF9F832" }
+    city = "x19094A"
+    farm = "xAC2570"
+    mine = "x6808DA"
+    wood = "x512903"
+    arable_land = 120	#TMR from ERWR #60
+    arable_resources = { "building_millet_farm" "building_livestock_ranch" "building_coffee_plantation" "building_cotton_plantation" "building_tobacco_plantation" "building_sugar_plantation" }
+    capped_resources = {
+        building_logging_camp = 13
+    }
+    resource = {
+        type = "building_gold_field"			#TMR
+        depleted_type = "building_gold_mine"
+        undiscovered_amount = 4
+    }
+    resource = {
+        type = "building_rubber_plantation"
+        undiscovered_amount = 41				#TMR from ERWR #18
+    }
+}

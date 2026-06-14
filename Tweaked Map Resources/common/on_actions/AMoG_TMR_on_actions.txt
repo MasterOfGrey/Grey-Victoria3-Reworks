@@ -1,0 +1,11 @@
+﻿on_game_started = {
+    on_actions = {
+        mog_tmr_edit_resources_action
+    }
+}
+
+mog_tmr_edit_resources_action = {
+	effect = {
+		mog_tmr_edit_resource_deposits_effect = yes
+	}
+}

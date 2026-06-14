@@ -1,0 +1,41 @@
+﻿STATE_WESTERN_NEW_GUINEA = {
+    id = 548
+    subsistence_building = "building_subsistence_farm"
+    provinces = { "x059DEC" "x0A9EBC" "x0DC0D2" "x12A1F1" "x1650EE" "x17B500" "x185D9A" "x1C9F62" "x1EFBC7" "x300043" "x30EFC8" "x35E1AE" "x39DD3B" "x3E2E8C" "x3ECEED" "x3F6260" "x4013C3" "x42EB5E" "x43C265" "x459264" "x4BE0B0" "x4FDEFE" "x4FF4F9" "x51BE37" "x51FF7F" "x524F67" "x54B094" "x5541DA" "x5A8ABF" "x5C88B7" "x66C85A" "x706C6E" "x817083" "x822774" "x83923F" "x8611C3" "x8A6BB0" "x8EFC0A" "x918FAF" "x95939C" "x9769DB" "x97A569" "x9B4105" "x9CD217" "x9D6313" "x9E801B" "xA2083C" "xA5F7BC" "xA8E93D" "xAFF001" "xB324A4" "xB40E08" "xB41206" "xB4957C" "xB4F5FA" "xB4FAF7" "xBA1AF0" "xBAE381" "xC0D7B0" "xC153E3" "xC28486" "xC6416E" "xC7965B" "xC8615D" "xC8A7EB" "xCC9AB1" "xCD7250" "xD34DF4" "xD3B54D" "xD729BB" "xDBA9DB" "xDF8B88" "xE8222C" "xE87A71" "xFC62DC" }
+    traits = { "state_trait_severe_malaria" }
+    city = "x0DC0D2"
+    port = "x39DD3B"
+    farm = "x1C9F62"
+    mine = "xAFF001"
+    wood = "xC6416E"
+    arable_land = 172	#TMR from ERWR #40
+    arable_resources = { "building_rice_farm" "building_livestock_ranch" "building_coffee_plantation" "building_dye_plantation" "building_sugar_plantation" "building_banana_plantation" }
+    capped_resources = {
+        # building_iron_mine = 18
+        building_logging_camp = 20
+        building_fishing_wharf = 9
+        building_whaling_station = 2
+    }
+    resource = {								#TMR
+        type = "building_coal_mine"
+        undiscovered_amount = 8
+    }
+    resource = {								#TMR
+        type = "building_iron_mine"
+        discovered_amount = 5
+        undiscovered_amount = 13
+    }
+    resource = {								#TMR
+        type = "building_lead_mine"
+        undiscovered_amount = 9
+    }
+    resource = {
+        type = "building_rubber_plantation"
+        undiscovered_amount = 78				#TMR from ERWR #8
+    }
+    resource = {
+        type = "building_oil_rig"
+        undiscovered_amount = 30 # 15			# TMR
+    }
+    naval_exit_id = 3125
+}
