@@ -63,6 +63,20 @@ refresh_strata_expected_sol_modifier = {
 		limit = { has_modifier = mog_$strata$_strata_expected_sol_from_average }
 		remove_modifier = mog_$strata$_strata_expected_sol_from_average
 	}
+
+	# Because the modifier isn't removed until next tick, we need to manually adjust for it in the calculation
+	save_temporary_scope_value_as = {
+		name = last_adjustment
+		value = {
+			if = { 
+				limit = { exists = { var:mog_$strata$_strata_expected_sol_from_average } }
+				value = var:mog_$strata$_strata_expected_sol_from_average
+			}
+			else { 
+				value = 0
+			}
+		}
+	}
 	
 	save_temporary_scope_value_as = {
 		name = scale
@@ -83,6 +97,7 @@ refresh_strata_expected_sol_modifier = {
 		name = base_expectation
 		value = {
 			value = owner.modifier:state_$strata$_strata_expected_sol_add
+			subtract = scope:last_adjustment
 			add = scope:average_expected_sol_from_literacy
 		}
 	}
@@ -131,6 +146,12 @@ refresh_strata_expected_sol_modifier = {
 			#  - a low literacy pop surronded by highly litereate pops will have lowered expectations
 			subtract = scope:base_expectation
 		}
+	}
+
+	# Save the adjustment in a variable so we can subtract it out next refresh
+	set_variable = {
+		name = mog_$strata$_strata_expected_sol_from_average
+		value = local_var:expectation_modifier
 	}
 	
 	add_modifier = {
