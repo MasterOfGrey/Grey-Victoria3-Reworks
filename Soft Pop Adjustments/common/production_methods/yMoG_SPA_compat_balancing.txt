@@ -2606,7 +2606,7 @@ TRY_REPLACE:pm_default_building_sacramento_port = {
 		workforce_scaled = {
 			country_prestige_add = 100  # Tăng uy tín quốc gia do vai trò quan trọng của Cảng Sacramento
 			state_trade_advantage_mult = 0.1  # Tăng thông lượng giao thông đường thủy cho các tuyến đường thương mại
-			country_convoys_capacity_mult = 0.1  # Tăng khả năng vận chuyển bằng tàu						 
+			# country_convoys_capacity_mult = 0.1  # Tăng khả năng vận chuyển bằng tàu						 
 		}
 	}
 

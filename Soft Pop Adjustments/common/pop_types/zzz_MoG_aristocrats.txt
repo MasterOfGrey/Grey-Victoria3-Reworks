@@ -30,45 +30,23 @@
 	}
 	
 	qualifications = {
-		# baseline: ( wealth - 10 ) / 10 + literacy, norm 1.5 for Wealth 20 and Literacy 50%
-		add = {
-			value = wealth
-			subtract = 14
-			divide = 20
+		if = {
+			limit = {
+				is_peasant_under_serfdom = no
+				wealth >= 15
+			}
+			# baseline: ( wealth - 10 ) / 10 + literacy, norm 1.5 for Wealth 20 and Literacy 50%
 			add = {
 				value = wealth
-				subtract = 20
-				divide = 5
-				min = 0
-			}
-			desc = "QUALIFICATIONS_WEALTH_FACTOR"
-		}
-		
-		# Limiting factors
-		if = {
-			limit = {
-				wealth < 14
-			}
-			multiply = {
-				value = 5
-				desc = "QUALIFICATIONS_INSUFFICIENT_WEALTH_DECAY"
-			}
-		}
-		if = {
-			limit = {
-				is_peasant_under_serfdom = yes
-			}
-			max = 0
-			subtract = {
-				value = 2
-				desc = "QUALIFICATIONS_PEASANTS_UNDER_SERFDOM"
-			}
-		}
-		
-		# Growth factors
-		else_if = {
-			limit = {
-				wealth >= 14
+				subtract = 14
+				divide = 20
+				add = {
+					value = wealth
+					subtract = 20
+					divide = 5
+					min = 0
+				}
+				desc = "QUALIFICATIONS_WEALTH_FACTOR"
 			}
 			multiply = {
 				value = 0.5
@@ -78,7 +56,7 @@
 				}
 				desc = "QUALIFICATIONS_LITERACY_FACTOR"
 			}
-			
+
 			if = {
 				limit = {
 					is_pop_type = bureaucrats
@@ -102,20 +80,20 @@
 					OR = {
 						is_pop_type = farmers
 						is_pop_type = clergymen
-					}
+						}
 				}
 				multiply = {
 					value = 5
 					desc = "QUALIFICATIONS_FAVORED_TYPE"
 				}
 			}
-			
+
 			if = {
 				limit = {
 					state = {
 						state_cultural_acceptance = {
 							target = PREV.culture
-						   	value < acceptance_status_4 
+						   	value < acceptance_status_4
 					   	}
 					}
 				}
@@ -123,6 +101,21 @@
 					value = 0.1
 					desc = "QUALIFICATIONS_CULTURAL_DISCRIMINATION"
 				}
+			}
+		}
+		else_if = {
+			limit = {
+				is_peasant_under_serfdom = yes
+			}
+			value = {
+				desc = "QUALIFICATIONS_PEASANTS_UNDER_SERFDOM"
+				value = 0
+			}
+		}
+		else = {
+			value = {
+				desc = "QUALIFICATIONS_INSUFFICIENT_WEALTH_DECAY"
+				value = -2
 			}
 		}
 	}

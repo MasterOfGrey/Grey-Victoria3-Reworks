@@ -1,6 +1,7 @@
 ﻿on_game_started = {
     on_actions = {
         state_education_access_setup_action
+		mog_spa_hail_c_fixes_action
     }
 }
 
@@ -8,6 +9,23 @@ state_education_access_setup_action = {
 	effect = {
 		every_state = {
 			trigger_event = mog_literacy_event.2
+		}
+	}
+}
+
+mog_spa_hail_c_fixes_action = {
+	effect = {
+		if = {
+			limit = { is_usfp_active = yes }
+			c:usfp_INV ?= {
+				annex = c:usfp_DGB
+				annex = c:usfp_STU
+				effect_starting_pop_wealth_low = yes
+			}
+			c:usfp_DNZ ?= {
+				annex = c:usfp_SVY
+				effect_starting_pop_wealth_low = yes
+			}
 		}
 	}
 }

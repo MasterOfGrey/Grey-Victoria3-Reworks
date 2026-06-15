@@ -1,4 +1,9 @@
 ﻿# Ultra Historical Research & Education
-Ultra_RE_is_active_trigger = {
+REPLACE_OR_CREATE:Ultra_RE_is_active_trigger = {
 	always = no
-}	# Not disabled even though UHRE trigger doesn't use keyword (yet) - missing trigger breaks things, UHRE just gotta get its act together
+}
+
+# Hail Columbia
+REPLACE_OR_CREATE:is_usfp_active = {
+	always = no
+}
