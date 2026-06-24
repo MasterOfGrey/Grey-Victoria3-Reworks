@@ -21,3 +21,10 @@
  mog_spa_base_sol_from_literacy: "SPA: Alterações no modificador de base" #deepl:2619766621
  
  mog_spa_indigenous_subsistance: "SPA: Indígena [concept_sol] Ajuste" #deepl:60321970
+ 
+ # Game Rules
+ rule_mog_spa_sol_modification: "SPA: Modificação prevista do Sol" #deepl:1342799645
+ setting_spa_sol_modification_enabled: "Ativado" #deepl:3001197554
+ setting_spa_sol_modification_enabled_desc: "Os estados terão modificadores para o SOL esperado que contribuam para o equilíbrio pretendido." #deepl:3267495563
+ setting_spa_sol_modification_disabled: "Desativado" #deepl:1603118088
+ setting_spa_sol_modification_disabled_desc: "Nenhum modificador será aplicado (USE ISSO PARA RESOLVER PROBLEMAS DE COMPATIBILIDADE)" #deepl:813769365

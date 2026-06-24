@@ -21,3 +21,10 @@
  mog_spa_base_sol_from_literacy: "SPA: Zmiany w modyfikatorach bazowych" #deepl:2619766621
  
  mog_spa_indigenous_subsistance: "SPA: Indigenous [concept_sol] Adjustment" #deepl:60321970
+ 
+ # Game Rules
+ rule_mog_spa_sol_modification: "SPA: Przewidywana modyfikacja Sol" #deepl:1342799645
+ setting_spa_sol_modification_enabled: "Włączone" #deepl:3001197554
+ setting_spa_sol_modification_enabled_desc: "W poszczególnych stanach wprowadzone zostaną modyfikatory przewidywanego SOL, które będą wspierać zamierzoną równowagę." #deepl:3267495563
+ setting_spa_sol_modification_disabled: "Niepełnosprawni" #deepl:1603118088
+ setting_spa_sol_modification_disabled_desc: "Nie zostaną zastosowane żadne modyfikatory (WYKORZYSTAJ TĘ OPCJĘ DO ROZWIĄZYWANIA PROBLEMÓW Z KOMPATYBILNOŚCIĄ)" #deepl:813769365

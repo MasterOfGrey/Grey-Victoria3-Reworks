@@ -21,3 +21,10 @@
  mog_spa_base_sol_from_literacy: "SPA: Изменения базового модификатора" #deepl:2619766621
  
  mog_spa_indigenous_subsistance: "SPA: Коренное население [concept_sol] " #deepl:60321970
+ 
+ # Game Rules
+ rule_mog_spa_sol_modification: "SPA: Ожидаемое изменение Sol" #deepl:1342799645
+ setting_spa_sol_modification_enabled: "Включено" #deepl:3001197554
+ setting_spa_sol_modification_enabled_desc: "В штатах будут введены модификаторы ожидаемого SOL, обеспечивающие намеченный баланс." #deepl:3267495563
+ setting_spa_sol_modification_disabled: "С ограниченными возможностями" #deepl:1603118088
+ setting_spa_sol_modification_disabled_desc: "Модификаторы не будут применяться (ИСПОЛЬЗУЙТЕ ЭТО ДЛЯ УСТРАНЕНИЯ ПРОБЛЕМ СОВМЕСТИМОСТИ)" #deepl:813769365

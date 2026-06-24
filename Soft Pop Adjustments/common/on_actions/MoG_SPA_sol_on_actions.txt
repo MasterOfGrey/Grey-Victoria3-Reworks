@@ -10,7 +10,8 @@ on_game_started = {
 MoG_SPA_sol_setup_action = {
 	effect = {
 		every_state = {
-			refresh_expected_sol_modifier = yes
+			# refresh_expected_sol_modifier = yes
+			mog_spa_new_refresh_expected_sol_modifier = yes
 		}
 	}
 }
@@ -24,10 +25,24 @@ on_monthly_pulse_country = {		# on_monthly_pulse_state = {
 MoG_SPA_sol_monthly_pulse_state = {
 	effect = {
 		every_scope_state = {
-			refresh_expected_sol_modifier = yes
+			limit = { owner = PREV }
+			# refresh_expected_sol_modifier = yes
+			mog_spa_new_refresh_expected_sol_modifier = yes
 		}
 	}
 }
+
+#on_monthly_pulse_state = {
+#	on_actions = {
+#		MoG_SPA_sol_monthly_pulse_state_local
+#	}
+#}
+
+#MoG_SPA_sol_monthly_pulse_state_local = {
+#	effect = {
+#		refresh_expected_sol_modifier = yes
+#	}
+#}
 
 # Base Modifier Safety check-up:
 on_monthly_pulse_country = { on_actions = { MoG_SPA_sol_base_modifier_action } }

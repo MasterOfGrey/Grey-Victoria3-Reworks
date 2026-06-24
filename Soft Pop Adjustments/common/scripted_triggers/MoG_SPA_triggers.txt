@@ -1,0 +1,4 @@
+﻿# Game Rules
+spa_sol_modification_trigger = {
+	has_game_rule = spa_sol_modification_enabled
+}

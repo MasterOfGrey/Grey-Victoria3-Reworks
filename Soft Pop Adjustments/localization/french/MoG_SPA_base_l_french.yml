@@ -21,3 +21,10 @@
  mog_spa_base_sol_from_literacy: "SPA : Modifications du modificateur de base" #deepl:2619766621
  
  mog_spa_indigenous_subsistance: "SPA : Indigenous [concept_sol] Ajustement" #deepl:60321970
+ 
+ # Game Rules
+ rule_mog_spa_sol_modification: "SPA : Modification prévue du Sol" #deepl:1342799645
+ setting_spa_sol_modification_enabled: "Activé" #deepl:3001197554
+ setting_spa_sol_modification_enabled_desc: "Les États disposeront de facteurs de pondération pour la durée de conservation prévue (SOL) qui permettront d'assurer l'équilibre souhaité." #deepl:3267495563
+ setting_spa_sol_modification_disabled: "Personnes handicapées" #deepl:1603118088
+ setting_spa_sol_modification_disabled_desc: "Aucun modificateur ne sera appliqué (À UTILISER POUR RÉSOUDRE LES PROBLÈMES DE COMPATIBILITÉ)" #deepl:813769365

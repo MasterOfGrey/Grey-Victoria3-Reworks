@@ -1,173 +1,367 @@
 ﻿# Expects state scope
-refresh_expected_sol_modifier = {
-	#if = {
-	#	limit = { this = this.owner }	# This is only needed because apparently on_monthly_pulse_state is bugged and can report a country scope.
-		# I'm in country scope
-	#}								# Fixed this by calling it from every_scope_state in on_actions
-	#else = {
-		save_scope_as = sol_calc_target_state
-		
-		# any_scope_state = THIS
-		
-		set_variable = {
-			name = national_weight
-			value = {
-				value = 0.15
-				add = {
-					value = 0.45
-					multiply = literacy_rate		# This is Local literacy rate: national average matters
-				}										# more as local literacy gets better.
+mog_spa_new_refresh_expected_sol_modifier = {
+	random_scope_building = {
+		limit = {
+			OR = {
+				is_subsistence_building = yes
+				is_building_type = building_urban_center
 			}
 		}
-		
-		set_variable = {
-			name = weighted_average_sol
-			value = {
-				# Mostly state average
-				add = {
-					value = average_sol							# Local Average SOL
-					multiply = {								# Multiplied by local weight (1 - national_weight)
-						value = 1
-						subtract = var:national_weight
-					}
+		state = { save_temporary_scope_as = sol_calc_target_state }
+	}
+	scope:sol_calc_target_state = {
+		if = {
+			limit = { NOT = { exists = var:spa_state_locked } }
+			#### TEMP REPLACEMENT
+			if = {
+				limit = { has_modifier = mog_lower_strata_expected_sol_from_average }
+				remove_modifier = mog_lower_strata_expected_sol_from_average
+			}
+			if = {
+				limit = { has_modifier = mog_middle_strata_expected_sol_from_average }
+				remove_modifier = mog_middle_strata_expected_sol_from_average
+			}
+			if = {
+				limit = { has_modifier = mog_upper_strata_expected_sol_from_average }
+				remove_modifier = mog_upper_strata_expected_sol_from_average
+			}
+			
+			if = {
+				limit = { spa_sol_modification_trigger = yes }
+				add_modifier = {
+					name = mog_lower_strata_expected_sol_from_average
+					multiplier = 1
 				}
-				
-				# a little nation average
-				add = {
-					value = owner.average_sol					# National Average SOL
-					multiply = var:national_weight		# Multiplied by national weight (national_weight)
+				add_modifier = {
+					name = mog_middle_strata_expected_sol_from_average
+					multiplier = 6
+				}
+				add_modifier = {
+					name = mog_upper_strata_expected_sol_from_average
+					multiplier = 11
 				}
 			}
-		}
-		
-		set_variable = {
-			name = average_expected_sol_from_literacy
-			value = {
-				value = modifier:state_expected_sol_from_literacy	# Local expectation (local + inherited from 
-				multiply = literacy_rate							# tech etc.) * local literacy rate = local avg
-			}
-		}
-		
-		# scale           - How much of average SOL does this strata expect
-		# literacy_factor - How much impact does literacy have. Pulls expectations upwards towards the average
-		scope:sol_calc_target_state = {
-			refresh_strata_expected_sol_modifier = { strata = lower  scale = -10 } #  literacy_factor = 0.5 }
-		}
-		scope:sol_calc_target_state = {
-			refresh_strata_expected_sol_modifier = { strata = middle scale =   0 } #  literacy_factor = 0.1   }
-		}
-		scope:sol_calc_target_state = {
-			refresh_strata_expected_sol_modifier = { strata = upper  scale =  11.5 } # literacy_factor = 0.01   }
-		}
-	#}
-}
-
-refresh_strata_expected_sol_modifier = {
-	if = {
-		limit = { has_modifier = mog_$strata$_strata_expected_sol_from_average }
-		remove_modifier = mog_$strata$_strata_expected_sol_from_average
-	}
-	
-	set_variable = {
-		name = pre_calc_sol_mod_val
-		value = modifier:state_$strata$_strata_expected_sol_add
-	}
-	
-	# Because the modifier isn't processed as being removed until next tick, we need to manually adjust for it in the calculation
-	set_variable = {
-		name = last_adjustment
-		value = scope:sol_calc_target_state.var:mog_$strata$_strata_expected_sol_from_average
-		#{
-		#	if = {
-		#		limit = { var:mog_$strata$_strata_expected_sol_from_average > 0 }
-		#		value = var:mog_$strata$_strata_expected_sol_from_average				# Is set at the end
-		#	}
-		#	else = {
-		#		value = 0
-		#	}
-		# }
-	}
-	
-	set_variable = {
-		name = sub_scale
-		value = {
-			value = $scale$
-			# Pull expectations towards average sol based on literacy
-			multiply = {
+			
+			set_variable = {
+				name = spa_state_locked
 				value = 1
-				subtract = {
-					# value = $literacy_factor$
-					value = 0.5
-					multiply = scope:sol_calc_target_state.owner.literacy_rate
-				}
 			}
 		}
 	}
-	
-	set_variable = {
-		name = base_expectation
-		value = {
-			value = var:pre_calc_sol_mod_val					# Current modifiers that add
-			subtract = var:last_adjustment						# minus Our modifiers that add
-			add = var:average_expected_sol_from_literacy		# literacy adjusted local expectation
-		}														# -> get native baseline for us to build off
-	}
-	
-	set_variable = {
-		name = scaled_average_sol
-		value = {
-			value = scope:sol_calc_target_state.var:weighted_average_sol
-			add = scope:sol_calc_target_state.var:sub_scale
-		}
-	}
-
-	
-	set_variable = {
-		name = expectation_modifier
-		value = {			
-		#	if = { # Below base expectation, slope towards base strata expectation, rather than zero
-		#		limit = {
-		#			var:scaled_average_sol < var:base_expectation
-		#		}
-		#		value = var:pre_calc_sol_mod_val
-		#		add = {
-		#			value = var:weighted_average_sol
-		#			multiply = scope:sol_calc_target_state.var:average_expected_sol_from_literacy
-		#			divide = {
-		#				value = var:pre_calc_sol_mod_val
-		#				subtract = var:sub_scale
-		#				add = var:average_expected_sol_from_literacy
-		#			}
-		#		}
-		#	}
-		#	else = {
-				value = var:scaled_average_sol
-		#	}
-			
-			# If the average is not starving, the floor can be a little higher
-		#	min = {
-		#		value = var:weighted_average_sol
-		#		subtract = 5 # define:NPops|SOL_STARVING_THRESHOLD
-		#		divide = 2
-		#		add = var:pre_calc_sol_mod_val
-		#	}
-			
-			# Don't double count base expectations in the modifier
-			# This also removes the *average* effect of expected sol from literacy
-			#  - a highly literate pop surrounded by low literacy pops will have raised expectations
-			#  - a low literacy pop surronded by highly litereate pops will have lowered expectations
-			subtract = var:base_expectation
-		}
-	}
-
-	# Save the adjustment in a variable so we can subtract it out next refresh
-	set_variable = {
-		name = mog_$strata$_strata_expected_sol_from_average
-		value = var:expectation_modifier
-	}
-	
-	add_modifier = {
-		name = mog_$strata$_strata_expected_sol_from_average
-		multiplier = scope:sol_calc_target_state.var:mog_$strata$_strata_expected_sol_from_average
-	}	# MUST have ^scope designation in multiplier
 }
+
+# mog_spa_new_refresh_strata_expected_sol_modifier = {
+#
+#
+#}
+
+
+
+
+
+
+
+
+
+
+#
+#refresh_expected_sol_modifier = {
+#	random_scope_building = {
+#		limit = {
+#			OR = {
+#				is_subsistence_building = yes
+#				is_building_type = building_urban_center
+#			}
+#		}
+#		state = {
+#			save_scope_as = sol_calc_target_state
+#			
+#			# any_scope_state = THIS
+#			
+#			set_variable = {
+#				name = national_weight
+#				value = {
+#					value = 0.15
+#					add = {
+#						value = 0.45
+#						multiply = literacy_rate		# This is Local literacy rate: national average matters
+#					}										# more as local literacy gets better.
+#				}
+#			}
+#			
+#			set_variable = {
+#				name = weighted_average_sol
+#				value = {
+#					# Mostly state average
+#					add = {
+#						value = average_sol							# Local Average SOL
+#						multiply = {								# Multiplied by local weight (1 - national_weight)
+#							value = 1
+#							subtract = scope:sol_calc_target_state.var:national_weight
+#						}
+#					}
+#					
+#					# a little nation average
+#					add = {
+#						value = owner.average_sol					# National Average SOL
+#						multiply = scope:sol_calc_target_state.var:national_weight		# Multiplied by national weight (national_weight)
+#					}
+#				}
+#			}
+#			
+#			set_variable = {
+#				name = average_expected_sol_from_literacy
+#				value = {
+#					value = modifier:state_expected_sol_from_literacy	# Local expectation (local + inherited from 
+#					multiply = literacy_rate							# tech etc.) * local literacy rate = local avg
+#				}
+#			}
+#			
+#						# scale           - How much of average SOL does this strata expect
+#						# literacy_factor - How much impact does literacy have. Pulls expectations upwards towards the average
+#					#	scope:sol_calc_target_state = {
+#					#		refresh_strata_expected_sol_modifier = { strata = lower } # scale = -10 } #  literacy_factor = 0.5 }
+#					#	}
+#					#	scope:sol_calc_target_state = {
+#					#		refresh_strata_expected_sol_modifier = { strata = middle scale =   0 } #  literacy_factor = 0.1   }
+#					#	}
+#					#	scope:sol_calc_target_state = {
+#					#		refresh_strata_expected_sol_modifier = { strata = upper  scale =  11.5 } # literacy_factor = 0.01   }
+#					#	}
+#			
+#			#### TESTING DUPLICATE
+#			if = {
+#				limit = { has_modifier = mog_lower_strata_expected_sol_from_average }
+#				remove_modifier = mog_lower_strata_expected_sol_from_average
+#			}
+#			
+#			set_variable = {
+#				name = pre_calc_sol_mod_val
+#				value = modifier:state_lower_strata_expected_sol_add
+#			}
+#			
+#			#	if = {
+#			#		limit = { exists = var:mog_lower_strata_sol_expectation_modifier }
+#			#	}
+#			#	else = {
+#			#		set_variable = {
+#			#			name = mog_lower_strata_sol_expectation_modifier
+#			#			value = 0
+#			#		}
+#			#	}
+#				
+#				# Because the modifier isn't processed as being removed until next tick, we need to manually adjust for it in the calculation
+#			#	if = {
+#			#		limit = { var:mog_lower_strata_sol_expectation_modifier > 0 }
+#					set_local_variable = {
+#						name = last_adjustment
+#						value = scope:sol_calc_target_state.var:mog_lower_strata_sol_expectation_modifier
+#					}
+#			#	}
+#			#	else = {
+#			#		set_local_variable = {
+#			#			name = last_adjustment
+#			#			value = 0
+#			#		}
+#			#	}
+#				
+#			#	set_local_variable = {
+#			#		name = sub_scale
+#			#		value = {
+#			#			# value = $scale$
+#			#			value = -10
+#			#			# Pull expectations towards average sol based on literacy
+#			#			multiply = {
+#			#				value = 1
+#			#				subtract = {
+#			#					# value = $literacy_factor$
+#			#					value = 0.5
+#			#					multiply = scope:sol_calc_target_state.owner.literacy_rate
+#			#				}
+#			#			}
+#			#		}
+#			#	}
+#				
+#			#	set_local_variable = {
+#			#		name = base_expectation
+#			#		value = {
+#			#			value = local_var:pre_calc_sol_mod_val					# Current modifiers that add
+#			#			subtract = local_var:last_adjustment						# minus Our modifiers that add
+#			#			add = var:average_expected_sol_from_literacy		# literacy adjusted local expectation
+#			#		}														# -> get native baseline for us to build off
+#			#	}
+#				
+#			#	set_local_variable = {
+#			#		name = scaled_average_sol
+#			#		value = {
+#			#			value = scope:sol_calc_target_state.var:weighted_average_sol
+#			#			add = scope:sol_calc_target_state.var:sub_scale
+#			#		}
+#			#	}
+#
+#				
+#				set_local_variable = {
+#					name = expectation_modifier
+#					value = scope:sol_calc_target_state.var:mog_lower_strata_sol_expectation_modifier
+#			#		value = {			
+#			#			if = { # Below base expectation, slope towards base strata expectation, rather than zero
+#			#				limit = {
+#			#					local_var:scaled_average_sol < local_var:base_expectation
+#			#				}
+#			#				value = var:pre_calc_sol_mod_val
+#			#				add = {
+#			#					value = var:weighted_average_sol
+#			#					multiply = scope:sol_calc_target_state.var:average_expected_sol_from_literacy
+#			#					divide = {
+#			#						value = local_var:pre_calc_sol_mod_val
+#			#						subtract = local_var:sub_scale
+#			#						add = var:average_expected_sol_from_literacy
+#			#					}
+#			#				}
+#			#			}
+#			#			else = {
+#			#				value = local_var:scaled_average_sol
+#			#			}
+#			#			
+#			#			# If the average is not starving, the floor can be a little higher
+#			#		#	min = {
+#			#		#		value = var:weighted_average_sol
+#			#		#		subtract = 5 # define:NPops|SOL_STARVING_THRESHOLD
+#			#		#		divide = 2
+#			#		#		add = var:pre_calc_sol_mod_val
+#			#		#	}
+#			#			
+#			#			# Don't double count base expectations in the modifier
+#			#			# This also removes the *average* effect of expected sol from literacy
+#			#			#  - a highly literate pop surrounded by low literacy pops will have raised expectations
+#			#			#  - a low literacy pop surronded by highly litereate pops will have lowered expectations
+#			#			subtract = var:base_expectation
+#			#		}
+#				}
+#
+#			# Save the adjustment in a variable so we can subtract it out next refresh
+#			set_variable = {
+#				name = mog_lower_strata_sol_expectation_modifier
+#				value = local_var:expectation_modifier
+#			}
+#			
+#			add_modifier = {
+#				name = mog_lower_strata_expected_sol_from_average
+#				multiplier = scope:sol_calc_target_state.var:mog_lower_strata_sol_expectation_modifier
+#			}	# MUST have ^scope designation in multiplier
+#		}
+#	}
+#}
+#
+#
+#refresh_strata_expected_sol_modifier = {
+#	if = {
+#		limit = { has_modifier = mog_$strata$_strata_expected_sol_from_average }
+#		remove_modifier = mog_$strata$_strata_expected_sol_from_average
+#	}
+#	
+#	set_local_variable = {
+#		name = pre_calc_sol_mod_val
+#		value = modifier:state_$strata$_strata_expected_sol_add
+#	}
+#	
+#	# Because the modifier isn't processed as being removed until next tick, we need to manually adjust for it in the calculation
+#	set_local_variable = {
+#		name = last_adjustment
+#		value = scope:sol_calc_target_state.var:mog_$strata$_strata_sol_expectation_modifier
+#		#{
+#		#	if = {
+#		#		limit = { var:mog_$strata$_strata_sol_expectation_modifier > 0 }
+#		#		value = var:mog_$strata$_strata_sol_expectation_modifier				# Is set at the end
+#		#	}
+#		#	else = {
+#		#		value = 0
+#		#	}
+#		# }
+#	}
+#	
+#	set_local_variable = {
+#		name = sub_scale
+#		value = {
+#			# value = $scale$
+#			value = -10
+#			# Pull expectations towards average sol based on literacy
+#			multiply = {
+#				value = 1
+#				subtract = {
+#					# value = $literacy_factor$
+#					value = 0.5
+#					multiply = scope:sol_calc_target_state.owner.literacy_rate
+#				}
+#			}
+#		}
+#	}
+#	
+#	set_local_variable = {
+#		name = base_expectation
+#		value = {
+#			value = local_var:pre_calc_sol_mod_val					# Current modifiers that add
+#			subtract = local_var:last_adjustment						# minus Our modifiers that add
+#			add = var:average_expected_sol_from_literacy		# literacy adjusted local expectation
+#		}														# -> get native baseline for us to build off
+#	}
+#	
+#	set_local_variable = {
+#		name = scaled_average_sol
+#		value = {
+#			value = scope:sol_calc_target_state.var:weighted_average_sol
+#			add = scope:sol_calc_target_state.var:sub_scale
+#		}
+#	}
+#
+#	
+#	set_local_variable = {
+#		name = expectation_modifier
+#		value = {			
+#		#	if = { # Below base expectation, slope towards base strata expectation, rather than zero
+#		#		limit = {
+#		#			var:scaled_average_sol < var:base_expectation
+#		#		}
+#		#		value = var:pre_calc_sol_mod_val
+#		#		add = {
+#		#			value = var:weighted_average_sol
+#		#			multiply = scope:sol_calc_target_state.var:average_expected_sol_from_literacy
+#		#			divide = {
+#		#				value = var:pre_calc_sol_mod_val
+#		#				subtract = var:sub_scale
+#		#				add = var:average_expected_sol_from_literacy
+#		#			}
+#		#		}
+#		#	}
+#		#	else = {
+#				value = local_var:scaled_average_sol
+#		#	}
+#			
+#			# If the average is not starving, the floor can be a little higher
+#		#	min = {
+#		#		value = var:weighted_average_sol
+#		#		subtract = 5 # define:NPops|SOL_STARVING_THRESHOLD
+#		#		divide = 2
+#		#		add = var:pre_calc_sol_mod_val
+#		#	}
+#			
+#			# Don't double count base expectations in the modifier
+#			# This also removes the *average* effect of expected sol from literacy
+#			#  - a highly literate pop surrounded by low literacy pops will have raised expectations
+#			#  - a low literacy pop surronded by highly litereate pops will have lowered expectations
+#			subtract = var:base_expectation
+#		}
+#	}
+#
+#	# Save the adjustment in a variable so we can subtract it out next refresh
+#	set_local_variable = {
+#		name = mog_$strata$_strata_sol_expectation_modifier
+#		value = local_var:expectation_modifier
+#	}
+#	
+#	add_modifier = {
+#		name = mog_$strata$_strata_expected_sol_from_average
+#		multiplier = scope:sol_calc_target_state.var:mog_$strata$_strata_sol_expectation_modifier
+#	}	# MUST have ^scope designation in multiplier
+#}
+#

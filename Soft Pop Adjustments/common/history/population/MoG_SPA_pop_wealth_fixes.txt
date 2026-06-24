@@ -37,10 +37,6 @@ POPULATION = {
 		effect_starting_pop_wealth_low = yes
 		effect_starting_pop_literacy_baseline = yes
 	}
-	c:usfp_ATB ?= {
-		effect_starting_pop_wealth_low = yes
-		effect_starting_pop_literacy_baseline = yes
-	}
 	c:usfp_ATK ?= {
 		effect_starting_pop_wealth_low = yes
 		effect_starting_pop_literacy_baseline = yes
@@ -49,23 +45,11 @@ POPULATION = {
 		effect_starting_pop_wealth_low = yes
 		effect_starting_pop_literacy_baseline = yes
 	}
-	c:usfp_BNN ?= {
-		effect_starting_pop_wealth_low = yes
-		effect_starting_pop_literacy_baseline = yes
-	}
-	c:usfp_CHE ?= {
-		effect_starting_pop_wealth_low = yes
-		effect_starting_pop_literacy_baseline = yes
-	}
 	c:usfp_CPW ?= {
 		effect_starting_pop_wealth_low = yes
 		effect_starting_pop_literacy_baseline = yes
 	}
-	c:usfp_CSW ?= {
-		effect_starting_pop_wealth_low = yes
-		effect_starting_pop_literacy_baseline = yes
-	}
-	c:usfp_CTF ?= {
+	c:CSW ?= {											# Yes this one is the odd one out # Cael
 		effect_starting_pop_wealth_low = yes
 		effect_starting_pop_literacy_baseline = yes
 	}
@@ -134,10 +118,6 @@ POPULATION = {
 		effect_starting_pop_literacy_baseline = yes
 	}
 	c:usfp_MDC ?= {
-		effect_starting_pop_wealth_low = yes
-		effect_starting_pop_literacy_baseline = yes
-	}
-	c:usfp_NEW ?= {
 		effect_starting_pop_wealth_low = yes
 		effect_starting_pop_literacy_baseline = yes
 	}
@@ -218,6 +198,27 @@ POPULATION = {
 		effect_starting_pop_literacy_baseline = yes
 	}
 	c:usfp_YUR ?= {
+		effect_starting_pop_wealth_low = yes
+		effect_starting_pop_literacy_baseline = yes
+	}
+	# USFP affected but borrowed from Vanilla
+	c:ATB ?= {
+		effect_starting_pop_wealth_low = yes
+		effect_starting_pop_literacy_baseline = yes
+	}
+	c:BNN ?= {
+		effect_starting_pop_wealth_low = yes
+		effect_starting_pop_literacy_baseline = yes
+	}
+	c:CHE ?= {
+		effect_starting_pop_wealth_low = yes
+		effect_starting_pop_literacy_baseline = yes
+	}
+	c:CTF ?= {
+		effect_starting_pop_wealth_low = yes
+		effect_starting_pop_literacy_baseline = yes
+	}
+	c:NEW ?= {
 		effect_starting_pop_wealth_low = yes
 		effect_starting_pop_literacy_baseline = yes
 	}

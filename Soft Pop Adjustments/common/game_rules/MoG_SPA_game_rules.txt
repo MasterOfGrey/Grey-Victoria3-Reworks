@@ -1,0 +1,6 @@
+﻿mog_spa_sol_modification = {
+	default = spa_sol_modification_enabled
+	
+	spa_sol_modification_enabled = {}
+	spa_sol_modification_disabled = {}
+}

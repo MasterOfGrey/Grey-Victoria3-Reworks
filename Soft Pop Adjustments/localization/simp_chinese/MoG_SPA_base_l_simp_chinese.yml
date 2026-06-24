@@ -21,3 +21,10 @@
  mog_spa_base_sol_from_literacy: "SPA: 基本修改器变更" #deepl:2619766621
  
  mog_spa_indigenous_subsistance: "SPA：土著[concept_sol] 调整" #deepl:60321970
+ 
+ # Game Rules
+ rule_mog_spa_sol_modification: "SPA：预期Sol修改" #deepl:1342799645
+ setting_spa_sol_modification_enabled: "已启用" #deepl:3001197554
+ setting_spa_sol_modification_enabled_desc: "各州将针对预期SOL设置调整因子，以支持预期的平衡。" #deepl:3267495563
+ setting_spa_sol_modification_disabled: "已禁用" #deepl:1603118088
+ setting_spa_sol_modification_disabled_desc: "不会应用任何修饰符（用于解决兼容性问题）" #deepl:813769365

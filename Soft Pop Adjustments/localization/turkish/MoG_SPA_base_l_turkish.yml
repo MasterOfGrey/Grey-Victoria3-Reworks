@@ -21,3 +21,10 @@
  mog_spa_base_sol_from_literacy: "SPA: Temel Değiştirici Değişiklikleri" #deepl:2619766621
  
  mog_spa_indigenous_subsistance: "SPA: Yerli [concept_sol] Ayarlama" #deepl:60321970
+ 
+ # Game Rules
+ rule_mog_spa_sol_modification: "SPA: Beklenen Sol Değişikliği" #deepl:1342799645
+ setting_spa_sol_modification_enabled: "Etkin" #deepl:3001197554
+ setting_spa_sol_modification_enabled_desc: "Eyaletlerde, hedeflenen dengeyi destekleyen, beklenen SOL için ayarlayıcılar bulunacaktır." #deepl:3267495563
+ setting_spa_sol_modification_disabled: "Engelli" #deepl:1603118088
+ setting_spa_sol_modification_disabled_desc: "Herhangi bir değiştirici uygulanmayacaktır (UYUMLULUK SORUNLARINI ÇÖZMEK İÇİN BUNU KULLANIN)" #deepl:813769365

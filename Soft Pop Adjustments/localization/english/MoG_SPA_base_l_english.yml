@@ -21,3 +21,10 @@
  mog_spa_base_sol_from_literacy: "SPA: Base Modifier Changes"
  
  mog_spa_indigenous_subsistance: "SPA: Indigenous [concept_sol] Adjustment"
+ 
+ # Game Rules
+ rule_mog_spa_sol_modification: "SPA: Expected Sol Modification"
+ setting_spa_sol_modification_enabled: "Enabled"
+ setting_spa_sol_modification_enabled_desc: "States will have modifiers for expected SOL that support intended balance."
+ setting_spa_sol_modification_disabled: "Disabled"
+ setting_spa_sol_modification_disabled_desc: "No modifiers will be applied (USE THIS FOR RESOLVING COMPATIBILITY ISSUES)"
