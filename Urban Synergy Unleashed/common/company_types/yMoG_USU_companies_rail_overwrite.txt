@@ -564,7 +564,7 @@ TRY_INJECT:company_galician_carpathian_oil = {
 }
 
 # Oesterreichisch-Alpine Montangesellschaft
-TRY_INJECT:company_mav = {
+TRY_INJECT:company_oesterreichisch_alpine_montangesellschaft = {
 	prosperity_modifier = {
 		building_railway_throughput_add = -0.05
 		building_group_bg_usu_rail_infrastructure_throughput_add = 0.05

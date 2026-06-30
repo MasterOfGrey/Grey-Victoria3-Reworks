@@ -93,11 +93,11 @@ TRY_REPLACE:je_spa_economic_regeneration_railways = {
     }
 
     fail = {
-        OR = {
+    #    OR = {
             NOT = {
                 has_journal_entry = je_spa_economic_regeneration_master
             }
-        }
+    #    }
     }
 
     on_fail = {

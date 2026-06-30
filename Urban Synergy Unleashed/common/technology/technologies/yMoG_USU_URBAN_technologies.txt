@@ -7,7 +7,7 @@ TRY_INJECT:urbanization = {
 
 TRY_INJECT:centralization = {
 	modifier = {
-		state_tax_capacity_add = -25
+		state_tax_capacity_add = -25
 		country_bureaucracy_mult = 0.02
 	}
 }

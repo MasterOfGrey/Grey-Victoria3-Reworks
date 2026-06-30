@@ -387,7 +387,7 @@ REPLACE_OR_CREATE:building_usu_railway_line = {
 				c:RUS ?= owner
 				is_in_geographic_region = geographic_region_manchuria_old
 				any_scope_building = {
-					is_building_type = building_railway
+					is_building_type = building_usu_railway_line
 					levels_owned_by_country = {
 						target = c:RUS
 						value  < 1
@@ -405,7 +405,7 @@ REPLACE_OR_CREATE:building_usu_railway_line = {
 				}
 				is_in_geographic_region = geographic_region_korea
 				any_scope_building = {
-					is_building_type = building_railway
+					is_building_type = building_usu_railway_line
 					level < 10
 				}
 			}

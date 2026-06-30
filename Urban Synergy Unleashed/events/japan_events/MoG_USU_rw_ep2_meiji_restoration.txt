@@ -118,11 +118,11 @@ ep2_meiji.9 = { # Restoration - Kogi Yoron Ending
 				NOT = {
 					any_scope_building = {
 						is_building_type = building_barrack
-						OR = {
+					#	OR = {
 							has_active_production_method = pm_no_organization
 							# has_active_production_method = pm_no_artillery
 							# has_active_production_method = pm_cannon_artillery
-						}
+					#	}
 					}
 				}
 			}

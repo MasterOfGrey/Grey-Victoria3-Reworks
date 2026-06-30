@@ -50,9 +50,9 @@ TRY_REPLACE:je_specialized_inputs = {
 			}
 			any_scope_building = {
 				is_building_type = building_usu_railway_line # building_railway
-				or = {
+			#	or = {
 					level >= 5
-				}
+			#	}
 			}
 		}
 	}

@@ -29,9 +29,9 @@ TRY_INJECT:company_galician_carpathian_oil = {
 	building_types = {
 		ppp_building_power_grid
 	}
-	prosperity_modifier = {
-		building_usu_railway_line_throughput_add = 0.05
-	}
+#	prosperity_modifier = {		# Handled in rail_overwrite
+#		building_usu_railway_line_throughput_add = 0.05
+#	}
 }
 
 
