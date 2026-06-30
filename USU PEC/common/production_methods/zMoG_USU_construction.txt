@@ -1,0 +1,160 @@
+﻿REPLACE_OR_CREATE:pm_wooden_buildings = {
+	texture = "gfx/interface/icons/production_method_icons/wooden_buildings.dds"
+	
+	is_default = yes
+	
+	country_modifiers = {
+		workforce_scaled = {
+			country_construction_add = 0.8 # 2	# This is 60% reduction
+		}
+	}
+	
+	building_modifiers = {
+		workforce_scaled = {
+			goods_input_fabric_add = 10		# 25
+			goods_input_wood_add = 30		# 75
+		}
+		
+		level_scaled = {
+			building_employment_bureaucrats_add = 50	# 500
+			building_employment_clerks_add = 350		# 500 (150 would-be bureaucrats converted into clerks)
+			building_employment_laborers_add = 1600		# 4000
+		}
+		unscaled = {
+			building_laborers_mortality_mult = 0.1
+		}
+	}
+	
+	state_modifiers = {
+		workforce_scaled = {
+			state_construction_mult = 0.002
+			state_infrastructure_add = 1.2		# New - makes *some* construction accessible to tiny nations.
+		}	
+	}
+}
+
+REPLACE_OR_CREATE:pm_iron_frame_buildings = {
+	texture = "gfx/interface/icons/production_method_icons/iron_frame_buildings.dds"
+	
+	unlocking_technologies = {
+		urban_planning
+	}
+	
+	country_modifiers = {
+		workforce_scaled = {
+			country_construction_add = 2 # 5	# This is 60% reduction
+		}
+	}
+	
+	building_modifiers = {
+		workforce_scaled = {
+			goods_input_wood_add = 16		# 40
+			goods_input_fabric_add = 8		# 20
+			goods_input_iron_add = 20		# 50
+			goods_input_tools_add = 4		# 10
+			goods_input_pec_financial_services_add = 4		# 10
+		}
+		
+		level_scaled = {
+			building_employment_bureaucrats_add = 50	# 500
+			building_employment_clerks_add = 300		# 500 (100 would-be bureaucrats converted into clerks)
+			building_employment_machinists_add = 150	# 250 (50 would-be bureaucrats converted into machinists)
+			building_employment_laborers_add = 1500		# 3750
+		}
+		unscaled = {
+			building_laborers_mortality_mult = 0.1
+		}
+	}
+	
+	state_modifiers = {
+		workforce_scaled = {
+			state_construction_mult = 0.003
+			state_infrastructure_add = 0.8		# New - net zero impact on infrastructure (they building their own here).
+		}	
+	}
+}
+
+REPLACE_OR_CREATE:pm_steel_frame_buildings = {
+	texture = "gfx/interface/icons/production_method_icons/steel_frame_buildings.dds"
+	
+	unlocking_technologies = {
+		steel_frame_buildings
+	}
+	
+	country_modifiers = {
+		workforce_scaled = {
+			country_construction_add = 4 # 10	# This is 60% reduction
+		}
+	}
+	
+	building_modifiers = {
+		workforce_scaled = {
+			goods_input_steel_add = 20		# 50
+			goods_input_glass_add = 16		# 40
+			goods_input_explosives_add = 4	# 10
+			goods_input_tools_add = 8		# 20
+			goods_input_pec_financial_services_add = 16 # 30
+		}
+		
+		level_scaled = {
+			building_employment_bureaucrats_add = 50	# 500
+			building_employment_clerks_add = 300		# 500 (100 would-be bureaucrats converted into clerks)
+			building_employment_machinists_add = 350	# 750 (50 would-be bureaucrats converted into machinists)
+			building_employment_laborers_add = 1300		# 3250
+		}
+		unscaled = {
+			building_laborers_mortality_mult = 0.1
+		}
+	}
+	
+	state_modifiers = {
+		workforce_scaled = {
+			state_construction_mult = 0.005
+			state_infrastructure_add = 0.4		# New - mitigation of infrastructure cost becomes minimal.
+		}	
+	}
+}
+
+REPLACE_OR_CREATE:pm_arc_welded_buildings = {
+	texture = "gfx/interface/icons/production_method_icons/arc_welded_buildings.dds"
+	
+	unlocking_technologies = {
+		arc_welding
+	}
+	
+	country_modifiers = {
+		workforce_scaled = {
+			country_construction_add = 6 # 15	# This is 60% reduction
+		}
+	}
+	
+	building_modifiers = {
+		workforce_scaled = {
+			goods_input_steel_add = 20			# 50
+			goods_input_glass_add = 16			# 40
+			goods_input_explosives_add = 8		# 20
+			goods_input_tools_add = 16			# 40
+			goods_input_electricity_add = 16	# 40
+			goods_input_pec_financial_services_add = 24
+		} 
+		
+		level_scaled = {
+			building_employment_bureaucrats_add = 50	# 500
+			building_employment_clerks_add = 300		# 500 (100 would-be bureaucrats converted into clerks)
+			building_employment_engineers_add = 100
+			building_employment_machinists_add = 350	# 750 (50 would-be bureaucrats converted into machinists)
+			building_employment_laborers_add = 1200
+		}
+		unscaled = {
+			building_laborers_mortality_mult = 0.1
+		}
+	}
+	
+	state_modifiers = {
+		workforce_scaled = {
+			state_construction_mult = 0.007
+		}	
+	}
+	
+	required_input_goods = electricity
+}

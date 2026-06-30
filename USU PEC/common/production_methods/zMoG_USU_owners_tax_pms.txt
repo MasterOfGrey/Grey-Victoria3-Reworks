@@ -1,0 +1,787 @@
+﻿### Originally just the Defaults - With state tax capacity changes to rebalance for urban changes.
+### But actually, ownership buildings employ vastly too many people late-game.
+
+## If you have a pm with building_company_worker_dividends_add and you want one of the owner building shareholders to receive the same dividends as the workforce...
+## E.g. it looks something like this:
+##			building_capitalists_shares_add = 7.5
+##			building_academics_shares_add   = 5
+##			building_clergymen_shares_add   = 3
+##			building_company_worker_dividends_add = 0.25
+## Then you start with the ratio of:
+##		num_of_workers/building_company_worker_dividends_add = 
+##			PopNumA/(((PNA*ShareValA)/(PNA*SVA+PNB*SVB))*(1-building_company_worker_dividends_add))
+##		i.e.: F/C = A/(((A*x)/(A*x+H*y))*(1-C))
+##	And the general equations are: 
+##		ShareValA = -(building_company_worker_dividends_add*PopNumB*ShareValB)/
+##					(PopNumA*building_company_worker_dividends_add + (-1 + building_company_worker_dividends_add)*num_of_workers)
+##	Or:
+##		ShareValB = ((-PopNumA*building_company_worker_dividends_add + num_of_workers - building_company_worker_dividends_add*num_of_workers)*ShareValA)/
+##					(building_company_worker_dividends_add*PopNumB)
+##					
+##	Where:
+##		A = PopNumA = sum of all pops you want parity for
+##		x = ShareValA = numerical value of the shares for PopTypeA (typically 1)
+##		H = PopNumB = sum of all pops receiving higher shares
+##		y = ShareValB = the higher value of the shares for PopTypeB (which you are trying to calculate)
+##		C = building_company_worker_dividends_add = per the applicable modifier from either a Law or the PM
+##		F = num_of_workers = the number of workers employed in the normal building
+##
+##	You can wolfram this formula like: solve x = -(C H y)/(A C + (-1 + C) F), A = 30, H = 20, C = 0.75, F = 1000		<-- x = ShareValA
+##								or: solve y = ((-A C + F - C F) x)/(C H), A = 30, H = 20, C = 0.75, F = 1000			<-- y = ShareValB
+##		This will give you a result like: y = (91/6)x
+##		Which you can either resolve to: ShareValA = 1, ShareValB = 15.166
+##									or: ShareValA = 6, ShareValB = 91
+## E.g. it looks something like this:
+##			building_capitalists_shares_add = 91
+##			building_academics_shares_add   = 6
+##			building_clergymen_shares_add   = 6
+##			building_company_worker_dividends_add = 0.75
+##
+##	If the building workforce varies, use the minimum workforce number, and this will mean that the dividends the workers receive has a ceiling equivalent to PopTypeA.
+
+## Manor Houses (4 PM's in 2 PMG's, reduced to total 50 people/level employed, 30/20 split)
+### Standard Ratio: 30 Upper, 15 Middle, 5 Lower (300/15/0) - Divine Economics: 25U, 25M, 5L (250/75/0)
+REPLACE_OR_CREATE:pm_manor_house_privately_owned = {
+	texture = "gfx/interface/icons/production_method_icons/ownership_aristocrats.dds"
+	replacement_if_valid = pm_manor_house_principle_divine_economics_2
+
+	state_modifiers = {
+		workforce_scaled = {
+			state_tax_capacity_add = -1
+		}		
+	}	
+	
+	building_modifiers = { 
+		level_scaled = {
+			building_employment_aristocrats_add = 30 # 50
+		}
+		unscaled = {
+			building_aristocrats_shares_add = 10
+		}
+	}
+}
+
+REPLACE_OR_CREATE:pm_manor_house_principle_divine_economics_2 = {
+	texture = "gfx/interface/icons/production_method_icons/privately_owned.dds"
+	is_hidden_when_unavailable = yes
+	
+	unlocking_principles = {
+		principle_divine_economics_2
+		principle_divine_economics_3
+	}
+	
+	state_modifiers = {
+		workforce_scaled = {
+			state_tax_capacity_add = -1
+		}		
+	}	
+	
+	building_modifiers = { 
+		level_scaled = {
+			building_employment_aristocrats_add = 25 # 50	# This is only pm that gives >50 total (+10% vs vanilla +33% total)
+			building_employment_clergymen_add = 10 # 50
+		}
+		
+		unscaled = {
+			building_aristocrats_shares_add = 10	# 25 pops share 77% (3.1% ea) instead of 30 sharing 95% (3.2% ea)
+			building_clergymen_shares_add = 2		# x25 total pops = 23% of profits (0.92%ea up from 0.31%ea)
+		}
+	}
+}
+
+REPLACE_OR_CREATE:pm_manor_house_bureaucrat_ownership = {
+	texture = "gfx/interface/icons/production_method_icons/ownership_bureacrats.dds"
+
+	unlocking_laws = {
+		law_state_atheism
+	}
+	
+	building_modifiers = {
+		level_scaled = {
+			building_employment_bureaucrats_add = 15 # 100
+			building_employment_clerks_add = 5 # 0
+		}
+		unscaled = {
+			building_bureaucrats_shares_add = 1		# x15 pops = 4.7% of profits
+		}		
+	}	
+}
+
+REPLACE_OR_CREATE:pm_manor_house_clergy_ownership = {
+	texture = "gfx/interface/icons/production_method_icons/ownership_clergy.dds"
+
+	disallowing_laws = {
+		law_state_atheism
+	}
+
+	building_modifiers = {
+		level_scaled = {
+			building_employment_clergymen_add = 15 # 100
+			building_employment_clerks_add = 5 # 0
+		}
+		unscaled = {
+			building_clergymen_shares_add = 1		# x15 pops = 4.7% of profits
+		}
+	}
+}
+
+## Financial Districts (3 PM's in 1 PMG, reduced to total 50 people/level employed)
+### Standard Ratio: 25 Upper, 15 Middle, 10 Lower (250/15/0) - Divine Economics: 20U, 20M, 10L (200/40/0)
+REPLACE_OR_CREATE:pm_financial_district_privately_owned = {
+	texture = "gfx/interface/icons/production_method_icons/privately_owned.dds"
+	replacement_if_valid = pm_financial_district_principle_divine_economics_2
+	
+	building_modifiers = { 
+		level_scaled = {
+			building_employment_capitalists_add = 25 # 50
+			building_employment_shopkeepers_add = 15 # 25
+			building_employment_clerks_add = 10 # 25
+		}
+		workforce_scaled = {
+			goods_input_pec_financial_services_add = 0.1
+		}
+		unscaled = {
+			building_capitalists_shares_add = 10
+			building_shopkeepers_shares_add = 1		# x15 pops = 5.5% of profits
+		}
+	}
+}
+
+REPLACE_OR_CREATE:pm_financial_district_publicly_traded = {
+	texture = "gfx/interface/icons/production_method_icons/publicly_traded.dds"
+	
+	unlocking_technologies = { mutual_funds }
+	
+	building_modifiers = { 
+		level_scaled = {
+			building_employment_capitalists_add = 25 # 50
+			building_employment_bureaucrats_add = 15 # 25
+			building_employment_clerks_add = 10 # 25
+		}
+		workforce_scaled = {
+			goods_input_pec_financial_services_add = 0.5
+		}
+		unscaled = {
+			building_capitalists_shares_add = 10
+			building_bureaucrats_shares_add = 1		# x15 pops = 5.5% of profits
+		}			
+	}	
+}
+
+REPLACE_OR_CREATE:pm_financial_district_principle_divine_economics_2 = {
+	texture = "gfx/interface/icons/production_method_icons/privately_owned.dds"
+	is_hidden_when_unavailable = yes
+	
+	unlocking_principles = {
+		principle_divine_economics_2
+		principle_divine_economics_3
+	}
+
+	building_modifiers = { 
+		level_scaled = {
+			building_employment_capitalists_add = 20 # 50
+			building_employment_clergymen_add = 20 # 25
+			building_employment_clerks_add = 10 # 25
+		}
+		workforce_scaled = {
+			goods_input_pec_financial_services_add = 0.25
+		}
+		unscaled = {
+			building_capitalists_shares_add = 10	# 20 pops share 83.3% (4.2% ea) instead of 25 sharing 95% (3.8% ea)
+			building_clergymen_shares_add = 2		# x20 total pops = 16.7% of profits (0.84%ea up from 0.37%ea)		- Church doesn't win quite as much here
+		}
+	}
+}
+
+## Company Headquarters (reduced to total 50 people/level employed)
+### Standard Ratio: 25 Upper, 15 Middle, 10 Lower (250/15/0)
+REPLACE_OR_CREATE:pm_company_headquarter_privately_owned = {
+	texture = "gfx/interface/icons/production_method_icons/privately_owned.dds"
+	is_hidden_when_unavailable = yes
+	
+	unlocking_company_categories = {
+		capitalist_owned
+	}
+
+	disallowing_laws = {
+		law_command_economy
+		law_cooperative_ownership
+	}
+
+	building_modifiers = {
+		level_scaled = {
+			building_employment_capitalists_add = 25 # 25
+			building_employment_shopkeepers_add = 15 # 0
+			building_employment_clerks_add      = 10 # 25
+		}
+		workforce_scaled = {
+			goods_input_pec_financial_services_add = 0.5
+		}
+		unscaled = {
+			building_capitalists_shares_add = 10		# x25 pops = 94.3% of profits (3.7%ea)
+			building_shopkeepers_shares_add = 1	# 0		# x15 pops = 5.5% of profits (0.37%ea)
+		}
+	}
+}
+
+REPLACE_OR_CREATE:pm_company_headquarter_privately_owned_aristocrats = {
+	texture = "gfx/interface/icons/production_method_icons/privately_owned.dds"
+	is_hidden_when_unavailable = yes
+	
+	unlocking_company_categories = {
+		aristocrat_owned
+	}
+
+	disallowing_laws = {
+		law_command_economy
+		law_cooperative_ownership
+		law_commercialized_agriculture
+		law_collectivized_agriculture
+	}
+
+	building_modifiers = {
+		level_scaled = {
+			building_employment_capitalists_add = 10 # - Note: More Aristocrats
+			building_employment_aristocrats_add = 15
+			building_employment_shopkeepers_add = 15 # 0
+			building_employment_clerks_add      = 10 # 25
+		}
+		workforce_scaled = {
+			goods_input_pec_financial_services_add = 0.5
+		}
+		unscaled = {
+			building_capitalists_shares_add = 10		# x25 pops = 94.3% of profits (3.7%ea)
+			building_aristocrats_shares_add = 10
+			building_shopkeepers_shares_add = 1	# 0		# x15 pops = 5.5% of profits (0.37%ea)
+		}
+	}
+}
+
+REPLACE_OR_CREATE:pm_company_headquarter_privately_owned_aristocrats_commercial_agriculture = {
+	texture = "gfx/interface/icons/production_method_icons/privately_owned.dds"
+	is_hidden_when_unavailable = yes
+	
+	unlocking_company_categories = {
+		aristocrat_owned
+	}
+	
+	unlocking_laws = {
+		law_commercialized_agriculture
+	}
+
+	disallowing_laws = {
+		law_command_economy
+		law_cooperative_ownership
+		law_collectivized_agriculture
+	}
+
+	building_modifiers = {
+		level_scaled = {
+			building_employment_capitalists_add = 15 # - Note: More Capitalists
+			building_employment_aristocrats_add = 10
+			building_employment_shopkeepers_add = 15 # 0
+			building_employment_clerks_add      = 10 # 25
+		}
+		workforce_scaled = {
+			goods_input_pec_financial_services_add = 0.5
+		}
+		unscaled = {
+			building_capitalists_shares_add = 10		# x25 pops = 94.3% of profits (3.7%ea)
+			building_aristocrats_shares_add = 10
+			building_shopkeepers_shares_add = 1	# 0		# x15 pops = 5.5% of profits (0.37%ea)
+		}
+	}
+}
+
+### MC Owners: Standard Ratio: 10 Upper, 30 Middle, 10 Lower (100/90/0)
+# Capitalist target 3.7% each or less = 37%
+# Middle Class target ~1% or less = 30%
+# Remainder min 33% to be distributed
+REPLACE_OR_CREATE:pm_company_headquarter_privately_owned_shopkeepers = {
+	texture = "gfx/interface/icons/production_method_icons/privately_owned.dds"
+	is_hidden_when_unavailable = yes
+	
+	unlocking_company_categories = {
+		shopkeeper_owned
+	}
+
+	disallowing_laws = {
+		law_command_economy
+		law_cooperative_ownership
+	}
+
+	building_modifiers = {
+		level_scaled = {
+			building_employment_capitalists_add = 10 # 10
+			building_employment_shopkeepers_add = 30 # 25
+			building_employment_clerks_add      = 10 # 15
+		}
+		workforce_scaled = {
+			goods_input_pec_financial_services_add = 0.5
+		}
+		unscaled = {
+			building_capitalists_shares_add = 10			# x10 pops = 34.2% of profits (3.4%ea)
+			building_shopkeepers_shares_add = 3 # 5			# x30 pops = 30.8% of profits (1.0%ea)
+			building_company_worker_dividends_add = 0.35	# 0.25
+		}													# Private owner shopkeepers much better off than worker (parity if capis had 183 shares each)
+	}
+}
+
+REPLACE_OR_CREATE:pm_company_headquarter_privately_owned_bureaucrats = {
+	texture = "gfx/interface/icons/production_method_icons/privately_owned.dds"
+	is_hidden_when_unavailable = yes
+	
+	unlocking_company_categories = {
+		bureaucrat_owned
+	}
+
+	disallowing_laws = {
+		law_command_economy
+		law_cooperative_ownership
+	}
+
+	building_modifiers = {
+		level_scaled = {
+			building_employment_capitalists_add = 10 # 10
+			building_employment_bureaucrats_add = 30 # 25
+			building_employment_clerks_add      = 10 # 15
+		}
+		workforce_scaled = {
+			goods_input_pec_financial_services_add = 0.5
+		}
+		unscaled = {
+			building_capitalists_shares_add = 10			# x10 pops = 34.2% of profits (3.4%ea)
+			building_bureaucrats_shares_add = 3 # 5			# x30 pops = 30.8% of profits (1.0%ea)
+			building_company_worker_dividends_add = 0.35	# 0.25
+		}													# Private owner bureaucrats much better off than worker (parity if capis had 183 shares each)
+	}
+}
+
+REPLACE_OR_CREATE:pm_company_headquarter_privately_owned_academics = {
+	texture = "gfx/interface/icons/production_method_icons/privately_owned.dds"
+	is_hidden_when_unavailable = yes
+	
+	unlocking_company_categories = {
+		academic_owned
+	}
+
+	disallowing_laws = {
+		law_command_economy
+		law_cooperative_ownership
+	}
+
+	building_modifiers = {
+		level_scaled = {
+			building_employment_capitalists_add = 10 # 10
+			building_employment_academics_add   = 30 # 25
+			building_employment_clerks_add      = 10 # 15
+		}
+		workforce_scaled = {
+			goods_input_pec_financial_services_add = 0.5
+		}
+		unscaled = {
+			building_capitalists_shares_add = 10			# x10 pops = 34.2% of profits (3.4%ea)
+			building_academics_shares_add = 3 # 5			# x30 pops = 30.8% of profits (1.0%ea)
+			building_company_worker_dividends_add = 0.35	# 0.25
+		}													# Private owner academics much better off than worker (parity if capis had 183 shares each)
+	}
+}
+
+REPLACE_OR_CREATE:pm_company_headquarter_principle_divine_economics_2 = {
+	texture = "gfx/interface/icons/production_method_icons/privately_owned.dds"
+	is_hidden_when_unavailable = yes
+	
+	unlocking_company_categories = {
+		capitalist_owned
+	}
+
+	disallowing_laws = {
+		law_command_economy
+		law_cooperative_ownership
+	}
+
+	unlocking_principles = {
+		principle_divine_economics_2
+		principle_divine_economics_3
+	}
+
+	building_modifiers = {
+		level_scaled = {
+			building_employment_capitalists_add = 20 # 25
+			building_employment_clergymen_add   = 20 # 25
+			building_employment_clerks_add      = 10 # 0
+		}
+		workforce_scaled = {
+			goods_input_pec_financial_services_add = 1
+		}
+		unscaled = {
+			building_capitalists_shares_add = 10	# 20 pops share 83.3% (4.2% ea) instead of 25 sharing 95% (3.8% ea)
+			building_clergymen_shares_add   = 2		# x20 total pops = 16.7% of profits (0.84%ea up from 0.37%ea)		- Church doesn't win quite as much here
+		}
+	}
+}
+
+REPLACE_OR_CREATE:pm_company_headquarter_principle_divine_economics_2_aristocrats = {
+	texture = "gfx/interface/icons/production_method_icons/privately_owned.dds"
+	is_hidden_when_unavailable = yes
+
+	unlocking_company_categories = {
+		aristocrat_owned
+	}	
+	
+	disallowing_laws = {
+		law_command_economy
+		law_cooperative_ownership
+		law_commercialized_agriculture
+		law_collectivized_agriculture
+	}
+
+	unlocking_principles = {
+		principle_divine_economics_2
+		principle_divine_economics_3
+	}
+	
+	building_modifiers = {
+		level_scaled = {
+			building_employment_capitalists_add = 8 # 10
+			building_employment_aristocrats_add = 12 # 15 - Note: More Aristocrats
+			building_employment_clergymen_add   = 20 # 25
+			building_employment_clerks_add      = 10 # 0
+		}
+		workforce_scaled = {
+			goods_input_pec_financial_services_add = 1
+		}
+		unscaled = {
+			building_capitalists_shares_add = 10	# 20 pops share 83.3% (4.2% ea) instead of 25 sharing 95% (3.8% ea)
+			building_aristocrats_shares_add = 10
+			building_clergymen_shares_add   = 2			# x20 total pops = 16.7% of profits (0.84%ea up from 0.37%ea)		- Church doesn't win quite as much here
+		}
+	}
+}
+
+REPLACE_OR_CREATE:pm_company_headquarter_principle_divine_economics_2_aristocrats_commercial_agriculture = {
+	texture = "gfx/interface/icons/production_method_icons/privately_owned.dds"
+	is_hidden_when_unavailable = yes
+
+	unlocking_company_categories = {
+		aristocrat_owned
+	}	
+	
+	unlocking_laws = {
+		law_commercialized_agriculture
+	}
+	
+	disallowing_laws = {
+		law_command_economy
+		law_cooperative_ownership
+		law_collectivized_agriculture
+	}
+
+	unlocking_principles = {
+		principle_divine_economics_2
+		principle_divine_economics_3
+	}
+
+	building_modifiers = {
+		level_scaled = {
+			building_employment_capitalists_add = 12 # 15 - Note: More Capitalists
+			building_employment_aristocrats_add = 8 # 10
+			building_employment_clergymen_add   = 20 # 25
+			building_employment_clerks_add      = 10 # 0
+		}
+		workforce_scaled = {
+			goods_input_pec_financial_services_add = 1
+		}
+		unscaled = {
+			building_capitalists_shares_add = 10	# 20 pops share 83.3% (4.2% ea) instead of 25 sharing 95% (3.8% ea)
+			building_aristocrats_shares_add = 10
+			building_clergymen_shares_add   = 2			# x20 total pops = 16.7% of profits (0.84%ea up from 0.37%ea)		- Church doesn't win quite as much here
+		}
+	}
+}
+
+REPLACE_OR_CREATE:pm_company_headquarter_principle_divine_economics_2_shopkeepers = {
+	texture = "gfx/interface/icons/production_method_icons/privately_owned.dds"
+	is_hidden_when_unavailable = yes
+
+	unlocking_company_categories = {
+		shopkeeper_owned
+	}	
+	
+	disallowing_laws = {
+		law_command_economy
+		law_cooperative_ownership
+	}
+
+	unlocking_principles = {
+		principle_divine_economics_2
+		principle_divine_economics_3
+	}
+
+	building_modifiers = {
+		level_scaled = {
+			building_employment_capitalists_add = 10
+			building_employment_shopkeepers_add = 20 # 15
+			building_employment_clergymen_add   = 10 # 25
+			building_employment_clerks_add      = 10 # 0
+		}
+		workforce_scaled = {
+			goods_input_pec_financial_services_add = 1
+		}
+		unscaled = {
+			building_capitalists_shares_add = 10			# x10 pops = 34.2% of profits (3.4%ea)
+			building_shopkeepers_shares_add = 3 # 5			# x30 pops (inc. clergy) = 30.8% of profits (1.0%ea)
+			building_clergymen_shares_add = 3 # 2
+			building_company_worker_dividends_add = 0.35	# 0.25
+		}													# Private owner shopkeepers much better off than worker (parity if capis had 183 shares each)
+	}
+}
+
+REPLACE_OR_CREATE:pm_company_headquarter_principle_divine_economics_2_bureaucrats = {
+	texture = "gfx/interface/icons/production_method_icons/privately_owned.dds"
+	is_hidden_when_unavailable = yes
+
+	unlocking_company_categories = {
+		bureaucrat_owned
+	}	
+	
+	disallowing_laws = {
+		law_command_economy
+		law_cooperative_ownership
+	}
+
+	unlocking_principles = {
+		principle_divine_economics_2
+		principle_divine_economics_3
+	}
+
+	building_modifiers = {
+		level_scaled = {
+			building_employment_capitalists_add = 10
+			building_employment_bureaucrats_add = 20
+			building_employment_clergymen_add   = 10 # 25
+			building_employment_clerks_add      = 10 # 0
+		}
+		workforce_scaled = {
+			goods_input_pec_financial_services_add = 1
+		}
+		unscaled = {
+			building_capitalists_shares_add = 10			# x10 pops = 34.2% of profits (3.4%ea)
+			building_bureaucrats_shares_add = 3 # 5			# x30 pops (inc. clergy) = 30.8% of profits (1.0%ea)
+			building_clergymen_shares_add = 3 # 2
+			building_company_worker_dividends_add = 0.35	# 0.25
+		}													# Private owner bureaucrats much better off than worker (parity if capis had 183 shares each)
+	}
+}
+
+REPLACE_OR_CREATE:pm_company_headquarter_principle_divine_economics_2_academics = {
+	texture = "gfx/interface/icons/production_method_icons/privately_owned.dds"
+	is_hidden_when_unavailable = yes
+
+	unlocking_company_categories = {
+		academic_owned
+	}	
+	
+	disallowing_laws = {
+		law_command_economy
+		law_cooperative_ownership
+	}
+
+	unlocking_principles = {
+		principle_divine_economics_2
+		principle_divine_economics_3
+	}
+
+	building_modifiers = {
+		level_scaled = {
+			building_employment_capitalists_add = 10
+			building_employment_academics_add   = 20 # 15
+			building_employment_clergymen_add   = 10 # 25
+			building_employment_clerks_add      = 10 # 0
+		}
+		workforce_scaled = {
+			goods_input_pec_financial_services_add = 1
+		}
+		unscaled = {
+			building_capitalists_shares_add = 10			# x10 pops = 34.2% of profits (3.4%ea)
+			building_academics_shares_add = 3 # 5			# x30 pops (inc. clergy) = 30.8% of profits (1.0%ea)
+			building_clergymen_shares_add = 3 # 2
+			building_company_worker_dividends_add = 0.35	# 0.25
+		}													# Private owner academics much better off than worker (parity if capis had 183 shares each)
+	}
+}
+
+### Government Owners: Standard Ratio: 20 Middle, 30 Lower (0/1820/180 - 2000 total)
+# Capitalist target 3.7% each or less = 37%
+# Middle Class target ~1% or less = 30%
+# Remainder min 33% to be distributed
+REPLACE_OR_CREATE:pm_company_headquarter_government_run = {
+	texture = "gfx/interface/icons/production_method_icons/government_run.dds"
+
+	unlocking_laws = {
+		law_command_economy
+	}
+
+	building_modifiers = {
+		level_scaled = {
+			building_employment_bureaucrats_add = 20 # 50
+			building_employment_clerks_add = 30 # 50
+		}
+		unscaled = {
+			building_bureaucrats_shares_add = 91 # 10		# x20 pops = 22.8% of profits (1.1%ea)
+			building_clerks_shares_add = 6 # 2				# x30 pops = 2.2% of profits (0.07%ea) - they're clerks 
+			# law_command_economy applies: building_company_government_dividends_add = 0.75
+		}
+	}
+}
+
+### Redistributive Owners: Standard Ratio: 30 Middle, 20 Lower (0/2820/180 - 3000 total)
+REPLACE_OR_CREATE:pm_company_headquarter_worker_cooperative = {
+	texture = "gfx/interface/icons/production_method_icons/worker_cooperative.dds"
+	replacement_if_valid = pm_company_headquarter_coop_collective_agriculture
+
+	unlocking_laws = {
+		law_cooperative_ownership
+	}
+
+	building_modifiers = {
+		level_scaled = {
+			building_employment_shopkeepers_add = 30 # 50
+			building_employment_clerks_add = 20 # 50
+		}
+		unscaled = {
+			building_shopkeepers_shares_add = 94 # 10		# x30 pops = 23.5% of profits (0.78%ea)
+			building_clerks_shares_add = 9 # 2				# x20 pops = 1.5% of profits (0.075%ea) - they're clerks 
+			# law_cooperative_ownership applies: building_company_government_dividends_add = 0.75
+		}
+	}
+}
+
+REPLACE_OR_CREATE:pm_company_headquarter_coop_collective_agriculture = {
+	texture = "gfx/interface/icons/production_method_icons/worker_cooperative.dds"
+	is_hidden_when_unavailable = yes
+
+	unlocking_company_categories = {
+		aristocrat_owned
+	}
+
+	unlocking_laws = {
+		law_collectivized_agriculture
+		# law_cooperative_ownership - Implied by blocking everything else.
+	}
+
+	disallowing_laws = {	# No other land reform, no non-coop ownership.
+		law_serfdom
+		law_tenant_farmers
+		law_homesteading
+		law_commercialized_agriculture
+		law_agrarianism
+		law_industry_banned
+		law_traditionalism
+		law_interventionism
+		law_laissez_faire
+		law_command_economy
+		law_extraction_economy
+	}
+
+	building_modifiers = {
+		level_scaled = {
+			building_employment_shopkeepers_add = 15
+			building_employment_farmers_add = 15
+			building_employment_clerks_add = 20
+		}
+		unscaled = {
+			building_shopkeepers_shares_add = 94 # 10		# x30 pops (inc. farmers) = 23.5% of profits (0.78%ea)
+			building_farmers_shares_add = 94 # 0
+			building_clerks_shares_add = 9 # 2				# x20 pops = 1.5% of profits (0.075%ea) - they're clerks 
+			# law_cooperative_ownership applies: building_company_government_dividends_add = 0.75
+		}
+	}
+}
+
+REPLACE_OR_CREATE:pm_company_headquarter_only_collective_agriculture = {
+	texture = "gfx/interface/icons/production_method_icons/worker_cooperative.dds"
+	is_hidden_when_unavailable = yes
+	ai_value = 200000					# Should be forced on if the laws are right, but just in case.
+
+	unlocking_company_categories = {
+		aristocrat_owned
+	}
+
+	unlocking_laws = {
+		law_collectivized_agriculture
+	}
+
+	disallowing_laws = {	# If you have Coll Ag somehow without having coop or command.
+		law_cooperative_ownership
+		law_command_economy
+	}
+
+	building_modifiers = {
+		level_scaled = {
+			building_employment_shopkeepers_add = 15
+			building_employment_farmers_add = 15
+			building_employment_clerks_add = 20
+		}
+		unscaled = {
+			building_shopkeepers_shares_add = 94 # 10		# x30 pops (inc. farmers) = 23.5% of profits (0.78%ea)
+			building_farmers_shares_add = 94 # 0
+			building_clerks_shares_add = 9 # 2				# x20 pops = 1.5% of profits (0.075%ea) - they're clerks 
+			building_company_government_dividends_add = 0.75	# Not provided by the law.
+		}
+	}
+}
+
+############### MANAFLOW OWNERSHIP BUILDINGS ###############
+TRY_REPLACE:pm_gate_basic_mage_tower = {
+	texture = "gfx/interface/icons/production_method_icons/gate_private_mages.dds"
+
+	disallowing_laws = {
+		law_cooperative_ownership
+	}
+
+	country_modifiers = {
+		workforce_scaled = {
+			country_gate_magical_innovation_add = 0.5
+		}
+	}
+
+	building_modifiers = {
+		level_scaled = {
+			building_employment_gate_mages_add = 30 # 50
+			building_employment_clerks_add = 20 # 100
+		}
+		workforce_scaled = {
+			goods_input_pec_financial_services_add = 1
+		}
+		unscaled = {
+			building_gate_mages_shares_add = 94 # 10		# x30 pops = 23.5% of profits (0.78%ea)
+			building_clerks_shares_add = 9 # 2				# x20 pops = 1.5% of profits (0.075%ea) - they're clerks 
+		}
+	}
+}
+
+TRY_REPLACE:pm_gate_cooperative_mage_tower = {
+	texture = "gfx/interface/icons/production_method_icons/worker_cooperative.dds"
+
+	unlocking_laws = {
+		law_cooperative_ownership
+	}
+
+	country_modifiers = {
+		workforce_scaled = {
+			country_gate_magical_innovation_add = 0.5
+		}
+	}
+
+	building_modifiers = {
+		level_scaled = {
+			building_employment_gate_mages_add = 20 # 40
+			building_employment_clerks_add = 30 # 120
+		}
+		unscaled = {
+			building_gate_mages_shares_add = 91 # 10		# x20 pops = 22.8% of profits (1.1%ea)
+			building_clerks_shares_add = 6 # 2				# x30 pops = 2.2% of profits (0.07%ea) - they're clerks 
+		}
+	}
+}

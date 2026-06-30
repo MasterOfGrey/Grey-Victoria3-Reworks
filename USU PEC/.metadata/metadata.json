@@ -1,0 +1,19 @@
+{
+  "name" : "USU + PEC Compatch",
+	"id" : "3754762717",
+  "version" : "",
+  "supported_game_version" : "",
+  "short_description" : "",
+  "tags" : [
+        "Balance",
+        "Economy And Buildings",
+        "Gameplay",
+        "Trade",
+        "ComPatch",
+        "1.13"
+    ],
+  "relationships" : [],
+  "game_custom_data" : {
+    "multiplayer_synchronized" : true
+  }
+}
