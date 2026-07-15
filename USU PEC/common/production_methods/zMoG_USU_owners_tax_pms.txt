@@ -193,6 +193,78 @@ REPLACE_OR_CREATE:pm_financial_district_principle_divine_economics_2 = {
 	}
 }
 
+REPLACE_OR_CREATE:pm_financial_district_pec_corporatist_owned = {
+	texture = "gfx/interface/icons/production_method_icons/merchant_guilds.dds"
+
+	unlocking_laws = {
+		law_industry_banned
+	}
+	
+	building_modifiers = { 
+		level_scaled = {
+			building_employment_shopkeepers_add = 75
+		}
+		workforce_scaled = {
+			goods_input_pec_financial_services_add = 0.1
+		}
+		unscaled = {
+			building_shopkeepers_shares_add = 1
+		}
+	}
+}
+
+REPLACE_OR_CREATE:pm_financial_district_technocratic_owned = {
+	texture = "gfx/interface/icons/production_method_icons/professional_bureaucrats.dds"
+
+	unlocking_laws = {
+		law_technocracy
+	}
+
+	disallowing_laws = {
+		law_industry_banned
+	}
+
+	building_modifiers = {
+		level_scaled = {
+			building_employment_capitalists_add = 10
+			building_employment_academics_add = 20
+			building_employment_engineers_add = 20
+		}
+		workforce_scaled = {
+			goods_input_pec_financial_services_add = 0.1
+		}
+		unscaled = {
+			building_capitalists_shares_add = 10
+			building_engineers_shares_add = 2
+			building_academics_shares_add = 2
+		}
+	}
+}
+
+REPLACE_OR_CREATE:pm_financial_district_privately_owned_pec_nofinser = {
+	texture = "gfx/interface/icons/production_method_icons/merchant_guilds.dds"
+	replacement_if_valid = pm_financial_district_principle_divine_economics_2
+
+	disallowing_laws = {
+		law_industry_banned
+		law_technocracy
+	}
+	
+	building_modifiers = { 
+		level_scaled = {
+			building_employment_capitalists_add = 20
+			building_employment_shopkeepers_add = 40
+			building_employment_clerks_add = 40
+		}
+		unscaled = {
+			building_capitalists_shares_add = 10
+			building_shopkeepers_shares_add = 3
+		}
+	}
+}
+
+ 
+
 ## Company Headquarters (reduced to total 50 people/level employed)
 ### Standard Ratio: 25 Upper, 15 Middle, 10 Lower (250/15/0)
 REPLACE_OR_CREATE:pm_company_headquarter_privately_owned = {

@@ -1,0 +1,407 @@
+﻿# Make modifier a decaying modifier.
+REPLACE:pec_boombust_redenominate_button = {
+	name = "pec_redenominate_currency_button"
+	desc = "pec_redenominate_currency_button_desc"
+
+	visible = {
+	}
+
+	ai_chance = {
+		value = -10
+		if = {
+			limit = {
+				scaled_gold_reserves > 0.75
+			}
+			add = 12
+		}
+		else_if = {
+			limit = {
+				scaled_gold_reserves > 0.5
+			}
+			add = 8
+		}
+		else_if = {
+			limit = {
+				scaled_gold_reserves > 0.25
+			}
+			add = 6
+		}
+		else_if = {
+			limit = {
+				scaled_gold_reserves > 0
+			}
+			add = 4
+		}
+		if = {
+			limit = {
+				has_modifier = pec_currency_devalued_2
+			}
+			add = 3
+		}
+		else_if = {
+			limit = {
+				OR = {
+					has_modifier = pec_currency_devalued_3
+					has_modifier = pec_currency_devalued_5
+				}
+			}
+			add = 5
+		}
+		else_if = {
+			limit = {
+				has_modifier = pec_currency_devalued_4
+			}
+			add = 7
+		}
+	}
+
+	possible = {
+		OR = {
+			has_law = law_type:law_pec_central_bank_metallic
+			AND = {
+				custom_tooltip = {
+					text = pec_has_mint_tt
+					owner.active_law:lawgroup_pec_banking_system ?= {
+						OR = {
+							has_amendment = amendment_type:amendment_pec_national_mint_freebank
+							has_amendment = amendment_type:amendment_pec_national_mint_merchant
+							has_amendment = amendment_type:amendment_pec_national_mint_china
+						}
+					}
+				}
+				government_legitimacy >= 80
+			}
+		}
+		has_technology_researched = central_banking
+		OR = {
+			institution_investment_level = {
+				institution = institution_pec_central_bank
+				value >= 2
+			}
+			custom_tooltip = {
+				text = pec_has_mint_tt
+				owner.active_law:lawgroup_pec_banking_system ?= {
+					OR = {
+						has_amendment = amendment_type:amendment_pec_national_mint_freebank
+						has_amendment = amendment_type:amendment_pec_national_mint_merchant
+						has_amendment = amendment_type:amendment_pec_national_mint_china
+					}
+				}
+			}
+		}
+		OR = {
+			has_modifier = pec_currency_devalued_1
+			has_modifier = pec_currency_devalued_2
+			has_modifier = pec_currency_devalued_3
+			has_modifier = pec_currency_devalued_4
+			has_modifier = pec_currency_devalued_5
+		}
+		NOT = { has_modifier = pec_recent_devaluation }
+		NOT = { has_modifier = pec_redenominate_currency }
+	}
+
+	effect = {
+		if = {
+			limit = {
+				has_modifier = pec_currency_devalued_1
+			}
+			remove_modifier = pec_currency_devalued_1
+			if = {
+				limit = {
+					has_law = law_type:law_pec_central_bank_metallic
+				}
+				add_modifier = {
+					name = pec_redenominate_currency
+					multiplier = 1
+					months = 49
+					is_decaying = yes
+				}
+				add_modifier = {
+					name = pec_paying_for_redenomination
+					multiplier = money_amount_multiplier_small
+					months = 49
+					is_decaying = yes
+				}
+			}
+			else = {
+				add_modifier = {
+					name = pec_redenominate_currency
+					multiplier = 1.5
+					months = 61
+					is_decaying = yes
+				}
+				add_modifier = {
+					name = pec_paying_for_redenomination
+					multiplier = money_amount_multiplier_medium
+					months = 61
+					is_decaying = yes
+				}
+			}
+			add_radicals = {
+				value = 0.01
+			}
+			ig:ig_petty_bourgeoisie = {
+				add_modifier = {
+					name = pec_redenominate_currency_igmod
+					months = 61
+				}
+			}
+			ig:ig_trade_unions = {
+				add_modifier = {
+					name = pec_redenominate_currency_igmod
+					months = 61
+				}
+			}
+			ig:ig_rural_folk = {
+				add_modifier = {
+					name = pec_redenominate_currency_igmod
+					months = 61
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				has_modifier = pec_currency_devalued_2
+			}
+			remove_modifier = pec_currency_devalued_2
+			if = {
+				limit = {
+					has_law = law_type:law_pec_central_bank_metallic
+				}
+				add_modifier = {
+					name = pec_redenominate_currency
+					multiplier = 1.5
+					months = 49
+					is_decaying = yes
+				}
+				add_modifier = {
+					name = pec_paying_for_redenomination
+					multiplier = money_amount_multiplier_medium
+					months = 49
+					is_decaying = yes
+				}
+			}
+			else = {
+				add_modifier = {
+					name = pec_redenominate_currency
+					multiplier = 2
+					months = 61
+					is_decaying = yes
+				}
+				add_modifier = {
+					name = pec_paying_for_redenomination
+					multiplier = money_amount_multiplier_large
+					months = 61
+					is_decaying = yes
+				}
+			}
+			add_radicals = {
+				value = 0.02
+			}
+			ig:ig_petty_bourgeoisie = {
+				add_modifier = {
+					name = pec_redenominate_currency_igmod
+					multiplier = 2
+					months = 61
+				}
+			}
+			ig:ig_trade_unions = {
+				add_modifier = {
+					name = pec_redenominate_currency_igmod
+					multiplier = 2
+					months = 61
+				}
+			}
+			ig:ig_rural_folk = {
+				add_modifier = {
+					name = pec_redenominate_currency_igmod
+					multiplier = 2
+					months = 61
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				has_modifier = pec_currency_devalued_3
+			}
+			remove_modifier = pec_currency_devalued_3
+			if = {
+				limit = {
+					has_law = law_type:law_pec_central_bank_metallic
+				}
+				add_modifier = {
+					name = pec_redenominate_currency
+					multiplier = 2
+					months = 49
+					is_decaying = yes
+				}
+				add_modifier = {
+					name = pec_paying_for_redenomination
+					multiplier = money_amount_multiplier_large
+					months = 49
+					is_decaying = yes
+				}
+			}
+			else = {
+				add_modifier = {
+					name = pec_redenominate_currency
+					multiplier = 2.5
+					months = 61
+					is_decaying = yes
+				}
+				add_modifier = {
+					name = pec_paying_for_redenomination
+					multiplier = money_amount_multiplier_more_large
+					months = 61
+					is_decaying = yes
+				}
+			}
+			add_radicals = {
+				value = 0.03
+			}
+			ig:ig_petty_bourgeoisie = {
+				add_modifier = {
+					name = pec_redenominate_currency_igmod
+					multiplier = 3
+					months = 61
+				}
+			}
+			ig:ig_trade_unions = {
+				add_modifier = {
+					name = pec_redenominate_currency_igmod
+					multiplier = 3
+					months = 61
+				}
+			}
+			ig:ig_rural_folk = {
+				add_modifier = {
+					name = pec_redenominate_currency_igmod
+					multiplier = 3
+					months = 61
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				has_modifier = pec_currency_devalued_4
+			}
+			remove_modifier = pec_currency_devalued_4
+			if = {
+				limit = {
+					has_law = law_type:law_pec_central_bank_metallic
+				}
+				add_modifier = {
+					name = pec_redenominate_currency
+					multiplier = 2.5
+					months = 49
+					is_decaying = yes
+				}
+				add_modifier = {
+					name = pec_paying_for_redenomination
+					multiplier = money_amount_multiplier_more_large
+					months = 49
+					is_decaying = yes
+				}
+			}
+			else = {
+				add_modifier = {
+					name = pec_redenominate_currency
+					multiplier = 3
+					months = 61
+					is_decaying = yes
+				}
+				add_modifier = {
+					name = pec_paying_for_redenomination
+					multiplier = money_amount_multiplier_very_large
+					months = 61
+					is_decaying = yes
+				}
+			}
+			add_radicals = {
+				value = 0.04
+			}
+			ig:ig_petty_bourgeoisie = {
+				add_modifier = {
+					name = pec_redenominate_currency_igmod
+					multiplier = 4
+					months = 61
+				}
+			}
+			ig:ig_trade_unions = {
+				add_modifier = {
+					name = pec_redenominate_currency_igmod
+					multiplier = 4
+					months = 61
+				}
+			}
+			ig:ig_rural_folk = {
+				add_modifier = {
+					name = pec_redenominate_currency_igmod
+					multiplier = 4
+					months = 61
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				has_modifier = pec_currency_devalued_5
+			}
+			remove_modifier = pec_currency_devalued_5
+			if = {
+				limit = {
+					has_law = law_type:law_pec_central_bank_metallic
+				}
+				add_modifier = {
+					name = pec_redenominate_currency
+					multiplier = 3
+					months = 49
+					is_decaying = yes
+				}
+				add_modifier = {
+					name = pec_paying_for_redenomination
+					multiplier = money_amount_multiplier_very_large
+					months = 49
+					is_decaying = yes
+				}
+			}
+			else = {
+				add_modifier = {
+					name = pec_redenominate_currency
+					multiplier = 3.5
+					months = 73
+					is_decaying = yes
+				}
+				add_modifier = {
+					name = pec_paying_for_redenomination
+					multiplier = money_amount_multiplier_very_large
+					months = 73
+					is_decaying = yes
+				}
+			}
+			add_radicals = {
+				value = 0.05
+			}
+			ig:ig_petty_bourgeoisie = {
+				add_modifier = {
+					name = pec_redenominate_currency_igmod
+					multiplier = 5
+					months = 61
+				}
+			}
+			ig:ig_trade_unions = {
+				add_modifier = {
+					name = pec_redenominate_currency_igmod
+					multiplier = 5
+					months = 61
+				}
+			}
+			ig:ig_rural_folk = {
+				add_modifier = {
+					name = pec_redenominate_currency_igmod
+					multiplier = 5
+					months = 61
+				}
+			}
+		}
+	}
+}
