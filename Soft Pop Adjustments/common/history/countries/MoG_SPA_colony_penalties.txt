@@ -13,4 +13,10 @@ COUNTRIES = {
 			name = mog_company_migration_penalty
 		}
 	}
+	
+	c:DEI ?= {
+		add_modifier = {
+			name = mog_dei_citizenship_adjustment
+		}
+	}
 }

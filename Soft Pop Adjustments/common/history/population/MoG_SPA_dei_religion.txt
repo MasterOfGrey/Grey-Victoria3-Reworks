@@ -1,0 +1,14 @@
+﻿##Ensure all DEI states have some local protestants.
+POPULATION = {
+	c:DEI ?= {
+		every_scope_state = {
+			every_scope_pop = {
+			limit = { religion = rel:sunni }
+				change_pop_religion = { 
+					target = rel:protestant
+					value = 0.02
+				}
+			}
+		}
+	}
+}

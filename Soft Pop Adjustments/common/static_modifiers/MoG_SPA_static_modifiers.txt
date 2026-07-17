@@ -11,11 +11,20 @@ mog_legacy_migration_penalty = {
 	state_assimilation_mult = -0.3
 }
 
+# Stop DEI from imploding
+mog_dei_citizenship_adjustment = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_documents_positive.dds"
+	country_acceptance_state_religion_add = 5
+	country_acceptance_homeland_add = 5
+}
+
+# Education stuff
 mog_education_access_from_urbanization = {
 	icon = "gfx/interface/icons/generic_icons/literacy.dds"
 	state_education_access_add = 0.2
 }
 
+# SoL stuff
 mog_lower_strata_expected_sol_from_average = {
 	icon = "gfx/interface/icons/generic_icons/sol_icon.dds"
 	state_lower_strata_expected_sol_add = 1
