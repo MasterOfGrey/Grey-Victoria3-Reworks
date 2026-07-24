@@ -30,7 +30,7 @@ TRY_REPLACE:company_egyptian_rail = {	# Mod: possible and construction targets c
 			is_in_geographic_region = geographic_region_nile_basin
 			is_incorporated = yes
 			any_scope_building = {
-				is_building_type = building_railway
+				is_building_type = building_usu_railway_line
 				level >= 5
 			}
 			count >= 2
