@@ -88,19 +88,19 @@ mog_pli_base_innovation_rebalance_oa = {
 }
 
 # Responsiveness effects
-on_monthly_pulse_country = {
-	on_actions = {
-		mog_pli_innov_war_exhaustion_response
-	}
-}
+#on_monthly_pulse_country = {
+#	on_actions = {
+#		mog_pli_innov_war_support_response	# Reactivate when we understand has_war_support_change better and have updated
+#	}
+#}
 
-mog_pli_innov_war_exhaustion_response = {
+mog_pli_innov_war_support_response = {
 	effect = {
 		if = {
 			limit = {
 				NOT = { has_variable = mog_pli_proliferation_disabled }
 				any_scope_war = {
-					has_war_support = {
+					has_war_support_change = {
 						target = ROOT
 						value < 50
 					}
@@ -111,7 +111,7 @@ mog_pli_innov_war_exhaustion_response = {
 				limit = {
 					any_scope_war = {
 						attacker_warleader = ROOT		# Attacker loses innovation, gains tech spread
-						has_war_support = {
+						has_war_support_change = {
 							target = ROOT
 							value < 50
 						}
@@ -121,16 +121,16 @@ mog_pli_innov_war_exhaustion_response = {
 				random_scope_war = {
 					limit = {
 						attacker_warleader = ROOT
-						has_war_exhaustion = {
+						has_war_support_change = {
 							target = ROOT
 							value < 50
 						}
 						NOT = {
 							scope:exhausted_country = {
 								any_scope_war = {
-									has_war_exhaustion = {
+									has_war_support_change = {
 										target = ROOT
-										value > prev.war_exhaustion
+										value > prev.war_support
 									}
 								}
 							}
@@ -143,7 +143,7 @@ mog_pli_innov_war_exhaustion_response = {
 						value = {
 							add = var:mog_pli_innovation_current_value
 							add = {
-								add = scope:exhausted_country.war_exhaustion
+								add = scope:exhausted_country.war_support
 								multiply = -1
 							}
 							min = 0
@@ -154,7 +154,7 @@ mog_pli_innov_war_exhaustion_response = {
 						value = {
 							add = var:mog_pli_proliferation_current_value
 							add = {
-								add = scope:exhausted_country.war_exhaustion
+								add = scope:exhausted_country.war_support
 								multiply = 1
 							}
 							max = 100
@@ -175,7 +175,7 @@ mog_pli_innov_war_exhaustion_response = {
 				limit = {
 					any_scope_war = {
 						defender_warleader = ROOT		# Defender gains innovation, gains some tech spread
-						has_war_support = {
+						has_war_support_change = {
 							target = ROOT
 							value < 50
 						}
@@ -185,16 +185,16 @@ mog_pli_innov_war_exhaustion_response = {
 				random_scope_war = {
 					limit = {
 						defender_warleader = ROOT
-						has_war_exhaustion = {
+						has_war_support_change = {
 							target = ROOT
 							value < 50
 						}
 						NOT = {
 							scope:exhausted_country = {
 								any_scope_war = {
-									has_war_exhaustion = {
+									has_war_support_change = {
 										target = ROOT
-										value > prev.war_exhaustion
+										value > prev.war_support
 									}
 								}
 							}
@@ -207,7 +207,7 @@ mog_pli_innov_war_exhaustion_response = {
 						value = {
 							add = var:mog_pli_innovation_current_value
 							add = {
-								add = scope:exhausted_country.war_exhaustion
+								add = scope:exhausted_country.war_support
 								multiply = 1
 							}
 							max = 100
@@ -218,7 +218,7 @@ mog_pli_innov_war_exhaustion_response = {
 						value = {
 							add = var:mog_pli_proliferation_current_value
 							add = {
-								add = scope:exhausted_country.war_exhaustion
+								add = scope:exhausted_country.war_support
 								multiply = 0.5
 							}
 							max = 100
@@ -242,7 +242,7 @@ mog_pli_innov_war_exhaustion_response = {
 							defender_warleader = ROOT
 							attacker_warleader = ROOT
 						}
-						has_war_support = {
+						has_war_support_change = {
 							target = ROOT
 							value < 50
 						}
@@ -252,16 +252,16 @@ mog_pli_innov_war_exhaustion_response = {
 				random_scope_war = {
 					limit = {
 						defender_warleader = ROOT
-						has_war_exhaustion = {
+						has_war_support_change = {
 							target = ROOT
 							value < 50
 						}
 						NOT = {
 							scope:exhausted_country = {
 								any_scope_war = {
-									has_war_exhaustion = {
+									has_war_support_change = {
 										target = ROOT
-										value > prev.war_exhaustion
+										value > prev.war_support
 									}
 								}
 							}
@@ -274,7 +274,7 @@ mog_pli_innov_war_exhaustion_response = {
 						value = {
 							add = var:mog_pli_proliferation_current_value
 							add = {
-								add = scope:exhausted_country.war_exhaustion
+								add = scope:exhausted_country.war_support
 								multiply = 1
 							}
 							max = 100
