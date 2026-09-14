@@ -9,3 +9,7 @@ community_framework_is_active = {
 morgenrote_is_active = { # Morgenrote
 	always = no
 }
+
+PEC_is_active = { # Political & Economic Changes
+	always = no
+}

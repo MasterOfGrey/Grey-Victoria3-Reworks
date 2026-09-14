@@ -1,0 +1,156 @@
+﻿### INVESTMENT ###
+# Additions from PEC laws (investment)
+mog_pli_pec_investment_add = {
+	if = {
+		limit = { PEC_is_active = yes }
+		value = 0
+		add = mog_pli_pec_investment_bank
+	}
+	else = {
+		value = 0
+	}
+}
+
+mog_pli_pec_investment_bank = {
+	if = {
+		limit = { has_law_or_variant = law_type:law_pec_merchant_banks }
+		add = 5
+	}
+	else_if = {
+		limit = { has_law_or_variant = law_type:law_pec_free_banking }
+		add = 20
+	}
+	else_if = {
+		limit = { has_law_or_variant = law_type:law_pec_central_bank_metallic }
+		add = 10
+		add = {
+			add = 5	# Eventually exceeds free banking
+			multiply = {
+				value = institution:institution_pec_central_bank.investment
+			}
+		}
+	}
+	else_if = {
+		limit = { has_law_or_variant = law_type:law_pec_abolish_money }
+		add = 0		# good luck investing without money
+	}
+	else = {		# For random modded laws
+		add = mog_pli_pec_investment_bank_modded
+	}
+}
+mog_pli_pec_investment_bank_modded = 5
+
+
+# Multipliers from PEC laws (investment)
+mog_pli_pec_investment_mult = {
+	if = {
+		limit = { PEC_is_active = yes }
+		value = 0
+		add = mog_pli_pec_investment_courts_mult
+	}
+	else = {
+		value = 1
+	}
+}
+
+mog_pli_pec_investment_courts_mult = {	# Court multipliers on investment (0.8 = 20% reduction)
+	if = {
+		limit = { has_law_or_variant = law_type:law_pec_local_elite_courts }
+		add = 0.95
+	}
+	else_if = {
+		limit = { has_law_or_variant = law_type:law_pec_religious_courts }
+		add = 0.90
+	}
+	else_if = {
+		limit = { has_law_or_variant = law_type:law_pec_appointed_courts }
+		add = 1.0
+	}
+	else_if = {
+		limit = { has_law_or_variant = law_type:law_pec_independent_courts }
+		add = 1.05
+	}
+	else_if = {
+		limit = { has_law_or_variant = law_type:law_pec_political_courts }
+		add = 1.10
+	}
+	else = {		# For random modded laws
+		add = mog_pli_pec_investment_courts_modded
+	}
+}
+mog_pli_pec_investment_courts_modded = 1
+
+### CORRUPTION ###
+# Additions from PEC laws (corruption)
+mog_pli_pec_corruption_add = {
+	if = {
+		limit = { PEC_is_active = yes }
+		value = 0
+		add = mog_pli_pec_corruption_state
+	}
+	else = {
+		value = 0
+	}
+}
+
+mog_pli_pec_corruption_state = {
+	if = {
+		limit = { has_law_or_variant = law_type:law_pec_nobility }
+		add = 0
+	}
+	else_if = {
+		limit = { has_law_or_variant = law_type:law_pec_unitarism }
+		add = -5
+	}
+	else_if = {
+		limit = { has_law_or_variant = law_type:law_pec_federalism }
+		add = -10
+	}
+	else_if = {
+		limit = { has_law_or_variant = law_type:law_pec_confederation }
+		add = -3
+	}
+	else = {		# For random modded laws
+		add = mog_pli_pec_corruption_state_modded
+	}
+}
+mog_pli_pec_corruption_state_modded = 0
+
+# Multipliers from PEC laws (corruption)
+mog_pli_pec_corruption_mult = {
+	if = {
+		limit = { PEC_is_active = yes }
+		value = 0
+		add = mog_pli_pec_corruption_courts_mult
+	}
+	else = {
+		value = 1
+	}
+}
+
+mog_pli_pec_corruption_courts_mult = {	# Court multipliers on corruption (0.8 = 20% reduction)
+	if = {
+		limit = { has_law_or_variant = law_type:law_pec_local_elite_courts }
+		add = 0.9
+	}
+	else_if = {
+		limit = { has_law_or_variant = law_type:law_pec_religious_courts }
+		add = 1.0
+	}
+	else_if = {
+		limit = { has_law_or_variant = law_type:law_pec_appointed_courts }
+		add = 0.8
+	}
+	else_if = {
+		limit = { has_law_or_variant = law_type:law_pec_independent_courts }
+		add = 0.7
+	}
+	else_if = {
+		limit = { has_law_or_variant = law_type:law_pec_political_courts }
+		add = 1.1
+	}
+	else = {		# For random modded laws
+		add = mog_pli_pec_corruption_courts_modded
+	}
+}
+mog_pli_pec_corruption_courts_modded = 1

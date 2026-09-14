@@ -17,10 +17,13 @@ MoG_PLI_do_corruption_setup_effect = {
 		name = mog_pli_corruption_bar_start_value
 		value = mog_pli_corruption_target
 	}
-	je:je_mog_pli_investment = {
-		set_bar_progress = {
-			value = local_var:mog_pli_corruption_bar_start_value
-			name = mog_pli_corruption_tracking_bar
+	if = {
+		limit = { pli_corruption_tracking_trigger = yes }
+		je:je_mog_pli_investment = {
+			set_bar_progress = {
+				value = local_var:mog_pli_corruption_bar_start_value
+				name = mog_pli_corruption_tracking_bar
+			}
 		}
 	}
 }

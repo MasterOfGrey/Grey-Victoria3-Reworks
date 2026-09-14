@@ -534,23 +534,29 @@ mog_pli_ino_slavery_modded = 1	# Replace this value for modded laws compatibilit
 
 ### Technology Proliferation Values
 mog_pli_proliferation_target = {	# This represents the conditions which support independent innovation incentives
-	value = 0
-	add = mog_pli_pro_governance			# Max 20	- Best: Parliamentary Republic
-	add = mog_pli_pro_bureaucracy			# Max 15	- Best: Appointed
-	add = mog_pli_pro_childrens_rights		# Max 15	- Best: Compulsory P.Schools
-	add = mog_pli_pro_internal_security		# Max 5		- Best: National Guard
-	add = mog_pli_pro_economic_system		# Max 5		- Best: Interventionism/Command Econ
-	add = mog_pli_pro_trade_policy			# Max 5		- Best: Mercantilism
-	add = mog_pli_pro_land_reform			# Max 5		- Best: Collectivised Ag
-	add = mog_pli_pro_education				# Max 5		- Best: Private
-	add = mog_pli_pro_healthcare			# Max 5		- Best: Private
-	add = mog_pli_pro_free_speech			# Max 5		- Best: Free Speech
-	add = mog_pli_pro_labor_rights			# Max 5		- Best: Worker Protections
-	add = mog_pli_pro_women					# Max 5		- Best: Women's Suffrage
-	multiply = mog_pli_pro_isolationism_mult			# Effectiveness of everything is nerfed by variants of isolationism
-	min = 0												# Min Bonus is 0%, Max Bonus is 100% - realistically getting either should be nearly impossible.
-	max = mog_pli_max_proliferation_from_literacy		# Already in 0-100 range
-	max = mog_pli_max_proliferation_from_position		# Already in 0-100 range
+	if = {
+		limit = { pli_proliferation_tracking_trigger = no }
+		value = 0
+	}
+	else = {
+		value = 0
+		add = mog_pli_pro_governance			# Max 20	- Best: Parliamentary Republic
+		add = mog_pli_pro_bureaucracy			# Max 15	- Best: Appointed
+		add = mog_pli_pro_childrens_rights		# Max 15	- Best: Compulsory P.Schools
+		add = mog_pli_pro_internal_security		# Max 5		- Best: National Guard
+		add = mog_pli_pro_economic_system		# Max 5		- Best: Interventionism/Command Econ
+		add = mog_pli_pro_trade_policy			# Max 5		- Best: Mercantilism
+		add = mog_pli_pro_land_reform			# Max 5		- Best: Collectivised Ag
+		add = mog_pli_pro_education				# Max 5		- Best: Private
+		add = mog_pli_pro_healthcare			# Max 5		- Best: Private
+		add = mog_pli_pro_free_speech			# Max 5		- Best: Free Speech
+		add = mog_pli_pro_labor_rights			# Max 5		- Best: Worker Protections
+		add = mog_pli_pro_women					# Max 5		- Best: Women's Suffrage
+		multiply = mog_pli_pro_isolationism_mult			# Effectiveness of everything is nerfed by variants of isolationism
+		min = 0												# Min Bonus is 0%, Max Bonus is 100% - realistically getting either should be nearly impossible.
+		max = mog_pli_max_proliferation_from_literacy		# Already in 0-100 range
+		max = mog_pli_max_proliferation_from_position		# Already in 0-100 range
+	}
 }
 
 mog_pli_proliferation_target_loc_value = {
@@ -559,10 +565,16 @@ mog_pli_proliferation_target_loc_value = {
 }
 
 mog_pli_proliferation_max_loc_value = {
-	value = 100
-	max = mog_pli_max_proliferation_from_literacy		# Already in 0-100 range
-	max = mog_pli_max_proliferation_from_position		# Already in 0-100 range
-	divide = 100
+	if = {
+		limit = { pli_proliferation_tracking_trigger = no }
+		value = 0
+	}
+	else = {
+		value = 100
+		max = mog_pli_max_proliferation_from_literacy		# Already in 0-100 range
+		max = mog_pli_max_proliferation_from_position		# Already in 0-100 range
+		divide = 100
+	}
 }
 
 mog_pli_proliferation_target_trend_buffer = {
