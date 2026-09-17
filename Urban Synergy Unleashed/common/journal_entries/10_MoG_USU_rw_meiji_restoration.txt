@@ -18,7 +18,7 @@ TRY_REPLACE:je_meiji_economy = { # <- tech. only needs 1 level (fine) but too no
 			}
 			any_scope_building = {
 				is_building_type = building_urban_center
-				level >= 5
+				level >= 2
 			}
 			has_building = building_usu_railway_line # building_railway
 			percent > 0.7

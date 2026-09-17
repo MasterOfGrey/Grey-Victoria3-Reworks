@@ -1,0 +1,121 @@
+﻿namespace = amazon
+## Update building_railway to building_usu_railway_line # building_railway
+
+# The Devil's Railroad
+amazon.1 = {
+	type = country_event
+	placement = scope:amazon_state
+
+	title = amazon.1.t
+	desc = amazon.1.d
+	flavor = amazon.1.f
+
+	cooldown = { days = short_modifier_time }
+
+	event_image = {
+		video = "unspecific_trains"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+
+	duration = 3
+
+	trigger = {
+		any_scope_state = {
+			OR = {
+				has_state_trait = state_trait_malaria
+				has_state_trait = state_trait_severe_malaria
+				has_state_trait = state_trait_amazon_rainforest
+				has_state_trait = state_trait_amazon_rainforest_level_1
+				has_state_trait = state_trait_amazon_rainforest_level_2
+			}
+			any_scope_building = {
+				is_building_type = building_usu_railway_line # building_railway
+				is_under_construction = yes
+			}
+			NOR = {
+				has_modifier = devils_railroad_modifier
+				has_modifier = slowed_railway_construction
+				has_modifier = cautious_railway_construction
+			}
+			any_scope_pop = {
+				is_pop_type = laborers
+				pop_employment_building = building_construction_sector
+			}
+		}
+	}
+
+	immediate = {
+		random_scope_state = {
+			limit = {
+				OR = {
+					has_state_trait = state_trait_malaria
+					has_state_trait = state_trait_severe_malaria
+					has_state_trait = state_trait_amazon_rainforest
+					has_state_trait = state_trait_amazon_rainforest_level_1
+					has_state_trait = state_trait_amazon_rainforest_level_2
+				}
+				any_scope_building = {
+					is_building_type = building_usu_railway_line # building_railway
+					is_under_construction = yes
+				}
+			}
+			save_scope_as = amazon_state
+			random_scope_building = {
+				limit = {
+					is_building_type = building_usu_railway_line # building_railway
+					is_under_construction = yes
+				}
+				save_scope_as = devils_railroad
+			}
+			random_scope_pop = {
+				limit = {
+					is_pop_type = laborers
+					pop_employment_building = building_construction_sector
+				}
+				save_scope_as = amazon_laborers
+			}
+		}
+	}
+
+	option = {
+		name = amazon.1.a
+		default_option = yes
+		# greatly increase laborer mortality for construction camps
+		scope:amazon_state = {
+			add_modifier = {
+				name = devils_railroad_modifier
+				days = normal_modifier_time
+			}
+		}
+	}
+	option = {
+		name = amazon.1.b
+		# greatly increase construction time
+		scope:amazon_state = {
+			add_modifier = {
+				name = slowed_railway_construction
+				days = normal_modifier_time
+			}
+		}
+	}
+	option = {
+		# slightly increase laborer mortality and increase construction time
+		name = amazon.1.c
+		highlighted_option = yes
+		trigger = {
+			OR = {
+				has_law_or_variant = law_type:law_regulatory_bodies
+				has_law_or_variant = law_type:law_worker_protections
+			}
+		}
+		scope:amazon_state = {
+			add_modifier = {
+				name = cautious_railway_construction
+				days = normal_modifier_time
+			}
+		}
+	}
+}

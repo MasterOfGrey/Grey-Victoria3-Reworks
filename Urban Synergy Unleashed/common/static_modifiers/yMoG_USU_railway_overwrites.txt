@@ -1,0 +1,78 @@
+﻿## VANILLA OVERWRITES
+
+# Whole System
+REPLACE:india_railway_reward = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_gear_positive.dds
+	state_migration_pull_mult = 0.50
+	building_group_bg_usu_rail_infrastructure_throughput_add = 0.15
+}
+
+REPLACE:modifier_arteries_of_the_nation = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_gear_positive.dds
+	building_group_bg_usu_rail_infrastructure_throughput_add = 0.1
+}
+
+REPLACE:modifier_portugal_rail_network = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_gear_positive.dds
+	building_group_bg_usu_rail_infrastructure_throughput_add = 0.25
+	state_construction_mult = 0.05
+}
+
+REPLACE:railway_production_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_gear_positive.dds
+	building_group_bg_usu_rail_infrastructure_throughput_add = 0.33
+}
+
+REPLACE:japan_production_reward = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_gear_positive.dds
+	building_group_bg_usu_rail_infrastructure_throughput_add = 0.4
+}
+
+REPLACE:siberia_infrastructure = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_gear_positive.dds
+	state_migration_pull_mult = 2
+	building_group_bg_usu_rail_infrastructure_throughput_add = 0.25
+}
+
+REPLACE:great_plains_settlement = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_gear_positive.dds
+	state_migration_pull_mult = 2
+	building_group_bg_usu_rail_infrastructure_throughput_add = 0.25
+}
+
+REPLACE:canada_settlement_mod = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_gear_positive.dds
+	state_migration_pull_mult = 1
+	building_group_bg_usu_rail_infrastructure_throughput_add = 0.15
+}
+
+REPLACE:railway_strike_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_gear_negative.dds
+	building_group_bg_usu_rail_infrastructure_throughput_add = -0.25
+}
+
+REPLACE:first_railway_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_gear_positive.dds
+	building_group_bg_usu_rail_infrastructure_throughput_add = 0.1
+}
+
+# Lines Only
+REPLACE:stressed_rail_network = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_gear_negative.dds
+	building_usu_railway_line_throughput_add = -0.25
+}
+
+REPLACE:mysteriously_mismanaged_rail_network = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_gear_negative.dds
+	building_usu_railway_line_throughput_add = -0.5
+}
+
+REPLACE:surprisingly_efficient_rail_network = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_gear_positive.dds
+	building_usu_railway_line_throughput_add = 0.25
+}
+
+REPLACE:protected_trains = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_gear_negative.dds
+	building_usu_railway_line_throughput_add = -0.5
+}

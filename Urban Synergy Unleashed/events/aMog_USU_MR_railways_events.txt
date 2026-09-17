@@ -1,0 +1,429 @@
+﻿######################
+# Morgenrote EVENTS  #
+######################
+
+#by Marco Dandolo
+
+###################
+
+namespace = gaudi
+
+################### swapped to new railway lines
+
+#Gaudí 1201: Modern Locomotives
+#Panum 1102: Spanish Flu - Dynamic Start
+
+###################
+
+#Gaudí 1201: Modern Locomotives
+
+gaudi.1201 = {
+	dlc = dlc_morgenrote
+
+	type = country_event
+
+	title = {
+		first_valid = {
+			triggered_desc = {
+				desc = gaudi.1201.t_general
+				trigger = {
+					c:USA ?= this
+					year >= 1855
+					year < 1880
+				}
+			}
+			triggered_desc = {
+				desc = gaudi.1201.t_forney
+				trigger = {
+					c:USA ?= this
+					year >= 1880
+					year < 1900
+				}
+			}
+			triggered_desc = {
+				desc = gaudi.1201.f_e6
+				trigger = {
+					c:USA ?= this
+					year >= 1900
+					year < 1925
+				}
+			}
+			triggered_desc = {
+				desc = gaudi.1201.t_m_1000
+				trigger = {
+					c:USA ?= this
+					year >= 1925
+					year < 1937
+					any_scope_state = {
+						count <= 0.25
+						is_production_method_active = {
+							building_type = building_usu_railway_line # building_railway
+							production_method = pm_electric_trains
+						}
+					}
+				}
+			}
+			triggered_desc = {
+				desc = gaudi.1201.t_gg1
+				trigger = {
+					c:USA ?= this
+					year >= 1925
+					year < 1937
+					any_scope_state = {
+						count > 0.25
+						is_production_method_active = {
+							building_type = building_usu_railway_line # building_railway
+							production_method = pm_electric_trains
+						}
+					}
+				}
+			}
+			triggered_desc = {
+				desc = gaudi.1201.t_kkstb_30
+				trigger = {
+					c:AUS ?= this
+					year >= 1895
+					year < 1936
+				}
+			}
+			triggered_desc = {
+				desc = gaudi.1201.t_fs_class_670
+				trigger = {
+					c:ITA ?= this
+					year >= 1900
+					year < 1936
+				}
+			}
+			triggered_desc = {
+				desc = gaudi.1201.t
+				trigger = {
+					always = yes
+				}
+			}
+		}
+	}
+
+	desc = gaudi.1201.d
+
+	flavor = {
+		first_valid = {
+			triggered_desc = {
+				desc = gaudi.1201.f_general
+				trigger = {
+					c:USA ?= this
+					year >= 1855
+					year < 1880
+				}
+			}
+			triggered_desc = {
+				desc = gaudi.1201.f_forney
+				trigger = {
+					c:USA ?= this
+					year >= 1880
+					year < 1900
+				}
+			}
+			triggered_desc = {
+				desc = gaudi.1201.f_e6
+				trigger = {
+					c:USA ?= this
+					year >= 1900
+					year < 1925
+				}
+			}
+			triggered_desc = {
+				desc = gaudi.1201.f_m_1000
+				trigger = {
+					c:USA ?= this
+					year >= 1925
+					year < 1937
+					any_scope_state = {
+						count <= 0.25
+						is_production_method_active = {
+							building_type = building_usu_railway_line # building_railway
+							production_method = pm_electric_trains
+						}
+					}
+				}
+			}
+			triggered_desc = {
+				desc = gaudi.1201.f_gg1
+				trigger = {
+					c:USA ?= this
+					year >= 1925
+					year < 1937
+					any_scope_state = {
+						count > 0.25
+						is_production_method_active = {
+							building_type = building_usu_railway_line # building_railway
+							production_method = pm_electric_trains
+						}
+					}
+				}
+			}
+			triggered_desc = {
+				desc = gaudi.1201.f_kkstb_30
+				trigger = {
+					c:AUS ?= this
+					year >= 1895
+					year < 1936
+				}
+			}
+			triggered_desc = {
+				desc = gaudi.1201.f_fs_class_670
+				trigger = {
+					c:ITA ?= this
+					year >= 1900
+					year < 1936
+				}
+			}
+			triggered_desc = {
+				desc = gaudi.1201.f
+				trigger = {
+					always = yes
+				}
+			}
+		}
+	}
+
+	event_image = { #General
+		trigger = {
+			c:USA ?= this
+			year >= 1855
+			year < 1880
+		}
+		texture = "gfx/event_pictures/gaudi_pictures/gaudi_locomotives/gaudi_locomotive_general.dds"
+	}
+	event_image = { #Forney
+		trigger = {
+			c:USA ?= this
+			year >= 1880
+			year < 1900
+		}
+		texture = "gfx/event_pictures/gaudi_pictures/gaudi_locomotives/gaudi_locomotive_forney.dds"
+	}
+	event_image = { #E6 Class
+		trigger = {
+			c:USA ?= this
+			year >= 1900
+			year < 1925
+		}
+		texture = "gfx/event_pictures/gaudi_pictures/gaudi_locomotives/gaudi_locomotive_e6.dds"
+	}
+	event_image = { #M-10000
+		trigger = {
+			c:USA ?= this
+			year >= 1925
+			year < 1937
+			any_scope_state = {
+				count <= 0.25
+				is_production_method_active = {
+                    building_type = building_usu_railway_line # building_railway
+                    production_method = pm_electric_trains
+                }
+			}
+		}
+		texture = "gfx/event_pictures/gaudi_pictures/gaudi_locomotives/gaudi_locomotive_m-10000.dds"
+	}
+	event_image = { #Class GG1
+		trigger = {
+			c:USA ?= this
+			year >= 1925
+			year < 1937
+			any_scope_state = {
+				count > 0.25
+				is_production_method_active = {
+                    building_type = building_usu_railway_line # building_railway
+                    production_method = pm_electric_trains
+                }
+			}
+		}
+		texture = "gfx/event_pictures/gaudi_pictures/gaudi_locomotives/gaudi_locomotive_gg1.dds"
+	}
+	event_image = { #kkStB-Reihe 30
+		trigger = {
+			c:AUS ?= this
+			year >= 1895
+			year < 1937
+		}
+		texture = "gfx/event_pictures/gaudi_pictures/gaudi_locomotives/gaudi_locomotive_kkstb_30.dds"
+	}
+	event_image = { #FS Class 670
+		trigger = {
+			c:ITA ?= this
+			year >= 1900
+			year < 1937
+		}
+		texture = "gfx/event_pictures/gaudi_pictures/gaudi_locomotives/gaudi_locomotive_fs_class_670.dds"
+	}
+	event_image = { #Default Picture
+		trigger = {
+			NOR = {
+				AND = {
+					c:USA ?= this
+					year >= 1855
+					year < 1937
+				}
+				AND = {
+					c:AUS ?= this
+					year >= 1895
+					year < 1937
+				}
+				AND = {
+					c:ITA ?= this
+					year >= 1900
+					year < 1937
+				}
+			}
+		}
+		texture = "gfx/event_pictures/gaudi_pictures/gaudi_locomotives/gaudi_locomotive_general.dds"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/unspecific/trains"
+
+	icon = "gfx/interface/icons/event_icons/locomotives.dds"
+
+	trigger = {
+	}
+
+	immediate = {
+		if = {
+			limit = { has_variable = tesla_engineer_var }
+			var:tesla_engineer_var = {
+				set_variable = {
+					name = tesla_engineer_achievements_finished_locomotive_project_var
+					value = flag:tesla_engineer_achievements_finished_locomotive_project_loc
+				}
+			}
+		}
+	}
+
+	option = {
+		name = gaudi.1201.g #A wonder of Engineering!
+		default_option = yes
+
+		tesla_civil_engineering_large_add_technology = yes
+		civil_engineer_experience_gain_effect = { AMOUNT = 30 }
+	}
+}
+
+#Panum 1102: Spanish Flu - Dynamic Start
+panum.1102 = {
+	dlc = dlc_morgenrote
+
+	placement = scope:panum_disease_state
+
+	type = country_event
+
+	title = panum.1102.t
+
+	desc = panum.1102.d
+
+	flavor = panum.1102.f
+
+	duration = 3
+
+	event_image = {
+		texture = "gfx/event_pictures/panum_pictures/panum_spanish_flu.dds"
+	}
+
+	icon = "gfx/interface/icons/event_icons/event_medicine.dds"
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	trigger = {
+		has_game_rule = panum_dynamic_spanish_flu_rule
+		NOT = {
+			has_global_variable = panum_spanish_flu_pandemic_global_var
+		}
+		game_date >= 1905.1.1
+		game_date < 1920.1.1
+		country_rank >= rank_value:major_power
+		any_scope_state = {
+			is_incorporated = yes
+			OR = {
+				is_production_method_active = {
+					building_type = building_usu_railway_line # building_railway
+					production_method = pm_electric_trains
+				}
+				is_production_method_active = {
+					building_type = building_usu_railway_line # building_railway
+					production_method = pm_diesel_trains
+				}
+				is_production_method_active = {
+					building_type = building_usu_railway_line # building_railway
+					production_method = pm_ac_electric_trains
+				}
+				is_production_method_active = {
+					building_type = building_usu_railway_line # building_railway
+					production_method = pm_electric_trains_principle_transport_3
+				}
+				is_production_method_active = {
+					building_type = building_usu_railway_line # building_railway
+					production_method = pm_diesel_trains_principle_transport_3
+				}
+				is_production_method_active = {
+					building_type = building_usu_railway_line # building_railway
+					production_method = pm_ac_electric_trains_principle_transport_3
+				}
+			}
+		}
+	}
+
+	immediate = {
+		set_global_variable = panum_spanish_flu_pandemic_global_var
+		country_definition = {
+			set_global_variable = {
+				name = panum_spanish_flu_originator_country
+				value = this
+			}
+		}
+		random_scope_state = {
+			limit = {
+				is_incorporated = yes
+				OR = {
+					is_production_method_active = {
+						building_type = building_usu_railway_line # building_railway
+						production_method = pm_electric_trains
+					}
+					is_production_method_active = {
+						building_type = building_usu_railway_line # building_railway
+						production_method = pm_diesel_trains
+					}
+					is_production_method_active = {
+						building_type = building_usu_railway_line # building_railway
+						production_method = pm_ac_electric_trains
+					}
+					is_production_method_active = {
+						building_type = building_usu_railway_line # building_railway
+						production_method = pm_electric_trains_principle_transport_3
+					}
+					is_production_method_active = {
+						building_type = building_usu_railway_line # building_railway
+						production_method = pm_diesel_trains_principle_transport_3
+					}
+					is_production_method_active = {
+						building_type = building_usu_railway_line # building_railway
+						production_method = pm_ac_electric_trains_principle_transport_3
+					}
+				}
+			}
+			save_scope_as = panum_disease_state
+			set_variable = panum_spanish_flu_originator_state
+		}
+		add_journal_entry = {
+			type = je_panum_spanish_flu
+		}
+	}
+
+	option = {	#Spanish Flu Pandemic started
+		name = panum.1101.g
+		default_option = yes
+		scope:panum_disease_state = {
+			state_region = {
+				start_harvest_condition = panum_spanish_flu_condition
+			}
+		}
+	}
+}

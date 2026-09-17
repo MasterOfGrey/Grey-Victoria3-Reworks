@@ -1,0 +1,127 @@
+﻿namespace = plague
+## Update building_railway to building_usu_railway_line # building_railway
+## Also update active PM checks for additional PM's introduced by USU
+# The plague arrives
+plague.1 = {
+	type = country_event
+	placement = scope:plague_origin_state
+
+	title = plague.1.t
+	desc = plague.1.d
+	flavor = plague.1.f
+
+	event_image = {
+		video = "unspecific_sick_in_hospital"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
+
+	duration = 3
+
+	trigger = {
+		NOT = { has_global_variable = spanish_flu }
+		country_rank >= rank_value:major_power
+		NOT = {
+			institution_investment_level = {
+				institution = institution_health_system
+				value >= 3
+			}
+		}
+		any_scope_state = {
+			is_incorporated = yes
+			OR = {
+				is_production_method_active = {
+					building_type = building_usu_railway_line # building_railway
+					production_method = pm_electric_trains
+				}
+				is_production_method_active = {
+					building_type = building_usu_railway_line # building_railway
+					production_method = pm_electric_trains_principle_transport_3
+				}
+				is_production_method_active = {
+					building_type = building_usu_railway_line # building_railway
+					production_method = pm_diesel_trains
+				}
+				is_production_method_active = {
+					building_type = building_usu_railway_line # building_railway
+					production_method = pm_diesel_trains_principle_transport_3
+				}
+				is_production_method_active = {	# USU
+					building_type = building_usu_railway_line # building_railway
+					production_method = pm_ac_electric_trains
+				}
+				is_production_method_active = {	# USU
+					building_type = building_usu_railway_line # building_railway
+					production_method = pm_ac_electric_trains_principle_transport_3
+				}
+			}
+		}
+	}
+
+	immediate = {
+		set_global_variable = {
+			name = spanish_flu
+		}
+		set_variable = {
+			name = plague_originator
+		}
+		save_scope_as = plague_originator_country
+		random_scope_state = {
+			limit = {
+				is_incorporated = yes
+				OR = {
+					is_production_method_active = {
+						building_type = building_usu_railway_line # building_railway
+						production_method = pm_electric_trains
+					}
+					is_production_method_active = {
+						building_type = building_usu_railway_line # building_railway
+						production_method = pm_electric_trains_principle_transport_3
+					}
+					is_production_method_active = {
+						building_type = building_usu_railway_line # building_railway
+						production_method = pm_diesel_trains
+					}
+					is_production_method_active = {
+						building_type = building_usu_railway_line # building_railway
+						production_method = pm_diesel_trains_principle_transport_3
+					}
+					is_production_method_active = {	# USU
+						building_type = building_usu_railway_line # building_railway
+						production_method = pm_ac_electric_trains
+					}
+					is_production_method_active = {	# USU
+						building_type = building_usu_railway_line # building_railway
+						production_method = pm_ac_electric_trains_principle_transport_3
+					}
+				}
+			}
+			save_scope_as = plague_origin_state
+			set_variable = plague_originator_state
+			randomize_plague_level_effect = yes
+			add_plague_modifier_effect = yes
+		}
+	}
+
+	option = {
+		name = plague.1.a
+		default_option = yes
+		scope:plague_origin_state = {
+			custom_tooltip = plague_state_mortality.tt
+		}
+		custom_tooltip = plague_decisions_available.tt
+		hidden_effect = {
+			every_country = {
+				limit = {
+					NOT = { this = ROOT }
+					is_player = yes
+				}
+				trigger_event = { id = plague.4 }
+			}
+		}
+		add_journal_entry = { type = je_spanish_flu }
+		set_variable = country_hit_by_plague # so that countries cannot get JE multiple times
+	}
+}

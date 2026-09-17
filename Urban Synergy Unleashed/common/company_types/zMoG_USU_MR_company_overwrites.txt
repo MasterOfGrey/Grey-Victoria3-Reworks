@@ -14,6 +14,13 @@
 #	}
 #}
 
+# Basic Telegraphic Company
+TRY_INJECT:mr_basic_telegraphy = {
+	extension_building_types = {
+		building_usu_railway_line
+	}
+}
+
 ### FLAVOURED
 ## Austria-Hungary
 # Galizisch-Karpathische Petroleum AG

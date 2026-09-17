@@ -20,6 +20,10 @@ TRY_REPLACE:company_egyptian_rail = {	# Mod: possible and construction targets c
 		building_iron_mine
 	}
 
+	possible_prestige_goods = {
+		prestige_good_brunn_type_engines
+	}
+
 	potential = {
 		country_has_primary_culture = cu:misri
 	}
@@ -31,7 +35,7 @@ TRY_REPLACE:company_egyptian_rail = {	# Mod: possible and construction targets c
 			is_incorporated = yes
 			any_scope_building = {
 				is_building_type = building_usu_railway_line
-				level >= 5
+				level >= 4
 			}
 			count >= 2
 		}
