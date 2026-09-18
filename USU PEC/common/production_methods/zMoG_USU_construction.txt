@@ -15,9 +15,9 @@
 			goods_input_wood_add = 30		# 75
 		}
 		
-		level_scaled = {
-			building_employment_bureaucrats_add = 10	# 100
-			building_employment_clerks_add = 70			# 100 (30 would-be bureaucrats converted into clerks)
+		level_scaled = {		# Note: too small pops creates hiring problems early game - hence 25 bureaucrats
+			building_employment_bureaucrats_add = 25	# 100
+			building_employment_clerks_add = 55			# 100 (15 would-be bureaucrats converted into clerks)
 			building_employment_laborers_add = 320		# 800
 		}
 		unscaled = {
@@ -56,9 +56,9 @@ REPLACE_OR_CREATE:pm_iron_frame_buildings = {
 		}
 		
 		level_scaled = {
-			building_employment_bureaucrats_add = 10	# 100
-			building_employment_clerks_add = 60			# 100 (20 would-be bureaucrats converted into clerks)
-			building_employment_machinists_add = 30		# 50 (10 would-be bureaucrats converted into machinists)
+			building_employment_bureaucrats_add = 25	# 100
+			building_employment_clerks_add = 50			# 100 (10 would-be bureaucrats converted into clerks)
+			building_employment_machinists_add = 25		# 50 (5 would-be bureaucrats converted into machinists)
 			building_employment_laborers_add = 300		# 750
 		}
 		unscaled = {
@@ -97,9 +97,9 @@ REPLACE_OR_CREATE:pm_steel_frame_buildings = {
 		}
 		
 		level_scaled = {
-			building_employment_bureaucrats_add = 10	# 100
-			building_employment_clerks_add = 60			# 100 (20 would-be bureaucrats converted into clerks)
-			building_employment_machinists_add = 70		# 150 (10 would-be bureaucrats converted into machinists)
+			building_employment_bureaucrats_add = 25	# 100
+			building_employment_clerks_add = 50			# 100 (10 would-be bureaucrats converted into clerks)
+			building_employment_machinists_add = 65		# 150 (5 would-be bureaucrats converted into machinists)
 			building_employment_laborers_add = 260		# 650
 		}
 		unscaled = {
@@ -139,10 +139,10 @@ REPLACE_OR_CREATE:pm_arc_welded_buildings = {
 		} 
 		
 		level_scaled = {
-			building_employment_bureaucrats_add = 10	# 100
-			building_employment_clerks_add = 60			# 100 (20 would-be bureaucrats converted into clerks)
+			building_employment_bureaucrats_add = 25	# 100
+			building_employment_clerks_add = 50			# 100 (10 would-be bureaucrats converted into clerks)
 			building_employment_engineers_add = 20		# 50
-			building_employment_machinists_add = 70		# 150 (10 would-be bureaucrats converted into machinists)
+			building_employment_machinists_add = 65		# 150 (5 would-be bureaucrats converted into machinists)
 			building_employment_laborers_add = 240		# 600
 		}
 		unscaled = {

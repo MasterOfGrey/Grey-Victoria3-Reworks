@@ -1,0 +1,5 @@
+﻿INJECT:pec_company_entertainment = {
+	building_types = {
+		usu_building_public_green
+	}
+}

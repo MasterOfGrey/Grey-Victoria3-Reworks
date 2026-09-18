@@ -1,0 +1,342 @@
+﻿TRY_INJECT:company_Bank_BNSW = {
+	extension_building_types = {
+		building_usu_railway_line
+		usu_building_public_green
+	}
+}
+
+TRY_INJECT:company_Bank_CA = {
+	extension_building_types = {
+		building_usu_railway_line
+		usu_building_public_green
+	}
+}
+
+TRY_INJECT:company_SgdB = {
+	extension_building_types = {
+		building_usu_railway_line
+		usu_building_public_green
+	}
+}
+
+TRY_INJECT:company_Bank_of_Brazil = {
+	extension_building_types = {
+		building_usu_railway_line
+		usu_building_public_green
+	}
+}
+
+TRY_INJECT:company_Royal_Bank_of_Canada = {
+	extension_building_types = {
+		building_usu_railway_line
+		usu_building_public_green
+	}
+}
+
+TRY_INJECT:company_Bank_of_Montreal = {
+	extension_building_types = {
+		building_usu_railway_line
+		usu_building_public_green
+	}
+}
+
+TRY_INJECT:company_Bank_Desjardins = {
+	extension_building_types = {
+		building_usu_railway_line
+		usu_building_public_green
+	}
+}
+
+TRY_INJECT:company_Bank_HSBC = {
+	extension_building_types = {
+		building_usu_railway_line
+		usu_building_public_green
+	}
+}
+
+TRY_INJECT:company_Bank_IBC = {
+	extension_building_types = {
+		building_usu_railway_line
+		usu_building_public_green
+	}
+}
+
+TRY_INJECT:company_Bank_BOCOM = {
+	extension_building_types = {
+		building_usu_railway_line
+		usu_building_public_green
+	}
+}
+
+#Da-Qing Bank / Bank of ChinaTRY_INJECT:company_Da_Qing_Bank = {
+	extension_building_types = {
+		building_usu_railway_line
+		usu_building_public_green
+	}
+}
+
+TRY_INJECT:company_CongoBank = {
+	extension_building_types = {
+		building_usu_railway_line
+		usu_building_public_green
+	}
+}
+
+TRY_INJECT:company_Bank_of_Denmark = {
+	extension_building_types = {
+		building_usu_railway_line
+		usu_building_public_green
+	}
+}
+
+TRY_INJECT:company_bank_of_java = {
+	extension_building_types = {
+		building_usu_railway_line
+		usu_building_public_green
+	}
+}
+
+TRY_INJECT:company_EgyptianBank = {
+	extension_building_types = {
+		building_usu_railway_line
+		usu_building_public_green
+	}
+}
+
+TRY_INJECT:company_Imperial_Bank_of_India = {
+	extension_building_types = {
+		building_usu_railway_line
+		usu_building_public_green
+	}
+}
+
+TRY_INJECT:company_Bank_NBoE = {
+	extension_building_types = {
+		building_usu_railway_line
+		usu_building_public_green
+	}
+}
+
+TRY_INJECT:company_Bank_of_Finland = {
+	extension_building_types = {
+		building_usu_railway_line
+		usu_building_public_green
+	}
+}
+
+TRY_INJECT:company_bank_of_france = {
+	extension_building_types = {
+		building_usu_railway_line
+		usu_building_public_green
+	}
+}
+
+TRY_INJECT:company_Bank_Credit_Lyonnais = {
+	extension_building_types = {
+		building_usu_railway_line
+		usu_building_public_green
+	}
+}
+
+TRY_INJECT:company_Bank_of_England = {
+	extension_building_types = {
+		building_usu_railway_line
+		usu_building_public_green
+	}
+}
+
+TRY_INJECT:company_Rothschild_Bank_Europe = {
+	extension_building_types = {
+		building_usu_railway_line
+		usu_building_public_green
+	}
+}
+
+TRY_INJECT:company_Deutsche_Bank = {
+	extension_building_types = {
+		building_usu_railway_line
+		usu_building_public_green
+	}
+}
+
+TRY_INJECT:company_bank_italy = {
+	extension_building_types = {
+		building_usu_railway_line
+		usu_building_public_green
+	}
+}
+
+TRY_INJECT:company_bank_of_Japan = {
+	extension_building_types = {
+		building_usu_railway_line
+		usu_building_public_green
+	}
+}
+
+TRY_INJECT:company_Chohung_Bank = {
+	extension_building_types = {
+		building_usu_railway_line
+		usu_building_public_green
+	}
+}
+
+TRY_INJECT:company_Bank_of_Mexico = {
+	extension_building_types = {
+		building_usu_railway_line
+		usu_building_public_green
+	}
+}
+
+TRY_INJECT:company_Bank_Lopez = {
+	extension_building_types = {
+		building_usu_railway_line
+		usu_building_public_green
+	}
+}
+
+TRY_INJECT:company_Christiana_Sparebank = {
+	extension_building_types = {
+		building_usu_railway_line
+		usu_building_public_green
+	}
+}
+
+TRY_INJECT:company_Bank_BIO = {
+	extension_building_types = {
+		building_usu_railway_line
+		usu_building_public_green
+	}
+}
+
+TRY_INJECT:company_Bank_IBP = {
+	extension_building_types = {
+		building_usu_railway_line
+		usu_building_public_green
+	}
+}
+
+TRY_INJECT:company_Bank_Ultramarino = {
+	extension_building_types = {
+		building_usu_railway_line
+		usu_building_public_green
+	}
+}
+
+TRY_INJECT:company_Bank_SBRE = {
+	extension_building_types = {
+		building_usu_railway_line
+		usu_building_public_green
+	}
+}
+
+#State Bank of the USSRTRY_INJECT:company_Gosbank = {
+	extension_building_types = {
+		building_usu_railway_line
+		usu_building_public_green
+	}
+}
+
+TRY_INJECT:company_Siam_Commercial_Bank = {
+	extension_building_types = {
+		building_usu_railway_line
+		usu_building_public_green
+	}
+}
+
+TRY_INJECT:company_Bank_SBoBSA = {
+	extension_building_types = {
+		building_usu_railway_line
+		usu_building_public_green
+	}
+}
+
+TRY_INJECT:company_bank_peru = {
+	extension_building_types = {
+		building_usu_railway_line
+		usu_building_public_green
+	}
+}
+
+TRY_INJECT:company_Bank_of_Spain = {
+	extension_building_types = {
+		building_usu_railway_line
+		usu_building_public_green
+	}
+}
+
+TRY_INJECT:company_HandelsBanken = {
+	extension_building_types = {
+		building_usu_railway_line
+		usu_building_public_green
+	}
+}
+
+TRY_INJECT:company_Bankenverein = {
+	extension_building_types = {
+		building_usu_railway_line
+		usu_building_public_green
+	}
+}
+
+TRY_INJECT:company_Bank_Grindlays = {
+	extension_building_types = {
+		building_usu_railway_line
+		usu_building_public_green
+	}
+}
+
+TRY_INJECT:company_Bank_JP_Morgan = {
+	extension_building_types = {
+		building_usu_railway_line
+		usu_building_public_green
+	}
+}
+
+TRY_INJECT:company_Chase_Bank = {
+	extension_building_types = {
+		building_usu_railway_line
+		usu_building_public_green
+	}
+}
+
+TRY_INJECT:company_Bank_Goldman_Sachs = {
+	extension_building_types = {
+		building_usu_railway_line
+		usu_building_public_green
+	}
+}
+
+TRY_INJECT:company_Bank_Wells_Fargo = {
+	extension_building_types = {
+		building_usu_railway_line
+		usu_building_public_green
+	}
+}
+
+TRY_INJECT:company_Bank_American_Express = {
+	extension_building_types = {
+		building_usu_railway_line
+		usu_building_public_green
+	}
+}
+
+TRY_INJECT:company_hawaiian_bank = {
+	extension_building_types = {
+		building_usu_railway_line
+		usu_building_public_green
+	}
+}
+
+TRY_INJECT:company_BankOfIndochina = {
+	extension_building_types = {
+		building_usu_railway_line
+		usu_building_public_green
+	}
+}
+
+TRY_INJECT:company_basic_bank = {
+	extension_building_types = {
+		building_usu_railway_line
+		usu_building_public_green
+	}
+}

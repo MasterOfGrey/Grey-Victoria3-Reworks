@@ -1,0 +1,47 @@
+﻿INJECT:pec_company_credit_suisse = {
+	extension_building_types = {
+		building_usu_railway_line
+	}
+}
+
+INJECT:pec_company_jpmorgan = {
+	extension_building_types = {
+		building_usu_railway_line
+	}
+}
+
+INJECT:pec_company_rothschild = {
+	extension_building_types = {
+		building_usu_railway_line
+	}
+}
+
+INJECT:pec_company_rothschild_french = {
+	extension_building_types = {
+		building_usu_railway_line
+	}
+}
+
+INJECT:pec_company_gaumont = {
+	extension_building_types = {
+		usu_building_public_green
+	}
+}
+
+INJECT:pec_company_paramount = {
+	extension_building_types = {
+		usu_building_public_green
+	}
+}
+
+INJECT:pec_company_nordisk_film = {
+	extension_building_types = {
+		usu_building_public_green
+	}
+}
+
+INJECT:pec_company_nikkatsu = {
+	extension_building_types = {
+		usu_building_public_green
+	}
+}

@@ -134,5 +134,5 @@
  pos_rel_infrastructure: "Devlet mevcut [concept_infrastructure]"
  neg_rel_infrastructure: "Devletin [concept_infrastructure] açığı var"
  bureaucracy_percent: "Ulusal Bürokrasi Düzeyi #v 90%#!'den azdır"
- is_convoy_provider: "sağlayan $bg_infrastructure$ adresidir. [concept_convoys]" #deepl:4008457251
+ # is_convoy_provider: "$bg_infrastructure$, şu hizmetleri sunan bir şirkettir: [concept_convoys]" #deepl:4008457251
  convoy_ratio: "Mevcut konvoylar #v %5'ten daha azdır.#!" #deepl:361081141

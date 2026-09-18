@@ -1,0 +1,6 @@
+﻿# Lee Wilson & Company
+INJECT:company_lee_wilson = {
+	extension_building_types = {
+		building_usu_railway_line
+	}
+}

@@ -134,5 +134,5 @@
  pos_rel_infrastructure: "州有可用[concept_infrastructure]"
  neg_rel_infrastructure: "州有 [concept_infrastructure] 赤字"
  bureaucracy_percent: "国家官僚层级低于#v 90%#!"
- is_convoy_provider: "是$bg_infrastructure$ ，提供[concept_convoys]" #deepl:4008457251
+ # is_convoy_provider: "$bg_infrastructure$ 是否提供[concept_convoys]" #deepl:4008457251
  convoy_ratio: "可用车队少于#v 5%#!" #deepl:361081141

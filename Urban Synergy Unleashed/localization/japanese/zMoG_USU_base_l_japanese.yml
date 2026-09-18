@@ -134,5 +134,5 @@
  pos_rel_infrastructure: "州には利用可能な[concept_infrastructure]があります"
  neg_rel_infrastructure: "州は[concept_infrastructure]の赤字を抱えている"
  bureaucracy_percent: "国家官僚レベルは#v 90%#!未満です"
- is_convoy_provider: "$bg_infrastructure$ 。[concept_convoys]" #deepl:4008457251
+ # is_convoy_provider: "$bg_infrastructure$ は、以下を提供しています。[concept_convoys]" #deepl:4008457251
  convoy_ratio: "利用可能なコンボイは#v 5% 未満。#!" #deepl:361081141

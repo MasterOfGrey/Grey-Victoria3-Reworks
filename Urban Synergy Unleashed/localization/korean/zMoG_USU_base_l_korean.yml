@@ -134,5 +134,5 @@
  pos_rel_infrastructure: "상태에 사용 가능한 [concept_infrastructure]이 있습니다."
  neg_rel_infrastructure: "국가는 [concept_infrastructure] 적자를 가지고 있습니다"
  bureaucracy_percent: "국가 관료 수준은 #v 90%#! 미만입니다."
- is_convoy_provider: "$bg_infrastructure$ 에서 다음을 제공합니다. [concept_convoys]" #deepl:4008457251
+ # is_convoy_provider: "$bg_infrastructure$ 는 다음과 같은 기능을 제공합니까? [concept_convoys]" #deepl:4008457251
  convoy_ratio: "사용 가능한 호송대가 #v 5% 미만입니다.#!" #deepl:361081141

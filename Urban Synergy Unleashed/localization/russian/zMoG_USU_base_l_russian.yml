@@ -134,5 +134,5 @@
  pos_rel_infrastructure: "Состояние доступно [concept_infrastructure]"
  neg_rel_infrastructure: "Дефицит штата [concept_infrastructure]"
  bureaucracy_percent: "Уровень национальной бюрократии составляет менее #v 90%#!"
- is_convoy_provider: "Это $bg_infrastructure$, который обеспечивает [concept_convoys]" #deepl:4008457251
+ # is_convoy_provider: "$bg_infrastructure$, который предоставляет [concept_convoys]" #deepl:4008457251
  convoy_ratio: "Доступных конвоев меньше, чем #v 5%.#!" #deepl:361081141
