@@ -16,9 +16,9 @@
 		}
 		
 		level_scaled = {
-			building_employment_bureaucrats_add = 50	# 500
-			building_employment_clerks_add = 350		# 500 (150 would-be bureaucrats converted into clerks)
-			building_employment_laborers_add = 1600		# 4000
+			building_employment_bureaucrats_add = 10	# 100
+			building_employment_clerks_add = 70			# 100 (30 would-be bureaucrats converted into clerks)
+			building_employment_laborers_add = 320		# 800
 		}
 		unscaled = {
 			building_laborers_mortality_mult = 0.1
@@ -55,10 +55,10 @@ REPLACE_OR_CREATE:pm_iron_frame_buildings = {
 		}
 		
 		level_scaled = {
-			building_employment_bureaucrats_add = 50	# 500
-			building_employment_clerks_add = 300		# 500 (100 would-be bureaucrats converted into clerks)
-			building_employment_machinists_add = 150	# 250 (50 would-be bureaucrats converted into machinists)
-			building_employment_laborers_add = 1500		# 3750
+			building_employment_bureaucrats_add = 10	# 100
+			building_employment_clerks_add = 60			# 100 (20 would-be bureaucrats converted into clerks)
+			building_employment_machinists_add = 30		# 50 (10 would-be bureaucrats converted into machinists)
+			building_employment_laborers_add = 300		# 750
 		}
 		unscaled = {
 			building_laborers_mortality_mult = 0.1
@@ -95,10 +95,10 @@ REPLACE_OR_CREATE:pm_steel_frame_buildings = {
 		}
 		
 		level_scaled = {
-			building_employment_bureaucrats_add = 50	# 500
-			building_employment_clerks_add = 300		# 500 (100 would-be bureaucrats converted into clerks)
-			building_employment_machinists_add = 350	# 750 (50 would-be bureaucrats converted into machinists)
-			building_employment_laborers_add = 1300		# 3250
+			building_employment_bureaucrats_add = 10	# 100
+			building_employment_clerks_add = 60			# 100 (20 would-be bureaucrats converted into clerks)
+			building_employment_machinists_add = 70		# 150 (10 would-be bureaucrats converted into machinists)
+			building_employment_laborers_add = 260		# 650
 		}
 		unscaled = {
 			building_laborers_mortality_mult = 0.1
@@ -136,11 +136,11 @@ REPLACE_OR_CREATE:pm_arc_welded_buildings = {
 		} 
 		
 		level_scaled = {
-			building_employment_bureaucrats_add = 50	# 500
-			building_employment_clerks_add = 300		# 500 (100 would-be bureaucrats converted into clerks)
-			building_employment_engineers_add = 100
-			building_employment_machinists_add = 350	# 750 (50 would-be bureaucrats converted into machinists)
-			building_employment_laborers_add = 1200
+			building_employment_bureaucrats_add = 10	# 100
+			building_employment_clerks_add = 60			# 100 (20 would-be bureaucrats converted into clerks)
+			building_employment_engineers_add = 20		# 50
+			building_employment_machinists_add = 70		# 150 (10 would-be bureaucrats converted into machinists)
+			building_employment_laborers_add = 240		# 600
 		}
 		unscaled = {
 			building_laborers_mortality_mult = 0.1
