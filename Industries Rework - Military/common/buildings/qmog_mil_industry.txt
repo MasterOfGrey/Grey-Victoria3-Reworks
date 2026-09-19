@@ -1,0 +1,84 @@
+﻿# This file is primary military industries with demobilisation PM's
+
+REPLACE:building_arms_industry = {
+	building_group = bg_military_industry
+	icon = "gfx/interface/icons/building_icons/arms_industry.dds"
+	city_type = city
+	levels_per_mesh = 50
+
+	ai_nationalization_desire = 0.5 # AI generally does not want to privatize military goods industries
+	
+	unlocking_technologies = {
+		gunsmithing
+	}
+
+	production_method_groups = {
+		pmg_firearms_manufacturing
+		pmg_arms_tools_demob
+		pmg_automation_building_arms_industry
+	}
+	
+	required_construction = construction_cost_high
+	ownership_type = self
+
+	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_heavy_industry.dds"
+}
+
+REPLACE:building_artillery_foundry = {
+	building_group = bg_military_industry
+	icon = "gfx/interface/icons/building_icons/artillery_foundry.dds"
+	city_type = city
+	levels_per_mesh = 50
+	
+	ai_nationalization_desire = 0.5 # AI generally does not want to privatize military goods industries
+	
+	unlocking_technologies = {
+		gunsmithing
+	}
+
+	production_method_groups = {
+		pmg_foundries
+		pmg_arti_tools_demob
+		pmg_automation_building_arms_industry
+	}
+	
+	required_construction = construction_cost_high
+	ownership_type = self
+
+	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_heavy_industry.dds"
+}
+
+REPLACE:building_munition_plant = {
+	building_group = bg_military_industry
+	icon = "gfx/interface/icons/building_icons/munition_plants.dds"
+	city_type = city
+	levels_per_mesh = 50
+	
+	ai_nationalization_desire = 0.5 # AI generally does not want to privatize military goods industries
+	
+	unlocking_technologies = {
+		percussion_cap
+	}
+
+	production_method_groups = {
+		pmg_base_building_munition_plant
+		pmg_munitions_explosives_demob
+		pmg_automation_building_munition_plant
+	}
+	
+	required_construction = construction_cost_very_high
+
+	possible = {
+		owner = {
+			NOT = {
+				OR = {
+					has_law_or_variant = law_type:law_industry_banned
+					has_law_or_variant = law_type:law_extraction_economy
+				}
+			}
+		}
+	}
+	ownership_type = self
+
+	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_heavy_industry.dds"
+}
