@@ -1,4 +1,4 @@
-﻿# Overwrites for tech-based MAPI
+﻿# New techs for stuff
 
 REPLACE_OR_CREATE:pneumatic_tyres = {
 	era = era_4
@@ -11,6 +11,25 @@ REPLACE_OR_CREATE:pneumatic_tyres = {
 	unlocking_technologies = {	
 		vulcanization
 		combustion_engine
+	}
+	
+	ai_weight = {
+		value = 1
+	}
+}
+
+REPLACE_OR_CREATE:low_speed_stabilisation = {
+	era = era_5
+	texture = "gfx/interface/icons/production_method_icons/cropdusting.dds"		# Update this later
+	category = military		# only cause pre-req's don't work otherwise
+	
+	modifier = {
+		state_food_security_add = 0.05
+		state_lower_strata_expected_sol_add = 2
+	}
+	
+	unlocking_technologies = {	
+		military_aviation
 	}
 	
 	ai_weight = {

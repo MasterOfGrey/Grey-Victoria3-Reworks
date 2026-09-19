@@ -1,34 +1,36 @@
 ﻿l_russian:
- # Production methods 
+# Production methods
  pmg_base_building_automotive_industry: "Автомобили"
  pmg_automotive_shiftwork: "Сменная работа"
  pmg_automotive_aeroplanes: "Самолеты"
  pmg_automotive_tanks: "Танки"
-  
+ 
  pm_gear_transmissions: "Ранние трансмиссии"
  pm_pneumatic_tyres: "Пневматические шины"
  pm_automobiles: "Автомобили"
-  
+ 
  pm_single_shift_days: "Отдельные смены"
  pm_automotive_double_shifts: "Двойные смены"
  pm_automotive_double_shifts_pneumatic: "Двойные смены"
  pm_automotive_triple_shifts: "Тройные смены"
  pm_automotive_triple_shifts_pneumatic: "Тройные смены"
-  
+
  pm_limited_aeroplanes: "Ограниченное производство самолетов"
- pm_limited_aeroplanes_double: "Ограниченное производство самолетов" #NT!
- pm_limited_aeroplanes_triple: "Ограниченное производство самолетов" #NT!
+ pm_limited_aeroplanes_double: "Ограниченное производство самолетов"
+ pm_limited_aeroplanes_triple: "Ограниченное производство самолетов"
  pm_extensive_aeroplanes: "Масштабное производство самолетов"
- pm_extensive_aeroplanes_triple: "Масштабное производство самолетов" #NT!
+ pm_extensive_aeroplanes_triple: "Масштабное производство самолетов"
  pm_overtime_aeroplanes: "Сверхурочное производство самолетов"
-  
+
  pm_limited_tanks: "Ограниченное производство танков"
- pm_limited_tanks_double: "Ограниченное производство танков" #NT!
- pm_limited_tanks_triple: "Ограниченное производство танков" #NT!
+ pm_limited_tanks_double: "Ограниченное производство танков"
+ pm_limited_tanks_triple: "Ограниченное производство танков"
  pm_extensive_tanks: "Масштабное производство танков"
- pm_extensive_tanks_triple: "Масштабное производство танков" #NT!
+ pm_extensive_tanks_triple: "Масштабное производство танков"
  pm_overtime_tanks: "Сверхурочное производство танков"
-  
- # Technology 
+ 
+# Technology
  pneumatic_tyres: "Пневматические шины"
  pneumatic_tyres_desc: "Применение вулканизированной резины в сочетании с двигателем внутреннего сгорания может стать революционным."
+ low_speed_stabilisation: "Стабилизация при низкой скорости" #deepl:3973632310
+ low_speed_stabilisation_desc: "Модификации самолетов, позволяющие перевозить груз на низкой высоте над землей на низкой скорости, обладают огромным потенциалом для повышения эффективности сельского хозяйства." #deepl:3329505149

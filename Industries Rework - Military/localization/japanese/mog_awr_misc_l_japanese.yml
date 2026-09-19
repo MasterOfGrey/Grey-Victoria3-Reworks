@@ -1,34 +1,36 @@
 ﻿l_japanese:
- # Production methods 
+# Production methods
  pmg_base_building_automotive_industry: "自動車"
  pmg_automotive_shiftwork: "シフト勤務"
  pmg_automotive_aeroplanes: "飛行機"
  pmg_automotive_tanks: "戦車"
-  
+ 
  pm_gear_transmissions: "初期のギアトランスミッション"
  pm_pneumatic_tyres: "空気入りタイヤ"
  pm_automobiles: "自動車"
-  
+ 
  pm_single_shift_days: "シングルシフト"
  pm_automotive_double_shifts: "ダブルシフト"
  pm_automotive_double_shifts_pneumatic: "ダブルシフト"
  pm_automotive_triple_shifts: "トリプルシフト"
  pm_automotive_triple_shifts_pneumatic: "トリプルシフト"
-  
+
  pm_limited_aeroplanes: "限定的な航空機生産"
  pm_limited_aeroplanes_double: "限定的な航空機生産"
  pm_limited_aeroplanes_triple: "限定的な航空機生産"
  pm_extensive_aeroplanes: "大規模な航空機生産"
  pm_extensive_aeroplanes_triple: "大規模な航空機生産"
  pm_overtime_aeroplanes: "航空機生産残業"
-  
+
  pm_limited_tanks: "限定生産戦車"
  pm_limited_tanks_double: "限定生産戦車"
  pm_limited_tanks_triple: "限定生産戦車"
  pm_extensive_tanks: "大規模なタンク生産"
  pm_extensive_tanks_triple: "大規模なタンク生産"
  pm_overtime_tanks: "航空機生産残業"
-  
- # Technology 
+ 
+# Technology
  pneumatic_tyres: "空気入りタイヤ"
  pneumatic_tyres_desc: "加硫ゴムを燃焼エンジンと組み合わせた応用は、革命的なものになる可能性があります。"
+ low_speed_stabilisation: "低速安定化" #deepl:3973632310
+ low_speed_stabilisation_desc: "低速で地表近くを飛行し、積載物を運搬できるよう航空機を改造すれば、農業の効率を飛躍的に向上させる可能性を秘めている。" #deepl:3329505149

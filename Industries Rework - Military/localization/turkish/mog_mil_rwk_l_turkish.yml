@@ -1,15 +1,15 @@
 ﻿l_turkish:
-  
- # Production method groups 
+
+# Production method groups
  pmg_arms_tools_demob: "Demobilize Alet Üretimi"
  pmg_arti_tools_demob: "Demobilize Alet Üretimi"
  pmg_munitions_explosives_demob: "Demobilize Patlayıcı Üretimi"
-  
- pmg_automation_building_electronics: "Otomasyon" #NT!
+ 
+ pmg_automation_building_electronics: "Otomasyon"
  pmg_automation_building_explosives_factory: "Otomasyon"
  pmg_mil_shipyards_shiftwork: "Vardiyalı Çalışma"
-  
-  # Production methods 
+ 
+ # Production methods
  pm_extensive_tools_a_i: "Yaygın"
  pm_moderate_tools_a_i: "Ilıman"
  pm_limited_tools_a_i: "Sınırlı"
@@ -20,7 +20,7 @@
  pm_moderate_tools_a_r: "Mod. Kauçuk"
  pm_limited_tools_a_r: "Ltd. Kauçuk"
  pm_no_tools_a: "Sivil Araçlar Yok"
-  
+ 
  pm_extensive_tools_t_i: "Yaygın"
  pm_moderate_tools_t_i: "Ilıman"
  pm_limited_tools_t_i: "Sınırlı"
@@ -31,7 +31,7 @@
  pm_moderate_tools_t_r: "Mod. Kauçuk"
  pm_limited_tools_t_r: "Ltd. Kauçuk"
  pm_no_tools_t: "Sivil Araçlar Yok"
-  
+ 
  pm_extensive_ammo_le: "Yaygın"
  pm_moderate_ammo_le: "Ilıman"
  pm_limited_ammo_le: "Sınırlı"
@@ -45,31 +45,31 @@
  pm_moderate_ammo_br: "Mod. Elektroliz"
  pm_limited_ammo_br: "Ltd. Elektroliz"
  pm_no_self_explosives: "Kendi Ürettiğiniz Patlayıcılar Yok"
-  
+ 
  pm_limited_radios: "Bazı Radyolar"
  pm_moderate_radios: "Bol Radyo"
  pm_extensive_radios: "Birçok Radyo"
-  
- pm_assembly_lines_building_electronics: "Montaj Hatları" #NT!
- pm_full_process_automation_building_electronics: "Önceden Damgalanmış Bileşenler" #NT!
-  
+ 
+ pm_assembly_lines_building_electronics: "Montaj Hatları"
+ pm_full_process_automation_building_electronics: "Önceden Damgalanmış Bileşenler"
+ 
  pm_ui_safety_a: "(Bunu görmezden gelin)"
  pm_ui_safety_b: "(Bunu görmezden gelin)"
- pm_ui_safety_c: "(Bunu görmezden gelin)" #NT!
- pm_ui_safety_d: "(Bunu görmezden gelin)" #NT!
-  
+ pm_ui_safety_c: "(Bunu görmezden gelin)"
+ pm_ui_safety_d: "(Bunu görmezden gelin)"
+ 
  pm_rotary_valve_engine_building_arti_foundry: "Döner Valf Motoru"
  pm_assembly_lines_building_arti_foundry: "Montaj Hatları"
-  
+ 
  pm_mechanical_mixers_building_explosives_factory: "Mekanik Karıştırıcılar"
  pm_rotary_valve_engine_building_explosives_factory: "Döner Valf Motoru"
  pm_assembly_lines_building_explosives_factory: "Montaj Hatları"
  pm_full_process_automation_building_explosives_factory: "Otomatik Paketleme"
-  
- pm_mil_shipyards_double_shifts_wooden: "Çift Vardiya" #NT!
+ 
+ pm_mil_shipyards_double_shifts_wooden: "Çift Vardiya"
  pm_mil_shipyards_double_shifts: "Çift Vardiya"
  pm_mil_shipyards_double_shifts_arc_weld: "Çift Vardiya"
- pm_mil_shipyards_triple_shifts_wooden: "Üçlü Vardiyalar" #NT!
+ pm_mil_shipyards_triple_shifts_wooden: "Üçlü Vardiyalar"
  pm_mil_shipyards_triple_shifts: "Üçlü Vardiyalar"
  pm_mil_shipyards_triple_shifts_arc_weld: "Üçlü Vardiyalar"
  pm_mil_shipyards_double_shifts_tts: "Çift Vardiya"
@@ -79,8 +79,8 @@
  pm_mil_shipyards_triple_shifts_tts: "Üçlü Vardiyalar"
  pm_mil_shipyards_triple_shifts_tts_turbine: "Üçlü Vardiyalar"
  pm_mil_shipyards_triple_shifts_tts_arc_welding: "Üçlü Vardiyalar"
-  
- # Alerts 
+ 
+# Alerts
  alert_MIR_war_demob_arms_name: "Terhis Edilen Silah Endüstrileriyle Savaşta"
  alert_MIR_war_demob_arms_hint: "Savaştasınız ve Silah Sanayiniz Hafif Silahlar yerine büyük miktarda Alet üretiyor."
  alert_MIR_war_demob_arms_action: "Kentsel Yapı Paneli"
@@ -89,7 +89,7 @@
  alert_MIR_peace_mob_arms_hint: "Siz huzur içindesiniz ve Silah Sanayiniz büyük miktarda Hafif Silah üretiyor."
  alert_MIR_peace_mob_arms_action: "Kentsel Yapı Paneli"
  MIR_peace_mob_arms_setting_name: "Mobilize Silah Endüstrisi Uyarısı - Barış"
-  
+ 
  alert_MIR_war_demob_arty_name: "Terhis Edilen Topçu Dökümhaneleriyle Savaşta"
  alert_MIR_war_demob_arty_hint: "Savaştasınız ve Topçu Dökümhaneleriniz Topçu yerine büyük miktarda Alet üretiyor."
  alert_MIR_war_demob_arty_action: "Kentsel Yapı Paneli"
@@ -98,7 +98,7 @@
  alert_MIR_peace_mob_arty_hint: "Huzur içindesiniz ve Topçu Dökümhaneleriniz büyük miktarda Topçu üretiyor."
  alert_MIR_peace_mob_arty_action: "Kentsel Yapı Paneli"
  MIR_peace_mob_arty_setting_name: "Seferber Edilen Topçu Uyarısı - Barış"
-  
+ 
  alert_MIR_war_demob_ammo_name: "Terhis Edilen Mühimmat Fabrikalarıyla Savaşta"
  alert_MIR_war_demob_ammo_hint: "Savaştasınız ve Mühimmat Fabrikalarınız askeri Mühimmat yerine büyük miktarda sivil patlayıcı üretiyor."
  alert_MIR_war_demob_ammo_action: "Kentsel Yapı Paneli"
@@ -107,7 +107,7 @@
  alert_MIR_peace_mob_ammo_hint: "Huzur içindesiniz ve Mühimmat Fabrikalarınız büyük miktarda askeri Mühimmat üretiyor."
  alert_MIR_peace_mob_ammo_action: "Kentsel Yapı Paneli"
  MIR_peace_mob_ammo_setting_name: "Mobilize Mühimmat Uyarısı - Barış"
-  
+
  alert_MIR_war_demob_planes_name: "Sınırlı Uçak Üretimiyle Savaşta"
  alert_MIR_war_demob_planes_hint: "Savaştasınız ve Otomotiv Endüstriniz pek fazla uçak üretmiyor."
  alert_MIR_war_demob_planes_action: "Kentsel Yapı Paneli"
@@ -116,7 +116,7 @@
  alert_MIR_peace_mob_planes_hint: "Siz huzur içindesiniz ve Otomotiv Sanayiniz çok sayıda uçak üretiyor."
  alert_MIR_peace_mob_planes_action: "Kentsel Yapı Paneli"
  MIR_peace_mob_planes_setting_name: "Mobilize Uçak Uyarısı - Barış"
-  
+ 
  alert_MIR_war_demob_tanks_name: "Sınırlı Tank Üretimiyle Savaşta"
  alert_MIR_war_demob_tanks_hint: "Savaştasınız ve Otomobil Endüstriniz pek fazla tank üretmiyor."
  alert_MIR_war_demob_tanks_action: "Kentsel Yapı Paneli"
@@ -125,3 +125,5 @@
  alert_MIR_peace_mob_tanks_hint: "Siz rahatsınız ve Otomotiv Sanayiniz çok sayıda tank üretiyor."
  alert_MIR_peace_mob_tanks_action: "Kentsel Yapı Paneli"
  MIR_peace_mob_tanks_setting_name: "Mobilize Tanklar Uyarısı - Barış"
+ 
+ mir_alert_send_to_building_registry: "Kentsel Binalar Paneli" #deepl:4031725970

@@ -1,15 +1,15 @@
 ﻿l_russian:
-  
- # Production method groups 
+
+# Production method groups
  pmg_arms_tools_demob: "Демобилизованное инструментальное производство"
  pmg_arti_tools_demob: "Демобилизованное инструментальное производство"
  pmg_munitions_explosives_demob: "Демобилизованное производство взрывчатых веществ"
-  
- pmg_automation_building_electronics: "Автоматизация" #NT!
+ 
+ pmg_automation_building_electronics: "Автоматизация"
  pmg_automation_building_explosives_factory: "Автоматизация"
  pmg_mil_shipyards_shiftwork: "Сменная работа"
-  
-  # Production methods 
+ 
+ # Production methods
  pm_extensive_tools_a_i: "Обширный"
  pm_moderate_tools_a_i: "Умеренный"
  pm_limited_tools_a_i: "Ограниченный"
@@ -20,7 +20,7 @@
  pm_moderate_tools_a_r: "Мод. Резина"
  pm_limited_tools_a_r: "Огр. Резина"
  pm_no_tools_a: "Нет гражданского инструмента"
-  
+ 
  pm_extensive_tools_t_i: "Обширный"
  pm_moderate_tools_t_i: "Умеренный"
  pm_limited_tools_t_i: "Ограниченный"
@@ -31,7 +31,7 @@
  pm_moderate_tools_t_r: "Мод. Резина"
  pm_limited_tools_t_r: "Огр. Резина"
  pm_no_tools_t: "Нет гражданского инструмента"
-  
+ 
  pm_extensive_ammo_le: "Обширный"
  pm_moderate_ammo_le: "Умеренный"
  pm_limited_ammo_le: "Ограниченный"
@@ -45,31 +45,31 @@
  pm_moderate_ammo_br: "Мод. Электролиз"
  pm_limited_ammo_br: "Огр. Электролиз"
  pm_no_self_explosives: "Никаких взрывчатых веществ собственного производства"
-  
+ 
  pm_limited_radios: "Некоторые радиоприемники"
  pm_moderate_radios: "Множество радиостанций"
  pm_extensive_radios: "Много радио"
-  
- pm_assembly_lines_building_electronics: "Линии сборки" #NT!
- pm_full_process_automation_building_electronics: "Предварительно штампованные компоненты" #NT!
-  
+ 
+ pm_assembly_lines_building_electronics: "Линии сборки"
+ pm_full_process_automation_building_electronics: "Предварительно штампованные компоненты"
+ 
  pm_ui_safety_a: "(Игнорировать это)"
  pm_ui_safety_b: "(Игнорировать это)"
- pm_ui_safety_c: "(Игнорировать это)" #NT!
- pm_ui_safety_d: "(Игнорировать это)" #NT!
-  
+ pm_ui_safety_c: "(Игнорировать это)"
+ pm_ui_safety_d: "(Игнорировать это)"
+ 
  pm_rotary_valve_engine_building_arti_foundry: "Двигатель с роторным клапаном"
  pm_assembly_lines_building_arti_foundry: "Линии сборки"
-  
+ 
  pm_mechanical_mixers_building_explosives_factory: "Механические миксеры"
  pm_rotary_valve_engine_building_explosives_factory: "Двигатель с роторным клапаном"
  pm_assembly_lines_building_explosives_factory: "Линии сборки"
  pm_full_process_automation_building_explosives_factory: "Автоматизированная упаковка"
-  
- pm_mil_shipyards_double_shifts_wooden: "Двойные смены" #NT!
+ 
+ pm_mil_shipyards_double_shifts_wooden: "Двойные смены"
  pm_mil_shipyards_double_shifts: "Двойные смены"
  pm_mil_shipyards_double_shifts_arc_weld: "Двойные смены"
- pm_mil_shipyards_triple_shifts_wooden: "Тройные смены" #NT!
+ pm_mil_shipyards_triple_shifts_wooden: "Тройные смены"
  pm_mil_shipyards_triple_shifts: "Тройные смены"
  pm_mil_shipyards_triple_shifts_arc_weld: "Тройные смены"
  pm_mil_shipyards_double_shifts_tts: "Двойные смены"
@@ -79,8 +79,8 @@
  pm_mil_shipyards_triple_shifts_tts: "Тройные смены"
  pm_mil_shipyards_triple_shifts_tts_turbine: "Тройные смены"
  pm_mil_shipyards_triple_shifts_tts_arc_welding: "Тройные смены"
-  
- # Alerts 
+ 
+# Alerts
  alert_MIR_war_demob_arms_name: "Война с демобилизованными военными предприятиями"
  alert_MIR_war_demob_arms_hint: "Вы находитесь в состоянии войны, и ваши оружейные предприятия производят большое количество инструментов вместо стрелкового оружия."
  alert_MIR_war_demob_arms_action: "Панель городского строительства"
@@ -89,7 +89,7 @@
  alert_MIR_peace_mob_arms_hint: "Вы живете в мире, и ваши оружейные предприятия производят большое количество стрелкового оружия."
  alert_MIR_peace_mob_arms_action: "Панель городского строительства"
  MIR_peace_mob_arms_setting_name: "Предупреждение о мобилизованной оружейной промышленности - Мир"
-  
+ 
  alert_MIR_war_demob_arty_name: "Война с демобилизованными артиллерийскими литейными заводами"
  alert_MIR_war_demob_arty_hint: "Вы находитесь в состоянии войны, и ваши артиллерийские заводы производят большое количество инструментов вместо артиллерии."
  alert_MIR_war_demob_arty_action: "Панель городского строительства"
@@ -98,7 +98,7 @@
  alert_MIR_peace_mob_arty_hint: "Вы живете в мире, и ваши артиллерийские заводы производят большое количество артиллерийских орудий."
  alert_MIR_peace_mob_arty_action: "Панель городского строительства"
  MIR_peace_mob_arty_setting_name: "Предупреждение о мобилизованной артиллерии - Мир"
-  
+ 
  alert_MIR_war_demob_ammo_name: "Война с демобилизованными военными заводами"
  alert_MIR_war_demob_ammo_hint: "Вы находитесь в состоянии войны, и ваши военные заводы производят большое количество гражданской взрывчатки вместо военных боеприпасов."
  alert_MIR_war_demob_ammo_action: "Панель городского строительства"
@@ -107,7 +107,7 @@
  alert_MIR_peace_mob_ammo_hint: "Вы живете в мире, и ваши военные заводы производят большое количество боеприпасов."
  alert_MIR_peace_mob_ammo_action: "Панель городского строительства"
  MIR_peace_mob_ammo_setting_name: "Предупреждение о мобилизованных боеприпасах - Мир"
-  
+
  alert_MIR_war_demob_planes_name: "Война с ограниченным производством самолетов"
  alert_MIR_war_demob_planes_hint: "Вы находитесь в состоянии войны, и ваша автомобильная промышленность не производит много самолетов."
  alert_MIR_war_demob_planes_action: "Панель городского строительства"
@@ -116,7 +116,7 @@
  alert_MIR_peace_mob_planes_hint: "Вы живете в мире, и ваша автомобильная промышленность производит много самолетов."
  alert_MIR_peace_mob_planes_action: "Панель городского строительства"
  MIR_peace_mob_planes_setting_name: "Предупреждение о мобилизованных самолетах - Мир"
-  
+ 
  alert_MIR_war_demob_tanks_name: "Война с ограниченным производством танков"
  alert_MIR_war_demob_tanks_hint: "Вы находитесь в состоянии войны, а ваша автомобильная промышленность не производит много танков."
  alert_MIR_war_demob_tanks_action: "Панель городского строительства"
@@ -125,3 +125,5 @@
  alert_MIR_peace_mob_tanks_hint: "Вы живете в мире, и ваша автомобильная промышленность производит много танков."
  alert_MIR_peace_mob_tanks_action: "Панель городского строительства"
  MIR_peace_mob_tanks_setting_name: "Предупреждение о мобилизованных танках - Мир"
+ 
+ mir_alert_send_to_building_registry: "Экспертная группа по городскому строительству" #deepl:4031725970

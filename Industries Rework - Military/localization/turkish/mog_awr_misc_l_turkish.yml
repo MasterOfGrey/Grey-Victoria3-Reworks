@@ -1,34 +1,36 @@
 ﻿l_turkish:
- # Production methods 
+# Production methods
  pmg_base_building_automotive_industry: "Automobiles"
  pmg_automotive_shiftwork: "Vardiyalı Çalışma"
  pmg_automotive_aeroplanes: "Uçaklar"
  pmg_automotive_tanks: "Tanklar"
-  
+ 
  pm_gear_transmissions: "Erken Vites Şanzımanları"
  pm_pneumatic_tyres: "Pnömatik Lastikler"
  pm_automobiles: "Otomobil Üretimi"
-  
+ 
  pm_single_shift_days: "Tek Vardiyalar"
  pm_automotive_double_shifts: "Çift Vardiya"
  pm_automotive_double_shifts_pneumatic: "Çift Vardiya"
  pm_automotive_triple_shifts: "Üçlü Vardiyalar"
  pm_automotive_triple_shifts_pneumatic: "Üçlü Vardiyalar"
-  
+
  pm_limited_aeroplanes: "Sınırlı Uçak Üretimi"
- pm_limited_aeroplanes_double: "Sınırlı Uçak Üretimi" #NT!
- pm_limited_aeroplanes_triple: "Sınırlı Uçak Üretimi" #NT!
+ pm_limited_aeroplanes_double: "Sınırlı Uçak Üretimi"
+ pm_limited_aeroplanes_triple: "Sınırlı Uçak Üretimi"
  pm_extensive_aeroplanes: "Kapsamlı Uçak Üretimi"
- pm_extensive_aeroplanes_triple: "Kapsamlı Uçak Üretimi" #NT!
+ pm_extensive_aeroplanes_triple: "Kapsamlı Uçak Üretimi"
  pm_overtime_aeroplanes: "Fazla Mesai Uçak Üretimi"
-  
+
  pm_limited_tanks: "Sınırlı Tank Üretimi"
- pm_limited_tanks_double: "Sınırlı Tank Üretimi" #NT!
- pm_limited_tanks_triple: "Sınırlı Tank Üretimi" #NT!
+ pm_limited_tanks_double: "Sınırlı Tank Üretimi"
+ pm_limited_tanks_triple: "Sınırlı Tank Üretimi"
  pm_extensive_tanks: "Geniş Tank Üretimi"
- pm_extensive_tanks_triple: "Geniş Tank Üretimi" #NT!
+ pm_extensive_tanks_triple: "Geniş Tank Üretimi"
  pm_overtime_tanks: "Fazla Mesai Uçak Üretimi"
-  
- # Technology 
+ 
+# Technology
  pneumatic_tyres: "Pnömatik Lastikler"
  pneumatic_tyres_desc: "Vulkanize kauçuğun içten yanmalı motorlarla birlikte kullanılmasının devrim niteliğinde olma potansiyeli bulunmaktadır."
+ low_speed_stabilisation: "Düşük Hızda Stabilizasyon" #deepl:3973632310
+ low_speed_stabilisation_desc: "Uçakların, yavaş hızda yere yakın bir yük taşıyabilmesi için yapılan değişiklikler, tarımsal verimliliği önemli ölçüde artırma potansiyeline sahiptir." #deepl:3329505149

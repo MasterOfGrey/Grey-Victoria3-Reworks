@@ -1,15 +1,15 @@
 ﻿l_german:
-  
- # Production method groups 
+
+# Production method groups
  pmg_arms_tools_demob: "Demobilisierte Werkzeugproduktion"
  pmg_arti_tools_demob: "Demobilisierte Werkzeugproduktion"
  pmg_munitions_explosives_demob: "Produktion demobilisierter Sprengstoffe"
-  
- pmg_automation_building_electronics: "Automatisierung" #NT!
+ 
+ pmg_automation_building_electronics: "Automatisierung"
  pmg_automation_building_explosives_factory: "Automatisierung"
  pmg_mil_shipyards_shiftwork: "Schichtarbeit"
-  
-  # Production methods 
+ 
+ # Production methods
  pm_extensive_tools_a_i: "Umfangreich"
  pm_moderate_tools_a_i: "Mäßig"
  pm_limited_tools_a_i: "Beschränkt"
@@ -20,7 +20,7 @@
  pm_moderate_tools_a_r: "Mod. Gummi"
  pm_limited_tools_a_r: "GmbH Gummi"
  pm_no_tools_a: "Keine zivilen Werkzeuge"
-  
+ 
  pm_extensive_tools_t_i: "Umfangreich"
  pm_moderate_tools_t_i: "Mäßig"
  pm_limited_tools_t_i: "Beschränkt"
@@ -31,7 +31,7 @@
  pm_moderate_tools_t_r: "Mod. Gummi"
  pm_limited_tools_t_r: "GmbH Gummi"
  pm_no_tools_t: "Keine zivilen Werkzeuge"
-  
+ 
  pm_extensive_ammo_le: "Umfangreich"
  pm_moderate_ammo_le: "Mäßig"
  pm_limited_ammo_le: "Beschränkt"
@@ -45,31 +45,31 @@
  pm_moderate_ammo_br: "Mod. Elektrolyse"
  pm_limited_ammo_br: "GmbH Elektrolyse"
  pm_no_self_explosives: "Keine Sprengstoffe aus eigener Produktion"
-  
+ 
  pm_limited_radios: "Einige Radios"
  pm_moderate_radios: "Viele Radios"
  pm_extensive_radios: "Viele Radios"
-  
- pm_assembly_lines_building_electronics: "Fließbänder" #NT!
- pm_full_process_automation_building_electronics: "Vorgestanzte Komponenten" #NT!
-  
+ 
+ pm_assembly_lines_building_electronics: "Fließbänder"
+ pm_full_process_automation_building_electronics: "Vorgestanzte Komponenten"
+ 
  pm_ui_safety_a: "(Ignorieren Sie dies)"
  pm_ui_safety_b: "(Ignorieren Sie dies)"
- pm_ui_safety_c: "(Ignorieren Sie dies)" #NT!
- pm_ui_safety_d: "(Ignorieren Sie dies)" #NT!
-  
+ pm_ui_safety_c: "(Ignorieren Sie dies)"
+ pm_ui_safety_d: "(Ignorieren Sie dies)"
+ 
  pm_rotary_valve_engine_building_arti_foundry: "Drehschiebermotor"
  pm_assembly_lines_building_arti_foundry: "Fließbänder"
-  
+ 
  pm_mechanical_mixers_building_explosives_factory: "Mechanische Mischer"
  pm_rotary_valve_engine_building_explosives_factory: "Drehschiebermotor"
  pm_assembly_lines_building_explosives_factory: "Fließbänder"
  pm_full_process_automation_building_explosives_factory: "Automatisiertes Verpacken"
-  
- pm_mil_shipyards_double_shifts_wooden: "Doppelschichten" #NT!
+ 
+ pm_mil_shipyards_double_shifts_wooden: "Doppelschichten"
  pm_mil_shipyards_double_shifts: "Doppelschichten"
  pm_mil_shipyards_double_shifts_arc_weld: "Doppelschichten"
- pm_mil_shipyards_triple_shifts_wooden: "Dreifache Schichten" #NT!
+ pm_mil_shipyards_triple_shifts_wooden: "Dreifache Schichten"
  pm_mil_shipyards_triple_shifts: "Dreifache Schichten"
  pm_mil_shipyards_triple_shifts_arc_weld: "Dreifache Schichten"
  pm_mil_shipyards_double_shifts_tts: "Doppelschichten"
@@ -79,8 +79,8 @@
  pm_mil_shipyards_triple_shifts_tts: "Dreifache Schichten"
  pm_mil_shipyards_triple_shifts_tts_turbine: "Dreifache Schichten"
  pm_mil_shipyards_triple_shifts_tts_arc_welding: "Dreifache Schichten"
-  
- # Alerts 
+ 
+# Alerts
  alert_MIR_war_demob_arms_name: "Im Krieg mit demobilisierten Waffenindustrien"
  alert_MIR_war_demob_arms_hint: "Sie befinden sich im Krieg und Ihre Rüstungsindustrie produziert in großem Umfang Werkzeuge statt Kleinwaffen."
  alert_MIR_war_demob_arms_action: "Städtebau-Panel"
@@ -89,7 +89,7 @@
  alert_MIR_peace_mob_arms_hint: "Es herrscht Frieden und Ihre Rüstungsindustrie produziert große Mengen Kleinwaffen."
  alert_MIR_peace_mob_arms_action: "Städtebau-Panel"
  MIR_peace_mob_arms_setting_name: "Warnung der mobilisierten Rüstungsindustrie - Frieden"
-  
+ 
  alert_MIR_war_demob_arty_name: "Im Krieg mit demobilisierten Artilleriegießereien"
  alert_MIR_war_demob_arty_hint: "Sie befinden sich im Krieg und Ihre Artilleriegießereien produzieren große Mengen an Werkzeugen statt Artillerie."
  alert_MIR_war_demob_arty_action: "Städtebau-Panel"
@@ -98,7 +98,7 @@
  alert_MIR_peace_mob_arty_hint: "Sie verfügen über Frieden und Ihre Artilleriegießereien produzieren große Mengen an Artillerie."
  alert_MIR_peace_mob_arty_action: "Städtebau-Panel"
  MIR_peace_mob_arty_setting_name: "Warnung vor mobilisierter Artillerie - Frieden"
-  
+ 
  alert_MIR_war_demob_ammo_name: "Im Krieg mit demobilisierten Munitionsfabriken"
  alert_MIR_war_demob_ammo_hint: "Sie befinden sich im Krieg und Ihre Munitionsfabriken produzieren große Mengen ziviler Sprengstoffe anstelle von militärischer Munition."
  alert_MIR_war_demob_ammo_action: "Städtebau-Panel"
@@ -107,7 +107,7 @@
  alert_MIR_peace_mob_ammo_hint: "Es herrscht Frieden und Ihre Munitionsfabriken produzieren große Mengen militärischer Munition."
  alert_MIR_peace_mob_ammo_action: "Städtebau-Panel"
  MIR_peace_mob_ammo_setting_name: "Warnung vor mobilisierter Munition - Frieden"
-  
+
  alert_MIR_war_demob_planes_name: "Im Krieg mit der eingeschränkten Flugzeugproduktion"
  alert_MIR_war_demob_planes_hint: "Sie befinden sich im Krieg und Ihre Automobilindustrie produziert nicht viele Flugzeuge."
  alert_MIR_war_demob_planes_action: "Städtebau-Panel"
@@ -116,7 +116,7 @@
  alert_MIR_peace_mob_planes_hint: "Es herrscht Frieden und Ihre Automobilindustrie produziert viele Flugzeuge."
  alert_MIR_peace_mob_planes_action: "Städtebau-Panel"
  MIR_peace_mob_planes_setting_name: "Mobilisierte Flugzeugwarnung - Frieden"
-  
+ 
  alert_MIR_war_demob_tanks_name: "Im Krieg mit begrenzter Panzerproduktion"
  alert_MIR_war_demob_tanks_hint: "Sie befinden sich im Krieg und Ihre Automobilindustrie produziert nicht viele Panzer."
  alert_MIR_war_demob_tanks_action: "Städtebau-Panel"
@@ -125,3 +125,5 @@
  alert_MIR_peace_mob_tanks_hint: "Sie haben Frieden und Ihre Automobilindustrie produziert viele Panzer."
  alert_MIR_peace_mob_tanks_action: "Städtebau-Panel"
  MIR_peace_mob_tanks_setting_name: "Warnung vor mobilisierten Panzern - Frieden"
+ 
+ mir_alert_send_to_building_registry: "Podiumsdiskussion zum Thema „Städtische Bebauung“" #deepl:4031725970

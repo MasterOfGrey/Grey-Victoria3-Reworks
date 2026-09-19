@@ -1,14 +1,14 @@
 ﻿l_turkish:
- building_motor_industry: "Lokomotif Fabrikaları" #NT!
- building_automotive_industry: "Otomotiv Endüstrileri" #NT!
-  
- dough_rollers: "Tam Süreç Otomasyonu" #NT!
- dough_rollers_desc: "Tekrarlayan görevleri tam otomatikleştirmek için makineleri entegre ederek, endüstriler üretimde benzeri görülmemiş verimlilik, tutarlılık ve ölçek elde edebilirler." #NT!
-  
+ building_motor_industry: "Lokomotif Fabrikaları"
+ building_automotive_industry: "Otomotiv Endüstrileri"
+ 
+ dough_rollers: "Tam Süreç Otomasyonu"
+ dough_rollers_desc: "Tekrarlayan görevleri tam otomatikleştirmek için makineleri entegre ederek, endüstriler üretimde benzeri görülmemiş verimlilik, tutarlılık ve ölçek elde edebilirler."
+ 
  pm_single_shift_days: "Tek Vardiyalar"
-  
- pm_cropdusting: "Ürün tozlama" #NT!
- pm_cropdusting_rice: "Ürün tozlama" #NT!
+ 
+ pm_cropdusting: "Ürün tozlama"
+ pm_cropdusting_rice: "Ürün tozlama"
  
  # Compatibility
  pm_chemical_fertilizer_rice_farm: "$pm_chemical_fertilizer$"

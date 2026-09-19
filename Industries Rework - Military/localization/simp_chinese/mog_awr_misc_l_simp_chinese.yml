@@ -1,34 +1,36 @@
 ﻿l_simp_chinese:
- # Production methods 
+# Production methods
  pmg_base_building_automotive_industry: "汽车"
  pmg_automotive_shiftwork: "轮班工作"
  pmg_automotive_aeroplanes: "飞机"
  pmg_automotive_tanks: "坦克"
-  
+ 
  pm_gear_transmissions: "早期齿轮传动"
  pm_pneumatic_tyres: "充气轮胎"
  pm_automobiles: "汽车"
-  
+ 
  pm_single_shift_days: "单班制"
  pm_automotive_double_shifts: "双班制"
  pm_automotive_double_shifts_pneumatic: "双班制"
  pm_automotive_triple_shifts: "三班倒"
  pm_automotive_triple_shifts_pneumatic: "三班倒"
-  
+
  pm_limited_aeroplanes: "限量飞机生产"
  pm_limited_aeroplanes_double: "限量飞机生产"
  pm_limited_aeroplanes_triple: "限量飞机生产"
  pm_extensive_aeroplanes: "大规模飞机生产"
  pm_extensive_aeroplanes_triple: "大规模飞机生产"
  pm_overtime_aeroplanes: "加班生产飞机"
-  
+
  pm_limited_tanks: "有限的坦克生产"
  pm_limited_tanks_double: "有限的坦克生产"
  pm_limited_tanks_triple: "有限的坦克生产"
  pm_extensive_tanks: "大规模坦克生产"
  pm_extensive_tanks_triple: "大规模坦克生产"
  pm_overtime_tanks: "加班生产飞机"
-  
- # Technology 
+ 
+# Technology
  pneumatic_tyres: "充气轮胎"
  pneumatic_tyres_desc: "硫化橡胶与内燃机的结合应用具有革命性的潜力。"
+ low_speed_stabilisation: "低速稳定" #deepl:3973632310
+ low_speed_stabilisation_desc: "对飞机进行改装，使其能够以低速在接近地面的高度运载有效载荷，这极有可能显著提高农业效率。" #deepl:3329505149

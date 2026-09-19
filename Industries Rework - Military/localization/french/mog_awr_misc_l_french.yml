@@ -1,5 +1,5 @@
 ﻿l_french:
- # Production methods 
+# Production methods
  pmg_base_building_automotive_industry: "Automobiles"
  pmg_automotive_shiftwork: "Travail posté"
  pmg_automotive_aeroplanes: "Avions"
@@ -14,21 +14,23 @@
  pm_automotive_double_shifts_pneumatic: "Doubles quarts de travail"
  pm_automotive_triple_shifts: "Triples quarts de travail"
  pm_automotive_triple_shifts_pneumatic: "Triples quarts de travail"
- 
+
  pm_limited_aeroplanes: "Production d'avions limitée"
- pm_limited_aeroplanes_double: "Production d'avions limitée" #NT!
- pm_limited_aeroplanes_triple: "Production d'avions limitée" #NT!
+ pm_limited_aeroplanes_double: "Production d'avions limitée"
+ pm_limited_aeroplanes_triple: "Production d'avions limitée"
  pm_extensive_aeroplanes: "Production d'avions importante"
- pm_extensive_aeroplanes_triple: "Production d'avions importante" #NT!
+ pm_extensive_aeroplanes_triple: "Production d'avions importante"
  pm_overtime_aeroplanes: "Production d'avions en heures supplémentaires"
- 
+
  pm_limited_tanks: "Production de chars limitée"
- pm_limited_tanks_double: "Production limitée de chars" #NT!
- pm_limited_tanks_triple: "Production limitée de chars" #NT!
+ pm_limited_tanks_double: "Production limitée de chars"
+ pm_limited_tanks_triple: "Production limitée de chars"
  pm_extensive_tanks: "Production de chars importante"
- pm_extensive_tanks_triple: "Production extensive de chars" #NT!
+ pm_extensive_tanks_triple: "Production extensive de chars"
  pm_overtime_tanks: "Production de chars en heures supplémentaires"
  
- # Technology 
+# Technology
  pneumatic_tyres: "Pneus pneumatiques"
  pneumatic_tyres_desc: "Les applications du caoutchouc vulcanisé en combinaison avec le moteur à combustion ont le potentiel d’être révolutionnaires."
+ low_speed_stabilisation: "Stabilisation à basse vitesse" #deepl:3973632310
+ low_speed_stabilisation_desc: "Les modifications apportées aux avions pour leur permettre de transporter une charge utile à faible altitude et à faible vitesse pourraient considérablement améliorer l'efficacité agricole." #deepl:3329505149

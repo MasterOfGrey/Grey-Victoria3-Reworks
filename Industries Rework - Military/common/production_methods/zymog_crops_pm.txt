@@ -1,0 +1,509 @@
+﻿## PEC Compatibility
+REPLACE:pm_compression_ignition_tractors = {
+	texture = "gfx/interface/icons/production_method_icons/compression_ignition_tractors.dds"
+	
+	state_modifiers = {
+		workforce_scaled = {
+			state_pollution_generation_add = 20
+		}
+	}
+	
+	unlocking_technologies = {
+		compression_ignition
+	}
+	building_modifiers = {
+		workforce_scaled = {
+			# input goods
+			goods_input_oil_add = 1
+			goods_input_automobiles_add = 0.5
+		}
+		
+		level_scaled = {
+			building_employment_laborers_add = -2500
+		}
+	}
+}
+
+## FPOAT Compatibility
+REPLACE_OR_CREATE:pm_cropdusting = {
+	texture = "gfx/interface/icons/production_method_icons/cropdusting.dds"
+	
+	state_modifiers = {
+		workforce_scaled = {
+			state_pollution_generation_add = 20
+		}
+	}
+	
+	unlocking_technologies = {
+		low_speed_stabilisation
+	}
+	
+	unlocking_production_methods = {
+		pm_chemical_fertilizer
+	}
+	
+	building_modifiers = {
+		workforce_scaled = {
+			# input goods
+			goods_input_sulfur_add = 1
+			goods_input_lead_add = 1
+			goods_input_oil_add = 2
+			goods_input_automobiles_add = 1
+			goods_input_aeroplanes_add = 1
+			# output goods
+			goods_output_grain_add = 30
+		}
+		
+		level_scaled = {
+			building_employment_laborers_add = -2500
+			building_employment_farmers_add = -1500
+			building_employment_machinists_add = 500
+		}
+	}
+}
+
+REPLACE_OR_CREATE:pm_cropdusting_rice = {
+	texture = "gfx/interface/icons/production_method_icons/cropdusting.dds"
+	
+	state_modifiers = {
+		workforce_scaled = {
+			state_pollution_generation_add = 20
+		}
+	}
+	
+	unlocking_technologies = {
+		low_speed_stabilisation
+	}
+	
+	unlocking_production_methods = {
+		pm_chemical_fertilizer_building_rice_farm
+		pm_chemical_fertilizer_rice_farm	# fpoat
+	}
+	
+	building_modifiers = {
+		workforce_scaled = {
+			# input goods
+			goods_input_sulfur_add = 2
+			goods_input_lead_add = 2
+			goods_input_oil_add = 6
+			goods_input_aeroplanes_add = 3
+			# output goods
+			goods_output_grain_add = 60
+		}
+		
+		level_scaled = {
+			building_employment_laborers_add = -3000
+			building_employment_farmers_add = -4000
+			building_employment_machinists_add = 800
+		}
+	}
+}
+
+## Plantations ##
+TRY_REPLACE:cropdusting_building_banana_plantation = {
+	texture = "gfx/interface/icons/production_method_icons/cropdusting.dds"
+	
+	state_modifiers = {
+		workforce_scaled = {
+			state_pollution_generation_add = 20
+		}
+	}
+	
+	unlocking_technologies = {
+		low_speed_stabilisation
+	}
+	
+	unlocking_production_methods = {
+		chemical_fertilizer_building_banana_plantation
+	}
+	
+	building_modifiers = {
+		workforce_scaled = {
+			# input goods
+			goods_input_sulfur_add = 1
+			goods_input_lead_add = 1
+			goods_input_oil_add = 2
+			goods_input_automobiles_add = 1
+			goods_input_aeroplanes_add = 1
+			# output goods
+			goods_output_fruit_add = 20
+		}
+		
+		level_scaled = {
+			building_employment_laborers_add = -1000
+			building_employment_farmers_add = -1000
+			building_employment_machinists_add = 500
+		}
+	}
+}
+
+TRY_REPLACE:cropdusting_building_coffee_plantation = {
+	texture = "gfx/interface/icons/production_method_icons/cropdusting.dds"
+	
+	state_modifiers = {
+		workforce_scaled = {
+			state_pollution_generation_add = 20
+		}
+	}
+	
+	unlocking_technologies = {
+		low_speed_stabilisation
+	}
+	
+	unlocking_production_methods = {
+		chemical_fertilizer_building_coffee_plantation
+	}
+	
+	building_modifiers = {
+		workforce_scaled = {
+			# input goods
+			goods_input_sulfur_add = 1
+			goods_input_lead_add = 1
+			goods_input_oil_add = 2
+			goods_input_automobiles_add = 1
+			goods_input_aeroplanes_add = 1
+			# output goods
+			goods_output_coffee_add = 15
+		}
+		
+		level_scaled = {
+			building_employment_laborers_add = -1000
+			building_employment_farmers_add = -1000
+			building_employment_machinists_add = 500
+		}
+	}
+}
+
+TRY_REPLACE:cropdusting_building_cotton_plantation = {
+	texture = "gfx/interface/icons/production_method_icons/cropdusting.dds"
+	
+	state_modifiers = {
+		workforce_scaled = {
+			state_pollution_generation_add = 20
+		}
+	}
+	
+	unlocking_technologies = {
+		low_speed_stabilisation
+	}
+	
+	unlocking_production_methods = {
+		chemical_fertilizer_building_cotton_plantation
+	}
+	
+	building_modifiers = {
+		workforce_scaled = {
+			# input goods
+			goods_input_sulfur_add = 1
+			goods_input_lead_add = 1
+			goods_input_oil_add = 2
+			goods_input_automobiles_add = 1
+			goods_input_aeroplanes_add = 1
+			# output goods
+			goods_output_fabric_add = 30
+		}
+		
+		level_scaled = {
+			building_employment_laborers_add = -1000
+			building_employment_farmers_add = -1000
+			building_employment_machinists_add = 500
+		}
+	}
+}
+
+TRY_REPLACE:cropdusting_building_dye_plantation = {
+	texture = "gfx/interface/icons/production_method_icons/cropdusting.dds"
+	
+	state_modifiers = {
+		workforce_scaled = {
+			state_pollution_generation_add = 20
+		}
+	}
+	
+	unlocking_technologies = {
+		low_speed_stabilisation
+	}
+	
+	unlocking_production_methods = {
+		chemical_fertilizer_building_dye_plantation
+	}
+	
+	building_modifiers = {
+		workforce_scaled = {
+			# input goods
+			goods_input_sulfur_add = 1
+			goods_input_lead_add = 1
+			goods_input_oil_add = 2
+			goods_input_automobiles_add = 1
+			goods_input_aeroplanes_add = 1
+			# output goods
+			goods_output_dye_add = 15
+		}
+		
+		level_scaled = {
+			building_employment_laborers_add = -1000
+			building_employment_farmers_add = -1000
+			building_employment_machinists_add = 500
+		}
+	}
+}
+
+TRY_REPLACE:cropdusting_building_opium_plantation = {
+	texture = "gfx/interface/icons/production_method_icons/cropdusting.dds"
+	
+	state_modifiers = {
+		workforce_scaled = {
+			state_pollution_generation_add = 20
+		}
+	}
+	
+	unlocking_technologies = {
+		low_speed_stabilisation
+	}
+	
+	unlocking_production_methods = {
+		chemical_fertilizer_building_opium_plantation
+	}
+	
+	building_modifiers = {
+		workforce_scaled = {
+			# input goods
+			goods_input_sulfur_add = 1
+			goods_input_lead_add = 1
+			goods_input_oil_add = 2
+			goods_input_automobiles_add = 1
+			goods_input_aeroplanes_add = 1
+			# output goods
+			goods_output_opium_add = 15
+		}
+		
+		level_scaled = {
+			building_employment_laborers_add = -1000
+			building_employment_farmers_add = -1000
+			building_employment_machinists_add = 500
+		}
+	}
+}
+
+TRY_REPLACE:cropdusting_building_silk_plantation = {
+	texture = "gfx/interface/icons/production_method_icons/cropdusting.dds"
+	
+	state_modifiers = {
+		workforce_scaled = {
+			state_pollution_generation_add = 20
+		}
+	}
+	
+	unlocking_technologies = {
+		low_speed_stabilisation
+	}
+	
+	unlocking_production_methods = {
+		chemical_fertilizer_building_silk_plantation
+	}
+	
+	building_modifiers = {
+		workforce_scaled = {
+			# input goods
+			goods_input_sulfur_add = 1
+			goods_input_lead_add = 1
+			goods_input_oil_add = 2
+			goods_input_automobiles_add = 1
+			goods_input_aeroplanes_add = 1
+			# output goods
+			goods_output_silk_add = 15
+		}
+		
+		level_scaled = {
+			building_employment_laborers_add = -1000
+			building_employment_farmers_add = -1000
+			building_employment_machinists_add = 500
+		}
+	}
+}
+
+TRY_REPLACE:cropdusting_building_sugar_plantation = {
+	texture = "gfx/interface/icons/production_method_icons/cropdusting.dds"
+	
+	state_modifiers = {
+		workforce_scaled = {
+			state_pollution_generation_add = 20
+		}
+	}
+	
+	unlocking_technologies = {
+		low_speed_stabilisation
+	}
+	
+	unlocking_production_methods = {
+		chemical_fertilizer_building_sugar_plantation
+	}
+	
+	building_modifiers = {
+		workforce_scaled = {
+			# input goods
+			goods_input_sulfur_add = 1
+			goods_input_lead_add = 1
+			goods_input_oil_add = 2
+			goods_input_automobiles_add = 1
+			goods_input_aeroplanes_add = 1
+			# output goods
+			goods_output_sugar_add = 20
+		}
+		
+		level_scaled = {
+			building_employment_laborers_add = -1000
+			building_employment_farmers_add = -1000
+			building_employment_machinists_add = 500
+		}
+	}
+}
+
+TRY_REPLACE:cropdusting_building_tea_plantation = {
+	texture = "gfx/interface/icons/production_method_icons/cropdusting.dds"
+	
+	state_modifiers = {
+		workforce_scaled = {
+			state_pollution_generation_add = 20
+		}
+	}
+	
+	unlocking_technologies = {
+		low_speed_stabilisation
+	}
+	
+	unlocking_production_methods = {
+		chemical_fertilizer_building_tea_plantation
+	}
+	
+	building_modifiers = {
+		workforce_scaled = {
+			# input goods
+			goods_input_sulfur_add = 1
+			goods_input_lead_add = 1
+			goods_input_oil_add = 2
+			goods_input_automobiles_add = 1
+			goods_input_aeroplanes_add = 1
+			# output goods
+			goods_output_tea_add = 15
+		}
+		
+		level_scaled = {
+			building_employment_laborers_add = -1000
+			building_employment_farmers_add = -1000
+			building_employment_machinists_add = 500
+		}
+	}
+}
+
+TRY_REPLACE:cropdusting_building_tobacco_plantation = {
+	texture = "gfx/interface/icons/production_method_icons/cropdusting.dds"
+	
+	state_modifiers = {
+		workforce_scaled = {
+			state_pollution_generation_add = 20
+		}
+	}
+	
+	unlocking_technologies = {
+		low_speed_stabilisation
+	}
+	
+	unlocking_production_methods = {
+		chemical_fertilizer_building_tobacco_plantation
+	}
+	
+	building_modifiers = {
+		workforce_scaled = {
+			# input goods
+			goods_input_sulfur_add = 1
+			goods_input_lead_add = 1
+			goods_input_oil_add = 2
+			goods_input_automobiles_add = 1
+			goods_input_aeroplanes_add = 1
+			# output goods
+			goods_output_tobacco_add = 15
+		}
+		
+		level_scaled = {
+			building_employment_laborers_add = -1000
+			building_employment_farmers_add = -1000
+			building_employment_machinists_add = 500
+		}
+	}
+}
+
+TRY_REPLACE:cropdusting_building_vineyard = {
+	texture = "gfx/interface/icons/production_method_icons/cropdusting.dds"
+	
+	state_modifiers = {
+		workforce_scaled = {
+			state_pollution_generation_add = 20
+		}
+	}
+	
+	unlocking_technologies = {
+		low_speed_stabilisation
+	}
+	
+	unlocking_production_methods = {
+		chemical_fertilizer_building_vineyard
+	}
+	
+	building_modifiers = {
+		workforce_scaled = {
+			# input goods
+			goods_input_sulfur_add = 1
+			goods_input_lead_add = 1
+			goods_input_oil_add = 2
+			goods_input_automobiles_add = 1
+			goods_input_aeroplanes_add = 1
+			# output goods
+			goods_output_wine_add = 15
+		}
+		
+		level_scaled = {
+			building_employment_laborers_add = -1000
+			building_employment_farmers_add = -1000
+			building_employment_machinists_add = 500
+		}
+	}
+}
+
+TRY_REPLACE:cropdusting_building_rubber_plantation = {
+	texture = "gfx/interface/icons/production_method_icons/cropdusting.dds"
+	
+	state_modifiers = {
+		workforce_scaled = {
+			state_pollution_generation_add = 20
+		}
+	}
+	
+	unlocking_technologies = {
+		low_speed_stabilisation
+	}
+	
+	unlocking_production_methods = {
+		chemical_fertilizer_building_rubber_plantation
+	}
+	
+	building_modifiers = {
+		workforce_scaled = {
+			# input goods
+			goods_input_sulfur_add = 1
+			goods_input_lead_add = 1
+			goods_input_oil_add = 2
+			goods_input_automobiles_add = 1
+			goods_input_aeroplanes_add = 1
+			# output goods
+			goods_output_rubber_add = 15
+		}
+		
+		level_scaled = {
+			building_employment_laborers_add = -1000
+			building_employment_farmers_add = -1000
+			building_employment_machinists_add = 500
+		}
+	}
+}
+

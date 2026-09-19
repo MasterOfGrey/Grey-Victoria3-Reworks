@@ -1,15 +1,15 @@
 ﻿l_simp_chinese:
-  
- # Production method groups 
+
+# Production method groups
  pmg_arms_tools_demob: "退役工具生产"
  pmg_arti_tools_demob: "退役工具生产"
  pmg_munitions_explosives_demob: "退役炸药生产"
-  
+ 
  pmg_automation_building_electronics: "自动化"
  pmg_automation_building_explosives_factory: "自动化"
  pmg_mil_shipyards_shiftwork: "轮班工作"
-  
-  # Production methods 
+ 
+ # Production methods
  pm_extensive_tools_a_i: "广泛的"
  pm_moderate_tools_a_i: "缓和"
  pm_limited_tools_a_i: "有限的"
@@ -20,7 +20,7 @@
  pm_moderate_tools_a_r: "改性橡胶"
  pm_limited_tools_a_r: "有限公司橡胶"
  pm_no_tools_a: "禁止使用民用工具"
-  
+ 
  pm_extensive_tools_t_i: "广泛的"
  pm_moderate_tools_t_i: "缓和"
  pm_limited_tools_t_i: "有限的"
@@ -31,7 +31,7 @@
  pm_moderate_tools_t_r: "改性橡胶"
  pm_limited_tools_t_r: "有限公司橡胶"
  pm_no_tools_t: "禁止使用民用工具"
-  
+ 
  pm_extensive_ammo_le: "广泛的"
  pm_moderate_ammo_le: "缓和"
  pm_limited_ammo_le: "有限的"
@@ -45,27 +45,27 @@
  pm_moderate_ammo_br: "电解模式"
  pm_limited_ammo_br: "有限公司电解"
  pm_no_self_explosives: "禁止自产爆炸物"
-  
+ 
  pm_limited_radios: "一些收音机"
  pm_moderate_radios: "大量广播"
  pm_extensive_radios: "许多收音机"
-  
+ 
  pm_assembly_lines_building_electronics: "装配线"
  pm_full_process_automation_building_electronics: "预冲压部件"
-  
+ 
  pm_ui_safety_a: "（忽略此内容）"
  pm_ui_safety_b: "（忽略此内容）"
  pm_ui_safety_c: "（忽略此内容）"
  pm_ui_safety_d: "（忽略此内容）"
-  
+ 
  pm_rotary_valve_engine_building_arti_foundry: "旋转阀发动机"
  pm_assembly_lines_building_arti_foundry: "装配线"
-  
+ 
  pm_mechanical_mixers_building_explosives_factory: "机械搅拌器"
  pm_rotary_valve_engine_building_explosives_factory: "旋转阀发动机"
  pm_assembly_lines_building_explosives_factory: "装配线"
  pm_full_process_automation_building_explosives_factory: "自动包装"
-  
+ 
  pm_mil_shipyards_double_shifts_wooden: "双班制"
  pm_mil_shipyards_double_shifts: "双班制"
  pm_mil_shipyards_double_shifts_arc_weld: "双班制"
@@ -79,8 +79,8 @@
  pm_mil_shipyards_triple_shifts_tts: "三班倒"
  pm_mil_shipyards_triple_shifts_tts_turbine: "三班倒"
  pm_mil_shipyards_triple_shifts_tts_arc_welding: "三班倒"
-  
- # Alerts 
+ 
+# Alerts
  alert_MIR_war_demob_arms_name: "与退役军工企业的战争"
  alert_MIR_war_demob_arms_hint: "您正在处于战争之中，而您的军火工业正在生产大量的工具而不是小型武器。"
  alert_MIR_war_demob_arms_action: "城市建筑面板"
@@ -89,7 +89,7 @@
  alert_MIR_peace_mob_arms_hint: "你们处于和平状态并且你们的军火工业正在生产大量小型武器。"
  alert_MIR_peace_mob_arms_action: "城市建筑面板"
  MIR_peace_mob_arms_setting_name: "动员军火工业警告 - 和平"
-  
+ 
  alert_MIR_war_demob_arty_name: "与退役炮兵铸造厂的战争"
  alert_MIR_war_demob_arty_hint: "您正处于战争之中，而您的火炮铸造厂正在生产大量的工具而不是火炮。"
  alert_MIR_war_demob_arty_action: "城市建筑面板"
@@ -98,7 +98,7 @@
  alert_MIR_peace_mob_arty_hint: "您处于和平状态并且您的火炮铸造厂正在生产大量火炮。"
  alert_MIR_peace_mob_arty_action: "城市建筑面板"
  MIR_peace_mob_arty_setting_name: "动员炮兵警告-和平"
-  
+ 
  alert_MIR_war_demob_ammo_name: "与退役军火工厂的战争"
  alert_MIR_war_demob_ammo_hint: "您正处于战争之中，您的弹药工厂正在生产大量民用爆炸物而不是军用弹药。"
  alert_MIR_war_demob_ammo_action: "城市建筑面板"
@@ -107,7 +107,7 @@
  alert_MIR_peace_mob_ammo_hint: "您处于和平状态并且您的弹药工厂正在生产大量军用弹药。"
  alert_MIR_peace_mob_ammo_action: "城市建筑面板"
  MIR_peace_mob_ammo_setting_name: "动员弹药警告 - 和平"
-  
+
  alert_MIR_war_demob_planes_name: "飞机产量有限，战争加剧"
  alert_MIR_war_demob_planes_hint: "你们正处于战争之中，而且你们的汽车工业没有生产出很多飞机。"
  alert_MIR_war_demob_planes_action: "城市建筑面板"
@@ -116,7 +116,7 @@
  alert_MIR_peace_mob_planes_hint: "你们很和平，你们的汽车工业正在生产许多飞机。"
  alert_MIR_peace_mob_planes_action: "城市建筑面板"
  MIR_peace_mob_planes_setting_name: "动员飞机警报 - 和平"
-  
+ 
  alert_MIR_war_demob_tanks_name: "坦克产量有限，战争中"
  alert_MIR_war_demob_tanks_hint: "你们正处于战争之中，而你们的汽车工业却没有生产出很多坦克。"
  alert_MIR_war_demob_tanks_action: "城市建筑面板"
@@ -125,3 +125,5 @@
  alert_MIR_peace_mob_tanks_hint: "您处于和平状态，并且您的汽车工业正在生产许多坦克。"
  alert_MIR_peace_mob_tanks_action: "城市建筑面板"
  MIR_peace_mob_tanks_setting_name: "动员坦克警告 - 和平"
+ 
+ mir_alert_send_to_building_registry: "城市建筑小组" #deepl:4031725970

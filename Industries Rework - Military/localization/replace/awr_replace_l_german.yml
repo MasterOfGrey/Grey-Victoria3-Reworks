@@ -1,14 +1,14 @@
 ﻿l_german:
- building_motor_industry: "Lokomotivfabriken" #NT!
- building_automotive_industry: "Automobilindustrie" #NT!
-  
- dough_rollers: "Vollständige Prozessautomatisierung" #NT!
- dough_rollers_desc: "Durch die Integration von Maschinen zur vollständigen Automatisierung sich wiederholender Aufgaben können Branchen eine beispiellose Effizienz, Konsistenz und Größenordnung in der Produktion erreichen." #NT!
-  
+ building_motor_industry: "Lokomotivfabriken"
+ building_automotive_industry: "Automobilindustrie"
+ 
+ dough_rollers: "Vollständige Prozessautomatisierung"
+ dough_rollers_desc: "Durch die Integration von Maschinen zur vollständigen Automatisierung sich wiederholender Aufgaben können Branchen eine beispiellose Effizienz, Konsistenz und Größenordnung in der Produktion erreichen."
+ 
  pm_single_shift_days: "Einzelschichten"
-  
- pm_cropdusting: "Schädlingsbekämpfung" #NT!
- pm_cropdusting_rice: "Schädlingsbekämpfung" #NT!
+ 
+ pm_cropdusting: "Schädlingsbekämpfung"
+ pm_cropdusting_rice: "Schädlingsbekämpfung"
  
  # Compatibility
  pm_chemical_fertilizer_rice_farm: "$pm_chemical_fertilizer$"

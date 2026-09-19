@@ -1,14 +1,14 @@
 ﻿l_french:
- building_motor_industry: "Usines de locomotives" #NT!
- building_automotive_industry: "Industries automobiles" #NT!
-  
- dough_rollers: "Automatisation complète des processus" #NT!
- dough_rollers_desc: "En intégrant des machines pour automatiser entièrement les tâches répétitives, les industries peuvent atteindre une efficacité, une cohérence et une échelle de production sans précédent." #NT!
-  
+ building_motor_industry: "Usines de locomotives"
+ building_automotive_industry: "Industries automobiles"
+ 
+ dough_rollers: "Automatisation complète des processus"
+ dough_rollers_desc: "En intégrant des machines pour automatiser entièrement les tâches répétitives, les industries peuvent atteindre une efficacité, une cohérence et une échelle de production sans précédent."
+ 
  pm_single_shift_days: "Quarts de travail uniques"
-  
- pm_cropdusting: "Épandage de pesticides sur les cultures" #NT!
- pm_cropdusting_rice: "Épandage de pesticides sur les cultures" #NT!
+ 
+ pm_cropdusting: "Épandage de pesticides sur les cultures"
+ pm_cropdusting_rice: "Épandage de pesticides sur les cultures"
  
  # Compatibility
  pm_chemical_fertilizer_rice_farm: "$pm_chemical_fertilizer$"

@@ -1,14 +1,14 @@
 ﻿l_polish:
- building_motor_industry: "Fabryki lokomotyw" #NT!
- building_automotive_industry: "Branża motoryzacyjna" #NT!
-  
- dough_rollers: "Pełna automatyzacja procesów" #NT!
- dough_rollers_desc: "Dzięki integracji maszyn w celu pełnej automatyzacji powtarzalnych zadań przedsiębiorstwa mogą osiągnąć niespotykaną dotąd wydajność, spójność i skalę produkcji." #NT!
-  
+ building_motor_industry: "Fabryki lokomotyw"
+ building_automotive_industry: "Branża motoryzacyjna"
+ 
+ dough_rollers: "Pełna automatyzacja procesów"
+ dough_rollers_desc: "Dzięki integracji maszyn w celu pełnej automatyzacji powtarzalnych zadań przedsiębiorstwa mogą osiągnąć niespotykaną dotąd wydajność, spójność i skalę produkcji."
+ 
  pm_single_shift_days: "Pojedyncze zmiany"
-  
- pm_cropdusting: "Opryskiwanie" #NT!
- pm_cropdusting_rice: "Opryskiwanie" #NT!
+ 
+ pm_cropdusting: "Opryskiwanie"
+ pm_cropdusting_rice: "Opryskiwanie"
  
  # Compatibility
  pm_chemical_fertilizer_rice_farm: "$pm_chemical_fertilizer$"

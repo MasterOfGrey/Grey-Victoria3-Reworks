@@ -1,14 +1,14 @@
 ﻿l_braz_por:
- building_motor_industry: "Fábricas de locomotivas" #NT!
- building_automotive_industry: "Indústrias automotivas" #NT!
-  
- dough_rollers: "Automação completa do processo" #NT!
- dough_rollers_desc: "Ao integrar máquinas para automatizar totalmente tarefas repetitivas, as indústrias podem alcançar eficiência, consistência e escala sem precedentes na produção." #NT!
-  
+ building_motor_industry: "Fábricas de locomotivas"
+ building_automotive_industry: "Indústrias automotivas"
+ 
+ dough_rollers: "Automação completa do processo"
+ dough_rollers_desc: "Ao integrar máquinas para automatizar totalmente tarefas repetitivas, as indústrias podem alcançar eficiência, consistência e escala sem precedentes na produção."
+ 
  pm_single_shift_days: "Turnos Únicos"
-  
- pm_cropdusting: "Pulverização de culturas" #NT!
- pm_cropdusting_rice: "Pulverização de culturas" #NT!
+ 
+ pm_cropdusting: "Pulverização de culturas"
+ pm_cropdusting_rice: "Pulverização de culturas"
  
  # Compatibility
  pm_chemical_fertilizer_rice_farm: "$pm_chemical_fertilizer$"

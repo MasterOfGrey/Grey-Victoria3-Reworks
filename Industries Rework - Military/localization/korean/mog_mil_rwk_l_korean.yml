@@ -1,15 +1,15 @@
 ﻿l_korean:
-  
- # Production method groups 
+
+# Production method groups
  pmg_arms_tools_demob: "동원 해제된 도구 생산"
  pmg_arti_tools_demob: "동원 해제된 도구 생산"
  pmg_munitions_explosives_demob: "동원 해제된 폭발물 생산"
-  
+ 
  pmg_automation_building_electronics: "오토메이션"
  pmg_automation_building_explosives_factory: "오토메이션"
  pmg_mil_shipyards_shiftwork: "교대근무"
-  
-  # Production methods 
+ 
+ # Production methods
  pm_extensive_tools_a_i: "광범위한"
  pm_moderate_tools_a_i: "보통의"
  pm_limited_tools_a_i: "제한된"
@@ -20,7 +20,7 @@
  pm_moderate_tools_a_r: "모드 고무"
  pm_limited_tools_a_r: "유한회사 고무"
  pm_no_tools_a: "민간 도구 없음"
-  
+ 
  pm_extensive_tools_t_i: "광범위한"
  pm_moderate_tools_t_i: "보통의"
  pm_limited_tools_t_i: "제한된"
@@ -31,7 +31,7 @@
  pm_moderate_tools_t_r: "모드 고무"
  pm_limited_tools_t_r: "유한회사 고무"
  pm_no_tools_t: "민간 도구 없음"
-  
+ 
  pm_extensive_ammo_le: "광범위한"
  pm_moderate_ammo_le: "보통의"
  pm_limited_ammo_le: "제한된"
@@ -45,27 +45,27 @@
  pm_moderate_ammo_br: "모드 전기 분해"
  pm_limited_ammo_br: "유한회사 전기분해"
  pm_no_self_explosives: "자체 생산 폭발물 없음"
-  
+ 
  pm_limited_radios: "일부 라디오"
  pm_moderate_radios: "라디오가 많다"
  pm_extensive_radios: "많은 라디오"
-  
+ 
  pm_assembly_lines_building_electronics: "조립 라인"
  pm_full_process_automation_building_electronics: "사전 스탬프 구성 요소"
-  
+ 
  pm_ui_safety_a: "(이것은 무시하세요)"
  pm_ui_safety_b: "(이것은 무시하세요)"
  pm_ui_safety_c: "(이것은 무시하세요)"
  pm_ui_safety_d: "(이것은 무시하세요)"
-  
+ 
  pm_rotary_valve_engine_building_arti_foundry: "로터리 밸브 엔진"
  pm_assembly_lines_building_arti_foundry: "조립 라인"
-  
+ 
  pm_mechanical_mixers_building_explosives_factory: "기계식 믹서"
  pm_rotary_valve_engine_building_explosives_factory: "로터리 밸브 엔진"
  pm_assembly_lines_building_explosives_factory: "조립 라인"
  pm_full_process_automation_building_explosives_factory: "자동 포장"
-  
+ 
  pm_mil_shipyards_double_shifts_wooden: "더블 쉬프트"
  pm_mil_shipyards_double_shifts: "더블 쉬프트"
  pm_mil_shipyards_double_shifts_arc_weld: "더블 쉬프트"
@@ -79,8 +79,8 @@
  pm_mil_shipyards_triple_shifts_tts: "트리플 시프트"
  pm_mil_shipyards_triple_shifts_tts_turbine: "트리플 쉬프트"
  pm_mil_shipyards_triple_shifts_tts_arc_welding: "트리플 쉬프트"
-  
- # Alerts 
+ 
+# Alerts
  alert_MIR_war_demob_arms_name: "동원 해제된 군수 산업과의 전쟁"
  alert_MIR_war_demob_arms_hint: "당신은 전쟁 중이며, 군수 산업은 소총 무기 대신 많은 양의 도구를 생산하고 있습니다."
  alert_MIR_war_demob_arms_action: "도시 건물 패널"
@@ -89,7 +89,7 @@
  alert_MIR_peace_mob_arms_hint: "당신들은 평화를 누리고 있으며, 군수 산업은 대량의 소총을 생산하고 있습니다."
  alert_MIR_peace_mob_arms_action: "도시 건물 패널"
  MIR_peace_mob_arms_setting_name: "동원된 무기 산업 경고 - 평화"
-  
+ 
  alert_MIR_war_demob_arty_name: "동원 해제된 포병 주조소와의 전쟁"
  alert_MIR_war_demob_arty_hint: "당신은 전쟁 중이며, 당신의 포병 주조소는 포병 대신 많은 양의 도구를 생산하고 있습니다."
  alert_MIR_war_demob_arty_action: "도시 건물 패널"
@@ -98,7 +98,7 @@
  alert_MIR_peace_mob_arty_hint: "당신은 평화로우며, 당신의 포병 주조소는 대량의 포병을 생산하고 있습니다."
  alert_MIR_peace_mob_arty_action: "도시 건물 패널"
  MIR_peace_mob_arty_setting_name: "동원포병 경고 - 평화"
-  
+ 
  alert_MIR_war_demob_ammo_name: "동원 해제된 군수 공장과의 전쟁"
  alert_MIR_war_demob_ammo_hint: "여러분은 전쟁 중이며, 군수 공장에서는 군용 탄약 대신 민간용 폭발물을 대량으로 생산하고 있습니다."
  alert_MIR_war_demob_ammo_action: "도시 건물 패널"
@@ -107,7 +107,7 @@
  alert_MIR_peace_mob_ammo_hint: "당신은 평화로우며 군수 공장에서는 대량의 군수 탄약을 생산하고 있습니다."
  alert_MIR_peace_mob_ammo_action: "도시 건물 패널"
  MIR_peace_mob_ammo_setting_name: "동원된 무기 경고 - 평화"
-  
+
  alert_MIR_war_demob_planes_name: "제한된 항공기 생산으로 전쟁 중"
  alert_MIR_war_demob_planes_hint: "당신은 전쟁 중이고 자동차 산업은 많은 비행기를 생산하지 못하고 있습니다."
  alert_MIR_war_demob_planes_action: "도시 건물 패널"
@@ -116,7 +116,7 @@
  alert_MIR_peace_mob_planes_hint: "당신은 평화로우며, 당신의 자동차 산업은 많은 비행기를 생산하고 있습니다."
  alert_MIR_peace_mob_planes_action: "도시 건물 패널"
  MIR_peace_mob_planes_setting_name: "동원 항공기 경고 - 평화"
-  
+ 
  alert_MIR_war_demob_tanks_name: "제한된 탱크 생산으로 전쟁 중"
  alert_MIR_war_demob_tanks_hint: "당신은 전쟁 중이고 자동차 산업은 많은 탱크를 생산하지 못하고 있습니다."
  alert_MIR_war_demob_tanks_action: "도시 건물 패널"
@@ -125,3 +125,5 @@
  alert_MIR_peace_mob_tanks_hint: "당신은 평화로우며, 당신의 자동차 산업은 많은 탱크를 생산하고 있습니다."
  alert_MIR_peace_mob_tanks_action: "도시 건물 패널"
  MIR_peace_mob_tanks_setting_name: "동원된 탱크 경고 - 평화"
+ 
+ mir_alert_send_to_building_registry: "도시 건축 패널" #deepl:4031725970
