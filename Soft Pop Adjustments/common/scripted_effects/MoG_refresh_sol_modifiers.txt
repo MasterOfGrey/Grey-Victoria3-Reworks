@@ -30,15 +30,15 @@ mog_spa_new_refresh_expected_sol_modifier = {
 				limit = { spa_sol_modification_trigger = yes }
 				add_modifier = {
 					name = mog_lower_strata_expected_sol_from_average
-					multiplier = 1
+					multiplier = -1 # 1
 				}
 				add_modifier = {
 					name = mog_middle_strata_expected_sol_from_average
-					multiplier = 6
+					multiplier = 4 # 6
 				}
 				add_modifier = {
 					name = mog_upper_strata_expected_sol_from_average
-					multiplier = 11
+					multiplier = 9 # 11
 				}
 			}
 			

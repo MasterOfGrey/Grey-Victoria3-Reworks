@@ -37,6 +37,47 @@ assimilate_everyone.1 = {
 					save_scope_as = executing_state
 				}
 				
+				if = {			# Avoid picking either deleted cultures or the smallest primary.
+					limit = {
+						any_scope_culture = {
+							is_primary_culture_of = ROOT
+							scope:executing_state = {
+								culture_percent_state = {
+									target = PREV
+									value > "culture_percent_state(scope:primary_culture)"
+								}
+							}
+						}
+					}
+					random_scope_culture = {
+						limit = {
+							is_primary_culture_of = ROOT
+							scope:executing_state = {
+								culture_percent_state = {
+									target = PREV
+									value > "culture_percent_state(scope:primary_culture)"
+								}
+							}
+						}
+						save_scope_as = primary_culture
+					}
+				}
+				else = {
+					random_scope_culture = {
+						limit = {
+							any_primary_culture = {
+								root = {
+									culture_percent_country = {
+										target = PREV
+										value > "culture_percent_country(scope:primary_culture)"
+									}
+								}
+							}
+						}
+						save_scope_as = primary_culture
+					}
+				}
+				
 				every_scope_pop = {
 					if = {
 						limit = {
@@ -63,85 +104,96 @@ assimilate_everyone.1 = {
 							save_scope_as = current_pop
 						}
 						
-						change_pop_culture = { 
-							target = scope:primary_culture 
-							value = {
-								value = 0.005 # 0.002
-								
-								# 1/5 this mod's base
-								divide = 5
-								
-								# This (original version) boosts assimilation for homeland pops *if* they're accepted.
-								#	if = {
-								#		limit = {
-								#			scope:current_pop = {
-								#				pop_is_discriminated = no
-								#			}
-								#		}
-								#		multiply = 2
-								#	}
-								# The intent of this was clearly to counteract some of the penalties from cultural difference when laws have then made them accepted. However;
-								# This is quite powerful if they already share heritage/culture traits - causing Ukrainians in Russia, N.Italians in A-H, Occitans in France, or Chinese subcultures to disappear too aggressively.
-								# Instead let's just skip the mismatching non-heritage trait penalties if they're already accepted by nesting that in the check instead:
-								if = {
-									limit = {
-										scope:current_pop = {
-											pop_acceptance < acceptance_status_3
+						if = {
+							limit = {
+								total_size <= 20
+							}
+							change_pop_culture = { 
+								target = scope:primary_culture 
+								value = 1
+							}
+						}
+						else = {
+							change_pop_culture = {
+								target = scope:primary_culture 
+								value = {
+									value = 0.005 # 0.002
+									
+									# 1/5 this mod's base
+									divide = 5
+									
+									# This (original version) boosts assimilation for homeland pops *if* they're accepted.
+									#	if = {
+									#		limit = {
+									#			scope:current_pop = {
+									#				pop_is_discriminated = no
+									#			}
+									#		}
+									#		multiply = 2
+									#	}
+									# The intent of this was clearly to counteract some of the penalties from cultural difference when laws have then made them accepted. However;
+									# This is quite powerful if they already share heritage/culture traits - causing Ukrainians in Russia, N.Italians in A-H, Occitans in France, or Chinese subcultures to disappear too aggressively.
+									# Instead let's just skip the mismatching non-heritage trait penalties if they're already accepted by nesting that in the check instead:
+									if = {
+										limit = {
+											scope:current_pop = {
+												pop_acceptance < acceptance_status_3
+											}
+										}
+										# Accepted pops in homelands skip this, preserving value 0.001 - allowing acceptance to "boost" some homeland results without dominating others.
+										# Only substantially discriminated pops check against the non-heritage trait:
+										if = {
+											limit = {
+												NOT = {
+													scope:current_pop.culture = {
+														OR = {
+															shares_language_trait_group_with_any_primary_culture = root
+															shares_tradition_trait_with_any_primary_culture = root
+														}
+													}
+												}
+											}
+											divide = 2
 										}
 									}
-									# Accepted pops in homelands skip this, preserving value 0.001 - allowing acceptance to "boost" some homeland results without dominating others.
-									# Only substantially discriminated pops check against the non-heritage trait:
+									
 									if = {
 										limit = {
 											NOT = {
 												scope:current_pop.culture = {
-													OR = {
-														shares_language_trait_group_with_any_primary_culture = root
-														shares_tradition_trait_with_any_primary_culture = root
-													}
+													shares_heritage_trait_group_with_any_primary_culture = root
 												}
 											}
 										}
 										divide = 2
 									}
-								}
-								
-								if = {
-									limit = {
-										NOT = {
-											scope:current_pop.culture = {
-												shares_heritage_trait_group_with_any_primary_culture = root
+									
+									if = {
+										limit = {
+											scope:executing_state = {
+												is_incorporated = no
 											}
 										}
+										divide = 2
 									}
-									divide = 2
-								}
-								
-								if = {
-									limit = {
-										scope:executing_state = {
-											is_incorporated = no
+									
+									if = {
+										limit = {
+											scope:current_pop = {
+												is_pop_type = peasants
+											}
 										}
+										multiply = 0.1		# Peasants should be hard to assimilate.
 									}
-									divide = 2
-								}
-								
-								if = {
-									limit = {
-										scope:current_pop = {
-											is_pop_type = peasants
-										}
+									
+									multiply = {
+										value = 1
+										add = scope:executing_state.modifier:state_assimilation_mult
 									}
-									multiply = 0.1		# Peasants should be hard to assimilate.
+									
+									min = 0
+									max = 1
 								}
-								
-								multiply = {
-									value = 1
-									add = scope:executing_state.modifier:state_assimilation_mult
-								}
-								
-								min = 0
-								max = 1
 							}
 						}
 					}
