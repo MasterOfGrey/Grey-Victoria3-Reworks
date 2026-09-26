@@ -1,0 +1,26 @@
+﻿# Urban Center Overwrites
+
+#REPLACE_OR_CREATE:pmg_amenities = {
+#	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+#	production_methods = {
+#		pm_market_stalls
+#		pm_market_squares
+#		pm_covered_markets
+#		pm_arcades
+#		usu_pm_hv_arcades
+#	}
+#}
+REPLACE:pmg_amenities = {
+    texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+    production_methods = {
+        pm_market_stalls
+        pm_market_squares
+        pm_market_squares_pec_corporatist
+        pm_covered_markets
+        pm_covered_markets_pec_corporatist
+        pm_arcades
+        pm_arcades_pec_corporatist
+        usu_pm_hv_arcades
+        usu_pm_hv_arcades_pec_corporatist
+    }
+}
