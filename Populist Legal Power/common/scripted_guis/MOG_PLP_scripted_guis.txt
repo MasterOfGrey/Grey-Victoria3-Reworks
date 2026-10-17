@@ -1,0 +1,13 @@
+﻿REPLACE_OR_CREATE:PLP_CMF_sg_set_debug_flag = {
+    scope = country
+    effect = {
+        set_global_variable = PLP_CMF_debug_mode
+    }
+}
+
+REPLACE_OR_CREATE:PLP_CMF_sg_unset_debug_flag = {
+    scope = country
+    effect = {
+        remove_global_variable = PLP_CMF_debug_mode
+    }
+}

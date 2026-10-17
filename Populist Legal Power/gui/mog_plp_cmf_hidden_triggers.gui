@@ -1,0 +1,23 @@
+widget = {
+    name = PLP_CMF_debug_driver_widget
+    
+    visible = "[GetMetaPlayer.GetPlayedOrObservedCountry.IsValid]"
+    
+    widget = {
+        visible = "[InDebugMode]"
+        
+        state = {
+            trigger_when = "[InDebugMode]"
+            on_finish = "[GetScriptedGui('PLP_CMF_sg_set_debug_flag').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+        }
+    }
+    
+    widget = {
+        visible = "[Not(InDebugMode)]"
+        
+        state = {
+            trigger_when = "[Not(InDebugMode)]"
+            on_finish = "[GetScriptedGui('PLP_CMF_sg_unset_debug_flag').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+        }
+    }
+}

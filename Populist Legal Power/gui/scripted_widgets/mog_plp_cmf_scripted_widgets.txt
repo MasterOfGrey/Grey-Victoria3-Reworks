@@ -1,0 +1,1 @@
+﻿gui/mog_plp_cmf_hidden_triggers.gui = PLP_CMF_debug_driver_widget
