@@ -1,0 +1,16 @@
+﻿# Manaflow
+gate_magic_golems = {
+	era = era_4
+	texture = "gfx/interface/icons/invention_icons/gate_magic_golems.dds"
+	category = production
+	can_research = no
+
+	unlocking_technologies = {
+		gate_simple_rune_carving
+		gate_mana_cores
+	}
+
+	ai_weight = {
+		value = 1
+	}
+}

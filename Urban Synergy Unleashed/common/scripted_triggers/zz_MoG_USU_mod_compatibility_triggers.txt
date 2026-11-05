@@ -14,3 +14,17 @@ REPLACE_OR_CREATE:Grey_USU_is_active = { # Urban Synergy Unleashed
 TRY_REPLACE:tesla_building_is_railway_building = {
 	is_building_type = building_usu_railway_line
 }
+
+#Valid Power Plant for improvement project
+TRY_REPLACE:tesla_power_plant_valid_for_improvement_trigger = {
+	level > 0
+	OR = {
+		is_building_type = building_power_plant
+		is_building_type = usu_building_hydro_power_plant
+	}
+	NAND = {
+		has_modifier = tesla_power_plant_1_modifier
+		has_modifier = tesla_power_plant_2_modifier
+		has_modifier = tesla_power_plant_3_modifier
+	}
+}
