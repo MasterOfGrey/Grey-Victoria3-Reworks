@@ -1,6 +1,7 @@
 ﻿NPops = {
 	RADICALS_MAX_FROM_LOW_SOL = 0.25 # 0.15				# If pop is already this % radical, don't add more radicals from low SOL (Scales by delta between SoL and expected min SoL)
-	RADICALS_MAX_FROM_DISCRIMINATION = 0.7 # 0.5		# If pop is already this % radical, don't add more radicals from discrimination (Scales by literacy)
+	# RADICALS_MAX_FROM_DISCRIMINATION = 0.7 # 0.5		# If pop is already this % radical, don't add more radicals from discrimination (Scales by literacy)
+		# Replaced by movement defines
 }
 
 NPolitics = {
@@ -44,7 +45,8 @@ NPolitics = {
 	CIVIL_WAR_COLONIAL_UPRISING_CHANCE_WEALTH_SUPPORT_FACTOR = 4.0 # 2.0	# Chance for each colonial area to rebel, multiplied by insurrectionary movement wealth support
 	CIVIL_WAR_COLONIAL_UPRISING_CHANCE_CLOUT_FACTOR = 1.0					# Chance for each colonial area to rebel, multiplied by insurrectionary IG clout in the area
 	
-	CIVIL_WAR_UPRISING_STATE_EXCESSIVE_ARMY_FRACTION = 0.5					# If a state contains at least this much of the area's army
+	# CIVIL_WAR_UPRISING_STATE_EXCESSIVE_ARMY_FRACTION = 0.5					# If a state contains at least this much of the area's army
+		# removed 1.15
 	CIVIL_WAR_UPRISING_ARMY_FRACTION_MILITARY_SUPPORT_FACTOR = 1.0 # 0.75	# Target fraction of the army that should rebel, multiplied by insurrectionary movement military support
 	CIVIL_WAR_UPRISING_ARMY_FRACTION_CLOUT_FACTOR = 1.0 # 0.25				# Target fraction of the army that should rebel, multiplied by insurrectionary IG clout in the area
 	CIVIL_WAR_UPRISING_NAVY_FRACTION_MILITARY_SUPPORT_FACTOR = 0.5 # 0.75	# Target fraction of the navy that should rebel, multiplied by insurrectionary movement military support

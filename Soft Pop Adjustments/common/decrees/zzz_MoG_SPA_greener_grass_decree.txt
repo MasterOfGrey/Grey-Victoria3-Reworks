@@ -10,6 +10,13 @@
 # Cannot use INJECT due to additive values which would be hugely broken if vanilla or some other mod changes the baseline.
 REPLACE:decree_greener_grass_campaign = {
 	texture = "gfx/interface/icons/decree/decree_greener_grass_campaign.dds"
+	country_trigger = {
+		custom_tooltip = {
+			text = tsarpoints_decree_not_upgraded_tt
+			NOT = { has_variable = tsarpoints_upgraded_greener_grass_campaign }
+		}
+	}
+
 	state_trigger = {
 		is_isolated_from_market = no
 	}
@@ -31,7 +38,7 @@ REPLACE:decree_greener_grass_campaign = {
 					occupancy < 0.75
 				}
 			}
-			add = 50
+			add = 10
 		}
 		if = {
 			limit = {
@@ -40,7 +47,7 @@ REPLACE:decree_greener_grass_campaign = {
 					occupancy < 0.5
 				}
 			}
-			add = 50
+			add = 15
 		}
 		if = {
 			limit = {
@@ -49,7 +56,7 @@ REPLACE:decree_greener_grass_campaign = {
 					occupancy < 0.25
 				}
 			}
-			add = 50
+			add = 25
 		}
 		if = {
 			limit = {
@@ -89,6 +96,68 @@ REPLACE:decree_greener_grass_campaign = {
 		}
 		if = {
 			limit = {
+				scope:country = {
+					has_journal_entry = je_taming_the_north
+				}
+				state_region = {
+					this = s:STATE_HOKKAIDO
+				}
+			}
+			add = 500
+		}
+		if = {
+			limit = {
+				scope:country = {
+					has_journal_entry = je_colonize_korea
+				}
+				is_in_geographic_region = geographic_region_korea
+			}
+			add = 500
+		}
+		if = {
+			limit = {
+				scope:country = {
+					has_journal_entry = je_russification
+				}
+				culture_percent_state = {
+					target = cu:russian
+					value < je_russification_decree_russian_culture_target # set in event_values
+				}
+				OR = {
+					is_in_geographic_region = geographic_region_finland_old
+					is_in_geographic_region = geographic_region_baltic_states_old
+					is_in_geographic_region = geographic_region_poland_old
+				}
+			}
+			add = 250
+		}
+		if = {
+			limit = {
+				scope:country = {
+					has_journal_entry = je_tp_tsar_heir_of_alexander
+					NOT = { has_variable = je_tp_tsar_heir_of_alexander_button_1_complete }
+				}
+				state_region = {
+					this = s:STATE_OUTER_MANCHURIA
+				}
+			}
+			add = 500
+		}
+		if = {
+			limit = {
+				scope:country = {
+					has_journal_entry = je_tp_pool_develop_frontier
+				}
+				OR = {
+					is_in_geographic_region = geographic_region_siberia
+					is_in_geographic_region = geographic_region_central_asia
+					is_in_geographic_region = geographic_region_caucasus_old
+				}
+			}
+			multiply = 1.5
+		}
+		if = {
+			limit = {
 				is_incorporated = no
 				scope:country = { NOT = { has_law_or_variant = law_type:law_colonial_resettlement } } # Already gives a hefty migration bonus
 			}
@@ -101,7 +170,7 @@ REPLACE:decree_greener_grass_campaign = {
 			multiply = 0
 		}
 		if = {
-			limit = {	# Have the AI Support low-pop states that are being disadvantaged
+			limit = {	# MODDED: Have the AI Support low-pop states that are being disadvantaged
 				OR = {
 					any_scope_building = {
 						is_building_type = building_urban_center

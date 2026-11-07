@@ -50,9 +50,11 @@ NPops = {
 ##### RADICALISM #####
 	
 	RADICALS_MAX_FROM_LOW_SOL = 0.25 # 0.15				# If pop is already this % radical, don't add more radicals from low SOL (Scales by delta between SoL and expected min SoL)
-	RADICALS_MAX_FROM_DISCRIMINATION = 0.7 # 0.5		# If pop is already this % radical, don't add more radicals from discrimination (Scales by literacy)
+	# RADICALS_MAX_FROM_DISCRIMINATION = 0.7 # 0.5		# If pop is already this % radical, don't add more radicals from discrimination (Scales by literacy)
+		# Replaced by movement defines
 	RADICALS_MONTHLY_FROM_LOW_SOL = 0.004 # 0.003		# Scales by delta between SoL and expected min SoL
-	RADICALS_MONTHLY_FROM_DISCRIMINATION = 0.005 		# Scales by literacy
+	# RADICALS_MONTHLY_FROM_DISCRIMINATION = 0.005 		# Scales by literacy
+		# Replaced by movement defines
 	
 	# Radicals Monthly indicates what fraction of the pop turns radical every month while starving
 	# Radicals max indicates at what max fraction of radicals we stop adding new ones due to starvation

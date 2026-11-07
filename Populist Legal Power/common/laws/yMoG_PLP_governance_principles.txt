@@ -27,6 +27,12 @@
 			}
 			NOT = { has_government_type = gov_chartered_company }
 		}
+		trigger_if = {
+			limit = {
+				c:POL ?= THIS
+			}
+			NOT = { has_journal_entry = je_congress_poland }
+		}
 	}
 
 	can_impose = {
@@ -181,6 +187,12 @@ REPLACE_OR_CREATE:law_corporate_state = {
 				is_subject = no
 			}
 			NOT = { has_government_type = gov_chartered_company }
+		}
+		trigger_if = {
+			limit = {
+				c:POL ?= THIS
+			}
+			NOT = { has_journal_entry = je_congress_poland }
 		}
 	}
 

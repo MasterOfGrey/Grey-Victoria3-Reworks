@@ -1,0 +1,27 @@
+﻿## Important Note:
+## Migration desire comes from SPA first, PLP only appends threshold changes.
+
+# PLP_nee_SPA update note: make sure the thresholds are aligned with common/script_values/yMoG_PLP_nee_SPA_event_values_overwrites.txt
+
+# We use TRY_INJECT to append threshold changes to SPA's migration modifications - no one should be using this mod if they have a different citizenship laws mod.
+INJECT:violent_hostility = {
+	threshold = 0 # from 0
+}
+
+INJECT:cultural_erasure = {
+	threshold = 20 # from 20
+}
+
+INJECT:open_prejudice = {
+	threshold = 45 # from 40
+}
+
+INJECT:second_rate_citizen = {
+	threshold = 70 # from 60
+}
+
+INJECT:full_acceptance = {
+	threshold = 95 # from 80
+}
+
+

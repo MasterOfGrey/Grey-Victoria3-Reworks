@@ -2,7 +2,9 @@
 # icon = graphical icon shown in-game
 # modifier = {} modifier on country for having adopted this law
 
-REPLACE_OR_CREATE:law_subjecthood = {
+# Cannot use INJECT due to additive values which would be hugely broken if vanilla or some other mod changes the baseline.
+# We use REPLACE cause if some other mod has completely redesigned these then a compatch needs to be made.
+REPLACE:law_subjecthood = {
 	group = lawgroup_citizenship
 
 	icon = "gfx/interface/icons/law_icons/imperial_subjecthood.dds"
@@ -82,10 +84,17 @@ REPLACE_OR_CREATE:law_subjecthood = {
 	}
 
 	acceptance_modifier = {
-		country_radicalism_increases_violent_hostility_mult = 0.2
-		country_radicalism_increases_cultural_erasure_mult = 0.1
-		country_loyalism_increases_second_rate_citizen_mult = 0.05
-		country_loyalism_increases_full_acceptance_mult = 0.1
+		country_radicalism_increases_violent_hostility_mult   =  0.3
+		country_radicalism_increases_cultural_erasure_mult    =  0.22
+		country_radicalism_increases_open_prejudice_mult      =  0.14
+		country_radicalism_increases_second_rate_citizen_mult =  0.06
+		country_radicalism_increases_full_acceptance_mult     = -0.02
+		
+		country_loyalism_increases_violent_hostility_mult   = -0.15
+		country_loyalism_increases_cultural_erasure_mult    = -0.11
+		country_loyalism_increases_open_prejudice_mult      = -0.07
+		country_loyalism_increases_second_rate_citizen_mult = -0.03
+		country_loyalism_increases_full_acceptance_mult     =  0.01
 
 		country_allow_voting_violent_hostility_bool = no
 		country_allow_voting_cultural_erasure_bool = no
@@ -94,6 +103,7 @@ REPLACE_OR_CREATE:law_subjecthood = {
 		country_allow_voting_second_rate_citizen_bool = yes
 		country_allow_voting_full_acceptance_bool = yes
 
+		# country_allow_assimilation_violent_hostility_bool = no	# Included for clarity.
 		country_allow_assimilation_cultural_erasure_bool = yes
 		country_allow_assimilation_open_prejudice_bool = yes
 		country_allow_assimilation_second_rate_citizen_bool = yes
@@ -132,7 +142,7 @@ REPLACE_OR_CREATE:law_subjecthood = {
 
 }
 
-REPLACE_OR_CREATE:law_ethnostate = {
+REPLACE:law_ethnostate = {
 	group = lawgroup_citizenship
 	
 	icon = "gfx/interface/icons/law_icons/ethnostate.dds"
@@ -159,6 +169,10 @@ REPLACE_OR_CREATE:law_ethnostate = {
 			custom_tooltip = fervor_effects_ld_tt
 		}
 	}
+	
+	unlocking_technologies = {
+		nationalism
+	}
 
 	can_impose = {
 		OR = {
@@ -172,11 +186,7 @@ REPLACE_OR_CREATE:law_ethnostate = {
 			can_impose_law_default = yes
 		}
 	}
-	
-	unlocking_technologies = {
-		nationalism
-	}
-	
+
 	modifier = {
 		country_authority_add = 200
 		
@@ -248,11 +258,11 @@ REPLACE_OR_CREATE:law_ethnostate = {
 		country_allow_assimilation_second_rate_citizen_bool = yes
 		country_allow_assimilation_full_acceptance_bool = yes
 		
-		# Note swap of cultural erasure and open prejudice modifiers
-		country_assimilation_open_prejudice_mult = 0.05
-		country_assimilation_cultural_erasure_mult = 0.15
-		country_assimilation_second_rate_citizen_mult = -0.05
-		country_assimilation_full_acceptance_mult = -0.15
+		country_assimilation_violent_hostility_mult = -0.8		# If something somehow enables this: good luck
+		country_assimilation_cultural_erasure_mult = -0.4
+		country_assimilation_open_prejudice_mult = 0.0
+		country_assimilation_second_rate_citizen_mult = 0.2		# If you somehow qualify, strongly incentivised to lick the boot.
+		country_assimilation_full_acceptance_mult = 0.2			# If you somehow qualify, strongly incentivised to lick the boot.
 		
 		country_political_strength_violent_hostility_mult = -0.5
 		country_political_strength_cultural_erasure_mult = -0.4
@@ -280,8 +290,8 @@ REPLACE_OR_CREATE:law_ethnostate = {
 		
 		country_disallow_government_work_violent_hostility_bool = yes
 		country_disallow_government_work_cultural_erasure_bool = yes
-		country_disallow_government_work_open_prejudice_bool = yes
-		country_disallow_government_work_second_rate_citizen_bool = no	# This is the shared heritage + culture trait + suitable religion group 
+		country_disallow_government_work_open_prejudice_bool = no		# This is the 2 shared traits + suitable religion with state religion group 
+		country_disallow_government_work_second_rate_citizen_bool = no
 		country_disallow_government_work_full_acceptance_bool = no
 	}
 	
@@ -295,7 +305,7 @@ REPLACE_OR_CREATE:law_ethnostate = {
 	}
 }
 
-REPLACE_OR_CREATE:law_national_supremacy = {
+REPLACE:law_national_supremacy = {
 	group = lawgroup_citizenship
 	
 	icon = "gfx/interface/icons/law_icons/national_supremacy.dds"
@@ -335,7 +345,7 @@ REPLACE_OR_CREATE:law_national_supremacy = {
 			can_impose_law_default = yes
 		}
 	}
-	
+
 	modifier = {
 		country_authority_add = 150
 		
@@ -408,11 +418,11 @@ REPLACE_OR_CREATE:law_national_supremacy = {
 		country_allow_assimilation_second_rate_citizen_bool = yes
 		country_allow_assimilation_full_acceptance_bool = yes
 		
-		# Note swap of cultural erasure and open prejudice modifiers
-		country_assimilation_open_prejudice_mult = 0.05
-		country_assimilation_cultural_erasure_mult = 0.15
-		country_assimilation_second_rate_citizen_mult = -0.05
-		country_assimilation_full_acceptance_mult = -0.15
+		country_assimilation_violent_hostility_mult = -0.6		# If something somehow enables this: good luck
+		country_assimilation_cultural_erasure_mult = -0.3
+		country_assimilation_open_prejudice_mult = 0.0
+		country_assimilation_second_rate_citizen_mult = 0.1		# If you somehow qualify, moderately incentivised to lick the boot.
+		country_assimilation_full_acceptance_mult = 0.1			# If you somehow qualify, moderately incentivised to lick the boot.
 		
 		country_political_strength_violent_hostility_mult = -0.4
 		country_political_strength_cultural_erasure_mult = -0.3
@@ -455,7 +465,7 @@ REPLACE_OR_CREATE:law_national_supremacy = {
 	}
 }
 
-REPLACE_OR_CREATE:law_racial_segregation = {
+REPLACE:law_racial_segregation = {
 	group = lawgroup_citizenship
 	
 	icon = "gfx/interface/icons/law_icons/racial_segregation.dds"
@@ -488,7 +498,7 @@ REPLACE_OR_CREATE:law_racial_segregation = {
 			remove_modifier = modifier_polish_organic_statute
 		}
 	}
-	
+
 	can_impose = {
 		OR = {
 			AND = {
@@ -514,7 +524,7 @@ REPLACE_OR_CREATE:law_racial_segregation = {
 		#country_acceptance_culture_base_add = 20 # 10
 		
 		#If primary culture, only apply this value
-		country_acceptance_primary_culture_add = 100
+		country_acceptance_primary_culture_add = 150 # 100
 
 		#Heritage
 		#From this block, we only apply the highest value a Pop qualifies for
@@ -564,17 +574,18 @@ REPLACE_OR_CREATE:law_racial_segregation = {
 		country_allow_voting_second_rate_citizen_bool = yes
 		country_allow_voting_full_acceptance_bool = yes
 		
-		# country_allow_assimilation_violent_hostility_bool = no	# Included for clarity.
+		country_allow_assimilation_violent_hostility_bool = yes # no	# Included for clarity.
 		country_allow_assimilation_cultural_erasure_bool = yes
 		country_allow_assimilation_open_prejudice_bool = yes
 		country_allow_assimilation_second_rate_citizen_bool = yes
 		country_allow_assimilation_full_acceptance_bool = yes
 		
-		# Note swap of cultural erasure and open prejudice modifiers
-		country_assimilation_open_prejudice_mult = 0.05
-		country_assimilation_cultural_erasure_mult = 0.15
-		country_assimilation_second_rate_citizen_mult = -0.05
-		country_assimilation_full_acceptance_mult = -0.15
+		# Note racial segregation means non-shared-heritage cultures can only reach open prejudice via state religion or same religion in homelands.
+		country_assimilation_violent_hostility_mult = -0.6		# If something somehow enables this: good luck
+		country_assimilation_cultural_erasure_mult = -0.4		# Racism strongly excludes.
+		country_assimilation_open_prejudice_mult = 0.3			# Wrong heritage pops sneaking into acceptance via other means are strongly motivated to align with another group.
+		country_assimilation_second_rate_citizen_mult = 0.1		# Shared heritage pops are moderately incentivised to adopt a shared identity.
+		country_assimilation_full_acceptance_mult = -0.2		# You got that privilege.
 		
 		country_political_strength_violent_hostility_mult = -0.3
 		country_political_strength_cultural_erasure_mult = -0.2
@@ -617,7 +628,7 @@ REPLACE_OR_CREATE:law_racial_segregation = {
 	}
 }
 
-REPLACE_OR_CREATE:law_cultural_exclusion = {
+REPLACE:law_cultural_exclusion = {
 	group = lawgroup_citizenship
 	
 	icon = "gfx/interface/icons/law_icons/cultural_exclusion.dds"
@@ -669,9 +680,9 @@ REPLACE_OR_CREATE:law_cultural_exclusion = {
 			can_impose_law_default = yes
 		}
 	}
-	
+
 	modifier = {
-		country_authority_add = 50
+		country_authority_add = 100
 		
 		# Pre 1.10:
 		##From this block, we only apply the highest value a Pop qualifies for
@@ -682,7 +693,7 @@ REPLACE_OR_CREATE:law_cultural_exclusion = {
 		#country_acceptance_culture_base_add = 40 # 20
 
 		#If primary culture, only apply this value
-		country_acceptance_primary_culture_add = 100
+		country_acceptance_primary_culture_add = 150 # 100
 
 		#Heritage
 		#From this block, we only apply the highest value a Pop qualifies for
@@ -725,17 +736,18 @@ REPLACE_OR_CREATE:law_cultural_exclusion = {
 		country_loyalism_increases_second_rate_citizen_mult = -0.025
 		country_loyalism_increases_full_acceptance_mult     =  0.025
 		
-		# country_allow_assimilation_violent_hostility_bool = no	# Included for clarity.
+		country_allow_assimilation_violent_hostility_bool = yes	# no	# Included for clarity.
 		country_allow_assimilation_cultural_erasure_bool = yes
 		country_allow_assimilation_open_prejudice_bool = yes
 		country_allow_assimilation_second_rate_citizen_bool = yes
 		country_allow_assimilation_full_acceptance_bool = yes
 		
-		# Note swap of cultural erasure and open prejudice modifiers
-		country_assimilation_open_prejudice_mult = 0.05
-		country_assimilation_cultural_erasure_mult = 0.15
-		country_assimilation_second_rate_citizen_mult = -0.05
-		country_assimilation_full_acceptance_mult = -0.15
+		# Note cultural exclusion means only fully foreign cultures that are wrong religion or new arrivals will face cultural erasure.
+		country_assimilation_violent_hostility_mult = -0.6		# If something somehow enables this: good luck
+		country_assimilation_cultural_erasure_mult = -0.4		# FOB discrimination or religious discrimination strongly excludes.
+		country_assimilation_open_prejudice_mult = -0.2			# If you're here with right religion, you might have to get comfortable, otherwise assimilation is hindered by religious differences.
+		country_assimilation_second_rate_citizen_mult = 0.0		# Any shared trait will get you here. Moving up would be nice, but at least you're not like "those" poor folk.
+		country_assimilation_full_acceptance_mult = 0.2			# Your "pretty privilege" means that you are in the "in" group, but only if you properly act like it.
 		
 		country_allow_voting_violent_hostility_bool = no
 		country_voting_power_cultural_erasure_mult = -0.25
@@ -785,7 +797,7 @@ REPLACE_OR_CREATE:law_cultural_exclusion = {
 	}
 }
 
-REPLACE_OR_CREATE:law_multicultural = {
+REPLACE:law_multicultural = {
 	group = lawgroup_citizenship
 	
 	icon = "gfx/interface/icons/law_icons/multicultural.dds"
@@ -810,7 +822,20 @@ REPLACE_OR_CREATE:law_multicultural = {
 	unlocking_technologies = {
 		human_rights
 	}
-	
+
+	can_impose = {
+		OR = {
+			AND = {
+				is_in_same_power_bloc = scope:target_country
+				AND = {
+					modifier:country_can_impose_same_lawgroup_citizenship_in_power_bloc_bool = yes
+					has_law = scope:law
+				}
+			}
+			can_impose_law_default = yes
+		}
+	}
+
 	on_enact = {
 		recalculate_pop_ig_support = yes
 		if = {
@@ -824,19 +849,6 @@ REPLACE_OR_CREATE:law_multicultural = {
 				has_modifier = modifier_polish_organic_statute
 			}
 			remove_modifier = modifier_polish_organic_statute
-		}
-	}
-
-	can_impose = {
-		OR = {
-			AND = {
-				is_in_same_power_bloc = scope:target_country
-				AND = {
-					modifier:country_can_impose_same_lawgroup_citizenship_in_power_bloc_bool = yes
-					has_law = scope:law
-				}
-			}
-			can_impose_law_default = yes
 		}
 	}
 	
@@ -856,7 +868,7 @@ REPLACE_OR_CREATE:law_multicultural = {
 		state_assimilation_mult = -0.25
 		
 		#If primary culture, only apply this value
-		country_acceptance_primary_culture_add = 100
+		country_acceptance_primary_culture_add = 150 # 100
 		
 		#Heritage
 		#From this block, we only apply the highest value a Pop qualifies for
@@ -902,17 +914,18 @@ REPLACE_OR_CREATE:law_multicultural = {
 		country_allow_voting_second_rate_citizen_bool = yes
 		country_allow_voting_full_acceptance_bool = yes
 		
-		# country_allow_assimilation_violent_hostility_bool = no	# Included for clarity.
+		country_allow_assimilation_violent_hostility_bool = yes	# no	# Included for clarity.
 		country_allow_assimilation_cultural_erasure_bool = yes
 		country_allow_assimilation_open_prejudice_bool = yes
 		country_allow_assimilation_second_rate_citizen_bool = yes
 		country_allow_assimilation_full_acceptance_bool = yes
 		
-		# Note swap of cultural erasure and open prejudice modifiers
-		country_assimilation_open_prejudice_mult = 0.05
-		country_assimilation_cultural_erasure_mult = 0.15
-		country_assimilation_second_rate_citizen_mult = -0.05
-		country_assimilation_full_acceptance_mult = -0.15
+		# Note multiculturalism means only fully foreign cultures that are wrong religion or new arrivals will face cultural erasure.
+		country_assimilation_violent_hostility_mult = -0.4		# If something somehow enables this: good luck
+		country_assimilation_cultural_erasure_mult = -0.4		# FOB discrimination AND religious discrimination strongly excludes.
+		country_assimilation_open_prejudice_mult = 0.0			# Anyone can be here; conversion or tolerant laws will trivially get you out of here.
+		country_assimilation_second_rate_citizen_mult = 0.2		# Leaning on your cultural connections lets you move up with your religion intact.
+		country_assimilation_full_acceptance_mult = -0.2		# You are in the "diversity is celebrated" category.
 		
 		country_wage_violent_hostility_mult   = -0.2
 		country_wage_cultural_erasure_mult    = -0.15
