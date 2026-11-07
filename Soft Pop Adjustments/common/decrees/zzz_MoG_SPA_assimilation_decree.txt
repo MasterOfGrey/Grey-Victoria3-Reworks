@@ -13,6 +13,14 @@ REPLACE:decree_promote_national_values = {
 	unlocking_technologies = {
 		centralization
 	}
+
+	country_trigger = {
+		custom_tooltip = {
+			text = tsarpoints_decree_not_upgraded_tt
+			NOT = { has_variable = tsarpoints_upgraded_promote_national_values }
+		}
+		# NOT = { has_law_or_variant = law_type:law_multicultural }	# The AI still needs to do this for performance reasons
+	}
 	#state_trigger = {	# The player may have other mods which mean this is still sensible to be used, but the AI shouldn't (added to ai_weight block)
 	#	OR = {
 	#		has_assimilating_pops = yes
@@ -23,6 +31,8 @@ REPLACE:decree_promote_national_values = {
 		state_assimilation_mult = 1
 		state_conversion_mult = 1
 		state_allow_assimilation_in_homeland_bool = yes
+		state_allow_assimilation_without_presence_bool = yes
+		state_allow_conversion_without_presence_bool = yes
 		state_radicals_and_loyalists_from_sol_change_mult = 0.15
 		state_radicalism_increases_violent_hostility_mult = 0.5
 		state_radicalism_increases_cultural_erasure_mult = 0.4
@@ -40,7 +50,10 @@ REPLACE:decree_promote_national_values = {
 						has_law_or_variant = law_type:law_subjecthood
 					}
 				}
-				primary_cultures_percent_state <= 0.9
+				primary_cultures_percent_state = {
+					target_country = owner
+					value <= 0.9
+				}
 			}
 
 			if = { # Colonies
@@ -65,7 +78,6 @@ REPLACE:decree_promote_national_values = {
 						OR = {
 							has_strategy = ai_strategy_reactionary_agenda
 							has_strategy = ai_strategy_conservative_agenda
-							has_strategy = ai_strategy_maintain_mandate_of_heaven
 						}
 					}
 				}
@@ -83,19 +95,28 @@ REPLACE:decree_promote_national_values = {
 
 			if = {
 				limit = {
-					primary_cultures_percent_state <= 0.1
+					primary_cultures_percent_state = {
+						target_country = owner
+						value <= 0.1
+					}
 				}
 				multiply = 5.0
 			}
 			else_if = {
 				limit = {
-					primary_cultures_percent_state <= 0.3
+					primary_cultures_percent_state = {
+						target_country = owner
+						value <= 0.3
+					}
 				}
 				multiply = 3.0
 			}
 			else_if = {
 				limit = {
-					primary_cultures_percent_state <= 0.5
+					primary_cultures_percent_state = {
+						target_country = owner
+						value <= 0.5
+					}
 				}
 				multiply = 2.0
 			}
@@ -234,10 +255,135 @@ REPLACE:decree_promote_national_values = {
 			}
 			add = 1000
 		}
+		if = {
+			limit = {
+				scope:country = {
+					has_journal_entry = je_colonize_korea
+				}
+				is_in_geographic_region = geographic_region_korea
+			}
+			add = 500
+		}
+		if = {
+			limit = {
+				scope:country = {
+					has_journal_entry = je_russification
+				}
+				culture_percent_state = {
+					target = cu:russian
+					value < je_russification_decree_russian_culture_target # set in event_values
+				}
+				OR = {
+					is_in_geographic_region = geographic_region_finland_old
+					is_in_geographic_region = geographic_region_baltic_states_old
+					is_in_geographic_region = geographic_region_poland_old
+				}
+			}
+			add = 250
+		}
+		if = {
+			limit = {
+				scope:country = {
+					has_journal_entry = je_tp_pool_cultural_dominance
+				}
+				culture_percent_state = {
+					target = cu:russian
+					value < 0.5
+				}
+			}
+			add = 250
+		}
+		if = {
+			limit = {
+				scope:country = {
+					has_variable = ai_ukraine_renaissance_repress
+				}
+				state_region = { is_homeland = cu:ukrainian }
+			}
+			add = 250
+		}
+		if = {
+			limit = {
+				scope:country = {
+					has_variable = ai_ukraine_renaissance_moderate
+					cultural_renaissance_fervor_is_high = { CULTURE = ukrainian }
+				}
+				state_region = { is_homeland = cu:ukrainian }
+			}
+			add = 150
+		}
+		if = {
+			limit = {
+				scope:country = {
+					has_variable = ai_belarus_renaissance_repress
+				}
+				state_region = { is_homeland = cu:byelorussian }
+			}
+			add = 250
+		}
+		if = {
+			limit = {
+				scope:country = {
+					has_variable = ai_belarus_renaissance_moderate
+					cultural_renaissance_fervor_is_high = { CULTURE = byelorussian }
+				}
+				state_region = { is_homeland = cu:byelorussian }
+			}
+			add = 150
+		}
+		if = {
+			limit = {
+				scope:country = {
+					has_journal_entry = je_tp_tsar_gendarme_of_europe
+					NOT = { has_variable = je_tp_tsar_gendarme_of_europe_button_3_complete }
+				}
+				OR = {
+					AND = {
+						is_in_geographic_region = geographic_region_diocese_of_kamchatka
+						NOT = {
+							religion_percent_state = {
+								target = rel:orthodox
+								value >= 0.75
+							}
+						}
+					}
+					AND = {
+						is_in_geographic_region = geographic_region_baltic_governorates
+						NOT = {
+							religion_percent_state = {
+								target = rel:orthodox
+								value >= 0.25
+							}
+						}
+					}
+				}
+			}
+			add = 250
+		}
+
+		# For Japanese religion Journal Entry
+		# If Shinbutsu Bunri is active and the Taikyo Proclamation has been made
+		# Only pursue this aggressively with a pious ruler or Devout in government
+		if = {
+			limit = {
+				scope:country = {
+					has_journal_entry = je_shinbutsu_bunri
+					country_has_state_religion = rel:shinto
+					OR = {
+						has_ruling_interest_group = ig_devout
+						ruler = { has_ideology = ideology:ideology_pious }
+					}
+				}
+			}
+			add = 500
+		}
 
 		if = {
 			limit = {
-				primary_cultures_percent_state > 0.9
+				primary_cultures_percent_state = {
+					target_country = owner
+					value > 0.9
+				}
 				religion_percent_state = {
 					target = scope:country.religion
 					value > 0.9
@@ -247,13 +393,55 @@ REPLACE:decree_promote_national_values = {
 		}
 		else_if = {
 			limit = {
-				primary_cultures_percent_state > 0.5
+				primary_cultures_percent_state = {
+					target_country = owner
+					value > 0.5
+				}
 				religion_percent_state = {
 					target = scope:country.religion
 					value > 0.5
 				}
 			}
 			multiply = 0.5
+		}
+
+		if = {
+			limit = {
+				scope:country = {
+					has_variable = ai_ukraine_renaissance_moderate
+				}
+				state_region = { is_homeland = cu:ukrainian }
+				NOT = { cultural_renaissance_fervor_is_high = { CULTURE = ukrainian } }
+			}
+			multiply = 0.5
+		}
+		if = {
+			limit = {
+				scope:country = {
+					has_variable = ai_ukraine_renaissance_accelerate
+				}
+				state_region = { is_homeland = cu:ukrainian }
+			}
+			multiply = 0.1
+		}
+		if = {
+			limit = {
+				scope:country = {
+					has_variable = ai_belarus_renaissance_moderate
+				}
+				state_region = { is_homeland = cu:byelorussian }
+				NOT = { cultural_renaissance_fervor_is_high = { CULTURE = byelorussian } }
+			}
+			multiply = 0.5
+		}
+		if = {
+			limit = {
+				scope:country = {
+					has_variable = ai_belarus_renaissance_accelerate
+				}
+				state_region = { is_homeland = cu:byelorussian }
+			}
+			multiply = 0.1
 		}
 	}
 }

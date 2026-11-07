@@ -1,5 +1,5 @@
 ﻿l_english:
- CULTURE_ENSLAVED_PERCENT: "Total percentage of this [concept_culture] that is [Concept('concept_slavery', '$concept_enslaved$')]."
+ CULTURE_ENSLAVED_PERCENT: "Total percentage of this [concept_culture] that is [Concept('concept_slavery', '$concept_enslaved|q$')]."
  
  # Debug Stuff
  plp_cmf_debug_sv_inspector: "PLP-CMF Script Value Overwrite Inspector"

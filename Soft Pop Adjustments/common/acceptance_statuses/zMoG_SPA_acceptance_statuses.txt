@@ -1,0 +1,36 @@
+﻿## Important Note:
+## Near as I can tell, Migration Desire is simply:
+# FORMULA: MD = base_migration_desire + (job_satisfaction * MIGRATION_DESIRE_FROM_JOB_SATISFACTION_FACTOR)
+#
+# The objective is that people jobseek a decent amount *before* electing to migrate.
+# Ideally job satisfaction doesn't fluctuate by large amounts under "normal" conditions.
+
+# Cannot use INJECT due to additive values which would be hugely broken if vanilla or some other mod changes the baseline.
+# We use TRY_INJECT in case some other mod has completely redesigned these from the ground up, in which case good luck but things might work out.
+# PLP appends acceptance threshold values to this.
+INJECT:violent_hostility = {
+	base_migration_desire = 100 # 100 # Not a binary system so keeping this at 100 now
+	# If the opportunity presents itself to leave, you need *very* good reasons to stay...
+}
+
+INJECT:cultural_erasure = {
+	base_migration_desire = 40 # 100
+	# At this point you need a good reason to stay, but those reasons definitely exist.
+}
+
+INJECT:open_prejudice = {
+	base_migration_desire = -20 # 10(old) # 50
+	# 3rd class has a rough deal, finding a better job is still a good way to beat prejudice, but moving...
+}
+
+INJECT:second_rate_citizen = {
+	base_migration_desire = -100 # -20.0(old) # 20 
+	# 2nd class actually has a pretty good deal - uprooting their lives and migrating is a hefty risk.
+}
+
+INJECT:full_acceptance = {
+	base_migration_desire = -50 # 0
+	# Jobseek preferentially until below -50 job satisfaction (default rate).
+}
+
+
