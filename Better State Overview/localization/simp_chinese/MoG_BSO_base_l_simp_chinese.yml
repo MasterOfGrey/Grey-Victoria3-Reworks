@@ -1,19 +1,19 @@
 ﻿l_simp_chinese:
  # Base Panel Localisations
- concept_market_access_price_impact: "市场准入对价格的影响" #deepl:3005675005
- concept_market_access_price_impact_desc: "$state_market_access_price_impact_desc$" #deepl:2016722914
- concept_market_access_price_impact_short: "MAPI" #deepl:1189338007
- GOODS_MARKET_ACCESS_PRICE_IMPACT_BSO: "[concept_state] [Concept('concept_market_access_price_impact','$concept_market_access_price_impact_short|q$')]\n[State.GetModifier.GetValueFor('state_market_access_price_impact')|v0%]" #deepl:3809456688
- BSO_MAPI_TOOLTIP_REPLACEMENT: "[State.GetModifier.GetTooltipFor('state_market_access_price_impact')]" #deepl:3232742896
- BSO_STRATEGIC_REGION_SHORT: "[Concept('concept_strategic_region', '$concept_strategic_region_short|q$')]" #deepl:385943649
- STATE_REGION_STATE_STATUS: "[concept_state_region]\n[State.GetStateRegion.GetName]" #deepl:258412541
+ concept_market_access_price_impact: "市场准入价格影响"
+ concept_market_access_price_impact_desc: "$state_market_access_price_impact_desc$"
+ concept_market_access_price_impact_short: "价差"
+ GOODS_MARKET_ACCESS_PRICE_IMPACT_BSO: "[concept_state] [Concept('concept_market_access_price_impact','$concept_market_access_price_impact_short|q$')]\n[State.GetModifier.GetValueFor('state_market_access_price_impact')|v0%]"
+ BSO_MAPI_TOOLTIP_REPLACEMENT: "[State.GetModifier.GetTooltipFor('state_market_access_price_impact')]"
+ BSO_STRATEGIC_REGION_SHORT: "[Concept('concept_strategic_region', '$concept_strategic_region_short|q$')]"
+ STATE_REGION_STATE_STATUS: "[concept_state_region]\n[State.GetStateRegion.GetName]"
  # Choice features: Game Rules & Decisions etc.
- rule_mog_bso_structured_state_overview: "BSO：结构化状态概述" #deepl:3001448387
- setting_bso_structured_state_overview_enabled: "已启用" #deepl:3001197554
- setting_bso_structured_state_overview_enabled_desc: "“州概况”面板将采用结构化格式，并提供切换布局的选项。" #deepl:3463953139
- setting_bso_structured_state_overview_disabled: "已禁用" #deepl:1603118088
- setting_bso_structured_state_overview_disabled_desc: "“州概况”面板将采用经典布局，并优化信息展示内容。" #deepl:2323420927
- mog_bso_set_structured_panel_decision: "BSO：使用结构化状态面板" #deepl:3941006353
- mog_bso_set_structured_panel_decision_desc: "将“状态概览”面板设置为使用改进的信息元素，采用结构化布局，该布局信息密度更高，并按类型对信息进行分组。" #deepl:1236545086
- mog_bso_set_classic_panel_decision: "BSO：使用经典状态面板" #deepl:885668751
- mog_bso_set_classic_panel_decision_desc: "将状态概览面板设置为将改进后的信息元素整合到经典面板布局中。" #deepl:402632809
+ rule_mog_bso_structured_state_overview: "BSO：结构化州概览"
+ setting_bso_structured_state_overview_enabled: "启用"
+ setting_bso_structured_state_overview_enabled_desc: "州概览面板将使用结构化布局，并可通过决议切换布局。"
+ setting_bso_structured_state_overview_disabled: "禁用"
+ setting_bso_structured_state_overview_disabled_desc: "州概览面板将使用包含改进信息元素的经典布局。"
+ mog_bso_set_structured_panel_decision: "BSO：使用结构化州面板"
+ mog_bso_set_structured_panel_decision_desc: "将州概览面板设为结构化布局，紧凑地按类型分组显示改进的信息元素。"
+ mog_bso_set_classic_panel_decision: "BSO：使用经典州面板"
+ mog_bso_set_classic_panel_decision_desc: "将州概览面板设为经典布局，并整合改进的信息元素。"
