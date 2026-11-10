@@ -33,9 +33,10 @@ types state_panel_types
 				effectname = "NoHighlight"
 				distribute_visual_state = no
 				inherit_visual_state = no
-				using = fade_top_illus
+				using = illus_top_shadow_bottom_fade
 
 				vfx = {
+					size = { 100% 83% }
 					blockoverride "entity_instance" {
 						entity_instance = "[State.GetBestTextureEffect]"
 					}
@@ -203,13 +204,13 @@ types state_panel_types
 					parentanchor = top|right
 					widgetanchor = top|right
 					#position =  { -15 65 }
-					spacing = 5
+					spacing = 3
 
 					# Harvest conditions
 					flowcontainer = {
 						visible = "[Not(IsDataModelEmpty(State.GetHarvestConditions))]"
 						datamodel = "[State.GetHarvestConditions]"
-						spacing = 5
+						spacing = 3
 
 						item = {
 							icon = {
@@ -232,15 +233,32 @@ types state_panel_types
 						visible = "[State.HasFamine]"
 						tooltip = "[State.GetFamineDesc]"
 						using = tooltip_se
-						size = { 50 50 }
+						size = { 45 45 }
 						texture = "gfx/interface/backgrounds/round_button_bg.dds"
 						using = clickthrough_blocker
 
 						icon = {
-							size = { 50 50 }
+							size = { 45 45 }
 							parentanchor = center
 							texture = "gfx/interface/icons/famine_icons/famine_icon.dds"
 						}
+					}
+				}
+
+				# Cold icon
+				icon = {
+					visible = "[State.GetStateRegion.HasModerateOrSevereCold]"
+					tooltip = "[State.GetColdDesc]"
+					using = tooltip_se
+					size = { 45 45 }
+					texture = "gfx/interface/backgrounds/round_button_bg.dds"
+					using = clickthrough_blocker
+					parentanchor = right
+
+					icon = {
+						size = { 40 40 }
+						parentanchor = center
+						texture = "gfx/interface/icons/generic_icons/cold_value.dds"
 					}
 				}
 			}
@@ -986,6 +1004,90 @@ types state_panel_types
 				}
 			}																					# STARVATION END
 
+			# Cold status
+			state_panel_status_item_small = {								# REORDERED (unchanged)
+				visible = "[State.GetStateRegion.HasModerateOrSevereCold]"
+				tooltip = "[State.GetColdDesc]"
+
+				blockoverride "texture" {
+					texture = "gfx/interface/icons/generic_icons/cold_value.dds"
+				}
+
+				blockoverride "name" {
+					text = "STATE_STATUS_ITEM_COLD"
+				}
+			}
+
+			#COSSACK HOST DISBAND
+			state_panel_status_item_small = {								# REORDERED (unchanged)
+				visible = "[State.HasBuilding('building_cossack_host')]"
+				tooltip = "TOOLTIP_STATE_COSSACK_HOST"
+
+				blockoverride "texture" {
+					texture = "gfx/interface/icons/state_status_icons/establish_cossack_host.dds"
+				}
+
+				blockoverride "name" {
+					text = "STATE_COSSACK_HOST_STATUS"
+				}
+
+				blockoverride "goto" {
+
+				}
+
+				blockoverride "navigation_button" {
+					button_icon_goto = {
+						position = { -5 5 }
+						parentanchor = top|right
+						size = { 25 25 }
+						datacontext = "[State.AccessBuilding('building_cossack_host')]"
+						tooltip = "GO_TO_BUTTON_BUILDING"
+						onclick = "[InformationPanelBar.OpenBuildingDetailsPanel(Building.AccessSelf)]"
+					}
+				}
+
+				blockoverride "extra_widget" {
+					button = {
+						visible = "[ObjectsEqual(State.GetOwner.Self, GetPlayer.Self)]"
+						enabled = "[IsValid( State.DisbandCossackHost )]"
+						onclick = "[PopupManager.AskConfirmation( State.DisbandCossackHost )]"
+						size = { 160 40 }
+						align = left|nobaseline
+						margin_left = 10
+						text = "DISBAND_COSSACK_HOST"
+						tooltip = "TOOLTIP_DISBAND_COSSACK_HOST"
+						using = default_button
+					}
+				}
+			}
+
+			#COSSACK HOST ESTABLISH
+			state_panel_status_item_small = {								# REORDERED (unchanged)
+				visible = "[And(Not(State.HasBuilding('building_cossack_host')), And(ObjectsEqual(State.GetOwner.Self, GetPlayer.Self), GetPlayer.CanFoundCossackHost))]"
+				tooltip = "TOOLTIP_STATE_NO_COSSACK_HOST"
+
+				blockoverride "texture" {
+					texture = "gfx/interface/icons/state_status_icons/establish_cossack_host.dds"
+				}
+
+				blockoverride "name" {
+					text = "STATE_NO_COSSACK_HOST_STATUS"
+				}
+
+				blockoverride "extra_widget" {
+					button = {
+						enabled = "[IsValid( State.EstablishCossackHost )]"
+						onclick = "[Execute( State.EstablishCossackHost )]"
+						size = { 160 40 }
+						align = left|nobaseline
+						margin_left = 10
+						text = "ESTABLISH_COSSACK_HOST_BUTTON"
+						tooltip = "TOOLTIP_ESTABLISH_COSSACK_HOST"
+						using = default_button
+					}
+				}
+			}
+
 			state_panel_status_item_small = {								# REORDERED (unchanged)
 				visible = "[State.HasHomelands]"
 
@@ -1325,7 +1427,7 @@ types state_panel_types
 				}
 			}
 		}
-		
+
 		flowcontainer = {												# BSO: STRUCTURED VIEW STARTS HERE - TRIPANEL 1
 			parentanchor = hcenter
 			margin = { 10 10 }
@@ -1398,6 +1500,26 @@ types state_panel_types
 					visible = "[State.IsOwner(GetPlayer)]"
 					tooltip = "GO_TO_BUTTON_CONSTRUCTION_QUEUE"
 					onclick = "[InformationPanelBar.OpenConstructionPanel(GetPlayer.Self)]"
+				}
+			}
+			# Cold Status
+			state_panel_status_item_extra_small = {
+				visible = "[State.GetStateRegion.HasModerateOrSevereCold]"
+				tooltip = "[State.GetColdDesc]"
+
+				blockoverride "texture" {
+					texture = "gfx/interface/icons/generic_icons/cold_value.dds"
+				}
+				blockoverride "iconsize" {
+					size = { 52 52 }
+				}
+
+				blockoverride "name" {
+					text = "STATE_STATUS_ITEM_COLD"
+				}
+				blockoverride "maximumsize" {		# Should equal 85 + (71 - iconsize)
+					minimumsize = { 104 -1 }
+					maximumsize = { 104 -1 }
 				}
 			}
 			# Food security - Mild Starvation
@@ -1624,7 +1746,7 @@ types state_panel_types
 			}
 			state_panel_status_item_extra_small = {						# BSO Tripanel NOT Split-State # FILLER
 				datacontext = "[State.GetFoodSecurity]"
-				visible = "[And4(Not(State.IsSplitState),
+				visible = "[And5(Not(State.IsSplitState),
 					Not(State.IsSlaveState),
 					Not(State.IsTreatyPort),
 					Not(Or8(
@@ -1635,7 +1757,8 @@ types state_panel_types
 						GreaterThan_CFixedPoint(State.GetObstinance, '(CFixedPoint)0.01'),
 						State.HasDevastation,
 						GreaterThan_CFixedPoint(State.GetBlockadeLevel, '(CFixedPoint)0'),
-						State.IsBeingBombarded) ) )]"
+						State.IsBeingBombarded) ),
+					Not(And(State.HasConstructionQueued, State.GetStateRegion.HasModerateOrSevereCold)) )]"
 				onmousehierarchyenter = "[AccessHighlightManager.HighlightStateRegion(State.GetStateRegion)]"
 				onmousehierarchyleave = "[AccessHighlightManager.RemoveHighlight]"
 				alwaystransparent = no
@@ -1790,6 +1913,76 @@ types state_panel_types
 						visible = "[IsValid( Building.QueueConstruction )]"
 						tooltip = "[Building.GetQueueConstructionTooltip]"
 						onclick = "[Execute( Building.QueueConstruction )]"
+					}
+				}
+			}
+
+			#COSSACK HOST DISBAND
+			state_panel_status_item_small = {								# REORDERED (unchanged)
+				visible = "[State.HasBuilding('building_cossack_host')]"
+				tooltip = "TOOLTIP_STATE_COSSACK_HOST"
+
+				blockoverride "texture" {
+					texture = "gfx/interface/icons/state_status_icons/establish_cossack_host.dds"
+				}
+
+				blockoverride "name" {
+					text = "STATE_COSSACK_HOST_STATUS"
+				}
+
+				blockoverride "goto" {
+
+				}
+
+				blockoverride "navigation_button" {
+					button_icon_goto = {
+						position = { -5 5 }
+						parentanchor = top|right
+						size = { 25 25 }
+						datacontext = "[State.AccessBuilding('building_cossack_host')]"
+						tooltip = "GO_TO_BUTTON_BUILDING"
+						onclick = "[InformationPanelBar.OpenBuildingDetailsPanel(Building.AccessSelf)]"
+					}
+				}
+
+				blockoverride "extra_widget" {
+					button = {
+						visible = "[ObjectsEqual(State.GetOwner.Self, GetPlayer.Self)]"
+						enabled = "[IsValid( State.DisbandCossackHost )]"
+						onclick = "[PopupManager.AskConfirmation( State.DisbandCossackHost )]"
+						size = { 160 40 }
+						align = left|nobaseline
+						margin_left = 10
+						text = "DISBAND_COSSACK_HOST"
+						tooltip = "TOOLTIP_DISBAND_COSSACK_HOST"
+						using = default_button
+					}
+				}
+			}
+
+			#COSSACK HOST ESTABLISH
+			state_panel_status_item_small = {								# REORDERED (unchanged)
+				visible = "[And(Not(State.HasBuilding('building_cossack_host')), And(ObjectsEqual(State.GetOwner.Self, GetPlayer.Self), GetPlayer.CanFoundCossackHost))]"
+				tooltip = "TOOLTIP_STATE_NO_COSSACK_HOST"
+
+				blockoverride "texture" {
+					texture = "gfx/interface/icons/state_status_icons/establish_cossack_host.dds"
+				}
+
+				blockoverride "name" {
+					text = "STATE_NO_COSSACK_HOST_STATUS"
+				}
+
+				blockoverride "extra_widget" {
+					button = {
+						enabled = "[IsValid( State.EstablishCossackHost )]"
+						onclick = "[Execute( State.EstablishCossackHost )]"
+						size = { 160 40 }
+						align = left|nobaseline
+						margin_left = 10
+						text = "ESTABLISH_COSSACK_HOST_BUTTON"
+						tooltip = "TOOLTIP_ESTABLISH_COSSACK_HOST"
+						using = default_button
 					}
 				}
 			}

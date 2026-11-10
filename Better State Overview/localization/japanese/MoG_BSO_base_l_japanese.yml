@@ -1,0 +1,19 @@
+﻿l_japanese:
+ # Base Panel Localisations
+ concept_market_access_price_impact: "市場参入と価格への影響" #deepl:3005675005
+ concept_market_access_price_impact_desc: "$state_market_access_price_impact_desc$" #deepl:2016722914
+ concept_market_access_price_impact_short: "MAPI" #deepl:1189338007
+ GOODS_MARKET_ACCESS_PRICE_IMPACT_BSO: "[concept_state] [Concept('concept_market_access_price_impact','$concept_market_access_price_impact_short|q$')]\n[State.GetModifier.GetValueFor('state_market_access_price_impact')|v0%]" #deepl:3809456688
+ BSO_MAPI_TOOLTIP_REPLACEMENT: "[State.GetModifier.GetTooltipFor('state_market_access_price_impact')]" #deepl:3232742896
+ BSO_STRATEGIC_REGION_SHORT: "[Concept('concept_strategic_region', '$concept_strategic_region_short|q$')]" #deepl:385943649
+ STATE_REGION_STATE_STATUS: "[concept_state_region]\n[State.GetStateRegion.GetName]" #deepl:258412541
+ # Choice features: Game Rules & Decisions etc.
+ rule_mog_bso_structured_state_overview: "BSO：構造化された状態の概要" #deepl:3001448387
+ setting_bso_structured_state_overview_enabled: "有効" #deepl:3001197554
+ setting_bso_structured_state_overview_enabled_desc: "「州概要パネル」では構造化された形式が採用されますが、レイアウトを切り替えることも可能です。" #deepl:3463953139
+ setting_bso_structured_state_overview_disabled: "無効" #deepl:1603118088
+ setting_bso_structured_state_overview_disabled_desc: "「州概要パネル」では、従来の形式を採用しつつ、情報要素を改良したものを使用します。" #deepl:2323420927
+ mog_bso_set_structured_panel_decision: "BSO：構造化されたステートパネルの使用" #deepl:3941006353
+ mog_bso_set_structured_panel_decision_desc: "ステート概要パネルを、情報の密度を高め、情報の種類ごとにグループ化した構造化されたレイアウトで、改良された情報要素を使用するように設定します。" #deepl:1236545086
+ mog_bso_set_classic_panel_decision: "BSO：クラシック状態パネルを使用する" #deepl:885668751
+ mog_bso_set_classic_panel_decision_desc: "状態概要パネルを設定し、改良された情報要素を従来のパネルレイアウトに統合します。" #deepl:402632809

@@ -1,0 +1,19 @@
+﻿l_french:
+ # Base Panel Localisations
+ concept_market_access_price_impact: "Accès au marché – Impact sur les prix" #deepl:3005675005
+ concept_market_access_price_impact_desc: "$state_market_access_price_impact_desc$" #deepl:2016722914
+ concept_market_access_price_impact_short: "MAPI" #deepl:1189338007
+ GOODS_MARKET_ACCESS_PRICE_IMPACT_BSO: "[concept_state] [Concept('concept_market_access_price_impact','$concept_market_access_price_impact_short|q$')]\n[State.GetModifier.GetValueFor('state_market_access_price_impact')|v0%]" #deepl:3809456688
+ BSO_MAPI_TOOLTIP_REPLACEMENT: "[State.GetModifier.GetTooltipFor('state_market_access_price_impact')]" #deepl:3232742896
+ BSO_STRATEGIC_REGION_SHORT: "[Concept('concept_strategic_region', '$concept_strategic_region_short|q$')]" #deepl:385943649
+ STATE_REGION_STATE_STATUS: "[concept_state_region]\n[State.GetStateRegion.GetName]" #deepl:258412541
+ # Choice features: Game Rules & Decisions etc.
+ rule_mog_bso_structured_state_overview: "BSO : Présentation générale structurée de l'État" #deepl:3001448387
+ setting_bso_structured_state_overview_enabled: "Activé" #deepl:3001197554
+ setting_bso_structured_state_overview_enabled_desc: "Le panneau « Aperçu de l'État » utilisera le format structuré, et il sera possible de changer de mise en page." #deepl:3463953139
+ setting_bso_structured_state_overview_disabled: "Personnes handicapées" #deepl:1603118088
+ setting_bso_structured_state_overview_disabled_desc: "Le panneau « Aperçu de l'État » adoptera le format classique, avec des éléments d'information améliorés." #deepl:2323420927
+ mog_bso_set_structured_panel_decision: "BSO : Utilisation du panneau d'état structuré" #deepl:3941006353
+ mog_bso_set_structured_panel_decision_desc: "Configurez le panneau de synthèse de l'État afin qu'il utilise des éléments d'information améliorés, présentés selon une mise en page structurée, plus dense et regroupant les informations par type." #deepl:1236545086
+ mog_bso_set_classic_panel_decision: "BSO : Utiliser le panneau d'état classique" #deepl:885668751
+ mog_bso_set_classic_panel_decision_desc: "Configurez le panneau de synthèse de l'état afin d'intégrer les éléments d'information améliorés dans la disposition classique du panneau." #deepl:402632809

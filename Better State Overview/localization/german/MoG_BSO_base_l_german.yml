@@ -1,0 +1,19 @@
+﻿l_german:
+ # Base Panel Localisations
+ concept_market_access_price_impact: "Marktzugang – Auswirkungen auf die Preise" #deepl:3005675005
+ concept_market_access_price_impact_desc: "$state_market_access_price_impact_desc$" #deepl:2016722914
+ concept_market_access_price_impact_short: "MAPI" #deepl:1189338007
+ GOODS_MARKET_ACCESS_PRICE_IMPACT_BSO: "[concept_state] [Concept('concept_market_access_price_impact','$concept_market_access_price_impact_short|q$')]\n[State.GetModifier.GetValueFor('state_market_access_price_impact')|v0%]" #deepl:3809456688
+ BSO_MAPI_TOOLTIP_REPLACEMENT: "[State.GetModifier.GetTooltipFor('state_market_access_price_impact')]" #deepl:3232742896
+ BSO_STRATEGIC_REGION_SHORT: "[Concept('concept_strategic_region', '$concept_strategic_region_short|q$')]" #deepl:385943649
+ STATE_REGION_STATE_STATUS: "[concept_state_region]\n[State.GetStateRegion.GetName]" #deepl:258412541
+ # Choice features: Game Rules & Decisions etc.
+ rule_mog_bso_structured_state_overview: "BSO: Strukturierte Zustandsübersicht" #deepl:3001448387
+ setting_bso_structured_state_overview_enabled: "Aktiviert" #deepl:3001197554
+ setting_bso_structured_state_overview_enabled_desc: "Das Übersichtsfenster „Bundesstaaten“ wird das strukturierte Format verwenden, und es wird eine Option zum Wechseln des Layouts geben." #deepl:3463953139
+ setting_bso_structured_state_overview_disabled: "Deaktiviert" #deepl:1603118088
+ setting_bso_structured_state_overview_disabled_desc: "Das Übersichtsfenster „Bundesstaaten“ wird das klassische Format mit verbesserten Informationselementen verwenden." #deepl:2323420927
+ mog_bso_set_structured_panel_decision: "BSO: Strukturiertes Statusfeld verwenden" #deepl:3941006353
+ mog_bso_set_structured_panel_decision_desc: "Stellen Sie das Statusübersichtsfenster so ein, dass verbesserte Informationselemente in einem strukturierten Layout verwendet werden, das kompakter ist und die Informationen nach Typ gruppiert." #deepl:1236545086
+ mog_bso_set_classic_panel_decision: "BSO: „Classic State Panel“ verwenden" #deepl:885668751
+ mog_bso_set_classic_panel_decision_desc: "Stellen Sie das Statusübersichtsfenster so ein, dass die verbesserten Informationselemente in das klassische Fensterlayout integriert werden." #deepl:402632809

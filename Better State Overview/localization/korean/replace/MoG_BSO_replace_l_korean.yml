@@ -1,0 +1,11 @@
+﻿l_korean:
+ state_market_access_price_impact: "[concept_market_access_price_impact]" #deepl:1472344475
+ state_market_access_price_impact_desc: "[concept_market_access] 가 [concept_good] 의 [concept_local_price] 에 미칠 수 있는 최대 영향력입니다. 이는 [concept_state] 가 [concept_market] 내의 다른 판매자들에 대해 얼마나 잘 알고 있는지를 나타내는 지표입니다. 최종 가격은 두 시장 접근 가치 중 더 낮은 쪽에 따라 결정됩니다." #deepl:4165648857
+ STATE_MARKET_STATUS: "[State.GetMarket.GetName]\n[SelectLocalization(LessThan_CFixedPoint(State.GetInfrastructureBalance, '(CFixedPoint)0'), 'WARNING', '')][State.GetMarketAccess|%v0]" #deepl:535992568
+ STATE_MARKET_CAPITAL_STATUS: "#yellow [State.GetMarket.GetOwner.GetAdjectiveNoFormatting]#!\n[concept_market_capital]" #deepl:3699789469
+ STATE_MARKET_CAPITAL_STATUS_CONDENSED: "[State.GetMarketAccess|%v0]" #deepl:297705177
+ state_tax_collection_mult: "Collection"  # Literally just to stop the box expanding.
+ STATE_CONSTRUCTION_CONDENSED: "[SelectLocalization(GreaterThan_int32(Country.GetNumBuildingsUnderConstructionInState(State.Self), '(int32)0'), 'STATE_CONSTRUCTION_ACTIVE', '')][AddTextIf(And(GreaterThan_int32(Country.GetNumBuildingsUnderConstructionInState(State.Self), '(int32)0'),GreaterThan_int32(Country.GetNumBuildingsInConstructionQueueInState(State.Self), '(int32)0')),'\n')][SelectLocalization(GreaterThan_int32(Country.GetNumBuildingsInConstructionQueueInState(State.Self), '(int32)0'), 'STATE_CONSTRUCTION_IN_QUEUE', '')]"   # Fix adding extra spacing that annoys me
+ STATE_CONSTRUCTION_ACTIVE: "[Country.GetNumBuildingsUnderConstructionInState(State.Self)|v] 활성" #deepl:1557201922
+ STATE_CONSTRUCTION_IN_QUEUE: "[Country.GetNumBuildingsInConstructionQueueInState(State.Self)|v] 대기 중" #deepl:773152060
+ STATE_OBSTINANCE_CONDENSED: "#b [State.GetObstinance|%R1]#! \n(  )[State.GetNumObstinanceSupporters|vD] @population!" #deepl:1766869700

@@ -3,9 +3,9 @@
  concept_market_access_price_impact: "Market Access Price Impact"
  concept_market_access_price_impact_desc: "$state_market_access_price_impact_desc$"
  concept_market_access_price_impact_short: "MAPI"
- GOODS_MARKET_ACCESS_PRICE_IMPACT_BSO: "[concept_state] [Concept('concept_market_access_price_impact','$concept_market_access_price_impact_short$')]\n[State.GetModifier.GetValueFor('state_market_access_price_impact')|v0%$]"
+ GOODS_MARKET_ACCESS_PRICE_IMPACT_BSO: "[concept_state] [Concept('concept_market_access_price_impact','$concept_market_access_price_impact_short|q$')]\n[State.GetModifier.GetValueFor('state_market_access_price_impact')|v0%]"
  BSO_MAPI_TOOLTIP_REPLACEMENT: "[State.GetModifier.GetTooltipFor('state_market_access_price_impact')]"
- BSO_STRATEGIC_REGION_SHORT: "[Concept('concept_strategic_region', '$concept_strategic_region_short$')]"
+ BSO_STRATEGIC_REGION_SHORT: "[Concept('concept_strategic_region', '$concept_strategic_region_short|q$')]"
  STATE_REGION_STATE_STATUS: "[concept_state_region]\n[State.GetStateRegion.GetName]"
  # Choice features: Game Rules & Decisions etc.
  rule_mog_bso_structured_state_overview: "BSO: Structured State Overview"

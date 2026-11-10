@@ -1,0 +1,11 @@
+﻿l_french:
+ state_market_access_price_impact: "[concept_market_access_price_impact]" #deepl:1472344475
+ state_market_access_price_impact_desc: "L'influence maximale que [concept_market_access] peut exercer sur l'[concept_local_price] d'un [concept_good]. Il s'agit d'une mesure du niveau d'information dont dispose un [concept_state] concernant les autres commerçants au sein de son [concept_market]. Les prix finaux sont déterminés en fonction de la valeur d'accès au marché la plus basse." #deepl:4165648857
+ STATE_MARKET_STATUS: "[State.GetMarket.GetName]\n[SelectLocalization(LessThan_CFixedPoint(State.GetInfrastructureBalance, '(CFixedPoint)0'), 'WARNING', '')][State.GetMarketAccess|%v0]" #deepl:535992568
+ STATE_MARKET_CAPITAL_STATUS: "#yellow [State.GetMarket.GetOwner.GetAdjectiveNoFormatting]#!\n[concept_market_capital]" #deepl:3699789469
+ STATE_MARKET_CAPITAL_STATUS_CONDENSED: "[State.GetMarketAccess|%v0]" #deepl:297705177
+ state_tax_collection_mult: "Collection"  # Literally just to stop the box expanding.
+ STATE_CONSTRUCTION_CONDENSED: "[SelectLocalization(GreaterThan_int32(Country.GetNumBuildingsUnderConstructionInState(State.Self), '(int32)0'), 'STATE_CONSTRUCTION_ACTIVE', '')][AddTextIf(And(GreaterThan_int32(Country.GetNumBuildingsUnderConstructionInState(State.Self), '(int32)0'),GreaterThan_int32(Country.GetNumBuildingsInConstructionQueueInState(State.Self), '(int32)0')),'\n')][SelectLocalization(GreaterThan_int32(Country.GetNumBuildingsInConstructionQueueInState(State.Self), '(int32)0'), 'STATE_CONSTRUCTION_IN_QUEUE', '')]"   # Fix adding extra spacing that annoys me
+ STATE_CONSTRUCTION_ACTIVE: "[Country.GetNumBuildingsUnderConstructionInState(State.Self)|v] actif" #deepl:1557201922
+ STATE_CONSTRUCTION_IN_QUEUE: "[Country.GetNumBuildingsInConstructionQueueInState(State.Self)|v] en file d'attente" #deepl:773152060
+ STATE_OBSTINANCE_CONDENSED: "#b [State.GetObstinance|%R1]#! \n(  )[State.GetNumObstinanceSupporters|vD] @population!" #deepl:1766869700
