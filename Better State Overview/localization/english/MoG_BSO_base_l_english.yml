@@ -1,0 +1,19 @@
+﻿l_english:
+ # Base Panel Localisations
+ concept_market_access_price_impact: "Market Access Price Impact"
+ concept_market_access_price_impact_desc: "$state_market_access_price_impact_desc$"
+ concept_market_access_price_impact_short: "MAPI"
+ GOODS_MARKET_ACCESS_PRICE_IMPACT_BSO: "[concept_state] [Concept('concept_market_access_price_impact','$concept_market_access_price_impact_short$')]\n[State.GetModifier.GetValueFor('state_market_access_price_impact')|v0%$]"
+ BSO_MAPI_TOOLTIP_REPLACEMENT: "[State.GetModifier.GetTooltipFor('state_market_access_price_impact')]"
+ BSO_STRATEGIC_REGION_SHORT: "[Concept('concept_strategic_region', '$concept_strategic_region_short$')]"
+ STATE_REGION_STATE_STATUS: "[concept_state_region]\n[State.GetStateRegion.GetName]"
+ # Choice features: Game Rules & Decisions etc.
+ rule_mog_bso_structured_state_overview: "BSO: Structured State Overview"
+ setting_bso_structured_state_overview_enabled: "Enabled"
+ setting_bso_structured_state_overview_enabled_desc: "The State Overview Panel will use the structured format, and a decision will be available to switch layouts."
+ setting_bso_structured_state_overview_disabled: "Disabled"
+ setting_bso_structured_state_overview_disabled_desc: "The State Overview Panel will use the classic format with improved information elements."
+ mog_bso_set_structured_panel_decision: "BSO: Use Structured State Panel"
+ mog_bso_set_structured_panel_decision_desc: "Set the state overview panel to use improved information elements in a structured layout that is denser and groups information by type."
+ mog_bso_set_classic_panel_decision: "BSO: Use Classic State Panel"
+ mog_bso_set_classic_panel_decision_desc: "Set the state overview panel to integrate the improved information elements into the classic panel layout."

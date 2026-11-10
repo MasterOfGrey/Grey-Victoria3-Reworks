@@ -1,0 +1,19 @@
+﻿mog_bso_classic_state_panel_sgui = {
+    scope = none
+    
+    is_shown = {
+		OR = {
+			has_game_rule = bso_structured_state_overview_disabled
+			has_global_variable = bso_state_overview_classic_set
+		}
+    }	# Visible with: visible = "[GetScriptedGui('mog_bso_classic_state_panel_sgui').IsShown(GuiScope.End)]"	# BSO
+}
+
+mog_bso_structured_state_panel_sgui = {
+    scope = none
+    
+    is_shown = {
+        has_game_rule = bso_structured_state_overview_enabled
+		NOT = { has_global_variable = bso_state_overview_classic_set }
+    }	# Visible with: visible = "[GetScriptedGui('mog_bso_structured_state_panel_sgui').IsShown(GuiScope.End)]"
+}

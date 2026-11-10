@@ -1,0 +1,35 @@
+﻿mog_bso_set_structured_panel_decision = {
+	is_shown = {
+		has_game_rule = bso_structured_state_overview_enabled
+	}
+
+	possible = {
+		has_global_variable = bso_state_overview_classic_set
+	}
+
+	when_taken = {
+		remove_global_variable = bso_state_overview_classic_set
+	}
+
+	ai_chance = {
+		value = -10
+	}
+}
+
+mog_bso_set_classic_panel_decision = {
+	is_shown = {
+		has_game_rule = bso_structured_state_overview_enabled
+	}
+
+	possible = {
+		NOT = { has_global_variable = bso_state_overview_classic_set }
+	}
+
+	when_taken = {
+		set_global_variable = bso_state_overview_classic_set
+	}
+
+	ai_chance = {
+		value = -10
+	}
+}

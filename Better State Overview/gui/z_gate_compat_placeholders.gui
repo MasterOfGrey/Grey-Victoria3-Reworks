@@ -1,0 +1,18 @@
+@panel_width_half = 270				# used to be 230
+@tooltip_max_width = 550            # copied from tooltip.gui
+
+types gate_shared {
+
+	type gate_mana_density_colored = widget {
+		visible = no	# size = { 0 0 }
+		
+		widget = {
+			block "mana_density_size" {
+				size = { 70 45 }
+			}
+			block "mana_density_visibility" {
+				visible = no
+			}
+		}
+	}
+}

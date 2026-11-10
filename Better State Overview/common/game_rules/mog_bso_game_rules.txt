@@ -1,0 +1,6 @@
+﻿mog_bso_structured_state_overview = {
+	default = bso_structured_state_overview_enabled
+	
+	bso_structured_state_overview_enabled = {}
+	bso_structured_state_overview_disabled = {}
+}

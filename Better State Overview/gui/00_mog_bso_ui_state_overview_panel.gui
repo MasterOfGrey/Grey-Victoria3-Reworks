@@ -1,0 +1,2315 @@
+# COPY-PASTED FOR NOW
+@panel_width_minus_10 = 530			# used to be 450
+@panel_width = 540  				# used to be 460
+@panel_width_half = 270				# used to be 230
+@panel_width_plus_10 = 550  		# used to be 470
+@panel_width_plus_14 = 554			# used to be 474
+@panel_width_plus_14_half = 277		# used to be 237
+@panel_width_plus_20 = 560			# used to be 480
+@panel_width_plus_30 = 570			# used to be 490
+@panel_width_plus_70 = 610			# used to be 530
+
+types state_panel_types
+{
+    ### Added Sections
+    # Strategic Region Indicator (from Sky's Uboy.UI-StrategicRegionIndicator)
+    # MAPI Value Indicator
+	# Manaflow Container (compatibility)
+
+	type state_panel_overview_content = flowcontainer {
+		ignoreinvisible = yes
+		direction = vertical
+		using = default_list_position
+
+		widget = {
+			using = default_list_position
+			size = { @panel_width_plus_14 274 }
+
+			### STATE IMAGE
+			button = {
+				size = { @panel_width_plus_14 274 }
+				texture = "[State.GetBestTexture]"
+				onrightclick = "[RightClickMenuManager.ShowForState(State.AccessSelf)]"
+				effectname = "NoHighlight"
+				distribute_visual_state = no
+				inherit_visual_state = no
+				using = fade_top_illus
+
+				vfx = {
+					blockoverride "entity_instance" {
+						entity_instance = "[State.GetBestTextureEffect]"
+					}
+				}
+
+				toggle_condensed = {
+					visible = "[InDebugMode]"
+				}
+			}
+
+			### FACTION
+			flowcontainer = {
+				ignoreinvisible = yes
+				parentanchor = bottom|left
+				margin = { 15 10 }
+				visible = "[And(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, State.GetOwner), GetScriptedGui('je_meiji_restoration_get_faction_sgui').IsShown( GuiScope.SetRoot( State.MakeScope ).End ) )]"
+				tooltip = "DOMAIN_FROM_STATE_FULL"
+
+				ep2_meiji_restoration_faction_button = {
+					datacontext = "[GetPlayerJournalEntry('je_meiji_restoration')]"
+					blockoverride "onclick" {
+						onclick = "[InformationPanelBar.OpenJournalEntryPanel(JournalEntry.AccessSelf)]"
+					}
+				}
+			}
+
+			### FLAG
+			flowcontainer = {
+				ignoreinvisible = yes
+				spacing = 15
+				margin_left = 10
+				margin_top = 15
+				direction = vertical
+
+				# Give the tooltip some extra space
+				margin_right = 30
+				margin_bottom = 30
+
+
+				flag = {
+					tooltip = STATE_CONTROLLED_BY
+					datacontext = "[State.GetOwner]"
+					blockoverride "flag_tooltip" {}
+				}
+				flag = {
+					datacontext = "[State.GetEnemyWithHighestOccupation]"
+					visible = "[Country.IsValid]"
+					tooltip = "[State.GetOccupantsTooltip]"
+					blockoverride "flag_tooltip" {}
+
+					blockoverride "onhover" {
+						onmousehierarchyenter = "[AccessHighlightManager.HighlightStateOccupation(State.Self,State.GetOccupant.Self)]"
+						onmousehierarchyleave = "[AccessHighlightManager.RemoveHighlight]"
+					}
+				}
+
+				gate_mana_density_colored = {				# MODDED: BSO Compat for Manaflow Mana Density
+					onmousehierarchyenter = "[AccessHighlightManager.HighlightStateRegion(State.AccessStateRegion.Self)]"
+					onmousehierarchyenter = "[SetTempMapModeByKey('mm_state_gate_mana_density')]"
+					onmousehierarchyleave = "[RemoveTempMapMode]"
+					onmousehierarchyleave = "[AccessHighlightManager.RemoveHighlight]"
+
+					blockoverride "mana_density_size" {
+						size = { 66 44 }
+					}
+					blockoverride "mana_density_visibility" {
+						visible = yes
+					}
+					blockoverride "font_size" {
+						using = fontsize_small
+					}
+				}											# END MODDED
+
+				chart = {
+					blockoverride "datamodel" {
+						datamodel = "[State.GetOccupationPiechartData]"
+					}
+
+					blockoverride "piechartsize" {
+						size = { 66 66 }
+					}
+					blockoverride "chart_button_position" {
+						position = { 20 -3 }
+					}
+					blockoverride "chart_button_button_position" {
+						position = { 0 0 }
+					}
+
+					blockoverride "columnsize" {
+						addcolumn = 83
+					}
+
+					blockoverride "textlabelsize" {
+						size = { 83 23 }
+					}
+
+					blockoverride = "chart_visible" {
+						visible = "[GreaterThan_int32(GetDataModelSize(State.GetOccupationPiechartData),'(int32)1')]"
+					}
+
+					blockoverride "title" {}
+					blockoverride "margin" {}
+					blockoverride "background" {}
+					blockoverride "chart_anchor" {}
+					blockoverride "hbox_margin" {}
+					blockoverride "rightside1_info_margin" {
+						margin_left = 2
+					}
+
+					blockoverride "tooltip" {
+						tooltip = "TOOLTIP_STATE_OCCUPATION_PIESLICE"
+						datacontext = "[StatesPanel.AccessState]"
+					}
+
+					blockoverride "pieslice" {
+						value = "[OccupationPiechartData.GetOccupationFraction]"
+					}
+
+					blockoverride "color" {
+						color = "[OccupationPiechartData.GetCountryColor]"
+					}
+
+					blockoverride "leftside_info" {
+						text = "[OccupationPiechartData.GetCountry.GetFlagTextIcon]"
+					}
+
+					blockoverride "rightside1_info" {
+						raw_text = "#bold [OccupationPiechartData.GetOccupationFraction|%0]#!"
+					}
+
+					blockoverride "rightside2_info" {}
+
+					blockoverride "pie_item_goto_button" {
+					}
+				}
+			}
+
+			flowcontainer = {
+				direction = vertical
+				parentanchor = top|right
+				widgetanchor = top|right
+				margin = { 15 10 }
+				spacing = 5
+
+				flowcontainer = {
+					visible = "[Not(IsDataModelEmpty(State.AccessStateRegion.AccessTraits))]"
+					datamodel = "[State.AccessStateRegion.AccessTraits]"
+					parentanchor = top|right
+					spacing = 3
+
+					item = {
+						icon = {
+							size = { 45 45 }
+							tooltip = "TOOLTIP_STATE_TRAIT"
+							onmousehierarchyenter = "[AccessHighlightManager.HighlightStateTrait(StateTrait.Self)]"
+							onmousehierarchyleave = "[AccessHighlightManager.RemoveHighlight]"
+							alwaystransparent = no
+							texture = "[StateTrait.GetTexture]"
+						}
+					}
+				}
+
+				# Harvest conditions and Famine
+				flowcontainer = {
+					parentanchor = top|right
+					widgetanchor = top|right
+					#position =  { -15 65 }
+					spacing = 5
+
+					# Harvest conditions
+					flowcontainer = {
+						visible = "[Not(IsDataModelEmpty(State.GetHarvestConditions))]"
+						datamodel = "[State.GetHarvestConditions]"
+						spacing = 5
+
+						item = {
+							icon = {
+								size = { 45 45 }
+								using = tooltip_se
+								onmousehierarchyenter = "[AccessHighlightManager.HighlightHarvestConditionArea(HarvestCondition.GetArea.Self)]"
+								onmousehierarchyleave = "[AccessHighlightManager.RemoveHighlight]"
+								alwaystransparent = no
+								texture = "[HarvestCondition.GetType.GetIcon]"
+
+								tooltipwidget = {
+									FancyTooltip_HarvestCondition = {}
+								}
+							}
+						}
+					}
+
+					# Famine icon
+					icon = {
+						visible = "[State.HasFamine]"
+						tooltip = "[State.GetFamineDesc]"
+						using = tooltip_se
+						size = { 50 50 }
+						texture = "gfx/interface/backgrounds/round_button_bg.dds"
+						using = clickthrough_blocker
+
+						icon = {
+							size = { 50 50 }
+							parentanchor = center
+							texture = "gfx/interface/icons/famine_icons/famine_icon.dds"
+						}
+					}
+				}
+			}
+
+			### TIMED MODIFIERS
+			flowcontainer = {
+				parentanchor = bottom|right
+				widgetanchor = bottom|right
+				position =  { -20 -20 }
+				datamodel = "[State.GetTimedModifiers]"
+				spacing = 5
+				using = clickthrough_blocker
+
+				item = {
+					icon = {
+						size = { 30 30 }
+						tooltip = "[TimedModifier.GetTooltip]"
+						using = tooltip_se
+						texture = "[TimedModifier.GetIcon]"
+					}
+				}
+			}
+		}
+
+		### INVASIONS
+		flowcontainer = {
+			visible = "[Not(IsDataModelEmpty(State.GetInvasions))]"
+			spacing = 10
+			direction = vertical
+			parentanchor = hcenter
+			margin = { 0 10 }
+
+			datamodel = "[State.GetInvasions]"
+
+			item = {
+				invasion_list_item = {}
+			}
+		}
+
+
+		flowcontainer = {			# BSO MOD: Boxes Start Here
+			margin = { 10 10 }
+			spacing = 9
+			parentanchor = hcenter
+
+			state_panel_status_item_extra_small = {								# STRUCTURED Modded box size
+				tooltip = "CURRENT_GDP_STATE"
+				onmousehierarchyenter = "[SetTempMapModeByKey('mm_gdp')]"
+				onmousehierarchyleave = "[RemoveTempMapMode]"
+				visible = "[GetScriptedGui('mog_bso_structured_state_panel_sgui').IsShown(GuiScope.End)]"
+				alwaystransparent = no
+
+				blockoverride "texture" {
+					texture = "gfx/interface/icons/generic_icons/gdp.dds"
+				}
+				blockoverride "iconsize" {
+					size = { 71 71 }
+				}
+
+				blockoverride "name" {
+					text = "STATE_GDP_STATUS"
+				}
+				
+				blockoverride "maximumsize" {		# Custom sizes for fixed first line
+					minimumsize = { 80 -1 }
+					maximumsize = { 80 -1 }
+				}
+			}
+
+			state_panel_status_item_extra_small = {											# MODDED: MAPI Information
+				tooltip = "BSO_MAPI_TOOLTIP_REPLACEMENT"
+				visible = "[GetScriptedGui('mog_bso_structured_state_panel_sgui').IsShown(GuiScope.End)]"
+				alwaystransparent = no
+
+				blockoverride "texture" {
+					texture = "gfx/interface/icons/state_status_icons/unused/territorial_state_icon.dds"
+				}
+				blockoverride "iconsize" {
+					size = { 71 71 }
+				}
+
+				blockoverride "name" {
+					text = "GOODS_MARKET_ACCESS_PRICE_IMPACT_BSO"
+				}
+				
+				blockoverride "maximumsize" {		# Custom sizes for fixed first line
+					minimumsize = { 50 -1 }
+					maximumsize = { 50 -1 }
+				}
+			}
+
+			state_panel_status_item_extra_small = {
+				onmousehierarchyenter = "[SetTempMapModeByKey('mm_trade')]"
+				onmousehierarchyleave = "[RemoveTempMapMode]"
+				visible = "[And(State.IsMarketCapital,
+					GetScriptedGui('mog_bso_structured_state_panel_sgui').IsShown(GuiScope.End))]"
+				tooltip = "TOOLTIP_MARKET_CAPITAL_STATE"
+				onmousehierarchyenter = "[AccessHighlightManager.HighlightMarket(State.GetMarket.Self)]"
+				onmousehierarchyleave = "[AccessHighlightManager.RemoveHighlight]"
+				alwaystransparent = no
+
+				blockoverride "texture" {
+					texture = "gfx/interface/icons/state_status_icons/state_market_capital_icon.dds"
+				}
+				blockoverride "iconsize" {
+					size = { 71 71 }
+				}
+
+				blockoverride "flow_spacing" {
+					spacing = -1
+				}
+
+			#	blockoverride "name" {
+			#		text = "STATE_MARKET_CAPITAL_STATUS"
+			#	}
+
+				blockoverride "name" {
+					text = "STATE_MARKET_CAPITAL_STATUS"
+					tooltipwidget = {
+						FancyTooltip_Market = { # or however the tooltip type is called
+							datacontext = "[State.GetMarket]"
+						}
+					}
+				}
+				blockoverride "name2" {
+					raw_text = "STATE_MARKET_CAPITAL_STATUS_CONDENSED"
+				}
+
+				blockoverride "goto" {
+					tooltip = "GO_TO_BUTTON_MARKET"
+					onclick = "[InformationPanelBar.OpenMarketPanelTab(State.GetMarket, 'default')]"
+				}
+				
+				blockoverride "maximumsize" {		# Custom sizes for fixed first line
+					minimumsize = { 125 -1 }
+					maximumsize = { 125 -1 }
+				}
+			}
+
+			state_panel_status_item_extra_small = {
+				onmousehierarchyenter = "[SetTempMapModeByKey('mm_trade')]"
+				onmousehierarchyleave = "[RemoveTempMapMode]"
+				visible = "[And(Not(State.IsMarketCapital),
+					GetScriptedGui('mog_bso_structured_state_panel_sgui').IsShown(GuiScope.End))]"
+				tooltip = "MARKET_STATES_PANEL_MARKET_ACCESS_TOOLTIP"
+				onmousehierarchyenter = "[AccessHighlightManager.HighlightMarket(State.GetMarket.Self)]"
+				onmousehierarchyleave = "[AccessHighlightManager.RemoveHighlight]"
+				alwaystransparent = no
+
+				blockoverride "texture" {
+					texture = "gfx/interface/icons/state_status_icons/state_market_capital_icon.dds"
+				}
+				blockoverride "iconsize" {
+					size = { 71 71 }
+				}
+
+				blockoverride "flow_margin" {
+					margin = { 0 1 }
+				}
+
+				blockoverride "name" {
+					text = "STATE_MARKET_STATUS"
+				}
+
+				blockoverride "goto" {
+					datacontext = "[State.GetMarket]"
+					tooltip = "GO_TO_BUTTON_MARKET"
+					onclick = "[InformationPanelBar.OpenMarketPanel(State.GetMarket)]"
+				}
+				
+				blockoverride "maximumsize" {		# Custom sizes for fixed first line
+					minimumsize = { 125 -1 }
+					maximumsize = { 125 -1 }
+				}
+			}																	# END STRUCTURED MODDED
+			
+			state_panel_status_item = {											# CLASSIC box size
+				tooltip = "CURRENT_GDP_STATE"
+				onmousehierarchyenter = "[SetTempMapModeByKey('mm_gdp')]"
+				onmousehierarchyleave = "[RemoveTempMapMode]"
+				visible = "[GetScriptedGui('mog_bso_classic_state_panel_sgui').IsShown(GuiScope.End)]"	# BSO
+				alwaystransparent = no
+
+				blockoverride "texture" {
+					texture = "gfx/interface/icons/generic_icons/gdp.dds"
+				}
+
+				blockoverride "name" {
+					text = "STATE_GDP_STATUS"
+				}
+			}
+			state_panel_status_item_small = {
+				onmousehierarchyenter = "[SetTempMapModeByKey('mm_trade')]"
+				onmousehierarchyleave = "[RemoveTempMapMode]"
+				visible = "[And(State.IsMarketCapital,
+					GetScriptedGui('mog_bso_classic_state_panel_sgui').IsShown(GuiScope.End))]"	# BSO
+				tooltip = "TOOLTIP_MARKET_CAPITAL_STATE"
+				onmousehierarchyenter = "[AccessHighlightManager.HighlightMarket(State.GetMarket.Self)]"
+				onmousehierarchyleave = "[AccessHighlightManager.RemoveHighlight]"
+				alwaystransparent = no
+
+				blockoverride "texture" {
+					texture = "gfx/interface/icons/state_status_icons/state_market_capital_icon.dds"
+				}
+
+				blockoverride "name" {
+					text = "STATE_MARKET_CAPITAL_STATUS"
+				}
+
+				blockoverride "goto" {
+					tooltip = "GO_TO_BUTTON_MARKET"
+					onclick = "[InformationPanelBar.OpenMarketPanelTab(State.GetMarket, 'default')]"
+				}
+			}
+			state_panel_status_item_small = {
+				onmousehierarchyenter = "[SetTempMapModeByKey('mm_trade')]"
+				onmousehierarchyleave = "[RemoveTempMapMode]"
+				visible = "[And(Not(State.IsMarketCapital),
+					GetScriptedGui('mog_bso_classic_state_panel_sgui').IsShown(GuiScope.End))]"	# BSO
+				tooltip = "MARKET_STATES_PANEL_MARKET_ACCESS_TOOLTIP"
+				onmousehierarchyenter = "[AccessHighlightManager.HighlightMarket(State.GetMarket.Self)]"
+				onmousehierarchyleave = "[AccessHighlightManager.RemoveHighlight]"
+				alwaystransparent = no
+
+				blockoverride "texture" {
+					texture = "gfx/interface/icons/state_status_icons/state_market_capital_icon.dds"
+				}
+
+				blockoverride "name" {
+					text = "STATE_MARKET_STATUS"
+				}
+
+				blockoverride "goto" {
+					datacontext = "[State.GetMarket]"
+					tooltip = "GO_TO_BUTTON_MARKET"
+					onclick = "[InformationPanelBar.OpenMarketPanel(State.GetMarket)]"
+				}
+			}
+		}
+
+		widget = {
+			size = { 530 160 }
+			parentanchor = hcenter
+
+			background = {
+				using = entry_bg_simple
+			}
+
+			widget = {
+				parentanchor = right|vcenter
+				size = { 300 225 }
+
+				# POP - Middle - This is at the top so that the left and right pop portaits does not get overlapped by the middle pop.
+				pop_portraits_datamodel = {
+					parentanchor = center
+
+					blockoverride "datamodel" {
+						datamodel = "[DataModelSubSpan(State.GetSamplePops, '(int32)1', '(int32)1')]"
+					}
+				}
+
+				# POP - Left
+				pop_portraits_datamodel = {
+					parentanchor = vcenter
+
+					blockoverride "datamodel" {
+						datamodel = "[DataModelFirst(State.GetSamplePops, '(int32)1')]"
+					}
+				}
+
+				# POP - Right
+				pop_portraits_datamodel = {
+					parentanchor = vcenter|right
+
+					blockoverride "datamodel" {
+						datamodel = "[DataModelLast(State.GetSamplePops, '(int32)1')]"
+					}
+				}
+			}
+
+			flowcontainer = {
+				direction = vertical
+				parentanchor = vcenter
+				margin_left = 20
+				spacing = 10
+
+				flowcontainer = {
+					tooltip = "TOOLTIP_STATE_POPULATION"
+					spacing = 5
+					onmousehierarchyenter = "[SetTempMapModeByKey('mm_population')]"
+					onmousehierarchyleave = "[RemoveTempMapMode]"
+					alwaystransparent = no
+
+					icon = {
+						texture = "gfx/interface/icons/generic_icons/population.dds"
+						size = { 50 50 }
+						parentanchor = vcenter
+					}
+
+					textbox = {
+						text = "STATE_POPULATION_STATUS"
+						autoresize = yes
+						minimumsize = { 160 -1 }
+						maximumsize = { 160 -1 }
+						multiline = yes
+						align = nobaseline
+						parentanchor = vcenter
+					}
+				}
+
+				flowcontainer = {
+					tooltip = "NUM_SOL"
+					onmousehierarchyenter = "[SetTempMapModeByKey('mm_standard_of_living')]"
+					onmousehierarchyleave = "[RemoveTempMapMode]"
+					alwaystransparent = no
+					spacing = 5
+
+					textbox = {
+						size = { 50 50 }
+						text = "[LabelingHelper.GetIconForStandardOfLivingCFixedPoint(State.GetAverageStandardOfLivingAll)|v]"
+						align = left|nobaseline
+						fontsize = 30 #hack to get the same size on the text icon as the rest in the top bar
+						parentanchor = vcenter
+					}
+
+					flowcontainer = {
+						direction = vertical
+						parentanchor = vcenter
+
+						textbox = {
+							text = "STATE_SOL_STATUS"
+							autoresize = yes
+							minimumsize = { 160 -1 }
+							maximumsize = { 160 -1 }
+							multiline = yes
+							align = nobaseline
+						}
+						textbox = {
+							raw_text = "[LabelingHelper.GetLabelForStandardOfLivingNoIconCFixedPointFormatFromExpected(State.GetAverageStandardOfLivingAll,State.GetExpectedStandardOfLivingAll)|v] ([State.GetFormattedStandardOfLivingAll|v])"
+							maximumsize = { 160 23 }
+							minimumsize = { 160 23 }
+							autoresize = yes
+							align = nobaseline
+						}
+					}
+				}
+			}
+		}
+
+		flowcontainer = {
+			parentanchor = hcenter
+			margin = { 10 10 }
+			spacing = 10
+			wrap_count = 2
+			ignoreinvisible = yes
+			visible = "[GetScriptedGui('mog_bso_classic_state_panel_sgui').IsShown(GuiScope.End)]"	# BSO
+
+			state_panel_status_item_small = {				# REORDERED (unchanged)				# STATE TYPE START
+				visible = "[State.IsCapitalState]"
+				tooltip = "TOOLTIP_CAPITAL_STATE"
+
+				blockoverride "texture" {
+					texture = "gfx/interface/icons/state_status_icons/state_capital_icon.dds"
+				}
+
+				blockoverride "name" {
+					text = "STATE_CAPITAL_STATUS"
+				}
+
+				blockoverride "goto" {
+					datacontext = "[State.GetOwner]"
+					tooltip = "GO_TO_BUTTON_COUNTRY"
+					onclick = "[InformationPanelBar.OpenCountryPanel(State.GetOwner.Self)]"
+				}
+			}
+
+			state_panel_status_item_small = {				# REORDERED (block)
+				visible = "[And(Not(State.IsUnincorporated), Not(State.IsCapitalState))]"
+				tooltip = "TOOLTIP_INCORPORATED_STATE_VALID"
+
+				blockoverride "texture" {
+					texture = "gfx/interface/icons/state_status_icons/incorporated_state.dds"
+				}
+
+				blockoverride "name" {
+					text = "[concept_incorporated_state]"
+				}
+			}
+
+			state_panel_status_item_small = {				# REORDERED (block)
+				visible = "[And(State.IsUnincorporated,Not(State.IsIncorporating))]"
+
+				blockoverride "texture" {
+					texture = "gfx/interface/icons/state_status_icons/unincorporated_state.dds"
+				}
+
+				blockoverride "name" {
+					text = "[concept_unincorporated_state]"
+				}
+
+				blockoverride "extra_widget" {
+					button = {
+						enabled = "[IsValid( State.IncorporateState )]"
+						onclick = "[Execute( State.IncorporateState )]"
+						size = { 160 40 }
+						text = "INCORPORATE"
+						tooltip = "TOOLTIP_INCORPORATE_STATE"
+						using = default_button
+					}
+				}
+			}
+
+			state_panel_status_item_small = {				# REORDERED (block)	
+				visible = "[State.IsIncorporating]"
+
+				blockoverride "texture" {
+					texture = "gfx/interface/icons/state_status_icons/unincorporated_state.dds"
+				}
+
+				blockoverride "name" {
+					text = "INCORPORATING"
+				}
+
+				blockoverride "extra_widget" {
+					container = {
+						tooltip = "TOOLTIP_INCORPORATING_STATE"
+
+						default_progressbar_horizontal = {
+							size = { 160 34 }
+							blockoverride "values" {
+								value = "[FixedPointToFloat(State.GetIncorporationProgress)]"
+								min = 0
+								max = 1
+							}
+						}
+
+						button = {
+							size = { 22 22 }
+							visible = "[State.IsOwner( GetPlayer )]"
+							tooltip = TOOLTIP_CANCEL_INCORPORATION
+							onclick = "[PopupManager.AskConfirmation( State.UnincorporateState )]"
+							enabled = "[IsValid( State.UnincorporateState )]"
+							texture = "gfx/interface/icons/generic_icons/red_cross.dds"
+							parentanchor = right|vcenter
+							widgetanchor = right|vcenter
+							position = { -10 0 }
+						}
+
+						textbox = {
+							text = "[State.GetIncorporationTimeLeft]"
+							autoresize = yes
+							position = { 10 0 }
+							parentanchor = left|vcenter
+							widgetanchor = left|vcenter
+							align = right|nobaseline
+						}
+					}
+				}
+			}																					# STATE TYPE END
+
+			state_panel_status_item_small = {				# REORDERED (unchanged)
+				tooltip = "STATE_TAX_CAPACITY_DESC"
+				alwaystransparent = no
+
+				blockoverride "texture" {
+					texture = "gfx/interface/icons/state_status_icons/state_tax_capacity.dds"
+				}
+
+				blockoverride "name" {
+					text = "STATE_TAX_CAPACITY"
+				}
+
+				blockoverride "navigation_button" {
+					button_icon_plus_action = {
+						position = { -5 5 }
+						size = { 25 25 }
+						parentanchor = top|right
+						datacontext = "[State.GetBuilding('building_government_administration')]"
+						visible = "[IsValid( Building.QueueConstruction )]"
+						tooltip = "[Building.GetQueueConstructionTooltip]"
+						onclick = "[Execute( Building.QueueConstruction )]"
+					}
+				}
+			}
+
+			state_panel_status_item_small = {											# MODDED: BSO Strategic Region Indicator
+                onmousehierarchyenter = "[SetTempMapModeByKey('mm_strategic_region')]"
+                onmousehierarchyleave = "[RemoveTempMapMode]"
+				alwaystransparent = no
+
+				blockoverride "texture" {
+					texture = "gfx/interface/icons/map_mode_icons/strategic_regions.dds"
+				}
+
+				blockoverride "name" {
+					text = "[concept_strategic_region]"
+				}
+
+				blockoverride "extra_widget" {
+					container = {
+						#tooltip = "TOOLTIP_INCORPORATING_STATE"
+                        
+						textbox = {
+							text = "[State.GetStateRegion.GetStrategicRegion.GetName]"
+							autoresize = yes
+							position = { 0 0 }
+							parentanchor = left|vcenter
+							widgetanchor = left|vcenter
+							align = right|nobaseline
+						}
+					}
+				}
+			}																		# END MODDED
+
+			state_panel_status_item_small = {								# REORDERED (unchanged)
+				name = "tutorial_highlight_state_infrastructure"
+				tooltip = "STATE_INFRASTRUCTURE_DESC"
+				alwaystransparent = no
+
+				blockoverride "texture" {
+					texture = "gfx/interface/icons/state_status_icons/state_infrastructure.dds"
+				}
+
+				blockoverride "name" {
+					text = "STATE_INFRASTRUCTURE"
+				}
+
+				blockoverride "navigation_button" {
+					button_icon_plus_action = {
+						position = { -5 5 }
+						size = { 25 25 }
+						parentanchor = top|right
+						datacontext = "[State.GetBuilding('building_railway')]"
+						visible = "[IsValid( Building.QueueConstruction )]"
+						tooltip = "[Building.GetQueueConstructionTooltip]"
+						onclick = "[Execute( Building.QueueConstruction )]"
+					}
+				}
+			}
+
+			state_panel_status_item_small = {								# MODDED: MAPI Innformation
+				tooltip = "BSO_MAPI_TOOLTIP_REPLACEMENT"
+				visible = "[GetScriptedGui('mog_bso_classic_state_panel_sgui').IsShown(GuiScope.End)]"	# BSO
+				alwaystransparent = no
+
+				blockoverride "texture" {
+					texture = "gfx/interface/icons/state_status_icons/unused/territorial_state_icon.dds"
+				}
+
+				blockoverride "name" {
+					text = "GOODS_MARKET_ACCESS_PRICE_IMPACT_BSO"
+				}
+			}	
+
+			state_panel_status_item_small = {								# REORDERED (unchanged)
+				tooltip = "STATE_TRADE_CAPACITY_DESC"
+				visible = "[GreaterThan_int32(State.GetTradeCapacity,'(int32)0')]"
+				alwaystransparent = no
+
+				blockoverride "texture" {
+					texture = "gfx/interface/icons/state_status_icons/trade_capacity.dds"
+				}
+
+				blockoverride "name" {
+					text = "STATE_TRADE_CAPACITY"
+				}
+
+				blockoverride "goto" {
+
+				}
+
+				blockoverride "navigation_button" {
+					flowcontainer = {
+						position = { -5 5 }
+						parentanchor = top|right
+						datacontext = "[State.AccessBuilding('building_trade_center')]"
+						spacing = 1
+
+						button_icon_plus_action = {
+							size = { 25 25 }
+							visible = "[IsValid( Building.QueueConstruction )]"
+							tooltip = "[Building.GetQueueConstructionTooltip]"
+							onclick = "[Execute( Building.QueueConstruction )]"
+						}
+
+						button_icon_goto = {
+							size = { 25 25 }
+							tooltip = "GO_TO_BUTTON_BUILDING"
+							onclick = "[InformationPanelBar.OpenBuildingDetailsPanel(Building.AccessSelf)]"
+						}
+					}
+				}
+
+				blockoverride "extra_widget" {
+					flowcontainer = {
+						datacontext = "[State.AccessBuilding('building_trade_center')]"
+						spacing = 5
+						overlappingitembox = {
+							block "trade_center_extra_info_size" {
+								size = { 70 23 }
+							}
+
+							datamodel = "[DataModelFirst(Building.AccessState.GetImports, '(int32)3')]"
+
+							item = {
+								small_goods_button = {
+									blockoverride "tooltip" {
+										tooltip = "[Goods.GetStateImportsDesc]"
+									}
+								}
+							}
+						}
+
+						vertical_divider = {}
+
+						overlappingitembox = {
+							block "trade_center_extra_info_size" {
+								size = { 70 23 }
+							}
+
+							datamodel = "[DataModelFirst(Building.AccessState.GetExports, '(int32)3')]"
+
+							item = {
+								small_goods_button = {
+									blockoverride "tooltip" {
+										tooltip = "[Goods.GetStateExportsDesc]"
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+
+			state_panel_status_item_small = {								# REORDERED (unchanged)
+				visible = "[State.IsMassMigrationTarget]"
+				tooltip = "TOOLTIP_MASS_MIGRATION_TARGET"
+
+				blockoverride "texture" {
+					texture = "gfx/interface/icons/state_status_icons/mass_migration_target.dds"
+				}
+
+				blockoverride "name" {
+					text = "STATE_MIGRATION_TARGET_STATUS"
+				}
+			}
+
+			state_panel_status_item_small = {				# REORDERED (unchanged)				# STATUSES START
+				visible = "[State.HasTurmoilEffects]"
+				tooltip = "TOOLTIP_STATE_TURMOIL"
+
+				blockoverride "texture" {
+					texture = "gfx/interface/icons/state_status_icons/has_turmoil.dds"
+				}
+
+				blockoverride "name" {
+					text = "STATE_TURMOIL"
+				}
+			}
+
+			state_panel_status_item_small = {
+				visible = "[State.HasDevastation]"
+				tooltip = "TOOLTIP_STATE_DEVASTATION"
+
+				blockoverride "texture" {
+					texture = "gfx/interface/icons/state_status_icons/has_devastation.dds"
+				}
+
+				blockoverride "name" {
+					text = "STATE_DEVASTATION"
+				}
+			}
+
+			state_panel_status_item_small = {
+				visible = "[GreaterThan_CFixedPoint(State.GetBlockadeLevel, '(CFixedPoint)0')]"
+				datacontext = "[State.GetStateRegion]"
+				tooltip = "TOOLTIP_STATE_BLOCKADE_LEVEL"
+
+				blockoverride "texture" {
+					texture = "gfx/interface/icons/state_status_icons/blockaded.dds"
+				}
+
+				blockoverride "name" {
+					text = "STATE_BLOCKADE_LEVEL"
+				}
+			}
+
+			state_panel_status_item_small = {
+				visible = "[State.IsBeingBombarded]"
+				tooltip = "TOOLTIP_STATE_BOMBARDMENT"
+
+				blockoverride "texture" {
+					texture = "gfx/interface/icons/commander_order_icons/bomb_shores.dds"
+				}
+
+				blockoverride "name" {
+					text = "STATE_BOMBARDMENT"
+				}
+			}																					# STATUSES END
+
+			# Food security - Mild Starvation
+			state_panel_status_item_small = {				# REORDERED (unchanged)				# STARVATION START
+				datacontext = "[State.GetFoodSecurity]"
+				visible = "[And(And(GreaterThan_int64(FoodSecurity.GetNumStarvingPops, '(int64)0'), Not(State.HasFamine)), Not(GreaterThan_CFixedPoint(FoodSecurity.GetPercentageStarvingPopsSevere, '(CFixedPoint)0.02')))]"
+				tooltip = "STATE_FOOD_SECURITY_TOOLTIP"
+
+				blockoverride "texture" {
+					texture = "gfx/interface/icons/famine_icons/famine_icon.dds"
+				}
+
+				blockoverride "name" {
+					text = "STATE_FOOD_SECURITY"
+				}
+			}
+
+			# Food security - Severe Starvation
+			state_panel_status_item_small = {
+				datacontext = "[State.GetFoodSecurity]"
+
+				visible = "[And(GreaterThan_CFixedPoint(FoodSecurity.GetPercentageStarvingPopsSevere, '(CFixedPoint)0.02'), Not(State.HasFamine))]"
+				tooltip = "STATE_FOOD_SECURITY_TOOLTIP"
+
+				blockoverride "texture" {
+					texture = "gfx/interface/icons/famine_icons/famine_icon.dds"
+				}
+
+				blockoverride "name" {
+					text = "STATE_FOOD_SECURITY"
+				}
+			}
+
+			# Food security - Famine
+			state_panel_status_item_small = {
+				visible = "[State.HasFamine]"
+				tooltip = "STATE_FOOD_SECURITY_TOOLTIP"
+
+				blockoverride "texture" {
+					texture = "gfx/interface/icons/famine_icons/famine_icon.dds"
+				}
+
+				blockoverride "name" {
+					text = "STATE_FOOD_SECURITY"
+				}
+			}																					# STARVATION END
+
+			state_panel_status_item_small = {								# REORDERED (unchanged)
+				visible = "[State.HasHomelands]"
+
+				blockoverride "texture" {
+					texture = "gfx/interface/icons/state_status_icons/state_homelands.dds"
+				}
+
+				blockoverride "name" {
+					text = "TOOLTIP_HOMELANDS"
+				}
+			}
+
+			state_panel_status_item_small = {								# REORDERED (unchanged)
+				visible = "[State.HasClaims]"
+
+				blockoverride "texture" {
+					texture = "gfx/interface/icons/state_status_icons/has_claims.dds"
+				}
+
+				blockoverride "name" {
+					text = "TOOLTIP_CLAIMS"
+				}
+			}
+
+			state_panel_status_item_small = {								# REORDERED (unchanged)
+				visible = "[GreaterThan_CFixedPoint(State.GetObstinance, '(CFixedPoint)0')]"
+				tooltip = "TOOLTIP_STATE_OBSTINANCE"
+
+				blockoverride "texture" {
+					texture = "gfx/interface/icons/state_status_icons/state_obstinance.dds"
+				}
+
+				blockoverride "name" {
+					text = "STATE_OBSTINANCE"
+				}
+			}
+
+			state_panel_status_item_small = {								# REORDERED (unchanged)
+				visible = "[State.HasDiscoverableResources]"
+				tooltip = "TOOLTIP_UNDISCOVERED_RESOURCES"
+
+				blockoverride "texture" {
+					texture = "gfx/interface/icons/state_status_icons/resources.dds"
+				}
+
+				blockoverride "name" {
+					text = "DISCOVERABLE_RESOURCES"
+				}
+			}
+
+			state_panel_status_item_small = {								# REORDERED (unchanged)
+				visible = "[State.IsSplitState]"
+				tooltip = "TOOLTIP_SPLIT_STATE"
+				onmousehierarchyenter = "[AccessHighlightManager.HighlightStateRegion(State.GetStateRegion)]"
+				onmousehierarchyleave = "[AccessHighlightManager.RemoveHighlight]"
+				alwaystransparent = no
+
+				blockoverride "texture" {
+					texture = "gfx/interface/icons/state_status_icons/split_state_icon.dds"
+				}
+
+				blockoverride "name" {
+					text = "STATE_SPLIT_STATE_STATUS"
+				}
+			}
+
+			state_panel_status_item_small = {								# REORDERED (unchanged)
+				visible = "[State.IsTreatyPort]"
+				tooltip = "TOOLTIP_TREATY_PORT"
+
+				blockoverride "texture" {
+					texture = "gfx/interface/icons/state_status_icons/treaty_port_icon.dds"
+				}
+
+				blockoverride "name" {
+					text = "[concept_treaty_port]"
+				}
+			}
+
+			state_panel_status_item_small = {								# REORDERED (unchanged)
+				tooltip = "STATE_WORLD_MARKET_ACCESS_DESC"
+				alwaystransparent = no
+
+				blockoverride "texture" {
+					texture = "gfx/interface/icons/state_status_icons/world_market_access.dds"
+				}
+
+				blockoverride "name" {
+					text = "STATE_WORLD_MARKET_ACCESS"
+				}
+
+				blockoverride "alpha" {
+					alpha = "[TransparentIfZero_int32(State.GetTradeCapacity)]"
+				}
+
+				blockoverride "navigation_button" {
+					datacontext = "[State.AccessBuilding('building_trade_center')]"
+
+					# BUILD IF TRADE CAPACITY IS ZERO
+					button_icon_plus_action = {
+						visible = "[And(IsValid( Building.QueueConstruction ), EqualTo_int32(State.GetTradeCapacity,'(int32)0'))]"
+						tooltip = "[Building.GetQueueConstructionTooltip]"
+						onclick = "[Execute( Building.QueueConstruction )]"
+
+						position = { -5 5 }
+						size = { 25 25 }
+						parentanchor = top|right
+					}
+
+					# GOTO IF TRADE CAPACITY IS ABOVE ZERO
+					button_icon_goto = {
+						visible = "[GreaterThan_int32(State.GetTradeCapacity,'(int32)0')]"
+						onclick = "[InformationPanelBar.OpenPanel('world_market')]"
+						tooltip = "GOTO_WORLD_MARKET"
+
+						position = { -5 5 }
+						size = { 25 25 }
+						parentanchor = top|right
+					}
+				}
+			}
+
+			state_panel_status_item_small = {								# REORDERED (unchanged)
+				visible = "[State.GetCountry.IsColonizable]"
+				tooltip = "TOOLTIP_STATE_DECENTRALIZED"
+
+				blockoverride "texture" {
+					texture = "gfx/interface/icons/state_status_icons/colonizable.dds"
+				}
+
+				blockoverride "name" {
+					text = "[concept_decentralized_nation]"
+				}
+			}
+
+			state_panel_status_item_small = {
+				visible = "[And(State.IsBeingColonized, Not(State.IsGrowingColony))]"
+				tooltip = "TOOLTIP_COLONIZED"
+				blockoverride "texture" {
+					texture = "gfx/interface/icons/state_status_icons/colonizable.dds"
+				}
+
+				blockoverride "name" {
+					text = "BEING_COLONIZED"
+				}
+			}
+
+			state_panel_status_item_small = {
+				visible = "[State.IsGrowingColony]"
+
+				blockoverride "texture" {
+					texture = "gfx/interface/icons/state_status_icons/colony.dds"
+				}
+
+				blockoverride "name" {
+					text = "UNDER_COLONIZATION"
+				}
+
+				blockoverride "extra_widget" {
+					container = {
+						tooltip = "STATE_COLONY_TOOLTIP"
+
+						default_progressbar_horizontal = {
+							size = { 160 34 }
+							blockoverride "values" {
+								value = "[State.GetColonyProgressAsFloat]"
+								min = 0
+								max = 1
+							}
+						}
+
+						button = {
+							texture = "gfx/interface/icons/generic_icons/not_paused.dds"
+							size = { 33 33 }
+							visible = "[And(State.IsOwner(GetPlayer),Not(State.IsColonizationPaused))]"
+							onclick = "[Execute( State.TogglePauseColonization )]"
+							enabled = "[IsValid( State.TogglePauseColonization )]"
+							parentanchor = right|vcenter
+							widgetanchor = right|vcenter
+							position = { -30 0 }
+						}
+
+						button = {
+							texture = "gfx/interface/icons/generic_icons/paused.dds"
+							size = { 33 33 }
+							visible = "[And(State.IsOwner(GetPlayer),State.IsColonizationPaused)]"
+							onclick = "[Execute( State.TogglePauseColonization )]"
+							enabled = "[IsValid( State.TogglePauseColonization )]"
+							parentanchor = right|vcenter
+							widgetanchor = right|vcenter
+							position = { -30 0 }
+						}
+
+						button = {
+							size = { 22 22 }
+							visible = "[State.IsOwner( GetPlayer )]"
+							tooltip = "CANCEL_COLONY_TOOLTIP"
+							onclick = "[PopupManager.AskConfirmation( State.AbandonColony )]"
+							enabled = "[IsValid( State.AbandonColony )]"
+							texture = "gfx/interface/icons/generic_icons/red_cross.dds"
+							parentanchor = right|vcenter
+							widgetanchor = right|vcenter
+							position = { -10 0 }
+						}
+
+						textbox = {
+							visible = "[GreaterThan_int32( State.GetColonyProgressAsDays, '(int32)-1')]"
+							text = "COLONY_MAP_MARKER_DAYS_LEFT"
+							autoresize = yes
+							position = { 10 0 }
+							parentanchor = left|vcenter
+							widgetanchor = left|vcenter
+							align = right|nobaseline
+						}
+
+						textbox = {
+							visible = "[Not(GreaterThan_int32( State.GetColonyProgressAsDays, '(int32)-1'))]"
+							text = "NO_PROGRESS"
+							autoresize = yes
+							position = { 10 0 }
+							parentanchor = left|vcenter
+							widgetanchor = left|vcenter
+							align = right|nobaseline
+						}
+					}
+				}
+			}
+
+			state_panel_status_item_small = {
+				visible = "[State.HasConstructionQueued]"
+				datacontext = "[State.AccessOwner]"
+				tooltip = "CONSTRUCTION_QUEUE_TOOLTIP"
+
+				blockoverride "texture" {
+					texture = "gfx/interface/icons/state_status_icons/has_construction.dds"
+				}
+
+				blockoverride "name" {
+					datacontext = "[State.AccessOwner]"
+					text = "STATE_CONSTRUCTION"
+				}
+
+				blockoverride "goto" {
+					visible = "[State.IsOwner(GetPlayer)]"
+					tooltip = "GO_TO_BUTTON_CONSTRUCTION_QUEUE"
+					onclick = "[InformationPanelBar.OpenConstructionPanel(GetPlayer.Self)]"
+				}
+			}
+
+			state_panel_status_item_small = {
+				visible = "[State.IsSlaveState]"
+				tooltip = "TOOLTIP_SLAVE_STATE"
+
+				blockoverride "texture" {
+					texture = "gfx/interface/icons/state_status_icons/slave_state.dds"
+				}
+
+				blockoverride "name" {
+					text = "SLAVE_STATE"
+				}
+			}
+
+			state_panel_status_item_small = {								# REORDERED (unchanged)
+				visible = "[State.IsImportingSlaves]"
+				tooltip = "[State.GetSlaveImportMarkerDesc]"
+
+				blockoverride "texture" {
+					texture = "gfx/interface/icons/state_status_icons/slave_import_marker.dds"
+				}
+
+				blockoverride "name" {
+					text = "SLAVE_IMPORT"
+				}
+			}
+
+			state_panel_status_item_small = {								# REORDERED (unchanged)
+				visible = "[State.HasSlaveExportMarkers]"
+				tooltip = "[State.GetSlaveExportMarkersDesc]"
+
+				blockoverride "texture" {
+					texture = "gfx/interface/icons/state_status_icons/slave_export_markers.dds"
+				}
+
+				blockoverride "name" {
+					text = "SLAVE_EXPORT"
+				}
+			}
+
+			state_panel_status_item_small = {
+				visible = "[GreaterThan_CFixedPoint(State.GetStateRegion.GetPollutionImpact, '(CFixedPoint)0')]"
+				datacontext = "[State.GetStateRegion]"
+				tooltip = "STATE_POLLUTION"
+
+				onmousehierarchyenter = "[SetTempMapModeByKey('mm_pollution')]"
+				onmousehierarchyleave = "[RemoveTempMapMode]"
+				alwaystransparent = no
+
+
+				blockoverride "texture" {
+					texture = "gfx/interface/icons/state_status_icons/pollution.dds"
+				}
+
+				blockoverride "name" {
+					text = "STATE_PANEL_POLLUTION"
+				}
+			}
+
+			state_panel_status_item_small = {
+				visible = "[State.IsStrategicObjective(GetPlayer.Self)]"
+				tooltip = "STATE_STRATEGIC_OBJECTIVE_TOOLTIP"
+
+				blockoverride "texture" {
+					texture = "gfx/interface/icons/formation_order_icons/strategic_objective.dds"
+				}
+
+				blockoverride "name" {
+					text = "STATE_STRATEGIC_OBJECTIVE"
+				}
+			}
+
+			datamodel = "[State.AccessStateRegion.AccessTraits]"
+
+			item = {
+				state_panel_status_item_small = {
+					tooltip = TOOLTIP_STATE_TRAIT
+					onmousehierarchyenter = "[AccessHighlightManager.HighlightStateTrait(StateTrait.Self)]"
+					onmousehierarchyleave = "[AccessHighlightManager.RemoveHighlight]"
+					alwaystransparent = no
+
+					blockoverride "texture" {
+						texture = "[StateTrait.GetTexture]"
+					}
+
+					blockoverride "name" {
+						text = "STATE_TRAIT_STATUS"
+					}
+				}
+			}
+		}
+		
+		flowcontainer = {												# BSO: STRUCTURED VIEW STARTS HERE - TRIPANEL 1
+			parentanchor = hcenter
+			margin = { 10 10 }
+			spacing = 9
+			wrap_count = 3
+			ignoreinvisible = yes
+			visible = "[GetScriptedGui('mog_bso_structured_state_panel_sgui').IsShown(GuiScope.End)]"
+			
+			state_panel_status_item_extra_small = {						# BSO Tripanel Strategic Region Indicator
+                onmousehierarchyenter = "[SetTempMapModeByKey('mm_strategic_region')]"
+                onmousehierarchyleave = "[RemoveTempMapMode]"
+				alwaystransparent = no
+
+			#	blockoverride "defaultsize" {
+			#		parentanchor = vcenter
+			#	}
+
+				blockoverride "texture" {
+					texture = "gfx/interface/icons/map_mode_icons/strategic_regions.dds"
+				}
+				blockoverride "iconsize" {
+					size = { 62 62 }
+				}
+
+				blockoverride "name" {
+					text = "BSO_STRATEGIC_REGION_SHORT"
+				}
+				blockoverride "maximumsize" {		# Should equal 85 + (71 - iconsize)
+					minimumsize = { 94 -1 }
+					maximumsize = { 94 -1 }
+				}
+
+				blockoverride "extra_widget" {
+					container = {
+						#tooltip = "TOOLTIP_INCORPORATING_STATE"
+                        
+						textbox = {
+							text = "[State.GetStateRegion.GetStrategicRegion.GetName]"
+							autoresize = yes
+							minimumsize = { 94 -1 }
+							maximumsize = { 94 -1 }
+							multiline = yes
+							align = vcenter
+						}
+					}
+				}
+			}
+			state_panel_status_item_extra_small = {						# BSO Tripanel Construction
+				visible = "[State.HasConstructionQueued]"
+				datacontext = "[State.AccessOwner]"
+				tooltip = "CONSTRUCTION_QUEUE_TOOLTIP"
+
+				blockoverride "texture" {
+					texture = "gfx/interface/icons/state_status_icons/has_construction.dds"
+				}
+				blockoverride "iconsize" {
+					size = { 52 52 }
+				}
+
+				blockoverride "name" {
+					datacontext = "[State.AccessOwner]"
+					text = "STATE_CONSTRUCTION"
+				}
+				blockoverride "maximumsize" {		# Should equal 85 + (71 - iconsize)
+					minimumsize = { 104 -1 }
+					maximumsize = { 104 -1 }
+				}
+
+				blockoverride "goto" {
+					visible = "[State.IsOwner(GetPlayer)]"
+					tooltip = "GO_TO_BUTTON_CONSTRUCTION_QUEUE"
+					onclick = "[InformationPanelBar.OpenConstructionPanel(GetPlayer.Self)]"
+				}
+			}
+			# Food security - Mild Starvation
+			state_panel_status_item_extra_small = {				# REORDERED (unchanged)				# STARVATION START
+				datacontext = "[State.GetFoodSecurity]"
+				visible = "[And(And(GreaterThan_int64(FoodSecurity.GetNumStarvingPops, '(int64)500'), Not(State.HasFamine)), Not(GreaterThan_CFixedPoint(FoodSecurity.GetPercentageStarvingPopsSevere, '(CFixedPoint)0.02')))]"
+				tooltip = "STATE_FOOD_SECURITY_TOOLTIP"
+
+				blockoverride "texture" {
+					texture = "gfx/interface/icons/famine_icons/famine_icon.dds"
+				}
+				blockoverride "iconsize" {
+					size = { 52 52 }
+				}
+
+				blockoverride "name" {
+					text = "STATE_FOOD_SECURITY"
+				}
+				blockoverride "maximumsize" {		# Should equal 85 + (71 - iconsize)
+					minimumsize = { 104 -1 }
+					maximumsize = { 104 -1 }
+				}
+			}
+			# Food security - Severe Starvation
+			state_panel_status_item_extra_small = {
+				datacontext = "[State.GetFoodSecurity]"
+
+				visible = "[And(GreaterThan_CFixedPoint(FoodSecurity.GetPercentageStarvingPopsSevere, '(CFixedPoint)0.02'), Not(State.HasFamine))]"
+				tooltip = "STATE_FOOD_SECURITY_TOOLTIP"
+
+				blockoverride "texture" {
+					texture = "gfx/interface/icons/famine_icons/famine_icon.dds"
+				}
+				blockoverride "iconsize" {
+					size = { 52 52 }
+				}
+
+				blockoverride "name" {
+					text = "STATE_FOOD_SECURITY"
+				}
+				blockoverride "maximumsize" {		# Should equal 85 + (71 - iconsize)
+					minimumsize = { 104 -1 }
+					maximumsize = { 104 -1 }
+				}
+			}
+			# Food security - Famine
+			state_panel_status_item_extra_small = {
+				visible = "[State.HasFamine]"
+				tooltip = "STATE_FOOD_SECURITY_TOOLTIP"
+
+				blockoverride "texture" {
+					texture = "gfx/interface/icons/famine_icons/famine_icon.dds"
+				}
+				blockoverride "iconsize" {
+					size = { 52 52 }
+				}
+
+				blockoverride "name" {
+					text = "STATE_FOOD_SECURITY"
+				}
+				blockoverride "maximumsize" {		# Should equal 85 + (71 - iconsize)
+					minimumsize = { 104 -1 }
+					maximumsize = { 104 -1 }
+				}
+			}																					# STARVATION END
+			state_panel_status_item_extra_small = {						# BSO Tripanel Turmoil		# STATUSES START
+				visible = "[State.HasTurmoilEffects]"
+				tooltip = "TOOLTIP_STATE_TURMOIL"
+
+				blockoverride "texture" {
+					texture = "gfx/interface/icons/state_status_icons/has_turmoil.dds"
+				}
+				blockoverride "iconsize" {
+					size = { 62 62 }
+				}
+
+				blockoverride "name" {
+					text = "STATE_TURMOIL"
+				}
+				blockoverride "maximumsize" {		# Should equal 85 + (71 - iconsize)
+					minimumsize = { 94 -1 }
+					maximumsize = { 94 -1 }
+				}
+			}
+			state_panel_status_item_extra_small = {						# BSO Tripanel Obstinance
+				visible = "[GreaterThan_CFixedPoint(State.GetObstinance, '(CFixedPoint)0.01')]"
+				tooltip = "TOOLTIP_STATE_OBSTINANCE"
+
+				blockoverride "texture" {
+					texture = "gfx/interface/icons/state_status_icons/state_obstinance.dds"
+				}
+				blockoverride "iconsize" {
+					size = { 62 62 }
+				}
+
+				blockoverride "name" {
+					text = "STATE_OBSTINANCE"
+				}
+				blockoverride "maximumsize" {		# Should equal 85 + (71 - iconsize)
+					minimumsize = { 94 -1 }
+					maximumsize = { 94 -1 }
+				}
+			}
+			state_panel_status_item_extra_small = {
+				visible = "[State.HasDevastation]"
+				tooltip = "TOOLTIP_STATE_DEVASTATION"
+
+				blockoverride "texture" {
+					texture = "gfx/interface/icons/state_status_icons/has_devastation.dds"
+				}
+				blockoverride "iconsize" {
+					size = { 62 62 }
+				}
+
+				blockoverride "name" {
+					text = "STATE_DEVASTATION"
+				}
+				blockoverride "maximumsize" {		# Should equal 85 + (71 - iconsize)
+					minimumsize = { 94 -1 }
+					maximumsize = { 94 -1 }
+				}
+			}
+			state_panel_status_item_extra_small = {
+				visible = "[GreaterThan_CFixedPoint(State.GetBlockadeLevel, '(CFixedPoint)0')]"
+				datacontext = "[State.GetStateRegion]"
+				tooltip = "TOOLTIP_STATE_BLOCKADE_LEVEL"
+
+				blockoverride "texture" {
+					texture = "gfx/interface/icons/state_status_icons/blockaded.dds"
+				}
+				blockoverride "iconsize" {
+					size = { 62 62 }
+				}
+
+				blockoverride "name" {
+					text = "STATE_BLOCKADE_LEVEL"
+				}
+				blockoverride "maximumsize" {		# Should equal 85 + (71 - iconsize)
+					minimumsize = { 94 -1 }
+					maximumsize = { 94 -1 }
+				}
+			}
+			state_panel_status_item_extra_small = {
+				visible = "[State.IsBeingBombarded]"
+				tooltip = "TOOLTIP_STATE_BOMBARDMENT"
+
+				blockoverride "texture" {
+					texture = "gfx/interface/icons/commander_order_icons/bomb_shores.dds"
+				}
+				blockoverride "iconsize" {
+					size = { 62 62 }
+				}
+
+				blockoverride "name" {
+					text = "STATE_BOMBARDMENT"
+				}
+				blockoverride "maximumsize" {		# Should equal 85 + (71 - iconsize)
+					minimumsize = { 94 -1 }
+					maximumsize = { 94 -1 }
+				}
+			}																					# STATUSES END
+			state_panel_status_item_extra_small = {						# BSO Tripanel Slave-State
+				visible = "[State.IsSlaveState]"
+				tooltip = "TOOLTIP_SLAVE_STATE"
+				onmousehierarchyenter = "[AccessHighlightManager.HighlightStateRegion(State.GetStateRegion)]"
+				onmousehierarchyleave = "[AccessHighlightManager.RemoveHighlight]"
+				alwaystransparent = no
+
+				blockoverride "texture" {
+					texture = "gfx/interface/icons/state_status_icons/slave_state.dds"
+				}
+				blockoverride "iconsize" {
+					size = { 62 62 }
+				}
+
+				blockoverride "name" {
+					text = "SLAVE_STATE"
+				}
+				blockoverride "maximumsize" {		# Should equal 85 + (71 - iconsize)
+					minimumsize = { 94 -1 }
+					maximumsize = { 94 -1 }
+				}
+			}
+			state_panel_status_item_extra_small = {						# BSO Tripanel Split-State
+				visible = "[State.IsSplitState]"
+				tooltip = "TOOLTIP_SPLIT_STATE"
+				onmousehierarchyenter = "[AccessHighlightManager.HighlightStateRegion(State.GetStateRegion)]"
+				onmousehierarchyleave = "[AccessHighlightManager.RemoveHighlight]"
+				alwaystransparent = no
+
+				blockoverride "texture" {
+					texture = "gfx/interface/icons/state_status_icons/split_state_icon.dds"
+				}
+				blockoverride "iconsize" {
+					size = { 52 52 }
+				}
+
+				blockoverride "name" {
+					text = "STATE_SPLIT_STATE_STATUS"
+				}
+				blockoverride "maximumsize" {		# Should equal 85 + (71 - iconsize)
+					minimumsize = { 104 -1 }
+					maximumsize = { 104 -1 }
+				}
+			}
+			state_panel_status_item_extra_small = {						# BSO Tripanel Treaty Port
+				visible = "[State.IsTreatyPort]"
+				tooltip = "TOOLTIP_TREATY_PORT"
+
+				blockoverride "texture" {
+					texture = "gfx/interface/icons/state_status_icons/treaty_port_icon.dds"
+				}
+				blockoverride "iconsize" {
+					size = { 52 52 }
+				}
+
+				blockoverride "name" {
+					text = "[concept_treaty_port]"
+				}
+				blockoverride "maximumsize" {		# Should equal 85 + (71 - iconsize)
+					minimumsize = { 104 -1 }
+					maximumsize = { 104 -1 }
+				}
+			}
+			state_panel_status_item_extra_small = {						# BSO Tripanel NOT Split-State # FILLER
+				datacontext = "[State.GetFoodSecurity]"
+				visible = "[And4(Not(State.IsSplitState),
+					Not(State.IsSlaveState),
+					Not(State.IsTreatyPort),
+					Not(Or8(
+						And(And(GreaterThan_int64(FoodSecurity.GetNumStarvingPops, '(int64)500'), Not(State.HasFamine)), Not(GreaterThan_CFixedPoint(FoodSecurity.GetPercentageStarvingPopsSevere, '(CFixedPoint)0.02'))),
+						And(GreaterThan_CFixedPoint(FoodSecurity.GetPercentageStarvingPopsSevere, '(CFixedPoint)0.02'), Not(State.HasFamine)),
+						State.HasFamine,
+						State.HasTurmoilEffects,
+						GreaterThan_CFixedPoint(State.GetObstinance, '(CFixedPoint)0.01'),
+						State.HasDevastation,
+						GreaterThan_CFixedPoint(State.GetBlockadeLevel, '(CFixedPoint)0'),
+						State.IsBeingBombarded) ) )]"
+				onmousehierarchyenter = "[AccessHighlightManager.HighlightStateRegion(State.GetStateRegion)]"
+				onmousehierarchyleave = "[AccessHighlightManager.RemoveHighlight]"
+				alwaystransparent = no
+		
+				blockoverride "texture" {
+					texture = "gfx/interface/icons/dlc_icons/dynamic_countries.dds"
+				}
+				blockoverride "iconsize" {
+					size = { 52 52 }
+				}
+		
+				blockoverride "name" {
+					text = "STATE_REGION_STATE_STATUS"
+				}
+				blockoverride "maximumsize" {		# Should equal 85 + (71 - iconsize)
+					minimumsize = { 104 -1 }
+					maximumsize = { 104 -1 }
+				}
+			}
+		}																# BSO: TRIPANEL ENDS HERE
+
+		flowcontainer = {
+			parentanchor = hcenter
+			margin = { 10 10 }
+			margin_top = 0
+			spacing = 10
+			wrap_count = 2
+			ignoreinvisible = yes
+			visible = "[GetScriptedGui('mog_bso_structured_state_panel_sgui').IsShown(GuiScope.End)]"
+			
+			state_panel_status_item_small = {				# REORDERED (unchanged)				# STATE TYPE START
+				visible = "[State.IsCapitalState]"
+				tooltip = "TOOLTIP_CAPITAL_STATE"
+
+				blockoverride "texture" {
+					texture = "gfx/interface/icons/state_status_icons/state_capital_icon.dds"
+				}
+
+				blockoverride "name" {
+					text = "STATE_CAPITAL_STATUS"
+				}
+
+				blockoverride "goto" {
+					datacontext = "[State.GetOwner]"
+					tooltip = "GO_TO_BUTTON_COUNTRY"
+					onclick = "[InformationPanelBar.OpenCountryPanel(State.GetOwner.Self)]"
+				}
+			}
+
+			state_panel_status_item_small = {				# REORDERED (block)
+				visible = "[And(Not(State.IsUnincorporated), Not(State.IsCapitalState))]"
+				tooltip = "TOOLTIP_INCORPORATED_STATE_VALID"
+
+				blockoverride "texture" {
+					texture = "gfx/interface/icons/state_status_icons/incorporated_state.dds"
+				}
+
+				blockoverride "name" {
+					text = "[concept_incorporated_state]"
+				}
+			}
+
+			state_panel_status_item_small = {				# REORDERED (block)
+				visible = "[And(State.IsUnincorporated,Not(State.IsIncorporating))]"
+
+				blockoverride "texture" {
+					texture = "gfx/interface/icons/state_status_icons/unincorporated_state.dds"
+				}
+
+				blockoverride "name" {
+					text = "[concept_unincorporated_state]"
+				}
+
+				blockoverride "extra_widget" {
+					button = {
+						enabled = "[IsValid( State.IncorporateState )]"
+						onclick = "[Execute( State.IncorporateState )]"
+						size = { 160 40 }
+						text = "INCORPORATE"
+						tooltip = "TOOLTIP_INCORPORATE_STATE"
+						using = default_button
+					}
+				}
+			}
+
+			state_panel_status_item_small = {				# REORDERED (block)	
+				visible = "[State.IsIncorporating]"
+
+				blockoverride "texture" {
+					texture = "gfx/interface/icons/state_status_icons/unincorporated_state.dds"
+				}
+
+				blockoverride "name" {
+					text = "INCORPORATING"
+				}
+
+				blockoverride "extra_widget" {
+					container = {
+						tooltip = "TOOLTIP_INCORPORATING_STATE"
+
+						default_progressbar_horizontal = {
+							size = { 160 34 }
+							blockoverride "values" {
+								value = "[FixedPointToFloat(State.GetIncorporationProgress)]"
+								min = 0
+								max = 1
+							}
+						}
+
+						button = {
+							size = { 22 22 }
+							visible = "[State.IsOwner( GetPlayer )]"
+							tooltip = TOOLTIP_CANCEL_INCORPORATION
+							onclick = "[PopupManager.AskConfirmation( State.UnincorporateState )]"
+							enabled = "[IsValid( State.UnincorporateState )]"
+							texture = "gfx/interface/icons/generic_icons/red_cross.dds"
+							parentanchor = right|vcenter
+							widgetanchor = right|vcenter
+							position = { -10 0 }
+						}
+
+						textbox = {
+							text = "[State.GetIncorporationTimeLeft]"
+							autoresize = yes
+							position = { 10 0 }
+							parentanchor = left|vcenter
+							widgetanchor = left|vcenter
+							align = right|nobaseline
+						}
+					}
+				}
+			}																					# STATE TYPE END
+
+			state_panel_status_item_small = {				# REORDERED (unchanged)
+				tooltip = "STATE_TAX_CAPACITY_DESC"
+				alwaystransparent = no
+
+				blockoverride "texture" {
+					texture = "gfx/interface/icons/state_status_icons/state_tax_capacity.dds"
+				}
+
+				blockoverride "name" {
+					text = "STATE_TAX_CAPACITY"
+				}
+
+				blockoverride "navigation_button" {
+					button_icon_plus_action = {
+						position = { -5 5 }
+						size = { 25 25 }
+						parentanchor = top|right
+						datacontext = "[State.GetBuilding('building_government_administration')]"
+						visible = "[IsValid( Building.QueueConstruction )]"
+						tooltip = "[Building.GetQueueConstructionTooltip]"
+						onclick = "[Execute( Building.QueueConstruction )]"
+					}
+				}
+			}
+
+			state_panel_status_item_small = {								# REORDERED (unchanged)
+				name = "tutorial_highlight_state_infrastructure"
+				tooltip = "STATE_INFRASTRUCTURE_DESC"
+				alwaystransparent = no
+
+				blockoverride "texture" {
+					texture = "gfx/interface/icons/state_status_icons/state_infrastructure.dds"
+				}
+
+				blockoverride "name" {
+					text = "STATE_INFRASTRUCTURE"
+				}
+
+				blockoverride "navigation_button" {
+					button_icon_plus_action = {
+						position = { -5 5 }
+						size = { 25 25 }
+						parentanchor = top|right
+						datacontext = "[State.GetBuilding('building_railway')]"
+						visible = "[IsValid( Building.QueueConstruction )]"
+						tooltip = "[Building.GetQueueConstructionTooltip]"
+						onclick = "[Execute( Building.QueueConstruction )]"
+					}
+				}
+			}
+
+			state_panel_status_item_small = {								# REORDERED (unchanged)
+				tooltip = "STATE_TRADE_CAPACITY_DESC"
+				visible = "[GreaterThan_int32(State.GetTradeCapacity,'(int32)0')]"
+				alwaystransparent = no
+
+				blockoverride "texture" {
+					texture = "gfx/interface/icons/state_status_icons/trade_capacity.dds"
+				}
+
+				blockoverride "name" {
+					text = "STATE_TRADE_CAPACITY"
+				}
+
+				blockoverride "goto" {
+
+				}
+
+				blockoverride "navigation_button" {
+					flowcontainer = {
+						position = { -5 5 }
+						parentanchor = top|right
+						datacontext = "[State.AccessBuilding('building_trade_center')]"
+						spacing = 1
+
+						button_icon_plus_action = {
+							size = { 25 25 }
+							visible = "[IsValid( Building.QueueConstruction )]"
+							tooltip = "[Building.GetQueueConstructionTooltip]"
+							onclick = "[Execute( Building.QueueConstruction )]"
+						}
+
+						button_icon_goto = {
+							size = { 25 25 }
+							tooltip = "GO_TO_BUTTON_BUILDING"
+							onclick = "[InformationPanelBar.OpenBuildingDetailsPanel(Building.AccessSelf)]"
+						}
+					}
+				}
+
+				blockoverride "extra_widget" {
+					flowcontainer = {
+						datacontext = "[State.AccessBuilding('building_trade_center')]"
+						spacing = 5
+						overlappingitembox = {
+							block "trade_center_extra_info_size" {
+								size = { 70 23 }
+							}
+
+							datamodel = "[DataModelFirst(Building.AccessState.GetImports, '(int32)3')]"
+
+							item = {
+								small_goods_button = {
+									blockoverride "tooltip" {
+										tooltip = "[Goods.GetStateImportsDesc]"
+									}
+								}
+							}
+						}
+
+						vertical_divider = {}
+
+						overlappingitembox = {
+							block "trade_center_extra_info_size" {
+								size = { 70 23 }
+							}
+
+							datamodel = "[DataModelFirst(Building.AccessState.GetExports, '(int32)3')]"
+
+							item = {
+								small_goods_button = {
+									blockoverride "tooltip" {
+										tooltip = "[Goods.GetStateExportsDesc]"
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+
+			state_panel_status_item_small = {								# REORDERED (unchanged)
+				visible = "[State.HasHomelands]"
+
+				blockoverride "texture" {
+					texture = "gfx/interface/icons/state_status_icons/state_homelands.dds"
+				}
+
+				blockoverride "name" {
+					text = "TOOLTIP_HOMELANDS"
+				}
+			}
+
+			state_panel_status_item_small = {								# REORDERED (unchanged)
+				visible = "[State.HasClaims]"
+
+				blockoverride "texture" {
+					texture = "gfx/interface/icons/state_status_icons/has_claims.dds"
+				}
+
+				blockoverride "name" {
+					text = "TOOLTIP_CLAIMS"
+				}
+			}
+
+			state_panel_status_item_small = {								# REORDERED (unchanged)
+				visible = "[State.HasDiscoverableResources]"
+				tooltip = "TOOLTIP_UNDISCOVERED_RESOURCES"
+
+				blockoverride "texture" {
+					texture = "gfx/interface/icons/state_status_icons/resources.dds"
+				}
+
+				blockoverride "name" {
+					text = "DISCOVERABLE_RESOURCES"
+				}
+			}
+
+			state_panel_status_item_small = {								# REORDERED (unchanged)
+				visible = "[State.IsMassMigrationTarget]"
+				tooltip = "TOOLTIP_MASS_MIGRATION_TARGET"
+
+				blockoverride "texture" {
+					texture = "gfx/interface/icons/state_status_icons/mass_migration_target.dds"
+				}
+
+				blockoverride "name" {
+					text = "STATE_MIGRATION_TARGET_STATUS"
+				}
+			}
+		}
+
+		flowcontainer = {												# Used in both views
+			margin = { 10 10 }
+			spacing = 10
+			margin_top = 0
+			margin_bottom = 0
+			margin_left = 12
+			maximumsize = { 550 -1 }
+
+			### NATIONAL FOCUSES
+			fixedgridbox = {
+				name = "tutorial_highlight_state_decrees"
+				visible = "[Not(IsDataModelEmpty(State.AccessDecrees))]"
+				datamodel = "[State.AccessDecrees]"
+				addrow = 100
+				addcolumn = 270
+				flipdirection = yes
+				datamodel_wrap = 2
+
+				item = {
+					container = {
+						state_panel_status_item_small = {
+							tooltipwidget = {
+								FancyTooltip_DecreeType = {
+									datacontext = "[Decree.GetType]"
+								}
+							}
+
+							blockoverride "texture" {
+								texture = "[Decree.GetTexture]"
+							}
+
+							blockoverride "name" {
+								text = "STATE_DECREE_STATUS"
+							}
+
+							blockoverride "maximumsize" {
+								maximumsize = { 160 23 }
+								minimumsize = { 160 23 }
+							}
+
+							blockoverride "extra_widget" {
+								button = {
+									visible = "[ObjectsEqual(Decree.GetCountry.Self, GetPlayer.Self)]"
+									using = default_button
+									size = { 160 40 }
+									text = "CANCEL"
+									tooltip = "DECREE_REMOVE"
+									enabled = "[IsValid( Decree.GetRemoveCommand )]"
+									onclick = "[Execute( Decree.GetRemoveCommand )]"
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		
+		flowcontainer = {
+			parentanchor = hcenter
+			margin = { 10 10 }
+			spacing = 10
+			margin_top = 0
+			wrap_count = 2
+			ignoreinvisible = yes
+			visible = "[GetScriptedGui('mog_bso_structured_state_panel_sgui').IsShown(GuiScope.End)]"
+
+			state_panel_status_item_small = {								# REORDERED (unchanged)
+				tooltip = "STATE_WORLD_MARKET_ACCESS_DESC"
+				alwaystransparent = no
+
+				blockoverride "texture" {
+					texture = "gfx/interface/icons/state_status_icons/world_market_access.dds"
+				}
+
+				blockoverride "name" {
+					text = "STATE_WORLD_MARKET_ACCESS"
+				}
+
+				blockoverride "alpha" {
+					alpha = "[TransparentIfZero_int32(State.GetTradeCapacity)]"
+				}
+
+				blockoverride "navigation_button" {
+					datacontext = "[State.AccessBuilding('building_trade_center')]"
+
+					# BUILD IF TRADE CAPACITY IS ZERO
+					button_icon_plus_action = {
+						visible = "[And(IsValid( Building.QueueConstruction ), EqualTo_int32(State.GetTradeCapacity,'(int32)0'))]"
+						tooltip = "[Building.GetQueueConstructionTooltip]"
+						onclick = "[Execute( Building.QueueConstruction )]"
+
+						position = { -5 5 }
+						size = { 25 25 }
+						parentanchor = top|right
+					}
+
+					# GOTO IF TRADE CAPACITY IS ABOVE ZERO
+					button_icon_goto = {
+						visible = "[GreaterThan_int32(State.GetTradeCapacity,'(int32)0')]"
+						onclick = "[InformationPanelBar.OpenPanel('world_market')]"
+						tooltip = "GOTO_WORLD_MARKET"
+
+						position = { -5 5 }
+						size = { 25 25 }
+						parentanchor = top|right
+					}
+				}
+			}
+
+			state_panel_status_item_small = {								# REORDERED (unchanged)
+				visible = "[State.GetCountry.IsColonizable]"
+				tooltip = "TOOLTIP_STATE_DECENTRALIZED"
+
+				blockoverride "texture" {
+					texture = "gfx/interface/icons/state_status_icons/colonizable.dds"
+				}
+
+				blockoverride "name" {
+					text = "[concept_decentralized_nation]"
+				}
+			}
+
+			state_panel_status_item_small = {
+				visible = "[And(State.IsBeingColonized, Not(State.IsGrowingColony))]"
+				tooltip = "TOOLTIP_COLONIZED"
+				blockoverride "texture" {
+					texture = "gfx/interface/icons/state_status_icons/colonizable.dds"
+				}
+
+				blockoverride "name" {
+					text = "BEING_COLONIZED"
+				}
+			}
+
+			state_panel_status_item_small = {
+				visible = "[State.IsGrowingColony]"
+
+				blockoverride "texture" {
+					texture = "gfx/interface/icons/state_status_icons/colony.dds"
+				}
+
+				blockoverride "name" {
+					text = "UNDER_COLONIZATION"
+				}
+
+				blockoverride "extra_widget" {
+					container = {
+						tooltip = "STATE_COLONY_TOOLTIP"
+
+						default_progressbar_horizontal = {
+							size = { 160 34 }
+							blockoverride "values" {
+								value = "[State.GetColonyProgressAsFloat]"
+								min = 0
+								max = 1
+							}
+						}
+
+						button = {
+							texture = "gfx/interface/icons/generic_icons/not_paused.dds"
+							size = { 33 33 }
+							visible = "[And(State.IsOwner(GetPlayer),Not(State.IsColonizationPaused))]"
+							onclick = "[Execute( State.TogglePauseColonization )]"
+							enabled = "[IsValid( State.TogglePauseColonization )]"
+							parentanchor = right|vcenter
+							widgetanchor = right|vcenter
+							position = { -30 0 }
+						}
+
+						button = {
+							texture = "gfx/interface/icons/generic_icons/paused.dds"
+							size = { 33 33 }
+							visible = "[And(State.IsOwner(GetPlayer),State.IsColonizationPaused)]"
+							onclick = "[Execute( State.TogglePauseColonization )]"
+							enabled = "[IsValid( State.TogglePauseColonization )]"
+							parentanchor = right|vcenter
+							widgetanchor = right|vcenter
+							position = { -30 0 }
+						}
+
+						button = {
+							size = { 22 22 }
+							visible = "[State.IsOwner( GetPlayer )]"
+							tooltip = "CANCEL_COLONY_TOOLTIP"
+							onclick = "[PopupManager.AskConfirmation( State.AbandonColony )]"
+							enabled = "[IsValid( State.AbandonColony )]"
+							texture = "gfx/interface/icons/generic_icons/red_cross.dds"
+							parentanchor = right|vcenter
+							widgetanchor = right|vcenter
+							position = { -10 0 }
+						}
+
+						textbox = {
+							visible = "[GreaterThan_int32( State.GetColonyProgressAsDays, '(int32)-1')]"
+							text = "COLONY_MAP_MARKER_DAYS_LEFT"
+							autoresize = yes
+							position = { 10 0 }
+							parentanchor = left|vcenter
+							widgetanchor = left|vcenter
+							align = right|nobaseline
+						}
+
+						textbox = {
+							visible = "[Not(GreaterThan_int32( State.GetColonyProgressAsDays, '(int32)-1'))]"
+							text = "NO_PROGRESS"
+							autoresize = yes
+							position = { 10 0 }
+							parentanchor = left|vcenter
+							widgetanchor = left|vcenter
+							align = right|nobaseline
+						}
+					}
+				}
+			}
+
+			state_panel_status_item_small = {								# REORDERED (unchanged)
+				visible = "[State.IsImportingSlaves]"
+				tooltip = "[State.GetSlaveImportMarkerDesc]"
+
+				blockoverride "texture" {
+					texture = "gfx/interface/icons/state_status_icons/slave_import_marker.dds"
+				}
+
+				blockoverride "name" {
+					text = "SLAVE_IMPORT"
+				}
+			}
+
+			state_panel_status_item_small = {								# REORDERED (unchanged)
+				visible = "[State.HasSlaveExportMarkers]"
+				tooltip = "[State.GetSlaveExportMarkersDesc]"
+
+				blockoverride "texture" {
+					texture = "gfx/interface/icons/state_status_icons/slave_export_markers.dds"
+				}
+
+				blockoverride "name" {
+					text = "SLAVE_EXPORT"
+				}
+			}
+
+			state_panel_status_item_small = {
+				visible = "[GreaterThan_CFixedPoint(State.GetStateRegion.GetPollutionImpact, '(CFixedPoint)0')]"
+				datacontext = "[State.GetStateRegion]"
+				tooltip = "STATE_POLLUTION"
+
+				onmousehierarchyenter = "[SetTempMapModeByKey('mm_pollution')]"
+				onmousehierarchyleave = "[RemoveTempMapMode]"
+				alwaystransparent = no
+
+
+				blockoverride "texture" {
+					texture = "gfx/interface/icons/state_status_icons/pollution.dds"
+				}
+
+				blockoverride "name" {
+					text = "STATE_PANEL_POLLUTION"
+				}
+			}
+
+			state_panel_status_item_small = {
+				visible = "[State.IsStrategicObjective(GetPlayer.Self)]"
+				tooltip = "STATE_STRATEGIC_OBJECTIVE_TOOLTIP"
+
+				blockoverride "texture" {
+					texture = "gfx/interface/icons/formation_order_icons/strategic_objective.dds"
+				}
+
+				blockoverride "name" {
+					text = "STATE_STRATEGIC_OBJECTIVE"
+				}
+			}
+
+			datamodel = "[State.AccessStateRegion.AccessTraits]"
+
+			item = {
+				state_panel_status_item_small = {
+					tooltip = TOOLTIP_STATE_TRAIT
+					onmousehierarchyenter = "[AccessHighlightManager.HighlightStateTrait(StateTrait.Self)]"
+					onmousehierarchyleave = "[AccessHighlightManager.RemoveHighlight]"
+					alwaystransparent = no
+
+					blockoverride "texture" {
+						texture = "[StateTrait.GetTexture]"
+					}
+
+					blockoverride "name" {
+						text = "STATE_TRAIT_STATUS"
+					}
+				}
+			}
+		}																# BSO: STRUCTURED VIEW ENDS HERE
+	}
+
+	type state_panel_status_item_extra_small = container {	# BSO: new TYPE - split text for fancy tooltips
+		flowcontainer = {
+			spacing = 5
+			margin = { 5 10 }
+
+			background = {
+				using = entry_bg_simple
+			}
+
+			block "icon" {
+				icon = {
+					block "texture" {}
+					block "alpha" {}
+					block "iconsize" {}		# default: size = { 71 71 }
+					parentanchor = vcenter
+				}
+			}
+
+			container = {
+				block "defaultsize" {
+					minimumsize = { -1 68.5 }	# Allow for adjusting internal icon heights
+				}
+				flowcontainer = {
+					parentanchor = vcenter
+					direction = vertical
+					block "flow_margin" {}
+					block "flow_spacing" {}
+					textbox = {
+						block "name" {}
+						block "alpha" {}
+						autoresize = yes
+						block "maximumsize" {			# 85 is the clean 3-way split
+							minimumsize = { 85 -1 }
+							maximumsize = { 85 -1 }
+						}
+						multiline = yes
+						align = nobaseline
+					}
+					textbox = {
+						block "name2" {}
+						autoresize = yes
+						block "maximumsize" {			# 85 is the clean 3-way split
+							minimumsize = { 85 -1 }
+							maximumsize = { 85 -1 }
+						}
+						multiline = yes
+						align = nobaseline
+					}
+
+					block "extra_widget" {
+
+					}
+				}
+			}
+		}
+
+		block "navigation_button" {
+			button_icon_goto = {
+				position = { -2 2 }
+				size = { 25 25 }
+				block "goto" {
+					visible = no
+				}
+				parentanchor = top|right
+			}
+		}
+	}
+}

@@ -1,0 +1,16 @@
+{
+  "name" : "Grey's Better State Overview UI",
+  "id" : "",
+  "version" : "",
+  "supported_game_version" : "",
+  "short_description" : "",
+  "tags" : [
+        "Gameplay",
+        "Graphics",
+        "Utilities"
+    ],
+  "relationships" : [],
+  "game_custom_data" : {
+    "multiplayer_synchronized" : true
+  }
+}
